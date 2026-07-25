@@ -1,0 +1,80 @@
+{
+  "preguntas": [
+    {
+      "id": "textura-vs-estructura",
+      "tipo": "verdadero_falso",
+      "enunciado": "Dos suelos con exactamente la misma textura pueden comportarse de forma opuesta frente a la lluvia: uno la absorbe y el otro se encharca.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es la idea central de la lección. La textura dice qué partículas tienes; la estructura, cómo están organizadas entre sí. Si están agrupadas en agregados quedan canales por donde circula el agua y el aire; si están apretadas en una masa uniforme, no. Y a diferencia de la textura, la estructura sí se puede modificar, para bien y para mal."
+    },
+    {
+      "id": "pegamentos-biologicos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuáles de estos son pegamentos que mantienen unidos los agregados del suelo?",
+      "opciones": [
+        "La materia orgánica, mediante sus sustancias húmicas.",
+        "Los exudados microbianos, como la glomalina que producen los hongos micorrízicos.",
+        "Las raíces y las hifas de hongos, que actúan como malla física.",
+        "Las cargas eléctricas de la arcilla.",
+        "El paso repetido de maquinaria, que compacta y une las partículas."
+      ],
+      "correctas": [0, 1, 2, 3],
+      "explicacion": "Los cuatro primeros son los pegamentos reales, y conviene notar que tres de ellos son de origen biológico: solo la arcilla es mineral. De ahí la conclusión de que la estructura es un producto biológico, que se construye con raíces, materia orgánica y hongos, no con maquinaria. El tránsito de maquinaria no une nada: compacta, que es precisamente lo contrario de agregar."
+    },
+    {
+      "id": "porosidad-total-trampa",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un análisis te informa de que un lote tiene 50 % de porosidad total. ¿Qué puedes concluir?",
+      "opciones": [
+        "Muy poco: falta saber la distribución de tamaños de poro.",
+        "Podría tratarse de un suelo arcilloso compactado en el que casi todo son microporos, que ni drenan ni ceden su agua a la planta.",
+        "Que el suelo drena bien, porque la mitad de su volumen son huecos.",
+        "Que la planta dispone de bastante agua utilizable."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "La porosidad total por sí sola no informa de casi nada. Lo que drena y airea son los macroporos; el agua que la planta puede usar está en los mesoporos. Un suelo arcilloso compactado puede tener la misma porosidad total que un suelo franco excelente y comportarse de forma opuesta, porque en él casi todo el hueco son microporos: agua que no se va y que la raíz no logra extraer."
+    },
+    {
+      "id": "densidad-aparente-calculo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Mides una densidad aparente de 1,59 g/cm³ en un lote franco donde piensas plantar cítricos. ¿Qué haces?",
+      "opciones": [
+        "Interpretarlo como suelo compactado: la porosidad ronda el 40 % y las raíces empiezan a tener dificultad.",
+        "Descompactar y aportar materia orgánica ANTES de plantar, no después.",
+        "Plantar igual, porque por debajo de 1,7 g/cm³ no hay problema.",
+        "Añadir arena para bajar la densidad aparente."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Con la fórmula, porosidad = (1 − 1,59 ÷ 2,65) × 100 ≈ 40 %, que cae en el rango de suelo compactado. En un suelo franco, 1,6 g/cm³ ya es un problema serio. Y siendo un cultivo perenne de ciclo largo, corregir después de plantar es mucho más difícil: la ventana para descompactar y enmendar es antes. La arena no resuelve un problema estructural, y esperar a 1,7 es esperar a que muchas raíces ya no puedan penetrar."
+    },
+    {
+      "id": "labrar-mojado",
+      "tipo": "verdadero_falso",
+      "enunciado": "Labrar un suelo húmedo es la forma más rápida de descompactarlo.",
+      "respuesta": false,
+      "explicacion": "Falso, y es justo al contrario. Con el suelo mojado las partículas de arcilla están lubricadas y se deslizan unas sobre otras reordenándose en láminas densas y orientadas: destruyes los agregados y creas la estructura laminar que querías evitar, además de suela de labor justo debajo de la profundidad de trabajo. Es la operación hecha con intención de mejorar que produce el daño más duradero. La regla de campo: si un puñado apretado hace una bola que mancha y no se rompe, espera."
+    },
+    {
+      "id": "prueba-terron",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si un terrón seco se desmorona en una nube de barro al caer en un vaso de agua, significa que lo único que unía esas partículas era que estaban secas.",
+      "respuesta": true,
+      "explicacion": "Correcto. La prueba del terrón evalúa estabilidad de agregados, es decir, si los pegamentos —materia orgánica, exudados microbianos, micorrizas— están funcionando de verdad. Un agregado que se deshace al mojarse no sirve de nada justo cuando más se le necesita: durante la lluvia. Y es exactamente lo que le ocurre al suelo desnudo con la primera lluvia fuerte de octubre."
+    },
+    {
+      "id": "desmonte-estructura",
+      "tipo": "abierta",
+      "enunciado": "El desmonte del terreno destruye simultáneamente varios de los mecanismos que sostenían la estructura del suelo. Explica cuáles se pierden y qué cuatro medidas tomarías, en orden, para limitar el daño antes de que empiecen las lluvias de octubre.",
+      "respuestaModelo": "Al retirar la vegetación se pierden a la vez los cuatro pegamentos biológicos que sostenían los agregados: las raíces vivas que actuaban como malla física, el aporte continuo de materia orgánica, las redes de hifas de hongos con su glomalina, y la cobertura que protegía la superficie del impacto de la gota de lluvia. Si además entra maquinaria pesada, se añade compactación, y muy probablemente suela de labor a 15-30 cm.\n\nLas cuatro medidas, en orden:\n\n1. Medir antes de que se borre la evidencia: hacer la prueba del terrón en una zona ya desmontada y en otra que todavía tenga vegetación. Esa diferencia es la línea base contra la que se podrá comprobar después si el manejo funciona.\n\n2. No dejar el suelo desnudo esperando octubre. En Santa Cruz la lluvia cae con intensidad alta, y sobre suelo descubierto rompe los agregados superficiales y forma una costra que sella la infiltración. Si un lote va a estar sin sembrar más de unas semanas, ponerle cobertura: un abono verde de ciclo corto, restos del desmonte triturados, acolchado, cualquier cosa.\n\n3. Restringir el tránsito desde el primer día: definir pasillos fijos por donde se camina y circula, y no cambiarlos. Sacrificar en torno a un 15 % de la superficie en pasillos salva el 85 % restante de la compactación por pisoteo repetido.\n\n4. Medir densidad aparente en los lotes destinados a producción. Si alguno pasa de 1,6 g/cm³, ese lote necesita descompactación y materia orgánica antes de plantar nada de ciclo largo.\n\nY cruzando con la lección anterior: un lote que salió franco arcilloso en la prueba del frasco y que además tenga estructura pobre o densidad alta se va a encharcar entre octubre y abril con casi total seguridad. Ese lote va a camas altas, y conviene construirlas ahora en la seca.",
+      "criterios": [
+        "Identifica la pérdida simultánea de los pegamentos biológicos: raíces, materia orgánica, hongos y cobertura.",
+        "Menciona la compactación añadida por maquinaria, idealmente la suela de labor a 15-30 cm.",
+        "Propone medir una línea base con la prueba del terrón antes de perder la referencia.",
+        "Insiste en no dejar el suelo desnudo, justificándolo por la intensidad de la lluvia en Santa Cruz y el sellado por costra.",
+        "Propone pasillos de tránsito fijos, con la lógica de sacrificar poca superficie para proteger el resto.",
+        "Cruza el resultado con la textura de la lección anterior para decidir camas altas en los lotes arcillosos."
+      ],
+      "explicacion": "Esta pregunta es la que convierte el módulo en decisiones. Si la respuesta te salió completa, ya tienes el plan de manejo del desmonte sin necesidad de que nadie te lo dicte."
+    }
+  ]
+}

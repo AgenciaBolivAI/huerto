@@ -1,0 +1,159 @@
+{
+  "_comentario": "Procedencia de cada imagen del curso. Se anota el modelo y el prompt exacto para poder regenerarla, corregirla o auditarla más adelante sin adivinar cómo se hizo. Todas las imágenes se revisan a ojo antes de entrar: un modelo de imagen puede escribir mal una etiqueta o inventar anatomía, y en un curso eso es tan grave como un enlace de video roto.",
+  "imagenes": {
+    "01-fundamentos/01-anatomia-funcional/portada.webp": {
+      "tipo": "fotografia",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Corte horizontal de suelo tropical oscuro atravesado por una red de raíces finas, con una banda de arcilla color terracota",
+      "prompt": "WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial macro photograph of a horizontal slice of dark tropical soil, seen from the side like a terrarium wall. A dense web of pale fibrous roots spreads HORIZONTALLY across the whole width of the image through near-black earth and a band of warm terracotta clay. Fine root hairs catch low warm sidelight. Palette: deep forest green, sage, bone cream, terracotta, near-black. Natural light, shallow depth of field, fine grain, muted and sophisticated. No text, no labels, no people, no pots.",
+      "nota": "El primer intento con un prompt casi idéntico salió apaisado por fuera pero con la composición en vertical y bandas crema a los lados. Insistir en «wide landscape, fills the frame edge to edge, full bleed» lo resolvió."
+    },
+    "01-fundamentos/01-anatomia-funcional/zonas-raiz.webp": {
+      "tipo": "diagrama",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Corte longitudinal de un ápice radicular dividido en cuatro zonas: de abajo arriba, cofia, meristemo apical, zona de elongación y zona pilífera con pelos radiculares",
+      "prompt": "Clean scientific botanical diagram, flat vector textbook illustration on a bone-cream background. Longitudinal cross-section of a plant ROOT TIP divided into four clearly separated horizontal bands, stacked vertically, each with a label line pointing to it. From bottom to top the four labels read exactly, in Spanish: 'COFIA', 'MERISTEMO APICAL', 'ZONA DE ELONGACIÓN', 'ZONA PILÍFERA'. The zona pilifera band shows fine root hairs projecting sideways. Forest green and sage green tissue, terracotta accent lines, dark ink text in a clean sans-serif. Precise, minimal, no shading, no photorealism, accurate botanical anatomy.",
+      "revisado": "Anatomía y orden de las cuatro zonas correctos; etiquetas en español bien escritas y acentuadas."
+    },
+    "01-fundamentos/01-anatomia-funcional/xilema-floema.webp": {
+      "tipo": "diagrama",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Planta esquemática con dos canales paralelos en el tallo: xilema en verde con flecha ascendente, floema en terracota con flecha descendente",
+      "prompt": "Clean scientific diagram, flat vector textbook illustration, bone-cream background, no shading, no photorealism, generous margins. A simplified plant: a few broad leaves at the top, one straight vertical stem, fine roots at the bottom. Inside the stem, two parallel channels. LEFT channel dark forest green with a bold arrow pointing UPWARD. RIGHT channel terracotta orange with a bold arrow pointing DOWNWARD. All label text sits in the OUTER MARGINS, far from the plant, never overlapping it. Text in dark ink, clean sans-serif, reading exactly, with these exact accents, in Spanish: on the far left 'XILEMA' in bold with 'agua y minerales' smaller beneath it; on the far right 'FLOEMA' in bold with 'azúcares' smaller beneath it. The word must be written azúcares with an accent on the u. Minimal, precise, elegant, well spaced.",
+      "nota": "La primera versión escribió «azucares» sin tilde porque el prompt la omitía, y además metía las etiquetas encima del tallo. Se regeneró exigiendo la tilde de forma explícita y las etiquetas en los márgenes."
+    },
+    "01-fundamentos/01-anatomia-funcional/tallo-nudos-yemas.webp": {
+      "tipo": "diagrama",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Tallo esquemático con la yema apical arriba, nudos con yemas axilares, entrenudos, y una flecha descendente que representa el transporte de auxina",
+      "prompt": "Clean scientific botanical diagram, flat vector textbook illustration, bone-cream background, no shading. A vertical plant STEM shown from the side, occupying the centre. At the very top a terminal bud drawn as a filled dark-green dot. Along the stem, three points where a leaf attaches; at each attachment there is a small sage-green oval bud in the angle between leaf and stem. A thin terracotta arrow runs DOWNWARD along the stem from the top bud. Label lines point outward to text in dark ink, clean sans-serif, reading exactly in Spanish: 'YEMA APICAL' pointing to the top dot, 'NUDO' pointing to a leaf attachment point, 'ENTRENUDO' pointing to the bare stem segment between two attachments, 'YEMA AXILAR' pointing to a small bud in a leaf angle, and 'AUXINA' labelling the downward terracotta arrow. Forest green and sage tissue, terracotta accents. Precise, minimal, accurate botany.",
+      "revisado": "Las cinco etiquetas son correctas y apuntan al elemento adecuado. La flecha de auxina aparece duplicada (una libre y otra dentro del tallo); no induce a error, así que se acepta."
+    },
+
+    "02-ciencia-del-suelo/01-textura-prueba-frasco/portada.webp": {
+      "tipo": "fotografia",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Tres montones de suelo alineados sobre una superficie crema: granos gruesos de arena a la izquierda, polvo fino de limo en el centro y arcilla agrietada de color terracota a la derecha",
+      "prompt": "WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, full bleed, no borders. Editorial overhead photograph of three separate small piles of soil laid out in a row on a bone-cream surface: on the left a coarse pale sandy soil with visible grains, in the centre a fine soft grey-brown silt, on the right a dense cracked reddish-terracotta clay. Even soft daylight from one side, subtle shadows, fine grain, muted sophisticated palette of cream, sage, terracotta and near-black. Macro detail, texture clearly visible in each pile. No text, no labels, no hands, no tools.",
+      "revisado": "Las tres fracciones se distinguen perfectamente y en el orden del texto. Sirve además como referencia visual de qué esperar al mirar la propia muestra."
+    },
+    "02-ciencia-del-suelo/01-textura-prueba-frasco/escala-particulas.webp": {
+      "tipo": "diagrama",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Tres círculos de tamaños muy distintos que comparan las fracciones del suelo: arena de 2 a 0,05 mm, limo de 0,05 a 0,002 mm y arcilla menor de 0,002 mm",
+      "prompt": "Clean scientific diagram, flat vector illustration, bone-cream background, no shading. Three circles of very different sizes in a row, drawn to scale to compare particle sizes, each with a label beneath it in dark ink, clean sans-serif. On the LEFT a LARGE circle in pale sand colour labelled 'ARENA' with smaller text '2 a 0,05 mm'. In the CENTRE a MUCH SMALLER circle in sage grey labelled 'LIMO' with smaller text '0,05 a 0,002 mm'. On the RIGHT a TINY dot in terracotta labelled 'ARCILLA' with smaller text 'menos de 0,002 mm'. The size difference between the three must be dramatic and obvious. Minimal, precise, generous white space, elegant.",
+      "revisado": "Rangos de tamaño correctos y con coma decimal, como corresponde en español. Las proporciones no son a escala real (lo serían de forma inservible: la arcilla resultaría invisible) y el pie de la lección lo advierte."
+    },
+    "02-ciencia-del-suelo/01-textura-prueba-frasco/prueba-del-frasco.webp": {
+      "tipo": "diagrama",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Frasco de vidrio con agua y suelo sedimentado en tres capas: arena abajo, limo en medio, arcilla arriba, y materia orgánica flotando en la superficie",
+      "prompt": "Clean scientific diagram, flat vector textbook illustration, bone-cream background, no shading, generous margins. A tall transparent glass jar filled with water, shown from the side, containing settled soil separated into three horizontal layers. From BOTTOM to TOP the layers are: a thick coarse pale-sand layer, then a medium grey-brown layer, then a thin dark terracotta layer at the top of the sediment; clear water above, with a few tiny floating fragments at the very top. Label lines point right, to text in dark ink, clean sans-serif, reading exactly in Spanish, from bottom to top: 'ARENA  (asienta en 1 minuto)', 'LIMO  (asienta en 2 horas)', 'ARCILLA  (asienta en 24-48 horas)', and at the very top 'MATERIA ORGÁNICA  (flota)'. Forest green accents, terracotta accents, precise and minimal.",
+      "revisado": "Orden de capas y tiempos de sedimentación correctos, materia orgánica flotando donde debe. Salió bien a la primera."
+    },
+    "02-ciencia-del-suelo/01-textura-prueba-frasco/poros-retencion.webp": {
+      "tipo": "diagrama",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Dos paneles comparados: a la izquierda un suelo arenoso con partículas grandes, poros amplios y una flecha de agua saliendo por abajo; a la derecha un suelo arcilloso con partículas diminutas y poros pequeños llenos de agua retenida",
+      "prompt": "Clean scientific diagram, flat vector textbook illustration, bone-cream background, no shading. TWO square panels side by side with generous space between them. LEFT panel: a few LARGE pale cream circles packed loosely with BIG empty gaps between them; a few small blue water droplets cling only at the contact points between circles; a blue arrow points straight DOWN and exits the bottom of the panel. RIGHT panel: MANY TINY terracotta circles packed densely, and all the small gaps between them completely filled with blue water; no arrow leaves this panel. Above each panel, a single bold heading in dark ink, clean sans-serif: above the left panel exactly 'SUELO ARENOSO', above the right panel exactly 'SUELO ARCILLOSO'. NO other text anywhere in the image, no captions, no labels beneath the panels. Minimal, precise, elegant, well spaced.",
+      "nota": "La primera versión llevaba los pies dentro de la imagen y escribió «rapido» sin tilde. Se regeneró dejando solo los dos titulares: el texto de pie va en HTML, donde es seleccionable y no puede tener faltas horneadas en un bitmap. Conviene aplicar este criterio a todos los diagramas nuevos."
+    },
+
+    "02-ciencia-del-suelo/02-estructura-porosidad/portada.webp": {
+      "tipo": "fotografia",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Macrofotografía de suelo oscuro y grumoso partido en agregados redondeados de varios tamaños, con canales oscuros entre ellos y raíces finas atravesándolos",
+      "prompt": "WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, full bleed, no borders, no letterboxing. Editorial macro photograph of dark crumbly topsoil broken into rounded natural crumbs and aggregates of many sizes, spread across the whole width of the frame, with visible dark gaps and channels between the crumbs and a few fine pale roots threading through. Low warm sidelight rakes across the surface, revealing depth and porosity. Palette: near-black earth, deep forest green flecks, warm terracotta, bone cream highlights. Shallow depth of field, fine grain, muted and sophisticated. No text, no labels, no hands, no tools.",
+      "revisado": "A sangre y apaisada a la primera. Los agregados redondeados, los canales entre ellos y las raíces se ven con claridad: es literalmente el tema de la lección."
+    },
+    "02-ciencia-del-suelo/02-estructura-porosidad/misma-textura-distinta-estructura.webp": {
+      "tipo": "diagrama",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Dos paneles con exactamente las mismas partículas: a la izquierda agrupadas en grumos con canales abiertos por los que pasa el agua; a la derecha apretadas en una masa densa, con el agua detenida en la superficie",
+      "prompt": "Clean scientific diagram, flat vector textbook illustration, bone-cream background, no shading. TWO square panels side by side with generous space between. Both panels contain EXACTLY THE SAME small particles in the same colours (a mix of large pale circles, medium sage circles and tiny terracotta dots) to show identical texture. LEFT panel: the particles are clustered into several rounded CRUMB-LIKE clumps with large open dark channels running between the clumps, and a blue arrow passes freely down through a channel. RIGHT panel: the very same particles are packed uniformly and tightly with no clumps and no channels at all, one dense mass, and a blue arrow stops dead at the top surface with a small puddle above it. Above each panel a single bold heading in dark ink, clean sans-serif: left exactly 'ESTRUCTURA GRANULAR', right exactly 'ESTRUCTURA MASIVA'. NO other text anywhere, no captions beneath. Minimal, precise, elegant.",
+      "revisado": "El mejor diagrama del módulo hasta ahora: respetó la instrucción de usar las MISMAS partículas y colores en los dos paneles, que es justo lo que hace visible la tesis de la lección."
+    },
+    "02-ciencia-del-suelo/02-estructura-porosidad/tipos-de-estructura.webp": {
+      "tipo": "diagrama",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Cuatro paneles en fila que comparan arreglos del suelo: granular con grumos redondeados, en bloques con piezas angulares, laminar con placas horizontales apiladas, y masiva como una masa sólida sin divisiones",
+      "prompt": "Clean scientific diagram, flat vector textbook illustration, bone-cream background, no shading. FOUR small square panels in a single row, evenly spaced, each showing a different arrangement of dark soil peds against cream: panel 1 rounded crumb-like granules loosely packed; panel 2 chunky angular blocks fitting together like irregular bricks; panel 3 flat horizontal plates stacked like thin pancakes; panel 4 one solid featureless dark mass with no divisions at all. Below each panel a single bold word in dark ink, clean sans-serif, reading exactly in Spanish, in this order left to right: 'GRANULAR', 'EN BLOQUES', 'LAMINAR', 'MASIVA'. NO other text anywhere in the image. Minimal, precise, elegant, evenly spaced.",
+      "revisado": "Los cuatro tipos correctamente representados y en el orden pedido. Calidad de libro de texto."
+    },
+    "02-ciencia-del-suelo/02-estructura-porosidad/clases-de-poros.webp": {
+      "tipo": "diagrama",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Corte ampliado de un agregado con tres tamaños de poro: macroporos anchos para aire y drenaje, mesoporos con agua utilizable y microporos con agua retenida que la planta no puede extraer",
+      "prompt": "Clean scientific diagram, flat vector textbook illustration, bone-cream background, no shading. A magnified cross-section of a single soil aggregate showing pore spaces of three clearly different sizes, with water rendered in blue. A WIDE open channel between crumbs, a MEDIUM pore holding a blue meniscus of water, and several MINUTE pores completely saturated dark blue. Three label lines point out to text on the right in dark ink, clean sans-serif, reading exactly, with these exact accents, in Spanish: 'MACROPOROS' in bold with smaller text beneath 'aire y drenaje'; 'MESOPOROS' in bold with smaller text beneath 'agua que la planta SÍ puede usar'; 'MICROPOROS' in bold with smaller text beneath 'agua retenida, la planta NO la puede extraer'. All accents must be written: SÍ with an accent on the i. Forest green and terracotta particle fills, minimal, precise, well spaced.",
+      "revisado": "Las tres clases correctas y el «SÍ» acentuado como se pidió explícitamente. Pedir la tilde de forma expresa en el prompt funciona: sin esa instrucción el modelo la omite."
+    },
+    "02-ciencia-del-suelo/02-estructura-porosidad/prueba-del-terron.webp": {
+      "tipo": "diagrama",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Dos vasos de agua comparados: en el izquierdo un terrón permanece intacto sobre una malla con el agua limpia; en el derecho un terrón idéntico se ha desmoronado en una nube de sedimento que enturbia el agua",
+      "prompt": "Clean scientific diagram, flat vector textbook illustration, bone-cream background, no shading. TWO tall clear glass beakers of water side by side, seen from the side, with generous space between them. In the LEFT beaker a single dark rounded soil clod sits INTACT on a small wire mesh near the surface, the water around it perfectly clear, a few tiny bubbles escaping upward. In the RIGHT beaker an identical clod has COLLAPSED into a spreading cloud of muddy sediment that clouds the whole water and settles as a loose heap at the bottom. Above each beaker a single bold heading in dark ink, clean sans-serif: left exactly 'AGREGADO ESTABLE', right exactly 'AGREGADO INESTABLE'. NO other text anywhere in the image, no captions beneath. Minimal, precise, elegant, well spaced.",
+      "revisado": "Correcto y muy legible: malla, burbujas, agua limpia a la izquierda; nube de sedimento y montón al fondo a la derecha."
+    },
+
+    "02-ciencia-del-suelo/03-compactacion-infiltracion-drenaje/portada.webp": {
+      "tipo": "fotografia",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Charco de agua turbia detenido sobre suelo desnudo y compactado, con la costra reseca y agrietada de color terracota en el borde y tallos aplastados medio sumergidos",
+      "prompt": "WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, full bleed, no borders, no letterboxing. Editorial photograph taken at ground level of a shallow sheet of muddy rainwater standing on bare compacted tropical soil, stretching across the whole width of the frame. The water surface reflects a dim overcast sky. At the edges the soil is sealed and smooth with a thin dried crust beginning to crack. A few flattened stalks of vegetation lie half submerged. Low contrast overcast light, wet sheen, palette of near-black earth, warm terracotta, dull sage and cold cream reflections. Fine grain, muted and sombre, documentary feel. No text, no labels, no people, no tools.",
+      "revisado": "A sangre y con la costra agrietada visible en el borde, que es exactamente el síntoma que describe la lección. El tono sombrío encaja con el tema."
+    },
+    "02-ciencia-del-suelo/03-compactacion-infiltracion-drenaje/lluvia-vs-infiltracion.webp": {
+      "tipo": "diagrama",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Dos paneles comparados: con lluvia suave el agua se absorbe entera; con lluvia intensa solo una parte entra, se forma un charco y el resto escurre de lado",
+      "prompt": "Clean scientific diagram, flat vector textbook illustration, bone-cream background, no shading. TWO panels side by side with generous space between, each a small vertical cross-section of soil with rain falling from above as short blue vertical dashes. LEFT panel: sparse rain dashes, and blue arrows curving DOWN INTO the soil, fully absorbed, no water on the surface. RIGHT panel: very dense heavy rain dashes, only one small arrow entering the soil while a THICK blue arrow runs SIDEWAYS across the soil surface and off the edge of the panel, plus a shallow blue puddle sitting on top. Above each panel a single bold heading in dark ink, clean sans-serif: left exactly 'LLUVIA SUAVE', right exactly 'LLUVIA INTENSA'. NO other text anywhere in the image, no captions beneath the panels. Minimal, precise, elegant, well spaced.",
+      "revisado": "Transmite la tesis de la lección de un golpe: mismo suelo, misma capacidad, resultado opuesto según la intensidad. Salió bien a la primera."
+    },
+    "02-ciencia-del-suelo/03-compactacion-infiltracion-drenaje/suela-de-labor.webp": {
+      "tipo": "diagrama",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Corte de un perfil de suelo con una capa compactada intermedia de placas horizontales; las raíces bajan, chocan con ella y giran creciendo de lado, y solo una raíz fina encuentra una grieta y continúa",
+      "prompt": "Clean scientific diagram, flat vector textbook illustration, bone-cream background, no shading. A vertical CROSS-SECTION of a soil profile seen from the side, about three times taller than wide, divided into three horizontal bands: a loose crumbly dark topsoil band at the top, then a THIN DENSE compacted band drawn as tightly packed flat horizontal plates in a darker colour, then a looser lighter subsoil band below. Several pale roots grow DOWN from the top band, reach the dense band, and TURN SHARPLY SIDEWAYS running horizontally along the top of it, unable to pass through; one thin root finds a crack and continues down. Two label lines point right to text in dark ink, clean sans-serif, reading exactly, with these exact accents, in Spanish: 'SUELA DE LABOR' in bold with smaller text beneath '15 a 30 cm de profundidad'; and 'RAÍCES DESVIADAS' in bold with smaller text beneath 'crecen de lado, no pueden bajar'. The word RAÍCES must carry the accent on the i. Forest green roots, terracotta accent lines, minimal and precise.",
+      "revisado": "Anatomía del problema correcta y «RAÍCES» acentuado. Defecto menor aceptado: la línea guía de «RAÍCES DESVIADAS» apunta a la raíz que sí atravesó por una grieta, en vez de a las que giran de lado. El pie de la lección describe ambos comportamientos, así que no induce a error."
+    },
+    "02-ciencia-del-suelo/03-compactacion-infiltracion-drenaje/prueba-de-infiltracion.webp": {
+      "tipo": "diagrama",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Prueba de infiltración de campo: un cilindro metálico sin fondo clavado en el suelo, con agua dentro, una regla midiendo cuánto baja el nivel y un cronómetro al lado",
+      "prompt": "Clean scientific diagram, flat vector textbook illustration, bone-cream background, no shading. A simple field infiltration test: an open metal cylinder with both ends removed, driven vertically into dark soil so most of it stands above the surface. Inside the cylinder a blue column of water, with a small ruler standing vertically in the water, and a thin blue arrow showing the water level dropping. Beside it, a stopwatch drawn as a simple circle with hands. Exactly TWO short label lines point right to text in dark ink, bold, clean sans-serif, reading only these two single words and NOTHING else: 'CILINDRO' and 'REGLA'. Absolutely NO sub-captions, NO explanatory text, NO numbers, NO other words anywhere in the image. Terracotta accents, minimal, precise, generous margins.",
+      "nota": "La primera versión llevaba sub-pies dentro de la imagen y escribió «cuanto» sin tilde. Se regeneró dejando solo los dos rótulos, aplicando la regla ya establecida: los pies van en HTML, nunca horneados. Prohibir el texto extra de forma explícita («absolutely NO sub-captions») funciona."
+    },
+    "02-ciencia-del-suelo/03-compactacion-infiltracion-drenaje/cama-alta-cotas.webp": {
+      "tipo": "diagrama",
+      "modelo": "nano_banana_pro",
+      "generadaEn": "2026-07-25",
+      "alt": "Corte de una cama alta con sus cotas: 30 a 40 cm de altura, 90 a 120 cm de ancho útil, pasillos de 50 cm con canal, y la zona saturada en azul pálido justo por debajo de la base de la cama",
+      "prompt": "Clean scientific diagram, flat vector textbook illustration, bone-cream background, no shading. Vertical cross-section of a RAISED PLANTING BED. A wide flat-topped mound of dark crumbly soil rises clearly ABOVE the surrounding flat ground line, planted with three small green seedlings whose roots spread inside the mound. On both sides, a lower walking path with a shallow channel carrying a little blue water away. CRITICAL: a horizontal BLUE DASHED LINE representing the saturated water table must be drawn JUST BELOW THE SURROUNDING GROUND LINE, only slightly under it, NOT at the bottom of the image — the whole point is that the mound lifts the seedling roots high above this line, so the shaded saturated zone occupies the ground on both sides of the mound and stops right at the base of the mound. Fill the saturated zone below the dashed line with a pale blue tint. Thin terracotta dimension arrows with text in dark ink, clean sans-serif, exactly in Spanish: vertical arrow on the mound side '30 a 40 cm', horizontal arrow across the mound top '90 a 120 cm', horizontal arrow across a path '50 cm'. Label the dashed line 'nivel saturado' in blue. Minimal, precise, technical.",
+      "nota": "La primera versión dibujó el nivel saturado en el fondo del todo, tan por debajo que la cama parecía innecesaria y se perdía el sentido del diagrama. Se regeneró marcando en mayúsculas dónde debía ir la línea y pidiendo tinte azul en la zona saturada. Lección general: cuando la POSICIÓN de un elemento es el contenido, hay que especificarla de forma casi agresiva."
+    },
+
+    "_descartadas": {
+      "02-ciencia-del-suelo/01-textura-prueba-frasco/triangulo-textural": {
+        "motivo": "Se intentó dos veces el triángulo textural del USDA y se descartó. El primer intento espejó todo el interior respecto a los ejes: con «% ARENA» creciendo hacia la derecha, colocó las regiones arenosas a la izquierda, de modo que cualquiera que clasificara su suelo con él obtendría la clase equivocada. El segundo intento corrigió la ubicación pero falló en los umbrales numéricos: FRANCO ARCILLOSO ocupaba de 40 a 80 % de arcilla, cuando por encima de 40 % ya es ARCILLA.",
+        "conclusion": "El modelo acierta la topología de un diagrama pero no sus valores cuantitativos. Para cartas de referencia donde los números SON el contenido, no sirve: o se dibuja a mano en SVG o se sustituye por una tabla. En esta lección se sustituyó por una tabla de clasificación en el propio MDX."
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "preguntas": [
+    {
+      "id": "textura-inmutable",
+      "tipo": "verdadero_falso",
+      "enunciado": "La textura de un suelo se puede corregir echando arena si resulta demasiado arcilloso.",
+      "respuesta": false,
+      "explicacion": "Falso, y es un error caro. Para pasar un suelo arcilloso a franco harían falta cientos de toneladas de arena por hectárea, y con cantidades intermedias el resultado empeora: poca arena mezclada con mucha arcilla se comporta como hormigón. La textura no se corrige, se acomoda con camas altas, materia orgánica y una elección de cultivos compatible."
+    },
+    {
+      "id": "superficie-especifica",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un 35 % de arcilla hace que un suelo se comporte como arcilloso, aunque el 65 % restante sea arena y limo?",
+      "opciones": [
+        "Porque al ser las partículas mucho más pequeñas, un gramo de arcilla tiene una superficie miles de veces mayor que un gramo de arena.",
+        "Porque la superficie es donde ocurre la retención de agua, la retención de nutrientes con carga y la unión entre partículas.",
+        "Porque la arcilla es químicamente más reactiva que la arena por su composición mineral, independientemente del tamaño.",
+        "Porque la arcilla pesa más que la arena, y por eso domina la mezcla."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "El mecanismo es geométrico: dividir un volumen en trozos más pequeños multiplica la superficie total sin cambiar el volumen. Un gramo de arena tiene unos 0,01 m² de superficie; un gramo de arcilla, entre 10 y 800 m². Y la superficie es precisamente donde pasa todo lo relevante. La composición mineral influye en cuánta superficie tiene cada tipo de arcilla, pero la causa del dominio es el tamaño, no la química. Y la arcilla no pesa más: se habla de proporciones en peso."
+    },
+    {
+      "id": "detergente-frasco",
+      "tipo": "opcion_multiple",
+      "enunciado": "Haces la prueba del frasco pero te olvidas del detergente. ¿Qué le pasa a tu resultado?",
+      "opciones": [
+        "Subestimas la arcilla, porque sus partículas siguen pegadas entre sí formando agregados.",
+        "Esos agregados de arcilla sedimentan con la velocidad de partículas más grandes y se cuentan como limo o arena.",
+        "El resultado no cambia: el detergente solo sirve para que el agua se aclare antes.",
+        "Sobreestimas la arcilla, porque el detergente la haría sedimentar más rápido."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "El detergente actúa como dispersante: separa las partículas de arcilla que están unidas en agregados. Sin él esos agregados caen como si fueran partículas grandes y se contabilizan en las capas inferiores, de modo que mides menos arcilla de la que hay. Es el error más común del ensayo y sesga justo la fracción que más importa conocer."
+    },
+    {
+      "id": "sedimentacion-orden",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué las tres fracciones se separan en capas ordenadas en el frasco, y con tiempos tan distintos?",
+      "opciones": [
+        "Porque la velocidad de caída de una partícula en agua es proporcional al cuadrado de su radio.",
+        "Porque las partículas grandes caen mucho más rápido: la arena en un minuto, la arcilla puede tardar 48 horas.",
+        "Porque cada fracción tiene una densidad mineral distinta y se ordenan por densidad.",
+        "Porque el agua empuja hacia arriba las partículas más pequeñas de forma activa."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Es sedimentación por tamaño: la velocidad de caída crece con el cuadrado del radio, así que duplicar el tamaño de la partícula cuadruplica su velocidad. Eso separa las fracciones solas y explica la enorme diferencia de tiempos. La densidad mineral de las tres fracciones es bastante parecida, así que no es el factor que las ordena, y el agua no empuja nada activamente."
+    },
+    {
+      "id": "clasificar-lote",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un lote te da 22 % de arcilla, 30 % de limo y 48 % de arena. Según la tabla de la lección, ¿qué clase es y qué decisión implica?",
+      "opciones": [
+        "Franco. Es tu mejor tierra: se puede sembrar en cama plana y conviene reservarla para cultivos de ciclo largo.",
+        "Franco arcilloso, y necesita camas altas obligatorias.",
+        "Franco arenoso, y hay que priorizar materia orgánica y acolchado.",
+        "Arcilloso, con riesgo alto de asfixia radicular."
+      ],
+      "correctas": [0],
+      "explicacion": "Con 22 % de arcilla y 48 % de arena, la primera fila de la tabla que se cumple es «7–27 % de arcilla y 23–52 % de arena»: es un suelo franco, el compromiso ideal entre retención y drenaje. No llega a franco arcilloso (haría falta 27 % o más de arcilla) ni a franco arenoso (haría falta más de 52 % de arena)."
+    },
+    {
+      "id": "asfixia-arcilla",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un suelo arcilloso saturado de agua puede tener nutrientes de sobra y aun así la planta no logra alimentarse.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es la conexión directa con el Módulo 1. Los poros diminutos de la arcilla retienen el agua y desplazan el aire. Sin oxígeno la raíz no produce el ATP que exige el transporte selectivo de iones a través de las membranas, de modo que la absorción activa se detiene aunque el suelo esté lleno de nutrientes. El síntoma imita a una carencia nutricional, y por eso mucha gente responde fertilizando y empeora el problema."
+    },
+    {
+      "id": "muestreo-aluvial",
+      "tipo": "abierta",
+      "enunciado": "Explica por qué en los 2.474 m² de Estrellas del Sur conviene hacer ocho pruebas del frasco, una por lote, en lugar de una sola muestra representativa del terreno. Describe además cómo tomarías la muestra de cada lote.",
+      "respuestaModelo": "Porque el terreno está sobre la llanura aluvial al sur de Santa Cruz, y los suelos aluviales se depositaron por corrientes de agua: donde la corriente iba rápida dejó arena, y donde se frenó dejó limo y arcilla. Eso hace que la textura pueda variar de forma brusca en pocos metros, y es perfectamente posible tener franco arenoso en un extremo del terreno y franco arcilloso en el otro.\n\nUna sola muestra del conjunto daría un promedio que no describe a ningún lote en particular, y sobre ese número se acabarían tomando decisiones de inversión —dónde hacer camas altas, cómo dimensionar el riego, qué cultivo va en qué lote— que serían erróneas para varios de ellos.\n\nEl muestreo correcto por lote es una muestra compuesta: cinco piquetes repartidos en zigzag por el lote, retirando primero los 2 cm superficiales de hojas y residuos, y sacando tierra de los siguientes 20 cm, que es donde vive la mayoría de las raíces. Se mezclan los cinco piquetes y de esa mezcla se toma el tercio de frasco. Ocho frascos rotulados con el número de lote.\n\nConviene hacerlo en la época seca, de mayo a septiembre, porque la prueba necesita tierra seca y desmenuzada; en plena lluvia habría que secar la muestra varios días antes.",
+      "criterios": [
+        "Identifica el origen aluvial del suelo como causa de la variabilidad espacial de la textura.",
+        "Explica por qué un promedio de los ocho lotes no describe a ninguno, y que sobre él se tomarían decisiones de inversión equivocadas.",
+        "Describe la muestra compuesta: varios piquetes por lote, mezclados en una sola muestra.",
+        "Menciona la profundidad correcta: descartar los 2 cm superficiales y muestrear los 20 cm siguientes, donde están las raíces.",
+        "Idealmente señala que conviene hacerlo en seca porque el ensayo exige tierra seca."
+      ],
+      "explicacion": "El muestreo es la parte del ensayo donde más se pierde fiabilidad, y no cuesta nada hacerlo bien. Si esta respuesta te salió completa, ya puedes ejecutar la caracterización de tu terreno esta semana sin supervisión."
+    }
+  ]
+}

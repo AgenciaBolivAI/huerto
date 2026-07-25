@@ -1,0 +1,396 @@
+Una planta es un sistema distribuido sin controlador central. No tiene cerebro, no tiene
+corazón, no tiene un proceso maestro que orqueste a los demás. Tiene, en cambio, cuatro
+subsistemas físicos especializados que intercambian materia y señales por una red interna, y
+un puñado de lugares —muy concretos, muy pequeños— donde se genera tejido nuevo.
+
+Entender exactamente qué hace cada subsistema, y sobre todo **dónde están sus límites**, es lo
+que separa a alguien que sigue recetas de alguien que puede diagnosticar. Cuando una planta de
+tu vivero se marchita a mediodía y se recupera de noche, o cuando un esqueje enraíza y otro se
+pudre, la explicación siempre está en esta lección.
+
+Vamos a recorrer la planta como recorrerías una arquitectura desconocida: qué componentes hay,
+qué contrato cumple cada uno, por dónde fluyen los datos y dónde están los puntos de fallo.
+
+## La planta no tiene director de orquesta
+
+El primer modelo mental que hay que romper es el del organismo con centro de mando. Un animal
+tiene un sistema nervioso: un canal rápido, dirigido, con un procesador central que integra
+información y emite órdenes. Una planta no tiene nada de eso, y aun así coordina el crecimiento
+de miles de órganos durante décadas.
+
+Lo hace con tres mecanismos:
+
+1. **Control local.** Cada órgano responde a su propio entorno inmediato. Una raíz que topa con
+   un bolsón húmedo prolifera ahí sin consultar a nadie. Una hoja a la sombra ajusta su
+   fisiología por su cuenta.
+2. **Un bus químico lento.** Las hormonas vegetales viajan por el agua y por la savia,
+   difundiéndose o transportándose activamente. Son mensajes de milisegundos a días, no de
+   milisegundos. Baratos, redundantes, sin garantía de entrega.
+3. **Crecimiento como respuesta.** Donde un animal se mueve, una planta **crece**. Es su única
+   forma de acción. Girar una hoja hacia la luz, buscar agua a dos metros, cerrar una herida:
+   todo se resuelve construyendo tejido nuevo en la dirección correcta.
+
+<Analogia>
+Piensa en un sistema distribuido sin nodo coordinador: cada servicio decide localmente con la
+información que tiene, y la coordinación global emerge de un *message bus* asíncrono, lento y
+sin acuse de recibo. No hay transacciones. No hay *rollback*. Lo que se construyó, construido
+está —una rama mal orientada no se deshace, se poda.
+
+Esa es exactamente la razón de que en horticultura **el momento importe tanto como la acción**.
+Estás modificando un sistema que no puede revertir su estado anterior.
+</Analogia>
+
+De aquí sale una consecuencia práctica que vas a usar toda tu vida como viverista: casi todo lo
+que le haces a una planta —podar, trasplantar, fertilizar, pinzar— funciona porque **redirige
+crecimiento futuro**, no porque cambie lo ya construido.
+
+## Los cuatro órganos y el contrato de cada uno
+
+Una planta vascular tiene cuatro tipos de órgano. Los tres primeros son **vegetativos**
+(construyen y mantienen el individuo) y el cuarto es **reproductivo**.
+
+| Órgano | Función primaria | Funciones secundarias frecuentes | Punto de fallo típico |
+|---|---|---|---|
+| Raíz | Absorber agua e iones; anclar | Almacenar reservas; asociarse con microbios | Asfixia por falta de oxígeno |
+| Tallo | Sostener y transportar | Almacenar; fotosintetizar; propagar | Rotura del cambium; estrangulamiento |
+| Hoja | Fotosintetizar; regular el intercambio gaseoso | Almacenar; propagar | Pérdida de agua sin reposición |
+| Flor / fruto / semilla | Reproducir y dispersar | Atraer polinizadores | Aborto por estrés |
+
+Lo interesante no es la tabla, sino que **estas funciones no son fijas**. La misma estructura
+básica —un tallo— puede convertirse en un órgano de almacenamiento subterráneo, en una espina o
+en un zarcillo. Esa plasticidad es la que hace que la yautía tenga cormos, que la batata tenga
+raíces tuberosas y que el plátano tenga un "tronco" que en realidad no es un tronco. Volveremos
+a esto en la lección 5 de este módulo, porque de ahí sale la mitad de tu catálogo comercial.
+
+## La raíz: una interfaz con un medio opaco
+
+La raíz es el subsistema que peor entendemos porque no lo vemos. Y es donde se origina la
+mayoría de los problemas de un vivero.
+
+### Las cuatro zonas de una punta de raíz
+
+Una raíz no crece por todas partes. Crece por la punta, y esa punta tiene una organización
+estricta en cuatro zonas que se suceden en apenas uno o dos centímetros:
+
+<Diagrama
+  src="zonas-raiz.webp"
+  alt="Corte longitudinal de un ápice radicular dividido en cuatro zonas: de abajo arriba, cofia, meristemo apical, zona de elongación y zona pilífera con sus pelos radiculares."
+  pie="Las cuatro zonas se suceden en apenas uno o dos centímetros. Por encima de la zona pilífera viene la zona de maduración, donde los tejidos ya están diferenciados y nacen las raíces laterales. Las proporciones varían mucho entre especies."
+/>
+
+La <Termino slug="cofia">cofia</Termino> es un casco de células que se sacrifican por rozamiento
+mientras la raíz avanza entre partículas de suelo, y que además secretan un mucílago lubricante.
+Se desgasta y se repone continuamente.
+
+Detrás va el <Termino slug="meristemo">meristemo</Termino> apical, el único sitio donde hay
+división celular. Después, la zona de elongación: las células no se dividen, se **alargan**
+llenándose de agua. Ese alargamiento es lo que literalmente empuja la punta hacia abajo.
+
+Y luego está la zona que nos importa comercialmente: la **zona pilífera**.
+
+### Los pelos radiculares y el problema de la superficie
+
+Los <Termino slug="pelos-radiculares">pelos radiculares</Termino> son prolongaciones de una sola
+célula de la epidermis. Miden menos de un milímetro. Y son, en la práctica, **toda** la
+capacidad de absorción de la planta.
+
+El motivo es puramente geométrico. Absorber es un problema de superficie de contacto, y un
+cilindro liso tiene muy poca superficie por unidad de volumen. Los pelos multiplican esa
+superficie entre 2 y 10 veces sin que la planta tenga que invertir en más volumen de raíz.
+
+<Dato titulo="El orden de magnitud que hay que retener">
+En una planta de centeno adulta se midió una superficie radicular total de unos 600 m², de los
+cuales alrededor de **480 m² correspondían solo a los pelos radiculares**. La raíz "gruesa" que
+uno se imagina aporta una fracción minoritaria del contacto real con el suelo.
+
+Traducción práctica: cuando arrancas un plantín del suelo, la parte que ves intacta es la que
+**no** absorbe. La que absorbía se quedó rota en la tierra.
+</Dato>
+
+Los pelos radiculares viven días, no meses. Se forman continuamente detrás de la zona de
+elongación y mueren detrás. Esto significa que **la zona activa de absorción de una raíz es una
+banda móvil que se desplaza hacia abajo con la punta**. La raíz vieja, la que está más arriba, ya
+solo transporta y ancla.
+
+<Advertencia titulo="Por qué un trasplante mal hecho tarda semanas en recuperarse">
+Al arrancar una planta destruyes los pelos radiculares. La planta queda con toda su superficie
+foliar transpirando y con una fracción de su capacidad de absorción. Ese desequilibrio —no el
+"susto"— es el estrés de trasplante.
+
+Reconstruir la zona pilífera lleva días. Por eso funcionan las tres medidas clásicas: trasplantar
+con cepellón (no destruyes los pelos), reducir la parte aérea (bajas la demanda) y dar sombra los
+primeros días (bajas la transpiración). Las tres atacan el mismo desequilibrio por lados
+distintos.
+</Advertencia>
+
+<Video id="pkOBy6zGQPY" />
+
+### Dentro de la raíz: el filtro obligatorio
+
+Una vez que el agua entra por un pelo radicular, tiene que llegar al centro de la raíz, donde
+están los conductos que la llevarán arriba. Hay dos caminos posibles:
+
+- **Vía apoplástica**: por fuera de las células, entre las paredes celulares. Es rápida, pasiva
+  y **sin control**: pasa lo que haya disuelto, bueno o malo.
+- **Vía simplástica**: atravesando membranas celulares de célula en célula. Es lenta, cuesta
+  energía y es **selectiva**: la planta decide qué iones deja entrar.
+
+Si solo existiera la primera, cualquier cosa disuelta en el suelo entraría directa al torrente de
+la planta. La solución evolutiva es un anillo de células, la endodermis, cuyas paredes tienen una
+banda impermeable de suberina: la <Termino slug="banda-de-caspary">banda de Caspary</Termino>.
+
+<Analogia titulo="La banda de Caspary es un firewall">
+La banda de Caspary sella la vía "por fuera de las células" y **obliga a todo el tráfico a
+atravesar al menos una membrana celular** antes de llegar al cilindro central.
+
+Es exactamente un cortafuegos que cierra la ruta no autenticada y fuerza todas las peticiones a
+pasar por un punto de control donde se aplican políticas. Nada llega al núcleo sin haber sido
+inspeccionado por un transportador de membrana específico.
+
+Y como todo cortafuegos, tiene un coste: ese paso obligatorio consume ATP. La absorción selectiva
+de nutrientes es un proceso **activo**, y por eso depende del oxígeno. Una raíz sin oxígeno no
+puede alimentar a la planta aunque esté rodeada de nutrientes.
+</Analogia>
+
+Ese último párrafo es, probablemente, el dato más rentable de toda la lección. Lo desarrollaremos
+en el bloque de aplicación.
+
+## El sistema vascular: dos redes en sentidos opuestos
+
+El transporte a larga distancia lo hacen dos tejidos distintos que corren en paralelo por toda la
+planta, y que funcionan con principios físicos **completamente diferentes**.
+
+<Diagrama
+  src="xilema-floema.webp"
+  alt="Planta esquemática con dos canales paralelos dentro del tallo: el xilema en verde con una flecha ascendente que lleva agua y minerales, y el floema en terracota con una flecha descendente que lleva azúcares."
+  pie="Dos redes en paralelo y en sentidos opuestos. Ojo con la simplificación de la flecha del floema: su dirección no es siempre descendente, sino de donde se produce a donde se consume. Se explica más abajo."
+/>
+
+<Video id="JhbhSr2OaQY" />
+
+### Xilema: una red pasiva que tira, no que empuja
+
+El <Termino slug="xilema">xilema</Termino> lleva agua y minerales de la raíz a las hojas. Sus
+conductos son **células muertas**: tubos huecos, con la pared reforzada y sin contenido.
+
+La pregunta obvia es cómo sube el agua diez, treinta o cien metros sin una bomba. La respuesta es
+que no la empuja nada desde abajo: **la tira la evaporación desde arriba**.
+
+<Formula explicacion="El agua se evapora en la hoja, eso genera tensión, y esa tensión se transmite por una columna continua de agua hasta la raíz.">
+evaporación en la hoja → tensión → cohesión del agua → ascenso
+</Formula>
+
+El mecanismo se llama **cohesión-tensión** y depende de una propiedad del agua: sus moléculas se
+adhieren unas a otras con fuerza suficiente para sostener una columna continua bajo tensión, como
+si fuera un hilo sólido. Cuando una molécula se evapora en la hoja, tira de la siguiente, y el
+tirón se propaga hasta la raíz.
+
+<Analogia>
+El xilema no es una tubería presurizada: es una red **pasiva** operando a presión negativa. No
+hay bomba, hay succión distribuida generada en los extremos.
+
+La consecuencia de ingeniería es la que esperarías de cualquier sistema que trabaja a presión
+negativa: **es vulnerable a que entre aire**. Si se rompe la continuidad de la columna, se forma
+una burbuja —embolia— y ese conducto queda inutilizado. Es un fallo permanente de ese vaso
+concreto. La planta lo tolera porque tiene miles de conductos en paralelo: redundancia masiva en
+lugar de fiabilidad individual.
+</Analogia>
+
+### Floema: una red activa que sí presuriza
+
+El <Termino slug="floema">floema</Termino> lleva los azúcares fabricados en la fotosíntesis hacia
+donde se necesiten. Sus conductos son **células vivas**, y el flujo se genera de otra manera.
+
+En el origen —una hoja iluminada— la planta **carga activamente** azúcares en el conducto,
+gastando energía. Esa concentración de azúcar atrae agua por ósmosis desde el xilema vecino, y esa
+entrada de agua genera **presión positiva**. En el destino —una raíz, un fruto, un cormo en
+formación— se descargan los azúcares, sale el agua, y la presión cae. El resultado es un flujo
+por diferencia de presión entre origen y destino.
+
+<Dato titulo="Origen y destino, no arriba y abajo">
+La dirección del floema no es fija: depende de quién produce y quién consume en ese momento. Una
+hoja joven que aún no se sostiene sola es un **destino**; dos semanas después, es un **origen**.
+Un cormo de yautía es destino mientras engorda y pasa a ser origen cuando rebrota.
+
+Esto es exactamente un sistema origen-destino que se reconfigura en caliente. Y es la base
+fisiológica de todo lo que harás para manejar la producción: cuando pinzas una planta para que
+engorde raíz en vez de hacer hoja, lo que estás haciendo es **eliminar destinos que competían**.
+</Dato>
+
+## El tallo: soporte, transporte y —lo que más importa— direcciones
+
+El tallo sostiene, conecta las dos redes vasculares y a menudo almacena. Pero para un viverista
+su rasgo decisivo es otro: **el tallo es donde están las direcciones a las que puedes escribir**.
+
+Un tallo no es un cilindro uniforme. Está segmentado:
+
+- El <Termino slug="nudo">nudo</Termino> es el punto donde se inserta una hoja.
+- El <Termino slug="entrenudo">entrenudo</Termino> es el tramo entre dos nudos.
+- En la axila de cada hoja —el ángulo entre hoja y tallo— hay una
+  <Termino slug="yema-axilar">yema axilar</Termino>: un meristemo en pausa, capaz de generar una
+  rama entera.
+
+<Diagrama
+  src="tallo-nudos-yemas.webp"
+  alt="Tallo esquemático con la yema apical en el extremo, nudos donde se insertan las hojas, yemas axilares en cada axila, entrenudos entre nudos, y una flecha descendente que representa el transporte de auxina."
+  pie="Un tallo es una secuencia de nudos, cada uno con una yema latente. La flecha marca el descenso de la auxina producida en el ápice: mientras ese flujo exista, las yemas de abajo no arrancan. Ahí está toda la propagación por esquejes y todo el pinzado de ornamentales."
+/>
+
+Cada yema axilar contiene la información completa para construir un eje nuevo. Están ahí, en
+pausa, esperando una señal. Y esa señal es, casi siempre, **la desaparición del ápice**.
+
+### Dominancia apical: un cerrojo hormonal
+
+La yema del extremo produce <Termino slug="auxina">auxina</Termino>, una hormona que, transportada
+hacia abajo, **inhibe la activación de las yemas axilares**. Mientras el ápice esté ahí, las de
+abajo no arrancan. Se llama <Termino slug="dominancia-apical">dominancia apical</Termino>.
+
+<Analogia>
+Es un cerrojo mantenido por el proceso principal: mientras el ápice vive, retiene el bloqueo y
+ningún otro proceso puede arrancar. Cortas el ápice, el bloqueo se libera, y varias yemas
+compiten por tomar el relevo.
+
+Eso es todo lo que ocurre cuando pinzas una planta para que ramifique. No la estás "estimulando":
+estás **matando al proceso que retenía el cerrojo**. Y por eso una duranta pinzada dos veces
+vende como planta compacta y sin pinzar vende como palo.
+</Analogia>
+
+## Los meristemos: dónde se ejecuta la construcción
+
+Ya han aparecido varias veces. Toca definirlos bien, porque son el concepto que conecta esta
+lección con todo el Módulo 6.
+
+Un <Termino slug="meristemo">meristemo</Termino> es un tejido de células no diferenciadas que
+conservan la capacidad de dividirse indefinidamente. Todo el cuerpo de la planta sale de ellos.
+Hay tres tipos:
+
+- **Apicales**: en la punta de cada tallo y de cada raíz. Producen el crecimiento en longitud
+  (crecimiento primario).
+- **Laterales**: el <Termino slug="cambium">cámbium</Termino>, un cilindro delgado bajo la
+  corteza. Produce el crecimiento en grosor (crecimiento secundario). Es lo que engorda un tronco
+  y lo que hace posible un injerto.
+- **Intercalares**: en la base de los entrenudos de algunas plantas, sobre todo gramíneas. Por eso
+  el césped rebrota después de cortarlo: su zona de crecimiento está abajo, no en la punta.
+
+<Video id="1VCSjoUAC3Q" />
+
+### Totipotencia: la propiedad que hace posible tu vivero
+
+Aquí está la propiedad más extraordinaria de las plantas y la base económica de un vivero.
+
+Muchas células vegetales vivas son <Termino slug="totipotencia">totipotentes</Termino>: conservan
+el genoma completo **y la capacidad de volver a expresarlo entero**. Una célula de tallo puede,
+bajo las señales adecuadas, desdiferenciarse y regenerar raíces, hojas y una planta completa.
+
+<Analogia>
+Un animal no puede hacer esto. Una célula de tu piel no puede reconstruir un cuerpo entero: está
+comprometida de forma irreversible con su función.
+
+Una célula de tallo de duranta sí. Es como si cualquier objeto en memoria conservara el
+constructor completo de la clase raíz y pudiera reinstanciar el sistema entero a partir de sí
+mismo. No hay borrado del estado; hay un camino de vuelta.
+
+Comercialmente, esto significa que **puedes clonar**. De una planta madre sacas cientos de
+individuos genéticamente idénticos, con las características exactas que tu cliente vio y quiso.
+La totipotencia es, literalmente, el activo productivo de un vivero.
+</Analogia>
+
+## Aplicación práctica
+
+<AplicarRizoma>
+Cuatro decisiones concretas para los 2.474 m² de Estrellas del Sur salen directamente de esta
+lección.
+
+**1. El oxígeno de la raíz manda sobre el agua, y aquí eso decide el trazado.**
+La absorción selectiva de nutrientes atraviesa membranas y gasta ATP, y el ATP necesita oxígeno.
+Una raíz encharcada no puede alimentarse aunque flote en nutrientes. En Zanja Honda, con lluvias
+de octubre a abril y suelos de llanura con drenaje lento, la asfixia radicular va a ser un
+problema mayor que la sequía durante seis meses del año.
+
+Consecuencia de diseño: la zona de propagación y las camas de cultivo van **elevadas**, y el
+trazado de los ocho lotes debe resolver por dónde sale el agua antes de decidir por dónde entra.
+Un vivero que se inunda tres días pierde el inventario de esos tres días.
+
+**2. La yautía es un cultivo de destino subterráneo, y eso cambia el manejo.**
+El cormo engorda porque es un destino que compite con los demás por los azúcares del floema.
+Todo lo que genere destinos competidores en la parte aérea —crecimiento foliar excesivo por
+exceso de nitrógeno, emisión de hijuelos sin control— resta cormo. Cuando llegues al Módulo 10 y
+tengas que decidir la fertilización, la pregunta no será "cuánto nitrógeno" sino "en qué momento
+dejo de favorecer la hoja".
+
+**3. Las ornamentales de venta rápida se ganan con el cerrojo apical.**
+Duranta, cayena y veranera se venden por porte compacto y ramificado. Eso no se consigue
+esperando: se consigue **pinzando**, es decir, quitando el ápice para liberar la dominancia
+apical y forzar la brotación de las yemas axilares. Dos pinzados bien puestos son la diferencia
+entre un producto de venta y un palo con hojas. Es una intervención de cinco segundos por planta
+que multiplica su precio.
+
+**4. El trasplante hay que planificarlo alrededor de los pelos radiculares.**
+Todo el flujo del vivero —de semillero a bolsa, de bolsa a campo— destruye zona pilífera. El
+protocolo que necesitas es siempre el mismo: cepellón intacto, reducción de área foliar cuando
+proceda, y sombra los primeros días. Y trasplantar por la tarde, nunca a mediodía: le das a la
+planta toda la noche para rehidratarse antes de enfrentar demanda de transpiración.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La bibliografía que vas a encontrar asume un clima que no es el tuyo.**
+
+Casi todo el material bueno de horticultura en internet viene de Estados Unidos o de Europa, y
+está escrito para climas templados con estaciones marcadas, donde el año tiene un invierno que
+detiene el crecimiento y una primavera que lo reinicia. Ese ritmo es el esqueleto implícito de
+todos sus calendarios.
+
+Santa Cruz no funciona así. A 529 msnm y con clima tropical de sabana, el factor que estructura
+el año **no es la temperatura, es el agua**: lluvias de octubre a abril, seca de mayo a
+septiembre. Cuando una fuente estadounidense dice "sembrar en primavera", lo que su autor quiere
+decir es "cuando cese el riesgo de helada y suba la temperatura del suelo". Aquí esa restricción
+casi no existe y en cambio existe otra: la disponibilidad de agua y el exceso de agua.
+
+**El surazo es la excepción que rompe la regla anterior.** Entre abril y septiembre pueden entrar
+masas de aire frío del sur que bajan la temperatura nocturna hasta unos 10 °C en pocas horas. No
+es una helada, pero para especies de origen caribeño como la yautía, el ají dulce o el gandul es
+un frenazo fisiológico: a esas temperaturas el transporte por floema y la actividad de los
+meristemos se ralentizan mucho. Una planta que parece "detenida" tras un surazo no está enferma,
+está a temperatura subóptima. La respuesta correcta suele ser esperar y **no** fertilizar: una
+raíz fría absorbe mal, y el fertilizante que no se absorbe se pierde o saliniza.
+
+**Sobre el vocabulario.** En la literatura técnica boliviana y del oriente encontrarás "almácigo"
+donde las fuentes españolas dicen "semillero", y "plantín" donde dicen "plántula" o "planta
+joven". En el mercado local también oirás "cepellón" y "pan de tierra" como sinónimos. Conviene
+que uses el vocabulario local desde el principio: es el que van a entender tus proveedores en
+los agropecuarios de Santa Cruz y los peones que contrates.
+</ContextoBolivia>
+
+## Errores comunes que ya puedes evitar
+
+**"Riego más para que absorba más nutrientes."** Al revés. Pasado el punto de saturación, más
+agua desplaza el aire de los poros, la raíz se queda sin oxígeno, y la absorción activa —que es
+la selectiva, la que trae los nutrientes— se detiene. El síntoma es idéntico al de una carencia
+nutricional, y por eso se responde fertilizando, lo cual empeora el problema.
+
+**"La planta se marchita a mediodía, le falta agua."** No necesariamente. Una marchitez temporal
+al mediodía con recuperación al atardecer es normal: la transpiración supera momentáneamente la
+absorción. Si el suelo está húmedo y la planta se recupera sola, el sistema está funcionando como
+debe. Marchitez que persiste de madrugada es otra cosa, y ahí sí hay que actuar.
+
+**"Poda para estimular el crecimiento."** La poda no añade energía al sistema; **redistribuye** la
+que hay. Funciona porque libera el cerrojo hormonal y porque concentra los recursos en menos
+destinos. Podar una planta debilitada no la fortalece: le quita área fotosintética que necesitaba.
+
+**"Las raíces buscan el agua."** Las raíces no detectan agua a distancia y se dirigen a ella.
+Proliferan más donde encuentran condiciones favorables y menos donde no. El resultado se parece a
+una búsqueda dirigida, pero el mecanismo es crecimiento diferencial, no navegación. La distinción
+importa cuando diseñes el riego: si mojas siempre el mismo punto, tendrás todo el sistema
+radicular concentrado ahí, y una planta así es frágil.
+
+## Lo que sigue
+
+Ya tienes el mapa de componentes. Sabes qué órganos hay, qué hace cada uno, cómo se comunican y
+dónde se construye tejido nuevo. Lo que todavía no sabes es **de dónde sale la energía** que
+mueve todo esto.
+
+En la próxima lección entramos en las tres reacciones que definen el metabolismo vegetal:
+fotosíntesis, respiración y transpiración. Y en particular en el compromiso imposible que
+gobierna la vida de cualquier planta en clima tropical: para capturar CO₂ hay que abrir los
+estomas, y abrir los estomas cuesta agua. Todo el manejo de un vivero en Santa Cruz —la malla
+sombra, la nebulización, la hora del riego— es una negociación alrededor de ese único conflicto.

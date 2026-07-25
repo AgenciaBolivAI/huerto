@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+
+# Nunca se commitea: contiene la service_role key de Supabase, que da acceso
+# total a la base de datos saltándose RLS.
+.env*.local
+.vercel

@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Compensa la cabecera fija al saltar a un ancla del contenido. */
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    @apply bg-crema-100 text-tinta-900 antialiased;
+    @apply dark:bg-tinta-950 dark:text-crema-100;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+    /* Fraunces es variable: fijamos el eje óptico para que los titulares no se
+       vuelvan demasiado "display" en tamaños medianos. */
+    font-variation-settings: 'SOFT' 0, 'WONK' 0;
+  }
+
+  ::selection {
+    @apply bg-salvia-300 text-tinta-900;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-bosque-500 ring-offset-2 ring-offset-crema-100;
+    @apply dark:ring-salvia-400 dark:ring-offset-tinta-950;
+  }
+}
+
+@layer components {
+  /* Etiqueta pequeña en versalitas sobre un titular de sección. */
+  .eyebrow {
+    @apply text-[0.68rem] font-semibold uppercase tracking-marca text-tierra-600;
+    @apply dark:text-tierra-300;
+  }
+
+  /* Filete que crece bajo un eyebrow. Se usa como <span className="regla-crece" /> */
+  .regla-crece {
+    @apply block h-px w-12 origin-left bg-tierra-400 animate-crecer-linea;
+  }
+
+  /* Marco de doble filete, tomado de la señalética de Rizoma del Sur. */
+  .marco-filete {
+    @apply relative rounded-2xl ring-1 ring-tierra-300/60 dark:ring-tierra-400/25;
+  }
+  .marco-filete::after {
+    content: '';
+    @apply pointer-events-none absolute inset-[5px] rounded-xl ring-1 ring-tierra-300/40;
+    @apply dark:ring-tierra-400/15;
+  }
+
+  .tarjeta {
+    @apply rounded-2xl bg-white/70 shadow-suave ring-1 ring-tinta-900/5 backdrop-blur;
+    @apply dark:bg-tinta-900/60 dark:ring-crema-100/10;
+  }
+
+  .seccion {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+}
+
+/*
+ * Tipografía del cuerpo de la lección. Se escribe a mano en vez de usar
+ * @tailwindcss/typography para tener control exacto sobre el ritmo vertical y
+ * sobre cómo respiran los bloques destacados dentro del texto.
+ */
+@layer components {
+  .prosa {
+    @apply max-w-lectura text-[1.0625rem] leading-[1.75] text-tinta-800 dark:text-crema-100/85;
+  }
+
+  .prosa > * + * {
+    @apply mt-5;
+  }
+
+  .prosa h2 {
+    @apply mt-14 scroll-mt-24 text-2xl font-semibold leading-tight text-bosque-800 sm:text-3xl;
+    @apply dark:text-salvia-200;
+  }
+
+  .prosa h3 {
+    @apply mt-10 scroll-mt-24 text-xl font-semibold leading-snug text-bosque-700 sm:text-2xl;
+    @apply dark:text-salvia-300;
+  }
+
+  .prosa h4 {
+    @apply mt-8 scroll-mt-24 text-lg font-semibold text-bosque-700 dark:text-salvia-300;
+  }
+
+  .prosa a {
+    @apply font-medium text-bosque-600 underline decoration-salvia-400 underline-offset-2;
+    @apply hover:decoration-bosque-600 dark:text-salvia-300 dark:decoration-salvia-500;
+  }
+
+  .prosa strong {
+    @apply font-semibold text-tinta-900 dark:text-crema-50;
+  }
+
+  .prosa ul {
+    @apply list-disc space-y-2 pl-6 marker:text-salvia-500;
+  }
+
+  .prosa ol {
+    @apply list-decimal space-y-2 pl-6 marker:text-salvia-500 marker:font-semibold;
+  }
+
+  .prosa li > ul,
+  .prosa li > ol {
+    @apply mt-2;
+  }
+
+  .prosa blockquote {
+    @apply border-l-2 border-tierra-400 pl-5 italic text-tinta-700 dark:text-crema-100/75;
+  }
+
+  .prosa code {
+    @apply rounded bg-salvia-100 px-1.5 py-0.5 font-mono text-[0.86em] text-bosque-800;
+    @apply dark:bg-tinta-800 dark:text-salvia-200;
+  }
+
+  .prosa pre {
+    @apply overflow-x-auto rounded-xl bg-tinta-900 p-4 text-[0.86rem] leading-relaxed text-crema-100;
+    @apply dark:bg-black/40 dark:ring-1 dark:ring-crema-100/10;
+  }
+
+  .prosa pre code {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  .prosa hr {
+    @apply my-12 border-0 border-t border-salvia-300/60 dark:border-crema-100/10;
+  }
+
+  /* Las tablas de datos son frecuentes en este curso (rangos de pH, densidades
+     de siembra, calendarios). Deben poder desbordarse en horizontal sin romper
+     el ancho de la página. */
+  .prosa .tabla-envoltura {
+    @apply -mx-1 overflow-x-auto rounded-xl ring-1 ring-tinta-900/10 dark:ring-crema-100/10;
+  }
+
+  .prosa table {
+    @apply w-full border-collapse text-left text-[0.94rem];
+  }
+
+  .prosa thead {
+    @apply bg-bosque-700 text-crema-50 dark:bg-bosque-800;
+  }
+
+  .prosa th {
+    @apply whitespace-nowrap px-4 py-2.5 font-semibold;
+  }
+
+  .prosa td {
+    @apply border-t border-salvia-200 px-4 py-2.5 align-top dark:border-crema-100/10;
+  }
+
+  .prosa tbody tr:nth-child(even) {
+    @apply bg-salvia-50/60 dark:bg-white/[0.03];
+  }
+}
+
+/*
+ * Variante de .prosa para el interior del bloque APLICAR A RIZOMA DEL SUR,
+ * que va sobre verde bosque: mismo ritmo, colores invertidos.
+ */
+@layer components {
+  .prosa-invertida {
+    @apply max-w-lectura text-[1rem] leading-[1.7] text-crema-100/90;
+  }
+
+  .prosa-invertida > * + * {
+    @apply mt-4;
+  }
+
+  .prosa-invertida strong {
+    @apply font-semibold text-crema-50;
+  }
+
+  .prosa-invertida a {
+    @apply font-medium text-salvia-300 underline decoration-salvia-500 underline-offset-2;
+  }
+
+  .prosa-invertida ul {
+    @apply list-disc space-y-1.5 pl-5 marker:text-salvia-400;
+  }
+
+  .prosa-invertida ol {
+    @apply list-decimal space-y-1.5 pl-5 marker:font-semibold marker:text-salvia-400;
+  }
+
+  .prosa-invertida code {
+    @apply rounded bg-black/25 px-1.5 py-0.5 font-mono text-[0.86em] text-salvia-200;
+  }
+
+  .prosa-invertida h4 {
+    @apply mt-6 text-base font-semibold text-crema-50;
+  }
+
+  .prosa-invertida table {
+    @apply w-full border-collapse text-left text-[0.9rem];
+  }
+
+  .prosa-invertida th {
+    @apply border-b border-crema-50/25 px-3 py-2 font-semibold text-crema-50;
+  }
+
+  .prosa-invertida td {
+    @apply border-b border-crema-50/10 px-3 py-2 align-top;
+  }
+}
+
+/* El editor de notas y los <textarea> heredan la tipografía del cuerpo. */
+textarea {
+  font-family: inherit;
+}
