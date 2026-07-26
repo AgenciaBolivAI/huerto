@@ -1,0 +1,283 @@
+Es perfectamente posible tener un suelo cargado de fósforo del que tu planta no pueda tomar ni un
+gramo. No porque falte, no porque la raíz esté enferma, no porque el agua no llegue: porque a ese
+pH el fósforo está químicamente unido a otra cosa y ya no es soluble.
+
+Ese es el asunto de esta lección. El <Termino slug="ph">pH</Termino> no alimenta a la planta.
+El pH **decide qué de lo que hay es alcanzable**.
+
+Y hay una consecuencia comercial directa: fertilizar un suelo con el pH equivocado es tirar
+dinero. El nutriente entra, se bloquea, y sigues con la carencia. Antes de comprar un solo saco de
+fertilizante conviene saber en qué pH estás.
+
+## Qué mide el pH, y por qué la escala engaña
+
+El pH mide la concentración de iones de hidrógeno libres en la solución del suelo. Va de 0 a 14,
+con 7 como neutro: por debajo es ácido, por encima alcalino.
+
+<Diagrama
+  src="escala-ph.webp"
+  alt="Escala horizontal de pH del 4 al 9, con gradiente de color de rojo terracota a la izquierda hasta azul verdoso a la derecha, marcada como ácido, neutro y alcalino, y con una banda destacada entre 6 y 7 señalada como rango óptimo para la mayoría de cultivos."
+  pie="La banda destacada es donde la mayoría de los nutrientes coinciden en estar disponibles a la vez. No es que las plantas «prefieran» ese pH: es que ahí la química coopera."
+/>
+
+Lo que casi nadie interioriza es que **la escala es logarítmica**. Cada unidad es un factor de
+diez.
+
+<Formula explicacion="Un suelo a pH 5 tiene diez veces más acidez que uno a pH 6, y cien veces más que uno a pH 7.">
+pH = −log [H⁺]
+</Formula>
+
+<Dato titulo="Por qué esto importa en la práctica">
+Cuando alguien dice «mi suelo está solo un poco ácido, a 5,5 en vez de 6,5», está describiendo una
+diferencia de **diez veces** en concentración de hidrógeno.
+
+Y en la otra dirección: corregir de 5,0 a 6,0 cuesta bastante menos enmienda que corregir de 4,0 a
+5,0, aunque en la escala se vea el mismo salto. La corrección de pH nunca es lineal, y esa es una
+de las razones por las que la dosis de cal no se puede estimar a ojo.
+</Dato>
+
+## El mecanismo: por qué el pH bloquea nutrientes
+
+Cada nutriente tiene un rango de pH en el que su forma química es soluble y, por tanto,
+absorbible. Fuera de ese rango, reacciona con otros iones presentes y precipita en compuestos que
+la raíz no puede tomar.
+
+El caso más claro y más costoso es el del fósforo:
+
+<Diagrama
+  src="fosforo-segun-ph.webp"
+  alt="Tres paneles con el mismo ion de fósforo ante una raíz: a pH bajo queda atrapado en una jaula de hierro y aluminio, entre pH 6 y 7 está libre y entra en la raíz, y a pH alto queda atrapado en una jaula de calcio."
+  pie="El fósforo no desaparece en ninguno de los tres casos: sigue estando en el suelo y un análisis de fósforo total lo detectaría. Lo que cambia es si la planta puede tomarlo."
+/>
+
+<Analogia>
+Piensa en el pH como el **control de acceso** del suelo.
+
+Los nutrientes son los recursos: están todos ahí, en el almacén. El pH es la política que decide
+cuáles se pueden leer en este momento.
+
+Y como toda política mal configurada, el fallo es silencioso y desconcertante: tu monitorización
+dice que el recurso existe —el análisis reporta fósforo—, la aplicación dice que no puede
+accederlo —la planta muestra carencia—, y añadir más recursos no arregla nada porque el problema
+nunca fue de cantidad.
+
+Corriges el pH y de pronto «aparece» fósforo que llevaba años ahí.
+</Analogia>
+
+Esta es la tabla que resume el comportamiento de cada grupo:
+
+| Nutriente | Se bloquea en… | Máxima disponibilidad |
+|---|---|---|
+| **Fósforo (P)** | Ácido, se une a Fe y Al · Alcalino, se une a Ca | 6,0 – 7,0 |
+| **Nitrógeno (N)** | Muy ácido: las bacterias nitrificantes se frenan | 6,0 – 8,0 |
+| **Potasio, calcio, magnesio** | Ácido: se lavan del complejo de cambio | 6,0 – 8,5 |
+| **Hierro, manganeso, zinc, cobre** | Alcalino: precipitan | 5,0 – 6,5 |
+| **Boro (B)** | Alcalino | 5,0 – 7,0 |
+| **Molibdeno (Mo)** | Ácido | 7,0 – 8,5 |
+
+Fíjate en la tensión: los micronutrientes metálicos quieren pH más bajo, los macronutrientes lo
+quieren más alto. Por eso el óptimo de compromiso está entre **6,0 y 7,0**, y por eso ningún pH
+hace felices a todos a la vez.
+
+<Video id="1Yu1Qg0INX8" />
+
+## El problema que de verdad importa en suelos tropicales ácidos: el aluminio
+
+Toda la discusión anterior es sobre disponibilidad. Pero en suelos ácidos hay algo más grave, y es
+un problema de **toxicidad directa**.
+
+Por debajo de aproximadamente pH 5,5, el aluminio de los minerales del suelo empieza a
+solubilizarse como Al³⁺. Y el aluminio soluble es tóxico para las raíces: **daña directamente el
+meristemo apical radicular**, ese que estudiaste en la lección 1 del Módulo 1. La raíz deja de
+alargarse, se engrosa, se vuelve corta y roma.
+
+<Diagrama
+  src="toxicidad-aluminio.webp"
+  alt="Dos paneles comparados: a pH 6,5 un sistema radicular sano, largo y muy ramificado; a pH 4,8 un sistema radicular atrofiado, corto y de puntas romas, rodeado de puntos de aluminio en el suelo."
+  pie="El daño del aluminio no es una carencia: es una lesión física del meristemo apical de la raíz. Y una raíz que no explora no encuentra ni agua ni nutrientes, así que los síntomas visibles arriba pueden parecer cualquier cosa."
+/>
+
+<Advertencia titulo="Por qué esto engaña tanto">
+Una planta con toxicidad de aluminio muestra síntomas de sequía y de carencias múltiples, porque
+su sistema radicular es demasiado pequeño para abastecerla. Riegas más y no mejora. Fertilizas y
+no mejora. El problema está en que la raíz no puede crecer.
+
+Es el ejemplo perfecto del principio del curso: **el síntoma visible casi nunca está donde está
+la causa.**
+
+Si un análisis reporta aluminio intercambiable alto o saturación de aluminio elevada, eso manda
+sobre casi todo lo demás y se corrige primero.
+</Advertencia>
+
+## Medirlo bien
+
+<Video id="n8M6AN30OZQ" />
+
+El método importa más de lo que parece, porque el número depende de **cómo lo mediste**. El
+estándar de laboratorio es una suspensión de suelo y agua destilada en proporción **1 : 2,5** en
+peso.
+
+<Diagrama
+  src="medicion-ph.webp"
+  alt="Vaso de laboratorio con una capa de suelo abajo y una capa de agua unas dos veces y media más alta encima, con una varilla de vidrio y la sonda de un medidor de pH digital introducida en el líquido."
+  pie="La proporción 1:2,5 en peso, suelo:agua destilada. Cambiar la proporción cambia el resultado, así que si comparas dos análisis conviene comprobar que usaron el mismo método."
+/>
+
+**El procedimiento, si lo haces tú:**
+
+1. Toma una muestra compuesta como en la lección 1: varios piquetes por lote, de 0 a 20 cm,
+   mezclados.
+2. Sécala al aire y tamízala.
+3. Pesa una parte de suelo y añade dos partes y media de **agua destilada** —no agua de pozo ni de
+   grifo, que traen su propia química y falsean la lectura.
+4. Agita bien y deja reposar unos 30 minutos.
+5. Mide con el peachímetro en la suspensión, tras calibrarlo con las soluciones patrón.
+
+<Video id="YnCen78LaNo" />
+
+**Sobre los medidores baratos de varilla**, esos «4 en 1» de jardinería que se clavan en la
+tierra: son útiles para detectar una tendencia y comparar dos puntos, pero no son fiables en valor
+absoluto y se descalibran con facilidad. Para decidir una dosis de encalado, análisis de
+laboratorio.
+
+## Corregirlo
+
+**Para subir el pH: encalado.** Se aportan carbonatos que neutralizan la acidez.
+
+| Material | Aporta | Cuándo elegirlo |
+|---|---|---|
+| Cal agrícola (carbonato de calcio) | Calcio | El caso general |
+| Dolomita (carbonato doble de calcio y magnesio) | Calcio y magnesio | Si el análisis muestra magnesio bajo |
+| Cal viva o apagada (óxido / hidróxido) | Calcio, reacción rápida | Solo con criterio: quema y es fácil pasarse |
+
+**Para bajar el pH** —suelos alcalinos— se usa azufre elemental, que las bacterias oxidan a ácido
+sulfúrico. Es lento, caro por unidad de efecto y difícil de sostener. En la práctica, es más
+barato elegir cultivos tolerantes que empeñarse en acidificar una parcela alcalina.
+
+<Dato titulo="La dosis no se deduce del pH">
+Dos suelos con el mismo pH de 5,0 pueden necesitar dosis de cal muy distintas.
+
+El motivo es el **poder tampón**: la capacidad del suelo de resistir cambios de pH. Un suelo
+arenoso y pobre en materia orgánica tiene poco tampón y cambia con poca cal; un suelo arcilloso y
+rico en materia orgánica tiene mucho tampón y exige bastante más.
+
+Ese poder tampón depende de la capacidad de intercambio catiónico, que es exactamente el tema de
+la próxima lección. Por eso el requerimiento de cal se calcula con el análisis completo —pH,
+acidez intercambiable, CIC— y no con el pH solo. Quien te venda una dosis sabiendo únicamente tu
+pH está adivinando.
+</Dato>
+
+Y una advertencia de calendario: la cal tarda **meses** en reaccionar, porque depende de que se
+disuelva. Se aplica bien incorporada y con humedad, con suficiente antelación a la siembra. Encalar
+la semana antes de plantar no sirve de nada.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Lo primero: no asumas tu pH, mídelo.** Y no lo asumas en los dos sentidos.
+
+Es tentador razonar «trópico con lluvias fuertes, luego suelo ácido y lavado». La lluvia
+efectivamente lava las bases —calcio, magnesio, potasio— y tiende a acidificar. Pero los suelos
+de la llanura aluvial del área integrada son **jóvenes**, de aporte reciente de sedimento, y a
+menudo tienen mejor estado de bases de lo que ese razonamiento sugiere. Puedes perfectamente
+tener un pH cercano a neutro.
+
+Este es exactamente el caso en que la teoría te da una expectativa y solo el análisis te da el
+dato. Y como el pH decide dónde va cada cultivo, conviene medirlo por lote junto con la textura,
+en la misma campaña de muestreo de la lección 1: mismo esfuerzo de campo, dos datos.
+
+**Tu catálogo no quiere todos el mismo pH.** Esto es una oportunidad de asignación, no un
+problema:
+
+| Cultivo | pH que prefiere | Nota |
+|---|---|---|
+| Yautía | 5,5 – 6,5 | Tolera algo de acidez; buena candidata a los lotes más ácidos |
+| Ají dulce, culantro | 6,0 – 6,8 | Quieren el rango cómodo |
+| Batata | 5,5 – 6,5 | Flexible, tolera acidez |
+| Gandul | 5,0 – 7,0 | Muy rústico, el más tolerante del catálogo |
+| Plátano | 5,5 – 7,0 | Amplio, pero exige mucho potasio |
+| Cítricos | 6,0 – 7,0 | Sensibles; en suelo alcalino dan clorosis férrica |
+| Mango | 5,5 – 7,0 | Amplio |
+| **Achachairú** | **5,0 – 6,0** | Es de la cuenca amazónica: **prefiere suelo ácido.** No lo encales |
+| Ornamentales (duranta, cayena, veranera) | 6,0 – 7,0 | Estándar |
+
+**Fíjate en el achachairú**, porque es el que rompe la regla. Encalar «para mejorar el suelo» un
+lote destinado a achachairú sería contraproducente. Si un lote sale ácido, no es un lote malo: es
+el lote del achachairú.
+
+Esa es la lógica que conviene adoptar en general — **asignar cultivo a lote según lo que el lote
+es**, en lugar de forzar todos los lotes a un mismo pH. Corregir suelo cuesta dinero cada año;
+elegir bien dónde va cada cosa es gratis y se hace una vez.
+
+**Y una nota de vivero que va aparte.** El pH de tu **sustrato** de contenedor es un problema
+distinto y separado del pH del suelo del terreno. En una bolsa no hay poder tampón que valga: el
+volumen es pequeño, y el pH lo determinan los componentes de la mezcla y, sobre todo, el agua de
+riego aplicada mil veces. Si tu agua es dura, el sustrato se irá alcalinizando con los meses
+aunque hayas partido de un pH correcto. Eso se ve en el Módulo 9, pero conviene saber desde ahora
+que son dos problemas y no uno.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El insumo existe y es accesible.** La cal agrícola se consigue en el área integrada de Santa
+Cruz a través de los agropecuarios y de las distribuidoras de insumos, y se vende por bolsa o a
+granel para volúmenes grandes. La **dolomita** también se encuentra, aunque menos, y es la
+elección correcta si el análisis muestra magnesio bajo, cosa frecuente en suelos que han sido
+lavados por lluvias intensas.
+
+**Cuidado con «cal» a secas.** En una ferretería, «cal» suele significar cal para construcción —
+cal viva o hidratada—, que es mucho más reactiva y es fácil pasarse y quemar el suelo. Lo que hay
+que pedir es explícitamente **cal agrícola** o **carbonato de calcio agrícola**, y conviene
+preguntar por la granulometría: cuanto más fina, más rápido reacciona.
+
+**El laboratorio y qué pedir.** Como en la lección 1, los referentes son el **CIAT** en Saavedra y
+la **Facultad de Ciencias Agrícolas de la UAGRM**. Para esta lección, en el análisis conviene
+pedir explícitamente, además del pH: **acidez intercambiable, aluminio intercambiable y CIC**. Sin
+esos tres no se puede calcular una dosis de cal, y un análisis básico puede no incluirlos. Pedirlos
+de entrada cuesta poco más y evita repetir el muestreo.
+
+**Por qué la bibliografía brasileña te va a servir más que la española.** Buena parte del
+conocimiento agronómico sobre encalado en suelos tropicales ácidos viene de Brasil, y en concreto
+del trabajo sobre los suelos del Cerrado, que llevan décadas corrigiéndose. El contexto climático
+y edafológico es mucho más cercano al del oriente boliviano que el de cualquier fuente europea.
+Si buscas en portugués *«calagem»* y *«saturação por bases»* vas a encontrar material mejor
+adaptado a tu realidad que buscando en español de España.
+
+**Sobre el agua de riego.** En el oriente es común regar con agua de pozo, y su composición varía
+mucho de un pozo a otro. Un agua con bicarbonatos altos alcaliniza el suelo poco a poco, riego
+tras riego, y puede deshacer un encalado o empujar un suelo neutro hacia alcalino en unos años.
+Analizar el agua una vez, al principio, es barato y evita un diagnóstico equivocado más adelante.
+</ContextoBolivia>
+
+## Errores comunes
+
+**"Tiene carencia de fósforo, le echo fósforo."** Si el pH está fuera de rango, el fósforo nuevo se
+bloquea igual que el que ya había. Primero se comprueba el pH; si está mal, corregirlo puede
+liberar fósforo que llevaba años en el suelo sin que se pudiera usar.
+
+**"Le eché cal, a ver si sube."** La dosis depende del poder tampón, no del pH. Sin análisis se
+queda corto —y no pasa nada, solo dinero perdido— o se pasa, y entonces se bloquean los
+micronutrientes metálicos y aparece un problema nuevo. Sobreencalar es más difícil de arreglar que
+encalar poco.
+
+**"El medidor de varilla dice 6,5."** Sirve para comparar dos puntos, no para decidir una dosis.
+Se descalibran y su exactitud absoluta es mala.
+
+**"Encalé el mes pasado y sigue igual."** La cal tarda meses. Se aplica con antelación, incorporada
+y con humedad.
+
+**"Mi suelo es tropical, así que es ácido."** No necesariamente, y menos en llanura aluvial joven.
+Es una expectativa razonable, no un dato.
+
+**"Voy a dejar todos los lotes al mismo pH."** Cuesta dinero cada año y desaprovecha la
+oportunidad de asignar cada cultivo al lote que ya le conviene. El achachairú, sin ir más lejos,
+quiere lo contrario que los cítricos.
+
+## Lo que sigue
+
+Ha aparecido dos veces una idea sin explicar: el **poder tampón**, esa capacidad del suelo de
+resistirse a cambiar de pH, y que determina cuánta cal hace falta de verdad.
+
+Detrás de ella hay un único mecanismo, y es el mismo que explica por qué unos suelos retienen
+nutrientes y otros los pierden con cada lluvia, por qué el humus vale tanto, y por qué dos suelos
+con el mismo análisis de nutrientes pueden comportarse de forma opuesta. Se llama **capacidad de
+intercambio catiónico**, y es la próxima lección.

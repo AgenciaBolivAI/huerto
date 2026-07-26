@@ -10,6 +10,7 @@
  *   · los prerrequisitos apuntan a lecciones que existen
  *   · cada <Video id="…"> del MDX está en el meta.json de esa lección
  *   · cada <Termino slug="…"> existe en el glosario
+ *   · cada imagen en disco se usa en su lección, y cada imagen usada existe
  *   · toda lección práctica lleva APLICAR A RIZOMA DEL SUR y CONTEXTO BOLIVIA
  *   · ningún video quedó marcado como no verificado
  *
@@ -271,8 +272,10 @@ for (const modulo of modulos.sort()) {
     // Toda imagen referenciada tiene que estar en disco: si falta, el lector ve
     // un hueco roto en mitad de la explicación.
     const dirImagenes = path.join(RAIZ, 'public', 'imagenes', modulo, slug);
+    const imagenesUsadas = new Set();
     const comprobarImagen = (archivo, donde) => {
       if (archivo.startsWith('/')) return; // ruta absoluta, se gestiona aparte
+      imagenesUsadas.add(archivo);
       if (!fs.existsSync(path.join(dirImagenes, archivo)))
         error(donde, `falta la imagen public/imagenes/${leccionId}/${archivo}`);
     };
@@ -291,6 +294,22 @@ for (const modulo of modulos.sort()) {
       comprobarImagen(meta.portada, `${dondeL}/meta.json`);
       if (!esTexto(meta.portadaAlt))
         aviso(`${dondeL}/meta.json`, 'la portada no tiene `portadaAlt`');
+    }
+
+    // Y la comprobación inversa: una imagen generada pero nunca insertada es
+    // trabajo invisible. Pasó de verdad con lavado-cic.webp, que se quedó en
+    // disco sin que ninguna lección la mostrara. Es el mismo agujero que el de
+    // los videos declarados y no incrustados, así que se cierra igual.
+    if (fs.existsSync(dirImagenes)) {
+      for (const archivo of fs.readdirSync(dirImagenes)) {
+        if (!/\.(webp|png|jpe?g|svg)$/i.test(archivo)) continue;
+        if (!imagenesUsadas.has(archivo))
+          error(
+            `${dondeL}/${slug}.mdx`,
+            `la imagen ${archivo} está en disco pero no se usa en la lección. ` +
+              `Insértala con <Diagrama src="${archivo}" …/> donde corresponda, o bórrala.`,
+          );
+      }
     }
 
     // Los bloques que dan al curso su carácter: obligatorios en lección práctica.

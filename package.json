@@ -13,11 +13,15 @@
     "verificar-videos:fix": "node scripts/verificar-videos.mjs --fix",
     "optimizar-imagenes": "node scripts/optimizar-imagenes.mjs"
   },
+  "_comentario_overrides": "next@14.2.35 fija internamente postcss 8.4.31, que arrastra 3 avisos de seguridad. El fallo es de tiempo de compilación y solo explotable procesando CSS de terceros —aquí todo el CSS es propio—, pero se corrige igualmente forzando la versión parcheada en todo el árbol. La alternativa era saltar a Next 16, un cambio mayor.",
+  "overrides": {
+    "postcss": "$postcss"
+  },
   "dependencies": {
     "@supabase/supabase-js": "^2.109.0",
     "github-slugger": "^2.0.0",
     "next": "14.2.35",
-    "next-mdx-remote": "^5.0.0",
+    "next-mdx-remote": "^6.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rehype-slug": "^6.0.0",
@@ -30,7 +34,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.47",
+    "postcss": "^8.5.23",
     "sharp": "^0.35.3",
     "tailwindcss": "^3.4.13",
     "typescript": "^5.6.2"

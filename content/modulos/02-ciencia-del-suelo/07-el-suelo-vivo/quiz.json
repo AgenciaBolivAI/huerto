@@ -1,0 +1,79 @@
+{
+  "preguntas": [
+    {
+      "id": "exudados-inversion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Que una planta suelte por las raíces hasta el 40 % del azúcar que fabrica es una pérdida que conviene reducir.",
+      "respuesta": false,
+      "explicacion": "Falso: es un gasto deliberado, no una fuga. La planta está comprando servicios. Con esos exudados recluta microorganismos concretos que a cambio le devuelven nitrógeno fijado, fósforo solubilizado y protección frente a patógenos. Ningún organismo destina cuatro de cada diez unidades de su energía a algo por accidente."
+    },
+    {
+      "id": "fosforo-inmovil",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la micorriza es especialmente decisiva para el fósforo y no tanto para el nitrato?",
+      "opciones": [
+        "Porque el fósforo es inmóvil en el suelo: no viaja hacia la raíz con el flujo de agua.",
+        "Porque la raíz agota rápidamente el fósforo de su zona inmediata y tiene que ir a buscarlo donde está.",
+        "Porque las hifas son mucho más finas que un pelo radicular y exploran un volumen mucho mayor.",
+        "Porque el fósforo solo puede ser absorbido por hongos, nunca directamente por la raíz."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El nitrato se mueve con el agua y llega solo a la raíz; el fósforo no. Eso obliga a explorar físicamente el suelo, y ahí la red de hifas —mucho más fina y extensa que cualquier raíz— multiplica el alcance efectivo. La raíz sí puede absorber fósforo directamente: lo que pasa es que agota el de su entorno inmediato enseguida."
+    },
+    {
+      "id": "fosforo-suprime",
+      "tipo": "opcion_multiple",
+      "enunciado": "Aplicas una fertilización de fondo generosa con fósforo en un suelo recién preparado. ¿Qué efecto tiene sobre la micorriza?",
+      "opciones": [
+        "La colonización micorrízica cae, porque la planta deja de invertir en una simbiosis cuyo beneficio ya tiene gratis.",
+        "Se pierden también los efectos colaterales de la micorriza: tolerancia a sequía, acceso al agua y glomalina.",
+        "Ninguno: el fósforo es un nutriente y solo puede beneficiar al sistema.",
+        "El fertilizante mata directamente al hongo por toxicidad."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "El fertilizante no mata al hongo: la planta deja de pagarle. Es una decisión racional desde el punto de vista de la planta —si el recurso está gratis, no tiene sentido gastar el 20 % de la fotosíntesis en obtenerlo—, pero con la simbiosis se van sus beneficios secundarios. Sobrefertilizar con fósforo no es solo caro: desmonta un sistema que estaba trabajando gratis."
+    },
+    {
+      "id": "nodulo-color",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si al cortar un nódulo de una leguminosa el interior está rosado, la fijación de nitrógeno está funcionando.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es una prueba de campo gratuita. El rosado viene de la leghemoglobina, una molécula pariente de la hemoglobina que la planta fabrica para controlar el oxígeno dentro del nódulo; sin ella la nitrogenasa no funciona. Nódulos blancos o verdosos por dentro indican que no hay rizobios eficaces, y entonces sí tiene sentido inocular la semilla en la siguiente siembra."
+    },
+    {
+      "id": "labranza-hifas",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una sola pasada de labranza no hace daño apreciable a la red de hifas del suelo.",
+      "respuesta": false,
+      "explicacion": "Falso. Una red de hifas puede extenderse metros y tarda años en construirse; una pasada de rotovator la corta en fragmentos de centímetros. Es la diferencia entre una red de fibra tendida y un montón de trozos de cable: el material sigue ahí, la función no. La red tarda años en construirse y minutos en romperse."
+    },
+    {
+      "id": "depredacion-libera",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué papel cumplen protozoos y nematodos en la nutrición del cultivo?",
+      "opciones": [
+        "Se comen a las bacterias y liberan el nitrógeno que estas tenían acumulado en sus cuerpos.",
+        "Sin depredadores, ese nitrógeno queda inmovilizado dentro de la biomasa bacteriana.",
+        "Son plagas del suelo que hay que eliminar para proteger la microbiota.",
+        "Fijan nitrógeno atmosférico igual que los rizobios."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Es contraintuitivo pero central: la depredación libera nutrientes. Se conoce como bucle microbiano. Un suelo con abundantes bacterias pero sin sus depredadores retiene el nitrógeno inmovilizado en la biomasa. No fijan nitrógeno —eso es cosa de bacterias específicas— y aunque existen nematodos fitoparásitos, los de vida libre que depredan bacterias son beneficiosos."
+    },
+    {
+      "id": "biologia-rizoma",
+      "tipo": "abierta",
+      "enunciado": "El desmonte ha destruido la red fúngica del terreno. Explica qué se ha perdido exactamente, cómo lo reconstruirías, qué papel juega el gandul en esa reconstrucción, y qué oportunidad comercial concreta abre esta lección para el vivero.",
+      "respuestaModelo": "Lo que se ha perdido es una red de micorrizas construida durante años por la vegetación establecida. Al retirar las plantas hospedadoras y remover el suelo, esa red se corta y desaparece casi entera, junto con buena parte del banco de propágulos. No se recupera por decreto ni comprando un producto: se reconstruye con raíces vivas y sin labrar.\n\nLa vía de reconstrucción es la misma que ya salía en la lección de estructura: cobertura permanente, cultivos de cobertura, raíces vivas todo el año que se pueda, materia orgánica variada y mínima perturbación. Y evitar dos cosas concretas: la quema, que mata la biología de los primeros centímetros justo donde está casi toda, y el exceso de fósforo soluble, que apaga la simbiosis precisamente cuando se intenta reconstruirla.\n\nEl gandul es la pieza más eficiente de esa reconstrucción porque acumula funciones. Es cultivo comercial que ya está en el catálogo; es leguminosa que fija nitrógeno atmosférico vía rizobios; es rústico y tolera acidez y sequía; tiene raíz pivotante profunda que perfora capas compactadas, lo que ataca gratis el problema de la lección 3; y su biomasa tiene relación C/N baja, así que aporta materia orgánica que no inmoviliza nitrógeno. Por eso merece rotar por todos los lotes y no quedarse solo en el suyo. Y conviene comprobar la fijación cortando un nódulo: si está rosado por dentro, funciona; si está blanco, tiene sentido inocular la semilla la próxima vez.\n\nLa oportunidad comercial está en que un sustrato de vivero es prácticamente estéril: no tiene micorrizas. Los plantines salen sin ese sistema y tienen que construirlo desde cero al llegar al terreno del cliente, justo después del trasplante, que es cuando ya han perdido los pelos radiculares y están en su peor momento. Un plantín inoculado con micorrizas se establece mejor, resiste mejor el estrés de trasplante y tolera mejor la sequía. Eso es un producto diferenciado, verificable y con argumento de venta propio, en un mercado donde casi todos los viveros venden lo mismo.",
+      "criterios": [
+        "Identifica que lo perdido es la red micorrízica y el banco de propágulos, construidos durante años.",
+        "Propone reconstrucción biológica: raíces vivas, cobertura, mínima perturbación, materia orgánica.",
+        "Menciona evitar la quema y el exceso de fósforo soluble como condiciones para que funcione.",
+        "Enumera las funciones acumuladas del gandul: comercial, fijador, rústico, descompactador y biomasa de C/N baja.",
+        "Incluye la comprobación del color del nódulo como prueba de campo.",
+        "Formula la oportunidad de vivero: sustrato estéril, plantín inoculado como producto diferenciado."
+      ],
+      "explicacion": "Esta pregunta es la que convierte la biología del suelo en decisiones de negocio. Si te salió completa, tienes tanto el plan de recuperación biológica del terreno como una línea de producto que casi ningún vivero de la zona está ofreciendo."
+    }
+  ]
+}

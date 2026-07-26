@@ -1,0 +1,80 @@
+{
+  "preguntas": [
+    {
+      "id": "orden-de-lectura",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un informe de suelo no se lee de arriba abajo sino por prioridad?",
+      "opciones": [
+        "Porque unos valores condicionan la interpretación de los otros.",
+        "Porque si la saturación de aluminio es alta hay toxicidad directa sobre la raíz, y nada más importa hasta corregirla.",
+        "Porque el pH decide qué de lo que hay está disponible, así que un nutriente «bajo» puede ser un nutriente bloqueado.",
+        "Porque los laboratorios imprimen las determinaciones en orden aleatorio."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El orden es: aluminio y acidez, pH, contexto estructural (textura, materia orgánica, CIC), saturación de bases y relaciones, y por último nutrientes individuales. Leer un valor de fósforo sin haber mirado antes el pH lleva a comprar fertilizante que se va a bloquear igual que el que ya había."
+    },
+    {
+      "id": "bray-olsen",
+      "tipo": "verdadero_falso",
+      "enunciado": "Puedes comparar directamente el fósforo de un análisis hecho con Bray-1 con el de otro hecho con Olsen.",
+      "respuesta": false,
+      "explicacion": "Falso. Son métodos de extracción distintos —Bray para suelos ácidos, Olsen para alcalinos— y no dan el mismo número para el mismo suelo. Un valor de fósforo sin el método al lado no significa nada. Al montar el histórico de tus lotes hay que anotar siempre el método junto al valor."
+    },
+    {
+      "id": "unidades-equivalentes",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuáles de estos pares son la misma unidad con distinto nombre?",
+      "opciones": [
+        "cmol(+)/kg y meq/100 g",
+        "ppm y mg/kg",
+        "dS/m y mmhos/cm",
+        "materia orgánica % y carbono orgánico %"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los tres primeros son equivalentes y el valor numérico es idéntico: no hay conversión que hacer. El cuarto NO: el carbono orgánico se convierte a materia orgánica multiplicando por 1,724 aproximadamente. Si ves un valor de materia orgánica sospechosamente bajo, comprueba si en realidad te están reportando carbono."
+    },
+    {
+      "id": "saturacion-aluminio",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un lote reporta aluminio intercambiable 1,6 cmol(+)/kg sobre una CIC de 11,2. ¿Qué haces?",
+      "opciones": [
+        "Calcular la saturación de aluminio: 1,6 ÷ 11,2 = 14 %.",
+        "Situarlo en zona de precaución: afectará a especies sensibles como los cítricos, pero no al gandul ni a la yautía.",
+        "Interpretarlo como toxicidad severa y encalar antes que cualquier otra cosa.",
+        "Ignorarlo, porque el valor absoluto de 1,6 es bajo."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "El valor absoluto de aluminio no informa por sí solo: hay que referirlo a la CIC para obtener la saturación. Un 14 % cae en zona de precaución (10-30 %), no de toxicidad severa, que empieza por encima del 30 %. Sirve para decidir qué cultivos van a ese lote mientras se corrige."
+    },
+    {
+      "id": "fosforo-bajo-ph-acido",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un análisis reporta fósforo 6 ppm (Bray-1) y pH 5,3. Lo sensato es comprar fertilizante fosfatado de inmediato.",
+      "respuesta": false,
+      "explicacion": "Falso. A pH 5,3 buena parte del fósforo del suelo está unido a hierro y aluminio, así que el fósforo nuevo se bloquearía igual que el que ya está. Encalar primero puede liberar fósforo que llevaba años ahí, sin comprar un gramo. Reevaluar después del encalado; aplicar fósforo antes de corregir el pH es tirar dinero."
+    },
+    {
+      "id": "muestreo-balde",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un balde que se usó antes para llevar urea sirve perfectamente para mezclar la muestra de suelo.",
+      "respuesta": false,
+      "explicacion": "Falso: los restos de fertilizante contaminan la muestra e invalidan el nitrógeno del análisis. El balde y la herramienta tienen que estar limpios. Es un detalle que no cuesta nada y que, si se pasa por alto, echa a perder un análisis que sí cuesta dinero."
+    },
+    {
+      "id": "informe-completo",
+      "tipo": "abierta",
+      "enunciado": "Llega este informe de un lote: textura franco arcillosa, pH 5,3, materia orgánica 1,8 %, CIC 11,2, saturación de bases 48 %, aluminio 1,6 cmol(+)/kg, calcio 3,4, magnesio 1,3, potasio 0,32, fósforo 6 ppm (Bray-1), CE 0,4 dS/m. Diagnostícalo en el orden correcto y di qué harías con ese lote.",
+      "respuestaModelo": "Leído por prioridad:\n\nPrimero el aluminio. 1,6 sobre una CIC de 11,2 es una saturación del 14 %, que cae en zona de precaución (10-30 %). No es toxicidad severa, pero afectará a las especies sensibles: los cítricos lo notarían, el gandul y la yautía no.\n\nSegundo el pH, 5,3. Suelo ácido, lo que explica la presencia de aluminio y anticipa que el fósforo estará bloqueado. Encaja además con el achachairú, que prefiere 5,0-6,0.\n\nTercero el contexto estructural. Textura franco arcillosa, que en este clima y con lluvias de octubre a abril obliga a cama alta. Materia orgánica 1,8 %, que es normal para suelo tropical pero mejorable. CIC 11,2, baja-media, de modo que hay que fraccionar la fertilización y no hacer aplicaciones de fondo grandes.\n\nCuarto, la saturación de bases: 48 %, por debajo del 50 %, lo que confirma suelo ácido y justifica encalar. Mirando las proporciones sobre la CIC: calcio 30 %, muy por debajo del 60-80 % deseable; magnesio 12 %, en rango pero justo; potasio 2,9 %, correcto. La relación Ca/Mg es 2,6, algo baja.\n\nY solo al final los nutrientes. Fósforo 6 ppm por Bray-1 es bajo, pero a pH 5,3 buena parte del fósforo del suelo está unida a hierro y aluminio: encalar va a liberar parte de ese fósforo sin comprar nada. Aplicar fosfatado antes de corregir el pH sería tirar dinero. La conductividad eléctrica, 0,4 dS/m, no presenta ningún problema de sales.\n\nDecisiones para el lote: encalar con dolomita —no con cal cálcica pura, porque el magnesio está justo y la relación Ca/Mg es baja— calculando la dosis por saturación de bases con la CIC del informe; construir cama alta por la textura y el drenaje; aportar materia orgánica de forma sostenida; NO aplicar fósforo hasta después del encalado y reevaluar entonces; y mientras se corrige, destinarlo a cultivos tolerantes a la acidez como gandul, yautía o batata, o directamente al achachairú, que estaría cómodo tal como está.",
+      "criterios": [
+        "Sigue el orden de prioridad y no el orden del informe.",
+        "Calcula la saturación de aluminio dividiendo por la CIC en vez de juzgar el valor absoluto.",
+        "Conecta el pH ácido con el bloqueo del fósforo y concluye que no hay que comprar fosfatado todavía.",
+        "Deriva cama alta de la textura y fraccionamiento de la fertilización de la CIC.",
+        "Calcula las proporciones de cationes sobre la CIC y detecta el calcio bajo y la relación Ca/Mg baja.",
+        "Elige dolomita y no cal cálcica, justificándolo con el magnesio.",
+        "Propone asignar cultivos tolerantes a la acidez, idealmente el achachairú, mientras se corrige."
+      ],
+      "explicacion": "Esta pregunta es el examen final del módulo: cada paso del diagnóstico usa una lección distinta de las ocho. Si te salió completa, ya puedes leer los ocho informes de tu terreno sin depender de nadie."
+    }
+  ]
+}

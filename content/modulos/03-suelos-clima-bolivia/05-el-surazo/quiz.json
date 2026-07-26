@@ -1,0 +1,80 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-llega",
+      "tipo": "verdadero_falso",
+      "enunciado": "El aire frío llega hasta Santa Cruz porque entre la Patagonia y el llano cruceño no hay ninguna barrera topográfica que lo detenga.",
+      "respuesta": true,
+      "explicacion": "Correcto. La cordillera al oeste y las tierras altas brasileñas al este forman un corredor abierto de norte a sur, y la cordillera además encauza la masa de aire. Lo que en otras latitudes se disiparía por el camino, aquí llega entero. Por eso un lugar en pleno trópico a 17,8° de latitud sur puede amanecer a 8 °C."
+    },
+    {
+      "id": "dano-por-frio",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué distingue el daño por frío del daño por congelación?",
+      "opciones": [
+        "El daño por frío ocurre por encima de cero grados, entre 0 y 12 °C, sin que se forme hielo.",
+        "Lo que falla es que las membranas celulares cambian de estado y dejan de funcionar correctamente.",
+        "Afecta específicamente a las especies de origen tropical.",
+        "Los dos requieren que se forme hielo dentro de las células."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La congelación revienta células con hielo por debajo de 0 °C. El daño por frío no rompe nada visiblemente: las membranas pasan de fluidas a algo parecido a un gel y todos los procesos que dependen de ellas empiezan a fallar a la vez. Es una degradación por debajo de la temperatura de operación, no un fallo catastrófico, y por eso los síntomas aparecen días después."
+    },
+    {
+      "id": "marchitez-raiz-fria",
+      "tipo": "opcion_multiple",
+      "enunciado": "Tras un surazo, una planta está marchita y el suelo está húmedo. ¿Qué haces?",
+      "opciones": [
+        "Nada: la marchitez es por raíz fría, que no absorbe, y la planta se recupera cuando suba la temperatura.",
+        "Regar más, para compensar la pérdida de agua.",
+        "Fertilizar con nitrógeno para que se recupere antes.",
+        "Entender que la absorción depende de procesos de membrana que consumen energía, y con la raíz fría esos procesos se frenan."
+      ],
+      "correctas": [0, 3],
+      "explicacion": "El agua ya está ahí; el problema es que la raíz no la toma. Regar más solo enfría el suelo y añade riesgo de asfixia. Y el nitrógeno es peor: estimula tejido tierno y acuoso, el más sensible al frío, justo cuando en temporada vienen más surazos. La planta no está enferma: está a temperatura subóptima."
+    },
+    {
+      "id": "adveccion-radiacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "Instalas una cortina rompevientos al sur. ¿Contra qué te protege y contra qué no?",
+      "opciones": [
+        "Protege del frío advectivo: la masa de aire frío que llega horizontalmente empujada por el viento.",
+        "No protege del frío radiativo de las noches despejadas y en calma que suelen venir después del frente.",
+        "Contra la pérdida radiativa hace falta algo por encima que tape la vista del cielo, no algo al lado.",
+        "Protege de los dos, porque cualquier barrera reduce la pérdida de calor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Son dos fríos distintos con dos geometrías distintas. El advectivo llega horizontalmente y se bloquea con una barrera vertical. El radiativo se escapa verticalmente hacia el cielo abierto, y solo se frena interponiendo algo encima: una malla, una tela, incluso las ramas de un árbol."
+    },
+    {
+      "id": "suelo-humedo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Regar la tarde anterior a una noche fría y despejada ayuda a proteger las plantas.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es de las medidas más baratas que existen. El agua tiene mucha más capacidad calorífica que el aire y que el suelo seco: un suelo húmedo acumula calor durante el día y lo cede lentamente de noche. Cuesta el agua de un riego y puede salvar un lote de plantines."
+    },
+    {
+      "id": "bajio-helada",
+      "tipo": "verdadero_falso",
+      "enunciado": "En una noche despejada y en calma, un bajío puede estar varios grados más frío que un alto situado solo treinta centímetros por encima.",
+      "respuesta": true,
+      "explicacion": "Correcto. El aire frío es más denso y escurre cuesta abajo, acumulándose en las depresiones. Es el mismo microrrelieve de la lección 2 actuando ahora sobre el aire en lugar de sobre el agua: los bajíos, que ya sabías que se encharcan, son además las zonas de helada. De ahí que la zona de endurecimiento del vivero vaya en el punto más alto."
+    },
+    {
+      "id": "proteger-vivero",
+      "tipo": "abierta",
+      "enunciado": "Los surazos coinciden con tu temporada de producción de vivero. Explica por qué ese solapamiento es estructural y no mala suerte, y detalla las decisiones concretas de protección que tomarías, distinguiendo las que son de trazado permanente de las que son de manejo puntual.",
+      "respuestaModelo": "El solapamiento es estructural. Como se vio en la lección anterior, la venta se concentra de septiembre a noviembre porque la gente compra plantas cuando empieza a llover, así que la producción tiene que ocurrir de mayo a septiembre. Y los surazos ocurren de abril a septiembre. Las dos ventanas coinciden casi por completo.\n\nAdemás, lo que hay en el vivero durante esa ventana es lo más vulnerable posible: plantines jóvenes, en contenedor —donde el volumen de sustrato es pequeño y se enfría mucho más rápido que el suelo— y de especies caribeñas y amazónicas, que son justamente las sensibles al daño por frío.\n\nDecisiones de trazado permanente, que se toman una vez:\n\nLa cortina rompevientos va al sur, no al norte ni rodeando: el aire frío entra del sur y esa orientación decide su utilidad. Conviene plantarla ya, porque una barrera viva tarda años en funcionar. Y protege además del viento, que con rachas de más de 40 km/h puede hacer más destrozo material que la propia temperatura: vuelca bandejas, tumba plantines en bolsa y rompe mallas mal tensadas.\n\nLa zona de endurecimiento va en el punto más alto y resguardado, nunca en un bajío, porque el aire frío escurre a las depresiones y ahí hiela primero.\n\nY la malla por encima en la zona de propagación sirve doblemente: contra el exceso de sol en la seca y contra la pérdida radiativa de noche. Una infraestructura, dos funciones, dos temporadas.\n\nDecisiones de manejo puntual:\n\nVentana sin nitrógeno de abril a septiembre, porque el nitrógeno produce tejido tierno justo cuando llega el frío. No podar antes de la temporada, por la misma razón: el rebrote es tejido tierno. Regar la víspera cuando el pronóstico anuncie surazo con noche despejada. Y tras el evento, esperar: ni regar de más ni fertilizar.\n\nFinalmente, una decisión de calendario: las especies sensibles —yautía, ají dulce, achachairú, plátano— no deberían estar en su fase más tierna en junio y julio. Adelantar o retrasar su propagación para que ese momento crítico caiga fuera del corazón de la temporada da protección sin gastar nada. El gandul, en cambio, es notablemente más rústico.",
+      "criterios": [
+        "Explica el solapamiento como consecuencia del desfase producción-venta, no como casualidad.",
+        "Señala la vulnerabilidad específica del contenedor, que se enfría más rápido que el suelo.",
+        "Separa claramente medidas de trazado permanente de medidas de manejo puntual.",
+        "Orienta la cortina rompevientos al sur y menciona su función también frente al viento.",
+        "Sitúa la zona de endurecimiento en alto, justificándolo por el escurrimiento del aire frío.",
+        "Incluye la ventana sin nitrógeno, no podar, y regar la víspera.",
+        "Propone ajustar el calendario de propagación de las especies sensibles."
+      ],
+      "explicacion": "Esta pregunta convierte el clima en trazado y calendario. Fíjate en cuántas de las medidas son gratis: la orientación de la barrera, la ubicación de la zona de endurecimiento y las fechas de propagación no cuestan dinero, solo decidirlas bien."
+    }
+  ]
+}

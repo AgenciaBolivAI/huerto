@@ -1,0 +1,79 @@
+{
+  "preguntas": [
+    {
+      "id": "escala-logaritmica",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un lote está a pH 5,0 y otro a pH 7,0. ¿Qué es correcto decir?",
+      "opciones": [
+        "El primero tiene cien veces más concentración de hidrógeno que el segundo.",
+        "La escala es logarítmica, así que cada unidad es un factor de diez.",
+        "El primero es «dos puntos más ácido», una diferencia moderada.",
+        "Corregir de 5,0 a 6,0 cuesta lo mismo en enmienda que corregir de 6,0 a 7,0."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "El pH es el logaritmo negativo de la concentración de hidrógeno, así que dos unidades son un factor de cien, no una diferencia moderada. Y por lo mismo, la corrección nunca es lineal: los saltos en la parte baja de la escala representan mucha más acidez que los de la parte alta. Es una de las razones por las que la dosis de cal no se puede estimar a ojo."
+    },
+    {
+      "id": "fosforo-bloqueado",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un suelo puede tener fósforo de sobra y aun así la planta mostrar carencia de fósforo.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es la tesis de la lección. A pH bajo el fósforo se une a hierro y aluminio; a pH alto, a calcio. En ambos casos sigue estando en el suelo —un análisis de fósforo total lo detecta— pero en una forma que la raíz no puede tomar. Por eso echar más fósforo sin corregir el pH es tirar dinero: el nuevo se bloquea igual que el que ya había."
+    },
+    {
+      "id": "aluminio-diagnostico",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un cultivo en suelo a pH 4,8 muestra síntomas de sequía y carencias múltiples. Riegas más y fertilizas, y no mejora. ¿Qué está pasando probablemente?",
+      "opciones": [
+        "Por debajo de pH 5,5 el aluminio se solubiliza y daña directamente el meristemo apical de la raíz.",
+        "El sistema radicular es demasiado pequeño para abastecer a la planta, así que los síntomas de arriba son consecuencia, no causa.",
+        "Es una carencia de varios nutrientes a la vez que se corrige fertilizando más.",
+        "Falta agua: hay que aumentar la frecuencia de riego."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "No es una carencia, es una lesión física. El aluminio soluble ataca el meristemo apical radicular, la raíz deja de alargarse y se vuelve corta y roma. Una raíz que no explora no encuentra ni agua ni nutrientes, de modo que los síntomas visibles arriba pueden parecer cualquier cosa. Regar y fertilizar no arreglan nada porque el problema es que la raíz no puede crecer. Es el ejemplo perfecto de que el síntoma casi nunca está donde está la causa."
+    },
+    {
+      "id": "dosis-de-cal",
+      "tipo": "verdadero_falso",
+      "enunciado": "Dos suelos con el mismo pH de 5,0 necesitan la misma dosis de cal.",
+      "respuesta": false,
+      "explicacion": "Falso. La dosis depende del poder tampón, es decir, de la capacidad del suelo de resistirse a cambiar de pH. Un suelo arenoso y pobre en materia orgánica cambia con poca cal; uno arcilloso y rico en materia orgánica exige bastante más. Ese poder tampón depende de la capacidad de intercambio catiónico, así que el requerimiento se calcula con el análisis completo —pH, acidez intercambiable y CIC—, no con el pH solo. Quien venda una dosis sabiendo únicamente el pH está adivinando."
+    },
+    {
+      "id": "achachairu-ph",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un lote de tu terreno sale con pH 5,4. ¿Qué es lo más sensato?",
+      "opciones": [
+        "Considerarlo el lote candidato para el achachairú, que prefiere suelo ácido (5,0–6,0).",
+        "Asignar cultivo a lote según lo que el lote es, en lugar de forzar todos los lotes al mismo pH.",
+        "Encalarlo para llevarlo a 6,5 como todos los demás.",
+        "Descartarlo para producción porque está fuera del rango óptimo."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Un lote ácido no es un lote malo: es el lote de un cultivo que quiere acidez. El achachairú viene de la cuenca amazónica y prefiere entre 5,0 y 6,0, así que encalarlo sería contraproducente. Corregir suelo cuesta dinero cada año; asignar bien cada cultivo al lote que ya le conviene es gratis y se hace una vez. Con pH 5,4 tampoco hay razón para descartarlo: yautía, batata y gandul también lo tolerarían."
+    },
+    {
+      "id": "medicion-agua-destilada",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para medir el pH del suelo en suspensión hay que usar agua destilada, no agua de pozo o de grifo.",
+      "respuesta": true,
+      "explicacion": "Correcto. El agua de pozo o de grifo trae su propia química —bicarbonatos, sales, su propio pH— y contamina la medición. El estándar es suelo y agua destilada en proporción 1:2,5 en peso. Y como el resultado depende del método, si comparas dos análisis conviene comprobar que ambos usaron la misma proporción."
+    },
+    {
+      "id": "estrategia-ph-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Explica por qué no conviene asumir el pH de tu terreno en ninguna de las dos direcciones, qué pedirías exactamente en el análisis de laboratorio y por qué, y cómo usarías el resultado para asignar cultivos a lotes en lugar de corregirlos todos.",
+      "respuestaModelo": "No conviene asumirlo porque los dos razonamientos plausibles se contradicen. Por un lado, es un trópico con lluvias intensas, y la lluvia lava las bases —calcio, magnesio, potasio— y tiende a acidificar el suelo. Por otro, los suelos de la llanura aluvial del área integrada son jóvenes, de aporte reciente de sedimento, y a menudo conservan mejor estado de bases de lo que ese razonamiento sugiere, con pH cercano a neutro. La teoría da una expectativa; solo el análisis da el dato.\n\nEn el análisis hay que pedir explícitamente, además del pH: acidez intercambiable, aluminio intercambiable y CIC. Sin esos tres no se puede calcular una dosis de cal, porque la dosis depende del poder tampón y no del pH, y un análisis básico puede no incluirlos. Pedirlos de entrada cuesta poco más y evita repetir el muestreo. El aluminio intercambiable además es decisivo por sí solo: si sale alto, la toxicidad manda sobre casi todo lo demás y se corrige primero.\n\nConviene medir el pH por lote, en la misma campaña de muestreo que la textura: mismo esfuerzo de campo, dos datos.\n\nCon los resultados, la estrategia es asignar en lugar de corregir. Los lotes que salgan más ácidos van al achachairú, que viene de la cuenca amazónica y prefiere 5,0–6,0, y a los cultivos tolerantes como yautía, batata y gandul. Los lotes en el rango cómodo de 6,0–6,8 se reservan para los más exigentes: ají dulce, culantro, cítricos y ornamentales. Corregir el suelo es un coste que se repite cada año; elegir bien dónde va cada cosa es gratis y se decide una sola vez.\n\nPor último, el pH del sustrato de vivero es un problema aparte: en un contenedor no hay poder tampón que valga, y el pH lo acaban determinando los componentes de la mezcla y el agua de riego aplicada muchas veces. Si el agua es dura, el sustrato se alcaliniza con los meses aunque se haya partido de un pH correcto.",
+      "criterios": [
+        "Expone los dos razonamientos contrapuestos: lavado de bases por lluvia frente a juventud del suelo aluvial.",
+        "Pide explícitamente acidez intercambiable, aluminio intercambiable y CIC además del pH, y justifica por qué.",
+        "Señala que el aluminio intercambiable alto tiene prioridad sobre lo demás.",
+        "Propone medir por lote aprovechando la misma campaña de muestreo que la textura.",
+        "Aplica la lógica de asignar cultivo a lote, con el achachairú como caso que rompe la regla.",
+        "Distingue el pH del suelo del pH del sustrato de vivero como dos problemas distintos."
+      ],
+      "explicacion": "Esta pregunta junta el criterio económico —corregir cuesta cada año, asignar es gratis— con el técnico. Si te salió completa, ya sabes qué pedir en el laboratorio y qué hacer con la respuesta."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "preguntas": [
+    {
+      "id": "regla-deposicion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Todas las unidades de una llanura aluvial se explican con la misma regla: cuando el agua pierde velocidad, suelta primero lo más grueso.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es la misma física de la prueba del frasco del Módulo 2. De esa regla salen el abanico aluvial (grueso en el ápice, fino en el borde), el dique natural (grueso junto al cauce, donde el agua frena al desbordar) y el bajío (fino, donde el agua queda estancada y deposita despacio)."
+    },
+    {
+      "id": "dique-natural",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un dique natural es a la vez la parte más alta y la más arenosa del paisaje?",
+      "opciones": [
+        "Porque al desbordarse el río, el agua pierde velocidad de golpe justo al salir del cauce y suelta ahí lo más grueso.",
+        "Porque ese depósito repetido durante siglos construye un lomo elevado paralelo al río.",
+        "Porque el viento acumula arena en las zonas altas.",
+        "Porque la arcilla se erosiona más rápido y deja la arena expuesta."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Es depósito, no erosión ni viento. El material grueso se acumula justo al borde del cauce cada vez que el río desborda, y siglos de repetición construyen el lomo. No es casualidad que por los diques naturales suelan ir los caminos y los asentamientos antiguos: son lo alto y lo bien drenado."
+    },
+    {
+      "id": "paleocauce",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un lote que en superficie parece arcilloso tiene una franja donde el cultivo se seca antes que en el resto. ¿Qué explicación es más probable?",
+      "opciones": [
+        "Hay un paleocauce: un cuerpo de arena de un cauce abandonado, enterrado e invisible desde arriba.",
+        "El río cambió de sitio hace tiempo, el cauce se rellenó y se cubrió, pero la arena sigue ahí abajo drenando.",
+        "Esa franja recibe más sol que el resto del lote.",
+        "El suelo de esa franja tiene más materia orgánica."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Es el caso típico de paleocauce. Un río divaga y abandona cauces; esos cuerpos de arena quedan enterrados y siguen condicionando el drenaje aunque la superficie no los delate. Un hoyo en esa franja lo confirma en media hora."
+    },
+    {
+      "id": "microrelieve",
+      "tipo": "verdadero_falso",
+      "enunciado": "En una llanura aluvial, treinta centímetros de diferencia de cota son irrelevantes porque el terreno es prácticamente plano.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error caro de la lección. La cota predice la textura: lo alto es alto porque el río depositó material grueso, y lo grueso drena; lo bajo recibió material fino, y lo fino retiene. Treinta centímetros invisibles al caminar deciden si un frutal vive o se ahoga. Se ven mucho mejor con luz rasante, a primera hora o al atardecer, que a mediodía."
+    },
+    {
+      "id": "rebrote-desmonte",
+      "tipo": "verdadero_falso",
+      "enunciado": "El patrón desigual con que rebrota la vegetación tras el desmonte es información valiosa que conviene registrar antes de intervenir el terreno.",
+      "respuesta": true,
+      "explicacion": "Correcto, y la ventana está abierta ahora mismo. Ese patrón dibuja gratis el mapa de suelos del terreno: cada cambio de vigor o de especie dominante marca un límite de suelo. Es información que desaparece en cuanto se empieza a nivelar y cultivar, así que hay que fotografiarla y croquizarla mientras existe."
+    },
+    {
+      "id": "bajio-uso",
+      "tipo": "opcion_multiple",
+      "enunciado": "Uno de tus lotes tiene un bajío claro. ¿Qué es lo más sensato?",
+      "opciones": [
+        "Asignarle un uso compatible: plátano, que tolera humedad mejor que el resto del catálogo, o el reservorio de agua.",
+        "Rellenarlo para dejar el terreno parejo.",
+        "Nivelar todo el lote para que quede uniforme.",
+        "Descartarlo: en un bajío no se puede hacer nada productivo."
+      ],
+      "correctas": [0],
+      "explicacion": "Rellenar cuesta mucho y a menudo no resuelve, porque el problema es el material fino que hay debajo y el nivel al que se satura. Nivelar mezcla horizontes y deja subsuelo desnudo donde había capa fértil, destruyendo más valor del que crea. Y un bajío no es terreno perdido: es el sitio del plátano o del reservorio que vas a necesitar en el Módulo 9."
+    },
+    {
+      "id": "croquis-terreno",
+      "tipo": "abierta",
+      "enunciado": "Describe el croquis de campo que harías de tus ocho lotes antes de intervenir el terreno: qué observarías, cuándo, y cómo cruzarías esas observaciones con las pruebas del Módulo 2 para decidir dónde va cada cultivo.",
+      "respuestaModelo": "Hay que hacerlo ya, porque la información se borra con la intervención.\n\nQué observar y anotar en un croquis a mano de los ocho lotes:\n\nPrimero, dónde se queda el agua después de una lluvia fuerte, fotografiándolo con referencias visibles. Esos son los bajíos, aunque a ojo el terreno parezca plano. Segundo, dónde rebrota distinto la vegetación tras el desmonte: cada mancha de vigor desigual o cambio de especie dominante marca un límite de suelo. Tercero, los lomos suaves aunque sean de veinte centímetros, mirándolos a primera hora o al atardecer, porque la luz rasante revela microrrelieve que a mediodía es invisible. Cuarto, las zonas que se secan primero en la seca, que delatan arena y probablemente un paleocauce. Y quinto, por dónde entra y sale el agua de escorrentía, incluida la que venga de la Ruta 9 o de la urbanización.\n\nEl cruce con el Módulo 2: cada observación es una hipótesis que se confirma con una prueba. Un lomo suave que se seca pronto sugiere dique natural o paleocauce arenoso, y se confirma con la prueba del frasco dando más arena. Una zona que se encharca con rebrote pobre sugiere bajío arcilloso, y se confirma con el frasco más la prueba del hoyo de percolación. Un plano intermedio con rebrote vigoroso sugiere llanura estable de textura media, probablemente franco.\n\nY la decisión que sale de ahí: distribuir los cultivos por unidad de paisaje y no por comodidad de trazado. Los frutales perennes —mango, cítricos, achachairú— van a lo alto, porque son los que menos toleran encharcamiento y los que más caro cuesta equivocarse, ya que el error se descubre a los dos años. Las hortalizas de ciclo corto admiten cama alta en zonas intermedias. Un bajío se destina a plátano, que tolera humedad, o al reservorio de agua. Y un paleocauce arenoso es mal sitio para cultivo de suelo pero buen sitio para la zona de vivero: drena rápido, no se embarra, y en contenedor la textura del terreno da igual.\n\nLo importante es que ninguna de esas asignaciones cuesta dinero. Son decisiones de trazado, y tomarlas bien ahora vale más que cualquier enmienda que se compre después.",
+      "criterios": [
+        "Insiste en hacerlo antes de intervenir, porque la información desaparece.",
+        "Enumera los indicios: encharcamiento, patrón de rebrote, lomos suaves, zonas que se secan antes, escorrentía externa.",
+        "Menciona la luz rasante de primera hora o atardecer para ver el microrrelieve.",
+        "Convierte cada observación en hipótesis y la confirma con una prueba concreta del Módulo 2.",
+        "Asigna frutales perennes a lo alto justificándolo por intolerancia al encharcamiento y coste del error.",
+        "Da un uso al bajío y al paleocauce en lugar de tratarlos como terreno perdido.",
+        "Señala que estas decisiones de trazado son gratuitas frente a las enmiendas posteriores."
+      ],
+      "explicacion": "Esta es la lección con mejor relación entre esfuerzo y valor de todo el módulo: unas horas de caminar el terreno con un cuaderno deciden el trazado de todo el proyecto, y esa ventana solo está abierta ahora."
+    }
+  ]
+}

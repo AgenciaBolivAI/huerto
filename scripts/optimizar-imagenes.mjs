@@ -31,11 +31,15 @@ const FORZAR = process.argv.includes('--forzar');
 const ANCHO_MAXIMO = 1600;
 
 /**
- * Una fotografía se comprime con pérdida; un diagrama, sin ella. Se distinguen
- * por nombre para no tener que mantener una lista aparte.
+ * Una fotografía admite más compresión que un diagrama, donde el texto fino se
+ * degrada antes. Se distinguen por nombre para no mantener una lista aparte,
+ * pero el prefijo tiene que estar ANCLADO al principio: con la regla anterior,
+ * que buscaba la palabra en cualquier posición, un diagrama llamado
+ * `ciclo-vivero` se comprimía como fotografía solo por llevar «vivero» dentro.
+ * En un curso de viveros eso iba a repetirse.
  */
 function esFotografia(nombre) {
-  return /portada|foto|paisaje|vivero/i.test(nombre);
+  return /^(portada|foto|paisaje)([-.]|$)/i.test(nombre);
 }
 
 function recorrer(dir) {

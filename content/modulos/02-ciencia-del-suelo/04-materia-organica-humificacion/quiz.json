@@ -1,0 +1,80 @@
+{
+  "preguntas": [
+    {
+      "id": "inmovilizacion-cascarilla",
+      "tipo": "opcion_multiple",
+      "enunciado": "Incorporas cascarilla de arroz (C/N ≈ 120) a un lote de cultivo, sin compostar y sin nada más. Semanas después el cultivo está amarillo y detenido. ¿Qué ha pasado?",
+      "opciones": [
+        "Los microbios se multiplicaron comiendo ese carbono y tomaron del suelo el nitrógeno que la cascarilla no traía.",
+        "Hay menos nitrógeno disponible que antes de la enmienda, y el síntoma es una carencia real de nitrógeno.",
+        "El nitrógeno no se ha perdido: está dentro de los microbios y volverá cuando mueran, pero no a tiempo para este cultivo.",
+        "La cascarilla acidificó el suelo y eso bloqueó la absorción."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es inmovilización. Los descomponedores necesitan carbono y nitrógeno en una proporción aproximada de 24 a 1; si el material no aporta suficiente nitrógeno, lo toman del suelo, que es el mismo del que come el cultivo. El nitrógeno vuelve cuando esos microbios mueren, pero «en unos meses» no le sirve a la planta que tienes ahora. La acidificación no es el mecanismo aquí."
+    },
+    {
+      "id": "temperatura-mineralizacion",
+      "tipo": "verdadero_falso",
+      "enunciado": "En Santa Cruz la materia orgánica del suelo se mineraliza mucho más rápido que en Europa central, y por eso el objetivo del 4–6 % que dan los manuales europeos no es un buen listón.",
+      "respuesta": true,
+      "explicacion": "Correcto. Como regla práctica, cada 10 °C de aumento duplica la velocidad de descomposición biológica. Entre la media de Europa central (~10 °C) y la de Santa Cruz (~25 °C) hay más de una duplicación, y la humedad de la temporada de lluvias acelera aún más. En suelos tropicales cultivados, 1,5–2,5 % es normal y superar el 3 % es un logro. Medirse con la vara europea lleva a concluir erróneamente que el suelo es irrecuperable."
+    },
+    {
+      "id": "mineralizar-vs-humificar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué distingue la mineralización de la humificación?",
+      "opciones": [
+        "La mineralización libera nutrientes de inmediato pero no deja estructura; el carbono se va como CO₂.",
+        "La humificación condensa parte del carbono en compuestos estables que duran décadas y construyen suelo.",
+        "La humificación es rápida y la mineralización es lenta.",
+        "Ambas producen humus, solo que a distinta velocidad."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Son los dos destinos posibles del carbono de un residuo incorporado. Mineralizar es gasto corriente: beneficio inmediato en forma de nutrientes, nada en el balance al final. Humificar es inversión: sin retorno visible este mes, pero el activo permanece décadas rindiendo estructura, retención de agua y capacidad de intercambio. La mineralización es la rápida, no la lenta, y solo la humificación produce humus."
+    },
+    {
+      "id": "flujo-no-stock",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una vez que se ha subido la materia orgánica de un suelo tropical con una buena enmienda, el nivel se mantiene solo durante años.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la consecuencia estratégica central de la lección. En clima templado la materia orgánica se comporta como un stock que se acumula; en el trópico es un flujo. Puedes mantener un nivel alto, pero solo mientras sigas aportando al mismo ritmo: si paras, cae en una o dos temporadas. No existe «arreglar el suelo» como proyecto con fecha de fin, existe un aporte anual permanente que es parte del coste de operación."
+    },
+    {
+      "id": "gallinaza-cruda",
+      "tipo": "opcion_multiple",
+      "enunciado": "La gallinaza es abundante y barata en Santa Cruz. ¿Cómo se usa correctamente?",
+      "opciones": [
+        "Madurada o compostada, nunca fresca al pie de la planta.",
+        "Como fuente de nitrógeno para equilibrar materiales de C/N alta, por ejemplo mezclada con cascarilla de arroz.",
+        "Fresca y directa al pie, para que el nitrógeno llegue cuanto antes.",
+        "Solo en cultivos perennes, porque en hortalizas es demasiado fuerte incluso madurada."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Con C/N de 7 a 10 es una fuente de nitrógeno excelente y el complemento natural de la cascarilla de arroz, con la que forma un compost equilibrado y muy barato con lo que hay a mano en el oriente. Pero cruda tiene tanto nitrógeno amoniacal y tantas sales que quema raíces y plántulas, y además puede traer semillas de maleza y patógenos. Madurada se usa sin problema en hortalizas."
+    },
+    {
+      "id": "labranza-mo",
+      "tipo": "verdadero_falso",
+      "enunciado": "En clima tropical, labrar para incorporar bien una enmienda orgánica suele tener un balance negativo.",
+      "respuesta": true,
+      "explicacion": "Correcto. Cada labranza airea el suelo y acelera la mineralización de la materia orgánica que ya tenías: ganas la enmienda nueva y quemas parte de la vieja. En un clima donde la mineralización ya es rápida de por sí, labrar es encender el ventilador de la combustión. Aplicar en superficie y mantener cobertura casi siempre rinde más, porque el material en superficie se descompone más despacio y además protege de la costra."
+    },
+    {
+      "id": "estrategia-mo-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Estás desmontando 2.474 m² y tienes biomasa disponible en el sitio. Diseña la estrategia de materia orgánica del proyecto: qué haces con esa biomasa según su tipo, por qué no conviene quemarla, qué orden de magnitud de aporte anual necesitas, y cómo priorizas si no puedes tratar todo el terreno.",
+      "respuestaModelo": "La biomasa del desmonte es materia orgánica gratuita y en el sitio, en un clima donde reponerla es caro. Se separa por relación C/N:\n\n— Herbáceas y hojas, de C/N moderada, van directas como acolchado sobre los lotes que vayan a estar sin sembrar. Doble beneficio: aportan materia orgánica y protegen de la costra que forma la lluvia intensa sobre suelo desnudo.\n— Ramas finas, de C/N alta, se trituran si hay chipeadora y se usan como acolchado en superficie, nunca incorporadas. En superficie se descomponen despacio y no inmovilizan nitrógeno en la zona de raíces.\n— Troncos y ramas gruesas no sirven como enmienda a corto plazo; se apilan en un borde, donde sirven de refugio de fauna útil y en un par de años son material ya avanzado.\n\nNo se quema por dos razones: se destruye un recurso que en este clima cuesta mucho reponer, y además el fuego destruye la materia orgánica del suelo superficial y mata la biología de los primeros centímetros. En un clima donde la materia orgánica ya se va sola tres o cuatro veces más rápido, quemarla es el gesto exactamente contrario al que necesita el suelo.\n\nEl orden de magnitud del aporte: para subir de forma perceptible la materia orgánica hacen falta del orden de 2 a 4 kg de compost maduro por m² y año, sostenidos. Sobre 2.474 m² son entre 5 y 10 toneladas anuales si se trata todo el terreno.\n\nEse número dice dos cosas. Comprar todo el compost no es viable, así que hay que producirlo. Y no se trata todo el terreno por igual: la enmienda se concentra en los lotes de producción intensiva de hortalizas —yautía, culantro, ají dulce— mientras que en ornamentales y frutales se trabaja con aportes localizados en el hoyo de plantación y con cobertura.\n\nAdemás, el aporte no es una obra con fecha de fin sino un coste recurrente anual, y como tal tiene que aparecer en el presupuesto de operación. Y conviene aprovechar que el gandul del catálogo es una leguminosa de C/N baja que fija nitrógeno: es a la vez cultivo comercial, abono verde y biomasa de calidad, así que vale la pena rotarlo por todos los lotes y no dejarlo solo en el suyo.",
+      "criterios": [
+        "Separa la biomasa por relación C/N y da un destino distinto a herbáceas, ramas finas y ramas gruesas.",
+        "Insiste en usar el material de C/N alta en superficie y no incorporado, para evitar la inmovilización.",
+        "Argumenta contra la quema tanto por el recurso perdido como por el daño a la materia orgánica y la biología del suelo.",
+        "Da el orden de magnitud del aporte (unos kg/m² y año) y lo escala a los 2.474 m².",
+        "Concluye que hay que producir el compost y priorizar los lotes de hortalizas frente a ornamentales y frutales.",
+        "Plantea la enmienda como coste recurrente anual, no como obra puntual.",
+        "Idealmente aprovecha el gandul como abono verde fijador además de cultivo comercial."
+      ],
+      "explicacion": "Esta pregunta es el puente al Módulo 4, donde se produce el compost, y al Módulo 12, donde el aporte anual aparece en el presupuesto. Si te salió completa, ya tienes la política de materia orgánica del proyecto."
+    }
+  ]
+}

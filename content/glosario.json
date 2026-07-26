@@ -218,6 +218,433 @@
       "sinonimos": ["capa freática", "manto freático"]
     },
     {
+      "termino": "Materia orgánica del suelo",
+      "slug": "materia-organica",
+      "definicion": "Conjunto de tres fracciones que solo comparten el contener carbono de origen biológico: la viva (bacterias, hongos, lombrices, raíces), la fresca (restos aún reconocibles) y el humus estable (compuestos ya transformados). En clima tropical se comporta como un flujo y no como un stock: se mineraliza tres o cuatro veces más rápido que en clima templado, de modo que mantenerla exige aporte permanente.",
+      "leccion": "02-ciencia-del-suelo/04-materia-organica-humificacion",
+      "sinonimos": ["MO", "materia orgánica"]
+    },
+    {
+      "termino": "Humus",
+      "slug": "humus",
+      "definicion": "Fracción estable de la materia orgánica: compuestos oscuros y complejos, resultado de la humificación, que persisten décadas o siglos. Es lo que aporta estructura duradera, retención de agua fácilmente cedible y una capacidad de intercambio catiónico muy superior a la de la mayoría de las arcillas.",
+      "leccion": "02-ciencia-del-suelo/04-materia-organica-humificacion",
+      "sinonimos": ["humus estable", "sustancias húmicas"]
+    },
+    {
+      "termino": "Mineralización",
+      "slug": "mineralizacion",
+      "definicion": "Descomposición biológica completa de la materia orgánica: el carbono se va como CO₂ y los nutrientes quedan libres y asimilables en el suelo. Es rápida, aporta nutrientes de inmediato y no deja estructura. Su velocidad se duplica aproximadamente por cada 10 °C de aumento de temperatura, lo que la convierte en el factor dominante en clima tropical.",
+      "leccion": "02-ciencia-del-suelo/04-materia-organica-humificacion",
+      "sinonimos": ["mineralizar"]
+    },
+    {
+      "termino": "Humificación",
+      "slug": "humificacion",
+      "definicion": "Transformación de parte del carbono de un residuo en humus estable, en lugar de perderse como CO₂. Es lenta, no libera casi nutrientes de inmediato y es la única de las dos rutas que construye suelo a largo plazo.",
+      "leccion": "02-ciencia-del-suelo/04-materia-organica-humificacion",
+      "sinonimos": ["humificar"]
+    },
+    {
+      "termino": "Relación C/N",
+      "slug": "relacion-c-n",
+      "definicion": "Proporción entre carbono y nitrógeno de un material orgánico. Los descomponedores necesitan ambos en una proporción aproximada de 24 a 1, así que por debajo de unos 25-30 el material libera nitrógeno al suelo y por encima lo secuestra. Es el dato más útil que se puede conocer de cualquier enmienda antes de incorporarla.",
+      "leccion": "02-ciencia-del-suelo/04-materia-organica-humificacion",
+      "sinonimos": ["C/N", "relación carbono nitrógeno"]
+    },
+    {
+      "termino": "Inmovilización",
+      "slug": "inmovilizacion",
+      "definicion": "Secuestro temporal del nitrógeno del suelo por los microorganismos cuando se incorpora un material de relación C/N alta —cascarilla, paja, aserrín— sin acompañarlo de una fuente de nitrógeno. Durante semanas o meses hay menos nitrógeno disponible que antes de la enmienda, y el síntoma es indistinguible de una carencia porque lo es.",
+      "leccion": "02-ciencia-del-suelo/04-materia-organica-humificacion",
+      "sinonimos": ["hambre de nitrógeno"]
+    },
+    {
+      "termino": "pH del suelo",
+      "slug": "ph",
+      "definicion": "Medida de la concentración de iones de hidrógeno libres en la solución del suelo, en escala logarítmica de 0 a 14 con 7 como neutro. No alimenta a la planta: decide qué nutrientes de los presentes están en forma soluble y por tanto absorbibles. Cada unidad es un factor de diez, así que pH 5 tiene cien veces más acidez que pH 7.",
+      "leccion": "02-ciencia-del-suelo/05-ph-disponibilidad-nutrientes",
+      "sinonimos": ["acidez del suelo"]
+    },
+    {
+      "termino": "Poder tampón",
+      "slug": "poder-tampon",
+      "definicion": "Capacidad de un suelo de resistirse a cambiar de pH. Depende de la capacidad de intercambio catiónico, de modo que un suelo arcilloso y rico en materia orgánica exige mucha más cal que uno arenoso para el mismo cambio. Es la razón por la que la dosis de encalado no se puede deducir del pH.",
+      "leccion": "02-ciencia-del-suelo/05-ph-disponibilidad-nutrientes",
+      "sinonimos": ["capacidad tampón", "poder amortiguador"]
+    },
+    {
+      "termino": "Encalado",
+      "slug": "encalado",
+      "definicion": "Aporte de carbonatos —cal agrícola o dolomita— para neutralizar la acidez y subir el pH. Tarda meses en reaccionar porque depende de que el material se disuelva, así que se aplica incorporado, con humedad y con antelación a la siembra. Pasarse es más difícil de arreglar que quedarse corto.",
+      "leccion": "02-ciencia-del-suelo/05-ph-disponibilidad-nutrientes",
+      "sinonimos": ["cal agrícola", "dolomita", "calagem"]
+    },
+    {
+      "termino": "Aluminio intercambiable",
+      "slug": "aluminio-intercambiable",
+      "definicion": "Aluminio en forma soluble (Al³⁺) que aparece por debajo de aproximadamente pH 5,5 y es tóxico para las raíces: daña directamente el meristemo apical radicular, que deja de alargarse y se vuelve corto y romo. En suelos ácidos tropicales suele ser un problema más grave que el bloqueo de nutrientes, y engaña porque sus síntomas imitan sequía y carencias múltiples.",
+      "leccion": "02-ciencia-del-suelo/05-ph-disponibilidad-nutrientes",
+      "sinonimos": ["toxicidad por aluminio", "saturación de aluminio"]
+    },
+    {
+      "termino": "Clorosis férrica",
+      "slug": "clorosis-ferrica",
+      "definicion": "Amarilleamiento de las hojas jóvenes, con las nervaduras aún verdes, causado por falta de hierro disponible. En suelos alcalinos el hierro precipita y queda inaccesible aunque abunde en el suelo, así que es un problema de pH y no de contenido. Frecuente en cítricos plantados en suelo calizo o sobreencalado.",
+      "leccion": "02-ciencia-del-suelo/05-ph-disponibilidad-nutrientes",
+      "sinonimos": ["clorosis"]
+    },
+    {
+      "termino": "Capacidad de intercambio catiónico",
+      "slug": "cic",
+      "definicion": "Cantidad de cationes que un suelo puede retener en las superficies negativas de sus arcillas y su humus, medida en cmol(+)/kg —equivalente a meq/100 g, el mismo número—. Determina cuánto nutriente resiste el lavado, cuánta cal hace falta para corregir el pH y con qué frecuencia hay que fertilizar. Es probablemente el dato más informativo de un análisis de suelo.",
+      "leccion": "02-ciencia-del-suelo/06-capacidad-intercambio-cationico",
+      "sinonimos": ["CIC", "CEC", "capacidad de intercambio"]
+    },
+    {
+      "termino": "Catión",
+      "slug": "cation",
+      "definicion": "Ion de carga positiva. Los nutritivos son calcio, magnesio, potasio y amonio; los de la acidez, hidrógeno y aluminio. Todos compiten por las mismas superficies negativas del suelo, y por eso un exceso de uno desplaza a los demás.",
+      "leccion": "02-ciencia-del-suelo/06-capacidad-intercambio-cationico",
+      "sinonimos": ["cationes", "bases intercambiables"]
+    },
+    {
+      "termino": "Complejo de cambio",
+      "slug": "complejo-de-cambio",
+      "definicion": "Conjunto de superficies cargadas negativamente del suelo —arcillas y humus— donde quedan retenidos los cationes. El agarre es reversible: el catión no está secuestrado, está retenido con una fuerza que la raíz puede vencer. De ahí que se hable de intercambio.",
+      "leccion": "02-ciencia-del-suelo/06-capacidad-intercambio-cationico",
+      "sinonimos": ["complejo arcillo-húmico", "coloides del suelo"]
+    },
+    {
+      "termino": "Saturación de bases",
+      "slug": "saturacion-de-bases",
+      "definicion": "Porcentaje del complejo de cambio ocupado por cationes nutritivos (calcio, magnesio, potasio, sodio) frente al ocupado por acidez (hidrógeno y aluminio). Por debajo del 50 % el suelo es ácido; por encima del 70 % está en buena situación. Encalar consiste precisamente en sustituir acidez por bases en esas posiciones.",
+      "leccion": "02-ciencia-del-suelo/06-capacidad-intercambio-cationico",
+      "sinonimos": ["saturação por bases", "porcentaje de saturación de bases"]
+    },
+    {
+      "termino": "Antagonismo catiónico",
+      "slug": "antagonismo-cationico",
+      "definicion": "Competencia entre cationes por las posiciones finitas del complejo de cambio: un exceso de uno desplaza a los otros y provoca carencias inducidas. Los casos típicos son exceso de potasio que produce carencia de magnesio, sobreencalado que bloquea potasio y magnesio, y exceso de sodio que además destruye la estructura del suelo.",
+      "leccion": "02-ciencia-del-suelo/06-capacidad-intercambio-cationico",
+      "sinonimos": ["antagonismo", "desequilibrio catiónico"]
+    },
+    {
+      "termino": "Rizosfera",
+      "slug": "rizosfera",
+      "definicion": "Capa delgada de suelo que rodea a la raíz, de apenas unos milímetros, donde la densidad de microorganismos puede ser cien veces mayor que a un centímetro de distancia. No es una zona pasiva: la planta la construye soltando exudados y con ello decide qué microbios prosperan a su alrededor.",
+      "leccion": "02-ciencia-del-suelo/07-el-suelo-vivo",
+      "sinonimos": []
+    },
+    {
+      "termino": "Exudados radiculares",
+      "slug": "exudados",
+      "definicion": "Azúcares, aminoácidos y ácidos orgánicos que la raíz libera al suelo. Las plantas destinan a ello entre el 20 y el 40 % de todo lo que fotosintetizan: no es una fuga sino un gasto deliberado con el que reclutan microorganismos concretos a cambio de nitrógeno, fósforo y protección.",
+      "leccion": "02-ciencia-del-suelo/07-el-suelo-vivo",
+      "sinonimos": ["exudados"]
+    },
+    {
+      "termino": "Micorriza",
+      "slug": "micorriza",
+      "definicion": "Simbiosis entre un hongo y una raíz, presente en el 80-90 % de las plantas. El hongo despliega una red de hifas mucho más fina y extensa que cualquier raíz y entrega sobre todo fósforo y agua; la planta paga en carbono. Es decisiva para el fósforo porque este es inmóvil en el suelo y hay que ir físicamente a buscarlo.",
+      "leccion": "02-ciencia-del-suelo/07-el-suelo-vivo",
+      "sinonimos": ["micorrizas", "hongos micorrízicos"]
+    },
+    {
+      "termino": "Rizobios",
+      "slug": "rizobios",
+      "definicion": "Bacterias del género Rhizobium y afines que establecen simbiosis con las leguminosas y fijan nitrógeno atmosférico dentro de nódulos que la planta construye a propósito en sus raíces. Son específicas: la cepa que funciona con soya no es necesariamente la del gandul o el frijol.",
+      "leccion": "02-ciencia-del-suelo/07-el-suelo-vivo",
+      "sinonimos": ["rizobio", "Rhizobium", "nódulo", "nódulos"]
+    },
+    {
+      "termino": "Nitrogenasa",
+      "slug": "nitrogenasa",
+      "definicion": "Enzima bacteriana capaz de romper el triple enlace del N₂ atmosférico a temperatura ambiente y convertirlo en amonio asimilable. Consume una cantidad enorme de ATP, razón por la que las bacterias fijadoras necesitan un socio vegetal que las pague en azúcares. Se inactiva con el oxígeno, y de ahí que la planta fabrique leghemoglobina para controlarlo dentro del nódulo.",
+      "leccion": "02-ciencia-del-suelo/07-el-suelo-vivo",
+      "sinonimos": ["fijación biológica de nitrógeno", "leghemoglobina"]
+    },
+    {
+      "termino": "Glomalina",
+      "slug": "glomalina",
+      "definicion": "Glicoproteína producida por los hongos micorrízicos, extraordinariamente estable, que actúa como uno de los principales pegamentos de los agregados del suelo. Es el vínculo directo entre la biología y la estructura física: sin hongos, menos glomalina y peor agregación.",
+      "leccion": "02-ciencia-del-suelo/07-el-suelo-vivo",
+      "sinonimos": []
+    },
+    {
+      "termino": "Saturación de aluminio",
+      "slug": "saturacion-de-aluminio",
+      "definicion": "Porcentaje de la capacidad de intercambio catiónico ocupado por aluminio. Es el dato que hay que leer primero en un análisis, porque por encima del 30 % hay toxicidad directa sobre la raíz y todo lo demás pasa a segundo plano. El valor absoluto de aluminio no informa por sí solo: hay que referirlo a la CIC.",
+      "leccion": "02-ciencia-del-suelo/08-leer-un-analisis-de-suelo",
+      "sinonimos": []
+    },
+    {
+      "termino": "Conductividad eléctrica",
+      "slug": "conductividad-electrica",
+      "definicion": "Medida de las sales solubles del suelo, expresada en dS/m —equivalente a mmhos/cm—. Por encima de 2 dS/m empiezan los problemas para cultivos sensibles y por encima de 4 hay restricción seria. Es el indicador a vigilar cuando se riega con agua de pozo.",
+      "leccion": "02-ciencia-del-suelo/08-leer-un-analisis-de-suelo",
+      "sinonimos": ["CE", "salinidad"]
+    },
+    {
+      "termino": "Bray y Olsen",
+      "slug": "bray-olsen",
+      "definicion": "Los dos métodos habituales de extracción de fósforo disponible en un análisis de suelo: Bray se usa en suelos ácidos y Olsen en alcalinos. No dan el mismo número para el mismo suelo y no son comparables entre sí, así que un valor de fósforo sin el método al lado carece de significado.",
+      "leccion": "02-ciencia-del-suelo/08-leer-un-analisis-de-suelo",
+      "sinonimos": ["Bray-1", "Olsen", "fósforo disponible"]
+    },
+    {
+      "termino": "Factores formadores del suelo",
+      "slug": "factores-formadores",
+      "definicion": "Los cinco factores cuya combinación determina qué suelo se forma sobre una roca: clima, organismos, relieve, roca madre y tiempo. Clima y organismos son las entradas activas, el relieve decide si el material se queda o se va, la roca madre es el punto de partida y el tiempo determina cuántas veces se ha aplicado la transformación.",
+      "leccion": "03-suelos-clima-bolivia/01-regiones-edafologicas-bolivia",
+      "sinonimos": []
+    },
+    {
+      "termino": "Meteorización",
+      "slug": "meteorizacion",
+      "definicion": "Alteración progresiva de los minerales de la roca por acción del agua, la temperatura y los organismos. Un suelo muy meteorizado ha perdido sus bases por lavado y conserva sobre todo óxidos de hierro y aluminio: es profundo, rojo, ácido y de CIC baja. Un suelo joven todavía tiene minerales frescos sin agotar.",
+      "leccion": "03-suelos-clima-bolivia/01-regiones-edafologicas-bolivia",
+      "sinonimos": ["suelo meteorizado", "intemperismo"]
+    },
+    {
+      "termino": "Llanura chaco-beniana",
+      "slug": "llanura-chaco-beniana",
+      "definicion": "Gran cuenca de sedimentación del oriente boliviano, donde los ríos que bajan de los Andes han depositado material erosionado de la cordillera durante el Cuaternario. Su suelo es sedimentario, joven, profundo y plano, y se está renovando en lugar de agotarse. Es la razón de fondo de que el oriente sea la zona agrícola productiva del país.",
+      "leccion": "03-suelos-clima-bolivia/01-regiones-edafologicas-bolivia",
+      "sinonimos": ["llanura chaco beniana", "el llano", "tierras bajas"]
+    },
+    {
+      "termino": "Escudo brasileño",
+      "slug": "escudo-brasileno",
+      "definicion": "Masa continental antiquísima que ocupa el este de Santa Cruz y buena parte de Brasil. Sus suelos llevan millones de años recibiendo lluvia tropical, de modo que están profundamente lavados: rojos, ácidos, con caolinita como arcilla dominante y CIC baja. Es lo opuesto a la llanura sedimentaria vecina.",
+      "leccion": "03-suelos-clima-bolivia/01-regiones-edafologicas-bolivia",
+      "sinonimos": ["escudo precámbrico", "escudo chiquitano"]
+    },
+    {
+      "termino": "Área integrada",
+      "slug": "area-integrada",
+      "definicion": "Término administrativo y agrícola para la zona en torno a Santa Cruz de la Sierra conectada por carretera, donde se concentra la agricultura comercial del departamento. Se distingue de la «zona de expansión» o «el este», que designa las áreas de frontera agrícola más recientes hacia San Julián y Pailón.",
+      "leccion": "03-suelos-clima-bolivia/01-regiones-edafologicas-bolivia",
+      "sinonimos": ["zona integrada"]
+    },
+    {
+      "termino": "Dique natural",
+      "slug": "dique-natural",
+      "definicion": "Lomo elevado y arenoso paralelo a un río, construido por el material grueso que el agua suelta al desbordarse y perder velocidad de golpe al salir del cauce. Es la parte alta del paisaje aluvial y la mejor drenada; no es casualidad que por ahí suelan ir los caminos y los asentamientos antiguos.",
+      "leccion": "03-suelos-clima-bolivia/02-llanura-chaco-beniana-area-integrada",
+      "sinonimos": ["albardón", "albardon"]
+    },
+    {
+      "termino": "Bajío",
+      "slug": "bajio",
+      "definicion": "Depresión del llano donde el agua queda estancada y deposita despacio el material más fino, dando suelo arcilloso y drenaje malo. Se encharca en cada temporada de lluvias. Si mantiene agua buena parte del año se le llama curichi. No es terreno perdido: admite plátano o reservorio.",
+      "leccion": "03-suelos-clima-bolivia/02-llanura-chaco-beniana-area-integrada",
+      "sinonimos": ["curichi", "bajios"]
+    },
+    {
+      "termino": "Paleocauce",
+      "slug": "paleocauce",
+      "definicion": "Cauce fluvial abandonado, relleno y cubierto, cuyo cuerpo de arena permanece enterrado e invisible desde la superficie. Explica esas franjas de terreno donde el cultivo se seca antes que en el resto sin razón aparente, porque la arena de abajo drena aunque la superficie parezca arcillosa.",
+      "leccion": "03-suelos-clima-bolivia/02-llanura-chaco-beniana-area-integrada",
+      "sinonimos": ["cauce abandonado"]
+    },
+    {
+      "termino": "Abanico aluvial",
+      "slug": "abanico-aluvial",
+      "definicion": "Depósito con forma de abanico que se forma cuando un río sale de un encajonamiento a un terreno llano: al abrirse pierde velocidad y suelta la carga, dejando material grueso cerca del ápice y fino en el borde distal. Los ríos que bajan del subandino han construido así buena parte del norte del área integrada.",
+      "leccion": "03-suelos-clima-bolivia/02-llanura-chaco-beniana-area-integrada",
+      "sinonimos": ["cono de deyección"]
+    },
+    {
+      "termino": "Microrrelieve",
+      "slug": "microrrelieve",
+      "definicion": "Diferencias de cota de decenas de centímetros que en una llanura aluvial predicen la textura y el drenaje: lo alto es alto porque recibió material grueso, que drena, y lo bajo recibió fino, que retiene. Se observan mucho mejor con luz rasante de primera hora o del atardecer que a mediodía.",
+      "leccion": "03-suelos-clima-bolivia/02-llanura-chaco-beniana-area-integrada",
+      "sinonimos": ["microrelieve"]
+    },
+    {
+      "termino": "Estrato",
+      "slug": "estrato",
+      "definicion": "Capa de un suelo aluvial depositada por una crecida concreta. A diferencia de un horizonte, que se forma en el sitio por procesos graduales y sigue un orden previsible, un estrato tiene borde neto y su posición en la secuencia no se puede predecir: la arena puede estar encima o debajo de la arcilla según qué traía el agua ese día.",
+      "leccion": "03-suelos-clima-bolivia/03-suelos-aluviales",
+      "sinonimos": ["estratos", "estratificación"]
+    },
+    {
+      "termino": "Discontinuidad textural",
+      "slug": "discontinuidad-textural",
+      "definicion": "Cambio brusco de textura entre dos capas del perfil. El agua no lo cruza libremente en ninguna de las dos direcciones: se acumula sobre una capa fina que hay debajo, y tampoco pasa a una capa gruesa inferior hasta que la fina de arriba está casi saturada.",
+      "leccion": "03-suelos-clima-bolivia/03-suelos-aluviales",
+      "sinonimos": []
+    },
+    {
+      "termino": "Nivel colgado",
+      "slug": "nivel-colgado",
+      "definicion": "Zona saturada suspendida sobre una capa poco permeable, muy por encima del nivel freático real. Se forma cuando hay arena sobre arcilla: el agua baja rápido y se acumula en el límite. Es el caso más traicionero, porque el lote parece arenoso y bien drenado en superficie mientras se encharca en profundidad y ahoga las raíces.",
+      "leccion": "03-suelos-clima-bolivia/03-suelos-aluviales",
+      "sinonimos": ["capa colgada", "freático colgado"]
+    },
+    {
+      "termino": "Barrera capilar",
+      "slug": "barrera-capilar",
+      "definicion": "Fenómeno por el que una capa de material grueso situada bajo otra más fina impide el paso del agua hasta que la capa fina se satura, porque sus poros gruesos retienen el agua con menos fuerza y no tiran de ella. Es la razón física por la que poner grava en el fondo de un hoyo de plantación o de una maceta empeora el drenaje en lugar de mejorarlo.",
+      "leccion": "03-suelos-clima-bolivia/03-suelos-aluviales",
+      "sinonimos": []
+    },
+    {
+      "termino": "Profundidad efectiva",
+      "slug": "profundidad-efectiva",
+      "definicion": "Hasta dónde pueden llegar las raíces sin encontrar un impedimento: capa compactada, nivel colgado, discontinuidad textural, roca o agua permanente. No aparece en ningún análisis de laboratorio, porque el análisis se hace sobre los primeros 20 cm; solo la revela el hoyo. Los frutales perennes exigen un metro o más, y la fertilidad no compensa su falta.",
+      "leccion": "03-suelos-clima-bolivia/03-suelos-aluviales",
+      "sinonimos": []
+    },
+    {
+      "termino": "Clima tropical de sabana",
+      "slug": "clima-tropical-sabana",
+      "definicion": "Clima de precipitación abundante pero marcadamente estacional, con una época de lluvias y una seca bien diferenciadas. En Santa Cruz supone del orden de 1.200 a 1.400 mm anuales concentrados de octubre a abril, y cinco meses secos. La temperatura permite crecer casi todo el año, de modo que el calendario agrícola lo gobierna el agua.",
+      "leccion": "03-suelos-clima-bolivia/04-calendario-climatico-santa-cruz",
+      "sinonimos": ["clima Aw", "sabana tropical"]
+    },
+    {
+      "termino": "Veranillo",
+      "slug": "veranillo",
+      "definicion": "Periodo seco de dos o tres semanas o más que aparece dentro de la época de lluvias. Es traicionero porque sorprende al cultivo en pleno crecimiento, con máxima demanda de agua y sin reservas, precisamente porque en esos meses nadie está regando. Es la razón por la que el riego debe estar operativo todo el año.",
+      "leccion": "03-suelos-clima-bolivia/04-calendario-climatico-santa-cruz",
+      "sinonimos": []
+    },
+    {
+      "termino": "Época de lluvias",
+      "slug": "epoca-de-lluvias",
+      "definicion": "De octubre a abril en Santa Cruz. En el vocabulario local se dice «las lluvias» y su contrario es «la seca»; aquí no se usan primavera ni otoño en sentido agrícola. El año agrícola no empieza en enero sino con las lluvias.",
+      "leccion": "03-suelos-clima-bolivia/04-calendario-climatico-santa-cruz",
+      "sinonimos": ["las lluvias", "la seca"]
+    },
+    {
+      "termino": "Campaña de invierno",
+      "slug": "campana-de-invierno",
+      "definicion": "Segunda campaña agrícola del área integrada, con siembra concentrada entre mayo y julio, donde el sorgo lleva el mayor peso por su papel en la rotación tras la cosecha de verano, seguido de trigo, girasol y maíz. Saber cuándo ocurren las dos campañas importa porque en esos picos la maquinaria y la mano de obra escasean y se encarecen.",
+      "leccion": "03-suelos-clima-bolivia/04-calendario-climatico-santa-cruz",
+      "sinonimos": ["campaña de verano", "campaña agrícola"]
+    },
+    {
+      "termino": "Surazo",
+      "slug": "surazo",
+      "definicion": "Entrada de una masa de aire frío de origen patagónico asociada a un frente, que sube por el corredor abierto entre la cordillera y las tierras altas brasileñas sin encontrar barrera. Ocurre entre abril y septiembre, varias veces por temporada, y baja la temperatura entre 6 y 12 grados en cuestión de horas. Localmente también se dice «viene el sur»; en otras zonas de Bolivia, friaje.",
+      "leccion": "03-suelos-clima-bolivia/05-el-surazo",
+      "sinonimos": ["viene el sur", "friaje", "frente frío"]
+    },
+    {
+      "termino": "Daño por frío",
+      "slug": "dano-por-frio",
+      "definicion": "Deterioro que sufren las especies de origen tropical entre 0 y 12 °C, sin que llegue a formarse hielo. Las membranas celulares pasan de fluidas a un estado parecido a un gel y todos los procesos que dependen de ellas —transporte de iones, fotosíntesis, respiración— empiezan a fallar a la vez. Es una degradación por debajo de la temperatura de operación, no un fallo catastrófico, y por eso los síntomas aparecen días después del evento. Se distingue del daño por congelación, que sí forma hielo por debajo de 0 °C y revienta las células.",
+      "leccion": "03-suelos-clima-bolivia/05-el-surazo",
+      "sinonimos": ["chilling injury", "daño por enfriamiento"]
+    },
+    {
+      "termino": "Frío advectivo",
+      "slug": "frio-advectivo",
+      "definicion": "Frío que llega horizontalmente transportado por el viento cuando entra una masa de aire frío, normalmente con cielo cubierto. Es el frío del frente mismo. Se combate con una barrera vertical —cortina rompevientos, muro, malla lateral— orientada hacia el lado por el que entra el aire, que en Santa Cruz es el sur.",
+      "leccion": "03-suelos-clima-bolivia/05-el-surazo",
+      "sinonimos": ["advección", "helada advectiva"]
+    },
+    {
+      "termino": "Frío radiativo",
+      "slug": "frio-radiativo",
+      "definicion": "Enfriamiento que se produce en noches despejadas y en calma, cuando el suelo y las plantas irradian su calor hacia el cielo abierto y quedan por debajo de la temperatura del aire. Suele venir después de que pase el frente. Contra él no sirve una barrera lateral: hace falta algo por encima que tape la vista del cielo —una malla, una tela, las ramas de un árbol— y mantener el suelo húmedo, porque el agua almacena calor durante el día y lo cede de noche.",
+      "leccion": "03-suelos-clima-bolivia/05-el-surazo",
+      "sinonimos": ["radiación nocturna", "helada radiativa", "helada blanca"]
+    },
+    {
+      "termino": "Ley del mínimo",
+      "slug": "ley-del-minimo",
+      "definicion": "Principio formulado por Justus von Liebig según el cual el rendimiento lo fija el factor más escaso y no la suma de todos los factores. Equivale a un análisis de cuello de botella: aumentar cualquier recurso que no sea el limitante no produce ninguna mejora medible, igual que añadir procesador a un servicio limitado por entrada y salida.",
+      "leccion": "03-suelos-clima-bolivia/06-que-crece-donde",
+      "sinonimos": ["ley de Liebig", "ley del mínimo de Liebig"]
+    },
+    {
+      "termino": "Factor limitante",
+      "slug": "limitante",
+      "definicion": "El recurso o la condición más escasa de un lote, la que está fijando el rendimiento. Se dividen en corregibles —pH, fertilidad, materia orgánica, agua, sombra, viento—, que se resuelven con una compra y unas semanas, y estructurales —profundidad efectiva, posición en el paisaje, textura del subsuelo, clima—, que vienen con el terreno y obligan a diseñar alrededor de ellas. El drenaje es el caso intermedio: la única limitante estructural que se puede comprar, mediante camas altas.",
+      "leccion": "03-suelos-clima-bolivia/06-que-crece-donde",
+      "sinonimos": ["limitante", "limitantes", "factor limitante"]
+    },
+    {
+      "termino": "Aptitud",
+      "slug": "aptitud",
+      "definicion": "Grado en que un terreno concreto satisface los requerimientos de un uso concreto. Es siempre una relación entre un lote y un cultivo, nunca una propiedad del terreno por sí solo: no existe un suelo malo, existe un suelo poco apto para lo que se le quiere poner encima. El bajío pésimo para cítricos puede ser el mejor lote disponible para almacenar agua.",
+      "leccion": "03-suelos-clima-bolivia/06-que-crece-donde",
+      "sinonimos": ["aptitud de uso", "apto", "vocación del lote"]
+    },
+    {
+      "termino": "Piso ecológico",
+      "slug": "piso-ecologico",
+      "definicion": "Franja del territorio definida sobre todo por la altitud, con su clima, su suelo y su producción característicos. En Bolivia es el vocabulario habitual para hablar de altiplano, valles, chaco, llanura y amazonía. Saber de qué piso ecológico procede un consejo agronómico es lo que permite decidir si aplica a tu terreno o si está resolviendo otra limitante distinta de la tuya.",
+      "leccion": "03-suelos-clima-bolivia/06-que-crece-donde",
+      "sinonimos": ["pisos ecológicos", "piso altitudinal"]
+    },
+    {
+      "termino": "Rusticidad",
+      "slug": "rusticidad",
+      "definicion": "Capacidad de una especie para tolerar condiciones adversas —frío, sequía, suelo pobre, descuido— sin perder producción. En el catálogo de Rizoma del Sur el gandul es notablemente rústico y el ají dulce está en el extremo opuesto. No es una virtud abstracta: define cuánta infraestructura de protección exige cada especie y por tanto cuánto cuesta producirla.",
+      "leccion": "03-suelos-clima-bolivia/06-que-crece-donde",
+      "sinonimos": ["rústico", "rústica", "especie rústica"]
+    },
+    {
+      "termino": "Amojonar",
+      "slug": "amojonar",
+      "definicion": "Marcar los límites de una parcela con hitos físicos —mojones, estacas— y levantar el plano correspondiente. Es el paso cero de cualquier preparación de terreno, no por trámite, sino porque todas las decisiones posteriores se anotan como posiciones sobre ese plano: sin coordenadas comunes, los datos de distintas temporadas no se pueden comparar entre sí.",
+      "leccion": "04-preparar-la-tierra/01-la-secuencia-correcta",
+      "sinonimos": ["amojonamiento", "mojón", "mojones", "lindero"]
+    },
+    {
+      "termino": "Línea de base",
+      "slug": "linea-base",
+      "definicion": "Medición del estado inicial de un terreno antes de intervenirlo: análisis de suelo, descripción de perfiles, fotos con fecha de dónde se estanca el agua, vegetación existente. Tiene exactamente una oportunidad de tomarse, porque cualquier intervención la borra. Su valor no está en el dato en sí sino en que es la única referencia contra la que se podrá comparar dentro de unos años para saber si lo que se hizo funcionó.",
+      "leccion": "04-preparar-la-tierra/01-la-secuencia-correcta",
+      "sinonimos": ["línea base", "estado inicial", "medición inicial"]
+    },
+    {
+      "termino": "Desmonte",
+      "slug": "desmonte",
+      "definicion": "Retirada de la vegetación existente de un terreno para ponerlo en producción. Selectivo significa decidir árbol por árbol qué se queda, y es la decisión menos reversible de todo el proceso: un árbol de sombra adulto vale años de espera y en un vivero es infraestructura de producción, no adorno. En Bolivia está sujeto a autorización de la ABT.",
+      "leccion": "04-preparar-la-tierra/01-la-secuencia-correcta",
+      "sinonimos": ["desmontar", "desmonte selectivo", "habilitación"]
+    },
+    {
+      "termino": "Ventana de obra",
+      "slug": "ventana-de-obra",
+      "definicion": "Periodo del año en que el suelo está lo bastante seco para trabajarlo: de mayo a septiembre en Santa Cruz. Se cierra con las lluvias de octubre y no vuelve hasta mayo. Es disjunta de la ventana de diagnóstico —el agua solo se puede observar cuando llueve—, y de esa separación se deduce que preparar un terreno bien es un ciclo de al menos dos temporadas.",
+      "leccion": "04-preparar-la-tierra/01-la-secuencia-correcta",
+      "sinonimos": ["ventana de diagnóstico", "ventana seca"]
+    },
+    {
+      "termino": "Chaqueo",
+      "slug": "chaqueo",
+      "definicion": "Práctica de tumbar la vegetación y quemarla para habilitar tierra de cultivo, muy extendida en Bolivia. Da una primera campaña buena —la ceniza libera potasio, calcio y fósforo, sube el pH y elimina el banco de semillas de malezas— y por eso persiste, pero consume la materia orgánica que sostiene el sistema, así que la segunda campaña es peor y la tercera bastante peor. Requiere autorización de la ABT y está sujeto a prohibiciones estacionales.",
+      "leccion": "04-preparar-la-tierra/02-desmonte-y-biomasa",
+      "sinonimos": ["chaquear", "quema", "tumba y quema", "chaqueo sin quema"]
+    },
+    {
+      "termino": "Cobertura muerta",
+      "slug": "cobertura-muerta",
+      "definicion": "Capa de material vegetal —restos de poda picados, rastrojo, hojas— extendida sobre la superficie del suelo sin incorporarla. Reduce la evaporación, modera la temperatura del suelo, frena la escorrentía, dificulta la germinación de malezas y aporta materia orgánica de forma progresiva. Es la forma correcta de devolver material leñoso al suelo: encima, nunca enterrado, porque incorporado provoca [[inmovilizacion]] de nitrógeno.",
+      "leccion": "04-preparar-la-tierra/02-desmonte-y-biomasa",
+      "sinonimos": ["mulch", "mantillo", "acolchado", "rastrojo"]
+    },
+    {
+      "termino": "Cordón de desmonte",
+      "slug": "cordon-de-desmonte",
+      "definicion": "Franja de material de desmonte apilado en línea y dejado descomponer en el sitio, en lugar de repartirlo o retirarlo. Conserva la materia orgánica dentro del terreno cuando el volumen es demasiado grande para picarlo todo, y en dos o tres años esas franjas son las líneas de suelo más fértil de la parcela. Colocado atravesado a la pendiente funciona además como control de escorrentía.",
+      "leccion": "04-preparar-la-tierra/02-desmonte-y-biomasa",
+      "sinonimos": ["cordón", "cordones", "camellón de desmonte"]
+    },
+    {
+      "termino": "Rebrote de tocón",
+      "slug": "rebrote-de-tocon",
+      "definicion": "Capacidad de muchas especies leñosas de emitir brotes nuevos desde la cepa después de ser cortadas. Si se corta alto y no se arranca la raíz, en dos o tres años hay de nuevo un arbusto o arbolito con el sistema radicular ya hecho. Es la forma más barata que existe de obtener una barrera viva o leña renovable, y solo cuesta la decisión de no arrancar. Es una manifestación práctica de la [[totipotencia]] vegetal.",
+      "leccion": "04-preparar-la-tierra/02-desmonte-y-biomasa",
+      "sinonimos": ["rebrote", "rebrotar de cepa", "monte bajo", "recepado"]
+    },
+    {
       "termino": "Totipotencia",
       "slug": "totipotencia",
       "definicion": "Capacidad de muchas células vegetales vivas de conservar el genoma completo y la aptitud para volver a expresarlo entero, desdiferenciándose y regenerando una planta completa. Es lo que permite clonar por esquejes, acodos o división, y por tanto el fundamento productivo de cualquier vivero.",

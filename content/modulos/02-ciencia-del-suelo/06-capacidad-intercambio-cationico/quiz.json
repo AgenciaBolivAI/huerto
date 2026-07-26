@@ -1,0 +1,79 @@
+{
+  "preguntas": [
+    {
+      "id": "origen-cargas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué las arcillas y el humus retienen nutrientes mientras que la arena prácticamente no lo hace?",
+      "opciones": [
+        "Porque sus superficies están cargadas negativamente y los nutrientes más importantes viajan como cationes, de carga positiva.",
+        "En las arcillas, por sustituciones dentro de la red cristalina que dejan un déficit de carga positiva.",
+        "En el humus, por grupos carboxilo y fenol que al pH del suelo pierden su hidrógeno.",
+        "Porque las arcillas y el humus son físicamente pegajosos y los nutrientes se adhieren a ellos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es electrostática, no adherencia física. Las cargas negativas vienen de dos orígenes distintos según el material: sustitución isomórfica en la red cristalina de las arcillas, y disociación de grupos químicos en el humus. La arena, con partículas grandes y poca superficie, apenas tiene carga y por eso no retiene."
+    },
+    {
+      "id": "humus-cic",
+      "tipo": "verdadero_falso",
+      "enunciado": "El humus tiene mayor capacidad de intercambio catiónico que cualquier arcilla del suelo.",
+      "respuesta": true,
+      "explicacion": "Correcto: entre 150 y 300 cmol(+)/kg, frente a 3-15 de la caolinita o 80-120 de la montmorillonita. Y esto cierra el círculo con la lección de materia orgánica: no puedes cambiar el tipo de arcilla que te tocó, pero sí puedes añadir humus. Subir un punto de materia orgánica puede aumentar la CIC más que cualquier otra intervención a tu alcance."
+    },
+    {
+      "id": "cic-y-cal",
+      "tipo": "opcion_multiple",
+      "enunciado": "Dos lotes están a pH 5,0. Uno tiene CIC 4 y el otro CIC 30. ¿Qué es correcto?",
+      "opciones": [
+        "El de CIC 30 necesita bastante más cal para subir el mismo punto de pH.",
+        "Encalar consiste en sustituir acidez por bases en el complejo de cambio, y cuantas más ranuras haya que rellenar, más cal hace falta.",
+        "Necesitan la misma dosis, porque el pH de partida es el mismo.",
+        "El de CIC 4 necesita más cal porque retiene peor."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Esto es exactamente el poder tampón que quedó pendiente en la lección anterior, y ahora tiene mecanismo: la cal aporta calcio, el calcio desplaza al hidrógeno y al aluminio de las ranuras del complejo de cambio, y el pH sube como consecuencia. Cuantas más ranuras existan —mayor CIC—, más calcio hace falta para el mismo cambio. El pH de partida no basta para calcular la dosis."
+    },
+    {
+      "id": "antagonismo-potasio",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un exceso de potasio puede provocar síntomas de carencia de magnesio en un suelo que tiene magnesio de sobra.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es un caso muy frecuente. Como las ranuras del complejo de cambio son finitas, los cationes compiten por ellas: meter mucho potasio desplaza al magnesio. El análisis reporta magnesio presente, la planta muestra carencia, y añadir más magnesio ayuda poco mientras no se corrija el desequilibrio. Más fertilizante no es más nutrición; pasado cierto punto es desplazamiento."
+    },
+    {
+      "id": "cic-baja-estrategia",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un lote da CIC 6 y piensas plantar plátano, que demanda mucho potasio. ¿Qué haces?",
+      "opciones": [
+        "Fraccionar el potasio en varias aplicaciones pequeñas en lugar de una de fondo.",
+        "Vigilar el magnesio en los análisis de seguimiento, porque el potasio puede desplazarlo.",
+        "Si hay que encalar, elegir dolomita en vez de cal agrícola, para aportar magnesio a la vez.",
+        "Aplicar todo el potasio de una vez al inicio del ciclo para asegurar la reserva."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Con CIC 6 el suelo retiene muy poco, así que una aplicación de fondo grande se lava en las primeras lluvias: es tirar dinero al freático. Y lo que sí se retiene compite por las pocas ranuras disponibles, con riesgo de desplazar el magnesio. La dolomita resuelve las dos cosas a la vez si además hay que corregir acidez."
+    },
+    {
+      "id": "unidades-cic",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si un laboratorio reporta la CIC en meq/100 g y otro en cmol(+)/kg, hay que convertir los valores para poder compararlos.",
+      "respuesta": false,
+      "explicacion": "Falso: son unidades equivalentes y el valor numérico es idéntico. Verás las dos notaciones según el laboratorio y la antigüedad del informe, y no hay que convertir nada. Conviene saberlo para no perder tiempo buscando un factor de conversión que no existe."
+    },
+    {
+      "id": "cic-sustrato-vivero",
+      "tipo": "abierta",
+      "enunciado": "Explica por qué un sustrato de vivero formulado con cascarilla de arroz, arena y poca materia orgánica obliga a una estrategia de fertilización distinta a la de un suelo de campo, y cómo se relaciona eso con la CIC. Conecta la respuesta con el manejo de los lotes del terreno.",
+      "respuestaModelo": "Porque ese sustrato tiene una CIC muy baja. La cascarilla y la arena aportan porosidad física pero casi ninguna superficie con carga negativa, y sin materia orgánica no hay humus que la aporte. El resultado es un medio que prácticamente no retiene cationes: cada riego lava lo que se haya aportado.\n\nEso cae de lleno en el caso «menos de 8» de la tabla de estrategia, y la consecuencia es que la fertilización de fondo no funciona. Lo que funciona es aportar poco y muchas veces: fertirriego en cada riego, o fertilizante de liberación lenta que vaya soltando de forma gradual. Aplicar una dosis grande al trasplante es tirar el fertilizante por el fondo de la bolsa.\n\nY de ahí también que añadir compost a la mezcla no sea solo una cuestión de nutrición: es sobre todo para subir la CIC del sustrato, de modo que retenga algo entre riego y riego.\n\nLa relación con los lotes del terreno es que el criterio es el mismo, solo cambia la magnitud. Cuando llegue el análisis, la CIC de cada lote decide el calendario: por debajo de 8, dosis pequeñas y frecuentes; entre 8 y 15, fraccionar en dos o tres aplicaciones por ciclo; por encima de 15, hay reserva real y se tolera una fertilización de fondo. Es especialmente importante en la temporada de lluvias: un lote de CIC baja fertilizado fuerte en octubre habrá perdido buena parte antes de diciembre, y el fraccionamiento es lo que evita pagar dos veces.",
+      "criterios": [
+        "Identifica que cascarilla y arena aportan porosidad pero no carga, de modo que la CIC del sustrato es muy baja.",
+        "Deduce que la fertilización de fondo no sirve y que hay que aportar poco y muchas veces.",
+        "Menciona fertirriego o fertilizante de liberación lenta como las soluciones prácticas.",
+        "Explica que el compost en la mezcla sube la CIC, no solo aporta nutrientes.",
+        "Traslada el mismo criterio a los lotes del terreno, con el fraccionamiento según el valor de CIC.",
+        "Idealmente señala el riesgo específico de fertilizar fuerte al inicio de la temporada de lluvias."
+      ],
+      "explicacion": "Esta pregunta conecta el módulo de suelo con el de vivero (Módulo 7) y con el de riego (Módulo 9). El mismo concepto —cuántas ranuras hay— gobierna decisiones muy distintas en los dos contextos."
+    }
+  ]
+}
