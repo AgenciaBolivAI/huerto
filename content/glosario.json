@@ -276,9 +276,9 @@
     {
       "termino": "Encalado",
       "slug": "encalado",
-      "definicion": "Aporte de carbonatos —cal agrícola o dolomita— para neutralizar la acidez y subir el pH. Tarda meses en reaccionar porque depende de que el material se disuelva, así que se aplica incorporado, con humedad y con antelación a la siembra. Pasarse es más difícil de arreglar que quedarse corto.",
+      "definicion": "Aporte de carbonatos —cal agrícola o dolomita— para neutralizar la acidez y subir el pH. El principio activo no es el calcio sino el anión que lo acompaña: la prueba es que el yeso aporta calcio y no sube el pH. Tarda meses en reaccionar porque depende de que el material se disuelva, así que se aplica incorporado, con humedad y con antelación a la siembra. Pasarse es más difícil de arreglar que quedarse corto. La elección entre caliza y dolomita depende de la relación calcio/magnesio, y cuánto material hace falta depende de su [[poder-de-neutralizacion]].",
       "leccion": "02-ciencia-del-suelo/05-ph-disponibilidad-nutrientes",
-      "sinonimos": ["cal agrícola", "dolomita", "calagem"]
+      "sinonimos": ["cal agrícola", "dolomita", "calagem", "encalar", "caliza", "cal"]
     },
     {
       "termino": "Aluminio intercambiable",
@@ -643,6 +643,83 @@
       "definicion": "Capacidad de muchas especies leñosas de emitir brotes nuevos desde la cepa después de ser cortadas. Si se corta alto y no se arranca la raíz, en dos o tres años hay de nuevo un arbusto o arbolito con el sistema radicular ya hecho. Es la forma más barata que existe de obtener una barrera viva o leña renovable, y solo cuesta la decisión de no arrancar. Es una manifestación práctica de la [[totipotencia]] vegetal.",
       "leccion": "04-preparar-la-tierra/02-desmonte-y-biomasa",
       "sinonimos": ["rebrote", "rebrotar de cepa", "monte bajo", "recepado"]
+    },
+    {
+      "termino": "Labranza",
+      "slug": "labranza",
+      "definicion": "Operación de voltear, mezclar y desmenuzar la capa superficial del suelo. Rompe los agregados, corta la continuidad de los poros construidos por raíces y fauna, acelera la mineralización de la materia orgánica que estaba protegida dentro de los agregados, corta las redes de micorrizas y crea una [[suela-de-labor]] a la profundidad del implemento. Afloja el primer día y deja el suelo más compacto al cabo de una temporada, lo que obliga a repetirla: es la causa de que el suelo siga compactándose, no su tratamiento.",
+      "leccion": "04-preparar-la-tierra/03-labranza-y-descompactacion",
+      "sinonimos": ["labrar", "arar", "rotovator", "rastra", "labranza convencional"]
+    },
+    {
+      "termino": "Subsolado",
+      "slug": "subsolado",
+      "definicion": "Fracturar una capa densa en profundidad con dientes estrechos que pasan por debajo de ella, sin voltear la capa superficial. No busca aflojar sino agrietar. Exige tres ajustes: trabajar de cinco a diez centímetros por debajo de la capa, separar los dientes entre una y una vez y media la profundidad para que los abanicos de fractura se solapen, y entrar solo con el suelo friable. Su efecto se pierde en una a tres temporadas si no se acompaña de tráfico controlado, cobertura y raíces profundas.",
+      "leccion": "04-preparar-la-tierra/03-labranza-y-descompactacion",
+      "sinonimos": ["subsolar", "subsolador", "descompactación mecánica", "cincel", "arado de cinceles"]
+    },
+    {
+      "termino": "Friabilidad",
+      "slug": "friabilidad",
+      "definicion": "Estado de humedad en que el suelo se deshace en terrones al manipularlo, en lugar de moldearse o pulverizarse. Es el único estado en que un implemento produce fractura frágil y por tanto agrietamiento real: con el suelo plástico —el que permite formar un cordón liso entre las manos— el diente deforma en vez de romper y compacta por debajo de su punto más bajo. Se comprueba con la misma prueba del cordón que sirve para estimar arcilla, sacando suelo de la profundidad de trabajo y no de la superficie.",
+      "leccion": "04-preparar-la-tierra/03-labranza-y-descompactacion",
+      "sinonimos": ["friable", "ventana de friabilidad", "consistencia", "punto de labranza", "suelo plástico"]
+    },
+    {
+      "termino": "Biodescompactación",
+      "slug": "biodescompactacion",
+      "definicion": "Uso de plantas de raíz pivotante potente para atravesar capas compactadas. La raíz perfora aprovechando grietas y puntos débiles, y al morir y descomponerse deja un canal vertical estable, con las paredes enriquecidas en materia orgánica, que las raíces siguientes heredan y usan como paso. Es lenta y gratuita, y a diferencia del [[subsolado]] no se recompacta, porque el mecanismo se renueva cada campaña. El gandul y el nabo forrajero son las especies habituales.",
+      "leccion": "04-preparar-la-tierra/03-labranza-y-descompactacion",
+      "sinonimos": ["descompactación biológica", "biopores", "bioporos", "arado biológico"]
+    },
+    {
+      "termino": "Compostaje termofílico",
+      "slug": "compostaje-termofilico",
+      "definicion": "Descomposición aerobia de materia orgánica en la que la oxidación libera suficiente calor como para que la pila alcance 55–65 °C y se mantenga ahí varios días. Solo a esa temperatura se matan las semillas de malezas, se reducen los patógenos y el material se estabiliza rápido. Se opone a la putrefacción anaerobia, que ocurre con los mismos materiales cuando no llega oxígeno: lenta, fría, maloliente y productora de compuestos fitotóxicos. Exige un volumen mínimo de aproximadamente un metro cúbico, porque por debajo de eso la pila pierde el calor más rápido de lo que lo genera.",
+      "leccion": "04-preparar-la-tierra/04-compost-y-vermicompost",
+      "sinonimos": ["compostaje", "compost", "fase termofílica", "putrefacción", "volteo"]
+    },
+    {
+      "termino": "Vermicompost",
+      "slug": "vermicompost",
+      "definicion": "Material producido por lombrices —habitualmente la roja californiana, Eisenia fetida— al procesar materia orgánica ya descompuesta. Es un proceso distinto del [[compostaje-termofilico]]: ocurre a temperatura ambiente, es más lento, produce menos volumen y no mata semillas de malezas, pero da un material fino y estable que es un componente excelente de sustrato para contenedor. En clima tropical el factor limitante es el calor: por encima de unos 35 °C las lombrices mueren o huyen, así que el lecho va obligatoriamente bajo sombra.",
+      "leccion": "04-preparar-la-tierra/04-compost-y-vermicompost",
+      "sinonimos": ["humus de lombriz", "lombricultura", "lombricompuesto", "Eisenia fetida", "lombriz roja californiana"]
+    },
+    {
+      "termino": "Gallinaza",
+      "slug": "gallinaza",
+      "definicion": "Estiércol de aves, muy abundante en Santa Cruz por la concentración avícola de la zona. Tiene una relación C/N muy baja, de 7 a 10, lo que la convierte en el activador de nitrógeno más potente accesible localmente y en la pareja natural del material leñoso del desmonte. Nunca se aplica fresca sobre una planta ni se echa a un lecho de lombrices: su concentración de nitrógeno y de sales quema el tejido, y libera amoníaco. Conviene preguntar qué cama trae —cascarilla de arroz, viruta—, porque eso cambia bastante la relación C/N real de lo que se compra.",
+      "leccion": "04-preparar-la-tierra/04-compost-y-vermicompost",
+      "sinonimos": ["estiércol de gallina", "guano de aves", "pollinaza"]
+    },
+    {
+      "termino": "Lixiviado",
+      "slug": "lixiviado",
+      "definicion": "Líquido que drena por la base de una pila de compost o de un lecho de lombrices. No es un fertilizante concentrado pese a que suele venderse como tal: es agua de drenaje que arrastra lo que encuentra a su paso, y si hay zonas anaerobias arrastra también compuestos indeseables para una raíz. No debe confundirse con el té de compost, que se prepara a propósito y con oxigenación. Si se usa, muy diluido; si huele mal, se descarta.",
+      "leccion": "04-preparar-la-tierra/04-compost-y-vermicompost",
+      "sinonimos": ["lixiviados", "té de lombriz", "té de compost", "percolado"]
+    },
+    {
+      "termino": "Poder relativo de neutralización total",
+      "slug": "poder-de-neutralizacion",
+      "definicion": "Índice porcentual que combina la pureza de un material de encalado con su finura, y que indica cuánta acidez neutraliza realmente frente al carbonato de calcio puro y finamente molido, que sería el 100 %. Importa porque la reacción ocurre en la superficie de las partículas: un grano grueso puede contener el carbonato y no llegar a reaccionar a tiempo. Un material con PRNT del 50 % exige el doble de cantidad para el mismo efecto, de modo que comparar precios por saco sin conocer este número no significa nada.",
+      "leccion": "04-preparar-la-tierra/05-enmiendas",
+      "sinonimos": ["PRNT", "RNV", "poder de neutralización", "valor neutralizante", "granulometría"]
+    },
+    {
+      "termino": "Roca fosfórica",
+      "slug": "roca-fosforica",
+      "definicion": "Fuente de fósforo mineral, barata y de liberación lenta, que necesita acidez para disolverse. En suelo ácido funciona; en suelo neutro o ya encalado permanece prácticamente inerte y es dinero perdido. De ahí una consecuencia de orden que contradice la regla general de corregir primero el pH: si se va a usar, entra antes o a la vez que el [[encalado]], nunca después. Es una decisión que hay que tomar conscientemente antes de encalar, porque después ya está tomada.",
+      "leccion": "04-preparar-la-tierra/05-enmiendas",
+      "sinonimos": ["fosforita", "fosfato de roca", "fósforo de liberación lenta"]
+    },
+    {
+      "termino": "Cachaza",
+      "slug": "cachaza",
+      "definicion": "Residuo de la clarificación del jugo de caña en los ingenios azucareros, en forma de torta oscura rica en materia orgánica, calcio y fósforo. En Santa Cruz es abundante y barata por la concentración de la industria azucarera, y se usa habitualmente como enmienda. Es variable según ingenio y momento de zafra, voluminosa y húmeda —el coste real suele ser el flete—, y conviene compostarla o madurarla antes de aplicarla.",
+      "leccion": "04-preparar-la-tierra/05-enmiendas",
+      "sinonimos": ["torta de filtro", "cachaza de ingenio", "ceniza de bagazo"]
     },
     {
       "termino": "Totipotencia",
