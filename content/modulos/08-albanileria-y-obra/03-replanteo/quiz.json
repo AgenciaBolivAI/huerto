@@ -1,0 +1,87 @@
+{
+  "preguntas": [
+    {
+      "id": "angulo-vs-distancia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué no se traza una perpendicular larga con una escuadra de carpintero?",
+      "opciones": [
+        "Porque mide unos 30 cm y al prolongar 10 m estás extrapolando por treinta y tres.",
+        "Un error de dos milímetros en el extremo de la escuadra se convierte en más de seis centímetros al final del muro.",
+        "Una cinta métrica, en cambio, mide diez metros con precisión de milímetros.",
+        "Porque las escuadras de carpintero no traen el ángulo bien de fábrica."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es que la escuadra esté mal hecha: es que la precisión a pequeña escala no se extrapola. Es el problema de estimar una pendiente a partir de una derivada local, donde cualquier ruido se amplifica sin control. La medida larga sí es fiable, y de ahí que toda la lección convierta problemas de ángulos en problemas de distancias."
+    },
+    {
+      "id": "3-4-5",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo funciona el método 3-4-5 y qué múltiplo conviene usar?",
+      "opciones": [
+        "Un triángulo de lados 3, 4 y 5 tiene forzosamente un ángulo recto entre los lados 3 y 4, porque 3² + 4² = 5².",
+        "Cualquier múltiplo sirve: 6-8-10, 9-12-15.",
+        "Conviene el múltiplo más grande que quepa, porque el mismo error de medida pesa proporcionalmente menos.",
+        "Solo funciona con esas medidas exactas en metros."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Lo notable es que has trazado un ángulo recto sin medir ningún ángulo: solo tres distancias, que es lo que una cinta hace bien. El ángulo aparece como consecuencia de una identidad aritmética y no de la calidad del instrumento. Un teorema de hace dos mil quinientos años funcionando como herramienta de precisión, y gratis."
+    },
+    {
+      "id": "diagonales",
+      "tipo": "opcion_multiple",
+      "enunciado": "Mides los cuatro lados del rectángulo replanteado y coinciden con el plano. ¿Está bien?",
+      "opciones": [
+        "No necesariamente: los cuatro lados pueden ser correctos y la figura estar inclinada como un romboide.",
+        "Hay que comprobar además que las dos diagonales midan lo mismo.",
+        "Es una comprobación global: con dos medidas verificas las cuatro esquinas a la vez.",
+        "Sí: si los lados son correctos, la figura es un rectángulo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Y hay un matiz que suele omitirse: diagonales iguales tampoco basta por sí solo, porque un trapecio isósceles también las tiene iguales. La comprobación completa son dos condiciones a la vez: lados opuestos iguales dos a dos, y diagonales iguales. Son seis medidas y cinco minutos."
+    },
+    {
+      "id": "camillas",
+      "tipo": "verdadero_falso",
+      "enunciado": "Las esquinas se marcan con estacas clavadas en el punto exacto, y desde ahí se excava.",
+      "respuesta": false,
+      "explicacion": "Falso, y el problema es evidente en cuanto se piensa: esas estacas están justo donde va la zanja, así que al primer palazo pierdes la referencia. Las camillas de replanteo van fuera de la zona de excavación, con tablas horizontales sobre las que se marcan los ejes; entre ellas se tienden las cuerdas, y la esquina se baja al fondo con una plomada. Es guardar la referencia fuera de la región que vas a mutar: nadie guarda el índice dentro del array que va a reasignar."
+    },
+    {
+      "id": "cota-unica",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué todas las alturas se miden desde una única cota de referencia?",
+      "opciones": [
+        "Porque si mides cada punto desde el anterior, los pequeños errores se suman.",
+        "El quinto punto acumularía los errores de los cuatro anteriores.",
+        "Refiriendo todo al mismo origen, cada medida lleva su error y ninguno se propaga.",
+        "Da igual el método mientras el instrumento sea preciso."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la diferencia entre rutas relativas y rutas absolutas. Una cadena de referencias funciona hasta que un eslabón intermedio falla, y entonces el error está en el camino y no en el destino, que es lo que lo hace difícil de rastrear. Una cota de referencia se resuelve siempre contra el mismo origen."
+    },
+    {
+      "id": "orden",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si las diagonales dan una diferencia pequeña, se puede seguir adelante y corregir al construir.",
+      "respuesta": false,
+      "explicacion": "Falso. Una diferencia en las diagonales no se corrige después: se hereda a toda la obra, y a partir de ahí cada pieza que vaya encima hay que ajustarla a mano. Los pasos de trazado y comprobación se repiten hasta que coincidan, y solo entonces se montan las camillas y se excava."
+    },
+    {
+      "id": "plan-replanteo",
+      "tipo": "abierta",
+      "enunciado": "Vas a replantear el sombreadero de Rizoma del Sur, una retícula rectangular de postes. Describe el procedimiento completo en orden, con qué herramientas, y qué dos decisiones permanentes tomas de paso.",
+      "respuestaModelo": "El procedimiento en orden. Primero fijo la línea base: un eje del que va a colgar todo lo demás. Después levanto la perpendicular desde un punto de esa línea con el 3-4-5, usando el múltiplo más grande que me quepa, un 6-8-10 o incluso 9-12-15, porque el mismo error de un centímetro pesa proporcionalmente menos cuanto mayor sea el triángulo. Con la línea base y su perpendicular, completo el rectángulo con las medidas del plano.\n\nEntonces compruebo: los cuatro lados y las dos diagonales, seis medidas. Si las diagonales no coinciden, la figura está inclinada aunque los lados estén bien, y repito el trazado hasta que coincidan. No paso de aquí con una diferencia que «ya se arreglará», porque no se arregla, se hereda a toda la estructura.\n\nSolo cuando cuadra monto las camillas: parejas de estacas con tabla horizontal, situadas uno o dos metros fuera de donde voy a excavar. Traslado los ejes a las tablas y tiendo las cuerdas entre camillas opuestas. La esquina teórica es donde se cruzan dos cuerdas y la bajo al fondo con la plomada. Así puedo quitar y volver a tender las cuerdas las veces que haga falta, y la excavación no se lleva por delante ninguna referencia.\n\nDespués fijo la cota de referencia y la transfiero a cada camilla con el nivel de manguera, midiendo todo desde ese único origen y no de un punto al siguiente, para que los errores no se acumulen.\n\nY recién entonces excavo.\n\nLas herramientas: cinta de fibra de vidrio de 30 metros —siempre la misma para una misma obra, porque dos cintas distintas pueden diferir lo bastante como para que las diagonales nunca cuadren—, estacas de madera del desmonte, cuerda de albañil de la buena porque la que da de sí introduce un error invisible, plomada, manguera transparente y tablas para las camillas.\n\nLas dos decisiones permanentes que tomo de paso. La primera es la línea base, que dejo materializada con dos mojones firmes en los extremos del terreno; si el lindero está claro y acordado con el vecino puedo usarlo, y si hay cualquier duda defino un eje interior propio, que es independiente de discusiones futuras. La segunda es la cota de referencia: un punto único, protegido, hormigonado en un rincón que no estorbe y anotado en el plano. Todas las alturas del proyecto —camas, drenaje, depósito— se refieren a ella, de modo que el drenaje que haga dentro de dos años seguirá siendo compatible con lo que construya hoy.\n\nY el sombreadero es justamente el caso que más disciplina exige, porque una retícula de postes tiene que encajar con las piezas que van encima: si está fuera de escuadra, cada pieza hay que ajustarla a mano.",
+      "criterios": [
+        "Ordena correctamente: línea base, perpendicular, rectángulo, comprobación, camillas, cotas, excavar.",
+        "Usa el 3-4-5 con el múltiplo más grande posible y justifica por qué.",
+        "Comprueba los cuatro lados y las dos diagonales, y no avanza si no coinciden.",
+        "Sitúa las camillas fuera de la excavación y baja el punto con plomada.",
+        "Refiere todas las alturas a una cota única y explica la acumulación de error.",
+        "Especifica usar siempre la misma cinta y cuerda que no dé de sí.",
+        "Deja materializada la línea base con mojones y aborda el riesgo del lindero.",
+        "Fija y anota una cota de referencia permanente para todo el proyecto."
+      ],
+      "explicacion": "Las dos decisiones permanentes de esta pregunta —la línea base y la cota de referencia— cuestan una tarde y valen para los próximos diez años de obra. Todo lo que construyas después se replantea contra ellas."
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "preguntas": [
+    {
+      "id": "notacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué significa exactamente 1:2:3, y qué le falta a esa notación?",
+      "opciones": [
+        "Una parte de cemento, dos de arena y tres de grava, siempre en ese orden.",
+        "Le falta la unidad: en volumen o en peso, y medido con qué recipiente.",
+        "Un mortero lleva dos números y no tres, porque no lleva grava.",
+        "Está completa: el número basta para reproducir la mezcla."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Una dosificación sin unidad es un fichero de configuración con números y sin unidades: «timeout: 30» no dice si son segundos o milisegundos, y quien lo lee asume lo que le parece. Si dos personas de la misma obra usan recipientes distintos, están haciendo hormigones distintos con la misma receta."
+    },
+    {
+      "id": "cajon",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un cajón medidor de 30 × 30 × 40 cm contiene aproximadamente el mismo volumen que una bolsa de cemento de 50 kg.",
+      "respuesta": true,
+      "explicacion": "Correcto: 0,036 m³, prácticamente lo que ocupa una bolsa. Eso hace la dosificación trivial de contar en obra: 1:2:3 es una bolsa de cemento, dos cajones de arena y tres de grava, sin conversiones y sin depender de quién sostenga la pala. Conviene hacerse dos, porque uno se rompe."
+    },
+    {
+      "id": "paladas",
+      "tipo": "verdadero_falso",
+      "enunciado": "Medir por paladas es aceptable si siempre lo hace la misma persona.",
+      "respuesta": false,
+      "explicacion": "Falso. Aunque sea la misma persona, la palada varía con el cansancio, con la humedad de la arena y con cómo se cargue cada vez. El problema de fondo no es la exactitud sino la reproducibilidad: una mezcla que no se puede repetir no se puede corregir, porque si un día sale mal no sabes qué cambiar."
+    },
+    {
+      "id": "esponjamiento",
+      "tipo": "opcion_multiple",
+      "enunciado": "La arena del acopio está húmeda porque llovió. ¿Qué le pasa a tu dosificación por volumen?",
+      "opciones": [
+        "Una película de agua rodea cada grano y los separa, así que la misma arena ocupa hasta un 20 o 30 % más.",
+        "Al medir por volumen estás poniendo menos arena de la que crees.",
+        "La mezcla sale con más cemento del previsto, es decir más cara, y con otra demanda de agua.",
+        "No pasa nada: el agua se evapora y el volumen es el mismo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es el efecto que explica algo desconcertante en obra: la misma receta da resultados distintos según llovió ayer o no. No hace falta corregirlo con precisión de laboratorio, pero sí saberlo. Y es otra razón para concentrar la obra en la seca, cuando el material del acopio está en un estado más constante."
+    },
+    {
+      "id": "revoque",
+      "tipo": "verdadero_falso",
+      "enunciado": "Conviene hacer el revoque con una mezcla rica en cemento para que aguante mejor.",
+      "respuesta": false,
+      "explicacion": "Falso, y es un error frecuente. Un revoque muy rico retrae más al fraguar y se fisura, y además queda más rígido que el muro sobre el que va, lo que hace que se despegue. Un revoque debe ser algo más débil que su soporte. Es el principio de cualquier sistema con capas: la capa exterior debe ceder antes que la estructura, no al revés."
+    },
+    {
+      "id": "rendimiento",
+      "tipo": "opcion_multiple",
+      "enunciado": "Mezclas un cajón de cemento, dos de arena y tres de grava. ¿Cuánto hormigón obtienes y por qué?",
+      "opciones": [
+        "Unos cuatro cajones, no seis.",
+        "Porque la arena se mete en los huecos de la grava y la pasta de cemento en los huecos de la arena.",
+        "Como regla, hacen falta alrededor de 1,5 m³ de material suelto por cada m³ de hormigón terminado.",
+        "Seis cajones: el volumen se conserva."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El volumen final es el del árido grueso más lo que no cupo, no la suma de todo. Es la cuenta que hace que la gente compre mal, y también la que evita quedarse corto a mitad de un vaciado: una junta fría no prevista es un punto débil permanente, así que conviene añadir un margen del 5 al 10 %."
+    },
+    {
+      "id": "agua-ingrediente",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se controla el agua de una amasada?",
+      "opciones": [
+        "Se mide con un balde marcado, la misma cantidad por amasada, y se anota.",
+        "Si una amasada sale demasiado seca, se corrige la siguiente cambiando la cantidad medida.",
+        "Nunca se vuelve a añadir agua a una mezcla que ya empezó a fraguar: ese hormigón se descarta.",
+        "Se ajusta a ojo según cómo se vea la mezcla girando en la mezcladora."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Medir el agua da algo valiosísimo: amasadas comparables. Si la tercera sale bien y la quinta mal, puedes averiguar por qué. Ajustando a ojo, cada amasada es una mezcla distinta y ninguna se puede corregir porque no sabes en qué se diferenciaban. Y el reamasado —añadir agua a lo que ya fragua— arruina la pieza."
+    },
+    {
+      "id": "plan-dosificacion",
+      "tipo": "abierta",
+      "enunciado": "Vas a hormigonar diez bases de poste para el sombreadero, de 40 × 40 × 40 cm cada una. Explica qué mezcla usas y por qué, calcula el material que necesitas comprar, y describe el procedimiento de amasado y las tres reglas que no se rompen.",
+      "respuestaModelo": "La mezcla: las bases de poste soportan carga moderada y lo que importa es el volumen y el anclaje, así que un hormigón simple 1:3:5 es suficiente. No hace falta un 1:2:3, que reservo para las zapatas y el depósito, donde la exigencia es mayor.\n\nEl cálculo. Cada base es 0,40 × 0,40 × 0,40, o sea 0,064 m³. Diez bases son 0,64 m³ de hormigón terminado. Como hacen falta alrededor de 1,5 m³ de material suelto por cada m³ de hormigón, necesito del orden de 0,96 m³ de material suelto. Y le añado un margen del 5 al 10 % por pérdidas, irregularidades del hoyo y lo que se queda pegado en todas partes, así que redondeo a algo más de un metro cúbico de material.\n\nEse material se reparte según la proporción: de nueve partes totales, una es cemento, tres arena y cinco grava. Con el cajón de 30 × 30 × 40, que equivale a una bolsa, la cuenta se hace contando cajones en lugar de calculando volúmenes. Y para el pedido de arena y ripio pregunto cuántos metros cúbicos trae la volqueta antes de comparar precios, porque una volqueta más barata puede ser simplemente más pequeña.\n\nEl procedimiento. Primero mezclo en seco grava, arena y cemento hasta que el color sea uniforme. Después añado el agua medida, poco a poco, con un balde marcado y la misma cantidad en cada amasada, anotándola. Mezclo al menos dos o tres minutos desde que entra la última agua; con menos tiempo quedan zonas sin cemento repartido. Y no preparo más mezcla de la que pueda colocar en el rato siguiente, porque hay que colocarla antes de que empiece a fraguar.\n\nLas tres reglas que no se rompen. Primera: el agua se mide y se anota, nunca se ajusta a ojo; si una amasada sale seca, corrijo la siguiente. Segunda: no se reamasa; la mezcla que empezó a fraguar se descarta, duele y sale más barato que la pieza que produciría. Y tercera, que viene de la lección anterior: curar. Todo lo que lleve cemento se mantiene húmedo al menos una semana, y en agosto y septiembre eso significa regar varias veces al día o tapar; ese consumo entra en el mismo presupuesto de agua que el vivero.\n\nY una precaución con la arena: si está húmeda del acopio, por volumen estoy poniendo menos de la que creo, así que la mezcla saldrá algo más rica en cemento de lo previsto. No lo corrijo con precisión pero lo tengo presente al interpretar cómo sale.",
+      "criterios": [
+        "Elige una mezcla proporcionada al elemento y justifica no usar la más rica.",
+        "Calcula correctamente el volumen de hormigón terminado a partir de las dimensiones.",
+        "Aplica el factor de rendimiento de aproximadamente 1,5 para pasar a material suelto.",
+        "Añade un margen por pérdidas y explica por qué quedarse corto es peor que sobrar.",
+        "Usa el cajón medidor como unidad de conteo en obra.",
+        "Describe el orden de mezclado, primero en seco y luego el agua medida, con tiempo mínimo.",
+        "Enuncia las reglas de no ajustar agua a ojo, no reamasar y curar.",
+        "Menciona el esponjamiento de la arena húmeda como factor a tener presente."
+      ],
+      "explicacion": "Fíjate en que el cálculo entero cabe en dos líneas y evita dos viajes al proveedor o un vaciado interrumpido. Media hora de hoja de cálculo antes de pedir el camión es la parte mejor pagada de toda la obra."
+    }
+  ]
+}

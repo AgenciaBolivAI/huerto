@@ -1,0 +1,285 @@
+Ya sabes con qué materiales trabajas y en qué proporciones. Ahora hay que decidir **dónde va cada
+cosa, exactamente**, y trasladarlo al terreno.
+
+Eso es el <Termino slug="replanteo">replanteo</Termino>, y es la operación que decide si lo que
+construyes queda recto. Se hace antes de excavar y no se puede corregir después: un muro fuera de
+escuadra se queda fuera de escuadra para siempre.
+
+Tiene además una elegancia que te va a gustar, porque toda la lección se sostiene sobre una sola
+idea.
+
+## En el campo no puedes medir un ángulo, pero sí una distancia
+
+<Diagrama
+  src="no-confies-en-el-angulo.webp"
+  alt="Esquema de una esquina. Una escuadra de carpintero pequeña apoyada en el vértice presenta una desviación mínima respecto al ángulo recto, marcada con una cota diminuta en su extremo. Desde esa esquina parten dos líneas: una punteada que representa la dirección correcta y otra continua que sigue la dirección de la escuadra desviada. Las dos líneas se separan progresivamente y a diez metros de distancia la separación entre ambas es muy grande, marcada con una cota mucho mayor."
+  pie="El error del instrumento se multiplica por la distancia. Lo que en la escuadra son dos milímetros, a diez metros son varios centímetros."
+/>
+
+Una escuadra de carpintero mide unos 30 cm. Si la apoyas en una esquina y prolongas la línea diez
+metros, **estás extrapolando por treinta y tres**. Un error de dos milímetros en el extremo de la
+escuadra se convierte en más de seis centímetros al final del muro.
+
+Una cinta métrica, en cambio, mide diez metros con una precisión de milímetros. La medida larga es
+buena; la medida angular corta, no.
+
+<Analogia>
+Es el problema de **estimar una pendiente a partir de una derivada local**.
+
+Si mides la inclinación en un tramo diminuto y extrapolas, cualquier ruido en esa medida se amplifica
+sin control. Si mides entre dos puntos separados, el mismo ruido queda dividido por la distancia.
+
+**La precisión a pequeña escala no se extrapola. La medida larga sí.**
+
+Y de ahí sale el truco que organiza toda esta lección: **cada técnica de replanteo convierte un
+problema de ángulos en un problema de distancias**, que es lo único que se puede medir bien en un
+terreno.
+</Analogia>
+
+## El 3-4-5: Pitágoras convertido en herramienta
+
+<Diagrama
+  src="el-3-4-5.webp"
+  alt="Dos triángulos rectángulos dibujados sobre el terreno con cuerdas y estacas. El pequeño tiene los lados rotulados tres, cuatro y cinco, con el ángulo recto marcado en el vértice entre los lados tres y cuatro. El grande, dibujado al lado y claramente mayor, tiene los lados rotulados seis, ocho y diez, con el mismo ángulo recto marcado. Una flecha señala el triángulo grande con la indicación de que es el preferible."
+  pie="Cualquier múltiplo funciona, y cuanto mayor sea, más preciso es el ángulo resultante. Con lo que tengas, usa el múltiplo más grande que quepa."
+/>
+
+Un triángulo cuyos lados midan 3, 4 y 5 tiene forzosamente un ángulo recto entre los lados 3 y 4,
+porque `3² + 4² = 5²`. Y eso es cierto para **cualquier múltiplo**: 6-8-10, 9-12-15, 1,5-2-2,5.
+
+En obra se usa así:
+
+1. Desde la esquina, marca **4 unidades** a lo largo de la línea que ya tienes.
+2. Desde la misma esquina, marca **3 unidades** en la dirección aproximada de la perpendicular.
+3. Mide la distancia entre esos dos puntos. Si no da **5**, mueve el segundo punto hasta que dé.
+4. Cuando dé 5 exacto, la perpendicular es perfecta.
+
+**Usa el múltiplo más grande que te quepa.** Con 3-4-5 en metros, un error de un centímetro al medir
+el 5 desplaza el ángulo mucho más que el mismo centímetro sobre un 6-8-10. Si tienes espacio, mide
+6-8-10 o incluso 9-12-15.
+
+<Dato titulo="Por qué esto es mejor que cualquier escuadra que puedas comprar">
+Fíjate en lo que acaba de pasar: has trazado un ángulo recto **sin medir ningún ángulo**.
+
+Solo mediste tres distancias, que es lo que una cinta hace bien. El ángulo aparece como consecuencia
+de una identidad aritmética, no de la calidad de un instrumento.
+
+Es un teorema de hace dos mil quinientos años funcionando como herramienta de precisión, y es
+gratis.
+</Dato>
+
+## Las diagonales: la comprobación que verifica todo a la vez
+
+<Diagrama
+  src="diagonales-iguales.webp"
+  alt="Dos cuadriláteros marcados con cuerdas sobre el terreno. En el izquierdo, rotulado correcto, las esquinas son rectas y las dos diagonales dibujadas en línea discontinua tienen la misma longitud, indicada con la misma cota en ambas. En el derecho, rotulado fuera de escuadra, la figura aparece inclinada como un romboide aunque sus lados opuestos siguen midiendo lo mismo, y las dos diagonales tienen longitudes claramente distintas."
+  pie="Los cuatro lados pueden ser correctos y la figura estar torcida. Solo las diagonales delatan el desplome."
+/>
+
+El 3-4-5 construye un ángulo. Las diagonales **verifican la figura entera**.
+
+En un rectángulo bien trazado, **las dos diagonales miden exactamente lo mismo**. Si una es más larga
+que la otra, la figura está inclinada: es un romboide, no un rectángulo.
+
+Y aquí está lo bueno: es una comprobación **global**. Con dos medidas verificas las cuatro esquinas a
+la vez, y no una por una.
+
+<Advertencia titulo="Diagonales iguales no basta por sí solo">
+Un detalle que se omite y que conviene saber: **hay figuras que no son rectángulos y tienen las
+diagonales iguales**, como un trapecio isósceles.
+
+La comprobación completa son **dos condiciones a la vez**:
+
+1. Los lados opuestos miden lo mismo, dos a dos.
+2. Las dos diagonales miden lo mismo.
+
+Con las dos, la figura es un rectángulo necesariamente. Con una sola, no.
+
+En la práctica: mide los cuatro lados **y** las dos diagonales. Son seis medidas y tardas cinco
+minutos.
+</Advertencia>
+
+## Las camillas: dónde poner la referencia para que sobreviva
+
+<Diagrama
+  src="camillas-de-replanteo.webp"
+  alt="Corte y vista de una esquina de obra. A cada lado, dos estacas verticales clavadas en el suelo sostienen una tabla horizontal, situadas bastante fuera de la zona de excavación. Entre las tablas de un lado y las del otro se tienden cuerdas tensadas que se cruzan en el aire sobre la zanja. Desde el punto exacto donde las dos cuerdas se cruzan cuelga una plomada cuya punta señala la esquina teórica dentro de la zanja ya excavada. La zanja aparece abierta y sin estacas dentro."
+  pie="Las marcas están fuera de lo que se va a excavar. La cuerda se puede quitar y volver a poner las veces que haga falta, y la esquina reaparece siempre en el mismo sitio."
+/>
+
+Y aquí está la técnica que casi nadie explica y que resuelve un problema evidente en cuanto lo
+piensas.
+
+Marcas las esquinas con estacas. Empiezas a excavar. **Y las estacas estaban justo donde va la
+zanja.** Al primer palazo pierdes la referencia.
+
+La solución son las <Termino slug="camilla-de-replanteo">camillas de replanteo</Termino>: parejas de
+estacas con una tabla horizontal clavada encima, situadas **fuera de la zona de excavación**, uno o
+dos metros más allá. Sobre esas tablas se marcan los ejes, y entre camilla y camilla se tienden las
+cuerdas.
+
+Ventajas:
+
+- Las cuerdas **se pueden quitar** para trabajar y volver a tender exactamente igual.
+- La esquina teórica es donde se cruzan dos cuerdas, y se baja al fondo de la zanja **con una
+  plomada**.
+- Las marcas sobreviven a toda la excavación y al hormigonado.
+
+<Analogia>
+Es guardar la referencia **fuera de la región que vas a mutar.**
+
+Nadie guarda el índice dentro del array que está a punto de reasignar. Marcar las esquinas con
+estacas dentro de la zanja es exactamente eso: poner el puntero en la memoria que vas a liberar.
+
+Las camillas son el equivalente físico de mantener las coordenadas en un sistema de referencia
+estable, independiente del objeto que se está modificando.
+</Analogia>
+
+## Los niveles: una sola referencia, no una cadena
+
+<Diagrama
+  src="acumulacion-de-error.webp"
+  alt="Dos esquemas con una hilera de cinco puntos sobre un terreno. En el superior, rotulado en cadena, cada punto se mide desde el anterior mediante flechas encadenadas, y cada medición lleva una pequeña desviación; el quinto punto queda visiblemente desplazado respecto a la línea horizontal correcta. En el inferior, rotulado desde una referencia, todas las flechas parten de un mismo punto inicial marcado con una señal destacada y llegan a cada uno de los cinco puntos, que quedan todos exactamente sobre la línea horizontal."
+  pie="El mismo error de medición en cada paso. Encadenado se acumula; referido a un origen único, no."
+/>
+
+Del Módulo 4 ya sabes usar el nivel de manguera. Aquí se aplica a la obra, con una regla añadida que
+importa más que el instrumento.
+
+**Todas las alturas se miden desde una única marca de referencia**, la
+<Termino slug="cota-de-referencia">cota de referencia</Termino>: un punto fijo, bien protegido, en un
+sitio que no se vaya a mover ni a excavar. Desde ahí se transfiere a cada camilla.
+
+Lo que **no** hay que hacer es medir cada punto desde el anterior. Si cada medida lleva un pequeño
+error y las encadenas, **los errores se suman**; el quinto punto acumula los cuatro anteriores. Si
+todas parten del mismo origen, cada una lleva su error y ninguno se propaga.
+
+<Analogia>
+Es la diferencia entre **rutas relativas y rutas absolutas.**
+
+`../../../config` funciona hasta que alguien mueve un directorio intermedio, y entonces falla de una
+forma difícil de rastrear porque el error está en el camino, no en el destino.
+
+Una cota de referencia es una ruta absoluta: cada punto se resuelve contra el mismo origen y no
+depende de que los anteriores estuvieran bien.
+</Analogia>
+
+## El orden completo
+
+| # | Paso | Herramienta |
+|---|---|---|
+| 1 | Fijar la **línea base** —un lindero, un muro existente, un eje decidido | Cinta y estacas |
+| 2 | Levantar la **perpendicular** desde un punto de esa línea | 3-4-5 |
+| 3 | Completar el rectángulo con las medidas del plano | Cinta |
+| 4 | **Comprobar** los cuatro lados y las dos diagonales | Cinta |
+| 5 | Montar las **camillas** fuera de la zona de excavación | Estacas y tablas |
+| 6 | Trasladar los ejes a las camillas y tender las cuerdas | Cuerda y plomada |
+| 7 | Fijar la **cota de referencia** y transferirla a cada camilla | Nivel de manguera |
+| 8 | Recién ahora, excavar | Pala |
+
+**Los pasos 1 a 4 se repiten hasta que las diagonales coincidan.** No se pasa al 5 con una diferencia
+que «ya se arreglará»: no se arregla, se hereda.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Esto ya lo empezaste sin saberlo.** En la lección 1 del Módulo 4, la primera tarea era amojonar y
+levantar el plano. Aquello era el replanteo del terreno; esto es el replanteo de cada obra concreta
+dentro de él.
+
+**Las herramientas, y ninguna cuesta casi nada:**
+
+- **Cinta métrica de 30 m**, de fibra de vidrio. La de 5 m no sirve para esto.
+- **Estacas** de madera del desmonte, con punta.
+- **Cuerda** de albañil, que no dé de sí. La cuerda que se estira arruina el trabajo.
+- **Plomada**, o una tuerca atada a un hilo.
+- **Manguera transparente**, la que ya usaste para las cotas del terreno.
+- **Tablas** para las camillas.
+
+**Dónde vas a usarlo esta seca:**
+
+| Obra | Qué hay que replantear |
+|---|---|
+| Sombreadero | La retícula de postes, en escuadra y con las diagonales comprobadas |
+| Camas del vivero | Los ejes y los anchos, con cuerdas que después guían el llenado |
+| Depósito de agua | Su planta, y la cota del fondo respecto a la del vivero |
+| Bases de poste | Las posiciones exactas, para que la estructura encaje |
+
+**El sombreadero es el caso que más disciplina exige.** Una estructura de postes tiene que encajar con
+las piezas que van encima, y si la retícula está fuera de escuadra, cada pieza hay que ajustarla a
+mano. Replantear bien media hora ahorra un día de ajustes, y el resultado se ve.
+
+**Una decisión de trazado que conviene tomar ahora**: elige tu **línea base** y déjala materializada
+de forma permanente. Lo lógico es un lindero, si está claro y acordado con el vecino, o un eje que
+definas tú y marques con dos mojones firmes en los extremos del terreno. A partir de esa línea se
+replantea todo lo demás, este año y dentro de cinco.
+
+**Y la cota de referencia**: un solo punto, protegido, del que salgan todas las alturas del proyecto.
+Puede ser una estaca hormigonada en un rincón que no estorbe. Anótala en el plano. Todas las cotas de
+las camas, del drenaje y del depósito se refieren a ella, y así el nivel del drenaje que hagas dentro
+de dos años seguirá siendo compatible con el que hiciste hoy.
+
+**Lo que no hay que hacer:** clavar las estacas dentro de la zanja, medir cada punto desde el
+anterior, y empezar a excavar con las diagonales sin cuadrar. Los tres errores se pagan en la misma
+moneda: piezas que no encajan y ajustes a mano durante toda la obra.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El 3-4-5 y la plomada son herramientas corrientes aquí**, y cualquier albañil con experiencia las
+conoce. Si mencionas «sacar la escuadra con el tres cuatro cinco» te van a entender perfectamente. No
+es una técnica académica: es el estándar de obra.
+
+**La cuerda de albañil se consigue en cualquier ferretería**, y conviene comprar de la buena. La
+cuerda barata da de sí con el sol y con la tensión, y una cuerda que se estira introduce un error
+que no se ve y que se traslada a todo lo que replantees con ella. Es de las pocas herramientas donde
+la diferencia de precio importa.
+
+**La cinta de fibra de vidrio, no la metálica larga.** La metálica de 30 m se dobla, se abolla y se
+corta; la de fibra aguanta mejor el uso en terreno con vegetación y piedras. Y no las mezcles: dos
+cintas distintas pueden diferir lo suficiente como para que las diagonales nunca te cuadren. **Usa
+siempre la misma cinta para una misma obra.**
+
+**Ojo con los linderos como línea base.** Con ocho lotes contiguos y vecinos alrededor, un lindero
+discutido es una línea base que puede moverse. Como se dijo en el Módulo 4, conviene tener los
+límites claros y acordados **antes** de apoyar todo el trazado en ellos. Si hay cualquier duda, define
+tu propio eje interior con dos mojones firmes y replantea desde ahí: es independiente de cualquier
+discusión futura.
+
+**Y las camillas se llaman así o «caballetes» según quién hable.** Si preguntas por «camillas de
+replanteo» y no te entienden, describe lo que es: las tablas con las estacas para tender las cuerdas
+fuera de la excavación. La técnica se usa; el nombre varía.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Saco la escuadra con la escuadra de carpintero.»** Mide 30 cm y vas a prolongar 10 m: multiplicas
+el error por treinta y tres. Usa el 3-4-5.
+
+**«Uso el 3-4-5 en metros porque es lo que recuerdo.»** Funciona, pero cuanto mayor el múltiplo, más
+preciso. Si cabe un 6-8-10, mejor.
+
+**«Los cuatro lados miden lo que dice el plano, está bien.»** Los cuatro lados pueden ser correctos y
+la figura estar torcida. Comprueba las diagonales.
+
+**«Las diagonales me dan casi igual, ya se arreglará.»** No se arregla: se hereda a toda la obra.
+
+**«Marco las esquinas con estacas.»** Y al primer palazo las pierdes. Las referencias van fuera de la
+excavación, en camillas.
+
+**«Voy midiendo cada punto desde el anterior.»** Los errores se suman. Todo se mide desde una única
+cota de referencia.
+
+**«Uso la cuerda que tenía por ahí.»** Si da de sí, introduce un error invisible en todo lo que
+replantees.
+
+## Lo que sigue
+
+Con el replanteo hecho y las camillas puestas, ya se puede excavar. Y lo primero que aparece debajo
+es **el suelo**, que llevas tres módulos estudiando pero ahora desde otra pregunta: no si sostiene una
+raíz, sino **si sostiene una carga**.
+
+La lección siguiente va de cimientos. Por qué se hunden las cosas, qué significa que un suelo sea
+portante, cómo se relaciona el peso de lo que construyes con la superficie de apoyo que necesita, qué
+profundidad exige un cimiento y por qué, y el caso que en tu terreno importa especialmente: **qué
+hacer cuando debajo hay una arcilla expansiva o un nivel freático alto**, que es exactamente lo que
+podrías encontrar en una llanura aluvial.

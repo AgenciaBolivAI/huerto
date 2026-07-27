@@ -1,0 +1,287 @@
+Ya sabes qué hace cada material. Ahora hay que combinarlos, y aquí es donde la obra se llena de
+números que nadie explica: **1:2:3**, **1:4**, **1:3:5**.
+
+Son proporciones, y son fáciles de entender. Lo que casi nadie dice —y donde está la mayoría de los
+errores— es **en qué unidades**.
+
+## La notación, y la trampa que trae dentro
+
+La <Termino slug="dosificacion">dosificación</Termino> se escribe siempre en el mismo orden:
+
+- **Hormigón**: `cemento : arena : grava`. Tres números.
+- <Termino slug="mortero">**Mortero**</Termino>: `cemento : arena`. Dos números, sin grava.
+
+Así que **1:2:3** significa una parte de cemento, dos de arena y tres de grava. Y **1:4** es un mortero
+con una parte de cemento por cada cuatro de arena.
+
+<Diagrama
+  src="proporciones.webp"
+  alt="Dos filas de recipientes idénticos. En la superior, rotulada hormigón uno dos tres, hay un recipiente con cemento gris, dos con arena clara y tres con grava, agrupados y separados por dos puntos. En la inferior, rotulada mortero uno cuatro, hay un recipiente con cemento y cuatro con arena, sin ningún recipiente de grava."
+  pie="Los números son partes, y las partes se miden con el mismo recipiente. Un mortero no lleva grava: por eso tiene dos números y no tres."
+/>
+
+<Analogia>
+Una dosificación sin unidad es **un fichero de configuración con números y sin unidades.**
+
+`timeout: 30`. ¿Segundos? ¿Milisegundos? El número solo no dice nada, y quien lo lee asume lo que le
+parece razonable, que no siempre coincide con lo que asumió quien lo escribió.
+
+`1:2:3` tiene exactamente el mismo problema. **En volumen o en peso. Y medido con qué.** Si dos
+personas de la misma obra usan recipientes distintos, están haciendo hormigones distintos con la
+misma receta.
+</Analogia>
+
+**En obra, las proporciones son casi siempre en volumen.** Y eso arrastra dos consecuencias que hay
+que resolver antes de mezclar nada.
+
+## Primera consecuencia: la palada no es una unidad
+
+<Diagrama
+  src="el-cajon-medidor.webp"
+  alt="Dos paneles. En el izquierdo, rotulado paladas, tres palas cargadas de arena de tamaños claramente distintos, una muy llena, otra media y otra escasa, con un signo de interrogación sobre ellas. En el derecho, rotulado cajón medidor, tres cajones de madera idénticos y llenos al ras, con sus cotas marcadas: treinta por treinta por cuarenta centímetros, y una marca de aprobación."
+  pie="La pala mide lo que quiera quien la sostiene. El cajón mide siempre lo mismo, y por eso la mezcla se puede repetir."
+/>
+
+Medir por paladas es lo más común y lo peor. Una palada depende de la pala, de quién la carga, del
+cansancio de las últimas horas y de si la arena está seca o húmeda. **No es reproducible**, y una
+mezcla que no se puede repetir no se puede corregir: si un día sale mal, no sabes qué cambiar.
+
+La solución cuesta lo que unas tablas: un **cajón medidor**, una caja de madera sin fondo o con
+fondo, siempre la misma, que se llena al ras.
+
+<Dato titulo="El cajón que equivale a una bolsa">
+Hay una medida especialmente cómoda: **30 × 30 × 40 cm**, que dan 0,036 m³.
+
+Una bolsa de cemento de 50 kg ocupa aproximadamente ese mismo volumen. Así que **un cajón lleno de
+arena equivale, en volumen, a una bolsa de cemento**, y la dosificación se vuelve trivial de contar
+en obra:
+
+- `1:2:3` → una bolsa de cemento, dos cajones de arena, tres cajones de grava.
+
+Sin conversiones, sin discusión y sin depender de quién sostenga la pala. Hazte dos cajones, porque
+uno se rompe.
+</Dato>
+
+<Video id="F3XKMDBHwuc" />
+
+## Segunda consecuencia: la arena húmeda ocupa más
+
+Y esta es la que sorprende.
+
+<Diagrama
+  src="esponjamiento.webp"
+  alt="Dos recipientes idénticos vistos en corte, con la misma cantidad de arena en cada uno según indica una balanza que marca el mismo peso bajo ambos. En el izquierdo, rotulado arena seca, los granos están muy juntos y la arena llega a media altura. En el derecho, rotulado arena húmeda, finas películas de agua separan los granos y la misma cantidad de arena llega mucho más arriba, desbordando el nivel del primero."
+  pie="El mismo peso de arena, dos volúmenes distintos. Las películas de agua separan los granos y los mantienen apartados."
+/>
+
+Cuando la arena tiene algo de humedad, **una fina película de agua rodea cada grano y los separa
+entre sí**. El resultado es que el mismo peso de arena ocupa bastante más volumen: el
+<Termino slug="esponjamiento">esponjamiento</Termino> puede llegar a un 20 o 30 % con humedades
+moderadas.
+
+La consecuencia práctica: si mides por volumen una arena húmeda, **estás poniendo menos arena de la
+que crees**. La mezcla sale con más cemento del previsto —cara— y con una demanda de agua distinta a
+la esperada.
+
+No hace falta corregirlo con precisión de laboratorio, pero sí saberlo, porque explica algo que
+desconcierta en obra: **la misma receta da resultados distintos según llovió ayer o no.**
+
+## Las mezclas que vas a usar
+
+Estas proporciones son **de partida y orientativas**. Para cualquier elemento estructural —una viga,
+una columna, una losa que soporte peso— el número lo da un cálculo, no una tabla.
+
+| Uso | Proporción | Para qué |
+|---|---|---|
+| **Mortero de asiento** | `1:4` a `1:5` | Pegar ladrillos y bloques |
+| **Mortero de revoque** | `1:5` a `1:6` | Revestir muros. Más pobre y más trabajable |
+| **Hormigón pobre** | `1:4:8` | Capa de limpieza, rellenos, bases sin carga |
+| **Hormigón simple** | `1:3:5` | Contrapisos, veredas, bases de poste |
+| **Hormigón estructural** | `1:2:3` a `1:2:4` | Zapatas, columnas, vigas, depósito de agua |
+
+Fíjate en la lógica: **cuanto más cemento por unidad de árido, más resistente y más caro.** Un
+revoque no necesita resistencia estructural, necesita adherirse y no fisurar, y por eso es más pobre.
+Una zapata sí, y por eso es más rica.
+
+<Advertencia titulo="El mortero de revoque quiere ser trabajable, no fuerte">
+Un error frecuente es hacer el revoque con la misma mezcla rica que el asiento, pensando que «más
+cemento es mejor».
+
+Un revoque muy rico en cemento **retrae más al fraguar y se fisura**, y además queda más rígido que
+el muro sobre el que va, lo que hace que se despegue. Un revoque tiene que ser algo más débil que su
+soporte, no más fuerte.
+
+Es el mismo principio que en cualquier sistema con capas: **la capa exterior debe ceder antes que la
+estructura**, no al revés.
+</Advertencia>
+
+## Cuánto material hace falta: el todo es menor que la suma
+
+<Diagrama
+  src="el-todo-es-menor.webp"
+  alt="En la parte superior, seis cajones separados de material suelto: uno de cemento, dos de arena y tres de grava, alineados en fila. Una flecha grande desciende hacia la parte inferior, donde aparece un bloque compacto de hormigón fresco cuyo volumen equivale claramente a unos cuatro cajones. A la derecha, un círculo de aumento muestra cómo los granos de arena ocupan los huecos entre las piedras de grava y la pasta de cemento rellena los huecos entre los granos de arena."
+  pie="Seis cajones de material suelto no dan seis cajones de hormigón. Lo fino se mete en los huecos de lo grueso."
+/>
+
+Esta es la cuenta que hace que la gente compre mal.
+
+Si mezclas un cajón de cemento, dos de arena y tres de grava —seis cajones de material—, **no
+obtienes seis cajones de hormigón**. Obtienes aproximadamente cuatro.
+
+El motivo es geométrico: la grava suelta tiene huecos entre las piedras, y **la arena se mete en esos
+huecos**; la arena tiene huecos entre sus granos, y **la pasta de cemento se mete en esos**. El
+volumen final es el del árido grueso más lo que no cupo, no la suma de todo.
+
+Como regla de trabajo: **hacen falta alrededor de 1,5 m³ de materiales sueltos por cada m³ de
+hormigón terminado.**
+
+<Dato titulo="Las cuentas que vas a necesitar">
+Para **1 m³ de hormigón `1:2:3`**, de forma aproximada y según los áridos concretos:
+
+- **7 a 9 bolsas de cemento** de 50 kg
+- **algo más de medio metro cúbico de arena**
+- **cerca de un metro cúbico de grava**
+
+Y para saber cuánto hormigón necesitas, el volumen de la pieza: largo × ancho × alto.
+
+Una zapata de 60 × 60 × 30 cm son 0,108 m³. Diez zapatas iguales, poco más de un metro cúbico. Una
+vereda de 10 m × 1 m × 8 cm son 0,8 m³.
+
+**Añade siempre un margen de un 5 a un 10 %** por pérdidas, irregularidades del terreno y lo que se
+queda pegado en todas partes. Quedarse corto a mitad de un vaciado es mucho peor que sobrar un poco:
+una junta fría no prevista es un punto débil permanente.
+</Dato>
+
+<Video id="i2nv3W8V3wg" />
+
+## El agua es un ingrediente, no un ajuste
+
+<Diagrama
+  src="agua-medida.webp"
+  alt="Dos paneles. En el izquierdo, rotulado a ojo, una manguera vierte agua directamente sobre una mezcladora mientras alguien observa, con un signo de interrogación sobre el chorro y tres mezclas resultantes de tonos distintos debajo. En el derecho, rotulado medida, un balde con marcas graduadas y una línea de llenado señalada se vacía en la mezcladora, y debajo aparecen tres mezclas resultantes idénticas entre sí, con una marca de aprobación."
+  pie="Si el agua no se mide, cada amasada es una mezcla distinta y ninguna se puede corregir, porque no sabes en qué se diferenciaban."
+/>
+
+De la lección anterior: la relación agua/cemento es lo que más determina la resistencia. Así que
+tratar el agua como un ajuste que se hace a ojo, según cómo se vea la mezcla, es renunciar a
+controlar lo único que de verdad importa.
+
+**El agua se mide.** Un balde marcado, la misma cantidad por amasada, anotada. Si una amasada sale
+demasiado seca, se corrige la vez siguiente **cambiando la cantidad medida y anotándola**, no echando
+un chorro más a la que está en la mezcladora.
+
+Con eso consigues algo valiosísimo: **amasadas comparables**. Si la tercera sale bien y la quinta mal,
+puedes averiguar por qué.
+
+**Y hay una operación que no se hace nunca:** volver a añadir agua a una mezcla que ya empezó a
+fraguar para «recuperarla». Se llama reamasado y arruina la pieza; ese hormigón se descarta.
+
+### El orden y el tiempo de mezclado
+
+1. **Primero en seco**: grava, arena y cemento, mezclados hasta que el color sea uniforme.
+2. **Después el agua**, medida, poco a poco.
+3. **Mezclar al menos dos o tres minutos** desde que entra la última agua. Menos tiempo y quedan
+   zonas sin cemento repartido.
+
+Y una regla de calendario: **la mezcla hay que colocarla antes de que empiece a fraguar.** No prepares
+más de la que puedas colocar en el rato siguiente.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Lo primero, y cuesta unas tablas: hazte dos cajones medidores de 30 × 30 × 40 cm.** Con la madera
+del desmonte. A partir de ahí, todas las mezclas de este proyecto son contables y repetibles, y
+cualquiera que te ayude puede hacerlas igual sin discutir cuánto es una palada.
+
+**Las mezclas concretas de lo que vas a construir:**
+
+| Obra | Mezcla | Por qué |
+|---|---|---|
+| Capa de limpieza bajo zapatas | `1:4:8` | No soporta carga, solo aísla del terreno |
+| Bases de poste del sombreadero | `1:3:5` | Carga moderada, y lo que importa es el volumen y el anclaje |
+| Zapatas y estructura del depósito | `1:2:3` | Es la pieza con más exigencia de toda tu obra |
+| Asiento de ladrillo o bloque | `1:4` | Pegar, no resistir |
+| Revoque | `1:5` a `1:6` | Adherirse sin fisurar, más pobre que el muro |
+
+**El depósito de agua merece atención aparte.** Es la única pieza donde se juntan las tres exigencias:
+tiene que ser resistente, tiene que ser **estanco**, y va a estar permanentemente en contacto con
+agua. Ahí la dosificación rica, el agua medida y el curado de verdad no son recomendaciones: son la
+diferencia entre un depósito y una jardinera cara. Lo desarrolla la lección 10, cuando toque
+instalación hidráulica.
+
+**Compra con la cuenta hecha, no por aproximación.** Antes de pedir el camión: calcula el volumen de
+cada pieza, súmalos, multiplica por 1,5 para saber cuánto material suelto necesitas, y añade un 10 %.
+Es media hora de hoja de cálculo que te evita dos viajes o un vaciado interrumpido.
+
+**Y aprovecha lo que ya sabes hacer.** Llevar una hoja con la fecha, la pieza, la dosificación, los
+cajones de cada material, los litros de agua y una nota de cómo salió, es exactamente el mismo hábito
+de registro que ya tienes con el compost y con el terreno. En dos o tres obras vas a tener calibrada
+tu propia receta para **tus** áridos concretos, que es más útil que cualquier tabla general —incluida
+la de arriba.
+
+**Dos cosas que no hay que hacer, dichas sin matices:**
+
+- **No añadir agua a una mezcla ya hecha para trabajarla.** Si sale seca, se corrige la amasada
+  siguiente.
+- **No recuperar mezcla que empezó a fraguar.** Se descarta. Duele, y sale más barato que la pieza que
+  produciría.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El cemento se vende en bolsas de 50 kg**, y esa es la unidad con la que se habla y se presupuesta
+todo: no vas a oír «tantos kilos», vas a oír «tantas bolsas». Conviene pensar directamente en bolsas,
+y de ahí que el cajón de 30 × 30 × 40 sea tan cómodo.
+
+**La arena y el ripio se venden por metro cúbico o por volqueta**, y el tamaño de la volqueta varía
+según el proveedor. Pregunta cuántos metros cúbicos trae **antes** de comparar precios, porque una
+volqueta más barata puede ser simplemente más pequeña. Y como viste en la lección anterior, pide ver
+el material o hazle la prueba del frasco: entre dos arenas al mismo precio puede haber mucha
+diferencia.
+
+**Las proporciones circulan en obra como recetas heredadas**, y en general son razonables. Pero
+conviene preguntar siempre dos cosas: **medido con qué**, y **para qué elemento**. Una misma receta
+dicha para una vereda y para una viga no puede ser la buena en los dos casos.
+
+**Ojo con la arena en temporada de lluvias.** De octubre a abril el material del acopio está húmedo
+casi siempre, y ahí el esponjamiento es máximo. Si trabajas en esa época y mides por volumen, estás
+poniendo bastante menos arena de la que crees. Es otra razón para concentrar la obra en la seca, que
+ya era la ventana buena por todo lo demás.
+
+**Y la mezcladora se alquila.** Para volúmenes pequeños se mezcla a mano sobre una superficie limpia
+—una plancha de hormigón pobre, o un plástico grueso—, pero en cuanto pasas de unos pocos metros
+cúbicos alquilar una mezcladora por días sale a cuenta y, sobre todo, **mezcla mucho más
+homogéneamente que a pala**. Para el depósito, alquílala.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«1:2:3, todo el mundo sabe lo que es.»** Falta lo esencial: medido en volumen y con qué recipiente.
+Sin eso, dos personas hacen mezclas distintas con la misma receta.
+
+**«Medimos por paladas.»** La palada depende de la pala, de quien la carga y de la humedad de la
+arena. No se puede repetir ni corregir.
+
+**«La arena es arena, húmeda o seca.»** Húmeda ocupa hasta un 20 o 30 % más, así que por volumen estás
+poniendo menos de la que crees.
+
+**«Seis cajones de material dan seis cajones de hormigón.»** Dan unos cuatro: lo fino se mete en los
+huecos de lo grueso. Hacen falta unos 1,5 m³ de material suelto por m³ de hormigón.
+
+**«Al revoque le pongo bien de cemento para que aguante.»** Un revoque rico retrae, fisura y se
+despega. Debe ser más pobre que su soporte.
+
+**«Le echo un poco de agua a la mezcladora, que está dura.»** El agua se mide y se anota. Corriges la
+amasada siguiente, no la que está girando.
+
+**«Esta mezcla se me quedó, le doy agua y la uso.»** El reamasado arruina la pieza. Se descarta.
+
+## Lo que sigue
+
+Ya sabes con qué materiales trabajas y en qué proporciones. Falta lo que va antes de tocar nada:
+**dónde va cada cosa, exactamente.**
+
+La lección siguiente es de replanteo. Cómo se traslada un plano al terreno, cómo se consigue una
+escuadra perfecta sin escuadra —con el método 3-4-5, que es Pitágoras convertido en herramienta de
+obra—, cómo se marcan niveles con lo que ya aprendiste en el Módulo 4, y cómo se montan las camillas
+de replanteo para que las líneas sobrevivan a la excavación. Es la lección más geométrica del módulo
+y la que decide si lo que construyes queda recto.
