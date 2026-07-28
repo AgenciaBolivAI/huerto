@@ -1,0 +1,281 @@
+Ya sabes construir el edificio. Esta lección va de algo anterior y más barato: **decidir qué edificio
+construir.** Y la respuesta correcta casi nunca empieza por los muros.
+
+Un galpón no es una caja donde guardar cosas. Es **el lugar donde tu vivero se convierte en una
+operación**: donde entran los insumos, donde se mezcla el sustrato, donde se llenan las bandejas,
+donde se guarda lo que vale y lo que es peligroso, y donde se anota lo que pasó. Si lo piensas así,
+el diseño se invierte: **primero se dibuja lo que ocurre dentro, y el edificio se pone alrededor.**
+La mayoría hace lo contrario —levanta la caja y después mete las funciones a presión— y el resultado
+es un galpón donde todo estorba a todo.
+
+## Primero el flujo, después las paredes
+
+<Diagrama
+  src="flujo.webp"
+  alt="Dos plantas del mismo edificio rectangular vistas desde arriba. En la izquierda, rotulada flujo cruzado, hay una sola puerta y las flechas de materiales y personas se cruzan repetidamente en el centro formando un nudo. En la derecha, rotulada flujo lineal, hay una puerta en cada extremo y una única flecha ancha entra por una, pasa en orden sobre tres zonas alineadas y sale por la otra sin cruzarse nunca."
+  pie="El mismo edificio, dos vidas distintas. La diferencia no costó ni un ladrillo más: costó pensarlo antes."
+/>
+
+El material de un vivero se mueve siempre en el mismo sentido: **entra como insumo, se transforma, y
+sale como planta.** Sacos de sustrato, arena y abono entran; se mezclan; la mezcla llena bandejas y
+bolsas; las bandejas sembradas salen hacia el sombreadero. Ese es el proceso, y ocurre decenas de
+veces por semana.
+
+La pregunta de diseño es una sola: **¿puede ese recorrido hacerse en línea, sin cruzarse consigo
+mismo?** Cuando la respuesta es no —una sola puerta, el almacén al fondo, la mesa en medio—, cada
+tarea atraviesa a las demás: el que entra con un saco cruza por donde otro siembra, la carretilla
+espera a que se despeje el paso, y lo sucio (tierra, polvo, abono) atraviesa lo limpio (bandejas
+sembradas, semilla).
+
+<Analogia titulo="Un galpón es un pipeline con techo">
+La forma correcta de dibujarlo es exactamente la de un pipeline: **etapas en secuencia, material
+fluyendo en un solo sentido, y ninguna etapa pisando a otra.** Entrada → almacén → mezcla → banco de
+trabajo → salida.
+
+Y la regla que lo protege es la misma que en cualquier pipeline: **lo sucio no cruza lo limpio.** El
+polvo de la mezcla no pasa por encima de las bandejas sembradas; el abono no se acopia junto a la
+semilla; la herramienta embarrada no vuelve por el lado de la mesa de siembra. No hace falta pared
+entre etapas — hace falta **orden y sentido único**.
+
+Dos puertas hacen más por un galpón que dos metros extra de ancho. Una en cada extremo convierte el
+edificio en un tubo; una sola lo convierte en un fondo de saco donde todo entra y sale por el mismo
+agujero, cruzándose.
+</Analogia>
+
+## Los espacios que hacen falta de verdad
+
+<Diagrama
+  src="planta-del-galpon.webp"
+  alt="Planta de un galpón rectangular vista desde arriba, con una fila de dos columnas interiores que lo divide en dos naves y sus zonas rotuladas: una puerta ancha de entrada en el extremo izquierdo, la zona de almacén con tarimas junto a la pared, la zona de mezcla con tres cajones y un sumidero en el piso, la zona de banco con la mesa de trabajo contra la pared opuesta, un pequeño recinto de químicos con candado cerca del otro extremo, y la puerta de salida en el extremo derecho. Una flecha ancha recorre entrada, almacén, mezcla y banco, y sale sin cruzarse."
+  pie="Las columnas centrales del capítulo de cubierta no eran un estorbo: son la partición natural del espacio."
+/>
+
+Para una operación como la tuya, los espacios son seis, y conviene nombrarlos porque cada uno tiene
+una exigencia distinta:
+
+**1 · Almacén de insumos.** Sacos de abono, sustratos comprados, bandejas y bolsas nuevas. Su
+exigencia es **seco**: todo sobre <Termino slug="tarima">tarimas</Termino> que lo despeguen del piso,
+separado de la pared, y lejos de la zona que se lava con agua.
+
+**2 · Zona de mezcla de sustrato.** La única zona *sucia por oficio*, y por eso con piso duro,
+lavable y con pendiente a un sumidero. La vemos en detalle más abajo.
+
+**3 · Banco de trabajo.** Donde se llenan bandejas, se siembra y se repica. Es la zona *limpia*, con
+la ergonomía de la lección de estructuras: **la misma altura de 80-90 cm que las mesas del vivero**,
+para que una bandeja pase de la mesa del galpón a la mesa del sombreadero sin cambiar de plano.
+
+**4 · Herramienta.** Un panel en la pared con la silueta o el gancho de cada cosa, y el criterio de
+la lección de herramientas: **la herramienta que hay que buscar es herramienta que no se usa** — y
+también al revés: un gancho vacío al final del día es un aviso de que algo quedó en el campo.
+
+**5 · El recinto de químicos.** Bajo llave y aparte. Tiene apartado propio más abajo, porque es el
+único espacio del galpón donde un error hace daño de verdad.
+
+**6 · El rincón de registro.** Una repisa y una silla bastan: ahí viven el cuaderno de campo, el
+plano con las cotas, el calendario de siembras y la libreta del pluviómetro. Parece poca cosa y es
+el germen del Módulo 14: **la automatización no empieza con sensores, empieza con un lugar fijo
+donde se anota.**
+
+<Dato titulo="Diseña para el doble, construye para hoy">
+La regla de dimensionado de un galpón productivo: **haz la lista de lo que guardas hoy, duplícala, y
+dimensiona para eso.** No porque vayas a duplicar mañana, sino porque un almacén lleno al 100 % es
+inoperable: no se puede rotar mercadería, ni limpiar, ni encontrar nada.
+
+Y la versión barata de «diseñar para el doble» no es construir el doble: es **decidir hoy hacia
+dónde crecería** el galpón —qué muro es ampliable, hacia qué lado sigue la platea— y no poner ahí ni
+el recinto de químicos ni las instalaciones. Una ampliación prevista cuesta un fin de semana; una
+no prevista obliga a demoler.
+</Dato>
+
+## La zona de mezcla: dosificación aplicada a biología
+
+<Diagrama
+  src="zona-de-mezcla.webp"
+  alt="Rincón de mezcla de sustrato en perspectiva: contra la pared, tres cajones abiertos con materiales de color y textura distintos —compost oscuro, arena clara y cascarilla—; delante, un cajón medidor de madera y un balde graduado sobre un piso de hormigón liso cuya leve pendiente converge en un pequeño sumidero; a un lado, una carretilla con mezcla fresca, y sobre los cajones una ventana."
+  pie="Tres ingredientes separados, una medida repetible y un piso que se lava. La receta del hormigón, aplicada al sustrato."
+/>
+
+La mezcla de <Termino slug="sustrato">sustrato</Termino> merece espacio propio por tres razones que
+ya conoces de otras lecciones, aplicadas a la vez:
+
+**Es la dosificación otra vez.** Un sustrato es una receta —tantas partes de compost, tantas de
+arena, tantas de cascarilla— y una receta solo existe si se mide igual cada vez. El cajón medidor y
+el balde graduado de la lección de dosificación trabajan aquí exactamente igual que con el hormigón:
+**por volumen, con el mismo recipiente, nunca a paladas.** Un lote de sustrato mal proporcionado no
+se nota al mezclarlo: se nota tres semanas después, en una bandeja entera que drena mal.
+
+**Es polvo.** Cribar compost y mezclar en seco levanta polvo fino que no quieres respirar —la
+mascarilla de la lección de herramientas no era solo para el cemento— y que no quieres depositado
+sobre las bandejas ya sembradas. Por eso la mezcla va en su zona, ventilada, y **aguas abajo del
+banco limpio en el sentido del flujo**, nunca antes.
+
+**Se lava.** Piso de hormigón alisado, con el 1-2 % de pendiente del movimiento de tierras hacia un
+sumidero que descarga lejos de los cimientos —la regla de la canaleta, puertas adentro—. Un piso de
+tierra en la zona de mezcla se convierte en barro con el primer lavado y en polvo el resto del año.
+
+Los tres **cajones de componentes** contra la pared —compost, arena, cascarilla u otro aligerante—
+cierran el sistema: cada material en su cajón, tapado, y la mezcla del día en la carretilla. Es el
+mismo principio del acopio de áridos de la obra: **separado se mide; amontonado se adivina.**
+
+<Video id="mrZCo1XaPfM" />
+
+La receta del video no es la única posible —la tuya la vas a ajustar con los materiales locales—,
+pero fíjate en el método: componentes separados, proporciones medidas y mezcla homogénea antes de
+llenar. Eso es lo que la zona de mezcla existe para hacer fácil.
+
+## El recinto de químicos: el único espacio donde un error mata
+
+<Diagrama
+  src="quimicos.webp"
+  alt="Dos paneles sobre el guardado de agroquímicos. En el izquierdo, rotulado en cualquier parte, un estante abierto mezcla bidones de químicos con un saco de semillas, unos guantes y una botella de refresco rellenada con un líquido ámbar; un bidón volcado gotea hacia el saco en el piso. En el derecho, rotulado bajo llave, un armario metálico sobre patas con candado, rejillas de ventilación arriba y abajo y una bandeja en su base guarda solo los bidones en orden; los guantes y la mascarilla cuelgan fuera, en la pared."
+  pie="Las dos cosas del panel izquierdo que matan gente todos los años: la botella de refresco rellenada, y el químico goteando hacia la comida o la semilla."
+/>
+
+Este apartado es corto, no negociable, y su lógica es la del confinamiento de la lección de muros:
+**no se trata de que el accidente no ocurra nunca, sino de que, cuando ocurra, quede contenido.**
+
+- **Bajo llave, siempre.** La llave protege de los dos visitantes que no evalúan riesgos: los niños
+  y las visitas que «solo agarraban prestado».
+- **Ventilado arriba y abajo**, para que ningún vapor se acumule, y **a la sombra**: calor y
+  agroquímicos envejecen mal juntos.
+- **Con <Termino slug="bandeja-de-retencion">bandeja de retención</Termino>** en la base: si un
+  envase gotea, el derrame queda en la bandeja y no en el piso, camino de la semilla o del desagüe.
+- **Solo químicos.** Nunca semilla, nunca abono foliar comestible, nunca el equipo de protección
+  *dentro* —los guantes y la mascarilla viven fuera del armario, limpios, no encerrados con lo que
+  deben protegerte.
+- **Cada producto en su envase original, con su etiqueta.** El trasvase a botellas de refresco es la
+  causa de intoxicación rural más repetida y más evitable que existe: una botella conocida con un
+  líquido de color amable es una invitación a beberla.
+- **Y el <Termino slug="triple-lavado">triple lavado</Termino>** de los envases vacíos: tres
+  enjuagues con el agua vertida a la mochila de aplicación —no al suelo—, envase perforado para que
+  nadie lo reutilice, y guardado aparte hasta poder entregarlo donde corresponda.
+
+<Video id="LlzOmDmlCS8" />
+
+**El inventario en la puerta**: una hoja con qué hay, cuánto, y de cuándo. No es burocracia; es lo
+que te dice qué venció sin abrir el armario, y lo que le muestras al técnico del SENASAG si algún
+día pregunta.
+
+## El almacén: nada toca el piso
+
+<Diagrama
+  src="sobre-tarima.webp"
+  alt="Dos paneles con sacos de abono almacenados. En el izquierdo, rotulado en el piso, los sacos apilados directamente sobre el hormigón y contra la pared muestran la mitad inferior oscurecida por la humedad que sube del piso, con material derramado y apelmazado en la base y un túnel de termitas trepando por la pared. En el derecho, rotulado sobre tarima, los mismos sacos descansan en una tarima de madera con aire debajo y separados de la pared, secos y enteros."
+  pie="El piso de un galpón en este clima nunca está del todo seco. La tarima no es prolijidad: es una barrera capilar."
+/>
+
+La regla del almacén es una y ya la conoces con otro nombre: **nada absorbente toca el piso ni la
+pared.** El hormigón es poroso —lección de muros— y en un clima de siete meses de lluvia siempre
+tiene algo de humedad que ofrecer. Un saco de abono apoyado en el piso la toma por capilaridad, se
+apelmaza por abajo y pierde la mitad; el papel y el cartón la toman aún más rápido.
+
+La tarima interrumpe el contacto —es la barrera capilar del Módulo 4, en versión mueble— y el aire
+que circula por debajo mantiene el conjunto seco. La separación de la pared hace lo mismo por el
+otro flanco, y de paso deja pasar la inspección: **un túnel de termitas detrás de una pila de sacos
+pegada a la pared puede trabajar meses sin que nadie lo vea.**
+
+Tres reglas más, cortas:
+
+- **Lo primero que entró es lo primero que se usa.** Los sacos nuevos atrás, los viejos adelante. El
+  abono también vence.
+- **Bandejas y bolsas nuevas, arriba y lejos del polvo de la mezcla**: son lo único del almacén que
+  va a tocar directamente a las plantas.
+- **La semilla no vive en el galpón a secas**: vive en un recipiente cerrado —un bidón con tapa, una
+  heladera vieja— porque los ratones también leyeron tu inventario.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Tu galpón de 8 × 12, resuelto con todo lo anterior.** La fila de columnas centrales que decidiste
+en la lección de cubierta parte la planta en dos naves de 4 × 12, y esa partición es funcional:
+
+**Nave sucia** (la que mira al vivero): entrada ancha en un extremo, almacén de insumos sobre
+tarimas al comienzo, zona de mezcla en el centro —cajones contra el muro, piso con pendiente y
+sumidero—, y salida ancha en el otro extremo, de frente al sombreadero. La carretilla entra por una
+puerta y sale por la otra **sin girar en redondo**.
+
+**Nave limpia**: banco de trabajo corrido contra el muro opuesto, a 80-90 cm, con las bandejas y
+bolsas almacenadas encima; el rincón de registro en el extremo de la salida, con luz natural; y el
+recinto de químicos en la esquina de la entrada —cerca de la puerta y lejos del banco—, metálico,
+con llave, ventilado y con su bandeja.
+
+**Las dos puertas enfrentadas hacen además otra cosa**: son la ventilación cruzada de la lección de
+techos a la altura de las personas, y con la abertura de cumbrera arriba, el galpón respira solo.
+
+**El piso, en dos calidades**: hormigón alisado con pendiente al sumidero en la zona de mezcla;
+hormigón simple en el resto. Y el **alero generoso del lado del vivero** convierte esa fachada en un
+puesto de trabajo exterior a la sombra —descarga, lavado de herramienta, encanastillado— que en la
+práctica es el metro cuadrado más usado del galpón.
+
+**El orden de equipamiento si el dinero entra por partes**: primero las tarimas y el banco —son un
+fin de semana de carpintería con la madera del desmonte—; después el armario de químicos, que no
+espera; después los cajones de mezcla; y al final el panel de herramienta y el rincón de registro.
+
+**Y una prueba de diseño antes de construir nada**: dibuja la planta, y recorre con el dedo el día
+completo de un saco de abono —llega, se descarga, se guarda, se abre, se mezcla, sale como bandeja
+sembrada— y el día completo de una herramienta. **Si el dedo se cruza consigo mismo, el plano está
+mal y todavía es gratis corregirlo.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Los agroquímicos en Bolivia los regula el SENASAG**, que registra los productos de venta legal.
+Compra siempre con etiqueta en regla y factura: el mercado informal de plaguicidas fraccionados
+—vendidos justamente en botellas de refresco— existe, y es la versión comercial del error que esta
+lección prohíbe. Para los envases vacíos con triple lavado, pregunta a tu proveedor por el punto de
+acopio de la campaña de recolección vigente; la distribución agropecuaria cruceña participa de esos
+programas.
+
+**Las tarimas se consiguen gratis o casi.** La logística de Santa Cruz mueve palets de madera
+constantemente y muchos comercios los regalan o los venden a precio de leña. Revisa que no traigan
+termitas de regalo: madera con galerías o con polvillo, se queda fuera del terreno.
+
+**La cascarilla de arroz es el aligerante local por excelencia** para sustratos: barata, disponible
+en las peladoras de arroz del norte cruceño, y mejor aún semicarbonizada. Vale la pena el viaje con
+la camioneta vacía y un par de bolsones.
+
+**El robo rural existe y el galpón es el objetivo.** Herramienta, mochila de fumigar y abono son lo
+que desaparece. Rejas en las ventanas, candado serio en las dos puertas, y la herramienta cara no se
+queda a la vista desde la puerta abierta. El panel de siluetas ayuda también aquí: sabes **hoy** qué
+falta, no el día que la necesitas.
+
+**Y el dengue, una vez más**: el galpón no acumula agua. Ni en baldes olvidados, ni en la carretilla
+parada, ni en la bandeja de retención del armario —que se revisa y se seca—. Cualquier agua quieta
+de más de tres días en este clima es un criadero.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Primero levanto el galpón y después veo cómo lo organizo.»** Al revés: primero el flujo, después
+las paredes. La caja se diseña alrededor de lo que pasa dentro.
+
+**«Con una puerta alcanza.»** Una puerta es un fondo de saco: todo entra y sale cruzándose. Dos
+puertas enfrentadas convierten el edificio en un tubo.
+
+**«El sustrato lo mezclo donde haya lugar.»** La mezcla es la zona sucia: polvo, agua y volumen.
+Tiene su lugar, aguas abajo del banco limpio, con piso lavable.
+
+**«El sustrato lo hago a ojo, que no es hormigón.»** Es una receta igual. Mal proporcionado no se
+nota al mezclar: se nota en la bandeja que drena mal tres semanas después.
+
+**«Los químicos, en el estante, que quedan a mano.»** Quedan a mano de todos. Bajo llave, ventilado,
+con bandeja, solo químicos, y cada cosa en su envase original.
+
+**«Trasvaso el sobrante a una botella para que no se derrame.»** Es la causa de intoxicación rural
+más evitable que existe. Envase original o nada.
+
+**«Los sacos al piso, total el piso es de cemento.»** El hormigón es poroso y en este clima nunca
+está seco del todo. Tarima, aire abajo, y despegado de la pared.
+
+**«El galpón lo lleno al tope, que para eso lo hice.»** Un almacén al 100 % es inoperable. Se
+dimensiona para el doble de lo que guardas hoy.
+
+**«Ya anotaré en algún cuaderno.»** El registro necesita un lugar fijo o no existe. Una repisa y una
+silla son el comienzo de toda la automatización que viene.
+
+## Lo que sigue
+
+El galpón tiene planta, flujo y espacios — pero sigue a oscuras y sin un enchufe. La lección
+siguiente mete **la instalación eléctrica**: cuánta potencia necesita de verdad una operación como
+la tuya, qué es un circuito y por qué se separan, qué hacen el térmico y el diferencial y cuál de
+los dos te salva la vida, cómo se cablea en un ambiente húmedo y con polvo, y qué puede hacerse en
+autoconstrucción y qué exige un electricista con carnet.

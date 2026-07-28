@@ -1,0 +1,89 @@
+{
+  "preguntas": [
+    {
+      "id": "de-dentro-afuera",
+      "tipo": "verdadero_falso",
+      "enunciado": "Lo sensato es construir primero el galpón y, con el edificio en pie, decidir cómo organizarlo por dentro.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error de diseño más común: levantar la caja y meter las funciones a presión. El galpón se diseña de dentro afuera: primero se dibuja lo que ocurre —el recorrido de un saco de abono desde que llega hasta que sale como bandeja sembrada—, después los espacios que ese recorrido necesita, y el edificio se pone alrededor. La prueba de diseño cuesta cero: recorrer el plano con el dedo siguiendo el día completo de un saco y de una herramienta, y si el dedo se cruza consigo mismo, el plano está mal y todavía es gratis corregirlo."
+    },
+    {
+      "id": "flujo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué convierte un galpón en un espacio donde todo estorba a todo?",
+      "opciones": [
+        "Una sola puerta: el edificio se vuelve un fondo de saco donde todo entra y sale por el mismo agujero, cruzándose.",
+        "Las zonas fuera de orden, que obligan a cada tarea a atravesar a las demás.",
+        "Lo sucio cruzando lo limpio: el polvo de la mezcla pasando sobre las bandejas sembradas, el abono acopiado junto a la semilla.",
+        "La falta de metros cuadrados: con espacio suficiente el orden aparece solo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la coartada de siempre y es falsa: un galpón grande y mal ordenado se degrada igual, solo que más lento. Dos puertas enfrentadas hacen más por el edificio que dos metros extra de ancho, porque lo convierten en un tubo con sentido único: entrada → almacén → mezcla → banco → salida. Es un pipeline con techo, y la regla que lo protege es la de cualquier pipeline: etapas en secuencia y lo sucio nunca cruza lo limpio."
+    },
+    {
+      "id": "mezcla",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la mezcla de sustrato merece una zona propia?",
+      "opciones": [
+        "Porque es una receta por volumen, y una receta solo existe si se mide igual cada vez, con el mismo recipiente, nunca a paladas.",
+        "Porque es polvo: cribar y mezclar en seco levanta partículas que no quieres respirar ni depositadas sobre las bandejas sembradas.",
+        "Porque se lava: necesita piso duro con pendiente a un sumidero que descargue lejos de los cimientos.",
+        "Porque el sustrato mal mezclado se nota al momento y se corrige sobre la marcha."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es justo lo contrario, y es lo que hace traicionero el descuido: un lote mal proporcionado no se nota al mezclarlo, se nota tres semanas después en una bandeja entera que drena mal, cuando ya no hay nada que corregir. Es la dosificación del hormigón aplicada a biología: el cajón medidor y el balde graduado trabajan aquí exactamente igual. Y en el flujo, la mezcla va aguas abajo del banco limpio, nunca antes."
+    },
+    {
+      "id": "quimicos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuáles son las condiciones mínimas del recinto de agroquímicos?",
+      "opciones": [
+        "Bajo llave, ventilado arriba y abajo, a la sombra, y con bandeja de retención en la base.",
+        "Solo químicos dentro: ni semilla, ni abono comestible, ni el equipo de protección, que vive fuera y limpio.",
+        "Cada producto en su envase original con su etiqueta, y los vacíos con triple lavado, perforados y guardados aparte.",
+        "Un estante alto, fuera del alcance de los niños, es suficiente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El estante alto no resuelve ninguno de los riesgos reales: no contiene un derrame, no impide el acceso de un adulto que «solo agarraba prestado», no ventila vapores y no separa el veneno de la comida. La lógica del recinto es la del confinamiento de la lección de muros: no se trata de que el accidente no ocurra nunca, sino de que quede contenido cuando ocurra. Y las dos cosas que matan gente todos los años son exactamente las del panel izquierdo del diagrama: el trasvase a botellas de refresco y el químico goteando hacia la comida o la semilla."
+    },
+    {
+      "id": "tarima",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué nada absorbente toca el piso ni la pared del almacén?",
+      "opciones": [
+        "Porque el hormigón es poroso y en un clima de siete meses de lluvia nunca está seco del todo: un saco apoyado toma esa humedad por capilaridad.",
+        "Porque la tarima interrumpe el contacto —es la barrera capilar en versión mueble— y el aire de abajo mantiene el conjunto seco.",
+        "Porque la separación de la pared deja pasar la inspección: un túnel de termitas detrás de una pila de sacos puede trabajar meses sin que nadie lo vea.",
+        "Porque el piso se raya con el peso de los sacos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la misma física de la humedad ascendente de los muros, a escala de mercadería: material poroso en contacto con superficie húmeda bombea agua hacia arriba. Y van con ella dos reglas de rotación: lo primero que entró es lo primero que se usa —los sacos nuevos atrás, porque el abono también vence—, y la semilla no vive en el galpón a secas sino en recipiente cerrado, porque los ratones también leyeron tu inventario."
+    },
+    {
+      "id": "doble",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un galpón bien dimensionado es el que queda lleno: espacio vacío es espacio desperdiciado.",
+      "respuesta": false,
+      "explicacion": "Falso: un almacén lleno al 100 % es inoperable. No se puede rotar mercadería —lo viejo queda atrapado atrás—, ni limpiar, ni encontrar nada, ni recibir una compra de oportunidad. La regla es dimensionar para el doble de lo que se guarda hoy. Y la versión barata de esa regla no es construir el doble: es decidir hoy hacia dónde crecería el edificio y no poner en ese lado ni el recinto de químicos ni las instalaciones, porque una ampliación prevista cuesta un fin de semana y una no prevista obliga a demoler."
+    },
+    {
+      "id": "plan-galpon",
+      "tipo": "abierta",
+      "enunciado": "Dibuja de palabra tu galpón de 8 × 12: cómo aprovechas la fila de columnas centrales, dónde va cada zona y por qué, por dónde entra y sale el material, y qué compruebas en el plano antes de construir.",
+      "respuestaModelo": "Parto de la decisión que ya tomé en la lección de cubierta: la fila de columnas centrales que divide la luz de ocho metros en dos de cuatro. Esa fila no es un estorbo, es la partición natural del espacio: dos naves de 4 × 12 con papeles distintos.\n\nLa nave que mira al vivero es la sucia, y es un tubo: puerta ancha de entrada en un extremo, puerta ancha de salida en el otro, de frente al sombreadero. Nada más entrar, el almacén de insumos: sacos sobre tarimas, despegados del piso y de la pared —el hormigón es poroso y en este clima nunca está seco; y la separación de la pared deja ver un túnel de termitas antes de que trabaje meses escondido—. Los sacos nuevos atrás y los viejos adelante, porque el abono también vence. En el centro de la nave, la zona de mezcla: los tres cajones de componentes contra el muro —compost, arena, cascarilla—, el cajón medidor y el balde graduado, y piso de hormigón alisado con el 1-2 % de pendiente a un sumidero que descarga lejos de los cimientos. La mezcla es la dosificación otra vez: por volumen, con el mismo recipiente, nunca a paladas, porque el lote mal proporcionado no se nota al mezclar sino tres semanas después en la bandeja que drena mal. Y la carretilla recorre la nave de puerta a puerta sin girar en redondo.\n\nLa otra nave es la limpia. El banco de trabajo corrido contra el muro opuesto, a 80-90 cm —la misma altura que las mesas del vivero, para que una bandeja cambie de mesa sin cambiar de plano—, con las bandejas y bolsas nuevas guardadas arriba, lejos del polvo. El rincón de registro en el extremo de la salida, con luz natural: cuaderno de campo, plano con las cotas, libreta del pluviómetro; es poca cosa y es el germen de toda la automatización del Módulo 14. Y el recinto de químicos en la esquina de la entrada, cerca de la puerta y lejos del banco: armario metálico con candado, ventilado arriba y abajo, con bandeja de retención, solo químicos dentro, cada producto en su envase original, y el equipo de protección colgado fuera. Los envases vacíos, con triple lavado vertido a la mochila, perforados y aparte. El inventario pegado en la puerta.\n\nEl polvo de la mezcla queda aguas abajo del banco en el sentido del flujo, así que lo sucio nunca cruza lo limpio. Las dos puertas enfrentadas dan además ventilación cruzada a la altura de las personas, que con la abertura de cumbrera de arriba hace que el galpón respire solo. El alero generoso del lado del vivero me da un puesto de trabajo exterior a la sombra —descarga, lavado de herramienta— que va a ser el metro cuadrado más usado del edificio.\n\nDimensiono el almacén para el doble de lo que guardo hoy, porque lleno al cien por ciento es inoperable, y decido ya hacia qué lado crecería el galpón: hacia ese lado no van ni el recinto de químicos ni las instalaciones, para que ampliar sea un fin de semana y no una demolición.\n\nY antes de construir, la prueba que no cuesta nada: recorro el plano con el dedo siguiendo el día completo de un saco de abono —llega, se descarga, se guarda, se abre, se mezcla, sale como bandeja sembrada— y el día completo de una herramienta —sale del panel por la mañana, vuelve lavada por la tarde—. Si el dedo se cruza consigo mismo en algún punto, el plano está mal, y es el único momento en que corregirlo es gratis.",
+      "criterios": [
+        "Usa la fila de columnas como partición en nave sucia y nave limpia.",
+        "Traza el flujo lineal con dos puertas enfrentadas y sin cruces.",
+        "Almacén sobre tarimas, separado de la pared, con rotación de lo viejo primero.",
+        "Zona de mezcla con componentes separados, medida por volumen y piso lavable con pendiente a sumidero.",
+        "Banco a la altura de las mesas del vivero y bandejas lejos del polvo.",
+        "Recinto de químicos con llave, ventilación, bandeja, solo químicos, envases originales y triple lavado.",
+        "Sitúa el registro con luz natural y lo conecta con la automatización futura.",
+        "Aprovecha las puertas como ventilación cruzada y el alero como puesto de trabajo exterior.",
+        "Dimensiona para el doble y reserva el lado de crecimiento sin químicos ni instalaciones.",
+        "Cierra con la prueba del dedo sobre el plano antes de construir."
+      ],
+      "explicacion": "Fíjate en cuánto de esta lección no es construcción sino diseño de sistemas: flujo con sentido único, separación de lo sucio y lo limpio, contención de fallos, capacidad de reserva, y un punto fijo de registro. El galpón es el primer sitio del curso donde tu oficio de ingeniero de software aplica casi sin traducción — y donde un error de diseño no lo paga el compilador sino tu espalda, todos los días, durante años."
+    }
+  ]
+}
