@@ -1,0 +1,399 @@
+Hasta aquí has construido para que las cosas no se caigan. Esta lección cambia de registro: lo que
+vas a construir ahora **no se juzga por si aguanta, sino por lo que le hace a las plantas.**
+
+Un sombreadero, una mesa de cultivo y un cerco de cama son tres objetos muy simples de construir. Y
+los tres son, en realidad, **instrumentos**: cada uno modifica un factor concreto del ambiente en que
+crece la planta. El sombreadero fija el nivel de luz y de temperatura. La mesa decide cómo drena la
+maceta y cómo se ramifica la raíz. La cama define la profundidad de suelo disponible.
+
+De modo que la pregunta de diseño no es «¿qué construyo?» sino la del Módulo 3: **¿cuál es
+el <Termino slug="limitante">factor limitante</Termino> aquí, y esta estructura lo corrige o no?** Una
+estructura que modifica el factor equivocado está bien construida y es dinero perdido.
+
+Antes de desmontarlo pieza por pieza, conviene haber visto el conjunto una vez:
+
+<Video id="aqHtW7Lb6dc" />
+
+## El sombreadero no da sombra: fija un nivel de luz
+
+<Diagrama
+  src="sombra-por-fase.webp"
+  alt="Secuencia de tres paneles con la misma plántula en maceta bajo distinta cobertura. En el primero, rotulado germinación, una malla densa cubre por arriba y solo pasan unos pocos rayos de luz hasta una plántula muy pequeña. En el segundo, rotulado crecimiento, la malla es claramente más abierta y pasa bastante más luz, y la planta es mayor. En el tercero, rotulado rustificación, no hay ninguna malla y el sol llega directo a una planta compacta de tallo grueso. Bajo los tres paneles, una flecha de izquierda a derecha acompañada de una cuña que se estrecha indica la sombra decreciendo."
+  pie="La sombra no es un ajuste que se pone y se deja. Es una rampa que baja a lo largo de la vida del plantín."
+/>
+
+El porcentaje de una <Termino slug="malla-de-sombra">malla de sombra</Termino> indica **cuánta luz
+bloquea**, no cuánta deja pasar. Una malla del 50 % deja pasar aproximadamente la mitad; una del 80 %,
+una quinta parte.
+
+Y bloquear luz hace dos cosas a la vez que conviene no confundir:
+
+- **Reduce la radiación disponible para la fotosíntesis**, que es lo evidente y lo que casi todo el
+  mundo tiene en cuenta.
+- **Reduce la carga térmica y la demanda de evaporación.** Menos radiación directa significa hoja más
+  fresca, menos diferencia de presión de vapor entre la hoja y el aire, y por tanto menos agua perdida
+  por transpiración. En un clima tropical con radiación intensa, **esto suele importar más que lo
+  primero**: la malla no está ahí porque falte luz —aquí sobra— sino porque sobra demanda de agua.
+
+Esa distinción cambia la decisión. Si tu problema es que los plantines se deshidratan a mediodía, no
+necesitas necesariamente más sombra: puede que necesites más volumen de aire, más altura o más riego.
+
+<Advertencia titulo="Pasarse de sombra es un error caro, y comercial">
+Con poca luz la planta se estira buscándola: entrenudos largos, tallo fino, hoja grande y delgada,
+tejidos blandos. Se llama **etiolación** y produce un plantín que a la vista parece exuberante y que
+en realidad es débil.
+
+Y aquí viene la parte que hace que esto sea un problema de negocio y no solo de cultivo. **Una planta
+criada al 80 % de sombra se muere cuando el cliente la pone al sol.** No porque el cliente la trate
+mal, sino porque nunca desarrolló la cutícula, el grosor de hoja ni el sistema radicular que hacen
+falta para eso.
+
+Y el cliente no dirá «no la aclimaté». Dirá **«esa planta no sirvió»**. Vender plantines sin
+rustificar es fabricar devoluciones y mala reputación con una planta que salió preciosa del vivero.
+</Advertencia>
+
+La <Termino slug="rustificacion">rustificación</Termino> es el proceso de ir exponiendo el plantín,
+de forma gradual, a las condiciones donde va a vivir. No confundir con
+la <Termino slug="rusticidad">rusticidad</Termino>, que es una propiedad de la especie: la rusticidad
+viene de fábrica, la rustificación se la das tú.
+
+**Y de ahí sale el principio de diseño que ordena todo el sombreadero:**
+
+**El nivel de sombra del vivero tiene que converger con el del destino.** Un plantín que va a un
+jardín a pleno sol tiene que salir del vivero habiendo visto pleno sol. Uno que va a media sombra
+bajo unos árboles, no.
+
+Esto significa que **no basta con un sombreadero**: hacen falta al menos dos ambientes, o uno con la
+malla retirable. Una zona de propagación con sombra alta y una zona de rustificación con poca o
+ninguna.
+
+### Cuánta sombra pide cada cosa
+
+| Situación | Sombra orientativa |
+|---|---|
+| Germinación y recién trasplantado | Alta, en torno al 50-70 % |
+| Enraizamiento de esquejes | Alta, y sobre todo alta humedad |
+| Crecimiento del plantín | Media, en torno al 30-50 % |
+| Rustificación antes de vender | Baja y decreciente hasta cero |
+| **Culantro** (*Eryngium foetidum*) | Media-alta, incluso en producción |
+| **Yautía** | Media, tolera bien sombra parcial |
+| **Ají dulce, gandul, batata, plátano** | Sol pleno en producción |
+| **Ornamentales de exterior** (duranta, cayena, veranera) | Sol pleno en destino, luego rustificar sí o sí |
+
+Dos casos de tu lista merecen comentario aparte.
+
+**El culantro es la excepción interesante.** No es que tolere la sombra: **la prefiere**. A pleno sol
+en este clima tiende a espigarse antes y la hoja se vuelve más dura y menos aromática, que es
+justamente lo contrario de lo que se vende. Es de los pocos cultivos donde la sombra no es una fase
+del vivero sino una condición de producción, y eso lo convierte en el candidato natural para ocupar
+permanentemente el sombreadero, o el sotobosque de los plátanos.
+
+**El plátano no necesita sombra: la da.** Vale la pena verlo así porque es la alternativa gratuita al
+sombreadero. Una asociación de plátano con yautía y culantro debajo reproduce en el terreno la
+estructura de sombra que si no tendrías que construir con postes y malla.
+
+## Por qué el problema de un sombreadero es el viento
+
+<Diagrama
+  src="poste-atirantado.webp"
+  alt="Dos paneles con la esquina de una estructura de sombra en sección: un poste de madera con la malla negra tendida desde su parte alta. En el izquierdo, rotulado poste sin arriostrar, unas flechas empujan la malla hacia arriba y de lado, el poste se ha inclinado fuertemente, el suelo de su base está levantado y roto y la malla queda floja. En el derecho, rotulado poste atirantado, el mismo poste está vertical sobre una base de hormigón que lo separa del suelo, con un tensor de acero en diagonal desde su parte alta hasta un anclaje enterrado; las mismas flechas empujan y ni el poste ni la malla se mueven."
+  pie="Una malla tensa es una superficie enorme sin peso. La estructura no la sostiene: la sujeta contra el viento."
+/>
+
+Un sombreadero de 200 m² pesa poquísimo y ocupa 200 m² frente al viento. Es, otra vez, el problema de
+la lección anterior, y aquí en su forma más extrema: **la carga que manda no es el peso, es
+la <Termino slug="succion">succión</Termino> y el arrastre.**
+
+La malla, además, es un caso raro: es **porosa**, así que deja pasar parte del aire y no recibe todo
+el empuje que recibiría una superficie maciza. Eso ayuda, pero no la salva, porque su superficie es
+enorme y su peso es despreciable. Y tiene un efecto colateral: **una malla vieja, sucia o cargada de
+polvo y hojas es menos porosa y recibe más empuje que una limpia.**
+
+Los principios de construcción salen todos de ahí:
+
+**La malla tiene que estar tensa, y tensa contra un cable perimetral**, no clavada directamente a los
+postes. Una malla floja aletea, y aletear es lo que la rompe: cada golpe trabaja los ojales hasta que
+rasgan. El cable perimetral recoge la tensión de todo el paño y la lleva a las esquinas.
+
+**Las esquinas son las que trabajan.** Los postes interiores sostienen sobre todo peso, casi nada; los
+de esquina reciben la tracción de dos lados a la vez y tienden a volcar hacia dentro. Por eso los
+postes de esquina van <Termino slug="atirantado">atirantados</Termino>: un tensor en diagonal hasta un
+anclaje enterrado, con tornillo tensor para poder recuperar la tensión con el tiempo, porque se
+afloja.
+
+**El anclaje del poste trabaja a arrancamiento, no a hundimiento.** Es exactamente lo que vimos en la
+lección de cimientos: la zapata de un poste de sombreadero no está ahí para repartir una carga hacia
+abajo, está ahí como **lastre**. Y por eso no se escatima en su volumen.
+
+<Video id="ZVkvE5AtfJU" />
+
+El video muestra el montaje completo de una malla con sus tensores, y fíjate en el detalle que más
+importa de todo el proceso: la malla nunca se clava directa, siempre trabaja contra cable o contra
+un perfil que reparte la tensión.
+
+**La malla tiene que poder retirarse.** Por dos motivos distintos y los dos importantes: para
+rustificar un lote sin moverlo de sitio, y para **quitarla ante un surazo anunciado**. Una malla
+recogida no ofrece superficie al viento; una malla tensada al máximo en un temporal se lleva la
+estructura entera. Es la decisión más barata de toda la lección y hay que preverla en el montaje.
+
+<Dato titulo="La altura tiene un compromiso, no un óptimo">
+Más alto es mejor agronómicamente: más volumen de aire bajo la malla significa que la temperatura
+sube más despacio y oscila menos, y además puedes trabajar de pie y mover una carretilla.
+
+Más alto es peor estructuralmente y más caro: más brazo de palanca sobre los postes, más tensor, más
+material.
+
+Como referencia práctica, por debajo de unos dos metros y medio se trabaja mal y el aire de debajo se
+calienta demasiado. Por encima de tres o tres y medio empiezas a pagar bastante por cada metro. Ese
+es el rango en el que conviene moverse, y la decisión final la marca lo que vayas a hacer debajo.
+</Dato>
+
+## Las mesas no son muebles: son podadoras de raíz
+
+<Diagrama
+  src="poda-de-aire.webp"
+  alt="Dos paneles con la sección ampliada de una maceta de vivero con sustrato y una plántula, apoyada sobre una mesa. En el izquierdo, rotulado mesa maciza, la maceta se apoya sobre un tablero continuo, la banda inferior del sustrato aparece saturada y las raíces al llegar al fondo giran y se enrollan formando una maraña densa contra la base. En el derecho, rotulado mesa calada, la maceta se apoya sobre una malla abierta con aire debajo, el sustrato tiene humedad uniforme, y las raíces al asomar por los agujeros se detienen con la punta seca y oscura mientras justo detrás se ramifican en muchas raíces finas que llenan todo el volumen."
+  pie="Debajo de la maceta no hay que poner una superficie. Hay que poner aire."
+/>
+
+Aquí está el contenido más útil de la lección, y es puro mecanismo.
+
+**El problema de la mesa maciza.** Una maceta apoyada sobre un tablero continuo mantiene contacto
+capilar con esa superficie. El agua del fondo no tiene por dónde marcharse ni aire con el que
+intercambiarse, y se forma una franja saturada permanente en la base del sustrato. Eso es asfixia
+radicular en la parte de la maceta donde más raíz hay, y es puerta de entrada para los hongos de
+raíz.
+
+**El segundo problema, menos obvio y más caro.** La raíz que llega al fondo y no encuentra salida
+**gira y sigue creciendo en círculo**. Al cabo de unas semanas el fondo de la maceta es una maraña
+enrollada. Y esa maraña no se deshace al trasplantar: la planta sigue con las raíces dando vueltas
+sobre sí mismas, ancla mal, y años después un árbol así puede volcarse por raíces que nunca salieron
+de la forma de la maceta que lo crió.
+
+**Lo que hace una mesa calada.** Con aire por debajo, la punta de la raíz asoma por el agujero de
+drenaje, se encuentra con aire seco y **se deseca**. El meristemo apical de esa raíz muere.
+
+Y esto, que suena a daño, es exactamente el objetivo. Al morir la punta se rompe la dominancia
+apical de esa raíz y **se activan las raíces laterales justo por detrás**. El resultado, repetido en
+cada raíz que llega al borde, es un cepellón denso y ramificado que ocupa todo el volumen en vez de
+una maraña que ocupa el fondo. Es la <Termino slug="poda-de-aire">poda de aire</Termino>.
+
+<Analogia titulo="Podar una punta para forzar la ramificación">
+Es la misma lógica que podar el brote apical de un tallo para que la planta se ramifique, aplicada
+bajo tierra y sin tijeras: quitas el extremo que inhibía a los laterales y los laterales despiertan.
+
+Y visto como diseño, tiene una propiedad elegante: **el límite no lo impone una regla, lo impone el
+propio entorno.** No hay que ir maceta por maceta decidiendo nada. Pones aire debajo y cada raíz que
+llega al borde se detiene sola, en el momento en que llega. La poda es automática, continua y
+gratuita, y lo único que hubo que hacer fue no poner una superficie donde no tocaba.
+</Analogia>
+
+Por eso una mesa de vivero se hace con **superficie calada**: malla metálica, metal desplegado,
+listones separados o rejilla plástica. Y por eso no se apoyan las macetas directamente en el suelo,
+que además de no podar por aire deja entrar raíces al terreno y con ellas hormigas, nematodos y
+malezas.
+
+## La ergonomía, que no es un lujo
+
+<Diagrama
+  src="ergonomia-mesa.webp"
+  alt="Dos paneles con la vista lateral de una persona junto a una mesa de cultivo con plantines. En el izquierdo, rotulado acceso por un lado, la mesa está contra un muro y es estrecha; una cota horizontal marca su ancho y la persona alcanza el borde opuesto con la espalda recta. En el derecho, rotulado acceso por los dos lados, la mesa está exenta con una persona a cada lado y es aproximadamente el doble de ancha; cada una alcanza el centro y sus manos se encuentran ahí, también con la espalda recta. En ambos paneles una cota vertical marca la altura de la mesa desde el suelo hasta la cintura baja."
+  pie="Es la misma regla del ancho de cama del Módulo 4, aplicada de pie en vez de agachado."
+/>
+
+Un vivero es trabajo repetitivo: llenar bolsas, trasplantar, mover, regar, seleccionar. Miles de
+veces. **Un mal ancho de mesa no te cansa un día, te lesiona en un año**, y encima cuesta lo mismo
+que uno bueno.
+
+**La altura.** En torno a la cintura baja, del orden de 80 a 90 cm. Más baja obliga a encorvarse y
+más alta obliga a levantar los brazos, que cansa el hombro.
+
+**El ancho lo fija el alcance**, exactamente igual que el ancho de una cama alta en el Módulo 4, con
+la diferencia de que aquí estás de pie:
+
+- **Mesa contra un muro**, accesible por un solo lado: lo que alcanzas cómodamente sin doblar la
+  espalda, que suele ser del orden de 60 a 75 cm.
+- **Mesa exenta**, accesible por los dos: aproximadamente el doble, en torno a 120 a 150 cm.
+
+Como en las camas, **mídete tú**: es una medida antropométrica, no una norma.
+
+**Los pasillos** tienen que dejar pasar lo que de verdad va a pasar por ellos, que casi nunca es solo
+una persona: es una persona con una carretilla, o con una bandeja de plantines en las dos manos. Unos
+60-70 cm sirven para pasar; para trabajar cómodo y cruzarse, más.
+
+Y una decisión que se agradece: **deja la altura de mesa igual en todo el vivero.** Permite mover
+bandejas de una a otra sin levantarlas y hacer superficies de trabajo continuas.
+
+## Camas y cercos: la pregunta es si hace falta el cerco
+
+Las medidas de una cama alta ya las fijaste en el Módulo 4: la altura sale de la profundidad a la que
+aparece la saturación y el ancho sale de tu alcance. Lo que queda por decidir aquí es **de qué se
+hace el borde**, y la primera pregunta es si hace falta alguno.
+
+**Una <Termino slug="cama-alta">cama alta</Termino> no necesita muro para funcionar.** Un simple
+caballón de tierra perfilado, con los taludes bien hechos, sube la zona de raíces por encima de la
+saturación exactamente igual que uno con cerco de ladrillo, y cuesta cero.
+
+El cerco aporta otras tres cosas, y hay que ver si las quieres:
+
+- **Mantiene la geometría** con lluvias intensas. Sin cerco, los taludes se erosionan y hay que
+  reperfilarlos, que en tu clima significa cada temporada.
+- **Separa limpiamente el pasillo del cultivo**, lo que ahorra desbroce y hace más difícil pisar la
+  cama por descuido.
+- **Permite contener un sustrato distinto** del suelo circundante, que es imprescindible si vas a
+  llenar la cama con una mezcla específica.
+
+Mi recomendación honesta para tu caso: **camas de producción sin cerco, perfiladas**, porque son
+muchas y se pueden rehacer; y **cerco de obra solo en las camas fijas** que estén a la vista, junto a
+la zona de venta, o que lleven sustrato propio. La albañilería de las lecciones anteriores te sirve
+igual para eso: un cerco es un muro bajo, con su sobrecimiento y todo.
+
+## El clima se come la madera
+
+<Diagrama
+  src="madera-en-contacto.webp"
+  alt="Dos paneles con la sección ampliada del pie de un poste de madera en el terreno. En el izquierdo, rotulado madera en el suelo, el poste se entierra directamente; la parte enterrada aparece oscura y deshecha, con galerías huecas y termitas dentro, adelgazada justo a la altura del nivel del suelo, y un túnel de tierra sube por su cara exterior; el poste se ha inclinado. En el derecho, rotulado madera sobre hormigón, el poste termina bastante por encima del terreno y descansa sobre un pedestal de hormigón que sobresale del suelo, unido con un herraje metálico, con una separación visible entre la madera y el hormigón; la madera está sana y el poste vertical."
+  pie="El punto donde se pudre no es el fondo: es la línea del suelo, donde hay agua y aire a la vez."
+/>
+
+Si vas a usar madera —y es lo razonable, porque es lo que hay y es barata— tienes que asumir una cosa:
+**en este clima, madera en contacto con el suelo tiene los años contados.** Siete meses de lluvia,
+humedad alta y termitas subterráneas activas todo el año.
+
+Y el detalle que casi nadie ve: **el poste no se pudre por abajo del todo.** Se pudre **en la línea
+del suelo**, en la franja donde hay humedad y oxígeno a la vez, que es la combinación que los hongos
+de pudrición necesitan. Más abajo falta oxígeno, más arriba falta humedad. Por eso un poste podrido
+aparece adelgazado justo ahí, como una cintura, y se parte por ese punto.
+
+**La regla, entonces, es una sola: que la madera no toque el suelo.** Poste sobre un dado o pedestal
+de hormigón que sobresalga del terreno, unido con un herraje metálico, dejando la madera al aire. Lo
+mismo vale para las patas de las mesas y para cualquier cerco de madera.
+
+Y tres cosas más:
+
+- **Las termitas suben por túneles de tierra** que construyen sobre superficies duras. Un dado de
+  hormigón no las detiene por sí solo, pero **hace visible el túnel**, y un túnel visible es un
+  problema detectado. Revisar los pies de los postes cada cierto tiempo es una tarea de dos minutos.
+- **La madera dura local** —cuchi, tajibo, y otras del oriente— es incomparablemente más durable que
+  el pino o el eucalipto. Cuesta más y vale la pena en cualquier pieza que sea difícil de sustituir.
+  En una pieza fácil de cambiar, madera barata es una decisión razonable.
+- **El metal galvanizado no es inmune**: en ambiente húmedo y con riego constante, cualquier arañazo
+  en el galvanizado es un punto de corrosión. Y si mojas fertilizante sobre acero, va más rápido.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**La decisión de fondo, antes que ninguna medida: cuántos ambientes de luz necesitas.** Y la respuesta
+en tu caso son al menos dos, porque tu catálogo tiene destinos opuestos.
+
+**Ambiente de sombra alta**, en torno al 50 %, para germinación, esquejes y recién trasplantados. Es
+el que más control necesita y el que menos superficie ocupa.
+
+**Ambiente de rustificación a pleno sol o casi**, donde los lotes pasan las últimas semanas antes de
+venderse. Puede ser simplemente una zona de mesas sin malla, o el mismo sombreadero con la malla
+recogida. **Esta zona no es opcional**: es la que decide si tus ornamentales sobreviven en el jardín
+del cliente, y por tanto si vuelve a comprarte.
+
+Y hay un tercer caso que no es una fase sino un destino: **el culantro querría estar en sombra media
+todo el tiempo.** Ahí la solución elegante no es más malla sino biología: bajo los plátanos, con la
+yautía. Te ahorra estructura y te da un cultivo asociado.
+
+**El sombreadero, en concreto:**
+
+- Postes de madera dura del desmonte si los tienes, **sobre dado de hormigón**, nunca enterrados
+  directamente.
+- Zapata dimensionada **como lastre**, no como apoyo: lo que va a intentar el viento es arrancarla.
+- Cable perimetral tensado y la malla sujeta al cable, no clavada a los postes.
+- **Postes de esquina atirantados** con tensor regulable hasta un anclaje enterrado.
+- Altura de trabajo entre 2,5 y 3 metros.
+- **Y montaje que permita recoger la malla.** Cuando anuncien surazo fuerte, se recoge. Esa media hora
+  de trabajo es lo que separa perder una tarde de perder la estructura.
+
+**Las mesas:**
+
+- Superficie **calada, siempre**. Es la decisión de mayor impacto por unidad de coste de toda la
+  lección: cambia la arquitectura de la raíz de cada planta que produzcas.
+- Altura uniforme de 80-90 cm en todo el vivero.
+- Ancho de 60-75 cm contra muro, 120-150 cm exentas, medido con tu propio alcance.
+- Patas sobre hormigón, sin madera en contacto con el suelo, y sabiendo que están permanentemente
+  mojadas por el riego.
+
+**Las camas:** perfiladas sin cerco las de producción, con cerco de obra solo las fijas de la zona de
+venta o las que lleven sustrato propio.
+
+**Y un orden de construcción por rentabilidad**, si hay que hacerlo por partes: **primero las mesas
+caladas**, que mejoran la calidad de todo lo que produzcas desde el primer lote; **después la zona de
+rustificación**, que es la que evita devoluciones; y **al final el sombreadero grande**, que es lo más
+caro. Es tentador empezar por el sombreadero porque es lo que parece un vivero, pero no es lo que más
+cambia el producto.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La malla se consigue en Santa Cruz sin problema**, en negro y en varios porcentajes, y suele
+venderse por metro de un rollo de ancho fijo. Conviene planear el sombreadero en múltiplos de ese
+ancho para no desperdiciar ni tener que coser paños.
+
+**Ojo con la calidad y la radiación ultravioleta.** La malla barata sin tratamiento UV se degrada
+rápido bajo el sol del trópico: pierde resistencia, se vuelve quebradiza y empieza a rasgarse por los
+ojales en un par de temporadas. La malla tratada cuesta más y dura bastante más, y es de las compras
+donde el barato sale caro.
+
+**Las maderas duras del oriente boliviano son un recurso real.** El **cuchi** es proverbialmente
+durable y hay tradición de usarlo en postes; el **tajibo** también aguanta bien. Si en tu desmonte
+salieron troncos de estas especies, son mucho mejor poste que cualquier madera blanda comprada.
+Guárdalos, descortézalos y déjalos secar bajo techo.
+
+**Las termitas aquí son un factor de diseño, no una plaga ocasional.** Hay especies subterráneas
+activas todo el año, y la construcción rural de la zona convive con ellas. Por eso la costumbre local
+de levantar todo sobre hormigón no es manía: es experiencia.
+
+**El bambú es una alternativa que se usa y funciona**, es barato y crece en la zona, pero exige
+tratamiento —curado o inmersión— y aun así dura bastante menos que la madera dura. Para estructuras
+provisionales o de bajo coste es razonable; para la estructura principal, no.
+
+**Y el vocabulario.** La malla de sombra se llama corrientemente **media sombra** o **malla
+raschel**; las mesas de cultivo, **mesas** o **camas altas de vivero** —conviene precisar, porque
+«cama» también es la del suelo—; el tensor, **templador** o **tensor**; y el dado de hormigón bajo un
+poste, **dado**, **poyo** o **pedestal**.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Cuanta más sombra, mejor para los plantines.»** Sombra de más da tallo fino y tejido blando, y una
+planta que se muere al llegar al jardín del cliente.
+
+**«Un solo sombreadero para todo el vivero.»** Hacen falta al menos dos ambientes de luz, porque la
+germinación y la rustificación piden lo contrario.
+
+**«La rustificación se puede saltar si la planta se ve bien.»** Justamente ahí es donde falla: se ve
+bien porque está blanda.
+
+**«El sombreadero pesa poco, así que la estructura puede ser ligera.»** Pesa poco y por eso es
+peligroso: el viento tira hacia arriba y no hay peso que lo sujete.
+
+**«La malla clavada al poste, que es más rápido.»** Va tensada contra un cable perimetral. Clavada
+directamente, aletea y rasga por los ojales.
+
+**«Los postes de esquina como los demás.»** Las esquinas reciben tracción de dos lados y vuelcan.
+Van atirantadas.
+
+**«Las macetas sobre tablero, que es más barato.»** El fondo queda saturado y la raíz se enrolla. La
+superficie calada es lo que más mejora tu producto por unidad de coste.
+
+**«Las macetas en el suelo mientras tanto.»** Sin poda de aire, con raíces que salen al terreno y con
+hormigas y malezas de regalo.
+
+**«La altura de la mesa da igual, uno se acostumbra.»** Uno se lesiona. Es trabajo repetido miles de
+veces.
+
+**«Poste de madera enterrado, que así queda firme.»** Se pudre en la línea del suelo y se parte por
+ahí. Sobre dado de hormigón, sin contacto.
+
+## Lo que sigue
+
+Con el vivero funcionando, falta el edificio que lo sostiene por detrás. La lección siguiente va del
+**galpón**: qué espacios necesita de verdad una operación como la tuya —almacén de insumos, mezcla de
+sustrato, banco de trabajo, guardado de herramienta, oficina—, cómo se organiza el flujo para que el
+material entre por un lado y salga por otro sin cruzarse, qué exige guardar agroquímicos con un
+mínimo de seguridad, y por qué la mezcla de sustrato merece un espacio propio con suelo duro y
+lavable.

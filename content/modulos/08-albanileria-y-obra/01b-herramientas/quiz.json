@@ -1,0 +1,100 @@
+{
+  "preguntas": [
+    {
+      "id": "dos-familias",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué criterio decide si puedes improvisar una herramienta o tienes que comprarla buena?",
+      "opciones": [
+        "Si define precisión o solo contiene y mueve material.",
+        "Las que definen precisión —cinta, nivel, plomada, cuerda, escuadra— no hacen trabajo: producen la información con la que se decide todo lo demás.",
+        "Un cajón medidor hecho con tablas de desecho mide igual que uno comprado, siempre que sus medidas sean las que dijiste.",
+        "El criterio es el precio: lo caro se improvisa y lo barato se compra."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La distinción se parece a la que hay entre la fuente de verdad de un sistema y todo lo que la consume. Un cajón medidor es un consumidor: si falla, falla un lote de mezcla. La cinta y el nivel son la fuente: si están mal, **está mal todo lo que se derivó de ellos**, y lo peor es que todo cuadra internamente, así que el error no se detecta comparando piezas entre sí. De ahí la regla práctica: en el grupo de medir se compra bueno y se compra una vez; en el resto, se improvisa lo que se pueda."
+    },
+    {
+      "id": "una-cinta",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si tienes dos cintas métricas, conviene usar las dos a la vez para ir más rápido.",
+      "respuesta": false,
+      "explicacion": "Falso. Dos cintas pueden diferir unos milímetros, y si mides unas cosas con una y otras con otra, las diagonales no cuadran nunca y no vas a saber por qué. No es que una sea mejor que la otra: es que no se mezclan dos fuentes de verdad. Y la comprobación es sencilla: extiéndelas juntas y compáralas. Cuál de las dos es la correcta importa mucho menos que usar siempre la misma."
+    },
+    {
+      "id": "nivel-180",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se comprueba en veinte segundos que un nivel de burbuja no miente?",
+      "opciones": [
+        "Se apoya en una superficie, se anota dónde queda la burbuja, se gira 180 grados extremo por extremo y se vuelve a apoyar en el mismo sitio.",
+        "Si la burbuja queda en la misma posición el nivel es fiable; si queda en otra, la ampolla está desviada.",
+        "No hace falta que la superficie esté a nivel: si estuviera inclinada, la inclinación afectaría igual a las dos lecturas.",
+        "Se compara con una superficie de la que sepas con certeza que está perfectamente horizontal."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Lo elegante del método es justamente que no necesita una referencia fiable, que es lo que lo hace utilizable en cualquier sitio: la diferencia entre las dos lecturas solo puede venir del instrumento, porque todo lo demás se mantuvo igual. Hazlo en la ferretería antes de pagar y repítelo de vez en cuando, porque un nivel que se cae al suelo puede quedar desviado sin que se le note nada por fuera. Un nivel descalibrado es peor que no tener nivel: te da una respuesta y no dudas de ella."
+    },
+    {
+      "id": "comprar-alquilar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Con qué criterio decides entre comprar una herramienta y alquilarla?",
+      "opciones": [
+        "Por cuántos días la vas a tener en la mano de verdad, no por lo que cuesta.",
+        "Se compra lo que se usa cada jornada: medición, badilejo, palas, martillo, carretilla.",
+        "Se alquila lo que se usa unos pocos días concentrados: hormigonera, placa vibratoria, andamios, vibrador.",
+        "Se compra todo lo que se pueda, porque a la larga siempre sale más barato que alquilar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La compra que más se arrepiente es la hormigonera: se usa unos pocos días y después se oxida en un rincón siete meses al año. La pregunta correcta no es «cuánto cuesta comprarla frente a los días de alquiler» sino **«¿voy a construir algo más el año que viene?»**. Y un detalle de gestión que ahorra dinero real: ten el trabajo preparado antes de que llegue la máquina —áridos acopiados, agua cerca, relleno extendido y con la humedad correcta—, porque pagar horas de máquina parada es la forma más rápida de que el alquiler deje de ser barato."
+    },
+    {
+      "id": "cemento-caustico",
+      "tipo": "verdadero_falso",
+      "enunciado": "El cemento fresco es molesto para la piel, pero si algo quemara de verdad lo notarías al momento y te lavarías.",
+      "respuesta": false,
+      "explicacion": "Falso, y es justo lo que lo hace peligroso. El cemento mezclado con agua da una solución fuertemente alcalina, con un pH del orden de 12 o 13, comparable a la sosa, y produce quemaduras químicas reales. **Al principio no duelen**: no existe la señal de alarma inmediata que da una quemadura por calor, y el daño aparece horas después, cuando ya llevas toda la tarde con la mezcla encima. Por eso se trabaja con guantes, por eso nadie se arrodilla directamente sobre hormigón fresco, y por eso una salpicadura se lava con agua abundante y pronto, no al terminar."
+    },
+    {
+      "id": "mismo-dia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la herramienta que toca hormigón o mortero se lava el mismo día?",
+      "opciones": [
+        "Porque el cemento endurecido cambia la geometría de la herramienta: un badilejo con costra pierde el filo recto y deja de alisar.",
+        "Porque quitar cemento fraguado exige picarlo, y picándolo se pica también el acero y se abre la puerta a la oxidación.",
+        "Porque una hormigonera con costra interior pierde volumen útil y mezcla peor cada vez.",
+        "Por orden y buena presencia, sobre todo si la obra la ve alguien."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es manía de ordenado: es que el cemento fragua igual en la pared que en el badilejo, y en la pared lo querías. Cinco minutos con un balde y un cepillo al terminar la jornada valen más que cualquier otra cosa que hagas por tu equipo. Y en este clima hay dos complementos que importan tanto como el lavado: guardar bajo techo y separado del suelo —herramienta apoyada en tierra siete meses de lluvia es herramienta oxidada y mango comido por termitas— y aceitar los mangos de madera de vez en cuando."
+    },
+    {
+      "id": "barato-caro",
+      "tipo": "opcion_multiple",
+      "enunciado": "En casi todo la herramienta económica sirve. ¿Dónde no?",
+      "opciones": [
+        "En la cinta métrica, porque una barata se estira y se retuerce, y es tu fuente de verdad.",
+        "En la cuerda de albañil, porque la que da de sí introduce un error que no puedes medir ni ver, y que cambia según cuánto tenses ese día.",
+        "En el nivel y en la tenaza de corte: uno miente con seguridad y la otra aplasta el alambre en vez de cortarlo.",
+        "En las palas y los baldes, que son los que más trabajo hacen."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "En palas, baldes y carretilla lo económico funciona perfectamente: son consumidores, no fuentes. La lista de excepciones es corta y coincide casi exactamente con el grupo de medir, más la tenaza, que no es cuestión de precisión sino de horas perdidas peleándose con cada atadura."
+    },
+    {
+      "id": "plan-compra",
+      "tipo": "abierta",
+      "enunciado": "Vas a empezar a construir en Rizoma del Sur y no quieres gastarlo todo de golpe. Describe en qué orden comprarías el equipo, qué alquilarías, qué improvisarías y qué comprobarías antes de pagar.",
+      "respuestaModelo": "El orden de compra sigue el orden de la obra, y empieza por lo que menos parece y más decide.\n\n**Primera compra: el grupo de medir.** Cinta de fibra de vidrio de 30 metros, nivel de burbuja, plomada, cuerda de albañil de la buena, manguera transparente y escuadra. Es la fuente de verdad de todo lo demás, es sorprendentemente barato, y con esto ya puedo replantear. Aquí es donde no escatimo: una cinta que se estira o una cuerda que da de sí introducen errores que no puedo medir ni ver, y que además contaminan todo lo que derive de ellos.\n\n**Segunda: mover tierra.** Pala de punta, pala plana, pico, barreta, carretilla y pisón. La carretilla es lo más caro del kit y la que más se usa; no la escatimo.\n\n**Tercera: hormigón y mortero.** Baldes con marcas, azadón de mezcla, badilejo, fratacho, regla de aluminio y plancha.\n\n**Cuarta: acero y madera.** Tenaza de corte, alambre de amarre, serrucho, martillo y sargentos.\n\n**Y la protección desde el primer día, no en la cuarta compra:** guantes, gafas, mascarilla y botas. El cemento fresco es cáustico y sus quemaduras no duelen al principio, que es exactamente lo que las hace peligrosas.\n\n**Lo que alquilo:** hormigonera para los días de hormigonado, placa vibratoria para la campaña de nivelación, andamios si el galpón sube más de lo que alcanzo. Todo por día y todo en la seca. Y con el trabajo preparado antes de que llegue la máquina, para no pagar horas paradas. La hormigonera no la compro salvo que vaya a seguir construyendo el año que viene: para una obra sola, el alquiler viene mantenido y con recambio.\n\n**Lo que improviso:** el cajón medidor con tablas de desecho, el pisón con un bloque de madera y un mango, las camillas de replanteo con las estacas de madera dura que quedaron del desmonte, y los baldes marcados a mano. Todo eso contiene o mueve material, no produce información, así que hecho en casa mide exactamente igual.\n\n**Lo que compruebo antes de pagar.** El nivel, girándolo 180 grados sobre el mismo punto: si la burbuja no queda donde estaba, la ampolla está desviada. Y no hace falta una superficie que sepa nivelada, porque cualquier inclinación real afecta igual a las dos lecturas. La cinta, comparándola con otra: si no coinciden, ya sé que no puedo mezclarlas en la misma obra.\n\n**Y una decisión de organización que no es de compra:** dos juegos de cinta corta y lápiz, uno permanentemente en el galpón. La herramienta que hay que ir a buscar es herramienta que no se usa, y medir antes de cortar deja de hacerse en cuanto la cinta está a cincuenta metros.",
+      "criterios": [
+        "Empieza por el grupo de medición y justifica por qué es lo primero.",
+        "Distingue dónde no escatimar —cinta, cuerda, nivel, tenaza— del resto.",
+        "Incluye la protección desde el primer día y no al final.",
+        "Alquila máquina y explica el criterio de días de uso, no de precio.",
+        "Menciona tener el trabajo preparado antes de que llegue la máquina alquilada.",
+        "Improvisa cajón medidor, pisón, camillas y baldes, y explica por qué se puede.",
+        "Comprueba el nivel con el giro de 180 grados y sabe por qué el método funciona.",
+        "Comprueba la cinta comparándola y aplica la regla de una sola cinta por obra."
+      ],
+      "explicacion": "Fíjate en que el orden de compra es casi el inverso del orden de precio. Lo primero de la lista —la cinta, el nivel, la plomada— es lo más barato del equipo entero, y es lo único que no admite un error. Lo más caro, la máquina, ni siquiera se compra. Es una asimetría que se repite mucho en obra: **lo que más decide el resultado casi nunca es lo que más cuesta**, y por eso hay que decidirlo con criterio en vez de con presupuesto."
+    }
+  ]
+}

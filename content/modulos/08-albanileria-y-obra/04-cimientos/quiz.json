@@ -1,0 +1,101 @@
+{
+  "preguntas": [
+    {
+      "id": "que-hace-una-zapata",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace exactamente una zapata bajo un muro?",
+      "opciones": [
+        "Reparte la misma carga sobre más superficie de apoyo, de modo que llega al suelo con menos presión por centímetro cuadrado.",
+        "Si duplicas el ancho de la zapata, la presión sobre el terreno se reduce a la mitad.",
+        "El ancho necesario sale de dividir la carga que baja entre lo que el suelo aguanta.",
+        "Reduce el peso que la construcción transmite al terreno."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la confusión habitual y conviene desmontarla: el peso es el que es y no lo cambia nada de lo que pongas debajo. Lo que cambia es el divisor. Presión igual a fuerza entre superficie, y el cimiento solo actúa sobre el denominador. Es el principio de una raqueta de nieve: el mismo peso, repartido, no se hunde."
+    },
+    {
+      "id": "quien-resiste",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una zapata más grande es un cimiento más resistente.",
+      "respuesta": false,
+      "explicacion": "Falso, y el matiz importa. La resistencia la pone el suelo, no la zapata. Una zapata mayor no aguanta más: hace que el terreno trabaje con menos presión. Por eso la pregunta correcta al dimensionar nunca es «¿qué zapata pongo?» sino «¿cuánto aguanta esto sobre lo que voy a apoyar?», y esa segunda pregunta se responde mirando el terreno, no el plano."
+    },
+    {
+      "id": "que-agrieta",
+      "tipo": "opcion_multiple",
+      "enunciado": "Una construcción ha descendido claramente respecto a su cota original. ¿Cuándo aparecen las grietas?",
+      "opciones": [
+        "Cuando el descenso es distinto en distintos puntos, y no por el hecho de descender.",
+        "Si todo el edificio baja por igual, los muros pueden quedar enteros.",
+        "Porque la mampostería y el hormigón no resisten tracción, y acompañar un descenso desigual les exige justamente eso.",
+        "Siempre que haya asiento medible, porque cualquier movimiento agrieta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Toda construcción se asienta algo. El asiento uniforme es un cambio de cota y poco más; el diferencial obliga a la estructura a deformarse, y como no puede estirarse, se parte. La consecuencia práctica es de diagnóstico: las grietas se abren en diagonal, se ensanchan al subir y apuntan hacia la zona que bajó. Una pared agrietada te está señalando dónde está el problema."
+    },
+    {
+      "id": "profundidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué determina la profundidad a la que se apoya un cimiento en tu terreno?",
+      "opciones": [
+        "Hay que pasar la capa orgánica y vegetal, porque se descompone y desaparece.",
+        "Hay que pasar la zona de humedad variable, donde el suelo cambia de volumen con las estaciones.",
+        "Hay que pasar cualquier relleno o material removido, que no está consolidado.",
+        "Hay que bajar por debajo de la profundidad de helada."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta aparece en casi todos los manuales de construcción y no aplica aquí: a 17,8° de latitud sur y 529 metros el suelo no se congela ni en el peor surazo. Aplicarla sin pensar lleva a profundidades innecesarias. El criterio que sí manda en este clima es el segundo, y con siete meses de lluvia y cinco de seca la zona de humedad variable es más profunda que en un clima templado."
+    },
+    {
+      "id": "arcilla-expansiva",
+      "tipo": "opcion_multiple",
+      "enunciado": "Abres un hoyo en agosto y el terreno muestra grietas anchas y profundas; el análisis del Módulo 2 daba una CIC alta. ¿Qué estás viendo y qué haces?",
+      "opciones": [
+        "Arcilla expansiva de tipo 2:1, del estilo de la montmorillonita: admite agua entre sus láminas, se hincha al mojarse y se retrae al secarse.",
+        "En un clima de dos estaciones marcadas eso es un ciclo anual de subida y bajada bajo la construcción.",
+        "Se cimenta por debajo de la zona de humedad variable, o se interpone una capa de material no expansivo, o se estabiliza la humedad con drenaje.",
+        "Es un suelo bien estructurado: las grietas son macroporos que mejoran la infiltración."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta opción es exactamente el tipo de error que produce leer el suelo con el manual equivocado: esas grietas son un dato agronómicamente ambiguo y estructuralmente inequívoco. Y fíjate en la simetría con el Módulo 2: la montmorillonita era la arcilla deseable, la de CIC alta que retiene nutrientes. La misma propiedad —láminas que admiten agua entre ellas— que la hace fértil la hace un mal terreno de apoyo."
+    },
+    {
+      "id": "flotacion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un depósito de agua enterrado corre más riesgo cuando está lleno, porque es cuando más pesa.",
+      "respuesta": false,
+      "explicacion": "Falso, y es al revés de lo que sugiere la intuición. Lleno está seguro precisamente porque pesa. El riesgo es el depósito vacío con el nivel freático alto: el agua del terreno empuja hacia arriba con el peso del volumen desplazado —Arquímedes, que no distingue entre un barco y un depósito— y si ese empuje supera al peso propio, el depósito se levanta y rompe sus conexiones. Ocurre en el peor momento: después de vaciarlo para limpiarlo, en plena temporada de lluvias."
+    },
+    {
+      "id": "losa",
+      "tipo": "opcion_multiple",
+      "enunciado": "Abres varios hoyos bajo la misma construcción y aparecen materiales distintos. ¿Qué solución conviene considerar?",
+      "opciones": [
+        "Una losa o platea, que reparte la carga sobre toda la superficie en vez de buscar puntos de apoyo.",
+        "Hace que la construcción se mueva en bloque, convirtiendo un problema de asiento diferencial en uno de asiento uniforme.",
+        "Zapatas aisladas más grandes bajo cada punto, para compensar el terreno peor.",
+        "Pilotes hasta el estrato firme."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "La gracia de la losa es que no resuelve el problema: lo transforma en otro mucho menos dañino. No consigue que el suelo malo deje de serlo, consigue que la construcción baje entera. Las zapatas más grandes no sirven porque el problema no es la magnitud del asiento sino su diferencia entre puntos. Y los pilotes están fuera de tu escala. Esto conecta con el Módulo 3: la variabilidad lateral es la firma de una llanura de sedimentación, y por eso aquí un solo hoyo no basta."
+    },
+    {
+      "id": "plan-cimentacion",
+      "tipo": "abierta",
+      "enunciado": "Vas a cimentar en Rizoma del Sur tres cosas: el sombreadero, las mesas del vivero y el depósito de agua. Describe qué reconocimiento haces primero, qué decides para cada una y por qué, y qué restricción de trazado sale de esta lección.",
+      "respuestaModelo": "El reconocimiento primero, y empieza con lo mismo que el diagnóstico agronómico: abrir hoyos, mirar y describir. Solo que ahora anoto otras cosas. A qué profundidad termina la capa orgánica y removida, porque ahí no se apoya nada. Qué material aparece debajo y si es arena, arcilla o mezcla. Si hay grietas anchas de retracción en la seca, que delatan arcilla expansiva, y las contrasto con el dato de CIC del análisis. Si aparece agua y a qué profundidad. Y manchas de gleyzación, que indican saturación aunque hoy no vea agua.\n\nDos precauciones sobre ese reconocimiento. Abro más de un hoyo, porque el área integrada tiene suelos aluviales con mucha variabilidad lateral y dos zapatas separadas cinco metros pueden estar sobre materiales distintos; si aparecen materiales distintos bajo la misma construcción, considero una losa en vez de zapatas separadas. Y no decido con el dato de una sola estación: un hoyo abierto en agosto puede aparecer seco y el mismo punto en febrero tener agua a poca profundidad.\n\nEl sombreadero va sobre zapatas aisladas bajo cada poste. La carga es modesta porque la estructura es ligera y la zapata queda pequeña, pero hay que pasar la capa orgánica igualmente. Ningún poste apoya directamente en tierra: va sobre la zapata y levantado unos centímetros. Y aquí hay una carga que casi todo el mundo olvida y que en este caso puede ser la que mande: el viento. Un sombreadero es una superficie grande y liviana, y en un surazo con rachas de más de 40 km/h el riesgo no es que se hunda sino que lo levante. La zapata trabaja entonces al revés, como lastre, y ese es un motivo para no escatimar su volumen.\n\nLas mesas del vivero llevan bases sencillas, pero por encima del nivel del suelo y drenando, porque van a estar permanentemente mojadas por el riego.\n\nEl depósito de agua es la decisión importante y la resuelvo no enterrándolo: apoyado en superficie o semienterrado en el punto alto que localicé con la manguera. Eso evita entero el problema de subpresión —un depósito enterrado y vacío con el freático alto puede flotar y romper sus conexiones—, evita excavar en un terreno con freático incierto y además me da presión por gravedad para el riego. Si aun así el volumen es grande, ahí sí encargo un estudio de suelos antes de dimensionar la base, porque un depósito lleno pesa toneladas concentradas en pocos metros cuadrados y es exactamente la situación en la que suponer sale caro. En Santa Cruz hay laboratorios de mecánica de suelos y el coste es una fracción del de rehacer una estructura asentada.\n\nLa restricción de trazado que sale de esta lección: los árboles grandes tienen que quedar a distancia de lo que construya. La cortina rompevientos del sur y los árboles de sombra secan el suelo bajo su zona de influencia, y en un terreno con arcilla activa esa desecación localizada produce asiento diferencial justo del tipo que agrieta. Es una condición nueva que hay que meter en el plano junto a las que ya tenía.",
+      "criterios": [
+        "Empieza por el reconocimiento con hoyos y enumera qué se anota: capa orgánica, material inferior, grietas de retracción, agua y gleyzación.",
+        "Abre más de un hoyo y justifica la variabilidad lateral de los suelos aluviales.",
+        "No decide con el dato de una sola estación por la oscilación del nivel freático.",
+        "Sombreadero: zapatas aisladas, pasar la capa orgánica, poste levantado sobre la zapata.",
+        "Identifica el viento como carga y la zapata trabajando como lastre en el surazo.",
+        "Mesas: bases por encima del suelo y drenando por el riego permanente.",
+        "Depósito: no enterrarlo, y explica la subpresión sobre un depósito vacío con freático alto.",
+        "Menciona la ventaja añadida de la presión por gravedad y el estudio de suelos si el volumen es grande.",
+        "Restricción de trazado: árboles grandes lejos de lo construido, por asiento diferencial."
+      ],
+      "explicacion": "Fíjate en lo que ha pasado con el reconocimiento: es el mismo hoyo del Módulo 2, la misma gleyzación del Módulo 3 y el mismo punto alto que localizaste con la manguera en el Módulo 4. No has aprendido un procedimiento nuevo, has aprendido a hacerle otras preguntas al mismo dato. Y la decisión del depósito es el ejemplo limpio de una respuesta que no resuelve el problema sino que lo esquiva: sacarlo del suelo elimina la subpresión, elimina la excavación con freático incierto y encima te regala presión de riego. Cuando una alternativa gana en tres frentes a la vez, normalmente es la correcta."
+    }
+  ]
+}

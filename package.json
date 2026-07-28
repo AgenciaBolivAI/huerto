@@ -8,10 +8,11 @@
     "build": "npm run validar && next build",
     "start": "next start",
     "lint": "next lint",
-    "validar": "node scripts/validar-contenido.mjs",
+    "validar": "node scripts/validar-contenido.mjs && node scripts/auditar-imagenes.mjs",
     "verificar-videos": "node scripts/verificar-videos.mjs",
     "verificar-videos:fix": "node scripts/verificar-videos.mjs --fix",
-    "optimizar-imagenes": "node scripts/optimizar-imagenes.mjs"
+    "optimizar-imagenes": "node scripts/optimizar-imagenes.mjs",
+    "auditar-imagenes": "node scripts/auditar-imagenes.mjs"
   },
   "_comentario_overrides": "next@14.2.35 fija internamente postcss 8.4.31, que arrastra 3 avisos de seguridad. El fallo es de tiempo de compilación y solo explotable procesando CSS de terceros —aquí todo el CSS es propio—, pero se corrige igualmente forzando la versión parcheada en todo el árbol. La alternativa era saltar a Next 16, un cambio mayor.",
   "overrides": {

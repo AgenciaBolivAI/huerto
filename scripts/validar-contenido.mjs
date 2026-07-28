@@ -75,7 +75,13 @@ if (fs.existsSync(rutaRegistro)) {
 /* ── Glosario ─────────────────────────────────────────────────────────────── */
 
 const rutaGlosario = path.join(DIR_CONTENIDO, 'glosario.json');
+// `slugsGlosario` incluye sinónimos porque sirve para resolver referencias.
+// Los duplicados, en cambio, se cuentan solo entre slugs reales: mezclarlos
+// daba un falso positivo en cuanto un sinónimo de un término se convertía en
+// término propio más adelante —pasó con «ripio», sinónimo de «áridos» hasta
+// que la lección de movimiento de tierras le dio entrada propia.
 const slugsGlosario = new Set();
+const slugsPropios = new Set();
 
 if (fs.existsSync(rutaGlosario)) {
   const glosario = leerJson(rutaGlosario, 'content/glosario.json');
@@ -86,14 +92,25 @@ if (fs.existsSync(rutaGlosario)) {
       for (const t of glosario.terminos) {
         if (!esTexto(t.slug)) error('content/glosario.json', 'un término no tiene `slug`');
         else {
-          if (slugsGlosario.has(t.slug))
+          if (slugsPropios.has(t.slug))
             error('content/glosario.json', `slug duplicado: "${t.slug}"`);
+          slugsPropios.add(t.slug);
           slugsGlosario.add(t.slug);
         }
         if (!esTexto(t.definicion))
           error('content/glosario.json', `"${t.slug}" no tiene definición`);
         for (const s of t.sinonimos ?? []) slugsGlosario.add(s);
       }
+      // Un sinónimo que además es término propio deja el enlace ambiguo: el
+      // lector no sabe cuál de las dos definiciones le van a mostrar.
+      for (const t of glosario.terminos)
+        for (const s of t.sinonimos ?? [])
+          if (s !== t.slug && slugsPropios.has(s))
+            error(
+              'content/glosario.json',
+              `"${s}" es sinónimo de "${t.slug}" y a la vez término propio. ` +
+                `Quítalo de los sinónimos o fusiona las dos entradas.`,
+            );
     }
   }
 }
@@ -268,6 +285,23 @@ for (const modulo of modulos.sort()) {
       if (!slugsGlosario.has(m[1]))
         aviso(`${dondeL}/${slug}.mdx`, `<Termino slug="${m[1]}"> no está en el glosario`);
     }
+
+    // Y el fallo silencioso: un <Termino> que empieza una línea lo interpreta
+    // MDX como bloque JSX, no como texto en línea. El resultado es que el
+    // término se imprime tal cual y el componente desaparece — sin error, sin
+    // aviso y sin enlace al glosario. Se descubrió con 19 casos ya publicados,
+    // varios de ellos en la primera aparición del término, que es justo donde
+    // la definición hacía más falta.
+    mdx.split('\n').forEach((linea, i) => {
+      const m = linea.match(/^<Termino\s+slug=["']([^"']+)["']/);
+      if (m)
+        error(
+          `${dondeL}/${slug}.mdx:${i + 1}`,
+          `<Termino slug="${m[1]}"> empieza la línea, así que MDX lo trata como bloque ` +
+            `y se pierde el enlace al glosario. Bájale una palabra de la línea anterior ` +
+            `o reescribe la frase para que no arranque con la etiqueta.`,
+        );
+    });
 
     // Toda imagen referenciada tiene que estar en disco: si falta, el lector ve
     // un hueco roto en mitad de la explicación.
