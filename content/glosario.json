@@ -419,6 +419,17 @@
       ]
     },
     {
+      "termino": "Circuito",
+      "slug": "circuito",
+      "definicion": "Camino eléctrico independiente desde el tablero, con su propio interruptor y su propio cable dimensionado para su carga. Separar circuitos —iluminación, tomas, bomba— no es lujo: es acotar el radio de daño, para que una falla en uno no apague los demás y se pueda diagnosticar el problema con la luz encendida. Es el mismo principio del confinamiento de los muros, aplicado a la electricidad.",
+      "leccion": "08-albanileria-y-obra/09-instalacion-electrica",
+      "sinonimos": [
+        "circuitos",
+        "circuito electrico",
+        "ramal"
+      ]
+    },
+    {
       "termino": "Clima tropical de sabana",
       "slug": "clima-tropical-sabana",
       "definicion": "Clima de precipitación abundante pero marcadamente estacional, con una época de lluvias y una seca bien diferenciadas. En Santa Cruz supone del orden de 1.200 a 1.400 mm anuales concentrados de octubre a abril, y cinco meses secos. La temperatura permite crecer casi todo el año, de modo que el calendario agrícola lo gobierna el agua.",
@@ -536,6 +547,18 @@
       ]
     },
     {
+      "termino": "Corte de aire",
+      "slug": "corte-de-aire",
+      "definicion": "Separación física de aire entre el extremo que entrega agua limpia y el nivel del líquido que se llena: el grifo descarga por encima del borde del lavadero, la manguera se sujeta por encima del barril. Cuando la presión de la red cae, cualquier extremo sumergido se convierte en un sifón que aspira hacia atrás; un sifón no puede saltar un espacio de aire, así que el corte de aire es la protección contra el contraflujo que no tiene piezas móviles, ni mantenimiento, ni modo de fallo.",
+      "leccion": "08-albanileria-y-obra/10-instalacion-hidraulica",
+      "sinonimos": [
+        "air gap",
+        "salto de aire",
+        "descarga libre",
+        "contraflujo"
+      ]
+    },
+    {
       "termino": "Corte y relleno",
       "slug": "corte-y-relleno",
       "definicion": "Método para formar una plataforma horizontal en un terreno irregular: se retira material donde el terreno sobresale de la cota elegida (corte) y se añade donde falta (relleno). La cota se elige buscando equilibrar ambos volúmenes, porque mover tierra dentro del terreno es barato y traerla o llevársela no, y quedando por encima del terreno circundante para que la obra sea trabajable en lluvias. La zona de corte es terreno intacto y la de relleno no, de ahí la regla de situar los cimientos en el corte.",
@@ -609,6 +632,18 @@
         "desmontar",
         "desmonte selectivo",
         "habilitación"
+      ]
+    },
+    {
+      "termino": "Diferencial",
+      "slug": "diferencial",
+      "definicion": "Protección que compara la corriente que sale hacia el circuito con la que vuelve. En un circuito sano son idénticas; si difieren aunque sea en 30 miliamperios, esa electricidad está escapando por un camino imprevisto —posiblemente un cuerpo humano hacia el suelo— y el aparato corta en milésimas de segundo. Es la protección que salva vidas, funciona en pareja con la puesta a tierra, y se prueba una vez al mes con su botón de test: un diferencial que no salta en la prueba es un diferencial que no existe.",
+      "leccion": "08-albanileria-y-obra/09-instalacion-electrica",
+      "sinonimos": [
+        "interruptor diferencial",
+        "disyuntor diferencial",
+        "id",
+        "rcd"
       ]
     },
     {
@@ -877,6 +912,16 @@
       "sinonimos": []
     },
     {
+      "termino": "Golpe de ariete",
+      "slug": "golpe-de-ariete",
+      "definicion": "Pico de presión que se produce cuando una columna de agua en movimiento se detiene de golpe, típicamente al cerrar una válvula de forma instantánea. La inercia del agua se convierte en una onda de presión que viaja por la tubería con un martilleo característico y descarga en el punto más débil: una unión encolada con prisa o una rosca justa. Se evita cerrando las válvulas despacio, y cuando llegue la automatización, eligiendo electroválvulas de cierre lento, porque un relé no sabe tener cuidado.",
+      "leccion": "08-albanileria-y-obra/10-instalacion-hidraulica",
+      "sinonimos": [
+        "ariete hidraulico",
+        "martilleo de tuberias"
+      ]
+    },
+    {
       "termino": "Hormigón de limpieza",
       "slug": "hormigon-de-limpieza",
       "definicion": "Capa fina de hormigón pobre, de unos cinco centímetros, que se echa en el fondo de una excavación antes de colocar la armadura. No es estructural y hace tres cosas: aísla el acero del terreno para que el recubrimiento se cumpla de verdad, da una superficie limpia y regular sobre la que trabajar y apoyar los separadores, e impide que el terreno le robe agua de fraguado al hormigón estructural. En Bolivia se llama corrientemente emplantillado o solado.",
@@ -948,6 +993,18 @@
         "intensidad",
         "mm por hora",
         "intensidad pluviometrica"
+      ]
+    },
+    {
+      "termino": "Interruptor termomagnético",
+      "slug": "interruptor-termomagnetico",
+      "definicion": "Protección que vigila cuánta corriente pasa por un circuito y corta cuando excede lo que el cable soporta, por sobrecarga o cortocircuito. Su trabajo es impedir que el cable se recaliente e incendie la instalación: protege cosas, no personas. Los 30 miliamperios que bastan para matar a alguien son, para un térmico de 16 amperios, una diferencia que ni registra. Por eso siempre va acompañado de un diferencial.",
+      "leccion": "08-albanileria-y-obra/09-instalacion-electrica",
+      "sinonimos": [
+        "termico",
+        "breaker",
+        "termomagnetico",
+        "llave termica"
       ]
     },
     {
@@ -1091,6 +1148,17 @@
       "sinonimos": [
         "suelo meteorizado",
         "intemperismo"
+      ]
+    },
+    {
+      "termino": "Metro de columna de agua",
+      "slug": "metro-de-columna-de-agua",
+      "definicion": "Unidad de presión que expresa literalmente su origen: la presión que ejerce una columna de agua de un metro de altura, equivalente a una décima de bar. Un depósito con la superficie del agua a cuatro metros sobre el grifo entrega unos 0,4 bar, sin bomba y sin electricidad. Es la unidad natural de una red por gravedad, porque convierte una lectura de altura con el nivel de manguera en una predicción directa de presión.",
+      "leccion": "08-albanileria-y-obra/10-instalacion-hidraulica",
+      "sinonimos": [
+        "mca",
+        "m.c.a.",
+        "columna de agua"
       ]
     },
     {
@@ -1256,6 +1324,17 @@
       ]
     },
     {
+      "termino": "Pérdida de carga",
+      "slug": "perdida-de-carga",
+      "definicion": "Presión que se gasta en fricción por el camino: contra las paredes de la tubería y en cada codo, te o reducción. Crece con la longitud del recorrido, la finura del tubo y la velocidad del agua. Con presión de red se disimula; con los 0,4 bar de un depósito a cuatro metros no hay margen, y de ahí las reglas de diseño: tubería generosa, recorridos cortos y rectos, y en la duda el diámetro mayor. Es la caída de tensión de un cable fino, con agua.",
+      "leccion": "08-albanileria-y-obra/10-instalacion-hidraulica",
+      "sinonimos": [
+        "perdidas de carga",
+        "friccion hidraulica",
+        "caida de presion"
+      ]
+    },
+    {
       "termino": "pH del suelo",
       "slug": "ph",
       "definicion": "Medida de la concentración de iones de hidrógeno libres en la solución del suelo, en escala logarítmica de 0 a 14 con 7 como neutro. No alimenta a la planta: decide qué nutrientes de los presentes están en forma soluble y por tanto absorbibles. Cada unidad es un factor de diez, así que pH 5 tiene cien veces más acidez que pH 7.",
@@ -1359,6 +1438,18 @@
       "definicion": "Hasta dónde pueden llegar las raíces sin encontrar un impedimento: capa compactada, nivel colgado, discontinuidad textural, roca o agua permanente. No aparece en ningún análisis de laboratorio, porque el análisis se hace sobre los primeros 20 cm; solo la revela el hoyo. Los frutales perennes exigen un metro o más, y la fertilidad no compensa su falta.",
       "leccion": "03-suelos-clima-bolivia/03-suelos-aluviales",
       "sinonimos": []
+    },
+    {
+      "termino": "Puesta a tierra",
+      "slug": "puesta-a-tierra",
+      "definicion": "Varilla de cobre —la jabalina— clavada en terreno húmedo y conectada por el cable verde-amarillo a todas las carcasas metálicas de la instalación. Le da a cualquier fuga un camino de salida mucho más fácil que un cuerpo humano: si un cable interno toca la carcasa de la bomba, la corriente se va por la jabalina en lugar de esperar la primera mano húmeda, y de paso el diferencial detecta el desbalance y corta. La tercera pata de un enchufe es este cable, y no se corta jamás.",
+      "leccion": "08-albanileria-y-obra/09-instalacion-electrica",
+      "sinonimos": [
+        "tierra",
+        "jabalina",
+        "pica de tierra",
+        "toma de tierra"
+      ]
     },
     {
       "termino": "Punto de descarga",
@@ -1708,6 +1799,29 @@
       "sinonimos": [
         "triple enjuague",
         "lavado de envases"
+      ]
+    },
+    {
+      "termino": "Válvula antirretorno",
+      "slug": "valvula-antirretorno",
+      "definicion": "Válvula que deja pasar el agua en un solo sentido y bloquea el contrario. En la impulsión de una bomba impide que la columna de agua se devuelva al apagarla; en un inyector de fertilizante impide que la mezcla viaje hacia la red limpia. Complementa al corte de aire, pero no lo sustituye: es una pieza mecánica y las piezas fallan; el aire no.",
+      "leccion": "08-albanileria-y-obra/10-instalacion-hidraulica",
+      "sinonimos": [
+        "antirretorno",
+        "valvula de retencion",
+        "check",
+        "valvula check"
+      ]
+    },
+    {
+      "termino": "Válvula de flotador",
+      "slug": "valvula-de-flotador",
+      "definicion": "Válvula que un flotador cierra mecánicamente cuando el nivel del depósito llega arriba, cortando el llenado. Es la primera automatización del sistema y la más robusta posible: sin electricidad, sin software y sin estado que corromper. Aunque la bomba quede encendida por descuido, el flotador cierra igual.",
+      "leccion": "08-albanileria-y-obra/10-instalacion-hidraulica",
+      "sinonimos": [
+        "flotador",
+        "valvula flotadora",
+        "boya"
       ]
     },
     {
