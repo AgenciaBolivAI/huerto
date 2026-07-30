@@ -1,0 +1,100 @@
+{
+  "preguntas": [
+    {
+      "id": "esencial-y-cantidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace esencial a un elemento y qué distingue a un macronutriente de un micronutriente?",
+      "opciones": [
+        "Esencial significa que sin él la planta no completa su ciclo, que ningún otro elemento lo sustituye y que participa directamente en el metabolismo.",
+        "Tres de los diecisiete son gratis y vienen del aire y del agua: carbono, hidrógeno y oxígeno, y forman la mayoría de la materia seca.",
+        "La diferencia entre macro y micro es la cantidad necesaria, no la importancia: una carencia de boro o hierro detiene un cultivo igual que una de nitrógeno.",
+        "Micronutriente significa que su falta produce efectos leves y tolerables."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la diferencia entre el tamaño de una dependencia y su criticidad: un paquete de dos kilobytes puede ser el que impide arrancar. Y encima las carencias de micronutrientes son más difíciles de diagnosticar, así que subestimarlas cuesta doble."
+    },
+    {
+      "id": "potasio",
+      "tipo": "verdadero_falso",
+      "enunciado": "El potasio se incorpora a las estructuras de la planta igual que el nitrógeno o el calcio.",
+      "respuesta": false,
+      "explicacion": "Falso, y esta es la fila que rompe el patrón: el nitrógeno, el fósforo, el calcio y el magnesio quedan incorporados en proteínas, membranas, paredes y pigmentos, pero el potasio circula libre como ion y su trabajo es mover cosas. En concreto se bombea dentro y fuera de las células de guarda, hinchándolas o vaciándolas — o sea que el potasio es el actuador del sistema hidráulico de la lección anterior. Una planta con potasio insuficiente regula peor su agua: cierra tarde y abre mal."
+    },
+    {
+      "id": "solo-disuelto",
+      "tipo": "opcion_multiple",
+      "enunciado": "«Una planta no come.» ¿Qué se sigue de tomarse esa frase en serio?",
+      "opciones": [
+        "Que la raíz solo absorbe iones disueltos: el nitrógeno entra como nitrato o amonio, el fósforo como fosfato.",
+        "Que sin agua no hay nutrición aunque haya nutrientes: un sustrato seco los tiene intactos y ninguno disponible.",
+        "Que el compost no alimenta directamente, es una despensa cerrada: hay que mineralizarlo primero, y eso tiene su propia velocidad.",
+        "Que la planta absorbe partículas finas de materia orgánica por los pelos radiculares."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Y de ahí la diferencia real entre abono orgánico y mineral: no es que uno sea mejor, es que el mineral ya viene en forma iónica y el orgánico hay que abrirlo. Por eso también una sequía produce síntomas de carencia — no faltaba el nutriente, faltaba el vehículo."
+    },
+    {
+      "id": "ph",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si un análisis muestra que el sustrato tiene hierro suficiente, se puede descartar la clorosis férrica.",
+      "respuesta": false,
+      "explicacion": "Falso: presencia no es disponibilidad. En suelo alcalino el hierro precipita y queda inaccesible aunque abunde, y el resultado es clorosis férrica — hojas jóvenes amarillas con los nervios todavía verdes. De ahí la comprobación más rentable del vivero: antes de fertilizar, mira el pH. Echar hierro a un sustrato alcalino es tirar dinero, porque el hierro nuevo precipitará igual que el que ya estaba."
+    },
+    {
+      "id": "tres-caminos",
+      "tipo": "opcion_multiple",
+      "enunciado": "Los nutrientes no van a buscar la raíz. ¿Cómo llegan, y qué consecuencia práctica tiene cada camino?",
+      "opciones": [
+        "Flujo masivo: viajan arrastrados por la corriente de agua que la transpiración tira hacia arriba, así que una planta que no transpira tampoco se alimenta bien.",
+        "Difusión: es lenta y de corto alcance, y es el mecanismo principal del fósforo — por eso el fósforo se coloca cerca de la raíz y no en superficie.",
+        "Interceptación: la raíz crece y se topa con nutrientes nuevos, así que un buen sistema radicular es exploración de territorio y el fósforo del arranque paga doble.",
+        "Los nutrientes se desplazan activamente hacia la raíz atraídos por sus exudados."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Fíjate en el enlace con la lección anterior: aquel plantín que cerró estomas en un mediodía de aire seco no solo dejó de producir azúcar — también frenó su entrada de nutrientes, porque el flujo masivo se detuvo con la transpiración."
+    },
+    {
+      "id": "posicion-carencia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se lee una carencia en la planta y qué precaución hay que tener?",
+      "opciones": [
+        "Si empieza en las hojas viejas, sospecha de un elemento móvil que la planta canibaliza para el brote: nitrógeno, fósforo, potasio, magnesio.",
+        "Si empieza en las hojas nuevas, sospecha de uno inmóvil que no llega —calcio, hierro, boro— o de un pH que lo bloquea.",
+        "El patrón dentro de la hoja añade información: amarilleo uniforme apunta a nitrógeno, entre nervios a magnesio o hierro, bordes quemados a potasio o exceso de sales.",
+        "Con la posición y el patrón se puede cerrar el diagnóstico con confianza."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Son hipótesis, no diagnósticos. En un vivero tropical el sospechoso número uno de un plantín amarillo es el exceso de riego con raíz asfixiada, que produce exactamente el mismo amarillo porque una raíz sin oxígeno no absorbe aunque el nutriente esté disponible. El orden correcto es riego y raíz, después pH, y solo entonces carencia."
+    },
+    {
+      "id": "dosis",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué «si un poco va bien, más va mejor» es falso en fertilización?",
+      "opciones": [
+        "Porque la curva tiene tres tramos: falta, justo y tóxico, y pasada la meseta más nutriente no aporta nada.",
+        "Por fitotoxicidad directa: el elemento en exceso envenena, como el boro, cuyo margen entre carencia y toxicidad es estrechísimo.",
+        "Por efecto salino: todo fertilizante mineral es una sal, y una solución muy concentrada le quita agua a la raíz en vez de dársela.",
+        "Porque el exceso simplemente se lava y no tiene ningún efecto negativo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Y hay una tercera vía indirecta: el antagonismo catiónico. Un exceso de potasio puede inducir carencia de magnesio o calcio aunque estén presentes, porque compiten por las mismas posiciones. Fertilizar de más no solo desperdicia: desequilibra. Por eso «quemó las raíces» no es fuego, es deshidratación osmótica."
+    },
+    {
+      "id": "plan-nutricion",
+      "tipo": "abierta",
+      "enunciado": "Una bandeja de plantines de Rizoma del Sur está amarilleando. Describe el proceso completo de razonamiento y decisión, desde la primera observación hasta la aplicación —si es que corresponde—, y cómo vas a saber si acertaste.",
+      "respuestaModelo": "Antes de pensar en nutrientes, descarto lo más frecuente. Saco un plantín de la bolsa y miro el cepellón: si el sustrato está empapado y hay raíces oscuras o blandas, el amarillo es por asfixia radicular, y una raíz sin oxígeno no absorbe aunque el nutriente esté disuelto y disponible. Fertilizar ahí no ayudaría: añadiría sales a un sistema que ya no puede absorber, y empeoraría el problema. En ese caso la corrección es de riego y drenaje, no de abono.\n\nSi la raíz está sana, compruebo el pH del sustrato. Es la medición con mejor relación entre costo e información que tengo, porque el pH decide la forma química de cada elemento y por tanto si la raíz puede tomarlo. Si el pH está desviado hacia lo alcalino, un amarilleo de hojas jóvenes con los nervios aún verdes es clorosis férrica: el hierro está ahí y la planta no lo alcanza, así que echar más hierro sería tirar dinero porque precipitaría igual. Se corrige el pH, o se usa una forma quelatada.\n\nRecién entonces leo el síntoma como carencia, con los dos ejes. Por posición: si empezó en las hojas viejas de abajo, sospecho de un elemento móvil que la planta está desmontando para alimentar el brote —nitrógeno, fósforo, potasio, magnesio—; si empezó en las hojas nuevas de arriba, de uno inmóvil que no llega, como calcio, hierro o boro. Por patrón: amarilleo uniforme de toda la lámina apunta a nitrógeno; amarilleo entre nervios con los nervios verdes apunta a magnesio si es abajo y a hierro si es arriba; bordes o puntas quemadas apuntan a potasio o a exceso de sales; deformación o muerte del brote apunta a calcio o boro y es urgente.\n\nAntes de aplicar pienso en el limitante real, porque el crecimiento lo fija el factor más escaso y no la suma. En un vivero cruceño el limitante suele no ser un nutriente: es agua mal manejada, raíz asfixiada, sombra excesiva o pH desviado. Subir el nitrógeno cuando falta hierro es alargar una duela que ya sobraba.\n\nSi decido aplicar, lo hago poco y seguido en vez de mucho de golpe, porque en bolsa pequeña con riego frecuente una dosis alta se lava en dos riegos o quema la raíz por efecto salino, y en plena temporada de lluvias el lavado es aún mayor. Y respeto la curva: pasada la meseta, más nutriente no aporta y termina dañando por toxicidad directa, por salinidad o por antagonismo, como el exceso de potasio que induce carencia de magnesio.\n\nPara saber si acerté uso el testigo: aplico en una bandeja y dejo otra igual sin tocar, cambiando una sola variable, y anoto las dos a los quince y a los treinta días. En nutrición esto es especialmente necesario porque los efectos son lentos y la memoria inventa relaciones — sin testigo no sabría si mejoró por el abono o porque esa semana estuvo nublada. Y registro lo aplicado con fecha, lote, producto y dosis, que es la mitad del diagnóstico ya escrita para el próximo síntoma raro.",
+      "criterios": [
+        "Descarta primero riego y raíz sacando el cepellón, y explica por qué fertilizar un plantín asfixiado empeora.",
+        "Comprueba el pH antes de comprar o aplicar, y reconoce la clorosis férrica en suelo alcalino.",
+        "Lee el síntoma por posición (móvil abajo, inmóvil arriba) y por patrón dentro de la hoja.",
+        "Busca el limitante real con la ley del mínimo antes de subir dosis.",
+        "Aplica poco y seguido por el volumen pequeño, el riego frecuente y el lavado de la temporada de lluvias.",
+        "Respeta la curva dosis-respuesta y nombra las tres vías de daño: fitotoxicidad, efecto salino y antagonismo.",
+        "Usa testigo con una sola variable y anota a los quince y treinta días.",
+        "Registra fecha, lote, producto y dosis."
+      ],
+      "explicacion": "Fíjate en que la mayor parte del razonamiento no es de nutrición: es descartar riego, raíz y pH. Eso no es un rodeo — es la aplicación directa de que la planta solo toma iones disueltos y solo con una raíz que funcione. La lección siguiente cierra el círculo con la tercera pregunta: ya sabes qué entra, y ahora vas a ver en qué lo gasta."
+    }
+  ]
+}

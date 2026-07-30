@@ -1,0 +1,101 @@
+{
+  "preguntas": [
+    {
+      "id": "anatomia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay dentro de una semilla y en qué proporción?",
+      "opciones": [
+        "La testa es la cubierta protectora, y su impermeabilidad funciona además como interruptor: sin agua que entre no hay germinación.",
+        "El embrión es la planta en miniatura ya diferenciada, con la radícula que será raíz y la plúmula que será brote.",
+        "Los cotiledones o el endospermo son la reserva, y en volumen ocupan casi todo: una semilla es más almuerzo que planta.",
+        "El embrión ocupa la mayor parte del volumen y la reserva es un añadido pequeño."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La proporción es el dato que cambia el manejo: el embrión es minúsculo y la batería es enorme. Y las dos estrategias de almacenamiento se reparten el mundo vegetal — cotiledones carnosos en las semillas tipo poroto, endospermo separado en los cereales, donde la harina es literalmente endospermo molido."
+    },
+    {
+      "id": "imbibicion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si una semilla se hinchó al remojarla, es señal de que está viva.",
+      "respuesta": false,
+      "explicacion": "Falso: la imbibición es un proceso puramente físico, como una esponja absorbiendo agua, y una semilla muerta se hincha igual. Hinchada no dice nada sobre viabilidad — eso se comprueba con una prueba de germinación, que es tema de una lección posterior. Y el remojo tiene un límite duro: pasada la hidratación la semilla ya respira, y bajo agua no hay oxígeno, así que son horas y no días."
+    },
+    {
+      "id": "activacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué ocurre en la fase de activación y por qué es la más peligrosa para el viverista?",
+      "opciones": [
+        "El embrión enciende su metabolismo y sus enzimas empiezan a desmontar la reserva, cortando el almidón en azúcares solubles que sí pueden viajar.",
+        "La respiración se dispara, y con ella el consumo de oxígeno.",
+        "Por fuera no pasa absolutamente nada durante días, así que invita a desenterrar para mirar o a dar la bandeja por perdida y resembrar encima.",
+        "Es la fase en la que la semilla se hincha visiblemente y cambia de tamaño."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El hinchamiento es la fase anterior. Lo característico de la activación es el silencio: la curva de absorción de agua se aplana y la semilla no cambia de aspecto mientras dentro ocurre todo. De ahí la regla — una bandeja sin emergencia no es una bandeja fallada hasta que pase el plazo de la especie, y ese plazo conviene tenerlo anotado y no intuido."
+    },
+    {
+      "id": "punto-no-retorno",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si un almácigo se seca un día y se vuelve a regar, las semillas retoman la germinación donde la habían dejado.",
+      "respuesta": false,
+      "explicacion": "Falso, y depende de un umbral: antes de que asome la radícula, una semilla parcialmente hidratada puede volver a secarse y sobrevivir; después, secarse es morir. De ahí la regla de oro del almácigo — desde la siembra hasta la emergencia el sustrato no se seca ni una vez. Un solo día de descuido en el momento equivocado se lleva la bandeja completa."
+    },
+    {
+      "id": "profundidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la profundidad de siembra es un cálculo de combustible y no un detalle?",
+      "opciones": [
+        "Porque desde que germina hasta que la primera hoja trabaja al sol el plantín es puro gasto: consume reserva y no produce nada.",
+        "Porque cada centímetro extra que el brote debe atravesar se paga con reserva, y si se agota antes de llegar arriba el plantín muere bajo tierra.",
+        "Porque ese fracaso es engañoso: parece que la semilla no germinó cuando en realidad germinó y se agotó.",
+        "Porque enterrar más profundo siempre protege mejor de la desecación y conviene hacerlo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es el punto de compensación del Módulo 1 visto desde abajo: la planta está por debajo de cero y sobrevive solo porque trajo combustible. La regla práctica es sembrar más profundo cuanto más grande la semilla, porque una semilla grande trae más batería — y ante la duda, más superficial: quedarse corto retrasa, quedarse largo mata sin dejar rastro."
+    },
+    {
+      "id": "aire",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un lote de semillas se podrió sin germinar en un almácigo bien regado. ¿Qué pasó?",
+      "opciones": [
+        "El sustrato estaba saturado: el agua ocupó todos los poros y no quedó aire.",
+        "Una semilla en activación respira intensamente y necesita oxígeno, así que se asfixió antes de germinar.",
+        "El exceso de humedad con calor es además el ambiente ideal de los hongos, que suelen acompañar el problema.",
+        "Le faltó fertilizante en el sustrato del almácigo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "En esta fase la semilla no necesita fertilidad —trae su propia comida— sino estructura y aire. La condición correcta es húmedo constante y nunca saturado: un sustrato bien preparado sostiene agua en películas alrededor de las partículas y deja huecos de aire entre ellas. La diferencia entre húmedo y encharcado no es cuánta agua se ve, es si quedan esos huecos."
+    },
+    {
+      "id": "epigea-hipogea",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué consecuencia práctica tiene que una especie germine de forma epigea o hipogea?",
+      "opciones": [
+        "En la epigea el tallo levanta los cotiledones sobre el suelo, así que hay que sembrar poco profundo: subir dos cotiledones carnosos desde muy abajo es un peaje que la reserva no paga.",
+        "En la hipogea los cotiledones quedan enterrados y solo sube el brote, así que tolera siembra más profunda — y más profundo significa humedad más estable.",
+        "En las epigeas, los cotiledones que asoman son reserva en uso y no basura: se caen solos cuando ya no hacen falta.",
+        "Es una distinción académica sin efecto sobre la siembra."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es justo lo contrario de académico: define la profundidad admisible. Y la tercera opción es el error cotidiano — arrancar esos cotiledones gordos que se ven raros le quita al plantín una reserva que todavía estaba consumiendo."
+    },
+    {
+      "id": "plan-almacigo",
+      "tipo": "abierta",
+      "enunciado": "Vas a sembrar el primer almácigo de una especie nativa del oriente de la que sabes poco. Describe cómo decides la siembra y el manejo hasta la emergencia, qué registras, y cómo distinguirás un fracaso real de una bandeja que simplemente está en fase de activación.",
+      "respuestaModelo": "Empiezo por lo que puedo observar sin literatura. Miro el tamaño de la semilla, porque predice la reserva disponible y por tanto la profundidad que puede pagar; y selecciono las semillas más grandes del lote, que es gratis y mejora la uniformidad del plantín. Si no sé si la especie es epigea o hipogea, siembro más superficial: quedarse corto solo retrasa, mientras quedarse largo mata sin dejar rastro visible, porque la semilla germina y se agota antes de llegar a la superficie.\n\nEl sustrato del almácigo lo elijo por estructura, no por fertilidad: en esta fase la semilla trae su propia comida y lo que necesita es poder atravesar el sustrato sin gastar reserva de más, y sobre todo encontrar aire. Un sustrato fino, suelto y que no se encoste. Y lo mantengo húmedo constante y nunca saturado, porque una semilla en activación respira intensamente y en un sustrato con todos los poros llenos de agua se asfixia y se podre sin germinar — que es el error más frecuente de los almácigos, disfrazado de buen riego.\n\nEl almácigo va bajo media sombra y techado. En la seca, por el calor del llano, reviso dos veces al día y riego poco y seguido, porque el momento de mayor riesgo es justo el que no perdona: desde que asoma la radícula, secarse es morir. En lluvias el riesgo se invierte y lo que vigilo es que un aguacero no compacte, encoste ni descoloque las semillas pequeñas — de ahí el techo.\n\nSi remojo para acelerar la imbibición, son unas horas y siembro el mismo día, nunca un fin de semana entero, porque pasada la hidratación la semilla respira y bajo agua no hay oxígeno.\n\nRegistro desde el primer lote: fecha de siembra, cantidad sembrada, profundidad usada, sustrato, y los días hasta el primer brote y hasta la mayoría. También si hubo remojo y de cuántas horas. Con dos o tres ciclos voy a tener el plazo de emergencia de esa nativa, que no está publicado en ninguna parte, y el porcentaje que germina — la misma lógica de los grados-día: el plazo se mide, no se supone.\n\nPara no confundir fracaso con activación, uso ese plazo: mientras no lo supere, una bandeja sin emergencia no es una bandeja fallada, está trabajando en silencio, y no la desentierro ni resiembro encima. Si necesito ver qué ocurre, siembro una bandeja aparte solo para abrirla y mirar, y así no toco la de producción. Y cuando el plazo se pasa de largo, la sospecha correcta no es que la semilla estuviera muerta: puede ser profundidad excesiva —germinó y se agotó—, asfixia por saturación, un secado en el momento crítico, o latencia, que es el tema que viene.",
+      "criterios": [
+        "Usa el tamaño de semilla para decidir profundidad y selecciona las más grandes del lote.",
+        "Ante la duda sobre epigea o hipogea, siembra más superficial y explica por qué.",
+        "Elige el sustrato por estructura y aire, no por fertilidad.",
+        "Mantiene húmedo constante y nunca saturado, explicando la respiración de la semilla.",
+        "Protege con media sombra y techo, con revisiones frecuentes en la seca y cuidado del impacto de lluvia.",
+        "Si remoja, lo limita a horas y siembra el mismo día.",
+        "Registra fecha, cantidad, profundidad, sustrato, remojo y días hasta emergencia.",
+        "Usa el plazo medido para distinguir activación de fracaso, y no desentierra ni resiembra encima.",
+        "Enumera las causas alternativas de no emergencia: profundidad, asfixia, secado crítico y latencia."
+      ],
+      "explicacion": "Fíjate en que casi todas las decisiones salen de una sola idea: el plantín corre una carrera contra una batería que no se recarga. Profundidad, sustrato, riego y sombra son formas de abaratar ese trayecto. Y la última causa de la lista —la latencia— es el caso que rompe todo lo anterior: una semilla viable, sana y bien sembrada que no germina porque tiene un bloqueo activo. Es la lección siguiente."
+    }
+  ]
+}

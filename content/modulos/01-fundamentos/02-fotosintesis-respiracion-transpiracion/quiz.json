@@ -1,0 +1,101 @@
+{
+  "preguntas": [
+    {
+      "id": "tres-dominios",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Dónde y cuándo ocurre cada uno de los tres procesos?",
+      "opciones": [
+        "La fotosíntesis, solo en tejido verde y solo mientras hay luz.",
+        "La respiración, en todas las células —incluidas las de la raíz— y las veinticuatro horas.",
+        "La transpiración, como una columna continua de agua que va del suelo al aire y sale por la hoja.",
+        "Los tres ocurren en la hoja y solo de día, porque los tres dependen de la luz."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Esa diferencia de dominios explica dos cosas prácticas: que las raíces se asfixien si el sustrato se satura de agua —respiran y necesitan oxígeno— y que el gasto de la planta no se apague nunca, aunque la fábrica cierre al anochecer."
+    },
+    {
+      "id": "dos-etapas",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si una planta tiene luz de sobra, su fotosíntesis está garantizada.",
+      "respuesta": false,
+      "explicacion": "Falso: la fotosíntesis tiene dos etapas que se atascan por razones distintas. La primera se limita por luz; la segunda —el ensamblaje del azúcar— por CO₂ y temperatura, y el CO₂ solo entra si los estomas están abiertos. Con el estoma cerrado puedes tener toda la luz del mundo y la línea de ensamblaje está sin material: acelerar lo que no es el cuello de botella no produce nada."
+    },
+    {
+      "id": "curva-luz",
+      "tipo": "opcion_multiple",
+      "enunciado": "Según la curva de respuesta a la luz, ¿qué pasa a medida que aumenta la radiación?",
+      "opciones": [
+        "Primero cada fotón extra se convierte en producción: ahí la planta está realmente limitada por luz.",
+        "Después llega el punto de saturación luminosa: la maquinaria trabaja a su máximo y la luz adicional no aporta nada.",
+        "Y por encima de lo que puede procesar, el exceso de energía daña el aparato fotosintético y la producción baja.",
+        "La producción sigue aumentando de forma proporcional mientras haya más luz disponible."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "De aquí sale la consecuencia que ordena medio vivero: al mediodía en el llano cruceño la mayoría de los plantines están muy por encima de su punto de saturación, así que la malla no les quita producción, les quita exceso inútil — y a cambio baja la temperatura de la hoja y su pérdida de agua. Sombrear puede aumentar el crecimiento neto."
+    },
+    {
+      "id": "saldo",
+      "tipo": "opcion_multiple",
+      "enunciado": "El crecimiento es un saldo, no una producción. ¿Qué se sigue de eso?",
+      "opciones": [
+        "Que lo que la planta puede construir es la fotosíntesis del día menos la respiración de todo el sistema, día y noche.",
+        "Que una noche caliente quema mucho más azúcar que una fresca con la misma producción diurna, porque la respiración se acelera con la temperatura.",
+        "Que bajo sombra excesiva la planta puede quedar en su punto de compensación: produce lo justo para pagar sus gastos y no crece, aunque siga verde.",
+        "Que si la planta está verde y no se marchita, está creciendo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Verde solo significa que tiene clorofila. Ese es exactamente el error de poner malla del 80 % «para protegerlas mejor»: la planta se mantiene verde, no se marchita, y se estanca durante meses — y por eso «más calor» tampoco es sinónimo de «más crecimiento» en el trópico."
+    },
+    {
+      "id": "columna",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo sube el agua desde la raíz hasta la hoja y qué implica ese mecanismo?",
+      "opciones": [
+        "La empuja la evaporación en la hoja: al irse las moléculas tiran de las que quedan y arrastran la columna entera. El motor es el sol, no la planta.",
+        "Esa corriente es además el sistema de reparto de nutrientes: una planta que no transpira tampoco mueve minerales.",
+        "Y es la refrigeración de la hoja, porque evaporar agua consume mucho calor; una hoja con estomas cerrados al mediodía se calienta.",
+        "La raíz funciona como una bomba que empuja el agua hacia arriba con energía metabólica."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Y de ahí la vulnerabilidad: si la tensión es excesiva la columna puede romperse y entrar aire en el conducto, que queda inutilizado. Es la razón física por la que un estrés hídrico severo deja secuelas aunque después riegues bien."
+    },
+    {
+      "id": "conflicto",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una planta bien manejada puede mantener los estomas abiertos para producir sin pagar un costo de agua importante.",
+      "respuesta": false,
+      "explicacion": "Falso: por el mismo poro por donde entra el CO₂ se escapa el vapor de agua, y la proporción es brutal — del orden de cientos de moléculas de agua perdidas por cada molécula de CO₂ capturada. No hay tercera opción: abierto produce y gasta agua, cerrado ahorra agua, detiene la fábrica y además deja que la hoja se caliente. Todo el manejo del vivero consiste en abaratar ese compromiso, no en eliminarlo."
+    },
+    {
+      "id": "dpv",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué dos días de 35 °C pueden exigirle cosas muy distintas a la misma planta?",
+      "opciones": [
+        "Porque lo que fija la velocidad de pérdida de agua es el déficit de presión de vapor: cuánta sed tiene el aire, no el número del termómetro.",
+        "Porque el viento agrava el problema al renovar el aire pegado a la hoja e impedir que se forme una capa húmeda que frenaría la evaporación.",
+        "Porque al mediodía el déficit sube por partida doble: el aire se calienta y su humedad relativa cae.",
+        "Porque a igual temperatura la demanda de agua es siempre la misma; lo que cambia es la resistencia de la planta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Por eso un día húmedo de temporada de lluvias a 35 °C es mucho menos exigente que uno seco con viento del norte a la misma temperatura, y por eso un surazo ventoso deshidrata más que una calma calurosa. Y de ahí el hundimiento de mediodía: la planta cierra estomas y sacrifica producción — la mayor parte del día se produce por la mañana."
+    },
+    {
+      "id": "manejo-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Un plantín de Rizoma del Sur se ve marchito a las dos de la tarde de un día seco de agosto, con viento del norte. Explica qué está pasando en términos de esta lección, cómo confirmarías el diagnóstico, y qué decisiones de manejo del vivero atacan cada variable del problema.",
+      "respuestaModelo": "Lo más probable es que el plantín esté haciendo exactamente lo correcto. Un día seco de agosto con viento del norte es un día de déficit de presión de vapor altísimo: el aire tiene mucha capacidad de vapor sin llenar y el viento renueva constantemente el aire pegado a la hoja, así que la evaporación tira con fuerza de la columna de agua. Frente a eso la planta cierra estomas para no deshidratarse, y al cerrarlos pierde dos cosas: deja de entrar CO₂, así que la fábrica se detiene, y deja de refrigerarse por evaporación, así que la hoja se calienta. El marchitamiento de mediodía es la degradación controlada de un sistema bajo carga, no una falla.\n\nLo confirmo con una comprobación simple: si al atardecer, cuando el aire se enfría y el déficit baja, la planta recupera turgencia, era cierre estomático y no hay problema de fondo. Si en cambio la encuentro marchita a primera hora de la mañana, con aire fresco y húmedo, entonces hay un problema real: sustrato seco de verdad, o raíz asfixiada o dañada que no puede absorber aunque haya agua. Para distinguirlo saco el cepellón y miro: si el sustrato está empapado y hay raíces oscuras, se está ahogando, y regar más lo empeoraría.\n\nSobre el manejo, cada intervención ataca una variable distinta de esa hora punta, y ninguna mejora la fotosíntesis: todas abaratan el costo de mantener el estoma abierto. La malla de sombra baja la radiación —que a esa hora está muy por encima del punto de saturación, así que no pierdo producción— y con eso baja la temperatura de la hoja y su pérdida de agua; para producción uso el rango del 35 al 50 por ciento, no del 80, que es sombra de propagación y con los meses acerca la planta a su punto de compensación. Una barrera cortaviento reduce la renovación de aire seco, que es justo lo que agrava el día de hoy. La nebulización sube la humedad del aire, o sea baja el déficit de presión de vapor, y sirve especialmente en propagación y en las horas de aire seco — pero no riega, y usada de más deja follaje húmedo que invita a los hongos. Y el riego va temprano, para que el depósito del sustrato esté lleno antes de que llegue la demanda, no a la tarde, que deja follaje y sustrato mojados toda una noche caliente.\n\nAdemás no programo trabajo agresivo para esa hora: trasplantes, podas y movimiento de bandejas van temprano o al final de la tarde, porque al mediodía apilaría estrés sobre el peor momento del día. Y si tengo que hacer algo delicado, elijo un día nublado, que en términos de esta lección es un día de déficit bajo con luz todavía por encima de la saturación.",
+      "criterios": [
+        "Identifica el cierre estomático frente a un déficit de presión de vapor alto, no falta de agua.",
+        "Explica las dos pérdidas del cierre: entrada de CO₂ y refrigeración de la hoja.",
+        "Distingue el marchitamiento de mediodía que recupera al atardecer del marchitamiento de la mañana, que sí es problema.",
+        "Revisa el cepellón para separar sustrato seco de raíz asfixiada, y sabe que regar más agravaría la asfixia.",
+        "Justifica la malla por saturación luminosa y descarta el 80 % por el punto de compensación.",
+        "Menciona el cortaviento como reductor de la renovación de aire seco.",
+        "Usa la nebulización como reductora del déficit de presión de vapor, no como riego.",
+        "Riega temprano y explica ambas razones: llenar el depósito antes de la demanda y evitar follaje mojado de noche.",
+        "Programa el trabajo agresivo fuera del mediodía."
+      ],
+      "explicacion": "Fíjate en que el diagnóstico y las cinco decisiones de manejo salen de un único mecanismo: por el mismo poro entra el CO₂ y sale el agua. Toda la infraestructura de un vivero tropical —malla, cortaviento, nebulización, horario— existe para bajar el precio de ese intercambio, y ninguna de esas cosas hace fotosíntesis. Ese es el patrón que el resto del curso va a seguir usando."
+    }
+  ]
+}

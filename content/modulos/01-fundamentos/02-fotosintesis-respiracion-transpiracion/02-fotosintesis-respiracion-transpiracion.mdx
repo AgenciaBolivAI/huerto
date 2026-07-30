@@ -1,0 +1,320 @@
+Ya tienes el mapa de componentes. Ahora el motor — y conviene decir de entrada que **no son tres
+temas, son tres procesos que corren a la vez sobre el mismo hardware**, compitiendo por el mismo
+recurso. Entender esa competencia es entender por qué existen la malla de sombra, la nebulización y
+la hora del riego.
+
+<Diagrama
+  src="tres-reacciones.webp"
+  alt="Una hoja en corte en el centro, con tallo y raíz, rodeada de tres sistemas de flujo. Rotulado fotosíntesis, en verde: un sol cuyos rayos llegan a la hoja, una flecha de gas entrando por el envés y un grano de azúcar formándose dentro, con un pequeño sol al lado del rótulo. Rotulado respiración, en terracota: flechas que salen de la hoja, el tallo y la raíz a la vez, cada una consumiendo un grano de azúcar, con un reloj al lado del rótulo. Rotulado transpiración, en azul: una columna continua de agua que sube desde la raíz, atraviesa el tallo y sale como vapor por la superficie de la hoja."
+  pie="Los tres a la vez. La fotosíntesis solo en verde y solo con luz; la respiración en todas las células y siempre, incluso bajo tierra; la transpiración como una única columna del suelo al aire."
+/>
+
+## Fotosíntesis: la fábrica que solo trabaja de día
+
+La <Termino slug="fotosintesis">fotosíntesis</Termino> hace algo que ninguna otra tecnología iguala:
+**convierte luz en materia.** Con dióxido de carbono del aire, agua del suelo y fotones, la planta
+fabrica azúcares — el material con el que después construirá todo lo demás — y libera oxígeno como
+subproducto.
+
+Ocurre en dos etapas, y separarlas te va a resultar natural:
+
+**Etapa 1 · La captación de energía.** En los <Termino slug="cloroplasto">cloroplastos</Termino> de
+las células verdes, la clorofila absorbe fotones y usa esa energía para arrancarle electrones al
+agua. De ahí sale el oxígeno que respiramos —es literalmente un residuo— y, sobre todo, energía
+guardada en dos moléculas transportadoras. Es una **fuente de alimentación**: convierte una entrada
+externa e intermitente en una moneda interna estable.
+
+**Etapa 2 · El ensamblaje.** Con esa moneda, otra maquinaria toma moléculas de CO₂ y las va uniendo
+hasta formar azúcares. Esta etapa **no necesita luz directamente**, pero sí necesita la moneda que
+produce la primera — así que en la práctica se detiene poco después de que se detiene la luz.
+
+<Analogia titulo="Dos etapas, dos cuellos de botella distintos">
+La distinción importa porque **cada etapa se atasca por una razón diferente**, y el manejo del vivero
+depende de saber cuál está atascada.
+
+La etapa 1 se limita por **luz**. La etapa 2 se limita por **CO₂ y por temperatura**, y —como
+veremos— por si los estomas están abiertos para dejarlo entrar. Si el estoma está cerrado, puedes
+tener toda la luz del mundo: la línea de ensamblaje está sin material.
+
+Ese es exactamente el patrón de un sistema de dos etapas con una cola en medio: **acelerar la etapa
+que no es el cuello de botella no produce nada.** Y en un mediodía de Santa Cruz, el cuello de
+botella casi nunca es la luz.
+</Analogia>
+
+### Más luz no es más producción
+
+<Diagrama
+  src="saturacion-de-luz.webp"
+  alt="Curva de respuesta sobre dos ejes: el horizontal rotulado luz y el vertical rotulado producción. La curva arranca por debajo del eje horizontal, lo cruza en un punto marcado con un círculo hueco, sube en pendiente pronunciada, se dobla en una meseta larga y plana, y al final decae. Cuatro zonas separadas por líneas discontinuas y rotuladas: pérdida en gris pálido junto al cruce, poca luz en verde salvia en el tramo ascendente, suficiente en verde más intenso en la meseta, y daño en terracota en el tramo que decae."
+  pie="La forma de esta curva explica la malla de sombra mejor que cualquier argumento: a la derecha del codo, la luz de más no aporta, y en el extremo destruye."
+/>
+
+Esta curva es probablemente el gráfico más útil de todo el curso, y contradice la intuición de
+cualquiera:
+
+**Al principio, la luz manda.** En penumbra, cada fotón extra se convierte en producción. Aquí la
+planta está limitada por luz de verdad.
+
+**Después llega la meseta**, el <Termino slug="punto-de-saturacion-luminosa">punto de saturación
+luminosa</Termino>: la maquinaria ya trabaja a su ritmo máximo y **la luz adicional no produce nada
+más.** Muchas especies de sombra saturan con una fracción pequeña del sol de mediodía.
+
+**Y al final, la luz daña.** Por encima de lo que puede procesar, el exceso de energía genera
+moléculas reactivas que estropean el aparato fotosintético. La hoja se decolora, se quema, y la
+producción **baja.**
+
+Aquí está la consecuencia práctica que ordena medio vivero: **al mediodía en el llano cruceño, la
+mayoría de tus plantines están muy por encima de su punto de saturación.** Poner malla de sombra no
+les quita producción: les quita **exceso inútil** — y a cambio baja la temperatura de la hoja y su
+pérdida de agua. Por eso sombrear puede **aumentar** el crecimiento neto, algo que suena absurdo
+hasta que ves la curva.
+
+Y el otro extremo tiene su propia trampa, que veremos enseguida: por debajo del cruce con el eje, la
+planta pierde más de lo que fabrica.
+
+## Respiración: el gasto que nunca se apaga
+
+<Diagrama
+  src="balance-dia-noche.webp"
+  alt="Dos paneles con el mismo balance de azúcar del día y la noche en dos barras verticales. En cada panel, una barra verde alta con un sol encima —lo que produjo el día— y al lado una barra terracota con una luna encima —lo que quemó la noche—, y una llave que marca la diferencia con granos de azúcar al lado. En el izquierdo, rotulado noche fresca, la barra terracota es claramente más corta que la verde y hay varios granos. En el derecho, rotulado noche caliente, la barra verde es de la misma altura pero la terracota casi la iguala y queda un único grano, con un termómetro de columna alta junto a la luna."
+  pie="El día produce lo mismo en los dos casos. Lo único que cambia es cuánto quema la noche — y con eso cambia todo lo que la planta puede construir."
+/>
+
+La <Termino slug="respiracion-celular">respiración celular</Termino> es la reacción inversa: toma
+azúcar y oxígeno y libera la energía guardada, devolviendo CO₂ y agua. Es lo que **paga** cada
+proceso vivo: mantener membranas, transportar iones, construir tejido, defenderse.
+
+Y tiene tres propiedades que cambian por completo cómo se lee una planta:
+
+**Ocurre en todas las células, no solo en las verdes.** Las raíces respiran —de ahí que se asfixien
+si el sustrato se satura de agua y quedan sin oxígeno, la causa de muerte más frecuente en un
+vivero—, y también el tallo, las flores y las semillas.
+
+**Ocurre las veinticuatro horas.** La fotosíntesis se apaga con el sol; el gasto no.
+
+**Y se acelera con el calor.** Como toda reacción química, su velocidad sube con la temperatura: en
+el rango habitual, cada 10 °C más aproximadamente **duplica** la tasa de respiración. La
+fotosíntesis, en cambio, tiene un óptimo y luego cae.
+
+De ahí sale la idea central de esta sección: **el crecimiento es un saldo, no una producción.**
+
+<Formula explicacion="Lo que la planta puede construir es lo que produjo el día menos lo que quemó el sistema entero, día y noche.">
+CRECIMIENTO = FOTOSÍNTESIS − RESPIRACIÓN
+</Formula>
+
+Con eso en la mano, dos hechos que sorprenden dejan de sorprender:
+
+**Las noches calientes cuestan crecimiento.** Una noche de 26 °C quema mucho más azúcar que una de
+18 °C, con la misma producción diurna. Es una de las razones por las que la calidad del plantín
+mejora en la temporada seca, con sus noches más frescas, y por las que «más calor» no es
+sinónimo de «más crecimiento» en el trópico.
+
+**Y una planta a la sombra profunda se muere de hambre estando verde.** Cuando la luz es tan baja
+que la fotosíntesis apenas iguala a la respiración, la planta está en
+su <Termino slug="punto-de-compensacion">punto de compensación</Termino>: produce justo para pagar
+sus gastos y **no le queda nada para crecer.** Por debajo de ese punto consume sus reservas y se
+consume a sí misma. Es exactamente el error de poner malla del 80 % «para protegerlas mejor»: la
+planta se mantiene verde, no se marchita, y sin embargo se estanca durante meses.
+
+## Transpiración: un pump sin motor
+
+<Diagrama
+  src="la-columna-de-agua.webp"
+  alt="Corte vertical del camino del agua en una planta, rotulado la columna de agua: una columna azul continua sube desde el suelo por la raíz y el tallo y sale como vapor por la hoja. Tres llamadas: arriba, junto a la superficie que evapora, rotulada tira, con una flecha en gancho hacia arriba; en medio del tallo, rotulada no se corta, con un círculo ampliado donde las moléculas de agua aparecen enganchadas como una cadena; y abajo en el suelo, rotulada entra, con flechas de agua pasando de las partículas a un pelo radicular. Al costado, un recuadro de advertencia muestra la columna interrumpida por una burbuja de aire con triángulo terracota."
+  pie="No hay bomba. El agua sube porque se está evaporando arriba y las moléculas se arrastran unas a otras — y todo se detiene si la cadena se rompe."
+/>
+
+La <Termino slug="transpiracion">transpiración</Termino> es la pérdida de agua en forma de vapor por
+la superficie de la hoja, y merece un momento de asombro: **es el mecanismo de transporte más
+elegante de la biología, y la planta no gasta energía en él.**
+
+Funciona así. El agua se evapora en las paredes húmedas del interior de la hoja y sale al aire. Al
+irse esas moléculas, tiran de las que quedan; y como las moléculas de agua se atraen fuertemente
+entre sí, la columna entera **se arrastra hacia arriba** desde la raíz, por unos conductos finísimos.
+No hay una bomba empujando desde abajo: hay una **succión** generada por la evaporación en la copa.
+El sol es el motor.
+
+Dos consecuencias operativas y una vulnerabilidad:
+
+- **La transpiración es el sistema de reparto de nutrientes.** Los minerales disueltos que absorbe la
+  raíz viajan en esa corriente. Una planta que no transpira —porque cerró estomas, porque el aire
+  está saturado— **también deja de mover nutrientes.**
+- **Y es el aire acondicionado de la hoja.** Evaporar agua consume mucho calor, así que una hoja que
+  transpira está activamente refrigerándose. Una que cerró estomas al mediodía se calienta, y ese
+  calor la daña.
+- **La vulnerabilidad**: si la tensión es excesiva —suelo seco, aire muy demandante— la columna puede
+  romperse y entrar aire en el conducto. Ese conducto queda **inutilizado**, y el daño no siempre es
+  reversible. Es la razón física por la que un estrés hídrico severo deja secuelas aunque después
+  riegues bien.
+
+Este repaso de seis minutos recorre el proceso completo y sus consecuencias en la planta. Míralo
+teniendo presente lo que viene a continuación, que es la parte que casi nunca se explica: **por qué
+la planta no puede simplemente dejar de transpirar.**
+
+<Video id="UdDRxihUlxc" />
+
+## El conflicto que gobierna todo: el estoma
+
+<Diagrama
+  src="el-conflicto-del-estoma.webp"
+  alt="Dos paneles con el mismo estoma ampliado en corte, formado por dos células de guarda. En el izquierdo, rotulado estoma abierto, las células están turgentes y separadas dejando el poro abierto: una sola molécula de gas gris entra hacia abajo mientras una veintena de gotitas azules sale hacia arriba en penacho, y dentro de la hoja se forma un grano de azúcar. En el derecho, rotulado estoma cerrado, las células están flácidas y juntas sellando el poro: no sale agua y hay una gota con candado, pero la molécula de gas queda detenida afuera y el grano de azúcar aparece desvaído y tachado."
+  pie="Ningún panel lleva visto ni cruz, porque los dos cuestan. La asimetría entre lo que entra y lo que sale es todo el problema de la vida vegetal en clima seco."
+/>
+
+Aquí está el nudo de la lección. El CO₂ entra a la hoja por unos poros microscópicos,
+los <Termino slug="estoma">estomas</Termino>, que la planta puede abrir y cerrar. Pero **por el mismo
+poro por donde entra el CO₂ se escapa el vapor de agua** — y la proporción es brutal: la planta pierde
+del orden de **cientos de moléculas de agua por cada molécula de CO₂ que captura.**
+
+Eso convierte cada momento del día en una apuesta con dos malas opciones:
+
+**Estoma abierto:** entra CO₂, la fábrica produce… y se pierde agua a raudales.
+**Estoma cerrado:** se conserva el agua… y la fotosíntesis se detiene, y encima la hoja se calienta.
+
+No existe una tercera opción. **Toda la evolución vegetal en climas secos es una colección de
+respuestas a este único compromiso**, y todo el manejo de un vivero también.
+
+Vale la pena ver el mecanismo en movimiento: cómo las células de guarda se hinchan y se vacían para
+abrir y cerrar el poro. Son dos minutos y explican con una animación lo que un párrafo tarda en
+describir:
+
+<Video id="mXKVu_-RiqY" />
+
+### Lo que de verdad tira del agua: el aire, no el termómetro
+
+<Diagrama
+  src="misma-temperatura-distinto-dpv.webp"
+  alt="Dos paneles bajo un rótulo compartido misma temperatura, con termómetros idénticos en los dos. En el izquierdo, rotulado aire húmedo, una hoja con el estoma abierto y el aire alrededor lleno de gotitas de vapor; solo un hilito de dos o tres gotas sale de la hoja, que se ve turgente, con visto verde. En el derecho, rotulado aire seco, la misma hoja con el aire casi vacío de vapor y algunos remolinos de viento; un penacho grueso de gotas es arrancado de la hoja, cuyo borde se enrolla, y el estoma se cierra con un candado, con triángulo de advertencia."
+  pie="El mismo calor, dos mundos distintos. Lo que arranca el agua de la hoja no es la temperatura: es cuánta sed tiene el aire."
+/>
+
+Aquí hay un concepto que vale más que muchas reglas de riego, y que casi nadie usa: lo que determina
+la velocidad a la que una hoja pierde agua **no es la temperatura, es
+el <Termino slug="dpv">déficit de presión de vapor</Termino>** — la diferencia entre el vapor que
+el aire podría contener a esa temperatura y el que realmente contiene. En una frase: **cuánta sed tiene
+el aire.**
+
+Por eso pasan cosas como estas:
+
+- Un día de **35 °C con aire húmedo** de temporada de lluvias es mucho **menos exigente** que un día
+  de 35 °C con aire seco y viento del norte.
+- El **viento agrava** el problema: renueva el aire pegado a la hoja y evita que se forme una capa
+  húmeda que frenaría la evaporación. Un surazo con viento fuerte deshidrata más que una calma
+  calurosa.
+- Y sube el DPV **al mediodía por partida doble**: el aire se calienta —con lo que podría contener
+  mucho más vapor— y su humedad relativa cae.
+
+De ahí la conducta que se ve todos los días en un vivero tropical y que ahora puedes leer bien: **la
+planta cierra estomas a mediodía**, sacrificando producción para no deshidratarse. La curva de
+fotosíntesis del día no es una campana: tiene un hundimiento al mediodía. Y la consecuencia
+sorprendente es que **la mayor parte de la producción del día se hace por la mañana** — cuando hay
+luz suficiente, el aire todavía está húmedo y la hoja aún está fresca.
+
+<Analogia titulo="El mediodía es tu hora punta, y la planta se cae">
+Traducido a lo tuyo: tienes un sistema con una demanda que se dispara justo cuando el recurso crítico
+se vuelve escaso, y su respuesta es **degradarse de forma controlada** —cerrar estomas— en vez de
+romperse por deshidratación. Es exactamente lo que hace un servicio bien construido bajo carga:
+rechaza trabajo antes de caerse.
+
+Y tu trabajo como viverista es **reducir el pico**, no forzar a la planta a soportarlo. Cada
+intervención del vivero tropical ataca una variable de esa hora punta: la malla baja la radiación y
+la temperatura de la hoja; la nebulización sube la humedad del aire, o sea baja el DPV; el riego
+matinal llena el depósito antes de que empiece la demanda; una barrera cortaviento reduce la
+renovación de aire seco. **Ninguna de esas cosas mejora la fotosíntesis: todas reducen el costo de
+mantener el estoma abierto.**
+</Analogia>
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Sombrea por saturación, no por miedo.** La pregunta correcta no es «¿cuánta sombra le pongo?» sino
+«¿en qué momento del día esta especie está por encima de su punto de saturación?». En el llano
+cruceño, para plantines de la mayoría de especies eso empieza temprano en la mañana y no acaba hasta
+media tarde. Malla del 35 al 50 % suele ser el rango razonable para producción; **el 80 % es sombra
+de propagación, no de crecimiento**, y mantenida por meses acerca las plantas a su punto de
+compensación: verdes, vivas y estancadas.
+
+**Riega temprano y por dos razones distintas.** Primero, para que el depósito del sustrato esté lleno
+antes de que llegue la demanda. Segundo, porque un riego de tarde deja follaje y sustrato mojados toda
+la noche a temperatura alta — condiciones ideales para hongos, como verás en el módulo de sanidad. La
+excepción es un plantín en estrés severo, que se atiende cuando se detecta.
+
+**Aprende a distinguir los dos marchitamientos**, porque el error cuesta lotes. Un plantín que se
+marchita al mediodía y **recupera turgencia al atardecer** hizo lo correcto: cerró estomas frente a
+un DPV alto. Un plantín marchito **a primera hora de la mañana**, con el aire fresco y húmedo, tiene
+un problema real: sustrato seco de verdad, o raíz asfixiada o dañada que no puede absorber aunque
+haya agua. Ese es el que hay que revisar sacando el cepellón, como enseña el módulo de IA sobre
+diagnóstico.
+
+**Usa la mañana como turno productivo de la planta.** Trasplantar, podar o mover bandejas al mediodía
+apila estrés sobre el peor momento del día: hazlo temprano o al final de la tarde. Y si tienes que
+hacer algo agresivo, elige un día nublado — que en términos de esta lección es un día de DPV bajo con
+luz todavía por encima de la saturación.
+
+**Y para la nebulización, ten claro qué compra.** No riega: **baja el DPV.** Sirve muchísimo en
+propagación —esquejes sin raíz que no pueden reponer agua— y en las horas de aire seco. Lo que no
+hace es sustituir el riego, y usada de más deja follaje permanentemente húmedo, que es una invitación
+a los hongos.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El llano cruceño tiene luz de sobra y agua a ratos**, y eso define la estrategia: casi nunca vas a
+estar limitado por luz, y muy a menudo por agua y por calor. Un vivero de Santa Cruz gestiona
+excedente de radiación, no escasez — al contrario de la mayoría de la literatura de invernaderos
+europeos, escrita para el problema inverso.
+
+**Las dos temporadas invierten el problema.** De octubre a abril, calor con aire húmedo: el DPV es
+moderado, la planta puede mantener estomas abiertos más horas, pero el riesgo se mueve a los hongos y
+al encharcamiento. De mayo a septiembre, aire seco y a veces viento: el DPV se dispara, la demanda de
+agua sube y la sombra y el cortaviento pasan a ser críticos.
+
+**El surazo es un caso especial de esta lección.** Trae dos golpes a la vez: viento seco que dispara
+el DPV, y frío que hunde la fotosíntesis mientras la planta sigue transpirando por el viento. Ese
+combinado —transpirar sin producir— es lo que deja plantines quemados en los bordes después de tres
+días de surazo, y explica por qué la protección es cortaviento **y** cobertura.
+
+**Y las noches importan más de lo que parece.** En plena temporada de lluvias las noches se quedan en
+24 o 26 °C, y esa respiración nocturna alta se come parte de la producción del día. No puedes
+cambiarlo, pero sí explica algo útil: la calidad y firmeza de un plantín producido en la seca, con
+noches frescas, suele ser mejor — y eso es un argumento comercial cuando lo mides con los registros
+del módulo de IA.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Más sol es más crecimiento.»** Solo hasta el punto de saturación. Después no aporta, y más allá
+destruye el aparato fotosintético.
+
+**«Le puse malla del 80 % para protegerla bien.»** Eso es sombra de propagación. Mantenida meses, la
+planta se acerca a su punto de compensación: produce lo justo para pagar su respiración y no crece.
+
+**«Está marchita al mediodía, necesita más agua.»** Si recupera turgencia al atardecer, cerró estomas
+frente a un aire muy demandante: hizo lo correcto. El marchitamiento que preocupa es el de la mañana
+temprano.
+
+**«Hace 35 °C, va a sufrir igual que ayer.»** No: depende de la humedad del aire y del viento. Con
+aire húmedo, esos 35 °C son mucho menos exigentes que con aire seco.
+
+**«La nebulización es un riego fino.»** No riega: baja el déficit de presión de vapor. Es para
+propagación y para horas de aire seco, y usada de más invita a los hongos.
+
+**«Riego a la tarde, que hace menos calor.»** Dejas follaje y sustrato mojados toda una noche
+caliente. El riego va temprano.
+
+**«El agua sube porque la raíz la bombea.»** La empuja la evaporación de la hoja, que tira de una
+columna continua. Por eso un estrés severo puede romper esa columna y dejar daño permanente.
+
+**«Si está verde, está creciendo.»** Verde solo significa que tiene clorofila. Crecer es tener saldo
+positivo después de pagar la respiración, y eso no se ve en el color.
+
+## Lo que sigue
+
+Ya sabes de dónde sale la energía y qué la consume. Lo que falta es **la materia**: una planta no está
+hecha solo de azúcar. Necesita nitrógeno para proteínas, fósforo para energía y membranas, potasio
+para regular —entre otras cosas— la apertura de esos estomas que acabas de conocer, y una docena de
+elementos más en cantidades minúsculas pero imprescindibles.
+
+La próxima lección entra en **cómo se alimenta una planta**: qué elementos necesita y para qué,
+por qué solo puede tomarlos disueltos y en forma iónica, por qué el pH del sustrato decide qué
+puede absorber aunque el nutriente esté presente, y cómo se lee una carencia en la propia hoja. Ahí
+vas a ver por qué «fertilizar» no es «echar comida», sino **poner disponible** lo que ya está.

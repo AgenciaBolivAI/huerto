@@ -1,0 +1,88 @@
+{
+  "preguntas": [
+    {
+      "id": "presupuesto",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué significa que el crecimiento sea un problema de partición?",
+      "opciones": [
+        "Que lo producido cada día se reparte entre cinco destinos que compiten: raíz, hoja, tallo, defensa y reproducción.",
+        "Que como la suma está fija, cada gramo que va a hoja es un gramo que no va a raíz.",
+        "Que lo visible —hoja y altura— atrae inversión y lo invisible —raíz y defensa— la pierde, y eso falla justo al salir del entorno protegido.",
+        "Que una planta bien manejada puede maximizar todos los destinos a la vez."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es asignación de presupuesto con la trampa clásica: una planta con mucha hoja y poca raíz es un servicio que funciona perfecto en desarrollo y se cae en producción, porque nadie invirtió en lo que no se veía. Y la defensa es el caso extremo — es caro y no se ve."
+    },
+    {
+      "id": "fuente-sumidero",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se deduce de la distinción entre fuente y sumidero?",
+      "opciones": [
+        "Que una hoja joven es un sumidero: mientras se expande cuesta azúcar, y solo devuelve cuando termina de crecer.",
+        "Que los sumideros compiten con distinta fuerza, y un fruto en desarrollo se lleva azúcar a costa de raíz y brotes.",
+        "Que las reservas en tallos y raíces gruesas dan margen para rebrotar, arrancar tras un trasplante o aguantar un surazo.",
+        "Que todas las partes de la planta colaboran repartiéndose el azúcar de forma proporcional."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No colaboran: compiten, y hay jerarquía. De ahí que quitar flores y frutos a un plantín sea buena práctica —no es estética, es liberar presupuesto para lo que sí vendes— y que una poda mal medida, al forzar brotación masiva, pueda debilitar en vez de fortalecer."
+    },
+    {
+      "id": "copa-raiz",
+      "tipo": "verdadero_falso",
+      "enunciado": "Entre dos plantines de la misma edad, el más alto y de hoja más grande es el que mejor va a sobrevivir al trasplante.",
+      "respuesta": false,
+      "explicacion": "Falso, y suele ser al revés. La parte aérea pierde agua y la raíz la repone: si la copa es grande y la raíz pequeña, es demanda alta con suministro corto. En el vivero, con riego frecuente y sombra, la desproporción no se nota; el día que se planta al sol, la demanda se dispara y no hay raíz para sostenerla. La relación parte aérea / raíz es el mejor predictor de supervivencia, y no está a la vista: está en el cepellón."
+    },
+    {
+      "id": "palancas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo redirige cada palanca el presupuesto de la planta?",
+      "opciones": [
+        "Podar el ápice lo manda a los lados: se libera el freno de la dominancia apical y brotan las yemas laterales.",
+        "Un déficit de agua moderado lo manda hacia abajo: la planta prioriza raíz porque invierte en buscar agua.",
+        "Demasiada sombra lo desperdicia hacia arriba: entrenudos largos, tallo fino, hojas grandes y delgadas, poca raíz.",
+        "La poda de aire perjudica el cepellón, porque mata puntas de raíz."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La poda de aire hace justo lo contrario: cuando la punta de una raíz asoma por el drenaje y muere al aire seco, la planta responde ramificando dentro del contenedor — y un cepellón ramificado es exactamente el activo que quieres vender. Y ojo con la palabra clave del déficit hídrico: moderado. Pasado un punto ya no es una señal, es un daño."
+    },
+    {
+      "id": "ahilamiento",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si un plantín se ahiló por exceso de sombra, se corrige bajándole la sombra y esperando.",
+      "respuesta": false,
+      "explicacion": "Falso: los entrenudos ya alargados no se acortan. Bajar la sombra evita que siga estirándose, pero el tejido formado no se rehace — solo se puede podar y volver a empezar. Por eso el ahilamiento es un error de manejo que se previene, no que se trata, y por eso la malla del 80 % mantenida meses produce el plantín más vistoso y más inútil del vivero."
+    },
+    {
+      "id": "rustificacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la rustificación tiene que empezar semanas antes del trasplante?",
+      "opciones": [
+        "Porque un plantín criado con sombra y riego generosos invirtió en lo que ese ambiente premia: hoja grande y delgada, cutícula fina, raíz modesta.",
+        "Porque bajar sombra y espaciar riego de forma gradual hace que la planta reasigne antes de necesitarlo: engrosa cutícula, acumula reservas y manda presupuesto a la raíz.",
+        "Porque reasignar un presupuesto lleva tiempo y el tejido ya formado no se puede rehacer.",
+        "Porque la planta necesita acostumbrarse psicológicamente al cambio de ambiente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La asignación del invernadero es óptima para el invernadero y catastrófica para el campo. De ahí la regla que resume la lección: no se endurece una planta el día que se planta, se endurece durante las tres semanas anteriores."
+    },
+    {
+      "id": "plan-particion",
+      "tipo": "abierta",
+      "enunciado": "Diseña el manejo de un lote de plantines de Rizoma del Sur para que salgan con buena relación copa/raíz y aguanten el trasplante, y explica cómo lo vas a demostrar a un cliente que compara tu plantín con uno más alto de otro vivero.",
+      "respuestaModelo": "Empiezo entendiendo que cada intervención mueve el mismo presupuesto. En germinación y propagación uso sombra alta, porque ahí la prioridad es no perder agua; pero en cuanto el plantín tiene raíz establecida bajo la malla a un nivel medio, porque una sombra alta mantenida durante meses lo ahíla —entrenudos largos, tallo fino, hojas grandes y pálidas, poca raíz— y eso no se corrige después: los entrenudos ya alargados no se acortan.\n\nUso el riego como palanca en la etapa correcta. Con raíz ya establecida, alargo un poco el intervalo entre riegos: un déficit moderado empuja el presupuesto hacia abajo porque la planta invierte en buscar agua, y el resultado es un plantín más compacto con mejor cepellón. En almácigo no lo hago, porque el volumen es diminuto y ahí un déficit no es señal sino daño.\n\nQuito flores y frutos precoces sin dudar. Un fruto es un sumidero potentísimo que se lleva azúcar a costa de raíz y brotes, y yo no vendo semillas: vendo plantines. Y aprovecho la poda del ápice donde quiero forma más ramificada, sabiendo que al cortar libero el freno de la dominancia apical y el presupuesto se va a las yemas laterales.\n\nDejo que la poda de aire trabaje a mi favor: cuando una raíz asoma por el drenaje y su punta se seca, la planta ramifica dentro del contenedor, y un cepellón ramificado es justamente el activo. Así que no me molesta ver puntas secas en el drenaje — me molestaría ver un bigote de raíces escapando y enraizando en el suelo.\n\nTres semanas antes de la entrega arranco la rustificación con calendario escrito: bajo la sombra por etapas, espacio el riego, expongo al viento y, si puedo, muevo las bandejas a un sector de rustificación. Lo hago con anticipación porque reasignar un presupuesto lleva semanas y el tejido ya formado no se rehace — no se endurece una planta el día que se planta. Y planifico la entrega al inicio de las lluvias, entre octubre y diciembre, lo que coloca la rustificación en septiembre y octubre, en plena seca con aire demandante, que es el entrenamiento que hace falta.\n\nPara demostrarlo no discuto: mido. Monto un testigo, una bandeja rustificada y otra no, plantadas el mismo día, y cuento supervivencia a los treinta días. Registro también la relación copa/cepellón de cada lote, aunque sea clasificándola a ojo en equilibrado, copa excesiva o raíz excesiva. Con eso, cuando un cliente compare mi plantín compacto con uno alto de otro vivero, la respuesta no es que el mío es mejor: es sacar el plantín de la bolsa para que vea el cepellón y mostrarle el número de supervivencia que medí. Vender infraestructura invisible exige mostrar el dato, y en arborización municipal o con un cliente que ya perdió una plantación, ese número es lo que gana el pedido siguiente.",
+      "criterios": [
+        "Ajusta el nivel de sombra por etapa y explica que el ahilamiento no se corrige después.",
+        "Usa el déficit hídrico moderado como palanca solo cuando hay raíz establecida, y lo descarta en almácigo.",
+        "Quita flores y frutos precoces por competencia de sumideros.",
+        "Aprovecha la poda del ápice vía dominancia apical cuando busca ramificación.",
+        "Trata la poda de aire como aliada de la ramificación del cepellón.",
+        "Rustifica tres semanas antes, por etapas y con calendario, justificándolo por el tiempo que exige reasignar.",
+        "Alinea la entrega con el inicio de las lluvias y la rustificación con la seca.",
+        "Demuestra con testigo y supervivencia medida a treinta días, y registra la relación copa/cepellón.",
+        "Convierte el dato en argumento de venta mostrando el cepellón y las cifras."
+      ],
+      "explicacion": "Fíjate en que ninguna de estas decisiones agrega recursos: todas reasignan los que la planta ya tiene. Ese es el cambio de mirada de la lección — dejas de preguntarte cómo hacer crecer más y empiezas a preguntarte dónde quieres que vaya el crecimiento. Y el remate es comercial: el activo está en el cepellón, así que hay que medirlo para poder venderlo."
+    }
+  ]
+}
