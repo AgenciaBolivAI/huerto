@@ -1,0 +1,322 @@
+Es el primer reflejo de todo el mundo: hoja rara, teléfono, foto, respuesta. Y es el caso de uso más
+malentendido del vivero — porque bajo la misma acción se esconden **dos tareas completamente
+distintas**: preguntar *qué planta es* y preguntar *qué le pasa*. La primera está a veces en zona
+verde. La segunda es zona roja disfrazada de verde, y esta lección explica por qué.
+
+## Cómo responde de verdad un clasificador
+
+Un identificador de plantas no «reconoce»: **puntúa un catálogo cerrado.** Recibe tu foto, calcula
+una puntuación para cada una de las clases con las que fue entrenado y te devuelve la lista ordenada.
+Dos consecuencias que cambian todo el uso práctico:
+
+**No existe el «no sé».** Siempre hay un primer puesto, porque siempre hay un máximo en la lista.
+Salvo que la aplicación esté explícitamente construida para rechazar entradas dudosas —y la mayoría
+no lo está—, el silencio no es una respuesta posible. Recibirás un nombre, sí o sí.
+
+**El número que ves no es la probabilidad de estar acertando.** Un «92 %» significa «el 92 % de la
+masa de puntuación quedó en esta clase, entre las clases que conozco». Es una repartición interna,
+no una medida de acierto. Puede haber 92 % de convicción sobre una especie que ni siquiera es del
+mismo continente que tu planta.
+
+<Diagrama
+  src="fuera-del-catalogo.webp"
+  alt="Dos paneles. En el izquierdo, rotulado en el catálogo, un estante con seis casillas, cada una con una silueta de hoja distinta; una planta que llega encaja exactamente en una casilla, marcada con visto verde. En el derecho, rotulado fuera del catálogo, el mismo estante de seis casillas, pero la planta que llega es una hoja tropical ancha que no encaja en ninguna; no hay casilla vacía para ella y una flecha la fuerza hacia la casilla más parecida, que se enciende con un triángulo de advertencia; cruz roja."
+  pie="No hay casilla vacía. Cuando tu planta no está en el catálogo, no recibes un «no sé»: recibes al vecino más parecido, con total aplomo."
+/>
+
+De ahí sale el fallo más importante para tu caso: **si tu especie no estaba en el entrenamiento, la
+respuesta no es un hueco, es el vecino más parecido.** Y como Bolivia es exactamente la región
+subrepresentada que vimos en la lección anterior, tus especies nativas —tajibo, toborochi, motacú,
+jichituriqui— caen con frecuencia fuera del catálogo. La respuesta llegará igual de segura. Solo
+estará vacía.
+
+## Género, especie, variedad: qué puede saberse de una foto
+
+<Diagrama
+  src="genero-especie-variedad.webp"
+  alt="Pirámide de tres niveles. El más ancho, abajo, rotulado género, en verde salvia con visto verde. El intermedio, rotulado especie, en tono oliva con un signo de interrogación terracota. El más estrecho, arriba, rotulado variedad, en terracota con cruz roja, y del que sale una flecha hacia una etiqueta de papel atada con hilo junto a un documento con sello y una pequeña planta madre en maceta."
+  pie="Cuanto más fina la pregunta, menos puede una imagen. La variedad no se ve: se hereda de la planta madre y del papel que la acompaña."
+/>
+
+Las identificaciones no son todas iguales de difíciles, y conviene tener clarísima la jerarquía:
+
+**El género suele acertarse.** Es la pregunta gruesa —«esto es un *Ficus*»— y los rasgos que la
+resuelven (forma de hoja, nervadura, disposición) son justo lo que una imagen captura bien.
+
+**La especie es dudosa.** Dentro de un género hay especies que se distinguen por la flor, el fruto,
+la pubescencia del envés o un detalle del pecíolo — y muchas veces por caracteres que no están en tu
+foto porque tu planta es un plantín de veinte centímetros que aún no floreció.
+
+**La variedad es inalcanzable, y es justo lo que vendes.** Un mango Tommy y un mango Kent tienen
+hojas prácticamente indistinguibles; dos cultivares de cítrico se diferencian por el fruto, por el
+patrón sobre el que están injertados o por su comportamiento a lo largo de años. **Ninguna foto de
+hoja va a resolverlo, y ningún modelo tampoco.**
+
+Aquí está el punto comercial, y es serio: la variedad no se identifica, **se rastrea.** Sale de
+la <Termino slug="trazabilidad">trazabilidad</Termino>: de qué planta madre tomaste la yema o el
+esqueje, quién te vendió la semilla, qué dice la factura, qué rótulo puso el proveedor. Si vendes un
+plantín con nombre de variedad porque lo dijo una aplicación, estás **construyendo una mentira que
+se descubre en tres años**, cuando el árbol fructifica en el jardín de un cliente que ya le contó a
+sus vecinos de quién lo compró. Es una deuda técnica que se paga con reputación, la única moneda que
+un vivero no puede reimprimir.
+
+## Cómo identifica un botánico: la clave dicotómica
+
+Antes de que existieran los modelos, la botánica resolvió la identificación con una herramienta que
+te va a resultar entrañable: la <Termino slug="clave-dicotomica">clave dicotómica</Termino>. Es una
+secuencia de preguntas binarias sobre caracteres observables —hojas opuestas o alternas, borde
+entero o dentado, envés con pelos o glabro— donde cada respuesta te manda a la siguiente pregunta
+hasta llegar a un nombre.
+
+<Analogia titulo="Árbol de decisión auditable contra caja negra">
+Una clave dicotómica es un **árbol de decisión escrito por humanos y recorrible paso a paso.** Su
+virtud no es la velocidad —es lentísima comparada con una foto— sino que **cada rama es una
+afirmación verificable**: puedes mirar la hoja y comprobar si es opuesta o alterna. Cuando la clave
+falla, sabes *dónde* falló y por qué.
+
+El clasificador es lo contrario: instantáneo y opaco. No puedes pedirle el paso 4. Por eso la
+combinación correcta no es elegir uno, es **encadenarlos**: el modelo propone dos o tres candidatos
+en un segundo, y la clave —o una ficha botánica seria, o el herbario— confirma cuál. Reduces el
+espacio de búsqueda con la herramienta rápida y decides con la auditable. Es exactamente lo que
+haces cuando una herramienta te señala un archivo sospechoso y después lees el código.
+</Analogia>
+
+Si nunca has visto funcionar una de estas aplicaciones por dentro, este recorrido muestra la
+mecánica órgano por órgano — y conviene mirarlo ya con las gafas de esta lección puestas: fíjate en
+que la respuesta **siempre llega**, aunque la planta pudiera no estar en el catálogo.
+
+<Video id="FO-NgcgxDSw" />
+
+Y el suelo firme de todo esto tiene nombre y dirección: un <Termino slug="herbario">herbario</Termino>,
+la colección de plantas prensadas, identificadas y catalogadas por especialistas. Santa Cruz tiene
+uno de los grandes de Bolivia — el **Herbario del Oriente Boliviano**, en el Museo de Historia
+Natural Noel Kempff Mercado, con más de cien mil especímenes de la flora del oriente. Cuando de
+verdad necesites saber qué es una planta nativa, esa es la fuente; ninguna aplicación la sustituye.
+
+## Diagnóstico: la zona roja disfrazada de verde
+
+Identificar es preguntar por una cosa que **está** en la imagen. Diagnosticar es preguntar por un
+**proceso** que ocurrió en el tiempo, en un organismo entero, dentro de un manejo concreto. La foto
+contiene un síntoma; el diagnóstico necesita cuatro cosas que la foto no tiene.
+
+### 1 · Dónde mirar: la posición del síntoma es información
+
+<Diagrama
+  src="donde-mirar.webp"
+  alt="Un plantín en bolsa de vivero dibujado de perfil, con el cepellón en corte, y cuatro llamadas: hojas nuevas señalando el brote pálido del ápice; hojas viejas señalando las inferiores cerca de la base; envés señalando una hoja volteada donde hay tres puntitos de insecto; y raíz señalando el interior del cepellón, donde algunas raíces se ven oscuras y podridas."
+  pie="Cuatro lugares que ninguna foto de una sola hoja contiene, y sin los cuales el diagnóstico es adivinanza educada."
+/>
+
+Empecemos por un mecanismo que resuelve la mitad de las confusiones. Algunos nutrientes viajan por
+la planta y otros no: un <Termino slug="nutriente-movil">nutriente móvil</Termino> como el nitrógeno
+puede desmontarse de una hoja vieja y enviarse al brote nuevo, mientras que el calcio o el hierro,
+una vez colocados, se quedan donde están.
+
+La consecuencia es un diagnóstico diferencial que se lee a simple vista: **si el amarilleo empieza
+por las hojas viejas**, sospecha de un nutriente móvil que la planta está canibalizando para
+alimentar el crecimiento; **si empieza por las hojas nuevas**, sospecha de uno inmóvil que no llega
+—o de un pH que lo bloquea aunque esté presente en el sustrato—. Es la misma planta, el mismo color,
+y dos causas opuestas. Una foto recortada de una sola hoja borra justamente el dato que decide.
+
+Añade dos lugares más. El <Termino slug="enves">envés</Termino> —la cara inferior de la hoja— es
+donde viven arañuela, mosca blanca y cochinilla: el daño se ve arriba y **el culpable está abajo**.
+Y la raíz, que ninguna foto de hojas muestra nunca, es donde vive la causa más frecuente de todas en
+un vivero: asfixia por exceso de riego, cuello podrido, cepellón enrollado. Un plantín marchito con
+sustrato empapado no tiene sed: **se está ahogando**, y el síntoma de arriba es idéntico al de la
+sequía.
+
+### 2 · Cuántas plantas: el mismo razonamiento que usas con un incidente
+
+<Diagrama
+  src="una-planta-o-toda-la-fila.webp"
+  alt="Dos paneles. En el izquierdo, rotulado una planta, una fila de ocho plantines sanos con uno solo en el medio marchito y manchado; debajo, una llave agrupa dos iconos: un insecto ampliado y un hongo. En el derecho, rotulado toda la fila, los ocho plantines igual de pálidos y decaídos; debajo, una llave agrupa una regadera, una bolsa de fertilizante y un sol."
+  pie="Antes de mirar la hoja, cuenta las plantas afectadas: el patrón de distribución te dice en qué familia de causas buscar."
+/>
+
+Esta es la heurística más rentable de toda la lección, y no requiere saber nada de botánica:
+**cuenta cuántas plantas están afectadas y con qué patrón.**
+
+- **Una planta enferma entre vecinas sanas**: la causa es local. Plaga, patógeno, o un accidente de
+  esa maceta —quedó sin riego, se golpeó, ese sustrato venía mal.
+- **Toda una fila o una bandeja igual de afectada**: la causa es algo que se aplicó a todas. Riego,
+  fertilización, exposición al sol, el agua de ese día, el lote de sustrato.
+- **Un gradiente** —peor en un extremo, mejor en el otro—: sospecha de algo con geometría. La
+  cobertura del riego, la sombra que se corre, el viento del surazo, el borde de la mesa.
+
+Es exactamente el razonamiento con el que separas «un nodo caído» de «el clúster entero caído»: **la
+distribución del fallo te dice en qué capa buscar**, y te lo dice antes de mirar un solo log. Aquí
+igual: primero el patrón, después la hoja.
+
+### 3 · La línea de tiempo, y 4 · tu propio manejo
+
+Un síntoma que apareció de un día para otro habla de un evento —una aplicación, un golpe de calor,
+un error de riego—; uno que avanzó durante tres semanas habla de un proceso —nutrición, raíz,
+patógeno instalado—. Y el resto de la respuesta está en algo que ningún modelo del mundo puede ver:
+**qué hiciste tú en esas tres semanas.** Cuándo riegas y cuánto, qué sustrato usaste, si moviste las
+bandejas de sitio, si el surazo pasó el jueves.
+
+Por eso la conclusión de este apartado es la misma frase con la que cerramos la lección anterior,
+ahora con todo su peso: **la imagen propone, el registro decide.** Un mismo síntoma más tu registro
+de riego es un diagnóstico; el mismo síntoma sin registro es una conversación entretenida.
+
+Una última distinción que te va a ordenar el vocabulario: lo que hace la planta —amarillear,
+marchitarse, deformarse— es un **síntoma**; ver al causante o sus estructuras —el insecto, la
+telaraña, el moho blanco— es un <Termino slug="signo">signo</Termino>. Los signos valen mucho más
+que los síntomas, porque son casi específicos. Y los signos casi siempre están donde nadie
+fotografía: en el envés, en el cuello, entre las raíces.
+
+## Cuánta fiabilidad esperar: mídela tú, en una tarde
+
+No te voy a dar un porcentaje de acierto, porque cualquier cifra general sería inventada: depende de
+la aplicación, de la especie, de la foto y de la región. Lo que sí puedo darte es **el protocolo
+para saber tu propia cifra**, que es la única que te sirve:
+
+1. Reúne **veinte plantas cuya identidad conoces con certeza** — porque compraste la semilla
+   rotulada, porque las trajo un ingeniero, porque están confirmadas por ficha.
+2. Fotografía cada una siguiendo el protocolo del apartado siguiente, y consulta la aplicación
+   **sin mirar la respuesta antes de anotar tu propia apuesta**.
+3. Anota tres columnas: qué era, qué dijo la app, y si acertó a nivel de género y a nivel de
+   especie.
+4. **Separa el recuento en dos grupos**: ornamentales y frutales comunes de amplia distribución, por
+   un lado, y nativas del oriente boliviano por el otro.
+
+En una tarde tendrás algo que ninguna reseña te da: **la fiabilidad real de esa herramienta en tu
+vivero, por grupo de especies.** Y verás con tus propios ojos el sesgo de la lección anterior, esta
+vez medido por ti. Es la misma calibración ESTIMADO contra REAL que aprendiste con el presupuesto,
+aplicada a una herramienta en vez de a una obra: **no se discute la fiabilidad de un instrumento, se
+mide.**
+
+## El protocolo de la foto útil
+
+<Diagrama
+  src="foto-inutil-foto-util.webp"
+  alt="Dos paneles. En el izquierdo, rotulado foto inútil, un marco con una toma borrosa y a contraluz de una mesa de vivero entera donde no se distingue ninguna hoja, con destellos de sol y un icono de trepidación; cruz roja. En el derecho, rotulado foto útil, un marco con una sola hoja nítida y plana sobre una hoja de papel blanco llenando el encuadre, con un recuadro insertado que muestra la misma hoja volteada por el envés y una moneda al lado como referencia de escala; visto verde."
+  pie="La diferencia entre las dos fotos no es la cámara: es el método. Y la de la derecha sirve igual para una app, para un técnico y para tu propio archivo."
+/>
+
+Esto es lo más aprovechable de la lección, porque mejora **todos** los usos a la vez: la app acierta
+más, el técnico puede responderte por WhatsApp, y tu archivo se vuelve consultable.
+
+- **Una hoja, todo el encuadre.** Hoja completa con su pecíolo, plana, sobre fondo neutro: una hoja
+  de papel blanco, una tabla lisa, tu mano. Que el sujeto ocupe el cuadro.
+- **Haz y envés, siempre las dos.** Dos tomas de la misma hoja. Es la regla que más diagnósticos
+  salva, porque el culpable vive abajo.
+- **Luz difusa, jamás sol directo.** A la sombra o temprano. El sol quema los claros y borra la
+  textura, que es justamente el carácter que se necesita.
+- **Escala física en el cuadro.** Una moneda o una cinta métrica. «Manchas pequeñas» no significa
+  nada; «manchas del tamaño de una moneda» sí.
+- **Enfoca tocando la lesión**, no dejes que la cámara enfoque el fondo.
+- **Sano al lado de enfermo.** Una toma con una hoja afectada junto a una sana de la misma planta:
+  el contraste es diagnóstico y elimina la duda de «¿ese es su color normal?».
+- **Cuatro escalas por caso**: la lesión de cerca, el órgano, la planta entera, y la fila o bandeja
+  desde arriba — esta última es la que muestra el patrón de distribución del apartado anterior.
+- **Y los datos con la foto.** Fecha, lote, especie sospechada, y qué se hizo esa semana. Con una
+  convención de nombre de archivo del tipo `2026-08-03_lote3_tajibo_enves`, tu carpeta de fotos se
+  vuelve una base de datos consultable — y en el Módulo 14 se vuelve una de verdad.
+
+### El uso de mayor valor: la foto como conversación, no como oráculo
+
+Aquí está el cambio de perspectiva que rinde más: **la mejor foto no es la que una app clasifica, es
+la que le permite a un humano competente ayudarte a distancia.** Con haz y envés, escala, planta
+entera y patrón de la bandeja, un ingeniero agrónomo del SENASAG, un vecino con treinta años de
+oficio o el técnico de la agropecuaria pueden decirte algo útil desde su teléfono. Sin eso, tu foto
+borrosa a contraluz solo genera un «mandame otra foto».
+
+Y hay un segundo uso que casi nadie hace y que vale oro: **la serie temporal.** La misma bandeja,
+desde el mismo ángulo y la misma altura, una foto por semana. Un síntoma aislado es ambiguo; su
+**progresión** es casi un diagnóstico — y además convierte tu vivero en el único sitio del mundo con
+un registro visual de cómo se comportan esas especies en Zanja Honda. Eso es exactamente la materia
+prima de la lección siguiente.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Esta semana, calibra tu herramienta.** Junta veinte plantas de identidad conocida de los ocho
+lotes, fotografía cada una con el protocolo, y arma la tabla de aciertos separando ornamentales
+comunes de nativas del oriente. Guarda esa tabla: es la que te dirá, para siempre, cuánto puedes
+apoyarte en la app y con qué grupos ni intentarlo.
+
+**Pega el protocolo de foto en la pared del galpón**, en siete líneas: una hoja llenando el cuadro ·
+haz y envés · a la sombra · moneda de escala · enfocar la lesión · sana junto a enferma · foto de la
+bandeja desde arriba. Que cualquiera que trabaje contigo pueda tomar una foto que sirva.
+
+**Adopta la convención de nombres desde la primera foto**: fecha, lote, especie, parte. Y una
+carpeta por mes. Es media hora de decisión hoy y un archivo consultable para siempre.
+
+**Regla dura de venta**: el rótulo de variedad de un plantín sale de la trazabilidad —planta madre,
+factura, rótulo del proveedor— y **nunca** de una identificación por imagen. Si no puedes rastrear la
+variedad, se vende sin variedad: «mango de semilla», y con el nombre honesto se vende igual.
+
+**Para las nativas, ten a mano la fuente de verdad.** Cuando aparezca una especie del monte que
+importe de verdad —porque vas a producirla o venderla—, la consulta va al herbario del Museo Noel
+Kempff Mercado o a un botánico, no a una app. Es una gestión al año, y te ahorra vender un
+jichituriqui que era otra cosa.
+
+**Y empieza la serie temporal ya**: elige dos bandejas representativas, marca en el suelo dónde
+pararte, y una foto semanal desde ahí. En seis meses tendrás la progresión completa de un ciclo, con
+tus fechas y tu clima.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El herbario existe y está en tu ciudad.** El Herbario del Oriente Boliviano (USZ), en el Museo de
+Historia Natural Noel Kempff Mercado de la UAGRM, conserva más de cien mil especímenes identificados
+de la flora del oriente boliviano y es el referente para taxonomía de la región. Para una especie
+nativa dudosa que vas a producir comercialmente, esa consulta vale mil respuestas de aplicación.
+
+**Las nativas del oriente son el punto ciego de las apps.** Especies chiquitanas y amazónicas con
+poca presencia en las bases de datos fotográficas internacionales caerán fuera del catálogo con
+frecuencia — y recuerda que fuera del catálogo no significa silencio, significa el vecino más
+parecido con aplomo.
+
+**El nombre común es una trampa regional.** El mismo nombre local puede designar especies distintas
+en Santa Cruz, en el Beni y en Tarija, y la misma especie tiene tres nombres según quién la nombre.
+Para buscar información técnica usa el nombre científico; guarda el nombre local para el cartel y
+para el cliente, que es donde de verdad sirve.
+
+**La foto es el canal de consulta real del rubro.** Aquí las preguntas técnicas viajan por WhatsApp:
+al técnico de la agropecuaria, al ingeniero conocido, al grupo de viveristas. Una foto con protocolo
+convierte esa consulta gratuita en un diagnóstico útil; una foto mala la desperdicia.
+
+**Y ojo con la temporada al interpretar síntomas.** En plena lluvia, el sospechoso número uno de un
+plantín marchito es el exceso de agua y la raíz asfixiada, no la sed; en la seca con surazo, el frío
+y el viento. El calendario es parte del diagnóstico, y el calendario lo tienes tú, no el modelo.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«La app dijo que era esta especie, con 94 %.»** Ese número es reparto interno de puntuación entre
+las clases que conoce, no probabilidad de acierto. Si tu planta no está en su catálogo, el 94 % es
+94 % de convicción sobre algo equivocado.
+
+**«Le puse el nombre de variedad que sugirió.»** La variedad no se ve en una hoja: se rastrea. Un
+rótulo inventado se descubre cuando el árbol fructifica, y lo paga tu reputación.
+
+**«Le mandé la foto de la hoja y me dio el diagnóstico.»** Falta todo lo demás: si el amarilleo
+empezó arriba o abajo, qué hay en el envés, cómo está la raíz, cuántas plantas están afectadas, y
+qué hiciste tú estas tres semanas.
+
+**«Está marchito, hay que regarlo más.»** Con sustrato empapado, un marchito se está ahogando, no
+muriendo de sed. Los dos síntomas de arriba son idénticos; la diferencia está en el cepellón.
+
+**«Fotografié la mesa entera para que se vea el contexto.»** Una foto que muestra todo no prueba
+nada. Cuatro escalas separadas: lesión, órgano, planta, bandeja.
+
+**«A pleno sol se ve mejor.»** A pleno sol se pierde la textura, que es el carácter que hace falta.
+Sombra o mañana temprano.
+
+**«No hace falta la foto del envés.»** Es la que más diagnósticos salva: el daño se ve arriba y el
+culpable vive abajo.
+
+**«Guardo las fotos en la galería, ya las encontraré.»** Sin fecha, lote y especie en el nombre, en
+dos meses son mil fotos idénticas de hojas verdes. La convención de nombres es lo que las convierte
+en datos.
+
+## Lo que sigue
+
+Hasta aquí le hemos pedido a la visión artificial que **interprete** — identificar, diagnosticar — y
+hemos visto dónde eso se rompe. La lección siguiente le pide algo mucho más humilde y mucho más
+rentable: que **cuente y mida**. Conteo de plantines y estimación de inventario, medición del avance
+de un lote, detección temprana de anomalías por comparación entre fotos de la misma bandeja, y la
+disciplina de captura repetible que hace posible todo eso. Es el caso de uso con la mejor relación
+entre valor y riesgo de todo el módulo, porque el error es barato, se verifica contando a mano — y ese
+conteo manual periódico es, otra vez, el que calibra la máquina.

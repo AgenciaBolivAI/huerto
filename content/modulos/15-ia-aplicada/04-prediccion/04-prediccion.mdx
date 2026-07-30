@@ -1,0 +1,297 @@
+Ya tienes cifras y series: cuántos hay, cuántos se mueren, cuánto crecen por semana. Toca el paso
+natural — **usarlas para anticipar.** Y conviene decir de entrada qué clase de predicción es cada
+cosa, porque en esta lección hay tres animales muy distintos: **una cuenta física** (cuánta agua
+pide el cultivo), **un reloj biológico** (cuándo estará listo un lote), y **un sistema que reacciona
+a lo que todos predicen** (el precio). El primero es casi determinista, el segundo es sorprendentemente
+predecible, y el tercero es el problema más difícil del módulo.
+
+## Riego: la demanda no está en el calendario
+
+<Diagrama
+  src="calendario-o-demanda.webp"
+  alt="Dos paneles. En el izquierdo, rotulado por calendario, una hoja de calendario con tres casillas marcadas con la misma regadera idéntica, y debajo dos plantines con problemas opuestos: uno encharcado con hojas amarillas y caídas, otro seco y marchito con el sustrato agrietado; cruz roja. En el derecho, rotulado por demanda, tres iconos —sol, remolino de viento y termómetro— que alimentan con flechas tres jarras medidoras con niveles de agua claramente distintos, y debajo tres plantines sanos e iguales; visto verde."
+  pie="La misma regadera tres veces por semana ahoga en junio y mata de sed en octubre. Lo que decide no es el día: es cuánta agua se fue."
+/>
+
+«Riega dos veces por semana» es la recomendación más repetida y más inútil del rubro, y ya sabes por
+qué desde la primera lección: viene calibrada para otro clima. Pero el problema es más profundo que
+el sesgo geográfico. **El calendario no es la variable correcta**, ni aquí ni en ningún sitio.
+
+Lo que la planta consume es la <Termino slug="evapotranspiracion">evapotranspiración</Termino>: la
+suma del agua que se evapora del sustrato y la que la planta transpira por sus hojas. Y ese consumo
+lo fija la atmósfera del día — radiación, temperatura, humedad y viento —, no el calendario. Un
+enero cruceño nublado y húmedo y un septiembre seco con viento del norte pueden diferir **al doble o
+más** en demanda diaria. Regar lo mismo en los dos casos es garantizar que uno de los dos esté mal.
+
+### El balance hídrico: es contabilidad, no agronomía
+
+<Diagrama
+  src="balance-hidrico.webp"
+  alt="Corte de un recipiente de vivero con sustrato ocre y un nivel de agua azul en su mitad inferior, funcionando como depósito, con un plantín cuyas raíces bajan hacia el agua. Cuatro flujos rotulados: lluvia entrando por arriba desde una nube; riego entrando por arriba desde una regadera; evapotranspiración saliendo hacia arriba como flechas onduladas desde el sustrato y las hojas; y drenaje saliendo por los agujeros del fondo en forma de gotas."
+  pie="Un almácigo es un depósito con dos entradas y dos salidas. Todo el riego de precisión es llevar la cuenta de ese depósito."
+/>
+
+Aquí es donde tu cabeza ya tiene la estructura montada. El sustrato de una bandeja es **un depósito
+con capacidad limitada**, con dos entradas —lluvia y riego— y dos salidas: la evapotranspiración,
+que sube, y el drenaje, que baja. El nivel de hoy es el de ayer más lo que entró menos lo que salió.
+
+Eso es todo. Y de ese modelo de tres líneas salen las decisiones importantes:
+
+- **Cuánto regar** es reponer lo que se fue, no llenar hasta el borde. Llenar por encima de la
+  capacidad no almacena nada: **se va por el drenaje**, arrastrando nutrientes solubles y dejando el
+  sustrato sin aire, que es la causa de la asfixia que ya conoces.
+- **Cuándo regar** depende de cuánto queda en el depósito, y el depósito de una bandeja de germinación
+  es **diminuto**: pocos centímetros de sustrato, mucha superficie, raíces cortas. Por eso los
+  almácigos perdonan tan poco y hay que mirarlos a diario, mientras una bolsa grande aguanta días.
+- **Y la lluvia no siempre cuenta como riego.** Bajo malla o techo llega una fracción; y un chubasco
+  de dos minutos moja la superficie sin cargar el depósito. Anotar «llovió» no es anotar cuánta agua
+  entró — para eso está el pluviómetro, que cuesta lo que un balde.
+
+<Analogia titulo="El presupuesto de agua es un presupuesto">
+Es literalmente el mismo objeto que la planilla de obra: un saldo con ingresos y egresos. Y trae
+consigo las mismas dos reglas que ya aplicaste ahí. Primera, **el margen**: se riega un poco por
+encima de lo estrictamente calculado, porque quedarse corto cuesta mucho más que pasarse un poco —la
+misma asimetría del sobrante de ladrillos. Segunda, **la calibración**: tu estimación de consumo se
+corrige con la observación real, que en riego tiene un instrumento buenísimo y gratis — **el peso.**
+Levanta una bolsa recién regada y la misma bolsa dos días después: la diferencia que sientes en la
+mano es agua que se fue. Con una balanza de cocina y tres bolsas testigo tienes tu propia curva de
+consumo, sin comprar ningún sensor.
+
+Y hay un modelo público al que puedes acudir cuando quieras el número teórico: la FAO publica el
+método estándar para calcular la evapotranspiración de referencia a partir de datos
+meteorológicos — el **estudio FAO 56**, que es el documento que usa medio mundo. Sirve para
+entender la magnitud; tu balanza sirve para saber la tuya.
+</Analogia>
+
+## Grados-día: el reloj que la planta sí usa
+
+<Diagrama
+  src="grados-dia.webp"
+  alt="Dos pistas horizontales comparando el mismo cultivo sembrado en dos épocas. La superior, rotulada mismo calor, es una fila corta de cinco hojas de calendario, cada una con una barra terracota alta, seguida de un plantín crecido con visto verde. La inferior, rotulada distintos días, es una fila de diez hojas de calendario, cada una con una barra verde salvia baja. A la derecha, las dos columnas de acumulado alcanzan exactamente la misma línea discontinua."
+  pie="La planta no cuenta días: acumula calor. El mismo total se junta en pocos días calientes o en muchos días frescos — y por eso «tres meses» nunca es una fecha."
+/>
+
+Esta es, de lejos, la idea más rentable de la lección para un vivero. La pregunta comercial que te
+van a hacer mil veces es **«¿para cuándo están listos?»**, y la respuesta honesta no es un número de
+días — porque **una planta no cuenta días: acumula temperatura.**
+
+El desarrollo de una planta avanza en proporción al calor recibido por encima de un umbral llamado
+**temperatura base**, propio de cada especie, por debajo del cual simplemente no progresa. La suma
+del calor efectivo día por día se llama <Termino slug="grados-dia">grados-día</Termino> o integral
+térmica, y se calcula de forma casi ofensivamente simple: por cada día, tomas la temperatura media
+—máxima más mínima, dividido dos—, le restas la temperatura base, y **acumulas.**
+
+Cuando ese acumulado alcanza cierto valor, la especie llega a su etapa. La misma lechuga que madura
+en pocas semanas de verano tarda mucho más en invierno: **no cambió su necesidad de calor, cambió el
+tiempo que tarda en juntarlo.**
+
+<Analogia titulo="Es una barra de progreso, no un temporizador">
+La diferencia entre días y grados-día es exactamente la diferencia entre **medir un trabajo por
+tiempo transcurrido y medirlo por unidades procesadas.** «Tres meses» es un temporizador; los
+grados-día son una barra de progreso alimentada por trabajo real — y por eso el clima frío no
+retrasa el reloj: **baja el caudal.**
+
+Con eso puedes hacer algo que la mayoría de los viveros no hace: **prometer fechas con banda.** «En
+condiciones normales, seis a ocho semanas; si viene una racha fresca, un poco más» no es una
+respuesta vaga: es una respuesta correcta, y encima defendible. Es la misma honestidad de la
+estimación con margen del módulo de obra, aplicada a un plazo de entrega.
+</Analogia>
+
+Y aquí está lo mejor: **para usar grados-día no necesitas ningún modelo de IA.** Necesitas la
+temperatura máxima y mínima de cada día —que te da cualquier fuente meteorológica, o un termómetro de
+máxima y mínima de veinte bolivianos— y una columna de suma acumulada en tu planilla. La parte de IA,
+si la quieres, es solo que un modelo te ayude a montar la hoja de cálculo y a buscar la temperatura
+base publicada de tus especies. **El valor está en la aritmética, no en el modelo.**
+
+Un aviso de honestidad: las temperaturas base y los acumulados publicados existen para cultivos
+hortícolas y de grano bien estudiados, y **son escasos o inexistentes para especies nativas y
+ornamentales tropicales.** Para esas, el camino es el de siempre — mides tú. Anota la fecha de
+siembra, la fecha en que cada lote llegó a tamaño de venta, y las temperaturas del período. Dos o
+tres ciclos y tendrás **tu propia constante**, que no existe en ninguna publicación del mundo.
+
+## El pronóstico: útil, dudoso, ruido
+
+<Diagrama
+  src="pronostico-util-dudoso-ruido.webp"
+  alt="Un cono de incertidumbre que se abre de izquierda a derecha desde un pequeño icono de sol tras una nube. El cono está dividido en tres zonas por líneas discontinuas: la primera y más estrecha, en verde salvia, rotulada útil; la intermedia, en oliva, rotulada dudoso; y la tercera y más ancha, en terracota claro, rotulada ruido, donde se superponen tres iconos contradictorios de sol, lluvia y viento. Debajo, una flecha horizontal con tres marcas indica el paso del tiempo."
+  pie="El cono se ensancha solo, y ningún modelo lo estrecha. Lo que sí puedes hacer es decidir qué decisión cabe en cada zona."
+/>
+
+Un pronóstico meteorológico es un modelo físico corriendo hacia adelante, y su fiabilidad **se
+degrada con el horizonte** por una razón estructural: pequeñas diferencias en las condiciones
+iniciales se amplifican con el tiempo. Eso no lo arregla más cómputo ni más IA. La consecuencia
+práctica es que debes emparejar cada decisión con el horizonte adecuado:
+
+- **A dos o tres días es útil de verdad.** Es la ventana para decidir si siembras mañana, si aplicas
+  algo (nunca antes de una lluvia), si adelantas un trasplante, si aseguras las mallas porque
+  anuncian viento.
+- **A una semana es orientativo.** Sirve para planificar trabajo, no para comprometerse.
+- **Más allá de dos semanas es ruido** para decisiones concretas. Lo que sí existe a esa escala son
+  **tendencias estacionales** —«se espera una temporada de lluvias más intensa»— que sirven para
+  planificar la campaña, no para decidir el jueves.
+
+Y hay un detalle que casi todo el mundo lee mal:
+la <Termino slug="probabilidad-de-precipitacion">probabilidad de precipitación</Termino>. Un «70 % de
+lluvia» **no significa** que va a llover fuerte, ni que va a llover en el 70 % del terreno, ni que
+lloverá el 70 % del tiempo: significa, aproximadamente, que hay 70 posibilidades sobre 100 de que
+caiga lluvia medible en un punto dado de la zona durante el período — y las convenciones varían entre
+servicios. Un 70 % con dos milímetros no cambia nada en tu balance hídrico; un 30 % con un chubasco
+de treinta milímetros te reordena la semana. **Mira siempre probabilidad y cantidad juntas.**
+
+Para Bolivia, la fuente oficial es el **SENAMHI**, el servicio nacional de meteorología e hidrología,
+y conviene tenerlo como referencia junto a cualquier app: los pronósticos globales que alimentan las
+aplicaciones tienen resolución gruesa y en el llano cruceño los fenómenos locales —tormentas de
+tarde, la llegada de un surazo— se les escapan o se les corren de hora.
+
+## Predecir el precio: el problema que se defiende
+
+<Diagrama
+  src="el-precio-se-defiende.webp"
+  alt="Lazo circular de cuatro etapas unidas por flechas terracota en sentido horario. Arriba, rotulado precio alto, una etiqueta de precio con flecha ascendente y una pila de monedas. A la derecha, rotulado todos siembran, tres mesas de vivero abarrotadas de bandejas idénticas. Abajo, rotulado sobreoferta, un montón desbordado de plantines iguales, algunos volcados. A la izquierda, rotulado precio cae, la misma etiqueta con flecha descendente y una o dos monedas."
+  pie="Si la predicción es buena y todos la ven, todos actúan igual — y esa acción destruye la predicción. Ningún modelo escapa a este lazo."
+/>
+
+Aquí conviene ser rotundo: **el precio de un plantín en Santa Cruz el mes que viene no es predecible
+por un modelo, y no es un problema de datos.** Es un problema de naturaleza del sistema, y tiene tres
+capas.
+
+**Primera: no hay serie.** No existe un histórico público de precios de plantines en tu mercado.
+Nadie lo publica, así que no hay nada sobre lo que ajustar. Un modelo sin serie no predice: opina.
+
+**Segunda: el sistema tiene realimentación reflexiva.** Si se sabe que un producto estará caro, muchos
+lo plantan, y esa siembra masiva produce la sobreoferta que hunde el precio. La predicción **causa**
+el evento que la invalida — un lazo que no aparece en el clima (llueve igual sepas o no) y que domina
+en los mercados. Es el equivalente agrícola de optimizar contra una métrica que reacciona a que la
+estés optimizando.
+
+**Tercera: y encima, tu mercado es chico.** En un mercado local, la entrada de un solo competidor
+grande, un contrato municipal de arborización o una helada en otra región mueven el precio más que
+cualquier tendencia. Con pocos actores, **la varianza gana a la señal.**
+
+<Analogia titulo="Lo predecible es tu costo, no el precio de mercado">
+La salida no es predecir mejor: es **predecir otra cosa.** Tu costo por plantín sí es predecible
+—depende de insumos, mortalidad y tiempo, todos medibles por ti—, y tu demanda tiene patrones
+estacionales reales que puedes registrar: la arborización que pide el municipio en cierta época, los
+frutales antes de las lluvias, las ornamentales cerca de las fiestas.
+
+Eso convierte la pregunta imposible «¿a cuánto estará el plantín?» en dos preguntas resolubles:
+**¿cuánto me cuesta producirlo?** y **¿cuándo suele haber demanda?** Con esas dos, el precio deja de
+ser una predicción y se vuelve una decisión — que es exactamente lo que el módulo de monetización va a
+trabajar. Y en un mercado con poca información, quien conoce su costo real ya tiene una ventaja que
+la mayoría no tiene.
+</Analogia>
+
+## La trampa del ajuste con pocos ciclos
+
+Un último aviso que en tu oficio conoces bien, pero que aquí muerde con particular saña.
+El <Termino slug="sobreajuste">sobreajuste</Termino> es fácil de evitar cuando tienes millones de
+filas; en agricultura, el problema es el contrario: **un cultivo da uno o dos ciclos por año.** Dos
+temporadas son dos observaciones. Con dos puntos puedes trazar cualquier recta y contarte cualquier
+historia.
+
+Las defensas prácticas, todas baratas:
+
+- **Cuenta ciclos, no filas.** Mil mediciones de una sola campaña siguen siendo una campaña.
+- **Desconfía de la explicación que encaja perfecto.** Si tu «modelo» explica los seis lotes del año
+  sin residuos, probablemente memorizó el año, no aprendió el proceso.
+- **Prefiere reglas simples y físicas** —balance hídrico, grados-día— a ajustes estadísticos sobre
+  pocos datos. Un modelo con mecanismo detrás se equivoca de forma comprensible; un ajuste ciego se
+  equivoca de forma sorprendente.
+- **Y separa la temporada.** Si vas a comprobar si una regla funciona, pruébala con la campaña que
+  no usaste para inventarla. Es la validación de siempre, con la diferencia de que aquí cada
+  «conjunto de prueba» tarda seis meses en llegar.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Instrumentación mínima esta semana, y es de ferretería:** un pluviómetro plástico donde no le
+llegue el techo ni la malla, un termómetro de máxima y mínima a la sombra, y una balanza de cocina.
+Con esos tres —menos de lo que cuesta una bolsa de sustrato— tienes entradas de agua, temperatura para
+grados-día y una forma directa de medir consumo.
+
+**Arranca la columna de grados-día en la planilla que ya diseñaste.** Una fila por día: máxima,
+mínima, media, y acumulado desde la siembra de cada lote. Con dos o tres ciclos vas a tener el
+acumulado típico de tus especies principales, y con eso podrás responder «¿para cuándo?» con una
+banda en vez de un encogimiento de hombros. Para las nativas del oriente no hay tabla publicada:
+esas constantes las vas a crear tú, y no las tiene nadie más.
+
+**Tres bolsas testigo con balanza, una vez por semana.** Pesa recién regado y a las 24 y 48 horas. La
+pérdida de peso es tu evapotranspiración real, en gramos, para tu sustrato, tu bolsa y tu clima — y
+te dice cuánto reponer sin adivinar. Repite en enero y en septiembre, y verás la diferencia entre
+temporadas con tus propios números.
+
+**Empareja decisiones con horizontes.** Aplicaciones y siembras, con el pronóstico de dos a tres
+días. Planificación de trabajo, a una semana. Campaña completa, con tendencias estacionales y con lo
+que ya sabes del clima local: lluvias de octubre a abril, seca de mayo a septiembre, surazos con
+noches de unos 10 °C. Nada de decisiones concretas a quince días.
+
+**Y del precio, olvídate de predecirlo: mide tu costo.** Con el conteo y la mortalidad de la lección
+anterior más los insumos de la planilla, tienes costo por plantín real. Y registra cada venta con
+fecha, especie, cantidad y precio: en un año esa tabla te va a mostrar tu propia estacionalidad de
+demanda, que es lo único que vale en un mercado sin datos públicos.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El SENAMHI es la fuente oficial** de meteorología e hidrología del país, y conviene mirarlo junto
+a cualquier app: los modelos globales que alimentan las aplicaciones tienen resolución gruesa, y en
+el llano las tormentas de tarde y la hora de llegada de un surazo se les escapan.
+
+**El pronóstico del surazo es el que más te importa.** Es el evento que puede costarte un lote entero
+en una noche, y a dos o tres días suele estar bien anunciado: ese aviso es tiempo para tapar
+almácigos, mover bandejas y adelantar riegos. Vale más que todo el resto del pronóstico junto.
+
+**Las dos temporadas ordenan el año**, no las cuatro estaciones. De octubre a abril, lluvias y calor:
+la demanda de agua baja pero sube el riesgo de encharcamiento y hongos. De mayo a septiembre, seca:
+la demanda de agua se dispara y el riego pasa a ser el factor limitante. Cualquier regla de riego
+tiene que decir en qué temporada aplica.
+
+**El chubasco no es lluvia útil.** En el llano caen aguaceros cortos e intensos donde buena parte
+escurre y se pierde; y bajo malla o techo llega solo una fracción. Por eso el pluviómetro va al
+descubierto y, si quieres ser fino, un segundo bajo la malla — la diferencia entre los dos es un dato
+que ningún pronóstico te va a dar.
+
+**Y de precios no hay serie publicada.** El precio de un plantín en Santa Cruz se averigua
+preguntando en el mercado y a otros viveros, y anotándolo. Tu propia tabla de ventas será, en poco
+tiempo, la mejor fuente de datos de precios que tengas a mano — porque es la única que existe.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Riego dos veces por semana.»** El calendario no es la variable: lo que decide es cuánta agua se
+fue, y eso cambia al doble entre una semana nublada y otra seca con viento.
+
+**«Riego hasta que rebose, así seguro no le falta.»** Por encima de la capacidad del sustrato el agua
+no se almacena: se va por el drenaje llevándose nutrientes y dejando el sustrato sin aire.
+
+**«Llovió, no hay que regar.»** Anotar «llovió» no es anotar cuánta agua entró. Un chubasco de dos
+minutos moja la superficie; y bajo malla llega una fracción. Para eso está el pluviómetro.
+
+**«El vivero estará listo en tres meses.»** Tres meses es un temporizador; la planta usa una barra de
+progreso alimentada por calor. Promete bandas, no fechas exactas.
+
+**«Uso la tabla de grados-día de esta especie tropical nativa.»** Probablemente no existe. Para las
+nativas, la constante la generas tú con dos o tres ciclos medidos — y es un activo, no un trámite.
+
+**«Dice 70 % de lluvia, seguro cae un aguacero.»** La probabilidad no dice cantidad. Un 70 % con dos
+milímetros no cambia nada; un 30 % con treinta milímetros te reordena la semana.
+
+**«Miro el pronóstico a quince días para planificar la siembra.»** A esa distancia es ruido. Dos o
+tres días para decisiones, tendencias estacionales para la campaña.
+
+**«Con un modelo bueno puedo anticipar el precio.»** No hay serie, el mercado es chico y la
+predicción se autodestruye: si todos ven que estará caro, todos plantan y el precio cae. Predice tu
+costo, que sí depende de ti.
+
+**«Con los datos de esta temporada ya tengo un modelo.»** Una temporada es una observación. En
+agricultura se cuentan ciclos, no filas — y las reglas con mecanismo físico detrás envejecen mucho
+mejor que los ajustes sobre pocos datos.
+
+## Lo que sigue
+
+Tienes registros, series, conteos y ahora reglas de anticipación. La lección siguiente junta todo eso
+en la pieza que tu perfil puede construir mejor que nadie: **tu propio asistente sobre los datos del
+vivero.** Cómo se le da contexto real para que deje de hablar en genérico, por qué los cálculos
+—dosis, superficies, costos, grados-día— tienen que salir de código determinista y no de la
+predicción de texto, qué barandas se le ponen para que nunca entregue una dosis sin fuente ni un
+diagnóstico sin verificación humana, y cómo se arma todo con lo mínimo, pensando en la conectividad
+que hay y no en la que quisieras.

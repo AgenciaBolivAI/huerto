@@ -1,0 +1,48 @@
+{
+  "titulo": "Predecir: agua, fechas, clima y el precio imposible",
+  "subtitulo": "Tres animales distintos bajo la misma palabra: una cuenta física (cuánta agua pide el cultivo), un reloj biológico (cuándo estará listo) y un sistema que reacciona a lo que todos predicen (el precio).",
+  "duracionMin": 31,
+  "portada": "portada.webp",
+  "portadaAlt": "Vivero bajo malla de sombra en el llano cruceño a primera hora: en primer plano, sobre un poste de madera curtida, un pluviómetro de plástico transparente con un poco de agua y, al lado, un termómetro redondo de esfera; abajo, sobre un banco de tablas, un cuaderno abierto muestra una curva ascendente dibujada a lápiz con un lápiz encima; al fondo, hileras de plantines en bolsas y una manguera enrollada en el suelo",
+  "objetivos": [
+    "Distinguir los tres tipos de predicción de la lección: cuenta física casi determinista, reloj biológico predecible, y sistema con realimentación reflexiva.",
+    "Sustituir el calendario de riego por la demanda: la evapotranspiración la fija la atmósfera del día, y puede variar al doble entre semanas.",
+    "Manejar el sustrato como un depósito con dos entradas y dos salidas, y entender por qué regar por encima de su capacidad no almacena nada.",
+    "Medir el consumo real con una balanza y tres bolsas testigo, en vez de comprar sensores.",
+    "Usar grados-día para responder «¿para cuándo están listos?» con una banda defendible, y generar la constante propia para especies nativas sin tabla publicada.",
+    "Emparejar cada decisión con el horizonte de pronóstico que la soporta, y leer correctamente la probabilidad de precipitación junto a la cantidad.",
+    "Entender por qué el precio local no es predecible —sin serie, mercado chico, realimentación reflexiva— y desplazar la pregunta al costo propio y a la estacionalidad de la demanda.",
+    "Evitar el sobreajuste contando ciclos en vez de filas y prefiriendo reglas con mecanismo físico."
+  ],
+  "prerrequisitos": [
+    "15-ia-aplicada/03-vision-conteo-y-monitoreo"
+  ],
+  "videos": [],
+  "referencias": [
+    {
+      "titulo": "Evapotranspiración del cultivo: guías para la determinación de los requerimientos de agua de los cultivos (Estudio FAO Riego y Drenaje 56)",
+      "fuente": "FAO",
+      "url": "https://www.fao.org/4/x0490s/x0490s00.pdf",
+      "nota": "El documento estándar mundial para calcular la evapotranspiración de referencia a partir de datos meteorológicos, con el método Penman-Monteith que la FAO recomienda como único procedimiento. Sirve para entender la magnitud teórica; tu balanza sirve para saber la tuya."
+    },
+    {
+      "titulo": "Integral térmica: ¿qué tiene que ver con la agricultura?",
+      "fuente": "Agromática",
+      "url": "https://www.agromatica.es/integral-termica/",
+      "nota": "Explicación del cálculo de grados-día con temperatura base y ejemplos de acumulados por cultivo. Es la aritmética completa de la sección central de esta lección — suma de temperaturas medias menos la base, día por día."
+    },
+    {
+      "titulo": "SENAMHI — Servicio Nacional de Meteorología e Hidrología de Bolivia",
+      "fuente": "Estado Plurinacional de Bolivia",
+      "url": "https://senamhi.gob.bo/",
+      "nota": "La fuente oficial de pronósticos y avisos del país. Conviene mirarla junto a cualquier app: los modelos globales que alimentan las aplicaciones tienen resolución gruesa y en el llano se les escapan las tormentas de tarde y la hora de llegada del surazo."
+    }
+  ],
+  "terminos": [
+    "evapotranspiracion",
+    "grados-dia",
+    "probabilidad-de-precipitacion",
+    "sobreajuste"
+  ],
+  "practica": true
+}

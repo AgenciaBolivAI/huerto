@@ -1,0 +1,101 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-contar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el conteo automático es la mejor apuesta de todo el módulo, según la matriz de la primera lección?",
+      "opciones": [
+        "El error es baratísimo: si dice 186 y hay 184, corriges el número y no se muere nada.",
+        "La verificación es inmediata y total: cuentas una bandeja a mano y sabes exactamente cuánto se equivocó.",
+        "La respuesta es única, a diferencia de «¿qué le pasa a esta hoja?», que admite cinco.",
+        "Porque los modelos de conteo son mucho más avanzados que los de diagnóstico."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es una cuestión de avance técnico sino de la forma del problema: contar objetos discretos tiene una sola respuesta correcta y se comprueba en dos minutos. Y encima el dato faltaba de verdad — nadie sabe con exactitud cuántas plantas tiene su vivero hoy, y ese desconocimiento cuesta ventas prometidas, riego mal dimensionado y un costo por plantín calculado a ojo."
+    },
+    {
+      "id": "errores-conteo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se equivoca un conteo por imagen y qué se hace al respecto?",
+      "opciones": [
+        "Se le pierden los tapados: dos plantines cuyas hojas se solapan cuentan como uno, así que la ventana útil es la fase juvenil, antes de que cierre el dosel.",
+        "Le sobran candidatos: reflejos de gotas, maleza germinada en la celda vacía, manchas del sustrato.",
+        "Casi todos sus errores se arreglan mejorando la captura, no cambiando el modelo.",
+        "Sus errores son aleatorios, así que no hay forma de corregirlos sistemáticamente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Justo lo contrario de aleatorios: son sistemáticos, y ahí está la buena noticia. Un conteo mediocre sobre fotos cenitales bien iluminadas y alineadas supera con holgura a un conteo excelente sobre fotos torcidas a contraluz — la calidad del dato de entrada domina, como en cualquier medición."
+    },
+    {
+      "id": "captura-repetible",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace falta para que dos fotos de la misma bandeja se puedan comparar entre semanas?",
+      "opciones": [
+        "Un punto fijo marcado en el suelo —una cruz de pintura, dos ladrillos— y altura y ángulo constantes, idealmente cenital.",
+        "Un encuadre fijo con algo que no se mueva nunca dentro del cuadro: la esquina de la mesa, un tornillo, una marca.",
+        "Una regla o tarjeta de tamaño conocido siempre en el mismo sitio, para que la foto además de contar, mida.",
+        "Un teléfono con mejor cámara y un modelo de conteo más moderno."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es el mismo requisito de un banco de pruebas: una medición sin condiciones controladas no es una medición. Si cada semana te paras en otro sitio, a otra altura y con otra luz, no tienes una serie — tienes fotos parecidas de cosas distintas. La diferencia entre una carpeta de fotos y una serie de datos es una cruz pintada en el suelo."
+    },
+    {
+      "id": "calibracion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si adoptas el conteo automático, el conteo manual deja de ser necesario.",
+      "respuesta": false,
+      "explicacion": "Falso: el conteo manual pasa de ser el método a ser el patrón. Una vez por semana, o al cambiar de especie o de bandeja, cuentas una a mano y comparas: si la máquina dice 180 y hay 186, tiene un sesgo del orden del 3 % a la baja y puedes corregir cuarenta bandejas con ese factor. Es el mismo patrón de ESTIMADO contra REAL del presupuesto: no se confía en un instrumento, se calibra."
+    },
+    {
+      "id": "inventario",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué se convierten los conteos cuando se registran por bandeja, lote y fecha?",
+      "opciones": [
+        "En inventario real: cuántas plantas vendibles hay por especie y tamaño, que no es lo mismo que plantas vivas.",
+        "En mortalidad medida por lote y por semana, que se puede cruzar con lo que hiciste esa semana.",
+        "En velocidad de crecimiento —si hay escala en el encuadre— y por tanto en una fecha defendible para responder «¿para cuándo estarán listos?».",
+        "En un dato interesante pero sin efecto en las cuentas del negocio."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Al contrario: es donde está el dinero. Sin conteo, el costo por planta es una división con el denominador inventado; con conteo y mortalidad es un número — y todo el costo se reparte entre las plantas que sobreviven. De ahí se apoya el módulo de monetización."
+    },
+    {
+      "id": "geometria-serie",
+      "tipo": "opcion_multiple",
+      "enunciado": "Miras cuatro fotos semanales alineadas de la misma bandeja. ¿Qué sugiere cada patrón?",
+      "opciones": [
+        "Empieza en un punto y se extiende en mancha: algo que se transmite — un patógeno de suelo, un insecto que camina. Es un foco, y se actúa cuando tiene tres celdas.",
+        "Empieza en un borde y avanza hacia dentro: geometría, no biología — el filo de la cobertura del riego, la sombra que se corrió, el viento del surazo, la mesa que drena mal.",
+        "Aparece de golpe y en todas partes: un evento — una aplicación, un día de calor extremo, el agua de ese riego, el lote de sustrato nuevo.",
+        "Todos los patrones son equivalentes: lo que importa es el color de las hojas afectadas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El color dice poco; la geometría y el tiempo dicen mucho. Y la señal más limpia de todas es la diferencia entre bandejas hermanas sembradas el mismo día con el mismo material: si una va bien y la otra no, la causa está en lo que las distingue, y esa es una lista corta. Aquí la máquina ayuda con una tarea trivial —avisar que algo cambió— que no es clasificar, es comparar."
+    },
+    {
+      "id": "trampas",
+      "tipo": "verdadero_falso",
+      "enunciado": "Colgar trampas cromáticas amarillas en el vivero ya constituye un sistema de monitoreo de plagas.",
+      "respuesta": false,
+      "explicacion": "Falso: la trampa captura, no avisa. Se vuelve monitoreo cuando cada trampa tiene una posición fija, se fotografía el mismo día de la semana con una moneda al lado para dar escala, y se cuenta — puntos oscuros sobre fondo amarillo uniforme, el caso más fácil de la visión artificial. Y el valor no está en el número absoluto sino en la pendiente: una subida brusca es una alerta que llega antes de que el daño se vea en las plantas."
+    },
+    {
+      "id": "montar-estacion",
+      "tipo": "abierta",
+      "enunciado": "Monta el sistema de conteo y monitoreo de Rizoma del Sur: la estación de captura, la rutina semanal, la calibración y las cifras que vas a extraer. Explica también qué decisiones vas a poder tomar que hoy no puedes.",
+      "respuestaModelo": "La estación es deliberadamente barata. Elijo dos o tres bandejas representativas por especie y marco con pintura una cruz en el piso frente a cada una, para pararme siempre en el mismo lugar. Armo un soporte de madera —un palo con una tablita en escuadra— que sostenga el teléfono siempre a la misma altura y paralelo a la bandeja, o sea cenital. Dejo una regla de madera fija en el borde de cada bandeja, así la foto no solo cuenta sino que mide. Y compruebo que en el encuadre entre siempre alguna referencia inmóvil, como la esquina de la mesa, para poder alinear las tomas después.\n\nLa rutina es de diez minutos: lunes temprano, con luz difusa y siempre a la misma hora, una foto cenital de cada bandeja de la ronda más una foto de cada trampa amarilla con una moneda al lado. Nombre de archivo con fecha, lote y bandeja, siguiendo la convención de la lección anterior, y una carpeta por mes. Guardo en el teléfono y sincronizo cuando haya wifi, en resolución moderada, porque en Zanja Honda cualquier flujo que exija subir cada foto al momento va a fracasar. Antes de cada ronda le paso un paño a la lente, que en la seca se ensucia en un día.\n\nLa calibración es semanal: cuento una bandeja a mano y anoto las dos cifras, la mía y la de la máquina. En un mes tengo el factor de corrección por especie y por tipo de bandeja, y con eso puedo extrapolar el inventario completo sin contar cuarenta bandejas.\n\nDe ahí salen las tres cifras que gobiernan el negocio: sembrados, vivos a los quince días y vendibles al final. Eso me da germinación, supervivencia y stock vendible por lote — y ojo con la diferencia entre plantas vivas y plantas vendibles, porque prometer las vivas es como se rompen los pedidos. Con la escala en el encuadre obtengo además la altura media por semana, o sea la velocidad de crecimiento.\n\nY las decisiones nuevas son cuatro. Puedo comprometer pedidos con cifras reales en vez de con una sensación. Puedo responder para cuándo estará listo un lote con una fecha defendible, porque tengo su curva de crecimiento. Puedo calcular el costo por plantín de verdad, porque el denominador ya no es inventado sino contado sobre los que sobreviven. Y puedo actuar antes: cada lunes comparo la foto de esta semana con la de la anterior, y si una zona cambió voy a mirarla en persona con el protocolo de la lección dos. Un foco de tres celdas es un problema chico; el mismo foco cuatro semanas después es una bandeja perdida — toda la ganancia del monitoreo está en ese adelanto. Lo mismo con las trampas: lo que me alerta no es la tarjeta sucia sino el salto en la curva de conteos.",
+      "criterios": [
+        "Estación con punto fijo marcado, soporte de altura constante, toma cenital, regla de escala y referencia inmóvil en el encuadre.",
+        "Rutina semanal a día y hora fijos, con nombres de archivo por fecha, lote y bandeja.",
+        "Considera las restricciones locales: luz difusa, sincronización diferida, resolución moderada, lente limpia.",
+        "Calibra contra conteo manual y obtiene un factor de corrección por especie y bandeja.",
+        "Extrae las tres cifras: sembrados, vivos a los quince días, vendibles — con germinación, supervivencia y stock vendible.",
+        "Distingue stock vendible de plantas vivas al comprometer pedidos.",
+        "Usa la escala para medir crecimiento y responder plazos de entrega.",
+        "Compara la serie semanalmente para detectar focos temprano y actuar antes.",
+        "Trata las trampas amarillas como sensores cuya alerta es la pendiente de la curva."
+      ],
+      "explicacion": "Fíjate en que casi nada de este sistema es tecnología: es una cruz de pintura, un palo con una tablita, una regla y la disciplina del lunes. Lo que hace la máquina —contar— es la parte fácil y verificable; lo que lo hace valioso es que la captura sea repetible y que el registro exista. Esa carpeta ordenada es exactamente la materia prima de las predicciones de la lección siguiente y del asistente de la lección cinco."
+    }
+  ]
+}

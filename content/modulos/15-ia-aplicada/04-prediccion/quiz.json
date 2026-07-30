@@ -1,0 +1,109 @@
+{
+  "preguntas": [
+    {
+      "id": "tres-animales",
+      "tipo": "opcion_multiple",
+      "enunciado": "La lección trata tres predicciones muy distintas bajo la misma palabra. ¿Cómo se ordenan por dificultad y por qué?",
+      "opciones": [
+        "El agua es una cuenta física casi determinista: entradas menos salidas de un depósito.",
+        "La fecha de un lote es un reloj biológico sorprendentemente predecible, porque la planta acumula calor.",
+        "El precio es el más difícil, y no por falta de datos: es un sistema que reacciona a lo que todos predicen.",
+        "Los tres son igual de difíciles y se resuelven con el mismo tipo de modelo si hay datos suficientes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Confundirlos es el error de fondo. Los dos primeros se resuelven con aritmética y mecanismo —balance hídrico y grados-día—, sin ningún modelo estadístico. El tercero no se resuelve con más datos porque el problema no es informacional: la predicción causa el evento que la invalida."
+    },
+    {
+      "id": "riego-demanda",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué «riega dos veces por semana» es una mala regla incluso si el número fuera el correcto para tu zona?",
+      "opciones": [
+        "Porque la variable que decide no es el calendario sino la evapotranspiración: lo que se evapora del sustrato más lo que la planta transpira.",
+        "Porque ese consumo lo fija la atmósfera del día —radiación, temperatura, humedad, viento— y puede diferir al doble entre una semana nublada y otra seca con viento.",
+        "Porque regar lo mismo en los dos casos garantiza que uno de los dos esté mal: encharcado o con sed.",
+        "Porque las plantas necesitan agua todos los días sin excepción."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El calendario es una variable que no tiene relación causal con el consumo. Y la cuarta opción cambia una regla rígida por otra: lo que se repone es lo que se fue, y en un día nublado y húmedo se fue muy poco."
+    },
+    {
+      "id": "balance",
+      "tipo": "opcion_multiple",
+      "enunciado": "El sustrato de una bandeja funciona como un depósito. ¿Qué se sigue de ahí?",
+      "opciones": [
+        "Cuánto regar es reponer lo que se fue: por encima de la capacidad el agua no se almacena, se va por el drenaje arrastrando nutrientes y dejando el sustrato sin aire.",
+        "El depósito de una bandeja de germinación es diminuto —poco sustrato, mucha superficie, raíces cortas—, por eso los almácigos perdonan menos que una bolsa grande.",
+        "La lluvia no siempre cuenta como riego: bajo malla llega una fracción, y un chubasco corto moja la superficie sin cargar el depósito.",
+        "Para saber cuánto se fue no hacen falta sensores: una balanza de cocina y tres bolsas testigo pesadas a las 24 y 48 horas dan la evapotranspiración real en gramos.",
+        "Conviene regar hasta que rebose, para asegurarse de que el sustrato queda saturado."
+      ],
+      "correctas": [0, 1, 2, 3],
+      "explicacion": "Saturar el sustrato es exactamente lo que produce la asfixia de raíz que viste en la lección 2: el agua ocupa los poros que deberían tener aire. Es contabilidad de un saldo, con las mismas dos reglas del presupuesto de obra: un margen prudente y una calibración con la realidad — y aquí la calibración cuesta una balanza de cocina. Repite el pesaje en enero y en septiembre y tendrás la diferencia entre temporadas medida con tus propios números."
+    },
+    {
+      "id": "grados-dia",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un cliente pregunta para cuándo estarán listos los plantines. ¿Qué principio gobierna la respuesta?",
+      "opciones": [
+        "La planta no cuenta días: acumula temperatura por encima de una temperatura base propia de cada especie, y avanza en proporción a ese calor.",
+        "Los grados-día se calculan sumando, día por día, la temperatura media menos la temperatura base.",
+        "Por eso la misma especie tarda más en la época fresca: no cambió su necesidad de calor, cambió el tiempo que tarda en juntarlo — y la respuesta correcta es una banda, no una fecha exacta.",
+        "El ciclo de una especie dura un número fijo de días que se busca en una tabla."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la diferencia entre un temporizador y una barra de progreso alimentada por trabajo real: el frío no retrasa el reloj, baja el caudal. Y lo mejor es que para usarlo no hace falta ningún modelo de IA — hacen falta la máxima y la mínima del día y una columna de suma acumulada en tu planilla."
+    },
+    {
+      "id": "pronostico",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se empareja cada decisión con el horizonte de pronóstico, y qué significa un 70 % de probabilidad de lluvia?",
+      "opciones": [
+        "A dos o tres días el pronóstico es útil de verdad: sembrar, aplicar algo, adelantar un trasplante, asegurar mallas por viento.",
+        "Más allá de dos semanas es ruido para decisiones concretas; a esa escala solo sirven tendencias estacionales para planificar la campaña.",
+        "El 70 % es la probabilidad de que caiga lluvia medible en un punto de la zona, no la cantidad ni la superficie: hay que mirar probabilidad y cantidad juntas.",
+        "Con un modelo de IA suficientemente bueno, el pronóstico a quince días se vuelve fiable."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El cono de incertidumbre se ensancha por una razón estructural —pequeñas diferencias iniciales se amplifican— y eso no lo arregla más cómputo. En la práctica: un 70 % con dos milímetros no cambia nada en tu balance hídrico; un 30 % con treinta milímetros te reordena la semana. Y el pronóstico que más vale aquí es el del surazo a dos o tres días."
+    },
+    {
+      "id": "precio",
+      "tipo": "verdadero_falso",
+      "enunciado": "Con suficientes datos históricos se podría predecir el precio del plantín en Santa Cruz el mes que viene.",
+      "respuesta": false,
+      "explicacion": "Falso, y no es un problema de datos. Primero, no hay serie: nadie publica precios de plantines en tu mercado. Segundo, hay realimentación reflexiva: si se sabe que estará caro, muchos plantan, y esa siembra produce la sobreoferta que hunde el precio — la predicción causa el evento que la invalida. Tercero, el mercado es chico y un solo competidor o un contrato municipal mueven el precio más que cualquier tendencia."
+    },
+    {
+      "id": "sobreajuste",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el sobreajuste es especialmente peligroso en agricultura y cómo se defiende?",
+      "opciones": [
+        "Porque un cultivo da uno o dos ciclos por año: dos temporadas son dos observaciones, y con dos puntos se traza cualquier recta.",
+        "Se cuentan ciclos, no filas: mil mediciones de una sola campaña siguen siendo una campaña.",
+        "Se prefieren reglas simples y físicas —balance hídrico, grados-día— porque se equivocan de forma comprensible, y se valida con la campaña que no se usó para inventar la regla.",
+        "Con muchas mediciones dentro de una misma temporada el riesgo de sobreajuste desaparece."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Y hay una señal de alarma que conviene interiorizar: si tu regla explica los seis lotes del año sin residuos, probablemente memorizó el año en vez de aprender el proceso. Aquí cada conjunto de prueba tarda seis meses en llegar, así que la prudencia estructural vale más que el ajuste fino."
+    },
+    {
+      "id": "plan-prediccion",
+      "tipo": "abierta",
+      "enunciado": "Diseña el sistema de anticipación de Rizoma del Sur: qué instrumentos instalas, qué registras, cómo decides riego y fechas de entrega, cómo usas el pronóstico y qué haces con la pregunta del precio.",
+      "respuestaModelo": "La instrumentación es de ferretería y cuesta menos que una bolsa de sustrato: un pluviómetro plástico al descubierto, donde no le llegue techo ni malla, y si quiero ser fino un segundo bajo la malla para saber qué fracción entra de verdad; un termómetro de máxima y mínima a la sombra; y una balanza de cocina. Con esos tres tengo entradas de agua, temperatura para grados-día y una forma directa de medir consumo.\n\nEl riego lo decido por demanda, no por calendario. Trato cada bolsa como un depósito con dos entradas —lluvia y riego— y dos salidas —evapotranspiración hacia arriba, drenaje hacia abajo—, y riego para reponer lo que se fue, sin pasar de la capacidad del sustrato, porque por encima el agua no se almacena: se va por el drenaje llevándose nutrientes y dejando el sustrato sin aire. Para saber cuánto se fue uso tres bolsas testigo y la balanza una vez por semana: peso recién regado y a las 24 y 48 horas, y la pérdida en gramos es mi evapotranspiración real. Lo repito en enero y en septiembre, porque la demanda entre lluvias y seca puede diferir al doble. Y anoto la lluvia en milímetros del pluviómetro, no como «llovió», porque un chubasco de dos minutos moja la superficie sin cargar el depósito.\n\nLas fechas de entrega salen de grados-día. En la planilla llevo una fila por día con máxima, mínima, media y el acumulado desde la siembra de cada lote, con la temperatura base de la especie cuando está publicada. Cuando un lote llega a tamaño de venta, anoto el acumulado con el que llegó: en dos o tres ciclos tengo la constante de mis especies principales, y para las nativas del oriente —que no tienen tabla publicada— esa constante la genero yo y no la tiene nadie más. Con eso respondo con banda: en condiciones normales seis a ocho semanas, y si viene una racha fresca un poco más. Es una respuesta correcta y defendible, no una vaga.\n\nEl pronóstico lo uso emparejado con el horizonte. A dos o tres días decido siembras, aplicaciones —nunca antes de una lluvia—, trasplantes y asegurar mallas si anuncian viento; el aviso que más vale es el del surazo, que puede costarme un lote en una noche y me da tiempo de tapar almácigos y mover bandejas. A una semana planifico trabajo, sin comprometerme. Más allá de dos semanas no tomo decisiones concretas: solo uso tendencias estacionales para la campaña, con lo que ya sé del clima local, lluvias de octubre a abril y seca de mayo a septiembre. Y leo siempre probabilidad y cantidad juntas, porque un 70 % con dos milímetros no cambia nada y un 30 % con treinta milímetros me reordena la semana. Miro el SENAMHI además de la app, porque los modelos globales tienen resolución gruesa y en el llano se les corre la hora de las tormentas.\n\nDel precio no intento predecir nada: no hay serie publicada, el mercado es chico y la predicción se autodestruye, porque si todos ven que estará caro todos plantan y el precio cae. Cambio la pregunta por dos que sí puedo responder: cuánto me cuesta producir un plantín —con el conteo, la mortalidad y los insumos que ya registro— y cuándo suele haber demanda, anotando cada venta con fecha, especie, cantidad y precio. En un año esa tabla será la mejor fuente de precios que tenga a mano, porque es la única que existe.\n\nY con todo esto me cuido del sobreajuste: cuento ciclos y no filas, desconfío de cualquier regla que explique el año sin residuos, prefiero las reglas con mecanismo físico detrás, y compruebo una regla nueva con la campaña que no usé para inventarla.",
+      "criterios": [
+        "Instala pluviómetro, termómetro de máxima y mínima y balanza, y explica para qué sirve cada uno.",
+        "Decide el riego por balance de depósito y evita regar por encima de la capacidad del sustrato.",
+        "Mide consumo con bolsas testigo y balanza, en dos temporadas distintas.",
+        "Registra lluvia en milímetros y distingue lluvia caída de lluvia útil bajo malla.",
+        "Lleva la columna de grados-día acumulados por lote y genera la constante propia para nativas.",
+        "Responde plazos con banda en vez de fecha exacta.",
+        "Empareja decisiones con horizontes: 2-3 días concreto, una semana orientativo, más allá solo tendencias; prioriza el aviso de surazo.",
+        "Lee probabilidad junto a cantidad y usa el SENAMHI además de la app.",
+        "Sustituye la predicción de precio por costo propio y estacionalidad de demanda registrada.",
+        "Cuenta ciclos, prefiere reglas físicas y valida con una campaña no usada para construirlas."
+      ],
+      "explicacion": "Fíjate en que el sistema de anticipación entero se sostiene sobre tres aparatos de ferretería y dos columnas nuevas en la planilla. La IA aquí es opcional y periférica —ayuda a montar la hoja de cálculo o a buscar una temperatura base publicada—, mientras que el valor está en la aritmética y en el registro. Ese es el patrón que la lección siguiente lleva a su conclusión: el asistente sirve exactamente en la medida en que tus datos existen."
+    }
+  ]
+}

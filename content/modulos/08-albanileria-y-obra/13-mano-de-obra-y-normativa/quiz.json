@@ -1,0 +1,99 @@
+{
+  "preguntas": [
+    {
+      "id": "matriz",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Con qué preguntas decides si una tarea la haces tú o la contratas?",
+      "opciones": [
+        "¿Perdona errores? Lo reversible —pintar, mallas, mesas, cerco— es tuyo: ahí se aprende barato.",
+        "¿Tiene ventana única o error escondido? Hormigones y lo que queda enterrado van con quien lo hizo cien veces.",
+        "¿Cuánto vale tu hora? Tres semanas levantando muro son tres semanas sin producir plantines: a veces contratar es comprarte tiempo.",
+        "¿Puedo hacerlo yo? Si la respuesta es sí, siempre conviene hacerlo uno mismo y ahorrar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Con este módulo casi todo «podrías»: por eso la cuarta pregunta es la equivocada. Es la decisión build-vs-buy: no externalizas por incapacidad sino para asignar el riesgo a quien mejor lo gestiona y quedarte con tu ventaja comparativa, que es el vivero."
+    },
+    {
+      "id": "maestro",
+      "tipo": "verdadero_falso",
+      "enunciado": "La mejor manera de elegir maestro albañil es una buena entrevista: quien explica bien su oficio, bien lo hace.",
+      "respuesta": false,
+      "explicacion": "Falso: la labia no carga con la plomada. La única credencial que no se puede inventar es la obra anterior — se visita el galpón o el muro que hizo, se le pasa la mano al revoque, y se conversa con ese dueño: plazos, cuidado del material, extras sorpresa. El portafolio de un maestro no se lee: se visita."
+    },
+    {
+      "id": "jornal-obra",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Jornal u obra vendida? ¿Qué vigila cada modo de pago?",
+      "opciones": [
+        "Al jornal compras tiempo, no resultado: conviene para tareas difíciles de delimitar y tu lupa va al ritmo.",
+        "Por obra el ritmo pasa a ser riesgo del maestro, y tu lupa se muda a la calidad y a los «extras» no escritos.",
+        "El armado común es híbrido —maestro por obra, ayudante al jornal— y el precio se pide siempre por partida, nunca «por todo el galpón».",
+        "La obra vendida no necesita supervisión: como cobra por resultado, el resultado siempre llega bien."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Son time & materials y fixed price con casco: cada uno con su patología —elasticidad del tiempo en uno, «eso no estaba» en el otro— y la misma cura: alcance escrito por partidas y cambios cotizados por escrito antes de ejecutarse. Pedir precio por partida además te deja comparar ofertas renglón por renglón."
+    },
+    {
+      "id": "acuerdo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué lleva la hoja firmada que hace de contrato en una obra chica?",
+      "opciones": [
+        "El alcance por partidas —tu planilla de cómputo adjunta—, los precios por partida y la regla de oro: todo cambio se cotiza por escrito antes de hacerse.",
+        "Quién pone qué: te conviene comprar tú los materiales —ya cotizas puesto en obra— y que el maestro ponga mano de obra y herramienta menor.",
+        "Plazos con holgura realista, hitos de pago por partida terminada, y los detalles que después pelean: escombros, limpieza, horario.",
+        "Nada: entre gente seria, el papel ofende."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El acuerdo escrito no es desconfianza, es memoria compartida: seis semanas después, dos memorias cuentan dos obras distintas y la hoja guarda una sola. No hace falta notario para un galpón: hace falta una hoja donde quepan el alcance, la plata y los plazos, firmada por ambos."
+    },
+    {
+      "id": "pago",
+      "tipo": "verdadero_falso",
+      "enunciado": "Adelantarle una buena parte del dinero al maestro es una señal de confianza que lo compromete con la obra.",
+      "respuesta": false,
+      "explicacion": "Falso, y al revés: pagado por delante, el comprometido eres tú — si la obra se detiene pierdes el dinero y la palanca. El pago sigue al avance verificado: anticipo razonable de arranque y cada pago contra partida terminada y revisada. Un profesional serio espera este esquema; el que insiste en cobrar muy por delante te está dando información."
+    },
+    {
+      "id": "supervisar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo supervisas una obra sabiendo menos albañilería que tu maestro?",
+      "opciones": [
+        "Sabiendo qué mirar, no cómo hacerlo: cada lección de este módulo te dejó los puntos de control.",
+        "Con horario: se revisa lo que está a punto de taparse — armadura antes de hormigonar, presión del agua y diferencial antes de cerrar zanjas, y presencia en el hormigonado, que es ventana única.",
+        "Con la frase normal del rubro desde el día uno: «maestro, avíseme antes de tapar, que quiero verlo».",
+        "Yendo al final, cuando la obra terminada se puede inspeccionar completa y con calma."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Terminada, la obra es opaca: todo lo importante ya está tapado. Es tu code review con una diferencia brutal — aquí el merge es físico y no hay revert—: no revisas por desconfianza sino porque los errores son estadísticos, y salen baratos solo si se atrapan antes de la tapada."
+    },
+    {
+      "id": "normativa",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué averiguas en el municipio antes del primer hormigón, y por qué antes?",
+      "opciones": [
+        "Uso de suelo y si tu obra exige licencia de construcción, con qué planos y si deben ir firmados por un profesional.",
+        "De paso, lo del negocio: NIT, licencia de funcionamiento y registro de SENASAG para vender plantines — una sola mañana de ventanilla para todo.",
+        "Porque preguntar antes cuesta una mañana; regularizar después cuesta multas, trámites dobles y a veces demoler lo hecho.",
+        "Nada: en zona periurbana nadie controla y es mejor no despertar al municipio."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La norma cambia y varía por municipio, así que la lección da el mapa y la ventanilla da el reglamento — cada respuesta anotada con nombre y fecha. «Construir a ver si nadie dice nada» es la versión administrativa de comprar justo: el faltante, cuando aparece, cuesta mucho más que el margen."
+    },
+    {
+      "id": "plan-mano-de-obra",
+      "tipo": "abierta",
+      "enunciado": "Arma el plan de mano de obra completo del galpón 8 × 12 de Rizoma del Sur: reparto hacer/contratar, cómo eliges y contratas al maestro, el acuerdo, el esquema de pagos, tu calendario de supervisión y los trámites previos.",
+      "respuestaModelo": "Primero el reparto, con la matriz: me quedo con lo reversible y lo que ya practiqué en el depósito —cerco y faldón, sombreadero, mesas, pintura, mallas, el riego de las camas y la instalación fina—, y contrato lo de ventana única y error escondido: movimiento de tierras si conviene la máquina, hormigones, muro confinado y cubierta, con un maestro y un ayudante. Mi hora también cuenta: las semanas que no pongo en el muro las pongo en plantines y clientes.\n\nAl maestro lo elijo visitando obra, no escuchando labia: dos candidatos, de cada uno una obra anterior visitada —revoque tocado, juntas miradas— y una conversación con el dueño sobre plazos, extras y trato. A los dos les pido precio por partida sobre mi planilla de cómputo, nunca «cuánto por todo», y comparo renglón por renglón.\n\nEl acuerdo es una hoja firmada: mi planilla adjunta como alcance, precios por partida, materiales los pongo yo —ya sé cotizar puesto en obra y controlo calidad y precio—, él pone mano de obra y herramienta menor, plazos con holgura de lluvia, y la regla de cambios: lo que no está en la lista se cotiza por escrito antes de hacerse. Escombros, limpieza final y horario, escritos también.\n\nLos pagos siguen al avance: anticipo chico de arranque y después cada pago contra partida terminada y verificada — cimientos, muro, cubierta, y el saldo final con la limpieza hecha. Recibo simple de cada pago contra su partida: es la columna «Real» de mi planilla haciéndose sola. Nunca pagado por delante de la obra: si se detiene, quiero conservar la palanca.\n\nLa supervisión tiene calendario, no vigilancia: los momentos en que algo se tapa. Replanteo con diagonales iguales antes de excavar; zanjas a fondo firme con su hormigón de limpieza; la visita más importante de la obra: armadura con recubrimiento, separadores y empalmes antes de hormigonar; presencia durante el hormigonado, que es ventana única; plomada y juntas en el muro; prueba de presión y prueba del diferencial antes de tapar; solapes y tornillería en la cubierta. Desde el día uno, la frase que lo ordena todo: «maestro, avíseme antes de tapar». Y seguridad como condición: casco, guantes y botas, talud en las zanjas, la provisional detrás del diferencial, agua y sombra en las horas bravas, botiquín y el plan de a qué clínica se va.\n\nAntes del primer ladrillo, la mañana de municipio con el plano en la mano: derecho propietario en orden, uso de suelo de mi zona, si el galpón agrícola exige licencia y con qué firma profesional, y de paso los requisitos del negocio —NIT, licencia de funcionamiento, SENASAG— para la conversación del módulo de monetización. Cada respuesta anotada con nombre y fecha. Preguntar cuesta una mañana; regularizar cuesta multas.",
+      "criterios": [
+        "Reparte con la matriz: reversible para sí, ventana única y error escondido al maestro, y valora el costo de su propia hora.",
+        "Elige maestro visitando obra anterior y hablando con su dueño; pide precios por partida a más de un candidato.",
+        "Arma el acuerdo escrito: planilla como alcance, materiales propios, plazos con holgura, cambios cotizados por escrito.",
+        "Esquema de pagos por avance verificado con anticipo chico y recibos contra partida.",
+        "Calendario de supervisión ligado a las tapadas, con presencia en el hormigonado y el «avíseme antes de tapar» desde el día uno.",
+        "Seguridad básica como condición: EPP, talud, diferencial, agua y sombra, botiquín.",
+        "Mañana de municipio previa: uso de suelo, licencia y firma profesional, más NIT, funcionamiento y SENASAG anotados para monetización."
+      ],
+      "explicacion": "Fíjate que el plan entero reutiliza el módulo: la planilla de cómputo es el contrato, los «Errores comunes» de cada lección son la lista de supervisión, la seguridad viene del movimiento de tierras y la eléctrica, y el pago por avance es la misma asimetría del margen. La lección final no añade técnica: añade la capa de personas y papeles sobre todo lo que ya sabes."
+    }
+  ]
+}

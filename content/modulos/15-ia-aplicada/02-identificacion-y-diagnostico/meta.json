@@ -1,0 +1,60 @@
+{
+  "titulo": "Identificación y diagnóstico por imagen: qué se ve y qué no",
+  "subtitulo": "Bajo el mismo gesto —hoja rara, teléfono, foto— hay dos preguntas distintas: qué planta es y qué le pasa. La primera está a veces en zona verde; la segunda es zona roja disfrazada de verde.",
+  "duracionMin": 30,
+  "portada": "portada.webp",
+  "portadaAlt": "Vista desde arriba de una mesa de trabajo de vivero: sobre una hoja de papel blanco, una hoja verde con manchas pardas junto a otra volteada mostrando el envés más pálido, y una moneda al lado como referencia de escala; unas manos sostienen un teléfono encima encuadrando la toma. Alrededor, una bolsa negra con un plantín, un cuaderno con anotaciones y un lápiz sobre la madera con restos de tierra",
+  "objetivos": [
+    "Entender que un clasificador puntúa un catálogo cerrado: siempre hay un primer puesto, y el porcentaje es reparto interno de puntuación, no probabilidad de acierto.",
+    "Anticipar el fallo fuera del catálogo: una especie no entrenada no devuelve silencio, devuelve al vecino más parecido con aplomo.",
+    "Distinguir qué puede saberse de una imagen: el género suele acertarse, la especie es dudosa, y la variedad no se identifica nunca — se rastrea por trazabilidad.",
+    "Encadenar herramienta rápida y herramienta auditable: el modelo propone candidatos, la clave dicotómica, la ficha o el herbario confirman.",
+    "Diagnosticar con lo que la foto no tiene: posición del síntoma (nutriente móvil o inmóvil), envés, raíz, cuántas plantas afectadas, línea de tiempo y tu propio manejo.",
+    "Usar el patrón de distribución como primer paso: una planta apunta a plaga o accidente, toda la fila apunta a manejo, un gradiente apunta a geometría.",
+    "Medir la fiabilidad real de tu app con veinte plantas de identidad conocida, separando ornamentales comunes de nativas del oriente.",
+    "Aplicar el protocolo de foto útil —una hoja, haz y envés, luz difusa, escala física, cuatro escalas, metadatos— para que sirva a la app, al técnico y a tu archivo."
+  ],
+  "prerrequisitos": [
+    "15-ia-aplicada/01-que-puede-y-que-no"
+  ],
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=FO-NgcgxDSw",
+      "idioma": "es",
+      "porQue": "Recorrido práctico de cómo se usa una app de identificación con el móvil, órgano por órgano. Míralo por la mecánica —encuadre, qué parte fotografiar— y aplica a los resultados el escepticismo de esta lección: fíjate en que las respuestas siempre llegan, aunque la planta pudiera no estar en el catálogo.",
+      "titulo": "📱 IDENTIFICAR PLANTAS🌷🌹 con el móvil | Y como usar la aplicación",
+      "canal": "La ciencia de MAC",
+      "duracion": "13:50",
+      "verificado": true
+    }
+  ],
+  "referencias": [
+    {
+      "titulo": "Caracterización de los síntomas visuales de deficiencias nutricionales de plántulas del roble andino en invernadero",
+      "fuente": "Agronomía Mesoamericana (SciELO Costa Rica)",
+      "url": "https://www.scielo.sa.cr/scielo.php?script=sci_arttext&pid=S0377-94242014000100010",
+      "nota": "Estudio revisado por pares hecho exactamente en tu contexto —plantines de vivero en invernadero— que documenta cómo se ven las deficiencias y confirma la regla de la movilidad: nitrógeno, fósforo y potasio dan síntomas primero en hojas viejas; calcio, azufre y boro, en las nuevas."
+    },
+    {
+      "titulo": "Diagnóstico visual de deficiencias nutrimentales",
+      "fuente": "Intagri",
+      "url": "https://www.intagri.com/articulos/nutricion-vegetal/Diagnostico-Visual-de-Deficiencias-Nutrimentales",
+      "nota": "Guía de diagnóstico visual con el detalle de por qué el nitrógeno se retransloca de las hojas viejas al tejido nuevo y el hierro no. Es el mecanismo que hace que la posición del síntoma valga más que su color."
+    },
+    {
+      "titulo": "Botánica / Herbario del Oriente Boliviano (USZ)",
+      "fuente": "Museo de Historia Natural Noel Kempff Mercado, UAGRM",
+      "url": "https://museonoelkempff.org/museo/botanica/",
+      "nota": "La fuente de verdad para identificar plantas nativas del oriente boliviano, en Santa Cruz de la Sierra: más de cien mil especímenes identificados y sistematizados. Cuando una nativa importe de verdad, la consulta va aquí, no a una aplicación."
+    }
+  ],
+  "terminos": [
+    "clave-dicotomica",
+    "enves",
+    "herbario",
+    "nutriente-movil",
+    "signo",
+    "trazabilidad"
+  ],
+  "practica": true
+}

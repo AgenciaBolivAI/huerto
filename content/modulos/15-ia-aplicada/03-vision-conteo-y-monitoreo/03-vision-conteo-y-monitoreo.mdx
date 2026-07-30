@@ -1,0 +1,279 @@
+La lección anterior le pedía a la máquina que **interpretara**, y ahí es donde se rompe. Esta le pide
+algo mucho más humilde: que **cuente y compare**. Y resulta que ahí es donde gana — porque contar
+objetos discretos es la tarea que la visión artificial hace bien, es baratísima de verificar, y da
+justo el dato que a un vivero le falta todos los días: **cuántos hay.**
+
+## Por qué contar es la mejor apuesta del módulo
+
+<Diagrama
+  src="contar-o-diagnosticar.webp"
+  alt="Dos paneles. En el izquierdo, rotulado contar, una bandeja vista desde arriba como una rejilla de celdas; cada celda ocupada lleva un punto verde y las tres vacías un círculo hueco, como si las hubiera contado una máquina; visto verde. En el derecho, rotulado diagnosticar, la misma bandeja con una lupa sobre un plantín amarillento y tres etiquetas flotantes en blanco con sus signos de interrogación, como explicaciones que compiten; cruz roja."
+  pie="La misma cámara, la misma bandeja, dos preguntas: una tiene respuesta única y comprobable, la otra tiene cinco respuestas posibles y ninguna verificable hoy."
+/>
+
+Vuelve a la matriz de la primera lección y verás por qué el conteo cae justo en la esquina buena:
+
+- **El error es baratísimo.** Si el conteo dice 186 y hay 184, no se muere nada. Corriges el número.
+- **La verificación es inmediata y total.** Cuentas a mano una bandeja y sabes exactamente cuánto se
+  equivocó. No hay que esperar tres semanas a que la planta responda.
+- **La respuesta es única.** «¿Cuántos plantines hay en esta bandeja?» tiene un solo valor correcto,
+  a diferencia de «¿qué le pasa a esta hoja?», que admite cinco.
+- **Y el dato faltaba de verdad.** Nadie sabe con exactitud cuántas plantas tiene su vivero hoy, por
+  especie y por lote. Ese desconocimiento cuesta ventas prometidas que no se pueden cumplir, riego
+  mal dimensionado y un costo por plantín que se calcula a ojo.
+
+Es exactamente la asimetría que buscas en cualquier automatización: **mucho tiempo ahorrado, error
+detectable, consecuencia acotada.**
+
+## Qué es un conteo automático, sin misterio
+
+Un contador de objetos en imagen hace tres cosas: **detecta** candidatos, **cuenta** los que superan
+un umbral de confianza, y **descarta** los duplicados cercanos. No necesitas entrenar nada para
+empezar — con un modelo de visión general y una foto cenital decente ya obtienes una cifra
+aprovechable — pero sí necesitas entender **dónde se equivoca**, porque sus errores tienen forma
+propia y son sistemáticos:
+
+- **Se le pierden los tapados.** Dos plantines cuyas hojas se solapan pueden contarse como uno. Y en
+  cuanto el cultivo cierra el dosel, el conteo por foto deja de servir: **la ventana útil es la
+  fase juvenil**, que es justo la que más te importa en un vivero.
+- **Le sobran los reflejos y la maleza.** Una gota de agua brillante, una hierba que germinó sola en
+  la celda vacía, una mancha del sustrato: candidatos falsos.
+- **Duda en los bordes.** El plantín cortado por el borde del encuadre: ¿entra o no entra? Un
+  criterio que tú decides y él adivina.
+- **Y confunde la sombra con el objeto** cuando el sol pega de lado, contando dos veces la misma
+  planta.
+
+Fíjate en que **ninguno de esos errores es aleatorio**: casi todos se arreglan mejorando la captura,
+no el modelo. Esa es la buena noticia de esta lección.
+
+## Captura repetible: el requisito que lo hace todo posible
+
+<Diagrama
+  src="toma-repetible.webp"
+  alt="Dos paneles. En el izquierdo, rotulado toma suelta, tres fotos de la misma bandeja tomadas desde posiciones distintas —una inclinada, una más cerca, una en ángulo—, con un rastro de pisadas dispersas y un eslabón de cadena roto entre las imágenes; cruz roja. En el derecho, rotulado toma repetible, tres fotos idénticas en encuadre apiladas en secuencia, con una marca pintada en el suelo, un par de pisadas y un soporte de madera que sostiene el teléfono siempre a la misma altura; un eslabón une las tres; visto verde."
+  pie="La diferencia entre una carpeta de fotos y una serie de datos es una cruz pintada en el suelo."
+/>
+
+Aquí está el corazón práctico de la lección, y no tiene nada de sofisticado. **Para que dos fotos se
+puedan comparar, tienen que estar tomadas igual.** Si cada semana te paras en un sitio distinto, a
+otra altura y con otra luz, no tienes una serie: tienes fotos parecidas de cosas distintas.
+
+El protocolo cuesta una mañana montarlo y sirve para años:
+
+- **Un punto fijo, marcado en el suelo.** Una cruz de pintura, una estaca, dos ladrillos donde poner
+  los pies. Suena tosco; es exactamente lo que hace comparables las fotos.
+- **Altura y ángulo fijos.** Lo ideal es cenital —la cámara paralela a la bandeja— y con la misma
+  altura siempre. Un palo de madera con una escuadra donde apoyar el teléfono resuelve el problema
+  para siempre y cuesta nada.
+- **Encuadre fijo con referencia visible.** Que la bandeja entera entre en el cuadro con un margen, y
+  que en el encuadre haya **algo que no se mueva nunca**: la esquina de la mesa, un tornillo, una
+  marca pintada. Esa referencia es lo que te permite alinear después.
+- **Una regla o una tarjeta de tamaño conocido**, siempre en el mismo sitio. Con eso, una foto no
+  solo cuenta: **mide**. La altura de los plantines en centímetros sale de la escala.
+- **Luz difusa y hora fija.** Temprano, o con cielo cubierto, o bajo la malla. La misma hora del día
+  cada vez, para que las sombras sean iguales.
+- **Y el nombre del archivo con la convención de la lección anterior**: fecha, lote, bandeja. Sin
+  eso, la serie se disuelve en la galería.
+
+<Analogia titulo="Es el mismo problema de un banco de pruebas">
+Cualquiera que haya medido rendimiento sabe que **una medición sin condiciones controladas no es una
+medición**: si cambias la máquina, la carga y la hora entre dos corridas, la diferencia que ves no
+significa nada. El punto fijo en el suelo es tu entorno de pruebas reproducible, y la regla en el
+encuadre es la unidad de medida.
+
+Y hay un corolario que ahorra frustración: **es más rentable invertir en la captura que en el
+modelo.** Un conteo mediocre sobre fotos cenitales, bien iluminadas y alineadas supera con holgura a
+un conteo excelente sobre fotos torcidas a contraluz. Aquí, como en tantos sitios, la calidad del
+dato de entrada domina.
+</Analogia>
+
+## El conteo a mano calibra a la máquina
+
+<Diagrama
+  src="conteo-a-mano-calibra.webp"
+  alt="Un lazo cerrado con flechas en sentido horario y el rótulo el conteo a mano calibra. En el nodo izquierdo, un teléfono sobre una bandeja con puntos verdes de conteo automático. En el superior, una balanza que compara dos fichas. En el derecho, una mano señalando celdas una por una junto a un cuaderno. En el inferior, un dial que se gira ligeramente con signos de más y menos, devolviendo la corrección al conteo automático."
+  pie="El conteo lento y confiable corrige al rápido, nunca al revés. Y la razón entre los dos es un número que vale más que cualquier presunción de exactitud."
+/>
+
+Nunca sustituyas el conteo manual: **úsalo como patrón.** Una vez por semana, o cada vez que cambias
+de especie o de tipo de bandeja, cuenta una bandeja a mano y compárala con lo que dijo la máquina.
+
+De ahí sale un número que ya sabes leer: **la razón entre lo automático y lo real.** Si la máquina
+dice 180 y hay 186, tiene un sesgo del orden del 3 % a la baja, y a partir de ahí puedes corregir el
+resto de las bandejas con confianza — sin contar 40 bandejas a mano.
+
+Es el mismo patrón que te viene acompañando todo el curso: **ESTIMADO contra REAL** en el
+presupuesto, el rendimiento del muro que se mide en la primera obra, la fiabilidad de la app que se
+mide con veinte plantas conocidas. Aquí otra vez: **no se confía en un instrumento, se calibra.** Y
+lo bonito es que la calibración no es un gasto: es el subproducto de una tarea que ya hacías.
+
+## Del conteo al inventario: dónde está el dinero
+
+Un número aislado sirve poco. Un conteo por bandeja, por lote y por fecha, en cambio, te da cuatro
+cosas que hoy no tienes:
+
+**1 · Inventario real.** Cuántas plantas vendibles hay, por especie y tamaño. Es la diferencia entre
+prometerle a un cliente «tengo 300 plantines» porque te suena, y saberlo. Y es la base
+del <Termino slug="stock-vendible">stock vendible</Termino>, que no es lo mismo que el número de
+plantas vivas: cuenta solo las que están en condición de venderse.
+
+**2 · La <Termino slug="mortalidad">mortalidad</Termino> medida, no intuida.** Sembraste 200 en una
+bandeja de 200 celdas; a los quince días hay 174 y a los sesenta hay 168. Eso son dos números
+—germinación y supervivencia— que definen tu negocio, porque **todo el costo se reparte entre las
+plantas que sobreviven.** Y si además tienes la mortalidad por lote y por semana, puedes cruzarla con
+lo que hiciste esa semana. Ahí empieza a haber conocimiento.
+
+**3 · La velocidad de crecimiento.** Con la escala en el encuadre, la serie de fotos te da la altura
+media a lo largo del tiempo. Eso responde la pregunta comercial más frecuente del rubro: **¿para
+cuándo estarán listos?** — y es lo que la lección siguiente convertirá en predicción.
+
+**4 · El costo por plantín, de verdad.** Sin conteo, el costo por planta es una división con el
+denominador inventado. Con conteo y mortalidad, es un número. El módulo de monetización se apoya
+justamente ahí.
+
+## Monitoreo: la serie delata lo que la foto esconde
+
+<Diagrama
+  src="la-serie-lo-delata.webp"
+  alt="Tira de cuatro fotos cenitales de la misma bandeja rotulada la serie lo delata. En la primera, todas las celdas con plantines verdes y sanos. En la segunda, algo más crecidos y una celda del borde izquierdo pálida. En la tercera, un grupo de tres celdas pálidas alrededor de la primera. En la cuarta, la mancha pálida cubre casi todo ese borde mientras el resto sigue verde, con un anillo verde marcando la esquina afectada y una flecha que indica la dirección del avance."
+  pie="Ninguna de las cuatro fotos por separado prueba nada. Juntas muestran dónde empezó y hacia dónde va — que es casi el diagnóstico."
+/>
+
+Ahora la parte que casi nadie hace y que vale más que cualquier clasificador: **comparar la misma
+bandeja consigo misma a lo largo del tiempo.**
+
+Un síntoma aislado es ambiguo; una **progresión** con geometría es informativa. Y no necesitas ningún
+modelo para leerla — solo la serie alineada:
+
+- **Empieza en un punto y se extiende en mancha**: patrón típico de algo que se transmite —un
+  patógeno de suelo, un insecto que camina—. Se llama foco, y el momento de actuar es cuando tiene
+  tres celdas, no cuando tiene treinta.
+- **Empieza en un borde y avanza hacia dentro**: sospecha de geometría, no de biología. El borde de
+  la cobertura del riego, el filo de la sombra que se corrió, el viento del surazo entrando por ese
+  lado, la mesa que se inclinó y drena mal.
+- **Aparece de golpe y en todas partes**: un evento. Una aplicación, un día de calor extremo, el agua
+  de ese riego, el lote de sustrato nuevo.
+- **Y una diferencia entre bandejas hermanas** sembradas el mismo día con el mismo material es la
+  señal más limpia que existe: si una va bien y la otra no, la causa está en lo que las distingue —y
+  eso es una lista corta.
+
+Aquí es donde una máquina sí ayuda de verdad, y con una tarea trivial: **avisarte de que algo
+cambió.** No «diagnosticar», solo «esta zona de la bandeja está más pálida que la semana pasada». Es
+detección de anomalías por diferencia, no clasificación: barato, verificable —vas y mirás— y
+enormemente útil, porque el vivero se pierde problemas por no mirar, no por no saber.
+
+### Las trampas amarillas: el conteo que sí es alerta temprana
+
+<Diagrama
+  src="trampa-contada.webp"
+  alt="Dos paneles con la misma trampa cromática amarilla. En el izquierdo, rotulado trampa sin contar, la tarjeta amarilla cuelga de un alambre entre el follaje, cubierta de puntitos oscuros de insectos, y al lado un gráfico con una línea discontinua plana y sin ningún dato. En el derecho, rotulado trampa contada, la misma tarjeta fotografiada dentro de un marco con una moneda al lado como escala, y junto a ella un gráfico de línea con cuatro puntos a lo largo del tiempo y una campanita de alarma encendida donde la línea sube bruscamente."
+  pie="La trampa no avisa: solo captura. Lo que avisa es la fotografía semanal contada, cuando la curva se dispara."
+/>
+
+Una <Termino slug="trampa-cromatica">trampa cromática</Termino> —esa tarjeta amarilla pegajosa que se
+cuelga entre las plantas— atrae y captura insectos voladores como la mosca blanca. Casi todos los
+viveros que las usan cometen el mismo error: **las cuelgan y no las mira nadie.**
+
+El uso correcto es tratarlas como un sensor: cada trampa en un sitio fijo, **fotografiada el mismo
+día de la semana** con una moneda al lado para dar escala, y contada. Ahí el conteo automático rinde
+espectacularmente —son puntos oscuros sobre fondo amarillo uniforme, el caso más fácil de la visión
+artificial—, y lo que obtienes es una **curva de población en el tiempo.**
+
+Y el valor no está en el número absoluto sino en la pendiente: **una subida brusca es una alerta que
+llega antes de que el daño se vea en las plantas.** Eso es exactamente lo que quieres de un sistema
+de monitoreo — y es el enlace natural con el módulo de sanidad vegetal, donde esas cuentas alimentan
+las decisiones de manejo.
+
+Este video muestra cómo fabricarlas con materiales de ferretería, y trae de paso un error de
+concepto muy común que conviene tener claro: **una trampa cromática no elimina una plaga, la mide.**
+Míralo por la fabricación, y quédate con la lección de que su valor está en el conteo semanal, no en
+los insectos que atrapa:
+
+<Video id="DjzS4-pJNoM" />
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Monta la estación de captura esta semana, y que sea deliberadamente barata.** Elige dos o tres
+bandejas representativas por especie, marca con pintura una cruz en el piso frente a cada una, y
+arma un soporte de madera —un palo con una tablita en escuadra— que sostenga el teléfono siempre a la
+misma altura y paralelo a la bandeja. Deja una regla de madera fija en el borde de cada bandeja. Con
+eso ya tienes un instrumento de medición.
+
+**La rutina: una foto por semana, el mismo día y a la misma hora.** Lunes temprano, todas las
+bandejas de la ronda, más una foto de cada trampa amarilla con su moneda. Diez minutos de trabajo. El
+nombre del archivo con fecha, lote y bandeja. Esa carpeta va a valer, en un año, más que cualquier
+herramienta que compres.
+
+**Calibra una vez por semana**: cuenta una bandeja a mano, compárala con el conteo automático y anota
+las dos cifras. En un mes tendrás tu factor de corrección por tipo de bandeja y por especie, y
+podrás extrapolar el inventario completo con confianza.
+
+**Convierte el conteo en las tres cifras que gobiernan el negocio**: sembrados, vivos a los quince
+días, vendibles al final. Con eso tienes germinación, supervivencia y stock vendible por lote — los
+números que la lección de monetización va a necesitar para el costo por plantín y los que hoy se
+estiman a ojo.
+
+**Y usa la serie para decidir antes**: cada lunes, mira la foto de esta semana junto a la de la
+anterior. Si una zona cambió, vas y la mirás en persona con el protocolo de la lección 2. Un foco de
+tres celdas es un problema chico; el mismo foco a las cuatro semanas es una bandeja perdida. Toda la
+ganancia del monitoreo está en ese adelanto.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El teléfono es la cámara y basta.** No hace falta ningún equipo especial: un teléfono común con
+cenital, luz difusa y regla en el encuadre da fotos perfectamente utilizables. La inversión real de
+esta lección es la cruz de pintura en el suelo y la disciplina del lunes.
+
+**La luz del llano exige horario.** Entre las diez y las cuatro, el sol vertical produce sombras
+duras y reflejos que arruinan el conteo. Temprano, tarde, con cielo cubierto o bajo malla — y siempre
+a la misma hora, que además es lo que hace comparables las fotos.
+
+**Guarda todo en el teléfono primero y sincroniza cuando puedas.** Con la conectividad de Zanja
+Honda, cualquier flujo que exija subir cada foto al momento va a fracasar. Captura local, respaldo
+por lotes cuando haya wifi, y resolución moderada para que el respaldo sea viable.
+
+**El polvo y la humedad son parte del método.** En la seca, la lente se ensucia en un día: pásale un
+paño antes de cada ronda. En lluvias, la condensación te arruina las fotos de la mañana temprano —
+espera veinte minutos o dispara un poco más tarde, siempre la misma hora.
+
+**Las trampas amarillas se venden en las agropecuarias de Santa Cruz** y son de lo más rentable que
+puedes colgar en el vivero, siempre que se cuenten. Ubicación fija, foto semanal, y una libreta: eso
+es un sistema de alerta temprana de plagas por el precio de unas tarjetas.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«El conteo automático se equivoca, no sirve.»** Se equivoca de forma sistemática y medible, que es
+la clase de error que se corrige con un factor. Cuenta una bandeja a mano y tendrás el factor.
+
+**«Cambio de sitio y de hora cada semana.»** Entonces no tienes una serie, tienes fotos parecidas de
+cosas distintas. El punto fijo en el suelo es la mitad del método.
+
+**«Sin escala en el encuadre.»** Sin referencia de tamaño la foto cuenta pero no mide, y pierdes la
+mejor pregunta: para cuándo estarán listos.
+
+**«A pleno sol se ve mejor.»** El sol vertical da sombras que se cuentan como plantas y reflejos que
+se cuentan como plantines. Luz difusa, siempre.
+
+**«Le pido que además me diga qué le pasa.»** Ese es el salto a la zona roja de la lección 1. Cuenta,
+compara, avisa — y el diagnóstico lo haces tú con el protocolo de la lección 2.
+
+**«Cuento solo cuando hace falta un número.»** Entonces nunca tendrás la serie, que es donde está el
+valor. El conteo aislado informa; la serie delata.
+
+**«Cuelgo las trampas amarillas y listo.»** Una trampa que nadie cuenta es una tarjeta sucia. Lo que
+avisa es la curva, no la trampa.
+
+**«El conteo es el inventario.»** El inventario es el stock **vendible**, que descuenta lo que no
+está en condiciones. Contar plantas vivas y prometer plantas vendibles es cómo se rompen los pedidos.
+
+## Lo que sigue
+
+Ya tienes cifras y series: cuántos hay, cuántos se mueren, cuánto crecen por semana. La lección
+siguiente da el paso natural — **usarlas para anticipar**. Cuánta agua pide el cultivo esta semana y
+por qué se calcula con la demanda atmosférica en vez de con el calendario; cómo los grados-día
+convierten «tres meses, más o menos» en una fecha defendible para decirle a un cliente; qué se puede
+esperar de un pronóstico meteorológico a tres días y qué no a treinta; y por qué **predecir el
+precio** es el problema más difícil de todos y el que más humildad exige, porque ahí el sistema
+reacciona a lo que todos predicen.

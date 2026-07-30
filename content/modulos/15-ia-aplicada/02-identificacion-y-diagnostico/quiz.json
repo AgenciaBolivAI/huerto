@@ -1,0 +1,100 @@
+{
+  "preguntas": [
+    {
+      "id": "catalogo-cerrado",
+      "tipo": "opcion_multiple",
+      "enunciado": "Fotografías un tajibo joven en una app de identificación y te devuelve una especie europea con 94 %. ¿Qué pasó?",
+      "opciones": [
+        "El clasificador puntúa un catálogo cerrado: si tu especie no estaba en el entrenamiento, no hay casilla vacía y devuelve al vecino más parecido.",
+        "El 94 % es reparto interno de puntuación entre las clases que conoce, no probabilidad de acierto: puede haber 94 % de convicción sobre algo de otro continente.",
+        "Salvo que la app esté construida para rechazar entradas dudosas, el «no sé» no es una respuesta posible: siempre hay un primer puesto.",
+        "La app se equivocó por la calidad de la foto; con mejor luz habría acertado la especie nativa."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Mejorar la foto ayuda cuando la especie está en el catálogo; cuando no está, ninguna foto la mete. Y como el oriente boliviano es la región subrepresentada que vimos en la lección anterior, las nativas caen fuera con frecuencia — con respuestas igual de seguras y completamente vacías."
+    },
+    {
+      "id": "jerarquia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué puede y qué no puede resolverse desde una imagen, y de dónde sale lo que no?",
+      "opciones": [
+        "El género suele acertarse: forma de hoja, nervadura y disposición son justo lo que una imagen captura bien.",
+        "La especie es dudosa, porque a menudo se distingue por flor, fruto o pubescencia — caracteres que un plantín de veinte centímetros aún no tiene.",
+        "La variedad es inalcanzable por imagen y sale de la trazabilidad: planta madre, factura, rótulo del proveedor.",
+        "Con un modelo suficientemente bueno, la variedad también se identifica: es solo cuestión de resolución."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un mango Tommy y un mango Kent tienen hojas prácticamente indistinguibles: no es un problema de resolución, es que la información no está en la hoja. Y rotular una variedad porque lo dijo una app construye una mentira que se descubre en tres años, cuando el árbol fructifica en el jardín de un cliente — una deuda técnica que se paga con reputación."
+    },
+    {
+      "id": "clave",
+      "tipo": "verdadero_falso",
+      "enunciado": "Ahora que existen los clasificadores por imagen, las claves dicotómicas son una curiosidad histórica.",
+      "respuesta": false,
+      "explicacion": "Falso: son complementarias, y por la razón que más te importa. Una clave dicotómica es un árbol de decisión escrito por humanos donde cada rama es una afirmación verificable —hojas opuestas o alternas, borde entero o dentado—, así que cuando falla sabes dónde falló. El clasificador es instantáneo y opaco. La jugada correcta es encadenarlos: el modelo reduce el espacio de búsqueda a dos o tres candidatos, y la clave, la ficha o el herbario deciden."
+    },
+    {
+      "id": "posicion-sintoma",
+      "tipo": "opcion_multiple",
+      "enunciado": "Dos bandejas amarillean. En una, el amarilleo empezó por las hojas viejas; en la otra, por las nuevas. ¿Qué te dice eso?",
+      "opciones": [
+        "Que son dos causas distintas: hay nutrientes móviles que la planta desmonta de las hojas viejas para alimentar el brote, y otros inmóviles que se quedan donde se colocaron.",
+        "Empezar por las viejas apunta a un nutriente móvil que la planta está canibalizando, como el nitrógeno.",
+        "Empezar por las nuevas apunta a uno inmóvil que no llega —calcio, hierro— o a un pH que lo bloquea aunque esté en el sustrato.",
+        "Que es el mismo problema en dos fases: primero amarillean las viejas y luego las nuevas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Misma planta, mismo color, dos causas opuestas — y el dato que las separa es la posición, no el tono. Por eso una foto recortada de una sola hoja borra justamente lo que decide, y por eso el diagnóstico necesita ver la planta entera: hojas nuevas, hojas viejas, envés y raíz."
+    },
+    {
+      "id": "distribucion",
+      "tipo": "opcion_multiple",
+      "enunciado": "Antes de mirar la hoja, cuentas cuántas plantas están afectadas. ¿Qué familia de causas sugiere cada patrón?",
+      "opciones": [
+        "Una planta enferma entre vecinas sanas: causa local — plaga, patógeno o un accidente de esa maceta.",
+        "Toda una fila o bandeja igual de afectada: algo que se aplicó a todas — riego, fertilización, sol, el lote de sustrato.",
+        "Un gradiente, peor en un extremo: algo con geometría — cobertura del riego, la sombra que se corre, el viento del surazo.",
+        "El número de plantas afectadas no aporta información diagnóstica: lo que importa es el síntoma en la hoja."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es el mismo razonamiento con el que separas «un nodo caído» de «el clúster entero caído»: la distribución del fallo te dice en qué capa buscar, y te lo dice antes de mirar un solo log. Aquí igual — primero el patrón, después la hoja. Es la heurística más rentable de la lección y no requiere saber botánica."
+    },
+    {
+      "id": "ahogado",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un plantín marchito con el sustrato empapado necesita más riego, porque el marchitamiento indica falta de agua.",
+      "respuesta": false,
+      "explicacion": "Falso: con sustrato empapado, ese plantín se está ahogando — la raíz asfixiada no absorbe, así que la planta se marchita igual que si tuviera sed. Los síntomas de arriba son idénticos y la diferencia está en el cepellón, que es justo lo que ninguna foto de hojas muestra. Es la causa más frecuente en un vivero y la que más se agrava al «tratarla» con más agua."
+    },
+    {
+      "id": "fiabilidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo sabes cuánta fiabilidad tiene tu app de identificación en tu vivero?",
+      "opciones": [
+        "Midiéndola: veinte plantas de identidad conocida, foto con protocolo, y anotar qué era, qué dijo la app y si acertó a nivel de género y de especie.",
+        "Separando el recuento en dos grupos: ornamentales y frutales comunes por un lado, nativas del oriente boliviano por el otro.",
+        "Anotando tu propia apuesta antes de ver la respuesta, para no contaminar el recuento.",
+        "Buscando el porcentaje de precisión que publica la aplicación en su tienda."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El porcentaje publicado se mide sobre el catálogo del fabricante, no sobre tu vivero: es la cifra menos útil que existe para ti. Una tarde de medición te da la fiabilidad real por grupo de especies — la misma calibración ESTIMADO contra REAL del presupuesto, aplicada a una herramienta: no se discute la fiabilidad de un instrumento, se mide."
+    },
+    {
+      "id": "protocolo-foto",
+      "tipo": "abierta",
+      "enunciado": "Aparece un problema en dos bandejas de Rizoma del Sur: plantines con hojas amarillentas y algunas manchas. Describe todo lo que haces —fotos, observaciones y registro— antes de aceptar cualquier diagnóstico, y qué harás con ese material.",
+      "respuestaModelo": "Antes de tocar la cámara, cuento y miro el patrón: ¿está afectada una planta suelta entre sanas, toda la bandeja por igual, o hay un gradiente peor en un extremo? Una sola planta me manda a pensar en plaga, patógeno o accidente de esa maceta; toda la bandeja uniforme me manda a lo que apliqué a todas —riego, fertilización, sol, el lote de sustrato—; un gradiente me manda a algo con geometría, como la cobertura del riego o la sombra que se corre.\n\nDespués miro dónde está el síntoma, que es la información que decide. Si el amarilleo empezó por las hojas viejas, sospecho de un nutriente móvil que la planta está desmontando para alimentar el brote, como el nitrógeno; si empezó por las nuevas, de uno inmóvil que no llega —calcio, hierro— o de un pH que lo bloquea. Volteo hojas para revisar el envés, que es donde viven arañuela, mosca blanca y cochinilla: el daño se ve arriba y el culpable está abajo. Y saco un plantín de la bolsa para mirar el cepellón y el cuello: si el sustrato está empapado y hay raíces oscuras, el marchitamiento es asfixia, no sed, y regar más lo empeora.\n\nRecién entonces fotografío, con protocolo y en cuatro escalas: la lesión de cerca, la hoja completa y plana sobre papel blanco con una moneda al lado como escala, la planta entera, y la bandeja desde arriba para que se vea el patrón de distribución. De cada hoja, dos tomas: haz y envés. Todo a la sombra o temprano, nunca a pleno sol, enfocando tocando la lesión, y con una toma de hoja sana junto a hoja enferma de la misma planta para eliminar la duda del color normal. Si hay un signo —el insecto, la telaraña, el moho— eso va fotografiado aparte, porque un signo vale mucho más que un síntoma.\n\nGuardo todo con nombres del tipo 2026-08-03_lote3_especie_enves, y anoto en la ficha qué hice esas tres semanas: fechas y volumen de riego, sustrato, si moví las bandejas, si pasó un surazo. Ese registro es la mitad del diagnóstico, y es la mitad que ningún modelo puede ver.\n\nCon ese material hago dos cosas. Una consulta de verdad: mando las fotos y el resumen del manejo por WhatsApp al técnico de la agropecuaria o al ingeniero conocido, que con esa evidencia puede responder algo útil desde su teléfono. Y una comparación propia: si es una especie que produzco, arranco la serie temporal —misma bandeja, mismo ángulo, una foto por semana—, porque la progresión es casi un diagnóstico. Si de la consulta sale una práctica nueva, no la aplico a todo: una bandeja tratada, otra igual como testigo, y anoto las dos a los quince y a los treinta días.",
+      "criterios": [
+        "Empieza por el patrón de distribución —una planta, toda la fila, gradiente— antes de mirar la hoja.",
+        "Usa la posición del síntoma con el mecanismo de movilidad: viejas para móviles, nuevas para inmóviles o pH.",
+        "Revisa el envés y saca un plantín para ver cepellón y cuello, distinguiendo asfixia de sed.",
+        "Fotografía en cuatro escalas con haz y envés, fondo neutro, escala física, luz difusa y sana junto a enferma.",
+        "Distingue signo de síntoma y fotografía el signo aparte.",
+        "Nombra los archivos con fecha, lote, especie y parte, y anota el manejo de las últimas semanas.",
+        "Usa las fotos para consultar a un humano competente, no como oráculo.",
+        "Arranca la serie temporal semanal y prueba cualquier tratamiento con testigo."
+      ],
+      "explicacion": "Fíjate en que el diagnóstico casi no depende de saber botánica: depende de mirar en los cuatro sitios correctos, contar plantas y tener el registro del manejo. Y el subproducto es lo mejor de todo — un archivo de fotos con protocolo y nombres consistentes es la materia prima del conteo y el monitoreo de la lección siguiente, y del asistente de la lección cinco."
+    }
+  ]
+}

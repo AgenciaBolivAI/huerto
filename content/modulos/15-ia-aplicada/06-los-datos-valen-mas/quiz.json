@@ -1,0 +1,101 @@
+{
+  "preguntas": [
+    {
+      "id": "asimetria",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la tesis del módulo es que los datos valen más que el modelo?",
+      "opciones": [
+        "El modelo es un bien común que va a mejorar sin que hagas nada, y tu competencia tendrá acceso al mismo.",
+        "Tu registro es único y no se puede comprar: nadie tiene la mortalidad de tus especies con tu agua, tu sustrato y tus manos.",
+        "La única forma de obtener dos años de datos es esperar dos años, así que ni con dinero se acorta.",
+        "Porque los modelos actuales todavía son inmaduros y en unos años el registro dejará de importar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es lo contrario de la cuarta: cuanto mejores sean los modelos, más se parecerán entre sí y más pesará la diferencia de datos. Cualquier ventaja construida sobre «uso una buena herramienta» tiene fecha de vencimiento y no es tuya; la construida sobre tu historial no la copia nadie, ni viéndote trabajar."
+    },
+    {
+      "id": "sesgo-supervivencia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué le pasa a un registro donde solo se anotan los buenos resultados?",
+      "opciones": [
+        "Queda sesgado y peligrosamente convincente: parece completo, todo en él es cierto, y sin embargo lleva a conclusiones falsas.",
+        "El sesgo no se ve mirando los datos que quedaron, solo mirando los que faltan — es sesgo de supervivencia.",
+        "Las prácticas que «siempre funcionan» suelen ser las que solo se anotaron cuando funcionaron.",
+        "No pasa nada grave: los fracasos se recuerdan bien y se pueden reconstruir después."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La memoria no reconstruye: reordena y suaviza. Y hay un segundo sesgo más fino, el de anotar lo que esperabas ver — si crees que el sustrato nuevo es mejor, mirarás esa bandeja con más ganas. La defensa es el testigo y anotar las dos ramas el mismo día, con el mismo criterio, antes de saber cuál preferías."
+    },
+    {
+      "id": "fila-minima",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuál es el criterio de diseño de la fila mínima de registro y qué columnas lleva?",
+      "opciones": [
+        "El criterio es que se llene todos los días con las manos sucias, no la exhaustividad.",
+        "Siete columnas: fecha, lote, especie, cantidad, qué hice, resultado y causa.",
+        "Con esas siete ya se pueden calcular germinación, supervivencia, stock vendible, tiempos por especie y costo por plantín.",
+        "Conviene diseñar el esquema completo con veinte campos y normalización antes de empezar a anotar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El esquema perfecto que nunca se llena vale menos que la libreta imperfecta que se llena todos los días — y esa es justamente la tentación del perfil técnico. Primero siete columnas mañana; la normalización, cuando el registro ya exista y duela."
+    },
+    {
+      "id": "eventos",
+      "tipo": "verdadero_falso",
+      "enunciado": "Da lo mismo registrar el estado actual de cada lote que registrar los eventos con su fecha.",
+      "respuesta": false,
+      "explicacion": "Falso, y la razón te resulta familiar: el estado se puede derivar de los eventos, pero los eventos no se pueden derivar del estado. Si guardas solo el estado sabes cómo está el lote 3 hoy; si guardas los eventos puedes responder también cuándo cambió, qué se le hizo antes y cómo se comparó con el lote 4. Y hay una asimetría brutal: si esta semana no anotas, esa información no queda pendiente — se pierde para siempre, porque la semana no vuelve."
+    },
+    {
+      "id": "calidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sin validaciones ni revisores, ¿qué reglas mantienen la calidad de tu registro?",
+      "opciones": [
+        "Unidades escritas siempre: «regué 3» no significa nada dentro de un año.",
+        "Vocabulario cerrado para lo que se cuenta: una lista corta de nombres decidida de antemano vale más que cualquier limpieza posterior.",
+        "Distinguir cero de vacío: «cero muertos» es una observación, la celda en blanco es «no miré».",
+        "Corregir y estandarizar todo al final del año, cuando haya tiempo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La limpieza al final no recupera lo que no se escribió, y la ambigüedad de nombres y unidades no se arregla adivinando meses después. Añade fechas completas con año y una nota libre por evento: todo esquema deja fuera lo importante alguna vez, y ese campo de texto es donde queda el detalle que explicará el número raro."
+    },
+    {
+      "id": "acumulacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué te da el registro a un ciclo, a un año y a tres años?",
+      "opciones": [
+        "Un ciclo: tus primeros números reales —germinación, supervivencia, tiempos, costo— y el fin de la estimación a ojo.",
+        "Un año: la comparación entre temporadas, el mismo cultivo en lluvias y en seca con sus consumos y tiempos distintos.",
+        "Tres años: tus constantes propias —grados-día de tus especies, factor de corrección del conteo, mortalidad por etapa, curva de demanda, costo real—.",
+        "Los tres plazos dan aproximadamente lo mismo: más filas de lo mismo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El registro compone, no solo acumula: cada ciclo agrega una temporada de comparación. Y la ventaja se manifiesta en cosas prosaicas y rentables — prometer plazos y cumplirlos, poner precio con margen conocido, elegir especies por rentabilidad medida, y detectar problemas cuando son de tres celdas."
+    },
+    {
+      "id": "respaldo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el registro está completo y ordenado en el teléfono, el respaldo puede esperar.",
+      "respuesta": false,
+      "explicacion": "Falso: un registro que existe en un solo teléfono ya está a medio perder, y en un vivero —entre agua, polvo, sol y golpes— un teléfono tiene una esperanza de vida modesta. La regla mínima no requiere pensar: dos copias, una de ellas fuera del vivero, con periodicidad sostenible y export a formato abierto. Es la lógica de los dos tubos enterrados de la instalación eléctrica: cuesta casi nada ahora y es carísimo no haberlo hecho."
+    },
+    {
+      "id": "plan-registro",
+      "tipo": "abierta",
+      "enunciado": "Escribe el plan de registro de Rizoma del Sur para empezar mañana: qué anotas y con qué formato, qué decides de antemano, cómo evitas el sesgo, cómo lo respaldas y cómo te aseguras de no abandonarlo en dos meses.",
+      "respuestaModelo": "Mañana empiezo con siete columnas y nada más: fecha, lote, especie, cantidad, qué hice, resultado y causa. Va en la hoja de cálculo que diseñé en la primera lección, o en una libreta a lápiz si eso es lo que voy a sostener de verdad — el criterio no es la exhaustividad sino que se llene todos los días con las manos sucias.\n\nAntes de escribir la primera fila decido dos cosas de antemano. Primero, numero y rotulo los lotes físicamente en el terreno, con tablillas clavadas, y uso esos mismos nombres en la planilla, en las fotos y en las ventas: sin identificadores estables en el mundo real ningún registro cruza con otro. Segundo, cierro el vocabulario: una lista corta de especies con su nombre científico al lado, y una lista corta de causas de pérdida —exceso de agua, falta de agua, hongo, plaga, frío del surazo, golpe, no sé—, con «no sé» incluido, porque es la causa más frecuente al principio y omitirla me empujaría a inventar.\n\nContra el sesgo, tres reglas de disciplina. La pérdida se anota siempre y con causa, aunque la causa sea que no sé: un registro que solo guarda lo que salió bien parece completo y esconde justo la información que serviría. Se anota el mismo día, no el domingo de memoria, porque la memoria reordena y suaviza. Y lo que se pueda se anota antes de conocer el resultado —qué sembré, qué cambié, en qué bandeja—, para no escribir la historia al revés. Cuando pruebe algo nuevo, testigo obligatorio y las dos ramas anotadas el mismo día con el mismo criterio.\n\nMantengo aparte los tres registros satélite que ya monté: clima diario con máxima, mínima y lluvia en milímetros, un minuto por día; fotos cenitales semanales de las bandejas fijas y de las trampas desde el punto marcado, diez minutos; y compras y ventas con fecha, cantidad y precio cuando ocurren. En total son diez o doce minutos al día, y son la materia prima de todo el módulo.\n\nSobre la calidad, sin auditor externo me pongo mis propias reglas: unidades siempre escritas, porque «regué 3» no significa nada en un año; fechas completas con año; cero y vacío distinguidos, porque cero muertos es una observación y la celda en blanco es que no miré; y una nota libre por evento para el detalle que ningún esquema previó.\n\nRespaldo cada semana con una copia fuera del vivero y exporto la planilla a un formato abierto cada tanto: diez minutos al mes contra la posibilidad de perder tres años de trabajo. Y para no abandonarlo, me pongo una cita con mis propios datos el primer domingo de cada mes, media hora para mirar mortalidad por lote, tiempos por especie y ventas del mes. Un registro que nadie lee se abandona en dos meses; esa media hora es lo que lo convierte en algo que devuelve — y es también cuando el asistente de la lección anterior, por fin, tiene con qué trabajar.",
+      "criterios": [
+        "Empieza con la fila mínima de siete columnas y elige el soporte que va a sostener.",
+        "Numera y rotula los lotes físicamente y usa los mismos identificadores en todos los registros.",
+        "Cierra el vocabulario de especies y de causas, incluyendo «no sé» como causa legítima.",
+        "Anota siempre la pérdida con causa, el mismo día, y lo que se pueda antes de conocer el resultado.",
+        "Usa testigo y anota las dos ramas con el mismo criterio para evitar el sesgo del observador.",
+        "Mantiene los tres registros satélite: clima diario, fotos semanales, compras y ventas.",
+        "Aplica reglas de calidad: unidades, fechas completas, cero distinto de vacío, nota libre.",
+        "Respalda semanalmente con copia fuera del vivero y exporta a formato abierto.",
+        "Agenda una revisión mensual de los propios datos para no abandonar el registro."
+      ],
+      "explicacion": "Mira el arco completo del módulo: empezó diciéndote qué no puede hacer un modelo con tu vivero y termina en una libreta de siete columnas y diez minutos al día. Eso no es una decepción — es el resultado honesto. En un rubro donde casi nadie mide, el reflejo de medir que traes de tu oficio es la ventaja competitiva más barata que vas a encontrar, y la única que no caduca cuando salga el próximo modelo."
+    }
+  ]
+}

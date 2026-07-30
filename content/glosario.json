@@ -44,6 +44,16 @@
       ]
     },
     {
+      "termino": "Alucinación",
+      "slug": "alucinacion",
+      "definicion": "Respuesta plausible, bien redactada, segura de sí misma y falsa producida por un modelo de lenguaje. No es un fallo ocasional sino una propiedad del mecanismo: el modelo completa lo que suena probable, y su confianza declarada no correlaciona con la corrección. En agronomía tiene tres agravantes: el vocabulario es tan regular que un ingrediente activo inventado suena idéntico a uno real, las unidades esconden factores de mil, y los síntomas son multicausales, así que casi cualquier diagnóstico resulta coherente. Y a diferencia del software, aquí no hay compilador que la delate: la delata la planta, semanas después.",
+      "leccion": "15-ia-aplicada/01-que-puede-y-que-no",
+      "sinonimos": [
+        "alucinaciones",
+        "alucinar"
+      ]
+    },
+    {
       "termino": "Aluminio intercambiable",
       "slug": "aluminio-intercambiable",
       "definicion": "Aluminio en forma soluble (Al³⁺) que aparece por debajo de aproximadamente pH 5,5 y es tóxico para las raíces: daña directamente el meristemo apical radicular, que deja de alargarse y se vuelve corto y romo. En suelos ácidos tropicales suele ser un problema más grave que el bloqueo de nutrientes, y engaña porque sus síntomas imitan sequía y carencias múltiples.",
@@ -430,6 +440,17 @@
       ]
     },
     {
+      "termino": "Clave dicotómica",
+      "slug": "clave-dicotomica",
+      "definicion": "El método clásico de identificación botánica: una secuencia de preguntas binarias sobre caracteres observables —hojas opuestas o alternas, borde entero o dentado, envés con pelos o glabro— donde cada respuesta manda a la siguiente pregunta hasta llegar a un nombre. Es un árbol de decisión escrito por humanos y recorrible paso a paso, y su virtud no es la velocidad sino que cada rama es una afirmación verificable: cuando falla, sabes dónde falló. Lo contrario de un clasificador por imagen, que es instantáneo y opaco — por eso se encadenan: el modelo propone candidatos y la clave decide.",
+      "leccion": "15-ia-aplicada/02-identificacion-y-diagnostico",
+      "sinonimos": [
+        "claves dicotómicas",
+        "clave taxonómica",
+        "clave de identificación"
+      ]
+    },
+    {
       "termino": "Clima tropical de sabana",
       "slug": "clima-tropical-sabana",
       "definicion": "Clima de precipitación abundante pero marcadamente estacional, con una época de lluvias y una seca bien diferenciadas. En Santa Cruz supone del orden de 1.200 a 1.400 mm anuales concentrados de octubre a abril, y cinco meses secos. La temperatura permite crecer casi todo el año, de modo que el calendario agrícola lo gobierna el agua.",
@@ -515,6 +536,19 @@
       ]
     },
     {
+      "termino": "Cómputo métrico",
+      "slug": "computo-metrico",
+      "definicion": "Contar antes de comprar: el proceso que convierte un plano en un presupuesto recorriendo siempre la misma cadena — plano, cantidades de obra medidas en la unidad natural de cada partida, materiales vía rendimientos, y precio. Es estimación de proyecto aplicada a la obra, con una ventaja sobre el software: el hormigón no tiene scope creep, y el error viene casi siempre de no haber contado, no de que el problema creciera.",
+      "leccion": "08-albanileria-y-obra/12-computo-y-presupuesto",
+      "sinonimos": [
+        "cómputos métricos",
+        "cómputo",
+        "cómputos",
+        "metrado",
+        "metrados"
+      ]
+    },
+    {
       "termino": "Conductividad eléctrica",
       "slug": "conductividad-electrica",
       "definicion": "Medida de las sales solubles del suelo, expresada en dS/m —equivalente a mmhos/cm—. Por encima de 2 dS/m empiezan los problemas para cultivos sensibles y por encima de 4 hay restricción seria. Es el indicador a vigilar cuando se riega con agua de pozo.",
@@ -522,6 +556,15 @@
       "sinonimos": [
         "CE",
         "salinidad"
+      ]
+    },
+    {
+      "termino": "Contratista",
+      "slug": "contratista",
+      "definicion": "Quien toma una obra completa con su propia gente, sus tiempos y su riesgo, en vez de vender jornales sueltos. Para un galpón sencillo no suele hacer falta; a mayor obra, más sentido tiene — entre otras cosas porque un contratista formal lleva personal propio, puede facturar, y con NIT la obra se vuelve costo deducible del negocio.",
+      "leccion": "08-albanileria-y-obra/13-mano-de-obra-y-normativa",
+      "sinonimos": [
+        "contratistas"
       ]
     },
     {
@@ -718,6 +761,15 @@
       ]
     },
     {
+      "termino": "Envés",
+      "slug": "enves",
+      "definicion": "La cara inferior de la hoja, opuesta al haz. Es donde se concentran los estomas en muchas especies y donde viven arañuela roja, mosca blanca y cochinilla: el daño se manifiesta en la cara superior y el causante está debajo. De ahí la regla de oro de la foto útil — siempre dos tomas de la misma hoja, haz y envés — y la razón por la que tantos diagnósticos por imagen fallan: nadie fotografía el lado donde está el problema.",
+      "leccion": "15-ia-aplicada/02-identificacion-y-diagnostico",
+      "sinonimos": [
+        "cara inferior de la hoja"
+      ]
+    },
+    {
       "termino": "Época de lluvias",
       "slug": "epoca-de-lluvias",
       "definicion": "De octubre a abril en Santa Cruz. En el vocabulario local se dice «las lluvias» y su contrario es «la seca»; aquí no se usan primavera ni otoño en sentido agrícola. El año agrícola no empieza en enero sino con las lluvias.",
@@ -822,6 +874,28 @@
         "estructura granular",
         "estructura masiva",
         "estructura laminar"
+      ]
+    },
+    {
+      "termino": "Etiqueta del producto",
+      "slug": "etiqueta-del-producto",
+      "definicion": "El texto legalmente vinculante que acompaña a un producto fitosanitario y donde constan el ingrediente activo y su concentración, los cultivos autorizados, la dosis, el plazo de seguridad y las precauciones de manejo. No es publicidad: es la fuente que gana cualquier discusión. En Bolivia el registro de estos productos lo lleva el SENASAG, y la regla del oficio es breve — la etiqueta manda: si un modelo, un video o un vecino dicen otra cosa, la etiqueta gana.",
+      "leccion": "15-ia-aplicada/01-que-puede-y-que-no",
+      "sinonimos": [
+        "etiqueta",
+        "marbete",
+        "la etiqueta manda"
+      ]
+    },
+    {
+      "termino": "Evapotranspiración",
+      "slug": "evapotranspiracion",
+      "definicion": "El agua que se pierde por dos caminos a la vez: la que se evapora del sustrato y la que la planta transpira por sus hojas. Es lo que hay que reponer al regar, y su magnitud la fija la atmósfera del día —radiación, temperatura, humedad y viento—, no el calendario: entre una semana nublada y húmeda y otra seca con viento puede diferir al doble o más. La FAO publica el método estándar para calcularla a partir de datos meteorológicos, pero la versión práctica en un vivero es una balanza: la pérdida de peso de una bolsa testigo entre un día y el siguiente es tu evapotranspiración real, en gramos.",
+      "leccion": "15-ia-aplicada/04-prediccion",
+      "sinonimos": [
+        "evapotranspiración de referencia",
+        "ET0",
+        "demanda atmosférica"
       ]
     },
     {
@@ -944,6 +1018,27 @@
       ]
     },
     {
+      "termino": "Grados-día",
+      "slug": "grados-dia",
+      "definicion": "La suma del calor acumulado por una planta por encima de una temperatura base propia de cada especie, que es el reloj que el desarrollo vegetal sí usa. Se calcula día por día: temperatura media —máxima más mínima dividido dos— menos la temperatura base, y se acumula; cuando el acumulado alcanza cierto valor, la especie llega a su etapa. También se llama integral térmica o suma térmica. Explica por qué la misma especie tarda más en la época fresca: no cambió su necesidad de calor, cambió el tiempo que tarda en juntarlo — es una barra de progreso alimentada por trabajo real, no un temporizador.",
+      "leccion": "15-ia-aplicada/04-prediccion",
+      "sinonimos": [
+        "grados día",
+        "integral térmica",
+        "suma térmica",
+        "tiempo térmico"
+      ]
+    },
+    {
+      "termino": "Herbario",
+      "slug": "herbario",
+      "definicion": "Colección científica de plantas prensadas, secas, identificadas por especialistas y catalogadas con su procedencia; es la fuente de verdad de la identificación botánica de una región. Santa Cruz de la Sierra tiene uno de los grandes de Bolivia, el Herbario del Oriente Boliviano (USZ) del Museo de Historia Natural Noel Kempff Mercado, con más de cien mil especímenes de la flora del oriente. Para una especie nativa que vas a producir o vender, esa consulta vale más que cualquier respuesta de aplicación.",
+      "leccion": "15-ia-aplicada/02-identificacion-y-diagnostico",
+      "sinonimos": [
+        "herbarios"
+      ]
+    },
+    {
       "termino": "Hormigón de limpieza",
       "slug": "hormigon-de-limpieza",
       "definicion": "Capa fina de hormigón pobre, de unos cinco centímetros, que se echa en el fondo de una excavación antes de colocar la armadura. No es estructural y hace tres cosas: aísla el acero del terreno para que el recubrimiento se cumpla de verdad, da una superficie limpia y regular sobre la que trabajar y apoyar los separadores, e impide que el terreno le robe agua de fraguado al hormigón estructural. En Bolivia se llama corrientemente emplantillado o solado.",
@@ -998,6 +1093,17 @@
       ]
     },
     {
+      "termino": "Ingrediente activo",
+      "slug": "ingrediente-activo",
+      "definicion": "La sustancia que realmente produce el efecto en un producto fitosanitario, distinta del nombre comercial con que se vende: dos marcas distintas pueden llevar el mismo ingrediente activo, y el mismo nombre comercial puede cambiar de formulación. Es el dato por el que se compara, se busca información y se evita repetir dos veces el mismo producto creyendo que se alterna. Aparece en la etiqueta con su concentración; el nombre de fantasía de la bolsa no sirve para nada técnico.",
+      "leccion": "15-ia-aplicada/01-que-puede-y-que-no",
+      "sinonimos": [
+        "ingredientes activos",
+        "principio activo",
+        "materia activa"
+      ]
+    },
+    {
       "termino": "Inmovilización",
       "slug": "inmovilizacion",
       "definicion": "Secuestro temporal del nitrógeno del suelo por los microorganismos cuando se incorpora un material de relación C/N alta —cascarilla, paja, aserrín— sin acompañarlo de una fuente de nitrógeno. Durante semanas o meses hay menos nitrógeno disponible que antes de la enmienda, y el síntoma es indistinguible de una carencia porque lo es.",
@@ -1030,6 +1136,17 @@
       ]
     },
     {
+      "termino": "Jornal",
+      "slug": "jornal",
+      "definicion": "El pago por día trabajado, el modo flexible de comprar mano de obra: conviene para tareas difíciles de delimitar, y su letra chica es que compras tiempo, no resultado — el ritmo es tu riesgo y tu lupa. En el trato cruceño el ciclo habitual del jornal es la semana, pagada el sábado, y las tarifas de referencia se preguntan en la zona, no se adivinan: varían por temporada y por escalón del oficio.",
+      "leccion": "08-albanileria-y-obra/13-mano-de-obra-y-normativa",
+      "sinonimos": [
+        "jornales",
+        "pago por día",
+        "al día"
+      ]
+    },
+    {
       "termino": "Labranza",
       "slug": "labranza",
       "definicion": "Operación de voltear, mezclar y desmenuzar la capa superficial del suelo. Rompe los agregados, corta la continuidad de los poros construidos por raíces y fauna, acelera la mineralización de la materia orgánica que estaba protegida dentro de los agregados, corta las redes de micorrizas y crea una [[suela-de-labor]] a la profundidad del implemento. Afloja el primer día y deja el suelo más compacto al cabo de una temporada, lo que obliga a repetirla: es la causa de que el suelo siga compactándose, no su tratamiento.",
@@ -1050,6 +1167,17 @@
       "sinonimos": [
         "ley de Liebig",
         "ley del mínimo de Liebig"
+      ]
+    },
+    {
+      "termino": "Licencia de construcción",
+      "slug": "licencia-de-construccion",
+      "definicion": "La autorización municipal para construir, que en Santa Cruz gestiona el Gobierno Autónomo Municipal de cada jurisdicción: presupone el derecho propietario en orden y un uso de suelo compatible, y según la superficie y el tipo de obra puede exigir planos firmados por un profesional. La regla del curso: se pregunta en ventanilla antes del primer hormigón — preguntar cuesta una mañana; regularizar después cuesta multas, trámites dobles y a veces demoler.",
+      "leccion": "08-albanileria-y-obra/13-mano-de-obra-y-normativa",
+      "sinonimos": [
+        "licencias de construcción",
+        "permiso de construcción",
+        "aprobación de planos"
       ]
     },
     {
@@ -1113,6 +1241,17 @@
       "sinonimos": [
         "mesoporos",
         "microporos"
+      ]
+    },
+    {
+      "termino": "Maestro albañil",
+      "slug": "maestro-albanil",
+      "definicion": "El escalón más alto del oficio en una obra chica: el que ha hecho de todo muchas veces, replantea, organiza a albañiles y ayudantes, resuelve lo imprevisto y responde por el conjunto. En el trato cruceño se le dice «maestro» a secas, y es un título de respeto. Su credencial verdadera no es la labia sino la obra anterior, que se visita: se toca el revoque, se miran las juntas y se conversa con el dueño sobre plazos, extras y trato.",
+      "leccion": "08-albanileria-y-obra/13-mano-de-obra-y-normativa",
+      "sinonimos": [
+        "maestro",
+        "maestro de obra",
+        "maestros albañiles"
       ]
     },
     {
@@ -1212,6 +1351,27 @@
       ]
     },
     {
+      "termino": "Mochila de aspersión",
+      "slug": "mochila-de-aspersion",
+      "definicion": "El pulverizador de espalda de 15 a 20 litros con el que se aplica en el campo cruceño, y por eso la unidad práctica real de las dosis: en la agropecuaria se habla de tanto por mochila, no de litros por hectárea. Pasar de la dosis de la etiqueta a la de la mochila es una conversión de unidades que hay que hacer con cuidado, porque mL por litro, litros por hectárea y gramos por mochila difieren en factores de hasta mil — y ese error no es del diez por ciento, es la diferencia entre controlar una plaga y quemar el lote.",
+      "leccion": "15-ia-aplicada/01-que-puede-y-que-no",
+      "sinonimos": [
+        "mochila",
+        "pulverizadora de espalda",
+        "aspersora de mochila"
+      ]
+    },
+    {
+      "termino": "Mortalidad",
+      "slug": "mortalidad",
+      "definicion": "La proporción de plantas que se pierden entre la siembra y la venta, medida por lote y por período — no intuida. Se obtiene de conteos sucesivos: sembrados, vivos a los quince días, vendibles al final, lo que da germinación y supervivencia por separado. Importa porque todo el costo del lote se reparte entre las plantas que sobreviven: una mortalidad del veinte por ciento no encarece un veinte por ciento, encarece más, y sin medirla el costo por plantín es una división con el denominador inventado.",
+      "leccion": "15-ia-aplicada/03-vision-conteo-y-monitoreo",
+      "sinonimos": [
+        "tasa de mortalidad",
+        "supervivencia"
+      ]
+    },
+    {
       "termino": "Mortero",
       "slug": "mortero",
       "definicion": "Mezcla de cemento, arena y agua, sin grava. Se usa para asentar ladrillos y bloques —dosificaciones en torno a 1:4 o 1:5— y para revocar —más pobre, de 1:5 a 1:6. Un mortero de revoque no busca resistencia sino adherencia sin fisurar, y debe ser algo más débil que el muro que reviste: si es más rico y más rígido que su soporte, retrae, se fisura y se despega.",
@@ -1307,6 +1467,28 @@
       ]
     },
     {
+      "termino": "Nutriente móvil",
+      "slug": "nutriente-movil",
+      "definicion": "Nutriente que la planta puede desmontar de un tejido viejo y reenviar por el floema hacia el crecimiento nuevo — nitrógeno, fósforo y potasio son los casos típicos. Su contrario, el nutriente inmóvil como el calcio, el azufre o el boro, se queda donde se colocó. La consecuencia es un diagnóstico diferencial que se lee a simple vista: si la carencia se manifiesta primero en las hojas viejas, sospecha de un nutriente móvil que la planta está canibalizando; si aparece primero en las hojas nuevas, de uno inmóvil que no llega o de un pH que lo bloquea. Mismo color, causas opuestas, y la posición es el dato que decide.",
+      "leccion": "15-ia-aplicada/02-identificacion-y-diagnostico",
+      "sinonimos": [
+        "nutrientes móviles",
+        "movilidad de nutrientes",
+        "nutriente inmóvil"
+      ]
+    },
+    {
+      "termino": "Obra vendida",
+      "slug": "obra-vendida",
+      "definicion": "El precio cerrado por un trabajo terminado —«al contrato»—: el modo de pago donde el ritmo pasa a ser riesgo de quien ejecuta, y la lupa del que paga se muda a la calidad y a los «extras» no escritos. Es el fixed price del software con casco: el proveedor asume el riesgo de estimación y lo recupera donde el alcance quedó ambiguo, así que su cura es la misma — alcance escrito por partidas y todo cambio cotizado por escrito antes de ejecutarse.",
+      "leccion": "08-albanileria-y-obra/13-mano-de-obra-y-normativa",
+      "sinonimos": [
+        "al contrato",
+        "por obra",
+        "destajo"
+      ]
+    },
+    {
       "termino": "Paleocauce",
       "slug": "paleocauce",
       "definicion": "Cauce fluvial abandonado, relleno y cubierto, cuyo cuerpo de arena permanece enterrado e invisible desde la superficie. Explica esas franjas de terreno donde el cultivo se seca antes que en el resto sin razón aparente, porque la arena de abajo drena aunque la superficie parezca arcillosa.",
@@ -1324,6 +1506,17 @@
         "pares",
         "par de cercha",
         "cabio"
+      ]
+    },
+    {
+      "termino": "Partida",
+      "slug": "partida",
+      "definicion": "Unidad de trabajo homogénea en que se descompone una obra para computarla y cotizarla por separado — excavación de zanjas, hormigón de cimientos, muro de ladrillo, revoque — cada una con su unidad, su cantidad y su precio. La regla de oro es la de descomponer un proyecto en tareas estimables: si una partida es demasiado grande para estimarla con confianza, se parte. En Bolivia se la llama también ítem.",
+      "leccion": "08-albanileria-y-obra/12-computo-y-presupuesto",
+      "sinonimos": [
+        "partidas",
+        "ítem de obra",
+        "ítems de obra"
       ]
     },
     {
@@ -1466,6 +1659,15 @@
       ]
     },
     {
+      "termino": "Probabilidad de precipitación",
+      "slug": "probabilidad-de-precipitacion",
+      "definicion": "El porcentaje que acompaña a un pronóstico de lluvia y que casi todo el mundo lee mal: no indica la intensidad, ni la fracción del terreno que se mojará, ni el tiempo que lloverá. Significa, aproximadamente, la posibilidad de que caiga lluvia medible en un punto dado de la zona durante el período, y las convenciones varían entre servicios meteorológicos. De ahí la regla práctica: se mira siempre junto a la cantidad prevista, porque un setenta por ciento con dos milímetros no cambia nada en el balance hídrico y un treinta por ciento con treinta milímetros reordena la semana.",
+      "leccion": "15-ia-aplicada/04-prediccion",
+      "sinonimos": [
+        "probabilidad de lluvia"
+      ]
+    },
+    {
       "termino": "Profundidad efectiva",
       "slug": "profundidad-efectiva",
       "definicion": "Hasta dónde pueden llegar las raíces sin encontrar un impedimento: capa compactada, nivel colgado, discontinuidad textural, roca o agua permanente. No aparece en ningún análisis de laboratorio, porque el análisis se hace sobre los primeros 20 cm; solo la revela el hoyo. Los frutales perennes exigen un metro o más, y la fertilidad no compensa su falta.",
@@ -1485,6 +1687,15 @@
       ]
     },
     {
+      "termino": "Puesto en obra",
+      "slug": "puesto-en-obra",
+      "definicion": "El precio que importa al comparar proveedores: el del material entregado en tu terreno, es decir, precio de pizarra más flete. Un árido baratísimo a cuarenta kilómetros no es barato, y en compras grandes el descuento real suele estar en el flete incluido más que en la rebaja de pizarra. Se pide literalmente así al cotizar: «puesto en obra».",
+      "leccion": "08-albanileria-y-obra/12-computo-y-presupuesto",
+      "sinonimos": [
+        "precio puesto en obra"
+      ]
+    },
+    {
       "termino": "Punto de descarga",
       "slug": "punto-de-descarga",
       "definicion": "Lugar concreto al que la red de drenaje entrega el agua que recoge. Es la primera decisión del diseño, no la última, porque el agua que se saca de un sitio aparece en otro: hacia el vecino genera un conflicto, y hacia la propia zona baja sin haberlo previsto concentra el problema en vez de resolverlo. Las opciones honestas son un desagüe existente, un almacenamiento propio o una zona de infiltración dentro del terreno.",
@@ -1494,6 +1705,16 @@
         "salida de drenaje",
         "colector",
         "descarga"
+      ]
+    },
+    {
+      "termino": "Recuperación aumentada (RAG)",
+      "slug": "rag",
+      "definicion": "La técnica de buscar primero los fragmentos relevantes de tus propios documentos y pasárselos al modelo dentro de la pregunta, en vez de confiar en lo que el modelo recuerda del mundo. Es lo que convierte un asistente genérico en uno que sabe de tu vivero, y a la escala de un vivero no requiere infraestructura: con miles de filas y decenas de documentos, una búsqueda por palabras y filtros de lote y fecha alcanza. La consecuencia importante es de negocio: el modelo es un bien común que cualquiera puede usar, pero los registros que se le entregan no lo son.",
+      "leccion": "15-ia-aplicada/05-tu-propio-asistente",
+      "sinonimos": [
+        "recuperación aumentada",
+        "generación aumentada por recuperación"
       ]
     },
     {
@@ -1543,12 +1764,21 @@
       ]
     },
     {
+      "termino": "Rendimiento",
+      "slug": "rendimiento",
+      "definicion": "Cuánto material consume una unidad de cada partida: el puente entre la cantidad de obra y la lista de compras. Del orden de 15-17 ladrillos de 6 huecos y 0,02 m³ de mortero por m² de muro, o unas 7 bolsas de cemento por m³ de hormigón 1:2:3. Los valores de tabla son órdenes de magnitud para planificar — el rendimiento que vale es el que mides en tu primera obra, con tu ladrillo y tu albañil, y ese número es tuyo.",
+      "leccion": "08-albanileria-y-obra/12-computo-y-presupuesto",
+      "sinonimos": [
+        "rendimientos",
+        "rendimiento de materiales"
+      ]
+    },
+    {
       "termino": "Rendimiento del hormigón",
       "slug": "rendimiento-del-hormigon",
       "definicion": "Relación entre el volumen de materiales sueltos que entran en una mezcla y el volumen de hormigón que sale, que siempre es menor. La razón es geométrica: la arena ocupa los huecos entre las piedras de la grava, y la pasta de cemento los huecos entre los granos de arena. Como regla de trabajo hacen falta alrededor de 1,5 m³ de material suelto por cada m³ de hormigón terminado, y conviene añadir un margen del 5 al 10 % por pérdidas, porque quedarse corto a mitad de un vaciado deja una junta fría permanente.",
       "leccion": "08-albanileria-y-obra/02-dosificacion",
       "sinonimos": [
-        "rendimiento",
         "factor de rendimiento",
         "junta fría",
         "cómputo de materiales"
@@ -1651,6 +1881,36 @@
       ]
     },
     {
+      "termino": "Sesgo de supervivencia",
+      "slug": "sesgo-de-supervivencia",
+      "definicion": "El error de sacar conclusiones mirando solo los casos que quedaron registrados, cuando lo que se descartó era precisamente lo informativo. En un vivero aparece de la forma más humana: la bandeja que germinó bien se anota con orgullo y la que se perdió entera se tira sin escribir una línea. El registro resultante es peligrosamente convincente —parece completo y todo en él es cierto— pero lleva a conclusiones falsas, porque el sesgo no se ve mirando los datos que quedaron, solo mirando los que faltan. Las defensas son de disciplina: anotar siempre la pérdida con su causa, anotar el mismo día, y anotar lo que se pueda antes de conocer el resultado.",
+      "leccion": "15-ia-aplicada/06-los-datos-valen-mas",
+      "sinonimos": [
+        "sesgo del superviviente",
+        "supervivencia de la muestra"
+      ]
+    },
+    {
+      "termino": "Signo",
+      "slug": "signo",
+      "definicion": "En sanidad vegetal, la evidencia directa del causante: el insecto, la telaraña de la arañuela, el moho blanco, los cuerpos fructíferos de un hongo. Se distingue del síntoma, que es la respuesta de la planta —amarillear, marchitarse, deformarse— y admite muchas causas. Los signos valen mucho más que los síntomas porque son casi específicos, y casi siempre están donde nadie fotografía: en el envés, en el cuello de la planta, entre las raíces.",
+      "leccion": "15-ia-aplicada/02-identificacion-y-diagnostico",
+      "sinonimos": [
+        "signos",
+        "signo patológico"
+      ]
+    },
+    {
+      "termino": "Sobreajuste",
+      "slug": "sobreajuste",
+      "definicion": "Cuando una regla o un modelo memoriza los datos con los que se construyó en vez de capturar el proceso que los genera, y por eso funciona perfecto sobre el pasado y falla sobre lo nuevo. En agricultura el riesgo es máximo por una razón estructural: un cultivo da uno o dos ciclos por año, así que dos temporadas son dos observaciones y con dos puntos se traza cualquier recta. Las defensas son contar ciclos en vez de filas, desconfiar de la explicación que encaja sin residuos, preferir reglas con mecanismo físico detrás —balance hídrico, grados-día— y comprobar cada regla con la campaña que no se usó para inventarla.",
+      "leccion": "15-ia-aplicada/04-prediccion",
+      "sinonimos": [
+        "sobreajustar",
+        "overfitting"
+      ]
+    },
+    {
       "termino": "Sobrecimiento",
       "slug": "sobrecimiento",
       "definicion": "Tramo de muro entre el cimiento y el nivel del terreno, que sobresale por encima del suelo y se hace de un material poco absorbente. Su función es que la mampostería empiece por encima de la zona que se moja, tanto por ascenso capilar como por salpicadura de la lluvia. Por sí solo retrasa el problema pero no lo detiene, porque el hormigón también es poroso: lo que corta el ascenso es la barrera impermeable continua que va sobre su cara superior.",
@@ -1670,6 +1930,16 @@
         "traslape",
         "traslapo",
         "montaje de chapas"
+      ]
+    },
+    {
+      "termino": "Stock vendible",
+      "slug": "stock-vendible",
+      "definicion": "El número de plantas que están en condiciones de venderse, que no es lo mismo que el número de plantas vivas: descuenta las atrasadas, las dañadas, las de mala forma y las que aún no alcanzan el tamaño comercial. Es la cifra con la que se compromete un pedido, y confundirla con las vivas es la forma más común de romper una entrega. Sale del conteo por bandeja y lote, y es la base del cálculo de costo por plantín.",
+      "leccion": "15-ia-aplicada/03-vision-conteo-y-monitoreo",
+      "sinonimos": [
+        "plantas vendibles",
+        "inventario vendible"
       ]
     },
     {
@@ -1771,6 +2041,17 @@
       ]
     },
     {
+      "termino": "Testigo",
+      "slug": "testigo",
+      "definicion": "En agronomía, el grupo de control: la bandeja, fila o parcela que se deja sin el cambio que se está probando, para tener con qué comparar. Es el mismo concepto del grupo de control de un test A/B y exige la misma disciplina — cambiar una sola variable y anotar las dos ramas. En un vivero es baratísimo, porque la producción son cientos de unidades casi idénticas sembradas el mismo día: eso convierte al vivero en una plataforma de experimentación natural y es lo que permite probar una idea nueva sin arriesgar el lote entero.",
+      "leccion": "15-ia-aplicada/01-que-puede-y-que-no",
+      "sinonimos": [
+        "testigos",
+        "parcela testigo",
+        "grupo de control"
+      ]
+    },
+    {
       "termino": "Textura del suelo",
       "slug": "textura",
       "definicion": "Proporción en peso de las tres fracciones minerales del suelo —arena, limo y arcilla—, definidas únicamente por su tamaño. Es la única propiedad del suelo que en la práctica no se puede modificar, y por eso funciona como la restricción de diseño de cualquier proyecto agrícola.",
@@ -1825,6 +2106,17 @@
       ]
     },
     {
+      "termino": "Trampa cromática",
+      "slug": "trampa-cromatica",
+      "definicion": "Tarjeta de color pegajosa —normalmente amarilla— que se cuelga entre las plantas y captura insectos voladores que responden a ese estímulo visual: mosca blanca, trips, pulgones, mosquitas del sustrato. Es un instrumento de medición, no de control: no elimina la plaga, la mide. Se vuelve útil solo si tiene posición fija, se revisa en un intervalo constante —del orden de una vez por semana— y se cuenta, porque el dato que avisa no es el número absoluto sino la pendiente: una subida brusca de capturas es una alerta que llega antes de que el daño se vea en las plantas.",
+      "leccion": "15-ia-aplicada/03-vision-conteo-y-monitoreo",
+      "sinonimos": [
+        "trampas cromáticas",
+        "trampa amarilla",
+        "trampa adhesiva"
+      ]
+    },
+    {
       "termino": "Tranquera",
       "slug": "tranquera",
       "definicion": "Puerta de potrero hecha de palos horizontales, barata y al alcance de cualquiera. Es el portón provisional honesto del campo cruceño: no detiene un perro pequeño, pero sí una vaca, que es el adversario que no puede esperar a que existan las columnas del portón definitivo.",
@@ -1832,6 +2124,16 @@
       "sinonimos": [
         "tranqueras",
         "puerta de potrero"
+      ]
+    },
+    {
+      "termino": "Trazabilidad",
+      "slug": "trazabilidad",
+      "definicion": "La cadena documentada del origen de una planta: de qué planta madre salió la yema o el esqueje, quién vendió la semilla, qué dice la factura, qué rótulo puso el proveedor. Es lo único que establece la variedad de un plantín, porque la variedad no se ve en una hoja ni la resuelve ningún modelo. Vender con nombre de variedad sin trazabilidad es construir una mentira que se descubre cuando el árbol fructifica en el jardín del cliente — una deuda técnica que se paga con reputación, la única moneda que un vivero no puede reimprimir.",
+      "leccion": "15-ia-aplicada/02-identificacion-y-diagnostico",
+      "sinonimos": [
+        "trazable",
+        "cadena de procedencia"
       ]
     },
     {

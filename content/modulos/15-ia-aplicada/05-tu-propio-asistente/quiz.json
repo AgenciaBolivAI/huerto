@@ -1,0 +1,94 @@
+{
+  "preguntas": [
+    {
+      "id": "no-entrenar",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para tener un asistente que sepa de tu vivero hay que entrenar un modelo con tus datos.",
+      "respuesta": false,
+      "explicacion": "Falso: a la escala de un vivero, entrenar es caro, lento y peor que darle contexto a un modelo existente. Lo que rinde es la capa de búsqueda sobre tus registros — y ahí está la asimetría que importa: el modelo es un bien común que cualquiera puede usar, pero nadie más tiene tu tabla de mortalidad por lote, tus acumulados de grados-día ni tus fotos semanales de las mismas bandejas."
+    },
+    {
+      "id": "arquitectura",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuál es la arquitectura mínima honesta de un asistente de vivero, de abajo hacia arriba?",
+      "opciones": [
+        "Registros: la planilla, las fotos con nombres consistentes, los conteos y las columnas de clima. Este es el activo; el resto es plomería.",
+        "Búsqueda: localizar los pedazos relevantes de tus registros y pasarlos en la pregunta — recuperación aumentada, que a tu escala no necesita base de datos vectorial.",
+        "Modelo para redactar, resumir, ordenar y explicar; y a un costado, deliberadamente fuera del modelo, la calculadora.",
+        "Un modelo grande al que se le pregunta directamente, sin capas intermedias."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Fíjate en cuál capa es la más ancha en el diagrama: la respuesta se apoya en la búsqueda, que se apoya en tus registros. Con miles de filas y decenas de documentos, una búsqueda por palabras y filtros de lote y fecha alcanza sobradamente — empieza por lo simple, y si algún día hay cien mil filas ya sabrás qué cambiar."
+    },
+    {
+      "id": "numeros",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué cálculos tienen que salir de código determinista y no del modelo?",
+      "opciones": [
+        "Dosis y diluciones, porque un error de unidades es un factor de mil y quema el lote.",
+        "Grados-día acumulados y costo por plantín: son sumas y divisiones sobre tus datos, y una suma no se estima.",
+        "Superficies, volúmenes, conversión de unidades y aritmética de fechas.",
+        "Ninguno: si el modelo es bueno, sus cálculos son confiables."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la separación entre capa de presentación y lógica de negocio, aplicada aquí: el modelo entiende la pregunta, identifica qué función corresponde, le pasa los parámetros y muestra el resultado sin retocarlo. La ganancia es doble — la exactitud deja de ser probabilística, y el cálculo se vuelve auditable: si sale mal hay una función que puedes leer, probar y corregir."
+    },
+    {
+      "id": "prompt-sistema",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace útil a un prompt de sistema para Rizoma del Sur?",
+      "opciones": [
+        "El contexto fijo verificable: ubicación, altitud, clima tropical de sabana, lluvias de octubre a abril, seca de mayo a septiembre, surazos, suelo de llanura aluvial con arcillas expansivas.",
+        "Quién pregunta y en qué unidades: productor con formación en informática y sin agronomía, sistema métrico y bolivianos, cada término definido la primera vez.",
+        "Los límites explícitos —sin dosis, sin diagnóstico cerrado, sin precios ni normativa inventados— y la instrucción de decir cuándo un dato no está.",
+        "Un párrafo pidiéndole que actúe como un experto agrónomo de primer nivel."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Pedirle que «actúe como experto» no aporta nada; lo que aporta son hechos verificables de tu operación. Esas ocho líneas de clima y calendario son lo que más rinde por carácter escrito: bastan para que deje de hablarte de primaveras y empiece a hablarte de temporada seca."
+    },
+    {
+      "id": "barandas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué no basta con escribir los límites en el prompt, y cómo se refuerzan?",
+      "opciones": [
+        "Porque un límite escrito es una petición, no una garantía: para lo que importa, la restricción debe estar en la estructura.",
+        "Lo que no debe calcular, no se le da a calcular: si las dosis salen de una tabla de etiquetas que tú cargaste, o está en la tabla o la respuesta es que no está.",
+        "Si la capa de búsqueda no encontró documento, la respuesta es «no tengo fuente para esto», no un párrafo verosímil.",
+        "Basta con revisar siempre todas las respuestas antes de usarlas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La revisión manual se sostiene la primera semana; los límites estructurales sostienen el año — y el día que estés apurado. Y hay una responsabilidad que no se delega: si el asistente le habla a un cliente, el consejo lleva tu firma. «Me lo dijo la IA» no es una defensa ante un huerto perdido."
+    },
+    {
+      "id": "conectividad",
+      "tipo": "verdadero_falso",
+      "enunciado": "Como el asistente vive en la nube, es razonable que la captura de datos en el campo requiera conexión.",
+      "respuesta": false,
+      "explicacion": "Falso: en Zanja Honda, cualquier flujo que exija estar en línea para funcionar va a fracasar en el campo. Anotar y fotografiar tiene que funcionar sin señal siempre, y la subida es un proceso aparte que corre cuando hay wifi, por lotes y en resolución moderada. Es el mismo razonamiento del depósito elevado de la lección hidráulica: un buffer entre un suministro intermitente —la señal— y una demanda continua, que es tu trabajo diario."
+    },
+    {
+      "id": "medir",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si al mes de usarlo el asistente no te ahorró horas ni evitó errores, el problema es que hace falta un modelo mejor.",
+      "respuesta": false,
+      "explicacion": "Falso: casi siempre el problema son los datos que todavía no existen. Un asistente sirve exactamente en la medida en que tus registros existen y están ordenados — sin planilla, sin conteos y sin fotos con nombres consistentes, el mejor modelo del mundo solo puede darte el promedio del mundo. Ese es el asunto de la última lección del módulo."
+    },
+    {
+      "id": "construir-asistente",
+      "tipo": "abierta",
+      "enunciado": "Diseña el asistente de Rizoma del Sur en dos etapas: la versión de una tarde y la versión con funciones. Especifica qué le cargas, qué prompt de sistema le escribes, qué barandas pones, cómo resuelves la conectividad y cómo vas a saber si sirve.",
+      "respuestaModelo": "La primera versión es de una tarde y sin programar nada: un documento con el prompt de sistema, la planilla exportada, y la costumbre de pegar el pedazo relevante de la planilla en cada consulta. Eso ya es un asistente con contexto. Lo uso dos semanas anotando qué preguntas le hago de verdad, y esa lista se convierte en la especificación de la versión siguiente.\n\nEl prompt de sistema lo escribo como una especificación, no como un pedido de tono. Contexto fijo: vivero de 2.474 m² en Zanja Honda al sur de Santa Cruz, 529 msnm, clima tropical de sabana, lluvias de octubre a abril y seca de mayo a septiembre, surazos de dos o tres días con noches de unos 10 °C, suelo de llanura aluvial con arcillas expansivas y napa variable, dengue endémico. Quién pregunta: alguien con formación en informática y sin agronomía, así que define cada término la primera vez, usa sistema métrico y bolivianos. Qué datos le paso: planilla de lotes con conteos y mortalidad, fotos con fecha y lote, clima diario, acumulado de grados-día — y si la respuesta depende de un dato que no está, que lo diga. Y un glosario local chico, porque por defecto dirá plántula donde aquí se dice plantín y maceta donde se dice bolsa.\n\nLa segunda versión agrega las funciones deterministas, que es mi terreno: dosificación de mezclas de sustrato, superficie y número de bandejas, grados-día acumulados por lote, costo por plantín con mortalidad, y días entre fechas. El modelo elige la función, la función devuelve el número, y el modelo lo muestra sin retocarlo. Nada de aritmética en el texto: un número que salió de predecir la siguiente palabra es una opinión con forma de cifra, y además así el cálculo queda auditable.\n\nEn la capa de búsqueda cargo mis propias fuentes, no bibliografía genérica: las etiquetas de los productos que realmente uso, la ficha de cada especie que produzco, mis protocolos —el de foto de la lección 2, el de riego por peso de la 4—, el historial de lotes con su resultado, y las notas de las consultas al técnico. Un asistente que cita mi propio historial vale mucho más que uno que cita internet.\n\nLas barandas las escribo antes de la primera pregunta útil, y las pongo en la estructura además del prompt: no da dosis de productos fitosanitarios, remite a la etiqueta registrada y explica cómo leerla; no cierra diagnósticos, propone hipótesis y qué observar —envés, raíz, distribución, manejo—; no inventa precios ni normativa; si la búsqueda no encontró documento, responde que no tiene fuente; y todo lo que toca plantas pasa por mí y por los tres filtros de la lección 1, fuente, testigo y registro. Además, nada que salga a un cliente se manda sin leerlo, porque lo que lleva mi nombre lo firmo yo.\n\nPara la conectividad, diseño al revés de lo cómodo: captura local primero en el teléfono, que funcione sin señal; sincronización por lotes cuando haya wifi, con fotos en resolución moderada porque los datos móviles cuestan; las tablas de consulta diaria y el protocolo disponibles sin conexión; y respaldo en dos lugares, uno fuera del vivero, porque todo el activo del módulo no puede depender de un teléfono que se cae en un balde. Y como hay cortes de luz, prefiero que viva en el teléfono, que trae su propia batería, antes que en un servidor en el galpón.\n\nPara saber si sirve uso el criterio de siempre: al mes, cuántas horas me ahorró y cuántos errores evitó. Si la respuesta es ninguna y ninguno, el problema casi nunca es el modelo — son los datos que todavía no existen.",
+      "criterios": [
+        "Plantea dos etapas: versión sin programar con prompt y planilla, y versión con funciones deterministas.",
+        "Escribe el prompt de sistema con contexto fijo verificable del vivero, perfil de quien pregunta, datos disponibles y glosario local.",
+        "Delega a funciones los cálculos exactos y nombra varios concretos.",
+        "Carga fuentes propias en la búsqueda: etiquetas, fichas, protocolos, historial de lotes, notas del técnico.",
+        "Define barandas estructurales: sin dosis, sin diagnóstico cerrado, sin precios ni normativa, sin fuente no responde, revisión humana.",
+        "Aplica la regla de que nada sale a un cliente sin leerlo, asumiendo la responsabilidad.",
+        "Diseña captura local primero, sincronización por lotes, consulta sin conexión y respaldo en dos lugares.",
+        "Mide el resultado en horas ahorradas y errores evitados, reconociendo que la falla suele ser de datos."
+      ],
+      "explicacion": "Nota que la parte de IA de este diseño es la más pequeña: un prompt bien escrito, una búsqueda simple y unas funciones que ya sabes programar. Todo lo demás son los registros de las cuatro lecciones anteriores. Ese reparto no es casualidad — es exactamente la tesis que la última lección del módulo va a enunciar sin rodeos."
+    }
+  ]
+}

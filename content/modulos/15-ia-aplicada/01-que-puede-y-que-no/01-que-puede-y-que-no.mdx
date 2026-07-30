@@ -1,0 +1,313 @@
+Este módulo es el único del curso donde llegas con ventaja. Sabes qué es un modelo de lenguaje, has
+llamado a una API, entiendes que la salida es una distribución de probabilidad y no una consulta a
+una base de datos. Nada de eso hay que explicártelo.
+
+Lo que sí hay que explicarte es **el dominio nuevo donde vas a apuntar esa herramienta** — y por qué
+un modelo que te ahorra una tarde escribiendo el catálogo puede costarte un lote entero si le
+preguntas una dosis. Este módulo no es sobre IA: es sobre **el vivero como sistema donde la IA
+acierta, falla, y en qué renglones el fallo se paga con plantas muertas.**
+
+## La diferencia que lo cambia todo: el bucle es lento y no hay revert
+
+<Diagrama
+  src="bucle-de-feedback.webp"
+  alt="Dos paneles. En el izquierdo, rotulado software, un lazo pequeño y cerrado entre una ventana de código y un visto verde, con un cronómetro al lado: segundos. En el derecho, rotulado vivero, un lazo mucho más amplio y abierto que va de una mano sembrando en una bandeja, atraviesa una hoja de calendario, y termina en un plantín marchito con un triángulo de advertencia: semanas, y el lazo no se cierra."
+  pie="La misma sugerencia equivocada cuesta segundos en un lado y semanas de producción en el otro. Toda la prudencia de este módulo sale de esta asimetría."
+/>
+
+En tu trabajo, una sugerencia dudosa de un modelo cuesta casi nada: la pegas, corre el test, falla
+en dos segundos, la descartas. El ciclo entero cabe en un café. Y si algo pasa a producción, hay
+revert.
+
+En el vivero, la misma sugerencia dudosa entra en un sistema donde:
+
+- **La verificación tarda semanas.** Si aplicas un riego, una dosis o un sustrato mal calculado, el
+  síntoma aparece en diez, veinte, cuarenta días. Cuando aparece, ya lo hiciste en toda la bandeja.
+- **No hay rollback.** Un plantín quemado por sobredosis no se recupera; una semilla que no germinó
+  no se vuelve a sembrar sin perder la ventana de la temporada. Es la misma regla que ya conociste
+  con el hormigón: **la ventana única.** La planta tampoco tiene Ctrl+Z.
+- **El error se propaga por lotes.** No falla un registro: falla la bandeja, el almácigo, la
+  producción completa de una especie — porque en un vivero todo se hace en serie, y eso que es tu
+  gran ventaja de productividad es también tu radio de explosión.
+- **Nada rechaza una respuesta bien formada.** No hay compilador, no hay linter, no hay tipos. Una
+  recomendación agronómica falsa **no se ve distinta** de una verdadera: misma sintaxis, mismo tono
+  seguro, mismas unidades verosímiles.
+
+Ese último punto merece detenerse, porque es el corazón del asunto.
+
+## Por qué las respuestas falsas son especialmente peligrosas *en agronomía*
+
+Ya sabes que un modelo puede producir una <Termino slug="alucinacion">alucinación</Termino>: texto
+plausible, seguro de sí mismo y falso. En tu dominio de siempre, eso se atrapa rápido — el import no
+existe, la función no compila, el endpoint devuelve 404. En agronomía hay tres agravantes que
+conviene tener presentes:
+
+**1. El vocabulario es regular, así que lo inventado suena exacto.** Los ingredientes activos de los
+plaguicidas siguen patrones morfológicos muy consistentes: *cipermetrina*, *mancozeb*,
+*abamectina*, *imidacloprid*. Un modelo puede producir «clorfenapiram-metil 480 SC» — que en esta
+lección es un nombre **inventado por mí como ejemplo** — y ni tú ni el vendedor de la agropecuaria
+notarán a primera vista que no existe. Peor: puede atribuirle a un producto real un uso que no
+tiene. En software, un nombre inventado revienta en el import. Aquí, se compra y se aplica.
+
+**2. Las unidades esconden errores de tres órdenes de magnitud.** La misma dosis se expresa como
+mL por litro de agua, litros por hectárea, o gramos
+por <Termino slug="mochila-de-aspersion">mochila de aspersión</Termino> — que es la unidad real
+con la que se trabaja en el campo cruceño. Confundir «2 mL/L» con «2 L/ha» no es un error del 10 %: es un
+factor de mil, y la diferencia entre controlar una plaga y quemar el lote. Un modelo cambia de
+unidad a mitad de párrafo con total serenidad.
+
+**3. Los síntomas son multicausales, así que casi cualquier diagnóstico «encaja».** Una hoja
+amarilla puede ser deficiencia de nitrógeno, exceso de agua con raíz asfixiada, pH que bloquea el
+hierro, daño de raíz por trasplante, o el comienzo de una virosis. Cinco causas, un síntoma. Como ya
+sabes por la **ley del mínimo**, el sistema responde al factor más escaso, y la foto no muestra
+cuál es. Pídele un diagnóstico a un modelo y te dará uno **coherente, bien redactado y
+probablemente incompleto** — porque la información que faltaba no estaba en la pregunta, sino en tu
+registro de riego de las últimas tres semanas.
+
+<Analogia titulo="Linter sí, suite de tests no">
+La forma sana de colocar un modelo en este dominio es la que ya usas con las herramientas de
+análisis estático: **un linter es utilísimo levantando sospechas y jamás autoriza un despliegue.**
+Puede decirte «esto parece deficiencia de nitrógeno, revisa el riego y el sustrato» y con eso te
+ahorra media hora de búsqueda. Lo que no puede es ser el paso que da luz verde a aplicar algo en
+cuatrocientos plantines.
+
+Y hay una propiedad que en tu oficio ya te ha morfido: **la confianza declarada no correlaciona con
+la corrección.** El modelo no tiene forma de decirte «esto lo sé porque lo vi mil veces» frente a
+«esto lo estoy completando». Suena igual. En un dominio donde el compilador es la biología y tarda
+tres semanas en responder, esa falta de calibración es el riesgo central.
+</Analogia>
+
+## El mapa: costo del error contra verificabilidad
+
+<Diagrama
+  src="matriz-de-riesgo.webp"
+  alt="Gráfico de dos ejes: el horizontal rotulado verificable y el vertical rotulado costo del error. Abajo a la derecha, en verde, iconos de un cartel con pincel y una pila de bandejas de plantines con marcas de conteo. Arriba a la izquierda, en terracota, un pulverizador con triángulo de advertencia junto a un plantín marchito y una lupa sobre una hoja manchada con signo de interrogación."
+  pie="La diagonal es la política entera: abajo a la derecha, delega sin miedo; arriba a la izquierda, ni se te ocurra sin verificar en la fuente."
+/>
+
+Antes de usar un modelo para cualquier cosa del vivero, ubica la tarea en dos ejes:
+
+**¿Cuánto cuesta el error?** ¿Un texto feo que reescribes, o cuatrocientos plantines?
+**¿Puedes verificarlo?** ¿Lo compruebas leyéndolo en dos minutos, o solo lo sabrás en un mes?
+
+Eso da cuatro zonas, y la política es distinta en cada una:
+
+**Zona verde — costo bajo, verificación inmediata. Delega sin culpa.** Redactar las descripciones de
+tu catálogo; traducir una ficha técnica del inglés; resumir un PDF largo de INIAF o de la FAO;
+escribir el texto del cartel de precios o del rótulo de un lote; convertir tus notas sueltas en una
+planilla ordenada; preparar el guion de un video para redes; darte tres formas de nombrar los lotes;
+generar el borrador de una respuesta a un cliente; ayudarte a diseñar la ficha de registro que vas a
+usar. Todo eso lo lees y sabes al instante si sirve.
+
+**Zona amarilla — verificable pero costoso, o barato pero difícil de comprobar.** Aquí el modelo
+propone y **tú confirmas contra una fuente antes de actuar**: calendarios de siembra, criterios de
+sustrato, planificación de tareas, interpretación de un análisis de suelo, estimación de cuántas
+bandejas caben en una mesa. Útil como borrador; nunca como decisión.
+
+**Zona roja — costo alto y verificación lenta o imposible. Prohibido delegar.** Dosis de cualquier
+producto fitosanitario; diagnóstico sanitario definitivo; identificación de especie para vender como
+tal; el precio de mercado local de hoy; qué exige la normativa municipal o el SENASAG. En estos
+renglones el modelo puede ayudarte a **formular la pregunta** y a entender el vocabulario, pero la
+respuesta se lee en la fuente: la etiqueta del producto, la norma, el técnico, el mercado.
+
+Fíjate en que es la misma lógica de dominios de fallo que aplicaste en la instalación eléctrica y en
+el agua: **no mezcles un circuito barato con uno crítico.** Un modelo es una dependencia excelente
+para el circuito barato.
+
+Este recorrido de un agricultor por seis usos concretos es prácticamente el índice de las zonas
+verde y amarilla — con la ventaja de verlo aplicado en una finca real, y con su propia sección de
+errores a evitar:
+
+<Video id="0vYXd4O3UMU" />
+
+## El sesgo de lo que vio: el trópico está subrepresentado
+
+<Diagrama
+  src="lo-que-el-modelo-vio.webp"
+  alt="Escena rotulada lo que el modelo vio. A la izquierda, una pila altísima de fichas fotográficas con siluetas de hojas de clima templado, en verde salvia. A la derecha, una pila de solo tres o cuatro fichas con hojas tropicales anchas, y al lado un plantín tropical en maceta con un gran signo de interrogación terracota encima, sin reconocer. Una línea discontinua separa los dos lados."
+  pie="Lo que vio mil veces, lo sabe. Lo que vio cuatro veces, lo completa. Y tu vivero está del lado flaco de la pila."
+/>
+
+Un modelo —de lenguaje o de visión— es tan bueno como la distribución que vio, y ahí hay un sesgo
+que te afecta directamente: **la literatura y las fotos disponibles están dominadas por climas
+templados del hemisferio norte.** Las consecuencias son muy concretas:
+
+- **«Siembra en primavera»** no significa nada en Santa Cruz. Aquí no hay cuatro estaciones
+  templadas: hay **temporada de lluvias (octubre a abril) y temporada seca (mayo a septiembre)**, y
+  el calendario del vivero se organiza por eso, no por equinoccios.
+- **«Riega dos veces por semana»** es una recomendación sin sentido sin decir a qué demanda
+  atmosférica. Un enero cruceño y un mayo cruceño piden cosas distintas, y una bandeja al sol y otra
+  bajo malla también.
+- **«Protege del frío en invierno»** subestima tu problema real: aquí el frío llega en
+  **surazos** — irrupciones de aire polar de tres días con noches de unos 10 °C en medio de la
+  temporada seca — y no como una estación entera que puedes planificar.
+- **Los nombres locales no están en el mapa.** Pregunta por el *tajibo*, el *toborochi*, el
+  *motacú* o el *cuchi* y la calidad de la respuesta se degrada rápido: nombres comunes que se
+  solapan entre especies, sinónimos regionales, y muy poca literatura digitalizada. El nombre
+  científico ayuda; el nombre de la barraca de tu zona, no.
+
+No es que el modelo «sepa menos de Bolivia»: es que **la Bolivia productiva publica poco en la web
+y mucho en manuales impresos, ferias y páginas de Facebook institucionales.** Tu vivero vive
+justamente en ese hueco de datos — y la lección 6 de este módulo convierte ese hueco en tu mayor
+ventaja competitiva.
+
+Y conviene ver el otro extremo de la escala para calibrar expectativas. Este documental recorre una
+app de escaneo de cultivos hecha para pequeños agricultores en Camerún y agricultura de precisión en
+el sur de España; mientras lo mires, hazte la pregunta que importa: **¿cuánto de esto baja a 2.474
+metros cuadrados sin financiamiento?** Distinguirlo es la mitad del oficio:
+
+<Video id="-Cie_vZcW7w" />
+
+## Los tres filtros antes de aplicar algo a todo
+
+<Diagrama
+  src="antes-de-aplicar.webp"
+  alt="Cadena rotulada antes de aplicar a todo. A la izquierda, una caja que representa la sugerencia de la máquina con un bocadillo en blanco. El flujo pasa por tres arcos verdes: primero un documento con sello oficial, después tres plantines pequeños con una lupa encima, y luego un cuaderno abierto con lápiz. Después de los tres arcos, el flujo se ensancha hacia un almácigo grande y sano con visto verde. Abajo, una flecha delgada intenta saltarse los tres arcos y está tachada con una cruz roja."
+  pie="Ningún atajo: la sugerencia llega al vivero entero solo después de la fuente, la prueba en pocas plantas y el registro escrito."
+/>
+
+Toda sugerencia de un modelo que vaya a tocar plantas pasa por tres puertas. Ninguna es opcional, y
+juntas convierten una herramienta insegura en un proceso seguro.
+
+### Filtro 1 · La fuente manda, no el modelo
+
+<Diagrama
+  src="sin-fuente-con-fuente.webp"
+  alt="Dos paneles. En el izquierdo, rotulado sin fuente, una caja que representa al modelo produce una cadena de fichas de palabras en blanco hacia una hoja, mientras un libro y un documento aparecen apagados y desconectados con línea discontinua; dos fichas llevan signos de interrogación; cruz roja. En el derecho, rotulado con fuente, un documento con sello oficial y un libro entran a la misma caja por flechas verdes sólidas, y cada ficha de palabra sale con un pequeño icono de enlace que vuelve al documento; visto verde."
+  pie="La máquina es la misma en los dos paneles. Lo único que cambia es si su salida está anclada a un documento real que alguien le dio — y eso es todo lo que decide si puedes usarla."
+/>
+
+Para cualquier cosa que se aplique a una planta, la autoridad está en un documento verificable, y en
+el caso de los productos fitosanitarios ese documento tiene
+nombre: **la <Termino slug="etiqueta-del-producto">etiqueta del producto</Termino>.** No es
+publicidad: es el texto legalmente vinculante donde constan
+el <Termino slug="ingrediente-activo">ingrediente activo</Termino> y su concentración, los
+cultivos autorizados, la dosis, el plazo de seguridad y las precauciones. En Bolivia el registro de esos
+productos lo lleva el **SENASAG**, y la regla del oficio es breve: **la etiqueta manda.** Si el
+modelo dice una cosa y la etiqueta dice otra, la etiqueta gana — siempre, sin discusión, aunque el
+modelo suene más convincente.
+
+Para lo agronómico general, la jerarquía práctica es: la etiqueta o el manual del producto, después
+las publicaciones de instituciones (INIAF, FAO, universidades, INTA), después el técnico o el
+viverista con experiencia local, y muy al final la respuesta suelta de un modelo. Y una exigencia
+que te ahorrará disgustos: **pídele siempre la fuente y compruébala.** Un modelo puede inventar una
+cita con la misma soltura con la que inventa una molécula.
+
+### Filtro 2 · El testigo: tu vivero es una plataforma de experimentos
+
+Aquí tienes una ventaja que la mayoría de los viveristas no aprovecha y que a ti te va a resultar
+familiar: **tu producción son cientos de unidades casi idénticas**, sembradas el mismo día, con el
+mismo sustrato, bajo la misma malla. Eso es una plataforma de experimentación natural.
+
+Así que ninguna idea nueva —venga de un modelo, de un video o de un vecino— se aplica a todo. Se
+aplica a **una bandeja o una fila**, dejando otra igual sin tocar:
+el <Termino slug="testigo">testigo</Termino>. Es exactamente el grupo de control de un test A/B, con
+otro nombre y con la misma disciplina: cambia **una sola variable**, deja el resto igual, y anota
+las dos.
+
+El costo de esta prudencia es minúsculo —una bandeja— y el beneficio es doble: te protege del error
+en escala y, sobre todo, **genera el único dato que a nadie más le sirve y a ti sí:** cómo se
+comporta esa práctica con tu agua, tu sustrato, tu clima y tus manos.
+
+### Filtro 3 · Si no queda escrito, no pasó
+
+La prueba solo vale si se registra: qué probaste, en qué lote, con qué fecha, contra qué testigo, y
+qué pasó a los quince y a los treinta días. Sin ese renglón, dentro de seis meses tendrás una
+sensación en vez de un resultado — y las sensaciones no se acumulan.
+
+Es la misma jugada que hiciste con la planilla de obra y su columna «Real»: **el registro convierte
+cada decisión en dato, y el dato calibra la siguiente.** Solo que aquí, además, ese registro es la
+materia prima de todo lo que viene: los conteos de la lección 3, las predicciones de la 4 y el
+asistente de la 5 no funcionan sin él.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Empieza por la zona verde, donde el retorno es inmediato y el riesgo cero.** Con las especies que
+ya tienes en los ocho lotes, un modelo te ahorra tardes enteras: redactar las descripciones del
+catálogo con un formato uniforme (nombre común, nombre científico, tamaño adulto, sol o sombra,
+riego, uso en jardín); traducir fichas técnicas del inglés; resumir manuales largos de la FAO a una
+página; escribir los rótulos de las mesas y los carteles de precios; convertir tus notas de campo en
+una planilla ordenada; y redactar los textos de las redes y del WhatsApp de ventas. Todo eso lo
+verificas leyéndolo.
+
+**Después, la tarea de más valor de esta lección: diseña tu ficha de registro con ayuda del
+modelo.** Pídele varias versiones de una planilla mínima para el vivero —lote, especie, fecha de
+siembra, sustrato, cantidad sembrada, riego, mortalidad, causa, fecha de venta, precio— discútelas,
+y quédate con la más corta que puedas sostener todos los días. Esa hoja es la que va a alimentar
+todo el módulo, y la que en el Módulo 14 se vuelve digital.
+
+**Prohibido en Rizoma, sin excepción:** aceptar de un modelo una dosis de cualquier producto
+fitosanitario (se lee en la etiqueta, y punto); dar por cerrado un diagnóstico sanitario por una
+foto; vender una planta con un nombre de especie que solo confirmó un modelo; o repetir a un cliente
+un dato técnico o legal sin haberlo comprobado. Lo que sí puede hacer el modelo en esos casos es
+enseñarte el vocabulario para entender la etiqueta y ayudarte a formular la pregunta correcta al
+técnico.
+
+**Y adopta el testigo como costumbre desde el primer lote.** Cada vez que pruebes algo nuevo
+—sustrato distinto, sombra distinta, hormona de enraizado— reserva una bandeja igual sin el cambio,
+rotúlala, y anota las dos a los quince y a los treinta días. Una bandeja de costo, y a cambio, en
+una temporada, tendrás algo que ningún modelo del mundo tiene: **datos de tu vivero.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La conectividad en Zanja Honda condiciona el diseño, no la ambición.** Si la señal es irregular,
+todo lo que dependa de la nube tiene que ser **asíncrono y tolerante a caídas**: se captura en el
+teléfono, se sincroniza cuando hay red. Es la misma lógica del depósito elevado de la lección
+hidráulica — un buffer entre un suministro intermitente y una demanda continua — y la misma
+prudencia de los cortes eléctricos que ya conoces.
+
+**El costo de datos móviles importa.** Subir cientos de fotos en alta resolución todos los días es
+caro; conviene resolución moderada, subida por lotes y cuando haya wifi. Diseña con eso en mente
+desde el principio.
+
+**El español de los modelos es bueno; el boliviano rural, flojo.** Con vocabulario técnico general
+responden bien, pero con nombres locales —motacú, jichituriqui, tajibo— y con prácticas de la zona
+la calidad cae. Truco práctico: trabaja con **nombre científico** cuando busques información
+técnica, y reserva el nombre local para hablar con clientes y proveedores.
+
+**La autoridad sanitaria es el SENASAG**, y para semillas y material vegetal el referente estatal es
+el **INIAF**. Sus documentos, y las etiquetas registradas, son la fuente que gana cualquier
+discusión con una máquina.
+
+**Y ningún modelo sabe el precio de hoy.** El precio de un plantín en Santa Cruz depende de la
+temporada, del mercado y de la competencia de la semana, y eso solo se averigua preguntando y
+anotando — que es, otra vez, tu registro. La lección de monetización va a apoyarse en él.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Me dio la dosis con mucha seguridad.»** La seguridad del tono no es evidencia. La dosis se lee en
+la etiqueta del producto, que es el documento legalmente vinculante.
+
+**«Le pedí el diagnóstico y me convenció.»** Una hoja amarilla admite cinco causas. Un diagnóstico
+coherente no es un diagnóstico correcto: falta tu registro de riego para distinguirlas.
+
+**«Lo probé directamente en todo el almácigo.»** Sin testigo no hay comparación, y sin comparación
+no aprendiste nada — solo apostaste. Una bandeja de control cuesta nada.
+
+**«Me citó tres estudios.»** Comprueba que existan. Inventar una cita le sale tan natural como
+inventar una molécula.
+
+**«Le pregunté cuándo sembrar y me habló de la primavera.»** Está calibrado para otro hemisferio y
+otro clima. Aquí manda lluvias contra seca, y el surazo.
+
+**«Total, si sale mal lo corrijo.»** No hay revert. El plantín quemado no vuelve, y la ventana de la
+temporada tampoco.
+
+**«Lo hicimos y salió bien, pero no anoté nada.»** Entonces no lo sabes: tienes una sensación. Las
+sensaciones no se acumulan ni se comparan; los registros sí.
+
+**«Para el catálogo también hay que desconfiar.»** No: ahí delega tranquilo. Desconfiar de todo por
+igual es tan improductivo como confiar en todo — la matriz existe para no gastar prudencia donde no
+hace falta.
+
+## Lo que sigue
+
+Con el mapa en la mano, entramos en el caso de uso que todo el mundo prueba primero: **la
+identificación y el diagnóstico por imagen.** Vamos a ver cómo funciona de verdad un clasificador de
+plantas, por qué acierta la especie y falla la variedad, por qué el «diagnóstico por foto» es la
+zona roja disfrazada de zona verde, cuánta fiabilidad real puedes esperar en el trópico boliviano, y
+—muy concreto— **cómo se toma una foto que sirva**: qué encuadre, qué luz, haz y envés, escala y
+contexto. Porque incluso cuando el modelo es flojo, una buena foto bien archivada sigue siendo un
+dato excelente.

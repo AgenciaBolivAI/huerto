@@ -1,0 +1,287 @@
+Esta es la lección donde tu perfil rinde al máximo, así que vamos a ser concretos: **no vas a
+entrenar nada.** Un asistente útil para tu vivero no se construye entrenando un modelo — se construye
+**dándole a un modelo existente el contexto que ningún modelo del mundo tiene, y sacándole de las
+manos todo lo que no debe hacer.**
+
+Las cuatro lecciones anteriores prepararon exactamente eso. La matriz de riesgo dice qué puede tocar.
+El protocolo de fotos genera un archivo consultable. Los conteos y la mortalidad producen las cifras.
+Los grados-día y el balance hídrico son las reglas. **Lo que falta es la carcasa que junta todo eso**
+— y cabe en una tarde.
+
+## Lo que separa un asistente útil de un buscador con modales
+
+<Diagrama
+  src="sin-contexto-con-contexto.webp"
+  alt="Dos paneles. En el izquierdo, rotulado sin contexto, una pregunta entra en una caja que representa al asistente y sale una hoja con líneas grises genéricas; al lado, tres iconos apagados —un globo terráqueo, un árbol nevado y un calendario templado— indican que la respuesta vino de otro lugar; cruz roja. En el derecho, rotulado con contexto, cuatro documentos —una planilla, un mapa con marcador, una nube con termómetro y una ficha de planta— entran a la misma caja por flechas verdes sólidas, y sale una hoja de líneas nítidas con un icono de enlace que vuelve a la planilla; visto verde."
+  pie="La máquina es idéntica en los dos paneles. La diferencia es que en el derecho alguien le pasó los registros, la ubicación, el clima y la lista de especies del vivero."
+/>
+
+Un modelo sin contexto responde con el promedio del mundo: el mundo templado, el del hemisferio norte,
+el de las cuatro estaciones. Ya viste el sesgo en la lección 1. Pero ese sesgo **no se corrige
+regañando al modelo**: se corrige **entregándole datos que lo anclen.**
+
+Y ahí está la asimetría que te conviene entender bien: **el modelo es un bien común y tus datos no.**
+Cualquiera puede usar el mismo modelo que tú; nadie más tiene tu tabla de mortalidad por lote, tus
+acumulados de grados-día por especie ni tus fotos semanales de las mismas bandejas. **La ventaja
+competitiva no está en el modelo, está en lo que le das** — que es literalmente el título de la
+lección que cierra el módulo.
+
+## La arquitectura mínima honesta
+
+<Diagrama
+  src="arquitectura-minima.webp"
+  alt="Pila vertical de cuatro losas conectadas por flechas verticales. Abajo, la más ancha, rotulada registros, con una planilla, un montón de fotos y un cuaderno. Encima, rotulada búsqueda, una lupa sobre fichas de documento con dos adelantadas como seleccionadas. Encima, rotulada modelo, una caja redondeada con un resplandor suave. Arriba, la más estrecha, rotulada respuesta, una hoja de líneas nítidas con visto verde. A la derecha de la losa del modelo, fuera de la pila y unida por una flecha horizontal, una calculadora con un engranaje."
+  pie="Cuatro capas y una calculadora al costado. Fíjate en cuál es la más ancha: la respuesta se apoya en la búsqueda, que se apoya en tus registros."
+/>
+
+De abajo hacia arriba, y sin más piezas de las necesarias:
+
+**1 · Registros.** La planilla que diseñaste en la lección 1, las fotos con nombres consistentes de la
+2, los conteos de la 3, las columnas de clima y grados-día de la 4. Este es el activo. Todo lo demás
+es plomería.
+
+**2 · Búsqueda.** Antes de preguntar al modelo, se localizan los pedazos relevantes de tus registros y
+se le pasan en la pregunta. Es el patrón que conoces como recuperación
+aumentada — <Termino slug="rag">RAG</Termino> —, y para tu escala **no necesita base de datos
+vectorial ni infraestructura**: con miles de filas y decenas de documentos, una búsqueda por palabras y por
+filtros de lote y fecha alcanza sobradamente. Empieza por lo simple; si algún día hay cien mil filas,
+ya sabrás qué cambiar.
+
+**3 · Modelo.** Redacta, resume, ordena, traduce, explica vocabulario y arma borradores. No decide
+nada crítico ni calcula nada exacto.
+
+**4 · Respuesta.** Y a un costado, deliberadamente **fuera** del modelo, la calculadora.
+
+## La regla dura: los números no se predicen, se calculan
+
+<Diagrama
+  src="numero-predicho-o-calculado.webp"
+  alt="Dos paneles. En el izquierdo, rotulado número predicho, una caja que representa al asistente emite una cadena de fichas de palabra en blanco y la última tiene forma de visor numérico pero muestra un borrón, con un signo de interrogación terracota; cruz roja. En el derecho, rotulado número calculado, la misma caja pasa una petición a una calculadora nítida con engranaje y recibe de vuelta una placa de resultado limpia que encaja en la respuesta; visto verde."
+  pie="Todo lo que tiene que ser exacto sale de código determinista. Un número que salió de predecir la siguiente palabra es una opinión con forma de cifra."
+/>
+
+Esta es la decisión de diseño más importante de la lección, y tiene una formulación simple: **si el
+resultado tiene que ser exacto, no lo produce el modelo.** Lo produce una función, y el modelo solo
+la llama y presenta lo que devuelve.
+
+Todo lo siguiente va en código determinista, sin excepción:
+
+| Cálculo | Por qué no puede predecirse |
+|---|---|
+| Dosis y diluciones | Un error de unidades es un factor de mil y quema el lote |
+| Grados-día acumulados | Es una suma sobre tus datos; una suma no se estima |
+| Costo por plantín | Divide entre supervivientes reales, no entre sembrados |
+| Superficies, volúmenes, cantidad de bandejas | Geometría: tiene una sola respuesta |
+| Días entre fechas, calendarios | Aritmética de fechas, donde los modelos fallan seguido |
+| Conversión de unidades | mL/L, L/ha, gramos por mochila |
+
+<Analogia titulo="El modelo es la interfaz, no el motor de cálculo">
+En arquitectura de software esto ya lo tienes resuelto: **la capa de presentación no hace la lógica de
+negocio.** Aquí igual — el modelo entiende «¿cuánto cemento para la platea del galpón?» o «¿cuántos
+días le faltan al lote 3?», identifica qué función corresponde, le pasa los parámetros y **muestra el
+resultado sin retocarlo.**
+
+La ganancia es doble y muy concreta. Primero, la exactitud deja de ser probabilística. Segundo, y más
+valioso, **el cálculo se vuelve auditable**: si el número sale mal, hay una función que puedes leer,
+probar y corregir — en vez de un misterio que a veces acierta. Es la misma razón por la que
+prefieres una clave dicotómica a un clasificador cuando la respuesta importa.
+</Analogia>
+
+## El prompt de sistema: la especificación de tu dominio
+
+Aquí es donde la mayoría se queda corta. Un prompt de sistema no es una fórmula mágica: **es la
+especificación escrita de tu operación.** Y como estás escribiendo una especificación, aplican las
+virtudes de siempre — concreto mejor que genérico, restricciones explícitas, y nada que no sea cierto.
+
+<Figura pie="El esqueleto de un prompt de sistema para Rizoma del Sur. Fíjate en que casi todo son hechos verificables del vivero, no instrucciones de tono.">
+CONTEXTO FIJO
+  Vivero de 2.474 m² en Zanja Honda, sur de Santa Cruz de la
+  Sierra, Bolivia. 529 msnm. Clima tropical de sabana.
+  Lluvias: octubre a abril.  Seca: mayo a septiembre.
+  Surazos: irrupciones de 2-3 días, noches de unos 10 °C.
+  Suelo: llanura aluvial, arcillas expansivas, napa variable.
+  Dengue endémico en la zona.
+
+QUIÉN PREGUNTA
+  Productor con formación técnica en informática y sin
+  formación agronómica. Define cada término la primera vez.
+  Usa unidades del sistema métrico y bolivianos (Bs).
+
+DATOS QUE TE PASO
+  Planilla de lotes, conteos y mortalidad · fotos con fecha
+  y lote · clima diario · acumulado de grados-día.
+  Si la respuesta depende de un dato que no está, dilo.
+
+LÍMITES
+  No indicas dosis de productos fitosanitarios: remites a la
+  etiqueta registrada y explicas cómo leerla.
+  No cierras diagnósticos sanitarios: propones hipótesis y
+  qué observar (envés, raíz, distribución, manejo).
+  No inventas precios de mercado ni normativa municipal.
+  Todo cálculo exacto lo pides a la herramienta, no lo estimas.
+  Si no tienes fuente, dices que no la tienes.
+
+FORMA
+  Respuesta corta primero, detalle después.
+  Cuando cites algo, indica de dónde sale.
+</Figura>
+
+Tres cosas que merecen subrayado:
+
+**El contexto fijo es el que más rinde por carácter escrito.** Esas ocho líneas de clima, suelo y
+calendario reordenan todas las respuestas: bastan para que deje de hablarte de primaveras y empiece a
+hablarte de temporada seca.
+
+**Los límites son la parte del prompt que evita daños**, y son la traducción directa de la matriz de
+la lección 1. No son cortesía: son la política del vivero escrita donde el sistema la lea.
+
+**Y «si no está en los datos, dilo» es la instrucción más subestimada.** Ya viste en la lección 2 que
+un clasificador no puede decir «no sé» porque siempre hay un primer puesto; un modelo de lenguaje sí
+puede — pero hay que pedírselo explícitamente, y aun así conviene comprobarlo.
+
+## Barandas: los límites que no dependen de la buena voluntad
+
+<Diagrama
+  src="barandas.webp"
+  alt="Corredor rotulado barandas con tres barreras verdes en fila que una pregunta debe atravesar. La primera, rotulada cita la fuente, con un documento sellado y un icono de enlace. La segunda, rotulada no da dosis, con un pulverizador tachado en rojo y una flecha que redirige a una etiqueta de producto. La tercera, rotulada revisa un humano, con una figura con portapapeles y visto verde. Después de la tercera barrera el corredor se abre a un almácigo sano. Por el piso, una flecha delgada intenta esquivar las barreras y está tachada con una cruz roja."
+  pie="Escribir el límite en el prompt es la primera capa. La segunda es que el sistema no tenga forma de saltárselo."
+/>
+
+Un límite escrito en el prompt es una petición, no una garantía. Para lo que importa, conviene que la
+restricción esté **en la estructura**, no en la redacción:
+
+- **Lo que no debe calcular, no se lo des a calcular.** Si las dosis salen de una tabla de etiquetas
+  que tú cargaste, no hay margen para inventar: o está en la tabla, o la respuesta es «no está».
+- **Lo que debe citar, que salga con cita o no salga.** Si tu capa de búsqueda no encontró documento,
+  el asistente responde «no tengo fuente para esto», no un párrafo verosímil.
+- **Lo que toca plantas, pasa por un humano.** El asistente prepara, tú apruebas. Y lo que llega al
+  vivero pasa además por los tres filtros de la lección 1: fuente, testigo, registro.
+- **Y lo que sale a un cliente, se lee antes.** Un catálogo o un WhatsApp con un dato inventado no es
+  un error interno: es tu reputación. La misma regla de la variedad que solo se rastrea.
+
+<Advertencia titulo="Y una responsabilidad que no se delega">
+Si en algún momento tu asistente le habla a un cliente o a un vecino, **el consejo lleva tu firma, no
+la del modelo.** «Me lo dijo la IA» no es una defensa ante un huerto perdido, y en el rubro tampoco
+es una excusa social. Un dato técnico que sale de tu vivero pasa por tus ojos primero.
+</Advertencia>
+
+## Diseñar para la conectividad que hay
+
+<Diagrama
+  src="primero-local.webp"
+  alt="Dos paneles. En el izquierdo, rotulado siempre en línea, un teléfono en el campo intenta alcanzar una nube por una línea discontinua interrumpida por un hueco irregular, con el icono de señal tachado, y debajo una pila de registros esperando con un reloj terracota; cruz roja. En el derecho, rotulado primero local, el mismo teléfono guarda los registros en una caja a su lado por una flecha verde sólida, y de esa caja sale una flecha curva y punteada hacia la nube que solo se activa cuando se enciende un icono de wifi; visto verde."
+  pie="La captura no puede depender de la señal. Se guarda local y se sincroniza cuando haya red — el mismo depósito elevado, con datos."
+/>
+
+Ya lo anticipamos en la primera lección y ahora es una decisión de diseño: en Zanja Honda, **cualquier
+flujo que exija estar en línea para funcionar va a fracasar en el campo.** Las reglas que se derivan:
+
+- **Captura local primero, sincronización después.** Anotar y fotografiar tiene que funcionar sin
+  señal, siempre. La subida es un proceso aparte que corre cuando hay red.
+- **Lo pesado va por lotes y con wifi.** Fotos en resolución moderada, subida agrupada. Los datos
+  móviles cuestan.
+- **Lo que se consulta a diario, disponible sin conexión.** Las tablas de referencia, el protocolo de
+  fotos, el calendario de tareas: eso vive en el teléfono, no en la nube.
+- **Y un respaldo aburrido pero real.** Copia de la planilla y de las fotos en dos lugares, uno
+  fuera del vivero. Sin eso, todo el activo de este módulo depende de un teléfono que se puede caer
+  en un balde.
+
+Es el mismo razonamiento del depósito elevado de la lección hidráulica: **un buffer entre un
+suministro intermitente y una demanda continua.** Aquí el suministro es la señal y la demanda es tu
+trabajo diario.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Empieza con la versión de una tarde, sin infraestructura.** Un documento con el prompt de sistema
+—copiado del esqueleto de arriba, con tus especies reales—, la planilla exportada, y la costumbre de
+pegar el pedazo relevante de la planilla en cada consulta. Eso ya es un asistente con contexto, y no
+requiere programar nada. Úsalo dos semanas y anota qué preguntas le haces de verdad: esa lista es la
+especificación de la versión siguiente.
+
+**Después, la versión con funciones, que es tu terreno.** Cuatro o cinco cálculos deterministas
+cubren casi todo el vivero: dosificación de mezclas de sustrato, superficie y número de bandejas,
+grados-día acumulados por lote, costo por plantín con mortalidad, y días entre fechas. El modelo
+elige la función, la función devuelve el número. Nada de aritmética en el texto.
+
+**Carga tus propias fuentes en la capa de búsqueda, no bibliografía genérica**: las etiquetas de los
+productos que realmente usas, la ficha de cada especie que produces, tus protocolos —el de foto, el
+de riego por peso—, tu historial de lotes con su resultado, y las notas de las consultas al técnico.
+Un asistente que cita tu propio historial es incomparablemente más útil que uno que cita internet.
+
+**Escribe las barandas antes de la primera pregunta útil**, cuando todavía no tienes prisa: sin
+dosis, sin diagnóstico cerrado, sin precios inventados, sin normativa sin verificar, y «si no está en
+los datos, dilo». Y una regla de operación que ahorra disgustos: **nada que salga a un cliente se
+manda sin leerlo.**
+
+**Diseña para la señal que hay**: captura en el teléfono, sincronización cuando haya wifi, tablas de
+consulta disponibles sin conexión, y respaldo en dos lugares con uno fuera del vivero.
+
+**Y mide si sirve, con el criterio de siempre.** Después de un mes, la pregunta no es si el asistente
+es impresionante: es **cuántas horas te ahorró y cuántos errores evitó.** Si la respuesta es «ninguna
+y ninguno», el problema casi nunca es el modelo — son los datos que todavía no existen. Que es
+precisamente el asunto de la última lección.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Los costos importan y se pueden acotar.** Las consultas a modelos se pagan por uso, así que conviene
+lo obvio: pedir respuestas cortas, no reenviar la planilla completa en cada pregunta sino el pedazo
+relevante, y reservar los modelos más caros para lo que de verdad lo necesita. Un asistente de vivero
+bien armado cuesta poco al mes; uno que manda todo el contexto en cada consulta, no.
+
+**El español rioplatense y peninsular dominan la respuesta.** Si le pides vocabulario local, tenlo
+presente: dirá «plántula» donde aquí se dice **plantín**, «maceta» donde se dice **bolsa**, «vivero
+forestal» donde se dice vivero. Vale la pena poner un pequeño glosario local en el prompt de sistema
+— y de paso te sirve a ti.
+
+**Guarda todo en una hoja de cálculo antes que en cualquier app.** Es lo que sabes mantener, se abre
+en cualquier lado, se respalda con un archivo, y no depende de que un servicio siga existiendo el año
+que viene. El Módulo 14 va a discutir cuándo conviene pasar a algo más estructurado; hasta entonces,
+la hoja gana.
+
+**Cuidado con lo que subes.** Los datos de tus clientes —nombres, teléfonos, direcciones de entrega—
+merecen el mismo cuidado que en cualquier sistema: no van pegados dentro de una consulta si no hace
+falta. Y las notas del negocio son tuyas; conviene saber qué servicio guarda qué.
+
+**Y la electricidad manda.** Con cortes en la zona, todo lo que sea servidor propio en el vivero tiene
+que sobrevivir a un apagón — o simplemente vivir en el teléfono, que trae su propia batería. Es la
+solución menos elegante y la que funciona.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Voy a entrenar un modelo con mis datos.»** Con la escala de un vivero, entrenar es caro, lento y
+peor que darle contexto a un modelo existente. Lo que rinde es la capa de búsqueda sobre tus
+registros.
+
+**«Le pregunto y él calcula.»** Si el número tiene que ser exacto, lo calcula una función. Un número
+que salió de predecir la siguiente palabra es una opinión con forma de cifra.
+
+**«El prompt de sistema es un párrafo pidiendo que sea un experto agrónomo.»** Eso no aporta nada. Lo
+que aporta son hechos verificables de tu operación: coordenadas, clima, calendario, suelo, especies,
+unidades y límites.
+
+**«Le puse los límites en el prompt, ya está.»** Un límite escrito es una petición. Para lo que
+importa, que la restricción esté en la estructura: si las dosis salen de una tabla que cargaste, no
+hay margen para inventar.
+
+**«Total lo reviso siempre.»** La revisión se sostiene la primera semana. Los límites estructurales
+sostienen el año — y el día que estés apurado.
+
+**«Necesita estar en línea para funcionar.»** Entonces no funciona en el campo. Captura local,
+sincronización después.
+
+**«Le paso la planilla completa en cada consulta.»** Caro e innecesario: se busca el pedazo relevante
+y se pasa ese. Y de paso las respuestas mejoran, porque hay menos ruido.
+
+**«Le mando el borrador al cliente directo.»** Lo que sale con tu nombre lo lees antes. «Me lo dijo la
+IA» no es una defensa ante un huerto perdido.
+
+## Lo que sigue
+
+Queda la lección que cierra el módulo y que, en cierto modo, es la única tesis del módulo entero:
+**los datos valen más que el modelo.** Qué capturar desde mañana y con qué formato mínimo; por qué el
+registro de un vivero pequeño es un activo que ningún modelo del mundo puede replicar; los sesgos
+sutiles que arruinan un registro —el éxito que se anota y el fracaso que no—; cómo se cuida la
+calidad de un dato que nadie más va a auditar; y por qué, en un mercado donde casi nadie mide, medir
+es la ventaja más duradera y la más barata de conseguir.
