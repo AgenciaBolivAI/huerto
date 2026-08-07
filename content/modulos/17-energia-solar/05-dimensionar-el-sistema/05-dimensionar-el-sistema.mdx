@@ -1,0 +1,309 @@
+Esta es la lección madre del módulo. Tienes las dos mitades —lo que el sol ofrece y lo que tú
+consumes— y aquí se juntan en cuatro números concretos: **cuántos vatios de panel, cuántos
+vatios-hora de batería, qué inversor y qué regulador.**
+
+Y con una advertencia que va antes de cualquier cuenta: **el dimensionado no se hace con promedios
+anuales.** Se hace con el mes peor. Un sistema calculado con la media del año funciona once meses y
+te deja a oscuras justo en el que más lo necesitas.
+
+## Horas sol pico: la unidad que hace posible la cuenta
+
+<Diagrama
+  src="horas-sol-pico.webp"
+  alt="Dos figuras sobre los mismos ejes. A la izquierda, una campana en terracota con el área sombreada bajo ella y solecitos de tamaño creciente y decreciente a lo largo, rotulada EL SOL REAL DE TODO EL DÍA. A la derecha, un rectángulo verde macizo mucho más estrecho y mucho más alto, de la misma área, con un solo sol grande encima, rotulado LAS MISMAS HORAS, PERO A TOPE. Entre ambas, un signo igual y una flecha curva que indica el plegado de un área en la otra. Abajo, LA MISMA ENERGÍA, CONTADA DE FORMA CÓMODA. Arriba, LAS HORAS SOL PICO."
+  pie="Un truco de contabilidad, no de física: se aplasta la campana del día en un rectángulo equivalente para poder multiplicar en vez de integrar."
+/>
+
+El sol no llega con la misma fuerza todo el día: sube al amanecer, alcanza su máximo al mediodía y
+cae. Si dibujas la radiación a lo largo del día obtienes una campana, y la energía total del día es
+**el área bajo esa campana**.
+
+Trabajar con esa campana es incómodo. Por eso el oficio usa un atajo elegante: **se convierte esa
+área en un rectángulo equivalente de la misma superficie**, de altura fija igual a los mil vatios por
+metro cuadrado de las condiciones de ensayo. Lo que queda es un ancho, y ese ancho está en horas.
+
+Eso son las <Termino slug="horas-sol-pico">horas sol pico</Termino>: **cuántas horas de sol perfecto
+equivalen a todo el día real.**
+
+<Analogia>
+Es exactamente lo que haces al hablar de usuarios equivalentes a tiempo completo, o de días
+laborables equivalentes. La realidad es irregular, y la conviertes en una cantidad de unidades
+completas que se puede multiplicar.
+
+Su valor práctico es enorme: **si un panel de 400 Wp recibe 4 horas sol pico, produce 1.600 Wh en el
+día**, antes de pérdidas. Multiplicación en vez de integración, y el error de esa aproximación es
+irrelevante frente a la incertidumbre del clima.
+</Analogia>
+
+### De dónde salen las horas sol pico de tu terreno
+
+**No se estiman, se consultan**, y hay tres fuentes gratuitas y buenas:
+
+- **Global Solar Atlas**, del Banco Mundial: se pincha en el mapa la ubicación exacta y da la
+  radiación media, mes a mes, con la inclinación óptima.
+- **NASA POWER**: da series históricas por coordenadas, descargables, con décadas de datos.
+- **El Atlas de radiación solar de Bolivia**, elaborado en la Universidad Mayor de San Simón, que es
+  la referencia nacional.
+
+Toma los datos de **tus coordenadas**, no de la ciudad más cercana, y quédate con **la tabla mensual,
+no con la media anual**. La media anual es la que engaña.
+
+<Dato titulo="Un orden de magnitud para detectar disparates">
+Como referencia gruesa, y solo para saber si el número que consultaste es plausible: **el llano
+oriental boliviano está en el entorno de cuatro a cinco kilovatios-hora por metro cuadrado y día de
+media**, lo que equivale aproximadamente a esa cantidad de horas sol pico. El altiplano tiene bastante
+más, por altura y aire seco.
+
+Pero eso es para comprobar que no te equivocaste de casilla. **El número que se usa para calcular es
+el que consultaste para tus coordenadas y para el mes crítico**, y va a ser más bajo que esa media.
+</Dato>
+
+## El mes que manda
+
+<Diagrama
+  src="el-mes-critico.webp"
+  alt="Gráfico de doce barras verticales, altas en los extremos del año y hundidas en un grupo central-izquierdo que forma un valle, con nubes de lluvia dibujadas encima y rotulado TEMPORADA DE LLUVIAS. La barra más baja del valle está en terracota, con una flecha hacia abajo y el rótulo EL MES MÁS FLOJO DEL AÑO. Una línea discontinua recorre el gráfico a la altura de esa barra, rotulada SE DIMENSIONA AQUÍ. Abajo, EL PROMEDIO ANUAL TE DEJA SIN LUZ EN ENERO. Arriba, EL MES QUE MANDA."
+  pie="La media anual describe el año; el mes peor describe el momento en que el sistema falla. Solo uno de los dos sirve para dimensionar."
+/>
+
+Aquí hay una diferencia regional que casi toda la literatura solar ignora, porque está escrita en el
+hemisferio norte:
+
+**En climas templados el mes crítico es el invierno**, porque el sol está bajo y los días son cortos.
+**En el llano tropical el <Termino slug="mes-critico">mes crítico</Termino> es la temporada de
+lluvias**, cuando el cielo puede quedarse
+encapotado semanas enteras aunque los días sean largos y calurosos.
+
+Es una diferencia de fondo: allá el problema es la geometría del sol, aquí es la nubosidad. Y por eso
+un sistema dimensionado copiando una guía extranjera puede quedar corto justo en enero.
+
+**Toma la tabla mensual, busca el valor más bajo, y dimensiona con ese.** Todo lo demás del año va a
+sobrar, que es exactamente lo que quieres.
+
+## La cadena de pérdidas
+
+<Diagrama
+  src="cadena-de-perdidas.webp"
+  alt="Diagrama de embudo horizontal: una banda verde ancha entra por la izquierda rotulada LO QUE DICE LA ETIQUETA y se estrecha en seis escalones sucesivos hasta salir mucho más delgada por la derecha, rotulada LO QUE LLEGA A TU ENCHUFE. En cada escalón se desprende hacia abajo una cuña terracota rotulada, en orden: CALOR, POLVO, ÁNGULO, CABLES, REGULADOR y BATERÍA E INVERSOR. Arriba, LA CADENA DE PÉRDIDAS."
+  pie="Ninguna pérdida es escandalosa por separado. Multiplicadas una tras otra, se llevan alrededor de un tercio de lo que el panel captó."
+/>
+
+Entre lo que el panel podría dar y lo que sale de tu enchufe hay una cadena de mordiscos, y **se
+multiplican, no se suman**:
+
+| Pérdida | De dónde viene |
+|---|---|
+| **Temperatura** | La celda caliente entrega menos, y aquí hace calor |
+| **Suciedad** | Polvo, barro salpicado, excrementos de ave |
+| **Ángulo y orientación** | El sol no cae perpendicular todo el día |
+| **Cables** | Caída de tensión en los conductores |
+| **Regulador** | Su propio rendimiento de conversión |
+| **Batería** | Lo que entra no es lo que sale: hay pérdida en el ciclo |
+| **Inversor** | Otra conversión, otro porcentaje, más su consumo en vacío |
+
+En la práctica se agrupan todas en un solo número, el
+llamado <Termino slug="factor-de-rendimiento">factor de rendimiento</Termino> del sistema. Para un sistema
+autónomo con baterías, un valor razonable para empezar está **en torno al 0,7**, es decir que **de
+cada diez unidades de energía que el panel capta, llegan unas siete a la carga**. Si el sistema es
+directo, sin baterías, el factor es bastante mejor.
+
+<Advertencia>
+Ese 0,7 es un punto de partida, no una constante universal. Un sistema con cables cortos y gruesos,
+regulador MPPT, baterías de litio y paneles ventilados rinde mejor; uno con cable fino y largo,
+regulador simple, plomo viejo y paneles pegados al techo, bastante peor.
+
+**Y por eso hay que medir la producción real desde el primer mes.** Ese factor lo vas a poder
+calcular tú, con tus datos, y a partir de ahí tus cuentas dejan de ser genéricas.
+</Advertencia>
+
+## La cuenta, paso a paso
+
+<Diagrama
+  src="cadena-del-dimensionado.webp"
+  alt="Cinco recuadros en escalera descendente unidos por flechas terracota, cada uno con un icono a la izquierda: una tabla para LO QUE CONSUMES AL DÍA, un embudo para DIVIDIDO POR EL RENDIMIENTO, un sol para DIVIDIDO POR LAS HORAS SOL PICO, un panel para ESO ES EL ARREGLO, y una batería para Y APARTE, EL BANCO. Arriba, LA CADENA DEL DIMENSIONADO."
+  pie="Dos divisiones sucesivas y una cuenta aparte. Todo el dimensionado del arreglo cabe en esa escalera."
+/>
+
+### Paso 1 · El arreglo
+
+<Formula explicacion="El consumo diario se infla por las pérdidas del sistema, y ese total se reparte entre las horas sol pico del mes peor. El resultado son los vatios pico de panel que hay que instalar.">
+Wp del arreglo = (consumo diario en Wh ÷ rendimiento) ÷ horas sol pico
+</Formula>
+
+Con números redondos para verlo funcionar. Supón un consumo medido de **3.000 Wh al día**, un
+rendimiento de **0,7** y un mes crítico con **3,5 horas sol pico**:
+
+- Energía que hay que generar: 3.000 ÷ 0,7 = **4.286 Wh al día**
+- Potencia de arreglo necesaria: 4.286 ÷ 3,5 = **1.225 Wp**
+- Con paneles de 450 Wp: 1.225 ÷ 450 = 2,7 → **tres paneles**, o sea 1.350 Wp instalados
+
+Fíjate en que redondeamos **hacia arriba**, siempre. Nunca hacia abajo.
+
+### Paso 2 · El banco de baterías
+
+Aquí la pregunta no es cuánta energía consumes, sino **cuánta tiene que pasar por la batería**, que
+es solo la parte nocturna y la de los días nublados. Y entran dos decisiones nuevas:
+
+**Los <Termino slug="dias-de-autonomia">días de autonomía</Termino>:** cuántos días seguidos sin
+sol quieres aguantar sin quedarte sin nada.
+
+**La <Termino slug="profundidad-de-descarga">profundidad de descarga</Termino>:** qué fracción de
+la batería puedes usar de verdad sin destruirla. Es
+la diferencia entre lo que compras y lo que puedes gastar, y depende de la tecnología —el plomo
+tolera alrededor de la mitad, el litio bastante más.
+
+<Formula explicacion="El consumo que pasa por batería, multiplicado por los días de autonomía, dividido por la fracción de la batería que se puede usar. El resultado son los vatios-hora que hay que comprar, que se convierten a amperios-hora dividiendo por la tensión del banco.">
+Wh de banco = (consumo nocturno × días de autonomía) ÷ profundidad de descarga
+</Formula>
+
+Siguiendo el ejemplo, con **1.800 Wh nocturnos** y **dos días de autonomía**:
+
+- Energía a cubrir: 1.800 × 2 = **3.600 Wh**
+- Con plomo, usando la mitad: 3.600 ÷ 0,5 = **7.200 Wh de banco**, que a 24 V son **300 Ah**
+- Con litio, usando el 80 %: 3.600 ÷ 0,8 = **4.500 Wh**, que a 24 V son **188 Ah**
+
+Esa diferencia —300 Ah frente a 188 Ah para exactamente el mismo servicio— es la razón por la que la
+comparación entre tecnologías no se hace por precio de compra, y de eso trata la lección siguiente.
+
+### Paso 3 · El inversor
+
+Del inversor ya sabes lo esencial: **no se elige por la energía diaria sino por la potencia
+instantánea máxima**, incluido el pico de arranque del motor más grande coincidiendo con lo demás
+encendido.
+
+Se mira su **potencia continua** —lo que aguanta indefinidamente— y su **potencia de pico** —lo que
+tolera unos segundos—, y las dos tienen que cubrir tu caso peor con margen.
+
+### Paso 4 · El regulador
+
+Se dimensiona por **corriente**: tiene que aguantar la corriente de cortocircuito del arreglo con
+margen. Y por **tensión**: su límite de entrada tiene que estar por encima de la suma de las
+tensiones en vacío corregidas por la temperatura mínima, que es el cálculo de la lección anterior y
+el único que rompe equipos si se ignora.
+
+## Más panel o más batería
+
+<Diagrama
+  src="mas-panel-o-mas-bateria.webp"
+  alt="Dos paneles comparados. Izquierda, MÁS PANELES: tres paneles solares sobre un riel, un calendario de plazo largo y una pila de dos monedas, con los pies BARATOS POR VATIO y DURAN DÉCADAS. Derecha, MÁS BATERÍA: cuatro baterías grandes en un bastidor, un calendario de plazo corto y una pila alta de monedas rodeada por un anillo terracota, con los pies CARAS POR VATIO HORA y DURAN POCOS AÑOS. Abajo, ANTE LA DUDA, MÁS PANEL. Arriba, DOS FORMAS DE CUBRIR EL MES MALO."
+  pie="Las dos cubren el mismo déficit. Una cuesta poco y dura veinticinco años; la otra cuesta mucho y hay que volver a comprarla."
+/>
+
+Cuando el mes crítico no cierra, hay dos salidas, y no son equivalentes:
+
+**Sobredimensionar el arreglo.** Poner más paneles de los que la media pediría, de modo que incluso
+en días nublados se genere lo suficiente. Los paneles son **baratos por vatio y duran décadas**.
+
+**Agrandar el banco.** Guardar más energía para atravesar los días malos. Las baterías son **caras
+por vatio-hora y se gastan**: hay que volver a comprarlas cada varios años.
+
+<Dato titulo="La regla práctica">
+**Ante la duda, más panel.** Un arreglo sobredimensionado tiene además dos ventajas que no se ven al
+principio: carga el banco más rápido después de un día nublado —lo que alarga la vida de la batería,
+porque una batería que pasa mucho tiempo parcialmente descargada se sulfata— y deja excedente al
+mediodía para mover cargas a esa franja.
+
+El límite es cuando el regulador ya no puede aprovechar más, o cuando el excedente de mediodía no
+tiene a quién dárselo. Antes de ese punto, cada panel extra es la compra más eficiente del sistema.
+</Dato>
+
+Y hay una tercera salida que suele ser la mejor de todas y que no cuesta nada: **reducir el consumo
+del mes crítico**. Si enero es el mes malo y es también cuando llueve, quizá el riego se puede
+espaciar, y quizá alguna carga puede esperar a un día de sol.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Primero, consigue tus datos reales.** Entra a Global Solar Atlas, pincha exactamente el punto del
+vivero en Zanja Honda —no Santa Cruz ciudad— y descarga la tabla mensual. Repítelo en NASA POWER con
+las mismas coordenadas y compara: si los dos coinciden aproximadamente, tienes un dato en el que
+apoyarte. Guarda esa tabla en la carpeta del proyecto con la fecha de consulta.
+
+**El mes crítico va a caer en la temporada de lluvias**, entre diciembre y marzo, y no en invierno.
+Ese es el número con el que se dimensiona todo. Si algún proveedor te presenta un cálculo hecho con
+la media anual, ya sabes qué preguntarle.
+
+**Y hay un dato que ninguna base de datos tiene y tú sí puedes conseguir:** cuántos días seguidos de
+cielo encapotado has visto en un enero cualquiera. Ese número, y no una regla general, es el que
+decide tus días de autonomía. Pregúntale a un vecino que lleve años ahí; vale más que cualquier
+promedio satelital.
+
+**Monta la cuenta en una planilla, no en papel.** Con celdas para consumo diario, rendimiento, horas
+sol pico del mes crítico, consumo nocturno, días de autonomía y profundidad de descarga, y que
+calcule sola los cuatro resultados. Vas a querer probar seis escenarios antes de comprar, y con papel
+no se prueban seis escenarios.
+
+**Aprovecha la asimetría del vivero:** buena parte de tu consumo puede ser diurno —bombeo, lavado,
+herramientas— y eso reduce el consumo nocturno, que es el único que dimensiona la batería. Cada carga
+que muevas al mediodía te ahorra amperios-hora de banco, que es donde está el dinero.
+
+**Y decide con la regla de más panel.** Con terreno de sobra, sobredimensionar el arreglo es la
+inversión más eficiente: cuesta menos por unidad, dura mucho más, recarga el banco más rápido después
+de los días nublados de enero y deja excedente al mediodía para mover cargas ahí.
+
+**Verifica al primer mes.** Anota producción diaria real y compárala con lo que tu planilla predecía.
+Con eso calculas tu factor de rendimiento verdadero y sustituyes el 0,7 genérico por tu número — que
+es lo que convierte el sistema en algo medido y no estimado, y enlaza directamente con el módulo de
+automatización y datos.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Bolivia tiene un recurso solar excelente y muy desigual entre regiones.** El altiplano está entre
+los mejores del mundo por altura y aire seco; el llano oriental tiene menos radiación pero sigue
+siendo bueno en términos absolutos, con la particularidad de que aquí manda la nubosidad y no la
+geometría solar.
+
+**El Atlas de radiación solar global de Bolivia**, elaborado en la Universidad Mayor de San Simón, es
+la referencia nacional y conviene contrastarlo con las fuentes internacionales. Cuando dos fuentes
+independientes coinciden, el dato es sólido; cuando divergen mucho, conviene desconfiar del más
+optimista.
+
+**El mes crítico del llano es de lluvias**, y eso invierte la intuición de casi toda la bibliografía
+disponible en español, que suele ser española y por tanto de clima templado del hemisferio norte. Es
+el mismo tipo de traducción que ya hiciste con la orientación al norte.
+
+**Y un fenómeno local que conviene tener presente al elegir días de autonomía:** los surazos traen
+dos o tres días de cielo cubierto, pero cuando pasan suelen dejar cielo muy limpio y fresco, que es
+la mejor condición posible para producir. La secuencia típica es unos días malos seguidos de unos
+días excelentes, y un arreglo sobredimensionado recupera el banco rápido en cuanto vuelve el sol.
+
+**Sobre el vocabulario:** a las horas sol pico se les dice **horas sol pico**, **HSP** o
+**horas de sol equivalentes**; a la profundidad de descarga, **profundidad de descarga** o **DOD**; y
+a los días de autonomía, **días de autonomía** o **días de reserva**.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Uso la media anual de radiación.»** Te deja sin luz en el mes peor, que aquí es de lluvias. Se
+dimensiona con el valor mensual más bajo.
+
+**«Copié el cálculo de una guía española.»** Allá el mes crítico es el invierno por geometría solar.
+Aquí es la temporada de lluvias por nubosidad. Los meses son otros y la lógica también.
+
+**«Tomé la radiación de Santa Cruz ciudad.»** Toma la de tus coordenadas. Es gratis y tarda un
+minuto.
+
+**«No apliqué pérdidas, los paneles dan lo que dicen.»** Entre el panel y el enchufe hay una cadena
+que se lleva cerca de un tercio. Sin factor de rendimiento, el sistema queda corto de origen.
+
+**«Redondeé hacia abajo para ahorrar un panel.»** Se redondea siempre hacia arriba. Ese panel de
+menos se nota exactamente el mes que no querías.
+
+**«El banco lo calculo con el consumo total del día.»** Solo pasa por la batería lo que consumes de
+noche y en días nublados. Lo diurno va casi directo del panel.
+
+**«Compro batería para siete días de autonomía.»** Es carísimo y las baterías se gastan. Con dos o
+tres días y un arreglo generoso se resuelve mejor y más barato.
+
+**«El inversor lo elijo por los vatios-hora del día.»** Se elige por la potencia instantánea máxima,
+con el pico de arranque incluido.
+
+## Lo que sigue
+
+Ya tienes los cuatro números. Toca ir de compras con criterio, y ahí la decisión difícil no es el
+panel —eso ya lo resolviste— sino **la batería, el regulador y el inversor**.
+
+La lección siguiente compara plomo contra litio por el único criterio que no engaña, que es el
+**costo por kilovatio-hora ciclado** y no el precio de compra; explica cuándo un regulador MPPT se
+paga solo y cuándo no; y por qué un inversor de onda modificada, que parece una ganga, puede quemar
+equipos.

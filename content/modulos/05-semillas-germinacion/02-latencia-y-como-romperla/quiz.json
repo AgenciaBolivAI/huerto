@@ -1,0 +1,97 @@
+{
+  "preguntas": [
+    {
+      "id": "que-es-latencia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es la latencia de una semilla?",
+      "opciones": [
+        "Un bloqueo activo de la germinación en una semilla que está viva y sana.",
+        "Una función de supervivencia: impide que toda la descendencia arranque con una lluvia fuera de temporada.",
+        "Muchas especies la escalonan, de modo que unas semillas del mismo lote se abren este año y otras dentro de tres.",
+        "Un síntoma de que la semilla perdió viabilidad durante el almacenamiento."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es un defecto ni pérdida de viabilidad: es una condición de arranque escrita en la semilla. La latencia escalonada es además un despliegue por fases, con la misma lógica que aplicarías tú: si esta versión falla, no cae todo el sistema."
+    },
+    {
+      "id": "domesticacion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el tomate y la lechuga de sobre germinan sin problema, es razonable esperar lo mismo de una semilla recogida del monte.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error que más lotes arruina. Las hortalizas de sobre germinan fácil porque la domesticación eliminó la latencia a propósito: durante milenios se guardó semilla de las plantas que germinaban rápido y parejo. Lo silvestre no pasó por ese filtro. Un lote nativo que «no sirve» casi nunca está muerto: está cerrado."
+    },
+    {
+      "id": "la-prueba",
+      "tipo": "opcion_multiple",
+      "enunciado": "Dejas un lote doce horas en agua y las semillas siguen tan duras como al principio. ¿Qué significa y qué toca hacer?",
+      "opciones": [
+        "La cubierta es impermeable: es latencia física.",
+        "El agua no llega al embrión, que probablemente está perfecto.",
+        "Toca escarificar: lijar, cortar lejos del hilo o agua caliente.",
+        "Toca aplicar frío húmedo durante varias semanas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El frío húmedo actúa sobre el equilibrio hormonal del embrión, y si el agua no entra el tratamiento no llega a ninguna parte. Aplicarlo aquí es perder semanas. Por eso la prueba del remojo va primero: antes de aplicar el remedio, comprobar de qué es el síntoma."
+    },
+    {
+      "id": "donde-cortar",
+      "tipo": "verdadero_falso",
+      "enunciado": "Al escarificar con cuchillo conviene hacer la muesca sobre el hilo, la cicatriz por donde la semilla estuvo unida a la planta madre, porque es la zona más blanda.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la forma más segura de matar la semilla. Esa marca señala dónde está el embrión y es justo por donde va a salir la radícula. La muesca se hace en el costado opuesto y superficial, lo justo para ver el tejido más claro de debajo. Una semilla cortada ahí queda muerta con un aspecto exterior perfecto."
+    },
+    {
+      "id": "agua-caliente",
+      "tipo": "verdadero_falso",
+      "enunciado": "En la escarificación con agua caliente, las semillas se ponen a hervir unos minutos y luego se retiran.",
+      "respuesta": false,
+      "explicacion": "Falso. El agua se retira del fuego y solo entonces se echan las semillas, que se dejan enfriar dentro del agua, normalmente hasta el día siguiente. El choque térmico agrieta la cubierta sin cocinar el embrión. Hervirlas es una de las causas más frecuentes de perder un lote entero creyendo que se lo estaba tratando."
+    },
+    {
+      "id": "estratificacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo funciona el frío húmedo y qué lo arruina?",
+      "opciones": [
+        "Es un temporizador que solo corre cuando hay agua y frío a la vez: la semilla cuenta tiempo acumulado en ese estado, no días de calendario.",
+        "Sacar el lote de la heladera y dejarlo tibio un día cuesta tiempo acumulado.",
+        "El congelador lo arruina: forma cristales de hielo dentro de las células de una semilla hidratada y las revienta.",
+        "Cuanto más frío mejor, así que el congelador acelera el proceso."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El frío húmedo trabaja unos grados por encima de cero: lo bastante frío para contar como invierno, lo bastante templado para que el metabolismo del embrión siga funcionando lentamente. Su sentido biológico es garantizar que la semilla no arranque en otoño, cuando hay humedad y temperatura suave pero el invierno está por venir."
+    },
+    {
+      "id": "bolivia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué tratamiento vas a necesitar con más frecuencia trabajando con especies nativas del llano cruceño, y por qué?",
+      "opciones": [
+        "Escarificación, porque muchísimas especies de aquí usan el mecanismo de la cubierta dura.",
+        "Casi nunca frío húmedo, porque las especies del llano tropical no evolucionaron con un invierno.",
+        "Aquí lo que separa la temporada buena de la mala no es el frío sino la lluvia, así que el frío no les sirve como señal.",
+        "Frío húmedo, porque el surazo de mayo a septiembre cumple esa función."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El surazo es un evento de días, no un invierno de meses, y las semillas nativas no lo usan como señal. El frío húmedo sí lo vas a necesitar cuando trabajes con especies del altiplano o de los valles, o con frutales de zona templada como durazno, manzano o vid."
+    },
+    {
+      "id": "protocolo-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Llega a Rizoma del Sur un lote de semilla recogida de una especie nativa del monte de la que no sabes nada. Describe qué haces, en qué orden, y qué anotas.",
+      "respuestaModelo": "Lo primero es no sembrar todavía. Aparto treinta semillas del lote y hago la prueba del remojo: doce horas en agua a temperatura ambiente, y después cuento cuántas se hincharon. Ese número, anotado con la especie y la fecha, es el que decide todo lo demás.\n\nSi la mayoría se hinchó, la cubierta deja pasar el agua y el problema, si lo hay, está dentro. Como es una especie del llano, lo más probable es que no tenga latencia fisiológica —aquí las plantas no evolucionaron con un invierno y el frío no les sirve como señal—, así que pruebo a sembrar directo antes de complicarme. Solo consideraría frío húmedo si fuera una especie traída del altiplano, de los valles o un frutal de zona templada.\n\nSi la mayoría siguió dura, es latencia física y toca escarificar. Empiezo por agua caliente, que es el método más manejable para cantidad: retiro el agua del fuego, echo las semillas y las dejo enfriar dentro hasta el día siguiente. Nunca las pongo a hervir. Y pruebo primero con un lote pequeño antes de tratar todo, porque la escarificación excesiva mata y el daño no se ve hasta que no nace nada.\n\nSi tengo pocas semillas y son grandes, prefiero lijar, que es gradual y se puede parar a tiempo. Si corto, la muesca va en el costado opuesto al hilo —la cicatriz alargada por donde la semilla estuvo unida a la planta madre—, porque ahí es donde está el embrión y donde va a salir la radícula.\n\nDespués de tratar, repito la prueba del remojo. Las que se hincharon están listas y las siembro de inmediato, porque una semilla que ya pasó la imbibición no se puede volver a guardar. Las que siguen duras reciben otra pasada de tratamiento. Ese ciclo de tratar, comprobar y repetir solo sobre las que fallaron es mucho mejor que escarificar más fuerte de entrada.\n\nSi ni una cosa ni la otra funciona, la hipótesis siguiente antes de dar el lote por muerto es latencia combinada: cubierta impermeable y embrión bloqueado a la vez. En ese caso hay que aplicar los dos tratamientos y en orden, primero abrir la cubierta y después el frío, porque el tratamiento interior no llega si el agua no entra.\n\nY antes de experimentar nada, busco si alguien ya documentó el tratamiento de esa especie: la literatura de viveros forestales suele tenerlo por especie, y buscar es gratis.\n\nDe todo esto abro una ficha de la especie: nombre, dónde y cuándo recogí la semilla, qué proporción se hinchó en el remojo, qué tratamiento apliqué, cuántos días tardó en nacer y qué porcentaje nació. Con tres temporadas de esas fichas voy a tener el protocolo de germinación de las especies de mi zona medido en mi terreno, que es información que no se compra y que casi no existe publicada con ese detalle para las nativas del llano.",
+      "criterios": [
+        "No siembra antes de diagnosticar.",
+        "Hace la prueba del remojo de doce horas sobre una muestra y cuenta el resultado.",
+        "Interpreta correctamente los dos resultados posibles.",
+        "Descarta el frío húmedo para una especie del llano y explica por qué.",
+        "Escarifica empezando por el método más manejable y probando en pequeño primero.",
+        "Retira el agua del fuego antes de echar las semillas.",
+        "Corta en el costado opuesto al hilo y justifica dónde está el embrión.",
+        "Vuelve a comprobar tras el tratamiento y siembra de inmediato las hinchadas.",
+        "Contempla la latencia combinada antes de dar el lote por muerto.",
+        "Busca literatura previa antes de experimentar.",
+        "Abre una ficha por especie con datos medidos."
+      ],
+      "explicacion": "Fíjate en que el trabajo real de esta lección son dos minutos de remojo y una libreta. Lo que distingue a un vivero que sabe propagar nativas de uno que no es exactamente eso: diagnosticar antes de tratar, y anotar lo que pasó."
+    }
+  ]
+}

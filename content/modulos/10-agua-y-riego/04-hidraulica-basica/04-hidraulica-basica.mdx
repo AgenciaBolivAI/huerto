@@ -1,0 +1,263 @@
+Ya sabes cuánta agua, cuándo y con qué método. Falta llevarla desde el tanque hasta el último emisor
+de la línea más lejana, **con presión suficiente para que ese emisor funcione.**
+
+Eso es hidráulica, y para un vivero pequeño se reduce a cuatro conceptos y una decisión: **el diámetro
+de la tubería.**
+
+La buena noticia para tu perfil: es exactamente el mismo problema que dimensionar un enlace de red.
+Hay un caudal que quieres mover, una capacidad que depende de la sección, y una pérdida que crece
+cuando fuerzas el sistema.
+
+## Caudal y presión no son lo mismo
+
+<Diagrama
+  src="caudal-y-presion.webp"
+  alt="Dos paneles enfrentados, cada uno ilustrando una idea con un tubo. A la izquierda, un tubo ancho en corte con mucha agua azul circulando y un balde grande llenándose rápido bajo su extremo abierto, con un reloj al lado, rotulado CAUDAL, CUÁNTA AGUA POR MINUTO. A la derecha, un tubo estrecho cerrado con una columna vertical alta de agua azul sostenida encima y una esfera de manómetro en su costado, con una pequeña flecha terracota que marca la altura de la columna, rotulado PRESIÓN, CON CUÁNTA FUERZA EMPUJA. Arriba, DOS COSAS DISTINTAS."
+  pie="Dos magnitudes independientes. Se puede tener mucha de una y nada de la otra, y ambos casos rompen el riego."
+/>
+
+Es la confusión más común y la que produce los errores más caros.
+
+El <Termino slug="caudal">caudal</Termino> es **cuánta agua pasa por unidad de tiempo**: litros por
+hora, litros por minuto. Es lo que llena el balde.
+
+La <Termino slug="presion">presión</Termino> es **con cuánta fuerza empuja esa agua**. Se mide en bares
+o, más intuitivamente para un vivero, en **metros de columna de agua**: la altura de la columna que esa
+presión puede sostener.
+
+<Analogia>
+Caudal es **ancho de banda**: cuántos datos por segundo pasan. Presión es **el voltaje de la línea**: la
+fuerza que empuja.
+
+Y como en electrónica, se pueden tener las dos combinaciones malas. Mucho caudal sin presión es una
+manguera gorda tirada en el suelo: sale mucha agua pero no llega a ningún aspersor. Mucha presión sin
+caudal es un tubito muy fino con la bomba a tope: empuja fuerte pero pasa poquísimo.
+
+Cada emisor necesita **las dos cosas a la vez**, dentro de su rango, y ahí está todo el trabajo.
+</Analogia>
+
+<Dato>
+Cada tipo de emisor trae en su ficha **un rango de presión de trabajo** y **el caudal que entrega dentro
+de ese rango.**
+
+Fuera de rango, el emisor no falla: **funciona mal, que es peor.** Con poca presión, un microaspersor
+gotea en vez de pulverizar y moja solo lo que tiene debajo. Con demasiada, atomiza tan fino que el
+viento se lleva el agua antes de que caiga.
+
+Ese rango es el dato que hay que mirar al comprar, y el que después determina toda la instalación.
+</Dato>
+
+## El caudal que hace falta
+
+El primer cálculo es directo: **sumar lo que consumen todos los emisores de un sector abiertos a la
+vez.**
+
+<Formula explicacion="El caudal que tiene que entregar la instalación a un sector es el caudal de cada emisor multiplicado por cuántos emisores tiene ese sector. Es la cifra que decide el diámetro de la tubería y el tamaño de la bomba.">
+caudal del sector = caudal de un emisor × número de emisores del sector
+</Formula>
+
+Y aquí aparece la razón hidráulica de sectorizar que anunció la lección anterior: **si abres todos los
+sectores a la vez, el caudal necesario se multiplica**, y con él el diámetro de tubería y la potencia
+de bomba. Regando por turnos, la instalación entera se dimensiona para el sector más grande y no para
+la suma de todos.
+
+<Formula explicacion="El tiempo de riego de un sector es el agua que hay que aplicar dividida entre el caudal que entrega ese sector. De ahí sale cuánto hay que tener abierta cada válvula.">
+tiempo de riego = agua a aplicar ÷ caudal del sector
+</Formula>
+
+## La presión se pierde por el camino
+
+<Diagrama
+  src="perdida-de-carga.webp"
+  alt="Un tubo horizontal largo en corte que cruza todo el ancho, con cuatro tubos verticales abiertos que se levantan de él a intervalos regulares. Dentro de cada uno hay agua azul, y el nivel es más alto en el primero de la izquierda y progresivamente más bajo en cada uno hacia la derecha, formando una escalera descendente. Una línea a trazos terracota une los cuatro niveles para hacer evidente el descenso. Una franja de rótulo señala el primer tubo vertical y dice AQUÍ HAY PRESIÓN DE SOBRA; otra señala el último y dice AQUÍ CASI NO QUEDA. Bajo todo el tubo, EL ROCE CONTRA LA PARED SE COME LA PRESIÓN. Arriba, LA PRESIÓN SE PIERDE POR EL CAMINO."
+  pie="El agua que roza la pared del tubo pierde energía. Cuanto más largo el recorrido, menos presión queda al final."
+/>
+
+Aquí está el concepto que explica por qué el último gotero de una línea larga no gotea.
+
+El agua que circula por un tubo **roza contra sus paredes y pierde energía.** A esa pérdida se la
+llama <Termino slug="perdida-de-carga">pérdida de carga</Termino>, y tiene tres propiedades que
+conviene tener claras:
+
+**Crece con la longitud.** El doble de tubo, el doble de pérdida.
+
+**Crece muchísimo con el caudal.** No de forma proporcional: **aproximadamente con el cuadrado**. Al
+duplicar el caudal por un mismo tubo, la pérdida se multiplica por cuatro.
+
+**Y baja muchísimo con el diámetro.** Y aquí la relación es aún más fuerte: subir un escalón de
+diámetro reduce la pérdida de forma drástica.
+
+<Advertencia>
+Esa asimetría es la que hay que retener, porque decide todas las compras: **el diámetro es la variable
+más poderosa del sistema.**
+
+Ante un problema de falta de presión al final de la línea, las opciones son subir la potencia de la
+bomba —que cuesta dinero para siempre, en equipo y en energía— o subir un diámetro de tubería, que
+cuesta una vez y a menudo resuelve el problema entero.
+
+**Casi siempre la respuesta correcta es el tubo más gordo.** Y es exactamente el mismo razonamiento de
+la caída de tensión del módulo solar: allí se subía la sección del cable en vez de la potencia del
+panel.
+</Advertencia>
+
+## El diámetro lo cambia todo
+
+<Diagrama
+  src="el-diametro.webp"
+  alt="Tres tubos dibujados de frente como tres círculos de diámetro claramente creciente, en fila de menor a mayor, con la misma cantidad de agua azul intentando pasar por cada uno, representada con flechas. Sobre el círculo más pequeño, las flechas van amontonadas, apretadas y con garabatos de turbulencia. Sobre el del medio van menos apretadas. Sobre el mayor pasan sueltas y repartidas. Bajo cada círculo, su franja: bajo el más pequeño SE ATRAGANTA, bajo el mediano JUSTO, y bajo el mayor PASA CÓMODO. Cruzando la parte inferior, SUBIR UN DIÁMETRO BAJA MUCHO LA PÉRDIDA. Arriba, EL DIÁMETRO LO CAMBIA TODO."
+  pie="La sección crece con el cuadrado del diámetro, y la pérdida cae mucho más rápido que eso."
+/>
+
+La razón física es geométrica: **la sección de un tubo crece con el cuadrado de su diámetro.** Un tubo
+del doble de diámetro tiene cuatro veces la sección, así que la misma agua circula a una cuarta parte
+de la velocidad, y como la pérdida depende fuertemente de la velocidad, cae de forma espectacular.
+
+De ahí sale la regla de diseño práctica para un vivero pequeño:
+
+**Tubería principal generosa**, la que va del tanque al colector de válvulas. Es un tramo corto y
+subir un diámetro cuesta poco.
+
+**Tuberías secundarias de sector según su longitud.** Cuanto más largo el sector, más diámetro.
+
+**Y líneas de emisores cortas.** Una línea de goteo demasiado larga tiene una diferencia de presión
+enorme entre su principio y su final, y ahí es donde se pierde la uniformidad de la lección anterior.
+
+<Dato>
+Hay dos formas de acortar las líneas sin acortar el sector, y las dos son gratis en el diseño:
+
+**Alimentar por el centro.** Si la línea entra por la mitad y se reparte hacia los dos lados, cada
+rama tiene la mitad de largo y por tanto mucha menos diferencia de presión.
+
+**Y usar goteros autocompensantes**, que entregan el mismo caudal dentro de un rango amplio de
+presión. Cuestan más por unidad y resuelven el problema de raíz, sobre todo si además hay desnivel.
+</Dato>
+
+## Lo que también se lleva presión
+
+La longitud del tubo no es lo único que resta. Hay tres cosas más, y una de ellas sorprende:
+
+**Los accesorios.** Cada codo, cada te, cada reducción y cada válvula produce una pérdida propia,
+porque obliga al agua a cambiar de dirección o de sección. Un recorrido con muchos codos pierde mucho
+más que uno recto de la misma longitud.
+
+**El filtro.** Un filtro limpio produce una pérdida moderada y aceptable; **un filtro sucio puede
+comerse casi toda la presión disponible.** Es la causa número uno de «el riego dejó de funcionar de
+golpe», y se arregla en cinco minutos abriendo y enjuagando la malla.
+
+**Y la subida.** Cada metro que el agua tiene que subir se resta directamente de la presión, exactamente
+igual que cada metro de bajada se suma. En terreno plano casi no importa; en cuanto hay un desnivel,
+sí.
+
+<Dato>
+De ahí sale una costumbre de mantenimiento que vale más que cualquier cálculo: **poner un manómetro a
+la entrada del sistema y mirarlo.**
+
+Con el riego abierto, el manómetro da un número. Ese número, anotado cuando el sistema está recién
+instalado y funcionando bien, es la referencia. Si un día está mucho más bajo, hay una fuga o el
+filtro está sucio; si está mucho más alto, algo está tapado aguas abajo.
+
+Es la misma idea del termómetro de máxima y mínima del módulo de estructuras: un instrumento barato
+que convierte un sistema opaco en uno observable.
+</Dato>
+
+## El tanque elevado es la bomba
+
+<Diagrama
+  src="el-tanque-elevado.webp"
+  alt="Sección con un tanque de agua elevado sobre una torre alta a la izquierda, con agua azul dentro. Una tubería sale de su base, corre hacia la derecha a ras de suelo y termina en un pequeño emisor que gotea sobre una planta. Una flecha de cota vertical terracota con puntas en ambos extremos recorre la distancia desde la superficie del agua del tanque hasta el nivel del emisor, con una franja al lado que dice LA ALTURA DA LA PRESIÓN. Otra franja señala el tanque y dice MÁS ALTO, MÁS FUERZA. Una tercera señala el tramo horizontal largo de tubería y dice MÁS LARGO, MÁS SE PIERDE. Arriba, EL TANQUE ELEVADO ES LA BOMBA."
+  pie="Cada metro de altura del tanque es presión gratis, sin electricidad y sin nada que se pueda romper."
+/>
+
+Y aquí está la idea que hace que todo esto sea barato en un vivero pequeño, y que enlaza directamente
+con el bombeo solar del módulo diecisiete.
+
+**Un tanque elevado genera presión por gravedad**, y esa presión es directamente su altura. Un tanque
+cuya superficie de agua está a tres metros por encima del emisor entrega una presión equivalente a tres
+metros de columna de agua.
+
+<Formula explicacion="La presión que llega a un emisor es la que da la altura del tanque menos todo lo que se perdió por rozamiento en el camino. Si la resta da menos que la presión mínima de trabajo del emisor, ese emisor no funciona bien.">
+presión en el emisor = altura del tanque − pérdida de carga del recorrido
+</Formula>
+
+Esa resta es todo el cálculo hidráulico de un vivero pequeño. Y tiene tres consecuencias de diseño:
+
+**El tanque va lo más alto que sea razonable**, porque cada metro es presión gratis.
+
+**El recorrido va lo más corto y lo más gordo posible**, para que la resta se lleve poco.
+
+**Y si el resultado no alcanza para el emisor elegido**, hay tres salidas antes de comprar una bomba:
+subir el tanque, subir el diámetro, o elegir emisores que trabajen a menor presión.
+
+<Advertencia>
+El goteo funciona bien a presiones bajas y es compatible con un tanque elevado modesto. **La
+microaspersión y sobre todo la nebulización exigen bastante más presión**, y ahí casi siempre hace
+falta bomba.
+
+Eso hay que saberlo **antes** de elegir el método de la lección anterior, porque una decisión que
+parecía solo de eficiencia arrastra un equipo, un consumo eléctrico y un componente más que se puede
+romper.
+
+Y con bombeo solar, cada vatio cuenta: el módulo diecisiete dimensionaba el sistema por el consumo, y
+la bomba de riego es una de las cargas grandes.
+</Advertencia>
+
+<AplicarRizoma>
+**En Rizoma el orden correcto es tanque elevado primero, bomba solo donde no quede otra.**
+
+**El tanque, lo más alto que permita la estructura y el presupuesto.** Cada metro de altura es presión
+que no hay que generar ni pagar, y además funciona cuando no hay sol, que es exactamente lo que el
+módulo solar llamaba «el tanque reemplaza a la batería».
+
+**Con esa presión de gravedad se alimenta el goteo** de crecimiento y del bloque de madres, que
+trabaja bien a presión baja. Ese es el grueso de la superficie regada.
+
+**La nebulización de propagación necesita presión alta y ahí sí va bomba**, pero es la zona más
+pequeña del vivero, así que la bomba puede ser modesta y funcionar poco tiempo al día. Conviene
+tratarla como un circuito aparte, con su propia bomba pequeña, en vez de sobredimensionar todo el
+sistema para atender a la zona más exigente.
+
+**El colector de válvulas junto al tanque**, con una válvula por sector, rotuladas, y un manómetro. El
+manómetro es el equivalente hidráulico del termómetro de máxima y mínima: cuesta poco y es lo único
+que dice si el sistema está funcionando como se diseñó.
+
+**Diámetros generosos en la principal**, que es un tramo corto donde subir un escalón cuesta poco y
+resuelve mucho. Y líneas de emisores cortas, alimentadas por el centro cuando se pueda.
+
+**Y el terreno hay que mirarlo**: aunque la llanura es plana, cualquier desnivel entre el tanque y los
+sectores lejanos cambia la presión disponible. Ese dato salió del levantamiento de la lección de
+layout, y aquí se usa.
+
+**Antes de comprar emisores, mirar su rango de presión de trabajo** y comprobar con la resta si la
+altura del tanque menos la pérdida estimada cae dentro de ese rango. Es un cálculo de servilleta y
+evita comprar un sistema que después no funciona.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La tubería de polietileno y los accesorios de riego se consiguen en agropecuarias y ferreterías de
+Santa Cruz**, en las medidas comerciales habituales, porque son de uso corriente en la agricultura de
+la región.
+
+**Los diámetros se manejan en pulgadas** en la práctica local, y conviene verificar que la medida
+nominal y los accesorios coincidan entre sí antes de comprar todo el material, porque hay más de un
+estándar circulando y las uniones entre sistemas distintos son una fuente clásica de fugas.
+
+**Sobre la presión de la red pública**, donde la haya, no conviene diseñar contando con ella sin
+medirla: varía con la hora y con la época, y un sistema calculado con la presión de un domingo por la
+mañana falla un lunes al mediodía. Con un manómetro de rosca y unos días de lecturas se sabe con qué
+se cuenta de verdad.
+
+**El agua de pozo llega con presión de bomba**, y ahí el cuidado es el contrario: presión de sobra que
+puede reventar accesorios y emisores. Un regulador de presión a la entrada del sistema es barato y
+evita ese problema.
+
+**Y una nota sobre el bombeo solar**, que enlaza con el módulo diecisiete: el esquema más robusto para
+esta región es bombear al tanque elevado durante las horas de sol y regar por gravedad a cualquier
+hora. Así la bomba no tiene que coincidir con el momento del riego, no hacen falta baterías, y el
+sistema sigue funcionando el día que está nublado.
+</ContextoBolivia>
+
+## Lo que sigue
+
+La instalación ya lleva el agua hasta la planta con presión suficiente. Falta preguntarse **qué trae
+esa agua dentro**, porque su composición decide si el sistema dura años o se tapa en meses, y si las
+plantas crecen o acumulan sales.

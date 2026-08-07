@@ -1,0 +1,101 @@
+{
+  "preguntas": [
+    {
+      "id": "leyenda",
+      "tipo": "verdadero_falso",
+      "enunciado": "La simbología de los planos está normalizada internacionalmente, así que un símbolo significa siempre lo mismo en cualquier lámina.",
+      "respuesta": false,
+      "explicacion": "Falso: varía entre países, entre oficinas y entre décadas. Un mismo relleno de puntos puede ser hormigón en una lámina y arena en otra. Por eso todo plano serio trae su leyenda, y esa leyenda manda sobre cualquier costumbre general. Si el símbolo no está, se busca en otra lámina del juego o se pregunta a quien lo dibujó — deducirlo por parecido es cómo se termina con una zapata sin armadura."
+    },
+    {
+      "id": "linea-de-eje",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué tiene de particular la línea de eje, la de raya y punto?",
+      "opciones": [
+        "Es la única de las cinco que no dibuja algo que exista físicamente.",
+        "Marca una referencia: el centro de una fila de columnas, un eje de simetría, un eje de replanteo.",
+        "Se materializa en obra como los hilos tendidos entre camillas, así que el papel y el terreno usan la misma referencia.",
+        "Representa un muro más delgado que los demás."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Confundirla con un muro fino es un error que se ve en obra. Y su valor práctico es grande: cuando el plano acota de eje a eje y el replanteo tiende hilos por los ejes, comprobar el terreno contra el papel es directo, porque ambos hablan de las mismas líneas."
+    },
+    {
+      "id": "ejes-al-centro",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una cota tomada de eje a eje entre dos muros te da la medida interior de la habitación.",
+      "respuesta": false,
+      "explicacion": "Falso: los ejes suelen pasar por el centro del muro, no por su cara, así que la medida interior es menor en medio espesor por cada lado. Con muros de quince centímetros y cuatro tramos eso es más de medio metro de error acumulado. El plano debería aclararlo con una nota o acotando también a caras; si no lo aclara, se pregunta antes de replantear."
+    },
+    {
+      "id": "arco-puerta",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué información lleva el arco de cuarto de círculo de una puerta en planta?",
+      "opciones": [
+        "Hacia qué lado abre la hoja y sobre qué bisagra.",
+        "Si abre hacia dentro o hacia fuera de la habitación.",
+        "Qué pedazo de suelo queda barrido y por tanto no puede ocuparse con un mueble ni con una bandeja.",
+        "El ancho libre de paso, que se lee midiendo el radio del arco con el escalímetro."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El ancho no se mide del arco: viene codificado en la etiqueta de la puerta y resuelto en la planilla de carpintería. Y la tercera opción es la que más veces se olvida — muchas distribuciones incómodas son puertas que abren hacia donde no debían, y el plano lo estaba diciendo en un cuarto de círculo que nadie leyó."
+    },
+    {
+      "id": "planilla",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué las aberturas se codifican como P1 o V2 en lugar de acotarse una por una en la planta?",
+      "opciones": [
+        "Porque los atributos viven una sola vez en la planilla y la planta solo guarda la clave.",
+        "Porque si todas las ventanas V1 cambian de alto se toca un renglón y no catorce dibujos.",
+        "Porque la planilla ya es el pedido al carpintero: tantas P1, tantas V2, sin recorrer el plano contando.",
+        "Porque acotar aberturas en la planta está prohibido por norma."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hay prohibición: hay una razón de diseño de información. Es una tabla de referencia con clave, con las propiedades que esperarías — cero riesgo de que dos ventanas iguales acaben con medidas distintas, y un único punto donde contar."
+    },
+    {
+      "id": "electrico-logico",
+      "tipo": "opcion_multiple",
+      "enunciado": "En un plano eléctrico, una curva une un interruptor con un punto de luz. ¿Qué significa exactamente?",
+      "opciones": [
+        "Que ese interruptor manda a esa luz: es una declaración de relación.",
+        "Que el plano eléctrico dice el qué y deja el cómo del trazado al electricista en obra.",
+        "Que, a diferencia de arquitectura y estructuras, esta lámina no es literal en sus recorridos.",
+        "Que el tubo con el cable va físicamente por esa curva."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la sorpresa habitual: el plano eléctrico es una declaración de intención, no una implementación. Lo que sí es literal es la posición de cada punto —dónde va el tomacorriente, en qué muro, a qué altura—, y eso hay que respetarlo, porque decide si el enchufe queda detrás del banco de trabajo o al alcance."
+    },
+    {
+      "id": "desague-manda",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el desagüe manda sobre la distribución y el agua de alimentación no?",
+      "opciones": [
+        "Porque el agua va a presión: puede subir, bajar y cruzar, y llega igual.",
+        "Porque el desagüe va por gravedad, necesita pendiente constante, no puede cruzar por encima de otro desagüe y no tolera contrapendientes.",
+        "Porque mover un lavamanos es mover un tubo de agua, mientras mover un inodoro es rehacer una pendiente y romper piso.",
+        "Porque el desagüe usa tubos de mayor diámetro y por eso es más caro."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El diámetro es una consecuencia, no la causa. La causa es una restricción de orden: en el desagüe cada punto tiene que estar más alto que el siguiente, y no hay reordenamiento posible después. Por eso los recorridos de desagüe se dibujan primero y la arquitectura se acomoda a lo que la gravedad permita."
+    },
+    {
+      "id": "leer-instalaciones",
+      "tipo": "abierta",
+      "enunciado": "Te entregan la lámina de instalaciones del galpón: eléctrica y sanitaria en la misma hoja. Explica cómo la lees, qué esperas encontrar literal y qué no, y qué comprobarías antes de que el albañil empiece a picar muros.",
+      "respuestaModelo": "Empiezo por la leyenda, antes que por el dibujo. Si hay símbolos que no reconozco, los busco ahí; y si no están en la leyenda ni en otra lámina del juego, pregunto en vez de deducir, porque deducir por parecido es exactamente el error que después nadie puede rastrear.\n\nDespués separo mentalmente las dos instalaciones, porque se leen con lógicas distintas. La eléctrica es una declaración de relaciones: las curvas que unen interruptores con puntos de luz dicen qué manda a qué, no por dónde va el cable. El recorrido físico del tubo lo resuelve el electricista siguiendo las reglas del oficio. Lo que sí tomo como literal en esa lámina es la posición de cada punto: en qué muro está cada tomacorriente y a qué altura, porque eso decide si el enchufe queda al alcance del banco de trabajo o detrás de él. Y compruebo el agrupamiento en circuitos, que en el galpón deberían ser al menos tres separados: luz, tomas y bomba.\n\nLa sanitaria la leo al revés: ahí sí importa la geometría, y no toda es igual de flexible. El agua de alimentación va a presión, admite prácticamente cualquier recorrido y lo que tengo que mirar son los diámetros anotados sobre la línea y dónde están las llaves de corte. El desagüe es lo contrario: solo baja, necesita pendiente constante en toda su longitud, no puede cruzarse con otro desagüe y no tolera ni un tramo que suba, porque ahí se retiene agua y termina tapándose. Así que en el desagüe compruebo que haya flechas de pendiente en todos los tramos, que todo converja hacia cajas de registro accesibles en cada cambio de dirección, y que la caída alcance hasta la cámara o el pozo — que en llanura, con poca pendiente natural, es el problema real y no un detalle.\n\nLas comprobaciones que hago antes de que nadie pique un muro son cuatro. Primero, que la posición de los puntos eléctricos coincida con cómo voy a usar el espacio de verdad, porque cambiar un punto en el papel es gratis y picar un muro terminado es pagar dos veces. Segundo, que los recorridos de desagüe tengan pendiente suficiente hasta el destino, y si no la tienen, resolverlo subiendo el nivel de piso terminado antes de fundir nada. Tercero, que la lámina de instalaciones no contradiga la de arquitectura: que no haya un tomacorriente en un muro que en la otra lámina es una ventana, que es el clásico de dos vistas del mismo modelo actualizadas a distinto ritmo. Y cuarto, que los tubos y cajas queden colocados durante la obra de muros y no después, porque ese es el momento en que salen gratis.\n\nY si voy a dejar algo previsto para el futuro, lo digo ahora: un ducto vacío con alambre guía hacia donde después van a ir sensores o una cámara. Cuesta centavos mientras la zanja está abierta.",
+      "criterios": [
+        "Empieza por la leyenda y pregunta en lugar de deducir símbolos ausentes.",
+        "Lee la eléctrica como declaración de relaciones, no como recorrido de cable.",
+        "Toma como literal la posición y altura de cada punto eléctrico.",
+        "Comprueba la separación en circuitos de luz, tomas y bomba.",
+        "Distingue el agua a presión, flexible, del desagüe por gravedad, restringido.",
+        "Verifica pendientes, ausencia de contrapendientes y cajas de registro accesibles.",
+        "Señala el problema local de conseguir caída suficiente en terreno llano.",
+        "Contrasta la lámina de instalaciones con la de arquitectura buscando contradicciones.",
+        "Exige que tubos y cajas se coloquen durante la obra de muros, no después."
+      ],
+      "explicacion": "Lo que hace útil esta lectura no es reconocer símbolos, es saber en qué modo está escrita cada lámina. Buscar en el plano eléctrico un recorrido que no está y tomarse a la ligera una restricción de pendiente que sí lo estaba son los dos errores opuestos, y ambos vienen de leer todas las láminas como si dijeran lo mismo."
+    }
+  ]
+}

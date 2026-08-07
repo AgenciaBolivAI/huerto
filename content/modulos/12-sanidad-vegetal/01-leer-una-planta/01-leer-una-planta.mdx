@@ -1,0 +1,233 @@
+Hay un reflejo que hay que desactivar antes de empezar este módulo: **ver un síntoma y buscar un
+producto.**
+
+La planta enferma no es un error que se corrige aplicando algo. Es **una señal**, y esa señal contiene
+casi toda la información necesaria para saber qué está pasando —si uno sabe leerla—. Aplicar sin
+diagnosticar es, en el mejor de los casos, gastar dinero; en el peor, tratar una plaga que no existe
+mientras el problema real sigue avanzando.
+
+Esta lección enseña a leer. Las siguientes enseñan qué puede haber detrás.
+
+## Cuatro preguntas antes de tocar nada
+
+<Diagrama
+  src="cuatro-preguntas.webp"
+  alt="Cuatro tarjetas cuadradas de esquinas redondeadas en una fila horizontal, cada una con un dibujo de líneas encima de su franja de rótulo. La primera: una planta entera con un anillo grande dibujado alrededor de sus hojas viejas de abajo y un segundo anillo alrededor del brote joven de la punta, con una pequeña flecha de doble punta entre los dos anillos; franja DÓNDE ESTÁ. La segunda: una misma hoja mostrada tres veces en un pequeño montón, una hoja pálida de manera uniforme, otra con manchas oscuras redondas repartidas, y otra con zonas pálidas solo entre los nervios mientras los nervios siguen oscuros; franja QUÉ FORMA TIENE. La tercera: una vista en planta de un banco de vivero con una cuadrícula de plantas pequeñas, en la que solo un grupito de plantas de una esquina está dibujado en otro tono; franja A CUÁNTAS LES PASA. La cuarta: tres dibujos de la misma hoja en fila con flechas entre ellos, con el daño más grande en cada uno; franja CÓMO VA CAMBIANDO. Arriba, CUATRO PREGUNTAS ANTES DE TOCAR NADA."
+  pie="Las cuatro se contestan mirando, sin instrumentos y sin gastar nada. Y entre las cuatro descartan la mayor parte de las causas posibles."
+/>
+
+**Dónde está el síntoma.** En hojas viejas o en hojas nuevas. En el borde o en el centro. En la hoja, en
+el tallo o en la raíz. Es la pregunta que más información da y la que casi nadie se hace.
+
+**Qué forma tiene.** Uniforme, en manchas con borde definido, entre los nervios, en el margen,
+deformando el tejido. La forma del síntoma es una huella.
+
+**A cuántas plantas les pasa, y a cuáles.** Una sola, un grupo, todo el lote, o solo las de una fila
+concreta. Esta pregunta se responde mirando el conjunto y no la planta, y es la que separa lo biológico
+de lo ambiental.
+
+**Y cómo va cambiando.** Apareció de un día para otro o lleva semanas. Avanza, se detiene o retrocede.
+Sin esta pregunta no hay diagnóstico posible, y **por eso hay que anotar y fechar** en vez de fiarse de
+la memoria.
+
+<Analogia>
+Es exactamente **depurar un fallo en producción**, y la disciplina es la misma.
+
+Nadie que sepa lo que hace parchea el primer sitio que se le ocurre. Primero se reproduce, se acota el
+alcance —¿le pasa a todos los usuarios o a unos pocos?—, se mira cuándo empezó y qué cambió antes, y
+recién entonces se toca algo.
+
+**La distribución del síntoma es tu registro de eventos.** Un fallo que afecta a todos los nodos a la
+vez y uno que se propaga de un nodo a sus vecinos son problemas de naturaleza completamente distinta, y
+la diferencia se ve en el patrón, no en el síntoma individual.
+</Analogia>
+
+## Por dónde empieza el amarillo
+
+<Diagrama
+  src="por-donde-empieza-el-amarillo.webp"
+  alt="Dos plantas de la misma forma dibujadas lado a lado, cada una con su línea de suelo y su envase. La planta de la izquierda tiene las hojas más bajas y viejas claramente amarillas y pálidas mientras las hojas jóvenes de arriba siguen de verde intenso, y una flecha terracota sube por el tallo desde las hojas viejas hacia el brote nuevo; debajo, una franja de rótulo que dice SI EMPIEZA ABAJO, LA PLANTA LO MUEVE. La planta de la derecha tiene las hojas jóvenes de arriba y el brote de crecimiento pálidos y deformados mientras las hojas viejas de abajo siguen de verde intenso, y sobre el tallo hay una flecha terracota con una barra de bloqueo cruzada que muestra que nada sube; debajo, una franja que dice SI EMPIEZA ARRIBA, NO LO PUEDE MOVER. Arriba, POR DÓNDE EMPIEZA EL AMARILLO."
+  pie="Un solo dato —arriba o abajo— parte en dos el conjunto de deficiencias posibles. Es la pregunta más rentable del diagnóstico."
+/>
+
+Este es el criterio más útil de toda la lección y descansa en un mecanismo real, no en una regla
+memorizada:
+
+**Algunos nutrientes la planta los puede mover de un sitio a otro**, y se llaman por eso <Termino slug="nutriente-movil">nutrientes
+móviles</Termino>. Cuando falta nitrógeno, la planta lo desmonta de las hojas viejas y lo manda al brote nuevo,
+que es lo que le interesa mantener. **El resultado es que las hojas viejas amarillean y las nuevas
+siguen verdes.**
+
+**Otros nutrientes quedan fijados donde se depositaron** y no se pueden reciclar. Si falta uno de esos,
+la planta no puede robárselo a las hojas viejas, así que **el que sufre es el tejido nuevo**: brotes
+pálidos, deformados o muertos, mientras abajo todo sigue verde.
+
+De ahí la regla práctica:
+
+**Síntoma que empieza abajo** → probablemente un nutriente que la planta sabe mover.
+
+**Síntoma que empieza arriba, en lo nuevo** → probablemente uno que no puede mover, **o un problema de
+raíz que impide absorberlo**, que produce el mismo cuadro.
+
+<Advertencia>
+Ese último matiz es importante y evita el error más caro de este módulo: **un síntoma de deficiencia no
+significa que falte el nutriente en el sustrato.**
+
+Puede estar presente y no absorberse por tres motivos que ya salieron en el curso: **pH fuera de rango**,
+que bloquea la disponibilidad de varios nutrientes; **raíz dañada o asfixiada** por encharcamiento, que
+no puede absorber nada; y **salinidad**, que impide la entrada de agua y con ella la de todo lo demás.
+
+Antes de echar fertilizante ante un amarilleo hay que preguntarse si el problema es de aporte o de
+absorción. **Echar más de lo que ya sobra empeora las tres situaciones.**
+</Advertencia>
+
+## Mira el lote, no la planta
+
+<Diagrama
+  src="mira-el-lote.webp"
+  alt="Tres vistas en planta del mismo banco rectangular de vivero en una fila horizontal, cada una con una cuadrícula idéntica de símbolos redondos de planta. En la primera vista, todos los símbolos de planta del banco están dibujados en el mismo tono pálido y desvaído; franja de rótulo TODAS A LA VEZ, MIRA EL AMBIENTE. En la segunda vista, solo un grupito apretado de símbolos cerca de una esquina está dibujado oscuro y marcado, con el resto normal y un pequeño anillo terracota rodeando ese grupo; franja UN GRUPITO, ALGO SE ESTÁ MOVIENDO. En la tercera vista, solo la fila de símbolos que está a lo largo de un borde exterior del banco aparece pálida, con el resto normal y una pequeña flecha terracota apuntando a ese borde desde fuera; franja SOLO EL BORDE, MIRA EL SITIO. Arriba, MIRA EL LOTE, NO LA PLANTA."
+  pie="La misma hoja amarilla significa cosas distintas según a cuántas vecinas les pase y a cuáles."
+/>
+
+Esta es la pregunta que más gente se salta, y la que más rápido descarta causas:
+
+**Si le pasa a todas las plantas del lote a la vez y por igual**, casi nunca es una plaga o una
+enfermedad. Los organismos vivos no aparecen simultáneamente en todas partes: **empiezan en algún sitio
+y se extienden.** Un problema perfectamente uniforme apunta a algo que también es uniforme: el riego, el
+sustrato, la fertilización, la temperatura de una noche fría, un producto mal aplicado.
+
+**Si le pasa a un grupo concreto y ese grupo crece con los días**, eso sí es un organismo. La forma de
+mancha que se expande desde un foco es la firma de algo que se reproduce y se mueve.
+
+**Y si le pasa solo a una fila, a un borde o a una esquina**, mira el sitio antes que la planta. Los
+bordes son distintos: reciben más sol de lado, más viento, menos agua del riego, o están donde la malla
+tiene un roto. **El patrón sigue la geometría de la instalación, no la biología.**
+
+<Dato>
+Hay un caso especialmente frecuente y fácil de diagnosticar en un vivero: **plantas malas justo debajo de
+un gotero tapado, o al final de una línea de riego.**
+
+Ese patrón —bueno-bueno-bueno-malo, siguiendo el orden de la tubería— no lo produce ningún organismo. Lo
+produce el sistema de riego, y lo dice el módulo de agua: **el gotero tapado es un fallo silencioso.**
+
+Es el ejemplo perfecto de por qué mirar el mapa del lote vale más que mirar la planta enferma: **el
+patrón nombra la causa.**
+</Dato>
+
+## Cuatro pistas, cuatro causas
+
+<Diagrama
+  src="cuatro-pistas.webp"
+  alt="Cuatro tarjetas cuadradas de esquinas redondeadas en una fila horizontal, cada una con el primer plano de una hoja con un tipo de daño distinto y su propia franja de rótulo debajo. La primera: una hoja con mordiscos grandes e irregulares arrancados del borde y una oruga pequeña encima; franja ALGO LA MASTICA. La segunda: una hoja cubierta de diminutos puntos pálidos punteados, con un grupo de insectos pequeños y blandos apiñados a lo largo del envés del nervio central y la hoja abarquillándose; franja ALGO LE CHUPA. La tercera: una hoja con varias manchas redondas y oscuras, cada una rodeada de un halo más claro, y una zona afelpada en el envés de una de las manchas; franja ALGO CRECE EN ELLA. La cuarta: una hoja completamente entera y sin roturas pero pálida y descolorida de manera uniforme, sin manchas y sin agujeros; franja NADA LA TOCA, LE FALTA ALGO. Arriba, CUATRO PISTAS, CUATRO CAUSAS."
+  pie="El tipo de daño dice qué clase de cosa lo produjo, aunque todavía no diga cuál."
+/>
+
+Con esas cuatro preguntas contestadas, el daño cae casi siempre en una de cuatro familias:
+
+**Algo la mastica.** Tejido arrancado, agujeros, bordes comidos. Es un masticador: orugas, escarabajos,
+grillos, hormigas, babosas. La pista adicional es que suele haber **excrementos** cerca, y que el daño
+es de noche o al amanecer en muchos casos.
+
+**Algo le chupa.** La hoja está entera pero punteada, decolorada, pegajosa o abarquillada. Son insectos
+y ácaros chupadores: pulgones, mosca blanca, trips, ácaros, cochinillas. Están **casi siempre en el
+envés y en los brotes tiernos**, y suelen ir acompañados de hormigas.
+
+**Algo crece en ella.** Manchas con borde definido, halos, polvo, pelusa, pudrición. Es un patógeno.
+Aquí lo decisivo es que **las manchas tienen estructura**: bordes, anillos, un centro distinto del
+contorno.
+
+**Y nada la toca.** La hoja está intacta, sin agujeros ni manchas, pero el color o la forma están mal:
+una <Termino slug="clorosis">clorosis</Termino> sin daño físico apunta a nutrición, agua, luz, temperatura o raíz.
+
+**La cuarta es la más importante de reconocer**, porque es la que más veces se trata con producto sin que
+haya nada que matar.
+
+## Los dos gestos que resuelven la mitad de los casos
+
+Hay dos cosas que casi nadie hace y que contestan más preguntas que ninguna otra:
+
+**Dar la vuelta a la hoja.** Casi todos los chupadores viven en el envés, protegidos del sol, de la
+lluvia y del riego. Diagnosticar mirando solo la cara de arriba es como depurar mirando solo la salida
+formateada y no el registro de errores. **Y con lupa**, porque los ácaros no se ven a simple vista y su
+daño se confunde con virus, con deficiencia y con daño químico.
+
+**Y sacar una planta del envase.** El daño de raíz es invisible desde arriba y produce síntomas aéreos
+que parecen otra cosa. Una raíz sana es blanca o clara y firme; una raíz enferma es parda, blanda y a
+veces huele. **Sacrificar una planta para saber qué pasa es siempre barato** comparado con equivocarse
+en el diagnóstico de un lote entero.
+
+Y un tercer gesto que hace de control: **comparar con una planta sana del mismo lote**, al lado. Muchos
+síntomas leves solo se ven por contraste, y muchas alarmas se desactivan al comprobar que la "planta
+enferma" está igual que las demás.
+
+## Escribirlo
+
+El diagnóstico depende del tiempo, y el tiempo solo existe si está anotado. Por eso el último paso de
+esta lección es una rutina y no un concepto:
+
+**Fecha, qué se vio, dónde, en cuántas plantas.** Cuatro datos, dos líneas.
+
+**Y una foto**, que hoy no cuesta nada y que congela un síntoma que en tres días será distinto.
+
+Con eso, dentro de un mes puedes contestar la pregunta que decide casi todo: **¿esto avanza o se
+quedó?** Sin eso, dentro de un mes vas a estar discutiendo con tu memoria.
+
+<AplicarRizoma>
+**La rutina de sanidad de Rizoma es un recorrido, no una reacción.**
+
+**Una vuelta semanal por el vivero, con lupa y libreta**, mirando por debajo de las hojas y por zonas.
+No cuando algo se ve mal: siempre. Es exactamente el mismo paseo de inspección que ya está en la rutina
+de mantenimiento de estructuras y en el control de inventario, y se hace todo junto.
+
+**Antes de aplicar nada, las cuatro preguntas.** Dónde está el síntoma, qué forma tiene, a cuántas les
+pasa y cómo va cambiando. La mayoría de las veces la respuesta va a ser que no hay nada que matar.
+
+**El mapa del lote es una herramienta de diagnóstico.** Con la planilla de lotes del módulo de inventario
+ya sabes qué hay en cada zona, de qué madre salió y cuándo se inició. Si un síntoma aparece solo en un
+lote concreto, la trazabilidad dice inmediatamente si el problema entró con el material.
+
+**Y el patrón geométrico se revisa siempre.** Bordes, esquinas, filas, orden de la línea de riego. En un
+vivero con riego por goteo, un buen porcentaje de las "enfermedades" resultan ser goteros tapados,
+zonas que no alcanza la aspersión o el borde donde entra el sol de la tarde.
+
+**Sacrificar una planta para mirar la raíz está autorizado por defecto.** Es la información más barata
+que existe y la que más errores evita.
+
+**Y todo se anota con fecha.** Dos líneas y una foto por incidencia, en la misma libreta de las fichas
+del módulo anterior. Ese registro es lo que va a convertir el primer año de sospechas en el segundo año
+de decisiones informadas.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El diagnóstico a distancia es poco fiable y conviene decirlo de entrada.** Una foto por mensajería
+puede orientar, pero muchos síntomas se confunden entre sí y varios requieren lupa, olfato o ver la
+raíz. Para un problema que amenace un lote entero, vale la pena buscar apoyo técnico presencial.
+
+**En Santa Cruz existen laboratorios y servicios de diagnóstico fitosanitario** vinculados a
+instituciones de investigación agropecuaria, a universidades y al sector privado. Averiguar cuáles
+están operativos, qué análisis hacen y cuánto cuestan **antes de necesitarlos** es una gestión de media
+mañana que se agradece el día que hace falta.
+
+**Y hay una fuente de información que la gente subestima: los vecinos productores.** Un problema que
+está apareciendo en la zona suele aparecer en varias fincas a la vez, y quien lleva años ahí reconoce
+en segundos algo que a ti te llevaría semanas. Preguntar es gratis y rápido.
+
+**El clima local marca el calendario sanitario.** En la temporada de lluvias, con humedad alta y
+temperatura alta, los problemas de hongos y bacterias se disparan; en la seca, con aire seco y
+polvoriento, se disparan los ácaros y algunos chupadores. Saber qué toca esperar en cada época es medio
+diagnóstico hecho, y ese calendario propio se construye con la libreta durante el primer año.
+
+**Y una precaución sobre los nombres.** Muchas plagas y enfermedades tienen nombres locales distintos
+de los de los manuales, y a veces el mismo nombre local designa cosas diferentes. Al consultar conviene
+describir el síntoma —qué se ve, dónde y desde cuándo— antes que ponerle un nombre, exactamente por la
+misma razón por la que en el módulo anterior se insistía en el nombre botánico.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Con las cuatro preguntas y los dos gestos, ya puedes acotar cualquier problema a una de cuatro
+familias.
+
+La siguiente lección afina la separación más difícil de las cuatro y la que más dinero decide: **cómo
+distinguir un problema causado por un organismo vivo de uno causado por el ambiente o por el manejo**,
+que se parecen muchísimo y se tratan de forma opuesta.

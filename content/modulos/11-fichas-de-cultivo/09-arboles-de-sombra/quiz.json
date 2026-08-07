@@ -1,0 +1,111 @@
+{
+  "preguntas": [
+    {
+      "id": "criterios",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué criterios deciden si un árbol sirve como árbol de sombra en un sitio concreto?",
+      "opciones": [
+        "La densidad y la altura de la copa, que deciden si se puede cultivar o trabajar debajo.",
+        "Si pierde la hoja en la seca, lo que en este clima es una ventaja.",
+        "La agresividad de la raíz y lo que el árbol tira encima: fruto, resina, espinas.",
+        "Solo la velocidad de crecimiento, porque cuanto antes dé sombra, mejor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La velocidad es uno de los siete criterios y trae su propio costo. Y hay que sumar la resistencia al viento y el aporte extra: un árbol que además florece de forma llamativa se vende como ornamental y como sombra, que es el mismo caso de una especie con dos mercados."
+    },
+    {
+      "id": "rapido-o-fuerte",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué los árboles de crecimiento rápido se rompen con el viento?",
+      "opciones": [
+        "Crecer deprisa significa fabricar mucho volumen con poco material por unidad de volumen.",
+        "Su madera es de baja densidad: células grandes y paredes finas.",
+        "La solución no es elegir sino plantar un rápido y un lento y retirar el rápido después.",
+        "Porque tienen la raíz más superficial que los lentos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es física de materiales y no se puede negociar. La solución de ingeniería es la de siempre cuando dos requisitos son incompatibles: combinar y planificar la transición, con fecha de retirada prevista. Con el gandul son tres capas de la misma estrategia."
+    },
+    {
+      "id": "ubicacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Dónde se planta un árbol para que dé sombra en el hemisferio sur?",
+      "opciones": [
+        "Al norte de lo que se quiere proteger, porque el sol recorre el cielo pasando por el norte.",
+        "Al oeste para cortar el sol de la tarde, que es el más caliente.",
+        "A una separación aproximadamente igual al diámetro de copa adulta.",
+        "Al sur, que es donde da mejor sombra al mediodía."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un árbol precioso plantado al sur da sombra a su propio tronco y a poco más. Y la separación es la cuenta más olvidada del módulo: un metro entre dos plantines de treinta centímetros parece razonable y es un desastre a los diez años."
+    },
+    {
+      "id": "enroscamiento",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un árbol con la raíz enroscada en el envase se nota enseguida porque crece mal.",
+      "respuesta": false,
+      "explicacion": "Falso, y ese es el problema: crece igual de bien durante años, porque las raíces enroscadas absorben agua y nutrientes sin dificultad. Lo que falla es el anclaje, y el árbol se cae con una tormenta a los diez o quince años, entero y desde la base. Nadie relaciona nunca ese fallo con el vivero que lo produjo."
+    },
+    {
+      "id": "envase",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué exige la producción de un árbol en envase?",
+      "opciones": [
+        "Envase alto y angosto, para que la raíz principal baje en vez de dar vueltas.",
+        "Poda aérea con fondo abierto y envase elevado, porque hacen falta las dos cosas.",
+        "Controlar el tiempo de permanencia, porque un árbol guardado de más ya está estropeado.",
+        "Trasplantar a un envase mayor cuando la raíz ya dio vueltas, que corrige el problema."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Trasplantar no lo arregla: la raíz enroscada sigue enroscada. O se descarta, o se poda la raíz de forma agresiva cortando las espirales, que es un procedimiento con su propio riesgo. Y un envase con fondo abierto apoyado en el suelo no poda nada."
+    },
+    {
+      "id": "escarificacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "Siembras cien semillas de un árbol tropical y no germina ninguna. ¿Qué puede estar pasando?",
+      "opciones": [
+        "La cubierta es impermeable y el agua no puede entrar.",
+        "Es una estrategia evolutiva: la semilla espera enterrada hasta que el desgaste abre la cubierta.",
+        "Se resuelve lijando un costado o con un remojo en agua muy caliente.",
+        "La semilla estaba muerta, que es la explicación más probable."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Concluir que la semilla estaba mala es el error clásico. Después de escarificar, la semilla se hincha —esa es la señal de que funcionó— y germina en días. Con agua caliente hay que calibrar, porque pasarse de temperatura o de tiempo mata la semilla; el dato exacto es por especie y se saca probando un lote pequeño."
+    },
+    {
+      "id": "cliente",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que explicarle a quien compra un árbol?",
+      "opciones": [
+        "Dónde plantarlo, lejos de construcciones y cañerías y a la distancia de copa adulta.",
+        "Que el cuello del árbol va a nivel del suelo y nunca enterrado.",
+        "Que el tutor es temporal y hay que quitarlo, porque olvidado estrangula el tronco.",
+        "Que un árbol recién plantado ya no necesita riego porque tiene raíz profunda."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un árbol recién plantado no tiene raíz explorando: depende del riego tanto como un plantín, y la primera seca es la que lo mata. A partir del segundo año se defiende solo. Un árbol muerto por mala plantación es una queja contra el vivero aunque el vivero lo hiciera todo bien."
+    },
+    {
+      "id": "arboles-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Planifica los árboles de sombra de Rizoma del Sur: dónde van, qué especies, cómo los produces y cómo los vendes.",
+      "respuestaModelo": "Lo primero es plantarlos ya, aunque no den sombra hasta dentro de años. Es la decisión más fácil de posponer y la más cara de posponer.\n\nVan al norte y al oeste de las zonas de cultivo. En el hemisferio sur el sol pasa por el norte, así que un árbol plantado al sur de la estructura de propagación no le va a dar sombra nunca; y el sol de la tarde entra bajo por el oeste y es el que recalienta paredes, techos y bancos.\n\nLos separo según el diámetro de copa adulta y no según el tamaño del plantín. Es la cuenta más olvidada y la más irreversible: una línea plantada demasiado junta obliga a cortar la mitad quince años después.\n\nLa estrategia es de tres capas y ya la tengo montada. El gandul protege desde el primer año; un árbol de crecimiento rápido da sombra en pocos años; y el árbol definitivo, de madera densa, queda para siempre. Los dos primeros tienen fecha de retirada prevista y la anoto, porque una solución provisional sin fecha se queda para siempre. Y sé por qué necesito los dos: crecer rápido significa madera de baja densidad, y en zona de tormentas ese árbol se parte.\n\nEn producción, el envase decide todo. Bolsa alta y angosta, o envase de fondo abierto sobre banco elevado para que la raíz se pode con el aire; hacen falta las dos cosas, porque un fondo abierto apoyado en el suelo no poda nada. Y control estricto del tiempo en envase: un árbol guardado de más está estropeado aunque se vea perfecto, y venderlo es vender un problema con quince años de retardo, porque la raíz enroscada no se endereza y el árbol se cae por fallo de anclaje.\n\nLa semilla la recojo del propio entorno: los árboles de la zona la producen gratis y adaptada. De cada especie averiguo y anoto si necesita escarificación, con qué método y con qué tiempo, probando lotes pequeños. Muchas semillas de árbol tropical tienen la cubierta impermeable y no germinan hasta que se lija un costado o se hace un remojo en agua muy caliente; si se hinchan, funcionó.\n\nEn especies prefiero nativas de la llanura y la Chiquitanía, que están adaptadas al clima, al suelo y a la estacionalidad. El tajibo y el toborochi son emblemáticos aquí y sirven a la vez como sombra y como ornamental de venta. La lista concreta la armo hablando con viveristas de la zona y con los servicios técnicos agropecuarios y forestales del departamento, porque esa información local no está en ningún manual general.\n\nCon las exóticas de crecimiento rápido voy con cuidado: algunas tienen comportamiento invasor y se escapan, y en un predio rodeado de vegetación nativa eso es un problema que se hereda. En la duda, nativa.\n\nY si pienso producir maderables valiosos, consulto antes la normativa forestal con la autoridad competente, porque producir plantines y aprovechar madera no son lo mismo pero conviene saber en qué terreno se pisa.\n\nEl producto que mejor encaja con el proyecto son árboles nativos producidos con semilla local y vendidos con instrucciones de plantación. Tiene demanda real —municipios, empresas, vecinos, programas de arborización— y un componente de conocimiento que casi nadie ofrece.\n\nY cada venta va con las cuatro instrucciones: dónde plantarlo, el cuello a nivel del suelo y nunca enterrado, tutor holgado y temporal que hay que quitar, y riego durante todo el primer año porque la primera seca es la que lo mata.",
+      "criterios": [
+        "Planta los árboles desde el principio pese al retorno lejano.",
+        "Ubica al norte y al oeste y justifica con el recorrido del sol.",
+        "Separa según diámetro de copa adulta.",
+        "Combina gandul, árbol rápido y árbol definitivo con fecha de retirada anotada.",
+        "Explica el compromiso entre velocidad de crecimiento y densidad de madera.",
+        "Produce en envase alto y angosto con poda aérea real y controla el tiempo en envase.",
+        "Reconoce que la raíz enroscada provoca fallo de anclaje años después.",
+        "Recoge semilla local y ensaya escarificación por especie.",
+        "Prefiere nativas y cita fuentes locales para armar la lista.",
+        "Evalúa el riesgo invasor de exóticas rápidas.",
+        "Consulta la normativa forestal antes de producir maderables valiosos.",
+        "Define el producto como árbol nativo con instrucciones de plantación.",
+        "Entrega las cuatro instrucciones de plantación en cada venta."
+      ],
+      "explicacion": "Esta ficha se distingue del resto en que casi todas sus decisiones se pagan o se cobran años después: la separación, el envase, la especie. Por eso es la única del módulo donde el error no se corrige con la siguiente temporada."
+    }
+  ]
+}

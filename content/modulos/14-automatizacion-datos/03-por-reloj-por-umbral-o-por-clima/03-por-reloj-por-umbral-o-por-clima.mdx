@@ -1,0 +1,240 @@
+Un sistema de riego automático tiene que contestar dos preguntas: **cuándo abrir la válvula y durante
+cuánto tiempo.** Hay tres formas de contestarlas, y esta lección sostiene algo que puede sorprender:
+
+**La elección entre ellas importa más que la calidad del sensor.** Un sistema simple con una buena
+estrategia rinde más que uno instrumentado con una estrategia mala.
+
+## Por reloj
+
+<Diagrama
+  src="tres-formas-de-decidir.webp"
+  alt="Tres columnas verticales altas lado a lado, cada una encabezada por un icono distinto y con un símbolo de válvula al pie sobre un tramo de tubería. La columna izquierda está encabezada por una esfera de reloj sin números. La del medio, por una sonda clavada en un montículo de sustrato. La derecha, por un sol con una nube y tres líneas onduladas que se elevan junto a una hoja. Dentro de cada columna hay elementos de instrumentación esquemáticos distintos. Tres franjas de rótulo, una bajo cada columna, que dicen de izquierda a derecha: SIEMPRE A LA MISMA HORA; CUANDO EL SUSTRATO BAJA; SEGÚN LO QUE PIDE EL DÍA. Arriba, TRES FORMAS DE DECIDIR."
+  pie="Las tres contestan la misma pregunta con información distinta, y las tres fallan de forma distinta."
+/>
+
+La más simple: **riega todos los días a las siete, durante diez minutos.** No hay sensores, no hay
+decisiones. Un temporizador y una válvula.
+
+**Lo que hace bien**, y es más de lo que se le reconoce:
+
+**Elimina la presencia obligatoria**, que es exactamente el cuello de botella que identificó el módulo
+anterior. Ese solo efecto ya justifica la instalación.
+
+**Es predecible.** Sabes exactamente qué va a hacer, siempre. Y cuando falla, falla de forma evidente.
+
+**Y casi no tiene piezas.** Menos piezas, menos modos de fallo, menos mantenimiento.
+
+**Lo que hace mal:**
+
+**No sabe qué tiempo hace.** Riega igual el día que llovió doce horas seguidas que el día de surazo
+seco con viento. En un clima con estación húmeda y estación seca marcadas, ese error no es pequeño.
+
+**Y no sabe cómo está el cultivo.** Un plantín recién repicado y uno a punto de salir necesitan
+cantidades muy distintas, y el reloj les da lo mismo.
+
+<Dato>
+Aun así, **el riego por reloj es la recomendación correcta para empezar**, y conviene decirlo sin
+rodeos porque contradice el instinto de quien sabe programar.
+
+La razón es que resuelve el problema principal —la presencia— con la menor cantidad posible de cosas
+que puedan fallar, y **permite acumular durante meses la observación necesaria para hacer algo mejor.**
+
+Automatizar por umbral sin haber regado a mano una temporada es escribir una regla sin saber qué
+regla hace falta.
+</Dato>
+
+## Por umbral
+
+La segunda estrategia usa el sensor: **si la humedad baja de X, riega; si no, no.**
+
+Es la más intuitiva y tiene un defecto que hay que resolver desde el primer día.
+
+**Un umbral único produce oscilación.** Justo alrededor del punto de disparo, el ruido de la medida
+hace que el sistema encienda y apague continuamente: lee 39, riega un segundo, lee 41, para, lee 39
+otra vez. La válvula chasquea, la bobina se calienta y el riego es errático.
+
+**La solución es la <Termino slug="histeresis">histéresis</Termino>**, y es la misma que usa cualquier
+termostato: **dos umbrales en vez de uno.**
+
+<Formula explicacion="Con histéresis, el riego arranca cuando la humedad cae por debajo del umbral inferior y no se detiene hasta que sube por encima del superior, que es un valor distinto y más alto. La separación entre ambos debe ser mayor que el ruido de la medida, de modo que un valor suelto no pueda cruzar los dos.">
+arranca si lectura &lt; umbral bajo · para si lectura &gt; umbral alto · umbral alto &gt; umbral bajo
+</Formula>
+
+<Diagrama
+  src="por-que-hacen-falta-dos.webp"
+  alt="Dos paneles lado a lado, cada uno con una línea ondulada horizontal que avanza de izquierda a derecha representando una medida que fluctúa. Panel izquierdo, marcado con una cruz roja en la esquina: una única línea recta horizontal de referencia cruza la ondulada muchas veces, y en cada cruce hay dibujado un pequeño símbolo de válvula, de modo que el panel queda abarrotado de válvulas. Debajo, una franja de rótulo que dice UN SOLO UMBRAL CHASQUEA. Panel derecho, marcado con una tilde verde en la esquina: dos líneas rectas horizontales de referencia a alturas claramente distintas con una banda sombreada entre ellas, la línea ondulada se mantiene dentro de la banda casi todo el tiempo, y en todo el panel solo aparecen dos símbolos de válvula, uno donde la onda baja de la línea inferior y otro donde sube por encima de la superior. Debajo, una franja que dice DOS UMBRALES SEPARADOS. Arriba, POR QUÉ HACEN FALTA DOS."
+  pie="La separación entre los dos umbrales tiene que ser mayor que el ruido de la medida."
+/>
+
+Y hay dos refinamientos que evitan casi todos los problemas restantes:
+
+**Tiempo mínimo entre riegos.** Aunque la lectura vuelva a bajar, no se riega otra vez hasta que hayan
+pasado, digamos, dos horas. Da tiempo a que el agua se redistribuya en el envase y **evita que un
+sensor mal colocado dispare riegos encadenados.**
+
+**Y duración fija, no «hasta que suba».** Regar hasta que el sensor diga que ya está suena razonable y
+es peligroso: si el sensor está mal colocado o se ha roto, «hasta que suba» significa para siempre. **Es
+más seguro regar una cantidad fija conocida y volver a comprobar en el ciclo siguiente.**
+
+<Analogia>
+La histéresis es el mismo problema que **un umbral de alerta que se dispara y se resuelve
+continuamente.**
+
+Con un solo valor, una métrica que oscila alrededor de él genera una avalancha de notificaciones sin
+que el sistema haya cambiado de estado real. Se resuelve exactamente igual: **el umbral para entrar en
+alarma y el umbral para salir de ella no pueden ser el mismo número.**
+
+Y el tiempo mínimo entre riegos es el equivalente de un periodo de espera: impide que un evento
+transitorio se convierta en una cascada de acciones.
+</Analogia>
+
+## Por demanda del clima
+
+La tercera estrategia no mira el sustrato sino **lo que el ambiente le está pidiendo a la planta.**
+
+Se apoya en la <Termino slug="evapotranspiracion">evapotranspiración</Termino>, que es el concepto
+central de la primera lección del módulo de riego: la suma del agua que se evapora del sustrato y la
+que la planta transpira. Es la demanda real, y
+depende de radiación, temperatura, humedad del aire y viento.
+
+La lógica es sencilla: **el vivero es un depósito que se vacía a la velocidad de la evapotranspiración,
+y hay que reponer lo que se fue.**
+
+<Formula explicacion="La necesidad de riego de un periodo es la demanda climática estimada multiplicada por un coeficiente que ajusta esa demanda a la especie y a su estado de desarrollo, restando lo que haya aportado la lluvia efectiva. Es la misma cuenta del balance hídrico del módulo de riego, aplicada de forma automática.">
+agua a reponer = evapotranspiración del periodo × coeficiente del cultivo − lluvia aprovechada
+</Formula>
+
+**Lo que hace bien:** se anticipa en lugar de reaccionar. No espera a que el sustrato se seque para
+actuar; repone lo que se perdió. En días de mucha demanda riega más, y en días cubiertos riega menos,
+automáticamente.
+
+**Lo que exige:** más sensores —radiación o al menos temperatura y humedad del aire—,
+un <Termino slug="coeficiente-de-cultivo">coeficiente de cultivo</Termino> que hay que estimar para
+cada especie y una implementación más compleja. **Es la estrategia más elegante y la que
+más cosas pueden salir mal.**
+
+<Diagrama
+  src="tres-capas.webp"
+  alt="Tres losas horizontales apiladas una encima de otra como capas de una cimentación, la de abajo la más ancha y la de arriba la más estrecha. La losa inferior contiene una esfera de reloj sin números. La del medio, una sonda clavada en un corte de sustrato con raíces. La de arriba, un sol con una nube. Tres franjas de rótulo colocadas a la derecha de cada losa, que dicen de abajo arriba: SIEMPRE RIEGA ALGO; CORRIGE CON EL SENSOR; AJUSTA CON LA ÉPOCA. Arriba, TRES CAPAS, UNA ENCIMA DE OTRA."
+  pie="Si cae la capa de arriba, las de abajo siguen sosteniendo el riego. Eso es degradar con elegancia."
+/>
+
+<Advertencia>
+La conclusión práctica no es elegir una de las tres: es **combinarlas en capas**, y esta es la
+arquitectura que recomienda la lección.
+
+**Una base por reloj**, que garantiza un riego mínimo aunque todo lo demás falle. Es el suelo del
+sistema.
+
+**Una corrección por umbral**, que suprime o añade riegos según lo que diga el sensor, dentro de
+límites acotados.
+
+**Y una corrección estacional por clima**, aunque sea manual: subir o bajar la base según la época del
+año.
+
+Las tres capas juntas dan un sistema que **degrada con elegancia**: si el sensor muere, sigue regando
+por reloj, con un riego imperfecto pero suficiente. Si además falla la lógica de clima, sigue habiendo
+riego base.
+
+**Es lo contrario de un sistema que depende de que todo funcione**, y es exactamente el criterio de
+diseño de la primera lección: decidir a propósito qué pasa cuando algo falla.
+</Advertencia>
+
+## Los límites que van por encima de todo
+
+<Diagrama
+  src="los-limites-duros.webp"
+  alt="Una barra roja horizontal gruesa que cruza la parte alta de la imagen como un techo. Por debajo de esa barrera, tres flechas separadas apuntan hacia arriba y todas quedan detenidas por ella; cada flecha arranca de un icono pequeño distinto en la parte baja: la primera de un reloj de arena, la segunda de una pila de tres símbolos de válvula idénticos y la tercera de una luna creciente. Tres franjas de rótulo, una sobre cada flecha detenida, que dicen de izquierda a derecha: NI UN RIEGO MÁS LARGO; NI UNO MÁS AL DÍA; NI FUERA DE HORA. Arriba, por encima de la barrera, LO QUE NINGUNA REGLA SALTA."
+  pie="Estos tres límites están por encima de los sensores, del cálculo y de cualquier lógica que escribas."
+/>
+
+Independientemente de la estrategia, tres límites duros que ninguna lógica puede saltarse:
+
+**Duración máxima por riego.** Ya estaba en la primera lección y aquí se hace explícito: por mucho que
+digan los sensores o el cálculo, ningún riego pasa de un máximo. Es la protección que atrapa todos los
+fallos de sensor.
+
+**Número máximo de riegos por día.** Impide que una lógica mal ajustada o un sensor errático
+encadenen decenas de riegos.
+
+**Y ventana horaria.** Fuera de las horas permitidas, no se riega. Esto no es solo seguridad: viene del
+módulo de sanidad, donde el follaje mojado al anochecer es una invitación a los hongos. **Regar
+temprano y no al final del día es una decisión agronómica, no informática**, y el sistema debe
+respetarla aunque el sensor pida agua a las seis de la tarde.
+
+<Dato>
+Un último criterio que ahorra mucho trabajo: **la lógica va en el sitio más tonto posible.**
+
+La decisión de regar debe tomarla el dispositivo que está junto a la válvula, con los datos que tiene
+localmente, **sin depender de una conexión, de un servidor ni de un teléfono.**
+
+La conectividad sirve para mirar, para avisar y para cambiar parámetros. **No debe estar en el camino
+crítico de la decisión.** Un vivero que deja de regar porque se cayó internet es un vivero con un
+problema de diseño, no de conectividad.
+</Dato>
+
+<AplicarRizoma>
+**Rizoma implementa las tres capas, y en ese orden en el tiempo.**
+
+**Primero, solo reloj.** Temporizador y válvula, sin sensores. Resuelve la presencia obligatoria —el
+cuello de botella real— con la menor cantidad posible de piezas que puedan fallar. Y mientras funciona,
+se riega y se observa a mano según la lección de riego, que es lo que produce el conocimiento necesario
+para la capa siguiente. Escribir una regla de umbral antes de haber regado a mano una temporada es
+escribir una regla sin saber cuál hace falta.
+
+**Después, corrección por umbral con histéresis desde el primer día.** Dos umbrales separados por más
+que el ruido de la medida, nunca uno solo, porque un umbral único hace chasquear la válvula alrededor
+del punto de disparo.
+
+**Tiempo mínimo entre riegos de al menos un par de horas**, para dar tiempo a que el agua se
+redistribuya en el envase y para que un sensor mal colocado no dispare riegos encadenados.
+
+**Duración fija por riego, nunca «hasta que el sensor suba».** Si el sensor está mal colocado o roto,
+esa condición no se cumple nunca. Se riega una cantidad conocida y se vuelve a comprobar en el ciclo
+siguiente.
+
+**Y la corrección estacional por clima puede ser manual al principio**: subir la base en la seca y
+bajarla en lluvias, con el criterio del balance hídrico. Automatizar el cálculo de evapotranspiración
+es la última capa y solo tiene sentido cuando las dos anteriores llevan una temporada funcionando.
+
+**Los tres límites duros son obligatorios y van por encima de cualquier lógica**: duración máxima por
+riego, número máximo de riegos al día y ventana horaria. La ventana horaria no es informática sino
+agronómica: se riega temprano y no al final del día, porque el follaje mojado al anochecer favorece a
+los hongos según el módulo de sanidad. Si el sensor pide agua a las seis de la tarde, no se riega.
+
+**La lógica vive en el dispositivo que está junto a la válvula**, con datos locales y sin depender de
+conexión, servidor ni teléfono. La conectividad sirve para mirar y para avisar, nunca para decidir.
+
+**Y las tres capas están pensadas para degradar con elegancia**: si muere el sensor, sigue el reloj; si
+falla la corrección estacional, sigue habiendo riego base. Un sistema que solo funciona cuando todo
+funciona no sirve para un vivero.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El clima de la zona hace que el riego por reloj puro sea claramente insuficiente a lo largo del año**,
+pero no por la razón que se supone. El problema no es tanto la estación seca —donde la demanda es alta
+pero estable y un reloj bien ajustado se acerca bastante— como **la temporada de lluvias, donde un
+reloj riega lotes que acaban de recibir cincuenta milímetros de agua.**
+
+Por eso, si solo se va a implementar una corrección, **la más rentable es suprimir el riego cuando ha
+llovido**, y para eso basta con un sensor de lluvia o incluso con el propio sensor de humedad usado
+únicamente como veto: no decide cuánto regar, decide si cancelar.
+
+**El surazo es el caso contrario**: irrupción de aire frío y seco con viento fuerte que dispara la
+transpiración durante uno o dos días. Un reloj no lo ve, y las plantas en envase pequeño lo sufren
+rápido. Es el argumento más fuerte a favor de la capa de umbral.
+
+**Los cortes de energía obligan a que el controlador recupere solo tras un corte** y a que sepa qué hora
+es cuando vuelve. Un reloj de tiempo real con pila propia es barato y evita que el sistema riegue a
+deshora tras cada apagón.
+
+**Y la conectividad en Zanja Honda no es garantizada**, lo cual refuerza el criterio de esta lección:
+la decisión se toma localmente. Cualquier solución basada en la nube que necesite estar conectada para
+abrir una válvula es inadecuada para este sitio.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya está decidida la estrategia. Falta el aparato que la ejecuta: **qué controlador elegir, cómo
+conectarlo a la válvula sin quemar nada y cómo conseguir que siga funcionando cuando lleve meses solo a
+la intemperie.** Es la lección siguiente.

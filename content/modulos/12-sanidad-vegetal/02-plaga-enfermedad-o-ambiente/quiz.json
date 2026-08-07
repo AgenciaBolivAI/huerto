@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "criterio-temporal",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué dice la forma en que aparece un problema?",
+      "opciones": [
+        "Un organismo tiene que estar en algún sitio, reproducirse y moverse: su firma es una mancha que crece.",
+        "El ambiente actúa a la vez y por igual sobre todo lo que estaba ahí.",
+        "Súbito y uniforme apunta al manejo o al clima; gradual y focal, a un organismo.",
+        "Un síntoma súbito siempre indica una causa súbita."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Una raíz asfixiada lleva semanas pudriéndose sin señal aérea, y el primer día realmente caluroso la planta se marchita de golpe y parece repentino. Por eso la pregunta correcta no es cuándo apareció el síntoma sino qué cambió antes."
+    },
+    {
+      "id": "criterio-de-especie",
+      "tipo": "opcion_multiple",
+      "enunciado": "En un banco con cinco especies distintas, el mismo síntoma aparece en todas. ¿Qué concluyes?",
+      "opciones": [
+        "Que casi seguro no es un organismo, porque la mayoría de los patógenos son específicos.",
+        "Que la explicación biológica exigiría varias plagas actuando a la vez, lo cual es poco probable.",
+        "Que hay que mirar el manejo: riego, sustrato, fertilización, clima o un producto aplicado.",
+        "Que hay una plaga polífaga muy agresiva y hay que fumigar todo el banco."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un vivero mixto tiene montado un experimento con control sin querer: las vecinas de otra especie comparten todas las variables ambientales y no comparten la susceptibilidad biológica. Un monocultivo no tiene ese control, y por eso allí el diagnóstico es más difícil."
+    },
+    {
+      "id": "vecina-sana",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si una especie está afectada y sus vecinas inmediatas de otras especies están perfectas, sigue siendo probable que la causa sea el riego.",
+      "respuesta": false,
+      "explicacion": "Falso: las vecinas comparten riego, sustrato y luz. Si ellas están bien, el ambiente queda descartado y hay que buscar el organismo. Es el mismo razonamiento del control experimental, leído en el otro sentido."
+    },
+    {
+      "id": "lista-abiotica",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuáles son causas ambientales típicas en un vivero?",
+      "opciones": [
+        "Exceso de agua, que da marchitez permanente con sustrato mojado por raíz asfixiada.",
+        "Sal, con bordes quemados, costra blanca y plantas detenidas.",
+        "Quemadura de sol en las hojas expuestas tras destapar o mover plantas, siguiendo la orientación.",
+        "Manchas foliares con halo y estructura definida repartidas por todo el envés."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las manchas con borde definido y estructura son la firma de un patógeno, no del ambiente. Faltan además el frío tras un surazo, el producto mal aplicado, los problemas de raíz y el envase recalentado al sol."
+    },
+    {
+      "id": "deriva",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se reconoce el daño por deriva de un producto aplicado en un terreno vecino?",
+      "opciones": [
+        "Deformación del brote nuevo: hojas retorcidas, enrolladas o estrechadas, con el tejido viejo intacto.",
+        "Gradiente espacial: más fuerte del lado por donde vino el viento y más suave al alejarse.",
+        "Afecta a varias especies a la vez, porque no es un organismo.",
+        "Manchas circulares con halo que aparecen primero en las hojas viejas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Esas tres firmas juntas no las produce ninguna plaga. El tejido viejo queda intacto porque ya estaba formado cuando llegó el producto. Y tiene consecuencias de diseño: barrera vegetal densa en el lado expuesto y especies sensibles en el lado opuesto."
+    },
+    {
+      "id": "secuencia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué tratar solo el hongo no suele alcanzar?",
+      "opciones": [
+        "Porque lo abiótico y lo biótico van juntos, y normalmente en ese orden.",
+        "Muchos patógenos de suelo están presentes siempre y solo entran en plantas debilitadas o heridas.",
+        "Si no se corrige el riego, el fungicida solo retrasa el mismo desenlace.",
+        "Porque los fungicidas no funcionan contra hongos de suelo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Son oportunistas: no derriban la puerta, entran por la que ya estaba abierta. Por eso la pregunta correcta no es qué hongo es, sino por qué pudo entrar."
+    },
+    {
+      "id": "descartes",
+      "tipo": "verdadero_falso",
+      "enunciado": "Los tres descartes de esta lección requieren equipo o análisis de laboratorio.",
+      "respuesta": false,
+      "explicacion": "Falso: los tres se hacen mirando y recordando. ¿Le pasa a todo el lote a la vez o hay un foco que crece? ¿Le pasa a especies sin parentesco? ¿Qué cambió antes? El único instrumento que ayuda —el conductivímetro— ya se compró para calidad de agua."
+    },
+    {
+      "id": "descartes-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Aparece un problema en un banco de Rizoma del Sur. Describe el proceso de descarte que sigues antes de considerar cualquier producto.",
+      "respuestaModelo": "Hago tres descartes en orden, y ninguno cuesta dinero.\n\nPrimero, el tiempo y la distribución. ¿Le pasa a todo el lote a la vez y por igual, o hay un foco que crece? Si es uniforme, la causa es el manejo o el clima, porque un organismo tiene que estar en algún sitio, reproducirse y moverse, y su firma es una mancha que se extiende. Si veo un grupito que crece con los días, es algo vivo. Con la libreta y las fechas puedo reconstruir en minutos qué se hizo los días anteriores.\n\nY tengo presente que súbito no significa causa súbita: una raíz asfixiada lleva semanas pudriéndose sin señal aérea y colapsa el primer día realmente caluroso. Por eso la pregunta no es cuándo apareció el síntoma, sino qué cambió antes.\n\nSegundo, la especie. El vivero mixto me da el control experimental gratis: si la yautía, el culantro y el ají están afectados por igual en el mismo banco, no hay plaga que explique eso, porque la mayoría de los patógenos son específicos de un hospedante o de un grupo emparentado. Si en cambio solo está el ají mientras el culantro de al lado, con el mismo riego y el mismo sustrato, está perfecto, entonces el ambiente queda descartado y busco el organismo.\n\nTercero, qué cambió antes. No cuándo se vio, sino qué se hizo o qué pasó en los días previos: un riego distinto, una fertilización, un producto, un surazo, una malla que se rompió, plantas que se movieron de sitio.\n\nCon eso reviso la lista corta de causas ambientales, que en un vivero es siempre la misma: exceso o falta de agua, sal, sol tras destapar o mover, frío tras surazo, producto mal aplicado, problema de raíz y envase recalentado. Dos herramientas resuelven la mitad: el conductivímetro que ya tengo de calidad de agua, y sacar una planta del envase para mirar la raíz. Sal y raíz son las dos causas que más veces se confunden con enfermedad.\n\nEn arcilla expansiva y en temporada de lluvias, la asfixia radicular es probablemente la causa ambiental más frecuente de todas, así que la descarto antes de buscar patógeno.\n\nPara la deriva vigilo las tres firmas juntas: brote nuevo retorcido con el tejido viejo intacto, gradiente más fuerte del lado del viento, y varias especies afectadas a la vez. Ninguna plaga hace eso. Si los linderos de los ocho lotes dan a agricultura extensiva, ahí va barrera vegetal densa y alta —gandul primero, árboles de sombra después— y las especies sensibles van al lado opuesto. Si aparece el daño, lo anoto, lo fotografío y lo hablo con el vecino, informándome antes de cuáles son las reglas de aplicación vigentes.\n\nY termine donde termine el diagnóstico, hago siempre la última pregunta: ¿por qué pudo entrar? Casi nunca hay una sola causa. Primero viene un estrés —encharcamiento, sequía, herida de repique, sustrato mal formulado— y después el patógeno oportunista, que no derriba la puerta sino que entra por la que ya estaba abierta. Si aplico algo y no corrijo el riego, solo compro tiempo.",
+      "criterios": [
+        "Aplica el descarte temporal y de distribución antes que nada.",
+        "Distingue síntoma súbito de causa súbita y usa el registro con fechas.",
+        "Usa el criterio de especie y explica por qué los patógenos son específicos.",
+        "Interpreta correctamente el caso de vecinas sanas de otra especie.",
+        "Pregunta qué cambió en los días previos.",
+        "Repasa la lista corta de causas ambientales del vivero.",
+        "Usa conductivímetro y extracción de planta como herramientas de descarte.",
+        "Sitúa la asfixia radicular como causa ambiental más probable en este suelo y clima.",
+        "Reconoce las tres firmas de la deriva.",
+        "Propone barrera vegetal y ubicación de especies sensibles como diseño.",
+        "Documenta y dialoga con el vecino informándose primero de las reglas.",
+        "Cierra con la pregunta de por qué pudo entrar el patógeno."
+      ],
+      "explicacion": "Fíjate en que los tres descartes son de razonamiento y no de instrumental, y en que el orden importa: hacerlos al revés lleva a buscar un organismo que no existe. La disciplina es la misma de depurar un fallo: acotar antes de tocar."
+    }
+  ]
+}

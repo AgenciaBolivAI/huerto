@@ -1,0 +1,335 @@
+La primera lección de este módulo planteó un problema y lo dejó abierto: en la llanura cruceña **llueve
+muchísimo y hay sequía.** No es una contradicción, es una cuestión de calendario.
+
+Esa asimetría define esta lección entera. **El problema no es que falte agua: es que no está cuando
+hace falta.** Y como el agua sí cae, en cantidades grandes y encima de techos que ya existen, la
+respuesta no es buscar una fuente nueva sino mover agua en el tiempo.
+
+## Llueve mucho, pero no cuando hace falta
+
+<Diagrama
+  src="llueve-mucho.webp"
+  alt="Gráfico de barras con doce barras iguales en fila sobre una línea de base, cada una rotulada debajo con la abreviatura de un mes en este orden de izquierda a derecha: ENE, FEB, MAR, ABR, MAY, JUN, JUL, AGO, SEP, OCT, NOV y DIC. Las barras son azul pálido y representan la lluvia: muy altas en ENE, FEB y MAR, medianas en ABR, muy cortas y casi planas en MAY, JUN, JUL, AGO y SEP, medianas en OCT y otra vez altas en NOV y DIC. Sobre el tramo plano del medio, una llave terracota abarca las barras cortas con una franja de rótulo encima que dice AQUÍ NO CAE NADA. Otra franja sobre las barras altas de la izquierda dice AQUÍ SOBRA. Arriba, LLUEVE MUCHO, PERO NO CUANDO HACE FALTA."
+  pie="La misma cantidad anual repartida de otra forma no sería un problema. El problema es el hueco del medio."
+/>
+
+La forma de esta curva es lo que hay que mirar, más que cualquier número concreto. La <Termino slug="epoca-de-lluvias">época de lluvias</Termino> concentra
+la precipitación entre octubre y abril, y de mayo a septiembre hay un hueco largo en el que puede pasar
+mucho tiempo sin lluvia útil.
+
+El agravante es que **el hueco coincide exactamente con el momento de máxima demanda**. La seca es
+cuando hay más radiación acumulada, menos humedad ambiente y más consumo por planta. La curva de oferta
+y la de demanda no solo están desfasadas: están en oposición de fase.
+
+<Analogia>
+Es un problema de **almacenamiento y no de generación**, exactamente igual que en el módulo solar.
+
+Allí había energía de sobra al mediodía y ninguna de noche, y la respuesta no era comprar más paneles
+sino guardar. Aquí hay agua de sobra en enero y ninguna en agosto, y la respuesta no es buscar más
+fuentes sino **guardar la que ya cae encima**.
+
+La analogía llega hasta el final. En un sistema solar el componente caro, frágil y limitante no es el
+panel, es la batería. En captación de lluvia el componente caro y limitante no es el techo, es el
+tanque. Y el criterio de dimensionado es literalmente el mismo: días de autonomía.
+</Analogia>
+
+## Cuánta agua da un techo
+
+<Diagrama
+  src="cuanta-agua-da-un-techo.webp"
+  alt="Tres bloques rectangulares de esquinas redondeadas en fila, unidos por dos grandes signos de multiplicación en terracota, seguidos de un signo igual y un cuarto bloque. El primero muestra una planta cenital de un techo rectangular con su contorno resaltado, rotulado SUPERFICIE DE TECHO. El segundo muestra una nube de lluvia con gotas cayendo, rotulado LLUVIA QUE CAE. El tercero muestra una canaleta con algo de agua rebasando su borde y una porción escapando, rotulado LO QUE SE PIERDE. El cuarto, tras el signo igual, muestra un tanque de agua lleno, rotulado LO QUE JUNTAS. Arriba, CUÁNTA AGUA DA UN TECHO."
+  pie="Tres factores. El primero ya está construido, el segundo no lo decides tú, y el tercero depende del material y de la instalación."
+/>
+
+La cuenta de captación es de las más agradecidas que existen, porque los números salen grandes y casi
+siempre sorprenden por arriba:
+
+<Formula explicacion="El agua que se puede captar de un techo es su superficie proyectada en horizontal multiplicada por los milímetros de lluvia caída y por un coeficiente que descuenta lo que se pierde en mojar el material, evaporarse y salpicar fuera de la canaleta.">
+agua captada = superficie de techo en planta × lluvia caída × coeficiente de escorrentía
+</Formula>
+
+Tres cosas de esa fórmula que conviene tener muy claras.
+
+**La superficie es la proyección en planta, no la del faldón inclinado.** Un techo a dos aguas más
+empinado no capta más agua: capta exactamente la misma, porque lo que importa es cuánta lluvia cae
+sobre la huella horizontal del edificio. La inclinación cambia la velocidad con la que el agua llega a
+la canaleta, no la cantidad que llega.
+
+**Un milímetro de lluvia sobre un metro cuadrado es un litro.** Esa equivalencia es la que permite
+hacer el cálculo de cabeza, y es la razón de que los resultados sorprendan: un aguacero modesto sobre
+un techo modesto son cientos de litros en una tarde.
+
+**Y el <Termino slug="coeficiente-de-escorrentia">coeficiente de escorrentía</Termino> descuenta las pérdidas reales.** No toda el agua que cae llega
+al tanque: parte moja el material seco y se evapora, parte salpica fuera de la canaleta cuando el
+chorro viene fuerte, y parte rebosa cuando el caudal instantáneo supera lo que el bajante puede tragar.
+En chapa metálica lisa el coeficiente es alto; en superficies rugosas o absorbentes, bastante menor.
+
+<Dato>
+De ahí sale la consecuencia de diseño más importante de la lección: **la limitación casi nunca es el
+techo, es el tanque.**
+
+En un aguacero tropical fuerte, un techo pequeño llena un tanque grande en poco tiempo y luego rebosa
+durante horas. Lo que decide cuánta agua tienes en agosto no es cuánta cayó en enero, sino **cuánta
+cabía en lo que compraste.**
+
+Ese es el mismo cuello de botella que el banco de baterías, y tiene la misma consecuencia práctica:
+ampliar la captación cuando el tanque ya rebosa no sirve de nada. Primero se amplía el almacenamiento,
+después la superficie que lo alimenta.
+</Dato>
+
+## La canaleta se calcula por intensidad, no por total anual
+
+Hay un error de dimensionado que es específico de este clima y que ya apareció al hablar de techos: la
+canaleta y el bajante no se calculan por la lluvia anual, sino por la <Termino slug="intensidad-de-lluvia">intensidad de lluvia</Termino> punta.
+
+Dos climas con la misma cantidad de lluvia al año pueden exigir instalaciones de evacuación
+completamente distintas, según la repartan en llovizna continua o en aguaceros violentos. Aquí es lo
+segundo. Una canaleta dimensionada con criterio de clima templado **rebosa varias veces por
+temporada**, y rebosa justo en los momentos de mayor caudal, que es cuando más agua se podría estar
+captando.
+
+Y el rebose de la canaleta no es solo agua perdida: es agua cayendo concentrada al pie del muro, que en
+suelo arcilloso expansivo es exactamente el mecanismo que arruina una fundación. La misma pieza que
+capta agua para el vivero es la que protege la obra.
+
+## El primer chorro se tira
+
+<Diagrama
+  src="el-primer-chorro.webp"
+  alt="Detalle de un bajante que viene de una canaleta de techo por arriba. La tubería se bifurca: una pata vertical corta y ciega cuelga recta hacia abajo y está cerrada en su extremo por un tapón con un agujerito de goteo, y el ramal principal gira de lado y sigue hacia un tanque a la derecha. Dentro de la pata ciega, la primera agua sucia está dibujada oscura con fragmentos de hoja, excrementos de ave y polvo en suspensión. Dentro de la tubería que va al tanque, el agua está dibujada limpia y azul pálido. Franjas de rótulo con líneas de llamada: una a la pata ciega, LA PRIMERA AGUA SE APARTA; otra al tapón de su base, GOTEA SOLA Y SE VACÍA; y otra a la tubería limpia, LA LIMPIA VA AL TANQUE. Arriba, EL PRIMER CHORRO SE TIRA."
+  pie="Un tubo cerrado con un agujerito. Es el dispositivo más simple del vivero y el que más mejora la calidad del agua captada."
+/>
+
+Un techo acumula entre lluvias todo lo que le cae encima: polvo, hojas, restos de insectos y
+excrementos de aves. **La primera agua de un aguacero arrastra todo eso de golpe**, y es con diferencia
+la más sucia de todo el evento. Después de esos primeros minutos, el techo ya está lavado y lo que baja
+es notablemente más limpio.
+
+El dispositivo que aprovecha esa diferencia se llama <Termino slug="separador-de-primeras-aguas">separador de primeras aguas</Termino>, y es un tubo vertical
+ciego colocado antes de la entrada al tanque:
+
+**Cuando empieza a llover**, el agua sucia baja por el bajante y llena ese tubo, que está cerrado por
+abajo.
+
+**Cuando el tubo se llena**, el agua ya limpia no tiene por dónde seguir bajando y sigue de largo por
+el ramal principal hacia el tanque.
+
+**Y entre lluvias**, un agujerito pequeño en el tapón del fondo lo vacía solo, dejándolo listo para el
+siguiente aguacero.
+
+Sin partes móviles, sin electricidad y sin más mantenimiento que destapar el agujerito de vez en
+cuando. Cuanto más largo el tubo, más agua se aparta y más limpia entra la que queda; el precio es que
+se descarta más volumen en cada lluvia.
+
+<Analogia>
+Funciona como un búfer de descarte de tamaño fijo a la entrada de un flujo: los primeros bytes, que
+sabes que son basura, se escriben en un espacio que se llena y se tira, y solo cuando ese espacio está
+lleno el resto del flujo pasa al consumidor real.
+
+Lo interesante es que el criterio no es una comprobación de calidad, sino de posición: **no se examina
+si el agua está sucia, se asume que la primera lo está.** Es una heurística barata que acierta casi
+siempre, y cuando falla, falla del lado seguro: si el techo estaba limpio, lo único que has perdido es
+el volumen del tubo.
+</Analogia>
+
+## Cuánto tanque hace falta
+
+El dimensionado del almacenamiento es la cuenta que cierra el problema del principio:
+
+<Formula explicacion="El volumen de reserva necesario es el consumo diario del vivero en el mes crítico multiplicado por los días que se quiere poder aguantar sin ninguna recarga. Es exactamente el mismo cálculo que el de los días de autonomía de un sistema solar autónomo.">
+volumen del tanque = consumo diario del mes crítico × días de autonomía
+</Formula>
+
+El consumo diario del mes crítico salió de la primera lección del módulo, con la evapotranspiración y
+la eficiencia del método de riego ya metidas dentro. Los <Termino slug="dias-de-autonomia">días de autonomía</Termino> son una decisión de diseño, y
+conviene pensarla en términos de qué falla:
+
+**Pocos días** significa depender de que la fuente de recarga no falle nunca. Si la recarga es lluvia,
+en plena seca no hay recarga en absoluto. Si es un pozo con bomba solar, dos días encapotados seguidos
+vacían la reserva.
+
+**Muchos días** cuesta dinero en tanques y en la plataforma que los sostiene, ocupa espacio útil, y
+además tiene un costo oculto: el agua almacenada mucho tiempo se calienta, se estanca y cría cosas. Un
+tanque enorme siempre medio lleno da peor agua que uno más chico que rota.
+
+<Advertencia>
+Hay que decirlo sin adornos: **cubrir toda la seca con agua de lluvia almacenada no es realista en un
+vivero pequeño.** Salen volúmenes de decenas de miles de litros, y a esa escala el almacenamiento
+cuesta más que perforar un pozo.
+
+Lo razonable es una **estrategia mixta**: la lluvia cubre lo que puede y reduce el consumo de la otra
+fuente, y el pozo o la red cubren el resto. La captación no tiene que resolver el problema entero para
+valer la pena. Con que cubra todos los meses húmedos y las primeras semanas de la seca, ya está
+pagando su costo.
+
+Y hay un beneficio que no es de cantidad sino de calidad, y que la lección anterior deja ver: **el agua
+de lluvia es la mejor que vas a tener**, prácticamente sin sales disueltas. Aunque no alcance para
+todo, alcanza para reservarla a lo que más lo agradece.
+</Advertencia>
+
+## Un tanque bien hecho
+
+<Diagrama
+  src="un-tanque-bien-hecho.webp"
+  alt="Un tanque de agua grande dibujado en corte, apoyado sobre una plataforma elevada, con agua azul pálido dentro. Cinco elementos están rodeados y unidos por líneas de llamada terracota a sus rótulos: la tapa ajustada de arriba, TAPA HERMÉTICA; una malla fina sobre la entrada, MALLA EN LA ENTRADA; la tubería de salida, dibujada a propósito unos centímetros por encima del fondo con una capa de sedimento oscuro debajo, TOMA POR ENCIMA DEL FONDO; un tubo corto cerca del borde superior que apunta hacia fuera de la plataforma, REBOSE HACIA AFUERA; y una pequeña válvula en el punto más bajo del tanque, PURGA ABAJO. Arriba, UN TANQUE BIEN HECHO."
+  pie="Cinco detalles que no encarecen el tanque y que deciden si el agua almacenada sirve o no."
+/>
+
+Cinco detalles, cada uno resolviendo un problema concreto que ya salió en lecciones anteriores.
+
+**Tapa hermética.** Sin luz no hay algas, y sin acceso no entran hojas ni bichos. Pero en esta región la
+razón más importante es otra: **sin abertura no hay criadero de mosquito.** Toda abertura, incluida la
+de rebose y la de ventilación, va con malla fina.
+
+**Malla en la entrada**, que atrapa lo grueso antes de que llegue al agua almacenada. Es la primera
+etapa del tren de limpieza de la lección anterior, y la más barata de todas.
+
+**Toma por encima del fondo.** Unos centímetros bastan. El sedimento se asienta abajo y se queda ahí en
+vez de irse a los emisores: es decantación gratis, sin ningún equipo, aprovechando que el tanque ya
+está quieto.
+
+**Rebose hacia afuera**, dirigido lejos de la plataforma y de los postes. Un rebose que descarga al pie
+del tanque termina socavando su propia base, que es el mismo problema de agua concentrada que arruina
+fundaciones en arcilla expansiva.
+
+**Y purga abajo**, una válvula en el punto más bajo para sacar el sedimento acumulado sin tener que
+vaciar y desmontar el tanque entero. Si no existe, la limpieza es tan incómoda que no se hace nunca.
+
+<Dato>
+Dos cosas más que no se ven en el dibujo y que deciden bastante.
+
+**Color y material.** Un tanque opaco y de color claro es mejor que uno oscuro en este clima. El oscuro
+absorbe radiación y calienta el agua, lo que acelera el crecimiento de lo que haya dentro y entrega
+agua tibia a las raíces. La opacidad no es negociable: un tanque translúcido con luz y nutrientes
+dentro es, literalmente, un cultivo de algas.
+
+**Peso.** Un tanque lleno pesa **una tonelada por cada mil litros**, y ese peso está concentrado en la
+huella del tanque. La plataforma que lo sostiene es una estructura seria, con fundación calculada como
+cualquier otra del módulo de construcción, y no un par de bloques apilados. Un tanque elevado que se
+desploma lleno es de los accidentes más peligrosos que puede haber en un vivero.
+</Dato>
+
+## Lo alto y lo enterrado
+
+Hay dos formas de almacenar y no hacen lo mismo:
+
+**El tanque elevado** entrega presión por gravedad, que es lo que la lección de hidráulica pedía para
+que un sistema de goteo funcione sin bomba. Cuanto más alto, más presión en el emisor. El precio es la
+estructura: subir mil litros a tres metros exige una plataforma seria.
+
+**La cisterna enterrada o al ras** es mucho más barata por litro almacenado, mantiene el agua fresca y
+sin luz de forma natural, y no tiene problema de peso. El precio es que el agua queda abajo y hay que
+bombearla para usarla.
+
+La combinación habitual —y la más sensata— es **almacenar barato abajo y elevar poco**: la cisterna
+guarda el volumen grande, y una bomba llena periódicamente un tanque elevado más pequeño que es el que
+alimenta el riego por gravedad. Así el volumen caro en altura es el mínimo, y la bomba trabaja a ratos
+en vez de tener que arrancar cada vez que se riega.
+
+<Analogia>
+Es exactamente una jerarquía de caché: almacenamiento masivo y barato abajo, una capa pequeña y rápida
+arriba, y un proceso que la va rellenando. El tanque elevado es la caché caliente del riego; la
+cisterna es el disco.
+</Analogia>
+
+## La otra fuente
+
+Cuando la captación no alcanza —y en la seca no alcanza— la fuente es el subsuelo. Vale la pena tener
+claros los tres puntos que deciden si un pozo es buena idea:
+
+**La profundidad y el caudal no se saben hasta perforar.** Son datos locales y varían mucho de un punto
+a otro. La información realmente útil son los pozos vecinos y lo que digan los perforistas de la zona,
+no una estimación general.
+
+**La calidad hay que medirla, no suponerla.** Es lo que decía la lección anterior, y aquí se aplica con
+un agravante estacional: al final de la seca, con el nivel más bajo, la concentración de sales suele
+ser mayor, y ese es justamente el momento en que más se riega.
+
+**Y el costo real incluye el equipo de bombeo**, no solo la perforación. La bomba, su instalación
+eléctrica y su mantenimiento son gasto recurrente. Es precisamente el caso donde el bombeo solar sale
+bien, porque el tanque elevado hace de batería y elimina el componente más caro y más frágil de un
+sistema fotovoltaico.
+
+<AplicarRizoma>
+**La captación de Rizoma tiene una ventaja que ya está construida: los techos del módulo anterior.**
+
+La estructura de propagación de seis por doce metros son setenta y dos metros cuadrados de proyección
+en planta, y con la equivalencia de un milímetro por metro cuadrado igual a un litro, un aguacero
+decente sobre esa superficie es una cantidad respetable de agua. Súmale el galpón y cualquier otra
+cubierta que se construya.
+
+**Poner canaleta en esos techos es barato y hay que hacerlo desde el principio**, aunque el tanque
+llegue después. Lo que no se capta se pierde, y en enero se pierde mucho. Además la canaleta hace un
+segundo trabajo que ya se pagó solo: sacar el agua del pie de los postes, que en arcilla expansiva es
+lo que descalza las fundaciones.
+
+**La canaleta y el bajante se dimensionan por intensidad**, no por lluvia anual. Aquí llueve en
+aguaceros, y una canaleta chica rebosa exactamente cuando más agua habría para captar.
+
+**Separador de primeras aguas en cada bajante**: un tubo, dos codos y un tapón perforado. Es
+especialmente necesario en esta zona porque entre lluvias los techos acumulan polvo y hojas, y porque
+hay temporadas de semanas sin que el techo se lave solo.
+
+**El dimensionado del tanque sale del consumo del mes crítico** que calculaste en la primera lección,
+multiplicado por los días de autonomía que decidas. Y con la advertencia honesta ya dicha: **cubrir
+toda la seca con lluvia captada no es realista.** La estrategia es mixta —la lluvia cubre los meses
+húmedos y el arranque de la seca, y el pozo cubre el resto.
+
+**La lluvia captada se reserva para las zonas sensibles**, porque es la mejor agua que vas a tener:
+almácigos y propagación primero, y crecimiento con lo que haya. Eso encaja con el mapa de zonas del
+módulo de diseño del vivero: el agua buena va donde las plantas son pequeñas y no perdonan.
+
+**El tanque va tapado, sin excepción, y con malla en toda abertura.** El dengue es endémico en la zona
+y un tanque destapado es un criadero. Esto no es una recomendación sanitaria añadida al final: es una
+condición de diseño desde el primer trazo, y aplica igual a baldes, envases vacíos y canaletas
+obstruidas.
+
+**La plataforma se calcula como estructura**, porque mil litros pesan una tonelada, y va lo más alta
+que sea razonable para tener presión por gravedad. Los dos requisitos —altura para presión y base
+sólida para el peso— apuntan al mismo diseño: una plataforma bien fundada, no unos bloques apilados.
+
+**Y el rebose se dirige lejos**, porque en arcilla expansiva el agua descargando al pie de la
+plataforma es exactamente el mecanismo que la descalza. El rebose no es un detalle menor: en un techo
+grande, durante un aguacero, por ahí sale mucha agua durante mucho rato.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Los tanques de polietileno se consiguen en toda la ciudad de Santa Cruz**, en volúmenes que van desde
+unos pocos cientos hasta varios miles de litros, y son la opción habitual y razonable para un vivero
+pequeño. Vienen con tapa, y hay que revisar que la tapa cierre de verdad y no solo se apoye encima.
+
+**Los tanques de mayor volumen salen más baratos por litro**, así que si el espacio y la plataforma lo
+permiten, uno grande suele convenir más que varios chicos. La excepción es cuando interesa separar
+aguas de distinta calidad —lluvia por un lado y pozo por otro—, y en ese caso dos tanques con destinos
+distintos tienen sentido operativo.
+
+**El tanque de agua elevado es parte del paisaje construido de la región**, y eso significa que hay
+albañiles con experiencia en hacer la plataforma y ferreterías con todos los accesorios. No es una obra
+exótica: es una obra corriente que hay que hacer bien.
+
+**La canaleta y el bajante de PVC son material de ferretería común**, y el costo de canalizar un techo
+es bajo comparado con lo que se capta. Conviene sobredimensionar antes que ajustar, porque el aguacero
+tropical no perdona una canaleta justa.
+
+**Sobre el agua subterránea**, si se va a perforar un pozo conviene informarse sobre los requisitos y
+autorizaciones vigentes, que dependen de la normativa de recursos hídricos y de la autoridad
+competente, y que hay que consultar directamente con el municipio o la instancia correspondiente antes
+de empezar. No es un dato que se pueda dar aquí de forma general ni que convenga suponer.
+
+**Y una precaución que aplica a toda la región y que ya se ha repetido en varios módulos**: cualquier
+recipiente con agua limpia y destapada —tanque, balde, envase vacío, canaleta obstruida, plato bajo una
+maceta— es criadero de *Aedes aegypti*, el mosquito que transmite el dengue. Revisar canaletas y
+recipientes olvidados forma parte del mantenimiento normal del vivero, no de una campaña sanitaria
+aparte.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Con esto el módulo ya tiene resuelta el agua completa: cuánta hace falta, cómo saber si el sustrato la
+tiene, con qué método entregarla, cómo hacerla llegar con presión, qué trae dentro y de dónde sacarla
+cuando el cielo no colabora.
+
+La última lección aprovecha toda esa infraestructura para un segundo trabajo: **usar el riego también
+para alimentar.** Eso es el fertirriego, y tiene ventajas evidentes y errores que conviene no cometer,
+porque el mismo sistema que reparte agua a todas las plantas reparte también los errores a todas las
+plantas.

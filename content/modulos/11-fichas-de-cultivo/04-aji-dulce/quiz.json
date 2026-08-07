@@ -1,0 +1,111 @@
+{
+  "preguntas": [
+    {
+      "id": "que-es",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es el ají dulce?",
+      "opciones": [
+        "Es Capsicum chinense, exactamente la misma especie botánica que el habanero.",
+        "Tiene el aroma del habanero sin el ardor, y ese perfil no lo da ningún pimiento común.",
+        "Es una solanácea, así que comparte plagas y enfermedades con tomate, papa y berenjena.",
+        "Es una especie distinta de los ajíes picantes y por eso no cruza con ellos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Precisamente porque son la misma especie, cruzan sin ninguna dificultad. Esa doble condición —producto valioso y fragilidad genética— es lo que define toda la ficha. Y en clima cálido la planta es perenne: bien manejada produce durante años, cosa que quien viene de clima templado no espera."
+    },
+    {
+      "id": "el-mecanismo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Si un habanero poliniza una flor de tu ají dulce, ¿qué pasa?",
+      "opciones": [
+        "El fruto de este año sigue siendo dulce, porque su pulpa y placenta son tejido de la planta madre.",
+        "La semilla que hay dentro lleva la mitad de la información del padre y puede dar plantas picantes.",
+        "El problema no se ve hasta la generación siguiente, cuando ya sembraste y vendiste.",
+        "El fruto que se está formando se vuelve picante de inmediato."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La capsaicina se sintetiza en la placenta, que es tejido de la planta que lleva el fruto, no del embrión. Es una actualización silenciosa: el sistema en ejecución sigue funcionando y lo que se corrompió es el artefacto del próximo despliegue. El problema no es el fallo, es la latencia de detección."
+    },
+    {
+      "id": "aislamiento",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se conserva la identidad varietal?",
+      "opciones": [
+        "Con distancia, que es lo más barato y lo menos fiable.",
+        "Con una barrera física entre bloques, que reduce el tránsito de insectos sin ocupar tanto terreno.",
+        "Embolsando las ramas en flor de las plantas destinadas a semilla, que es lo único que lo garantiza.",
+        "Confiando en la autopolinización, porque el Capsicum es autógamo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El Capsicum se autopoliniza en buena medida, pero tiene cruzamiento por insectos apreciable y muy variable según abejas, densidad y ambiente. Si te importa la identidad varietal, no puedes confiar en la autopolinización."
+    },
+    {
+      "id": "prueba-de-fruto",
+      "tipo": "verdadero_falso",
+      "enunciado": "Probar el fruto de cada lote de plantas madre antes de guardar semilla es un control rudimentario que aporta poco.",
+      "respuesta": false,
+      "explicacion": "Falso: es la prueba más eficaz que existe, porque mide directamente lo que le importa al cliente en vez de una variable intermedia. Si pica, ese lote no da semilla por bonita que sea la planta. Y es lo que permite vender algo que casi nadie ofrece: un plantín de ají dulce del que puedes garantizar que no pica."
+    },
+    {
+      "id": "podredumbre",
+      "tipo": "opcion_multiple",
+      "enunciado": "Una planta de ají se marchita con el suelo empapado. ¿Qué está pasando y qué se hace?",
+      "opciones": [
+        "El patógeno pudrió la base del tallo en la línea del suelo y cortó el sistema conductor.",
+        "No falta agua: la planta ya no puede subirla.",
+        "Regar más empeora exactamente la condición que lo causó.",
+        "Le falta riego y hay que aumentar la frecuencia."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la misma lógica que la salinidad: el síntoma de sed no significa falta de agua. Aquí significa que la tubería está rota. La prevención es toda de diseño: camellón o cama elevada, nada de agua estancada en el cuello, riego dirigido al suelo y sustrato con aireación suficiente en el vivero."
+    },
+    {
+      "id": "solanaceas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué implica para el manejo que el ají sea solanácea?",
+      "opciones": [
+        "Comparte plagas y enfermedades con tomate, papa y berenjena.",
+        "Pulgones y mosca blanca importan sobre todo como vectores de virus, no por el daño directo.",
+        "Conviene no poner el semillero de ají al lado del de tomate y rotar de zona.",
+        "Los ácaros que deforman los brotes se ven bien a simple vista."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los ácaros que deforman hojas jóvenes y brotes son tan pequeños que no se ven sin lupa, y su síntoma —brotes retorcidos y acartonados— se confunde constantemente con daño de herbicida o con virus. Ese es justamente el problema: se diagnostica mal."
+    },
+    {
+      "id": "calendario",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se ordena el calendario de producción del plantín?",
+      "opciones": [
+        "Hacia atrás desde la ventana de venta, que es cuando la gente planta, con las primeras lluvias.",
+        "Contando la germinación lenta de esta especie y añadiendo margen.",
+        "Evitando los meses fríos para el almácigo, porque sin calor no germina o tarda muchísimo.",
+        "Sembrando cuando haya sitio libre en el vivero, porque el plantín se vende todo el año."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La ventana de venta es estrecha y no la decide el vivero: la deciden las lluvias. Un plantín listo en diciembre llega tarde a su mejor mercado. De mayo a septiembre la germinación es difícil por el frío relativo, así que es mal momento para almácigos y buen momento para mantener madres y producir semilla."
+    },
+    {
+      "id": "aji-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña la producción de ají dulce en Rizoma del Sur: cómo proteges la identidad, cómo evitas perder plantas y cómo lo vendes.",
+      "respuestaModelo": "Lo primero es el banco de plantas madre, y lo aíslo de los ajíes picantes desde el primer día. Distancia, barrera física entre bloques y, para las plantas destinadas a semilla, embolsado de las ramas en flor antes de que abran, que es lo único que garantiza el resultado. Y no me basta con aislarlas de las mías: miro qué tienen los vecinos, porque el ají picante es cultivo corriente por aquí y la fuente de polen contaminante no es exótica.\n\nEl control decisivo es probar fruto de cada lote madre antes de guardar semilla. Literalmente morderlo. Si pica, ese lote no da semilla. Suena rudimentario y es lo más eficaz que existe, porque mide directamente lo que le importa al cliente. Un cliente que compró ají dulce y le salió picante no vuelve.\n\nLa trazabilidad es obligatoria en esta especie: de qué madre salió cada lote de semilla y de qué lote de semilla salió cada bandeja. Si aparece picante donde no debía, la trazabilidad es lo que salva el resto del catálogo en vez de obligarme a sospechar de todo.\n\nEntiendo por qué el problema tarda en verse: la capsaicina se hace en la placenta, que es tejido de la planta madre, así que el polen ajeno no vuelve picante el fruto de este año. Lo que se contamina es la semilla, y el fallo aparece una temporada después, cuando ya crié y vendí plantines. El riesgo no es el error, es la latencia de detección.\n\nContra la muerte por cuello podrido trabajo con diseño y no con producto. En vivero, sustrato con aireación suficiente y banco elevado, nunca la bolsa apoyada en suelo que se encharca. En terreno, camellón. Riego dirigido al suelo, sin encharcar y sin agua parada alrededor del tallo. Y si veo una planta marchita con el suelo empapado, no riego más: reviso el cuello, porque el problema no es sed sino que ya no puede subir agua.\n\nAl cliente se lo digo al vender: si la planta va a un hoyo en terreno pesado sin camellón, se le muere y va a pensar que la planta era mala.\n\nEn sanidad, el semillero de ají no va pegado al de tomate ni al de berenjena, y las solanáceas rotan de zona. Controlo pulgones y mosca blanca por lo que transmiten, no por el daño directo. Y reviso los brotes jóvenes con lupa, porque los ácaros que los deforman no se ven a simple vista y su síntoma se confunde con daño de herbicida o con virus. Antes de montar un semillero grande pregunto a los productores de la zona qué problemas de virus están viendo, porque eso decide si necesito malla antiinsectos desde el principio.\n\nEl calendario lo ordeno hacia atrás desde la ventana de venta, que es octubre en adelante con las primeras lluvias. Con germinación lenta y necesidad de calor, siembro el almácigo con antelación y con margen. Los meses fríos son mal momento para semillero y buen momento para mantener madres y producir semilla.\n\nY el argumento comercial cabe en una frase: aroma de habanero sin picor, en una planta que aquí es perenne y produce durante años. Mucha gente no sabe que eso existe, así que la venta va con explicación, igual que el culantro. Lo que en realidad vendo no es un plantín: es una garantía de que no pica.\n\nAntes de nada busco la semilla de partida en la región y con productores que ya la tengan; si tuviera que traerla de fuera, consulto los requisitos sanitarios con la autoridad competente.",
+      "criterios": [
+        "Aísla las plantas madre con distancia, barrera y embolsado, y considera lo que siembran los vecinos.",
+        "Prueba fruto de cada lote madre antes de guardar semilla.",
+        "Lleva trazabilidad de madre a lote de semilla y de lote a bandeja.",
+        "Explica correctamente que el fruto del año no cambia y la semilla sí.",
+        "Previene la podredumbre de cuello con sustrato aireado, banco elevado y camellón.",
+        "No riega más ante una planta marchita con suelo mojado, y revisa el cuello.",
+        "Advierte al cliente sobre el drenaje en el momento de la venta.",
+        "Separa el semillero de las otras solanáceas y rota de zona.",
+        "Controla pulgones y mosca blanca por su papel como vectores.",
+        "Revisa brotes con lupa por los ácaros que deforman.",
+        "Ordena el calendario hacia atrás desde la ventana de octubre, con margen por germinación lenta.",
+        "Comunica el argumento de aroma sin picor y planta perenne.",
+        "Busca semilla de partida en la región antes de plantearse traerla de fuera."
+      ],
+      "explicacion": "Lo interesante de esta ficha es que el producto de mayor valor no es la planta, es la garantía. Y una garantía solo se puede vender si existe un procedimiento que la sostiene: aislar, probar y trazar. Sin eso, la promesa es solo una afirmación."
+    }
+  ]
+}

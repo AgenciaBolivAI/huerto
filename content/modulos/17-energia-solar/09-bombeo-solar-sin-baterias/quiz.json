@@ -1,0 +1,97 @@
+{
+  "preguntas": [
+    {
+      "id": "donde-esta-el-almacenamiento",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo elimina la batería un sistema de bombeo solar directo?",
+      "opciones": [
+        "Cambiando de lugar el almacenamiento: guarda agua arriba en vez de energía.",
+        "El tanque elevado guarda el producto final, en un medio que no se degrada con el uso.",
+        "La bomba trabaja solo cuando hay sol, y el riego sale del tanque por gravedad a cualquier hora.",
+        "Usando paneles más eficientes que permiten regar de noche."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es un truco de eficiencia: es un cambio de capa de almacenamiento. En lugar de guardar el recurso en su forma cara y volátil —energía en una batería química que se degrada cada ciclo— se guarda ya transformado en el producto final. Es la diferencia entre cachear la consulta y cachear el resultado renderizado."
+    },
+    {
+      "id": "que-se-pierde",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se renuncia al adoptar este esquema?",
+      "opciones": [
+        "La bomba solo trabaja de día: no hay presión de bomba de madrugada.",
+        "El sistema no da electricidad para nada más: no carga el teléfono ni alimenta la heladera.",
+        "La autonomía la limita el tanque, y un tanque más grande pesa mucho sobre la torre.",
+        "El agua almacenada pierde calidad y hay que reemplazarla cada pocos años, como la batería."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Justamente lo que no se pierde es la permanencia del almacenamiento: un tanque a los quince años guarda los mismos litros que el primer día. Las tres primeras renuncias sí son reales y conviene decirlas sin adornos antes de decidir."
+    },
+    {
+      "id": "altura-manometrica",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué compone la altura manométrica total contra la que trabaja la bomba?",
+      "opciones": [
+        "El nivel estático: la profundidad del agua en el pozo cuando nadie bombea.",
+        "El abatimiento: cuánto baja ese nivel mientras la bomba trabaja.",
+        "La altura de elevación hasta la superficie del agua en el tanque, y las pérdidas por fricción en la tubería.",
+        "Solamente la altura de la torre del tanque, medida desde el terreno."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Quedarse con la altura de la torre es el error de principiante, y hace comprar una bomba que no llega. Las cuatro componentes se suman, y con tubería fina y recorrido largo las pérdidas por fricción solas pueden ser varios metros."
+    },
+    {
+      "id": "abatimiento",
+      "tipo": "verdadero_falso",
+      "enunciado": "El abatimiento del pozo se puede estimar razonablemente a partir de los datos del catálogo de la bomba.",
+      "respuesta": false,
+      "explicacion": "Falso: el abatimiento depende del acuífero, no de tu instalación, y no está en ningún catálogo. Se mide con la bomba trabajando, comparando el nivel en reposo con el nivel tras una hora de bombeo continuo. Esa medición dice además algo más importante: si el nivel sigue bajando y no se estabiliza, estás sacando más de lo que el pozo repone, y ninguna bomba lo va a arreglar."
+    },
+    {
+      "id": "curva",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una bomba que anuncia 5.000 litros por hora y hasta 40 metros de altura entrega esos 5.000 litros a 40 metros.",
+      "respuesta": false,
+      "explicacion": "Falso. Los dos números están acoplados y describen los extremos de una curva descendente: da 5.000 litros por hora a altura casi nula, y llega a 40 metros entregando un hilo de agua. Lo que se elige es el punto de trabajo, tu caudal a tu altura manométrica, con algo de margen. Es exactamente el mismo error que leer el máximo de corriente y el máximo de tensión de un panel y suponer que se dan a la vez."
+    },
+    {
+      "id": "aspiracion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué una bomba de superficie no puede aspirar agua desde veinte metros de profundidad?",
+      "opciones": [
+        "Porque la bomba no tira del agua: hace vacío para que la presión atmosférica la empuje hacia arriba.",
+        "Porque la atmósfera solo puede empujar hasta unos siete metros, y en la práctica bastante menos.",
+        "Es un límite físico, no de potencia: con más motor no se arregla.",
+        "Porque el motor de una bomba de superficie es siempre más pequeño que el de una sumergible."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la razón por la que existen las bombas sumergibles: empujar es más fácil que aspirar, y una bomba dentro del pozo empuja. La bomba de superficie es más barata y muchísimo más fácil de reparar, pero solo sirve para pozos someros."
+    },
+    {
+      "id": "marcha-en-seco",
+      "tipo": "verdadero_falso",
+      "enunciado": "La protección contra marcha en seco es un accesorio recomendable pero prescindible en una instalación sencilla.",
+      "respuesta": false,
+      "explicacion": "Falso: es innegociable. Una bomba sumergible se refrigera con el agua que la rodea y se lubrica con la que mueve; si el pozo se abate por debajo de la bomba y esta sigue girando en vacío, se destruye en minutos. Es la avería más común y más cara del bombeo solar, y la más fácil de evitar. En un pozo cuyo comportamiento estacional todavía no conoces, esta protección es lo primero que instalas."
+    },
+    {
+      "id": "bombear-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Vas a montar el bombeo solar del vivero. Describe la secuencia completa: qué mides antes de cotizar, cómo dimensionas tanque y bomba, qué arquitectura eléctrica eliges y por qué, y qué detalles sanitarios y estructurales no se pueden saltar.",
+      "respuestaModelo": "El paso cero es caracterizar el pozo, y en la seca, no en la temporada de lluvias. Mido el nivel estático con una cinta y un peso, pongo la bomba a trabajar una hora seguida y vuelvo a medir para conocer el abatimiento. Si el nivel no se estabiliza, el pozo no da el caudal que le estoy pidiendo, y eso hay que saberlo antes de gastar en paneles. Ese dato no está en ningún catálogo porque depende del acuífero.\n\nDespués, el consumo de agua en el mes de mayor demanda, que aquí es plena seca. Los dos peores números coinciden en el mismo mes: máxima demanda de riego y pozo más bajo. Ese es el caso de diseño.\n\nEl tanque lo dimensiono a dos días de ese consumo, no a uno, porque con un solo día de reserva un día nublado ya me deja al límite. Opaco y de pared oscura, tapado y con malla mosquitera en las aberturas y en el rebose. Con boya o sensor de paro para que la bomba se detenga al llenarse, y con rebose siempre, aunque haya boya, porque las boyas fallan; el rebose conducido lejos de la base de la torre, no a los pies de las fundaciones. Y la torre calculada con el tanque lleno: cinco mil litros son cinco toneladas a cuatro metros de altura, sobre una estructura que además tiene que aguantar el surazo, así que esas fundaciones se hacen con el criterio de arcilla expansiva del módulo de albañilería y no a ojo.\n\nLa bomba la elijo por el punto de trabajo, no por el número grande del catálogo: mi caudal a mi altura manométrica total, sumando las cuatro componentes —nivel estático, abatimiento, altura de elevación hasta la superficie del agua en el tanque, y pérdidas por fricción en la tubería—. Con protección de marcha en seco, sin excepción.\n\nPara la arquitectura eléctrica elijo variador solar con bomba de alterna convencional, en lugar de bomba de continua conectada al panel. La razón es local y muy concreta: una bomba de alterna se consigue, se repara y se repone en Santa Cruz, mientras que una de continua puede tardar semanas. Es el mismo criterio de reparabilidad con el que elegí equipos separados en vez de un híbrido. Y el variador aporta algo técnico importante: arranca la bomba suavemente a frecuencia baja y va subiendo según el sol da, con lo que empieza a mover agua mucho antes por la mañana y sigue hasta más tarde, en vez de trabajar solo en las horas centrales. Con la misma potencia instalada bombeo bastante más al día, y me ahorro tener que dimensionar el arreglo contra el pico de arranque.\n\nLos paneles del bombeo van en un arreglo propio, independiente del sistema de la vivienda, para que si hay que intervenir uno el otro siga funcionando.\n\nLo sanitario que no se salta: tapa cerrada y malla en toda abertura, porque un depósito descubierto en zona endémica de dengue es un criadero de Aedes aegypti, y un vivero donde trabaja gente todos los días no puede tener eso en el patio. Tanque opaco, porque uno translúcido al sol se llena de algas en semanas y las algas tapan goteros y filtros. Y regar temprano o al atardecer, porque el agua del tanque se calienta bajo el sol y el agua muy caliente daña los plantines.\n\nY cuando esté funcionando, llevo registro de cuántas veces se llena el tanque y a qué hora: es el mejor dato real que voy a tener sobre el sol de mi terreno, mejor que cualquier atlas.",
+      "criterios": [
+        "Caracteriza el pozo en la seca midiendo nivel estático y abatimiento antes de cotizar.",
+        "Reconoce el pozo que no repone como criterio de viabilidad del proyecto.",
+        "Toma como caso de diseño el mes de máxima demanda, que coincide con el pozo más bajo.",
+        "Dimensiona el tanque a dos días de consumo y justifica por qué no uno.",
+        "Equipa el tanque con boya, rebose conducido lejos de las fundaciones, tapa y malla.",
+        "Calcula la torre con el tanque lleno y con criterio de arcilla expansiva.",
+        "Elige la bomba por el punto de trabajo con la altura manométrica completa.",
+        "Exige protección contra marcha en seco.",
+        "Elige variador solar y lo justifica por reparabilidad local y por arranque suave.",
+        "Separa el arreglo del bombeo del de la vivienda.",
+        "Resuelve algas y dengue con tanque opaco, tapa y malla."
+      ],
+      "explicacion": "Observa que la mitad de las decisiones importantes de esta lección no son eléctricas: son hidráulicas, estructurales y sanitarias. El bombeo solar es el punto donde los módulos de albañilería, de riego y de energía se tocan, y por eso es también el mejor primer proyecto: obliga a usar las tres cosas a la vez sobre algo pequeño."
+    }
+  ]
+}

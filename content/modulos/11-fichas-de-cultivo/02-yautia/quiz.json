@@ -1,0 +1,110 @@
+{
+  "preguntas": [
+    {
+      "id": "que-es",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es la yautía y qué se aprovecha de ella?",
+      "opciones": [
+        "Una arácea, de la misma familia que anturios y filodendros.",
+        "Lo que se come son los cormos hijos que se forman alrededor del cormo central.",
+        "Lo que parece tallo son los pecíolos de las hojas, que salen directamente del cormo.",
+        "Cruda se puede comer sin problema, como una zanahoria."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Cruda no: toda la planta contiene cristales de oxalato de calcio, agujas microscópicas que irritan boca y garganta, y por eso se come siempre cocida. Para el vivero eso tiene una consecuencia práctica: la savia y los cormos cortados irritan la piel de mucha gente, así que guantes al partir material de siembra."
+    },
+    {
+      "id": "colocasia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se distingue la yautía de la colocasia y por qué importa?",
+      "opciones": [
+        "En la yautía el pecíolo se pega en el borde del limbo, en la escotadura entre los lóbulos.",
+        "En la colocasia el pecíolo se pega hacia dentro del envés, como el mango de un paraguas.",
+        "La colocasia tolera el encharcamiento y la yautía no.",
+        "Se distinguen por el tamaño de la hoja, que en la yautía es mucho menor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El tamaño no sirve: varía con la variedad y con las condiciones. El carácter fiable es dónde se une el pecíolo, y de ahí sale la diferencia que decide dónde va cada una. La yautía quiere humedad alta pero con drenaje: un suelo saturado le pudre el cormo, que es el riesgo exacto de una arcilla pesada en enero."
+    },
+    {
+      "id": "donde-vive",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué condiciones le convienen a la yautía en Santa Cruz?",
+      "opciones": [
+        "Tolera bien la sombra parcial, lo que la hace apta para zonas bajo árboles o malla.",
+        "Necesita agua alta y constante, y sufre mucho en un mes seco sin riego.",
+        "En el terreno conviene plantarla en camellón elevado por el drenaje.",
+        "Aprovecha los meses frescos de la seca para crecer sin estrés de calor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Al contrario: el frío la frena. Los surazos con noches de unos diez grados le detienen el crecimiento aunque no la maten, así que de mayo a septiembre no se espera avance. Es un dato de calendario, no un inconveniente menor: son cuatro o cinco meses de espera."
+    },
+    {
+      "id": "propagacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se propaga la yautía en un vivero?",
+      "opciones": [
+        "Solo por vía vegetativa: la floración es rara y la semilla no se usa en la práctica.",
+        "El mejor material son cormos hijos enteros, medianos, firmes y sin heridas.",
+        "Los cortes se orean en sombra un par de días antes de plantar.",
+        "La semilla es la vía más segura porque evita transmitir enfermedades."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hay vía por semilla utilizable. También sirven trozos de cormo madre con al menos una yema y la cabeza con la base de los pecíolos, aunque brotan más lento. El oreo de los cortes es por la misma razón que en las estacas suculentas: una superficie cortada y húmeda metida en sustrato es una puerta de entrada."
+    },
+    {
+      "id": "virus",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una mata muy vigorosa con hojas moteadas es buena candidata a planta madre, porque su vigor demuestra que la enfermedad no la afecta.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la peor madre posible precisamente porque su vigor la hace parecer buena. Las aráceas son sensibles a virus que viajan en el material de siembra, no matan la planta pero la vuelven improductiva poco a poco, y como el cultivo se multiplica clonando, el problema se acumula cosecha tras cosecha. La propagación vegetativa no filtra nada."
+    },
+    {
+      "id": "sanidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué medidas sanitarias exige esta especie en el vivero?",
+      "opciones": [
+        "Seleccionar madres por sanidad antes que por rendimiento.",
+        "Descartar y sacar del vivero lo sospechoso, sin intentar recuperarlo.",
+        "Controlar pulgones, que son el vector que lleva el problema de una mata a otra.",
+        "Tratar con fungicida las matas con hojas moteadas hasta que se recuperen."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un virus no tiene cura en campo y ningún fungicida actúa sobre él. Falta además la trazabilidad del material: saber de qué mata salió cada lote es lo que permite descartar los lotes afectados en vez de sospechar de todos."
+    },
+    {
+      "id": "dos-ciclos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué ciclo entra en el calendario del inventario de un vivero?",
+      "opciones": [
+        "El de vivero: desde que se planta el cormo hijo hasta que la planta está vendible.",
+        "El de producción de tubérculo, de nueve a doce meses, es información necesaria pero no es el producto.",
+        "El producto de un vivero es capacidad de producción, no producción.",
+        "El de tubérculo, porque es el que determina cuándo se puede vender."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la idea que vale para todo el módulo: el producto no es el tubérculo, es la planta. El ciclo largo hay que sabérselo para asesorar al cliente y para producir el propio material de siembra, pero el que ocupa espacio en el inventario es una fracción de él."
+    },
+    {
+      "id": "yautia-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Escribe la ficha operativa de la yautía para Rizoma del Sur: de dónde sacas el material, dónde la ubicas, qué calendario sigues y qué vendes.",
+      "respuestaModelo": "El material de siembra lo consigo primero y lo cuido después, porque es el punto crítico de toda la especie. Busco cormos sanos de procedencia conocida: material que ya esté circulando en la región y consulta a las instituciones de investigación agropecuaria del departamento sobre colecciones y disponibilidad. Si pensara traerlo de otro país, consulto antes los requisitos sanitarios con la autoridad competente, porque los virus de aráceas viajan precisamente en el material de siembra.\n\nSelecciono las madres mirando la parte aérea antes de arrancar nada: hojas grandes, uniformes, sin moteados ni deformaciones. Una mata vigorosa con hojas moteadas es la peor madre posible, porque su vigor la hace parecer buena. Y llevo trazabilidad: de qué mata salió cada lote, para poder descartar por lote si aparece un problema.\n\nPara separar, levanto la mata con horquilla y no con pala, para no cortar los hijos. Descarto sin piedad todo lo blando, con manchas internas o con olor. Oreo los cortes en sombra dos o tres días antes de plantar, por la misma razón que las estacas suculentas: una superficie cortada y húmeda metida en sustrato es una puerta de entrada.\n\nPlanto un cormo hijo por envase, con la yema hacia arriba y cubierta con unos centímetros, en sustrato de crecimiento, y riego sin encharcar hasta que brote. Mantengo en media sombra hasta que tenga dos o tres hojas propias y entonces paso a la zona de crecimiento.\n\nLa ubico aprovechando que tolera la sombra parcial: bajo la malla y bajo los árboles de sombra del catálogo, en zonas que otras especies desperdiciarían. Es una planta de sotobosque adaptada y sufre mucho menos ahí en la seca.\n\nEl drenaje es el punto crítico del suelo. Las arcillas expansivas retienen agua y drenan mal, y la yautía quiere humedad alta con drenaje. En el terreno la respuesta es de forma y no de producto: camellón elevado, que sube la zona del cormo por encima de la lámina de agua. En el vivero el problema casi desaparece, porque el drenaje lo decido yo con la mezcla del envase.\n\nEl calendario se ordena aceptando que de mayo a septiembre la planta no crece. Con las primeras lluvias, de octubre a diciembre, planto el material. De enero a abril es el crecimiento pleno y el periodo de máxima vigilancia de drenaje. De mayo a septiembre es parada: riego mínimo, cosecha de la producción del año anterior y selección de material para el siguiente.\n\nContra pulgones vigilo, porque son el vector que mueve los virus dentro del propio vivero.\n\nEn poscosecha manejo los cormos con cuidado porque una magulladura es la puerta de entrada de la podredumbre: oreo en sombra y guardo en sitio fresco, seco y ventilado. Nada de refrigeración fuerte, que les hace daño por frío.\n\nY lo que vendo son cuatro cosas: plantas en envase listas para llevar, que es el producto principal; material de siembra seleccionado y sano de madre identificada, que casi nadie ofrece con garantía sanitaria; ornamentales de la misma familia, porque el manejo es casi idéntico; y el conocimiento, que en una especie poco cultivada aquí vale tanto como la planta, porque quien compra una yautía sin saber cultivarla ni cocinarla no vuelve.\n\nY antes de producir a escala hago el trabajo de campo: recorrer los mercados de abasto preguntando por aráceas de raíz con los nombres locales, ver qué se consigue, de dónde llega y a qué precio. No hay literatura que lo conteste.",
+      "criterios": [
+        "Consigue material sano de procedencia conocida y consulta requisitos sanitarios antes de importar.",
+        "Selecciona madres por sanidad mirando la parte aérea y lleva trazabilidad por lote.",
+        "Levanta con horquilla, descarta lo blando y orea los cortes antes de plantar.",
+        "Planta un cormo por envase con la yema arriba y mantiene en media sombra hasta las primeras hojas.",
+        "Ubica la especie aprovechando su tolerancia a la sombra parcial.",
+        "Resuelve el drenaje con camellón en terreno y con la mezcla en envase.",
+        "Ordena el calendario reconociendo la parada de mayo a septiembre.",
+        "Planta con las primeras lluvias y vigila el drenaje en el pico de enero a abril.",
+        "Controla pulgones como vector de virus dentro del vivero.",
+        "Maneja la poscosecha evitando magulladuras y refrigeración fuerte.",
+        "Define el producto como planta, material de siembra, ornamentales y conocimiento.",
+        "Hace trabajo de mercado con nombres locales antes de producir a escala."
+      ],
+      "explicacion": "Lo que hace de la yautía una buena primera ficha es que la propagación es gratuita e infinita a partir de lo que tú mismo cosechas: sin proveedor y sin temporada de compra. Su costo es la latencia, y por eso necesita al lado especies rápidas que sostengan la caja."
+    }
+  ]
+}

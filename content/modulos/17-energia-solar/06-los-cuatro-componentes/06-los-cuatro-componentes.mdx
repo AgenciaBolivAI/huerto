@@ -1,0 +1,281 @@
+Ya tienes los cuatro números del dimensionado. Toca convertirlos en compras, y ahí la decisión
+difícil no es el panel —eso ya lo resolviste comparando precio por vatio— sino los otros tres.
+
+Esta lección compara **regulador, batería e inversor** con un criterio que atraviesa las tres: **el
+precio de compra es el peor indicador posible.** Lo que decide es cuánto cuesta cada unidad de
+servicio a lo largo de la vida del equipo, y en el caso de las baterías la diferencia entre esos dos
+números es abismal.
+
+## Los cuatro y su papel
+
+<Diagrama
+  src="los-cuatro-componentes.webp"
+  alt="Cadena horizontal de cuatro bloques unidos por cables: un panel inclinado rotulado PANEL con la nota PRODUCE, una caja pequeña con dial rotulada REGULADOR con la nota PROTEGE Y OPTIMIZA, un banco de tres celdas rotulado BATERÍA con la nota GUARDA, y una caja con aletas y un tomacorriente rotulada INVERSOR con la nota TRADUCE. Del último sale un cable a una casita. El tramo entre panel y batería está en verde, rotulado CONTINUA; el que sale del inversor, en terracota, rotulado ALTERNA. Arriba, LOS CUATRO COMPONENTES."
+  pie="Cuatro piezas y una frontera: todo lo que hay a la izquierda del inversor vive en continua, y ahí es donde conviene dejar todo lo que se pueda."
+/>
+
+| Componente | Qué hace | Cuánto dura |
+|---|---|---|
+| **Panel** | Produce | Décadas |
+| **Regulador** | Protege la batería y busca el punto óptimo del panel | Muchos años |
+| **Batería** | Guarda para la noche y los días nublados | **Pocos años** |
+| **Inversor** | Traduce continua a alterna | Muchos años |
+
+Esa última columna es la que ordena el presupuesto: **el sistema no se compra una vez.** Se compra
+una vez la parte que dura y varias veces la que se gasta.
+
+## El regulador: PWM o MPPT
+
+<Diagrama
+  src="mppt-o-pwm.webp"
+  alt="Dos paneles con la misma curva característica dibujada en gris claro. En el izquierdo, rotulado REGULADOR SIMPLE, un punto terracota está sobre la parte que cae, pasada la rodilla, con un rectángulo sombreado pequeño debajo, y el pie TRABAJA DONDE CAIGA. En el derecho, rotulado REGULADOR MPPT, el punto está exactamente en la rodilla con un rectángulo bastante mayor y una flechita circular orbitando el punto, con el pie BUSCA EL CODO Y SE QUEDA AHÍ. Abajo, LA DIFERENCIA SE COBRA TODOS LOS DÍAS. Arriba, LO QUE HACE UN REGULADOR MPPT."
+  pie="El área del rectángulo es la potencia. Un regulador que no busca el codo deja parte de esa área sin cobrar, todos los días del año."
+/>
+
+El regulador está entre el panel y la batería, y hace dos trabajos: **cortar la carga cuando la
+batería está llena** —sin eso, el panel la destruiría— y, en las versiones buenas, **hacer que el
+panel trabaje en su punto óptimo**.
+
+Hay dos familias:
+
+**PWM.** El regulador simple. Conecta el panel a la batería y, en la práctica, **arrastra al panel a
+la tensión de la batería**, que casi nunca es su punto de máxima potencia. No lo rompe: le
+desperdicia una parte.
+
+**<Termino slug="regulador-mppt">MPPT</Termino>.** Busca activamente el codo de la curva, muchas
+veces por segundo, y convierte esa tensión a
+la que la batería necesita. Recupera la parte que el PWM desperdicia.
+
+<Analogia>
+El MPPT hace un seguimiento continuo de un óptimo que se mueve: la curva del panel cambia con cada
+nube y con cada grado de temperatura, y el regulador va detrás. Es un lazo de control corriendo todo
+el día.
+
+El PWM, en cambio, es un valor fijo: funciona, no rompe nada, y deja rendimiento sobre la mesa
+siempre que las condiciones se apartan de su punto — que es casi siempre.
+</Analogia>
+
+<Dato titulo="Cuándo el MPPT se paga solo">
+No siempre. La regla útil:
+
+**MPPT se justifica** cuando el arreglo es de tamaño apreciable, cuando la tensión del arreglo es
+bastante mayor que la del banco —que es lo habitual si pones paneles en serie—, y cuando hay días
+frescos, porque ahí es donde más diferencia saca.
+
+**PWM basta** en sistemas muy pequeños, con un panel de tensión cercana a la del banco, donde el
+precio del MPPT no se recupera.
+
+Para un sistema de vivero de tamaño razonable, **MPPT**, sin dudarlo. La diferencia se cobra todos
+los días durante veinte años.
+</Dato>
+
+## La batería: la decisión cara
+
+<Diagrama
+  src="plomo-y-litio.webp"
+  alt="Dos paneles. Izquierda, PLOMO ÁCIDO: una batería robusta con tapones de venteo y un icono de gotas y vapor; debajo, una barra de capacidad rellena solo hasta la mitad en terracota con una llave sobre la parte usable, y una fila corta de calendarios; los pies dicen USAS LA MITAD y MENOS CICLOS. Derecha, LITIO: una batería más esbelta con un icono de chip; debajo, la barra rellena en cuatro quintos y una fila larga de calendarios; los pies dicen USAS CASI TODA y MUCHOS MÁS CICLOS. Abajo, SE COMPARAN POR COSTO POR CICLO, NO POR PRECIO. Arriba, PLOMO Y LITIO."
+  pie="Dos baterías con la misma capacidad nominal entregan servicios muy distintos, y el precio de compra no lo dice."
+/>
+
+Aquí está la decisión que más dinero mueve, y donde el precio de etiqueta engaña más.
+
+**Plomo-ácido.** La tecnología tradicional, en tres variantes: **líquida** —la de toda la vida, con
+tapones, que hay que rellenar con agua destilada y **desprende gases, así que necesita ventilación
+obligatoria**—; **AGM** y **gel**, selladas, sin mantenimiento de líquido y más tolerantes. Todas
+comparten dos límites: **solo se puede usar aproximadamente la mitad de su capacidad** sin acortar la
+vida drásticamente, y **aguantan un número modesto de ciclos**.
+
+**Litio, en su variante de fosfato de hierro.** Más cara de comprar, y con dos ventajas que cambian
+la cuenta: **se puede usar la gran mayoría de su capacidad**, y **aguanta muchísimos más ciclos**.
+Además pesa mucho menos, se carga más rápido y no desprende gases.
+
+### El único criterio que no engaña
+
+<Formula explicacion="Lo que importa no es cuánto cuesta la batería sino cuánto cuesta cada kilovatio-hora que vas a poder sacarle a lo largo de su vida. Dos baterías con el mismo precio pueden diferir por un factor grande en este número.">
+costo por kWh ciclado = precio ÷ (capacidad × profundidad de descarga × ciclos)
+</Formula>
+
+Ese <Termino slug="costo-por-kwh-ciclado">costo por kilovatio-hora ciclado</Termino> castiga a la
+vez **la profundidad de descarga baja y la vida corta**,
+que son exactamente los dos puntos débiles del plomo. Al hacer la cuenta completa, el litio suele
+salir mejor a pesar de costar bastante más de entrada — y sale todavía mejor si valoras no tener que
+desmontar y reemplazar un banco entero a mitad de camino.
+
+<Advertencia>
+**El plomo líquido desprende hidrógeno al cargar**, y eso no es un detalle de manual: es un gas
+inflamable. Un banco de plomo abierto va en un recinto **ventilado al exterior**, nunca dentro de un
+dormitorio ni en un armario cerrado, y sin ninguna fuente de chispa cerca.
+
+Las selladas de AGM y gel reducen mucho ese problema, y el litio no lo tiene. Pero si eliges plomo
+líquido por precio, la ventilación entra en el presupuesto y en el plano — la lección de simbología
+te enseñó a dibujarla.
+</Advertencia>
+
+### El BMS y las reglas del banco
+
+<Diagrama
+  src="el-banco.webp"
+  alt="Bastidor con cuatro baterías en fila unidas por cables gruesos. Sobre ellas, una placa delgada con iconos de chip y sensores, conectada a cada batería por líneas discontinuas y con un cable de salida, rotulada EL BMS, QUE VIGILA CADA CELDA. A la izquierda, una rejilla de entrada de aire baja y a la derecha un extractor alto, con flechas curvas de flujo cruzando el bastidor, rotuladas VENTILACIÓN, SOBRE TODO CON PLOMO. Abajo, NUNCA MEZCLES BATERÍAS DE DISTINTA EDAD. Arriba, EL BANCO NECESITA DOS CUIDADOS."
+  pie="El BMS no es un accesorio del litio: es la razón por la que el litio se puede usar hasta el fondo sin destruirse."
+/>
+
+El <Termino slug="bms">BMS</Termino> es la electrónica que vigila un banco de litio celda por celda:
+corta si alguna se pasa de tensión al cargar, corta si alguna se vacía demasiado, corta si la
+temperatura se dispara, y equilibra las celdas entre sí. **Es lo que hace seguro y duradero al
+litio**, y una batería de litio sin BMS adecuado no es una ganga: es un problema esperando.
+
+Y tres reglas del banco que valen para cualquier tecnología:
+
+1. **No mezclar** baterías de distinta edad, capacidad o tecnología. Ya viste por qué: en paralelo
+   quedan a la misma tensión y la fuerte alimenta a la débil.
+2. **Todas del mismo lote**, compradas juntas, e instaladas juntas.
+3. **Cables de interconexión iguales**, de la misma longitud, para que todas trabajen por igual. Un
+   detalle que casi nadie respeta y que desequilibra bancos.
+
+## El inversor: onda pura o nada
+
+<Diagrama
+  src="onda-modificada-y-pura.webp"
+  alt="Dos paneles con una onda cada uno sobre su línea base. Izquierda, ONDA MODIFICADA: una forma escalonada de bloques rectangulares angulosos en terracota, y debajo tres iconos —un motor, un transformador y un cargador— con una cruz roja cada uno; el pie dice PARECE UNA GANGA. Derecha, ONDA SENOIDAL PURA: una senoidal suave en verde y los mismos tres iconos con un visto verde; el pie dice LO QUE ESPERAN TUS EQUIPOS. Abajo, LO QUE TIENE MOTOR O TRANSFORMADOR SE CALIENTA Y SE ACORTA. Arriba, ONDA MODIFICADA Y ONDA PURA."
+  pie="La onda escalonada enciende una bombilla igual de bien. El problema aparece en todo lo que tiene bobinas."
+/>
+
+El <Termino slug="inversor">inversor</Termino> convierte continua en alterna, y hay dos calidades
+de conversión:
+
+**Onda modificada.** Aproxima la senoidal con escalones rectangulares. Es más barata y **funciona
+para cargas resistivas simples**. Pero todo lo que tiene bobinas —motores, compresores,
+transformadores, muchas fuentes de alimentación— **se calienta más, hace ruido, rinde peor y dura
+menos**.
+
+**<Termino slug="onda-senoidal-pura">Onda senoidal pura</Termino>.** Reproduce la forma que la red
+entrega. Es lo que esperan tus equipos, y hoy
+la diferencia de precio ya no justifica el ahorro.
+
+<Dato titulo="La recomendación es corta">
+**Onda senoidal pura, siempre.** En un sistema que va a alimentar una heladera, una bomba,
+herramientas y electrónica, la onda modificada no es un ahorro: es una degradación silenciosa de todo
+lo que enchufes, y el daño no se ve hasta que un compresor muere antes de tiempo.
+</Dato>
+
+Y los tres números del inversor:
+
+- **Potencia continua:** lo que entrega indefinidamente. Debe cubrir tu consumo simultáneo normal.
+- **Potencia de pico:** lo que tolera unos segundos. Debe cubrir el arranque del motor más grande
+  coincidiendo con lo demás.
+- **Consumo en vacío:** lo que gasta encendido sin nada conectado. Compáralo entre modelos; en
+  sistemas chicos importa.
+
+<Dato titulo="Y una categoría que conviene conocer">
+Existen equipos que integran regulador, inversor y cargador en una sola caja, a veces llamados
+**híbridos** o **todo en uno**. Tienen dos ventajas reales —menos cableado y una sola pantalla que
+mirar— y una desventaja igual de real: **si falla, cae todo el sistema a la vez**, y el reemplazo es
+una pieza cara en lugar de una barata.
+
+Para una instalación remota, donde conseguir un repuesto lleva días, hay un argumento sólido a favor
+de los equipos separados: **falla uno y el resto sigue**. Es exactamente el mismo razonamiento que
+usarías al decidir si un servicio va monolítico o en piezas, y aquí el criterio decisivo también es
+el mismo: cuánto tarda la reparación y qué pasa mientras tanto.
+</Dato>
+
+## Una nota sobre garantías y repuestos
+
+Al comparar equipos, hay dos preguntas que cuestan poco y valen mucho, y que nadie hace en la tienda:
+
+**¿Quién honra la garantía y dónde?** Una garantía de fábrica que exige mandar el equipo al
+extranjero no es una garantía práctica para una instalación rural. Una garantía respaldada por el
+distribuidor local, aunque sea más corta, vale bastante más.
+
+**¿Hay repuestos y hay quien lo repare?** Los inversores y reguladores son electrónica de potencia, y
+la avería típica no es catastrófica: un ventilador, un fusible interno, un condensador. La diferencia
+entre un equipo reparable localmente y uno que hay que tirar es enorme a lo largo de veinte años.
+
+Es la misma lógica que aplicas al elegir una dependencia: no solo si funciona hoy, sino qué pasa
+cuando deje de funcionar y quién puede arreglarlo.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Regulador: MPPT, sin discusión.** Vas a poner paneles en serie para subir la tensión del arreglo y
+ahorrar cobre, así que la tensión del arreglo va a estar bastante por encima de la del banco: ahí es
+exactamente donde el MPPT saca su diferencia. Elígelo con el cálculo de tensión en vacío corregida
+por frío que ya sabes hacer, y con margen sobre la corriente de cortocircuito del arreglo.
+
+**Batería: haz la cuenta completa antes de decidir.** Pide precio de plomo AGM y de litio para la
+capacidad que calculaste, y calcula el costo por kilovatio-hora ciclado de cada opción con los ciclos
+y la profundidad de descarga que declare cada fabricante. Es una fila de planilla y suele dar vuelta
+la intuición del precio de compra.
+
+**Y si el presupuesto obliga a empezar con plomo**, que sea plomo sellado, y **prevé la ventilación en
+el plano del galpón desde ahora**, con rejilla baja de entrada y extractor alto. Ya sabes dibujarla;
+lo que no se puede es improvisarla después dentro de un cuarto cerrado.
+
+**Inversor: onda senoidal pura**, dimensionado por el pico de arranque de la bomba coincidiendo con
+la heladera si la hay. Y compara el consumo en vacío entre modelos, porque en tu caso el sistema va a
+pasar muchas horas encendido sin nada trabajando.
+
+**Sobre separados o todo en uno:** para Zanja Honda, con la ciudad a distancia y un repuesto a días
+de camino, me inclinaría por equipos **separados**. Si muere el inversor, el regulador sigue cargando
+el banco y la bomba de continua sigue funcionando; si muere un híbrido, se para todo. Un sistema
+autónomo en zona rural se diseña también para fallar bien.
+
+**El banco, todo del mismo lote y comprado junto**, con cables de interconexión de la misma longitud.
+Y anota la fecha de compra en una etiqueta pegada al bastidor: dentro de cinco años vas a querer
+saber exactamente cuántos ciclos lleva.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**En Santa Cruz se consiguen las dos tecnologías de batería**, y el litio ha bajado mucho de precio
+en los últimos años. La comparación por costo por kilovatio-hora ciclado, que hace unos años favorecía
+claramente al plomo por precio de entrada, hoy suele inclinarse hacia el litio — pero eso hay que
+comprobarlo con los precios del día, no con lo que se decía hace cinco años.
+
+**El calor del llano afecta a las baterías**, y bastante. Todas las tecnologías envejecen más rápido a
+temperatura alta, así que el cuarto del banco debería ser el lugar más fresco y ventilado que puedas
+darle: a la sombra, con ventilación cruzada, nunca bajo una calamina al sol.
+
+**Sobre las baterías de auto:** se ven mucho y son una mala idea para un sistema solar. Están
+diseñadas para dar un pico enorme durante unos segundos y volver a llenarse, no para descargarse
+lentamente todas las noches. Duran muy poco en servicio cíclico. Lo que hace falta es batería
+de <Termino slug="ciclo-profundo">ciclo profundo</Termino>, y esa distinción vale la pena
+preguntarla explícitamente al comprar.
+
+**Y el vocabulario:** al regulador se le dice **regulador** o **controlador de carga**; al inversor,
+**inversor**; al conjunto integrado, **híbrido** o **todo en uno**; y cuando alguien habla de una
+batería **estacionaria** o **de ciclo profundo**, se refiere a la buena para esto.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Compro la batería más barata por amperio-hora.»** Compara costo por kilovatio-hora ciclado, que
+incluye profundidad de descarga y ciclos. Es otra cuenta y suele dar otro ganador.
+
+**«Uso una batería de auto, total es una batería.»** Está hecha para picos cortos, no para ciclado
+diario. Dura muy poco. Hace falta ciclo profundo.
+
+**«El regulador PWM es más barato y hace lo mismo.»** Hace lo mismo salvo lo importante: no busca el
+punto óptimo del panel. En un arreglo de tamaño apreciable, el MPPT se paga solo.
+
+**«La onda modificada me ahorra un dinero.»** Y te acorta la vida de todo lo que tenga bobinas. Hoy
+la diferencia de precio no justifica el riesgo.
+
+**«El banco de plomo líquido lo pongo en el depósito cerrado.»** Desprende hidrógeno al cargar. Va
+ventilado al exterior, siempre.
+
+**«Amplío el banco con una batería nueva.»** En paralelo, la nueva alimenta a las viejas. Banco
+entero o banco independiente.
+
+**«El todo en uno es más práctico.»** Lo es, hasta que falla. En zona rural, equipos separados fallan
+mejor: cae uno y el resto sigue.
+
+**«Los cables entre baterías da igual de qué largo sean.»** Cables desiguales hacen que unas trabajen
+más que otras y desequilibran el banco.
+
+## Lo que sigue
+
+Ya sabes qué comprar. Falta lo que une todo eso y donde se cometen los errores que sí son peligrosos:
+**cables, protecciones y tierra en corriente continua.**
+
+La lección siguiente explica por qué la caída de tensión manda sobre la corriente al elegir un cable,
+por qué **un interruptor de alterna no sirve en continua** —el arco no se apaga solo—, dónde va cada
+fusible y por qué, y cómo se hace la puesta a tierra de un sistema fotovoltaico.

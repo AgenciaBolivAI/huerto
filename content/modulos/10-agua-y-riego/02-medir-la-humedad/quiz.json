@@ -1,0 +1,106 @@
+{
+  "preguntas": [
+    {
+      "id": "la-superficie",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué no se decide el riego mirando la superficie del sustrato?",
+      "opciones": [
+        "La superficie se seca en horas con sol y viento, mientras el fondo puede seguir saturado días.",
+        "También ocurre al revés: una superficie oscura puede tener debajo un cepellón seco y despegado.",
+        "El método correcto es meter el dedo hasta la segunda falange, junto al borde del cepellón.",
+        "El color de la superficie es un buen indicador si se mira siempre a la misma hora."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Ni a la misma hora: los dos primeros centímetros no dicen nada sobre lo que pasa abajo, donde además sigue estando la capa de agua colgante de la lección de sustratos. Y el dedo va junto al borde del cepellón y no en el centro, para no romper raíces."
+    },
+    {
+      "id": "hidrofobico",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el agua de riego sale muy rápido y muy limpia por el fondo, es señal de que el sustrato drena bien.",
+      "respuesta": false,
+      "explicacion": "Falso: es la señal típica de un sustrato hidrofóbico. Una mezcla con turba o fibra de coco que se secó del todo repele el agua, que corre por el hueco entre el cepellón y la pared y sale en segundos dejando el interior seco. El envase pesa poco, la superficie está mojada y la planta se muere de sed. Se corrige sumergiendo el envase hasta que deje de burbujear."
+    },
+    {
+      "id": "la-balanza",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo funciona el método de la balanza?",
+      "opciones": [
+        "Se riega hasta saturación, se deja drenar media hora y ese peso es la referencia.",
+        "La diferencia en gramos con el peso de hoy son directamente los mililitros consumidos.",
+        "Se usan dos o tres envases testigo por zona en vez de pesar todo.",
+        "Hace falta calibrar la balanza contra el sustrato antes de poder interpretar la lectura."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hace falta calibrar nada, y esa es su ventaja sobre cualquier sensor barato: un mililitro de agua pesa un gramo, así que la balanza mide directamente lo que hay que reponer. No hay proxy, no hay deriva y no hay nada que interpretar."
+    },
+    {
+      "id": "marchitez",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se interpreta una planta caída?",
+      "opciones": [
+        "La marchitez temporal aparece al mediodía de un día caluroso y se recupera sola al atardecer.",
+        "La marchitez permanente es la que sigue por la mañana temprano y sí indica falta real de agua.",
+        "La comprobación práctica es la hora a la que se observa.",
+        "Regar en cuanto se ve una planta caída es siempre lo correcto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Regar una planta caída a las tres de la tarde es un error: el problema no es falta de agua en el sustrato sino que la hoja pierde más rápido de lo que la raíz absorbe. Y en cualquier caso la planta avisa tarde: cierra estomas y deja de crecer mucho antes de que aparezca cualquier síntoma visible."
+    },
+    {
+      "id": "los-dos-extremos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué son la capacidad de campo y el punto de marchitez?",
+      "opciones": [
+        "La capacidad de campo es el estado de máxima agua retenida sin encharcarse, tras regar y drenar.",
+        "En el punto de marchitez queda agua, pero tan retenida que la raíz no puede arrancarla.",
+        "Entre los dos está toda el agua útil, y no se espera a agotarla del todo.",
+        "Conviene llegar siempre al punto de marchitez antes de regar, para forzar raíces profundas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Llegar al punto de marchitez permanente significa que la planta ya no se recupera aunque riegues. Lo que sí se hace es variar la fracción de agua útil que se deja consumir: muy poca en almácigo y propagación, más en crecimiento para que la raíz explore todo el envase, y bastante en endurecimiento, donde el estrés controlado es el objetivo."
+    },
+    {
+      "id": "sensores",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un sensor de humedad de suelo barato da un valor útil desde que se instala.",
+      "respuesta": false,
+      "explicacion": "Falso: los más económicos derivan con el tiempo y se corroen, y todos necesitan calibración contra el sustrato concreto que uses, porque su lectura depende de la composición. Un sensor sin calibrar es telemetría sin unidades. El orden correcto es método manual primero, hasta conocer los números reales, y sensor después, calibrado contra esos números."
+    },
+    {
+      "id": "hasta-que-escurra",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué se riega hasta que salga agua por abajo?",
+      "opciones": [
+        "Para mojar todo el volumen, y no dejar la raíz concentrada en la parte de arriba.",
+        "Para arrastrar las sales que dejan el agua y el fertilizante en cada riego.",
+        "Porque el agua que sale es la única confirmación de que el sustrato se mojó entero.",
+        "Significa dar mucha agua todos los días."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Significa lo contrario: riegos completos y espaciados en vez de riegos cortos y frecuentes. La pasadita de manguera diaria moja la superficie, gasta agua, no llega al fondo, no arrastra sales y mantiene la superficie permanentemente húmeda, que es una invitación al musgo y a los hongos."
+    },
+    {
+      "id": "medicion-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Monta el método de decisión de riego de Rizoma del Sur: qué mides, con qué, con qué frecuencia y cómo lo registras.",
+      "respuestaModelo": "El método son dos herramientas y una columna más en la planilla que ya existe.\n\nEl dedo, todos los días, en el recorrido normal. Hasta la segunda falange como mínimo, junto al borde del cepellón y no en el centro para no romper raíces. Es gratis y detecta la mayoría de los casos. Y hay que hacerlo así porque la superficie miente en las dos direcciones: se seca en horas con sol y viento aunque abajo siga saturado, y a veces se ve oscura mientras el cepellón de adentro ya se secó y se despegó de las paredes.\n\nUna balanza de cocina y dos o tres envases testigo por zona. Riego uno hasta saturación, lo dejo drenar media hora y anoto ese peso como referencia; después lo peso cada día a la misma hora, y la diferencia en gramos son exactamente los mililitros que se consumieron, porque un mililitro de agua pesa un gramo. No hay que calibrar nada, que es justo la ventaja sobre cualquier sensor barato.\n\nCada zona necesita sus propios testigos, porque propagación, crecimiento y endurecimiento tienen consumos por planta muy distintos: propagación consume poquísimo por planta pero sin margen, crecimiento es el grueso del volumen, y endurecimiento es el mayor consumo por planta porque está a sol y viento plenos.\n\nCon una semana de pesadas diarias ya conozco el consumo típico de cada zona en cada época, y a partir de ahí la balanza pasa a ser una comprobación semanal. Esos números van a la misma planilla del inventario con una columna más, y al llegar la seca me dan exactamente el dato que necesito para dimensionar el tanque: cuántos litros por día consume cada zona en el peor mes.\n\nLos almácigos son la excepción sin margen: los alvéolos almacenan tan poca agua útil que en un día despejado de septiembre la agotan en horas, así que hay que mirarlos todos los días y más de una vez en los días duros. No sirve el sistema de testigos semanales ahí.\n\nNo espero a que la planta avise, porque avisa tarde: cierra estomas y deja de crecer antes de cualquier síntoma visible, y cuando se ve caída ya perdí días de crecimiento. Y si veo una planta caída, miro la hora: caída a las tres de la tarde con sustrato húmedo es marchitez temporal y se recupera sola al atardecer; caída a las siete de la mañana es falta real de agua.\n\nLa fracción de agua útil que dejo consumir antes de regar cambia por zona: muy poca en almácigo y propagación, más en crecimiento para que la raíz explore todo el envase, y bastante en endurecimiento, donde el estrés controlado es precisamente el objetivo de la zona.\n\nRiego completo hasta que escurra, no pasadita diaria: para mojar todo el volumen, para arrastrar las sales que deja cada riego y porque el agua que sale por abajo es la única confirmación de que se mojó entero. Con la mezcla de cascarilla del módulo del vivero, que drena rápido, eso se hace en poco tiempo.\n\nY al principio de cada seca vuelco un envase testigo después de regar para comprobar que se mojó hasta el fondo. Si el agua sale demasiado rápido y demasiado limpia, el cepellón se hidrofobizó y hay que sumergirlo en un balde hasta que deje de burbujear, no regarlo más.\n\nRiego temprano por la mañana y no al atardecer, porque con el calor y la humedad de aquí dejar el follaje mojado toda la noche favorece las enfermedades foliares, igual que la condensación del módulo de estructuras.\n\nSensores, después: primero seis meses de dedo y balanza con los números anotados, y con eso el módulo de automatización tendrá contra qué calibrar.",
+      "criterios": [
+        "Usa el dedo a profundidad y junto al borde del cepellón, a diario.",
+        "Explica que la superficie engaña en las dos direcciones.",
+        "Monta el método de la balanza con peso de referencia y diferencia diaria.",
+        "Justifica que un mililitro pesa un gramo y que no hace falta calibrar.",
+        "Usa envases testigo por zona y reconoce sus consumos distintos.",
+        "Pasa a comprobación semanal tras conocer el consumo típico.",
+        "Vuelca los datos a la planilla y los liga al dimensionado del tanque.",
+        "Trata los almácigos como excepción de vigilancia diaria.",
+        "No espera al aviso de la planta y distingue marchitez temporal de permanente.",
+        "Ajusta la fracción de agua útil consumida según la zona.",
+        "Riega hasta drenaje y da las tres razones.",
+        "Comprueba la hidrofobia volcando un testigo y la corrige por inmersión.",
+        "Riega temprano por la mañana por razones sanitarias.",
+        "Pospone los sensores hasta tener números manuales."
+      ],
+      "explicacion": "Fíjate en que la herramienta más precisa de esta lección cuesta lo que una balanza de cocina, y la segunda más precisa es gratis. El instrumento caro no era necesario; lo que faltaba era la costumbre de medir en vez de suponer."
+    }
+  ]
+}

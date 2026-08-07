@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "cuatro-metodos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace cada método de riego?",
+      "opciones": [
+        "El goteo entrega el agua en un punto sobre el envase, con la mayor eficiencia.",
+        "La microaspersión moja el envase y también todo lo que hay alrededor.",
+        "La manguera a mano es la más flexible y obliga a mirar las plantas una por una.",
+        "La nebulización es el método de riego más eficiente de todos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La nebulización no es riego: es control de humedad ambiente. Su función es mantener el aire saturado alrededor de las hojas de un esqueje sin raíces, que es la cámara húmeda del módulo de propagación. Una cama nebulizada puede tener el sustrato completamente seco, porque casi toda la niebla se evapora en el aire."
+    },
+    {
+      "id": "eficiencia-no-es-todo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Además de la eficiencia, ¿qué criterios deciden el método?",
+      "opciones": [
+        "El costo por planta: un emisor por envase se vuelve caro con miles de plantas pequeñas.",
+        "La tolerancia al agua sucia: el orificio de un gotero es diminuto y se tapa con cualquier partícula.",
+        "La movilidad: si las plantas se mueven, un emisor por envase obliga a reconectar todo el tiempo.",
+        "El método más eficiente es siempre la mejor decisión."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Elegir solo por eficiencia lleva a decisiones malas. El goteo es ideal para pocas plantas grandes, fijas y valiosas —como el bloque de madres—, y mal negocio para miles de alvéolos que se manipulan constantemente."
+    },
+    {
+      "id": "gotero-tapado",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace peligroso el taponamiento de un gotero y cómo se previene?",
+      "opciones": [
+        "No hay ninguna señal: el sistema sigue funcionando y solo esa planta se muere, semanas después.",
+        "Se tapa por partículas, por precipitados de sales y por algas que crecen dentro del tubo.",
+        "Filtro a la entrada, tubería opaca, goteros autocompensantes y purga periódica de finales de línea.",
+        "Basta con revisar el manómetro para detectarlo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un emisor tapado no mueve la aguja de nada: es un fallo silencioso en un nodo, sin alerta y sin log. La única detección es el monitoreo activo, que aquí significa caminar la línea con el riego abierto mirando que cada gotero suelte agua. Y la tubería opaca importa porque la luz dentro del tubo es lo que hace crecer las algas."
+    },
+    {
+      "id": "uniformidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué importa la uniformidad de riego y cómo se mide?",
+      "opciones": [
+        "Sin uniformidad el lote sale desparejo, con plantas listas y plantas a medio crecer del mismo día.",
+        "Se pierde por diferencia de presión a lo largo de la línea, por desnivel y por emisores tapados.",
+        "Se mide con la prueba de los vasos: recipientes iguales bajo emisores repartidos por el sector.",
+        "Se corrige aumentando el tiempo de riego del sector entero."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Aumentar el tiempo no corrige la desigualdad: riega de más a los que ya recibían de más. Las correcciones reales son líneas más cortas, tubería de mayor diámetro o goteros autocompensantes. Y como el lote se vende junto, la desigualdad se paga."
+    },
+    {
+      "id": "zona-por-zona",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué método corresponde a cada zona?",
+      "opciones": [
+        "Propagación: nebulización para el ambiente más riego aparte para la cama.",
+        "Almácigo: microaspersión fina, porque un emisor por alvéolo es inviable.",
+        "Madres: goteo, porque son pocas plantas, grandes, fijas y valiosas.",
+        "Endurecimiento: goteo, para controlar exactamente el agua de cada planta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "En endurecimiento van microaspersión o manguera: son pocas plantas, se mueven todo el tiempo y además el riego ahí es deliberadamente escaso. Montar goteo en una zona donde las plantas cambian de sitio constantemente es trabajo de reconexión permanente."
+    },
+    {
+      "id": "sectorizar",
+      "tipo": "verdadero_falso",
+      "enunciado": "Basta con una sola válvula general si después se ajusta el tiempo total de riego.",
+      "respuesta": false,
+      "explicacion": "Falso, por dos razones. De manejo: propagación y endurecimiento tienen necesidades opuestas y no pueden compartir programa. E hidráulica: todos los sectores abiertos a la vez exigen un caudal que casi ningún sistema pequeño puede dar con presión suficiente, mientras que regar por sectores permite una bomba y una tubería mucho más modestas."
+    },
+    {
+      "id": "riego-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define el sistema de riego de Rizoma del Sur zona por zona, con sus componentes críticos y su rutina de comprobación.",
+      "respuestaModelo": "El sistema se diseña por sectores desde el primer día, aunque se instale por partes, porque cada zona tiene un objetivo distinto y necesidades a veces opuestas.\n\nPropagación lleva nebulización sobre las camas de enraizamiento más riego independiente del sustrato de la cama. Son dos sistemas distintos y hay que tenerlo claro: la niebla mantiene el aire saturado alrededor de hojas que todavía no tienen raíces, pero casi toda se evapora y apenas aporta agua al envase. Confundirlas produce el error clásico de esquejes con las hojas húmedas y el sustrato reseco debajo. Es la zona de menor consumo y mayor criticidad.\n\nAlmácigos, microaspersión fina. Con alvéolos no hay alternativa razonable, porque un emisor por celda es inviable, y hay que aceptar que moja también el banco.\n\nCrecimiento es el grueso, y la decisión depende de si las plantas se mueven. Con el manejo por lotes del módulo del vivero, las plantas de una fila se quedan ahí meses, así que el goteo es viable y es lo más eficiente. Si en la práctica resulta que se reorganizan mucho, la microaspersión es la alternativa sensata aunque gaste más agua, porque no depende de que cada envase tenga su emisor.\n\nEndurecimiento, microaspersión o manguera: pocas plantas, mucho movimiento y riego deliberadamente escaso.\n\nMadres, goteo sin dudarlo: pocas plantas, grandes, fijas y de las que depende todo lo demás. Es el caso ideal del goteo.\n\nEl filtro a la entrada no se discute. Con agua de pozo o de captación de lluvia, cualquier sistema de goteo sin filtro se tapa en semanas, y un gotero tapado no avisa: el sistema sigue funcionando, las demás plantas se riegan y solo esa se muere. A eso se le suman tubería opaca, para que la luz no haga crecer algas dentro, goteros autocompensantes si hay desnivel, y purga periódica abriendo los finales de línea.\n\nY el sol de la llanura degrada la tubería expuesta igual que la malla, así que va con protección ultravioleta, enterrada o bajo la sombra de la propia estructura.\n\nUna válvula por sector, todas juntas y rotuladas cerca del tanque. Eso permite hoy regar cada zona con su frecuencia, permite que la bomba y la tubería sean modestas porque nunca se abre todo a la vez, y es lo que después va a permitir automatizar sector por sector.\n\nLa rutina de comprobación es semanal: abrir cada sector y caminar la línea mirando que todos los emisores suelten agua. Cinco minutos que evitan perder plantas por un fallo que no avisa.\n\nY una vez por temporada, la prueba de los vasos en cada sector: recipientes iguales bajo emisores del principio, del medio, del final y de las esquinas, riego un tiempo fijo, y comparar cuánto juntó cada uno. Si hay mucha diferencia, el sector no es uniforme y hay que acortar líneas, subir diámetro o poner autocompensantes; si no, el lote sale desparejo y como se vende junto, se paga.\n\nEl horario: riego temprano por la mañana, y con la nebulización de propagación ajusto los ciclos para que la última deje tiempo a que el follaje se oree antes de la noche. Follaje mojado toda la noche en este clima cálido y húmedo es una invitación a las enfermedades foliares.",
+      "criterios": [
+        "Diseña por sectores desde el principio aunque instale por partes.",
+        "Separa nebulización de riego de cama en propagación y explica por qué.",
+        "Usa microaspersión fina en almácigos por inviabilidad del emisor por alvéolo.",
+        "Condiciona goteo o microaspersión en crecimiento a la movilidad de las plantas.",
+        "Asigna microaspersión o manguera a endurecimiento por movimiento y riego escaso.",
+        "Reserva el goteo para el bloque de madres y lo justifica.",
+        "Exige filtro a la entrada y explica el fallo silencioso del gotero.",
+        "Añade tubería opaca, autocompensantes y purga de finales de línea.",
+        "Protege la tubería de la radiación ultravioleta.",
+        "Instala una válvula por sector y da la razón de manejo y la hidráulica.",
+        "Define la comprobación semanal caminando la línea.",
+        "Programa la prueba de los vasos por temporada y sabe corregir.",
+        "Riega temprano y orea el follaje antes de la noche."
+      ],
+      "explicacion": "Fíjate en que el sistema de riego bien diseñado tiene la misma propiedad que las estructuras del módulo anterior: funciona solo la mayor parte del tiempo, y lo poco que exige es una comprobación periódica de que efectivamente sigue funcionando. Los fallos que matan plantas aquí son silenciosos, y contra eso lo único que sirve es mirar."
+    }
+  ]
+}

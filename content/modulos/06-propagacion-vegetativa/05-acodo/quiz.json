@@ -1,0 +1,103 @@
+{
+  "preguntas": [
+    {
+      "id": "invertir-orden",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué se diferencia el acodo de un esqueje?",
+      "opciones": [
+        "La rama forma raíces mientras sigue unida a la madre, y solo se corta cuando ya las tiene.",
+        "Mientras dura el proceso la rama sigue recibiendo agua del árbol, así que no hay carrera contra la deshidratación.",
+        "Es lento, multiplica poquísimo y exige trabajo sobre el árbol.",
+        "Da muchas más plantas por planta madre que el esqueje."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Cada acodo da exactamente una planta, y solo puedes montar tantos como ramas accesibles tenga el árbol: es el método que menos multiplica del módulo. Es un despliegue en verde y azul aplicado a una rama: levantas el nuevo en paralelo, compruebas que funciona, y solo entonces cortas."
+    },
+    {
+      "id": "el-anillado",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué funciona quitar un anillo de corteza?",
+      "opciones": [
+        "Porque corta el floema, que lleva azúcares hacia abajo, y deja intacto el xilema, que lleva agua hacia arriba.",
+        "El agua sigue subiendo desde la raíz, así que la rama no se marchita.",
+        "Los azúcares y las hormonas que bajan desde las hojas se acumulan justo por encima del corte.",
+        "Porque interrumpe el paso del agua y eso obliga a la rama a buscarla por su cuenta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Si se cortara el agua, la rama se marchitaría y no pasaría nada más. La elegancia del método está en que los dos sistemas de transporte están a distinta profundidad, y se puede cortar uno dejando el otro. Ese acúmulo de azúcares y auxinas en un punto húmedo y a oscuras es la instrucción de enraizar."
+    },
+    {
+      "id": "anillo-completo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Dejar una tira estrecha de corteza sin quitar no compromete el acodo.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error número uno del acodo aéreo. Si queda una tira, el floema sigue pasando por ahí, los azúcares no se acumulan y no hay raíces. Y no se nota hasta que abres la bola meses después. Igual de importante es raspar hasta la madera: si dejas el cámbium intacto, la rama cicatriza y vuelve a conectarse."
+    },
+    {
+      "id": "el-envuelto",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Con qué y cómo se envuelve el anillo?",
+      "opciones": [
+        "Con musgo, fibra de coco o sustrato liviano, húmedo pero exprimido, nunca chorreando.",
+        "Nunca con tierra del terreno, porque pesa, se compacta y se encharca.",
+        "Con plástico transparente atado arriba y abajo, para poder ver las raíces sin abrir nada.",
+        "Con plástico negro, para que la oscuridad favorezca el enraizamiento."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El interior de la bola ya está a oscuras: el musgo compactado no deja pasar luz. Lo que aporta el plástico transparente es diagnóstico, y eso vale mucho, porque el acodo se arruina justo cuando lo abres para mirar antes de tiempo."
+    },
+    {
+      "id": "modos-de-fallo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuáles son los dos modos de fallo de un acodo aéreo y cómo se corrigen?",
+      "opciones": [
+        "Se secó: el musgo se encogió y se despegó. Se corrige inyectando agua con jeringa y volviendo a atar, sin desmontar.",
+        "Se encharcó: entró agua de lluvia y se acumuló abajo, y la madera expuesta se pudre.",
+        "El encharcamiento se corrige con un pinchazo pequeño abajo para que drene, y atando mejor arriba.",
+        "Ambos se corrigen abriendo la bola para revisar el estado de las raíces."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Abrir la bola es exactamente lo que no hay que hacer: rompe las raíces nuevas y deshace el microclima. Con plástico transparente, los dos fallos se diagnostican desde fuera y se corrigen sin desmontar nada."
+    },
+    {
+      "id": "el-corte-final",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un acodo recién cortado se puede plantar directamente en el terreno con todo su follaje.",
+      "respuesta": false,
+      "explicacion": "Falso, y ahí es donde se pierden los acodos después de meses de espera. Tiene raíces nuevas, tiernas y escasas, y todo el follaje de una rama adulta: es exactamente el desequilibrio del que huías. Hay que recortarle buena parte de las hojas, plantarlo en maceta y no en terreno, y tratarlo como un trasplante recién hecho durante unas semanas."
+    },
+    {
+      "id": "rastrero-y-monticulo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué distingue al acodo rastrero y al acodo por montículo?",
+      "opciones": [
+        "El rastrero dobla una rama baja hasta el suelo, entierra un tramo intermedio y deja la punta fuera.",
+        "El rastrero es el más fácil y de mayor tasa de éxito, pero exige una rama que llegue al suelo.",
+        "El de montículo poda la planta corta, deja brotar muchos tallos y amontona tierra alrededor de ellos.",
+        "El de montículo da una sola planta por temporada, igual que el aéreo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Justo al revés: el acodo por montículo es la única variante que multiplica en cantidad, porque cada brote enterrado echa raíces por su cuenta y al final de la temporada se separan todos. Por eso se usa comercialmente para producir patrones de frutales."
+    },
+    {
+      "id": "acodo-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Explica qué papel le das al acodo en Rizoma del Sur: para qué casos sí, para cuáles no, cómo lo montas y en qué calendario.",
+      "respuestaModelo": "Lo primero es no confundirlo con producción. Cada acodo da una planta y ocupa una rama durante meses, así que si necesito doscientas plantas de algo, el acodo no es el camino. Su valor está en otra parte.\n\nLo uso en tres casos. El primero, frutales de patio identificados: ese mango del vecino que da una fruta excepcional, esa guayaba concreta, ese cítrico que aguanta bien. Son plantas que quiero copiar exactamente y de las que hay un solo ejemplar, y el acodo me da una copia fiel sin arriesgar la madre. El segundo, y el más estratégico, arrancar mi bloque de plantas madre: si consigo por acodo dos o tres ejemplares de una variedad buena, esos se vuelven mis madres y a partir de ahí produzco por esqueje o injerto en cantidad. El acodo es lento pero es el que me da el original. Y el tercero, obtener plantas grandes de golpe, porque un acodo de una rama gruesa ya es una planta con porte el día que lo corto, y un cliente paga bastante más por eso.\n\nEl acodo rastrero, en cambio, lo uso con soltura, porque no cuesta nada. En cualquier arbusto u ornamental con ramas bajas, doblar dos o tres ramas al suelo, hacerles una muesca en la cara inferior del tramo enterrado y ponerles una piedra encima es trabajo de un minuto. Lo hago por costumbre cada vez que paso, no como proyecto, y el suelo mantiene la humedad solo.\n\nPara montar un acodo aéreo elijo una rama del grosor de un dedo, sana y con la orientación que quiero que tenga la planta futura, porque lo que acodo es lo que obtengo con su forma incluida. Hago dos cortes paralelos separados dos o tres dedos y pelo la tira entre ellos, raspando hasta dejar la madera limpia: el anillo tiene que ser completo en toda la vuelta y sin dejar cámbium, porque si queda una tira el floema sigue pasando y no hay raíces, y si queda cámbium la rama cicatriza. Envuelvo con musgo, fibra de coco o cascarilla con algo de compost muy maduro, húmedo pero exprimido, nunca tierra del terreno porque pesa, se compacta y se encharca. Y envuelvo con plástico transparente atado bien arriba y abajo, transparente porque así veo las raíces sin abrir nada.\n\nEl calendario aquí es claro: monto al empezar las lluvias, para que todo el enraizamiento caiga en la época húmeda y la bola se mantenga sola sin que yo tenga que regarla a mano durante meses, y corto y maceto hacia el final de las lluvias, dejando al acodo separado un margen de humedad ambiental mientras se recupera. Montarlos en plena seca es condenarme a mantener bolas a mano.\n\nMonto todos en la misma semana, etiqueto cada uno con especie y fecha y los anoto en el cuaderno, porque un acodo olvidado en un árbol durante dos temporadas se estrangula y arruina la rama.\n\nY me preparo para la última media hora, que es donde se pierden después de meses de trabajo: al cortar, recorto follaje sin piedad, planto en maceta y no en terreno, lo dejo a media sombra con riego constante y sin fertilizante hasta que muestre crecimiento nuevo.\n\nUna precaución local: con las lluvias torrenciales de aquí, un atado flojo arriba encharca la bola en una sola tormenta, así que ato bien y evito dejar la bola en una posición que forme embudo.",
+      "criterios": [
+        "Descarta el acodo como método de volumen y explica por qué.",
+        "Identifica los tres casos de uso, incluido arrancar el bloque de madres.",
+        "Usa el acodo rastrero con soltura por su bajo costo.",
+        "Elige la rama por sanidad y por orientación futura.",
+        "Ejecuta un anillo completo y raspado hasta la madera, con los dos errores explicados.",
+        "Envuelve con material liviano húmedo y descarta la tierra del terreno.",
+        "Usa plástico transparente y justifica el diagnóstico sin abrir.",
+        "Monta al empezar las lluvias y corta hacia el final, con la razón climática.",
+        "Etiqueta y registra para no olvidar acodos en el árbol.",
+        "Recorta follaje, maceta y trata como trasplante al separar.",
+        "Prevé el encharcamiento por lluvia torrencial con un buen atado."
+      ],
+      "explicacion": "Fíjate en la asimetría: el acodo aéreo es un método de precisión que usas pocas veces al año para conseguir originales valiosos, y el rastrero es un gesto de un minuto que puedes hacer cien veces sin pensarlo. Confundirlos —tratar el aéreo como producción o el rastrero como proyecto— es el error de planificación más común con esta técnica."
+    }
+  ]
+}

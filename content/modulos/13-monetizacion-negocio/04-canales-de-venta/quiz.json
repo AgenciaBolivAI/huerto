@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "los-canales",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué caracteriza a cada canal de un vivero pequeño?",
+      "opciones": [
+        "La venta directa paga mejor y construye clientes propios, pero exige presencia y presentación permanentes.",
+        "La feria concentra gente en unas horas, y su costo real es el día entero más el transporte.",
+        "Revendedores y viveros grandes pagan menos pero liberan tiempo: una entrega sustituye decenas de ventas.",
+        "El canal institucional es el más estable y conviene construir el negocio sobre él."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El institucional paga bien y recompensa a un vivero ordenado, pero es intermitente por razones ajenas: un pedido grande puede no repetirse al año siguiente. Se trata como extra, nunca como base."
+    },
+    {
+      "id": "la-asimetria",
+      "tipo": "verdadero_falso",
+      "enunciado": "El canal que mejor paga por planta suele ser también el que más tiempo consume por planta.",
+      "respuesta": true,
+      "explicacion": "Correcto, y por eso no existe un canal óptimo sino una mezcla óptima. También por eso comparar canales solo por precio es un error de método: hay que compararlos por lo que dejan por hora de trabajo."
+    },
+    {
+      "id": "precio-efectivo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que descontar del precio para comparar canales de verdad?",
+      "opciones": [
+        "Transporte, incluyendo el tiempo de viaje y la merma de lo que llega maltratado.",
+        "El tiempo de atención: mostrar, explicar y esperar, aunque no se venda nada.",
+        "El papeleo y los plazos de cobro, que obligan a financiar la espera.",
+        "Los costos fijos del vivero, repartidos entre las plantas de esa entrega."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los costos fijos no cambian según el canal, así que no sirven para comparar entre canales: eso se hace con el margen de contribución. Lo que sí hay que descontar es todo lo específico de cobrar por ese canal, incluido lo que no se cobra: envases, reposiciones y descuentos por cantidad."
+    },
+    {
+      "id": "un-solo-cliente",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué es riesgoso que un solo comprador se lleve casi toda la producción?",
+      "opciones": [
+        "Cuando sabe que es tu única salida, no negocia: dicta el precio.",
+        "Si desaparece, toda la producción del ciclo se queda en el vivero.",
+        "No se construyen clientes propios ni reputación: se acumula producción pero no negocio.",
+        "Porque las entregas grandes siempre salen mal."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las entregas grandes son perfectamente viables y muy eficientes en tiempo. El problema no es el tamaño de la entrega sino la concentración: ningún canal debería llevarse más de la mitad de lo que produces, y conviene tener al menos tres activos."
+    },
+    {
+      "id": "canal-secundario",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un canal secundario que hoy no compensa el esfuerzo conviene abandonarlo para concentrarse en el que más deja.",
+      "respuesta": false,
+      "explicacion": "Falso: ese canal es un seguro barato, porque es lo que queda cuando el principal falla. Mantenerlo vivo cuesta poco; construirlo desde cero justo en el momento malo, mucho."
+    },
+    {
+      "id": "los-tres-momentos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué decide cada uno de los tres momentos de una venta?",
+      "opciones": [
+        "Que te encuentren: cartel, contacto que se contesta y sobre todo recomendaciones de clientes anteriores.",
+        "Que acuerden: la información clara de qué hay, en qué tamaños, a qué precio y para cuándo.",
+        "Que retiren: planta sana, envase limpio e instrucciones de qué hacer con ella.",
+        "Los tres dependen del precio y se resuelven bajándolo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los tres momentos existen en todos los canales; lo único que cambia es quién hace cada uno y cuánto cuesta. Y cada uno se puede mejorar sin tocar los otros, que es justamente lo que los hace útiles por separado."
+    },
+    {
+      "id": "encargo-anticipado",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el encargo anticipado es el mejor canal de todos?",
+      "opciones": [
+        "Elimina la incertidumbre de la demanda: se produce contra un pedido conocido.",
+        "Elimina la merma comercial: la planta ya está vendida antes de existir.",
+        "Adelanta dinero antes del gasto, que es lo que resuelve el problema de caja.",
+        "Permite cobrar más caro que la venta directa en el vivero."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es un canal de precio alto: su valor está en eliminar tres incertidumbres a la vez. Conseguir encargos exige identidad conocida del material, cumplimiento de fechas y alguien que responde, así que es el premio a hacer las cosas ordenadas."
+    },
+    {
+      "id": "canales-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña la estrategia de canales de Rizoma del Sur: cuáles usas, cómo los comparas y cómo evitas depender de uno solo.",
+      "respuestaModelo": "Trabajo con varios canales desde el principio y ninguno se lleva más de la mitad de lo que produzco.\n\nLa venta directa en el vivero es el canal base, porque paga mejor, porque el cliente ve lo que compra y porque construye clientes propios que vuelven. A cambio exige que el vivero esté presentable siempre y que haya alguien para atender, así que defino días y horas de atención en vez de estar disponible todo el tiempo. La presentación no es cosmética: es parte del precio, como decía la lección de precio y margen.\n\nUn cartel en el camino y un número de contacto que se contesta son la inversión más barata en «que te encuentren», y los tengo listos antes de tener producción para vender. A eso sumo los grupos vecinales y de mensajería locales, que son gratis y llegan exactamente al público que puede venir a retirar.\n\nMantengo una lista de disponibilidad —especies, tamaños, precios y fecha en que estarán listas— porque cierra ventas que una conversación desordenada pierde. Sale directamente de las fichas de cultivo y de los tiempos anotados en la libreta.\n\nUso el canal de revendedores y viveros más grandes conscientemente: paga menos pero libera tiempo, y una entrega grande sustituye decenas de ventas pequeñas. No es un mal canal, es un canal de margen bajo y consumo de tiempo bajo, y eso lo hace útil cuando el tiempo aprieta.\n\nExploro el canal institucional con las especies difíciles de conseguir aquí: árboles nativos de sombra, frutales injertados con identidad conocida, culantro, yautía. Ese canal recompensa exactamente lo que este vivero hace bien. Averiguo con anticipación cómo compran las instituciones de la zona, si necesito poder facturar y qué requisitos fitosanitarios aplican, consultándolo con un contador local y con la autoridad competente antes de que aparezca el pedido, no después. Pero lo trato como extra y nunca como base, porque es intermitente por razones ajenas a mí.\n\nPara comparar canales anoto en la misma libreta que los costos el precio efectivo de cada uno —descontando transporte, tiempo de atención, plazos de cobro, envases que se van, reposiciones y descuentos— y las horas que consume. Con eso calculo lo que deja cada canal por hora de trabajo, que es la comparación correcta cuando el recurso escaso es el tiempo. Sin ese dato, comparar vender en el vivero con vender en feria es pura intuición.\n\nDecido de antemano si entrego o el cliente retira, y si entrego le pongo precio en vez de regalarlo, porque los caminos de tierra en época de lluvias condicionan cuándo se puede entregar y en qué estado llega la planta.\n\nCada entrega sale con instrucciones de plantación y cuidado, como en la ficha de árboles de sombra: es la forma más barata de que al cliente le vaya bien, y a quien le va bien vuelve y recomienda.\n\nY el objetivo explícito es mover producción hacia el encargo anticipado, con una seña por adelantado. Elimina la incertidumbre de la demanda, elimina la merma comercial y adelanta el dinero antes del gasto. Para conseguirlo hacen falta dos cosas que se construyen con tiempo y que ya están en el plan: cumplir fechas y tener identidad conocida del material.\n\nPor último, planifico contra el arranque de la temporada de lluvias, que es cuando se concentra la demanda en todos los canales a la vez, contando hacia atrás desde esa fecha con los tiempos de las fichas. Y averiguo las reglas de las ferias locales —días, cupos, autorización y costo del puesto— antes de contar con ese canal.",
+      "criterios": [
+        "Usa al menos tres canales y limita el peso de cada uno.",
+        "Pone la venta directa como base y asume lo que exige.",
+        "Prevé cartel, contacto y redes locales para que lo encuentren.",
+        "Mantiene una lista de disponibilidad derivada de las fichas.",
+        "Valora el canal de revendedores por el tiempo que libera.",
+        "Trata el institucional como extra y averigua sus requisitos antes.",
+        "Calcula precio efectivo descontando transporte, atención y plazos.",
+        "Compara canales por lo que dejan por hora, no por planta.",
+        "Decide y cobra la entrega en vez de regalarla.",
+        "Entrega con instrucciones para generar retorno y recomendación.",
+        "Persigue el encargo anticipado y explica sus tres ventajas.",
+        "Planifica contra el pico de demanda del inicio de las lluvias."
+      ],
+      "explicacion": "El giro de esta lección es dejar de pensar en canales como sitios donde vender y empezar a pensarlos como configuraciones distintas de precio, tiempo y riesgo. La mezcla correcta no es la que más paga por planta: es la que sostiene el negocio cuando alguno falla."
+    }
+  ]
+}

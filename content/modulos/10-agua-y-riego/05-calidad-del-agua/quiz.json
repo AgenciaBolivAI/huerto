@@ -1,0 +1,106 @@
+{
+  "preguntas": [
+    {
+      "id": "que-trae",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué puede traer el agua de riego y qué consecuencia tiene cada cosa?",
+      "opciones": [
+        "Sales disueltas, que no se ven ni enturbian y son el problema más serio.",
+        "Sólidos en suspensión, que sí se ven y son lo que tapa los emisores.",
+        "Algas y bacterias, que crecen dentro del sistema y también lo tapan.",
+        "Todo lo que trae el agua se puede quitar con un buen filtro."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Hay dos categorías con soluciones distintas: lo que viene en partículas discretas, que sí se filtra, y lo que viene disuelto, que atraviesa cualquier filtro y hay que manejar de otra manera. La cuarta variable es el pH, que decide qué nutrientes puede absorber la raíz y si el agua tiende a incrustar carbonatos en los emisores."
+    },
+    {
+      "id": "salinidad",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una planta con síntomas de sed en un sustrato húmedo indica que hace falta regar más.",
+      "respuesta": false,
+      "explicacion": "Falso, y regar más empeora el problema si la causa es salinidad. Las sales disueltas hacen que la raíz tenga que trabajar más para absorber agua, y si el agua del sustrato está más salada que el interior de la raíz, el flujo se invierte y la planta pierde agua. El síntoma clásico son bordes de hoja quemados con el sustrato mojado."
+    },
+    {
+      "id": "conductividad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se mide la salinidad en la práctica?",
+      "opciones": [
+        "Con conductividad eléctrica, porque el agua pura conduce mal y las sales conducen bien.",
+        "Con un medidor de bolsillo barato, que es el único análisis rutinario que necesita un vivero pequeño.",
+        "Midiendo tanto el agua de riego como la que sale por el fondo del envase, y comparando.",
+        "Observando la turbidez del agua, que aumenta con la salinidad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las sales disueltas no enturbian: un agua salina puede verse perfectamente cristalina. Por eso hace falta un instrumento, y la conductividad da una medida directa de cuánta sal hay sin analizar cuál es cada una. La comparación entre el agua que entra y la que drena es el dato realmente útil."
+    },
+    {
+      "id": "acumulacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué se acumulan las sales en un envase?",
+      "opciones": [
+        "Cada riego aporta sal, y el agua se va por evaporación y transpiración, que no se llevan sal.",
+        "La sal acumulada es la que entra con el riego menos la que sale con el drenaje.",
+        "En un envase es peor que en el suelo, porque el volumen es diminuto y no hay a dónde diluir.",
+        "Las sales se degradan solas con el tiempo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las sales no se degradan: son iones, y solo se van si algo se las lleva. El vapor de agua sale puro, así que si nunca drena nada por el fondo la resta es siempre positiva y la concentración sube sin límite."
+    },
+    {
+      "id": "fraccion-de-lavado",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué papel cumple el agua que drena por el fondo?",
+      "opciones": [
+        "Es la única vía por la que la sal sale del envase.",
+        "Con agua más salina hace falta dejar drenar una fracción mayor.",
+        "Ese mayor consumo por planta hay que meterlo en el cálculo de litros por día.",
+        "Es desperdicio y conviene reducirlo al mínimo posible."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es desperdicio: es la fracción de lavado, y cumple una función. Por eso el riego corto y frecuente es lo peor posible desde este punto de vista: aporta sal en cada riego y nunca drena nada, que es exactamente el manejo que hace muchísima gente."
+    },
+    {
+      "id": "limpiar-por-etapas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se quitan los sólidos del agua?",
+      "opciones": [
+        "Dejando asentar en el tanque y tomando el agua unos centímetros por encima del fondo.",
+        "Con rejilla gruesa en la entrada, sobre todo si el agua viene de captación de techos.",
+        "Con filtro fino antes del sistema de riego, limpiado con la periodicidad que pida el agua.",
+        "Con un solo filtro fino, que hace todo el trabajo por sí mismo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Cada etapa quita lo que puede y protege a la siguiente; saltarse una obliga a la siguiente a hacer su trabajo y a ensuciarse mucho antes. Falta además la purga de fondo del tanque, para sacar el sedimento acumulado en vez de dejarlo crecer hasta que llegue a la toma."
+    },
+    {
+      "id": "algas-y-ph",
+      "tipo": "verdadero_falso",
+      "enunciado": "Corregir el pH del agua con ácidos es lo primero que debe hacer un vivero pequeño con agua alcalina.",
+      "respuesta": false,
+      "explicacion": "Falso: es una técnica real y estándar, pero requiere medir, dosificar con precisión y manejar productos corrosivos, y un error puede arruinar un lote en un riego. Antes están todas las medidas de diseño: elegir bien la fuente, decantar, filtrar, tapar el tanque, purgar y dejar fracción de lavado. Si después de eso el agua sigue siendo el limitante, entonces sí, y consultándolo con alguien que lo haya hecho en la zona."
+    },
+    {
+      "id": "agua-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define el manejo de calidad de agua de Rizoma del Sur: qué mides, con qué frecuencia, qué instalas y cómo reaccionas.",
+      "respuestaModelo": "Lo primero es medir el agua que voy a usar, antes de diseñar nada más. Un medidor de conductividad eléctrica de bolsillo y unas tiras de pH cuestan poco y contestan la pregunta que decide todo lo demás.\n\nY mido cada fuente por separado, porque pueden ser muy distintas: el pozo, la red si la hay, y el agua de lluvia captada. La lluvia es la mejor agua que voy a tener, prácticamente sin sales, y esa es una razón fuerte para la captación. Si tengo dos fuentes, reservo la de mejor calidad para las zonas más sensibles, que son almácigos y propagación.\n\nEl agua de pozo hay que medirla y no suponerla: la calidad de un acuífero varía mucho de un punto a otro, incluso a poca distancia, y también con la época. Al final de la seca, con el nivel más bajo, la concentración de sales suele ser mayor, y ese es justo el momento en que más riego. La única información confiable es mi propia medición más lo que digan los vecinos y los perforistas.\n\nUn análisis completo de laboratorio una vez al empezar es una inversión razonable, porque da la composición real y no solo la conductividad total. Después el medidor de bolsillo alcanza para el seguimiento mensual, anotado en la misma planilla. Y hay que calibrarlo con solución patrón de vez en cuando, porque si no deriva.\n\nLas medidas de instalación son todas de diseño y todas baratas, y van antes de pensar en química. Tanque tapado y opaco: sin luz no hay algas, y tapado no es criadero de mosquito, que aquí no es un detalle porque el dengue es endémico y cualquier reserva de agua limpia destapada cría Aedes aegypti. Toma de agua unos centímetros por encima del fondo, para que el sedimento se quede abajo. Rejilla gruesa en la entrada, imprescindible si capto de techos. Filtro fino antes del riego. Tubería opaca. Y purga periódica del fondo del tanque y de los finales de línea, para arrastrar el sedimento y la biopelícula antes de que se organicen.\n\nSi el agua es alcalina y dura, sé que va a tender a precipitar carbonatos dentro de los emisores, que es la tercera causa de taponamiento después de los sólidos y las algas, y que esa precipitación se acelera al evaporarse el agua que queda en la boca del gotero entre riegos.\n\nLa fracción de lavado la ajusto según lo que diga el medidor: comparo la conductividad del agua de riego con la del agua que sale por el fondo de un envase, y si la de salida es mucho más alta, tengo que dejar drenar más. Con agua salina eso sube el consumo por planta, y ese aumento hay que meterlo en el cálculo de litros por día del principio del módulo.\n\nY tengo una alarma visual gratis: la costra blanca en la superficie del sustrato. Si aparece, no basta con volver al riego normal; hay que hacer un lavado deliberado aplicando varias veces el volumen del envase y dejando drenar todo, retirar la capa superficial con costra, que es donde la concentración es mayor, y revisar por qué el riego habitual no estaba drenando.\n\nSi el agua viene de red con cloro, la dejo reposar unas horas en el tanque antes de usarla en propagación.",
+      "criterios": [
+        "Mide antes de diseñar, con conductivímetro y tiras de pH.",
+        "Mide cada fuente por separado y reconoce que la lluvia es la mejor.",
+        "Reserva el agua de mejor calidad para almácigos y propagación.",
+        "No supone la calidad del pozo y sabe que empeora al final de la seca.",
+        "Propone un análisis de laboratorio inicial y seguimiento mensual.",
+        "Recuerda calibrar el medidor.",
+        "Tapa el tanque y lo hace opaco, ligándolo a algas y a dengue.",
+        "Toma el agua por encima del fondo para dejar el sedimento abajo.",
+        "Instala rejilla gruesa y filtro fino, y purga tanque y líneas.",
+        "Usa tubería opaca contra las algas.",
+        "Anticipa la incrustación de carbonatos con agua alcalina.",
+        "Ajusta la fracción de lavado comparando conductividad de entrada y drenaje.",
+        "Suma el mayor consumo por lavado al cálculo de litros por día.",
+        "Reacciona a la costra blanca con lavado deliberado y retirada de la capa."
+      ],
+      "explicacion": "Fíjate en que casi todas las respuestas de esta lección son de diseño y no de química: tapar, decantar, filtrar, purgar y dejar drenar. La química solo entra al final, cuando todo lo demás ya está hecho y el agua sigue siendo el limitante."
+    }
+  ]
+}

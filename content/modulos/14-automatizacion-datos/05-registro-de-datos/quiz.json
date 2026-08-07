@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "que-registrar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué conviene registrar en un vivero automatizado?",
+      "opciones": [
+        "Humedad del sustrato por sector, y temperatura y humedad del aire, que explican casi todo lo demás.",
+        "Cada riego con su hora de inicio y su duración real, no solo cuándo se ordenó.",
+        "Los eventos raros: lecturas fuera de rango, reinicios y riegos abortados.",
+        "Todo lo que el equipo sea capaz de medir, al máximo detalle posible."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Menos de lo que apetece. Los eventos raros son los datos más valiosos por byte, porque avisan de que algo se está rompiendo. Y falta la lluvia, aunque sea anotada a mano: sin ella, la mitad de la variación queda inexplicada."
+    },
+    {
+      "id": "anotaciones-humanas",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una serie de datos sin anotaciones humanas de contexto es un gráfico bonito, no una explicación.",
+      "respuesta": true,
+      "explicacion": "Correcto: sin «hoy repiqué el lote 4» o «cambié la receta del sustrato», seis meses después habrá un escalón inexplicable y nadie recordará por qué. La automatización captura lo que se puede medir; la libreta captura lo que se decidió, y no se sustituyen."
+    },
+    {
+      "id": "como-registrar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué decisiones técnicas evitan que el registro sea inservible?",
+      "opciones": [
+        "Marca de tiempo absoluta en cada dato, no tiempo desde el arranque.",
+        "Guardar el valor crudo además del calibrado.",
+        "Distinguir «no medido» de «cero», dejando el hueco vacío y marcado.",
+        "Guardar solo el valor ya calibrado, para ahorrar espacio."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La calibración va a resultar estar mal alguna vez: con el valor crudo puedes recalcular la historia entera y con el calibrado no. Y si los huecos se rellenan con ceros, cualquier promedio posterior queda envenenado."
+    },
+    {
+      "id": "donde-guardarlo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se almacena el registro?",
+      "opciones": [
+        "Local primero: el dispositivo guarda en su propia memoria y funciona sin conexión.",
+        "Sincronizando cuando hay red y acumulando cuando no la hay.",
+        "Con una copia fuera del vivero, porque una tarjeta en el campo desaparece con la tarjeta.",
+        "En la misma tarjeta del controlador de riego, para tenerlo todo junto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La tarjeta va en el registrador y no en el controlador de riego, que es precisamente el que no debe fallar. Es la misma separación de responsabilidades de la lección anterior."
+    },
+    {
+      "id": "conectividad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que tener en cuenta sobre la conectividad?",
+      "opciones": [
+        "El wifi alcanza decenas de metros y un vivero con vegetación es hostil para radiofrecuencia.",
+        "La radio de largo alcance y baja potencia basta para enviar unos números cada media hora.",
+        "La opción más barata es no conectar nada y bajarse los datos al pasar.",
+        "Conectar el sistema es prioritario porque permite decidir mejor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La pregunta correcta no es cómo conectarlo sino qué decisión vas a tomar antes gracias a tenerlo conectado. Si la respuesta es ninguna, la conectividad es una complicación gratuita, y además añade un costo fijo recurrente que sube el punto de equilibrio."
+    },
+    {
+      "id": "para-que-sirve",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Para qué sirven realmente los datos de un vivero?",
+      "opciones": [
+        "Para avisar cuando algo se sale de lo normal, que es el uso más valioso.",
+        "Para ajustar la regla de riego comparando lo que el sistema hizo con lo que las plantas hicieron.",
+        "Para explicar lo que ya pasó, incluido descartar el riego como causa.",
+        "Para tener un panel que muestre el estado en tiempo real."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El panel es la parte divertida y la menos útil: la mayoría dejan de mirarse a las tres semanas, y un panel que nadie mira no cambia ninguna decisión. Primero las alertas, después el registro, y el gráfico al final o nunca. Falta un cuarto uso: documentar, que refuerza la trazabilidad y da credibilidad ante un cliente institucional."
+    },
+    {
+      "id": "la-revision",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si llevas seis meses registrando y no has cambiado ninguna decisión por lo que viste, o estás registrando lo que no importa o no estás mirando.",
+      "respuesta": true,
+      "explicacion": "Correcto, y las dos cosas tienen arreglo pero hay que darse cuenta. Es la misma exigencia que el ciclo de mejora del módulo de negocio: los datos que no se comparan con nada no producen información."
+    },
+    {
+      "id": "registro-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña el sistema de registro de datos de Rizoma del Sur: qué guardas, cómo, dónde y para qué.",
+      "respuestaModelo": "Registro cinco series y mantengo la libreta.\n\nLas series son: humedad del sustrato por sector, temperatura y humedad del aire, cada riego con hora de inicio y duración real de apertura de la válvula, la lluvia —aunque sea anotada a mano— y los eventos raros: lecturas fuera de rango, reinicios y riegos abortados por el límite de tiempo. Estos últimos son los datos más valiosos por byte, porque avisan de que algo se está rompiendo.\n\nLa libreta sigue existiendo porque la automatización captura lo que se puede medir y la libreta captura lo que se decidió: repiques, cambios de receta de sustrato, roturas de goteros, llegada de un surazo. Sin esas anotaciones, dentro de seis meses habrá un escalón inexplicable en la serie y nadie recordará la causa.\n\nCada dato lleva fecha y hora absolutas, apoyadas en el reloj con pila del controlador. Sin eso, tras cada corte de energía la serie queda desalineada y deja de poder cruzarse con nada.\n\nUso formato plano, una línea por medida, con sector, magnitud y valor. Es el formato más aburrido y el que se seguirá pudiendo leer dentro de diez años.\n\nGuardo el valor crudo además del calibrado, porque la calibración va a resultar estar mal alguna vez y con el crudo puedo recalcular la historia entera.\n\nY distingo un hueco de un cero: los periodos sin medida se marcan como ausentes, porque rellenarlos con ceros envenena cualquier promedio posterior.\n\nEl almacenamiento es local primero. La tarjeta va en el registrador y no en el controlador de riego, que es el que no debe fallar. Se sincroniza cuando hay conexión y se acumula cuando no la hay, de modo que nunca se pierde un dato por falta de red. Y copio el archivo fuera del vivero en cada visita, porque un registro que solo existe en una tarjeta enterrada en el campo desaparece con la tarjeta.\n\nNo priorizo la conectividad. Con presencia diaria, bajarse los datos con un cable o una tarjeta es suficiente durante mucho tiempo. Si más adelante compensa conectar, la tecnología adecuada es la radio de largo alcance y baja potencia, no wifi ni red móvil permanente; antes de invertir comprobaría la cobertura en el punto exacto del equipo y consultaría qué bandas de uso libre son aplicables con la autoridad de telecomunicaciones, sin suponerlo. Y contabilizaría el costo recurrente de datos como costo fijo, porque los fijos suben el punto de equilibrio.\n\nLa primera funcionalidad que implemento son las alertas, no el panel. Un sector que lleva dos días sin subir de humedad después de regar significa línea rota o filtro tapado, y ese aviso llega a tiempo de evitar la pérdida. El panel se deja para el final o para nunca: es la parte divertida y la menos útil, y la mayoría dejan de mirarse a las tres semanas.\n\nLos otros tres usos son ajustar la regla de riego con el ciclo de mejora del módulo de negocio, explicar lo que ya pasó cuando un lote sale mal —descartar el riego como causa es tan útil como confirmarlo— y documentar, que refuerza la trazabilidad de bioseguridad y da credibilidad ante un cliente institucional.\n\nHago una revisión honesta cada seis meses: si el registro no ha cambiado ninguna decisión, o estoy registrando lo que no importa o no estoy mirando.\n\nY tengo presente un uso local que va más allá del riego: acumular datos propios de temperatura, humedad y lluvia de Zanja Honda. Los datos publicados vienen de estaciones que pueden estar lejos, y el microclima de un terreno con vegetación y estructura de sombra no es el del aeropuerto. Dos o tres años de registro propio valen más que cualquier tabla general, y son exactamente el activo que el módulo anterior describía como imposible de copiar.",
+      "criterios": [
+        "Define cinco series concretas y justifica los eventos raros.",
+        "Mantiene la libreta y explica qué captura cada una.",
+        "Usa marca de tiempo absoluta apoyada en reloj con pila.",
+        "Elige formato plano y duradero.",
+        "Guarda el valor crudo además del calibrado.",
+        "Distingue huecos de ceros.",
+        "Almacena local primero y separa del controlador de riego.",
+        "Sincroniza oportunistamente y copia fuera del vivero.",
+        "Evalúa la conectividad con realismo y la contabiliza como costo fijo.",
+        "Prioriza alertas sobre paneles con justificación.",
+        "Enumera los usos de explicar y documentar.",
+        "Prevé la revisión periódica y el valor del registro climático propio."
+      ],
+      "explicacion": "El error típico de un perfil técnico aquí no es registrar mal sino registrar mucho y no mirar nada. La lección ordena el trabajo al revés de como apetece: alerta primero, gráfico al final."
+    }
+  ]
+}

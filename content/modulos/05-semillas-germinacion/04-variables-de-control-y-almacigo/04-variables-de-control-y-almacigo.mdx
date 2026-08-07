@@ -1,0 +1,308 @@
+Sabes qué hay dentro de una semilla, por qué a veces está cerrada y cuántas de tu lote están vivas.
+Ahora viene lo que haces con eso: **construir el entorno donde van a nacer.**
+
+Y conviene entenderlo así, como construir un entorno, porque esa es exactamente la naturaleza del
+trabajo. La semilla ya trae dentro todo lo que necesita para convertirse en planta. **Tú no la haces
+germinar: tú creas las condiciones y te apartas.**
+
+<Analogia>
+Es un problema de **configuración de entorno**, no de programación. El proceso ya está escrito y
+funciona; lo que decide si corre o falla son cuatro variables externas, y tu trabajo es ponerlas en
+rango y **mantenerlas ahí**.
+
+Y como en cualquier entorno, lo que rompe las cosas casi nunca es el valor medio: es **la
+oscilación.** Una temperatura que sube y baja veinte grados cada día es peor que una temperatura
+mediocre pero estable.
+</Analogia>
+
+Las cuatro variables son **temperatura, humedad, oxígeno y luz.** Vamos por orden de cuánto deciden.
+
+## Temperatura: la que manda
+
+<Diagrama
+  src="curva-de-temperatura.webp"
+  alt="Gráfico con la temperatura en el eje horizontal y la germinación en el vertical, sin marcas ni números. Una curva asimétrica sube despacio desde cerca de cero a la izquierda, alcanza un máximo redondeado hacia los dos tercios del recorrido y cae de forma muy abrupta hasta cero a la derecha, con el área bajo ella rellena en verde salvia. Tres llamadas señalan: la subida lenta de la izquierda, LENTO PERO NACE; el máximo redondeado, LA VENTANA; y el desplome de la derecha, AQUÍ SE MUERE. Arriba, LA CURVA NO ES SIMÉTRICA."
+  pie="Pasarse de frío cuesta tiempo. Pasarse de calor cuesta el lote. Los dos extremos no son equivalentes."
+/>
+
+La temperatura gobierna la velocidad de todas las reacciones químicas de la semilla, y por tanto
+gobierna la germinación entera. Cada especie tiene **un rango donde germina y un óptimo dentro de ese
+rango**, y ese dato es lo primero que hay que averiguar de una especie nueva.
+
+Pero lo importante de la curva no es dónde está el óptimo: **es que no es simétrica.**
+
+- **Por debajo del óptimo**, la germinación se ralentiza. Tarda el doble, el triple. Es molesto pero
+  reversible: sube la temperatura y arrancan.
+- **Por encima del óptimo**, hay un umbral a partir del cual **la germinación se detiene y las
+  semillas mueren.** No es lento: es que no van a nacer nunca.
+
+<Advertencia>
+**Esa asimetría tiene una consecuencia operativa directa: ante la duda, quédate corto de calor.**
+
+Si no sabes el rango de una especie, es mucho mejor equivocarte por frío que por calor. Un almácigo
+demasiado fresco tarda más y te impacienta; un almácigo demasiado caliente no tarda: **no nace**, y
+para cuando te das cuenta ya perdiste el lote y varias semanas.
+
+Y en el llano cruceño esto no es una precaución teórica: es el modo de fallo por defecto.
+</Advertencia>
+
+<Dato titulo="El error de la bandeja al sol">
+El error más común y más caro de todo el módulo, y el que casi todo el mundo comete una vez:
+**poner las bandejas al sol para que «tengan calor».**
+
+Una bandeja de plástico oscuro, con poco sustrato y poca inercia térmica, bajo sol directo de
+mediodía, alcanza temperaturas muy por encima de cualquier rango de germinación. El sustrato se
+convierte en un horno de pocos centímetros.
+
+Los almácigos van **a media sombra o bajo malla**, y en el trópico eso no es una recomendación
+delicada: es la diferencia entre germinar y cocinar. **El calor lo da el ambiente, no el sol
+directo.**
+</Dato>
+
+## Humedad: constante, no abundante
+
+<Diagrama
+  src="aire-entre-particulas.webp"
+  alt="Tres columnas de sustrato en corte, cada una dibujada como un rectángulo relleno de partículas redondeadas con una semilla en medio. A la izquierda, los huecos entre partículas están vacíos y la semilla aparece encogida, rotulada SECO. En el centro, una película fina de agua rodea cada partícula pero el centro de los huecos sigue siendo aire, y la semilla está hinchada con una raicilla, rotulada HÚMEDO. A la derecha, todos los huecos están completamente llenos de agua sin nada de aire y la semilla aparece oscura y podrida con burbujas al lado, rotulada ENCHARCADO. Arriba, EL AIRE ENTRE LAS PARTÍCULAS."
+  pie="El agua no ocupa el lugar de la tierra: ocupa el lugar del aire. Y ahí está todo el problema."
+/>
+
+La regla es corta y ya apareció en la primera lección: **húmedo constante, nunca encharcado.** Vale
+la pena entender por qué las dos mitades de esa frase son igual de importantes.
+
+**Por qué constante.** Una semilla en fase de activación —la fase silenciosa, entre la hidratación y
+la salida de la radícula— ya empezó procesos que no puede detener. Si en ese momento se seca, muere.
+No es que se pause: **muere.** Y una vez que asomó la radícula, secarse es letal en cuestión de
+horas.
+
+**Por qué nunca encharcado**, y esto es lo que casi nadie tiene claro: cuando el agua llena todos los
+huecos del sustrato, **desplaza el aire**. Y la semilla en germinación **respira**, e intensamente:
+está quemando sus reservas a toda velocidad y eso consume oxígeno.
+
+Una semilla en sustrato encharcado no se ahoga metafóricamente. **Se asfixia.** Y encima, un sustrato
+sin oxígeno es el hábitat favorito de los hongos que producen damping-off, que es el tema de la
+lección siguiente.
+
+<Advertencia>
+**El exceso de riego mata muchos más almácigos que la sequía**, y por una razón psicológica sencilla:
+la sequía se ve —el sustrato claro, seco al tacto— y da miedo, así que se corrige. El exceso no se
+ve, y además da sensación de estar cuidando bien.
+
+La prueba táctil es la de siempre: **el sustrato apretado en la mano debe humedecerla, no gotear.**
+Si escurre agua entre los dedos, es demasiado.
+</Advertencia>
+
+**Cómo se riega un almácigo:** con **niebla o aspersión fina**, nunca con chorro. Un chorro descoloca
+las semillas pequeñas, las entierra a profundidad aleatoria, compacta la superficie y arrastra el
+sustrato. Y siempre **temprano en la mañana**, para que la superficie se seque durante el día y el
+follaje no pase la noche mojado.
+
+<Dato titulo="El riego por abajo, que resuelve varios problemas a la vez">
+Hay una técnica que vale la pena adoptar desde el principio: **regar por abajo.**
+
+Se apoya la bandeja unos minutos en una fuente con un dedo de agua, y el sustrato la absorbe
+por <Termino slug="riego-por-capilaridad">capilaridad</Termino> hasta saturarse. Después se retira y se deja escurrir.
+
+Tres ventajas de golpe: **no descoloca las semillas**, porque el agua sube en vez de caer; **el
+cuello del plantín y las hojas quedan secos**, que es exactamente lo que necesitas contra los hongos;
+y **la humedad queda pareja en todo el bloque**, sin los puntos secos y encharcados que deja el riego
+por arriba.
+
+La contrapartida es que hay que estar presente y no dejar la bandeja en el agua. Una bandeja olvidada
+media hora en la fuente es un bloque encharcado.
+</Dato>
+
+## Oxígeno: la variable invisible
+
+Ya está dicho a través de la humedad, pero merece su propio nombre porque es la variable que nadie
+mide y todos alteran sin saberlo.
+
+La semilla en germinación necesita oxígeno para respirar. Ese oxígeno viene **del aire que hay entre
+las partículas del sustrato**, y hay tres formas de quitárselo, todas comunes:
+
+- **Encharcar**, que llena los poros de agua.
+- **Compactar**, apretando el sustrato al llenar la bandeja o al regar con chorro.
+- **Sembrar demasiado profundo**, que aleja la semilla del aire de la superficie.
+
+Las tres se evitan con decisiones de un segundo: **llenar sin apretar, regar suave, sembrar
+superficial.**
+
+## Luz: casi siempre indiferente, a veces decisiva
+
+La luz es la variable con más mitos alrededor. La realidad es que **para la mayoría de las especies
+es indiferente**: la semilla está enterrada, a oscuras, y germina perfectamente.
+
+Pero hay dos excepciones que sí importan:
+
+**Semillas que necesitan luz para germinar.** Son casi siempre **semillas muy pequeñas**, y la lógica
+es preciosa: una semilla diminuta tiene reservas para muy pocos centímetros de crecimiento. Si
+germinara enterrada a cinco centímetros, se quedaría sin combustible antes de llegar a la superficie
+y moriría a oscuras. Así que **usa la luz como señal de que está cerca de la superficie.**
+
+Esas se siembran **encima del sustrato**, sin cubrir, o apenas espolvoreadas.
+
+**Semillas que necesitan oscuridad.** Menos frecuentes, pero existen. Se cubren bien.
+
+<Diagrama
+  src="profundidad.webp"
+  alt="Dos paneles en corte lateral de sustrato con una semilla dentro. A la izquierda, una semilla diminuta apoyada casi en la superficie, con una capa finísima de sustrato encima y una flecha corta hasta la luz. A la derecha, una semilla grande enterrada bastante más abajo, con una capa gruesa encima y una flecha larga hasta la luz. Debajo, LA PROFUNDIDAD SE MIDE EN VECES EL TAMAÑO DE LA SEMILLA."
+  pie="La profundidad no se mide en centímetros: se mide en veces el tamaño de la semilla, porque es un presupuesto de reservas."
+/>
+
+De ahí sale la regla de profundidad que ya viste en la primera lección y que aquí se cierra: **se
+siembra a unas dos o tres veces el diámetro de la semilla.** No es una convención estética: es un
+presupuesto de energía. Y como el error de sembrar hondo es fatal mientras que el de sembrar
+superficial solo es incómodo, **ante la duda, más superficial.**
+
+## El sustrato
+
+<Diagrama
+  src="sustrato.webp"
+  alt="Un recipiente de mezcla grande visto en corte, con el contenido dividido en tres cuñas de material distinto y una llamada desde cada una: materia orgánica oscura y desmenuzada, RETIENE AGUA; granos claros gruesos y angulosos, DEJA PASAR EL AIRE; y fibras finas y claras, DA CUERPO. Encima del recipiente, tres iconos tachados con trazo terracota —una pala de tierra del terreno, un grumo con hifas y una maleza brotando— junto al rótulo TIERRA DEL TERRENO NO. Arriba, UN SUSTRATO NO ES TIERRA."
+  pie="Tres funciones distintas, ninguna de las cuales la cumple bien la tierra del terreno tal como está."
+/>
+
+Aquí hay una afirmación que sorprende y que conviene decir sin rodeos: **la tierra del terreno no
+sirve para <Termino slug="almacigo">almácigo</Termino>.** Ni siquiera la buena.
+
+Tres razones, todas suficientes por sí solas:
+
+**Se compacta.** En un volumen pequeño, regada todas las mañanas, la tierra se apelmaza y pierde
+justo los poros de aire que la semilla necesita.
+
+**Trae hongos.** La tierra viva está llena de microorganismos, y la mayoría son buenos o inocuos en
+campo abierto. En una bandeja tibia, húmeda y llena de plantines recién nacidos y sin defensas, los
+patógenos de suelo encuentran condiciones perfectas.
+
+**Trae semillas de malezas.** Y en una bandeja de plantines, distinguir el plantín de la maleza
+cuando ambos tienen dos hojas es difícil y hacerlo mal es caro.
+
+Un <Termino slug="sustrato">sustrato</Termino> de almácigo cumple **tres funciones a la vez**, y
+por eso siempre es una mezcla:
+
+- **Retener agua**, para no secarse entre riegos. Lo aporta la materia orgánica fina: compost muy
+  maduro y tamizado, turba, fibra de coco.
+- **Dejar pasar el aire**, para que la semilla respire y el agua escurra. Lo aportan las partículas
+  gruesas: arena gruesa lavada, cascarilla de arroz, perlita.
+- **Dar cuerpo**, para que el bloque se sostenga y
+  el <Termino slug="cepellon">cepellón</Termino> no se desarme al trasplantar.
+
+<Dato titulo="Cómo se comprueba una mezcla, sin instrumentos">
+Mezcla, humedece y aprieta un puñado en la mano.
+
+**Si al abrir la mano el puñado mantiene la forma pero se desmorona al tocarlo con un dedo**, la
+mezcla está bien.
+
+**Si queda una bola compacta y pegajosa**, tiene demasiado fino: falta parte gruesa.
+
+**Si se desarma sola en cuanto abres la mano**, tiene demasiado grueso: no va a sostener el cepellón
+y se va a secar muy rápido.
+
+Es la misma prueba de puño que usaste en el módulo de suelo, aplicada a un contexto distinto. La
+diferencia es que aquí sí puedes cambiar la mezcla hasta que salga bien, cosa que con el suelo del
+terreno no podías.
+</Dato>
+
+## El envase decide la raíz
+
+<Diagrama
+  src="envase-y-raiz.webp"
+  alt="Dos paneles en corte de envases de vivero con una planta joven dentro. A la izquierda, una bandeja ancha y poco profunda donde las raíces se extienden de lado y dan vueltas por el fondo, rotulada RAÍZ QUE DA VUELTAS. A la derecha, un tubete alto, estrecho y cónico con nervaduras verticales por dentro, donde la raíz baja recta sin enroscarse, rotulada RAÍZ QUE BAJA DERECHO. Debajo, EL ENVASE DECIDE LA FORMA DE LA RAÍZ."
+  pie="Una raíz enroscada no se endereza al trasplantar: se queda enroscada toda la vida del árbol."
+/>
+
+Esta es la decisión que menos se piensa y que más consecuencias tiene a largo plazo, sobre todo si
+vas a producir árboles.
+
+Una raíz que llega al fondo de un envase no se detiene: **gira y sigue creciendo en círculo.** Y esa
+espiral **no se corrige al trasplantar.** El árbol crece con un sistema radicular enroscado, se
+sostiene mal, sufre más en la seca y, años después, puede caerse con un viento fuerte. En el llano
+cruceño, con surazos, eso no es una hipótesis remota.
+
+Por eso los envases de vivero forestal son **altos, estrechos y cónicos, con nervaduras verticales
+internas** que guían la raíz hacia abajo, y con el fondo abierto: al llegar al aire, **la punta de la
+raíz se seca y se detiene**, y la planta responde ramificando hacia los lados en vez de enroscarse.
+Eso se llama <Termino slug="poda-aerea-de-raiz">poda aérea de raíz</Termino>, y es un mecanismo
+elegante: **el aire hace de tijera.**
+
+Para hortalizas de ciclo corto, que van a estar pocas semanas en la bandeja, esto importa mucho
+menos. Para un árbol que va a vivir cuarenta años, es de las cosas que más importan.
+
+<ContextoBolivia>
+Cuatro consecuencias concretas de hacer almácigos en el llano cruceño.
+
+**El calor es el enemigo, no el frío.** Durante casi todo el año, el problema no es que las bandejas
+no lleguen a temperatura: es que se pasan. Media sombra o malla, siempre, y bandejas a la sombra en
+las horas centrales.
+
+**Salvo durante el surazo, y ahí se invierte.** Entre mayo y septiembre, una entrada de aire frío
+puede bajar la temperatura nocturna lo suficiente como para frenar en seco un almácigo de especies
+tropicales durante días. Con una previsión de surazo, conviene cubrir las bandejas por la noche con
+plástico o llevarlas a resguardo, y **no sembrar especies sensibles justo antes** de que entre uno.
+
+**La humedad ambiente alta juega en contra.** Durante las lluvias, la humedad del aire hace que el
+sustrato se seque despacio, y eso —que suena cómodo— es peligroso: es fácil regar por costumbre sobre
+un sustrato que todavía estaba húmedo y encharcarlo. **Riega por comprobación, no por horario.**
+
+**Y el material grueso es fácil de conseguir:** la cascarilla de arroz es abundante y barata en Santa
+Cruz, y es un excelente componente de aireación para sustratos. Es un caso claro de aprovechar lo
+que hay en la zona en lugar de comprar perlita importada.
+
+Sobre el calendario: la siembra de almácigo se planifica **contando hacia atrás desde el trasplante**,
+y el trasplante en el llano se hace al empezar las lluvias, para que la planta se establezca con agua
+de arriba. Eso pone la siembra de almácigo en las últimas semanas de la seca, cuando hace más calor
+y hay menos agua, que es justo la parte del año que más exige del vivero.
+</ContextoBolivia>
+
+## Aplicación práctica
+
+<AplicarRizoma>
+Para el vivero de Rizoma del Sur, esto define la mesa de propagación entera.
+
+**Ubicación: bajo malla de media sombra, no a pleno sol.** Es la decisión número uno y la que más
+lotes salva. Si el almácigo está a pleno sol, ninguna de las demás decisiones importa.
+
+**Mesa elevada, no bandejas en el suelo.** Elevar el almácigo a la altura de trabajo resuelve tres
+cosas de golpe: la espalda de quien trabaja, el acceso de hormigas y otros bichos del suelo, y las
+salpicaduras de tierra al llover, que son un vector de patógenos. Y facilita la poda aérea de raíz,
+porque el fondo del envase queda al aire.
+
+**Sustrato mezclado, nunca tierra del terreno.** Con lo que hay disponible aquí, una base razonable
+es compost muy maduro y tamizado para retención, cascarilla de arroz para aireación, y arena gruesa
+lavada para cuerpo. Las proporciones se ajustan con la prueba del puño hasta que el puñado mantenga
+la forma y se desmorone al tocarlo.
+
+**Riego por abajo siempre que se pueda**, y por aspersión fina cuando no. Temprano en la mañana. Y
+regar **comprobando el sustrato con el dedo**, no por costumbre horaria, especialmente durante las
+lluvias.
+
+**Envases altos y estrechos con fondo abierto para todo lo que sea árbol**, y bandejas de celdas
+convencionales para hortaliza de ciclo corto. Si vas a producir nativas para reforestación o venta,
+esta decisión define la calidad de tu producto de forma que se nota años después.
+
+**Un termómetro de máxima y mínima en la mesa de propagación.** Es barato y te dice lo que de verdad
+está pasando ahí, que no es lo mismo que la temperatura del aire libre. Anota máxima y mínima cada
+día durante una temporada y vas a tener el perfil térmico real de tu mesa, que es exactamente el tipo
+de serie que el módulo de automatización va a querer capturar con un sensor.
+
+Y una recomendación de calendario que ahorra disgustos: **no siembres especies sensibles justo antes
+de un surazo previsto.** Una consulta al pronóstico antes de sembrar cuesta un minuto.
+</AplicarRizoma>
+
+## Lo que hay que llevarse
+
+No haces germinar nada: **construyes un entorno y te apartas**, y lo que rompe un entorno no es el
+valor medio sino la oscilación.
+
+**La temperatura manda, y su curva no es simétrica:** pasarse de frío cuesta tiempo, pasarse de calor
+cuesta el lote. Ante la duda, quédate corto de calor, y **nunca pongas las bandejas al sol.**
+
+Humedad **constante pero nunca encharcada**, porque el agua no desplaza tierra: desplaza aire, y la
+semilla en germinación respira intensamente. El exceso de riego mata más almácigos que la sequía
+porque no se ve. **Riego por abajo** cuando se pueda, o aspersión fina, temprano.
+
+**La tierra del terreno no sirve**: se compacta, trae hongos y trae malezas. Un sustrato es una
+mezcla que retiene agua, deja pasar aire y da cuerpo, y se comprueba con la prueba del puño.
+
+Y **el envase decide la forma de la raíz para toda la vida de la planta**: alto, estrecho, con
+nervaduras y fondo abierto para árboles, porque una raíz enroscada no se endereza nunca.

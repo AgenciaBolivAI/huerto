@@ -1,0 +1,111 @@
+{
+  "preguntas": [
+    {
+      "id": "no-es-una-papa",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la batata no se propaga como una papa?",
+      "opciones": [
+        "La papa es un tubérculo de tallo y tiene yemas repartidas por su superficie.",
+        "La batata es una raíz engrosada y no tiene yemas preformadas.",
+        "Por eso su material de siembra normal es la guía, no la raíz.",
+        "Porque la batata es una solanácea de ciclo más largo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es solanácea: es convolvulácea, de la familia de la campanilla, y no tiene nada que ver con la papa más allá del nombre en inglés. Rizoma, tubérculo de tallo, cormo, bulbo y raíz engrosada se parecen por fuera y responden a operaciones distintas: es el error de programar contra la representación en vez de contra la interfaz."
+    },
+    {
+      "id": "esqueje",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se hace un plantín a partir de una guía?",
+      "opciones": [
+        "Cortando la punta de una guía vigorosa, un tramo con varios nudos.",
+        "Quitando las hojas de la mitad inferior, que es la que va enterrada.",
+        "Enterrando en diagonal unos dos tercios de la longitud.",
+        "Aplicando hormona de enraizamiento y nebulización, como en los esquejes leñosos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hace falta nada de eso: enraíza sola en cuestión de días. Las puntas enraízan mejor y son material más sano que los tramos viejos de la base. Cada nudo enterrado emite raíces."
+    },
+    {
+      "id": "colonizadora",
+      "tipo": "verdadero_falso",
+      "enunciado": "Que las guías enraícen en cada nudo donde tocan el suelo es siempre una ventaja.",
+      "respuesta": false,
+      "explicacion": "Depende de qué estés produciendo. Si buscas raíz, cada nudo enraizado es un punto de crecimiento que compite y reparte la producción en muchos sitios pequeños. Si buscas material de siembra, es producción gratuita de plantines enraizados. Y en un vivero además coloniza: las guías se meten en los envases vecinos y clavan las macetas al suelo."
+    },
+    {
+      "id": "nitrogeno",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un cultivo espectacular de hoja puede dar una cosecha ridícula?",
+      "opciones": [
+        "El exceso de nitrógeno favorece el crecimiento vegetativo: hoja y tallo.",
+        "La raíz engrosada es una reserva, y la planta la llena cuando tiene excedente, no en plena expansión.",
+        "La batata rinde mejor en suelo pobre que en suelo abonado a fondo.",
+        "El problema se corrige aumentando el riego."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es un problema de asignación de recursos, no de agua. La conclusión práctica es contraintuitiva: encaja mejor después de un cultivo exigente que justo después de una enmienda fuerte, y eso hay que meterlo en la planilla de rotación del vivero."
+    },
+    {
+      "id": "degeneracion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué consiste la degeneración por virus de esta especie?",
+      "opciones": [
+        "Los virus se acumulan ciclo tras ciclo de multiplicación clonal.",
+        "También los transmiten mosca blanca y pulgones.",
+        "El material rinde cada vez menos sin que la planta muera ni dé un síntoma dramático.",
+        "Se resuelve aplicando un tratamiento al material antes de plantar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hay tratamiento que cure un virus en campo. Lo que sí funciona es la selección positiva: marcar las mejores plantas antes de la cosecha y sacar de ellas el material del ciclo siguiente, en vez de usar lo que sobra al final, que es lo que hace todo el mundo."
+    },
+    {
+      "id": "gorgojo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se maneja el gorgojo de la batata?",
+      "opciones": [
+        "Aporcando, para tapar con tierra las grietas y la parte alta de las raíces.",
+        "Regando sin permitir sequías largas, porque la sequía es la que abre las grietas.",
+        "Usando material de siembra limpio y no dejando raíces olvidadas en el terreno.",
+        "Aplicando insecticida al follaje, que es donde se alimenta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El daño está dentro de la raíz, no en el follaje: las larvas hacen galerías y la planta responde produciendo compuestos amargos que la vuelven incomible entera. Y el acceso principal son las grietas que abre la arcilla al secarse, así que todo el manejo consiste en cerrar esa puerta."
+    },
+    {
+      "id": "producto",
+      "tipo": "opcion_multiple",
+      "enunciado": "Si el camote se consigue en cualquier parte, ¿qué vende un vivero?",
+      "opciones": [
+        "Material seleccionado y sano, que rinde más que el que circula de mano en mano.",
+        "Una propiedad del material, igual que el ají dulce garantizado sin picor.",
+        "La diferencia se puede demostrar con una parcela de comparación.",
+        "Precio más bajo que los productores establecidos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Competir por precio contra productores establecidos es mala idea para un vivero pequeño. Competir por sanidad del material de siembra es una posición mucho mejor, y es donde un vivero tiene ventaja estructural sobre un productor."
+    },
+    {
+      "id": "batata-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Organiza la producción de batata en Rizoma del Sur: material, ubicación, manejo y propuesta de venta.",
+      "respuestaModelo": "El material de partida lo consigo localmente, porque aquí el camote se cultiva y se conoce. Pero elijo bien de dónde: material de plantas de buen aspecto, no lo que sobre al final de una cosecha.\n\nMonto un banco de plantas madre en pleno sol y en suelo suelto, y lo mantengo regado durante la seca. Ese banco es el activo real: mientras exista, el material de siembra es infinito y gratuito, porque cada vez que corto puntas la planta ramifica y produce más guías. Si dejo que se seque todo en agosto me quedo sin material para la temporada siguiente, que es la forma tonta de perder un cultivo que no cuesta nada multiplicar.\n\nLe doy un sitio delimitado, porque coloniza. Guías rastreras enraizando entre los envases de las demás especies clavan macetas al suelo y se meten donde no deben. Una cama con borde definido, o cultivo sobre superficie que no permita enraizar, y recorrido periódico recogiendo guías.\n\nEl plantín se hace en minutos: corto la punta de una guía vigorosa con varios nudos, quito las hojas de la mitad inferior y entierro dos tercios en diagonal. Sin hormona, sin nebulización, sin sustrato especial. Riego hasta que arranque.\n\nLa práctica que convierte esto en producto diferenciado es la selección positiva: marcar en el campo, antes de cosechar, las plantas de mejor aspecto —vigorosas, follaje limpio, sin moteados— y sacar de ellas el material del ciclo siguiente. Eso frena la degeneración por virus, que es lo que hace que el material que circula de mano en mano rinda cada vez menos sin que nadie lo note.\n\nY lo demuestro con una parcela de comparación: material seleccionado al lado de material común, misma fecha y mismo manejo. Un cliente que ve la diferencia con sus ojos no necesita más explicación. Igual que con el ají dulce, no vendo la especie, vendo una propiedad de mi material.\n\nEn fertilización, poco nitrógeno. En terreno recién enmendado con compost fuerte da guía y no raíz, así que encaja mejor después de un cultivo exigente que justo después de abonar. Eso va en la planilla de rotación.\n\nCamellón alto y mullido, por drenaje y porque la raíz tiene que empujar suelo suelto para engrosar. En la arcilla del sitio, sin camellón se cosechan raíces pequeñas y deformes.\n\nContra el gorgojo, riego constante y aporque. Las arcillas expansivas de la zona se agrietan mucho al secarse y esa grieta es la puerta de entrada; las larvas hacen galerías dentro y la raíz se vuelve amarga entera. Cosecho a tiempo y no dejo raíces olvidadas en el terreno, que es donde la población sobrevive de una campaña a la siguiente.\n\nSobre el mercado, aquí no hay que crearlo: hay que competir dentro de uno que existe, y no por precio. Averiguo qué variedades circulan —de pulpa anaranjada, blanca o morada—, cuáles prefiere el mercado local y si hay material mejorado disponible a través de los servicios técnicos del departamento.\n\nY aprovecho un producto lateral: las variedades ornamentales de follaje de colores, que son la misma especie, se propagan exactamente igual y se venden como planta de cobertura y de maceta colgante. Misma técnica, dos mercados distintos.",
+      "criterios": [
+        "Consigue material local eligiendo plantas de buen aspecto.",
+        "Monta un banco de madres en pleno sol y lo mantiene regado en la seca.",
+        "Delimita el espacio por el carácter colonizador de la planta.",
+        "Describe el esqueje de guía correctamente y sin insumos innecesarios.",
+        "Aplica selección positiva marcando plantas antes de la cosecha.",
+        "Explica la degeneración por virus y su efecto sobre el rendimiento.",
+        "Propone una parcela de comparación como demostración comercial.",
+        "Limita el nitrógeno y lo sitúa en la rotación.",
+        "Usa camellón alto y mullido por drenaje y por forma de la raíz.",
+        "Maneja el gorgojo con aporque, riego constante y limpieza del terreno.",
+        "Reconoce que el mercado ya existe y no compite por precio.",
+        "Averigua variedades locales y fuentes de material mejorado.",
+        "Aprovecha las variedades ornamentales de follaje como segundo producto."
+      ],
+      "explicacion": "Esta ficha es un buen ejemplo de que la ventaja competitiva de un vivero pequeño casi nunca está en tener la especie, sino en tener el mejor material de esa especie. Y eso se consigue con un procedimiento barato —marcar y seleccionar—, no con inversión."
+    }
+  ]
+}

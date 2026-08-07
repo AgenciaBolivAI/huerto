@@ -1,0 +1,96 @@
+{
+  "preguntas": [
+    {
+      "id": "dos-criterios",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Con qué criterio se elige la sección de un cable en una instalación fotovoltaica?",
+      "opciones": [
+        "Por corriente admisible, para que el cable no se caliente peligrosamente.",
+        "Por caída de tensión, para que la pérdida se mantenga dentro de un límite razonable.",
+        "Se calculan los dos y se compra el que exija más sección.",
+        "Basta con el criterio de corriente admisible: si el cable aguanta la corriente, el circuito está bien resuelto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El criterio de corriente admisible es de seguridad y el de caída es de rendimiento, y son independientes. Un cable puede aguantar la corriente sin quemarse y aun así comerse un porcentaje notable de la energía todos los días durante veinte años, en silencio y sin fallar nunca. En fotovoltaica el criterio de caída suele ser el que manda."
+    },
+    {
+      "id": "doce-o-cuarenta-y-ocho",
+      "tipo": "verdadero_falso",
+      "enunciado": "Pasar el sistema de 12 V a 48 V reduce la caída de tensión porcentual a la cuarta parte.",
+      "respuesta": false,
+      "explicacion": "Falso, la reduce mucho más: a la dieciseisava parte. Actúan dos efectos multiplicándose. La corriente baja cuatro veces, así que la caída en voltios baja cuatro veces; y esa caída se compara con una tensión de sistema cuatro veces mayor, así que el porcentaje vuelve a dividirse por cuatro. Es la misma razón por la que la red de distribución transporta a decenas de miles de voltios."
+    },
+    {
+      "id": "arco",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un interruptor de corriente alterna no sirve en el lado de continua?",
+      "opciones": [
+        "Porque la alterna pasa por cero cien veces por segundo y en cada cruce el arco se queda sin alimentación y se apaga solo.",
+        "Porque la continua no cruza nunca por cero, así que el arco se sostiene y se alarga mientras los contactos se separan.",
+        "Porque un dispositivo de continua necesita cámaras de extinción más largas o imanes que soplen el arco.",
+        "Porque la corriente continua circula siempre a más tensión que la alterna."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La tensión no tiene nada que ver: un sistema de 24 V continua es de baja tensión y el problema aparece igual. Lo que cambia es la forma de onda. Un interruptor de alterna puede parecer que funciona durante meses, hasta el día en que se abre con sol a tope y con carga; entonces el arco no se extingue, los contactos se sueldan o se destruyen, y hay fuego dentro del tablero."
+    },
+    {
+      "id": "que-protege-el-fusible",
+      "tipo": "verdadero_falso",
+      "enunciado": "El fusible de un circuito se dimensiona en función del equipo que alimenta.",
+      "respuesta": false,
+      "explicacion": "Falso: se dimensiona en función del cable que tiene detrás. Si el cable puede llevar cierta corriente sin calentarse en exceso, la protección corta antes de llegar a ella, de modo que pase lo que pase aguas abajo el cable nunca arda dentro de una pared. El equipo se protege solo o no se protege; el cable siempre."
+    },
+    {
+      "id": "fusible-principal",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Dónde va el fusible más importante de toda la instalación y por qué?",
+      "opciones": [
+        "Lo más cerca posible del borne positivo de la batería.",
+        "Porque protege el cable desde ese borne en adelante, y lo que quede antes del fusible queda desprotegido.",
+        "Porque un banco de baterías puede entregar corrientes de cortocircuito de miles de amperios.",
+        "En la salida del inversor, porque es donde hay más tensión."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El banco es la fuente de corriente más brutal de la instalación, y el tramo batería-inversor es a la vez el más corto y el que lleva la corriente más grande. Un destornillador que cae entre bornes sin fusible no es una anécdota: es un incendio. Distinto es el caso de los fusibles de rama del arreglo, que solo hacen falta con tres o más ramas en paralelo: con una sola rama el cable ya está dimensionado para lo máximo que esa rama puede entregar."
+    },
+    {
+      "id": "dos-tierras",
+      "tipo": "verdadero_falso",
+      "enunciado": "Clavar una jabalina para la estructura de los paneles y otra independiente para el tablero de la casa es una buena práctica, porque duplica la protección.",
+      "respuesta": false,
+      "explicacion": "Falso, y es un error frecuente. Dos jabalinas en el mismo terreno casi nunca están al mismo potencial, y esa diferencia aparece exactamente donde alguien toca las dos masas a la vez, o entre dos equipos unidos por un cable de datos. Una sola tierra, o varias unidas entre sí por un conductor. Nunca islas independientes."
+    },
+    {
+      "id": "conector-flojo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un conector MC4 mal prensado no falla de golpe, sino años después?",
+      "opciones": [
+        "Porque un contacto flojo tiene resistencia, y una resistencia con corriente se calienta.",
+        "Porque al calentarse el metal se oxida, al oxidarse sube la resistencia, y al subir la resistencia se calienta más.",
+        "Porque es un lazo de realimentación positiva lento, que termina en un conector derretido o en un arco permanente.",
+        "Porque el plástico del conector va absorbiendo humedad hasta que deja de aislar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El mecanismo es puramente térmico y se retroalimenta: cada vuelta del lazo empeora la siguiente. Por eso la prueba de dos segundos —tirar del cable con la mano después de armar cada conector— ahorra tantos disgustos, y por eso no se mezclan marcas de conector aunque encajen físicamente."
+    },
+    {
+      "id": "cablear-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Vas a cablear el sistema del vivero. Describe cómo tratas cada tramo, qué protecciones pones y dónde, cómo resuelves la tierra, y qué documentación dejas hecha.",
+      "respuestaModelo": "Trato los tres tramos por separado, porque tienen exigencias distintas y comprar un solo rollo de cable para todo sería un error.\n\nDel arreglo al cuarto de equipos es el tramo largo y a la intemperie. Antes de cotizar mido la distancia real por donde va a ir el cable, siguiendo el recorrido con sus subidas y curvas, no en línea recta sobre el terreno. Calculo la sección por los dos criterios —corriente admisible y caída de tensión— y me quedo con el que pida más cobre, que aquí casi seguro será la caída. Uso cable solar con protección ultravioleta, sin excepción, porque un cable común pierde el aislamiento en pocos años bajo este sol. El seccionador de continua lo monto a la entrada del cuarto, accesible, para poder cortar sin tener que subir al techo.\n\nDe la batería al inversor es el tramo corto y gordo: es por donde pasa la corriente más grande del sistema, y el fusible o magnetotérmico va pegado al borne positivo de la batería, no a un metro de distancia, porque lo que quede antes del fusible está desprotegido. Los dos cables, de la misma longitud.\n\nLa distribución de 220 V ya es territorio del módulo de albañilería: tablero, magnetotérmicos por circuito y diferencial. El diferencial hace falta aunque esté aislado de la red, porque la fuga que compara puede ser una persona. Circuitos separados para bomba, galpón y vivienda, de modo que revisar la bomba no obligue a apagar todo lo demás.\n\nLas protecciones quedan así: seccionador de continua entre arreglo y regulador, fusible entre regulador y batería, fusible principal pegado al borne de batería, protecciones de alterna a la salida del inversor, y fusibles de rama solo si termino con tres o más ramas en paralelo. Y un DPS en la entrada de continua, que dada la actividad de tormentas de octubre a abril es el seguro más barato del sistema: en campo abierto mi estructura puede ser el punto más alto de varias hectáreas, y no hace falta que caiga un rayo encima para que se induzca un pico en decenas de metros de cable.\n\nLa tierra: una sola jabalina, clavada donde el suelo se mantenga húmedo en la seca —cerca de la descarga del tanque es el sitio natural— y clavada profunda, buscando el estrato que no se seca, porque las arcillas de aquí se contraen y se agrietan alrededor de la varilla justo en la temporada seca. A esa única jabalina se unen el marco de la estructura, los gabinetes metálicos y la tierra de la instalación de 220 V. Un solo punto, un solo potencial.\n\nY dejo documentación: cada cable etiquetado en los dos extremos, y el unifilar de lo que quedó realmente construido, con secciones, longitudes y calibres de fusible. Es el mismo hábito que el diagrama de arquitectura de un sistema, y por la misma razón: dentro de tres años nadie recuerda por dónde va nada, y quien abra el tablero puede que no sea yo.",
+      "criterios": [
+        "Separa los tres tramos y les da tratamiento distinto.",
+        "Mide la distancia real del recorrido y calcula por los dos criterios.",
+        "Especifica cable solar con protección ultravioleta en el tramo exterior.",
+        "Coloca el fusible principal pegado al borne positivo de la batería y justifica por qué.",
+        "Mantiene el diferencial en alterna aunque el sistema esté aislado.",
+        "Sitúa correctamente seccionador, fusibles y DPS, y condiciona los fusibles de rama al paralelo.",
+        "Justifica el DPS por la actividad de tormentas de la temporada de lluvias.",
+        "Resuelve la tierra con una sola jabalina, en zona húmeda y profunda por las arcillas expansivas.",
+        "Une marco, gabinetes y tierra de 220 V al mismo punto.",
+        "Deja cables etiquetados y un unifilar de lo construido."
+      ],
+      "explicacion": "Fíjate en que casi nada de esto se ve en una foto del sistema terminado, y en que el cableado y las protecciones son menos del diez por ciento de la factura. Esa desproporción entre lo que cuesta y lo que decide es exactamente la razón por la que se hace mal tantas veces."
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+De todo lo que puedes hacer con energía solar en un vivero, **esto es lo más rentable, y por bastante
+margen.** No porque bombear agua consuma poco —consume mucho, probablemente sea tu carga más grande—
+sino porque en el bombeo se puede eliminar el componente más caro, más frágil y más perecedero de
+todo el sistema.
+
+La batería.
+
+Y no se elimina con un truco ni renunciando a nada: se elimina **cambiando de lugar el
+almacenamiento.**
+
+## La idea que ordena toda la lección
+
+<Diagrama
+  src="con-y-sin-bateria.webp"
+  alt="Dos cadenas de sistema comparadas. Arriba, CON BATERÍA: panel, bloque REGULADOR, batería, bloque INVERSOR, bomba y una gota de agua, con una flecha hacia abajo y una cruz roja bajo la batería. Abajo, SIN BATERÍA: panel, bloque VARIADOR, bomba, un tanque elevado sobre torre con agua dentro y una tubería que baja hasta una gota, con un tilde verde junto al tanque. Debajo, EL TANQUE ES LA BATERÍA."
+  pie="Dos cadenas que hacen lo mismo. La de abajo tiene menos piezas, ninguna de ellas perecedera."
+/>
+
+Un sistema solar con baterías guarda **energía** para usarla cuando no hay sol. Un sistema de bombeo
+solar directo no guarda energía: **guarda agua arriba.**
+
+La bomba trabaja cuando hay sol, y solo cuando hay sol. Lo que sube al tanque se queda ahí, y por la
+noche o en un día nublado el riego sale del tanque por gravedad, sin que ninguna bomba se encienda.
+
+<Analogia>
+Es un cambio de capa de almacenamiento. En lugar de guardar el recurso en su forma cara y volátil
+—energía eléctrica en una batería química que se degrada con cada ciclo— lo guardas **ya
+transformado en el producto final**, en un medio que no se degrada.
+
+Es la diferencia entre cachear la consulta y cachear el resultado renderizado. El segundo cache es
+más tonto, ocupa más espacio y no sirve para nada más. Y por eso mismo es más barato, más simple y
+prácticamente no falla.
+</Analogia>
+
+Las consecuencias de ese cambio son enormes, y conviene enumerarlas sin adornos:
+
+- **No hay batería que reemplazar cada pocos años.** Ese es el costo recurrente que hace caro un
+  sistema solar a largo plazo, y desaparece entero.
+- **No hay banco que ventilar, ni BMS, ni profundidad de descarga que respetar.**
+- **No hace falta inversor** si la bomba es de continua, ni onda senoidal pura, ni pico de arranque
+  que dimensionar contra un inversor.
+- **El almacenamiento no se degrada.** Un tanque de agua a los quince años guarda exactamente los
+  mismos litros que el primer día. Una batería a los quince años no existe.
+- **Y el almacenamiento es baratísimo por unidad guardada.** Ampliar la autonomía es comprar otro
+  tanque, no otro banco de baterías.
+
+<Dato titulo="El tanque elevado ya estaba en el proyecto">
+Fíjate en que **esto no añade una pieza al vivero: aprovecha una que ya tenías que construir.**
+
+En el módulo de albañilería el depósito elevado ya era necesario, porque es lo que da presión al
+riego por gravedad. Aquí ese mismo depósito, sin cambiarle nada, hace además de almacenamiento
+energético del sistema solar.
+
+Un componente que cumple dos funciones sin costo adicional es exactamente lo que hay que buscar en un
+proyecto con presupuesto limitado. Y es también la razón por la que esta lección va después de la de
+albañilería y no antes: la decisión de elevar el tanque ya estaba tomada por otro motivo.
+</Dato>
+
+## Qué se pierde con este esquema
+
+Sería deshonesto vender esto como gratis. Hay tres renuncias reales.
+
+**Primera: la bomba solo trabaja de día.** Si necesitas presión de bomba a las tres de la mañana
+—para una electroválvula que exige presión de red, por ejemplo— este esquema no te la da. La
+gravedad da una presión modesta y constante, no la de una bomba.
+
+**Segunda: el sistema no da electricidad para nada más.** Un sistema de bombeo directo bombea. No
+carga el teléfono, no enciende luces, no alimenta la heladera. Si quieres eso, necesitas el otro
+sistema, con su batería.
+
+**Tercera: la autonomía la fija el tanque, y el tanque tiene un límite físico.** Tres días de lluvia
+cerrada con un tanque de un día de consumo son tres días de problema. La solución es tanque más
+grande, pero un tanque más grande arriba pesa mucho y la torre se encarece rápido.
+
+<Advertencia>
+**El agua pesa una tonelada por metro cúbico.**
+
+Es la cifra que hay que tener presente antes de entusiasmarse con el tamaño del tanque. Un depósito
+de 5.000 litros lleno son cinco toneladas **a cuatro metros de altura**, sobre una estructura que
+además tiene que aguantar el surazo.
+
+Esa carga no es la del tanque vacío que compras y levantas entre dos personas. La torre y sus
+fundaciones se calculan con el tanque lleno, con el mismo criterio del módulo de albañilería, y en
+suelo arcilloso expansivo eso significa fundaciones serias.
+
+Duplicar el volumen del tanque duplica la carga sobre la torre. Es la restricción que en la práctica
+limita la autonomía de este esquema, mucho antes que el precio del plástico.
+</Advertencia>
+
+## Los números del bombeo
+
+<Diagrama
+  src="altura-manometrica.webp"
+  alt="Corte vertical de un pozo y un tanque elevado. A la izquierda, la perforación baja hasta una bomba sumergible, con el nivel del agua en reposo marcado por una línea y, más abajo, una segunda línea a trazos con el nivel mientras la bomba trabaja. A la derecha, un tanque sobre torre con su superficie de agua cerca del borde. Una tubería sube de la bomba y cruza hasta el tanque. Cotas rotuladas NIVEL ESTÁTICO desde el agua en reposo hasta el terreno, ABATIMIENTO entre las dos líneas de agua, ALTURA DE ELEVACIÓN desde el terreno hasta la superficie del tanque, PÉRDIDAS EN TUBERÍA junto al recorrido, y una llave general que abarca todo el desnivel, ALTURA MANOMÉTRICA TOTAL."
+  pie="Todo lo que la bomba tiene que vencer, sumado. El error clásico es medir solo el trozo que se ve."
+/>
+
+Una bomba se especifica con dos números: **cuánta agua mueve** y **a qué altura la sube**. Y esos dos
+números están acoplados, cosa que las fichas comerciales tienden a esconder.
+
+**El <Termino slug="caudal">caudal</Termino>** es cuántos litros por hora entrega. Es lo que
+necesitas para regar.
+
+**La <Termino slug="altura-manometrica-total">altura manométrica total</Termino>** es todo lo que la
+bomba tiene que vencer, y aquí está el error de principiante: no es la altura de la torre. Es la suma de cuatro cosas:
+
+<Formula explicacion="La altura total contra la que trabaja una bomba, expresada en metros de columna de agua. Las cuatro componentes se suman: si te olvidas de una, compras una bomba que no llega.">
+altura manométrica = nivel estático + abatimiento + altura de elevación + pérdidas en tubería
+</Formula>
+
+- **<Termino slug="nivel-estatico">Nivel estático</Termino>**: la profundidad del agua en el pozo
+  cuando nadie bombea, medida desde el terreno.
+- **<Termino slug="abatimiento-del-pozo">Abatimiento</Termino>**: cuánto **baja** ese nivel mientras la bomba
+  trabaja, porque el pozo se vacía más rápido de lo que el acuífero lo rellena. Es el número que
+  nadie mide y todos subestiman.
+- **Altura de elevación**: del terreno hasta la superficie del agua en el tanque, no hasta la base
+  del tanque.
+- **Pérdidas en tubería**: la fricción del recorrido, que ya conoces del módulo de albañilería
+  como <Termino slug="perdida-de-carga">pérdida de carga</Termino>. Con tubería fina y recorrido largo, esta componente sola puede ser varios metros.
+
+<Dato titulo="Un dato que solo se obtiene midiendo">
+El abatimiento no está en ningún catálogo y no se puede estimar bien: depende del acuífero, no de tu
+instalación. La forma de conocerlo es **medirlo**, con la bomba trabajando: se baja una sonda o
+simplemente una cinta con un peso, se anota el nivel en reposo y se vuelve a medir después de una
+hora de bombeo continuo.
+
+Y hay una segunda cosa que esa misma medición te dice, más importante todavía: **si el nivel sigue
+bajando y no se estabiliza, estás sacando más de lo que el pozo repone.** Ese pozo no aguanta ese
+caudal, y ninguna bomba lo va a arreglar.
+
+Esa medición, hecha en la seca y no en la temporada de lluvias, es la que decide si el proyecto de
+riego es viable. Se hace antes de comprar la bomba, no después.
+</Dato>
+
+### Los dos números están acoplados
+
+Aquí está la trampa de las fichas comerciales. Una bomba que anuncia «5.000 litros por hora» y «hasta
+40 metros» **no hace las dos cosas a la vez.** Da 5.000 litros por hora a altura casi nula, y llega a
+40 metros entregando un hilo de agua.
+
+Lo que describe el comportamiento real es **la curva caudal-altura**, que es una curva descendente:
+cuanto más alto tiene que subir, menos entrega. La bomba correcta es aquella cuya curva pasa por **tu
+punto de trabajo** —tu caudal a tu altura manométrica— con algo de margen.
+
+<Analogia>
+Es exactamente la curva corriente-tensión del panel que viste en la lección de la ficha técnica: dos
+magnitudes acopladas, un producto que es lo que importa —potencia allá, potencia hidráulica aquí— y
+un punto de operación que hay que elegir a conciencia.
+
+Y el mismo error en los dos casos: leer un número máximo del catálogo y suponer que se puede tener a
+la vez que el otro.
+</Analogia>
+
+## La bomba y su electrónica
+
+<Diagrama
+  src="tres-bombas.webp"
+  alt="Tres tipos de bomba dibujados en corte, uno por columna. A la izquierda, una bomba sumergible cilíndrica y esbelta colgando de su cable dentro de una perforación estrecha y profunda, rotulada SUMERGIBLE. En el centro, un cuerpo de bomba apoyado en el terreno junto a un pozo somero abierto, con la tubería de aspiración bajando al agua, rotulada SUPERFICIE. A la derecha, una bomba con un panel solar encima y un rotor helicoidal visible en el corte, dentro de una perforación, rotulada HELICOIDAL. Arriba, TRES BOMBAS, TRES PROBLEMAS DISTINTOS."
+  pie="La profundidad y el caudal deciden el tipo, y el tipo decide casi todo lo demás."
+/>
+
+**La <Termino slug="bomba-sumergible">sumergible</Termino>** vive dentro del pozo, empujando el
+agua hacia arriba. Es la solución para pozos
+profundos, y tiene una ventaja física decisiva: **empujar es más fácil que aspirar.**
+
+**La de superficie** se instala fuera y aspira. Es más barata y muchísimo más fácil de reparar,
+porque está al alcance de la mano. Pero tiene un límite duro que conviene entender: **ninguna bomba
+puede aspirar agua desde más de unos siete metros de profundidad**, y en la práctica bastante menos.
+No es una limitación de potencia; es que la bomba no tira del agua, sino que hace vacío para que **la
+presión atmosférica la empuje hacia arriba**, y la atmósfera solo puede empujar lo que puede. Con más
+motor no se arregla.
+
+**La helicoidal** usa un rotor en espiral en vez de impulsores, y es la que mejor se lleva con el
+bombeo solar: entrega caudal bajo pero constante y **arranca con poca luz**, así que empieza a
+trabajar temprano por la mañana y sigue hasta tarde. Para llenar un tanque a lo largo del día, que es
+exactamente nuestro caso, es una gran opción.
+
+### Cómo se conecta al sol
+
+Hay dos arquitecturas, y la elección importa.
+
+**Bomba de corriente continua conectada casi directamente al panel.** Es la más simple posible: panel,
+un controlador, y bomba. Sin inversor, sin batería. Muy eficiente y con muy pocas piezas que fallen.
+A cambio, las bombas de continua son un mercado más estrecho, más caras por vatio y con menos
+repuestos disponibles localmente.
+
+**Bomba de alterna convencional con un <Termino slug="variador-solar">variador
+solar</Termino>.** El variador toma la continua de los paneles y fabrica alterna trifásica de
+frecuencia variable para una bomba industrial común. Y hace algo más
+sutil e importante: **ajusta la frecuencia según la potencia disponible en cada momento**, así que la
+bomba gira despacio cuando hay poca luz en vez de intentar arrancar y no poder.
+
+<Dato titulo="Por qué el variador cambia el problema">
+Sin variador, una bomba de alterna tiene un comportamiento de todo o nada: o hay potencia suficiente
+para el pico de arranque o no arranca. Y ese pico es varias veces la potencia nominal.
+
+Eso obligaría a dimensionar el arreglo para el arranque en el peor momento, o a poner una batería
+solo para tener el pico disponible. El variador elimina esa necesidad porque **hace arrancar la bomba
+suavemente, a frecuencia baja, y va subiendo según el sol da**.
+
+El resultado práctico es que la bomba empieza a mover agua mucho antes por la mañana y sigue mucho
+después por la tarde, en vez de trabajar solo en las horas centrales. Con la misma potencia
+instalada, se bombea bastante más agua al día.
+
+Además, la mayoría de los variadores solares traen ya la entrada para la boya del tanque, la
+protección de marcha en seco y el seguimiento del punto de máxima potencia, con lo cual sustituyen a
+varias piezas sueltas.
+</Dato>
+
+<Advertencia>
+**La protección contra marcha en seco no es opcional.**
+
+Una bomba sumergible se refrigera con el agua que la rodea y se lubrica con el agua que mueve. Si el
+pozo se abate por debajo de la bomba y esta sigue girando en vacío, **se destruye en minutos**, no en
+horas.
+
+Es la avería más común y más cara del bombeo solar, y la más fácil de evitar: un sensor de nivel en
+el pozo o un detector de falta de caudal que corte la bomba y la reintente al cabo de un rato. Casi
+todos los variadores solares lo traen; si usas un controlador simple, se compra aparte.
+
+En un pozo del que no conoces todavía el comportamiento estacional, esta protección es lo primero que
+instalas, no lo último.
+</Advertencia>
+
+## El tanque como batería de agua
+
+<Diagrama
+  src="el-tanque-elevado.webp"
+  alt="Corte de un tanque de agua elevado sobre torre, con el agua dibujada dentro. Cuatro llamadas señalan: un flotador colgando dentro de la parte alta del tanque, rotulado BOYA DE PARO; un tubo de rebose que sale del costado cerca del borde superior, rotulado REBOSE; la tapa oscura y la pared del tanque, rotuladas TAPA Y PARED OPACAS; y las patas de la torre apoyadas en dados de hormigón al nivel del terreno, rotuladas EL AGUA PESA. Arriba, EL TANQUE ELEVADO."
+  pie="Cuatro detalles que deciden si el tanque dura veinte años o da problemas desde el primer verano."
+/>
+
+El tanque no es un accesorio: en este esquema **es el componente que sustituye a la batería**, y
+merece el mismo cuidado de diseño.
+
+**Volumen: al menos un día completo de consumo, y preferiblemente dos.** Con un día de reserva, un
+día nublado ya te deja al límite. Con dos, tienes margen para reaccionar. Esto sale del cálculo de
+riego, no de lo que había en la ferretería.
+
+**Boya o sensor de paro.** Es la misma idea de
+la <Termino slug="valvula-de-flotador">válvula de flotador</Termino> que ya montaste en el depósito,
+pero cortando electricidad en vez de agua: cuando el tanque se llena, la bomba tiene que parar. Sin eso, la bomba
+sigue trabajando y el agua se va por el rebose: desperdicias agua, desperdicias energía y castigas la
+bomba sin ningún beneficio.
+
+**Rebose, siempre.** Aunque haya boya, porque las boyas fallan. Un tubo de rebose que lleve el agua
+lejos de la base de la torre, no a los pies de las fundaciones, que es donde menos falta hace mojar
+en suelo arcilloso.
+
+**Tanque opaco, tapado y estanco.** Esto es sanidad, no estética, y en el trópico es serio.
+
+<ContextoBolivia>
+Un tanque de agua a la intemperie en el llano cruceño tiene dos problemas que en otros climas son
+menores.
+
+**El primero son las algas.** Un tanque translúcido con sol directo y agua a temperatura ambiente se
+llena de algas verdes en semanas. Las algas tapan goteros, ensucian filtros y dan mal olor al agua.
+La solución es trivial y hay que decidirla al comprar: **tanque opaco, de pared oscura o pintado**,
+con tapa cerrada. Un tanque negro cuesta lo mismo que uno translúcido.
+
+**El segundo es el dengue.** Cualquier depósito de agua descubierto es un criadero de *Aedes
+aegypti*, y esta es zona endémica. **La tapa no es opcional y las aberturas de ventilación y el
+rebose van con malla mosquitera.** No es solo la ley y el sentido común sanitario: es que un vivero
+donde trabaja gente todos los días no puede tener un criadero de mosquitos en el patio.
+
+Un tercer detalle práctico: el agua del tanque se calienta bastante bajo el sol, y regar plantines
+con agua muy caliente les hace daño. Un tanque a la sombra parcial, o simplemente regar temprano y
+al atardecer en vez del mediodía, resuelve el problema.
+</ContextoBolivia>
+
+<Diagrama
+  src="la-bomba-sigue-al-sol.webp"
+  alt="Gráfico con un eje de tiempo que va de un amanecer a la izquierda, pasa por un sol alto en el centro y llega a un atardecer a la derecha. Bajo el eje, una campana en terracota representa la potencia solar disponible; sobre ella, barras verticales en verde salvia de altura creciente y decreciente representan el agua que la bomba sube en cada momento. A la derecha, un tanque sobre torre cuyo nivel de agua sube por escalones, conectado a las barras por una flecha. Debajo, una escena nocturna con luna donde el agua baja del tanque por una tubería hasta una planta, rotulada DE NOCHE RIEGA LA GRAVEDAD. Arriba, LA BOMBA SIGUE AL SOL, EL RIEGO NO."
+  pie="La producción sigue la campana del sol; el consumo no tiene por qué. El tanque desacopla las dos curvas."
+/>
+
+Ese desacople es el corazón del esquema y vale la pena decirlo explícitamente: **la bomba trabaja
+cuando puede, el riego ocurre cuando conviene.** Puedes regar de madrugada, o al atardecer, o
+fraccionado en tres tandas, sin que ninguna de esas decisiones dependa de si en ese momento hay sol.
+
+Es una cola de trabajos con un buffer en medio. El productor tiene una tasa irregular impuesta por el
+entorno; el consumidor tiene un ritmo propio; el buffer absorbe la diferencia.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+Para Rizoma del Sur este es el primer sistema solar que yo construiría, antes que el de la vivienda,
+por una razón económica simple: es el que tiene mejor retorno y el que menos puede fallar.
+
+**Paso cero, antes de cotizar nada: caracteriza el pozo en la seca.** Mide el nivel estático, pon la
+bomba a trabajar una hora seguida y mide otra vez para conocer el abatimiento. Si el nivel no se
+estabiliza, ese pozo no da el caudal que le pides, y eso hay que saberlo antes de gastar en paneles.
+Hazlo en agosto o septiembre, no en marzo: el dato que importa es el del peor momento.
+
+**Después, el consumo de agua**, que sale del módulo de riego, no de este: litros por día en el mes
+de mayor demanda, que aquí es plena seca, cuando además el pozo está más bajo. Los dos peores números
+coinciden en el mismo mes, y ese es el caso de diseño.
+
+**El tanque, dimensionado a dos días de ese consumo**, opaco, tapado, con malla en las aberturas, con
+boya de paro y con rebose conducido lejos de las fundaciones. Y la torre calculada con el tanque
+lleno: cinco mil litros son cinco toneladas, y esas fundaciones se hacen con el criterio de arcilla
+expansiva del módulo de albañilería, no a ojo.
+
+**La bomba, elegida por el punto de trabajo** —tu caudal a tu altura manométrica completa, con las
+cuatro componentes sumadas— y no por el número grande del catálogo. Con protección de marcha en seco
+sí o sí.
+
+**Variador solar** en lugar de bomba de continua, por una razón muy concreta de este lugar: una bomba
+de alterna convencional se consigue, se repara y se repone en Santa Cruz; una bomba de continua puede
+tardar semanas. El variador cuesta algo más y compra reparabilidad local, que es exactamente el mismo
+criterio que aplicaste al elegir equipos separados en vez de un híbrido.
+
+**Los paneles del bombeo, en un arreglo propio**, independiente del sistema de la vivienda. Fallar
+por separado es una virtud: si un día hay que intervenir el sistema de la casa, el vivero sigue
+regando.
+
+Y cuando esto funcione, tendrás además algo que no esperabas: **un registro natural de producción
+solar.** Cuántas veces se llenó el tanque, a qué hora, en qué mes. Es el mejor dato real que vas a
+tener sobre el comportamiento del sol en tu terreno, mejor que cualquier atlas, y es exactamente el
+tipo de serie que el módulo de automatización va a querer capturar.
+</AplicarRizoma>
+
+## Lo que hay que llevarse
+
+El bombeo solar directo elimina la batería no renunciando al almacenamiento, sino **moviéndolo de la
+energía al agua**: el tanque elevado guarda el producto final en un medio que no se degrada y que
+cuesta una fracción por unidad guardada.
+
+Se paga con tres renuncias honestas: solo se bombea de día, el sistema no sirve para otras cargas, y
+la autonomía la limita el peso del tanque sobre la torre.
+
+La bomba se elige por **el punto de trabajo, no por el número máximo del catálogo**, y la altura
+manométrica suma cuatro componentes, de las cuales el abatimiento del pozo es la que nadie mide y
+todos subestiman. La protección contra marcha en seco es innegociable.
+
+El tanque merece el mismo cuidado que merecía la batería a la que sustituye: dos días de reserva,
+opaco, tapado y con malla contra el mosquito, boya de paro, rebose conducido lejos de las
+fundaciones, y una torre calculada con el tanque lleno.

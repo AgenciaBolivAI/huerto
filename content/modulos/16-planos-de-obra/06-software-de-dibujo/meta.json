@@ -1,0 +1,50 @@
+{
+  "titulo": "Papel, CAD o modelo 3D: con qué dibujar",
+  "subtitulo": "La conversación que no está en los manuales. Para quien viene de la informática, el riesgo no es quedarse corto: es sobreingenierizar el plano de un galpón de seis por doce.",
+  "duracionMin": 23,
+  "portada": "portada.webp",
+  "portadaAlt": "Vista cenital de un escritorio de madera con dos formas de trabajar lado a lado. A la izquierda, un portátil abierto muestra una planta arquitectónica dibujada en un programa de CAD, con líneas finas y precisas sobre fondo oscuro. A la derecha, la misma planta impresa en papel blanco, con un escalímetro triangular y un lápiz encima. Entre ambos, una taza y un cuaderno pequeño",
+  "objetivos": [
+    "Elegir entre papel, CAD 2D y modelo 3D según el problema real: empezar, precisar o mostrar.",
+    "Dibujar el primer plano a mano y pasar a CAD cuando llegue la segunda versión.",
+    "Identificar lo que el CAD aporta de verdad: geometría enganchada, capas, repetición barata, medición automática y reimpresión.",
+    "Usar las capas como fuente única de verdad que evita la desincronización entre láminas.",
+    "Reconocer los costes reales del CAD: días de aprendizaje, invitación a sobremodelar y que en obra sigue mandando el papel.",
+    "Distinguir un CAD, donde la medida se declara, de un editor gráfico, donde la medida solo se dibuja.",
+    "Diferenciar DWG, DXF, PDF y SVG, y tratar el fuente y el artefacto entregable como cosas distintas.",
+    "Imprimir siempre a tamaño real y protegerse con una escala gráfica de las impresiones ajenas.",
+    "Aprovechar el perfil técnico en versionado y en automatizar el cómputo, no el dibujo.",
+    "Asumir que la IA sirve para revisar, calcular y ordenar, y no para producir un plano medible."
+  ],
+  "prerrequisitos": [
+    "16-planos-de-obra/05-dibujar-el-plano-de-tu-obra",
+    "15-ia-aplicada/01-que-puede-y-que-no"
+  ],
+  "videos": [],
+  "referencias": [
+    {
+      "titulo": "LibreCAD",
+      "fuente": "Proyecto LibreCAD",
+      "url": "https://librecad.org/",
+      "nota": "CAD 2D libre y multiplataforma, suficiente de sobra para plantas, cortes y planos de fundaciones de una obra pequeña. Es el punto de entrada recomendado cuando el papel empieza a costar más de lo que ahorra."
+    },
+    {
+      "titulo": "QCAD",
+      "fuente": "RibbonSoft",
+      "url": "https://qcad.org/en/",
+      "nota": "La otra opción habitual de CAD 2D, con una edición comunitaria libre. Comparte formato DXF con LibreCAD, así que probar las dos y quedarse con la que resulte más cómoda no cuesta nada."
+    },
+    {
+      "titulo": "FreeCAD",
+      "fuente": "Proyecto FreeCAD",
+      "url": "https://www.freecad.org/",
+      "nota": "Modelador paramétrico 3D libre. Para el plano de un galpón es más herramienta de la necesaria, pero conviene saber que existe si alguna vez hace falta diseñar piezas o ensambles."
+    }
+  ],
+  "terminos": [
+    "cad",
+    "capa-de-dibujo",
+    "escala-grafica"
+  ],
+  "practica": true
+}

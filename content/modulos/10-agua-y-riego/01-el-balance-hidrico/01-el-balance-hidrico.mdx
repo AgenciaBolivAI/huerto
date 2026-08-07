@@ -1,0 +1,268 @@
+El módulo del vivero identificó dos cuellos de botella posibles: superficie de crecimiento y agua. El
+primero se resolvió con layout. Este módulo va sobre el segundo.
+
+Y empieza por la pregunta que casi nadie contesta con un número: **¿cuánta agua necesita realmente tu
+vivero?**
+
+No «bastante». No «depende». Un número, en litros por día, que sirva para dimensionar el tanque, la
+bomba, la tubería y el sistema solar que ya montaste en el módulo diecisiete.
+
+## A dónde va el agua
+
+<Diagrama
+  src="a-donde-va-el-agua.webp"
+  alt="Sección de una planta creciendo en un envase con sustrato sobre una línea de suelo. Dos flechas gruesas azul pálido entran desde arriba, una desde el pico de una regadera y otra desde la lluvia que cae, rotuladas LO QUE ENTRA. Cuatro flechas terracota salen en cuatro direcciones distintas, cada una con su rótulo: una que sube desde la superficie desnuda del sustrato, SE EVAPORA DEL SUSTRATO; otra que sube desde las hojas, LA PLANTA TRANSPIRA; otra que sale hacia abajo por el fondo del envase, SE VA POR ABAJO; y otra que escurre de lado por la superficie del sustrato, SE ESCURRE POR EL BORDE. Arriba, A DÓNDE VA EL AGUA."
+  pie="Una entrada y cuatro salidas. Solo una de las cuatro es la que quieres, y no es la más grande."
+/>
+
+El agua que entra a un envase se va por cuatro caminos, y conviene distinguirlos porque cada uno se
+controla de una forma distinta:
+
+**Se evapora del sustrato.** Directamente desde la superficie desnuda al aire. Es pérdida pura: no
+pasó por la planta.
+
+**La planta transpira.** Sube por el xilema, sale por los estomas y se lleva el calor de la hoja. Esta
+es la única salida que quieres, porque va acompañada de fotosíntesis y de transporte de nutrientes.
+
+**Se va por abajo.** Drenaje. Una parte es necesaria —hace falta que algo salga para arrastrar sales,
+como se verá en la lección de calidad del agua— y el resto es desperdicio.
+
+**Y se escurre por el borde.** Riego que cae fuera del envase o que corre por la superficie sin
+infiltrarse. Es la pérdida más tonta y la más fácil de corregir.
+
+<Analogia>
+Es un balance de entradas y salidas, exactamente igual que el del invernadero del módulo anterior, y
+con la misma matemática incómoda: **el nivel sube o baja según la diferencia, no según la entrada.**
+
+Y como en cualquier sistema con fugas, aumentar la entrada para compensar es la solución peor. Lo
+barato es cerrar las fugas: el escurrimiento, el drenaje excesivo y la evaporación desnuda.
+</Analogia>
+
+## Evapotranspiración
+
+A las dos primeras salidas —evaporación del sustrato más transpiración de la planta— se las agrupa en
+un solo concepto, porque en la práctica son difíciles de separar y porque juntas son el consumo real:
+la <Termino slug="evapotranspiracion">evapotranspiración</Termino>.
+
+<Diagrama
+  src="de-donde-sale-el-vapor.webp"
+  alt="Dos paneles enfrentados, cada uno con la sección de la misma planta en el mismo envase. A la izquierda, la planta es pequeña, con solo dos hojitas, y las flechas de vapor azul pálido suben únicamente desde la superficie desnuda del sustrato alrededor del tallo, ninguna desde las hojas, rotulado PLANTA CHICA, MANDA EL SUSTRATO. A la derecha, el mismo envase con una planta grande y frondosa cuyo follaje cubre por completo la superficie del sustrato: aquí muchas flechas de vapor suben desde las hojas y casi ninguna desde el sustrato, que queda en sombra, rotulado PLANTA GRANDE, MANDA LA HOJA. Arriba, DE DÓNDE SALE EL VAPOR CAMBIA CON LA PLANTA."
+  pie="El consumo total cambia poco; lo que cambia es por dónde se va, y eso decide cómo hay que regar."
+/>
+
+Y esa distinción no es académica, porque cambia el método de riego:
+
+**Con planta pequeña**, la mayor parte de la pérdida es evaporación desde el sustrato descubierto. Se
+combate **cubriendo la superficie** —una capa fina de cascarilla, por ejemplo— y regando de forma que
+no se moje toda la superficie.
+
+**Con planta grande**, la mayor parte es transpiración, que es consumo útil. Ahí no hay nada que
+recortar: hay que suministrarlo.
+
+<Dato>
+La evapotranspiración se estima a partir de dos factores que se multiplican.
+
+El primero es **la demanda del clima**, que depende de sol, temperatura, viento y sequedad del aire, y
+que es igual para todos los cultivos de un mismo sitio y momento. Existen datos de referencia para
+cada zona.
+
+El segundo es **un coeficiente propio del cultivo y de su etapa**, que dice qué fracción de esa demanda
+consume esa planta concreta. Una plantita recién trasplantada consume una fracción pequeña; la misma
+planta grande y frondosa, mucho más.
+
+<Formula explicacion="El consumo real de un cultivo es la demanda que impone el clima multiplicada por un coeficiente que depende de la especie y de su etapa de desarrollo. La demanda climática se consulta para la zona; el coeficiente sale de tablas o de la propia observación.">
+consumo de agua = demanda del clima × coeficiente del cultivo
+</Formula>
+</Dato>
+
+## Qué hace que se gaste más
+
+<Diagrama
+  src="que-hace-gastar-mas.webp"
+  alt="Cuatro tarjetas cuadradas en fila, cada una con la misma plantita en un envase y flechas de vapor azul pálido subiendo, pero con un factor distinto reforzado en cada una y las flechas más numerosas y más largas en consecuencia. La primera, con un sol abrasador encima, rotulada MÁS SOL. La segunda, con un termómetro de columna alta, rotulada MÁS CALOR. La tercera, con fuertes líneas de viento barriendo, rotulada MÁS VIENTO. La cuarta, con un símbolo de suelo agrietado al lado de la planta y ninguna gota en el aire, rotulada AIRE MÁS SECO. Arriba, QUÉ HACE QUE LA PLANTA GASTE MÁS AGUA."
+  pie="Los cuatro factores que decide el clima. Ninguno se controla, pero tres de ellos se pueden atenuar."
+/>
+
+Cuatro variables suben la demanda, y todas deberían resultarte familiares del módulo de estructuras:
+
+**Más sol.** La radiación es la energía que evapora el agua. Es el factor dominante.
+
+**Más calor.** El aire caliente admite más vapor, así que la evaporación es más rápida.
+
+**Más viento.** Retira el aire húmedo que se forma junto a la hoja y lo reemplaza por aire seco. Sin
+viento se forma una capa saturada que frena la pérdida.
+
+**Aire más seco.** Cuanto menor la humedad relativa, más «sed» tiene el aire, exactamente el mismo
+mecanismo que decidía la utilidad del enfriamiento evaporativo.
+
+<Advertencia>
+Fíjate en lo que esto significa: **la malla de sombra y el cortaviento del módulo anterior no eran solo
+control de temperatura. Son control de consumo de agua.**
+
+Bajo malla, con menos radiación y menos viento, la demanda cae de forma apreciable. Es la misma
+inversión resolviendo dos problemas, y en la seca, cuando el agua es el recurso escaso, esa reducción
+vale dinero.
+
+Y al revés: la zona de endurecimiento, deliberadamente expuesta al sol y al viento, es la que más agua
+consume por planta de todo el vivero.
+</Advertencia>
+
+## De la demanda al tanque
+
+<Diagrama
+  src="de-la-demanda-al-tanque.webp"
+  alt="Cuatro bloques rectangulares de esquinas redondeadas en fila horizontal, unidos de izquierda a derecha por tres grandes flechas terracota, como una cadena de cálculo. Cada bloque lleva un icono de línea y su franja de pie. El primero, un sol y un termómetro juntos, rotulado LO QUE PIDE EL CLIMA. El segundo, una planta pequeña junto a una planta grande, rotulado LO QUE PIDE ESA PLANTA. El tercero, un plano cenital de un bloque de muchas plantas en hileras, rotulado CUÁNTAS PLANTAS HAY. El cuarto, un tanque grande de almacenamiento con una llave, rotulado LITROS AL DÍA. Arriba, DE LA DEMANDA AL TANQUE."
+  pie="Cuatro pasos entre el clima y la cifra que dimensiona toda la instalación."
+/>
+
+Ahora el cálculo completo, que es una cadena de multiplicaciones:
+
+<Formula explicacion="El consumo diario del vivero es lo que consume una planta al día multiplicado por el número de plantas, dividido entre la eficiencia del sistema de riego, porque parte del agua que sale del tanque nunca llega a la planta.">
+litros por día = consumo por planta × número de plantas ÷ eficiencia del riego
+</Formula>
+
+El término que sorprende es el último. **No toda el agua que sale del tanque llega a la raíz**, y la
+fracción que sí llega depende mucho del método:
+
+| Método | Qué se pierde |
+| --- | --- |
+| Manguera a mano | Mucho: cae fuera del envase, escurre, se moja el camino |
+| Microaspersión | Bastante: moja toda la superficie, incluida la que no tiene plantas |
+| Goteo | Poco: entrega el agua justo sobre el envase |
+
+Esa eficiencia es lo que convierte al goteo en interesante, y la lección de métodos entra en el
+detalle. Aquí basta con retener que **el mismo consumo de las plantas puede exigir el doble de agua
+del tanque según cómo se la lleves.**
+
+<Dato>
+Y hay un multiplicador más que casi nadie incluye y que en la seca decide si el sistema aguanta:
+**el día pico, no el día medio.**
+
+Dimensionar el tanque y la bomba con el consumo promedio del año garantiza que en el peor día de
+septiembre el sistema se quede corto. Se dimensiona con **el consumo del mes más exigente**, que aquí
+es el final de la seca, con máxima radiación, mínima humedad y las plantas ya grandes.
+
+Es el mismo principio que en el módulo solar, donde el sistema se dimensionaba por el mes crítico y no
+por el promedio anual.
+</Dato>
+
+## Cuánto cabe en un envase
+
+Falta una pieza para poder decidir **cada cuánto** regar, y es una propiedad del envase y del sustrato,
+no del clima: **cuánta agua útil almacena.**
+
+De todo el volumen del envase, una parte es partícula sólida, otra es agua que la planta no puede
+arrancar porque está demasiado firmemente retenida, otra es aire, y solo una fracción es la que
+llamamos <Termino slug="agua-util">agua útil</Termino>: la que está ahí y la planta puede tomar.
+
+<Formula explicacion="El tiempo que un envase aguanta entre riegos es el agua útil que almacena dividida entre lo que la planta consume cada día. Es la razón por la que un envase pequeño hay que regarlo mucho más seguido aunque la planta consuma lo mismo.">
+días entre riegos = agua útil del envase ÷ consumo diario de la planta
+</Formula>
+
+De esa relación salen tres consecuencias que explican mucho del manejo diario:
+
+**Los envases pequeños se riegan mucho más seguido.** Una bandeja de alvéolos almacena tan poca agua
+útil que en un día de calor puede agotarla en horas, y por eso los almácigos son lo primero que muere
+cuando falla el riego.
+
+**El sustrato decide tanto como el tamaño.** Una mezcla muy gruesa drena rápido y almacena poca agua
+útil: da mucho aire, que era el objetivo, y a cambio obliga a regar más seguido. Es el mismo
+compromiso de la lección de sustratos, visto ahora desde el lado del agua.
+
+**Y no se puede compensar regando más de golpe.** Un envase lleno hasta el borde no almacena más: lo
+que sobra se va por abajo el mismo día. **El único modo de espaciar los riegos es tener más volumen o
+más retención**, no echar más agua cada vez.
+
+## El error de regar por calendario
+
+Cierro con el error de manejo más común y más caro, que enlaza directamente con la lección siguiente.
+
+**Regar «todos los días a las ocho» es regar sin información.** La demanda cambia con el día: un día
+nublado de enero y un día despejado y ventoso de septiembre pueden diferir en un factor de dos o tres.
+Un calendario fijo riega de más la mitad de los días y de menos la otra mitad.
+
+Y los dos errores no son simétricos:
+
+**Regar de menos** frena el crecimiento y, si es severo, mata. Se ve enseguida.
+
+**Regar de más** es peor de lo que parece, porque **no se ve.** Desplaza el aire del sustrato, ahoga
+raíces, favorece pudriciones, lava nutrientes hacia abajo y, en un vivero, es una de las causas
+principales de plantas que «no arrancan» sin motivo aparente.
+
+<Analogia>
+Regar por calendario es un sistema en lazo abierto: actúa sin medir el estado. Funciona mientras las
+condiciones no cambien, y las condiciones aquí cambian todos los días.
+
+Lo que hace falta es cerrar el lazo, y para eso hay que medir. Ese es exactamente el tema de la
+lección siguiente.
+</Analogia>
+
+<AplicarRizoma>
+**El primer número que hay que estimar para Rizoma es el consumo del día pico**, porque de él salen el
+tamaño del tanque, el caudal de la bomba y el dimensionado del sistema solar de bombeo del módulo
+diecisiete.
+
+**Y hay que calcularlo por zonas, no en bloque**, porque las cuatro zonas del vivero tienen consumos
+por planta muy distintos:
+
+**Propagación**, bajo techo y con cámara húmeda: consumo bajísimo por planta, pero cero tolerancia a
+quedarse seca. Es la zona donde un fallo de riego cuesta un lote entero en horas.
+
+**Crecimiento bajo malla al 50 %**: es el grueso del consumo por volumen, y a la vez la zona donde la
+malla ya está reduciendo la demanda de forma apreciable.
+
+**Endurecimiento, a sol y viento plenos**: el mayor consumo por planta de todo el vivero. Es su función
+y hay que asumirlo.
+
+**Y el bloque de madres**, con plantas grandes y frondosas: consumo alto por planta pero pocas plantas.
+
+**El mes crítico aquí es el final de la seca**, hacia agosto y septiembre: máxima radiación acumulada,
+mínima humedad relativa, sin lluvia y con las plantas del ciclo ya grandes. Ese es el mes con el que
+se dimensiona todo, no el promedio.
+
+**Y hay una medida de eficiencia que cuesta casi nada y que conviene tomar desde el principio**: cubrir
+la superficie del sustrato de los envases con una capa fina de cascarilla de arroz. Reduce la
+evaporación desnuda, que en plantas pequeñas es la mayor parte de la pérdida, y usa un material que ya
+tienes en el vivero.
+
+**El objetivo real de este módulo, dicho sin rodeos**: llegar a la seca sabiendo cuántos litros por día
+necesitas, teniéndolos almacenados y con un método que los entregue sin desperdiciar. Todo lo demás
+son detalles de ese objetivo.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La llanura de Santa Cruz tiene una particularidad que define este módulo: llueve mucho y hay
+sequía.**
+
+No es contradictorio. La precipitación anual es abundante, pero se concentra entre octubre y abril, y
+de mayo a septiembre puede pasar mucho tiempo sin lluvia útil. Un vivero que dependa solo de la lluvia
+funciona medio año y colapsa el otro medio.
+
+**Eso hace que el problema no sea de cantidad total sino de almacenamiento y de reparto.** Y por eso
+la lección de captación y almacenamiento de este módulo importa tanto: hay agua de sobra cayendo del
+cielo en enero, y el problema es tenerla en agosto.
+
+**Los datos climáticos de referencia para calcular la demanda existen y son públicos.** Las fuentes de
+datos de radiación y clima que se usaron en el módulo solar —conjuntos de datos meteorológicos
+globales de acceso libre— dan también los valores necesarios para estimar la demanda de agua de una
+zona, y el SENAMHI publica información climática nacional. Vale la pena consultar los valores reales de
+la zona en vez de usar cifras genéricas, porque el error puede ser grande.
+
+**Sobre el agua subterránea**, en la zona de Santa Cruz los pozos son una fuente habitual, pero la
+profundidad, el caudal y la calidad varían mucho de un punto a otro, incluso a poca distancia. Antes de
+diseñar un sistema alrededor de un pozo hay que conocer sus datos reales, y eso se pregunta a los
+vecinos y a los perforistas de la zona, que es la información más confiable que existe sobre un
+acuífero local.
+
+**Y una nota que enlaza con la salud**: cualquier reserva de agua limpia y destapada en esta región es
+criadero de *Aedes aegypti*. Todo tanque va tapado, y toda la instalación se diseña sin recipientes
+abiertos permanentes. No es un añadido: es parte del diseño desde el primer trazo.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya sabes a dónde va el agua, qué hace que se gaste más y cómo se llega a la cifra de litros por día.
+
+Lo que falta para cerrar el lazo es **saber cuándo regar**, y eso no se decide con un reloj: se decide
+midiendo la humedad del sustrato. Con el dedo, con una balanza o con un sensor, según lo que se
+necesite.

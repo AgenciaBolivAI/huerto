@@ -1,0 +1,102 @@
+{
+  "preguntas": [
+    {
+      "id": "que-es-una-planta",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es exactamente una planta y qué consecuencias tiene esa definición?",
+      "opciones": [
+        "Es un corte horizontal a una altura convenida —normalmente entre 1,00 y 1,50 m— del que se tira todo lo de arriba y se mira hacia abajo lo que queda.",
+        "Esa altura se elige porque atraviesa puertas y ventanas: cortando a 30 cm no habría ni una ventana en el dibujo.",
+        "Por eso los muros aparecen como bandas gruesas: es material cortado, ladrillo en sección.",
+        "Es el edificio fotografiado desde arriba, como si se mirara desde un dron."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La vista de dron es justo lo que no es, y por eso confunde: desde un dron verías el techo y nada más. La planta existe porque alguien decidió cortar a la altura donde está la información interesante. Todo lo demás —muros rellenos, puertas abiertas, ventanas con marco— se deduce de esa única operación."
+    },
+    {
+      "id": "linea-discontinua",
+      "tipo": "verdadero_falso",
+      "enunciado": "En una planta, una línea discontinua marca algo que se canceló o que no se va a construir.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error de lectura más caro de los principiantes. La discontinua dice está, pero no a esta altura: algo por encima del plano de corte —el alero del techo, una viga, un estante alto— o escondido detrás de otra cosa. Ignorarla es plantar un árbol justo donde el alero va a volar ochenta centímetros."
+    },
+    {
+      "id": "por-que-ortogonal",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué los planos se dibujan en proyección ortogonal y no en perspectiva, si la perspectiva se entiende mejor?",
+      "opciones": [
+        "Porque en proyección ortogonal las líneas de proyección son paralelas y no hay punto de fuga.",
+        "Porque así un centímetro de papel vale siempre la misma cantidad de centímetros de realidad, esté donde esté en la hoja.",
+        "Porque un plano está hecho para medirse, no para mirarse: la perspectiva sirve para vender, no para construir.",
+        "Porque la perspectiva es más difícil de dibujar a mano."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La dificultad de dibujo no tiene nada que ver. En una perspectiva el tamaño depende de la distancia a la cámara, así que dos muros iguales se dibujan distintos y no hay forma de medir sobre el papel. Los planos son feos y planos exactamente por eso: la medibilidad es la propiedad que los hace útiles."
+    },
+    {
+      "id": "hacen-falta-cortes",
+      "tipo": "verdadero_falso",
+      "enunciado": "Con la planta de un edificio y sus dimensiones ya se puede calcular cuánto material lleva.",
+      "respuesta": false,
+      "explicacion": "Falso: la planta no dice ni una altura. Y las alturas son donde se esconde la plata — la altura del muro multiplica los ladrillos, la profundidad del cimiento multiplica excavación y hormigón, el espesor de la cubierta define la estructura que la sostiene. Un juego que solo trae plantas parece completo y no se puede computar. Cuando te entreguen planos, la primera pregunta es dónde están los cortes."
+    },
+    {
+      "id": "cajetin-version",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el par fecha-versión del cajetín es el campo que más problemas evita en obra?",
+      "opciones": [
+        "Porque el desastre clásico no es un plano malo, sino dos versiones del mismo plano circulando a la vez.",
+        "Porque en obra solo puede haber una versión vigente: cuando sale una nueva, la anterior se saca de la mesa, no se archiva al lado.",
+        "Porque a diferencia del código, aquí no hay compilador que avise de que estás usando una versión vieja: la detección es humana.",
+        "Porque el municipio exige que todos los planos lleven fecha."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El requisito de trámite existe, pero no es lo que evita el problema en obra. Lo que lo evita es la disciplina de una sola versión sobre la mesa. Guardar el histórico está bien — pero se guarda lejos, no en la misma mesa donde alguien va a mirar con las manos llenas de mortero."
+    },
+    {
+      "id": "el-norte",
+      "tipo": "opcion_multiple",
+      "enunciado": "Estás a 17,8° de latitud sur. ¿Qué decide la flecha de norte de tu plano?",
+      "opciones": [
+        "Que el sol pasa por el norte casi todo el año: la pared norte recibe sol y la sur se queda en sombra.",
+        "Que del sur entran los surazos con viento fuerte y frío, así que esa cara hay que arriostrarla mejor.",
+        "Que es lo único que permite orientar el papel respecto al terreno al replantear: sin el norte, un rectángulo puede ir en cuatro posiciones.",
+        "Nada práctico: es una convención de dibujo para que el plano se vea profesional."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Y hay una trampa añadida: casi todo el material de estudio disponible está escrito en el hemisferio norte, donde la lógica de orientación está invertida. Cada recomendación de orientación de un manual extranjero hay que traducirla — lo que allá se orienta al sur, aquí se orienta al norte."
+    },
+    {
+      "id": "juego-de-planos",
+      "tipo": "opcion_multiple",
+      "enunciado": "Pediste el plano del galpón y te entregaron una hoja con la planta. ¿Qué falta y por qué está separado?",
+      "opciones": [
+        "Faltan al menos cortes y elevaciones, planta de fundaciones, planta de techos e instalaciones.",
+        "Está separado porque cada lámina responde una pregunta y calla las demás: superponerlo todo daría un dibujo ilegible.",
+        "Es separación de responsabilidades, con el mismo problema heredado: son vistas del mismo modelo y pueden contradecirse si cambias una y no las otras.",
+        "Está separado por costumbre de los estudios de arquitectura, pero podría dibujarse todo junto sin pérdida."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Y el problema de contradicción no es teórico: mueves un muro en arquitectura y la zapata sigue dibujada donde estaba, sin ningún compilador que te avise. Por eso todo cambio obliga a preguntarse qué otras láminas tocaba ese muro, y por eso la fecha va en todas, no en una."
+    },
+    {
+      "id": "leer-un-plano-ajeno",
+      "tipo": "abierta",
+      "enunciado": "Un vecino te pasa cuatro láminas del galpón que quiere construir y te pide opinión antes de empezar. Describe en qué orden las lees, qué compruebas en cada paso y qué preguntas concretas le harías antes de que compre un solo ladrillo.",
+      "respuestaModelo": "Empiezo por el cajetín de cada lámina, que son ocho segundos y ahorran tardes: de qué obra son, qué contiene cada una, en qué escala están, de qué fecha y de qué versión. Lo primero que compruebo es que las cuatro sean de la misma versión y la misma fecha; si una es más vieja, dejo de leer hasta aclarar cuál manda, porque todo lo que lea después de una lámina desactualizada es tiempo perdido. También miro si dice lámina 1 de 4 o 1 de 7, para saber si el juego está completo.\n\nDespués busco el norte y el acceso, y oriento las láminas mentalmente respecto al terreno real: por dónde entra el sol —que aquí pasa por el norte—, por dónde entra el surazo, por dónde entra una persona y por dónde entraría un camión. Con eso ya puedo opinar sobre orientación antes de mirar un solo detalle.\n\nLuego recorro el perímetro exterior y me quedo con las dos dimensiones grandes, largo y ancho totales, para tener el tamaño en la cabeza. Recién entonces busco las marcas de corte en la planta y salto a los cortes, porque ahí están las alturas: altura de muro, profundidad de cimiento, pendiente del techo, altura de antepecho. Y termino con los símbolos de nivel, que me dicen qué está más alto y más bajo y, por lo tanto, hacia dónde va a correr el agua.\n\nLas preguntas que le haría, en ese orden: primero, si estas cuatro son todas o si falta alguna, porque con cuatro láminas es muy probable que no haya planta de fundaciones ni instalaciones, y esas dos deciden excavación, hormigón y todos los tubos que hay que dejar antes de tapar. Segundo, dónde están los cortes, porque si no hay cortes no hay alturas y sin alturas no se puede computar ni presupuestar nada; una planta sola parece un plano completo y no lo es. Tercero, qué versión es la vigente y qué pasó con las anteriores, para que en la obra quede una sola sobre la mesa. Cuarto, si el norte del plano coincide con el norte real del terreno, porque girar la hoja noventa grados sin darse cuenta convierte un buen diseño en uno malo sin cambiar una línea.\n\nY una última, que es la que más plata salva: qué cosas todavía no están dibujadas. Porque lo que no está en el plano no está decidido ni presupuestado, y va a aparecer igual durante la obra —la obra no acepta campos vacíos—, pero aparecerá improvisado, por quien esté ahí ese día y al precio del apuro.",
+      "criterios": [
+        "Empieza por el cajetín y comprueba obra, contenido, escala, fecha y versión.",
+        "Verifica que todas las láminas sean de la misma versión y detecta si el juego está incompleto.",
+        "Orienta con el norte y el acceso antes de mirar detalles, con el sol al norte y el surazo al sur.",
+        "Recorre el perímetro y retiene las dimensiones grandes antes del detalle interior.",
+        "Busca las marcas de corte y salta a los cortes para encontrar las alturas.",
+        "Lee los niveles y los interpreta como el sentido en que corre el agua.",
+        "Pregunta explícitamente por las láminas que faltan, sobre todo fundaciones e instalaciones.",
+        "Señala que sin cortes no hay alturas y por tanto no hay cómputo posible.",
+        "Plantea la regla de una sola versión vigente en obra.",
+        "Cierra preguntando qué no está dibujado, entendiendo que eso equivale a delegar la decisión."
+      ],
+      "explicacion": "Fíjate en que ninguno de los cinco pasos requiere saber construir: son de lectura. Esa es la idea que sostiene el módulo entero — leer un plano es una habilidad separada de levantar un muro, se aprende antes y ahorra más. Y la última pregunta, la de qué falta por dibujar, es la que convierte una revisión educada en una revisión útil."
+    }
+  ]
+}

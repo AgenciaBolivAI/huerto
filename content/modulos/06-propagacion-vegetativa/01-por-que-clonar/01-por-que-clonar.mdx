@@ -1,0 +1,280 @@
+El módulo anterior terminó con una planta criada desde semilla. Este módulo empieza con una pregunta
+que la contradice: **¿y si no quieres una planta nueva, sino otra copia de la que ya tienes?**
+
+Porque son cosas distintas, y la diferencia decide buena parte de lo que un vivero puede vender.
+
+## Una semilla no es una copia
+
+<Diagrama
+  src="semilla-o-clon.webp"
+  alt="Dos paneles enfrentados, cada uno con una planta madre arriba y cinco descendientes debajo unidos por líneas finas. A la izquierda, sobre un icono de semilla, los cinco descendientes son visiblemente distintos entre sí y de la madre, con alturas, formas de hoja y vigor diferentes, rotulado CADA UNA ES DISTINTA. A la derecha, sobre un icono de tallo cortado, los cinco son exactamente idénticos entre sí y a la madre, dibujados como copias perfectas, rotulado TODAS SON LA MISMA. Arriba, SEMILLA O CLON."
+  pie="La semilla baraja las cartas de dos progenitores. El clon reparte exactamente la misma mano."
+/>
+
+Una semilla es el resultado de **mezclar el material genético de dos plantas**. Aunque las dos sean
+de la misma variedad, la mezcla produce combinaciones nuevas, y cada semilla del mismo fruto es
+genéticamente distinta de sus hermanas.
+
+Eso es maravilloso desde el punto de vista de la especie —es lo que le permite adaptarse— y es un
+problema serio desde el punto de vista de quien produce plantas.
+
+Si encuentras un árbol de mango excepcional, con la fruta perfecta, y siembras sus semillas, **no vas
+a obtener ese mango.** Vas a obtener veinte árboles distintos, la mayoría peores, algunos incomibles,
+y todos tardando años en dar fruto para que te enteres.
+
+<Analogia>
+Sembrar semilla es **fusionar dos ramas y compilar**: el resultado combina ambas y no es idéntico a
+ninguna. Clonar es **copiar el binario**: bit por bit, el mismo comportamiento, sin sorpresas.
+
+Y como en aquel caso, cada opción tiene su lugar. La fusión es lo que hace avanzar el proyecto; la
+copia exacta es lo que te permite desplegar lo que ya sabes que funciona, sin volver a probar nada.
+
+Un vivero necesita las dos cosas: **semilla para generar variabilidad y descubrir, clon para
+reproducir con garantía lo que ya descubriste.**
+</Analogia>
+
+**La <Termino slug="propagacion-vegetativa">propagación vegetativa</Termino> es multiplicar una planta
+a partir de un trozo de sí misma** —un tallo, una hoja, una raíz, un brote— en lugar de a partir de
+una semilla. El resultado es un <Termino slug="clon">clon</Termino>: genéticamente idéntico a la
+planta de la que salió.
+
+## Por qué funciona: cada célula tiene el plano completo
+
+<Diagrama
+  src="cada-celula.webp"
+  alt="A la izquierda, corte transversal de un tallo dibujado como capas concéntricas; entre la corteza exterior y el núcleo leñoso, un anillo fino destacado en terracota y dibujado más grueso, con la llamada LA CAPA QUE PUEDE VOLVER A EMPEZAR. A la derecha, tres etapas en fila unidas por flechas terracota sobre el mismo extremo de tallo cortado: primero con un pequeño abultamiento en el corte, después con el abultamiento convertido en una masa rugosa, y por último con raicillas saliendo de esa masa, bajo el rótulo DE UNA CÉLULA CUALQUIERA A UNA RAÍZ. Arriba, CADA CÉLULA TIENE EL PLANO COMPLETO."
+  pie="El tejido cortado retrocede a un estado indiferenciado y desde ahí construye lo que falta."
+/>
+
+Que un trozo de tallo se convierta en una planta entera es, si lo piensas, extraordinario. Un trozo
+de brazo no se convierte en una persona.
+
+La razón es una propiedad que las plantas tienen y los animales no:
+la **<Termino slug="totipotencia">totipotencia</Termino>.** Cada célula viva de una planta conserva
+el juego completo de instrucciones para construir la planta entera, y —bajo las condiciones
+adecuadas— **puede volver a activarlo.**
+
+<Analogia>
+Cada célula lleva **el repositorio completo**, no solo el módulo en el que trabaja.
+
+Una célula de tallo está ejecutando la configuración «yo soy tallo», pero el código para «yo soy
+raíz» sigue ahí, presente y ejecutable. Lo que hace el esqueje es **provocar un cambio de
+configuración**: cortas, la célula pierde las señales que le llegaban de abajo, y reinterpreta qué
+tiene que ser.
+</Analogia>
+
+El mecanismo concreto, en tres pasos:
+
+**Primero, el corte crea un desequilibrio hormonal.** Mientras el tallo estaba unido a la planta, la
+raíz le mandaba unas señales y las yemas de arriba le mandaban otras. Al cortar, **desaparecen las
+señales que venían de la raíz** y se acumulan las que bajan desde las hojas y las yemas, entre ellas
+las auxinas. Ese desequilibrio es la instrucción de arranque.
+
+**Segundo, un grupo de células cercanas al corte se desdiferencia**, es decir, retrocede a un estado
+sin especializar, y se multiplica formando una masa desorganizada llamada <Termino slug="callo">callo</Termino>. Es material en
+bruto: células que ya no son «de tallo» y todavía no son de nada.
+
+**Tercero, dentro de ese callo se organizan nuevos centros de crecimiento** que empiezan a construir
+raíces. Son <Termino slug="raiz-adventicia">raíces adventicias</Termino>: raíces que aparecen donde
+normalmente no hay raíces.
+
+<Dato titulo="Dónde está la capa que hace el trabajo">
+No cualquier parte del tallo sirve igual. La capacidad de formar callo y raíces se concentra en
+**una capa de células muy fina, entre la corteza y la madera**, que en las plantas leñosas es
+el <Termino slug="cambium">cámbium</Termino>.
+
+Esa capa es la fábrica del tallo: es la que produce madera hacia dentro y corteza hacia fuera, y es
+la que conserva mejor la capacidad de reorganizarse.
+
+Ese detalle, que parece anatómico y menor, **decide la técnica de cada método** que vas a ver en este
+módulo. En el esqueje, es la que forma el callo. En el acodo, es la que hay que interrumpir. Y en el
+injerto, es la que hay que hacer coincidir entre las dos piezas: si no se tocan cámbium con cámbium,
+el injerto no pega. Nada más.
+</Dato>
+
+## Lo que ganas al clonar
+
+**Fidelidad.** El clon es la planta que elegiste, con su sabor, su color, su porte, su resistencia.
+Es lo único que permite tener una **variedad** en el sentido comercial: si vendes plantines de una
+variedad concreta, tienen que ser esa variedad.
+
+**Tiempo.** Un esqueje ya es un trozo de planta adulta. No tiene que pasar por la fase juvenil.
+Muchos frutales tardan años en dar fruto desde semilla y muy poco desde un injerto sobre patrón
+adecuado. **Clonar salta etapas.**
+
+**Uniformidad.** Un lote de clones crece parejo, madura junto y se cosecha de una vez. Eso simplifica
+todo el manejo, y es la diferencia entre un vivero que puede prometer «doscientas plantas iguales
+para tal fecha» y uno que no.
+
+**Y a veces es la única opción.** Hay plantas que no producen semilla viable —el banano comercial es
+el ejemplo clásico— y otras cuya semilla es tan difícil o tan lenta que nadie la usa. Para esas, la
+propagación vegetativa no es una alternativa: es el camino.
+
+## Lo que pierdes
+
+<Diagrama
+  src="uniformidad-se-paga.webp"
+  alt="Dos paneles enfrentados con un cultivo visto desde arriba como una cuadrícula y una plaga entrando por una esquina. A la izquierda, las plantas tienen siluetas y tonos variados y solo unas pocas dispersas aparecen afectadas en terracota, rotulado DIVERSA, PIERDE ALGUNAS. A la derecha, todas las plantas son idénticas y todas aparecen afectadas en terracota, con una cruz roja al lado, rotulado IDÉNTICA, PIERDE TODAS. Debajo, LA UNIFORMIDAD SE PAGA."
+  pie="Si todas son la misma planta, lo que mata a una mata a todas. No hay excepción posible."
+/>
+
+Aquí está lo que casi nadie dice, y es importante decirlo.
+
+**Un lote de clones no tiene variabilidad genética**, y eso significa que **no tiene la posibilidad de
+que alguna resista.** Si aparece una plaga o una enfermedad a la que esa variedad es susceptible,
+todas son susceptibles exactamente igual.
+
+<Analogia>
+Es una **flota de máquinas idénticas con la misma versión y la misma vulnerabilidad.** Muy cómoda de
+administrar, y un único exploit se las lleva todas.
+
+La diversidad genética es exactamente lo que en infraestructura llamarías **diversidad de
+implementación**: cuesta más gestionarla y es lo que evita el fallo correlacionado.
+</Analogia>
+
+Los otros costos, más prosaicos pero muy reales:
+
+**Se propagan los problemas junto con la planta.** Un virus en la planta madre pasa a todos los
+clones, y muchos virus son asintomáticos en la madre y no en la descendencia. **Con semilla, la
+mayoría de los virus no se transmiten; con esqueje, todos.** Esto convierte la sanidad de tus plantas
+madre en un asunto crítico, y es el tema de la última lección del módulo.
+
+**El clon hereda la edad, no solo la genética.** Un esqueje de una rama vieja se comporta como tejido
+viejo: enraíza peor y a veces crece con porte de rama en vez de porte de árbol. Por eso los esquejes
+se sacan de brotes jóvenes y vigorosos.
+
+**Y no todo se clona con la misma facilidad.** Algunas especies enraízan poniendo el tallo en un vaso
+de agua; otras se resisten a todo. Esa variabilidad es real y no se vence a fuerza de voluntad: se
+resuelve eligiendo el método adecuado para la especie.
+
+## Los seis métodos
+
+<Diagrama
+  src="seis-metodos.webp"
+  alt="Seis tarjetas en dos filas de tres con un dibujo de línea y un pie cada una: un segmento de tallo cortado con hojas arriba y raíces abajo, ESQUEJE; una hoja tendida con plantitas brotando de su borde, HOJA; una mata separada en dos por dos manos, DIVISIÓN; una rama todavía unida a su planta madre con un tramo de corteza retirado y envuelto en una bola de sustrato, ACODO; dos trozos de tallo de distinto grosor unidos y atados con cinta, INJERTO; y un tallo engrosado subterráneo con varias yemas y brotes saliendo, RIZOMA. Arriba, SEIS FORMAS DE HACER LO MISMO."
+  pie="Todos hacen lo mismo —copiar una planta— y se diferencian en qué trozo usan y cuánta ayuda le dan."
+/>
+
+El resto del módulo desarrolla estos seis, y conviene tener el mapa antes de entrar en cada uno:
+
+**Esqueje**: se corta un trozo de tallo, hoja o raíz, se separa de la madre y se le pide que forme
+raíces por su cuenta. Es el método más usado y el que tiene más variantes.
+
+**División**: se separa una mata que ya tiene varios brotes con sus propias raíces. Es el método más
+sencillo y con mayor tasa de éxito, porque **cada trozo ya viene con todo lo que necesita.**
+
+**Acodo**: se enraiza una rama **sin separarla de la madre**, y solo se corta cuando ya tiene raíces
+propias. Es el método más lento y el más seguro para especies difíciles.
+
+**Injerto**: se une un trozo de la planta que quieres a la raíz de otra planta que aporta vigor,
+resistencia o adaptación al suelo. **No es exactamente clonar: es combinar dos plantas en una.**
+
+**Órganos subterráneos** —rizomas, cormos, tubérculos, hijuelos—: se aprovecha que la planta ya se
+multiplica sola bajo tierra, y solo hay que separar y replantar.
+
+**Cultivo de tejidos**: multiplicar en laboratorio a partir de fragmentos diminutos, en medio estéril.
+Excede el alcance de este curso, pero conviene saber que existe y que es de donde salen las plantas
+certificadas libres de virus que a veces se compran para arrancar un bloque madre limpio.
+
+## Cuándo clonar y cuándo sembrar
+
+<Diagrama
+  src="cuando-clonar.webp"
+  alt="Diagrama de flujo de izquierda a derecha que parte de un icono de planta, con flechas terracota hacia rombos de decisión y cajas de resultado. El primer rombo, QUIERO ALGO IDÉNTICO, deriva por la rama con cruz a la caja SEMILLA y por la rama con tilde a un segundo rombo, DA SEMILLA VIABLE, del que la rama con cruz lleva a NO HAY OTRA OPCIÓN y la rama con tilde a un tercer rombo, TENGO PRISA, cuyas ramas llevan a CLON y a CUALQUIERA DE LAS DOS. Arriba, CUÁNDO CLONAR Y CUÁNDO SEMBRAR."
+  pie="Tres preguntas resuelven casi todos los casos. La primera es la que más pesa."
+/>
+
+Puesto en forma de decisión:
+
+**¿Necesito que sea idéntica a una planta concreta?** Si la respuesta es no —quieres árboles de
+sombra, quieres un seto, quieres plantas de una especie sin variedad definida—, **la semilla es más
+barata, más rápida de producir en cantidad y te da diversidad, que es un valor.**
+
+Si la respuesta es sí —una variedad frutal concreta, una ornamental de color determinado, un clon
+productivo que seleccionaste—, **hay que clonar.**
+
+**¿La planta da semilla viable?** Si no, no hay elección.
+
+**¿Tengo prisa?** El clon salta la fase juvenil, y en frutales eso son años.
+
+Y una pregunta transversal que no está en el diagrama y que conviene hacerse siempre: **¿tengo una
+planta madre sana de la que sacar material?** Porque si la madre está enferma, todo lo que salga de
+ella lo estará.
+
+<ContextoBolivia>
+En Santa Cruz, la propagación vegetativa no es una técnica exótica: **es la forma normal de propagar
+buena parte de lo que se cultiva en el llano.**
+
+**El plátano y el banano se propagan exclusivamente por hijuelos**, esos brotes que salen alrededor
+de la planta madre. No hay otra forma práctica, y es una operación que se hace todo el tiempo en la
+zona.
+
+**La yuca se propaga por estacas de tallo**, cortando trozos del tallo maduro y enterrándolos. Es
+probablemente el ejemplo más masivo de propagación vegetativa del país.
+
+**Los frutales de patio —cítricos, mango, palta— se venden casi siempre injertados**, y el injerto es
+lo que garantiza que la fruta sea la que promete la etiqueta. Un cítrico de semilla tarda muchos años
+y no da la fruta del árbol del que salió.
+
+**Y las ornamentales de venta rápida** —crotos, veraneras, potus, cintas, suculentas— son casi todas
+esquejes, y son el producto de rotación rápida más accesible para un vivero pequeño, porque el ciclo
+de esqueje a planta vendible es corto.
+
+Hay además una ventaja climática local que conviene aprovechar: **el calor y la humedad del llano son
+excelentes para enraizar esquejes.** Muchas especies que en clima templado exigen calor de fondo y
+nebulización controlada, aquí enraízan en una cama sencilla bajo malla. **Lo que en otros sitios
+requiere equipo, aquí lo da el clima.**
+
+La contrapartida, ya conocida del módulo anterior: ese mismo calor y esa misma humedad son perfectos
+para los hongos, así que la higiene y el drenaje pesan más aquí que en otros lados.
+</ContextoBolivia>
+
+## Aplicación práctica
+
+<AplicarRizoma>
+Para Rizoma del Sur, la propagación vegetativa abre una línea de producto que la semilla no puede
+dar, y conviene verla en ese orden.
+
+**Lo primero, y lo más rentable de arrancar: ornamentales por esqueje.** Ciclo corto, material
+gratis, demanda constante y venta de rotación rápida. Es lo que da flujo de caja mientras los cultivos
+lentos crecen, y no requiere ninguna inversión más allá de una cama de enraizamiento.
+
+**Segundo: los cultivos que aquí solo se propagan así.** Si vas a producir plátano o yuca, no hay
+decisión que tomar: es por hijuelo y por estaca.
+
+**Tercero, a más largo plazo: frutales injertados.** Requiere aprender una técnica manual y tener
+patrones, y es el producto de mayor valor unitario de un vivero. No es por donde se empieza, pero sí
+por donde se llega.
+
+**Y una decisión de diseño de predio que hay que tomar ya, aunque los frutales sean para dentro de
+años: dónde va el bloque de plantas madre.**
+
+Es un área del terreno dedicada a plantas de las que solo se saca material de propagación, no
+producto. Va bien identificada, con buena sanidad, con riego seguro, y **separada del área de
+producción**, porque su función es distinta: no produce nada vendible por sí misma y sin embargo es
+el origen de todo lo que vas a vender clonado.
+
+Ese bloque, junto con el registro de qué planta madre dio origen a qué lote, es lo que convierte la
+propagación en algo trazable. Y la trazabilidad es exactamente lo que separa a un vivero que puede
+garantizar variedad de uno que solo puede afirmarla.
+
+Si vas a poner una sola cosa en el croquis del predio a partir de esta lección, que sea esa: **el
+rincón de las madres.**
+</AplicarRizoma>
+
+## Lo que hay que llevarse
+
+**Una semilla no es una copia**: mezcla el material de dos plantas y cada una sale distinta. Clonar
+es reproducir exactamente lo que ya tienes, y las dos cosas tienen su lugar en un vivero.
+
+Funciona porque las plantas tienen **totipotencia**: cada célula conserva el plano completo y puede
+volver a activarlo. El corte crea un desequilibrio hormonal, se forma un callo de células sin
+especializar, y de ahí salen **raíces adventicias**.
+
+Se gana fidelidad, tiempo y uniformidad, y a veces es la única opción. Se pierde **diversidad
+genética** —lo que mata a una mata a todas—, se **heredan los virus** de la madre, y se hereda
+también su edad.
+
+Y la pregunta que decide casi todo: **¿necesito que sea idéntica a una planta concreta?** Si no, la
+semilla es más barata y te da diversidad. Si sí, hay que clonar, y todo empieza por tener **una
+planta madre sana**.

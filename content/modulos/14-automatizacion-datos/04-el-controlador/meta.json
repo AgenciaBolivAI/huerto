@@ -1,0 +1,31 @@
+{
+  "titulo": "El controlador",
+  "subtitulo": "La diferencia entre un circuito que funciona en la mesa y uno que sigue funcionando ocho meses después, mojado, caliente y solo. Microcontrolador frente a ordenador de placa, cómo accionar la válvula sin quemar nada, y por qué la caja es la mitad del trabajo.",
+  "duracionMin": 29,
+  "portada": "portada.webp",
+  "portadaAlt": "Una placa de circuito pequeña con cables de colores conectados apoyada en un banco de trabajo de madera, junto a una caja estanca de plástico gris cerrada con sus prensaestopas a la vista, una válvula solenoide pequeña, un rollo de manguera de riego negra y un destornillador, con herramientas de taller desenfocadas al fondo",
+  "objetivos": [
+    "Enumerar lo que un controlador de riego necesita de verdad y descartar lo demás.",
+    "Comparar microcontrolador y ordenador de placa en un entorno con cortes de energía.",
+    "Separar responsabilidades para que el riego siga si el registro se cae.",
+    "Elegir entre relé, MOSFET y optoacoplador según el aislamiento necesario.",
+    "Evitar los cuatro errores de potencia: alimentación compartida, diodo, entradas y masa.",
+    "Aplicar perro guardián, estado seguro al arrancar y reloj con pila.",
+    "Guardar configuración en memoria no volátil sin agotarla, y llevar contadores de eventos.",
+    "Diseñar la caja: estanqueidad, prensaestopas hacia abajo, lazo de goteo y ventilación."
+  ],
+  "prerrequisitos": [
+    "14-automatizacion-datos/03-por-reloj-por-umbral-o-por-clima",
+    "17-energia-solar/07-cables-protecciones-y-tierra"
+  ],
+  "videos": [],
+  "referencias": [],
+  "terminos": [
+    "microcontrolador",
+    "perro-guardian",
+    "fallo-seguro",
+    "valvula-solenoide",
+    "actuador"
+  ],
+  "practica": true
+}

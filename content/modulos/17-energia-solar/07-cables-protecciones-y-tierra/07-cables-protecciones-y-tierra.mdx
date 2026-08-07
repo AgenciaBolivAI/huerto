@@ -1,0 +1,380 @@
+Ya sabes qué comprar. Esta lección es sobre **lo que une lo que compraste**, y es la parte que más
+instalaciones arruina, porque es invisible en la factura y nadie la mira en la foto.
+
+El cable, los fusibles y la tierra suelen ser menos del diez por ciento del presupuesto. Y sin
+embargo son los responsables de la mayoría de los incendios, de la mayoría de los equipos quemados y
+de la mayoría de los sistemas que «rinden menos de lo que decía el cálculo». Un sistema solar con
+buenos componentes y mal cableado es peor que uno con componentes modestos y cableado correcto.
+
+Hay una razón técnica de fondo que atraviesa toda la lección: **la corriente continua es más
+peligrosa de manejar que la alterna**, y casi todo lo que sabes —o lo que sabe un electricista de
+casas— sobre interruptores y protecciones vale para alterna y no vale aquí.
+
+<Diagrama
+  src="caida-de-tension.webp"
+  alt="Dos paneles horizontales comparados. Arriba, SISTEMA A 12 V: una batería a la izquierda, un cable largo hacia una carga rotulada 600 W, con una flecha gruesa rotulada 50 A y, justo antes de la carga, una barra roja alta rotulada CAÍDA GRANDE. Abajo, SISTEMA A 48 V: la misma batería, el mismo cable y la misma carga de 600 W, con una flecha fina rotulada 12,5 A y una barra verde pequeña rotulada CAÍDA PEQUEÑA. Entre ambos paneles, la leyenda MISMA POTENCIA, MISMO CABLE, CUATRO VECES MENOS CORRIENTE."
+  pie="El mismo trabajo entregado a más tensión viaja con menos corriente, y la corriente es lo que cuesta cobre."
+/>
+
+## La caída de tensión: el impuesto que cobra el cable
+
+Un cable no es un conductor perfecto. Tiene resistencia, poca pero no cero, y esa resistencia hace
+dos cosas simultáneas: **calienta el cable** y **hace que llegue menos tensión al otro extremo que la
+que salió**.
+
+Esa diferencia entre la tensión que sale y la que llega es la <Termino
+slug="caida-de-tension">caída de tensión</Termino>, y sale directamente de la ley de Ohm que viste en
+la primera lección: si la corriente atraviesa una resistencia, aparece una tensión sobre ella.
+
+<Formula explicacion="La caída de tensión en un tramo de cable de ida y vuelta. La longitud se multiplica por dos porque la corriente recorre el conductor de ida y el de retorno. La resistividad del cobre ronda 0,0172 ohmios por milímetro cuadrado y metro.">
+caída (V) = 2 × longitud (m) × corriente (A) × resistividad ÷ sección (mm²)
+</Formula>
+
+Lee la fórmula como lo que es: **una función con cuatro perillas**, de las cuales solo dos son tuyas.
+
+- **La longitud** casi siempre viene dada por la geografía. Se puede acortar acercando los equipos
+  entre sí, y esa es una decisión de proyecto que se toma antes de comprar el cable.
+- **La corriente** depende de la potencia y de la tensión del sistema, y ahí sí puedes intervenir.
+- **La resistividad** es una constante del material. Cobre o aluminio, poco más.
+- **La <Termino slug="seccion-de-conductor">sección</Termino>** —los milímetros cuadrados de cobre—
+  es lo que compras, y es la perilla que se usa para corregir todo lo demás.
+
+<Analogia>
+Piensa en el cable como una tubería y en la caída de tensión como la pérdida de presión a lo largo
+de ella. Si quieres mover más caudal por la misma tubería, la presión que llega al final baja. Si
+quieres que llegue con presión, o ensanchas la tubería o mandas menos caudal.
+
+Traducido a un sistema informático: la sección es el ancho de banda del enlace, y la caída es la
+latencia que te come el presupuesto de tiempo. La diferencia es que aquí la pérdida no es tiempo,
+**es calor**, y el calor tiene consecuencias físicas.
+</Analogia>
+
+### Por qué en 12 V mata y en 48 V no
+
+Aquí aparece la razón real por la que en la lección anterior insistí en subir la tensión del banco, y
+conviene verla con números.
+
+Supón una carga de 600 W a 25 metros del banco.
+
+- **A 12 V**, esa carga pide 50 A. Es una corriente enorme.
+- **A 48 V**, la misma carga pide 12,5 A. Cuatro veces menos.
+
+Ahora mira la fórmula. La caída es proporcional a la corriente, así que **a 48 V la caída en voltios
+es cuatro veces menor**. Pero además, lo que importa no son los voltios perdidos sino **el porcentaje
+perdido sobre la tensión del sistema**, y la tensión del sistema es cuatro veces mayor.
+
+<Dato titulo="Dieciséis veces">
+Combinando los dos efectos, **la caída porcentual a 48 V es dieciséis veces menor que a 12 V** para
+la misma carga y el mismo cable. Por eso un sistema de 12 V exige cables absurdamente gruesos para
+cualquier distancia y un sistema de 48 V se cablea con algo razonable.
+
+Es la misma razón por la que la red de distribución eléctrica transporta a decenas de miles de
+voltios y baja la tensión al final del recorrido: **transportar a tensión alta es transportar con
+poca corriente, y la corriente es lo que cuesta cobre y lo que se pierde en calor.**
+</Dato>
+
+### El criterio de dimensionado que casi nadie aplica
+
+Aquí está el error más común de todos, y es un error conceptual, no de cuentas.
+
+Casi todo el mundo elige el cable **por la corriente que aguanta**. La tabla del fabricante dice que
+un cable de cierta sección soporta tantos amperios sin calentarse en exceso, se busca la corriente
+del circuito, y listo.
+
+Ese criterio es necesario pero **no es suficiente**. Un cable puede aguantar perfectamente la
+corriente sin quemarse y aun así estar comiéndose el diez por ciento de tu energía en caída de
+tensión. No se quema, no huele, no falla: simplemente **tu sistema rinde menos de lo que calculaste,
+todos los días, durante veinte años.**
+
+<Advertencia>
+**El cable se dimensiona por dos criterios y se elige el que exija más sección.**
+
+1. **Por corriente admisible**: que el cable no se caliente peligrosamente. Es un criterio de
+   seguridad.
+2. **Por caída de tensión**: que la pérdida se mantenga dentro de un límite razonable. Es un
+   criterio de rendimiento.
+
+En instalaciones fotovoltaicas, sobre todo a baja tensión y con distancias, **el segundo criterio
+casi siempre manda**, y suele pedir un cable bastante más grueso que el primero.
+</Advertencia>
+
+Como límites de proyecto, la práctica habitual del oficio trabaja con márgenes estrechos: en torno al
+uno por ciento en el tramo entre batería e inversor, que es donde circula la corriente más grande;
+alrededor del dos por ciento entre panel y regulador; y algo más holgado, pero nunca desmedido, en
+los circuitos de consumo. Cuanto más corto y más crítico el tramo, más exigente el límite.
+
+<Dato titulo="El tramo batería-inversor es el que más cobre pide">
+Es contraintuitivo, porque es el tramo más corto de toda la instalación —a veces medio metro—, y por
+eso mucha gente lo cablea con cualquier cosa.
+
+Pero es el tramo por donde pasa **la corriente más grande de todo el sistema**: un inversor de 3.000 W
+alimentado a 24 V tira más de 125 A en régimen, y bastante más en el pico de arranque. Ese tramo se
+cablea con cable de sección grande, corto, y con los dos conductores de la misma longitud.
+
+Y es también, por la misma razón, **el tramo que más rápido se pone al rojo si algo falla**. De ahí
+que su fusible sea innegociable.
+</Dato>
+
+### Cable solar de verdad
+
+Un detalle que se salta mucha gente: **el cable que va del panel al regulador no es cable de
+instalación doméstica.** Vive a la intemperie, expuesto al sol directo, a la lluvia, al calor y al
+frío, durante décadas. Un cable común pierde el aislamiento en pocos años bajo el sol de Santa Cruz:
+la vaina se agrieta, entra agua y aparece una fuga.
+
+El cable solar específico tiene doble aislamiento, resistencia a la radiación ultravioleta y un rango
+de temperatura amplio, y viene en rojo y negro para no confundir polaridad. Cuesta más por metro. Es
+uno de los ahorros que no se hace.
+
+Dentro del cuarto de equipos la exigencia es otra: ahí lo que importa es la sección, la flexibilidad
+para las curvas cerradas y los terminales bien prensados.
+
+## Por qué la continua es más peligrosa que la alterna
+
+Esta es la parte que hay que entender de verdad, porque explica media lección.
+
+<Diagrama
+  src="el-arco-no-se-apaga.webp"
+  alt="Dos paneles. A la izquierda, CORRIENTE ALTERNA: una onda senoidal que cruza la línea de cero repetidamente, con un círculo verde en cada cruce, y debajo dos contactos de interruptor abriéndose con una chispa corta que se desvanece y un tilde verde, con el pie EL ARCO SE APAGA SOLO. A la derecha, CORRIENTE CONTINUA: una línea recta muy por encima del cero que nunca lo toca, y debajo los mismos contactos con un arco largo y sostenido entre ellos y una cruz roja, con el pie EL ARCO NO SE APAGA."
+  pie="La alterna se apaga sola sesenta veces por segundo. La continua no se apaga nunca: hay que apagarla a la fuerza."
+/>
+
+Cuando abres un interruptor bajo carga, los contactos se separan y durante un instante la corriente
+sigue pasando **por el aire ionizado entre ellos**. Eso es un <Termino slug="arco-electrico">arco
+eléctrico</Termino>, y es plasma a miles de grados. Suficiente para fundir cobre.
+
+En corriente alterna eso no es un problema grave, y la razón es elegante: **la alterna pasa por cero
+cien veces por segundo**. En cada uno de esos cruces la corriente se anula, el arco se queda sin
+alimentación y se apaga. El interruptor solo tiene que aguantar unos milisegundos hasta el siguiente
+cruce, y para entonces los contactos ya están lo bastante separados como para que el arco no vuelva a
+encenderse.
+
+En corriente continua **no hay cruce por cero. Nunca.** La corriente es constante. El arco que se
+enciende al abrir los contactos no tiene ningún momento en el que se apague solo: **se queda ahí,
+alimentado, alargándose mientras los contactos se separan**, quemando el metal, hasta que la
+separación es tan grande que el aire ya no puede sostenerlo. Y a tensiones altas de arreglo, esa
+distancia es mucha.
+
+<Advertencia>
+**Un interruptor, un fusible o un seccionador de corriente alterna NO sirve en corriente continua.**
+
+Puede parecer que funciona —enciende, apaga, no pasa nada— hasta el día que lo abres con el sol a
+tope y con carga. Entonces el arco no se extingue, los contactos se sueldan o se destruyen, y lo que
+tienes es un fuego dentro de un tablero de plástico.
+
+Todo dispositivo de corte del lado de continua debe estar **explícitamente marcado para corriente
+continua y para una tensión igual o mayor que la de tu arreglo corregida por frío**. No es lo mismo
+un fusible de 30 A a 250 V alterna que uno de 30 A a 600 V continua, aunque el número de amperios
+coincida.
+</Advertencia>
+
+Por eso los dispositivos de continua tienen aspecto raro: cámaras de extinción de arco más largas,
+imanes que soplan el arco hacia un lado para estirarlo y enfriarlo, contactos múltiples en serie. No
+es marketing. Es física de plasma.
+
+Y por eso mismo hay una regla operativa que aprenderás en la lección de puesta en marcha: **los
+conectores de los paneles no se desconectan bajo carga**. Primero se abre el seccionador, y solo
+entonces se separa el conector.
+
+## Las protecciones, una por una
+
+<Diagrama
+  src="las-protecciones.webp"
+  alt="Esquema unifilar en línea: arreglo de paneles, un dispositivo rotulado SECCIONADOR CC, el bloque REGULADOR, un FUSIBLE, el bloque BATERÍA, el FUSIBLE PRINCIPAL, el bloque INVERSOR, la PROTECCIÓN CA y una casa. Sobre el arreglo, una flecha en zigzag que baja a un bloque rotulado DPS. Por debajo, una línea verde que conecta el marco de los paneles y el bloque de batería a un símbolo de TIERRA."
+  pie="Dónde va cada protección y qué protege. Los fusibles no protegen los equipos: protegen el cable que llega hasta ellos."
+/>
+
+Antes de la lista, la idea que ordena todo, porque es la que casi nadie tiene clara:
+
+<Dato titulo="Un fusible no protege al equipo. Protege al cable.">
+Es la inversión mental que hay que hacer. Un fusible o un magnetotérmico se dimensiona **por el cable
+que está detrás de él**, no por el aparato que hay al final.
+
+La lógica es esta: si el cable puede llevar 30 A sin calentarse en exceso, pones una protección que
+corte antes de 30 A. Así, pase lo que pase aguas abajo —un cortocircuito, un equipo averiado, un
+tornillo caído— **el cable nunca llegará a una corriente que lo haga arder dentro de una pared.**
+
+El equipo se protege solo, o no se protege. El cable siempre.
+</Dato>
+
+**Fusible o magnetotérmico entre batería e inversor.** El más importante de todos, y el que más se
+omite. Va **lo más cerca posible del borne positivo de la batería**, porque protege el cable desde
+ese borne en adelante, y si está lejos, el tramo que queda antes está desprotegido. Un banco de
+baterías puede entregar corrientes de cortocircuito de miles de amperios: es la fuente más brutal de
+toda la instalación. Un destornillador caído entre bornes sin fusible no es una anécdota, es un
+incendio.
+
+**Fusible o seccionador entre regulador y batería.** Protege ese tramo y, sobre todo, permite aislar
+el regulador para trabajar en él sin desconectar cables con la mano.
+
+**Fusibles de rama en el arreglo, cuando hay varias ramas en paralelo.** Con una sola rama de paneles
+no hacen falta: un panel no puede entregar mucho más que su corriente de cortocircuito, y el cable ya
+está dimensionado para eso. Pero con tres o más ramas en paralelo, si una se pone en cortocircuito,
+**las otras dos descargan su corriente sobre ella** a través de un cable dimensionado para una sola.
+Ahí el fusible de rama es obligatorio.
+
+**Seccionador de continua entre arreglo y regulador.** No es una protección contra sobrecorriente: es
+un <Termino slug="seccionador-cc">seccionador</Termino>, un dispositivo para **cortar a mano y con
+seguridad** la entrada de los paneles. Sirve para mantenimiento, para emergencias y para poder
+desconectar los conectores sin abrirlos bajo carga. Es la pieza que convierte una intervención
+arriesgada en una rutina.
+
+**Protector contra sobretensiones.** El <Termino slug="dps">DPS</Termino> es un dispositivo que en
+condiciones normales no hace nada, y que cuando aparece un pico de tensión enorme —el típico de una
+descarga atmosférica cercana— **se vuelve conductor hacia tierra y desvía ese pico** antes de que
+llegue a la electrónica. Se pone en el lado de continua, cerca del regulador, y en el lado de alterna
+si hay red.
+
+<ContextoBolivia>
+En el llano oriental esto no es opcional. **Santa Cruz tiene una actividad eléctrica atmosférica
+intensa durante toda la temporada de lluvias**, de octubre a abril, con tormentas frecuentes y
+violentas. No hace falta que un rayo caiga sobre los paneles: basta una descarga a cientos de metros
+para inducir en el cableado un pico capaz de matar un regulador o un inversor.
+
+Un arreglo de paneles sobre un techo, en campo abierto, con decenas de metros de cable, es
+exactamente una antena. **El DPS y una puesta a tierra decente son la diferencia entre perder un
+equipo cada temporada y no perder ninguno**, y cuestan una fracción ínfima del sistema.
+
+Y si el terreno es como el de la mayoría de la zona —llano abierto, sin estructuras altas alrededor—
+tu estructura solar puede ser el punto más alto de varias hectáreas. Vale la pena pensarlo desde el
+día uno.
+</ContextoBolivia>
+
+**Protecciones del lado de alterna.** A la salida del inversor empieza territorio conocido: el
+magnetotérmico y el diferencial que ya viste en el módulo de albañilería. Un detalle importante: **el
+diferencial sigue haciendo falta aunque estés aislado de la red.** Compara la corriente que va con la
+que vuelve y corta si hay fuga, y esa fuga puede ser una persona. El inversor no lo sustituye.
+
+## La tierra: dos funciones distintas con el mismo cable
+
+<Diagrama
+  src="las-dos-tierras.webp"
+  alt="Corte lateral de un arreglo solar sobre estructura metálica junto a un gabinete de equipos, ambos sobre una línea de terreno. Del marco metálico baja un conductor verde-amarillo rotulado TIERRA DEL MARCO hasta una varilla de cobre en el suelo rotulada JABALINA. Del gabinete baja otro conductor rotulado TIERRA DEL SISTEMA hasta la misma varilla. Un conductor horizontal une ambos caminos justo sobre el terreno, rotulado UNA SOLA TIERRA."
+  pie="Todo lo metálico que puedes tocar, unido y bajado al mismo punto. Dos tierras separadas son peores que ninguna."
+/>
+
+La <Termino slug="puesta-a-tierra">puesta a tierra</Termino> aparece ya en el módulo de albañilería,
+pero en un sistema solar tiene dos papeles que conviene separar mentalmente.
+
+**La tierra de protección**, o tierra del marco. Todas las partes metálicas que una persona puede
+tocar —los marcos de aluminio de los paneles, la estructura de soporte, los gabinetes metálicos— se
+unen entre sí y se conectan a la jabalina. Si un aislamiento falla y una parte metálica queda con
+tensión, la corriente encuentra el camino a tierra en vez de esperar a que alguien la toque.
+
+**La tierra funcional**, o tierra del sistema. Es la referencia del sistema eléctrico y el camino por
+donde el DPS descarga los picos. Sin ella, un DPS no tiene a dónde mandar lo que desvía: es un
+desagüe sin desagüe.
+
+<Advertencia>
+**Todo se une a la misma tierra.** Este es el error que se comete con más frecuencia: clavar una
+jabalina para los paneles y otra para el tablero de la casa, sin unirlas.
+
+Dos tierras separadas, en el mismo terreno, casi nunca están al mismo potencial. Y si dos masas
+metálicas de tu instalación están a potenciales distintos, **la diferencia aparece exactamente en el
+punto donde alguien las toca a la vez** — o entre dos equipos conectados por un cable de datos, que
+es lo que fríe electrónica sin explicación aparente.
+
+Una sola jabalina, o varias unidas entre sí por un conductor. Nunca islas independientes.
+</Advertencia>
+
+Sobre la jabalina misma: es una varilla de cobre o de acero cobreado clavada en terreno
+permanentemente húmedo, y lo que determina su calidad no es el metal sino **la humedad y la
+conductividad del suelo que la rodea**. Se prueba con un telurómetro; y si no hay instrumento, hay una señal indirecta
+muy práctica: si el terreno donde la clavaste se seca del todo en la seca, no es un buen sitio.
+
+<ContextoBolivia>
+Aquí hay una ventaja y una trampa.
+
+**La ventaja:** los suelos arcillosos de la llanura aluvial cruceña conducen bien cuando están
+húmedos, mejor que un suelo arenoso, y durante siete meses del año están húmedos.
+
+**La trampa:** entre mayo y septiembre esos mismos suelos se secan y se agrietan, y la resistencia de
+tierra sube justo cuando el terreno se abre alrededor de la varilla y pierde contacto. Es el mismo
+comportamiento de las arcillas expansivas que estudiaste al fundar el galpón — se contraen al secarse.
+
+La solución práctica es **clavar la jabalina donde el suelo se mantenga húmedo**: cerca de la
+descarga de un tanque, en la sombra permanente, o en una zona regada. Y clavarla profunda, buscando
+el estrato que no se seca, en vez de conformarse con el largo estándar.
+</ContextoBolivia>
+
+## Conectores: el punto que falla
+
+<Diagrama
+  src="mc4.webp"
+  alt="Comparación en dos paneles. A la izquierda, marcado MAL con una cruz roja: corte de un conector MC4 donde el conductor está solo retorcido y metido en el pin, con un hueco visible, un hilo suelto por fuera y el prensacable abierto, todo rodeado de un resplandor naranja de sobrecalentamiento. A la derecha, marcado BIEN con un tilde verde: el mismo corte, frío y sin ninguna marca de calor, con el conductor asentado hasta el fondo del pin, una huella de prensado limpia, sin hilos sueltos y el prensacable cerrado sobre la vaina."
+  pie="Un contacto que no prensa bien no falla de golpe: se calienta un poco más cada año hasta que se abre o se quema."
+/>
+
+Los <Termino slug="mc4">conectores MC4</Termino> son el estándar de la industria para unir paneles
+entre sí y con el cable de bajada. Son macho y hembra, se enchufan con un clic, quedan estancos y
+resisten la intemperie. Bien hechos, duran lo que dura el panel.
+
+Mal hechos son la causa número uno de averías en un arreglo, y por un mecanismo que vale la pena
+entender: **un contacto flojo tiene resistencia, y una resistencia con corriente se calienta.** Al
+calentarse, el metal se oxida un poco más; al oxidarse, la resistencia sube; al subir la resistencia,
+se calienta más. Es un lazo de realimentación positiva, lento, que tarda años y que termina en un
+conector derretido o en un arco permanente dentro de una carcasa de plástico, en el techo.
+
+Las reglas son pocas y no admiten atajos: se prensa con **la herramienta de prensar**, no con alicate
+ni a mordiscos; el conductor entra **hasta el fondo del pin** y ningún hilo se queda fuera; el
+prensacable se aprieta sobre la vaina, no sobre el cobre, de modo que si alguien tira del cable la
+fuerza no llegue al contacto; y **no se mezclan marcas de conector**, porque aunque encajen
+físicamente, las tolerancias del contacto interno no son las mismas y el resultado es exactamente el
+contacto flojo que queremos evitar.
+
+Y una prueba de dos segundos que ahorra disgustos: **tira del cable con la mano después de armar
+cada conector.** Si se mueve, está mal.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+Para el sistema de Rizoma del Sur hay tres tramos con exigencias muy distintas, y conviene tratarlos
+por separado en vez de comprar un solo rollo de cable para todo.
+
+**Tramo uno: del arreglo al cuarto de equipos.** Es el tramo largo, a la intemperie, y el que decide
+cuánto cobre compras. Antes de cotizar, mide la distancia real por donde va a ir el cable —no en
+línea recta sobre el terreno, sino siguiendo el recorrido, con las subidas y las curvas— y calcula la
+sección por caída de tensión con la corriente del arreglo, no solo por corriente admisible. Aquí va
+cable solar con protección ultravioleta, sin excepción, y el seccionador de continua se monta a la
+entrada del cuarto, accesible, para poder cortar sin subir al techo.
+
+**Tramo dos: batería a inversor.** Corto, gordo, y con el fusible pegado al borne positivo. Los dos
+cables de la misma longitud. Es el tramo que menos metros lleva y más sección pide, y es donde más
+gente improvisa.
+
+**Tramo tres: la distribución de 220 V.** Ya es territorio del módulo de albañilería: tablero,
+magnetotérmicos por circuito, diferencial, y circuitos separados para la bomba, para el galpón y para
+la vivienda. Que la bomba tenga su propio circuito no es un lujo: es lo que permite apagarla sin
+apagar todo lo demás cuando haya que revisarla.
+
+**Tierra:** una sola jabalina, clavada en zona que se mantenga húmeda en la seca —cerca de la
+descarga del tanque es el sitio natural—, y a ella se unen el marco de la estructura, los gabinetes y
+la tierra de la instalación de 220 V. Un solo punto, un solo potencial.
+
+**DPS a la entrada de continua**, dada la actividad de tormentas de la temporada de lluvias. Es el
+seguro más barato de todo el sistema.
+
+Y una tarea de documentación que te va a agradecer tu yo del futuro: **etiqueta cada cable en los dos
+extremos y dibuja el unifilar de lo que quedó construido**, con secciones, longitudes y calibres de
+fusible. Es el mismo hábito que aplicas a un diagrama de arquitectura de software, y por la misma
+razón: dentro de tres años nadie recuerda por dónde va nada, y el que abra el tablero puede que no
+seas tú.
+</AplicarRizoma>
+
+## Lo que hay que llevarse
+
+El cable se dimensiona por dos criterios —corriente admisible y caída de tensión— y manda el que pida
+más sección; en fotovoltaica, casi siempre el segundo. Subir la tensión del sistema reduce la
+corriente y la caída porcentual cae con el cuadrado, que es la razón económica de fondo para trabajar
+a 24 o 48 V en vez de 12.
+
+La corriente continua no cruza por cero, así que **el arco no se extingue solo**: todo dispositivo de
+corte del lado de continua tiene que estar marcado para continua y para la tensión del arreglo
+corregida por frío. Un componente de alterna en ese lado es una bomba de relojería silenciosa.
+
+Los fusibles protegen cables, no equipos, y el más importante va pegado al borne positivo de la
+batería. Los conectores se prensan con herramienta y se prueban tirando de ellos. Y todo lo metálico
+va a una sola tierra, clavada donde el suelo no se seque.
+
+Nada de esto se ve en una foto del sistema terminado. Todo esto es la diferencia entre una
+instalación que dura veinte años y una que da un susto en la tercera temporada de lluvias.

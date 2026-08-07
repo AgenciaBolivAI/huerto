@@ -1,0 +1,346 @@
+Tienes el sistema calculado y el cableado resuelto. Falta la decisión que más energía puede regalar
+o quitar sin cambiar un solo componente: **dónde y cómo se plantan los paneles.**
+
+Y es una decisión de albañil tanto como de electricista. Un arreglo bien dimensionado y mal montado
+produce menos que uno modesto bien montado, porque aquí se juntan tres cosas que no perdonan: la
+geometría del sol, la física de las sombras y la fuerza del viento.
+
+Empecemos por la que más se equivoca todo el mundo, y que en el hemisferio sur se equivoca al revés.
+
+## Al norte, no al sur
+
+<Diagrama
+  src="miran-al-ecuador.webp"
+  alt="Un globo terráqueo inclinado visto de lado, con el ecuador dibujado como una línea horizontal. Sobre él, dos paneles solares pequeños en soportes: el del hemisferio norte mira hacia abajo, hacia el ecuador, con una flecha rotulada SUR; el del hemisferio sur mira hacia arriba, hacia el ecuador, con una flecha rotulada NORTE y un círculo que lo destaca. Arriba, LOS PANELES MIRAN AL ECUADOR. Abajo, EN BOLIVIA, MIRAN AL NORTE."
+  pie="Una sola regla explica los dos hemisferios: el panel mira hacia el ecuador, porque es hacia donde está el sol el resto del tiempo."
+/>
+
+Casi todo el material sobre energía solar que vas a encontrar en internet está escrito en el
+hemisferio norte, y ahí la regla es «los paneles miran al sur». Si la copias aquí, **pierdes una
+fracción enorme de la producción todo el año**, y lo peor es que el sistema seguirá funcionando lo
+bastante como para que tardes en darte cuenta.
+
+La regla verdadera, la que vale en los dos hemisferios, es más simple: **el panel mira hacia el
+ecuador.** En el hemisferio norte eso es hacia el sur; en el hemisferio sur, hacia el norte.
+
+La razón es geométrica. El sol no pasa por el cenit todos los días; a lo largo del año recorre una
+franja de cielo desplazada hacia el ecuador respecto de tu posición. Si estás al sur del ecuador, el
+sol pasa **al norte de ti** la mayor parte del año, y un panel orientado al norte lo recibe más de
+frente durante más horas.
+
+<Advertencia>
+**El norte que importa es el <Termino slug="norte-geografico">norte geográfico</Termino>, no el
+magnético.**
+
+Una brújula apunta al norte magnético, y la diferencia entre
+ambos —la <Termino slug="declinacion-magnetica">declinación magnética</Termino>— no es cero y cambia
+con el lugar y con los años. Además, en el terreno, una brújula cerca de una estructura
+metálica o de un cable con corriente miente descaradamente.
+
+El norte geográfico se determina bien con una aplicación de móvil que use el GPS y el sol, o con el
+método de la sombra del mediodía solar: se clava una varilla vertical, se marca la punta de su sombra
+cada pocos minutos alrededor del mediodía y **la sombra más corta apunta exactamente al sur
+geográfico**, así que su prolongación al otro lado es el norte. Es el mismo procedimiento que usaste
+para orientar la planta del galpón.
+</Advertencia>
+
+<Dato titulo="Cuánto se pierde por desviarse">
+Una buena noticia: **la orientación no es tan crítica como parece.** Desviarse quince o veinte grados
+del norte exacto cuesta muy poco, unos pocos puntos porcentuales de producción anual. Desviarse
+noventa grados sí duele.
+
+Esto tiene una consecuencia práctica útil: si el techo del galpón está orientado a nornoreste, no
+hace falta construir una estructura torcida y fea para corregirlo. **Se aprovecha el techo.** Lo que
+no se hace nunca es montar al sur porque «el techo caía para allá».
+
+Y hay un caso donde la desviación es deliberada: si tu consumo está concentrado en la tarde —bombeo
+al atardecer, riego de tarde—, girar el arreglo ligeramente hacia el poniente entrega menos energía
+total pero **la entrega cuando la necesitas**. Es la misma lógica de dimensionar por perfil de carga
+y no solo por volumen.
+</Dato>
+
+## La inclinación
+
+<Diagrama
+  src="inclinacion.webp"
+  alt="A la izquierda, elevación lateral de un panel sobre una estructura inclinada, con una línea horizontal de referencia bajo él y un ángulo marcado de 18°; desde arriba llega un rayo de sol que incide perpendicular a la cara del panel, con el ángulo recto marcado. Abajo, INCLINACIÓN IGUAL A LA LATITUD. A la derecha, el mismo panel casi plano, con agua estancada y suciedad acumulada sobre el vidrio y una cruz roja. Abajo, DEMASIADO PLANO NO SE LAVA."
+  pie="La regla de la latitud da el óptimo anual. El mínimo por lavado da el suelo del que no hay que bajar."
+/>
+
+La segunda perilla es el ángulo respecto de la horizontal. La regla clásica es directa:
+
+<Formula explicacion="La inclinación que maximiza la producción anual de un arreglo fijo. Es una regla práctica muy buena, no una ley exacta: el óptimo real depende también del reparto de nubosidad a lo largo del año.">
+inclinación óptima ≈ latitud del lugar
+</Formula>
+
+Esa <Termino slug="inclinacion-optima">inclinación óptima</Termino> es el ángulo que deja al panel
+más de frente al sol promediando todo el año.
+
+**Zanja Honda está en torno a los 17,8° de latitud sur**, así que el óptimo anual de un arreglo fijo
+ronda los 18°. Es una inclinación baja, muy tumbada comparada con la de un tejado europeo, y eso
+sorprende a mucha gente. Es correcto: cuanto más cerca del ecuador, más alto pasa el sol y más plano
+conviene poner el panel.
+
+Pero aquí aparece un segundo criterio que compite con el primero, y en el trópico manda tanto como
+la geometría.
+
+<Advertencia>
+**Nunca montes un panel plano ni casi plano, aunque la latitud lo sugiera.**
+
+Un panel muy tumbado no se lava con la lluvia: el agua se queda, se evapora y deja el polvo pegado en
+una película que **no se va sola**. En un lugar con polvo, tierra levantada por el viento y siete
+meses de lluvia, esa película le puede costar a un panel un porcentaje considerable de su producción
+sin que nadie lo note.
+
+La práctica del oficio es no bajar de unos diez o quince grados aunque la latitud diga menos, y así
+las lluvias fuertes hacen el mantenimiento gratis. Para Zanja Honda, los 18° de la latitud ya cumplen
+holgadamente con esto: no hay conflicto entre los dos criterios, pero conviene saber que existen los
+dos, porque **si alguien te propone montar los paneles casi horizontales sobre un techo plano, la
+respuesta es no**.
+</Advertencia>
+
+<Analogia>
+La regla de la latitud es la solución del problema de optimización puro. El mínimo por lavado es una
+**restricción de mantenimiento** que el óptimo teórico no contempla.
+
+Es la misma situación que optimizar una consulta hasta un plan de ejecución perfecto que resulta
+imposible de mantener. El óptimo global de una función no es el óptimo del sistema real, porque el
+sistema real tiene términos que no están en la función.
+</Analogia>
+
+### Y si el terreno tiene mucha nubosidad estacional
+
+Hay un matiz que muy poca gente aplica y que aquí es pertinente. Si tu mes crítico no es el de menos
+sol geométrico sino **el más nublado** —que en el llano boliviano es plena temporada de lluvias—,
+puede convenir apartarse del óptimo anual para favorecer ese mes.
+
+Y hay un caso todavía más claro: **con un arreglo sobredimensionado, el óptimo anual deja de
+importar.** Si en la seca te sobra energía y la tiras, no ganas nada optimizando la seca; lo que
+quieres es maximizar el mes malo. El criterio no es «producir más al año», es **«no quedarte corto
+el peor mes»**, y son cosas distintas.
+
+## Sombras: la asimetría que arruina arreglos
+
+<Diagrama
+  src="una-celda-tapada.webp"
+  alt="A la izquierda, un panel visto de frente como una rejilla de doce celdas unidas por una línea de cableado en serie que serpentea entre ellas; una celda del centro está cubierta por una sombra oscura y una flecha gruesa que recorre la cadena se detiene en seco ahí, marcada con una cruz roja. Arriba, UNA SOLA CELDA TAPADA FRENA A TODAS. A la derecha, el mismo panel con tres caminos curvos alrededor de grupos de celdas, cada uno con un símbolo de diodo, y la flecha rodeando el grupo sombreado y continuando hasta el final; rotulado DIODOS DE PASO."
+  pie="Las celdas van en serie: la corriente del conjunto la fija la peor. Los diodos abren un desvío alrededor del grupo tapado."
+/>
+
+Esta es la parte más contraintuitiva de toda la lección, y la que separa una instalación pensada de
+una improvisada.
+
+Las celdas de un panel **están conectadas en serie**, una detrás de otra. Y en un circuito serie, la
+corriente que circula es la misma en todos los elementos, así que **la fija el elemento que menos
+puede dar.** Una celda tapada no aporta corriente y, peor aún, se convierte en un obstáculo para la
+corriente que las demás intentan empujar.
+
+El resultado desconcierta a cualquiera la primera vez: **tapar una sola celda de sesenta puede tumbar
+la producción de todo el panel**, no reducirla en un sesentavo. Una hoja, una cagada de pájaro, la
+sombra de un cable de antena.
+
+<Analogia>
+Es exactamente el problema del rezagado en una tarea paralela con barrera de sincronización. Diez
+hilos hacen su parte, uno se queda atascado, y el tiempo total lo marca el atascado. No promedias:
+esperas al peor.
+
+Y como en aquel caso, la solución no es acelerar al rezagado: es **darle un camino para saltárselo**.
+</Analogia>
+
+Ese camino existe y viene de fábrica: los <Termino slug="diodo-de-paso">diodos de paso</Termino>.
+Un panel trae internamente dos o tres diodos, cada uno puenteando un grupo de celdas. Cuando un grupo queda sombreado y empieza a
+estorbar, su diodo se pone en conducción y **la corriente lo rodea**. Pierdes ese grupo, un tercio o
+la mitad del panel, pero salvas el resto en vez de perderlo todo.
+
+<Dato titulo="Por qué la celda tapada además se calienta">
+Hay una segunda razón, más grave, para que existan los diodos de paso.
+
+Una celda sombreada dentro de una cadena en serie no solo deja de producir: **el resto de las celdas
+la fuerzan a conducir en sentido inverso**, y en ese régimen la celda disipa como resistencia toda la
+potencia que las demás están generando. Se convierte en un calefactor dentro del propio panel.
+
+Eso se llama <Termino slug="punto-caliente">punto caliente</Termino>, y no es una pérdida de
+rendimiento: es un daño físico permanente que puede quemar el encapsulado y arruinar el panel. El diodo de paso, al ofrecer un desvío, evita que la
+celda tapada tenga que soportar esa corriente.
+
+Es un mecanismo de protección más que de rendimiento, y explica por qué un panel con sombras
+crónicas envejece mal aunque siga entregando algo.
+</Dato>
+
+Vale la pena ver el efecto medido en paneles reales, porque la caída es mucho más brutal de lo que
+cualquiera esperaría antes de verla:
+
+<Video id="7gYcntBtpX0" />
+
+Y este otro entra en el detalle del diodo, incluyendo la diferencia entre paneles de celda completa y
+de celda partida, que es una de las razones técnicas por las que los paneles modernos toleran mejor
+una sombra parcial:
+
+<Video id="Ig6o8Ufhb4A" />
+
+### Cómo se estudian las sombras antes de montar
+
+La regla operativa es dura y simple: **el sitio donde vas a montar tiene que estar libre de sombras
+entre media mañana y media tarde, todos los días del año.** Fuera de esa franja el sol está bajo y
+aporta poco; dentro de ella es donde se produce casi todo.
+
+Para estudiarlo:
+
+- **Mira el sitio a distintas horas del mismo día**, sobre todo a las nueve, al mediodía y a las
+  tres. Es un rato bien invertido antes de clavar una sola fundación.
+- **Piensa en el sol de invierno, no en el de hoy.** En junio el sol pasa más bajo y las sombras son
+  bastante más largas. El árbol que en diciembre no molesta, en junio sí.
+- **Cuenta con lo que va a crecer.** Un árbol joven a diez metros es un problema de dentro de cinco
+  años, y el arreglo va a estar ahí veinte. Esto vale doble en un vivero, que está lleno de plantas
+  que crecen por definición.
+- **Y con lo que se va a construir.** El galpón que planeas levantar más adelante, el tanque
+  elevado, el tinglado. Si el proyecto los contempla, ponlos en el croquis de sombras aunque todavía
+  no existan.
+
+<Diagrama
+  src="separacion-entre-filas.webp"
+  alt="Elevación lateral con tres filas de paneles inclinados sobre una línea de terreno y un sol bajo a la izquierda que proyecta rayos rasantes. La sombra de la primera fila, dibujada como una banda rayada, se detiene justo antes de la base de la segunda; entre ambas hay una cota horizontal rotulada SEPARACIÓN. La tercera fila está demasiado cerca y la sombra de la segunda le trepa por la cara, marcado con una cruz roja. Arriba, LA SOMBRA DEL INVIERNO MANDA."
+  pie="La separación no se elige a ojo: se calcula con la sombra más larga del año, que es la del mediodía de invierno."
+/>
+
+Si vas a montar más de una fila de paneles, aparece un problema adicional: **las filas se dan sombra
+entre sí.** La separación necesaria depende de la altura de la fila y de lo bajo que pase el sol en
+invierno, y se calcula con la sombra del mediodía del solsticio, que es la más larga del año.
+
+<Dato titulo="La ventaja de estar cerca del ecuador">
+Aquí la latitud baja juega a tu favor de nuevo. Cuanto más cerca del ecuador, **más alto pasa el sol
+incluso en invierno**, más cortas son las sombras y menos separación hacen falta entre filas.
+
+Un arreglo en el sur de Chile necesita separaciones enormes entre filas y desperdicia mucho terreno.
+En Santa Cruz la separación necesaria es modesta. Es una de las ventajas silenciosas de instalar
+solar en el trópico, junto con el hecho de que la producción está mucho mejor repartida a lo largo
+del año que en latitudes altas.
+</Dato>
+
+## Anclar contra el viento
+
+<Diagrama
+  src="el-surazo-levanta.webp"
+  alt="Elevación lateral de un panel inclinado sobre estructura de acero con dos patas empotradas en fundaciones de hormigón, con el suelo en corte. Flechas gruesas de viento golpean horizontalmente la cara inferior del panel desde la derecha y una flecha curva hacia arriba indica la fuerza de levantamiento, rotulada SUCCIÓN. Tres llamadas señalan la fundación de hormigón enterrada, rotulada FUNDACIÓN AL PESO; un arriostre diagonal entre la pata y el bastidor, rotulado ARRIOSTRE; y un perno con arandela de seguridad en la grapa del panel, rotulado TORNILLO CON SEGURO. Arriba, EL SURAZO NO EMPUJA, LEVANTA."
+  pie="Un arreglo inclinado es un ala. La carga que lo destruye no es el empuje horizontal, es la succión hacia arriba."
+/>
+
+Un panel inclinado en campo abierto no es una placa: **es un ala.** El viento que pasa por encima
+acelera y baja de presión, y el que se mete por debajo empuja hacia arriba. La suma es una fuerza
+de <Termino slug="succion">succión</Termino>, perpendicular al panel y hacia afuera, que puede
+superar con holgura el peso propio del conjunto.
+
+Eso significa que **la estructura no trabaja a compresión, trabaja a tracción**: los pernos no
+sostienen el panel contra la gravedad, lo sostienen contra un tirón hacia arriba. Y una fijación
+pensada para soportar peso no es la misma que una pensada para resistir arrancamiento.
+
+<ContextoBolivia>
+**El <Termino slug="surazo">surazo</Termino> es el dimensionante.** Entre mayo y septiembre, la
+irrupción de aire frío desde el sur llega al llano cruceño con vientos fuertes y sostenidos, con rachas notablemente más violentas que
+el viento habitual del norte.
+
+Tres consecuencias de proyecto:
+
+**Primera: la dirección del viento crítico es exactamente la contraria a la que miran los paneles.**
+Un arreglo orientado al norte le da la espalda al surazo, que se le mete por debajo con toda la
+superficie inclinada haciendo de vela. Es la peor geometría posible, y no se puede evitar sin
+renunciar a la orientación correcta. Se compensa con estructura, no con orientación.
+
+**Segunda: las fundaciones se dimensionan al arrancamiento, no al aplastamiento.** Un dado de
+hormigón que sobra para sostener el peso puede ser insuficiente para impedir que el conjunto se
+levante entero. Aquí se aplica lo del módulo de albañilería: la fundación tiene que pesar más que el
+tirón, y en arcilla expansiva tiene además que estar por debajo de la capa que se mueve con la
+humedad.
+
+**Tercera: todo lo que se afloja, se afloja con el surazo.** El ciclo de rachas es una máquina de
+aflojar tornillos. Arandelas de seguridad o tuercas autoblocantes en todas las fijaciones, y una
+revisión de aprietes después de la primera temporada de vientos fuertes.
+
+Y una advertencia de convivencia con el vivero: **el mismo surazo que puede levantar tu arreglo es el
+que te obliga a tener las mallas y los plásticos bien tensados y anclados.** Un plástico suelto que
+sale volando y se engancha en un panel hace dos daños a la vez.
+</ContextoBolivia>
+
+### Sobre el techo o sobre el suelo
+
+Las dos opciones son válidas y la elección depende menos del rendimiento que de la operación.
+
+**Sobre el techo** no ocupa terreno útil, queda lejos de manos y de animales, y aprovecha una
+estructura que ya existe. A cambio: la orientación y la inclinación te vienen impuestas por el techo,
+el mantenimiento y la limpieza exigen subir, y **el techo tiene que aguantar la carga añadida**, que
+en un tinglado ligero no es evidente. Cualquier perforación en la chapa es además una vía de agua
+potencial, y en un clima con lluvias torrenciales eso hay que resolverlo bien.
+
+**Sobre el suelo** da libertad total de orientación e inclinación, se limpia y se revisa de pie, y se
+amplía sin tocar nada. A cambio: ocupa superficie, es accesible a quien no debería tocarlo, la
+vegetación de abajo crece y hay que cortarla, y **necesita fundaciones propias**, con lo que eso
+significa en arcilla expansiva.
+
+<Dato titulo="El caso mixto que suele ganar en un vivero">
+Hay una tercera opción que en un vivero tiene mucho sentido y que casi nadie considera: montar el
+arreglo **sobre una estructura elevada que además hace sombra útil.**
+
+Un sector de vivero necesita sombreo. Un arreglo solar necesita superficie despejada. Poner los
+paneles sobre una estructura de tipo pérgola, a suficiente altura para trabajar debajo, cumple las
+dos funciones con un solo bastidor: la sombra que proyecta ya no es un desperdicio, es exactamente
+lo que se buscaba para las plantas que la necesitan.
+
+La contrapartida es que esa estructura es más alta, más cara y mucho más expuesta al viento, así que
+el cálculo estructural pesa más. No es para el primer sistema, pero conviene tenerlo en el mapa desde
+el diseño del predio.
+</Dato>
+
+## Aplicación práctica
+
+<AplicarRizoma>
+Para el arreglo de Rizoma del Sur, el orden de decisiones es este.
+
+**Primero, el estudio de sombras, antes que ninguna otra cosa.** Elige dos o tres sitios candidatos y
+visítalos a las nueve, a mediodía y a las tres del mismo día, anotando qué proyecta sombra sobre
+cada uno. Añade a mano, sobre el croquis del predio, la sombra estimada del invierno, que es
+bastante más larga, y marca los árboles jóvenes con el tamaño que van a tener dentro de diez años.
+Es media jornada de trabajo y decide veinte años de producción.
+
+**Segundo, orientación al norte geográfico**, determinado con la sombra del mediodía solar y no con
+brújula. Si el techo del galpón cae razonablemente al norte, aprovéchalo: una desviación de quince o
+veinte grados cuesta muy poco y ahorra una estructura entera.
+
+**Tercero, inclinación en torno a 18°**, la latitud del lugar. Aquí la latitud y el mínimo de lavado
+no entran en conflicto, así que se puede tomar el óptimo geométrico sin más. Si terminas
+sobredimensionando el arreglo para cubrir la temporada de lluvias, considera inclinar un poco más
+para favorecer el mes crítico en lugar del promedio anual.
+
+**Cuarto, la estructura calculada al surazo**, que es la carga que manda. Fundaciones dimensionadas
+al arrancamiento y llevadas por debajo de la capa de arcilla que se mueve con la humedad, arriostres
+diagonales, y arandelas de seguridad o tuercas autoblocantes en todas las fijaciones. Anota en el
+calendario una revisión de aprietes al terminar la primera temporada de vientos.
+
+**Quinto, decide suelo o techo con criterio de operación.** Para el primer sistema, montaje en suelo
+en una zona despejada tiene ventajas prácticas fuertes: limpias y revisas de pie, amplías sin tocar
+nada, y no comprometes la cubierta del galpón. Reserva la idea de la pérgola productiva —paneles
+arriba, plantas de media sombra abajo— para una segunda etapa, cuando ya sepas cómo se comporta el
+sistema y tengas el cálculo estructural hecho con calma.
+
+Y una decisión de trazado que se olvida siempre: **deja pasillo para caminar alrededor del arreglo.**
+Vas a limpiar los paneles muchas veces en veinte años, y tener que meterte entre filas apretadas
+convierte una tarea de diez minutos en una hora que nadie hace.
+</AplicarRizoma>
+
+## Lo que hay que llevarse
+
+En el hemisferio sur los paneles miran al **norte geográfico**, no al sur y no al norte magnético.
+Desviarse quince o veinte grados cuesta poco, así que se puede aprovechar un techo existente en vez
+de forzar una estructura.
+
+La inclinación óptima ronda **la latitud del lugar**, unos 18° aquí, con un mínimo por debajo del
+cual la lluvia deja de lavar el panel. Si el arreglo está sobredimensionado, conviene optimizar el
+mes crítico en lugar del promedio anual.
+
+Las celdas van en serie, así que **la peor manda**: una sola celda tapada puede tumbar el panel
+entero y además calentarse hasta dañarse. Los diodos de paso limitan el daño abriendo un desvío, pero
+no sustituyen a elegir un sitio sin sombras entre media mañana y media tarde, contando con el sol de
+invierno y con lo que va a crecer.
+
+Y un panel inclinado es un ala: **la carga que lo destruye es la succión hacia arriba**, no el empuje
+lateral. En el llano cruceño esa carga es el surazo, que además viene por detrás del arreglo, así que
+la estructura se calcula al arrancamiento y las fijaciones se aseguran contra el aflojado.

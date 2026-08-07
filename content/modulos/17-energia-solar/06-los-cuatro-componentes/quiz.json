@@ -1,0 +1,101 @@
+{
+  "preguntas": [
+    {
+      "id": "vida-util",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la vida útil de cada componente ordena el presupuesto?",
+      "opciones": [
+        "Porque los paneles duran décadas y la electrónica muchos años, pero las baterías se gastan en pocos.",
+        "Porque el sistema no se compra una vez: se compra una vez la parte que dura y varias veces la que se gasta.",
+        "Porque presupuestar como si todo durara lo mismo lleva a una sorpresa al cabo de unos años.",
+        "Porque todos los componentes se reemplazan a la vez cuando termina la garantía."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Nada se reemplaza a la vez: esa asimetría es justamente el punto. Un panel a los veinte años sigue produciendo la mayor parte de lo que producía nuevo, mientras que el banco ya habrá pasado por uno o dos reemplazos."
+    },
+    {
+      "id": "mppt",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace un regulador MPPT que no hace uno PWM?",
+      "opciones": [
+        "Busca activamente el codo de la curva del panel muchas veces por segundo y convierte esa tensión a la que la batería necesita.",
+        "Recupera la potencia que el PWM desperdicia al arrastrar el panel a la tensión de la batería.",
+        "Se justifica sobre todo cuando la tensión del arreglo es bastante mayor que la del banco.",
+        "Protege la batería de la sobrecarga, cosa que el PWM no hace."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Cortar la carga cuando la batería está llena lo hacen los dos: es la función básica de cualquier regulador. La diferencia está en el seguimiento del punto óptimo, que es un lazo de control corriendo todo el día detrás de una curva que se mueve con cada nube y cada grado de temperatura."
+    },
+    {
+      "id": "costo-ciclado",
+      "tipo": "verdadero_falso",
+      "enunciado": "Entre dos baterías de la misma capacidad nominal, la más barata es la mejor compra.",
+      "respuesta": false,
+      "explicacion": "Falso: lo que decide es el costo por kilovatio-hora ciclado, que divide el precio entre la capacidad multiplicada por la profundidad de descarga y por el número de ciclos. Esa fórmula castiga a la vez la profundidad baja y la vida corta, que son los dos puntos débiles del plomo. Al hacer la cuenta completa, una batería más cara de entrada suele salir mejor."
+    },
+    {
+      "id": "plomo-ventilacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "Si eliges plomo-ácido líquido por precio, ¿qué entra obligatoriamente en el proyecto?",
+      "opciones": [
+        "Ventilación al exterior del recinto donde vive el banco, porque desprende hidrógeno al cargar.",
+        "Mantenimiento de nivel con agua destilada, que las selladas no necesitan.",
+        "Ninguna fuente de chispa cerca del recinto.",
+        "Nada especial: cualquier armario cerrado sirve mientras esté seco."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El hidrógeno es inflamable, así que un armario cerrado es exactamente lo que no hay que hacer. Las selladas de AGM y gel reducen mucho el problema y el litio no lo tiene, pero si el presupuesto obliga al plomo líquido, la ventilación entra en el presupuesto y en el plano."
+    },
+    {
+      "id": "reglas-banco",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué reglas se aplican al armar un banco de baterías?",
+      "opciones": [
+        "No mezclar baterías de distinta edad, capacidad o tecnología.",
+        "Comprarlas del mismo lote e instalarlas juntas.",
+        "Usar cables de interconexión iguales y de la misma longitud, para que todas trabajen por igual.",
+        "Empezar con dos y añadir más cada año según crezca el consumo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Añadir baterías nuevas a un banco viejo es el error caro: en paralelo quedan a la misma tensión y la fuerte alimenta a la débil en lugar de alimentar la carga. Si hay que ampliar, se reemplaza el banco entero o se monta uno independiente con su propio regulador."
+    },
+    {
+      "id": "onda",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un inversor de onda modificada es un buen ahorro para un sistema que va a alimentar una heladera, una bomba y herramientas.",
+      "respuesta": false,
+      "explicacion": "Falso: la onda modificada funciona para cargas resistivas simples, pero todo lo que tiene bobinas —motores, compresores, transformadores, muchas fuentes de alimentación— se calienta más, hace ruido, rinde peor y dura menos. No es un ahorro: es una degradación silenciosa que no se ve hasta que un compresor muere antes de tiempo. Y hoy la diferencia de precio ya no lo justifica."
+    },
+    {
+      "id": "separados-o-todo-en-uno",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué argumentos hay a favor de equipos separados frente a un híbrido todo en uno?",
+      "opciones": [
+        "Si falla uno, el resto sigue funcionando; si falla el híbrido, cae todo el sistema a la vez.",
+        "El reemplazo de una pieza barata en lugar de una cara.",
+        "En zona rural, donde un repuesto tarda días, importa mucho qué pasa mientras tanto.",
+        "El híbrido siempre rinde menos que los equipos separados."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El rendimiento no es el argumento: los híbridos pueden ser perfectamente buenos y tienen ventajas reales de cableado y de tener una sola pantalla que mirar. El criterio decisivo es el mismo que aplicarías al decidir si un servicio va monolítico o en piezas: cuánto tarda la reparación y qué pasa mientras tanto."
+    },
+    {
+      "id": "comprar-para-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Con el dimensionado terminado, vas a comprar regulador, batería e inversor para el vivero. Explica qué eliges en cada caso, con qué criterio, y qué preguntas haces en la tienda que casi nadie hace.",
+      "respuestaModelo": "Regulador MPPT, sin dudarlo. Voy a poner paneles en serie para subir la tensión del arreglo y ahorrar cobre, así que la tensión del arreglo va a estar bastante por encima de la del banco, y ahí es exactamente donde el MPPT saca su diferencia frente a un PWM, que arrastra el panel a la tensión de la batería y desperdicia parte de la curva. Lo elijo con el cálculo de tensión en vacío corregida por la temperatura mínima, dejando margen sobre el límite de entrada, y comprobando que aguanta la corriente de cortocircuito del arreglo.\n\nBatería: hago la cuenta completa antes de decidir. Pido precio de plomo sellado y de litio para la capacidad que calculé, y saco el costo por kilovatio-hora ciclado de cada uno, dividiendo el precio entre la capacidad por la profundidad de descarga por el número de ciclos que declara el fabricante. Esa cuenta castiga a la vez la profundidad baja y la vida corta, y suele dar vuelta la intuición del precio de compra. Si aun así el presupuesto obliga a plomo, que sea sellado, y preveo la ventilación en el plano desde ahora con rejilla baja de entrada y extractor alto, porque el plomo líquido desprende hidrógeno y eso no se improvisa en un cuarto cerrado.\n\nInversor de onda senoidal pura, siempre, porque va a alimentar bomba, heladera y herramientas, y la onda modificada degrada en silencio todo lo que tiene bobinas. Lo dimensiono por potencia instantánea máxima, con el pico de arranque de la bomba coincidiendo con lo demás encendido, mirando su potencia continua y su potencia de pico. Y comparo el consumo en vacío entre modelos, porque el sistema va a pasar muchas horas encendido sin nada trabajando.\n\nPara la arquitectura elijo equipos separados en lugar de un híbrido. En Zanja Honda, con la ciudad a distancia y un repuesto a días de camino, importa qué pasa cuando algo falla: si muere el inversor, el regulador sigue cargando y la bomba de continua sigue funcionando; si muere un híbrido, se para todo. Un sistema autónomo rural se diseña también para fallar bien.\n\nY en la tienda hago dos preguntas que casi nadie hace. Primera: quién honra la garantía y dónde, porque una garantía de fábrica que exige mandar el equipo al extranjero no es una garantía práctica aquí. Segunda: si hay repuestos y quién lo repara, porque la avería típica de la electrónica de potencia no es catastrófica —un ventilador, un fusible interno, un condensador— y la diferencia entre un equipo reparable localmente y uno desechable es enorme a lo largo de veinte años. También pregunto explícitamente si la batería es de ciclo profundo, porque una batería de auto está hecha para picos cortos y dura muy poco en servicio cíclico.\n\nEl banco lo compro entero del mismo lote, con cables de interconexión de la misma longitud, y le pego una etiqueta con la fecha de compra para saber dentro de años cuántos ciclos lleva.",
+      "criterios": [
+        "Elige MPPT y justifica por la diferencia de tensión entre arreglo y banco.",
+        "Dimensiona el regulador por tensión corregida por frío y por corriente.",
+        "Compara baterías por costo por kilovatio-hora ciclado y no por precio.",
+        "Si opta por plomo, prevé ventilación al exterior en el plano.",
+        "Elige onda senoidal pura y explica el daño de la modificada en cargas con bobinas.",
+        "Dimensiona el inversor por potencia continua, de pico y consumo en vacío.",
+        "Prefiere equipos separados por comportamiento ante fallo en zona rural.",
+        "Pregunta por garantía local y por reparabilidad y repuestos.",
+        "Exige batería de ciclo profundo y compra el banco entero del mismo lote."
+      ],
+      "explicacion": "Fíjate en que ninguna de las decisiones se toma mirando el precio de la etiqueta: todas miran el costo del servicio a lo largo de los años, y dos de ellas —reparabilidad y comportamiento ante fallo— ni siquiera aparecen en una comparativa de catálogo. Son exactamente las que más se agradecen en una instalación que está lejos de todo."
+    }
+  ]
+}

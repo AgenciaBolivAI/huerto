@@ -1,0 +1,100 @@
+{
+  "preguntas": [
+    {
+      "id": "cuatro-numeros",
+      "tipo": "opcion_multiple",
+      "enunciado": "En la analogía del agua, ¿qué representa cada magnitud eléctrica?",
+      "opciones": [
+        "La tensión es la altura del tanque: lo que empuja, medida en voltios.",
+        "La corriente es el caudal: cuánta agua pasa por segundo, medida en amperios, y es lo que calienta los cables.",
+        "La resistencia es el estrechamiento: lo que estorba el paso, medida en ohmios.",
+        "La potencia es la cantidad total de agua que hay en el tanque."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La potencia es el trabajo que la rueda entrega por segundo, no una cantidad acumulada — la cantidad acumulada es la energía, y confundirlas es justamente el error central que esta lección viene a evitar."
+    },
+    {
+      "id": "tension-corriente",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para una misma potencia, trabajar a 48 voltios en vez de a 12 hace circular la misma corriente.",
+      "respuesta": false,
+      "explicacion": "Falso: como la corriente es la potencia dividida por la tensión, cuadruplicar la tensión divide la corriente por cuatro. Un sistema de 1.200 W mueve 100 amperios a 12 V y solo 25 a 48 V. Y como la corriente es lo que calienta los cables, esa diferencia decide directamente el grosor del cobre que hay que comprar y cuánto se pierde por el camino."
+    },
+    {
+      "id": "potencia-energia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la frase «tengo un panel de 400 W, alcanza para mi heladera de 150 W» está mal planteada?",
+      "opciones": [
+        "Porque mezcla potencia con energía: la pregunta es cuántos vatios-hora produce el panel al día frente a cuántos consume la heladera al día.",
+        "Porque el panel solo entrega sus 400 W bajo sol pleno y perpendicular, unas pocas horas al día.",
+        "Porque hay que cumplir dos condiciones distintas: que la energía del día alcance y que la potencia alcance en el instante peor.",
+        "Porque una heladera nunca puede alimentarse con energía solar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Una heladera se alimenta perfectamente con solar; lo que falla es el razonamiento. Es la diferencia entre ancho de banda y datos transferidos: el panel es el enlace de subida, la batería es el disco, el inversor es el limitador de velocidad y tu consumo diario son los datos del mes."
+    },
+    {
+      "id": "serie-paralelo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué ocurre al conectar en serie y qué al conectar en paralelo?",
+      "opciones": [
+        "En serie las tensiones se suman y la corriente es la misma en todo el recorrido.",
+        "En paralelo las corrientes se suman y la tensión es la misma en todas las ramas.",
+        "Subir la tensión conectando en serie permite mover la misma potencia con menos corriente y por tanto con cable más fino.",
+        "En paralelo se suman las tensiones, que es como se llega a 48 voltios."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "A 48 voltios se llega poniendo cuatro baterías de 12 en serie, no en paralelo. Y esa es exactamente la razón por la que los sistemas grandes trabajan a 48 V: subir la tensión es subir la altura del tanque, y con más empuje hace falta menos caudal para la misma potencia."
+    },
+    {
+      "id": "baterias-paralelo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para ampliar un banco de baterías basta con añadir una batería nueva en paralelo junto a las que ya están instaladas.",
+      "respuesta": false,
+      "explicacion": "Falso, y es un error caro. Al estar en paralelo todas quedan a la misma tensión, así que la nueva termina alimentando a las viejas en lugar de alimentar la carga, y las dos se degradan; en el peor caso se calientan. Lo correcto es reemplazar el banco entero o montar un banco independiente con su propio regulador."
+    },
+    {
+      "id": "continua-alterna",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que saber sobre continua, alterna y el inversor?",
+      "opciones": [
+        "El panel y la batería trabajan en continua; la red y los enchufes, en alterna.",
+        "Toda conversión pierde algo, típicamente en torno a un diez por ciento.",
+        "El inversor consume aunque no haya nada encendido, y en sistemas chicos ese consumo en vacío pesa.",
+        "Conviene pasar todas las cargas por el inversor para simplificar el cableado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Al contrario: conviene dejar en continua todo lo que pueda funcionar así —iluminación LED, sensores y microcontroladores, algunas bombas— porque evita la pérdida de conversión y permite apagar el inversor cuando no hace falta. Es una decisión de arquitectura que se toma al principio, porque cambiarla después significa recablear."
+    },
+    {
+      "id": "que-consume",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se reparte el consumo real entre los distintos aparatos?",
+      "opciones": [
+        "Lo que calienta o enfría con resistencia es lo caro: hervidor, plancha, ducha eléctrica, termo.",
+        "Los motores son intermedios y traen además un pico de arranque que hay que contar aparte.",
+        "La electrónica y la iluminación LED son casi gratis comparadas con lo anterior.",
+        "El reparto es bastante parejo, así que basta con sumar todo lo enchufado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El reparto es desparejo por dos órdenes de magnitud, y esa asimetría es una buena noticia: un sistema modesto puede dar una calidad de vida muy alta siempre que las cargas de calor se resuelvan por otro camino. Iluminar bien un galpón toda la noche consume menos que hervir agua para dos mates."
+    },
+    {
+      "id": "primer-paso",
+      "tipo": "abierta",
+      "enunciado": "Antes de comprar un solo panel para el vivero, ¿qué harías durante las próximas dos semanas y por qué? Explica qué mides, con qué, cómo lo registras y qué decisiones de arquitectura del sistema empiezas a tomar con ese dato.",
+      "respuestaModelo": "Compraría dos instrumentos baratos antes que cualquier equipo solar: un medidor de enchufe, que se intercala entre el aparato y el tomacorriente y acumula vatios-hora durante días, y una pinza amperimétrica para lo que está cableado fijo. Sin medir el consumo, dimensionar un sistema es adivinar, y la etiqueta de un aparato dice su potencia máxima, no la que usa habitualmente: una heladera de 150 W no consume 150 W todo el día, sino mientras el compresor trabaja, y esa fracción depende del calor que haga.\n\nDurante dos semanas pondría el medidor en cada carga importante por turnos: la bomba, la heladera si la hay, las herramientas del galpón, la iluminación. Y lo registraría en una planilla con una fila por carga y columnas para potencia de placa, potencia medida, horas al día y vatios-hora al día. Esa planilla es literalmente la entrada del dimensionado y la voy a usar varias veces, así que vale la pena hacerla bien desde el principio.\n\nCon ese dato empiezo a tomar dos decisiones de arquitectura. La primera es qué vive en continua y qué necesita alterna. En continua conviene dejar todo lo que se pueda —iluminación LED, sensores y microcontroladores, posiblemente la bomba— porque evita la pérdida del inversor, que ronda el diez por ciento, y permite apagarlo cuando no hace falta, ahorrando además su consumo en vacío. En alterna, solo lo que no tenga alternativa. Cuanto más viva en continua, más chico y más eficiente sale el sistema. Y es una decisión que hay que tomar al principio, porque cambiarla después significa recablear.\n\nLa segunda es qué cargas saco directamente del sistema. Todo lo que calienta por resistencia —hervidor, ducha eléctrica, plancha, termo— fuera desde el día uno: son miles de vatios que se comen el presupuesto energético de un día en minutos, y calentar agua con electricidad almacenada en baterías es la forma más cara de calentar agua que existe. En el llano cruceño el agua caliente sale casi gratis del sol con un termotanque simple.\n\nTambién miraría la bomba aparte, porque en un vivero es la carga que manda y la que mejor se lleva con el sol: puede bombear de día, cuando hay sol, y el depósito elevado guarda esa energía en forma de agua, que es el mismo razonamiento del depósito como batería que ya apareció en la instalación eléctrica del galpón.\n\nY al elegir la tensión de trabajo tendría presente que para la misma potencia, más tensión significa menos corriente: a 48 voltios circula la cuarta parte de amperios que a 12, y como la corriente es lo que calienta los cables, eso decide cuánto cobre hay que comprar.",
+      "criterios": [
+        "Compra medidor de enchufe y pinza amperimétrica antes que ningún equipo solar.",
+        "Explica por qué la etiqueta no sirve y hay que medir consumo real.",
+        "Registra en planilla con potencia de placa, medida, horas y vatios-hora al día.",
+        "Decide qué cargas quedan en continua y cuáles en alterna, y por qué.",
+        "Menciona la pérdida del inversor y su consumo en vacío.",
+        "Saca del sistema las cargas de calor por resistencia y propone alternativa solar térmica.",
+        "Trata la bomba aparte y usa el depósito elevado como almacenamiento.",
+        "Relaciona la tensión de trabajo con la corriente y con el grosor de cable."
+      ],
+      "explicacion": "Fíjate en que ninguna de esas decisiones requiere haber comprado nada, y todas condicionan lo que vas a comprar. Es el mismo principio de las lecciones de planos: lo que se decide en papel cuesta nada, y lo que se decide después de instalar cuesta recablear."
+    }
+  ]
+}

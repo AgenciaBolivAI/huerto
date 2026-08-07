@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "el-producto",
+      "tipo": "verdadero_falso",
+      "enunciado": "Producir ornamentales exige aprender técnicas de propagación distintas de las del resto del catálogo.",
+      "respuesta": false,
+      "explicacion": "Falso: esquejes de tallo, división, acodo, plantas madre, cama de enraizamiento y malla de sombra son exactamente el módulo de propagación y el de diseño de vivero aplicados sin cambios. Lo que hay que aprender aquí no es agronomía, sino cómo se vende algo cuyo valor está en el aspecto."
+    },
+    {
+      "id": "cuatro-papeles",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se organiza un catálogo de ornamentales?",
+      "opciones": [
+        "Por la función que la planta cumple en el sitio donde va a vivir.",
+        "Follaje de interior, floración de exterior, cobertura y borde, colgantes y trepadoras.",
+        "Al cliente le da igual la familia botánica: compra un hueco que llenar.",
+        "Por familia botánica, que es lo que decide el manejo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La familia importa para el manejo interno —las aráceas ornamentales se manejan igual que la yautía porque son la misma familia—, pero no es la clasificación que decide qué se produce. Esa la decide el hueco que la planta llena en casa del comprador."
+    },
+    {
+      "id": "el-precio",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿De qué depende el precio de una ornamental?",
+      "opciones": [
+        "De la planta: especie, tamaño, sanidad y forma.",
+        "De cómo se ve: maceta limpia y uniforme, sustrato sin hierbas, hojas repasadas, etiqueta legible.",
+        "De cuándo se vende, porque la demanda tiene picos marcados en fechas concretas.",
+        "Solo de la calidad biológica de la planta, que es lo único que el productor controla."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Dos de los tres factores no tienen nada que ver con cultivar, y son los que más margen mueven. La asimetría es brutal: la parte biológica cuesta meses y la presentación cuesta minutos, pero pesan parecido en el precio final."
+    },
+    {
+      "id": "uniformidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué importa tanto la uniformidad en ornamentales?",
+      "opciones": [
+        "El comprador va a poner las plantas juntas y quiere que se vean iguales.",
+        "Un lote desigual se vende a trozos y siempre se queda con los peores ejemplares.",
+        "Clasificar por porte permite vender cada categoría a su precio.",
+        "Es solo una cuestión estética sin efecto sobre el ingreso."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El efecto sobre el ingreso es directo: lo que sobra de un lote desigual ocupa espacio sin generar ingreso, que es exactamente el problema de inventario del módulo de vivero. Un lote parejo se vende entero y a mejor precio."
+    },
+    {
+      "id": "merma-estetica",
+      "tipo": "verdadero_falso",
+      "enunciado": "El embudo de producción de una ornamental es el mismo que el de una hortaliza, porque las pérdidas biológicas son parecidas.",
+      "respuesta": false,
+      "explicacion": "Falso: hay un escalón adicional que no es biológico sino estético. Una planta con una hoja rota está sana y viva y no se vende igual, mientras que en una hortaliza esa misma hoja no cambiaría nada. Esa merma comercial hay que medirla aparte y anotarla en la ficha."
+    },
+    {
+      "id": "umbral-de-dano",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el umbral de daño aceptable es más bajo en ornamentales?",
+      "opciones": [
+        "Porque la hoja mordida es el producto estropeado, no una pérdida de capacidad fotosintética.",
+        "Porque el daño no se recupera: una hoja rota no se cura.",
+        "Porque obliga a vigilancia más frecuente y a prevención en vez de reacción.",
+        "Porque las plagas de ornamentales son más agresivas que las de los cultivos de alimento."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las plagas suelen ser las mismas: lo que cambia es qué parte se está vendiendo. En un cultivo de raíz, unas hojas mordidas son irrelevantes mientras la planta siga fabricando reservas; aquí esa mordida es el producto."
+    },
+    {
+      "id": "cuarentena",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el comercio ornamental es una vía importante de dispersión de plagas?",
+      "opciones": [
+        "Las plantas viajan vivas, con sustrato y a sitios sin control agronómico.",
+        "Por eso una plaga nueva aparece muchas veces primero en jardines y viveros.",
+        "La respuesta es una zona de cuarentena para todo lo que entre de fuera.",
+        "El riesgo desaparece si el material viene de otro vivero y no de campo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Que venga de otro vivero no garantiza nada: precisamente los viveros son nodos de la red por la que las plantas viajan. Y hay un segundo lado del asunto: la responsabilidad sobre lo que sale, porque lo que vendes va a casa de alguien."
+    },
+    {
+      "id": "ornamentales-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña la línea de ornamentales de Rizoma del Sur: qué produces, cómo lo presentas, cómo lo planificas y cómo encaja con el resto.",
+      "respuestaModelo": "Empiezo por el material, que aquí es casi gratis: esquejes y divisiones de plantas que ya existen en patios, jardines y casas de la zona. Es el catálogo más barato de arrancar de todo el módulo.\n\nLas aráceas son mi apuesta principal porque encajan como un guante con la infraestructura que ya construí: sombra, humedad alta y sustrato drenante es exactamente lo que produce la malla y lo que ya pedía la yautía. La misma zona sirve para las dos, y el manejo es el mismo porque son la misma familia. Sumo floración de exterior para patio, cobertura de borde —donde entra la batata ornamental— y colgantes y trepadoras, que dan dos productos distintos con el mismo material según cómo los presente.\n\nOrganizo el catálogo por función y no por familia, porque el cliente compra un hueco que llenar: hoja para adentro, flor para afuera, para cubrir suelo, para colgar y trepar.\n\nLa presentación la trato como decisión de negocio y no como detalle. Macetas del mismo modelo y color, sustrato limpio sin hierbas, hojas repasadas antes de exponer, planta centrada y una etiqueta que diga qué es y cuánta luz quiere. Cuesta minutos por planta y cambia el precio: la parte biológica cuesta meses y la presentación cuesta minutos, pero pesan parecido.\n\nClasifico por porte antes de exponer y no mezclo tamaños en el mismo estante. Un lote parejo se vende entero; uno desigual se vende a trozos y me deja los peores ejemplares ocupando espacio.\n\nMido la merma estética aparte de la biológica y la anoto en la ficha, porque es un escalón del embudo que no existe en los cultivos de alimento y sorprende la primera vez.\n\nLa vigilancia es semanal y visual, y baja el umbral: aquí el daño estético es daño económico y no se recupera, porque una hoja rota no se cura y solo desaparece cuando la planta hace hojas nuevas. Prevención antes que reacción: malla, limpieza, densidad razonable.\n\nCuarentena obligatoria para todo lo que entre de fuera: una zona apartada, unas semanas de observación y solo después mezclar. El comercio ornamental es una de las vías principales de dispersión de plagas, y las ornamentales son mi vía de entrada más probable.\n\nPara cada especie anoto cinco datos propios: luz que tolera de verdad, método y época de propagación, meses hasta cada tamaño comercial, fragilidad al transporte y toxicidad. Ese tercero es el que más falta hace y el que menos aparece publicado; y el de toxicidad lo digo al vender, porque muchas aráceas de interior son irritantes igual que la yautía.\n\nPlanifico hacia atrás desde las fechas señaladas: fecha de venta menos ciclo menos margen, y el margen va antes de la fecha, no después. Llegar tarde es perder la fecha entera; llegar demasiado pronto también cuesta, porque la planta se pasa de tamaño y sigue consumiendo espacio y riego. Las fechas concretas del calendario cruceño las confirmo y las anoto durante el primer año.\n\nY exploto la sinergia con el resto del catálogo: quien viene a comprar una planta de interior es la misma persona que puede llevarse una hierba en maceta, un ají dulce o un frutal pequeño. La ornamental atrae al cliente y el resto aumenta el ticket. Eso ordena también la disposición física del vivero: lo bonito adelante y lo demás al alcance.\n\nAntes de decidir precios recorro viveros y puestos con la libreta anotando especies, tamaños, tipo de maceta y precios, y lo repito en distintas épocas. En ornamentales los precios están expuestos, así que es la investigación de mercado más barata que existe.",
+      "criterios": [
+        "Arranca con material de esquejes y divisiones conseguidos localmente.",
+        "Aprovecha las aráceas por su encaje con la infraestructura de sombra ya construida.",
+        "Organiza el catálogo por función en casa del cliente.",
+        "Trata la presentación como decisión de negocio con macetas y etiquetas uniformes.",
+        "Clasifica por porte y no mezcla tamaños al exponer.",
+        "Mide la merma estética aparte y la anota en la ficha.",
+        "Baja el umbral de daño y hace vigilancia semanal preventiva.",
+        "Aplica cuarentena a todo el material que entra de fuera.",
+        "Anota los cinco datos propios de ficha ornamental, incluida la toxicidad.",
+        "Planifica hacia atrás desde fechas señaladas poniendo el margen antes.",
+        "Explota la sinergia comercial con el resto del catálogo y ordena el vivero en consecuencia.",
+        "Investiga precios recorriendo viveros y puestos en distintas épocas."
+      ],
+      "explicacion": "Fíjate en que casi todo lo que sube el precio en esta ficha —presentación, uniformidad, momento, etiqueta— es trabajo de minutos sobre una planta que ya costó meses. Es de las relaciones esfuerzo-resultado más favorables de todo el negocio, y por eso es también donde más dinero se deja sobre la mesa."
+    }
+  ]
+}

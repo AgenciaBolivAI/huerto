@@ -1,0 +1,99 @@
+{
+  "preguntas": [
+    {
+      "id": "las-cinco-zonas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué caracteriza a las cinco zonas de un vivero?",
+      "opciones": [
+        "Propagación es la zona con las condiciones más controladas y la que menos tránsito debe tener.",
+        "Crecimiento es donde la planta pasa la mayor parte de su vida y ocupa la mayor superficie.",
+        "Endurecimiento se olvida a menudo y es la causa número uno de plantas que mueren tras la venta.",
+        "Las cinco zonas solo existen si el viverista decide crearlas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las cinco etapas existen en cualquier vivero aunque nadie las haya dibujado. Si no se separan, existen igual pero revueltas, y el vivero funciona como un sistema sin entornos separados: nada está donde se supone, cada operación tiene que buscar antes de actuar, y un problema en un punto se propaga a todos los demás."
+    },
+    {
+      "id": "sentido-unico",
+      "tipo": "opcion_multiple",
+      "enunciado": "De la regla del sentido único, ¿qué consecuencias de diseño se derivan?",
+      "opciones": [
+        "Propagación va lejos de la entrada, porque es la zona más sensible y la que menos tránsito necesita.",
+        "Despacho va junto a la entrada, para que el cliente no tenga que cruzar la producción.",
+        "El bloque de madres va aparte de la línea, porque no es una etapa sino la fuente que la alimenta.",
+        "Las zonas se van ubicando donde haya sitio libre en cada momento."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Ubicar cada zona donde había hueco es precisamente lo que hace casi todo vivero pequeño, y el resultado es que llevar plantas de una etapa a la siguiente obliga a cruzar el terreno entero. Lo caro no es la distancia sino que el movimiento ocurre miles de veces al año: diez metros de más, mil veces, son diez kilómetros de carretilla."
+    },
+    {
+      "id": "otros-flujos",
+      "tipo": "verdadero_falso",
+      "enunciado": "El montón de restos de poda y plantas muertas puede quedar junto a la zona de propagación, ya que es material vegetal del propio vivero.",
+      "respuesta": false,
+      "explicacion": "Falso: un montón de restos vegetales es exactamente donde se cultivan los hongos que después matan los almácigos. Los residuos son uno de los cuatro flujos que compiten con el de las plantas —junto con el sustrato, el agua y las personas— y necesitan su propio sitio, lejos de la zona más sensible del vivero."
+    },
+    {
+      "id": "dimensionar",
+      "tipo": "opcion_multiple",
+      "enunciado": "Quieres sacar 2.000 plantas al año; cada una pasa 6 meses en crecimiento ocupando 0,04 m². ¿Qué se concluye?",
+      "opciones": [
+        "Como el ciclo dura medio año, en cualquier momento hay unas 1.000 plantas dentro a la vez.",
+        "Esas 1.000 plantas pegadas ocupan unos 40 m², y con caminos la zona pide unos 60 m².",
+        "La superficie de una zona depende de las plantas por año, la superficie por planta y el tiempo de estancia.",
+        "Necesitas superficie para las 2.000 plantas a la vez, porque todas pasan por la zona en el año."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hacen falta 2.000 sitios: hacen falta tantos como plantas coexistan, y eso lo fija el tiempo de estancia. Con la misma cuenta, las 2.000 plantas pasan unas cuatro semanas en la cama de enraizamiento ocupando 5 × 5 cm, lo que da unas 150 a la vez y menos de medio metro cuadrado de cama. La zona que te obsesiona cabe en una mesa y la que te aburre se come el terreno."
+    },
+    {
+      "id": "cuello-de-botella",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se maneja el cuello de botella de un vivero?",
+      "opciones": [
+        "La capacidad del sistema entero es la de su etapa más estrecha, no la suma de las etapas.",
+        "Optimizar una etapa que no es el cuello de botella no mejora nada, solo alarga la cola.",
+        "Se encuentra mirando dónde se amontonan las plantas y dónde sobra espacio vacío.",
+        "Una vez ampliado, el cuello de botella desaparece y el sistema queda equilibrado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El cuello de botella no desaparece: se mueve. Cuando amplías la etapa que limitaba, el límite pasa a ser otra, y a menudo no la que esperabas. Por eso la forma de encontrarlo no es razonar sino observar: donde se acumulan plantas, estás justo antes del cuello; donde sobra sitio, esa etapa está sobredimensionada."
+    },
+    {
+      "id": "el-tiempo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Subir cinco puntos el porcentaje de enraizamiento vale más que recortar un mes el tiempo de crecimiento con la misma calidad final.",
+      "respuesta": false,
+      "explicacion": "Falso, y por una razón económica: cada planta en crecimiento es capital inmovilizado, que ocupa espacio, consume agua y trabajo, y todavía no se ha cobrado. Crecimiento se lleva más del ochenta por ciento del tiempo total, así que recortarlo libera espacio, agua y dinero de forma mucho más contundente que mejorar una etapa que dura semanas."
+    },
+    {
+      "id": "cinco-preguntas",
+      "tipo": "verdadero_falso",
+      "enunciado": "La cifra que dimensiona el terreno de un vivero es cuántas plantas quieres vender al año.",
+      "respuesta": false,
+      "explicacion": "Falso: lo que dimensiona el terreno es cuántas plantas van a estar simultáneamente ocupando espacio, que depende del tiempo de estancia y no del total anual. Un vivero que vende 2.000 plantas de ciclo corto necesita mucho menos terreno que uno que vende 2.000 de ciclo largo, aunque la cifra de ventas sea idéntica."
+    },
+    {
+      "id": "layout-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Traza el layout de Rizoma del Sur: dónde va cada zona, por dónde corren los caminos, y qué decides ahora que sería caro cambiar después.",
+      "respuestaModelo": "Con 2.474 m² en ocho lotes contiguos y forma alargada, la disposición natural es poner la línea de producción a lo largo del terreno, de modo que la planta lo recorra una sola vez y en un solo sentido.\n\nEl orden a lo largo del eje: despacho junto al acceso, después endurecimiento, después crecimiento ocupando el grueso del terreno, y propagación en el extremo opuesto, el más protegido y el de menos tránsito. Así el cliente que entra a comprar no pisa nunca la zona de producción, y la zona más delicada del vivero es la más lejana al polvo, las pisadas y las visitas.\n\nEl bloque de madres va en un lateral, cerca de propagación pero fuera de la línea, porque no es una etapa del flujo sino la fuente que lo alimenta: nada debe pasar por encima de él.\n\nEl reparto de superficie sale de la fórmula y no del reparto igualitario: crecimiento se lleva la mayor parte con diferencia, porque la planta pasa ahí más del ochenta por ciento de su tiempo y ocupa cien veces más que en la cama; propagación una fracción pequeña pero con las mejores condiciones; endurecimiento y despacho lo mínimo cómodo; y madres un bloque aparte que crece despacio.\n\nLos otros cuatro flujos necesitan sitio desde el primer trazo. La zona de mezcla de sustrato va cerca de la entrada de vehículos y cerca de donde se llenan envases, porque es lo más pesado que se mueve. El punto de agua y el recorrido de la red los reservo ahora, porque en la seca hay que regar a diario y si la red obliga a arrastrar mangueras entre plantas, las plantas se van a llevar por delante. El acceso de personas queda limitado a despacho para el cliente. Y el sitio de residuos va lejos de propagación, porque un montón de restos vegetales es donde se cultivan los hongos que matan los almácigos.\n\nLos caminos se deciden ahora: rectos, anchos para carretilla en toda la línea, y con el suelo compactado o cubierto. En la llanura aluvial de arcillas expansivas, un camino de tierra desnuda en plena lluvia deja de ser un camino; es el mismo problema de agua estancada que aparecía en las fundaciones del módulo de construcción y se resuelve igual, no dejando que el agua se quede encima.\n\nEl sur pesa en el trazado. Los surazos entran por ahí con viento fuerte y noches frías, así que propagación y almácigos van protegidos por ese lado, con cortaviento o con la propia edificación haciendo de pantalla. El bloque de madres agradece la misma protección.\n\nY hay dos requisitos físicamente opuestos que obligan a separar zonas: propagación necesita malla de sombra casi todo el año por la radiación de la llanura cruceña, mientras que endurecimiento tiene que estar deliberadamente expuesto al sol y al viento. No pueden compartir sitio.\n\nMi cuello de botella previsible es superficie de crecimiento o agua, no la capacidad de propagar; lo voy a comprobar mirando dónde se amontonan las plantas en el primer ciclo, no razonándolo.\n\nLo que decido ahora porque después sería caro: la posición de las zonas y el sentido de circulación, el trazado y el ancho de los caminos, el punto de agua, y dejar un lado del vivero libre para ampliar, que hoy es gratis y más adelante muy caro.\n\nY todo esto se dibuja de verdad, con el módulo de planos en la mano: planta acotada con zonas, caminos, punto de agua y orientación. Es la única forma de discutir el reparto antes de construirlo, cuando cambiarlo todavía cuesta una goma de borrar.",
+      "criterios": [
+        "Pone la línea de producción a lo largo del terreno alargado, en un solo sentido.",
+        "Sitúa despacho junto al acceso y propagación en el extremo protegido.",
+        "Deja el bloque de madres fuera de la línea, en un lateral.",
+        "Reparte superficie con crecimiento llevándose la mayor parte.",
+        "Reserva sitio para sustrato, agua, personas y residuos.",
+        "Aleja los residuos de la zona de propagación y explica por qué.",
+        "Define caminos rectos, anchos para carretilla y con suelo tratado.",
+        "Relaciona el drenaje de los caminos con las arcillas expansivas.",
+        "Protege propagación del sur por los surazos.",
+        "Reconoce que sombra en propagación y sol en endurecimiento son incompatibles.",
+        "Anticipa el cuello de botella y dice que lo comprobará observando.",
+        "Reserva terreno para ampliación futura.",
+        "Dibuja un plano acotado apoyándose en el módulo de planos."
+      ],
+      "explicacion": "Fíjate en que ninguna de estas decisiones requiere saber agronomía: son decisiones de arquitectura de sistema aplicadas a un terreno. Y como toda decisión de arquitectura, cuestan poco mientras están en el papel y muchísimo cuando ya hay dos mil plantas encima."
+    }
+  ]
+}

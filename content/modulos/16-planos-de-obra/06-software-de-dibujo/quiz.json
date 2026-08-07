@@ -1,0 +1,100 @@
+{
+  "preguntas": [
+    {
+      "id": "cuando-cad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuál es la recomendación de esta lección sobre cuándo pasar del papel al CAD?",
+      "opciones": [
+        "Dibujar el primer plano a mano, porque hacerlo a mano obliga a entender cada decisión.",
+        "Pasar a CAD cuando llegue la segunda versión, que es donde el papel empieza a costar más de lo que ahorra.",
+        "Redibujar en CAD algo ya entendido, para no pelear con dos cosas nuevas a la vez.",
+        "Instalar primero la herramienta y aprenderla bien antes de dibujar nada."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La última opción es el orden invertido y es la trampa típica de quien viene de la informática: buscar la herramienta perfecta antes de tener claro el problema. En el tiempo que lleva instalar y aprender un programa, el galpón ya está resuelto en papel — y entonces sí se sabe qué se le va a pedir a la herramienta."
+    },
+    {
+      "id": "que-da-el-cad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué aporta realmente un CAD 2D frente al dibujo a mano?",
+      "opciones": [
+        "Geometría enganchada: dos muros que deberían encontrarse se encuentran de verdad, y no casi.",
+        "Capas, que permiten generar varias láminas distintas del mismo archivo apagando información.",
+        "Medición automática de áreas y longitudes, que alimenta el cómputo métrico sin aritmética a mano.",
+        "Criterio de proyecto: el programa evita que dibujes una solución mala."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El programa dibuja lo que le digas, incluida una tontería. Todo el criterio de las lecciones anteriores —el arco de la puerta, la medida modular, la pendiente del desagüe— sigue siendo tuyo. Y la ventaja más profunda son las capas: convierten el juego de planos en varias vistas de una sola fuente, que es exactamente lo que en papel no se puede tener."
+    },
+    {
+      "id": "editor-grafico",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un plano dibujado en un editor gráfico de diseño sirve igual que uno hecho en CAD, siempre que se vea bien.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la trampa más peligrosa de la lista. En un CAD escribes que un muro mide seis metros y el programa lo dibuja: la medida está declarada. En un editor gráfico dibujas algo de seis centímetros y escribes al lado que son seis metros: la medida está solo dibujada. Los dos se ven idénticos hasta que alguien intenta medir."
+    },
+    {
+      "id": "formatos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se reparten los formatos DWG, DXF, PDF y SVG?",
+      "opciones": [
+        "DWG es el nativo del CAD dominante y es propietario; DXF es el de intercambio, abierto y basado en texto.",
+        "PDF es el formato de entrega: fija la geometría, se imprime igual en todas partes y no se edita por accidente.",
+        "DXF y DWG hacen de código fuente y el PDF hace de artefacto: se versiona el fuente y se entrega el artefacto.",
+        "Conviene entregar siempre el archivo editable, para que quien lo reciba pueda corregirlo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El editable se comparte con quien va a seguir dibujando, no con quien va a ejecutar. Nadie edita el PDF por la misma razón por la que nadie parchea un binario: se toca el original y se vuelve a generar. Y el dato que suele sorprender es que DXF y SVG son texto, así que se pueden versionar y comparar como cualquier otro fuente."
+    },
+    {
+      "id": "imprimir",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el archivo está dibujado a escala exacta, la impresión conserva la escala automáticamente.",
+      "respuesta": false,
+      "explicacion": "Falso: la opción de ajustar a página viene marcada por defecto en casi todos los diálogos de impresión y destruye la escala en silencio. Se imprime al cien por cien, a tamaño real. Y como no siempre controlas quién imprime —el centro de copiado, el municipio, un vecino—, la defensa adicional es dibujar una escala gráfica junto al cajetín, que se encoge con el dibujo y sigue siendo verdadera."
+    },
+    {
+      "id": "perfil-tecnico",
+      "tipo": "opcion_multiple",
+      "enunciado": "Con formación en informática, ¿dónde conviene invertir el esfuerzo y dónde no?",
+      "opciones": [
+        "Sí: versionar los archivos y nombrarlos con obra, lámina, versión y fecha.",
+        "Sí: automatizar el cómputo, sacando áreas y longitudes del CAD hacia la planilla.",
+        "No: montar una infraestructura, generar el plano por código o inventar un formato propio.",
+        "Sí: pedirle a un modelo de IA que dibuje el plano a escala, para ahorrarse el dibujo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los modelos de imagen no dibujan a escala ni respetan cotas: este mismo curso está lleno de diagramas generados y ninguno es un plano medible, por eso son ilustraciones y no documentos de obra. La IA sirve para revisar tu lista de comprobaciones, ayudarte con cálculos y ordenar la planilla de materiales — el plano lo dibujas tú."
+    },
+    {
+      "id": "flujo-obra",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo debería ser el flujo de trabajo entre el archivo y la obra?",
+      "opciones": [
+        "Se dibuja en CAD, se exporta a PDF, se imprime a tamaño real y el papel va al galpón en funda plástica.",
+        "El archivo es la fuente de verdad y el papel es una copia con número de versión.",
+        "Cuando sale una versión nueva se imprime y la anterior se saca de la pared.",
+        "En obra se consulta el archivo en la pantalla del teléfono, que siempre está actualizado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La pantalla no funciona en obra: nadie la mira con las manos llenas de mortero y con sol directo no se ve nada. El teléfono sirve como caché para consultar caminando, pero el documento que manda es el papel colgado donde todos lo ven — y con una sola versión vigente, como en la lección uno."
+    },
+    {
+      "id": "decidir-herramienta",
+      "tipo": "abierta",
+      "enunciado": "Un conocido con tu mismo perfil técnico te dice que va a modelar su vivero entero en tres dimensiones antes de construir nada, para tenerlo todo bien resuelto. ¿Qué le respondes, y qué le propones en su lugar?",
+      "respuestaModelo": "Le diría que entiendo el impulso porque yo lo tuve, y que el problema no es que el modelo tridimensional sea malo sino que resuelve una pregunta que él todavía no tiene. El 3D sirve para ver y para convencer: para entender cómo va a caer la luz, para mostrarle a alguien qué se va a construir, para detectar que una viga choca con una puerta. No sirve para ir más rápido, y de los tres caminos es el más lento. Es facilísimo pasar tres tardes afinando un modelo de un galpón cuya única decisión pendiente era el ancho.\n\nLe propondría empezar al revés. Primero, dibujar a mano el plano de conjunto del terreno y las láminas del galpón: planta, fundaciones y un corte. A mano se tarda una tarde, obliga a entender cada decisión y se puede probar tres distribuciones distintas en veinte minutos, que es algo que ninguna herramienta digital iguala. Y si el galpón es rectangular con muros ortogonales, papel milimetrado y una regla dan un plano perfectamente medible.\n\nCuando llegue el primer cambio grande, y va a llegar porque el primer diseño de cualquier cosa cambia, entonces sí: instalar un CAD 2D libre y redibujar lo que ya entendió. Redibujar algo conocido es la mejor forma de aprender la herramienta, porque no está peleando con dos cosas nuevas a la vez. Y lo que va a ganar ahí no es exactitud de trazo, que su mano con regla ya tiene, sino geometría enganchada, capas, repetición barata, medición automática y poder reimprimir a cualquier escala.\n\nLas capas son el argumento de peso, y se lo explicaría en sus términos: en papel, la planta y la de fundaciones son dos dibujos que pueden desincronizarse, y no hay compilador que avise. En CAD son dos vistas de la misma fuente, y mover un muro actualiza las dos. Es la misma razón por la que no copiamos y pegamos bloques que representan la misma cosa, solo que aquí el coste de no hacerlo lo paga un albañil construyendo la versión equivocada.\n\nDonde sí le diría que aproveche su perfil es en tres cosas: versionar los archivos con la disciplina que ya tiene, nombrarlos con obra, lámina, versión y fecha, y automatizar el cómputo sacando áreas y longitudes del CAD hacia la planilla, para que el presupuesto se recalcule cuando cambie una dimensión. Ahí es donde la computadora ahorra días de verdad.\n\nY le advertiría de dos cosas. Que no use un editor gráfico de diseño por cómodo que sea, porque produce dibujos que parecen planos y no tienen escala real. Y que al imprimir desmarque siempre lo de ajustar a página, y dibuje una escala gráfica junto al cajetín, porque el plano va a acabar impreso por alguien que no es él.",
+      "criterios": [
+        "Explica que el 3D sirve para ver y convencer, no para ir más rápido.",
+        "Propone dibujar primero a mano y menciona el papel milimetrado como opción.",
+        "Sitúa el paso a CAD en la segunda versión, redibujando algo ya entendido.",
+        "Enumera lo que el CAD aporta de verdad, empezando por geometría enganchada.",
+        "Usa las capas como argumento de fuente única de verdad entre láminas.",
+        "Recomienda versionar, nombrar bien y automatizar el cómputo, no el dibujo.",
+        "Advierte contra el editor gráfico sin unidades reales.",
+        "Advierte sobre imprimir a tamaño real y dibujar escala gráfica."
+      ],
+      "explicacion": "Lo que hace difícil esta conversación es que el impulso de sobreingenierizar viene de una intuición correcta —las herramientas buenas ahorran trabajo— aplicada al problema equivocado. El cuello de botella de una obra chica nunca es la precisión del dibujo: es entender qué hay que dibujar. Y eso se aprende dibujando, no eligiendo herramienta."
+    }
+  ]
+}

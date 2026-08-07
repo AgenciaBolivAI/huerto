@@ -1,0 +1,356 @@
+Ya sabes qué estás mirando cuando miras un plano. Falta lo que lo vuelve **utilizable**: la escala,
+que es la razón entre el papel y el mundo, y el acotado, que es el sistema por el cual el plano dice
+medidas exactas sin que nadie tenga que sacar la regla.
+
+Y en el medio está la regla que más plata salva en toda la obra, tan simple que da vergüenza
+enunciarla y tan ignorada que se sigue pagando todos los días: **la cota manda sobre el dibujo.**
+
+## La escala es una razón, no un tamaño
+
+<Diagrama
+  src="que-es-la-escala.webp"
+  alt="Diagrama en dos mitades. Arriba, un muro de ladrillo dibujado en alzado ocupando el ancho del cuadro, con una línea de cota debajo y una pequeña silueta humana al lado para dar referencia de tamaño, rotulado LA REALIDAD. Abajo, el mismo muro dibujado mucho más pequeño sobre una hoja blanca, con la misma línea de cota, rotulado EL PAPEL. Guías discontinuas conectan los extremos del muro grande con los del dibujo pequeño. En el centro, el rótulo ESCALA 1:50 y la línea 1 CM EN EL PAPEL SON 50 CM REALES."
+  pie="La escala no dice cuán grande es el dibujo: dice por cuánto hay que multiplicar el papel para llegar a la realidad."
+/>
+
+La <Termino slug="escala">escala</Termino> de un plano es la razón entre la medida dibujada y la
+medida real. Se escribe con dos puntos y se lee en voz alta como *uno a cincuenta*:
+
+<Formula explicacion="Una unidad de papel equivale a cincuenta unidades de realidad. Da igual cuál sea la unidad: si un centímetro de papel son cincuenta centímetros reales, un milímetro de papel son cincuenta milímetros reales.">
+1 : 50   →   medida real = medida en el papel × 50
+</Formula>
+
+La conversión funciona en los dos sentidos y conviene tener los dos automatizados en la cabeza:
+
+- **Del papel a la realidad:** multiplicas por el denominador. Un trazo de 8 cm en un plano 1:50 son
+  400 cm, es decir **4 metros**.
+- **De la realidad al papel:** divides por el denominador. Un muro de 6 metros en 1:50 se dibuja de
+  600 ÷ 50 = **12 centímetros**.
+
+Fíjate en la propiedad clave, que es la que hace que un plano sea un plano: **la razón es la misma
+en toda la hoja y en cualquier dirección.** Por eso se puede medir un plano, y por eso una
+fotografía no sirve.
+
+### Qué escala se usa para qué
+
+El denominador crece cuando el objeto es grande o el detalle poco importante, y se achica cuando hay
+que ver algo de cerca:
+
+| Escala | Para qué |
+|---|---|
+| **1:500 · 1:200** | Plano de ubicación: el terreno entero y dónde cae la construcción |
+| **1:100** | Planta general de una construcción mediana; el estándar de trámite |
+| **1:50** | **El caballo de batalla** de la obra chica: plantas, cortes y fundaciones |
+| **1:25 · 1:20** | Ampliaciones de una zona: un baño, un encuentro de muros, una escalera |
+| **1:10 · 1:5 · 1:1** | Detalle constructivo: cómo se resuelve un anclaje, un dintel, una junta |
+
+Una regla práctica que evita discusiones: **si algo no se entiende, no se explica con más palabras,
+se redibuja a mayor escala.** Un detalle en 1:10 al costado de la planta resuelve en un minuto lo
+que tres flechas y una nota no resuelven nunca.
+
+<Video id="kmYb5N7zDjI" />
+
+### El escalímetro: no calcules, lee
+
+El <Termino slug="escalimetro">escalímetro</Termino> es una regla de sección triangular con seis
+graduaciones distintas, una por escala habitual. No mide centímetros: **mide metros directamente en
+la escala que elijas.** Apoyas la cara marcada 1:50 sobre el dibujo y la regla te dice *cuatro
+metros*, sin que hayas multiplicado nada.
+
+Es una herramienta barata que elimina una clase entera de errores aritméticos, y merece estar en el
+cajón. Pero ojo con la trampa que viene: incluso con escalímetro en mano, medir el papel es el
+último recurso, no el primero.
+
+<Video id="X5ZUXaQ-Dk0" />
+
+## La cota manda sobre el dibujo
+
+<Diagrama
+  src="la-cota-manda.webp"
+  alt="Diagrama de dos paneles. En el izquierdo, una mano apoya una regla común sobre un plano impreso para medir la distancia entre dos muros, y encima hay una gran cruz roja; el rótulo dice MEDIR EL PAPEL. En el derecho, una mano señala con un lápiz la cifra escrita sobre la línea de cota entre esos mismos dos muros, con un gran visto verde encima; el rótulo dice LEER LA CIFRA. Arriba, el título LA COTA MANDA SOBRE EL DIBUJO."
+  pie="El dibujo es una ilustración de la medida. La medida es el número escrito. Cuando discrepan, gana el número."
+/>
+
+Esta es la regla más importante del módulo, así que va sola y en negrita: **cuando el dibujo y la
+cifra escrita no coinciden, la cifra escrita tiene razón.**
+
+La razón no es filosófica, es una lista de cosas que le pasan al papel entre que alguien lo dibuja y
+alguien lo lee:
+
+- **El papel cambia de tamaño.** Absorbe y suelta humedad, y se dilata y se contrae con ella. En un
+  clima que pasa de la seca al aguacero, una lámina grande deja de medir lo que medía.
+- **La fotocopia reduce.** Copiar un A1 a A3 divide todas las distancias por más de dos, y el
+  resultado sigue pareciendo un plano perfectamente serio.
+- **La impresión ajusta a página.** Es la opción marcada por defecto en la mitad de los diálogos de
+  impresión del mundo, y su único efecto es destruir la escala en silencio.
+- **A veces el dibujo nunca estuvo a escala.** Un croquis, una modificación anotada a mano sobre una
+  lámina vieja, un detalle exagerado a propósito para que se vea. Cuando es deliberado se marca
+  **S/E**, de *sin escala*.
+
+<Advertencia>
+Una lámina que llega por WhatsApp está fuera de escala por definición: no sabes en qué formato se
+imprimió ni si se recortó al fotografiarla. Sobre una foto de un plano **solo se leen cotas, jamás
+se mide**. Y si la cota que necesitas no está escrita, la respuesta no es medir la pantalla: es
+pedir el dato.
+</Advertencia>
+
+### La escala gráfica: el plan B que sobrevive a la fotocopia
+
+Hay una defensa elegante contra todo lo anterior, y es dibujar en la lámina una **escala gráfica**:
+una barrita segmentada con sus valores, colocada junto al cajetín.
+
+Su gracia es que **se deforma junto con el dibujo**. Si alguien reduce la lámina a la mitad, la
+barra se reduce a la mitad también, y sigue siendo verdadera: mides la barra, sabes cuánto vale un
+centímetro de esa copia concreta, y recuperas la escala. Es un dato que viaja dentro del propio
+documento en lugar de depender de que nadie toque el archivo.
+
+<Analogia>
+La escala numérica del cajetín es una constante declarada aparte; la escala gráfica es un valor
+embebido en el propio dato. Cuando el documento pasa por transformaciones que nadie controla —
+fotocopias, impresiones, fotos de una foto—, lo declarado aparte se desincroniza y lo embebido
+sobrevive.
+
+Es la misma razón por la que una imagen lleva sus dimensiones dentro del archivo en vez de en un
+`.txt` al lado.
+</Analogia>
+
+## Anatomía de una cota
+
+<Diagrama
+  src="anatomia-de-una-cota.webp"
+  alt="Ampliación de un tramo de muro en planta con su cota completa dibujada debajo: dos líneas auxiliares verticales que suben desde los extremos del muro, una línea de cota horizontal entre ellas, una marca diagonal en cada extremo y la cifra 3,45 centrada encima de la línea. Cuatro llamadas con punto señalan las cuatro partes, rotuladas LÍNEAS AUXILIARES, LÍNEA DE COTA, EXTREMO y CIFRA. Arriba, el título ANATOMÍA DE UNA COTA."
+  pie="Cuatro piezas, siempre las mismas. La cifra va sobre la línea y sin tocarla, para que se lea aunque el dibujo esté apretado."
+/>
+
+Una <Termino slug="cota">cota</Termino> es la anotación que declara una medida, y tiene cuatro
+partes fijas:
+
+1. **Las líneas auxiliares** salen de los dos puntos que se están midiendo, perpendiculares a la
+   medida, y no llegan a tocar el objeto: se dejan un par de milímetros de aire para no confundirlas
+   con líneas del dibujo.
+2. **La línea de cota** une esas dos auxiliares y es la que representa la distancia.
+3. **Los extremos** marcan dónde empieza y termina: en arquitectura casi siempre una marca diagonal
+   a 45 grados; en dibujo mecánico, flechas.
+4. **La cifra** va centrada **sobre** la línea, no cortándola, y siempre orientada para leerse desde
+   abajo o desde la derecha de la hoja — nunca cabeza abajo.
+
+### La unidad hay que declararla
+
+Un plano puede acotar en metros con dos decimales —`3,45`— o en centímetros —`345`— y las dos
+costumbres conviven. La cifra `345` en un plano en metros sería un muro de trescientos cuarenta y
+cinco metros, así que **la unidad se declara en el cajetín o en una nota**, y no se mezcla dentro de
+la misma lámina.
+
+Y la precisión se elige con cabeza: **la obra se construye al centímetro.** Escribir `3,4573` no es
+más riguroso, es ruido — nadie va a levantar un muro con esa exactitud, y el decimal de más solo
+sirve para que alguien lo redondee mal.
+
+### Qué se acota y qué no
+
+Se acota **todo lo que hace falta para construir, y una sola vez**. Esta última parte es menos obvia
+de lo que parece.
+
+<Analogia>
+No acotar dos veces la misma distancia es exactamente el principio de no repetir la fuente de
+verdad. Si el largo total está escrito y además está la suma de los parciales, tienes el mismo dato
+en dos sitios — y el día que alguien mueva un tabique, va a actualizar uno y olvidar el otro.
+
+A partir de ahí el plano se contradice a sí mismo y el albañil elige. En el código eso es un bug
+sutil; en la obra es un muro donde no va.
+</Analogia>
+
+La convención resuelve el conflicto de forma práctica: se acotan **los parciales y el total**, que
+es información redundante a propósito, pero justamente para poder comprobarla. Lo que no se hace es
+acotar una misma distancia dos veces por caminos distintos.
+
+## La cadena de cotas es un checksum
+
+<Diagrama
+  src="cadena-de-cotas.webp"
+  alt="Un muro largo en planta con cuatro huecos de puerta y ventana que lo dividen en cuatro tramos. Debajo, una primera fila de cuatro cotas parciales con sus cifras 2,40, 1,20, 3,60 y 1,80, rotulada PARCIALES. Más abajo, una única cota que abarca el muro entero con la cifra 9,00, rotulada TOTAL. Un signo de suma entre las parciales y un signo de igual apuntando al total. Arriba, el título LA SUMA DE LAS PARCIALES ES EL TOTAL."
+  pie="Si los parciales no suman el total, el plano tiene un error — y encontrarlo cuesta un minuto en el papel o una semana en la obra."
+/>
+
+Las cotas de una fachada o de un muro se organizan en **cadenas**: una fila de cotas parciales tramo
+por tramo, y encima o debajo una cota que abarca el conjunto.
+
+Y de ahí sale una comprobación que deberías correr en cada plano que te entreguen, propio o ajeno:
+
+<Formula explicacion="Si la suma de las cotas parciales no da la cota total, alguien cambió algo y no actualizó lo demás. No hay una tercera explicación.">
+Σ parciales = total
+</Formula>
+
+Es un **checksum**, y funciona igual de bien: no te dice dónde está el error, pero te dice que
+existe. En un plano que ha pasado por tres versiones y dos personas, esa suma falla más a menudo de
+lo que uno esperaría, y cada vez que falla ha atrapado un problema real.
+
+<Dato titulo="La comprobación diagonal, otra vez">
+En el replanteo aprendiste a comprobar la escuadra midiendo las dos diagonales de un rectángulo: si
+son iguales, está a escuadra. Es la misma idea aplicada al terreno en lugar de al papel — una
+medición redundante cuyo único propósito es delatar un error que las mediciones principales no
+muestran.
+
+Un plano bien hecho está lleno de estas comprobaciones. Un plano sin ninguna es un plano en el que
+hay que creer.
+</Dato>
+
+## El error se acumula
+
+<Diagrama
+  src="acumulacion-de-error.webp"
+  alt="Diagrama de dos bandas horizontales. En la superior, rotulada MEDIR ENCADENANDO, una cinta métrica se levanta y se reinicia en cada una de cinco estacas; en cada empalme hay un pequeño hueco rojo, los huecos crecen de izquierda a derecha y la última estaca queda claramente desplazada de su posición prevista, con una cruz roja al final. En la inferior, rotulada MEDIR DESDE UN ORIGEN, una sola cinta continua recorre todo el tramo desde una estaca de origen y las cinco estacas caen exactamente en su posición, con un visto verde al final. Arriba, el título EL ERROR SE ACUMULA."
+  pie="Cinco mediciones encadenadas con un centímetro de error cada una son cinco centímetros al final, y todos en la misma dirección."
+/>
+
+Aquí hay un fenómeno que se entiende mejor con formación técnica que sin ella, porque es un problema
+de propagación de error.
+
+Cuando mides un tramo, apoyas la punta de la cinta, lees y marcas. Cada uno de esos tres gestos
+introduce un error pequeño: la punta no cayó exactamente en la marca, la cinta no estaba del todo
+tensa, el lápiz tiene grosor. Es medio centímetro, un centímetro. Irrelevante.
+
+Pero si mides **encadenando** —levantas la cinta, la vuelves a apoyar donde terminó la medición
+anterior, y así ocho veces—, esos errores **se suman**, y peor aún: tienden a sumarse en la misma
+dirección, porque el sesgo de quien mide es constante. Ocho tramos con un centímetro cada uno son
+ocho centímetros al final. Y ocho centímetros de desviación en la esquina de un galpón significan un
+techo que no cierra.
+
+La solución es tan simple como cambiar de qué se mide:
+
+- **Mal:** medir cada tramo desde donde acabó el anterior.
+- **Bien:** medir todos los puntos **desde un mismo origen**, con la cinta tendida una sola vez, y
+  leer valores acumulados: 2,40 · 3,60 · 7,20 · 9,00. Cada punto se lee contra el origen, así que
+  cada error se queda en su punto y **no se hereda**.
+
+<Analogia>
+Es la diferencia entre calcular una posición sumando incrementos —donde el error se integra y deriva
+sin límite— y leerla siempre contra una referencia absoluta.
+
+Los planos bien acotados vienen preparados para esto: además de los parciales traen las
+llamadas <Termino slug="cotas-acumuladas">cotas acumuladas</Termino> desde un extremo, para que
+quien replantee no tenga que ir sumando en la cabeza al lado de la zanja.
+</Analogia>
+
+Y esto no es teoría de dibujo: es lo que se hace con la cinta en el terreno el día del replanteo. El
+plano puede facilitarlo o dificultarlo, y ahora sabes cuál de las dos cosas estás haciendo cuando
+acotas.
+
+## Las cotas de nivel
+
+<Diagrama
+  src="cotas-de-nivel.webp"
+  alt="Corte vertical de una construcción pequeña con el terreno hachurado, cimiento, piso interior, muro y ventana. A la izquierda, una línea vertical de referencia con cuatro símbolos de nivel, cada uno un triangulito apoyado sobre una línea corta, marcando de abajo arriba -1,20 en el fondo del cimiento, -0,15 en el terreno exterior, 0,00 en el piso interior y +1,00 en el antepecho de la ventana. El símbolo del cero está dibujado más grande y en terracota, rotulado NIVEL DE PISO TERMINADO. Arriba, el título LAS COTAS DE NIVEL."
+  pie="Todas las alturas de la obra se cuentan contra un único cero, y ese cero se elige una vez para siempre."
+/>
+
+Las cotas que hemos visto son horizontales. Las verticales se anotan distinto: con un símbolo de
+nivel —un triangulito apoyado en una línea— y un valor con signo.
+
+El sistema entero cuelga de un único punto: el **cero**, que en edificación suele ser
+el <Termino slug="nivel-de-piso-terminado">nivel de piso terminado</Termino> de la construcción, y
+se escribe `± 0,00`. Todo lo demás se cuenta contra él: el terreno natural queda en `-0,15`, el fondo
+de la zapata en `-1,20`, el antepecho de una ventana en `+1,00`.
+
+Esto es exactamente la <Termino slug="cota-de-referencia">cota de referencia</Termino> del
+replanteo, vista desde el papel. Y el criterio para elegirla es el mismo: **tiene que ser un punto
+que no se vaya a mover en toda la obra** — un mojón de hormigón, la base de un poste existente, el
+umbral de una construcción vecina. Nunca una estaca de madera clavada en tierra suelta, que es lo
+que un peón va a arrancar en la semana tres sin saber que era el origen de coordenadas de todo.
+
+<Advertencia>
+El día que el cero se pierde, todas las alturas del plano se vuelven inútiles a la vez: puedes saber
+que el piso va a `± 0,00` y no tener ni idea de dónde está eso en el mundo. Por eso el cero se
+materializa en algo permanente, se marca con pintura y se anota en el plano **de qué objeto físico
+se trata**, no solo su valor.
+</Advertencia>
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Tus dos escalas de trabajo son 1:200 y 1:50.** El plano de conjunto de los 2.474 m² en 1:200 —a
+esa escala el terreno entero entra en una hoja A3 y todavía se distingue una cama de las de al
+lado—; y cada construcción concreta, el galpón y el sombreadero, en 1:50, que es donde se ven
+espesores de muro y anchos de puerta.
+
+**Acota siempre en metros con dos decimales**, decláralo en el cajetín y no lo mezcles nunca. Es la
+convención más común en obra por aquí y evita la discusión de si `250` eran centímetros o milímetros.
+
+**Y acota preparando el replanteo, no solo describiendo el dibujo.** Concretamente: elige una esquina
+del galpón como origen y pon cotas acumuladas desde ella a lo largo de cada lado, además de los
+parciales. El día que estés con la cinta y las estacas vas a poder tender la cinta una vez por lado
+y marcar todos los puntos sin sumar nada — y sin heredar el error de la marca anterior. Ese detalle
+de dibujo se paga solo la primera mañana.
+
+**El cero de tu obra merece pensarse una vez y respetarse siempre.** En llanura aluvial, con napa
+variable y zonas que se encharcan, la altura a la que pongas el piso del galpón no es un detalle
+estético: decide si el agua entra. Elige el `± 0,00` **por encima del nivel que alcanzó el agua el
+peor día que recuerdes**, materialízalo en algo permanente —un dado de hormigón enterrado, no una
+estaca—, píntalo, y anota en el plano exactamente qué objeto es.
+
+**Un truco que te va a servir muchas veces:** dibuja siempre una escala gráfica junto al cajetín. Vas
+a mandar estos planos por teléfono, alguien los va a imprimir en la ciudad en el formato que tenga
+la impresora, y esa barrita es lo único que va a sobrevivir al viaje.
+
+**Y la comprobación antes de que nadie compre material:** suma los parciales de cada fachada y
+verifica que dan el total. Un minuto por lámina. Es el test más barato del proyecto y el que más
+veces va a encontrar algo.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**En Bolivia se acota en el sistema métrico**, con coma decimal: `3,45` y no `3.45`. Parece trivial y
+no lo es en cuanto entra un programa de dibujo configurado en inglés, que va a escribir punto y va a
+interpretar la coma como separador de miles. Revisa esa configuración antes de imprimir.
+
+**Los formatos de papel son de la serie A**, y las escalas de trámite habituales, 1:100 para plantas
+y 1:200 o 1:500 para ubicación. Conviene preguntar en la ventanilla municipal qué escala esperan
+antes de imprimir un juego completo — imprimir en plotter dos veces cuesta dinero y una mañana.
+
+**El escalímetro se consigue en librerías y casas de material de dibujo de la ciudad**, y es barato.
+Vale la pena tenerlo aunque dibujes en computadora, porque el plano que llega a la obra es siempre
+de papel y en el papel es donde se discute.
+
+**Sobre la humedad:** aquí el papel trabaja de verdad. Una lámina que pasa la temporada de lluvias
+clavada en un galpón abierto se ondula, se dilata y termina midiendo distinto. Es otra razón para no
+medir sobre el papel — y una razón práctica para tener la lámina de obra dentro de una funda
+plástica, que además la salva del barro y del rocío.
+
+**Y el vocabulario:** la cota es **cota** o **medida**; acotar es **acotar** o **poner medidas**; el
+escalímetro es **escalímetro**; el nivel de piso terminado se abrevia **N.P.T.** y se lo oye como
+**nivel de piso**; y cuando alguien dice que un dibujo está **fuera de escala** quiere decir que no
+se puede medir sobre él, no que esté mal dibujado.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Mido el plano con la regla y listo.»** La cifra escrita manda. El papel se dilata, la fotocopia
+reduce y la impresora ajusta a página sin avisar.
+
+**«Lo imprimí en A3 en vez de A1, es lo mismo más chico.»** Es lo mismo más chico **y con otra
+escala**. Si el cajetín sigue diciendo 1:50, ahora el cajetín miente.
+
+**«Escribo 3,4573 para ser preciso.»** La obra se construye al centímetro. Los decimales de más no
+añaden precisión, añaden ruido y ocasiones de redondear mal.
+
+**«Acoto el total y también todos los parciales por dos caminos distintos.»** Duplicar la fuente de
+verdad garantiza que algún día se contradigan. Parciales y total, sí; el mismo tramo medido dos
+veces por rutas distintas, no.
+
+**«Voy midiendo cada tramo desde donde acabó el anterior.»** Ahí es donde el error se integra. Todos
+los puntos desde un mismo origen, con la cinta tendida una vez.
+
+**«El cero lo marqué en esa estaca de ahí.»** Esa estaca la arranca alguien el mes que viene. El cero
+va en algo permanente, pintado y descrito en el plano.
+
+**«El plano no dice la unidad, se entiende por contexto.»** No se entiende: `250` puede ser dos
+metros y medio o doscientos cincuenta metros. La unidad se declara.
+
+**«Los parciales no suman el total, será un redondeo.»** Casi nunca es un redondeo. Es un cambio que
+alguien hizo en un sitio y no en el otro, y es exactamente lo que esa suma existe para atrapar.
+
+## Lo que sigue
+
+Ya puedes leer las medidas de un plano y confiar en las correctas. Falta el idioma con el que el
+plano dice **qué son** las cosas que dibuja: por qué un muro se raya de una manera y un hormigón de
+otra, cómo se marca hacia dónde abre una puerta, qué significan esos círculos con letras en los
+ejes, y cómo se leen los planos de instalación eléctrica y de agua, que son otro alfabeto entero
+montado encima del primero.

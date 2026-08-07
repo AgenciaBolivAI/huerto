@@ -1,0 +1,404 @@
+Un plano no dibuja un edificio: lo **especifica**. Y el compilador es un grupo de personas con
+badilejo que a las siete de la mañana de un sábado no te puede preguntar nada. Todo lo que el plano
+no diga, alguien lo va a decidir en el momento, con el material que tenga a mano y con el criterio
+que tenga ese día. A veces decidirá bien. La cuestión es que no tendrías que estar apostando.
+
+Por eso el plano es la pieza más barata y más rentable de una obra: **una hora de lápiz corrige lo
+que después cuesta una semana de picar muro.** Y por eso este módulo va antes de volver a construir
+nada, aunque en el índice del curso aparezca después.
+
+Empecemos por deshacer el malentendido que arruina la mitad de las lecturas de plano.
+
+## La planta es un corte, no un dibujo
+
+<Diagrama
+  src="planta-es-corte.webp"
+  alt="Diagrama en dos mitades. Arriba, una casa sencilla en vista isométrica atravesada por un plano de corte horizontal traslúcido a la altura del antepecho de las ventanas; todo lo que queda por encima, incluido el techo, está dibujado desvaído, y una flecha gruesa apunta hacia abajo indicando la dirección de la mirada. Abajo, la planta resultante de esa misma casa vista desde arriba, con los muros cortados en bandas gruesas, la puerta como un hueco con arco de barrido y las ventanas como huecos finos en las bandas. Una guía discontinua conecta el plano de corte con la planta. El rótulo dice LA PLANTA ES UN CORTE."
+  pie="La operación completa: cortar a una altura elegida, tirar todo lo de arriba y mirar hacia abajo lo que queda. Lo que en la planta parece un dibujo de la casa es en realidad el rastro del cuchillo."
+/>
+
+Casi todo el mundo cree que una <Termino slug="plano-de-planta">planta</Termino> es la casa vista
+desde arriba, como desde un dron. No lo es, y la diferencia importa.
+
+La operación real es otra: se imagina un plano horizontal que atraviesa el edificio entero a una
+altura convenida —normalmente entre **1,00 y 1,50 metros** sobre el piso terminado—, se tira todo lo
+que queda por encima, incluido el techo, y se dibuja lo que se ve mirando hacia abajo lo que quedó.
+
+Esa altura no es caprichosa: es la que **atraviesa las puertas y las ventanas** de un muro normal.
+Si cortaras a treinta centímetros no habría ni una ventana en el dibujo; si cortaras a dos metros y
+medio, las puertas aparecerían como muro macizo. La convención existe para que el corte pase por
+donde está la información interesante.
+
+De ahí salen, de golpe, todas las reglas de lectura de una planta:
+
+- **Los muros son bandas gruesas** porque el plano de corte los atravesó: eso que ves rellenado es
+  material cortado, ladrillo en sección.
+- **Las puertas son huecos** en la banda, con un arco de cuarto de círculo que muestra hacia dónde
+  abre la hoja.
+- **Las ventanas son huecos también**, pero con líneas finas dentro que representan el marco y el
+  vidrio, porque el corte pasó por ellas.
+- **Lo que está abajo y no fue cortado** —un escalón, un mesón, el piso— se dibuja con línea fina.
+- **Lo que está arriba del corte** —el alero del techo, una viga, un estante alto, un tinglado— se
+  dibuja **discontinuo**, porque no está ahí a la altura del corte pero conviene saber que existe.
+
+Esas tres familias de línea son el alfabeto entero:
+
+| Cómo se ve la línea | Qué significa |
+|---|---|
+| **Gruesa y llena** | Material **cortado** por el plano de corte |
+| **Fina y llena** | Algo **visible** por debajo del corte, pero no cortado |
+| **Discontinua** | Algo que está **por encima** del corte, o escondido detrás de otra cosa |
+
+Es el error de novato más frecuente: leer una línea discontinua como «esto se canceló». No. La línea
+discontinua dice **está, pero no a esta altura**. El alero de un techo que vuela ochenta centímetros
+por fuera del muro aparece siempre así, y saber que está ahí es lo que evita plantar un árbol donde
+después va a chocar.
+
+<Analogia>
+Una planta es un `SELECT` con un `WHERE altura = 1.40`. No es el modelo completo: es **una rebanada
+del modelo en una coordenada elegida**, y la elección de esa coordenada decide qué información
+sobrevive al dibujo y qué información se pierde.
+
+Y como en cualquier proyección con pérdida, lo importante no es lo que muestra sino **saber qué
+descartó**. Quien lee una planta creyendo que ve el edificio entero está usando una vista parcial
+como si fuera la fuente de verdad.
+</Analogia>
+
+### Por qué no sirve una foto
+
+Podrías pensar que una fotografía o un render en perspectiva comunican mejor. Comunican mejor para
+vender; no sirven para construir, y la razón es geométrica.
+
+En una perspectiva, **el tamaño de las cosas depende de su distancia a la cámara**: dos muros
+iguales se dibujan distintos, y no hay forma de medir sobre el papel. Un plano usa en cambio la
+llamada <Termino slug="proyeccion-ortogonal">proyección ortogonal</Termino>: todas las líneas de
+proyección son paralelas entre sí y perpendiculares al papel, no hay punto de fuga, y por lo tanto **un
+centímetro de papel vale siempre la misma cantidad de centímetros de realidad**, esté donde esté
+sobre la hoja.
+
+Esa propiedad —que el dibujo sea **medible**— es la razón entera de que los planos se dibujen así de
+feos y así de planos. Un plano no está hecho para mirarse: está hecho para medirse.
+
+## Tres vistas, porque con una no alcanza
+
+<Diagrama
+  src="tres-vistas.webp"
+  alt="Tres paneles verticales con el mismo edificio sencillo dibujado de tres maneras. Panel izquierdo rotulado PLANTA, con el edificio visto desde arriba, muros en bandas gruesas y arco de puerta. Panel central rotulado CORTE, con el edificio rebanado verticalmente y visto de lado, mostrando la altura interior, el cimiento hachurado bajo el suelo y la pendiente del techo. Panel derecho rotulado ELEVACIÓN, con el edificio visto de frente desde fuera, sin corte, mostrando puerta, ventanas y el triángulo del techo. Cada panel lleva debajo una nota: QUÉ HAY Y DÓNDE, QUÉ ALTURA Y QUÉ ESPESOR, CÓMO SE VE POR FUERA."
+  pie="Cada vista mata una dimensión para que las otras dos sean medibles. Por eso hacen falta varias: ninguna sola describe el objeto sin ambigüedad."
+/>
+
+Una vista sola nunca alcanza para describir un objeto tridimensional sin ambigüedad. Con la planta
+puedes saber que hay un muro de doce metros y dónde está, pero no si mide dos metros de alto o
+cuatro. Por eso el dibujo técnico usa siempre un juego de vistas ortogonales, y en construcción son
+tres:
+
+**La planta** responde *qué hay y dónde*. Superficie, distribución, posición de muros, puertas y
+ventanas, ejes, dimensiones en el suelo. Es la vista que más se usa y la que más gente cree entender.
+
+**El <Termino slug="seccion">corte</Termino>** responde *qué altura y qué espesor*. Es la misma
+operación que la planta pero con el plano de corte **vertical**: se rebana el edificio de arriba
+abajo, se tira la mitad que estorba y se mira horizontalmente lo que quedó. Ahí aparecen la altura
+del muro, el espesor real de la losa o de la cubierta, la profundidad del cimiento bajo tierra, la
+pendiente del techo, la altura del antepecho de una ventana. **Todo lo vertical vive en el corte.**
+
+**La <Termino slug="elevacion">elevación</Termino>** —también llamada fachada— responde *cómo se ve
+por fuera*. No hay corte: es el edificio mirado de frente desde afuera, con proyección ortogonal.
+Muestra proporciones, aberturas y acabados. Es la vista que se enseña a un cliente o al municipio y
+la que menos le sirve al albañil.
+
+<Dato titulo="Un plano sin corte es un plano que no dice alturas">
+Y las alturas son donde se esconde la plata. La altura del muro multiplica los ladrillos; la
+profundidad del cimiento multiplica la excavación y el hormigón; el espesor de la cubierta define la
+estructura que la sostiene. Un juego de planos que solo trae plantas se ve completo y no lo está: no
+se puede computar. Cuando alguien te entregue planos, la primera pregunta es dónde están los cortes.
+</Dato>
+
+### Las marcas de corte
+
+Los cortes no aparecen de la nada: **la planta dice dónde se cortó**. La planta lleva una recta
+gruesa, la <Termino slug="linea-de-corte">línea de corte</Termino>, que la atraviesa con una flecha
+en cada extremo y una letra —A, B, C— junto a cada flecha.
+
+Se lee así: la recta indica **por dónde pasa el cuchillo**, y las flechas indican **hacia dónde se
+mira** después de cortar. Si las flechas apuntan hacia arriba en el papel, el corte A-A muestra lo
+que se ve mirando en esa dirección. Cambiar el sentido de las flechas cambia por completo el dibujo
+resultante, y confundirlo es una de esas equivocaciones que nadie detecta hasta que la ventana quedó
+en la pared equivocada.
+
+Es, literalmente, un puntero: la letra en la planta te manda a la lámina donde está dibujado ese
+corte. Un plano bien hecho está lleno de referencias cruzadas de ese tipo, y leerlas es saltar entre
+láminas siguiendo letras y números.
+
+<Video id="ord6znbZL7w" />
+
+## El cajetín: los metadatos de la lámina
+
+<Diagrama
+  src="cajetin.webp"
+  alt="Una lámina de plano en formato apaisado, con el dibujo de una planta apenas insinuado en gris muy claro al fondo. En la esquina inferior derecha destaca un recuadro con borde terracota dividido en seis celdas apiladas, cada una con una etiqueta: OBRA, PLANO, ESCALA, FECHA, VERSIÓN, AUTOR. En la esquina superior derecha, un círculo con una flecha de norte y la letra N."
+  pie="Siempre en la esquina inferior derecha, porque es la que queda a la vista cuando la lámina está doblada o enrollada con otras."
+/>
+
+Toda lámina lleva en su esquina inferior derecha un recuadro con los datos de identificación, el
+llamado <Termino slug="cajetin">cajetín</Termino>. Está en esa esquina por una razón práctica —es la que
+queda visible cuando el plano está doblado o cuando hay veinte láminas apiladas—, y contiene:
+
+<Figura pie="El esqueleto de un cajetín. Los seis primeros campos son obligatorios incluso en un plano hecho a mano para uso propio.">
++---------------------------------------------------+
+|  OBRA      Vivero Rizoma del Sur - Zanja Honda     |
+|            Estrellas del Sur, Santa Cruz           |
++---------------------------------------------------+
+|  PLANO     Galpon - planta de fundaciones          |
++------------------------+--------------------------+
+|  ESCALA    1:50        |  FECHA    12-03-2026      |
++------------------------+--------------------------+
+|  VERSION   v3          |  LAMINA   3 de 7          |
++------------------------+--------------------------+
+|  AUTOR                 |  APROBO                   |
++------------------------+--------------------------+
+</Figura>
+
+Cada campo está resolviendo un problema concreto:
+
+**Obra y ubicación** — porque las láminas se separan. Una lámina suelta sin obra identificada es
+basura con líneas.
+
+**Plano** — qué contiene *esta* lámina. No «plano de la casa», sino «planta de fundaciones» o «corte
+A-A y detalle de cimiento». La precisión aquí evita que alguien construya el muro mirando el plano
+de instalación eléctrica.
+
+**Escala** — sin ella el dibujo no es medible, y de la escala se ocupa la lección siguiente entera.
+
+**Fecha y versión** — el par más importante del cajetín y el que casi nadie completa.
+
+**Lámina N de M** — para saber si falta alguna. Un juego incompleto es un juego que va a improvisar
+lo que falta.
+
+**Autor y aprobó** — quién lo dibujó y quién se hace responsable. En un plano de trámite esto tiene
+consecuencias legales; en un plano tuyo, sirve para saber a quién preguntarle.
+
+### La versión: el problema de las dos verdades
+
+El desastre clásico de obra no es un plano malo. Es **dos versiones del mismo plano circulando a la
+vez**, con el albañil construyendo la vieja porque era la que estaba sobre la mesa.
+
+Esto ya lo sabes de otro contexto: es exactamente el problema que resuelve el control de versiones.
+Y la regla de obra es la misma que la de una rama principal — **en la obra solo puede haber una
+versión vigente.** Cuando sale una versión nueva, la anterior **no se archiva en la obra: se
+destruye o se saca de ahí.** Guardar el histórico está muy bien, pero se guarda lejos, no en la
+misma mesa donde alguien va a mirar con las manos llenas de mortero.
+
+Con una diferencia incómoda respecto al código: aquí no hay compilador que detecte que estás usando
+una versión desactualizada. La detección es humana, y la única defensa es que la fecha y la versión
+estén escritas grandes y en el mismo sitio de siempre.
+
+## El norte no es decoración
+
+Toda planta lleva una flecha de norte, casi siempre en un círculo, arriba a la derecha. Es el dato
+que ata el dibujo al mundo real, y en tu caso decide bastante más de lo que parece.
+
+Aquí estamos a unos **17,8° de latitud sur**. Eso significa que **el sol pasa por el norte** durante
+la mayor parte del año: una pared orientada al norte recibe sol casi todo el día en invierno, y una
+orientada al sur se queda en sombra. Del sur, además, es de donde entran los surazos con viento
+fuerte y frío.
+
+Con lo cual, la flecha del norte en un plano de vivero es la que decide dónde va el sombreadero,
+hacia dónde abre la puerta del galpón, en qué lado se ponen los almácigos que necesitan luz de la
+mañana y qué cara del invernadero hay que arriostrar mejor. Girar un plano noventa grados sin
+darse cuenta —cosa facilísima cuando lo miras en el terreno— convierte un buen diseño en uno malo
+sin cambiar una sola línea.
+
+Y hay una segunda función, más terrenal: **el norte es lo que te permite orientar el papel respecto
+al terreno** cuando llega el momento de <Termino slug="replanteo">replantear</Termino>. Sin él, un
+plano de un rectángulo es un rectángulo que puede ir en cuatro posiciones distintas.
+
+## Un edificio no tiene un plano: tiene un juego
+
+<Diagrama
+  src="juego-de-planos.webp"
+  alt="Tres paneles verticales con el mismo contorno rectangular de edificio dibujado tres veces con información distinta. Panel izquierdo rotulado ARQUITECTURA, con muros en bandas gruesas, un tabique interior, puerta con arco de barrido y huecos de ventana. Panel central rotulado FUNDACIONES, con los muros en línea discontinua desvaída y, debajo de ellos, bandas hachuradas en terracota y cuatro cuadrados hachurados en las esquinas. Panel derecho rotulado TECHOS, sin muros interiores, con una cumbrera recta en el medio y flechas que bajan alejándose de ella hacia los dos aleros. Abajo, el rótulo MISMO EDIFICIO, DISTINTO PLANO."
+  pie="El mismo contorno tres veces, con información completamente distinta encima. Superponerlas en una sola lámina daría un dibujo ilegible."
+/>
+
+Aquí está la confusión que más tiempo hace perder al principio: pedir «el plano» de algo. Un
+edificio, hasta el más humilde, necesita un <Termino slug="juego-de-planos">juego de planos</Termino>
+— varias láminas que describen el mismo objeto desde ángulos distintos:
+
+| Lámina | Qué responde |
+|---|---|
+| **Ubicación o situación** | Dónde cae la construcción dentro del terreno, respecto a los linderos y al acceso |
+| **Planta de arquitectura** | Distribución, muros, aberturas, circulaciones |
+| **Cortes y elevaciones** | Alturas, espesores, pendientes, aspecto exterior |
+| **Planta de fundaciones** | Qué hay bajo tierra: zapatas, cimientos corridos, profundidades |
+| **Planta de techos** | Faldones, pendientes, cumbrera, aleros, por dónde escurre el agua |
+| **Instalación eléctrica** | Circuitos, puntos de luz, tomas, tablero |
+| **Instalación de agua y desagüe** | Recorridos, diámetros, pendientes, cajas de registro |
+| **Detalles** | Los puntos difíciles ampliados: un encuentro, un anclaje, un dintel |
+
+Fíjate en la lógica: **cada lámina responde una pregunta y calla las demás.** La planta de
+fundaciones dibuja los muros en discontinuo y desvaído —están, pero no son el tema— y pone en primer
+plano lo que va bajo tierra. La planta de techos no tiene muros interiores en absoluto: solo
+faldones y flechas de pendiente.
+
+<Analogia>
+Es separación de responsabilidades, y por el mismo motivo por el que no metes las migraciones, los
+estilos y la lógica de negocio en un solo archivo: **superponer todo en una lámina la vuelve
+ilegible**, y lo ilegible no se lee, se adivina.
+
+Pero heredas también el problema que conoces: son **vistas del mismo modelo**, y si cambias una y no
+las otras, se contradicen. Mueves un muro en arquitectura y la zapata sigue dibujada donde estaba.
+No hay tipos que te avisen. Por eso todo cambio de plano obliga a preguntarse **qué otras láminas
+tocaba ese muro** — y por eso la fecha va en las siete láminas, no en una.
+</Analogia>
+
+<Video id="v1v46_vdg3M" />
+
+## En qué orden se lee un plano
+
+<Diagrama
+  src="orden-de-lectura.webp"
+  alt="Una planta arquitectónica ocupando dos tercios del cuadro, con cajetín en la esquina inferior derecha, círculo de norte arriba a la derecha, una línea de corte gruesa con flechas atravesando el centro y un símbolo de nivel dentro de una habitación. A la derecha, una lista vertical de cinco discos verdes numerados del 1 al 5 con sus rótulos: CAJETÍN, NORTE Y ACCESO, PERÍMETRO, MARCAS DE CORTE, NIVELES. Líneas guía discontinuas conectan cada número con su elemento en la planta. El rótulo superior dice EN QUÉ ORDEN SE LEE UN PLANO."
+  pie="La secuencia que evita el 90 % de los malentendidos: identificar la lámina, orientarla, entender el tamaño, y solo entonces meterse en el detalle."
+/>
+
+Un plano no se lee empezando por el rincón que llame la atención. Hay un orden, y saltárselo es lo
+que produce esas discusiones en obra donde dos personas miran la misma hoja y ven cosas distintas.
+
+**1 · El cajetín.** ¿Qué lámina es, de qué obra, en qué escala, qué versión y de qué fecha? Si la
+versión que tienes en la mano no es la vigente, todo lo que leas después es tiempo perdido. Este
+paso dura ocho segundos y ahorra tardes.
+
+**2 · El norte y el acceso.** Orienta la hoja mentalmente respecto al terreno real: por dónde entra
+el sol, por dónde entra el viento, por dónde entra una persona. Si el plano tiene un plano de
+ubicación, mira ese primero.
+
+**3 · El perímetro.** Recorre el contorno exterior y quédate con las dos o tres dimensiones grandes
+—largo total, ancho total— antes de mirar un solo detalle interior. Necesitas el tamaño metido en la
+cabeza para que el resto tenga proporción.
+
+**4 · Las marcas de corte.** Localiza las líneas de corte y salta a los cortes correspondientes. Es
+donde vas a encontrar las alturas, que es lo que la planta te está ocultando.
+
+**5 · Los niveles.** Busca los símbolos de nivel —normalmente un triangulito apoyado en una línea
+con un número— y entiende qué está más alto y qué más bajo. Los niveles son los que cuentan hacia
+dónde corre el agua, y el agua es la que decide si una obra dura.
+
+Recién después de esos cinco pasos tiene sentido meterse en el detalle: espesores, aberturas,
+materiales.
+
+<Analogia>
+Es leer un repositorio ajeno. No abres un archivo al azar por la línea 1: miras primero el manifiesto
+para saber qué es y de qué versión, después el punto de entrada, y desde ahí sigues los imports.
+
+El paso 1 es leer el `package.json` antes que el código. El paso 4 es seguir una referencia a otro
+archivo. Y el paso 5 —los niveles— es el equivalente a entender el flujo de datos: cuál es el sentido
+en que las cosas corren, que aquí es literal porque lo que corre es el agua.
+</Analogia>
+
+## Lo que un plano no dice
+
+Vale la pena cerrar el marco por el lado de las expectativas, porque un plano es menos omnipotente
+de lo que parece:
+
+- **No dice el orden de ejecución.** Qué se hace primero y qué después es planificación de obra, no
+  dibujo. El plano dice el *qué* y el *dónde*.
+- **No dice cómo se hace.** La técnica —cómo se dosifica el hormigón, cómo se aparejan los ladrillos,
+  cómo se ancla una correa— es oficio, y de eso trata el módulo de albañilería.
+- **No dice cuánto cuesta.** El precio sale de contar lo que el plano dibuja: eso es el
+  <Termino slug="computo-metrico">cómputo métrico</Termino>, y la calidad del presupuesto no puede
+  ser mejor que la del plano del que salió.
+- **No dice lo que no dibuja.** Y esta es la que duele: **lo que no está en el plano no está
+  presupuestado y no está decidido**. Va a aparecer igual —la obra no acepta campos nulos—, pero
+  aparecerá improvisada y a precio de apuro.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Lo primero que Rizoma necesita no es el plano del galpón: es el plano del terreno.** Dos mil
+cuatrocientos setenta y cuatro metros cuadrados repartidos en ocho lotes contiguos son demasiada
+superficie para llevarla en la cabeza, y todo lo demás —galpón, camas, sombreadero, depósito,
+tuberías— se dibuja **encima** de esa base. Ese levantamiento es la lección 4 de este módulo, y es la
+que desbloquea el resto.
+
+**Tu juego de planos completo, cuando esté, son unas siete láminas:** conjunto del terreno con los
+ocho lotes y el acceso; planta del galpón; planta de fundaciones del galpón; un corte transversal;
+instalación eléctrica; instalación de agua y riego; y trazado de camas y sombreadero. No hace falta
+que existan todas hoy. Hace falta saber que ese es el conjunto, para no creer que con una hoja
+estás cubierto.
+
+**En el plano del terreno dibuja lo que ya existe y lo que planeas con distinta línea** — llena lo
+construido, discontinua lo proyectado. Incluye lo que no es construcción y manda igual: los árboles
+grandes que dan sombra, el punto de agua, por dónde entra el camión, y sobre todo **las zonas que se
+encharcan cuando llueve fuerte**, que en llanura aluvial no son evidentes hasta que las ves una vez.
+Ese último dato no lo tiene ningún plano municipal y solo lo tienes tú, por haber estado ahí en
+enero.
+
+**Aprovecha tu oficio en lo que de verdad se aprovecha: el versionado.** Cada vez que un plano
+cambie, foto con fecha y nombre con versión, y un repositorio de planos junto al de la app. No
+porque haga falta ceremonia, sino porque dentro de dos años vas a querer saber por qué la zapata del
+rincón sureste se dibujó más ancha, y la respuesta va a estar en la diferencia entre dos versiones.
+
+**Y una regla de campo:** el plano vigente vive en el galpón, en funda plástica y clavado donde todos
+lo ven; en el teléfono llevas la foto para consultar caminando. El del galpón es la fuente de verdad;
+el del teléfono es una caché, y como toda caché puede estar vieja.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El vocabulario que vas a oír.** La lámina se llama **plano** o **lámina**; el cajetín es
+**cajetín**, **rótulo** o **carátula**; la planta es **planta**; el corte es **corte** o **sección**;
+la elevación es **elevación** o **fachada**; el plano que ubica la obra dentro del lote es **plano de
+ubicación**; y el plano actualizado con lo que realmente se construyó se llama **conforme a obra**.
+Si alguien te dice «pasame la planta», te está pidiendo una lámina, no una maceta.
+
+**Los formatos son de la serie A**, como en casi toda la región: A4 para croquis y detalles, A3 para
+plantas de obra chica, y A1 o A0 para los juegos completos que se presentan a trámite. La impresión
+grande se hace en plotter, en centros de copiado de la ciudad, y ahí hay un detalle que arruina
+planos: **si al imprimir se deja marcada la opción de ajustar a página, la escala se pierde** y el
+dibujo deja de ser medible. Se imprime siempre a tamaño real del formato.
+
+**El sol pasa por el norte.** Es obvio y aun así se olvida constantemente, sobre todo con material
+de estudio escrito en el hemisferio norte, donde toda la lógica de orientación está invertida. Cada
+vez que leas una recomendación de orientación en un manual extranjero, tradúcela: lo que allá se
+orienta al sur, aquí se orienta al norte.
+
+**Y una realidad rural que conviene decir en voz alta:** muchísimas propiedades en el área de
+influencia de Santa Cruz **no tienen ningún plano**, ni del terreno ni de lo construido. No es un
+descuido tuyo ni una anomalía. Significa simplemente que el primer plano de la propiedad lo vas a
+dibujar tú, y que eso —lejos de ser un problema— es una ventaja: vas a saber exactamente qué hay,
+porque lo mediste.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«La planta es la casa vista desde arriba.»** Es un corte horizontal a metro y medio. Por eso ves
+los muros rellenos y las ventanas abiertas: el cuchillo pasó por ahí.
+
+**«La línea discontinua es algo que se canceló.»** Es algo que está **por encima del corte** o
+escondido: un alero, una viga, un estante. Ignorarla es construir sin saber que había algo arriba.
+
+**«Ya vi la planta, ya sé cómo es el muro.»** La planta no dice ni una altura. Si no hay corte, no
+hay alturas, y sin alturas no hay presupuesto.
+
+**«Mido con la regla sobre el papel.»** Se lee la cota escrita. El papel se estira, la fotocopia
+reduce y el plotter recorta — de eso trata la lección siguiente.
+
+**«Tengo dos versiones, uso la que tengo a mano.»** En la obra hay una sola versión vigente. Las
+demás se sacan de la mesa.
+
+**«El norte es adorno.»** Decide sombra, viento y orientación de todo el vivero, y es lo único que
+te permite apoyar el papel sobre el terreno sin equivocarte de lado.
+
+**«Pedí el plano y me dieron una hoja.»** Un edificio necesita un juego. Si te entregan una sola
+lámina, faltan seis.
+
+**«Lo que falta lo resolvemos en obra.»** Se resuelve, sí — al precio del apuro y con el criterio de
+quien esté ahí. Todo lo que no dibujaste lo estás delegando sin saberlo.
+
+## Lo que sigue
+
+Ya sabes qué estás mirando cuando miras un plano y en qué orden mirarlo. Falta lo que convierte ese
+dibujo en algo **medible**: la escala, que es la razón entre el papel y el mundo, y el acotado, que
+es el sistema por el cual el plano dice medidas exactas sin que nadie tenga que sacar la regla.
+
+Y ahí aparece la regla más importante de todo el módulo, la que te va a salvar de errores que se
+pagan en ladrillos: **la cota manda sobre el dibujo.**

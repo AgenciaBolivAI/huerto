@@ -1,0 +1,97 @@
+{
+  "preguntas": [
+    {
+      "id": "las-cuatro-salidas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por dónde se va el agua que entra a un envase?",
+      "opciones": [
+        "Se evapora del sustrato, directamente al aire y sin pasar por la planta.",
+        "La planta transpira, que es la única salida acompañada de fotosíntesis y transporte de nutrientes.",
+        "Se va por abajo y se escurre por el borde.",
+        "Toda el agua que entra termina pasando por la planta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Solo una de las cuatro salidas es la que quieres, y no es la mayor. Es el mismo tipo de balance que el del invernadero: el nivel sube o baja según la diferencia entre entradas y salidas, y aumentar la entrada para compensar fugas es la peor solución. Lo barato es cerrar las fugas: escurrimiento, drenaje excesivo y evaporación desnuda."
+    },
+    {
+      "id": "evapotranspiracion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se estima la evapotranspiración?",
+      "opciones": [
+        "Multiplicando la demanda que impone el clima por un coeficiente propio del cultivo y su etapa.",
+        "La demanda climática es igual para todos los cultivos de un mismo sitio y momento.",
+        "Una plantita recién trasplantada consume una fracción pequeña de lo que consume grande.",
+        "Es un valor fijo por especie que no depende del clima."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los dos factores se multiplican, y ninguno solo alcanza: el clima dice cuánta capacidad de evaporar hay ese día, y el coeficiente dice qué fracción de eso consume esa planta concreta en esa etapa. Y el reparto entre evaporación del sustrato y transpiración cambia con el tamaño de la planta, lo que cambia también cómo conviene regar."
+    },
+    {
+      "id": "factores",
+      "tipo": "verdadero_falso",
+      "enunciado": "La malla de sombra y el cortaviento son solo medidas de control de temperatura.",
+      "respuesta": false,
+      "explicacion": "Falso: son también control de consumo de agua. Los cuatro factores que suben la demanda son más sol, más calor, más viento y aire más seco, y la malla reduce los dos primeros mientras el cortaviento reduce el tercero. En la seca, cuando el agua es el recurso escaso, esa reducción vale dinero. Y al revés: la zona de endurecimiento, expuesta a propósito, es la que más agua consume por planta."
+    },
+    {
+      "id": "litros-por-dia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se llega a la cifra de litros por día del vivero?",
+      "opciones": [
+        "Multiplicando el consumo por planta por el número de plantas.",
+        "Dividiendo entre la eficiencia del riego, porque no toda el agua del tanque llega a la raíz.",
+        "Usando el consumo del mes más exigente y no el promedio anual.",
+        "El agua que sale del tanque es la misma que reciben las plantas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La eficiencia es el término que sorprende: el mismo consumo de las plantas puede exigir el doble de agua del tanque según el método. Y dimensionar con el promedio garantiza quedarse corto en el peor día de septiembre; se dimensiona con el mes crítico, igual que en el módulo solar."
+    },
+    {
+      "id": "agua-util",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué determina cada cuánto hay que regar un envase?",
+      "opciones": [
+        "El agua útil que almacena dividida entre el consumo diario de la planta.",
+        "Los envases pequeños se riegan mucho más seguido porque almacenan poca agua útil.",
+        "Un sustrato muy grueso da más aire y a cambio obliga a regar más seguido.",
+        "Se puede espaciar los riegos echando más agua cada vez."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No se puede: un envase lleno hasta el borde no almacena más, y lo que sobra se va por abajo el mismo día. El único modo de espaciar los riegos es tener más volumen o más retención. Por eso los almácigos, que almacenan poquísima agua útil, son lo primero que muere cuando falla el riego."
+    },
+    {
+      "id": "regar-por-calendario",
+      "tipo": "verdadero_falso",
+      "enunciado": "Regar todos los días a la misma hora y con la misma cantidad es un manejo razonable.",
+      "respuesta": false,
+      "explicacion": "Falso: es un sistema en lazo abierto, que actúa sin medir el estado. La demanda de un día nublado de enero y la de un día despejado y ventoso de septiembre pueden diferir en un factor de dos o tres, así que un calendario fijo riega de más la mitad de los días y de menos la otra mitad."
+    },
+    {
+      "id": "exceso-vs-defecto",
+      "tipo": "verdadero_falso",
+      "enunciado": "Pasarse de riego es menos grave que quedarse corto, porque el agua sobrante simplemente drena.",
+      "respuesta": false,
+      "explicacion": "Falso, y es peor precisamente porque no se ve. Regar de menos frena el crecimiento y se nota enseguida; regar de más desplaza el aire del sustrato, ahoga raíces, favorece pudriciones y lava nutrientes, y es una de las causas principales de plantas que no arrancan sin motivo aparente."
+    },
+    {
+      "id": "balance-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Estima el consumo de agua de Rizoma del Sur: qué zonas distingues, con qué mes dimensionas y qué medidas de ahorro tomas.",
+      "respuestaModelo": "El primer número que hay que estimar es el consumo del día pico, porque de él salen el tamaño del tanque, el caudal de la bomba y el dimensionado del sistema solar de bombeo del módulo diecisiete.\n\nY hay que calcularlo por zonas, no en bloque, porque las cuatro zonas del vivero tienen consumos por planta muy distintos.\n\nPropagación, bajo techo y con ambiente húmedo, tiene consumo bajísimo por planta pero cero tolerancia a quedarse seca: los alvéolos almacenan tan poca agua útil que en un día de calor la agotan en horas, y ahí un fallo de riego cuesta un lote entero.\n\nCrecimiento bajo malla al 50 % es el grueso del consumo por volumen, porque es donde hay más plantas y donde pasan más tiempo. A la vez, la malla ya está reduciendo la demanda de forma apreciable al quitar radiación y frenar el viento.\n\nEndurecimiento, a sol y viento plenos, es el mayor consumo por planta de todo el vivero. Es su función y hay que asumirlo.\n\nY el bloque de madres, con plantas grandes y frondosas, tiene consumo alto por planta pero pocas plantas.\n\nEl mes crítico aquí es el final de la seca, hacia agosto y septiembre: máxima radiación acumulada, mínima humedad relativa, sin lluvia y con las plantas del ciclo ya grandes. Con ese mes se dimensiona todo, no con el promedio anual, exactamente igual que con el sistema solar.\n\nEl cálculo es consumo por planta por número de plantas dividido entre la eficiencia del riego, y ese último término no es menor: con manguera a mano se pierde muchísima agua fuera del envase y en el camino, con microaspersión se moja también la superficie sin plantas, y con goteo se entrega justo sobre el envase. El mismo consumo de las plantas puede exigir el doble de agua del tanque según el método.\n\nMedidas de ahorro que tomo desde el principio. Cubrir la superficie del sustrato de los envases con una capa fina de cascarilla de arroz, que reduce la evaporación desnuda —la mayor parte de la pérdida en plantas pequeñas— y usa un material que ya tengo en el vivero. Aprovechar que la malla y el cortaviento ya bajan la demanda. Y cerrar las fugas tontas antes de aumentar la entrada: el escurrimiento por el borde y el drenaje excesivo son lo más barato de corregir.\n\nY el manejo no puede ser por calendario, porque la demanda cambia con el día: un día nublado de enero y uno despejado y ventoso de septiembre difieren en un factor de dos o tres. Regar por reloj es un lazo abierto que riega de más la mitad de los días y de menos la otra mitad, y el exceso es el error más peligroso porque no se ve: desplaza el aire, ahoga raíces y lava nutrientes. Hay que cerrar el lazo midiendo.\n\nEl objetivo real es llegar a la seca sabiendo cuántos litros por día necesito, teniéndolos almacenados y con un método que los entregue sin desperdiciar.",
+      "criterios": [
+        "Calcula el consumo del día pico y lo liga al tanque, la bomba y el sistema solar.",
+        "Distingue las cuatro zonas con sus consumos por planta distintos.",
+        "Señala la vulnerabilidad de los almácigos por su poca agua útil.",
+        "Reconoce que crecimiento es el grueso del consumo y que la malla lo reduce.",
+        "Identifica endurecimiento como el mayor consumo por planta.",
+        "Dimensiona con el mes crítico del final de la seca.",
+        "Incluye la eficiencia del riego en el cálculo y compara métodos.",
+        "Propone cubrir el sustrato con cascarilla para bajar la evaporación.",
+        "Prioriza cerrar fugas antes que aumentar la entrada.",
+        "Descarta el riego por calendario y explica la variabilidad diaria.",
+        "Reconoce el exceso de riego como el error que no se ve."
+      ],
+      "explicacion": "Fíjate en que este módulo empieza igual que el solar: con un número que hay que estimar antes de comprar nada. Y por la misma razón, se dimensiona con el peor momento del año y no con el promedio, porque un sistema que falla en septiembre no sirve aunque el promedio anual cuadre."
+    }
+  ]
+}

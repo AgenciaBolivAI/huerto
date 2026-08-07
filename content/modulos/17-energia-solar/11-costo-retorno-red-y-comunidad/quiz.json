@@ -1,0 +1,96 @@
+{
+  "preguntas": [
+    {
+      "id": "costo-real",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se calcula el costo real de la energía de un sistema solar?",
+      "opciones": [
+        "Sumando la inversión inicial y todos los reemplazos previstos, y dividiendo entre la energía total generada en la vida útil.",
+        "Separando lo que se compra una sola vez de lo que hay que volver a comprar varias veces.",
+        "Es el único número comparable con la tarifa de la red o con el diésel convertido a kilovatios-hora.",
+        "Dividiendo el precio de compra entre la potencia instalada en vatios."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El precio por vatio instalado sirve para comparar cotizaciones entre sí, pero no dice cuánto cuesta la energía. Es la diferencia entre el costo de licencia y el costo de operación: un presupuesto que solo mira la compra inicial evalúa una arquitectura por lo que cuesta desplegarla la primera vez."
+    },
+    {
+      "id": "que-se-repone",
+      "tipo": "verdadero_falso",
+      "enunciado": "En un presupuesto solar todas las partidas son gasto de una sola vez.",
+      "respuesta": false,
+      "explicacion": "Falso. Paneles, estructura y cableado son gasto único para toda la vida del sistema; la electrónica se reemplaza quizá una vez en veinte años; y la batería se reemplaza varias veces. En un sistema con baterías esa partida recurrente puede terminar pesando más que todo lo demás junto, y es exactamente por eso que el bombeo directo, que no la tiene, sale tan bien en la cuenta."
+    },
+    {
+      "id": "generador",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué comparar un generador a combustible con un sistema solar por su precio de compra es tramposo?",
+      "opciones": [
+        "Porque el generador es barato de comprar y caro de operar: cada kilovatio-hora sale de un litro que hay que pagar.",
+        "Porque a eso se suman cambios de aceite, ruido, humos y una vida útil corta si se usa a diario.",
+        "Porque en el campo el combustible hay que ir a buscarlo, y ese viaje forma parte del costo real y de la disponibilidad del sistema.",
+        "Porque un generador no puede alimentar las mismas cargas que un sistema solar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Técnicamente un generador alimenta cualquier carga, y muy bien: el problema no es lo que puede hacer sino lo que cuesta hacerlo todos los días. Su lugar legítimo es el respaldo de emergencia, no la operación continua."
+    },
+    {
+      "id": "hibrido",
+      "tipo": "verdadero_falso",
+      "enunciado": "Añadir un generador pequeño de respaldo a un sistema solar es una redundancia cara que conviene evitar.",
+      "respuesta": false,
+      "explicacion": "Falso: suele ser justo lo contrario. Un generador de respaldo trabaja poquísimas horas al año, así que su costo de operación es despreciable, y a cambio permite dimensionar el sistema solar para el caso normal en vez de para el peor caso. Es la misma lógica que dimensionar la infraestructura para la carga habitual y tener un desborde para el pico raro, en lugar de pagar el pico todo el año."
+    },
+    {
+      "id": "generacion-distribuida",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué establece el marco boliviano de generación distribuida?",
+      "opciones": [
+        "El Decreto Supremo 4477 de 2021 lo creó, y el Decreto Supremo 5167 de junio de 2024 lo modificó ampliando incentivos.",
+        "Clasifica por potencia instalada en nanogeneración, microgeneración, minigeneración y macrogeneración.",
+        "La compensación se hace por balance entre la energía consumida y la energía inyectada a la red de distribución.",
+        "Paga en efectivo al usuario por cada kilovatio-hora que inyecta a la red."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No se paga en efectivo: se compensa contra lo que consumes, de modo que la red funciona como un depósito y no como un comprador. Un sistema doméstico o de un vivero pequeño cae en nanogeneración, hasta 10 kW, que es la categoría más sencilla."
+    },
+    {
+      "id": "confirmar",
+      "tipo": "verdadero_falso",
+      "enunciado": "Con las cifras y categorías de esta lección ya tienes todo lo necesario para iniciar el trámite de conexión.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la advertencia central de la lección. Los decretos fijan el marco, pero el detalle operativo —requisitos técnicos de conexión, tarifas, plazo de validez de los créditos de energía— lo establece el ente regulador por resolución administrativa, y eso cambia con más frecuencia que los decretos. El marco se estudia aquí; el detalle se confirma con el regulador y con la distribuidora antes de moverse."
+    },
+    {
+      "id": "tres-arquitecturas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué distingue a las tres arquitecturas posibles cuando el terreno sí tiene red?",
+      "opciones": [
+        "El sistema aislado sigue funcionando durante un apagón, pero necesita batería y la batería es el gasto recurrente.",
+        "El conectado a red sin batería da el mejor retorno, pero se apaga cuando se corta la luz.",
+        "El híbrido con respaldo cuesta más pero sostiene lo crítico durante un corte.",
+        "El conectado a red sigue alimentando la línea durante un apagón, lo que lo hace más útil."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Justamente lo contrario: un sistema conectado a red debe desconectarse obligatoriamente si la red cae, para no electrificar una línea donde puede haber alguien trabajando. Esa función es un requisito del inversor certificado para conexión a red, y es la razón por la que un sistema conectado sin batería no te sirve durante un apagón."
+    },
+    {
+      "id": "multiplicar-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "El objetivo del módulo no era que tú tuvieras un sistema solar, sino que la comunidad pudiera tenerlo. Explica cómo lo harías desde Rizoma del Sur: en qué orden construyes, qué documentas y qué compartes, y por dónde empiezas a explicar.",
+      "respuestaModelo": "Construyo en orden de retorno y de riesgo, no de deseo. Primero el bombeo solar del tanque, porque tiene el mejor retorno de todo el módulo y el menor riesgo: no lleva batería, así que no tiene el componente perecedero, y el tanque elevado ya estaba en el proyecto por el riego por gravedad, con lo cual el almacenamiento sale gratis. Después la iluminación y las cargas pequeñas del galpón, que ya requieren batería pero pequeña. Y la vivienda al final, que es la parte más cara y la menos crítica. Si en algún momento el presupuesto se corta, se corta por el final y lo importante ya está funcionando.\n\nLa cuenta con la que decido cada compra es el costo por kilovatio-hora a lo largo de la vida útil: inversión inicial más todos los reemplazos previstos, dividido entre la energía total. Es el único número comparable con lo que pagaría por otra vía, y es el que hace evidente por qué el bombeo directo gana: quitar la batería de la ecuación cambia el resultado por completo.\n\nRizoma tiene una ventaja poco común para multiplicar: es un vivero, y la gente ya viene al predio. Ya hay una razón para que un vecino esté aquí mirando plantas, y estando aquí ve el sistema. Aprovecho eso de tres maneras.\n\nDejo el sistema a la vista y explicado, con un cartel sencillo junto al cuarto de equipos: el esquema unifilar, la potencia instalada y qué alimenta, en lenguaje llano. La gente pregunta cuando entiende lo suficiente como para tener una pregunta.\n\nPublico lo que medí. Tengo perfil de programador y el sistema va a generar datos; un registro público de producción de mi terreno, aunque sea una hoja de cálculo compartida, es un recurso local que hoy no existe, y es mejor que cualquier atlas para varios kilómetros a la redonda porque son mis sombras y mi arreglo.\n\nY documento cuatro cosas concretas: los precios reales con fecha y proveedor, porque un precio real vale más que cualquier estimación; los errores, sobre todo los errores, como la cotización que resultó mala o el equipo que llegó sin garantía local; qué proveedor respondió bien cuando algo falló, que es un dato dificilísimo de conseguir; y el registro de producción.\n\nPor dónde empiezo a explicar: por el bombeo, no por la vivienda. El sistema que un vecino puede copiar no es el más grande sino el más barato, el que se entiende en diez minutos y el que resuelve un problema que todos tienen. Ese es el que hay que saber contar de memoria.\n\nY si algún día el predio tiene red, sé que existe el marco de generación distribuida —el DS 4477 modificado por el DS 5167, con nanogeneración hasta 10 kW para un caso como el mío y compensación por balance entre lo inyectado y lo consumido—, pero también sé que el detalle lo fija el regulador por resolución y que hay que confirmarlo con la CRE antes de contar con ello.\n\nCinco sistemas en cinco predios vecinos no son cinco sistemas: son repuestos compartidos, un multímetro que circula, alguien que ya cometió el error que estoy a punto de cometer, y poder de compra para negociar precio. Esa diferencia no cuesta dinero: cuesta documentar y contar.",
+      "criterios": [
+        "Ordena la construcción por retorno y riesgo, empezando por el bombeo.",
+        "Justifica el bombeo por la ausencia de batería y por el tanque que ya estaba en el proyecto.",
+        "Deja la vivienda para el final y explica por qué.",
+        "Usa el costo por kilovatio-hora de vida útil como criterio de decisión.",
+        "Aprovecha que el vivero ya recibe visitas para mostrar el sistema.",
+        "Deja el sistema explicado con un esquema visible en lenguaje llano.",
+        "Publica el registro de producción de su terreno.",
+        "Documenta precios con fecha, errores y proveedores que respondieron bien.",
+        "Empieza a explicar por lo más barato y replicable, no por lo más grande.",
+        "Menciona el marco de generación distribuida y la necesidad de confirmarlo con el regulador y la distribuidora."
+      ],
+      "explicacion": "Fíjate en que la parte que multiplica no cuesta dinero ni requiere equipo: es documentar y contar. Un sistema instalado resuelve un predio; un sistema explicado resuelve un barrio. Y con esto cierras el módulo entero: desde qué es un voltio hasta instalar de cero a cien y enseñarlo."
+    }
+  ]
+}

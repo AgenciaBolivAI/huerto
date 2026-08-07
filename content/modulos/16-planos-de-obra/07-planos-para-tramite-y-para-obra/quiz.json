@@ -1,0 +1,101 @@
+{
+  "preguntas": [
+    {
+      "id": "dos-cadenas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué se diferencian la cadena de obra y la cadena de trámite?",
+      "opciones": [
+        "La de obra va de croquis a plano a replanteo a obra, y su interlocutor es el albañil.",
+        "La de trámite va de uso de suelo a proyecto a visado a licencia, y su interlocutor es la administración.",
+        "No se sustituyen: un plano impecable para construir puede no servir para tramitar, y un proyecto aprobado puede no servir en obra.",
+        "Son la misma secuencia con nombres distintos según a quién se le presente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Parten del mismo terreno y terminan en la misma obra, pero sirven a criterios distintos: que la obra salga bien frente a que lo construido cumpla las normas y quede registrado. El proyecto aprobado suele estar en 1:100 y sin cuadro de replanteo, así que en la zanja no sirve; y tu plano de obra, por bueno que sea, no lleva las firmas que un trámite exige."
+    },
+    {
+      "id": "firmas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué significan las firmas de un plano de trámite?",
+      "opciones": [
+        "El propietario declara que quiere construir eso en su terreno; el proyectista responde de que cumpla la normativa.",
+        "El director técnico responde de que la obra se ejecute conforme al proyecto, y el supervisor controla la ejecución diaria.",
+        "La firma certifica que hay alguien identificable a quien pedirle cuentas: es responsabilidad nominal.",
+        "La firma certifica que el dibujo está bien hecho y a escala."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La calidad del dibujo no es lo que la firma certifica. Y el visado del colegio profesional cumple la función complementaria: verifica que quien firma es quien dice ser, que su título está registrado y que está habilitado y al día — autenticación de identidad y credenciales, igual que verificar la firma de un paquete antes de instalarlo."
+    },
+    {
+      "id": "firmar-uno-mismo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si dibujas bien tus planos y entiendes la normativa, puedes firmarlos tú mismo para presentarlos a trámite.",
+      "respuesta": false,
+      "explicacion": "Falso: el sistema no está midiendo tu competencia, está exigiendo alguien colegiado que responda. Lo que sí puedes hacer, y es mucho, es llegar con el proyecto pensado, medido y dibujado, de modo que el profesional trabaje sobre algo resuelto en lugar de empezar de cero — eso abarata el encargo y hace que el resultado se parezca a lo que querías."
+    },
+    {
+      "id": "circuito-scz",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo está planteado el circuito municipal en Santa Cruz de la Sierra?",
+      "opciones": [
+        "Son dos trámites encadenados: primero la aprobación del proyecto de arquitectura y después la licencia de construcción.",
+        "Los planos arquitectónicos se presentan visados por el Colegio de Arquitectos y con firmas del propietario, del proyectista y del director técnico.",
+        "La licencia se pide con el proyecto ya aprobado, y el paquete incluye título de propiedad, uso de suelo, catastral, alodial, impuestos al día, línea municipal, juegos de planos aprobados y licencia ambiental.",
+        "Es un trámite único que se resuelve presentando los planos firmados por el propietario."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Y dos advertencias que valen más que la lista: los requisitos cambian, así que la fuente válida es el portal municipal y la ventanilla; y antes que nada hay que comprobar qué municipio tiene jurisdicción sobre el terreno, porque un predio al sur de la ciudad puede depender de otro municipio con requisitos y plazos distintos."
+    },
+    {
+      "id": "conforme-a-obra",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es el conforme a obra y por qué importa?",
+      "opciones": [
+        "Es el plano actualizado con lo que realmente se construyó, no con lo que se prometió construir.",
+        "Importa para ampliar: es la diferencia entre medir un plano y picar a ciegas.",
+        "Importa para regularizar o vender, porque la distancia entre lo aprobado y lo construido es el trabajo que habrá que hacer.",
+        "Solo hace falta en obras grandes con inspección oficial."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es justo al revés: en la obra chica es donde más falta hace, porque no hay nadie más documentando. Toda obra se desvía —el terreno tiene más información que el papel— y lo que distingue a una obra ordenada no es que no haya desvíos, sino que los desvíos quedan dibujados el día que ocurren."
+    },
+    {
+      "id": "versiones",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué reglas de versionado se aplican en una obra?",
+      "opciones": [
+        "Una sola versión vigente, colgada en funda plástica, con fecha y versión escritas grandes.",
+        "Cuando sale una versión nueva, la anterior se retira físicamente del lugar; no se archiva al lado.",
+        "Todo cambio se dibuja antes de ejecutarse, aunque sea a mano sobre la lámina vigente, con fecha.",
+        "Basta con avisar de palabra al albañil y anotarlo mentalmente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un cambio acordado de palabra a las once de la mañana no existe a las cuatro de la tarde. Y la razón de retirar físicamente la versión vieja es que aquí no hay compilador que detecte que alguien está construyendo la anterior: la única defensa real es que esa lámina no esté al alcance de la mano."
+    },
+    {
+      "id": "antes-de-tapar",
+      "tipo": "verdadero_falso",
+      "enunciado": "Fotografiar zanjas y ductos antes de taparlos es una precaución opcional que se puede sustituir dibujándolos después de memoria.",
+      "respuesta": false,
+      "explicacion": "Falso: lo que se tapa deja de ser verificable, y desenterrar cuesta cien veces lo que costaba mirar. Reconstruir de memoria seis meses después produce un documento que parece cierto y no lo es, que es peor que no tenerlo. Dos minutos de teléfono, con un metro plegable dentro del encuadre para dar referencia de medida, es el registro más barato que existe y el único que se puede tomar una sola vez."
+    },
+    {
+      "id": "plan-de-papeles",
+      "tipo": "abierta",
+      "enunciado": "Vas a construir el galpón del vivero. Describe qué haces con la parte administrativa antes de empezar, cómo llegas al profesional si hace falta uno, y qué sistema montas durante la obra para que al terminar tengas un conforme a obra de verdad.",
+      "respuestaModelo": "Lo primero, y es una mañana: averiguar qué municipio tiene jurisdicción sobre el terreno y si está dentro o fuera del radio urbano, porque un predio al sur de la ciudad puede depender del municipio de Santa Cruz de la Sierra o de uno vecino, y los requisitos, plazos y costos no son los mismos. Voy a la ventanilla con el certificado catastral y hago una sola pregunta concreta: para construir un galpón de este tamaño y un vivero comercial en este predio, qué necesito. Anoto la respuesta con nombre, cargo y fecha, porque eso se pregunta y no se supone.\n\nEn paralelo ordeno los papeles del terreno, que es de lo que cuelga todo lo demás: título en Derechos Reales, certificado catastral, alodial e impuestos al día. Conseguirlos con calma cuesta la mitad que conseguirlos con prisa. Y pregunto desde el principio por la licencia ambiental, porque un vivero es actividad productiva además de una construcción y conviene saber qué categoría le toca antes de tener medio galpón levantado.\n\nSi hace falta trámite, contrato al profesional pero llego con el proyecto resuelto: mi plano de conjunto, la planta, las fundaciones y el corte, con las dimensiones ya ajustadas al material que compro. El arquitecto no empieza de cero, revisa, corrige lo que haga falta y firma. Sale más barato y el resultado se parece a lo que yo quería. Tengo claro que no puedo firmar yo: el sistema no mide mi competencia, exige alguien colegiado que responda, y el visado del colegio verifica que esa persona está habilitada y al día.\n\nDurante la obra monto tres cosas. Una, la lámina vigente plastificada y clavada en el galpón, con fecha y versión grandes en el cajetín, y la regla de que cuando sale una versión nueva la anterior se retira físicamente del lugar, no se archiva al lado. Dos, una copia sucia aparte donde marco a mano todos los cambios el día que ocurren, con fecha, porque lo hablado desaparece. Tres, una carpeta de fotos en el teléfono organizada por fecha con todo lo que se va a tapar: zanjas con sus tubos antes de rellenar, armaduras antes de hormigonar, cajas y ductos antes de revocar, y siempre con un metro plegable dentro del encuadre para dar referencia de medida.\n\nY le pido al maestro una cosa explícitamente: que me avise antes de tapar cualquier cosa. Es la frase más rentable de la obra, porque lo que se tapa deja de ser verificable y desenterrar cuesta cien veces lo que costaba mirar.\n\nAl terminar dedico una tarde a pasar a limpio la copia sucia, fecho la versión final como conforme a obra y la guardo en dos sitios. Ese documento es el que va a responder, dentro de cinco años, por dónde pasa el tubo que quiera pinchar o dónde puedo apoyar una ampliación.",
+      "criterios": [
+        "Averigua primero qué municipio tiene jurisdicción y si está en radio urbano.",
+        "Pregunta en ventanilla en lugar de suponer, y registra la respuesta con fecha.",
+        "Ordena título, catastral, alodial e impuestos antes de empezar.",
+        "Pregunta por la licencia ambiental por tratarse de actividad productiva.",
+        "Llega al profesional con el proyecto resuelto y entiende por qué no puede firmar él.",
+        "Mantiene una sola versión vigente, con la anterior retirada del lugar.",
+        "Marca los cambios el día que ocurren sobre una copia sucia fechada.",
+        "Fotografía todo lo que se tapa con referencia de medida en el encuadre.",
+        "Pide aviso antes de tapar y produce el conforme a obra al terminar."
+      ],
+      "explicacion": "Fíjate en que casi nada de esto es burocracia: es documentación de un sistema que después no vas a poder inspeccionar. Lo que quedó bajo tierra o dentro de un muro solo lo sabes si alguien lo anotó antes de taparlo — y ese alguien, en una obra chica, eres tú."
+    }
+  ]
+}

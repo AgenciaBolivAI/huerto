@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "el-reloj",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se puede decir a favor y en contra del riego por reloj?",
+      "opciones": [
+        "Elimina la presencia obligatoria, que es el cuello de botella real de un vivero pequeño.",
+        "Es predecible y tiene muy pocas piezas, así que tiene pocos modos de fallo.",
+        "No sabe qué tiempo hace ni cómo está el cultivo.",
+        "Es una mala opción de partida porque desperdicia el sensor que ya tienes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es justamente la recomendación correcta para empezar, aunque contradiga el instinto de quien sabe programar: resuelve el problema principal con lo mínimo que puede fallar y permite acumular la observación necesaria para hacer algo mejor. Automatizar por umbral sin haber regado a mano una temporada es escribir una regla sin saber cuál hace falta."
+    },
+    {
+      "id": "histeresis",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un umbral único produce oscilación, y la solución es usar dos umbrales separados por más que el ruido de la medida.",
+      "respuesta": true,
+      "explicacion": "Correcto: con un solo valor, el ruido hace que el sistema arranque y pare continuamente alrededor del punto de disparo, la válvula chasquea y el riego es errático. Es el mismo mecanismo de cualquier termostato, y el mismo problema que una alerta que se dispara y se resuelve en bucle."
+    },
+    {
+      "id": "duracion-fija",
+      "tipo": "verdadero_falso",
+      "enunciado": "Es más seguro regar hasta que el sensor indique que el sustrato ya está húmedo que regar una cantidad fija.",
+      "respuesta": false,
+      "explicacion": "Falso, y es peligroso: si el sensor está mal colocado o roto, «hasta que suba» significa para siempre. Se riega una cantidad fija conocida y se vuelve a comprobar en el ciclo siguiente. Lo mismo vale para el tiempo mínimo entre riegos, que evita que un sensor mal colocado dispare riegos encadenados."
+    },
+    {
+      "id": "por-clima",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué caracteriza al riego basado en evapotranspiración?",
+      "opciones": [
+        "Repone lo que se perdió en lugar de esperar a que el sustrato se seque.",
+        "Ajusta solo, regando más en días de alta demanda y menos en días cubiertos.",
+        "Exige más sensores, coeficientes de cultivo estimados y más complejidad.",
+        "Elimina la necesidad de sensores de humedad en el sustrato."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No los elimina: es la estrategia más elegante y también la que más cosas pueden salir mal, así que conviene combinarla con las otras y no sustituirlas. Es la misma cuenta del balance hídrico del módulo de riego, aplicada automáticamente."
+    },
+    {
+      "id": "las-tres-capas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se combinan las tres estrategias?",
+      "opciones": [
+        "Una base por reloj que garantiza riego mínimo aunque todo lo demás falle.",
+        "Una corrección por umbral que suprime o añade riegos dentro de límites acotados.",
+        "Una corrección estacional por clima, aunque al principio sea manual.",
+        "Eligiendo la más avanzada de las tres y descartando las otras."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Apiladas, las tres capas hacen que el sistema degrade con elegancia: si muere el sensor sigue el reloj, y si falla la corrección estacional sigue habiendo riego base. Es lo contrario de un sistema que depende de que todo funcione."
+    },
+    {
+      "id": "limites-duros",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué límites van por encima de cualquier lógica?",
+      "opciones": [
+        "Duración máxima por riego, que atrapa todos los fallos de sensor.",
+        "Número máximo de riegos por día.",
+        "Ventana horaria, porque el follaje mojado al anochecer favorece a los hongos.",
+        "Un mínimo diario que garantice que siempre se riegue algo, pase lo que pase."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un mínimo obligatorio va en contra del criterio de fallo seguro: si algo va mal, el estado seguro es no regar. Y la ventana horaria es una decisión agronómica que viene del módulo de sanidad: si el sensor pide agua a las seis de la tarde, no se riega."
+    },
+    {
+      "id": "decision-local",
+      "tipo": "verdadero_falso",
+      "enunciado": "La decisión de regar debe tomarla el dispositivo junto a la válvula, sin depender de conexión, servidor ni teléfono.",
+      "respuesta": true,
+      "explicacion": "Correcto: la conectividad sirve para mirar, avisar y cambiar parámetros, pero no debe estar en el camino crítico de la decisión. Un vivero que deja de regar porque se cayó internet tiene un problema de diseño, no de conectividad, y en Zanja Honda la conexión no está garantizada."
+    },
+    {
+      "id": "estrategia-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define la estrategia de control del riego de Rizoma del Sur: qué implementas primero, cómo la haces crecer y qué límites impones.",
+      "respuestaModelo": "Implemento las tres capas, pero escalonadas en el tiempo.\n\nPrimero, solo reloj: temporizador y válvula, sin sensores. Resuelve la presencia obligatoria, que es el cuello de botella real que identificó el módulo de negocio, con la menor cantidad posible de piezas que puedan fallar, y es predecible. Mientras funciona, riego y observo a mano según la lección de riego, porque eso es lo que produce el conocimiento para la capa siguiente: escribir una regla de umbral antes de haber regado a mano una temporada es escribir una regla sin saber cuál hace falta.\n\nDespués añado la corrección por umbral, con histéresis desde el primer día. Dos umbrales separados por más que el ruido de la medida, nunca uno solo, porque con un umbral único la válvula chasquea alrededor del punto de disparo y el riego se vuelve errático.\n\nPongo un tiempo mínimo entre riegos de al menos un par de horas, para que el agua se redistribuya en el envase y para que un sensor mal colocado no encadene riegos.\n\nY riego una duración fija, nunca «hasta que el sensor suba»: si el sensor está roto o mal colocado, esa condición no se cumple nunca. Riego una cantidad conocida y vuelvo a comprobar en el ciclo siguiente.\n\nLa corrección estacional por clima empieza siendo manual: subo la base en la seca y la bajo en lluvias con el criterio del balance hídrico. Automatizar el cálculo de evapotranspiración es la última capa y solo tiene sentido cuando las dos anteriores llevan una temporada funcionando.\n\nSi solo pudiera implementar una corrección, elegiría suprimir el riego cuando ha llovido, porque el problema mayor aquí no es la seca —donde la demanda es alta pero estable y un reloj bien ajustado se acerca— sino la temporada de lluvias, donde un reloj riega lotes que acaban de recibir cincuenta milímetros. Para eso basta un sensor de lluvia, o el propio sensor de humedad usado solo como veto: no decide cuánto regar, decide si cancelar.\n\nEl surazo es el caso contrario y el argumento más fuerte para la capa de umbral: aire frío y seco con viento fuerte dispara la transpiración durante uno o dos días, un reloj no lo ve y las plantas en envase pequeño lo sufren rápido.\n\nImpongo tres límites duros por encima de cualquier lógica: duración máxima por riego, número máximo de riegos al día y ventana horaria. La ventana horaria es agronómica y no informática: riego temprano y no al final del día, porque el follaje mojado al anochecer favorece a los hongos según el módulo de sanidad. Si el sensor pide agua a las seis de la tarde, no se riega.\n\nLa lógica vive en el dispositivo junto a la válvula, con datos locales, sin depender de conexión, servidor ni teléfono. La conectividad es para mirar y avisar, nunca para decidir, y en Zanja Honda no está garantizada.\n\nPongo un reloj de tiempo real con pila propia para que el controlador sepa qué hora es al volver de un corte de energía y no riegue a deshora.\n\nY el conjunto está diseñado para degradar con elegancia: si muere el sensor sigue el reloj, y si falla la corrección estacional sigue habiendo riego base. Un sistema que solo funciona cuando todo funciona no sirve para un vivero.",
+      "criterios": [
+        "Empieza por reloj puro y justifica por qué antes de instrumentar.",
+        "Usa la temporada de riego manual para construir la regla.",
+        "Implementa histéresis con dos umbrales desde el principio.",
+        "Añade tiempo mínimo entre riegos.",
+        "Riega duración fija en vez de hasta condición de sensor.",
+        "Deja la corrección climática como última capa, manual al principio.",
+        "Identifica la cancelación por lluvia como la corrección más rentable aquí.",
+        "Cita el surazo como argumento para la capa de umbral.",
+        "Impone duración máxima, riegos máximos y ventana horaria.",
+        "Justifica la ventana horaria por sanidad y no por electrónica.",
+        "Mantiene la decisión local e independiente de la conectividad.",
+        "Prevé recuperación tras corte de energía con reloj de tiempo real."
+      ],
+      "explicacion": "La lección invierte la intuición de un perfil técnico: lo primero que hay que construir no es lo más capaz sino lo que sigue funcionando cuando falta una pieza. Las capas no son etapas de un plan de mejora, son redundancia."
+    }
+  ]
+}

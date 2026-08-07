@@ -1,0 +1,284 @@
+La primera lección del módulo dejó una afirmación pendiente: **en clima cálido, la ventilación es el
+control de temperatura de una estructura.** No la cubierta, no el aislamiento, no la inercia. El aire
+que consigue salir.
+
+Esta es la lección donde eso se dimensiona, se construye y se maneja.
+
+## El aire se mueve solo
+
+<Diagrama
+  src="el-aire-se-mueve-solo.webp"
+  alt="Sección de una estructura de techo a dos aguas sobre una línea de suelo con plantas dentro. Una abertura ancha recorre toda la cumbrera, dibujada en terracota, y las dos paredes laterales están abiertas en una franja cerca del suelo, también en terracota. Flechas terracota entran en horizontal por las dos aberturas bajas, barren el interior, suben y salen hacia arriba por la abertura de cumbrera. Una franja de rótulo señala las aberturas bajas y dice ENTRA ABAJO, FRESCO; otra señala la cumbrera y dice SALE ARRIBA, CALIENTE. Una flecha de cota vertical de doble punta recorre la distancia entre el nivel de las aberturas laterales y el de la cumbrera, con una franja al lado que dice CUANTA MÁS DIFERENCIA DE ALTURA, MÁS TIRO. Arriba, EL AIRE SE MUEVE SOLO."
+  pie="Dos aberturas a distinta altura y el aire circula sin ventiladores, sin electricidad y sin que nadie haga nada."
+/>
+
+La ventilación de una estructura de vivero **no necesita energía**, y esa es la mejor noticia de todo
+el módulo. Se consigue con geometría.
+
+Hacen falta dos aberturas y una diferencia de altura entre ellas:
+
+**Una entrada baja**, por los costados, cerca del suelo, por donde entra el aire fresco del exterior.
+
+**Una salida alta**, en la cumbrera o en los escalones de un diente de sierra, por donde sale el aire
+caliente que ya subió.
+
+Y funciona porque el aire caliente es menos denso: sube, sale por arriba, y su salida crea una
+depresión que arrastra aire nuevo por abajo. Es el efecto chimenea de la lección de estructuras.
+
+<Formula explicacion="El tiro que se establece por diferencia de temperatura depende de dos cosas: cuánto más caliente está el aire de dentro que el de fuera, y cuánta altura hay entre la abertura de entrada y la de salida. Ninguna de las dos se compra: se diseñan.">
+tiro ∝ diferencia de temperatura × diferencia de altura entre aberturas
+</Formula>
+
+<Dato>
+De esa relación sale un detalle que casi nadie aprovecha: **el tiro es más fuerte justo cuando más
+falta hace.**
+
+Cuanto más se calienta el interior, mayor es la diferencia de temperatura con el exterior y más fuerte
+tira la chimenea. El sistema se autorregula: a mediodía, cuando el problema es mayor, la ventilación
+natural trabaja al máximo.
+
+Es un lazo de realimentación negativo, gratis y sin partes móviles. Lo único que hay que hacer es no
+estropearlo cerrando las aberturas.
+</Dato>
+
+Y hay un segundo mecanismo que se suma: **la ventilación por viento.** Cuando corre aire fuera, entra
+por barlovento y sale por sotavento, y ese efecto suele ser mayor que el térmico. Por eso la
+orientación de la lección anterior importaba: el eje se pone para que el viento atraviese la nave por
+su lado corto.
+
+## Cuánta abertura hace falta
+
+<Diagrama
+  src="cuanta-abertura.webp"
+  alt="Vista en planta de la huella rectangular de una estructura, dibujada como un rectángulo grande en verde salvia que representa el suelo, con franjas terracota a lo largo de sus dos bordes largos y de su línea central que representan las aberturas. Al lado, a la derecha, una gran fracción en terracota: un bloque superior rotulado SUPERFICIE DE ABERTURA, una línea de división horizontal, y un bloque inferior rotulado SUPERFICIE DE SUELO. Debajo del conjunto, una franja que dice EN CLIMA CÁLIDO, CUANTO MÁS GRANDE MEJOR. Arriba, LA ABERTURA SE MIDE CONTRA EL PISO."
+  pie="La cifra que importa no es cuántas ventanas hay, sino qué fracción del piso suman todas juntas."
+/>
+
+Aquí está el número que hay que saber, y se expresa siempre igual: **la superficie total de aberturas
+como porcentaje de la superficie de suelo cubierta.**
+
+<Formula explicacion="Se suma el área de todas las aberturas —cumbrera, laterales, frontones— y se divide entre la superficie de piso que cubre la estructura. El resultado se expresa en porcentaje y es la cifra que se compara con las recomendaciones.">
+tasa de ventilación = superficie total de aberturas ÷ superficie de suelo cubierta
+</Formula>
+
+A esa cifra se la llama <Termino slug="tasa-de-ventilacion">tasa de ventilación</Termino>, y es la que
+se compara con las recomendaciones. Las referencias, y son mínimos:
+
+**En clima templado, entre un quince y un veinte por ciento** suele bastar, y es lo que traen la
+mayoría de los diseños de manual.
+
+**En clima cálido y húmedo, hay que ir a bastante más**: del orden de un treinta por ciento o incluso
+más, y con parte importante de esa superficie en la cumbrera y no solo en los costados.
+
+**Y en la práctica de un vivero pequeño en la llanura, la respuesta suele ser aún más simple: quitar
+las paredes.** Una estructura con techo y sin laterales tiene una tasa de ventilación enorme y ningún
+mecanismo que la limite.
+
+<Advertencia>
+La distribución importa tanto como el total. **Un veinte por ciento todo en un costado ventila mucho
+peor que un veinte por ciento repartido entre cumbrera y ambos laterales.**
+
+Con las aberturas mal repartidas se forman zonas muertas: rincones donde el aire no se renueva y donde
+las plantas se comportan como si estuvieran en otra estructura. Y eso se detecta de una forma muy
+barata: un termómetro en el rincón sospechoso y otro en el centro.
+</Advertencia>
+
+## La malla tapa más de lo que parece
+
+<Diagrama
+  src="la-malla-tapa.webp"
+  alt="Dos paneles enfrentados, cada uno con la vista frontal cercana de la misma abertura rectangular enmarcada en una pared. A la izquierda, la abertura está completamente libre y muchas flechas terracota gruesas la atraviesan sin obstáculo, rotulado ABERTURA LIBRE, PASA TODO. A la derecha, marcado con una cruz roja al lado, la misma abertura está cubierta por una malla muy fina y densa dibujada como retícula apretada, y solo unas pocas flechas terracota delgadas logran colarse mientras la mayoría se amontonan y se detienen contra la malla, rotulado CON MALLA FINA, PASA MUCHO MENOS. Entre ambos paneles, una flecha terracota apuntando a la derecha. Arriba, LA MALLA TAPA MÁS DE LO QUE PARECE."
+  pie="Poner malla antiinsectos sin agrandar la abertura convierte una estructura ventilada en una cerrada."
+/>
+
+Este es el error que echa a perder muchas estructuras bien diseñadas.
+
+Una malla antiinsectos —de las que sirven de barrera contra los vectores de virus— tiene una trama
+muy fina, y **el aire que la atraviesa es una fracción del que pasaría por el hueco libre.** No es una
+reducción pequeña: puede ser la mitad o menos, y depende del tamaño de poro.
+
+Es el mismo fenómeno que hace que un filtro sucio ahogue un motor. La abertura sigue estando ahí; lo
+que se perdió es el caudal.
+
+<Dato>
+La regla práctica: **si pones malla, agranda la abertura.** Bastante. Y si no puedes agrandarla, no
+pongas malla, porque el problema que vas a crear —temperatura y humedad— es mayor que el que resuelves.
+
+Por eso la lección de umbráculos decía que la malla antiáfidos tiene sentido **solo en el bloque de
+plantas madre y en la propagación de material valioso**, y no en todo el vivero: son las únicas zonas
+donde el beneficio sanitario justifica el costo de tener que sobredimensionar toda la ventilación.
+</Dato>
+
+## Tres formas de bajar la temperatura
+
+<Diagrama
+  src="tres-formas.webp"
+  alt="Tres tarjetas cuadradas en fila, cada una con la misma estructura pequeña de techo a dos aguas con plantas dentro, tratada de forma distinta, con una franja pequeña dentro y otra de pie. La primera, con la cumbrera y los costados abiertos de par en par y flechas de aire terracota barriendo el interior, rotulada dentro SACAR EL AIRE y al pie VENTILAR. La segunda, con una malla tendida sobre el techo y el sol de arriba dibujado con los rayos visiblemente reducidos antes de llegar a la cubierta, rotulada dentro QUE ENTRE MENOS SOL y al pie SOMBREAR. La tercera, con una neblina fina de gotitas azul pálido en el aire bajo el techo y una mancha oscura de humedad en el piso, con pequeñas volutas de vapor subiendo, rotulada dentro GASTAR CALOR EN EVAPORAR y al pie MOJAR. Arriba, TRES FORMAS DE BAJAR LA TEMPERATURA."
+  pie="Las tres funcionan, pero en clima húmedo la tercera funciona mucho menos de lo que promete."
+/>
+
+**Ventilar** es sacar el aire caliente. Es la principal, la más barata y la que no tiene contrapartida.
+Todo lo anterior de esta lección va sobre esto.
+
+**Sombrear** es que entre menos radiación. Malla encima de la cubierta, malla móvil que se corre en
+las horas duras, o lechada de cal sobre el plástico en la temporada de más sol, que se va lavando sola
+con las lluvias. Es efectivo y su contrapartida es obvia: menos luz, y ya viste lo que hace el exceso
+de sombra.
+
+**Y mojar**, que es enfriamiento por evaporación: nebulización fina en el aire, o simplemente mojar el
+piso. Evaporar agua consume muchísima energía, y esa energía sale del aire, que se enfría.
+
+<Advertencia>
+El enfriamiento por evaporación tiene una limitación que decide su utilidad aquí: **funciona en
+proporción a lo seco que esté el aire.**
+
+En un clima seco es espectacular: el aire admite mucho vapor y la caída de temperatura es grande.
+**En un clima húmedo el aire ya está casi saturado**, así que admite poca agua más, la evaporación es
+lenta y el enfriamiento resulta mucho menor.
+
+Y hay un costo colateral serio: **subes todavía más la humedad**, que en un clima ya húmedo es
+justamente lo que no quieres, por el riesgo fúngico de la primera lección.
+
+Por eso, en la llanura cruceña, mojar el piso ayuda un poco en los días secos de la temporada seca y
+es contraproducente en plena temporada de lluvias. La nebulización tiene sentido en camas de
+enraizamiento, donde la humedad alta sí se busca, y poco sentido como sistema de refrigeración
+general.
+</Advertencia>
+
+## Por qué el enfriamiento evaporativo depende del aire
+
+Vale la pena entender el mecanismo, porque explica de una vez por qué la misma técnica es magia en un
+sitio y casi nada en otro.
+
+Evaporar un gramo de agua consume una cantidad de energía enorme comparada con lo que cuesta
+calentarla. Esa energía sale del aire y de las superficies que rodean la gota, que por tanto **se
+enfrían**. Hasta ahí, todo bien.
+
+Pero el aire solo admite una cantidad limitada de vapor, y ese límite depende de su temperatura.
+La <Termino slug="humedad-relativa">humedad relativa</Termino> es justamente eso: qué fracción de lo
+que el aire podría admitir ya lleva encima.
+
+**Con humedad relativa baja, el aire está sediento**: la evaporación es rápida, se consume mucha
+energía y la caída de temperatura es grande. **Con humedad relativa alta, el aire ya está casi lleno**:
+la evaporación es lenta y apenas se enfría nada.
+
+<Dato>
+De ahí sale una regla de decisión sencilla: **antes de invertir en cualquier sistema de nebulización o
+de pared húmeda, mira la humedad relativa de tus horas más calurosas.**
+
+Si a las dos de la tarde en el peor mes la humedad ya es alta, ese sistema va a rendir muy por debajo
+de lo que promete el folleto, que casi siempre está escrito para climas secos.
+
+Y hay una comprobación de campo aún más barata: mojar el piso una tarde de calor y mirar el termómetro
+media hora después. Si no se mueve, ya está contestada la pregunta.
+</Dato>
+
+## Medir en vez de suponer
+
+Todo lo anterior se ajusta con un instrumento que cuesta muy poco y que casi ningún vivero pequeño
+tiene: **un termómetro de máxima y mínima.**
+
+Registra la temperatura más alta y la más baja desde la última vez que se puso a cero, así que con
+mirarlo una vez al día se tiene el dato que importa: **el pico**. Y el pico es lo que mata plantas, no
+la media.
+
+Cómo usarlo bien:
+
+**A la altura de las plantas**, no del techo. Lo que importa es lo que siente la hoja.
+
+**A la sombra**, nunca con el sol directo dándole, porque entonces mide su propia temperatura y no la
+del aire.
+
+**Y dos, si se puede**: uno dentro y uno fuera. La diferencia entre ambos es la medida directa de si la
+ventilación funciona. Si dentro hace mucho más calor que fuera al mediodía, la estructura está
+fallando en lo único que tiene que hacer.
+
+<Dato>
+Un tercer termómetro, movido de sitio cada semana, es la forma barata de encontrar las **zonas
+muertas**: rincones donde el aire no se renueva y que están sistemáticamente varios grados por encima
+del resto.
+
+Casi siempre corresponden a esquinas alejadas de las aberturas, a la zona de sotavento, o a puntos
+donde una fila de plantas altas hace de tapón.
+</Dato>
+
+## El manejo diario
+
+Y termino con el protocolo, que es corto a propósito:
+
+**Abrir temprano**, antes de que empiece a pegar el sol. Abrir a las diez es tarde, porque a esa hora
+ya hay una masa de aire caliente acumulada que cuesta mucho más sacar que evitar.
+
+**Cerrar tarde**, o no cerrar. En este clima, la mayoría de las noches no hay ninguna razón para
+cerrar, y dejar abierto evita la condensación de la lección anterior.
+
+**Cerrar solo por surazo**, y por el lado sur. Es la única situación del año que justifica cerrar, y
+dura unos pocos días.
+
+**Y revisar el termómetro al pasar**, que cuesta tres segundos y es lo que convierte todo esto en un
+sistema con realimentación en vez de en una intuición.
+
+<AplicarRizoma>
+**En Rizoma la ventilación se resuelve casi entera por diseño, y esa es la decisión importante.**
+
+Las estructuras elegidas —umbráculo sin paredes sobre crecimiento y techo a dos aguas con cumbrera y
+costados abiertos sobre propagación— tienen de partida una tasa de ventilación enorme, muy por encima
+de cualquier recomendación de manual. **No hay que manejarlas: funcionan solas**, que era exactamente
+el criterio que se fijó al elegirlas.
+
+**La abertura de cumbrera se deja abierta todo el año**, con su sombrerete para que no entre la lluvia.
+Solo se cierra el faldón sur, y solo los días de surazo.
+
+**Y la excepción que sí exige cálculo es la malla antiáfidos del bloque de plantas madre.** Ahí, al
+poner trama fina hay que **agrandar mucho la superficie de apertura y subir la altura**, porque si no
+se convierte en una cámara caliente y húmeda que produce justo el problema fúngico que la malla no
+resuelve. Si no se puede sobredimensionar, es mejor no poner la malla.
+
+**Dos termómetros de máxima y mínima**, uno bajo la estructura de propagación y otro al aire libre, a
+la altura de las plantas y a la sombra los dos. La diferencia entre ambos al mediodía es la única
+métrica que hace falta para saber si el diseño funciona. Y anotar el pico una vez al día en la misma
+planilla del inventario cuesta un renglón.
+
+**El sombreo temporal como recurso de temporada**, no permanente: la lechada de cal sobre la cubierta
+impermeable en los meses de más radiación, que se lava sola con las primeras lluvias, justo cuando ya
+no hace falta.
+
+**Y la nebulización, solo en la cama de enraizamiento**, donde la humedad alta es el objetivo y no un
+efecto secundario. Como sistema de refrigeración general aquí no compensa: con el aire ya cargado de
+humedad enfría poco y sube la humedad, que es lo último que conviene en un clima donde el hongo es el
+enemigo principal.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La combinación de calor y humedad de la llanura oriental cambia el orden de prioridad respecto a lo
+que dicen la mayoría de los manuales.**
+
+En zonas cálidas y secas —el Chaco, buena parte del mundo mediterráneo— el enfriamiento evaporativo es
+una herramienta de primer orden, y se ven sistemas de pared húmeda y nebulización que funcionan muy
+bien. **En Santa Cruz, con humedad relativa alta buena parte del año, ese recurso pierde casi toda su
+eficacia** y además agrava el riesgo de enfermedad fúngica.
+
+Aquí el orden correcto es: **ventilar primero, sombrear después, y mojar solo con criterio y en sitios
+concretos.**
+
+**El surazo es la única razón estacional para cerrar**, y es un evento de pocos días varias veces al
+año, con noches que pueden bajar a unos diez grados y viento fuerte del sur. Tener un faldón
+enrollable en esa cara resuelve el año entero sin comprometer la ventilación el resto del tiempo.
+
+**Los termómetros de máxima y mínima se consiguen en agropecuarias y ferreterías** y cuestan poco. Es
+probablemente el instrumento con mejor relación entre precio y decisiones que corrige, y es el punto
+natural donde el módulo de automatización va a enganchar más adelante: primero medir a mano y saber
+qué números importan, después decidir si vale la pena registrarlos solos.
+
+**Y una advertencia sobre las mallas antiinsectos de trama muy fina**, que se venden como solución
+sanitaria: en este clima, colocarlas sin rediseñar la ventilación produce más pérdidas por hongo y por
+calor de las que evitan por virus. Es un caso claro donde la solución correcta en otro contexto se
+vuelve contraproducente aquí si se copia sin ajustar.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya sabes qué construir, con qué forma, con qué cubierta y cómo tiene que ventilar.
+
+La siguiente lección es la práctica: **construir una estructura concreta con materiales de Santa
+Cruz**, paso a paso, con medidas y con la lista de materiales.

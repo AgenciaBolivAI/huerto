@@ -1,0 +1,102 @@
+{
+  "preguntas": [
+    {
+      "id": "cuatro-tareas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué tiene que hacer un sustrato y qué tensión hay entre esas tareas?",
+      "opciones": [
+        "Sostener la planta, guardar agua, dejar entrar aire y retener nutrientes.",
+        "Guardar agua y dejar entrar aire compiten directamente por el mismo espacio poroso.",
+        "No existe un sustrato universalmente bueno, sino uno adecuado para cada etapa.",
+        "Un buen sustrato consigue retener mucha agua y a la vez tener mucho aire."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Esa última combinación no existe: el hueco que no tiene agua tiene aire y viceversa. Todo el diseño de un sustrato es repartir bien esa tensión para la etapa concreta en que lo vas a usar, igual que memoria contra disco o latencia contra consistencia. Un almácigo y un frutal en bolsa de veinte litros son cargas distintas y llevan mezclas distintas."
+    },
+    {
+      "id": "agua-colgante",
+      "tipo": "opcion_multiple",
+      "enunciado": "Riegas un envase y lo dejas drenar. ¿Qué pasa con el agua del fondo?",
+      "opciones": [
+        "Queda una capa saturada permanente, porque la tensión superficial solo sostiene una columna de cierta altura.",
+        "El espesor de esa capa depende solo del sustrato, no del tamaño ni la forma del envase.",
+        "En el suelo abierto el fenómeno no se nota porque el perfil sigue bajando.",
+        "El espesor de la capa saturada es proporcional a la altura del envase."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es justo lo que hace el fenómeno tan contraintuitivo: el mismo sustrato deja la misma capa mojada al fondo de una maceta de veinte centímetros que al fondo de una bandeja de cinco. Lo que cambia no es el espesor sino qué fracción del volumen se lleva: en la maceta es poca cosa, en la bandeja puede ser casi todo."
+    },
+    {
+      "id": "grava-al-fondo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Poner una capa de grava en el fondo del envase mejora el drenaje.",
+      "respuesta": false,
+      "explicacion": "Falso, aunque sea uno de los consejos más repetidos que existen. El agua no cruza al material grueso hasta que la capa de arriba está saturada, así que la grava no drena nada, te roba volumen útil y en la práctica sube la capa mojada. Es la optimización que todo el mundo repite porque suena razonable, que nadie ha medido, y que hace el sistema peor."
+    },
+    {
+      "id": "envases-bajos",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una bandeja de almácigo puede llevar el mismo sustrato que una bolsa grande, ajustando solo el riego.",
+      "respuesta": false,
+      "explicacion": "Falso: en un envase bajo, la capa saturada —que mide lo mismo— ocupa una fracción enorme del volumen. Hace falta un sustrato más grueso, con partículas mayores, porque partículas grandes dejan poros grandes, los poros grandes sostienen menos columna de agua y la capa saturada resultante es más delgada. Por eso las bandejas llevan mezclas más aireadas que las bolsas."
+    },
+    {
+      "id": "por-que-falla-la-tierra",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué falla la tierra del terreno dentro de un envase?",
+      "opciones": [
+        "Sus poros finísimos sostienen columnas altas, así que la capa saturada es gruesa.",
+        "Se compacta, porque dentro del envase no hay raíces, lombrices ni ciclos que mantengan la estructura.",
+        "Pesa mucho y viene con hongos, nematodos y semillas de maleza.",
+        "Es mala tierra, y por eso tampoco funciona bien en el suelo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La tierra no es mala: en el suelo esa misma tierra funciona perfectamente, porque el perfil continúa hacia abajo y la vida del suelo mantiene la estructura. El error no es usar tierra sino meterla en un envase, que es un entorno con condiciones de contorno radicalmente distintas. Es el mismo tipo de error que llevar una configuración de servidor dedicado a un contenedor con límite de memoria."
+    },
+    {
+      "id": "propiedades",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué describen las propiedades de un sustrato?",
+      "opciones": [
+        "La porosidad de aireación es el hueco que sigue lleno de aire después de regar y drenar.",
+        "Un sustrato puede retener mucha agua y que casi nada sea aprovechable si los poros son demasiado finos.",
+        "La densidad aparente determina el peso del envase y también cuánto sostén da.",
+        "Con pH fuera del rango cómodo, el problema es que el sustrato no contiene los nutrientes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Con pH fuera de rango los nutrientes sí están presentes, pero quedan químicamente bloqueados: la planta muestra síntomas de carencia aunque el fertilizante esté ahí. La mayoría de las especies de vivero están cómodas entre 5,5 y 6,5. Y ojo con la densidad: una mezcla demasiado ligera no aguanta de pie una planta alta y se vuelca con el viento."
+    },
+    {
+      "id": "componentes",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué aporta cada componente y qué trampas tienen?",
+      "opciones": [
+        "Cascarilla, arena gruesa y perlita aportan estructura y aire con partículas grandes.",
+        "Turba, fibra de coco y compost fino aportan retención de agua.",
+        "La fibra de coco sin lavar trae sal, que deshidrata las raíces por vía osmótica.",
+        "El compost puede usarse solo, porque aporta las cuatro tareas a la vez."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Ningún componente hace las cuatro tareas solo, y el compost menos: en exceso compacta, y en almácigo puede quemar la semilla. Es el único que aporta vida biológica y capacidad de intercambio, y por eso se dosifica con cuidado en vez de usarlo como base. La cascarilla, por su parte, conviene quemada o bien seca y curada, porque fresca trae semillas de arroz y se descompone rápido."
+    },
+    {
+      "id": "sustrato-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña la estrategia de sustratos de Rizoma del Sur: con qué materiales, por qué esos, cómo los almacenas y cómo compruebas que la mezcla funciona.",
+      "respuestaModelo": "La estrategia se construye con lo que hay a treinta kilómetros, no con lo que sale en los manuales.\n\nEl componente estructural es la cascarilla de arroz. Santa Cruz es una de las principales zonas arroceras del país y los ingenios la generan como residuo en cantidades enormes, así que sale muy barata o gratis si la retiro. Aporta exactamente lo que la arcilla local jamás va a dar: partículas grandes, poros grandes y por tanto una capa saturada delgada. La compro o la retiro quemada para los almácigos, que es algo más cara pero no trae semillas de arroz y aporta algo de potasio, y cruda bien seca y curada para el resto.\n\nEl componente de retención y nutrientes es el compost propio. Con 2.474 m² generando restos vegetales todo el año, compostarlos convierte un residuo en el insumo más caro de la mezcla, y además es la única forma de tener control real sobre lo que entra al sustrato. La compostera va techada y con base drenada, porque con los aguaceros de la temporada de lluvias un montón a la intemperie se lava y pierde nutrientes.\n\nLa arena gruesa de río es fácil de conseguir en la zona y aporta peso, que hace falta en los envases altos de frutales para que no se vuelquen con el viento del sur.\n\nLo que no voy a usar es la tierra del terreno. La arcilla expansiva de la llanura aluvial es el peor caso posible dentro de un envase: partículas finísimas, capa saturada gruesa, compactación rápida y peso muerto. Y además viene con hongos de suelo, incluidos los del damping-off, nematodos y semillas de maleza. Se queda donde sí funciona, que es en el suelo.\n\nLa turba y la perlita se consiguen en agropecuarias de Santa Cruz pero son importadas y caras, y la turba tiene además un problema de sostenibilidad conocido, porque se extrae de turberas que tardan milenios en formarse. Si necesitara algo de esa familia usaría fibra de coco, que aquí es el sustituto lógico, siempre lavada, porque sin lavar trae sal y la sal deshidrata las raíces por vía osmótica.\n\nSobre la tierra negra que se vende como relleno: su composición varía enormemente de un proveedor a otro y muchas veces es tierra de desmonte con algo de materia orgánica. Si la compro, exijo verla antes y la trato como un componente más, nunca como el sustrato completo.\n\nEl almacenamiento es parte del vivero, no un extra. Cascarilla mojada por la lluvia se pudre y se apelmaza, y compost a la intemperie se lava. La zona de mezcla que reservé en el layout necesita techo, y va cerca de la entrada de vehículos porque el sustrato es lo más pesado que se mueve.\n\nY la comprobación no requiere laboratorio. Lleno un envase con la mezcla, lo riego hasta que chorree, lo dejo drenar media hora y después lo vuelco con cuidado para mirar el fondo. Si la parte baja sale chorreando y compacta, la capa saturada es demasiado gruesa para ese envase y hay que subir la proporción de material grueso. Cuesta diez minutos y responde la única pregunta que importa de verdad.\n\nY ese ensayo lo repito por tipo de envase, no una sola vez, porque el mismo sustrato deja la misma capa mojada en todos y por tanto se comporta muy distinto en una bandeja de almácigo que en una bolsa de veinte litros: en la bandeja esa capa puede ser casi todo el volumen. Los envases bajos van a llevar mezcla más gruesa que los altos.",
+      "criterios": [
+        "Elige cascarilla de arroz como estructural y justifica con la disponibilidad local.",
+        "Distingue cascarilla quemada para almácigo de cruda curada para el resto.",
+        "Usa compost propio como retención y nutrientes, con compostera techada.",
+        "Añade arena gruesa por peso y sostén frente al viento del sur.",
+        "Descarta la tierra del terreno con razones físicas y sanitarias.",
+        "Trata turba y perlita como caras e importadas y propone fibra de coco lavada.",
+        "Desconfía de la tierra negra de proveedor y la trata como un componente más.",
+        "Reserva almacenamiento techado cerca de la entrada de vehículos.",
+        "Propone la prueba de volcar el envase tras regar y drenar.",
+        "Repite el ensayo por tipo de envase y ajusta la granulometría según la altura."
+      ],
+      "explicacion": "Fíjate en que casi toda la lección se resume en una sola pregunta práctica: cuánto de este envase se queda encharcado. Contestarla no necesita análisis de laboratorio, necesita volcar una bolsa y mirar el fondo, y esa costumbre vale más que cualquier receta copiada de un libro."
+    }
+  ]
+}

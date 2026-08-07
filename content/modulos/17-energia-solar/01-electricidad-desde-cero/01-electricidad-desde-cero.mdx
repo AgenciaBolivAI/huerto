@@ -1,0 +1,294 @@
+En la lección de instalación eléctrica del módulo de obra aparecieron tres números —tensión,
+corriente y potencia— con lo justo para dimensionar circuitos de 220 voltios y no matar a nadie. Aquí
+hace falta más, y por una razón concreta: **cuando te conectas a la red, la energía es infinita y solo
+gestionas el consumo. Cuando la produces tú, es finita, y hay que contarla.**
+
+Esta lección es la base de todo el módulo. Si sales de ella con una sola idea, que sea la distinción
+entre **potencia y energía** — porque casi todos los errores de dimensionado de sistemas solares son,
+en el fondo, confundir esas dos cosas.
+
+## Los cuatro números de un circuito
+
+<Diagrama
+  src="analogia-del-agua.webp"
+  alt="Circuito cerrado de tuberías dibujado como analogía. Un tanque elevado sobre una torre alimenta una bajante, con una flecha vertical de doble punta que marca su altura, rotulada TENSIÓN, LO QUE EMPUJA. La tubería corre y lleva flechas de flujo en su interior, rotuladas CORRIENTE, LO QUE PASA. Pasa por un estrechamiento pinzado, rotulado RESISTENCIA, LO QUE ESTORBA. Y termina en una rueda hidráulica que gira antes de volver al tanque, rotulada POTENCIA, EL TRABAJO QUE SALE. Arriba, LA ANALOGÍA DEL AGUA."
+  pie="La analogía es vieja y sigue siendo la mejor: la electricidad no se ve, pero el agua sí, y se comporta parecido."
+/>
+
+Imagina un circuito de agua cerrado: un tanque elevado, una tubería que baja, un estrechamiento en el
+camino y una rueda que gira al final. Cuatro magnitudes describen ese sistema, y la electricidad usa
+exactamente la misma estructura:
+
+**La <Termino slug="tension">tensión</Termino>** es la altura del tanque: **lo que empuja**. Se mide
+en voltios (V). Más altura, más empuje. En un sistema solar la fijas tú al elegir cómo conectar
+paneles y baterías, y esa elección tiene consecuencias enormes que veremos.
+
+**La <Termino slug="corriente-electrica">corriente</Termino>** es el caudal: **cuánta agua pasa por
+segundo**. Se mide en amperios (A). Es lo que calienta los cables y lo que funde los fusibles.
+
+**La <Termino slug="resistencia-electrica">resistencia</Termino>** es el estrechamiento: **lo que
+estorba el paso**. Se mide en ohmios (Ω). Todo conduce con algo de resistencia, incluidos tus cables.
+
+**La <Termino slug="potencia">potencia</Termino>** es el trabajo que la rueda entrega: **cuánta
+energía por segundo**. Se mide en vatios (W), y sale de multiplicar empuje por caudal.
+
+Las dos relaciones que necesitas y ninguna más:
+
+<Formula explicacion="La ley de Ohm: con más empuje pasa más caudal, y con más estorbo pasa menos. Y la potencia es el producto del empuje por el caudal.">
+V = I × R          P = V × I
+</Formula>
+
+De esas dos fórmulas sale prácticamente todo el módulo. La <Termino slug="ley-de-ohm">ley de
+Ohm</Termino> te va a decir cuánta tensión pierdes en un cable largo, y la fórmula de la potencia te
+va a decir cuánta corriente circula por ese cable.
+
+<Dato titulo="El truco que evita la mitad de las cuentas">
+La fórmula de la potencia se despeja en las tres direcciones y conviene tenerlas las tres a mano:
+
+**P = V × I** para saber cuánto consume algo. **I = P ÷ V** para saber cuánta corriente pasa, que es
+lo que dimensiona cables y fusibles. Y **V = P ÷ I** para el caso raro.
+
+La del medio es la que más vas a usar, y trae la primera consecuencia importante del módulo: **para
+la misma potencia, más tensión significa menos corriente.** Un sistema de 1.200 W a 12 V mueve 100
+amperios; el mismo sistema a 48 V mueve 25. Y como la corriente es lo que calienta los cables, esa
+diferencia decide el grosor de cobre que hay que comprar.
+</Dato>
+
+## Potencia no es energía
+
+<Diagrama
+  src="potencia-y-energia.webp"
+  alt="Dos paneles. En el izquierdo, un grifo abierto vierte un chorro fuerte dentro de un balde, con una flecha grande junto al chorro y un cronómetro en la esquina; rotulado POTENCIA, EL CAUDAL, CUÁNTO SALE POR SEGUNDO. En el derecho, el mismo balde ya lleno hasta una marca, con una flecha vertical de doble punta midiendo la profundidad del agua y un icono de día de calendario; rotulado ENERGÍA, EL VOLUMEN, CUÁNTO SE ACUMULÓ EN EL DÍA. Arriba, POTENCIA NO ES ENERGÍA."
+  pie="Un grifo muy abierto durante un segundo llena menos que un hilo de agua durante toda la noche. Todo el dimensionado vive en esa diferencia."
+/>
+
+Aquí está la idea central, y merece leerse dos veces.
+
+**La potencia es un caudal: cuánto sale por segundo.** Se mide en vatios y **no dice nada sobre
+cuánto tiempo dura**.
+
+**La <Termino slug="energia-electrica">energía</Termino> es el volumen acumulado: potencia por
+tiempo.** Se mide en vatios-hora (Wh) o, en unidades más cómodas,
+en <Termino slug="kilovatio-hora">kilovatios-hora</Termino> (kWh).
+
+<Formula explicacion="Un aparato de 100 W encendido 5 horas consume 500 Wh, es decir 0,5 kWh. Y uno de 1.000 W encendido media hora consume exactamente lo mismo.">
+energía (Wh) = potencia (W) × tiempo (h)
+</Formula>
+
+<Analogia>
+Es exactamente la diferencia entre **ancho de banda y datos transferidos**. Los megabits por segundo
+son potencia: la velocidad instantánea. Los gigabytes del mes son energía: lo acumulado.
+
+Y de ahí sale la intuición correcta para todo el módulo:
+
+- **El panel es el enlace de subida.** Su número de placa está en vatios, y dice a qué velocidad
+  máxima puede entregar, no cuánto entrega en el día.
+- **La batería es el disco.** Su capacidad está en vatios-hora, y dice cuánto cabe.
+- **El inversor es un limitador de ancho de banda.** Su número está en vatios: cuánto puede entregar
+  a la vez, sin decir nada de cuánto tiempo.
+- **Tu consumo diario son los datos del mes.** Está en vatios-hora al día, y es el número que hay que
+  cubrir.
+
+Dimensionar un sistema solar es, literalmente, **hacer que el volumen producido cubra el volumen
+consumido, con el caudal suficiente en los momentos pico.** Dos condiciones distintas, y hay que
+cumplir las dos.
+</Analogia>
+
+<Advertencia>
+El error clásico del principiante es este: *«tengo un panel de 400 W, entonces puedo hacer funcionar
+mi heladera de 150 W»*. Mezcla las dos magnitudes en la misma frase y, además, ignora que el panel
+solo entrega esos 400 W bajo sol pleno y perpendicular, unas pocas horas al día.
+
+La pregunta correcta nunca es *¿alcanza la potencia?* sino **¿alcanza la energía del día, y además
+alcanza la potencia en el instante peor?**
+</Advertencia>
+
+## Serie y paralelo
+
+<Diagrama
+  src="serie-y-paralelo.webp"
+  alt="Dos esquemas de circuito. En el izquierdo, rotulado EN SERIE, una batería y tres resistencias conectadas una tras otra en un único lazo, con una sola flecha recorriéndolo; debajo, SE SUMA LA TENSIÓN y LA CORRIENTE ES LA MISMA. En el derecho, rotulado EN PARALELO, las tres resistencias montadas entre dos barras horizontales formando tres ramas, con una flecha que se divide en tres y vuelve a juntarse; debajo, SE SUMA LA CORRIENTE y LA TENSIÓN ES LA MISMA. Arriba, SERIE Y PARALELO."
+  pie="Dos formas de conectar y dos resultados opuestos. Elegir entre ellas es lo primero que se decide al armar un arreglo de paneles o un banco de baterías."
+/>
+
+Solo hay dos maneras de conectar dos cosas, y las consecuencias son opuestas:
+
+**En serie**, una detrás de otra, formando un solo camino. **Las tensiones se suman** y la corriente
+es la misma en todo el recorrido. Cuatro baterías de 12 V en serie dan 48 V.
+
+**En paralelo**, todas entre los mismos dos puntos, formando caminos alternativos. **Las corrientes
+se suman** y la tensión es la misma en todas. Cuatro baterías de 12 V en paralelo siguen dando 12 V,
+pero cuadruplican la capacidad de entrega.
+
+| Conexión | Tensión | Corriente | Para qué se usa |
+|---|---|---|---|
+| **Serie** | Se suman | La misma | Subir la tensión del arreglo o del banco |
+| **Paralelo** | La misma | Se suman | Aumentar corriente o capacidad manteniendo la tensión |
+
+Y aquí conecta con lo anterior: **subir la tensión conectando en serie es como subir la altura del
+tanque.** Para la misma potencia entregada, sube el empuje y baja el caudal — y con menos caudal, los
+cables pueden ser más finos y se pierde menos por el camino. Es la razón por la que los sistemas
+grandes trabajan a 48 V y no a 12.
+
+<Advertencia>
+Una regla que se aprende cara: **no se conectan en paralelo baterías de distinta edad, distinta
+capacidad o distinta tecnología.** Al estar a la misma tensión, la más fuerte alimenta a la más débil
+en lugar de alimentar la carga, y las dos se degradan; en el peor caso, se calientan.
+
+Si hay que ampliar un banco, lo correcto es reemplazarlo entero o añadir un banco independiente con
+su propio regulador. Mezclar una batería nueva con tres de tres años es tirar la nueva.
+</Advertencia>
+
+## Continua y alterna
+
+<Diagrama
+  src="continua-y-alterna.webp"
+  alt="Dos gráficos con eje de tiempo. El izquierdo, rotulado CORRIENTE CONTINUA, muestra una línea recta horizontal constante muy por encima del eje, con iconos debajo de panel solar, batería y bomba, y el pie EL SOL Y LAS BATERÍAS DAN ESTO. El derecho, rotulado CORRIENTE ALTERNA, muestra una onda senoidal que oscila arriba y abajo del eje, con iconos de enchufe, foco y heladera, y el pie LA RED Y LOS ENCHUFES USAN ESTO. Arriba, CONTINUA Y ALTERNA."
+  pie="El sistema solar vive en el mundo de la izquierda y tus electrodomésticos en el de la derecha. Traducir entre los dos cuesta un aparato y un porcentaje de pérdida."
+/>
+
+**La <Termino slug="corriente-continua">corriente continua</Termino>** fluye siempre en el mismo
+sentido, con tensión constante. Es lo que produce un panel solar, lo que almacena una batería y lo
+que consumen los aparatos electrónicos por dentro.
+
+**La <Termino slug="corriente-alterna">corriente alterna</Termino>** cambia de sentido muchas veces
+por segundo — en Bolivia, cincuenta veces, que es lo que significan los 50 hercios. Es lo que
+distribuye la red y lo que esperan los enchufes de tu casa.
+
+El sistema solar nace en continua y casi siempre tiene que terminar en alterna, y ese salto lo hace
+un **inversor**. Es un aparato con dos propiedades que conviene tener claras desde ahora:
+
+- **Cuesta un porcentaje.** Toda conversión pierde algo, típicamente en torno a un diez por ciento.
+- **Consume aunque no haya nada encendido.** Un inversor en espera gasta energía continuamente. En un
+  sistema chico ese consumo en vacío puede ser una parte nada despreciable del total, y apagarlo de
+  noche es una decisión de diseño real.
+
+<Dato titulo="Y por eso a veces conviene quedarse en continua">
+Hay cargas que funcionan igual o mejor sin pasar por el inversor: la iluminación LED, los sensores y
+microcontroladores del módulo de automatización, algunas bombas y ventiladores. Alimentarlas
+directamente en 12 o 24 V evita la pérdida de conversión y permite apagar el inversor cuando no hace
+falta.
+
+Es una decisión de arquitectura del sistema, y se toma al principio: **qué vive en continua y qué
+necesita alterna.** Cambiarlo después significa recablear.
+</Dato>
+
+## Lo que de verdad consume
+
+<Diagrama
+  src="no-todo-consume-igual.webp"
+  alt="Cuatro barras verticales de alturas muy distintas sobre una línea base, cada una con el icono del aparato encima y su nombre debajo: una barra muy baja para FOCO LED, una algo mayor para CARGADOR, una mucho más alta para HELADERA y una altísima para HERVIDOR. Sobre la más alta, una nota en terracota dice LO QUE CALIENTA ES LO QUE COME. Arriba, NO TODO CONSUME IGUAL."
+  pie="La intuición de que todo lo enchufado consume parecido es falsa por dos órdenes de magnitud, y por eso conviene medir antes de diseñar."
+/>
+
+Antes de dimensionar nada, hay una intuición que corregir, porque cambia el diseño entero: **el
+consumo de los aparatos no está repartido de forma pareja, ni de lejos.**
+
+- **Lo que calienta o enfría con resistencia es lo caro:** hervidor, plancha, ducha eléctrica,
+  termo, horno. Son miles de vatios y comen el presupuesto energético de un día en minutos. En un
+  sistema autónomo, la regla práctica es sacarlos del sistema — a gas, a leña, o al sol directo.
+- **Los motores son intermedios** —heladera, bomba, ventilador, esmeril— y traen la complicación del
+  **pico de arranque**, del que se ocupa la lección de auditoría de consumo.
+- **La electrónica es casi gratis:** cargadores, router, sensores. Suman poco aunque estén todo el
+  día.
+- **La iluminación LED es prácticamente gratis** comparada con lo anterior. Iluminar bien un galpón
+  toda la noche consume menos que hervir agua para dos mates.
+
+Esa asimetría es una buena noticia: significa que **un sistema modesto puede dar una calidad de vida
+muy alta** siempre que las cargas de calor se resuelvan por otro camino.
+
+### Medir en vez de suponer
+
+La etiqueta de un aparato dice su potencia **máxima**, no la que usa habitualmente. Una heladera de
+150 W no consume 150 W todo el día: consume eso mientras el compresor trabaja, que es una fracción
+del tiempo, y esa fracción depende del calor que haga.
+
+Por eso el dato que sirve no se lee, se mide, con dos instrumentos baratos:
+
+- Un **medidor de enchufe**, que se intercala entre el aparato y el tomacorriente y acumula
+  vatios-hora durante días.
+- Una **pinza amperimétrica**, que mide corriente sin cortar el cable y sirve para lo que está
+  cableado fijo.
+
+Con eso reúnes en una semana un dato real, y ese dato es la entrada de todo lo que viene.
+
+<Video id="ZhUQkN3Wyao" />
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Lo primero que puedes hacer esta semana, sin comprar un solo panel:** un medidor de enchufe cuesta
+poco y es el instrumento con mejor retorno de todo el módulo. Ponlo una semana en cada carga
+importante —la bomba, la heladera si la hay, las herramientas del galpón— y anota vatios-hora al día.
+Ese cuaderno vale más que cualquier estimación.
+
+**Y con tu perfil, hazlo bien de una vez:** una planilla con una fila por carga y columnas para
+potencia de placa, potencia medida, horas al día y vatios-hora al día. Esa planilla es literalmente la
+entrada de la lección de dimensionado, y la vas a usar cinco veces.
+
+**Empieza a separar mentalmente el vivero en dos mundos.** En continua conviene dejar todo lo que
+puedas: iluminación LED del galpón, sensores y microcontroladores del módulo de automatización, y
+posiblemente la bomba. En alterna, solo lo que no tenga alternativa: herramientas eléctricas,
+heladera, tomas de uso general. Cuanto más viva en continua, más chico y más eficiente será el
+sistema.
+
+**La bomba merece atención aparte desde ahora**, porque en un vivero es la carga que manda y la que
+más se beneficia del sol: bombea de día, cuando hay sol, y el depósito elevado guarda la energía en
+forma de agua. Es el mismo razonamiento del depósito como batería de agua que ya apareció en la
+instalación eléctrica, y tiene su propia lección más adelante.
+
+**Y la advertencia de diseño más importante para tu caso:** todo lo que caliente por resistencia
+—hervidor, ducha eléctrica, plancha— déjalo fuera del sistema solar desde el principio. En el llano
+cruceño el agua caliente sale casi gratis del sol con un termotanque simple, y calentar con
+electricidad almacenada en baterías es la forma más cara de calentar agua que existe.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La red en Bolivia es de 220 voltios y 50 hercios**, como se vio en la instalación eléctrica del
+módulo de obra. Eso importa aquí por dos motivos: el inversor que compres tiene que entregar 220 V a
+50 Hz, y los equipos importados pensados para otras redes pueden no servir aunque el enchufe entre.
+
+**El vocabulario que vas a oír:** la tensión es **voltaje** o **tensión**; la corriente es
+**corriente** o **amperaje**; la corriente continua es **continua** o **DC**; la alterna, **alterna**
+o **AC**; y a los vatios se les dice **watts** con la misma naturalidad.
+
+**Sobre instrumentos:** el medidor de enchufe y la pinza amperimétrica se consiguen en casas de
+material eléctrico de Santa Cruz y no son caros. Vale la pena comprar los dos antes que cualquier
+panel: sin medir el consumo, dimensionar un sistema es adivinar.
+
+**Y un apunte sobre calidad del suministro que empuja hacia lo solar:** en zona rural los cortes en
+temporada de tormentas son habituales y la extensión de red hasta un predio alejado puede costar más
+que un sistema autónomo completo. Es exactamente la comparación que hace la última lección de este
+módulo, con números.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Tengo un panel de 400 W, alcanza para mi heladera de 150 W.»** Mezcla potencia con energía. La
+pregunta es cuántos vatios-hora produce el panel en el día y cuántos consume la heladera en el día.
+
+**«Con más baterías tengo más potencia.»** Con más baterías tienes más energía almacenada. La
+potencia instantánea que puedes entregar la fija sobre todo el inversor.
+
+**«Amplío el banco con una batería nueva junto a las viejas.»** Al estar en paralelo, la nueva
+alimenta a las viejas y se degrada. O banco entero, o banco independiente.
+
+**«Da igual trabajar a 12 o a 48 voltios.»** Para la misma potencia, 12 V mueve cuatro veces más
+corriente que 48 V, y la corriente es lo que calienta los cables y encarece el cobre.
+
+**«El inversor solo gasta cuando hay algo encendido.»** Gasta en vacío, todo el tiempo que esté
+encendido. En sistemas chicos ese consumo importa.
+
+**«La etiqueta dice 150 W, entonces consume 150 W.»** Dice el máximo. Lo real se mide, y en un
+compresor depende del calor que haga ese día.
+
+**«Pongo el hervidor eléctrico, total son cinco minutos.»** Dos mil vatios durante cinco minutos son
+casi 170 Wh: más que toda la iluminación LED del galpón en una noche entera.
+
+## Lo que sigue
+
+Con los cuatro números y la distinción entre potencia y energía en la cabeza, toca mirar la fuente.
+La lección siguiente explica **cómo una celda de silicio convierte luz en corriente**: qué pasa
+físicamente cuando un fotón entra, por qué una celda entrega alrededor de medio voltio sin importar
+su tamaño mientras que la corriente sí crece con el área, y por qué el calor —que aquí sobra— le baja
+el rendimiento a un panel justo cuando más sol hay.

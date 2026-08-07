@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "ganancia-vs-caja",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué se diferencian la ganancia y la caja?",
+      "opciones": [
+        "La ganancia es un resultado del periodo: ventas menos costos, contados cuando ocurren.",
+        "La caja es el dinero disponible ahora mismo: lo que entró menos lo que salió, cuando se mueve.",
+        "Se separan porque hay gastos que se pagan antes y ventas que se cobran después.",
+        "Son el mismo número calculado de dos formas equivalentes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La ganancia responde a «¿este negocio funciona?» y la caja a «¿puedo pagar esto hoy?». Un lote sembrado en agosto es dinero que sale en agosto y ganancia que aparece en diciembre: el negocio no muere por falta de rentabilidad, muere por no tener con qué pagar en un momento concreto."
+    },
+    {
+      "id": "las-tres-causas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué causa el desfase entre gasto e ingreso en un vivero?",
+      "opciones": [
+        "El ciclo productivo: se paga al empezar y se vende meses después.",
+        "La estacionalidad: para llegar con producto al pico hay que gastar en la peor época.",
+        "Los plazos de cobro: la venta ya ocurrió y el dinero todavía no está.",
+        "Los costos fijos, que se pagan todos al final del año."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los costos fijos se pagan a lo largo del año, no al final, y precisamente por eso agravan el problema: siguen saliendo durante los meses en que no entra nada. Las tres causas se suman, y cuanto más lenta la especie, más largo el desfase."
+    },
+    {
+      "id": "el-mes-bueno",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cuando llega el pico de ventas y entra mucho dinero de golpe, ese dinero es la ganancia del ciclo.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error que más viveros pequeños hunde: una parte grande es el capital que hay que volver a poner para producir el ciclo siguiente, que arranca inmediatamente después. Gastarlo como beneficio deja al vivero sin con qué sembrar y arranca una espiral que se cierra sola. La regla es apartar primero lo que cuesta el ciclo siguiente."
+    },
+    {
+      "id": "suavizar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se suaviza la estacionalidad de la caja?",
+      "opciones": [
+        "Con especies de ciclo corto que rotan en semanas y generan ingresos en los meses muertos.",
+        "Escalonando las siembras en varios lotes en vez de uno enorme apuntando al pico.",
+        "Con productos que no son plantas, como sustrato, compost o asesoramiento.",
+        "Convenciendo a los clientes de plantar fuera de la temporada de lluvias."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No se puede cambiar cuándo la gente quiere plantar, pero sí de qué depende el vivero. Las especies de ciclo corto tienen aquí una función de caja y no de margen: sacarlas del catálogo por margen bajo sería un error aunque el cálculo del punto de equilibrio invite a hacerlo."
+    },
+    {
+      "id": "encargo-y-caja",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una seña por adelantado invierte el signo del problema de caja, porque el dinero entra antes del gasto en vez de después.",
+      "respuesta": true,
+      "explicacion": "Correcto, y esa es la razón por la que el encargo anticipado es el mejor canal: además de eliminar la incertidumbre de la demanda y la merma comercial, resuelve el desfase que esta lección describe."
+    },
+    {
+      "id": "flujo-de-caja",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se construye y para qué sirve un flujo de caja mensual?",
+      "opciones": [
+        "Doce columnas con lo que entra, lo que sale y el saldo acumulado arrastrado mes a mes.",
+        "Las entradas se anotan en el mes en que se cobran, no en el que se venden.",
+        "Lo que se busca es el mes de saldo mínimo, porque es el que dimensiona la caja necesaria.",
+        "Sirve para calcular la rentabilidad anual del negocio."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La rentabilidad la dan el margen y el punto de equilibrio; el flujo de caja contesta otra pregunta. Si el saldo acumulado cae por debajo de cero en algún mes, el negocio no es inviable: hay que mover algo antes de llegar ahí."
+    },
+    {
+      "id": "el-tanque",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué se parece la caja al tanque de agua del módulo de riego?",
+      "opciones": [
+        "Entrada concentrada y salida continua.",
+        "Se dimensiona por el periodo peor, no por el promedio anual.",
+        "Tiene un nivel mínimo que no se toca, para poder responder a un imprevisto.",
+        "Cuanto más grande, más eficiente es el sistema."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un tanque desproporcionado es capital inmovilizado, igual que en el riego. Lo que importa no es el tamaño sino que cubra el periodo crítico con margen: un negocio que opera con la caja en cero no tiene margen de maniobra y cualquier sorpresa lo detiene."
+    },
+    {
+      "id": "caja-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Planifica la caja del primer año de Rizoma del Sur: qué construyes, qué esperas encontrar y qué decisiones tomas en consecuencia.",
+      "respuestaModelo": "Lo primero es un flujo de caja mensual de doce columnas, hecho antes de sembrar el primer lote y contrastado con lo real durante todo el año. En cada columna anoto lo que va a entrar, lo que va a salir y el saldo acumulado arrastrado mes a mes.\n\nLas entradas las anoto en el mes en que se cobran, no en el que se venden. Con el canal institucional en el plan, esa diferencia puede ser de dos o tres meses, y confundirla es exactamente lo que hunde a un negocio rentable.\n\nLo que busco es el mes de saldo mínimo, porque ese mes dimensiona la caja necesaria: gastos mensuales por los meses hasta el primer cobro, más un colchón para imprevistos. Ese cálculo lo hago antes, no cuando aparece el problema.\n\nEspero encontrar un desfase grande y previsible, por dos razones que ya conozco. Primero, el catálogo tiene especies lentas —frutales injertados, árboles de sombra, plátano— que tardan mucho en convertirse en dinero. Segundo, para llegar con producto listo al arranque de las lluvias, alrededor de octubre y noviembre, tengo que haber comprado insumos y trabajado durante toda la época seca, que es cuando además hay que regar más y no entra nada. Es el peor cruce posible.\n\nEn consecuencia, mantengo especies de ciclo corto por su función de caja y no por su margen. El culantro y las hortalizas de hoja rotan en semanas y generan ingresos en los meses muertos. Su margen por planta es bajo, pero mantienen el vivero funcionando mientras los frutales maduran, así que sacarlas del catálogo por margen bajo sería un error aunque el cálculo del punto de equilibrio invite a hacerlo.\n\nEscalono las siembras en varios lotes con semanas de diferencia en vez de concentrar un lote enorme apuntando al pico. Reparte el gasto, reparte la disponibilidad y evita que un solo problema sanitario se lleve toda la producción del año.\n\nAprovecho productos que no son plantas —sustrato preparado, compost del propio proceso, asesoramiento— porque se venden todo el año y usan capacidad ya instalada.\n\nCuando llegue el pico de ventas, aparto primero lo que cuesta producir el ciclo siguiente. Ese dinero no es ganancia, y gastarlo como si lo fuera deja al vivero sin con qué sembrar justo cuando toca, lo cual arranca una espiral que se cierra sola.\n\nAsumo desde ahora que el primer ciclo probablemente necesite un ingreso externo. No es un fallo del plan, es aritmética: se gasta durante meses antes de la primera venta significativa. Planificarlo con ahorro previo o ingreso paralelo evita la peor salida posible, que es malvender producción inmadura y destruir margen y reputación a la vez.\n\nPregunto explícitamente los plazos de cobro antes de aceptar un pedido grande, porque un pedido excelente a noventa días puede ser inasumible sin caja para sostener la espera. Y si evalúo financiamiento, lo consulto con la entidad y con un contador local: endeudarme para cubrir un desfase previsible de caja es razonable, endeudarme para tapar un problema de margen no lo es, y la diferencia me la da precisamente el flujo de caja.\n\nMantengo un nivel mínimo de caja que no se toca, igual que en el tanque de riego, porque un surazo o una lluvia fuerte son eventos de caja además de eventos climáticos: una pérdida de lote o un daño en la estructura obliga a gastar sin previo aviso.\n\nY el objetivo de fondo sigue siendo mover producción hacia el encargo anticipado con seña, que invierte el signo del problema porque el dinero entra antes del gasto.",
+      "criterios": [
+        "Construye un flujo de caja mensual antes de empezar a producir.",
+        "Anota las entradas en el mes de cobro y no en el de venta.",
+        "Busca el mes de saldo mínimo para dimensionar la caja necesaria.",
+        "Anticipa el desfase por especies lentas y por gasto en época seca.",
+        "Mantiene especies de ciclo corto por su función de caja.",
+        "Escalona las siembras en vez de concentrarlas en el pico.",
+        "Incluye productos que no son plantas.",
+        "Aparta el capital del ciclo siguiente antes de disponer del pico.",
+        "Asume y planifica el ingreso externo del primer ciclo.",
+        "Pregunta plazos de cobro antes de aceptar pedidos grandes.",
+        "Distingue endeudarse por caja de endeudarse por margen.",
+        "Mantiene un nivel mínimo de caja para imprevistos climáticos."
+      ],
+      "explicacion": "Esta es la lección que salva negocios que ya estaban bien diseñados. El cálculo de rentabilidad dice si el negocio tiene sentido; el flujo de caja dice si llega vivo hasta el momento en que ese sentido se materializa."
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "preguntas": [
+    {
+      "id": "costo-por-ano",
+      "tipo": "verdadero_falso",
+      "enunciado": "Entre dos cubiertas, la más barata por metro cuadrado es la decisión económica correcta.",
+      "respuesta": false,
+      "explicacion": "Falso: lo que hay que comparar es el costo por metro cuadrado y por año de servicio, que incluye además la mano de obra de montarlo cada vez que hay que reponerlo. Un film que cuesta la mitad y dura la cuarta parte es el doble de caro, y esa cuenta, que es elemental, casi nadie la hace en el mostrador."
+    },
+    {
+      "id": "luz-difusa",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué conviene una cubierta difusora?",
+      "opciones": [
+        "La luz entra por todos los ángulos y alcanza capas de hoja que la directa deja en sombra.",
+        "Con luz directa las hojas de arriba se saturan mientras las de abajo no llegan al mínimo.",
+        "No produce puntos calientes ni quemaduras, porque no hay rayos paralelos que concentrar.",
+        "Aumenta la cantidad total de luz que entra en la estructura."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No aumenta la cantidad: es la misma energía repartida de otra forma, y de hecho un difusor suele tener algo menos de transmisión total que un transparente. Aun así compensa en clima de alta radiación, porque bajo un material transparente cualquier gota de condensación o pliegue actúa de lente y quema puntualmente las hojas de abajo."
+    },
+    {
+      "id": "cuatro-cubiertas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué caracteriza a cada material de cubierta?",
+      "opciones": [
+        "El film es barato, liviano y se adapta a cualquier forma, pero se degrada al sol y se repone entero.",
+        "La malla no encierra calor ni pide manejo y falla de a poco, pero no tapa la lluvia.",
+        "La chapa translúcida aguanta granizo y viento y dura años, pero es cara, pesada y transmite menos.",
+        "El policarbonato alveolar es la opción más económica para un vivero pequeño."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El policarbonato alveolar tiene buena transmisión y difusión y es liviano, pero es el más caro y se amarillea con los años si no es de calidad. Para un vivero pequeño rara vez compensa frente a la chapa translúcida, sobre todo porque en el mercado local suele estar orientado a construcción y no a agricultura."
+    },
+    {
+      "id": "comprar-film",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que decidir en el mostrador al comprar film?",
+      "opciones": [
+        "El espesor, porque un film delgado es barato y efímero.",
+        "El tratamiento contra ultravioleta, que decide si dura una temporada o varias.",
+        "Los aditivos: difusor, antigoteo y térmico, sabiendo que el térmico aquí interesa poco.",
+        "Nada más que el ancho del rollo y los metros necesarios."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los tres primeros se declaran en la ficha del producto, y si el vendedor no puede decir cuáles tiene, ese film no es el que quieres para una estructura fija. Buena parte del film barato disponible es polietileno de uso general sin aditivos, pensado para embalaje: sirve para una cubierta temporal de un ciclo, no para años al sol."
+    },
+    {
+      "id": "lo-que-mata",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué destruye una cubierta y qué se puede evitar?",
+      "opciones": [
+        "El sol rompe las cadenas del polímero: es inevitable y solo se retrasa con el tratamiento adecuado.",
+        "El roce contra un tubo desnudo abre el primer agujero justo en la línea de contacto.",
+        "El aleteo de un film flojo fatiga el material y lo desgarra en los puntos de sujeción.",
+        "Todas las causas son inevitables y solo queda reponer cuando toque."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Solo la primera es inevitable; las otras tres son errores de montaje o de manejo. El roce se resuelve con cinta blanca o pintura blanca sobre los tubos, que además evita que el metal oscuro caliente y queme el film. El aleteo es probablemente la causa número uno de roturas prematuras. Y la cuarta causa son ciertos químicos, como el azufre y algunos plaguicidas."
+    },
+    {
+      "id": "condensacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué problemas causa la condensación en la cara interna de una cubierta?",
+      "opciones": [
+        "Cae en gotas sobre las hojas, y hoja mojada durante horas es lo que piden los hongos foliares.",
+        "Quita luz justo en las primeras horas de la mañana, que son las más productivas.",
+        "Cada gota actúa como lente y puede quemar puntualmente las hojas de abajo.",
+        "Es inocua mientras la estructura esté bien ventilada de día."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La solución de fábrica es el aditivo antigoteo, que hace que el agua se extienda en película continua y escurra hasta el borde en vez de gotear. Para que funcione hacen falta dos cosas: que el material lo tenga y que la cubierta tenga pendiente suficiente, lo que es un argumento más a favor del dos aguas frente al techo plano cuando la cubierta es impermeable."
+    },
+    {
+      "id": "sujecion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Atar el film con alambre alrededor del tubo es una sujeción aceptable si se aprieta bien.",
+      "respuesta": false,
+      "explicacion": "Falso: el alambre concentra toda la fuerza en una línea, corta el film, y en el primer viento el desgarro empieza justo ahí. Lo correcto es perfil y resorte, que reparte la presión y permite retensar y desmontar sin destruir el film; y la alternativa barata aceptable es el listón de madera sobre el borde doblado. En cualquier sistema: todo el perímetro sujeto, borde doblado antes de sujetar, y tensado en día fresco."
+    },
+    {
+      "id": "cubiertas-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Elige las cubiertas de Rizoma del Sur y define cómo se compran, se montan y se mantienen.",
+      "respuestaModelo": "Malla de sombra sobre la zona de crecimiento y el bloque de madres, que es la mayor superficie, con tratamiento ultravioleta declarado y gramaje suficiente. Esa exigencia es la diferencia entre reponerla cada pocas temporadas o dejarla estar durante años, y el sobreprecio se recupera en un solo recambio evitado.\n\nChapa ondulada translúcida sobre propagación y almácigos si el presupuesto lo permite. Es más cara por metro cuadrado y pesa más, lo que obliga a una estructura algo más firme, pero aguanta el granizo, no se rasga con el viento y dura años, y esa es la zona que menos ganas hay de estar reparando en plena temporada de lluvias. El granizo es un factor real aquí y una granizada puede agujerear un film en minutos.\n\nSi hay que ajustarse, film de polietileno con las tres decisiones tomadas explícitamente en el mostrador: espesor suficiente, tratamiento ultravioleta declarado y, si está disponible, aditivo difusor. El difusor tiene aquí una ventaja concreta: la luz difusa entra por todos los ángulos y alcanza las hojas bajas, y sobre todo evita los puntos calientes y las quemaduras que provoca la luz directa concentrada por gotas o pliegues.\n\nSi el film es impermeable y va sobre propagación, pediría también antigoteo, porque la condensación nocturna deja las hojas mojadas cada amanecer y eso es exactamente lo que necesitan los hongos foliares. Y le daría pendiente suficiente, porque el antigoteo sin pendiente no evacua nada.\n\nEl montaje tiene tres costumbres que multiplican la vida útil de cualquier film. Cinta blanca o pintura blanca sobre todos los tubos que lo toquen, porque el roce abre el primer agujero justo en la línea de contacto y además el metal oscuro al sol lo quema desde el otro lado. Perfil y resorte para sujetar, o al menos listón de madera sobre el borde doblado, nunca alambre directo, que concentra la fuerza en una línea y corta el film. Y tensado de verdad, en día fresco, porque el film se dilata con el calor y uno tensado a mediodía queda flojo por la noche, y el aleteo es la causa número uno de roturas prematuras. Todo el perímetro sujeto y ningún canto libre, que es lo mismo que decía la lección de estructuras sobre el viento.\n\nEl mantenimiento entra en el calendario anual: lavado de cubiertas desde fuera, con agua y cepillo suave de mango largo, al final de la seca hacia septiembre, en la misma ventana de baja producción que el mantenimiento del banco de madres y la solarización de sustratos. El polvo y las algas quitan transmisión de forma gradual, y como es gradual nadie lo nota; una mañana de trabajo recupera una parte apreciable de esa luz.\n\nY una precaución sobre químicos: si en algún momento se aplica azufre o ciertos plaguicidas bajo cubierta, hay que comprobar antes la compatibilidad con el material, porque hay productos que degradan el polietileno y acortan mucho su vida.\n\nAl comprar, las dos preguntas concretas que hago siempre son el espesor en micras y si tiene tratamiento contra ultravioleta. Si el proveedor no las puede responder, es un film para una temporada y no para una estructura fija.",
+      "criterios": [
+        "Asigna malla con tratamiento ultravioleta a crecimiento y madres.",
+        "Elige chapa translúcida para propagación y justifica con granizo y durabilidad.",
+        "Si usa film, exige espesor, tratamiento ultravioleta y difusor.",
+        "Justifica el difusor por puntos calientes y por alcance a hojas bajas.",
+        "Pide antigoteo y pendiente donde la cubierta sea impermeable.",
+        "Protege los tubos con cinta o pintura blanca contra el roce.",
+        "Sujeta con perfil y resorte o listón, nunca con alambre.",
+        "Tensa en día fresco y sujeta todo el perímetro sin cantos libres.",
+        "Programa el lavado de cubiertas al final de la seca.",
+        "Comprueba compatibilidad química antes de fumigar bajo cubierta.",
+        "Formula las dos preguntas de compra al proveedor."
+      ],
+      "explicacion": "Fíjate en que casi todo lo que alarga la vida de una cubierta cuesta muy poco: una cinta blanca, un perfil, tensar bien y lavar una vez al año. Lo caro es no hacerlo, y se paga entero cuando hay que reponer la cubierta dos años antes de lo previsto."
+    }
+  ]
+}

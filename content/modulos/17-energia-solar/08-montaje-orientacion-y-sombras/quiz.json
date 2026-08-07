@@ -1,0 +1,102 @@
+{
+  "preguntas": [
+    {
+      "id": "hacia-donde-miran",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Hacia dónde se orienta un arreglo fijo en Santa Cruz de la Sierra?",
+      "opciones": [
+        "Al norte, porque en el hemisferio sur el sol pasa al norte la mayor parte del año.",
+        "Al norte geográfico, no al magnético que marca una brújula.",
+        "La regla general es que el panel mira hacia el ecuador, y eso da norte aquí y sur en Europa.",
+        "Al sur, como indican casi todos los manuales y videos de energía solar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Casi todo el material disponible está escrito en el hemisferio norte, donde la regla es «al sur». Copiarla aquí cuesta una fracción enorme de la producción, y lo peor es que el sistema sigue funcionando lo bastante como para que tardes en notarlo. La regla que vale en los dos hemisferios es que el panel mira hacia el ecuador."
+    },
+    {
+      "id": "norte-geografico",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para orientar el arreglo basta con una brújula bien calibrada.",
+      "respuesta": false,
+      "explicacion": "Falso. Una brújula apunta al norte magnético, que no coincide con el geográfico y cuya diferencia cambia con el lugar y con los años; y en el terreno, cerca de una estructura metálica o de un cable con corriente, miente descaradamente. El método fiable es la sombra del mediodía solar: se clava una varilla vertical, se marca la punta de su sombra alrededor del mediodía, y la sombra más corta apunta al sur geográfico."
+    },
+    {
+      "id": "desviarse",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es cierto sobre desviarse de la orientación ideal?",
+      "opciones": [
+        "Desviarse quince o veinte grados cuesta solo unos pocos puntos porcentuales de producción anual.",
+        "Por eso se puede aprovechar un techo existente en vez de construir una estructura torcida para corregirlo.",
+        "Si el consumo se concentra en la tarde, girar el arreglo un poco al poniente entrega menos energía total pero la entrega cuando hace falta.",
+        "Cualquier desviación del norte exacto se paga cara, así que siempre conviene una estructura correctora."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La curva de pérdida por desorientación es plana cerca del óptimo, lo que da bastante libertad de proyecto. Lo que no se hace nunca es montar al sur porque el techo caía para allá: eso ya no es una desviación pequeña."
+    },
+    {
+      "id": "inclinacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué gobierna la inclinación de un arreglo fijo en Zanja Honda?",
+      "opciones": [
+        "La regla de la latitud, que da unos 18° para este lugar.",
+        "Un mínimo por debajo del cual la lluvia deja de lavar el panel y el polvo queda pegado.",
+        "Si el arreglo está sobredimensionado, conviene favorecer el mes crítico en vez del promedio anual.",
+        "Cuanto más inclinado, mejor, porque el agua escurre más rápido."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los dos primeros criterios compiten entre sí en latitudes muy bajas, aunque en Zanja Honda los 18° de la latitud ya cumplen holgadamente con el mínimo de lavado. «Cuanto más inclinado mejor» es falso: te alejas del óptimo geométrico y aumentas la superficie que el viento puede agarrar."
+    },
+    {
+      "id": "celda-tapada",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si tapas una de las sesenta celdas de un panel, pierdes aproximadamente un sesentavo de su producción.",
+      "respuesta": false,
+      "explicacion": "Falso, y por mucho. Las celdas están en serie, y en un circuito serie la corriente la fija el elemento que menos puede dar: una sola celda tapada puede tumbar la producción del panel entero. Es el problema del rezagado en una tarea paralela con barrera de sincronización: no promedias, esperas al peor."
+    },
+    {
+      "id": "punto-caliente",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hacen los diodos de paso y por qué son una protección además de una mejora?",
+      "opciones": [
+        "Abren un desvío alrededor del grupo de celdas sombreado, de modo que se pierde ese grupo pero se salva el resto.",
+        "Evitan que la celda tapada tenga que conducir en sentido inverso y disipar como resistencia la potencia de las demás.",
+        "Impiden el punto caliente, que no es una pérdida de rendimiento sino un daño físico permanente.",
+        "Aumentan la tensión de salida del panel cuando hay sombra."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La segunda razón es la grave. Una celda sombreada dentro de una cadena en serie es forzada por el resto a conducir al revés, y en ese régimen se convierte en un calefactor dentro del propio panel que puede quemar el encapsulado. Por eso un panel con sombras crónicas envejece mal aunque siga entregando algo."
+    },
+    {
+      "id": "estudio-de-sombras",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué entra en un estudio de sombras hecho como corresponde?",
+      "opciones": [
+        "Visitar el sitio a distintas horas del mismo día, sobre todo a las nueve, al mediodía y a las tres.",
+        "Pensar en el sol de invierno, que pasa más bajo y alarga bastante las sombras.",
+        "Contar con lo que va a crecer, porque un árbol joven a diez metros es un problema de dentro de cinco años.",
+        "Contar con lo que se va a construir después: el galpón, el tanque elevado, el tinglado."
+      ],
+      "correctas": [0, 1, 2, 3],
+      "explicacion": "Las cuatro. El arreglo va a estar ahí veinte años, así que el estudio no es sobre la sombra de hoy sino sobre la del peor momento de las próximas dos décadas. En un vivero el tercer punto pesa doble, porque está lleno de plantas que crecen por definición."
+    },
+    {
+      "id": "montar-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Vas a decidir dónde y cómo plantar el arreglo en Rizoma del Sur. Explica tu secuencia de decisiones, qué mides o compruebas en cada paso, y qué eliges entre techo y suelo, con el porqué.",
+      "respuestaModelo": "Primero el estudio de sombras, antes que ninguna otra decisión, porque condiciona todo lo demás. Elijo dos o tres sitios candidatos y los visito a las nueve, al mediodía y a las tres del mismo día, anotando qué proyecta sombra sobre cada uno. Sobre el croquis del predio dibujo la sombra estimada del invierno, que es bastante más larga que la de hoy, y marco los árboles jóvenes con el tamaño que van a tener dentro de diez años, además del galpón, el tanque elevado y cualquier cosa que el proyecto contemple construir. Medio día de trabajo que decide veinte años de producción. El objetivo es un sitio libre de sombras entre media mañana y media tarde, todos los días del año, porque fuera de esa franja el sol está bajo y aporta poco.\n\nSegundo, la orientación: al norte geográfico, determinado con la sombra del mediodía solar y no con brújula, porque la brújula apunta al norte magnético y encima miente cerca de estructuras metálicas. Si el techo del galpón cae razonablemente al norte, lo aprovecho: una desviación de quince o veinte grados cuesta muy poco y ahorra una estructura entera.\n\nTercero, la inclinación en torno a 18°, que es la latitud del lugar. Aquí la regla de la latitud y el mínimo por lavado de lluvia no entran en conflicto, así que puedo tomar el óptimo geométrico sin más. Si termino sobredimensionando el arreglo para cubrir la temporada de lluvias, me planteo inclinar un poco más para favorecer el mes crítico en lugar del promedio anual: si en la seca me sobra energía y la tiro, optimizar la seca no me sirve de nada.\n\nCuarto, la estructura calculada al surazo, que es la carga que manda. Un panel inclinado es un ala, y el surazo viene justamente por detrás de un arreglo orientado al norte, así que se le mete por debajo con toda la superficie haciendo de vela. Eso significa fundaciones dimensionadas al arrancamiento y no al aplastamiento, llevadas por debajo de la capa de arcilla que se mueve con la humedad, arriostres diagonales, y arandelas de seguridad o tuercas autoblocantes en todas las fijaciones, porque el ciclo de rachas es una máquina de aflojar tornillos. Anoto en el calendario una revisión de aprietes al terminar la primera temporada de vientos fuertes.\n\nEntre techo y suelo elijo suelo para el primer sistema. El techo no ocupa terreno y queda lejos de manos y animales, pero me impone la orientación y la inclinación, obliga a subir para limpiar y revisar, exige que la cubierta aguante la carga añadida, y cada perforación en la chapa es una vía de agua potencial con lluvias torrenciales. En suelo tengo libertad total de orientación e inclinación, limpio y reviso de pie, y amplío sin tocar nada; a cambio ocupo superficie, necesito fundaciones propias y tengo que cortar la vegetación de abajo. Para una instalación que voy a mantener yo mismo durante veinte años, la facilidad de acceso pesa más que el terreno que ocupa.\n\nLa idea de la pérgola productiva —paneles arriba, plantas de media sombra abajo, un solo bastidor cumpliendo dos funciones— la dejo para una segunda etapa, cuando ya sepa cómo se comporta el sistema y tenga el cálculo estructural hecho con calma, porque esa estructura es más alta y mucho más expuesta al viento.\n\nY una decisión de trazado que se olvida siempre: dejo pasillo para caminar alrededor del arreglo. Voy a limpiar los paneles muchas veces en veinte años, y meterse entre filas apretadas convierte una tarea de diez minutos en una hora que nadie hace.",
+      "criterios": [
+        "Pone el estudio de sombras primero y lo hace a varias horas del mismo día.",
+        "Cuenta con el sol de invierno, con el crecimiento de los árboles y con lo que se va a construir.",
+        "Define la franja crítica de media mañana a media tarde.",
+        "Orienta al norte geográfico y lo determina con la sombra del mediodía, no con brújula.",
+        "Acepta desviaciones pequeñas para aprovechar un techo existente.",
+        "Elige inclinación en torno a la latitud y contempla favorecer el mes crítico si sobredimensiona.",
+        "Dimensiona la estructura al arrancamiento por succión y justifica el surazo por detrás del arreglo.",
+        "Prevé arriostres, fijaciones con seguro y revisión de aprietes tras la primera temporada.",
+        "Compara techo y suelo por criterios de operación y justifica su elección.",
+        "Deja pasillo de mantenimiento alrededor del arreglo."
+      ],
+      "explicacion": "Fíjate en que ninguna de estas decisiones cambia un solo componente comprado, y todas cambian la energía que vas a tener. El montaje es la parte del sistema que no aparece en la factura y que más se paga con el tiempo."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "preguntas": [
+    {
+      "id": "criterios-de-seleccion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se le pide a una planta antes de convertirla en planta madre?",
+      "opciones": [
+        "Identidad conocida: sabes exactamente qué variedad es, escrita.",
+        "Sanidad: está libre de las enfermedades que viajan con el material vegetal.",
+        "Rendimiento comprobado: la has visto producir, no solo la ves bonita.",
+        "Buen porte y aspecto atractivo, que es lo que después compra el cliente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El aspecto no es criterio: una planta elegida por cómo se ve es una apuesta, elegida por su historial es un dato. Y el orden importa: sanidad e identidad van antes que rendimiento, porque una planta espectacular pero enferma te contamina toda la producción y una sin identidad te obliga a vender «una variedad muy buena» sin poder decir cuál. El cuarto criterio real es el vigor, porque la vas a podar toda su vida."
+    },
+    {
+      "id": "un-punto-de-fallo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un virus presente en la planta madre se pierde por el camino si el esqueje se enraíza en sustrato limpio y desinfectado.",
+      "respuesta": false,
+      "explicacion": "Falso. El virus vive dentro de las células de la planta: al cortar el esqueje te llevas células infectadas, y al enraizarlo enraízas el virus con él. Ningún paso del proceso lo deja fuera, y la limpieza del sustrato no tiene nada que ver. Lo peor es que muchos virus vegetales no se ven: la planta no se muere ni se mancha, solo produce un veinte o treinta por ciento menos año tras año, y se le echa la culpa al suelo o al clima."
+    },
+    {
+      "id": "juvenilidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "Dos esquejes del mismo árbol cortados el mismo día enraízan muy distinto. ¿Por qué?",
+      "opciones": [
+        "Porque los tejidos de la base se formaron cuando la planta era juvenil y conservan ese carácter.",
+        "Porque al madurar, la capacidad de formar raíces adventicias cae en picada.",
+        "Porque las dos etapas, juvenil y adulta, conviven dentro del mismo individuo.",
+        "Porque los brotes de la copa reciben más luz y por eso enraízan mejor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es al revés: los brotes de la copa son los que peor enraízan, pese a ser los más nuevos en el calendario. Los de la base son cronológicamente más viejos pero se formaron en fase juvenil y siguen comportándose como esa versión anterior de la planta. De ahí sale la técnica central del banco de madres: la poda severa fuerza rebrote desde la base y por tanto rejuvenece el material."
+    },
+    {
+      "id": "manejo-del-banco",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se maneja un banco de plantas madre?",
+      "opciones": [
+        "No se las deja fructificar: cada fruto consume azúcares y desvía la planta a producir semilla.",
+        "Se las poda pensando en la próxima cosecha de brotes, no en darles forma.",
+        "Se las riega y fertiliza mejor que al resto, porque están en déficit permanente.",
+        "Se las deja crecer sin podar para que acumulen la mayor cantidad posible de ramas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Dejarlas crecer sin podar es lo contrario del manejo correcto: se vuelven altas y desgarbadas, con pocas ramas largas de tejido adulto, que es justamente el material que peor enraíza. Faltan dos decisiones más: etiquetado permanente con croquis o planilla, y renovación cuando rebroten peor o sus esquejes prendan menos."
+    },
+    {
+      "id": "sin-replica",
+      "tipo": "verdadero_falso",
+      "enunciado": "Con un solo ejemplar bien cuidado de cada variedad basta para tener el banco de madres cubierto.",
+      "respuesta": false,
+      "explicacion": "Falso: es un servidor sin réplica. Un surazo fuerte, una plaga, un vecino con machete y perdiste la variedad entera. El mínimo son dos ejemplares por variedad, y si se puede en dos puntos distintos del terreno para que un mismo accidente no se los lleve a los dos."
+    },
+    {
+      "id": "el-embudo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Enraízas al 70 %, sobrevive al trasplante el 85 % y sale vendible el 90 %. ¿Qué se concluye?",
+      "opciones": [
+        "El rendimiento total es el producto de las tres tasas, algo más de la mitad, no su promedio.",
+        "Conviene cortar más esquejes de los que necesitas, porque la asimetría del error es evidente.",
+        "Mejorar la etapa peor rinde mucho más que mejorar la que ya iba bien.",
+        "El rendimiento total ronda el 82 %, que es el promedio de las tres etapas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los porcentajes de un embudo se multiplican, no se promedian: 0,70 × 0,85 × 0,90 da alrededor del 54 %. Por eso «bastante bien tres veces» termina siendo poco más de la mitad, y por eso si cada etapa cae diez puntos el total no cae diez, se desploma. Y la asimetría: si te faltan plantas esperas otro ciclo entero, si te sobran las vendes o las regalas."
+    },
+    {
+      "id": "calendario",
+      "tipo": "verdadero_falso",
+      "enunciado": "La época seca, de mayo a septiembre, es el mejor momento para cortar esquejes en Santa Cruz.",
+      "respuesta": false,
+      "explicacion": "Falso: en la seca la planta está frenada, los brotes están duros, y el aire seco y los surazos castigan la cama de enraizamiento. El corte va con el arranque de las lluvias, hacia octubre o noviembre. La seca sirve para otra cosa muy concreta: mantener el banco de madres —podar para forzar rebrote, fertilizar, reemplazar madres viejas y preparar sustratos y envases para el ciclo que viene."
+    },
+    {
+      "id": "banco-de-madres-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña el banco de plantas madre de Rizoma del Sur: qué establecer primero, cómo se maneja, y qué registro llevas desde el primer día.",
+      "respuestaModelo": "El banco de madres es infraestructura, y como toda infraestructura se construye antes de necesitarla. En los 2.474 m² hay sitio de sobra, y conviene que sea un bloque y no plantas sueltas repartidas: separado del resto, bajo media sombra, con riego propio y con acceso cómodo para cortar con las manos limpias.\n\nQué establecer primero: las especies donde el material de origen es el cuello de botella y donde la variedad se paga. Los frutales de los que quiera sacar púas para injerto —cítricos y palta antes que nada— y las ornamentales de venta rápida, que son las que dan flujo de caja mientras los frutales tardan. Dos ejemplares por variedad como mínimo, y si se puede en dos puntos distintos del terreno: una sola planta madre de una variedad buena es un servidor sin respaldo.\n\nEl orden real de arranque encadena todo el módulo: acodo o compro dos ejemplares identificados de cada variedad que me importa, los planto en el bloque de madres, los podo bajo para forzar rebrote juvenil, y recién el ciclo siguiente empiezo a cortar esquejes y púas en cantidad. Entre la decisión y la primera producción seria hay un año, y ese año empieza el día que planto, no el día que lo decido.\n\nEl manejo del bloque tiene cinco decisiones que no son obvias. No las dejo fructificar, porque cada fruto que madura consume azúcares y desvía la planta a producir semilla en vez de brotes: se le quitan las flores. Las podo para cosechar brotes y no para dar forma, dejando tocones con yemas que rebrotarán. Las alimento mejor que al resto, con riego regular y fertilización más generosa con nitrógeno suficiente, porque una planta a la que le quito brotes sistemáticamente está en déficit permanente. Las etiqueto de forma permanente, con marcador indeleble y no lápiz en papel, más un croquis con la posición de cada una. Y las renuevo cuando noto que rebrotan peor o que sus esquejes prenden menos, propagando de ellas mismas mientras todavía están buenas.\n\nLa sanidad desde el primer día, porque la madre es un único punto de fallo y la propagación vegetativa no filtra nada. Alcohol o lavandina al lado de la tijera y un paso de trapo entre madre y madre, porque cortar diez madres con el mismo cuchillo sin limpiarlo es conectar diez repositorios que estaban aislados. No propago de una planta con manchas, deformaciones u hojas moteadas que no sepa explicar: la duda descalifica. Y cuarentena de unas semanas para todo lo que entre de fuera antes de acercarlo al bloque.\n\nEl calendario: corte de esquejes con el arranque de las lluvias, hacia octubre y noviembre; enraizamiento en las semanas siguientes con el calor y la humedad a favor; trasplante y crecimiento en la temporada húmeda; venta cuando el cliente quiere plantar, que también es en lluvias. Es decir, para vender en la lluvia que viene hay que cortar en la anterior. La seca, de mayo a septiembre, la dedico al mantenimiento del banco: podar para forzar rebrote, fertilizar, reemplazar madres viejas y preparar sustratos y envases. Y un cortaviento por el sur, porque los surazos frenan el enraizamiento y castigan las camas.\n\nEl registro, desde el primer lote y sin sobreingeniería: especie, variedad, planta madre de origen, fecha de corte, método, cantidad y después el resultado. Media línea por lote, seis columnas. Con mi perfil la tentación va a ser montar algo mucho más complicado de lo necesario; una planilla basta y el módulo de automatización llega después.\n\nEse registro me da tres cosas concretas. Vender mejor, porque una planta con variedad y origen conocidos vale más que una anónima. Mejorar, porque en un año sé qué especies me rinden, en qué mes conviene cortarlas y qué madres dan mejores esquejes, en vez de empezar cada ciclo de cero. Y cortar un problema, porque si aparece una enfermedad en un lote el registro me dice de qué madre salió y qué otros lotes vinieron de la misma, en vez de tener que sospechar de todo.\n\nY el dimensionamiento se hace hacia atrás: desde cuántas plantas quiero vender, dividido entre lo que realmente llega a venderse de cada cien esquejes cortados, y eso me dice cuántos esquejes tengo que cortar y por tanto cuántas madres necesito. Los dos números que faltan —esquejes por madre y año, y tasa de éxito— salen de mi propio vivero con dos o tres ciclos anotados, no de un libro.",
+      "criterios": [
+        "Trata el banco como infraestructura y lo monta como bloque separado con media sombra y riego.",
+        "Prioriza cítricos y palta para púas, y ornamentales para flujo de caja.",
+        "Exige dos ejemplares por variedad, en puntos distintos del terreno.",
+        "Reconoce que entre la decisión y la primera producción seria hay un año.",
+        "Impide la fructificación y poda para cosechar brotes, no para dar forma.",
+        "Alimenta y riega el banco mejor que al resto del vivero.",
+        "Etiqueta de forma permanente y lleva croquis o planilla de posiciones.",
+        "Renueva las madres cuando rebrotan peor o sus esquejes prenden menos.",
+        "Desinfecta la herramienta entre madres y pone en cuarentena lo que entra.",
+        "Sitúa el corte con las lluvias y el mantenimiento del banco en la seca.",
+        "Define un registro de seis columnas y evita la sobreingeniería.",
+        "Justifica el registro por venta, mejora y corte de un problema sanitario.",
+        "Dimensiona hacia atrás desde el objetivo de venta usando la tasa de éxito."
+      ],
+      "explicacion": "Fíjate en que casi todo lo difícil de esta lección es de calendario y no de técnica. La parte manual de propagar se aprende en una tarde; lo que separa a un vivero de alguien que hace plantitas es haber plantado las madres un año antes y haber anotado los resultados de cada lote."
+    }
+  ]
+}

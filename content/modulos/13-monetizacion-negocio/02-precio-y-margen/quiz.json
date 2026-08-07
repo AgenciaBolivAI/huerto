@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "tres-referencias",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué papel juega cada referencia de precio?",
+      "opciones": [
+        "El costo es el piso: dice por debajo de qué no tiene sentido vender.",
+        "El mercado es el ancla mental del comprador, y hay que conocerlo aunque no se iguale.",
+        "El techo es lo que el cliente está dispuesto a pagar, y es lo único que se puede mover con trabajo.",
+        "El precio se calcula sumando un porcentaje al costo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El costo no determina el precio: determina si vale la pena jugar. Y si el costo está muy cerca del techo, el problema no es el precio sino el producto: o se cambia lo que se ofrece, o se cambia de producto."
+    },
+    {
+      "id": "guerra-de-precios",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué no conviene competir por precio con la oferta informal?",
+      "opciones": [
+        "Mucha oferta informal no cuenta su tiempo, así que puede bajar más sin darse cuenta de que pierde.",
+        "Mucha oferta no ofrece lo mismo: sin procedencia, sin garantía y sin nadie a quien volver.",
+        "Eso no es la misma planta a otro precio: es otro producto.",
+        "Porque los costos de un vivero pequeño siempre son menores."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Al revés: un vivero con costos contabilizados tiene costos mayores, precisamente porque los cuenta. La única estrategia sostenible es no ser el más barato sino ser distinto, sobre garantía, presentación, conocimiento y disponibilidad."
+    },
+    {
+      "id": "explicar-la-diferencia",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el producto es mejor, el cliente lo va a notar y no hace falta explicar por qué cuesta más.",
+      "respuesta": false,
+      "explicacion": "Falso: un precio más alto sin razón visible se lee como abuso, y con razón visible se lee como calidad. La razón hay que decirla, no esperar a que se note. Y hay que aceptar que diferenciarse implica perder a los clientes que solo miran el precio: eso no es un fallo de la estrategia, es la estrategia."
+    },
+    {
+      "id": "el-formato",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué aporta ofrecer la misma especie en tres formatos?",
+      "opciones": [
+        "Tres productos con tres precios, mientras el costo no se triplica.",
+        "Le da una opción a cada cliente, y quien no sabe elige el del medio.",
+        "Convierte las plantas que se pasaron de tamaño en el formato grande en vez de en merma.",
+        "Permite bajar el precio del formato pequeño hasta igualar al competidor más barato."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El formato pequeño sigue teniendo su piso de costo: no es una herramienta para entrar en la guerra de precios. Lo interesante es que el material de partida es el mismo y el trabajo extra son minutos, mientras la diferencia de precio es grande."
+    },
+    {
+      "id": "margen-de-contribucion",
+      "tipo": "verdadero_falso",
+      "enunciado": "El margen de contribución se calcula restando al precio todos los costos, incluidos los fijos.",
+      "respuesta": false,
+      "explicacion": "Falso: se resta solo el costo variable —envase, sustrato, material, insumos y trabajo—. Los costos fijos no cambian con una planta más o menos, y por eso el margen de contribución es el número que sirve para decidir; los fijos entran en el punto de equilibrio, que es la lección siguiente."
+    },
+    {
+      "id": "margen-por-metro",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el margen por metro cuadrado y año corrige la intuición?",
+      "opciones": [
+        "Multiplica el margen por planta por las que caben y por las veces que rota.",
+        "Un frutal tiene margen alto por unidad y rotación bajísima; el culantro, al revés.",
+        "Al multiplicar los tres factores el resultado puede darse la vuelta por completo.",
+        "Porque los costos variables se reparten mejor en superficies grandes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la distinción entre latencia y rendimiento que ya anticipaba la primera lección del módulo de fichas. Y de ahí sale la corrección más importante sobre márgenes: aplicar el mismo porcentaje a todas las especies ignora que una ocupa el espacio cuatro veces más tiempo que la otra."
+    },
+    {
+      "id": "revisar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué señales indican que hay que revisar un precio?",
+      "opciones": [
+        "Si algo se vende inmediatamente y siempre, probablemente esté barato.",
+        "Si algo lleva meses sin salir, o el precio está alto o el producto no interesa.",
+        "Son dos problemas distintos y conviene no confundirlos.",
+        "Si el competidor más cercano baja el precio, hay que igualarlo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Igualar al competidor es exactamente la guerra que no se gana. La revisión se hace contra los propios costos actualizados y contra el relevamiento anual del mercado, no como reacción."
+    },
+    {
+      "id": "precios-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Escribe la política de precios de Rizoma del Sur: cómo la posicionas, cómo la construyes y cómo decides el espacio por especie.",
+      "respuestaModelo": "El posicionamiento ya viene decidido desde el módulo de fichas: no compito por precio. Produzco material con identidad y sanidad verificables, ofrezco especies que casi nadie propaga aquí y vendo el conocimiento junto con la planta. Nada de eso es compatible con ser el más barato, y tampoco hace falta.\n\nSé por qué no puedo ganar esa guerra: mucha oferta informal no cuenta su tiempo, así que puede bajar más sin darse cuenta de que pierde. Y no ofrece lo mismo: sin procedencia, sin garantía, sin explicación y sin nadie a quien volver. Eso no es la misma planta a otro precio, es otro producto.\n\nExplico la diferencia siempre, con una frase concreta por especie: un ají dulce garantizado sin picor, un camote de material seleccionado, un frutal con el patrón elegido para suelo pesado, un árbol nativo con instrucciones de plantación. Un precio alto sin razón visible se lee como abuso; con razón visible se lee como calidad.\n\nY acepto la consecuencia: voy a perder al cliente que solo mira el precio. Eso no es un fallo de la estrategia, es la estrategia.\n\nOfrezco tres formatos por especie donde tenga sentido: bolsa simple, maceta presentada y ejemplar grande y formado. Es la misma planta con tres precios y una fracción de costo extra, le da una opción a cada cliente, y convierte a las plantas que se pasaron de tamaño en producto en vez de en merma. Eso conecta con la clasificación por porte de la ficha de ornamentales.\n\nFijo el precio por especie y no con un porcentaje único. Con la rotación tan distinta que hay entre culantro y frutales, un margen porcentual uniforme condena al vivero a llenarse de especies lentas que se ven bien y no pagan el espacio.\n\nCalculo el margen de contribución por planta —precio menos costo variable— y después el margen por metro cuadrado y año, multiplicándolo por las plantas que caben y por las rotaciones. Ese último número, y no el margen por unidad, es el que decide cuánto espacio recibe cada especie. Lo calculo con los datos reales del primer año, no con estimaciones.\n\nHago un paseo anual de precios y lo anoto en la libreta: especie, tamaño, envase, sitio y fecha. En ornamentales los precios están expuestos, así que es especialmente fácil. Y lo repito en distintas épocas, porque en las fechas de mayor demanda suben y esa diferencia es información de planificación.\n\nReviso precios contra costos actualizados al menos una vez al año, porque un precio decidido hace un año puede haber quedado por debajo del costo actual sin que nadie lo note.\n\nY leo las señales: lo que se vende siempre e inmediatamente probablemente esté barato; lo que lleva meses sin salir tiene un problema de precio o de interés, que son dos cosas distintas.\n\nPor último, exploro el canal institucional —municipios, empresas, programas de arborización—, que compra en volumen, paga mejor por unidad y exige documentación, lo cual encaja exactamente con este vivero. Averiguo cómo compran esas instituciones y consulto con un contador si necesito poder facturar, para no perder el canal cuando aparezca.",
+      "criterios": [
+        "Se posiciona explícitamente fuera de la competencia por precio.",
+        "Explica por qué no puede ganar contra quien no cuenta su tiempo.",
+        "Formula una frase de diferencia concreta por especie.",
+        "Acepta perder al cliente que solo mira el precio.",
+        "Ofrece tres formatos y los liga a la clasificación por porte.",
+        "Fija precios por especie y no con porcentaje uniforme.",
+        "Calcula el margen de contribución restando solo costos variables.",
+        "Usa el margen por metro y año para asignar espacio.",
+        "Releva precios de mercado con fecha y en distintas épocas.",
+        "Revisa precios contra costos actualizados al menos una vez al año.",
+        "Interpreta correctamente las señales de precio alto o bajo.",
+        "Explora el canal institucional y prevé la capacidad de facturar."
+      ],
+      "explicacion": "El giro de esta lección es aceptar que el precio no es una consecuencia aritmética del costo sino una decisión estratégica. Y que la decisión más rentable —diferenciarse— implica renunciar a una parte del mercado a propósito."
+    }
+  ]
+}

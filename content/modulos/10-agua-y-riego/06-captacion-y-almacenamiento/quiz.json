@@ -1,0 +1,111 @@
+{
+  "preguntas": [
+    {
+      "id": "el-problema",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuál es exactamente el problema del agua en la llanura cruceña?",
+      "opciones": [
+        "No es que falte agua al año, es que no está en el momento en que hace falta.",
+        "El hueco sin lluvia coincide con el momento de máxima demanda de las plantas.",
+        "Es un problema de almacenamiento y no de generación, igual que en un sistema solar.",
+        "La precipitación anual es baja y por eso hay que buscar fuentes adicionales."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La precipitación anual es abundante: el problema es la forma de la curva. Oferta y demanda no solo están desfasadas, están en oposición de fase, porque la seca es cuando más radiación acumulada hay y más consume cada planta."
+    },
+    {
+      "id": "cuanta-agua",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el cálculo de agua captable de un techo, ¿qué es correcto?",
+      "opciones": [
+        "La superficie que cuenta es la proyección en planta, no la del faldón inclinado.",
+        "Un milímetro de lluvia sobre un metro cuadrado es un litro.",
+        "El coeficiente de escorrentía descuenta lo que moja el material, se evapora y salpica.",
+        "Un techo más empinado capta más agua porque tiene más superficie."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un techo más empinado tiene más superficie de faldón pero la misma huella horizontal, y lo que decide cuánta lluvia le cae encima es la huella. La inclinación cambia la velocidad con la que el agua llega a la canaleta, no la cantidad."
+    },
+    {
+      "id": "el-limitante",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el tanque ya rebosa en cada aguacero, ampliar la superficie de captación aumenta el agua disponible en la seca.",
+      "respuesta": false,
+      "explicacion": "Falso. El limitante casi nunca es el techo, es el tanque. En un aguacero tropical un techo pequeño llena un tanque grande y luego rebosa durante horas; lo que decide cuánta agua hay en agosto es cuánta cabía en lo que compraste. Es el mismo cuello de botella que el banco de baterías: primero se amplía el almacenamiento, después lo que lo alimenta."
+    },
+    {
+      "id": "canaleta",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué se dimensiona la canaleta por intensidad de lluvia y no por total anual?",
+      "opciones": [
+        "Porque aquí llueve en aguaceros y no en llovizna, y el caudal punta es alto.",
+        "Porque una canaleta calculada con criterio de clima templado rebosa varias veces por temporada.",
+        "Porque rebosa justo cuando más agua habría para captar.",
+        "Porque el total anual y la intensidad punta son proporcionales entre sí."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No son proporcionales: dos climas con la misma lluvia al año pueden exigir instalaciones muy distintas según la repartan en llovizna continua o en aguaceros. Y el rebose no es solo agua perdida: es agua concentrada al pie del muro, que en arcilla expansiva es el mecanismo que arruina una fundación."
+    },
+    {
+      "id": "primeras-aguas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo funciona un separador de primeras aguas?",
+      "opciones": [
+        "Es un tubo vertical ciego que se llena con el agua sucia del principio del aguacero.",
+        "Cuando ese tubo se llena, el agua ya limpia sigue de largo hacia el tanque.",
+        "Un agujerito en el tapón del fondo lo vacía solo entre lluvias.",
+        "Detecta la turbidez del agua y desvía la sucia automáticamente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No detecta nada: no examina si el agua está sucia, asume que la primera lo está. Es una heurística de posición, barata, sin partes móviles ni electricidad, y cuando falla lo hace del lado seguro: si el techo estaba limpio, lo único perdido es el volumen del tubo."
+    },
+    {
+      "id": "tanque-bien-hecho",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué resuelve cada detalle de un tanque bien hecho?",
+      "opciones": [
+        "Tapa hermética: sin luz no hay algas, sin acceso no hay bichos y, sobre todo, no hay criadero de mosquito.",
+        "Toma por encima del fondo: el sedimento se queda abajo en vez de irse a los emisores.",
+        "Rebose dirigido lejos: si descarga al pie, termina socavando la base de la plataforma.",
+        "Purga arriba: para sacar la suciedad que flota en la superficie."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La purga va abajo, en el punto más bajo, porque lo que hay que sacar es el sedimento acumulado. Si no existe esa válvula, la limpieza es tan incómoda que no se hace nunca. Y falta la quinta: malla en la entrada, la primera etapa del tren de limpieza y la más barata."
+    },
+    {
+      "id": "elevado-o-enterrado",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué diferencia hay entre almacenar arriba y almacenar abajo?",
+      "opciones": [
+        "El tanque elevado entrega presión por gravedad, que es lo que el goteo necesita sin bomba.",
+        "La cisterna es mucho más barata por litro y mantiene el agua fresca y sin luz.",
+        "Lo sensato suele ser volumen grande abajo y un tanque pequeño elevado que se rellena.",
+        "Un tanque lleno pesa poco, así que la plataforma puede ser ligera."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Mil litros pesan una tonelada, concentrada en la huella del tanque: la plataforma es una estructura seria con fundación calculada, no unos bloques apilados. La combinación cisterna abajo más tanque chico arriba es una jerarquía de caché: masivo y barato en el disco, pequeño y rápido arriba."
+    },
+    {
+      "id": "captacion-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña la captación y el almacenamiento de Rizoma del Sur: de dónde captas, qué instalas, cuánto tanque y qué haces con lo que no alcance.",
+      "respuestaModelo": "Capto de los techos que ya voy a construir. La estructura de propagación de seis por doce metros son setenta y dos metros cuadrados de proyección en planta, y con la equivalencia de un milímetro por metro cuadrado igual a un litro, un aguacero decente sobre esa superficie ya son cientos de litros. Súmale el galpón y cualquier otra cubierta.\n\nPongo canaleta en esos techos desde el principio, aunque el tanque llegue después, porque lo que no se capta se pierde y en enero se pierde mucho. Además la canaleta hace un segundo trabajo que la paga sola: sacar el agua del pie de los postes, que en arcilla expansiva es lo que descalza las fundaciones.\n\nDimensiono la canaleta y el bajante por intensidad de lluvia, no por total anual. Aquí llueve en aguaceros, y una canaleta calculada con criterio de clima templado rebosa varias veces por temporada, justo cuando más agua habría para captar. Sobredimensionar sale barato comparado con lo que cuesta el rebose.\n\nEn cada bajante instalo un separador de primeras aguas: un tubo vertical ciego, dos codos y un tapón con un agujerito. Se llena con el agua sucia del principio, deja pasar la limpia al tanque y se vacía solo entre lluvias. Aquí hace falta especialmente porque entre aguaceros los techos acumulan polvo y hojas, y en la seca pasan semanas sin lavarse.\n\nEl tanque lo dimensiono con el consumo diario del mes crítico que calculé en la primera lección, multiplicado por los días de autonomía que decida. Y soy honesto con el resultado: cubrir toda la seca con lluvia captada no es realista en un vivero pequeño, salen decenas de miles de litros y a esa escala almacenar cuesta más que perforar. La estrategia es mixta: la lluvia cubre los meses húmedos y el arranque de la seca, el pozo cubre el resto.\n\nEl agua de lluvia es la mejor que voy a tener, prácticamente sin sales, así que la reservo para las zonas sensibles: almácigos y propagación primero, crecimiento con lo que haya. Eso encaja con el mapa de zonas del vivero, donde el agua buena va a las plantas pequeñas que no perdonan.\n\nEl tanque va tapado sin excepción y con malla fina en toda abertura, incluido el rebose. El dengue es endémico aquí y un tanque destapado es un criadero de Aedes aegypti: no es una recomendación sanitaria añadida al final, es condición de diseño desde el primer trazo, y aplica igual a baldes, envases vacíos y canaletas obstruidas.\n\nLos cinco detalles del tanque: tapa hermética, malla en la entrada, toma unos centímetros por encima del fondo para que el sedimento se quede abajo, rebose dirigido lejos de la plataforma y de los postes, y purga en el punto más bajo para sacar el sedimento sin desmontar nada.\n\nLo prefiero opaco y de color claro. El oscuro absorbe radiación, calienta el agua, acelera lo que crezca dentro y entrega agua tibia a las raíces.\n\nLa plataforma la calculo como estructura, con fundación, porque mil litros pesan una tonelada concentrada en la huella del tanque. Y la hago lo más alta que sea razonable, porque la altura es presión por gravedad y eso es lo que el goteo necesita sin bomba. Los dos requisitos apuntan al mismo diseño.\n\nSi el volumen crece, almaceno barato abajo y elevo poco: una cisterna guarda el grueso y una bomba rellena periódicamente un tanque elevado más chico que alimenta el riego.\n\nY para el pozo, mido antes de suponer: la calidad varía mucho de un punto a otro y empeora al final de la seca, que es cuando más riego. El costo real incluye el equipo de bombeo, no solo la perforación, y ahí es donde el bombeo solar con tanque elevado como batería tiene más sentido.",
+      "criterios": [
+        "Capta de los techos ya construidos y estima con la equivalencia mm por m² igual a litros.",
+        "Instala canaleta desde el principio y reconoce su papel en proteger las fundaciones.",
+        "Dimensiona canaleta y bajante por intensidad y no por total anual.",
+        "Instala separador de primeras aguas en cada bajante y explica cómo funciona.",
+        "Dimensiona el tanque con consumo del mes crítico por días de autonomía.",
+        "Admite que cubrir toda la seca con lluvia no es realista y propone estrategia mixta.",
+        "Reserva el agua de lluvia para almácigos y propagación por su calidad.",
+        "Tapa el tanque y pone malla en toda abertura, ligándolo explícitamente al dengue.",
+        "Aplica los cinco detalles: tapa, malla, toma alta, rebose lejos y purga abajo.",
+        "Elige tanque opaco y claro por temperatura y algas.",
+        "Calcula la plataforma como estructura por el peso y la eleva por presión.",
+        "Considera cisterna abajo más tanque elevado chico si el volumen crece.",
+        "Mide la calidad del pozo y cuenta el equipo de bombeo en el costo."
+      ],
+      "explicacion": "Fíjate en que la captación no gana por resolver el problema entero, sino por reducir cuánto tiene que resolver la otra fuente. Un sistema que cubre los meses húmedos y las primeras semanas de la seca ya está pagando su costo, y encima entrega la mejor agua del vivero."
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+Última lección del módulo, y la que cierra el ciclo: **sacar el plantín del entorno protegido que le
+construiste y ponerlo en el mundo real.**
+
+Y es, con diferencia, **el momento de mayor mortalidad de todo el proceso.** Puedes haber hecho todo
+lo anterior perfecto —diagnosticar la latencia, medir la viabilidad, montar el almácigo, evitar el
+damping-off— y perder la mitad del lote en un día por hacer mal el trasplante.
+
+La razón es que el trasplante somete a la planta a **dos golpes simultáneos**: pierde parte de sus
+raíces justo cuando pasa de un ambiente controlado a uno que no lo es.
+
+<Analogia>
+Es una migración a producción. Todo lo anterior era el entorno de desarrollo: temperatura controlada,
+riego a demanda, sombra, sin viento, sin competencia.
+
+Y como cualquier migración a producción, **falla por dos motivos: se hace de golpe y sin preparar el
+destino.** El endurecimiento es el despliegue gradual; el hoyo bien hecho y el riego inmediato son
+preparar el destino.
+</Analogia>
+
+## Cuándo: el punto no es una fecha
+
+<Diagrama
+  src="el-punto.webp"
+  alt="Tres plantines dibujados en corte dentro de sus envases, mostrando follaje arriba y raíces abajo. A la izquierda, uno pequeño con solo dos cotiledones redondeados y una raíz corta y escasa, rotulado MUY CHICO. En el centro, uno con los cotiledones más tres o cuatro hojas verdaderas de otra forma y un sistema radicular que llena el envase y llega a sus paredes sin enroscarse, con un tilde verde encima, rotulado EN PUNTO. A la derecha, uno mucho más alto, estirado e inclinado, con las raíces densamente enroscadas en el fondo del envase, rotulado PASADO. Arriba, EL PUNTO NO ES UNA FECHA."
+  pie="Ni antes ni después. La ventana es más estrecha de lo que parece, y se lee en la planta, no en el calendario."
+/>
+
+Casi todo el mundo trasplanta **por calendario** —«ya pasaron cuatro semanas»— y esa es la forma
+equivocada. **El punto se lee en la planta**, y son dos señales que deben darse a la vez:
+
+**Arriba: tiene varias hojas verdaderas**, no solo los cotiledones. Eso significa que ya está
+fabricando su propio alimento y no depende de las reservas de la semilla.
+
+**Abajo: la raíz llena el envase pero todavía no lo estranguló.** Al sacar el bloque, debería salir
+entero y con raíces blancas visibles en la superficie, pero **sin una maraña enroscada** en el fondo.
+
+Los dos errores:
+
+**Trasplantar demasiado pronto** es someter a una planta sin reservas ni raíz suficiente a un estrés
+grande. El cepellón se desarma al sacarlo, porque no hay raíces que lo traben, y las pocas raíces que
+hay se rompen.
+
+**Trasplantar demasiado tarde** es peor de lo que parece. La planta se estira buscando luz y sale
+débil; la raíz da vueltas y **esa espiral no se corrige nunca**, como viste en la lección del envase;
+y el bloque agotado ya no tiene nada que darle.
+
+<Dato titulo="La prueba del cepellón, que dura cinco segundos">
+Antes de trasplantar un lote entero, **saca un plantín de prueba** y mira el bloque.
+
+**Si se desarma en la mano**, todavía es pronto. Vuelve a meterlo con cuidado y espera unos días más.
+
+**Si sale entero, con raíces blancas asomando por los lados y sin enroscarse**, es el momento.
+
+**Si sale entero pero con una maraña densa girando en el fondo**, ya te pasaste. Trasplanta ya, y
+además **abre esa maraña con los dedos o córtala** antes de plantar: si la dejas como está, la raíz
+va a seguir girando en el mismo círculo dentro del hoyo, y el árbol nunca se anclará bien.
+
+Ese sacrificio de un plantín antes de mover doscientos es la mejor inversión del día.
+</Dato>
+
+## El endurecimiento: no se salta
+
+<Diagrama
+  src="endurecimiento.webp"
+  alt="Una línea de tiempo horizontal dibujada como una banda que empieza clara a la izquierda y se oscurece hacia la derecha. Encima, una fila de soles que empiezan pequeños y medio ocultos tras un símbolo de malla de sombra y crecen hasta quedar plenamente expuestos. Debajo, relojes cuya porción rellena crece de una franja mínima a casi completa. En el extremo izquierdo, SOMBRA Y POCO RATO; en el derecho, SOL PLENO TODO EL DÍA. Una llave que abarca toda la banda, UNA SEMANA O DIEZ DÍAS. Arriba, ACOSTUMBRARLO ANTES DE MUDARLO."
+  pie="Cada día un poco más de mundo real. La planta necesita ese tiempo para fabricar defensas que no tenía."
+/>
+
+Aquí está la parte que más gente se salta y la que más plantas mata.
+
+Un plantín criado a media sombra, sin viento y con riego constante **es fisiológicamente distinto**
+de uno criado a la intemperie. Tiene la <Termino slug="cuticula">cutícula</Termino> **más delgada**, tiene menos control sobre
+sus <Termino slug="estoma">estomas</Termino>, y tiene un tallo más blando.
+
+Si lo sacas de golpe al sol pleno y al viento, **pierde agua más rápido de lo que la raíz puede
+reponerla**, y se marchita en horas. No importa lo bien que hiciste el hoyo.
+
+El <Termino slug="endurecimiento">endurecimiento</Termino> es exponer a la planta **gradualmente** a
+las condiciones que va a encontrar, para que fabrique esas defensas antes de necesitarlas:
+
+- **Primeros días**: sacarlo un par de horas a un sitio con más luz y algo de aire, y devolverlo.
+- **Días siguientes**: aumentar progresivamente el tiempo y la exposición.
+- **Últimos días**: dejarlo a la intemperie el día entero, y finalmente también la noche.
+- **En paralelo**: **reducir un poco el riego**, sin llegar a marchitarlo. Un ligero déficit
+  controlado es precisamente lo que dispara la producción de cutícula más gruesa y raíces más
+  profundas.
+
+Una semana o diez días bastan. **Es el paso que más se salta por prisa y el que más caro se paga.**
+
+<Analogia>
+Es un despliegue gradual, no un corte. Mandas un poco de tráfico real al sistema nuevo, observas,
+aumentas, observas.
+
+Y el déficit hídrico controlado es exactamente una **prueba de carga**: sometes al sistema a una
+tensión moderada y controlada, **en un entorno donde el fallo no es catastrófico**, para que sea
+robusto cuando la tensión venga de verdad y sin aviso.
+</Analogia>
+
+<Advertencia>
+**Endurecer no es maltratar.** Un plantín que se marchita de verdad durante el endurecimiento no está
+endureciéndose: está sufriendo un daño que no se revierte del todo.
+
+La diferencia está en el grado y en la reversibilidad. Reducir el riego hasta que el sustrato se seque
+un poco más entre riegos, sí. Dejarlo hasta que las hojas cuelguen fláccidas, no.
+
+Y lo mismo con el sol: aumentar la exposición progresivamente, sí. Dejar un plantín criado a la
+sombra bajo el sol de mediodía de octubre porque «hay que endurecerlo», no. Eso no es endurecer, es
+quemar.
+</Advertencia>
+
+## El trasplante, paso a paso
+
+<Diagrama
+  src="sacar-el-plantin.webp"
+  alt="Dos paneles comparados. A la izquierda, marcado con una cruz roja: una mano agarra el plantín por el tallo fino y tira hacia arriba, el bloque de sustrato se ha desarmado y las raíces rotas cuelgan sueltas en el aire, rotulado TIRAR DEL TALLO. A la derecha, marcado con un tilde verde: una mano sostiene la base del bloque desde abajo mientras la otra vuelca el envase, y el bloque sale entero con las raíces intactas dentro, rotulado SOSTENER EL BLOQUE. Debajo, LO QUE SE ROMPE NO SE VE."
+  pie="El tallo no es un asa. Toda la planta se sostiene por el bloque, siempre."
+/>
+
+**Elige el momento del día: al atardecer, o en un día nublado.** Nunca a mediodía. La planta va a
+pasar unas horas sin poder absorber bien mientras la raíz se reconecta, y esas horas conviene que
+sean las de menos demanda de agua. Trasplantar al atardecer le regala una noche entera de
+recuperación antes del primer sol.
+
+**Riega el almácigo unas horas antes.** Un bloque bien hidratado sale entero; un bloque seco se
+desarma. Pero no lo riegues justo antes: empapado también se rompe, y encima pesa y se deforma.
+
+**Prepara el hoyo antes de sacar la planta.** Este orden importa. Una raíz al aire se seca en
+minutos, y esos minutos son los que la planta va a pagar. Todos los hoyos hechos, y después se
+empieza a sacar.
+
+**Saca el plantín sosteniendo el bloque, nunca tirando del tallo.** El tallo no es un asa: es el
+tejido más frágil del conjunto, y arrancar de ahí desgarra las raíces del bloque. Se vuelca el
+envase, se empuja desde abajo si tiene orificio, y se recibe el bloque en la mano.
+
+<Diagrama
+  src="el-hoyo.webp"
+  alt="Corte de un hoyo de plantación con un plantín trasplantado dentro y la línea de superficie del terreno bien marcada. Cuatro llamadas señalan: el hoyo, claramente más ancho que el bloque pero no más profundo, MÁS ANCHO, NO MÁS HONDO; la parte alta del bloque, exactamente al nivel de la superficie, AL RAS, NI HUNDIDO NI ASOMADO; la tierra apretada suavemente alrededor de los costados con dos manos, APRETAR ALREDEDOR, NO ENCIMA; y un chorro generoso de agua entrando en el hoyo, REGAR AHORA MISMO. Arriba, EL HOYO Y EL PRIMER RIEGO."
+  pie="Cuatro decisiones de treinta segundos que deciden si la planta prende o se pierde."
+/>
+
+**El hoyo, más ancho que el bloque pero no más hondo.** Más ancho, para que la raíz encuentre tierra
+suelta al salir del bloque en todas direcciones. No más hondo, porque si el fondo queda mullido la
+planta se hunde con los riegos y **el cuello acaba enterrado**, que es exactamente donde no quieres
+humedad permanente.
+
+**El bloque al ras.** La superficie del cepellón queda **exactamente a nivel del terreno**. Enterrado
+de más, el cuello se pudre. Asomado de más, el borde del bloque se seca y hace de mecha, chupando
+agua del cepellón hacia el aire.
+
+**Aprieta alrededor, no encima.** Firmar la tierra en los costados elimina las bolsas de aire que
+dejarían la raíz sin contacto. Pisar encima del cepellón lo compacta y lo asfixia.
+
+**Riega inmediatamente y en abundancia.** No es solo por el agua: **el riego asienta la tierra contra
+las raíces** y elimina las bolsas de aire que quedan. Es un riego mecánico tanto como hídrico, y por
+eso se hace en ese momento y no una hora después.
+
+## Lo que pasa después
+
+<Diagrama
+  src="la-meseta.webp"
+  alt="Gráfico de línea sin marcas ni números que muestra el crecimiento en el tiempo tras el trasplante: la línea sube desde la izquierda, se aplana en una larga meseta horizontal en el centro y vuelve a subir con fuerza a la derecha. La meseta está sombreada en verde salvia y lleva la llamada NO ESTÁ MUERTO, ESTÁ HACIENDO RAÍZ. Bajo la meseta, un pequeño corte muestra raíces saliendo de un bloque de sustrato hacia la tierra de alrededor. Arriba, LA MESETA DESPUÉS DEL TRASPLANTE."
+  pie="El crecimiento visible se detiene porque toda la inversión se está yendo abajo, donde no se ve."
+/>
+
+Después del <Termino slug="trasplante">trasplante</Termino>, la planta **parece detenerse.** Durante días o semanas no crece
+visiblemente, y mucha gente se asusta, riega de más, fertiliza, o directamente da el trasplante por
+fallido.
+
+No está detenida: **está reconstruyendo la raíz**, extendiéndola desde el bloque hacia la tierra
+nueva. Toda la energía se va abajo, donde no se ve. Cuando el sistema radicular está establecido, el
+crecimiento visible se reanuda y suele acelerarse.
+
+<Advertencia>
+**No fertilices en esa meseta.**
+
+El instinto de ver una planta parada es alimentarla. Pero abonar en ese momento es contraproducente
+por dos razones: la raíz dañada absorbe mal y las sales del fertilizante la irritan, y además una
+dosis de nitrógeno empuja a la planta a hacer hojas justo cuando lo que necesita es hacer raíces.
+
+Agua sí, en la medida justa. Fertilizante, cuando ya se vea crecimiento nuevo.
+</Advertencia>
+
+**Sombra temporal los primeros días**, si el sol es fuerte: una rama, una hoja de palma, media
+botella. No es un lujo en el trópico, y se quita en cuanto la planta muestre turgencia estable.
+
+**Y no se trasplanta dos veces seguidas.** Si hay que pasar de bandeja a bolsa y luego a terreno, hay
+que dejar que se recupere entre una y otra. Encadenar dos estreses sin recuperación es lo que mata a
+las plantas que «no prendieron sin razón aparente».
+
+<ContextoBolivia>
+El calendario manda, y en el llano cruceño manda de forma muy clara: **se trasplanta al empezar las
+lluvias.**
+
+La razón es directa. Una planta recién trasplantada tiene la raíz dañada y no puede buscar agua
+lejos; necesita humedad **constante y sin esfuerzo** durante semanas. En plena seca, eso significa
+regar a mano todos los días sin fallar uno, y en cuanto falles, pierdes lo trasplantado. Con las
+lluvias empezadas, el clima hace ese trabajo.
+
+Eso ordena todo el ciclo hacia atrás: si el trasplante va en octubre o noviembre, **la siembra de
+almácigo cae en las últimas semanas de la seca**, cuando hace más calor y hay menos agua, que es la
+parte del año que más exige del vivero. Es un calendario incómodo y no hay forma de evitarlo: contar
+hacia atrás desde el trasplante es lo que hay.
+
+Tres precauciones locales más:
+
+**No trasplantes justo antes de un surazo.** Una planta con la raíz recién cortada, expuesta de golpe
+a viento fuerte y a diez grados de bajada, lo pasa muy mal. Consultar el pronóstico antes de un día
+de trasplante cuesta un minuto.
+
+**El primer riego tiene que ser generoso de verdad**, y en suelo arcilloso conviene comprobar que el
+agua penetró y no se quedó formando un charco en la superficie del hoyo. Un hoyo en arcilla puede
+comportarse como una maceta sin drenaje.
+
+**Y aprovecha el atardecer**, que aquí es una ventaja: las tardes son largas y las noches templadas,
+así que trasplantar al final del día da muchas horas de recuperación antes del primer sol fuerte.
+</ContextoBolivia>
+
+## Aplicación práctica
+
+<AplicarRizoma>
+Para Rizoma del Sur, esto se organiza como una jornada de trasplante planificada, no como algo que se
+hace sobre la marcha.
+
+**Diez días antes**, empieza el endurecimiento. Marca el día uno en el calendario del vivero y baja
+la sombra progresivamente, alargando la exposición cada día y reduciendo un poco el riego sin llegar
+a marchitar.
+
+**El día anterior**, riega el almácigo por la mañana para que el bloque esté bien hidratado pero no
+empapado, y **haz la prueba del cepellón** con un plantín. Si se desarma, aplaza. Si sale con una
+maraña enroscada, trasplanta ya y prevé abrir las raíces.
+
+**El día del trasplante**, empieza por preparar todos los hoyos antes de sacar la primera planta.
+Hazlo por la tarde, con el pronóstico consultado y sin surazo a la vista. Ten el agua ya en el sitio
+—regaderas llenas o manguera tendida—, porque el riego tiene que ser inmediato, no después de ir a
+buscarla.
+
+**La secuencia por planta**, que conviene tener interiorizada: sacar sosteniendo el bloque, meter en
+el hoyo al ras, apretar alrededor y regar. Cuatro movimientos, treinta segundos, y no se salta
+ninguno.
+
+**Las dos semanas siguientes**, agua sí y fertilizante no. Si el sol pega fuerte, sombra temporal.
+Y ten paciencia con la meseta: la planta parada no está fallando, está trabajando abajo.
+
+Y una anotación que cierra el módulo entero: añade a la ficha de cada especie
+el <Termino slug="prendimiento">prendimiento</Termino> —cuántas de las trasplantadas
+sobrevivieron— junto al porcentaje de germinación que ya venías anotando desde la lección de
+viabilidad.
+
+Con esos dos números por especie tienes el rendimiento completo de tu proceso, de semilla a planta
+establecida, medido en tu terreno. Es exactamente lo que te va a permitir presupuestar de verdad
+—cuántas semillas hacen falta para entregar doscientas plantas— y es la base de datos que el módulo
+de fichas de cultivo va a estructurar.
+</AplicarRizoma>
+
+## Cierre del módulo
+
+Empezaste por abrir una semilla y mirar qué había dentro. Terminas plantando en tierra una planta que
+criaste tú.
+
+En medio aprendiste a **diagnosticar por qué un lote no nace** en vez de darlo por muerto; a **medir
+cuántas están vivas** con una servilleta; a **construir el entorno** en vez de esperar que la
+naturaleza colabore; a **reconocer el fracaso más común por su patrón** y a prevenirlo cambiando
+condiciones en vez de comprando productos; y a **mudar una planta sin matarla.**
+
+Ese es el ciclo completo de propagación por semilla. El módulo siguiente hace lo mismo por el otro
+camino: **propagar sin semilla**, clonando la planta que ya tienes.
+
+## Lo que hay que llevarse
+
+El trasplante es **el momento de mayor mortalidad** de todo el proceso, porque somete a la planta a
+dos golpes a la vez: pierde raíces y cambia de ambiente.
+
+**El punto se lee en la planta, no en el calendario**: varias hojas verdaderas arriba y un cepellón
+que sale entero sin enroscarse abajo. La prueba de un plantín antes de mover doscientos dura cinco
+segundos.
+
+**El endurecimiento no se salta.** Una semana o diez días de exposición gradual y riego algo reducido
+son lo que le permite fabricar la cutícula y las raíces que no tenía. Pero endurecer no es maltratar:
+si se marchita de verdad, te pasaste.
+
+Se trasplanta **al atardecer, con los hoyos ya hechos, sosteniendo el bloque y nunca el tallo**; el
+hoyo más ancho pero no más hondo, el bloque **al ras**, apretar alrededor y no encima, y **regar
+inmediatamente**, porque ese riego asienta la tierra tanto como hidrata.
+
+Y después viene **la meseta**: la planta parece detenida y está haciendo raíz. Agua sí, fertilizante
+no, paciencia.

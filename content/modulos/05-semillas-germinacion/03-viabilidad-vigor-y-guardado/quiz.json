@@ -1,0 +1,97 @@
+{
+  "preguntas": [
+    {
+      "id": "viabilidad-vs-vigor",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué diferencia hay entre viabilidad y vigor?",
+      "opciones": [
+        "La viabilidad es cuántas están vivas; el vigor es con cuánta fuerza arrancan las que lo están.",
+        "Dos lotes con la misma viabilidad pueden dar una bandeja pareja o una bandeja despareja.",
+        "El vigor es el que predice lo que va a pasar en el almácigo de verdad.",
+        "Son dos formas de nombrar el mismo porcentaje de germinación."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la diferencia entre cuántos nodos responden y con qué latencia siguen respondiendo bajo carga. Un chequeo que solo cuenta vivo o muerto oculta exactamente lo que importa, y en semillas pasa igual: el porcentaje es la métrica que todos miran, y el vigor es la que predice el resultado."
+    },
+    {
+      "id": "orden-deterioro",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un lote que todavía da 80 % de germinación en la prueba de papel está en buen estado.",
+      "respuesta": false,
+      "explicacion": "No necesariamente. El deterioro tiene un orden: primero se pierde vigor, después viabilidad, y al final el lote muere. Un 80 % en condiciones ideales de laboratorio casero puede convertirse en bastante menos en una bandeja real, con su tierra, sus hongos y sus altibajos de humedad. Por eso conviene mirar también en cuántos días germinaron."
+    },
+    {
+      "id": "que-cuenta",
+      "tipo": "verdadero_falso",
+      "enunciado": "En la prueba de germinación, una semilla que se hinchó cuenta como germinada.",
+      "respuesta": false,
+      "explicacion": "Falso: una semilla se hincha aunque esté muerta, porque la imbibición es un proceso puramente físico. Lo que cuenta es que asome la radícula, y además que salga blanca, recta y siga creciendo. Una radícula que asoma un milímetro y se detiene, o que sale marrón y retorcida, no es una germinación exitosa."
+    },
+    {
+      "id": "la-curva",
+      "tipo": "opcion_multiple",
+      "enunciado": "Anotaste cuántas semillas germinaban cada día. ¿Qué te dice la forma de la curva acumulada?",
+      "opciones": [
+        "Una curva que sube de golpe y se aplana enseguida indica un lote vigoroso, que nacerá parejo.",
+        "Una curva que sube despacio durante muchos días indica un lote deteriorado, aunque el total final sea aceptable.",
+        "Es una medida de vigor que sale gratis si anotas por día en vez de solo el total.",
+        "La forma de la curva no aporta nada si el total germinado es el mismo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El total es la media y la forma de la curva es la dispersión, y como con las latencias de un servicio, lo que arruina la operación no es la media sino la cola: los rezagados que llegan cuando ya cerraste la ventana. Una bandeja despareja no se puede regar, fertilizar ni trasplantar igual."
+    },
+    {
+      "id": "cuanto-sembrar",
+      "tipo": "opcion_multiple",
+      "enunciado": "Necesitas 200 plantas y tu lote germina al 60 %. ¿Qué haces?",
+      "opciones": [
+        "Siembras unas 334 semillas: las plantas que necesitas divididas entre el porcentaje.",
+        "Con lotes de germinación baja, siembras dos o tres semillas por celda y después raleas.",
+        "Al ralear, cortas a ras de sustrato en vez de arrancar, para no dañar las raíces del que se queda.",
+        "Siembras 200 semillas y aceptas quedarte con menos plantas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Sembrar justo lo necesario te deja con 120 plantas y una bandeja llena de huecos. Una celda vacía ya consumió sustrato, ocupa espacio, recibe riego y ocupa mesa de vivero durante semanas sin producir nada: cuesta mucho más que la semilla que faltó."
+    },
+    {
+      "id": "guardado",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué determina cuánto dura una semilla guardada?",
+      "opciones": [
+        "La humedad, que es la variable dominante con diferencia.",
+        "La temperatura: el calor acelera el deterioro, y constante es mejor que oscilante.",
+        "La luz, menos crítica que las otras dos pero relevante porque el sol calienta y degrada.",
+        "Nada de eso: una semilla seca está inerte y no se deteriora."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Una semilla seca no está inerte: respira muy despacio, gasta reservas y acumula daño, solo que a un ritmo lentísimo. Guardar bien no detiene ese reloj, lo frena. Y por eso guardar en bolsa cerrada una semilla que no está bien seca es la forma más eficaz de arruinarla: el plástico no deja salir la humedad que la semilla trae dentro."
+    },
+    {
+      "id": "heladera",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un frasco de semillas sacado de la heladera se puede abrir de inmediato sin problema.",
+      "respuesta": false,
+      "explicacion": "Falso, y en un clima húmedo es un error caro. Si abres el frasco frío, el aire húmedo del ambiente condensa dentro y mojas todo el lote de golpe, exactamente como le pasa a un vaso frío en un día húmedo. Hay que sacarlo y dejarlo llegar a temperatura ambiente antes de destaparlo."
+    },
+    {
+      "id": "lote-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Un cliente te pide 300 plantines de una especie para dentro de tres meses. Tienes un frasco de semilla de esa especie recogido la temporada pasada. Describe qué haces antes de aceptar el pedido y cómo lo planificas.",
+      "respuestaModelo": "No acepto el pedido antes de saber qué tengo en el frasco. Una semilla guardada una temporada entera en el clima de aquí puede estar perfecta o puede estar bastante deteriorada, y comprometerme a una cantidad y una fecha sin ese dato es comprometerme a ciegas.\n\nLo primero es la prueba de germinación. Aparto cien semillas si el lote lo permite, las coloco separadas en cuadrícula sobre papel de cocina húmedo, enrollo sin apretar, meto en bolsa sin cerrar del todo para que respiren, etiqueto con especie, fecha y número, y lo guardo en sitio tibio y oscuro. Reviso cada día anotando cuántas nuevas germinaron ese día, no solo el total, y retiro las germinadas para no contarlas dos veces. Cuento solo las que sacan radícula blanca y recta, no las que se hincharon ni las que asoman un milímetro y se detienen. Cierro la cuenta cuando pasan varios días sin ninguna nueva.\n\nDel resultado saco dos cosas. El porcentaje me dice cuántas sembrar: 300 plantas divididas entre el porcentaje. Si el lote da 60 %, son unas 500 semillas, no 300. Y la forma de la curva acumulada me dice el vigor: si sube de golpe y se aplana, la bandeja va a nacer pareja y todos van a llegar al trasplante a la vez; si sube despacio durante muchos días, va a nacer despareja y eso complica riego, fertilización y trasplante, y probablemente me obligue a entregar en dos tandas.\n\nCon eso ya puedo comprometerme con una estimación con base en vez de una promesa. Si el porcentaje es bajo y no tengo semilla suficiente en el frasco, lo digo antes de firmar, no después.\n\nSi el lote sale flojo, siembro dos o tres semillas por celda y raleo dejando el plantín más fuerte de cada una. Al ralear corto a ras de sustrato con tijera pequeña en vez de arrancar, porque a esa altura las raíces de los vecinos ya están enredadas y arrancar daña al que quiero conservar. Gastar semilla extra es barato; una celda vacía consume sustrato, espacio, riego y semanas de mesa de vivero sin producir nada.\n\nY reviso cómo tengo guardado el resto. Frasco de vidrio con tapa a rosca, absorbente dentro, en el sitio más fresco y oscuro que tenga, con etiqueta que diga especie, procedencia, fecha y el porcentaje que acabo de medir. Si lo tengo en la heladera, lo saco y lo dejo llegar a temperatura ambiente antes de abrirlo, porque abrir un frasco frío en este clima condensa humedad dentro y moja el lote entero. Y si es leguminosa, reviso que no haya agujeritos de gorgojo, que en clima cálido vacían un lote en silencio.\n\nEse porcentaje anotado en la etiqueta es lo que convierte el frasco en un lote con especificación, y es lo que me va a permitir la próxima vez responder a un pedido sin tener que esperar una semana.",
+      "criterios": [
+        "No acepta el pedido antes de conocer el estado del lote.",
+        "Ejecuta la prueba de germinación correctamente, con etiquetado y sitio tibio y oscuro.",
+        "Cuenta por día y no solo el total, y retira las germinadas.",
+        "Cuenta radículas válidas y descarta hinchadas y germinaciones fallidas.",
+        "Calcula las semillas a sembrar dividiendo entre el porcentaje.",
+        "Lee el vigor en la forma de la curva y anticipa consecuencias operativas.",
+        "Comunica al cliente si el lote no alcanza, antes de comprometerse.",
+        "Con lote flojo, siembra varias por celda y ralea cortando, no arrancando.",
+        "Revisa y corrige el guardado: frasco, absorbente, etiqueta con porcentaje.",
+        "Atempera el frasco antes de abrirlo si estaba en la heladera.",
+        "Contempla el ataque de gorgojos en leguminosas."
+      ],
+      "explicacion": "Fíjate en que la prueba cuesta una servilleta y una semana, y en que lo que compra no es una certeza sino algo más útil: la diferencia entre una promesa y una estimación con base. En cuanto empieces a vender plantines, esa distinción va a ser tu reputación."
+    }
+  ]
+}

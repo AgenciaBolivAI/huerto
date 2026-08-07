@@ -1,0 +1,105 @@
+{
+  "preguntas": [
+    {
+      "id": "cuatro-preguntas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que contestar antes de aplicar nada?",
+      "opciones": [
+        "Dónde está el síntoma: hojas viejas o nuevas, borde o centro, hoja, tallo o raíz.",
+        "Qué forma tiene: uniforme, en manchas con borde, entre nervios, en el margen, deformando.",
+        "A cuántas plantas les pasa y a cuáles dentro del lote.",
+        "Qué producto es más barato para lo que parece que tiene."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Falta la cuarta: cómo va cambiando con el tiempo, que exige haber anotado y fechado. Es la misma disciplina que depurar un fallo en producción: acotar el alcance y mirar cuándo empezó antes de tocar nada."
+    },
+    {
+      "id": "movilidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "El amarilleo empieza en las hojas viejas y las nuevas siguen verdes. ¿Qué indica?",
+      "opciones": [
+        "Que probablemente falta un nutriente que la planta sabe mover.",
+        "Que la planta lo está desmontando de las hojas viejas para mandarlo al brote nuevo.",
+        "Si el síntoma empezara arriba, apuntaría a un nutriente que no puede reciclar.",
+        "Que hay una plaga instalada en la parte baja de la planta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es un criterio mecánico, no una regla memorizada: la planta prioriza el tejido nuevo y recicla lo que puede. Un solo dato —arriba o abajo— parte en dos el conjunto de deficiencias posibles."
+    },
+    {
+      "id": "aporte-o-absorcion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un síntoma de deficiencia significa que falta ese nutriente en el sustrato.",
+      "respuesta": false,
+      "explicacion": "Falso, y confundirlo es el error más caro del módulo. El nutriente puede estar presente y no absorberse por pH fuera de rango, por raíz dañada o asfixiada, o por salinidad. Echar más fertilizante empeora las tres situaciones."
+    },
+    {
+      "id": "distribucion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué dice la distribución del síntoma en el lote?",
+      "opciones": [
+        "Si le pasa a todas a la vez y por igual, casi nunca es plaga ni enfermedad.",
+        "Un grupo concreto que crece con los días es la firma de un organismo que se reproduce.",
+        "Si afecta solo a una fila, un borde o una esquina, hay que mirar el sitio antes que la planta.",
+        "La distribución es anecdótica: lo que importa es el síntoma en la hoja."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los organismos vivos no aparecen simultáneamente en todas partes: empiezan en algún sitio y se extienden. Un problema perfectamente uniforme apunta a algo que también es uniforme: riego, sustrato, fertilización, una noche fría, un producto mal aplicado."
+    },
+    {
+      "id": "patron-de-riego",
+      "tipo": "verdadero_falso",
+      "enunciado": "Plantas malas que siguen el orden de una línea de riego indican un problema sanitario que avanza por contacto.",
+      "respuesta": false,
+      "explicacion": "Falso: ese patrón —bueno, bueno, bueno, malo, siguiendo la tubería— no lo produce ningún organismo, lo produce el sistema de riego. Es el gotero tapado del módulo de agua, un fallo silencioso. En un vivero con goteo, buena parte de las supuestas enfermedades resultan ser esto."
+    },
+    {
+      "id": "cuatro-pistas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué familias de causa delata cada tipo de daño?",
+      "opciones": [
+        "Tejido arrancado y agujeros: un masticador, y suele haber excrementos cerca.",
+        "Hoja entera pero punteada, pegajosa o abarquillada: un chupador, casi siempre en el envés.",
+        "Manchas con borde definido, halos o pelusa: un patógeno, porque el daño tiene estructura.",
+        "Hoja intacta pero descolorida: casi siempre un ácaro que no se ve."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Una hoja intacta sin manchas ni agujeros apunta a nutrición, agua, luz, temperatura o raíz. Es la familia más importante de reconocer, porque es la que más veces se trata con producto sin que haya nada que matar."
+    },
+    {
+      "id": "los-dos-gestos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué dos gestos resuelven la mitad de los casos?",
+      "opciones": [
+        "Dar la vuelta a la hoja, porque casi todos los chupadores viven en el envés.",
+        "Sacar una planta del envase, porque el daño de raíz es invisible desde arriba.",
+        "Comparar con una planta sana del mismo lote, porque muchos síntomas leves solo se ven por contraste.",
+        "Aplicar un producto de amplio espectro y observar si mejora."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Aplicar para ver qué pasa es lo contrario de diagnosticar. Y la lupa es parte del primer gesto: los ácaros no se ven a simple vista y su daño se confunde con virus, con deficiencia y con daño químico."
+    },
+    {
+      "id": "rutina-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define la rutina de diagnóstico sanitario de Rizoma del Sur: qué haces, cada cuánto, con qué y qué anotas.",
+      "respuestaModelo": "La sanidad es un recorrido, no una reacción. Doy una vuelta semanal por todo el vivero con lupa y libreta, mirando por debajo de las hojas y zona por zona. No cuando algo se ve mal: siempre. Y lo hago junto con el paseo de inspección de estructuras y el control de inventario, que ya están en la rutina.\n\nAntes de aplicar nada me hago las cuatro preguntas. Dónde está el síntoma, qué forma tiene, a cuántas plantas les pasa y cómo va cambiando. La mayoría de las veces la respuesta va a ser que no hay nada que matar.\n\nPara la primera pregunta uso la movilidad: si el amarilleo empieza abajo, es un nutriente que la planta sabe mover y lo está reciclando hacia el brote nuevo; si empieza arriba, en lo nuevo, es uno que no puede mover, o un problema de raíz que impide absorberlo. Y antes de echar fertilizante me pregunto si el problema es de aporte o de absorción, porque con pH fuera de rango, raíz asfixiada o salinidad, echar más empeora las tres cosas.\n\nPara la tercera uso el mapa del lote. Si le pasa a todas a la vez y por igual, miro el ambiente y el manejo. Si es un grupito que crece con los días, es algo vivo que se está moviendo. Y si sigue la geometría de la instalación —una fila, un borde, una esquina, el orden de la línea de riego— miro el sitio antes que la planta. En un vivero con goteo, muchas supuestas enfermedades son goteros tapados o zonas que no alcanza el riego.\n\nClasifico el daño en cuatro familias: algo la mastica, algo le chupa, algo crece en ella, o nada la toca. La cuarta es la que más veces se trata con producto sin que haya nada que matar.\n\nLos dos gestos que hago siempre: dar la vuelta a la hoja con lupa, porque casi todos los chupadores viven en el envés y los ácaros no se ven a simple vista; y sacar una planta del envase para mirar la raíz, que está autorizado por defecto porque es la información más barata que existe. Y comparo con una planta sana del mismo lote al lado, que desactiva muchas alarmas falsas.\n\nLa planilla de lotes es herramienta de diagnóstico: ya sé qué hay en cada zona, de qué madre salió y cuándo se inició, así que si un síntoma aparece solo en un lote concreto, la trazabilidad dice si el problema entró con el material.\n\nAnoto cada incidencia con fecha, qué vi, dónde y en cuántas plantas: cuatro datos, dos líneas, más una foto. Sin eso, dentro de un mes voy a estar discutiendo con mi memoria en vez de contestando la pregunta que decide todo, que es si esto avanza o se quedó.\n\nY antes de necesitarlo, averiguo qué laboratorios y servicios de diagnóstico fitosanitario hay operativos en Santa Cruz, qué análisis hacen y cuánto cuestan. También pregunto a los vecinos productores, porque un problema que aparece en la zona suele aparecer en varias fincas a la vez y quien lleva años ahí lo reconoce en segundos.\n\nY al consultar describo el síntoma —qué se ve, dónde y desde cuándo— antes que ponerle un nombre, porque muchos nombres locales designan cosas distintas.",
+      "criterios": [
+        "Convierte la sanidad en un recorrido semanal y no en una reacción.",
+        "Aplica las cuatro preguntas antes de cualquier tratamiento.",
+        "Usa la movilidad de nutrientes para interpretar dónde empieza el síntoma.",
+        "Distingue problema de aporte de problema de absorción.",
+        "Lee la distribución en el lote para separar lo biológico de lo ambiental.",
+        "Reconoce los patrones geométricos de riego, borde e instalación.",
+        "Clasifica el daño en las cuatro familias.",
+        "Da la vuelta a la hoja con lupa y saca plantas para mirar raíz.",
+        "Compara con una planta sana del mismo lote.",
+        "Usa la trazabilidad del inventario como herramienta de diagnóstico.",
+        "Registra con fecha, cuatro datos y foto.",
+        "Localiza servicios de diagnóstico antes de necesitarlos y consulta a vecinos.",
+        "Describe síntomas en vez de usar nombres locales al consultar."
+      ],
+      "explicacion": "Fíjate en que ninguna de las herramientas de esta lección cuesta dinero: mirar, dar la vuelta a la hoja, sacar una planta, comparar y anotar. Lo que cuesta dinero es lo que se hace cuando no se hizo nada de eso."
+    }
+  ]
+}

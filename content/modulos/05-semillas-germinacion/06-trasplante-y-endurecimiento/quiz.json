@@ -1,0 +1,105 @@
+{
+  "preguntas": [
+    {
+      "id": "el-punto",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se sabe que un plantín está en punto de trasplante?",
+      "opciones": [
+        "Arriba, tiene varias hojas verdaderas y no solo los cotiledones.",
+        "Abajo, la raíz llena el envase pero todavía no lo estranguló.",
+        "El bloque sale entero, con raíces blancas asomando por los lados y sin maraña enroscada en el fondo.",
+        "Han pasado cuatro semanas desde la siembra."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El calendario es exactamente la forma equivocada de decidirlo, porque el mismo número de días da plantas muy distintas según temperatura, sustrato y especie. Las dos señales tienen que darse a la vez, y la prueba del cepellón con un solo plantín antes de mover doscientos dura cinco segundos."
+    },
+    {
+      "id": "tarde",
+      "tipo": "verdadero_falso",
+      "enunciado": "Trasplantar tarde es un problema menor comparado con trasplantar pronto.",
+      "respuesta": false,
+      "explicacion": "Falso: es peor de lo que parece. La planta se estira buscando luz y sale débil, el bloque agotado ya no tiene nada que darle, y sobre todo la raíz da vueltas, y esa espiral no se corrige nunca. Si te pasaste, hay que abrir la maraña con los dedos o cortarla antes de plantar; si la dejas, la raíz seguirá girando en el mismo círculo dentro del hoyo."
+    },
+    {
+      "id": "endurecimiento",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué hace falta endurecer un plantín antes de trasplantarlo?",
+      "opciones": [
+        "Porque uno criado a media sombra tiene la cutícula más delgada y menos control sobre sus estomas.",
+        "Porque al sol pleno y al viento pierde agua más rápido de lo que la raíz puede reponerla.",
+        "Porque la exposición gradual le permite fabricar esas defensas antes de necesitarlas.",
+        "Porque el plantín necesita acumular reservas antes del trasplante."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es una cuestión de reservas sino de estructura: un plantín criado protegido es fisiológicamente distinto de uno criado a la intemperie. Es un despliegue gradual, no un corte, y el ligero déficit hídrico que se aplica en paralelo funciona como una prueba de carga en un entorno donde el fallo todavía no es catastrófico."
+    },
+    {
+      "id": "endurecer-no-maltratar",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si durante el endurecimiento las hojas cuelgan fláccidas, es señal de que el proceso está funcionando.",
+      "respuesta": false,
+      "explicacion": "Falso: un plantín que se marchita de verdad no está endureciéndose, está sufriendo un daño que no se revierte del todo. La diferencia está en el grado y en la reversibilidad. Reducir el riego para que el sustrato se seque algo más entre riegos, sí. Dejar un plantín criado a la sombra bajo el sol de mediodía porque hay que endurecerlo, no: eso es quemar."
+    },
+    {
+      "id": "sacar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se ejecuta el trasplante para minimizar el daño?",
+      "opciones": [
+        "Al atardecer o en día nublado, nunca a mediodía.",
+        "Con todos los hoyos ya hechos antes de sacar la primera planta.",
+        "Sosteniendo el bloque desde abajo y volcando el envase, nunca tirando del tallo.",
+        "Regando el almácigo justo antes de sacar cada planta, para que el bloque esté empapado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El bloque se riega unas horas antes, no justo antes: bien hidratado sale entero, pero empapado también se rompe y encima pesa y se deforma. Y el orden importa porque una raíz al aire se seca en minutos, así que se abren todos los hoyos primero. El tallo no es un asa: es el tejido más frágil del conjunto."
+    },
+    {
+      "id": "el-hoyo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo debe quedar la planta en el hoyo?",
+      "opciones": [
+        "El hoyo más ancho que el bloque pero no más hondo.",
+        "La superficie del cepellón exactamente al ras del terreno.",
+        "La tierra apretada alrededor de los costados, no pisada encima del cepellón.",
+        "El cepellón unos centímetros por debajo del nivel, para que retenga mejor el agua."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Enterrado de más, el cuello acaba con humedad permanente y se pudre; asomado de más, el borde del bloque hace de mecha y chupa agua del cepellón hacia el aire. Y no más hondo, porque si el fondo del hoyo queda mullido la planta se hunde con los riegos y termina enterrada sola."
+    },
+    {
+      "id": "la-meseta",
+      "tipo": "opcion_multiple",
+      "enunciado": "Después del trasplante la planta parece detenerse durante semanas. ¿Qué está pasando y qué haces?",
+      "opciones": [
+        "Está reconstruyendo la raíz, extendiéndola desde el bloque hacia la tierra nueva.",
+        "Toda la energía se va abajo, donde no se ve, y el crecimiento visible se reanuda después.",
+        "Agua sí, en la medida justa, y fertilizante no hasta que se vea crecimiento nuevo.",
+        "Conviene fertilizar para ayudarla a arrancar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Abonar en la meseta es contraproducente por dos motivos: la raíz dañada absorbe mal y las sales la irritan, y una dosis de nitrógeno empuja a hacer hojas justo cuando lo que necesita es hacer raíces. Y tampoco se encadenan dos trasplantes seguidos sin recuperación entre medio: eso es lo que mata a las plantas que no prendieron sin razón aparente."
+    },
+    {
+      "id": "jornada-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Planifica la jornada de trasplante de un lote en Rizoma del Sur: desde diez días antes hasta dos semanas después, con el calendario del llano cruceño en mente.",
+      "respuestaModelo": "Diez días antes empieza el endurecimiento, y lo marco en el calendario del vivero porque es el paso que más se salta por prisa y el que más caro se paga. Bajo la sombra progresivamente y alargo la exposición cada día, hasta dejar las bandejas a la intemperie el día entero y finalmente también la noche. En paralelo reduzco un poco el riego, dejando que el sustrato se seque algo más entre riegos, sin llegar a que las hojas cuelguen: ese déficit leve es lo que dispara la cutícula más gruesa y las raíces más profundas. Si algún plantín se marchita de verdad, me pasé y aflojo.\n\nEl día anterior riego el almácigo por la mañana, para que el bloque esté bien hidratado pero no empapado, y hago la prueba del cepellón con un plantín. Si se desarma en la mano, aplazo unos días. Si sale entero con raíces blancas por los lados y sin enroscarse, es el momento. Si sale con una maraña densa girando en el fondo, ya me pasé: trasplanto ya y preveo abrir esas raíces con los dedos o cortarlas antes de plantar, porque si no seguirán girando en el mismo círculo dentro del hoyo.\n\nEl día del trasplante lo elijo por la tarde, para que la planta tenga la noche entera de recuperación antes del primer sol, y consulto el pronóstico: no trasplanto justo antes de un surazo, porque una planta con la raíz recién cortada expuesta de golpe a viento fuerte y una bajada de diez grados lo pasa muy mal.\n\nEmpiezo abriendo todos los hoyos antes de sacar la primera planta, porque una raíz al aire se seca en minutos. Tengo el agua ya en el sitio, regaderas llenas o manguera tendida, porque el riego tiene que ser inmediato y no después de ir a buscarla.\n\nLa secuencia por planta son cuatro movimientos que no se saltan: sacar sosteniendo el bloque desde abajo y volcando el envase, nunca tirando del tallo; meter en el hoyo, que es más ancho que el bloque pero no más hondo, con la superficie del cepellón exactamente al ras del terreno; apretar la tierra alrededor de los costados para eliminar bolsas de aire, sin pisar encima; y regar de inmediato y en abundancia, porque ese riego asienta la tierra contra las raíces tanto como hidrata. En suelo arcilloso compruebo que el agua penetró y no se quedó formando un charco en la superficie del hoyo, porque un hoyo en arcilla puede comportarse como una maceta sin drenaje.\n\nLas dos semanas siguientes: agua sí, fertilizante no. La planta va a parecer detenida y no lo está: está extendiendo la raíz hacia la tierra nueva, y toda la energía se va abajo. Abonar ahí es contraproducente porque la raíz dañada absorbe mal y el nitrógeno la empuja a hacer hojas en vez de raíces. Si el sol pega fuerte, sombra temporal con una rama o media botella, que quito en cuanto vea turgencia estable.\n\nSobre el calendario: todo esto va al empezar las lluvias, en octubre o noviembre, porque una planta recién trasplantada necesita humedad constante y sin esfuerzo durante semanas, y en plena seca eso significa regar a mano todos los días sin fallar uno. Eso ordena el ciclo hacia atrás y pone la siembra de almácigo en las últimas semanas de la seca, que es la parte del año que más exige del vivero. Es incómodo y no hay forma de evitarlo.\n\nY al terminar, anoto en la ficha de la especie el prendimiento: cuántas de las trasplantadas sobrevivieron. Junto al porcentaje de germinación que ya venía anotando, eso me da el rendimiento completo del proceso, de semilla a planta establecida, medido en mi terreno.",
+      "criterios": [
+        "Arranca el endurecimiento diez días antes con exposición gradual y riego algo reducido.",
+        "Distingue endurecer de maltratar.",
+        "Riega el almácigo el día anterior, no justo antes.",
+        "Hace la prueba del cepellón y sabe reaccionar a los tres resultados.",
+        "Trasplanta al atardecer y consulta el pronóstico por el surazo.",
+        "Abre todos los hoyos antes de sacar la primera planta y tiene el agua lista.",
+        "Extrae sosteniendo el bloque, nunca por el tallo.",
+        "Hoyo más ancho no más hondo, cepellón al ras.",
+        "Aprieta alrededor y no encima, y riega de inmediato.",
+        "Comprueba la penetración del agua en suelo arcilloso.",
+        "No fertiliza durante la meseta y explica por qué.",
+        "Sitúa el trasplante al empezar las lluvias y cuenta hacia atrás.",
+        "Anota el prendimiento en la ficha de especie."
+      ],
+      "explicacion": "Con esto cierras el módulo entero: sabes diagnosticar por qué un lote no nace, medir cuántas están vivas, construir el entorno donde nacen, reconocer y prevenir el fracaso más común, y mudar una planta sin matarla. Y tienes dos números por especie —germinación y prendimiento— que convierten tu vivero en algo que se puede presupuestar."
+    }
+  ]
+}

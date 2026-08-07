@@ -1,0 +1,285 @@
+Un sistema solar mal dimensionado casi nunca falla por el lado del sol. Falla porque **nadie midió lo
+que consume**, y en su lugar alguien sumó las etiquetas de los aparatos, multiplicó por un número
+inventado de horas y compró equipos sobre esa base.
+
+Esta lección es la mitad que decide todo lo demás: la llamada
+auditoría de consumo, o <Termino slug="auditoria-de-consumo">auditoría de cargas</Termino>. Y trae el dato que arruina
+más inversores que ningún otro, porque no aparece en ninguna etiqueta: **la corriente de arranque**.
+
+## La planilla, que es el producto real de esta lección
+
+<Diagrama
+  src="planilla-de-consumo.webp"
+  alt="Tabla blanca con cabecera y cinco filas, cada una con el icono de un aparato a la izquierda: foco LED, bomba de agua, heladera, portátil y taladro. Las cinco columnas se rotulan CARGA, POTENCIA REAL, HORAS AL DÍA, DÍAS POR SEMANA y VATIOS HORA AL DÍA, esta última resaltada con una banda terracota y una llave que apunta a un recuadro resumen debajo con el texto ESTE TOTAL ES LO QUE HAY QUE CUBRIR. Arriba, LA PLANILLA DE CONSUMO."
+  pie="Cinco columnas y una suma. Todo el módulo de dimensionado se apoya en el número que sale de la última."
+/>
+
+La estructura mínima, y no hace falta más:
+
+| Columna | Qué va ahí |
+|---|---|
+| **Carga** | Cada aparato, por separado. Nada de «varios» ni «etcétera» |
+| **Potencia real** | La medida, no la de la etiqueta |
+| **Horas al día** | Las que de verdad está encendido, no las que está enchufado |
+| **Días por semana** | Para lo que no se usa a diario, como una herramienta |
+| **Vatios-hora al día** | Potencia × horas × (días ÷ 7). El resultado |
+
+Y al final, una suma. **Ese total en vatios-hora al día es el número que va a decidir cuántos paneles
+y cuánta batería compras**, así que merece medirse bien y no estimarse con optimismo.
+
+<Dato titulo="Añade una columna que nadie pone">
+Además de las cinco, agrega una columna **«¿de día o de noche?»** con tres valores posibles: de día,
+de noche, o todo el tiempo.
+
+Parece un detalle y no lo es: **la energía que consumes mientras hay sol casi no pasa por la
+batería**, y la batería es el componente más caro y el que se gasta. Saber qué fracción de tu consumo
+es diurna cambia el tamaño del banco, y por tanto el presupuesto entero.
+</Dato>
+
+## Medir en vez de leer la etiqueta
+
+La etiqueta declara la potencia **máxima** que el aparato puede pedir, y casi ningún aparato la pide
+de forma continua. Una heladera de 150 W no consume 150 W todo el día: consume eso mientras el
+compresor trabaja, que es una fracción del tiempo — y esa fracción depende del calor que haga, de
+cuántas veces se abra la puerta y de lo llena que esté.
+
+Dos instrumentos baratos resuelven el problema:
+
+**El <Termino slug="medidor-de-enchufe">medidor de enchufe</Termino>.** Se intercala entre el
+aparato y el tomacorriente y **acumula vatios-hora**
+durante días. Es el instrumento con mejor retorno de todo el módulo. Se deja una semana en cada
+carga importante y se anota el acumulado dividido por los días.
+
+**La <Termino slug="pinza-amperimetrica">pinza amperimétrica</Termino>.** Mide corriente sin cortar
+el cable, abrazándolo. Sirve para lo que está
+cableado fijo, como una bomba, y para ver picos instantáneos.
+
+<Advertencia>
+Mide **al menos una semana** por carga, y si puedes, una semana de calor y una de fresco.
+
+La razón es la heladera, que es el caso típico: su consumo en enero puede ser bastante mayor que en
+julio, porque el compresor arranca más veces. Dimensionar con la medición de la semana más fresca es
+dimensionar para el mes en que menos falta hace.
+</Advertencia>
+
+## El pico de arranque
+
+<Diagrama
+  src="pico-de-arranque.webp"
+  alt="Gráfico de potencia contra tiempo. La curva terracota parte de cero, sube en una espiga muy alta y estrecha cerca del inicio, cae de inmediato y se estabiliza en una meseta larga y mucho más baja que continúa hasta el borde derecho. Una flecha vertical mide la altura de la espiga, rotulada ARRANQUE, DURA UN INSTANTE, y otra la de la meseta, rotulada MARCHA, DURA HORAS. Abajo, EL INVERSOR SE ELIGE POR EL PICO, NO POR LA MARCHA. Arriba, EL PICO DE ARRANQUE."
+  pie="La espiga dura una fracción de segundo y no aparece en ninguna etiqueta. Pero es la que decide si el inversor arranca la bomba o se protege y corta."
+/>
+
+Aquí está el dato que hunde instalaciones enteras.
+
+El <Termino slug="pico-de-arranque">pico de arranque</Termino> es un hecho de todos los motores:
+**en el instante de arrancar piden mucha más potencia de la que consumen en marcha.** El
+rotor está quieto y hay que vencer la inercia; durante una fracción de segundo, la demanda se
+multiplica. Como orden de magnitud, un motor puede pedir **entre tres y siete veces su potencia
+nominal** en ese instante, y los compresores de heladera y las bombas de pozo están en la parte alta
+de ese rango.
+
+Eso significa que una bomba que en marcha consume unos cientos de vatios puede exigir, en el
+arranque, un pico de más de un kilovatio durante un momento.
+
+<Analogia>
+Es el mismo patrón que ya conoces de otro lado: **el tráfico medio no dimensiona el sistema, lo
+dimensiona el pico.** Un servicio que atiende cien peticiones por segundo de media pero recibe mil en
+un pico necesita capacidad para el pico, o se cae justo cuando importa.
+
+Con una diferencia incómoda: aquí el pico no está en ninguna métrica publicada. La etiqueta del
+aparato declara la marcha, no el arranque, y el fabricante rara vez lo publica. Hay que **medirlo con
+una pinza** o, si no se puede, **suponerlo generoso**.
+</Analogia>
+
+Y la consecuencia práctica separa dos decisiones que la gente mezcla:
+
+- **La energía diaria** —los vatios-hora— dimensiona **los paneles y la batería**.
+- **La potencia instantánea máxima**, incluido el arranque del motor más grande coincidiendo con lo
+  demás encendido, dimensiona **el inversor**.
+
+Un inversor elegido por el consumo medio va a funcionar perfectamente hasta el día que arranque la
+bomba con la heladera encendida, y ahí va a cortar. Y como el corte es una protección, el síntoma es
+confuso: *el sistema se apaga solo a veces*.
+
+<Dato titulo="Y hay una salida elegante">
+Antes de comprar un inversor enorme para cubrir un pico de un segundo, vale la pena preguntarse si el
+pico se puede evitar:
+
+**Escalonar los arranques** para que la bomba no coincida con otras cargas. **Elegir equipos con
+arranque suave**, que existen y arrancan progresivamente. O **sacar la carga del inversor**: una bomba
+de continua alimentada directamente, sin pasar por él, se lleva su pico consigo.
+
+Esa última idea es tan buena que tiene lección propia más adelante.
+</Dato>
+
+## Cuándo consumes importa tanto como cuánto
+
+<Diagrama
+  src="cuando-consumes.webp"
+  alt="Línea de tiempo de un día con luna, salida del sol, sol alto, puesta y luna otra vez. Encima, áreas de consumo en terracota: una loma pequeña de madrugada, una loma muy alta al mediodía rotulada LA BOMBA, DE DÍA, una loma media al anochecer, y una franja constante y baja a lo largo de todo el día rotulada LO QUE NUNCA SE APAGA. Debajo, una curva verde en campana rotulada LO QUE PRODUCE EL SOL, con su pico al mediodía. El solape entre la loma del mediodía y el pico verde está resaltado y rotulado ESTO NO PASA POR LA BATERÍA. Arriba, CUÁNDO CONSUMES IMPORTA TANTO COMO CUÁNTO."
+  pie="Mover una carga al mediodía no reduce su consumo: reduce el tamaño de la batería que hace falta para alimentarla."
+/>
+
+Dos personas con el mismo consumo diario pueden necesitar sistemas muy distintos, y la diferencia es
+**a qué hora consumen**.
+
+- Lo que se consume **mientras el sol produce** va del panel a la carga casi directamente. La batería
+  apenas participa.
+- Lo que se consume **de noche** tiene que haber pasado por la batería: entra, se almacena, se
+  degrada un poco y sale. Cuesta más, desgasta más y exige más capacidad instalada.
+
+Por eso la primera optimización de cualquier sistema autónomo no es comprar más panel: es **mover al
+mediodía todo lo que pueda moverse**. Bombear, lavar, usar herramientas, cargar baterías de mano.
+
+Y el ejemplo perfecto es el bombeo: **bombear de día y almacenar el agua arriba** convierte un
+consumo nocturno en uno diurno y sustituye batería eléctrica por batería de agua, que no se degrada.
+
+<Advertencia>
+Ojo con la carga que menos se piensa: el
+llamado <Termino slug="consumo-en-vacio">consumo en vacío</Termino>, **lo que nunca se apaga.**
+
+Un inversor en espera, un router, un módem, un cargador enchufado sin nada, un piloto. Cada uno es
+ridículo por separado y todos juntos suman **veinticuatro horas al día, trescientos sesenta y cinco
+días**. En sistemas chicos ese consumo residual puede ser una fracción sorprendente del total.
+
+Se mide igual que lo demás, y a veces la conclusión es simplemente **poner un interruptor**.
+</Advertencia>
+
+## Lo que cuesta cada cosa
+
+<Diagrama
+  src="lo-que-cuesta-cada-cosa.webp"
+  alt="Dos paneles comparados. Izquierda, un hervidor eléctrico con un reloj marcando muy poco tiempo y, debajo, una pila alta de bloques de energía; el pie dice HERVIR AGUA CINCO MINUTOS. Derecha, una fila de cinco focos LED con un icono de luna y, debajo, una pila mucho más baja de solo un par de bloques; el pie dice ILUMINAR EL GALPÓN TODA LA NOCHE. Una llave terracota abarca la pila alta. Al pie, LO QUE CALIENTA SALE DEL SISTEMA SOLAR. Arriba, LO QUE CUESTA CADA COSA."
+  pie="La comparación que cambia el diseño: cinco minutos de resistencia eléctrica cuestan más que una noche entera de luz."
+/>
+
+Ordenar las cargas por lo que de verdad cuestan reordena el proyecto:
+
+**Lo que calienta con resistencia** es la categoría cara y no hay diseño que la arregle: hervidor,
+plancha, ducha eléctrica, termo, horno, secadora. Son miles de vatios y se comen el presupuesto
+energético de un día en minutos. **La decisión correcta es sacarlos del sistema**: a gas, a leña, o al
+sol directo con un calentador solar térmico, que es una tecnología distinta, mucho más barata por
+unidad de calor y que en el llano funciona casi todo el año.
+
+**Los motores** —heladera, bomba, ventiladores, herramientas— son intermedios en energía y altos en
+pico. Es la categoría que hay que medir con cuidado.
+
+**La electrónica** —cargadores, router, sensores, computadora portátil— suma poco aunque esté todo el
+día. Una portátil consume una fracción de lo que consume una heladera.
+
+**La iluminación LED** es prácticamente gratis en comparación. Iluminar bien todo un galpón toda la
+noche cuesta menos que hervir agua para dos mates.
+
+Esa asimetría es una buena noticia, y conviene decirla claro: **un sistema modesto puede dar una
+calidad de vida muy alta**, siempre que el calor se resuelva por otra vía.
+
+## Un orden de magnitud para empezar
+
+Mientras mides, conviene tener una escala mental para detectar disparates. Los órdenes de magnitud
+que ordenan la cabeza, sabiendo que **son para orientarse y no para dimensionar**:
+
+| Carga | Orden de magnitud de potencia |
+|---|---|
+| Foco LED | Unidades de vatios |
+| Cargador de teléfono, router | Unidades a decenas de vatios |
+| Computadora portátil | Decenas de vatios |
+| Ventilador de techo | Decenas de vatios |
+| Heladera, en marcha | Poco más de cien vatios |
+| Bomba pequeña, en marcha | Cientos de vatios |
+| Herramienta eléctrica | Cientos a mil vatios |
+| Hervidor, plancha, ducha eléctrica | **Miles de vatios** |
+
+Fíjate en el salto de la última fila: no es un poco más, es otra escala. Si una carga tuya cae ahí y
+no la habías considerado un problema, acabas de encontrar la decisión más importante de tu
+dimensionado.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Empieza la planilla esta semana, con el vivero y la casa por separado**, porque tienen perfiles
+distintos y conviene poder mirarlos aparte antes de sumarlos.
+
+**Del lado del vivero, las cargas a medir son cuatro:** la bomba —que es la grande y la del pico—, la
+iluminación del galpón, las herramientas eléctricas, y el consumo permanente del rincón de registro:
+router, cargadores y el nodo de sensores que el módulo de automatización va a pedir.
+
+**Del lado de la casa**, la heladera es casi siempre la mayor consumidora continua, y merece dos
+semanas de medición: una en pleno calor y otra en una semana fresca. Ventiladores, iluminación,
+televisión, cargadores y bomba de la vivienda si es distinta.
+
+**Y la lista de lo que sacas del sistema desde el principio:** todo lo que caliente por resistencia.
+En el llano cruceño un termotanque solar da agua caliente casi gratis buena parte del año, y calentar
+agua con electricidad almacenada en baterías es la forma más cara de calentar agua que existe.
+Cocinar, a gas. Esa sola decisión puede reducir el sistema a la mitad.
+
+**Mide el pico de arranque de la bomba con la pinza**, o si no puedes, supón un factor generoso sobre
+su potencia nominal y dimensiona el inversor con eso. Es el número que decide si el sistema se apaga
+solo los días de riego.
+
+**Aprovecha tu perfil en lo que aquí rinde de verdad:** en lugar de una planilla estática, monta el
+registro de forma que se pueda repetir. Una hoja con las mediciones fechadas, para poder comparar la
+misma carga en enero y en julio. Con dos ciclos vas a tener el perfil estacional del vivero, que es
+exactamente lo que ninguna calculadora en línea puede darte.
+
+**Y marca la columna de día o noche con criterio de diseño, no de costumbre.** El riego puede
+programarse al mediodía. El lavado de bandejas también. Cada carga que muevas al sol es batería que
+no compras.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El medidor de enchufe y la pinza amperimétrica se consiguen en casas de material eléctrico de Santa
+Cruz** y no son caros. Vale la pena comprarlos antes que cualquier panel: sin medir, dimensionar es
+adivinar, y el error se paga en equipos.
+
+**La estacionalidad de la heladera aquí es fuerte.** Con temperaturas de verano por encima de los
+treinta y cinco grados, un compresor trabaja mucho más que en un clima templado, y el consumo real de
+enero puede sorprender a quien dimensionó con datos de invierno. Mide en enero si puedes.
+
+**El agua caliente solar es la decisión más rentable del sistema**, y es independiente de lo
+fotovoltaico: un termotanque solar es tecnología térmica, mucho más simple y barata por unidad de
+calor, y en el llano funciona la mayor parte del año. Sacar la ducha eléctrica del sistema puede
+cambiar la escala del proyecto entero.
+
+**Sobre el gas:** cocinar con garrafa sigue siendo mucho más barato en energía que cocinar con
+electricidad almacenada, y esa comparación no está ni cerca. En un sistema autónomo, la cocina
+eléctrica no se plantea.
+
+**Y el vocabulario:** al medidor de enchufe se le dice **medidor de consumo** o **wattímetro**; a la
+pinza, **pinza amperimétrica** o **pinza**; al pico de arranque, **pico de arranque** o **corriente
+de arranque**; y a la potencia continua de un inversor, **potencia nominal**, frente a la **potencia
+pico** que aguanta unos segundos.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Sumo las etiquetas de todo lo que tengo.»** Las etiquetas declaran el máximo, no el consumo real.
+Y sumarlas todas supone que todo funciona a la vez, que no ocurre.
+
+**«La heladera es de 150 W, entonces son 3.600 Wh al día.»** Consume eso mientras el compresor
+trabaja, que es una fracción del tiempo. Medido, el número real es mucho menor.
+
+**«El inversor lo elijo por la suma de lo que voy a enchufar.»** Se elige por el pico, incluido el
+arranque del motor más grande. Un inversor justo corta el día que arranca la bomba con la heladera
+encendida.
+
+**«Los consumos en espera son despreciables.»** Son pequeños y duran veinticuatro horas. En sistemas
+chicos suman más de lo que nadie espera.
+
+**«Da igual a qué hora consuma, la energía es la misma.»** La energía sí, el sistema no. Lo que
+consumes de día casi no pasa por la batería, y la batería es lo caro.
+
+**«Mido una semana y ya está.»** Mide en la estación más exigente, o al menos en dos. Un compresor en
+enero no consume lo mismo que en julio.
+
+**«La ducha eléctrica la pongo, total es un rato.»** Es la carga más cara que existe. En un sistema
+autónomo, el agua caliente sale del sol térmico, no del banco de baterías.
+
+## Lo que sigue
+
+Ya tienes las dos mitades: cuánta energía te ofrece la fuente y cuánta necesitas tú. La lección
+siguiente las junta, y es la lección madre del módulo: **el dimensionado**.
+
+Vas a ver de dónde salen los datos reales de radiación de tu zona, por qué el mes crítico aquí es la
+temporada de lluvias y no el invierno, cómo se decide cuántos días de autonomía tiene sentido pagar,
+y por qué casi siempre conviene sobredimensionar el arreglo antes que comprar más batería.

@@ -1,0 +1,106 @@
+{
+  "preguntas": [
+    {
+      "id": "que-es-mip",
+      "tipo": "verdadero_falso",
+      "enunciado": "El manejo integrado consiste en sustituir los productos químicos por productos naturales.",
+      "respuesta": false,
+      "explicacion": "Falso: no es una lista de insumos permitidos, es un orden de decisión. Qué hacer primero, cuándo hace falta actuar y qué se reserva para el final. Y ese orden importa porque las herramientas no son intercambiables: unas evitan el problema y otras solo lo apagan cuando ya está."
+    },
+    {
+      "id": "la-escalera",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué peldaños de la escalera resuelven más y por qué?",
+      "opciones": [
+        "Prevenir, porque impide que el problema llegue o se establezca y son decisiones ya tomadas en el diseño.",
+        "Cambiar el manejo, que es la herramienta más subestimada y la que resuelve la mayoría de los problemas de hongos.",
+        "Quitar a mano, que en un vivero pequeño resuelve mucho más de lo que la gente cree.",
+        "El producto, porque es el único que actúa directamente sobre el organismo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El producto va en el último peldaño y debería usarse muy poco. Es la misma pirámide de una arquitectura defensiva: casi todo el valor está en el diseño y en la validación de entradas, y muy poco en el parche de emergencia."
+    },
+    {
+      "id": "umbral",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es el umbral de acción?",
+      "opciones": [
+        "El punto donde el costo del daño supera al costo de actuar.",
+        "Actuar tiene un costo más o menos fijo, mientras que el daño crece con la población.",
+        "Por debajo del umbral se pierde dinero actuando; por encima, se pierde producto.",
+        "El nivel a partir del cual aparece la primera plaga, porque el objetivo es tener cero."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Tener cero plagas no es el objetivo: es imposible, carísimo y no hace falta. El objetivo es que el daño se mantenga por debajo de lo que cuesta evitarlo."
+    },
+    {
+      "id": "umbral-por-zona",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el umbral no es el mismo en todo el vivero?",
+      "opciones": [
+        "En una ornamental de follaje es bajísimo, porque el daño estético es pérdida directa.",
+        "En un árbol de sombra en crecimiento es altísimo, porque puede perder hojas y seguir siendo vendible.",
+        "En una planta madre importa poco el aspecto y muchísimo si el bicho es vector de virus.",
+        "Depende únicamente de qué especie de plaga sea."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El umbral se decide por zona y por producto, no por especie de plaga. Y con la planilla de lotes ya está toda la información necesaria para fijarlo."
+    },
+    {
+      "id": "resurgencia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué una aplicación de amplio espectro puede empeorar el problema?",
+      "opciones": [
+        "Mata la plaga y también a sus enemigos naturales, porque no está hecha para distinguir.",
+        "La plaga se reproduce mucho más deprisa que el depredador y vuelve a un ambiente sin control.",
+        "Al desaparecer los depredadores generalistas pueden aparecer plagas secundarias.",
+        "Porque el producto pierde eficacia con la humedad del trópico."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es el caso clásico de optimizar una métrica local y romper el sistema: el número de plagas visibles baja al día siguiente, pero se destruyó el mecanismo que mantenía el problema acotado. A partir de ahí el vivero queda dependiente del producto."
+    },
+    {
+      "id": "resistencia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo aparece la resistencia a un producto?",
+      "opciones": [
+        "Es evolución: en cualquier población hay unos pocos individuos menos sensibles por azar.",
+        "Al aplicar mueren los sensibles y sobreviven los otros, que es la definición de selección.",
+        "Repetido varias veces, la población entera se vuelve resistente y subir la dosis solo acelera el proceso.",
+        "Los insectos aprenden a evitar el producto tras varias exposiciones."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hay aprendizaje: hay selección, y el agente selector es quien aplica. Por eso la medida que la retrasa es rotar modos de acción, y la más eficaz de todas es aplicar menos veces."
+    },
+    {
+      "id": "rotar",
+      "tipo": "verdadero_falso",
+      "enunciado": "Alternar entre productos de marcas distintas evita la resistencia.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error más común: dos marcas distintas pueden tener exactamente el mismo mecanismo de acción, y alternarlas no cambia nada desde el punto de vista de la selección. Lo que hay que mirar en la etiqueta es el grupo o modo de acción del ingrediente activo, y alternar entre grupos distintos."
+    },
+    {
+      "id": "politica-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Escribe la política de manejo sanitario de Rizoma del Sur: en qué orden actúas, cómo fijas umbrales y qué exiges si llegas a aplicar.",
+      "respuestaModelo": "La política cabe en una frase: subir la escalera de abajo hacia arriba y casi nunca llegar al último peldaño.\n\nEl peldaño de prevenir ya está construido en los módulos anteriores, y conviene verlo como lo que es: la mayor parte del trabajo sanitario está hecho antes de que aparezca ningún bicho. Sustrato limpio, bandejas lavadas, cuarentena de todo lo que entra, densidad razonable, riego temprano y al sustrato, drenaje, ventilación, malla y cortaviento. Nada de eso se llama sanidad y todo eso es sanidad.\n\nEl peldaño de mirar y contar es el recorrido semanal con lupa, trampas y libreta, que ya está en la rutina y sin el cual todo lo de arriba se aplica a ciegas.\n\nEl de cambiar el manejo es el que más tengo que ejercitar, porque es el que la costumbre salta. Ante un problema de hongos en enero, la primera pregunta no es qué aplicar sino qué puedo cambiar: menos densidad, riego más temprano, más aire, mover el lote de sitio.\n\nDespués viene quitar a mano —retirar hojas afectadas, aplastar la colonia, arrancar y sacar la planta enferma, lavar con un chorro de agua—, que en un vivero pequeño donde todo está al alcance resuelve muchísimo. Y después soltar aliados.\n\nEl umbral lo fijo por zona y por producto, no por especie de plaga. En ornamentales, muy bajo, porque una hoja mordida ya es producto que no se vende. En árboles de sombra, alto, porque pueden perder hojas y seguir siendo vendibles. Y en el banco de plantas madre el criterio cambia de naturaleza: ahí no importa el aspecto, importa que no entren vectores de virus, porque lo que está en juego es la sanidad de todo lo que salga de ese banco. La planilla de lotes ya me dice qué hay en cada zona.\n\nY entiendo por qué no se actúa en cero: actuar tiene un costo casi fijo y el daño crece con la población, así que hay un punto de cruce. Antes de él pierdo dinero actuando; después pierdo producto.\n\nLos productos de amplio espectro son la última opción y con motivo. En un vivero mixto rodeado de vegetación hay una fauna de enemigos naturales trabajando gratis, y una aplicación general la destruye en una tarde. Después vuelve la plaga más alta y sin freno, y encima pueden aparecer plagas secundarias que antes controlaba algo.\n\nSi llego a aplicar, exijo un mínimo: diagnóstico hecho, producto adecuado y lo más selectivo posible, etiqueta leída entera y cumplida —dosis, cultivos autorizados, momento, plazos, equipo de protección—, cobertura donde está el bicho, que en chupadores significa el envés, condiciones sin viento y sin sol fuerte, y protección personal siempre.\n\nY anoto cada aplicación: qué, dónde, cuándo, a qué dosis y por qué. Ese registro es lo que permite rotar modos de acción de verdad y no marcas, y lo que dentro de un año va a explicar por qué algo dejó de funcionar. Sé que la medida más eficaz contra la resistencia no es rotar sino aplicar menos veces: toda la escalera existe para eso.\n\nAntes de comprar, contrasto el consejo de la agropecuaria con asistencia técnica independiente, porque el del comercio es comercial. Y tengo presente que en una zona de agricultura extensiva es esperable que varias plagas ya tengan resistencia a los modos de acción más usados.\n\nY hay algo que un productor no tiene y yo sí: lo que vendo va a casa de otra gente, así que residuos, plazos y productos no autorizados no son solo un problema mío.",
+      "criterios": [
+        "Ordena la actuación de abajo hacia arriba en la escalera.",
+        "Reconoce que la prevención ya está construida en el diseño del vivero.",
+        "Usa el recorrido semanal como peldaño de monitoreo.",
+        "Ejercita el cambio de manejo antes de pensar en producto.",
+        "Incluye la retirada manual como herramienta real en vivero pequeño.",
+        "Fija umbrales distintos por zona y por producto, con criterio propio para plantas madre.",
+        "Explica por qué no se actúa en cero.",
+        "Justifica evitar amplio espectro por resurgencia y plagas secundarias.",
+        "Exige diagnóstico, etiqueta, selectividad, cobertura y condiciones antes de aplicar.",
+        "Usa protección personal siempre.",
+        "Registra cada aplicación para poder rotar modos de acción.",
+        "Sabe que rotar marcas no sirve y que aplicar menos es lo más eficaz.",
+        "Contrasta el consejo comercial y considera la resistencia previa en la región.",
+        "Asume la responsabilidad añadida de vender plantas a terceros."
+      ],
+      "explicacion": "Lo que hace difícil el manejo integrado no es entenderlo sino resistir la tentación de saltar peldaños. Casi todo el mundo entiende la escalera y casi todo el mundo empieza por arriba cuando ve un bicho."
+    }
+  ]
+}

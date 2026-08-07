@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "micro-vs-placa",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué diferencia a un microcontrolador de un ordenador de placa para este uso?",
+      "opciones": [
+        "El microcontrolador arranca en milisegundos, consume poco y no tiene sistema de archivos que corromper.",
+        "El ordenador de placa es cómodo de programar pero su tarjeta de memoria se corrompe con los cortes.",
+        "Si hacen falta ambos, conviene separar responsabilidades para que el riego siga si el registro se cae.",
+        "El ordenador de placa es preferible porque permite tomar decisiones más complejas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La decisión de regar es simple; lo que no puede fallar es que se tome. Poner esa decisión en la pieza más frágil contradice el criterio de la lección anterior: nada crítico debe depender de algo que pueda caerse."
+    },
+    {
+      "id": "etapa-de-potencia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se conecta un microcontrolador a la bobina de una válvula?",
+      "opciones": [
+        "Con un relé, que aísla completamente el control de la potencia y tolera errores.",
+        "Con un MOSFET, silencioso y sin desgaste, pero que no aísla.",
+        "Con un optoacoplador más transistor, que da aislamiento sin partes móviles.",
+        "Directamente desde el pin de salida, que entrega corriente suficiente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un pin entrega unos pocos miliamperios y una bobina necesita bastante más. La lentitud del relé es irrelevante aquí, donde se conmuta unas pocas veces al día, y su aislamiento es una ventaja real."
+    },
+    {
+      "id": "errores-de-potencia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué errores destruyen estos montajes sin dar síntomas previos?",
+      "opciones": [
+        "Alimentar la válvula desde el regulador de la placa, lo que reinicia el controlador al abrir.",
+        "Omitir el diodo de rueda libre en la bobina.",
+        "No proteger las entradas de cables largos, que actúan como antena.",
+        "Usar una fuente de mayor corriente de la necesaria."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Sobredimensionar la fuente es barato y precisamente evita el primer problema: una fuente que entrega menos de lo que promete produce reinicios al abrir la válvula, y el síntoma parece un fallo de software. Falta un cuarto error, la masa común mal hecha, que produce lecturas erráticas que parecen fallos de sensor."
+    },
+    {
+      "id": "robustez",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace que un montaje siga funcionando sin supervisión?",
+      "opciones": [
+        "Perro guardián activado, que reinicia si el programa deja de dar señales de vida.",
+        "Cerrar todas las salidas como primera acción al arrancar.",
+        "Reloj de tiempo real con pila, para saber la hora tras un corte.",
+        "Guardar la configuración en memoria no volátil en cada vuelta del bucle."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La memoria no volátil tiene un número limitado de ciclos de escritura, y guardarla en cada vuelta la agota en semanas: se graba solo cuando algo cambia. Y sin reloj con pila, una ventana horaria basada en horas desde el arranque riega a deshora tras cada apagón."
+    },
+    {
+      "id": "contadores",
+      "tipo": "verdadero_falso",
+      "enunciado": "Llevar contadores de aperturas de válvula, lecturas inválidas y reinicios ocupa muy poco y contesta casi cualquier pregunta cuando algo falla.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es especialmente valioso aquí porque el controlador está en un poste a la intemperie: todo lo que se pueda diagnosticar sin caminar hasta él hay que resolverlo desde el diseño."
+    },
+    {
+      "id": "la-caja",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué exige el montaje físico en clima tropical?",
+      "opciones": [
+        "Caja estanca con junta y prensaestopas orientados hacia abajo.",
+        "Un lazo de goteo en cada cable antes de entrar en la caja.",
+        "Respiradero de membrana, porque una caja sellada al sol condensa por dentro de noche.",
+        "Sellar todos los empalmes con cinta dentro de la propia caja."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Dentro de una caja expuesta a humedad no se hacen empalmes: se usan conectores estancos o no se hacen. Y el cable va protegido en conducto o manguera enterrada, porque roedores y hormigas muerden cables y buscar una avería intermitente en 2.474 m² cuesta más que el conducto."
+    },
+    {
+      "id": "alimentacion-solar",
+      "tipo": "verdadero_falso",
+      "enunciado": "Con alimentación solar y agua por gravedad desde el tanque elevado, el riego puede funcionar sin red eléctrica en absoluto.",
+      "respuesta": true,
+      "explicacion": "Correcto, y no es una comodidad sino lo que mantiene el vivero regando durante un corte prolongado, que en la zona ocurre. El consumo es minúsculo, y una válvula biestable reduce el consumo del actuador a casi cero porque solo necesita un pulso."
+    },
+    {
+      "id": "controlador-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Especifica el controlador de riego de Rizoma del Sur: arquitectura, etapa de potencia, medidas de robustez y montaje físico.",
+      "respuestaModelo": "Uso un microcontrolador y no un ordenador de placa. Los cortes de energía son frecuentes en la zona, y una tarjeta de memoria corrupta es un fallo silencioso y molesto; el microcontrolador arranca en milisegundos, consume poco y no tiene sistema de archivos que corromper. Además, lo que necesito es sencillo: leer una tensión analógica, leer un bus digital, accionar una salida de potencia, saber la hora y no olvidar la configuración.\n\nSi más adelante quiero registrar o mostrar datos, añado un segundo dispositivo y separo responsabilidades: el microcontrolador riega, el otro registra y muestra. Si el segundo se cae, el riego sigue. Es la misma regla de la lección anterior.\n\nLa etapa de potencia lleva aislamiento —módulo de relé u optoacoplador con transistor— y no un MOSFET desnudo, porque el aislamiento evita que un fallo del lado de potencia alcance al controlador. La lentitud del relé es irrelevante cuando se conmuta unas pocas veces al día.\n\nLa válvula tiene su propia fuente y comparte solo la referencia de masa. Alimentarla desde el regulador de la placa hace que la tensión caiga al abrir y el controlador se reinicie justo en el momento crítico.\n\nPongo diodo de rueda libre en toda bobina de continua, protejo las entradas de los cables largos con resistencia en serie y condensador de filtro, y hago bien la masa común: una masa mal hecha produce lecturas analógicas erráticas que parecen fallos de sensor y no lo son.\n\nSobredimensiono la fuente, porque las fuentes baratas que entregan menos de lo que prometen producen reinicios al abrir la válvula y el síntoma parece un problema de software.\n\nPara robustez: perro guardián activado —viene incorporado y desactivado en la mayoría de los microcontroladores—, cierre de todas las salidas como primera acción al arrancar, reloj de tiempo real con pila para saber la hora tras un corte, y configuración en memoria no volátil grabada solo cuando cambia, nunca en cada vuelta del bucle, porque los ciclos de escritura son finitos.\n\nLlevo tres contadores mínimos: aperturas de válvula, lecturas inválidas y reinicios. Ocupan nada y contestan casi cualquier pregunta cuando algo va mal sin tener que caminar hasta el poste.\n\nEl montaje físico es la mitad del trabajo: caja estanca con junta, prensaestopas hacia abajo, lazo de goteo en cada cable antes de entrar, ningún empalme dentro de la caja, respiradero de membrana para evitar la condensación nocturna, y cable protegido en conducto o manguera enterrada contra roedores y hormigas. La caja va siempre en sombra, y si no hay sombra natural le pongo visera, porque el calor dentro de una caja al sol supera con holgura la temperatura ambiente.\n\nPreveo protecciones contra sobretensión y puesta a tierra según el módulo de construcción, por las tormentas eléctricas de la temporada de lluvias, y acepto que desconectar durante una tormenta fuerte es una medida legítima.\n\nCompro repuesto de todo lo crítico —controlador, módulo de relé, fuente—, porque una avería en temporada de lluvias no admite esperar un pedido.\n\nY la alimentación es solar desde el diseño, aprovechando el módulo de energía del curso. Con válvula biestable el consumo del actuador es casi cero, y como el agua llega por gravedad desde el tanque elevado, el riego funciona sin red eléctrica en absoluto durante un corte prolongado.\n\nPor último, mantengo en la mesa la alternativa hidráulica: un temporizador de riego mecánico o a pilas, sin firmware ni conectividad, resuelve la capa base y no se cuelga. Si lo único que busco es no estar presente a una hora fija, esa puede ser toda la automatización que necesite el primer año.",
+      "criterios": [
+        "Elige microcontrolador y justifica por los cortes de energía.",
+        "Separa riego y registro en dispositivos distintos si hacen falta ambos.",
+        "Usa etapa de potencia con aislamiento.",
+        "Alimenta la válvula desde fuente propia con masa común.",
+        "Incluye diodo de rueda libre y protección de entradas.",
+        "Sobredimensiona la fuente y conoce el síntoma engañoso.",
+        "Activa perro guardián y cierra salidas al arrancar.",
+        "Usa reloj de tiempo real con pila.",
+        "Graba configuración solo al cambiar, por los ciclos de escritura.",
+        "Lleva contadores de eventos para diagnóstico remoto.",
+        "Diseña caja estanca con prensaestopas abajo, lazo de goteo y respiradero.",
+        "Prevé alimentación solar y mantiene la alternativa hidráulica."
+      ],
+      "explicacion": "Para un perfil que programa, la parte difícil de esta lección no es el firmware sino aceptar cuánto del resultado depende de decisiones físicas: la fuente, la masa, la caja y el sitio donde va montada."
+    }
+  ]
+}

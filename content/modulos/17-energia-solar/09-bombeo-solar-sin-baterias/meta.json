@@ -1,0 +1,49 @@
+{
+  "titulo": "Bombeo solar sin baterías",
+  "subtitulo": "El uso más rentable de la energía solar en un vivero, y el único donde se puede eliminar el componente más caro del sistema. No renunciando al almacenamiento: moviéndolo de la energía al agua.",
+  "duracionMin": 27,
+  "portada": "portada.webp",
+  "portadaAlt": "Instalación rural de agua a pleno mediodía tropical: un tanque plástico negro sobre una torre de acero soldado de unos cuatro metros, con dos paneles solares montados en un bastidor bajo al lado. Una tubería sube del terreno al tanque y otra baja hacia hileras de plantines bajo malla de sombra en segundo plano. Terreno llano, pasto alto y árboles dispersos en el horizonte",
+  "objetivos": [
+    "Entender el cambio de capa de almacenamiento: guardar agua arriba en vez de energía en una batería.",
+    "Enumerar lo que desaparece del sistema al quitar la batería y lo que se pierde a cambio.",
+    "Reconocer que el tanque elevado ya estaba en el proyecto por el riego por gravedad.",
+    "Calcular la altura manométrica total sumando sus cuatro componentes.",
+    "Medir el nivel estático y el abatimiento del pozo, y detectar un pozo que no repone lo que se le saca.",
+    "Elegir bomba por el punto de trabajo en la curva caudal-altura y no por el máximo del catálogo.",
+    "Distinguir bomba sumergible, de superficie y helicoidal, y el límite físico de la aspiración.",
+    "Explicar qué resuelve un variador solar frente a una bomba de continua conectada al panel.",
+    "Instalar protección contra marcha en seco como requisito, no como accesorio.",
+    "Dimensionar y equipar el tanque: dos días de reserva, opaco, tapado, con boya, rebose y torre calculada lleno."
+  ],
+  "prerrequisitos": [
+    "17-energia-solar/08-montaje-orientacion-y-sombras",
+    "08-albanileria-y-obra/10-instalacion-hidraulica"
+  ],
+  "videos": [],
+  "referencias": [
+    {
+      "titulo": "Kilovatio-hora (kWh), kilovatio (kW) y kWp: diferencias",
+      "fuente": "SunFields Europe",
+      "url": "https://www.sfe-solar.com/electricidad/kwh-kw/",
+      "nota": "Pertinente aquí para no confundir la potencia de la bomba con la energía que consume al día: es la misma distinción entre caudal y volumen que se aplica al agua, y el paralelo ayuda a fijarla."
+    },
+    {
+      "titulo": "Global Solar Atlas",
+      "fuente": "Banco Mundial / Solargis",
+      "url": "https://globalsolaratlas.info/",
+      "nota": "Para estimar cuántas horas útiles de bombeo vas a tener mes a mes en tus coordenadas. El mes crítico del bombeo no coincide con el del consumo eléctrico: aquí lo que importa es la seca, cuando más riego hace falta y más bajo está el pozo."
+    }
+  ],
+  "terminos": [
+    "caudal",
+    "altura-manometrica-total",
+    "nivel-estatico",
+    "abatimiento-del-pozo",
+    "bomba-sumergible",
+    "variador-solar",
+    "perdida-de-carga",
+    "valvula-de-flotador"
+  ],
+  "practica": true
+}

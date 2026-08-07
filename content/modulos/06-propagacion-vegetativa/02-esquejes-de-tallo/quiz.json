@@ -1,0 +1,105 @@
+{
+  "preguntas": [
+    {
+      "id": "la-carrera",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuál es el problema de fondo de un esqueje recién cortado?",
+      "opciones": [
+        "Tiene hojas que pierden agua constantemente y todavía no tiene raíces que la repongan.",
+        "Está en una carrera entre deshidratarse y enraizar.",
+        "Como no puedes acelerar mucho el enraizamiento, casi toda tu intervención va dirigida a frenar el consumo.",
+        "Le faltan nutrientes, y por eso el sustrato de enraizamiento debe ser rico."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los nutrientes no son el problema: el esqueje vive de sus reservas hasta que enraíza, y por eso el sustrato de enraizamiento lleva arena y aire pero no compost. Quitar hojas, recortarlas, sombrear y humedecer el ambiente son todas la misma jugada: hacer que el reloj de la deshidratación corra más despacio que el del enraizamiento."
+    },
+    {
+      "id": "que-trozo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué parte de la rama conviene usar y cómo se reconoce?",
+      "opciones": [
+        "La zona semileñosa, que combina capacidad de enraizar con resistencia a deshidratarse.",
+        "Se reconoce doblando el tallo: si se dobla un poco y hace un chasquido pequeño, ese es el punto.",
+        "Si se dobla como una goma y vuelve a su sitio, es demasiado tierno.",
+        "La punta en crecimiento activo, porque enraíza más rápido que cualquier otra zona."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El tejido tierno enraíza rápido, es verdad, pero se marchita rapidísimo porque tiene poca reserva y mucha superficie de hoja, y solo funciona con ambiente muy húmedo. Si tienes que elegir sin saber nada de la especie, elige semileñoso."
+    },
+    {
+      "id": "flores",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una rama con botones florales es buen material para esquejes, porque indica que la planta está vigorosa.",
+      "respuesta": false,
+      "explicacion": "Falso. Una rama en floración tiene el metabolismo dirigido a producir flores y fruto, no raíces, y las señales hormonales apuntan en el otro sentido. Los esquejes con flor enraízan mal y muchas veces gastan sus reservas en abrir esa flor mientras se mueren por abajo. Si el material trae botones, se quitan antes de plantarlo."
+    },
+    {
+      "id": "el-corte",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se hace el corte de un esqueje?",
+      "opciones": [
+        "Justo debajo de un nudo, porque ahí se concentra el tejido con más capacidad de formar raíces.",
+        "En diagonal, para aumentar el contacto con el sustrato y para saber cuál es el extremo de abajo.",
+        "Con filo, porque un corte machacado deja tejido triturado que se pudre.",
+        "Por el entrenudo, que es donde el tallo es más limpio y regular."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Cortar por el entrenudo funciona en algunas especies y falla en muchas otras: debajo del nudo es la apuesta segura. Y lo del corte diagonal tiene un valor práctico que se subestima: un esqueje plantado al revés no enraíza nunca, y con un trozo de tallo sin hojas es sorprendentemente fácil confundirse."
+    },
+    {
+      "id": "media-hoja",
+      "tipo": "verdadero_falso",
+      "enunciado": "Quitar todas las hojas de un esqueje es la mejor forma de evitar que se deshidrate.",
+      "respuesta": false,
+      "explicacion": "Falso: un esqueje sin hojas no tiene fábrica. Las hojas producen los azúcares y las auxinas que bajan desde el follaje y disparan el enraizamiento, así que sin ellas enraíza mucho peor o no enraíza. La solución no es quitarlas sino reducir su superficie, cortándolas por la mitad. Es degradar el servicio en vez de apagarlo."
+    },
+    {
+      "id": "hormona",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace y qué no hace una hormona de enraizamiento?",
+      "opciones": [
+        "Contiene auxinas sintéticas y refuerza una señal que la planta ya produce.",
+        "Acelera el enraizamiento y sube el porcentaje que prende, y hace posibles algunas especies difíciles.",
+        "No compensa un mal corte, material deshidratado ni un mal ambiente.",
+        "Cuanta más se aplique, mejor resultado se obtiene."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Más no es mejor: una capa gruesa de polvo puede quemar el tejido en vez de estimularlo. Se moja solo el centímetro inferior, se sacude el exceso, se hace el hueco en el sustrato antes de meter el esqueje —si lo empujas directamente le raspas la hormona— y nunca se mete el esqueje en el bote, que se contamina para siempre."
+    },
+    {
+      "id": "sustrato-y-profundidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se planta el esqueje?",
+      "opciones": [
+        "Alrededor de un tercio de su longitud bajo el sustrato, con al menos un nudo enterrado.",
+        "En sustrato muy aireado y limpio, que retenga humedad sin saturarse.",
+        "Sin compost, porque aporta nutrientes que el esqueje no puede usar y microorganismos que sí.",
+        "Bien juntos entre sí, para que las hojas se den sombra unas a otras."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Al contrario: se separan lo suficiente para que las hojas no se toquen. Hojas superpuestas retienen humedad entre ellas, y ese microclima permanentemente mojado es exactamente el que arruina un lote entero por hongos."
+    },
+    {
+      "id": "jornada-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Describe una jornada de esquejes en Rizoma del Sur: desde que sales a cortar hasta que la bandeja queda plantada, con lo que anotas y con qué especies empezarías.",
+      "respuestaModelo": "Salgo temprano por la mañana, con la planta madre turgente. En un clima caluroso, un esqueje cortado a las dos de la tarde ya viene deshidratado antes de llegar a la mesa, y ese detalle sube el prendimiento más que cualquier hormona. Corto ramas enteras, no esquejes individuales en la planta, y las meto de inmediato en un balde con algo de agua o en una bolsa con papel húmedo, a la sombra. En la mesa trabajo cómodo, con buena luz y las herramientas a mano.\n\nAntes de empezar tengo todo preparado: bandejas ya llenas de sustrato de enraizamiento —arena lavada con algo de fibra o cascarilla de arroz, sin compost, porque el esqueje no puede usar nutrientes hasta que enraíce y el compost trae microorganismos que sí pueden aprovecharse de él—, los huecos ya hechos, la cuchilla afilada, un platillo con una porción de hormona sacada del bote, y un trapo limpio.\n\nPor cada esqueje: elijo un tramo semileñoso con la prueba del chasquido, corto en diagonal justo debajo de un nudo y con filo, dejo dos o tres nudos de largo, quito las hojas de abajo porque una hoja enterrada se pudre y arrastra al tallo, recorto a la mitad las de arriba para conservar la fábrica y recortar la fuga, quito cualquier botón floral, mojo solo la punta en la hormona, sacudo el exceso y lo meto en el hueco ya hecho, apretando suavemente alrededor. Un tercio abajo, con un nudo enterrado. Y los separo lo suficiente para que las hojas no se toquen entre sí.\n\nNunca meto el esqueje directamente en el bote de hormona: saco una porción a un platillo y tiro lo que sobre, porque meterlos en el envase lo contamina con los hongos que traiga el material y a partir de ahí cada esqueje se lleva esa contaminación al sustrato.\n\nEtiqueto cada bandeja al plantarla, con especie, planta madre de origen y fecha. Sin esa etiqueta, en tres semanas tengo una bandeja de tallos verdes indistinguibles y pierdo toda la trazabilidad que justifica tener plantas madre.\n\nEmpezaría por ornamentales fáciles: crotos, veraneras, potus, cintas. Son gratis, enraízan bien, tienen venta de rotación rápida, y me van a enseñar el gesto y el criterio con material que no duele perder. Cuando esos salgan al noventa por ciento, pruebo con algo difícil. Además aquí el clima juega a favor: el calor mantiene la cama en buen rango sin cables calefactores, y hay material tierno todo el año en vez de por campañas.\n\nLa precaución local es el surazo: una entrada de aire frío puede frenar en seco un lote en enraizamiento, así que con previsión de surazo tapo la cama o la llevo a resguardo.\n\nY anoto el porcentaje de prendimiento por especie, igual que anotaba la germinación en el módulo anterior. Las dos columnas juntas son las que me van a decir, especie por especie, cuál de los dos caminos de propagación me conviene.",
+      "criterios": [
+        "Corta temprano por la mañana y justifica por qué en clima caluroso.",
+        "Corta ramas enteras y las transporta protegidas hasta la mesa.",
+        "Prepara bandejas, sustrato sin compost, huecos, cuchilla y hormona antes de empezar.",
+        "Elige semileñoso con la prueba del chasquido.",
+        "Corta en diagonal, bajo nudo y con filo.",
+        "Quita hojas de abajo y recorta las de arriba, con la razón de cada cosa.",
+        "Elimina botones florales.",
+        "Aplica la hormona solo en la punta, sacude y no contamina el bote.",
+        "Planta a un tercio con un nudo enterrado y sin que las hojas se toquen.",
+        "Etiqueta con especie, madre y fecha.",
+        "Empieza por ornamentales fáciles y explica por qué.",
+        "Aprovecha el calor local y prevé el surazo.",
+        "Registra el prendimiento por especie."
+      ],
+      "explicacion": "Fíjate en que la decisión que más sube el prendimiento en este clima no cuesta nada y no aparece en ningún manual: cortar a las siete de la mañana en vez de a las dos de la tarde. Las hormonas ayudan; la hora de cortar decide."
+    }
+  ]
+}

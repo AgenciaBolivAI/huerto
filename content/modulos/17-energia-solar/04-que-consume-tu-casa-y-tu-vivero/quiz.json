@@ -1,0 +1,101 @@
+{
+  "preguntas": [
+    {
+      "id": "medir-no-leer",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una heladera con etiqueta de 150 W consume 3.600 vatios-hora al día, porque son 150 W durante 24 horas.",
+      "respuesta": false,
+      "explicacion": "Falso: la etiqueta declara la potencia máxima que el aparato puede pedir, y una heladera solo la pide mientras el compresor trabaja, que es una fracción del tiempo. Esa fracción además depende del calor que haga, de cuántas veces se abra la puerta y de lo llena que esté. El número real se mide con un medidor de enchufe durante al menos una semana, y sale bastante menor."
+    },
+    {
+      "id": "planilla",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué columnas necesita la planilla de consumo?",
+      "opciones": [
+        "Cada carga por separado, con su potencia real medida y no la de etiqueta.",
+        "Horas al día que de verdad está encendida y días por semana para lo que no se usa a diario.",
+        "El resultado en vatios-hora al día, cuya suma es el número que decide paneles y batería.",
+        "El precio de compra de cada aparato, para calcular el retorno."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El precio va en otra planilla. Y conviene añadir una columna que casi nadie pone: si la carga es de día, de noche o todo el tiempo — porque la energía consumida mientras hay sol casi no pasa por la batería, y la batería es el componente más caro y el que se gasta."
+    },
+    {
+      "id": "pico-arranque",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es el pico de arranque y qué decide?",
+      "opciones": [
+        "La potencia mucho mayor que un motor pide durante una fracción de segundo al arrancar, para vencer la inercia.",
+        "Puede ser de tres a siete veces la potencia nominal, y los compresores y bombas están en la parte alta del rango.",
+        "Dimensiona el inversor, mientras que la energía diaria dimensiona paneles y batería.",
+        "Viene declarado en la etiqueta de todos los aparatos con motor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No viene en la etiqueta: la etiqueta declara la marcha, no el arranque. Hay que medirlo con pinza o suponerlo generoso. Un inversor elegido por el consumo medio funciona perfectamente hasta el día que arranca la bomba con la heladera encendida, y ahí corta — con un síntoma confuso, porque parece que el sistema se apaga solo."
+    },
+    {
+      "id": "evitar-el-pico",
+      "tipo": "opcion_multiple",
+      "enunciado": "Antes de comprar un inversor enorme para cubrir un pico de un segundo, ¿qué alternativas hay?",
+      "opciones": [
+        "Escalonar los arranques para que la bomba no coincida con otras cargas.",
+        "Elegir equipos con arranque suave, que arrancan progresivamente.",
+        "Sacar la carga del inversor: una bomba de continua alimentada directamente se lleva su pico consigo.",
+        "Ignorarlo, porque un pico de un segundo no puede hacer daño."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un pico de un segundo no daña nada, pero hace que el inversor se proteja y corte, que en la práctica significa quedarse sin luz cada vez que arranca la bomba. La tercera opción es tan buena que tiene lección propia: el bombeo solar sin baterías."
+    },
+    {
+      "id": "cuando-consumes",
+      "tipo": "verdadero_falso",
+      "enunciado": "Dos personas con el mismo consumo diario en vatios-hora necesitan el mismo sistema solar.",
+      "respuesta": false,
+      "explicacion": "Falso: importa a qué hora consumen. Lo que se consume mientras el sol produce va del panel a la carga casi directamente y la batería apenas participa. Lo que se consume de noche tiene que haber entrado y salido de la batería, con su pérdida y su desgaste, y exige más capacidad instalada. Por eso la primera optimización de cualquier sistema autónomo no es comprar más panel: es mover al mediodía todo lo que pueda moverse."
+    },
+    {
+      "id": "consumo-vacio",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué importa el consumo en vacío en un sistema pequeño?",
+      "opciones": [
+        "Porque un inversor en espera, un router, un módem o un cargador enchufado consumen aunque no haya nada encendido.",
+        "Porque cada uno es ridículo por separado pero todos juntos suman veinticuatro horas al día, todos los días.",
+        "Porque se mide igual que lo demás y a veces la conclusión es simplemente poner un interruptor.",
+        "Porque son la carga más grande de cualquier instalación."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No son la carga más grande, pero en sistemas chicos pueden ser una fracción sorprendente del total precisamente porque no se apagan nunca. Es la categoría que menos se piensa y la más fácil de reducir."
+    },
+    {
+      "id": "cargas-de-calor",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se hace con las cargas que calientan por resistencia?",
+      "opciones": [
+        "Se sacan del sistema solar: hervidor, plancha, ducha eléctrica, termo, horno.",
+        "Porque son miles de vatios y se comen el presupuesto energético de un día en minutos.",
+        "El agua caliente se resuelve con un calentador solar térmico, que es otra tecnología, más simple y mucho más barata por unidad de calor.",
+        "Se dimensiona el sistema para cubrirlas, que para eso está."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Dimensionar para cubrirlas es lo que multiplica el presupuesto sin necesidad. Y la buena noticia detrás de esta asimetría es que un sistema modesto puede dar una calidad de vida muy alta siempre que el calor se resuelva por otra vía: iluminar bien un galpón toda la noche cuesta menos que hervir agua para dos mates."
+    },
+    {
+      "id": "auditar-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Vas a auditar el consumo del vivero y de la casa antes de dimensionar nada. Describe qué mides, con qué instrumentos, durante cuánto tiempo, y qué decisiones de diseño empiezas a tomar con los primeros resultados.",
+      "respuestaModelo": "Monto la planilla con las cargas del vivero y las de la casa por separado, porque tienen perfiles distintos y conviene poder mirarlos aparte antes de sumarlos. Las columnas son carga, potencia real medida, horas al día, días por semana, vatios-hora al día, y una más que casi nadie pone: si la carga es de día, de noche o permanente.\n\nCompro dos instrumentos baratos antes que cualquier equipo solar: un medidor de enchufe, que acumula vatios-hora durante días, y una pinza amperimétrica para lo que está cableado fijo y para ver picos. La etiqueta no sirve: declara el máximo, y casi ningún aparato lo pide de forma continua.\n\nDel lado del vivero mido cuatro cosas: la bomba, que es la carga grande y la del pico; la iluminación del galpón; las herramientas eléctricas, anotando días por semana porque no se usan a diario; y el consumo permanente del rincón de registro, con router, cargadores y el nodo de sensores. Del lado de la casa, la heladera es la mayor consumidora continua y merece dos semanas de medición, una en pleno calor y otra en época fresca, porque con temperaturas de verano por encima de treinta y cinco grados el compresor trabaja mucho más y el consumo de enero puede sorprender a quien dimensionó con datos de invierno.\n\nEl pico de arranque de la bomba lo mido con la pinza; si no puedo, supongo un factor generoso sobre su potencia nominal. Ese número no dimensiona el arreglo ni la batería: dimensiona el inversor, y es lo que decide si el sistema se apaga solo los días de riego.\n\nCon los primeros resultados tomo tres decisiones. Primera: todo lo que calienta por resistencia sale del sistema desde el día uno. En el llano un termotanque solar da agua caliente casi gratis buena parte del año, y calentar con electricidad almacenada en baterías es la forma más cara que existe; cocinar, a gas. Esa sola decisión puede reducir el sistema a la mitad. Segunda: qué cargas quedan en continua y cuáles necesitan alterna, porque todo lo que pueda quedarse en continua evita la pérdida del inversor y permite apagarlo. Tercera: qué cargas puedo mover al mediodía. El riego y el lavado de bandejas pueden programarse con sol, y cada carga que muevo al día es batería que no compro.\n\nY registro con fechas para poder repetir la medición. Con dos ciclos voy a tener el perfil estacional del vivero, que es exactamente lo que ninguna calculadora en línea puede darme.",
+      "criterios": [
+        "Separa vivero y casa y monta la planilla con las seis columnas, incluida día o noche.",
+        "Compra medidor de enchufe y pinza antes que cualquier equipo solar.",
+        "Explica por qué la etiqueta no sirve y mide al menos una semana por carga.",
+        "Mide la heladera en la estación calurosa por la estacionalidad del compresor.",
+        "Mide o supone el pico de arranque de la bomba y lo asigna al inversor.",
+        "Saca del sistema las cargas de calor y propone termotanque solar y gas.",
+        "Decide qué queda en continua para evitar la pérdida del inversor.",
+        "Mueve cargas al mediodía para reducir el banco de baterías.",
+        "Registra con fecha para obtener el perfil estacional con dos ciclos."
+      ],
+      "explicacion": "Fíjate en que ninguna de las tres decisiones de diseño requiere haber comprado un solo panel, y las tres cambian el tamaño y el precio del sistema. Medir antes de comprar no es prudencia: es la única forma de que el dimensionado tenga entrada real en lugar de supuestos."
+    }
+  ]
+}

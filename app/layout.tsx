@@ -70,6 +70,19 @@ export default async function LayoutRaiz({ children }: { children: React.ReactNo
             </p>
             <p>2.474 m² · Estrellas del Sur, Zanja Honda · Santa Cruz de la Sierra</p>
           </div>
+          <div className="seccion mt-4 text-sm text-tinta-500 dark:text-crema-100/45">
+            <p>
+              Made by{' '}
+              <a
+                href="https://bolivai.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-bosque-700 underline-offset-2 hover:underline dark:text-salvia-300"
+              >
+                BolivAI
+              </a>
+            </p>
+          </div>
         </footer>
       </body>
     </html>

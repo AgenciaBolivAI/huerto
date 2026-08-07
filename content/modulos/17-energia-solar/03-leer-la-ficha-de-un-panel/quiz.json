@@ -1,0 +1,95 @@
+{
+  "preguntas": [
+    {
+      "id": "curva",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué una ficha declara dos tensiones y dos corrientes distintas?",
+      "opciones": [
+        "Porque el panel no tiene un punto de trabajo fijo sino una curva entera, y trabaja donde lo lleve lo que se le conecte.",
+        "Con los bornes sueltos la corriente es cero y la tensión sube a su máximo: eso es Voc.",
+        "Con los bornes unidos la tensión cae a cero y la corriente sube a su máximo: eso es Isc.",
+        "Porque Voc e Isc son los valores que el panel entrega en funcionamiento normal."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "En esos dos extremos el panel no entrega ninguna potencia, porque en uno la corriente es cero y en el otro lo es la tensión. La potencia sale del codo de la curva, en el punto de máxima potencia, cuyas coordenadas son Vmp e Imp — siempre menores que Voc e Isc respectivamente."
+    },
+    {
+      "id": "condiciones-ensayo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un panel etiquetado como de 550 W entrega 550 W en un buen día de sol en el techo.",
+      "respuesta": false,
+      "explicacion": "Falso. Esa cifra se mide con mil vatios por metro cuadrado de radiación y la celda a 25 grados, y esas dos condiciones casi no pueden darse a la vez: si hay sol suficiente para esa radiación, la celda está a cincuenta o sesenta grados y la temperatura ya se llevó un pedazo. Las condiciones de ensayo existen para comparar paneles entre sí, no para predecir producción."
+    },
+    {
+      "id": "voc-frio",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuándo alcanza tu arreglo su tensión máxima absoluta y por qué importa?",
+      "opciones": [
+        "En la mañana más fría del año, con el arreglo iluminado y sin nada consumiendo.",
+        "Porque el frío sube la tensión, de forma simétrica a como el calor la baja.",
+        "Porque si esa tensión supera el límite de entrada del regulador o inversor, el equipo se rompe, y suele ser un daño no cubierto por garantía.",
+        "Al mediodía del día más caluroso, que es cuando hay más radiación."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Al mediodía caluroso hay mucha radiación y poca tensión, precisamente porque el calor la baja. El momento peligroso es el amanecer despejado de un surazo: máxima tensión, sin carga conectada. Por eso la regla es sumar los Voc de la cadena corregidos por la temperatura mínima esperada, y no los Vmp."
+    },
+    {
+      "id": "sumar-voc",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para saber si el regulador aguanta una cadena de paneles en serie se suman sus tensiones de trabajo.",
+      "respuesta": false,
+      "explicacion": "Falso: se suman las tensiones en vacío, corregidas además por la temperatura mínima esperada. Sumar Vmp es el error habitual y da una falsa sensación de holgura, porque Vmp es siempre menor que Voc. Es un cálculo de cinco minutos con el coeficiente de la ficha, y es el único de este módulo donde equivocarse rompe hardware el primer día."
+    },
+    {
+      "id": "medir-antes",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué haces antes de conectar el arreglo al regulador?",
+      "opciones": [
+        "Medir la tensión en los bornes del arreglo con un multímetro, sin carga.",
+        "Comparar esa medición con el valor calculado para ver si coincide.",
+        "Si no coincide, buscar el panel mal conectado o el dato mal leído antes de conectar nada.",
+        "Conectar y ver si el regulador enciende, que es la prueba definitiva."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Conectar para ver qué pasa es exactamente lo que no hay que hacer con tensiones que pueden estar por encima del límite del equipo. Es mejor descubrir una discrepancia con un multímetro que con humo."
+    },
+    {
+      "id": "comparar-ofertas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Tienes tres ofertas de paneles sobre la mesa. ¿Cómo las ordenas?",
+      "opciones": [
+        "Dividiendo precio entre potencia máxima para obtener el precio por vatio de cada una.",
+        "Comprobando con Voc cuántos paneles caben en serie sin pasarte del límite del regulador.",
+        "Desempatando por coeficiente de temperatura, porque en clima cálido esa diferencia se cobra todos los días.",
+        "Eligiendo directamente el panel de más vatios de etiqueta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El panel de más vatios puede ser el más caro por vatio. Y hay una comprobación de sensatez que atrapa fichas dudosas: Pmax debería ser aproximadamente Vmp por Imp. Si no cuadra, la ficha está mal transcrita o inventada, y eso dice bastante de quién la vende."
+    },
+    {
+      "id": "coeficiente-desempate",
+      "tipo": "verdadero_falso",
+      "enunciado": "Entre dos paneles con el mismo precio por vatio, el coeficiente de temperatura es un detalle menor.",
+      "respuesta": false,
+      "explicacion": "Falso en clima cálido. Con la celda a sesenta grados, un panel con coeficiente de 0,45 % por grado pierde alrededor de un dieciséis por ciento y otro de 0,29 % algo más de un diez: seis puntos de diferencia que se repiten todos los días calurosos del año. A lo largo de la vida del sistema equivale a haber pagado por paneles que no vas a tener."
+    },
+    {
+      "id": "elegir-y-comprobar",
+      "tipo": "abierta",
+      "enunciado": "Vas a comprar paneles y un regulador para el vivero. Describe qué datos pides antes de comprar, qué cálculo haces para no quemar el regulador, y qué compruebas el día que llegan los equipos y el día que los conectas.",
+      "respuestaModelo": "Antes de comprar pido la ficha técnica de cada panel ofertado, no la etiqueta ni la palabra del vendedor. Un panel sin ficha disponible es un panel sin garantía real, diga lo que diga la etiqueta. Con las fichas monto una planilla comparativa: una fila por modelo y columnas para potencia máxima, tensión y corriente de trabajo, tensión en vacío, corriente de cortocircuito, coeficiente de temperatura, dimensiones, peso, garantía de potencia, precio y precio por vatio calculado.\n\nEl precio por vatio es el número de compra, porque tengo terreno y el espacio no es mi limitante: no me interesa la máxima eficiencia por metro cuadrado sino el menor costo por vatio instalado. Y desempato por coeficiente de temperatura, que en Santa Cruz pesa más que en casi cualquier otro sitio: entre dos paneles equivalentes, el de coeficiente más suave produce más todos los días calurosos del año.\n\nEl cálculo que hago antes de elegir regulador es el de tensión en vacío corregida por frío. Tomo el Voc de la ficha, que está medido a 25 grados, y lo corrijo con el coeficiente de temperatura hasta la temperatura mínima que espero: una mañana de surazo con cielo limpio, que aquí puede bajar a unos diez grados o menos. Ese Voc corregido lo multiplico por el número de paneles que voy a poner en serie, y elijo un regulador cuyo límite de tensión de entrada quede claramente por encima de ese total, con margen. Sumo Voc y no Vmp, que es el error habitual y da una falsa holgura. También compruebo que el regulador aguante la corriente del arreglo, mirando Isc.\n\nEl día que llegan los equipos comparo la ficha que me mandaron con la etiqueta física del panel entregado. Es una comprobación de treinta segundos y detecta la sustitución de modelo, que es la sorpresa más común al recibir mercadería. Y guardo en una carpeta el PDF de cada equipo, la factura y una foto del número de serie, porque dentro de años eso es lo que sostiene una garantía de potencia o permite ampliar con paneles compatibles.\n\nEl día de conectar, antes de enchufar nada al regulador, mido con multímetro la tensión en los bornes del arreglo, sin carga, con sol de la mañana. Comparo esa medición con el valor que calculé. Si coincide, conecto. Si no coincide, busco el panel mal conectado o el dato mal leído antes de tocar el regulador — es mejor encontrar el problema con un multímetro que con humo.\n\nY una vez funcionando, registro producción para poder compararla con lo esperado según radiación y temperatura del día. Así, si un mes rinde menos, el problema es medible —suciedad, una sombra nueva, una conexión floja— y no una sensación.",
+      "criterios": [
+        "Pide fichas técnicas y monta una planilla comparativa con los siete datos.",
+        "Usa precio por vatio como criterio de compra y justifica por qué no eficiencia.",
+        "Desempata por coeficiente de temperatura y explica el peso en clima cálido.",
+        "Calcula Voc corregido por temperatura mínima y lo multiplica por los paneles en serie.",
+        "Aclara que se suman Voc y no Vmp, y deja margen sobre el límite del regulador.",
+        "Comprueba también que el regulador aguante la corriente mirando Isc.",
+        "Contrasta ficha contra etiqueta física al recibir y archiva fichas y facturas.",
+        "Mide con multímetro sin carga antes de conectar y compara con lo calculado.",
+        "Prevé registrar producción real para compararla con la esperada."
+      ],
+      "explicacion": "Toda la lección se resume en dos ideas: los números de la ficha son de laboratorio y hay que traducirlos, y uno de ellos —Voc en frío— no admite aproximación porque rompe equipos. El resto son criterios de compra; ese es una condición de diseño."
+    }
+  ]
+}

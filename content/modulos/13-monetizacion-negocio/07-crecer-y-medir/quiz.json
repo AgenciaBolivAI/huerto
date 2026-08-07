@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "cinco-numeros",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué cinco números bastan para llevar un vivero pequeño?",
+      "opciones": [
+        "Cuántas se pierden —la merma— y cuánto deja cada una —el margen por especie—.",
+        "Qué proporción de clientes repite y cuántos minutos por planta llevan las operaciones.",
+        "Cuánto deja cada metro cuadrado y año, que es el que ordena el catálogo.",
+        "Todos los datos posibles, porque cuanto más se mide mejor se decide."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Medirlo todo es un error aquí, porque el costo de anotar lo paga el mismo tiempo que produce, y un sistema de registro que no se sostiene deja de existir en tres semanas. Cinco indicadores anotados de verdad valen más que veinte estimados de memoria."
+    },
+    {
+      "id": "el-registro",
+      "tipo": "verdadero_falso",
+      "enunciado": "Conviene construir primero una buena herramienta de registro y después empezar a anotar los datos.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error clásico de un perfil técnico. El dato se anota en el momento o no se anota nunca, y en el momento tienes las manos sucias: una libreta a pie de bancal funciona y una aplicación que exige sentarse a cargar datos, no. Primero tres meses en papel para descubrir qué hace falta de verdad; después automatizar."
+    },
+    {
+      "id": "cuello-de-botella",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué implica que solo un recurso limite el crecimiento en cada momento?",
+      "opciones": [
+        "Ampliar cualquiera de los otros dos no produce ningún efecto.",
+        "Comprar más terreno cuando el límite es el tiempo solo aumenta el terreno vacío.",
+        "Al resolver el cuello de botella este no desaparece: se mueve a otro sitio.",
+        "El espacio es el primer límite que aparece en un vivero pequeño."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El espacio es lo que la intuición señala primero, pero suele ser el último de los tres: en un vivero pequeño el primer cuello de botella es casi siempre el tiempo y el segundo la caja. Y como el cuello se mueve, identificarlo hay que repetirlo después de cada mejora."
+    },
+    {
+      "id": "crecer-amplifica",
+      "tipo": "verdadero_falso",
+      "enunciado": "Crecer amplifica los errores, así que la bioseguridad hay que reforzarla antes de aumentar el volumen y no después.",
+      "respuesta": true,
+      "explicacion": "Correcto: un problema que se contenía en un bancal cruza todo el vivero cuando hay diez bancales. Y crecer también consume calidad si no se prepara, porque más plantas con el mismo tiempo significa menos atención por planta, más merma y más reclamos."
+    },
+    {
+      "id": "cuando-no-crecer",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué señales indican que todavía no toca crecer?",
+      "opciones": [
+        "La merma sigue alta: producir más plantas para perder más plantas no es crecimiento.",
+        "No hay datos del ciclo anterior, así que crecer sería apostar en vez de decidir.",
+        "No hay caja, y crecer aumenta el capital de trabajo antes que los ingresos.",
+        "La demanda supera a la producción actual."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Que la demanda supere a la producción es precisamente una razón para crecer, no para frenarse; el resto son condiciones bloqueantes. La tercera es la que más sorprende: crecer empeora la caja a corto plazo, justo cuando el negocio está más expuesto."
+    },
+    {
+      "id": "el-productor-cuello",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el vivero solo funciona porque el productor está allí todos los días, está listo para crecer siempre que haya demanda.",
+      "respuesta": false,
+      "explicacion": "Falso: crecer sin escribir cómo se hacen las cosas convierte al productor en el cuello de botella permanente. Escribir los procedimientos —sustrato, siembra, repique, riego, sanidad, entrega— es lo que permite delegar sin perder calidad, aunque de momento las haga una sola persona."
+    },
+    {
+      "id": "ciclo-de-mejora",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué consiste el ciclo de mejora y por qué importa?",
+      "opciones": [
+        "Anotar, comparar, cambiar una sola cosa y volver a medir.",
+        "La comparación es lo que convierte números en información: un dato aislado no dice nada.",
+        "Produce conocimiento local que no existe en ningún manual.",
+        "Conviene cambiar varias cosas a la vez para avanzar más rápido."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Si cambias tres cosas y mejora, no sabes cuál fue y no puedes repetirlo. El ciclo es el método experimental aplicado a un vivero, y después de dos o tres vueltas la libreta vale más que cualquier bibliografía: cualquiera puede comprar la misma malla, pero nadie tiene tus anotaciones."
+    },
+    {
+      "id": "crecer-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define el sistema de medición y la política de crecimiento de Rizoma del Sur, y explica qué esperas que sea el cuello de botella.",
+      "respuestaModelo": "Mido cinco números y ninguno más: merma por lote y por especie, margen de contribución por especie, proporción de clientes que repiten, minutos por planta en las operaciones principales, y margen por metro cuadrado y año. La tentación de instrumentarlo todo hay que resistirla, porque el costo de anotar lo paga el mismo tiempo que produce, y un registro que no se sostiene deja de existir en tres semanas.\n\nLos anoto en papel, a pie de bancal, al menos durante el primer ciclo completo. El dato se anota en el momento o no se anota nunca, y en el momento tengo barro en las manos. Capturo en el sitio con lo que sea —libreta, foto, nota de voz— y paso a limpio después si hace falta: lo que se apunta importa más que dónde se apunta.\n\nY me resisto explícitamente a construir la herramienta antes de tener los datos, que es el error clásico de mi perfil. Primero tres meses de libreta para descubrir qué necesito de verdad; después automatizo lo que valga la pena.\n\nAntes de invertir en nada identifico cuál es el cuello de botella activo. Espero que sea el tiempo, y en segundo lugar la caja. El espacio, que es lo que la intuición señala primero, será probablemente el último de los tres, porque con 2.474 m² bien usados y rotación alta el techo real lo pone el tiempo disponible mucho antes que la superficie. Ampliar el recurso que no limita no produce ningún efecto: comprar más terreno cuando falta tiempo solo da más terreno vacío, y contratar cuando falta caja solo sube los costos fijos y con ellos el punto de equilibrio.\n\nY repito esa identificación después de cada mejora, porque el cuello no desaparece: se mueve a otro sitio.\n\nEn consecuencia, las decisiones de crecimiento pasan casi siempre por especies de mayor margen por metro y año, no por más metros.\n\nCrezco por escalones y no de golpe. Crecer amplifica los errores: un problema sanitario que se contenía en un bancal cruza todo el vivero, y la bioseguridad no escala sola, así que la refuerzo antes de crecer y no después. Y crecer consume calidad si no se prepara: más plantas con el mismo tiempo significa menos atención por planta, más merma y más reclamos, lo cual da un vivero más grande que gana menos y tiene peor reputación.\n\nNo crezco si la merma sigue alta, si no tengo datos del ciclo anterior o si no tengo caja. Las tres son bloqueantes, y la de la caja es la que más daño hace porque crecer aumenta el capital de trabajo antes que los ingresos.\n\nEscribo cómo se hacen las cosas —preparación de sustrato, siembra, repique, riego, sanidad, entrega— aunque de momento las haga yo solo. Si el vivero solo funciona porque estoy yo todos los días, no está listo para ser más grande, y sin procedimientos escritos me convierto en el cuello de botella permanente.\n\nAplico el ciclo de mejora: anoto, comparo lote contra lote y temporada contra temporada, cambio una sola cosa por vez, y vuelvo a medir. Una sola, porque si cambio tres y mejora no sé cuál fue.\n\nAntes de contratar ayuda consulto las obligaciones laborales con un contador local, y averiguo el costo del jornal en la zona, que es el dato que decide a partir de qué punto conviene contratar. También reviso con el contador si crecer en volumen cambia el marco tributario aplicable, antes de dar el salto y no después. Y si el crecimiento lleva hacia especies o volúmenes con requisitos de registro o fitosanitarios, lo consulto con la autoridad competente antes de comprometerme con un cliente.\n\nPor último, decido de antemano hasta dónde quiero llegar: un vivero pequeño y bien llevado responde más rápido, produce especies que a uno grande no le compensan y trata directamente con el cliente. Crecer hasta perder esas ventajas sería un mal negocio.\n\nEl ciclo produce el activo que nadie puede copiar: conocimiento local sobre el suelo, el clima, las especies y el mercado de Zanja Honda. Cualquiera compra la misma malla; nadie tiene tres años de anotaciones de este sitio.",
+      "criterios": [
+        "Limita la medición a los cinco indicadores y los nombra.",
+        "Elige papel a pie de bancal y justifica la baja fricción.",
+        "Rechaza construir la herramienta antes de tener datos.",
+        "Identifica el cuello de botella antes de invertir.",
+        "Prevé que sea el tiempo y no el espacio, con justificación.",
+        "Entiende que el cuello se mueve tras cada mejora.",
+        "Orienta el crecimiento a margen por metro y no a más metros.",
+        "Crece por escalones y refuerza la bioseguridad antes.",
+        "Enumera las tres condiciones bloqueantes para no crecer.",
+        "Escribe procedimientos para no ser el cuello de botella.",
+        "Aplica el ciclo cambiando una sola variable por vez.",
+        "Consulta obligaciones laborales, tributarias y fitosanitarias antes de crecer."
+      ],
+      "explicacion": "El módulo entero descansa en una frase: en un vivero pequeño el recurso escaso no es el terreno ni el dinero, es el tiempo del que lo lleva. Casi todas las decisiones correctas salen de tomarse esa frase en serio, y esta lección es donde se convierte en método."
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+Hay un negocio que gana dinero, tiene precios correctos, márgenes sanos y supera holgadamente su punto
+de equilibrio, y aun así cierra.
+
+No es una paradoja: **la ganancia y el dinero disponible son dos cosas distintas**, y en un vivero —donde
+todo se gasta meses antes de cobrarse y donde la demanda se concentra en unas semanas del año— la
+diferencia entre las dos es lo que decide si el negocio sobrevive a su primer año.
+
+## El dinero no entra cuando sale
+
+<Diagrama
+  src="el-dinero-no-entra-cuando-sale.webp"
+  alt="Dos líneas de tiempo horizontales dibujadas una encima de la otra, ocupando todo el ancho, cada una como un eje horizontal liso con doce marcas pequeñas repartidas por igual y sin ninguna palabra sobre ellas. En la línea de tiempo superior hay barras terracota que apuntan hacia abajo por debajo del eje, altas y apretadas sobre la mitad izquierda y muy cortas sobre la mitad derecha. En la línea inferior hay barras verde bosque que apuntan hacia arriba por encima del eje, casi inexistentes sobre la mitad izquierda y muy altas y apretadas solo sobre la mitad derecha. Entre las dos líneas de tiempo, hacia el centro, hay una flecha vertical fina de dos puntas que marca la separación entre lo que se gasta y lo que se cobra. Tres franjas de rótulo con líneas de llamada finas: una a la línea de tiempo superior dice PRIMERO SE GASTA; otra a la inferior dice DESPUÉS SE COBRA; y otra a la flecha de dos puntas dice ESTE HUECO ES EL PROBLEMA. Arriba, EL DINERO NO ENTRA CUANDO SALE."
+  pie="El gasto va por delante y el ingreso va por detrás. Esa distancia hay que financiarla."
+/>
+
+En un vivero, el desfase tiene tres causas que se suman:
+
+**El ciclo productivo.** El sustrato, el envase, la semilla y el trabajo se pagan al empezar; la planta
+se vende meses después. Cuanto más lenta la especie, más largo el desfase: un frutal injertado puede
+tardar más de un año en convertirse en dinero.
+
+**La estacionalidad de la demanda.** La gente planta cuando llegan las lluvias, así que las ventas se
+concentran en unas semanas. **Y para llegar con producto listo hay que haber gastado en la peor época**,
+que es justo cuando no entra nada.
+
+**Los plazos de cobro.** El canal institucional y algunos revendedores pagan a treinta, sesenta o
+noventa días. La venta ya ocurrió, el margen ya se ganó, y el dinero todavía no está.
+
+<Formula explicacion="La necesidad de caja es la suma de todo lo que hay que pagar durante el periodo en que no entra dinero, más un colchón. Es la cantidad que hay que tener disponible al empezar el ciclo para poder llegar hasta el primer cobro sin ahogarse.">
+caja necesaria = gastos mensuales × meses hasta el primer cobro + colchón de imprevistos
+</Formula>
+
+<Analogia>
+Es exactamente **la latencia de una petición frente a su rendimiento.**
+
+Un sistema puede procesar mucho y aun así fallar si cada petición tarda demasiado y no hay suficientes
+conexiones libres para las que llegan mientras tanto. El rendimiento total no salva a nadie del
+agotamiento del pool.
+
+**El dinero funciona igual: no basta con que el año cierre en positivo si en marzo no hay con qué
+pagar.** El negocio no muere por falta de rentabilidad, muere por falta de recursos disponibles en un
+momento concreto.
+
+Y la solución es la misma en ambos casos: **dimensionar el pool para el pico, no para el promedio.**
+</Analogia>
+
+## Ganar no es tener
+
+<Diagrama
+  src="ganar-no-es-tener.webp"
+  alt="Dos paneles lado a lado. Panel izquierdo, marcado con una cruz roja en la esquina: una pila alta de monedas dibujada en verde bosque de pie en el suelo, y a su lado una billetera abierta completamente vacía apoyada en plano, claramente sin nada dentro. Debajo, una franja de rótulo que dice CON GANANCIA Y SIN PLATA. Panel derecho, marcado con una tilde verde en la esquina: una pila de monedas mucho más baja de pie en el suelo, y a su lado una billetera abierta con unas cuantas monedas visibles dentro. Debajo, una franja que dice CON MENOS GANANCIA Y CON PLATA. Arriba, GANAR NO ES TENER."
+  pie="La pila alta es la ganancia del ejercicio. La billetera es lo que puedes usar hoy. No son lo mismo."
+/>
+
+La distinción exacta:
+
+**La ganancia es un resultado del periodo:** ventas menos costos, contadas cuando ocurren. Es la
+respuesta a «¿este negocio funciona?».
+
+**La caja es el dinero disponible ahora mismo:** lo que entró menos lo que salió, contado cuando se
+mueve. Es la respuesta a «¿puedo pagar esto hoy?», y seguirla mes a mes es lo que se
+llama <Termino slug="flujo-de-caja">flujo de caja</Termino>.
+
+Se separan porque **hay gastos que no son de este mes pero se pagan este mes**, y ventas que ya
+ocurrieron pero se cobran el mes que viene. Un lote grande sembrado en agosto es dinero que sale en
+agosto y ganancia que aparece en diciembre.
+
+<Advertencia>
+Y aquí está el error que más viveros pequeños hunde: **confundir caja con ganancia en el mes bueno.**
+
+Llega el pico de ventas, entra mucho dinero de golpe, y parece que sobra. Pero **una parte grande de
+ese dinero no es ganancia: es
+el <Termino slug="capital-de-trabajo">capital de trabajo</Termino> que hay que volver a poner** para
+producir el ciclo siguiente, que arranca inmediatamente después.
+
+Gastarlo como si fuera beneficio deja al vivero sin con qué producir justo cuando toca sembrar, y el
+año siguiente empieza con menos producción, menos ventas y menos caja todavía. **Es una espiral que se
+cierra sola.**
+
+La regla práctica: **cuando llega el pico, aparta primero lo que cuesta producir el ciclo siguiente.**
+Lo que queda después de eso, y solo eso, es lo que hay disponible.
+</Advertencia>
+
+## No pongas todo en un pico
+
+<Diagrama
+  src="no-pongas-todo-en-un-pico.webp"
+  alt="Una cuadrícula grande de calendario dibujada como un rectángulo ancho dividido en celdas iguales vacías repartidas en dos filas, sin ninguna palabra ni número dentro de ninguna celda. Sobre las celdas de la mitad izquierda hay dibujado un único símbolo de planta en maceta muy grande que ocupa varias celdas de golpe. Sobre las celdas de la mitad derecha hay seis símbolos de planta pequeños repartidos por igual entre las celdas, cada uno de forma distinta a los demás. Dos franjas de rótulo bajo la cuadrícula: una bajo la mitad izquierda dice TODO EN UNA FECHA; y otra bajo la mitad derecha dice REPARTIDO EN EL CALENDARIO. Arriba, NO PONGAS TODO EN UN PICO."
+  pie="La demanda se concentra, pero la producción no tiene por qué. Repartirla suaviza la caja."
+/>
+
+No se puede cambiar cuándo la gente quiere plantar, pero **sí se puede cambiar de qué depende el
+vivero.** Cuatro estrategias, en orden de facilidad:
+
+**Especies de ciclo corto entre medias.** Culantro, hortalizas de hoja, aromáticas. Rotan en semanas,
+no en meses, y **generan ingresos en los meses muertos**. Su margen por planta es bajo, pero su función
+aquí no es el margen: es la caja.
+
+**Escalonar las siembras.** En vez de un lote enorme apuntando al pico, varios lotes con semanas de
+diferencia. Reparte el gasto, reparte la disponibilidad y reduce el riesgo de que un problema arruine
+toda la producción de golpe.
+
+**Productos que no son plantas.** Sustrato preparado, compost, envases, tutores, asesoramiento. Se
+venden todo el año y usan capacidad que ya está instalada.
+
+**Y el encargo anticipado**, que ya apareció en la lección anterior y que aquí muestra su verdadero
+valor: **una seña por adelantado convierte el problema de caja en su contrario**, porque el dinero
+entra antes del gasto en vez de después.
+
+<Dato>
+Hay una consecuencia de la estacionalidad que conviene decir sin rodeos: **un vivero pequeño y nuevo
+casi siempre necesita un ingreso externo durante el primer ciclo.**
+
+No es un fracaso ni una señal de mal diseño. Es aritmética: se gasta durante meses antes de la primera
+venta significativa, y ese dinero tiene que salir de algún lado.
+
+Reconocerlo de antemano permite planificarlo —ahorro previo, ingreso paralelo, escalonamiento del
+arranque— en vez de descubrirlo a mitad de camino y tener que malvender producción inmadura, que es la
+peor decisión posible: **una planta vendida antes de tiempo destruye margen y reputación a la vez.**
+</Dato>
+
+## La caja es un tanque
+
+<Diagrama
+  src="la-caja-es-un-tanque.webp"
+  alt="Un tanque de agua grande dibujado en corte, de pie en el centro, con una línea horizontal de nivel mínimo claramente marcada baja en su interior y el agua por debajo de esa línea dibujada en azul pálido. Por la parte superior izquierda entra una tubería de golpe, dibujada como una flecha gruesa que llega toda de una vez. Por la parte inferior derecha sale una tubería en forma de hilo fino y constante, dibujada como una pequeña flecha continua. Tres franjas de rótulo con líneas de llamada finas: una a la entrada de golpe dice ENTRA DE GOLPE; otra al hilo de salida constante dice SALE TODO EL TIEMPO; y otra a la línea de nivel mínimo marcada dice NUNCA BAJES DE AQUÍ. Arriba, LA CAJA ES UN TANQUE."
+  pie="Es exactamente el mismo problema que el tanque de riego: entrada concentrada, salida continua y un mínimo que no se toca."
+/>
+
+La herramienta que resuelve esto es sencilla y cabe en una hoja: **un flujo de caja mensual.** Doce
+columnas, y en cada una tres líneas:
+
+**Lo que va a entrar ese mes.** Ventas previstas por canal, con el mes en que se cobran de verdad y no
+el mes en que se venden. Esa distinción es todo el punto del ejercicio.
+
+**Lo que va a salir ese mes.** Insumos del ciclo que arranca, gastos fijos, y cualquier pago
+comprometido.
+
+**Y el saldo acumulado.** La suma de todo lo anterior arrastrada mes a mes. **Es la línea que importa**,
+y lo que hay que buscar es el mes en que se pone más baja.
+
+Ese mes es el que dimensiona la caja necesaria. Si el saldo cae por debajo de cero en algún punto, el
+negocio no es inviable: **hay que mover algo antes de llegar ahí.**
+
+<Dato>
+Es el mismo problema del tanque de agua del módulo de riego, y conviene aprovechar la analogía porque
+ya está construida:
+
+**Entrada concentrada, salida continua, y un volumen que hay que dimensionar por el periodo peor y no
+por el promedio anual.** Igual que el tanque no se calcula con la lluvia media del año sino con el mes
+crítico, la caja no se calcula con la ganancia anual sino con el mes de saldo mínimo.
+
+**Y hay un nivel mínimo que no se toca.** En el tanque, para no quedarse sin agua ante un imprevisto.
+En la caja, para poder responder ante una rotura, una plaga o una entrega que se retrasa. Un negocio
+que opera con la caja en cero **no tiene margen de maniobra: cualquier sorpresa lo detiene.**
+</Dato>
+
+<AplicarRizoma>
+**Rizoma arranca con un flujo de caja mensual de doce columnas antes de sembrar el primer lote**, y se
+mantiene durante todo el primer año contrastándolo con lo real.
+
+**Las entradas se anotan en el mes en que se cobran, no en el que se venden.** Con canal institucional
+en el plan, esa diferencia puede ser de dos o tres meses y es exactamente lo que hunde a un negocio que
+solo mira la ganancia.
+
+**El mes de saldo mínimo es el número que hay que encontrar**, porque es el que dimensiona la caja
+necesaria: gastos mensuales por los meses hasta el primer cobro, más colchón. Ese cálculo se hace
+antes, no cuando aparece el problema.
+
+**El desfase es previsible y grande en este proyecto**, porque el catálogo tiene especies lentas —
+frutales injertados, árboles de sombra, plátano— que tardan mucho en convertirse en dinero, y porque
+para llegar con producto al arranque de las lluvias hay que haber gastado durante toda la época seca,
+que es cuando no entra nada.
+
+**Por eso las especies de ciclo corto tienen una función de caja y no solo de margen.** El culantro y
+las hortalizas de hoja rotan en semanas y generan ingresos en los meses muertos: su margen por planta
+es bajo, pero mantienen el vivero funcionando mientras los frutales maduran. Sacarlas del catálogo por
+margen bajo sería un error, aunque el cálculo de la lección anterior invite a hacerlo.
+
+**Las siembras se escalonan**, en vez de concentrar un lote enorme apuntando al pico. Reparte el gasto,
+reparte la disponibilidad y evita que un solo problema sanitario se lleve toda la producción del año.
+
+**Se aprovechan productos que no son plantas**: sustrato preparado, compost del propio proceso,
+asesoramiento. Se venden todo el año y usan capacidad ya instalada.
+
+**Cuando llegue el pico de ventas, primero se aparta lo que cuesta producir el ciclo siguiente.** Ese
+dinero no es ganancia y gastarlo como si lo fuera es lo que cierra viveros.
+
+**Y se asume desde ahora que el primer ciclo probablemente necesite un ingreso externo.** No es un
+fallo del plan: es aritmética. Planificarlo permite evitar la peor salida posible, que es malvender
+producción inmadura y destruir margen y reputación a la vez.
+
+**El objetivo declarado sigue siendo mover producción hacia el encargo anticipado con seña**, porque
+invierte el signo del problema: el dinero entra antes del gasto.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La estacionalidad aquí es muy marcada y previsible**, y eso es una ventaja: la demanda de plantación
+se concentra al arranque de las lluvias, en torno a octubre y noviembre, y decae en la época seca. Se
+puede planificar con anticipación porque el calendario se repite.
+
+**Pero el gasto va justo al revés**: para llegar con producto listo en octubre hay que haber comprado
+insumos y trabajado durante la seca, que es cuando además hay que regar más y no entra dinero. Es el
+peor cruce posible y hay que preverlo.
+
+**Los plazos de cobro institucionales pueden ser largos**, y varían según la entidad y el tipo de
+contratación. Conviene preguntarlo explícitamente antes de aceptar un pedido grande, porque un pedido
+excelente con noventa días de plazo puede ser inasumible si no hay caja para sostener la espera.
+
+**El acceso a financiamiento para productores pequeños existe en Bolivia a través de distintas
+entidades**, pero las condiciones, requisitos y costos cambian y hay que consultarlos directamente con
+la entidad y con un contador local antes de contar con ellos. Endeudarse para cubrir un desfase
+previsible de caja es razonable; endeudarse para tapar un problema de margen no lo es, y la diferencia
+entre ambos casos la da precisamente el flujo de caja.
+
+**Y el surazo y las lluvias fuertes son eventos de caja además de eventos climáticos.** Una pérdida
+de lote o un daño en la estructura obliga a gastar sin previo aviso, y esa es exactamente la razón del
+nivel mínimo que no se toca.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Con costo, precio, punto de equilibrio, canales y caja, el negocio ya tiene su esqueleto numérico
+completo. Lo que falta es lo que hace que alguien elija este vivero y no otro, y que vuelva: **la marca
+y la relación con el cliente.** No es marketing decorativo —es la diferencia entre vender plantas y
+tener clientes— y es la lección siguiente.

@@ -1,0 +1,109 @@
+{
+  "preguntas": [
+    {
+      "id": "sin-interruptor",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué se dice que un sistema solar no tiene interruptor general de fábrica?",
+      "opciones": [
+        "Porque los paneles producen tensión desde que les da la luz y no se pueden apagar.",
+        "Porque la batería tiene energía almacenada permanentemente y tampoco se puede apagar.",
+        "Porque el seccionador de continua es un interruptor de mantenimiento que tú añades, no algo que venga con el sistema.",
+        "Porque los reguladores modernos no incorporan ningún tipo de corte."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Son dos componentes siempre alimentados y sin modo de mantenimiento: no hay un flag para ponerlos en solo lectura mientras trabajas. Por eso el seccionador de continua no es un lujo, y por eso taparlos con algo opaco es la única forma real de apagar los paneles."
+    },
+    {
+      "id": "orden",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué se conecta la batería primero y los paneles al final?",
+      "opciones": [
+        "Porque el regulador detecta la tensión del banco al arrancar y necesita ver la batería antes que nada.",
+        "Si arranca alimentado solo por los paneles puede configurarse para la tensión equivocada y luego cargar mal el banco.",
+        "Porque conectar los paneles al final y tapados permite manipular todo el cableado de continua sin tensión.",
+        "Porque los paneles se dañan si se conectan antes que la batería."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los paneles no se dañan por el orden: los que sufren son el regulador y la batería. Hay una razón técnica —la detección automática de la tensión del banco— y una de seguridad, y las dos apuntan al mismo orden. Para apagar se hace exactamente al revés."
+    },
+    {
+      "id": "medir-antes",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se mide antes de enchufar el arreglo al regulador?",
+      "opciones": [
+        "La tensión en vacío del arreglo, y si supera el límite de entrada del regulador no se conecta.",
+        "La polaridad, porque el color del cable pudo haberse invertido en un empalme.",
+        "La ausencia de continuidad entre cualquier polo del arreglo y el marco metálico.",
+        "La potencia de salida en vatios, con el multímetro en escala de potencia."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un multímetro no mide potencia directamente en esa configuración. Las tres primeras medidas toman dos minutos y evitan la mayoría de los desastres de puesta en marcha: conectar un panel con polaridad invertida puede destruir un regulador al instante."
+    },
+    {
+      "id": "linea-base",
+      "tipo": "verdadero_falso",
+      "enunciado": "Anotar las medidas del día uno es opcional, porque siempre se pueden volver a medir más adelante.",
+      "respuesta": false,
+      "explicacion": "Falso. Podrás volver a medir, pero no tendrás contra qué comparar. Dentro de tres años, cuando el sistema rinda menos, la pregunta será si es degradación normal, suciedad o avería, y sin los números iniciales solo queda adivinar. Es el mismo instinto que guardar el resultado de un benchmark antes de optimizar: sin medición previa no hay medición posterior."
+    },
+    {
+      "id": "reapriete",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué se reaprietan todas las conexiones a tornillo una semana después del montaje?",
+      "opciones": [
+        "Porque el cobre fluye ligeramente bajo presión y una conexión apretada en frío se afloja tras los primeros ciclos térmicos.",
+        "Porque ese aflojamiento produce exactamente el contacto de alta resistencia que se calienta y termina fallando.",
+        "Porque un reapriete a la semana y otro a los seis meses eliminan el problema de raíz.",
+        "Porque el instalador nunca aprieta lo suficiente la primera vez."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es cuestión de descuido: es una propiedad del material. El cobre cede lentamente bajo la presión del tornillo, y ese pequeño aflojamiento inicia el mismo lazo térmico que arruina los conectores mal prensados."
+    },
+    {
+      "id": "limpieza",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se limpia un panel sin dañarlo?",
+      "opciones": [
+        "Temprano por la mañana o al atardecer, nunca al mediodía, porque el vidrio caliente con agua fría se fisura.",
+        "Con agua limpia y paño o cepillo suave, sin detergente ni cerdas duras ni hidrolavadora.",
+        "Desde el suelo con un mango largo, porque subirse encima de un panel lo daña.",
+        "Frotando con fuerza para arrancar el polvo bien adherido."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Frotar fuerte raya el vidrio y no hace falta: el polvo adherido sale con agua y un paño suave. Y ten presente que la suciedad importa menos de lo que la gente cree, salvo cuando es una mancha localizada y opaca, que actúa como una sombra y tumba todo un grupo de celdas."
+    },
+    {
+      "id": "envejecimiento",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo llega al final de su vida cada componente?",
+      "opciones": [
+        "Un panel se desgasta lentamente, pero lo que lo mata antes de tiempo es la entrada de humedad bajo el vidrio.",
+        "El regulador y el inversor mueren normalmente por calor: ventilador parado, rejillas tapadas, armario sin ventilación.",
+        "La batería avisa cargándose cada vez más rápido y descargándose cada vez más rápido.",
+        "Una batería de plomo agotada se puede desechar con la basura común una vez descargada del todo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Una batería de plomo agotada es residuo peligroso, con plomo y ácido sulfúrico, y a la vez uno de los residuos con mejor cadena de reciclaje que existe. Casi cualquier comercio de baterías la recibe y muchos la descuentan de la nueva. Pregunta por el retorno al comprarla, no cuando ya esté muerta."
+    },
+    {
+      "id": "el-dia-de-la-instalacion",
+      "tipo": "abierta",
+      "enunciado": "Llegan las cajas. Describe cómo organizas el día de la instalación, qué anotas, qué vigilas el primer mes, y cómo queda el calendario de mantenimiento adaptado al clima de Zanja Honda.",
+      "respuestaModelo": "Preparo tres cosas antes de subir un solo panel. Una lona opaca suficiente para tapar todo el arreglo, que suena tonto anotarlo y es justamente la pieza que falta el día del montaje. La planilla de línea base impresa con las casillas vacías: tensión en vacío por rama, corriente de cortocircuito, aislamiento a tierra, tensión de batería en reposo, fecha, hora y estado del cielo. Y el cuaderno de bitácora del sistema, que va a vivir en el cuarto de equipos.\n\nEl orden de montaje es: estructura y paneles fijados pero sin conectar entre sí y tapados, con el cableado tendido hasta el cuarto con los extremos libres y separados; puesta a tierra completa de marco y equipos antes de energizar nada, porque la tierra es lo primero que se conecta y lo último que se desconecta; regulador e inversor montados en pared con ventilación alrededor y ninguno encima de la batería; batería al regulador respetando polaridad y con el fusible principal puesto, para que el regulador despierte y detecte bien la tensión del banco; inversor a la batería con su propio fusible pegado al borne; paneles al regulador todavía tapados, después de medir; y destapar al final. Para apagar, exactamente al revés.\n\nAntes de enchufar los paneles mido tres cosas con el multímetro: la tensión en vacío del arreglo, que debe dar aproximadamente la suma corregida por temperatura y que si supera el límite de entrada del regulador significa que no lo conecto; la polaridad, sin fiarme del color del cable; y la ausencia de continuidad entre cualquier polo y el marco metálico. Anoto todo en la planilla, la plastifico y la pego dentro de la tapa del tablero, porque en el cuarto va a haber humedad.\n\nEl primer mes el sistema está en observación, no entregado. Miro cada día que la batería llegue a llena en un día despejado y que no amanezca más baja cada mañana; que los equipos estén tibios pero no quemen; que ningún conector esté caliente, porque ese es el síntoma temprano del contacto flojo; y que ningún cable vibre, roce ni cuelgue. A la semana reaprieto todas las conexiones a tornillo, porque el cobre fluye bajo presión y una conexión apretada en frío se afloja tras los primeros ciclos térmicos.\n\nEl calendario, adaptado a aquí: mantenimiento semestral grande en octubre y en mayo. Octubre cierra la seca y los vientos, cuando el polvo, el humo y el surazo ya hicieron su daño; mayo cierra las lluvias, cuando toca revisar humedad, corrosión y sellos. Limpieza mensual entre junio y octubre, que es cuando se acumula polvo y no llueve; el resto del año la lluvia se encarga, y después de una tormenta fuerte los paneles suelen quedar mejor que tras una limpieza a mano. Revisión extraordinaria después de cada surazo fuerte y de cada granizada, porque un evento extremo es justo cuando algo se afloja o se agrieta, y si hubo descarga cerca compruebo que el DPS siga vivo por su ventanita indicadora: un DPS agotado sigue instalado y ya no protege nada. Semanalmente, treinta segundos mirando la pantalla; anualmente, media jornada repitiendo las medidas de la línea base y comparándolas.\n\nUn matiz local: entre agosto y octubre, con el humo de las quemas, la producción cae por ceniza en el aire y sobre el vidrio. No es una avería, y si no lo sé voy a buscar un fallo donde no lo hay.\n\nY una última cosa: le muestro el sistema a alguien más del predio. Dónde está el seccionador, cómo se apaga, qué se mira cada semana. Un sistema que solo una persona entiende tiene un único punto de fallo, y no es eléctrico.",
+      "criterios": [
+        "Prepara lona opaca, planilla de línea base y cuaderno de bitácora antes del montaje.",
+        "Ejecuta el orden completo con la tierra primero y los paneles tapados al final.",
+        "Mide tensión en vacío, polaridad y aislamiento antes de enchufar.",
+        "Registra la línea base con fecha, hora y estado del cielo, y la deja accesible.",
+        "Vigila el primer mes carga, temperatura de equipos y conectores, y cables sueltos.",
+        "Reaprieta las conexiones a la semana y explica el flujo del cobre.",
+        "Sitúa el mantenimiento semestral en octubre y mayo con la razón climática de cada uno.",
+        "Concentra la limpieza en la temporada seca y confía en la lluvia el resto del año.",
+        "Añade revisión extraordinaria tras surazo, granizo y descarga eléctrica, con la comprobación del DPS.",
+        "Distingue la caída de producción por humo de una avería.",
+        "Enseña el sistema a otra persona del predio."
+      ],
+      "explicacion": "Lo que decide la vida de un sistema rural no es la calidad del equipo: es que alguien lo mire con regularidad y anote lo que ve. El equipo que se revisa dos veces al año dura veinte; el que nadie mira nunca falla en la tercera temporada de lluvias y nadie sabe por qué."
+    }
+  ]
+}

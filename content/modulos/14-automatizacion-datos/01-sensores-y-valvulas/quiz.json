@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "la-cadena",
+      "tipo": "verdadero_falso",
+      "enunciado": "En un riego automático la inteligencia está repartida entre el sensor, el controlador y la válvula.",
+      "respuesta": false,
+      "explicacion": "Falso: el sensor no sabe nada y la válvula tampoco. Toda la decisión está en la regla, y la regla la escribe una persona. Un sistema automático no decide mejor que tú, decide más veces y a las tres de la mañana; si la regla es mala, la aplica con una constancia admirable."
+    },
+    {
+      "id": "sensor-resistivo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un sensor de humedad resistivo de dos púas no sirve a la intemperie?",
+      "opciones": [
+        "Se corroe: pasar corriente entre dos metales en medio húmedo con sales es una electrólisis.",
+        "Mide conductividad, así que responde a las sales disueltas y no al agua.",
+        "Depende del contacto físico, y si el sustrato se contrae la lectura se desploma sin que cambie la humedad.",
+        "Consume demasiada corriente para un sistema a batería."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El consumo no es el problema. Y con fertirriego el segundo defecto es especialmente grave, porque un sustrato fertilizado y uno lavado con la misma humedad dan lecturas distintas."
+    },
+    {
+      "id": "sensor-capacitivo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un sensor capacitivo funciona porque las placas selladas forman un condensador cuyo dieléctrico es el sustrato, y el agua tiene una constante dieléctrica muy alta.",
+      "respuesta": true,
+      "explicacion": "Correcto, y de ahí salen sus tres ventajas: no hay metal en contacto, así que no hay corrosión; responde al agua y no a la conductividad iónica; y funciona a través del plástico, lo que lo hace mucho más robusto."
+    },
+    {
+      "id": "temperatura-y-luz",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que tener en cuenta con los sensores de temperatura y de luz?",
+      "opciones": [
+        "El sensor de temperatura al sol mide su propio encapsulado: va a la sombra, ventilado y a la altura de las plantas.",
+        "Un sensor de luz barato responde como el ojo humano, no como la fotosíntesis.",
+        "Sirve para saber si el día estuvo cubierto o si la malla se rompió, no para calcular biomasa.",
+        "Ambos requieren calibración con patrones de laboratorio antes de cada temporada."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hace falta calibración de laboratorio para el uso que se les va a dar. Lo que sí importa es saber qué mide cada uno: la distinción entre luz percibida y radiación útil para la planta viene del módulo de fundamentos."
+    },
+    {
+      "id": "la-valvula",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo abre una válvula solenoide de riego y qué consecuencia tiene?",
+      "opciones": [
+        "El solenoide solo destapa un orificio piloto muy pequeño.",
+        "Al escaparse la presión de encima de la membrana, es el propio agua el que abre el paso grande.",
+        "Por eso la válvula necesita una presión mínima de trabajo y puede no abrir por gravedad.",
+        "La bobina tiene fuerza suficiente para abrir directamente contra la presión de la línea."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Justamente no la tiene: son válvulas servoasistidas. En un sistema por gravedad desde un tanque elevado hay que comprobar la presión mínima del modelo antes de comprar, porque un par de metros de altura puede no bastar y la bobina hará clic sin que pase agua."
+    },
+    {
+      "id": "la-bobina",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué precauciones exige la bobina de una válvula?",
+      "opciones": [
+        "Consume mientras esté abierta, lo cual importa mucho con alimentación solar y batería.",
+        "Una válvula biestable consume solo un pulso, pero se queda como estaba si pierdes el control.",
+        "Necesita un diodo de rueda libre en continua, por el pico inverso al cortar la corriente.",
+        "Conviene alimentarla directamente desde la red para asegurar la fuerza de apertura."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Al revés: hay válvulas de 12 o 24 voltios pensadas para esto, y trabajar con 220 V en un entorno mojado es una mala idea. El diodo de rueda libre es el error de electrónica más común en estos montajes y no da síntomas hasta que algo se quema."
+    },
+    {
+      "id": "modos-de-fallo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué reglas de diseño protegen ante los modos de fallo?",
+      "opciones": [
+        "Límite de tiempo por riego siempre, independientemente de lo que digan los sensores.",
+        "Llave manual en serie, para poder cerrar sin depender de nada eléctrico.",
+        "Fallo hacia el estado seguro, que en un vivero es cerrado.",
+        "Reintentar la apertura automáticamente si el sensor devuelve un valor extremo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un valor fuera de rango significa que el sensor está roto, no que haya que regar más: todo sensor necesita un rango de validez. Y el criterio general es el mismo de cualquier proceso que actúa sobre el mundo real: ante la duda, no actúes."
+    },
+    {
+      "id": "automatizar-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña la primera etapa de automatización del riego de Rizoma del Sur: qué componentes eliges, por qué, y cómo proteges el sistema ante fallos.",
+      "respuestaModelo": "Empiezo por lo más simple: un temporizador con válvula y nada más, sin sensores. Es la automatización que más problema resuelve con menos piezas que puedan fallar, porque elimina la obligación de estar presente a una hora fija, que es justamente el cuello de botella que identificó el módulo anterior. Los sensores vienen después, cuando tenga datos de la libreta que digan qué corregir.\n\nCuando ponga sensores de humedad, serán capacitivos y sellados, nunca de dos púas metálicas. Con riego diario, fertirriego y un clima húmedo, un sensor resistivo se corroe por electrólisis, mide sales en vez de agua —lo cual con fertirriego es un problema serio— y pierde contacto cuando el sustrato se contrae al secarse. No es que sea menos preciso: es que deja de existir en meses, y lo peor es que no falla limpiamente sino que va derivando.\n\nEl sensor de temperatura y humedad del aire va a la sombra, ventilado y a la altura de las plantas, porque al sol mide su propia carcasa y da varios grados de más.\n\nEl sensor de luz lo uso para vigilar si la malla se rompió y si el día estuvo cubierto, no para calcular producción: responde como el ojo humano y no como la fotosíntesis.\n\nAntes de comprar válvulas compruebo la presión mínima de trabajo del modelo contra la altura real de mi tanque elevado. Mi sistema es por gravedad, y como las válvulas de riego son servoasistidas —el solenoide solo destapa un orificio piloto y es la presión del agua la que abre el paso grande—, una válvula que pida más presión de la que da la plataforma hará clic sin abrir.\n\nSi alimento con solar, elijo válvulas biestables, que consumen solo un pulso para abrir y otro para cerrar. Asumo la contrapartida: si pierdo el control con la válvula abierta, se queda abierta, y por eso las protecciones dejan de ser opcionales.\n\nPongo diodo de rueda libre en toda bobina de continua, sin excepción. El pico inverso al cortar la corriente destruye transistores y pega contactos de relé, y no avisa hasta que algo se quema.\n\nUso válvulas de 12 o 24 voltios y nunca red directa: el entorno está mojado y todo lo del módulo de construcción sobre diferencial y puesta a tierra sigue vigente.\n\nPara los fallos aplico tres reglas obligatorias. Límite de tiempo por riego, fijado por hardware o software, que atrapa todos los demás fallos a la vez. Llave manual en serie antes de la válvula automática, para poder cerrar todo sin depender de nada eléctrico. Y fallo hacia cerrado: en un suelo con arcillas expansivas y riesgo de asfixia radicular, unas horas sin riego son estrés recuperable y una noche de riego continuo no lo es.\n\nAdemás, todo sensor lleva rango de validez. Un valor fuera de rango significa «el sensor está roto», no «riega más»; sin esa comprobación, un sensor averiado que devuelve cero riega hasta ahogar el lote.\n\nCompro dos unidades de cada sensor para poder comparar lecturas, porque dos sensores que discrepan avisan de un problema que uno solo oculta. Todo va en caja estanca con prensaestopas hacia abajo, y protejo el cable en conducto o manguera enterrada, porque las hormigas y los roedores muerden cables y buscar una avería intermitente en 2.474 m² es carísimo.\n\nY antes de automatizar nada eléctrico descarto a propósito la automatización hidráulica: flotador mecánico en el tanque, regulador de presión, temporizador mecánico. No tienen firmware, no se cuelgan y no dependen de la energía, y resuelven una parte grande del problema.",
+      "criterios": [
+        "Empieza por temporizador sin sensores y justifica por qué.",
+        "Elige sensores capacitivos y explica los tres defectos del resistivo.",
+        "Coloca el sensor de temperatura a la sombra y ventilado.",
+        "Limita el uso del sensor de luz a vigilancia, no a cálculo de producción.",
+        "Comprueba la presión mínima de la válvula contra la altura del tanque.",
+        "Explica el funcionamiento servoasistido de la válvula.",
+        "Considera válvulas biestables si hay alimentación solar y asume su riesgo.",
+        "Incluye diodo de rueda libre en toda bobina de continua.",
+        "Trabaja en baja tensión y no con red directa.",
+        "Aplica límite de tiempo, llave manual y fallo hacia cerrado.",
+        "Define rango de validez para todo sensor.",
+        "Protege cableado y considera la alternativa hidráulica."
+      ],
+      "explicacion": "La lección es de electrónica, pero su conclusión es de criterio: un sistema automático amplifica la regla que le pongas, así que lo que hay que diseñar con cuidado no es el circuito sino qué ocurre cuando el circuito se equivoca."
+    }
+  ]
+}

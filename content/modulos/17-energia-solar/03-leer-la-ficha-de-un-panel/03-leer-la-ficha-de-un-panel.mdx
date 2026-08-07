@@ -1,0 +1,259 @@
+Detrás de cada panel hay una etiqueta con una docena de números y abreviaturas que parecen escritas
+para no ser leídas. Esta lección las traduce, y con una advertencia que ordena todo lo demás:
+**ninguno de esos números es lo que el panel te va a dar en el techo.**
+
+Son medidas de laboratorio, tomadas en condiciones que en tu terreno no ocurren nunca. Saber leerlas
+no es un trámite: es lo que separa comprar bien de comprar por el número más grande, y lo que evita
+quemar un regulador la primera mañana fresca.
+
+## Los siete números que importan
+
+<Diagrama
+  src="ficha-tecnica.webp"
+  alt="Etiqueta de especificaciones dibujada como un rectángulo blanco dividido en siete filas, cada una con su rótulo a la izquierda y espacio de valor a la derecha: POTENCIA MÁXIMA, TENSIÓN DE TRABAJO, CORRIENTE DE TRABAJO, TENSIÓN EN VACÍO, CORRIENTE DE CORTOCIRCUITO, COEFICIENTE DE TEMPERATURA y TOLERANCIA. Tres filas están resaltadas con una banda terracota y una llamada al margen derecho: LO QUE VAS A COMPRAR, LO QUE REVIENTA EL REGULADOR y LO QUE PIERDES POR CALOR. Arriba, LOS SIETE NÚMEROS DE LA FICHA."
+  pie="Una ficha trae veinte datos y tres deciden la compra. Los demás se leen una vez y se archivan."
+/>
+
+| Sigla | Nombre | Qué es y para qué sirve |
+|---|---|---|
+| **Pmax** | Potencia máxima | El vatiaje del panel, en <Termino slug="vatio-pico">vatios pico</Termino>. Es lo que compras y lo que se compara entre ofertas |
+| **Vmp** | Tensión de trabajo | La tensión a la que entrega esa potencia máxima |
+| **Imp** | Corriente de trabajo | La corriente a la que entrega esa potencia máxima |
+| **Voc** | Tensión en vacío | La tensión con los bornes sueltos, sin nada conectado. **El número peligroso** |
+| **Isc** | Corriente de cortocircuito | La corriente con los bornes unidos. Dimensiona fusibles y regulador |
+| **Coef. de temperatura** | | Cuánta potencia pierde por cada grado de más |
+| **Tolerancia** | | Cuánto puede desviarse el panel real de su etiqueta |
+
+Y una relación que se cumple siempre y conviene tener en la cabeza:
+
+<Formula explicacion="La potencia máxima es el producto de la tensión y la corriente de trabajo. Y ojo con el orden: Vmp es siempre menor que Voc, e Imp siempre menor que Isc.">
+Pmax = Vmp × Imp        Vmp &lt; Voc        Imp &lt; Isc
+</Formula>
+
+## La curva: por qué hay dos tensiones y dos corrientes
+
+<Diagrama
+  src="curva-iv.webp"
+  alt="Curva característica sobre ejes: eje vertical rotulado CORRIENTE, eje horizontal rotulado TENSIÓN. La curva arranca en un punto sobre el eje vertical rotulado ISC, CORTOCIRCUITO, corre casi plana hacia la derecha, dobla en un codo redondeado rotulado PUNTO DE MÁXIMA POTENCIA y cae a pico hasta el eje horizontal en un punto rotulado VOC, CIRCUITO ABIERTO. Desde el codo bajan guías discontinuas a los dos ejes, y el rectángulo que forman está sombreado en terracota y rotulado AQUÍ ESTÁ LA POTENCIA. Arriba, LA CURVA DE UN PANEL."
+  pie="El panel no tiene un punto de trabajo: tiene una curva entera, y solo uno de sus puntos entrega la potencia máxima."
+/>
+
+Un panel no es una pila con una tensión fija. **Su comportamiento es una curva**, y en qué punto de
+esa curva trabaja depende de lo que le conectes.
+
+- Si dejas los bornes **sueltos**, no circula corriente y la tensión sube a su máximo: eso es
+  **Voc**, la <Termino slug="tension-en-vacio">tensión en vacío</Termino>.
+- Si unes los bornes con un cable —**en cortocircuito**—, la tensión cae a cero y la corriente sube
+  a su máximo: eso es **Isc**,
+  la <Termino slug="corriente-de-cortocircuito">corriente de cortocircuito</Termino>.
+- **En ninguno de esos dos extremos entrega potencia**, porque en uno la corriente es cero y en el
+  otro lo es la tensión.
+
+Entre medio está la <Termino slug="curva-iv">curva característica</Termino>, casi plana y luego con
+un codo. Y justo en ese codo hay **un punto donde el producto de tensión por corriente es máximo**:
+el <Termino slug="punto-de-maxima-potencia">punto de máxima potencia</Termino>, con sus coordenadas
+Vmp e Imp. Todo lo que hay a los lados entrega menos.
+
+<Analogia>
+Es una curva de operación con un óptimo, como tantas que ya conoces. El panel puede trabajar en
+cualquier punto de ella, y el trabajo del regulador MPPT que veremos más adelante es exactamente
+**buscar y mantener ese óptimo** mientras la curva se mueve con el sol y con la temperatura.
+
+Un regulador barato que no hace esa búsqueda deja al panel trabajando en un punto cualquiera. No lo
+rompe: simplemente le desperdicia una fracción de lo que podía dar, todos los días.
+</Analogia>
+
+## La etiqueta se mide en laboratorio
+
+<Diagrama
+  src="stc-vs-real.webp"
+  alt="Dos paneles comparados. Izquierda, CONDICIONES DE ENSAYO: un panel sobre un banco bajo una batería de lámparas, con un icono de termómetro y copo indicando temperatura controlada y un portapapeles; el pie dice SOL PERFECTO Y CELDA FRESCA. Derecha, TU TECHO EN ENERO: el mismo panel inclinado bajo un sol abrasador con líneas de calor subiendo, un termómetro rojo, una nube fina cruzando el sol y polvo en el vidrio; el pie dice MENOS LUZ, MUCHO MÁS CALOR. Entre ambos, una flecha terracota hacia abajo. Al pie, EL PANEL NUNCA DA SU NÚMERO DE ETIQUETA. Arriba, LA ETIQUETA SE MIDE EN LABORATORIO."
+  pie="Las condiciones de ensayo existen para que dos paneles se puedan comparar entre sí, no para predecir lo que uno va a producir."
+/>
+
+Todos esos números se miden en unas
+llamadas <Termino slug="condiciones-estandar-de-ensayo">condiciones estándar de ensayo</Termino>
+que hay que conocer, porque explican la decepción del primer día:
+
+- **Mil vatios de radiación por metro cuadrado**, que es un sol pleno de mediodía muy bueno.
+- **Celda a 25 grados**, no ambiente: la celda.
+- Un espectro de referencia definido.
+
+Y ahí está la trampa: **esas dos primeras condiciones casi no pueden darse a la vez.** Si hay mil
+vatios por metro cuadrado cayendo sobre un panel, la celda no está a 25 grados — está a cincuenta o
+sesenta. Con un sol capaz de dar la potencia de etiqueta, la temperatura ya te ha quitado un pedazo.
+
+<Dato titulo="Y por eso existe un segundo juego de números">
+Muchas fichas traen además datos medidos en **condiciones más realistas** —menos radiación, con
+viento, con la celda a la temperatura que de verdad alcanza—, que dan cifras bastante más bajas y
+bastante más honestas.
+
+Cuando compares dos paneles, compáralos **en las mismas condiciones**: los datos de ensayo con los de
+ensayo, los realistas con los realistas. Y cuando estimes producción, usa los realistas, o aplica un
+factor de pérdidas a los de ensayo — que es justo lo que hace la lección de dimensionado.
+</Dato>
+
+## Voc en frío: el número que revienta el regulador
+
+<Diagrama
+  src="voc-en-frio.webp"
+  alt="Dos escenas comparadas, cada una con un panel conectado por dos cables a una cajita electrónica. Izquierda: sol amarillo, termómetro rojo alto, cable en verde tranquilo y la caja con un visto; el pie dice DÍA CALUROSO, TENSIÓN MÁS BAJA. Derecha: amanecer despejado, sol pálido, termómetro azul bajo y marcas de escarcha, el cable dibujado grueso en terracota con chispas y la caja agrietada con un símbolo de estallido y un triángulo de advertencia encima; el pie dice AMANECER FRÍO, TENSIÓN MÁS ALTA. Al pie, ESE PICO ES EL QUE QUEMA EL REGULADOR. Arriba, EL FRÍO SUBE LA TENSIÓN."
+  pie="La tensión máxima de un arreglo no ocurre al mediodía de enero: ocurre en la mañana más fría del año, con el cielo limpio y sin carga conectada."
+/>
+
+Aquí está el error caro que esta lección viene a evitar.
+
+Ya vimos que **el calor baja la tensión de un panel**. La consecuencia simétrica es la peligrosa:
+**el frío la sube.** Y como Voc es la tensión más alta que un panel puede alcanzar, la tensión máxima
+absoluta de tu instalación se produce en el momento más frío del año, con el arreglo iluminado y sin
+nada consumiendo — típicamente **el amanecer despejado de un surazo**.
+
+El problema es que los reguladores y los inversores tienen un **límite de tensión de entrada** que no
+perdona. Si el arreglo lo supera, el equipo no se protege ni se apaga: **se rompe**, y suele ser un
+daño no cubierto por garantía porque es un error de diseño.
+
+<Advertencia>
+La regla de oro al armar un arreglo en serie es esta: **se suman los Voc de todos los paneles de la
+cadena, corregidos por la temperatura mínima esperada, y ese total tiene que quedar por debajo del
+límite del equipo con margen.**
+
+No se suman los Vmp, que es el error habitual, porque Vmp es menor y da una falsa sensación de
+holgura. Y no se usa el Voc de la ficha tal cual, porque está medido a 25 grados y tu mañana más fría
+está bastante por debajo.
+
+Es un cálculo de cinco minutos con el coeficiente de temperatura de la ficha, y es el único cálculo
+de este módulo donde equivocarse **rompe hardware el primer día**.
+</Advertencia>
+
+Y una precaución de campo que se deriva de lo mismo: **medir Voc antes de conectar nada**. Un
+multímetro en los bornes del arreglo, con el sol de la mañana, te dice si el número real coincide con
+el calculado. Si no coincide, hay un panel mal conectado o un dato mal leído, y es mejor descubrirlo
+con un multímetro que con humo.
+
+## Los números que se leen una vez
+
+**La tolerancia.** Los fabricantes declaran cuánto puede desviarse un panel real de su etiqueta.
+Hoy es habitual una tolerancia solo positiva —el panel nunca da menos de lo declarado— y eso es buena
+señal de fabricación seria.
+
+**La eficiencia.** El porcentaje de la luz que convierte. Ya vimos que importa cuando el espacio es
+escaso y bastante menos cuando hay terreno.
+
+**La garantía de potencia.** No es lo mismo que la garantía del producto. Declara qué porcentaje de
+la potencia inicial garantiza el fabricante a los diez, veinte o veinticinco años. Es el dato que
+convierte al panel en el componente más duradero del sistema, y conviene guardarlo con la factura.
+
+**Las dimensiones y el peso.** Aburridos hasta el día que hay que diseñar la estructura, subirlos a
+un techo o meterlos en una camioneta. Anótalos antes de comprar.
+
+**La corriente máxima de fusible.** Un dato pequeño que dice qué protección admite el panel en su
+caja de conexiones, y que la lección de protecciones va a usar.
+
+### Un caso que aclara la diferencia
+
+Imagina dos ofertas del mismo precio por vatio. La primera declara un coeficiente de temperatura de
+0,45 % por grado; la segunda, de 0,29 %. Sobre el papel parecen iguales.
+
+En un día de verano cruceño, con la celda a sesenta grados, la primera pierde alrededor de un
+dieciséis por ciento por temperatura y la segunda algo más de un diez. Esa diferencia de seis puntos
+se repite **todos los días calurosos del año**, y en un arreglo de tamaño mediano equivale, a lo largo
+de la vida del sistema, a haber pagado por paneles que no vas a tener.
+
+Es el tipo de decisión que solo se puede tomar leyendo la ficha, y por eso vale la pena aprender a
+leerla aunque la compra parezca sencilla.
+
+## Cómo se lee una ficha en la práctica
+
+El orden que funciona cuando tienes tres ofertas sobre la mesa:
+
+1. **Divide precio entre Pmax** y quédate con el precio por vatio de cada una. Ese es el número de
+   compra.
+2. **Mira Voc** y calcula cuántos paneles puedes poner en serie sin pasarte del límite de tu
+   regulador, con la corrección por frío.
+3. **Mira Isc** y comprueba que el regulador aguanta la corriente del arreglo que planeas.
+4. **Compara coeficientes de temperatura**: entre dos paneles parecidos, el de coeficiente más suave
+   produce más en clima cálido, y eso es dinero todos los días.
+5. **Comprueba dimensiones y peso** contra la estructura que puedes construir.
+6. **Lee la garantía de potencia** y guarda la ficha con la factura.
+
+Y una comprobación de sensatez que atrapa ofertas dudosas: **Pmax debería ser aproximadamente Vmp por
+Imp.** Si no cuadra, la ficha está mal transcrita o inventada, y eso dice mucho de quién la vende.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Para tu clima, el coeficiente de temperatura sube de categoría.** Entre dos paneles con el mismo
+precio por vatio, el de coeficiente más suave va a producir más todos los días calurosos del año, que
+en Santa Cruz son la mayoría. Es un criterio de desempate que casi nadie mira y que aquí pesa.
+
+**El cálculo de Voc en frío hazlo antes de comprar el regulador, no después.** El día más frío que
+vas a ver en el vivero es una mañana de surazo con cielo limpio, y ese es exactamente el momento de
+máxima tensión. Con el coeficiente de la ficha y esa temperatura mínima, calculas el Voc corregido,
+lo multiplicas por el número de paneles en serie, y eliges un regulador con margen sobre ese
+resultado. Cinco minutos de planilla.
+
+**Y aprovecha tu oficio: monta una planilla comparativa antes de pedir precios.** Una fila por modelo
+ofertado y columnas para Pmax, Vmp, Imp, Voc, Isc, coeficiente, dimensiones, peso, garantía, precio y
+precio por vatio calculado. Con eso, comparar tres ofertas deja de ser una conversación de vendedor y
+pasa a ser una tabla ordenada — y el vendedor lo nota.
+
+**Guarda las fichas.** Una carpeta con el PDF de cada equipo comprado, la factura y la foto del
+número de serie. Dentro de ocho años, cuando haya que ampliar el arreglo o reclamar una garantía de
+potencia, esa carpeta es la diferencia entre poder y no poder.
+
+**Y una cosa que vas a poder hacer y casi nadie hace:** cuando el sistema esté funcionando, compara la
+producción real contra la esperada teniendo en cuenta radiación y temperatura del día. Si un mes
+producen menos de lo que deberían, el problema es medible —suciedad, sombra nueva, una conexión
+floja— y no una sensación. Eso enlaza directamente con el módulo de automatización y datos.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**En el mercado boliviano vas a encontrar paneles de fabricantes conocidos y también sin marca
+identificable.** La diferencia rara vez está en el silicio y casi siempre en dos cosas: el
+encapsulado, que decide cuántos años dura en clima húmedo y caliente, y la existencia de una garantía
+que alguien vaya a honrar. Un panel sin ficha técnica disponible es un panel sin garantía real,
+cualquier cosa que diga la etiqueta.
+
+**Pide la ficha antes de comprar y compárala con la etiqueta física del panel que te entregan.** Es
+una comprobación de treinta segundos y detecta la sustitución de modelo, que es la sorpresa más común
+al recibir mercadería.
+
+**Sobre la temperatura mínima para el cálculo de Voc:** en la zona de Santa Cruz las mañanas de surazo
+pueden bajar a unos diez grados o menos. Ese es el número que hay que usar, y no la media anual —
+porque el equipo se rompe con el extremo, no con el promedio.
+
+**Y el vocabulario:** a la ficha se le dice **ficha técnica** o **datasheet**; a Pmax, **potencia
+pico** o **watts pico**; a Voc, **tensión de circuito abierto** o directamente **el voc**; y cuando
+alguien habla de un panel **de 550**, se refiere a sus vatios pico de etiqueta.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Sumo los Vmp para ver si el regulador aguanta.»** Se suman los Voc, corregidos por la temperatura
+mínima. Vmp es menor y da una falsa holgura.
+
+**«El panel de 550 W me va a dar 550 W.»** Te va a dar eso en laboratorio. En tu techo, con calor,
+polvo y ángulo imperfecto, bastante menos.
+
+**«Compro el de más vatios.»** Compras el de mejor precio por vatio, salvo que el espacio te limite.
+
+**«El coeficiente de temperatura es un detalle de ficha.»** En clima cálido es un criterio de
+desempate que se paga todos los días del año.
+
+**«Mido la tensión después de conectar todo.»** Se mide antes, con multímetro y sin carga. Después
+puede ser tarde para el regulador.
+
+**«Isc no me interesa, yo miro la potencia.»** Isc dimensiona fusibles y define si el regulador
+aguanta la corriente del arreglo.
+
+**«La ficha la tiene el vendedor.»** La ficha la tienes tú, archivada con la factura. Es lo que
+sostiene una garantía de potencia dentro de quince años.
+
+## Lo que sigue
+
+Ya sabes qué te ofrece la fuente y cómo leer sus números sin creerles de más. Toca la otra mitad de
+la ecuación, y es la que casi todo el mundo estima mal: **cuánto consumes de verdad**.
+
+La lección siguiente es la auditoría de cargas — lista, medición, vatios-hora al día — con el detalle
+que arruina más inversores que ningún otro: **la corriente de arranque** de motores y compresores, que
+no aparece en ninguna etiqueta y que define el equipo que hay que comprar.

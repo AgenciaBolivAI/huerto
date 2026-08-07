@@ -1,0 +1,106 @@
+{
+  "preguntas": [
+    {
+      "id": "el-tiro",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se establece la ventilación natural de una estructura?",
+      "opciones": [
+        "Con una entrada baja por los costados y una salida alta en la cumbrera.",
+        "El aire caliente sale por arriba y su salida arrastra aire fresco por abajo.",
+        "El tiro es mayor cuanto mayores son la diferencia de temperatura y la de altura.",
+        "Requiere un ventilador para que el aire empiece a moverse."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No necesita energía: se consigue con geometría, y esa es la mejor noticia del módulo. Además el sistema se autorregula, porque cuanto más se calienta el interior mayor es la diferencia con el exterior y más fuerte tira la chimenea. Es un lazo de realimentación negativo, gratis y sin partes móviles; lo único que hay que hacer es no estropearlo cerrando las aberturas."
+    },
+    {
+      "id": "tasa-de-ventilacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se dimensiona la abertura de una estructura?",
+      "opciones": [
+        "Sumando el área de todas las aberturas y dividiéndola entre la superficie de suelo cubierta.",
+        "En clima cálido y húmedo hay que ir del orden de un treinta por ciento o más.",
+        "Buena parte de esa superficie debe estar en la cumbrera y no solo en los costados.",
+        "Con un quince por ciento repartido como sea alcanza en cualquier clima."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El quince o veinte por ciento es la referencia de clima templado, que es de donde vienen la mayoría de los diseños de manual. Y la distribución importa tanto como el total: un veinte por ciento todo en un costado ventila mucho peor que el mismo veinte repartido entre cumbrera y ambos laterales, porque se forman zonas muertas donde el aire no se renueva."
+    },
+    {
+      "id": "malla-y-caudal",
+      "tipo": "verdadero_falso",
+      "enunciado": "Colocar malla antiinsectos sobre una abertura no cambia su capacidad de ventilar, porque el hueco sigue siendo el mismo.",
+      "respuesta": false,
+      "explicacion": "Falso: la trama fina reduce mucho el caudal que atraviesa, y puede ser a la mitad o menos según el tamaño de poro. Es el mismo fenómeno que hace que un filtro sucio ahogue un motor: la abertura sigue ahí, lo que se perdió es el caudal. Si pones malla, agranda la abertura; y si no puedes agrandarla, no pongas malla, porque el problema que creas es mayor que el que resuelves."
+    },
+    {
+      "id": "tres-formas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué caracteriza a las tres formas de bajar la temperatura?",
+      "opciones": [
+        "Ventilar es la principal, la más barata y la que no tiene contrapartida.",
+        "Sombrear es efectivo y su contrapartida es obvia: menos luz.",
+        "Mojar enfría porque evaporar agua consume mucha energía, que sale del aire.",
+        "Las tres funcionan igual de bien en cualquier clima."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El enfriamiento evaporativo funciona en proporción a lo seco que esté el aire: en clima seco es espectacular y en clima húmedo el aire ya está casi saturado, así que la evaporación es lenta y el enfriamiento resulta mucho menor. Y encima sube todavía más la humedad, que en un clima ya húmedo es justo lo que no conviene por el riesgo fúngico."
+    },
+    {
+      "id": "humedad-relativa",
+      "tipo": "verdadero_falso",
+      "enunciado": "Antes de invertir en nebulización conviene mirar la humedad relativa de las horas más calurosas.",
+      "respuesta": true,
+      "explicacion": "Cierto: si a las dos de la tarde del peor mes la humedad ya es alta, el sistema va a rendir muy por debajo de lo que promete el folleto, que casi siempre está escrito para climas secos. Y hay una comprobación aún más barata: mojar el piso una tarde de calor y mirar el termómetro media hora después. Si no se mueve, la pregunta ya está contestada."
+    },
+    {
+      "id": "termometro",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se usa bien un termómetro de máxima y mínima?",
+      "opciones": [
+        "A la altura de las plantas, porque lo que importa es lo que siente la hoja.",
+        "A la sombra, porque al sol mide su propia temperatura y no la del aire.",
+        "Con dos, uno dentro y otro fuera, para medir si la ventilación funciona.",
+        "Registrando la temperatura media, que es la que decide la salud del cultivo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Lo que mata plantas es el pico, no la media, y para eso sirve precisamente un termómetro de máxima y mínima: con mirarlo una vez al día se tiene ese dato. Un tercer termómetro movido de sitio cada semana es la forma barata de encontrar zonas muertas, que suelen estar en esquinas alejadas de las aberturas, en sotavento, o donde una fila de plantas altas hace de tapón."
+    },
+    {
+      "id": "manejo-diario",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuál es el protocolo diario en este clima?",
+      "opciones": [
+        "Abrir temprano, antes de que empiece a pegar el sol.",
+        "Cerrar tarde, o directamente no cerrar la mayoría de las noches.",
+        "Cerrar solo por surazo, y solo por el lado sur.",
+        "Cerrar cada noche para conservar el calor acumulado durante el día."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Cerrar por la noche en este clima no aporta nada y provoca condensación, que deja las hojas mojadas al amanecer. Y abrir a las diez ya es tarde: a esa hora hay una masa de aire caliente acumulada que cuesta mucho más sacar que evitar. Revisar el termómetro al pasar cuesta tres segundos y es lo que convierte todo esto en un sistema con realimentación."
+    },
+    {
+      "id": "ventilacion-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define cómo se ventilan y se controlan en temperatura las estructuras de Rizoma del Sur, y qué se mide.",
+      "respuestaModelo": "En Rizoma la ventilación se resuelve casi entera por diseño, y esa es la decisión importante: las estructuras elegidas son un umbráculo sin paredes sobre crecimiento y un techo a dos aguas con cumbrera y costados abiertos sobre propagación. De partida tienen una tasa de ventilación enorme, muy por encima de cualquier recomendación de manual, y no hay que manejarlas: funcionan solas, que era exactamente el criterio con el que se eligieron.\n\nEl mecanismo es el de la entrada baja y la salida alta: el aire fresco entra por los costados cerca del suelo, barre el interior, se calienta, sube y sale por la cumbrera. No necesita energía, y además se autorregula, porque cuanto más calienta el sol mayor es la diferencia de temperatura con el exterior y más fuerte tira la chimenea. Y como la orientación se eligió para que el viento dominante atraviese la nave por su lado corto, la ventilación por viento se suma a la térmica.\n\nLa abertura de cumbrera se deja abierta todo el año, con su sombrerete para que no entre la lluvia. Lo único que se cierra es el faldón sur, y solo los días de surazo.\n\nLa excepción que sí exige cálculo es la malla antiáfidos del bloque de plantas madre. Al poner trama fina el caudal cae mucho, así que ahí hay que agrandar bastante la superficie de apertura y subir la altura; si no, se convierte en una cámara caliente y húmeda que produce justo el problema fúngico que la malla no resuelve. Si no se puede sobredimensionar, es mejor no poner la malla.\n\nDe las tres formas de bajar la temperatura, aquí el orden es ventilar primero, sombrear después y mojar solo con criterio. El sombreo temporal se usa como recurso de temporada y no permanente: lechada de cal sobre la cubierta impermeable en los meses de más radiación, que se lava sola con las primeras lluvias, justo cuando ya no hace falta. Y la nebulización queda reservada a la cama de enraizamiento, donde la humedad alta es el objetivo y no un efecto secundario. Como sistema de refrigeración general no compensa: con el aire ya cargado de humedad buena parte del año, enfría poco y sube la humedad, que es lo último que conviene donde el hongo es el enemigo principal.\n\nLa medición son dos termómetros de máxima y mínima, uno bajo la estructura de propagación y otro al aire libre, ambos a la altura de las plantas y a la sombra. La diferencia entre los dos al mediodía es la única métrica que hace falta para saber si el diseño funciona: si dentro hace mucho más calor que fuera, la estructura está fallando en lo único que tiene que hacer. Anotar el pico una vez al día cuesta un renglón en la misma planilla del inventario.\n\nY un tercer termómetro movido de sitio cada semana para cazar zonas muertas, que suelen aparecer en las esquinas alejadas de las aberturas, en la cara de sotavento o donde una fila de plantas altas hace de tapón.\n\nEl protocolo diario, para las pocas partes que sí se manejan: abrir temprano, antes de que empiece a pegar el sol, porque a las diez ya hay una masa de aire caliente acumulada; no cerrar por la noche salvo surazo; y revisar el termómetro al pasar.\n\nY para decidir si vale la pena la nebulización en algún momento, la comprobación es de una tarde: mojar el piso un día de calor y mirar el termómetro media hora después. Si no se mueve, con este aire no hay nada que ganar por ahí.",
+      "criterios": [
+        "Resuelve la ventilación por diseño y no por manejo diario.",
+        "Explica entrada baja y salida alta y la autorregulación del tiro.",
+        "Suma la ventilación por viento gracias a la orientación elegida.",
+        "Deja la cumbrera abierta todo el año con sombrerete.",
+        "Cierra solo el faldón sur y solo en surazo.",
+        "Sobredimensiona la apertura donde va malla antiáfidos, o renuncia a ella.",
+        "Ordena ventilar, sombrear y mojar en ese orden de prioridad.",
+        "Usa la lechada de cal como sombreo estacional que se lava con las lluvias.",
+        "Reserva la nebulización a la cama de enraizamiento.",
+        "Justifica el bajo rendimiento evaporativo por la humedad relativa alta.",
+        "Instala dos termómetros de máxima y mínima, dentro y fuera, a la sombra.",
+        "Usa la diferencia dentro-fuera al mediodía como métrica de éxito.",
+        "Busca zonas muertas con un termómetro móvil.",
+        "Abre temprano y no cierra de noche salvo surazo."
+      ],
+      "explicacion": "Fíjate en que la mejor ventilación es la que no se maneja. Todo el módulo ha ido en esa dirección: en vez de comprar un sistema que exige atención diaria, elegir una geometría que hace el trabajo sola, y quedarse con un termómetro para comprobar que efectivamente lo hace."
+    }
+  ]
+}

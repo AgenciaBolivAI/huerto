@@ -1,0 +1,101 @@
+{
+  "preguntas": [
+    {
+      "id": "conversion",
+      "tipo": "opcion_multiple",
+      "enunciado": "Trabajas con un plano en escala 1:50. ¿Qué afirmaciones son correctas?",
+      "opciones": [
+        "Un trazo de 8 cm en el papel representa 4 metros reales, porque se multiplica por el denominador.",
+        "Un muro real de 6 metros se dibuja de 12 cm, porque se divide por el denominador.",
+        "La razón es la misma en toda la hoja y en cualquier dirección, y eso es justo lo que permite medir un plano.",
+        "La escala 1:50 significa que el dibujo mide 50 veces más que la realidad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La última está invertida: 1:50 es una escala de reducción, el papel es cincuenta veces más chico. Y la tercera afirmación es la propiedad de fondo — en una fotografía en perspectiva la razón cambia con la distancia a la cámara, y por eso una foto de un edificio no sirve para construirlo."
+    },
+    {
+      "id": "cota-manda",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si mides con el escalímetro y te da 3,60, pero la cota escrita dice 3,45, deberías confiar en tu medición porque el escalímetro es un instrumento preciso.",
+      "respuesta": false,
+      "explicacion": "Falso: la cota manda sobre el dibujo. El escalímetro es preciso midiendo el papel, y el problema no es tu instrumento sino el papel — que se dilata con la humedad, que pudo salir de una fotocopia reducida, o de una impresión con la opción de ajustar a página marcada. La cifra escrita es el dato; el dibujo es una ilustración de ese dato."
+    },
+    {
+      "id": "escala-grafica",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué conviene dibujar una escala gráfica junto al cajetín?",
+      "opciones": [
+        "Porque se deforma junto con el dibujo: si alguien reduce la lámina a la mitad, la barra se reduce igual y sigue siendo verdadera.",
+        "Porque permite recuperar la escala de una copia concreta midiendo la barra, sin depender de que nadie haya tocado la impresión.",
+        "Porque es un dato embebido en el propio documento, en lugar de una constante declarada aparte que se desincroniza.",
+        "Porque es un requisito legal de todos los planos de construcción."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la misma razón por la que una imagen guarda sus dimensiones dentro del archivo y no en un texto al lado. Y tiene un uso muy concreto en tu caso: vas a mandar planos por teléfono, alguien los va a imprimir en el formato que tenga la impresora, y esa barrita es lo único que sobrevive al viaje."
+    },
+    {
+      "id": "checksum",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sumas las cotas parciales de una fachada y no dan la cota total. ¿Qué significa?",
+      "opciones": [
+        "Que el plano tiene un error: alguien cambió algo en un sitio y no lo actualizó en el otro.",
+        "Que la comprobación funcionó — no dice dónde está el error, pero delata que existe.",
+        "Que hay que aclararlo antes de comprar material, porque encontrarlo cuesta un minuto en el papel y una semana en la obra.",
+        "Que probablemente sea un redondeo sin importancia y se puede seguir."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Casi nunca es un redondeo. Los parciales y el total son información deliberadamente redundante, puesta ahí para poder comprobarla: funciona como un checksum. En un plano que pasó por tres versiones y dos personas, esa suma falla más a menudo de lo que uno esperaría, y cada vez que falla ha atrapado un problema real."
+    },
+    {
+      "id": "acumulacion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para replantear ocho tramos seguidos da igual medir cada uno desde donde acabó el anterior que medirlos todos desde un mismo origen.",
+      "respuesta": false,
+      "explicacion": "Falso, y la diferencia es acumulativa. Cada medición introduce un error pequeño —la punta que no cae exacta, la cinta poco tensa, el grosor del lápiz— y al encadenar, esos errores se suman, además en la misma dirección porque el sesgo de quien mide es constante. Ocho tramos con un centímetro cada uno son ocho centímetros al final. Midiendo todos los puntos contra un mismo origen, cada error se queda en su punto y no se hereda."
+    },
+    {
+      "id": "unidad-precision",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué reglas se aplican a las cifras de un plano acotado?",
+      "opciones": [
+        "La unidad se declara en el cajetín o en una nota y no se mezcla dentro de la misma lámina.",
+        "La precisión razonable es el centímetro, porque es a lo que se construye: escribir 3,4573 añade ruido, no rigor.",
+        "La cifra va centrada sobre la línea de cota, sin cortarla, y orientada para leerse desde abajo o desde la derecha.",
+        "Como el sistema es métrico, se entiende por contexto si son metros o centímetros."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No se entiende por contexto: la cifra 345 puede ser un muro de tres metros cuarenta y cinco o uno de trescientos cuarenta y cinco metros, y ambas costumbres de acotado conviven. Por eso la unidad se declara explícitamente, igual que se declara la escala."
+    },
+    {
+      "id": "cero-de-obra",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué criterios definen un buen cero de obra, el punto marcado como más menos cero cero?",
+      "opciones": [
+        "Tiene que ser un punto que no se vaya a mover en toda la obra: un dado de hormigón, la base de un poste existente, un umbral vecino.",
+        "Nunca una estaca de madera clavada en tierra suelta, porque alguien la arranca sin saber que era el origen de todo.",
+        "Se pinta y se anota en el plano de qué objeto físico se trata, no solo su valor.",
+        "Conviene ponerlo en el punto más bajo del terreno para que todas las cotas salgan positivas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El signo de las cotas es lo de menos; que el cero sobreviva es lo de más. El día que se pierde, todas las alturas del plano se vuelven inútiles a la vez: sabes que el piso va a más menos cero cero y no tienes ni idea de dónde está eso en el mundo. En llanura aluvial hay además un criterio propio para elegir la altura, y es dónde llegó el agua el peor día que recuerdes."
+    },
+    {
+      "id": "acotar-el-galpon",
+      "tipo": "abierta",
+      "enunciado": "Vas a acotar tú mismo el plano de planta del galpón, sabiendo que dentro de un mes vas a estar en el terreno con una cinta métrica replanteándolo. Explica qué cotas pones, en qué unidad, cómo eliges el cero de alturas y qué comprobaciones dejas incorporadas al dibujo.",
+      "respuestaModelo": "Acoto en metros con dos decimales y lo declaro en el cajetín, para que nadie tenga que adivinar si un 250 son centímetros o milímetros, y no mezclo unidades dentro de la lámina. La precisión la dejo en el centímetro porque es a lo que se construye; decimales adicionales solo darían ocasión de redondear mal.\n\nEn planta pongo dos cosas por cada lado. Primero, la cadena de cotas parciales: cada tramo de muro, cada hueco de puerta y de ventana con su ancho. Y encima, la cota total del lado. Esa redundancia es deliberada: la suma de las parciales tiene que dar el total, y esa comprobación es un checksum que puedo correr en un minuto sobre cualquier versión del plano, propia o de otro. Si algún día muevo un tabique y me olvido de actualizar el total, la suma me lo va a decir.\n\nAdemás de los parciales, y esto es lo que de verdad me va a servir en el terreno, pongo cotas acumuladas desde una esquina elegida como origen de cada lado. Con eso, el día del replanteo tiendo la cinta una sola vez por lado y marco todos los puntos leyendo valores acumulados, sin sumar nada en la cabeza al lado de la zanja y, sobre todo, sin heredar el error de la marca anterior. Si midiera encadenando, los errores pequeños de cada apoyo se sumarían en la misma dirección y me encontraría varios centímetros fuera en la última esquina, que es exactamente lo que hace que un techo no cierre.\n\nDejo también las dos diagonales del rectángulo acotadas, que es la otra medición redundante: si en el terreno las dos diagonales me dan iguales, el rectángulo está a escuadra, y si no, sé que tengo que corregir antes de excavar nada.\n\nPara las alturas elijo el cero pensando en el agua, no en la estética: el nivel de piso terminado del galpón va por encima del nivel que alcanzó el agua el peor aguacero que recuerde, porque estamos en llanura aluvial con zonas que se encharcan. Ese cero lo materializo en algo permanente, un dado de hormigón enterrado o la base de un poste que no se va a tocar, lo pinto, y anoto en el plano exactamente qué objeto es, no solo su valor. Desde él cuelgan todas las demás cotas de nivel: el terreno natural en negativo, el fondo de zapata en negativo más profundo, el antepecho de las ventanas en positivo.\n\nY por último dibujo una escala gráfica junto al cajetín, porque este plano va a viajar por teléfono y alguien lo va a imprimir en el formato que tenga la impresora a mano. La escala numérica del cajetín va a dejar de ser cierta en ese viaje; la barrita gráfica no.",
+      "criterios": [
+        "Acota en metros con dos decimales y declara la unidad en el cajetín.",
+        "Mantiene la precisión al centímetro y justifica por qué no más.",
+        "Pone cadena de parciales más total, y explica la suma como comprobación.",
+        "Añade cotas acumuladas desde un origen pensando en el replanteo.",
+        "Explica la acumulación de error al medir encadenando.",
+        "Incluye las diagonales como comprobación de escuadra.",
+        "Elige el cero de alturas por el nivel del agua en llanura aluvial.",
+        "Materializa el cero en algo permanente, lo pinta y anota qué objeto es.",
+        "Dibuja una escala gráfica y explica que sobrevive a la impresión."
+      ],
+      "explicacion": "Fíjate en el criterio que atraviesa toda la respuesta: acotar no es describir el dibujo, es preparar el trabajo de campo. Las mismas medidas se pueden escribir de una forma que obliga a sumar de pie al lado de una zanja, o de otra que permite tender la cinta una vez y marcar. La segunda cuesta lo mismo de dibujar y ahorra una mañana."
+    }
+  ]
+}

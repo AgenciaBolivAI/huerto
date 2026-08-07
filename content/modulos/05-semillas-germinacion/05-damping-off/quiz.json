@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "mecanismo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué le pasa exactamente a un plantín con damping-off?",
+      "opciones": [
+        "Un hongo coloniza el tejido justo en el punto donde el tallo sale del sustrato.",
+        "Ese anillo se estrangula y se oscurece, y el plantín se cae por su propio peso.",
+        "El follaje sigue verde un rato porque no está enfermo: está desconectado.",
+        "La planta entera se marchita progresivamente desde las hojas hacia abajo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hay marchitez progresiva: la caída es súbita. Es un fallo en un único punto de la cadena, no una degradación general, y por eso el síntoma visible engaña: las hojas están bien, la raíz está bien, y el daño está en un anillo de dos milímetros que casi nadie mira."
+    },
+    {
+      "id": "ventana",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un plantín es vulnerable al damping-off durante toda su vida en el vivero.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la mejor noticia de la lección. La ventana va desde la germinación hasta que el plantín endurece el cuello, más o menos cuando aparecen las primeras hojas verdaderas. Después de eso, el mismo hongo en el mismo sustrato ya no puede tumbarlo. El objetivo no es eliminar el hongo sino cruzar esa ventana rápido y en malas condiciones para él."
+    },
+    {
+      "id": "tres-condiciones",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué condiciones tienen que darse para que aparezca?",
+      "opciones": [
+        "Exceso de agua: varias de estas especies producen esporas que nadan en la película de agua entre partículas.",
+        "Falta de aire, por sustrato encharcado o compactado y ambiente cerrado.",
+        "Densidad excesiva, que crea un microclima húmedo que no se seca y pone cada planta en contacto con la siguiente.",
+        "La presencia del hongo, que solo aparece en sustratos contaminados."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los hongos que lo causan están prácticamente en todas partes: en el aire, en el agua, en la tierra, en las macetas usadas. No puedes evitar que estén. Y eso es precisamente lo que hace resoluble el problema: como lo que falta son las condiciones y no el organismo, la solución es cambiar las condiciones, y eso es gratis y permanente."
+    },
+    {
+      "id": "patron",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si en tu bandeja aparecen plantines caídos dispersos al azar por toda la superficie, probablemente sea damping-off.",
+      "respuesta": false,
+      "explicacion": "Falso: la firma del damping-off es una mancha contigua que crece día a día hacia afuera, porque se propaga por contacto y por el agua que corre entre celdas vecinas. Bajas dispersas al azar apuntan a otra cosa: semilla de baja calidad, siembra irregular, un problema puntual de riego o un insecto. Lo delata el mapa, no el plantín."
+    },
+    {
+      "id": "capa-inerte",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué funciona espolvorear una capa fina de arena lavada o cascarilla sobre la superficie sembrada?",
+      "opciones": [
+        "Porque crea una capa que se seca rápido justo donde el tallo sale del sustrato.",
+        "Porque le quita al hongo el microambiente húmedo del punto exacto donde ataca.",
+        "Porque es barato y no interfiere con la emergencia del plantín.",
+        "Porque el material inerte contiene un compuesto que mata al hongo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hay nada químico en juego: es puramente físico. La capa mantiene seco el cuello, que es el punto exacto de ataque, y con eso basta. Es un truco viejo, barato y sorprendentemente efectivo, y en Santa Cruz la cascarilla de arroz lo resuelve con material local."
+    },
+    {
+      "id": "riego-abajo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Regar temprano y por abajo es especialmente útil contra el damping-off.",
+      "respuesta": true,
+      "explicacion": "Verdadero, por dos motivos que se suman. Temprano, para que la superficie se seque durante el día en vez de pasar la noche mojada. Y por abajo, para que el cuello del plantín —el punto exacto donde ataca el hongo— nunca se moje. Esa sola decisión cambia muchísimo el resultado."
+    },
+    {
+      "id": "ya-empezo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Aparece la mancha en tu bandeja. ¿Qué haces el mismo día?",
+      "opciones": [
+        "Retirar los caídos en un recipiente y sacarlos del vivero, porque cada uno es un foco activo.",
+        "Dejar de regar hasta que la superficie se seque de verdad.",
+        "Aumentar el aire: sacar la bandeja a un sitio más abierto, abrir lo cerrado, poner un ventilador.",
+        "Regar con más frecuencia para que los plantines afectados se recuperen."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los caídos no se recuperan: el tallo estrangulado no se regenera, y todo lo que se hace es para salvar al resto. Regar cuesta resistirse porque el instinto ante un problema es intervenir y regar se siente como cuidar, pero aquí regar es alimentar al problema. Y si la mancha está localizada, separa físicamente la parte sana."
+    },
+    {
+      "id": "protocolo-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Escribe el protocolo anti damping-off que pegarías en la mesa de propagación de Rizoma del Sur: qué se hace antes de sembrar, qué cada día, y qué si aparece la mancha.",
+      "respuestaModelo": "Antes de sembrar. Bandejas y macetas lavadas y restregadas de verdad, quitando el sustrato viejo pegado, que es donde viajan las esporas de una temporada a la siguiente; y sustrato nuevo, nunca reutilizado de un lote que tuvo caída. Sustrato con suficiente parte gruesa, comprobado con la prueba del puño, y bandeja con los orificios de drenaje libres y apoyada de forma que el agua no se estanque debajo. Una vez sembrado, espolvorear una capa fina de cascarilla de arroz o arena lavada sobre la superficie, que se seca rápido justo donde el tallo va a salir. Y no sembrar más denso de lo necesario: sembrar apretado no da más plantas, da una mancha que se propaga sin obstáculos.\n\nCada día. Meter el dedo en el sustrato antes de regar y regar solo si hace falta. Este es el hábito que más lotes va a salvar y no cuesta nada, y aquí importa el doble: durante las lluvias la humedad ambiente alta hace que el sustrato se seque muy despacio, así que es facilísimo regar por costumbre sobre algo que todavía estaba húmedo. Regar temprano, para que la superficie se seque durante el día, y por abajo cuando se pueda, para que el cuello del plantín no se moje nunca.\n\nCada día también, una mirada de diez segundos buscando el patrón. No plantines sueltos: manchas. Un grupo de caídos juntos es la alarma; caídos dispersos por toda la bandeja es otra cosa y hay que buscar otra causa.\n\nSi aparece la mancha, el mismo día y en este orden. Retirar los caídos con pinzas, meterlos en un balde y sacarlos del vivero, sin dejarlos sobre el sustrato ni al lado de la mesa, porque cada uno es un foco activo. Cortar el riego y dejar que la superficie se seque de verdad. Abrir todo lo que se pueda para que corra aire, o sacar la bandeja a un sitio más ventilado. Y separar físicamente la parte sana de la bandeja, porque la propagación es por contacto y por agua corriendo, así que la distancia funciona.\n\nSobre fungicidas: si aplico uno sin cambiar riego, drenaje, aire y densidad, voy a aplicarlo cada temporada indefinidamente, porque estaría tratando el síntoma de una configuración incorrecta. Y si alguna vez uso uno, respeto la etiqueta y la dosis y uso protección.\n\nY dos decisiones de diseño que van más allá del protocolo diario. La mesa de propagación va en un sitio con brisa, no en el rincón más protegido: el instinto lleva a resguardar los plantines del viento, pero un rincón sin circulación durante las lluvias es donde este problema aparece todos los años. Y añado una columna a la ficha de cada especie anotando si el lote tuvo damping-off y en qué condiciones, para saber en dos temporadas cuáles de mis especies son sensibles.",
+      "criterios": [
+        "Higieniza bandejas y no reutiliza sustrato de un lote afectado.",
+        "Asegura drenaje del sustrato y de la bandeja.",
+        "Espolvorea capa inerte sobre la superficie sembrada.",
+        "Evita sembrar demasiado denso.",
+        "Comprueba con el dedo antes de regar y explica por qué aquí importa el doble.",
+        "Riega temprano y por abajo, protegiendo el cuello.",
+        "Inspecciona a diario buscando el patrón espacial, no plantines sueltos.",
+        "Ante la mancha, retira los caídos fuera del vivero.",
+        "Corta el riego y aumenta el aire.",
+        "Separa físicamente la parte sana.",
+        "Sitúa el fungicida como tratamiento de síntoma y menciona etiqueta y protección.",
+        "Ubica la mesa en zona con brisa y registra en la ficha de especie."
+      ],
+      "explicacion": "Fíjate en que el protocolo entero no incluye comprar nada. Todo son decisiones de montaje y hábitos de dos segundos. Esa es la diferencia entre un problema de organismo, que se combate, y un problema de condiciones, que se elimina."
+    }
+  ]
+}

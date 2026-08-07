@@ -1,0 +1,111 @@
+{
+  "preguntas": [
+    {
+      "id": "dos-bocas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se deduce del tipo de boca de un artrópodo?",
+      "opciones": [
+        "Los masticadores arrancan tejido: falta materia y quedan excrementos cerca.",
+        "Los chupadores clavan un pico y beben savia: la hoja queda entera pero decolorada o pegajosa.",
+        "Los chupadores viven casi siempre en el envés, protegidos del sol, la lluvia y el riego.",
+        "Los masticadores son los principales transmisores de virus."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Casi todos los transmisores de virus son chupadores, porque el pico que perfora la célula es exactamente el vehículo que un virus necesita. Ese es el motivo real para controlarlos, mucho más que el daño directo."
+    },
+    {
+      "id": "el-enves",
+      "tipo": "verdadero_falso",
+      "enunciado": "Contra un chupador, mojar bien la cara superior de la hoja es suficiente si el producto es de buena calidad.",
+      "respuesta": false,
+      "explicacion": "Falso: el chupador vive en el envés y bebe desde dentro. Un producto que solo moja la cara superior no lo toca, por bueno que sea. En chupadores, mojar el envés no es un detalle de aplicación: es la aplicación."
+    },
+    {
+      "id": "los-seis",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué señales identifican a cada grupo?",
+      "opciones": [
+        "Mosca blanca: levanta vuelo en nube al mover la planta.",
+        "Trips: zonas plateadas o bronceadas con puntitos negros de excremento encima.",
+        "Ácaro: no es un insecto, tiene ocho patas, deja punteado fino y se dispara con calor y aire seco.",
+        "Cochinilla: se mueve constantemente por la planta y por eso es fácil de mojar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cochinilla hace lo contrario: se fija a un tallo, deja de moverse y se cubre con una escama dura o cera algodonosa. Esa cubierta la protege y la convierte en una de las más difíciles de mojar."
+    },
+    {
+      "id": "melaza",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué indican la melaza, el hollín y las hormigas?",
+      "opciones": [
+        "La melaza es el excedente de azúcar que excretan los chupadores al procesar mucha savia.",
+        "El hollín no ataca a la planta: vive del azúcar, pero tapa la hoja y le quita luz.",
+        "Una fila de hormigas subiendo por un tallo es una flecha señalando dónde está la colonia.",
+        "Las hormigas que suben por el tallo son la plaga y hay que eliminarlas primero."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Muchas hormigas cosechan melaza y a cambio protegen a los chupadores de sus enemigos naturales, pero no son la plaga: son el servicio de monitoreo gratuito que ya está desplegado. Matarlas sin tocar a los chupadores no resuelve nada y encima pierde la señal."
+    },
+    {
+      "id": "cortadora",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la hormiga cortadora exige otra lógica de control?",
+      "opciones": [
+        "No se come la hoja: corta trozos y con ellos cultiva un hongo en el nido subterráneo.",
+        "El daño es masivo y rápido: puede defoliar plantas jóvenes en una noche.",
+        "El control está en el nido, y se llega siguiendo el camino de acarreo.",
+        "Basta con pulverizar bien el follaje al atardecer."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Pulverizar hojas no sirve prácticamente de nada porque la población vive bajo tierra y solo sale a cortar. Y los cortes limpios y curvos sin ningún insecto a la vista de día son la firma inconfundible."
+    },
+    {
+      "id": "aritmetica",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué llegar temprano no es un consejo sino aritmética?",
+      "opciones": [
+        "La población se multiplica por un factor cada generación, no aumenta en una cantidad fija.",
+        "El tiempo entra como exponente, así que esperar no aumenta el problema un poco.",
+        "En el trópico las generaciones son cortas todo el año, así que el exponente crece rápido.",
+        "El crecimiento es lineal, así que una semana de retraso cuesta lo mismo que cualquier otra."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la diferencia entre un coste lineal y uno exponencial. El recorrido semanal es lo que mantiene el problema en la parte plana de la curva, donde se resuelve quitando unas hojas con la mano."
+    },
+    {
+      "id": "monitoreo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Para qué sirven las trampas adhesivas de color?",
+      "opciones": [
+        "Para saber que una plaga llegó y si va en aumento, contando cada semana.",
+        "Las amarillas atraen mosca blanca y pulgones alados; las azules, trips.",
+        "Lo que interesa es la tendencia y no el número absoluto.",
+        "Para controlar la plaga capturando la mayor parte de la población."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Capturan una fracción minúscula: son herramienta de detección, no de control. Junto con el golpeteo sobre papel blanco y la ronda nocturna con linterna, adelantan semanas al ojo desnudo."
+    },
+    {
+      "id": "monitoreo-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Monta el sistema de monitoreo de artrópodos de Rizoma del Sur: qué instalas, qué revisas, cuándo y cómo decides actuar.",
+      "respuestaModelo": "Todo va dentro del mismo recorrido semanal que ya hago para estructuras e inventario, así que no añade una tarea nueva sino contenido a una que ya existe.\n\nInstalo trampas adhesivas amarillas y azules repartidas por zonas, a la altura de las plantas, y las cambio cuando se llenan. Las amarillas para mosca blanca y pulgones alados, las azules para trips. No espero que controlen nada: capturan una fracción minúscula. Lo que me dicen es que la plaga llegó y si va en aumento. Anoto el conteo cada semana en la misma libreta, porque lo que importa es la tendencia y no el número.\n\nLlevo lupa siempre y hago golpeteo sobre papel blanco en los brotes tiernos. Trips y ácaros son las dos plagas que más se diagnostican tarde por no verse, y en la seca cruceña los ácaros son casi seguros porque calor y aire seco son justo sus condiciones.\n\nInspecciono con prioridad los brotes tiernos y el envés de las hojas. Pulgones, trips y ácaros van todos al tejido nuevo, blando y jugoso, y los chupadores viven en el envés. Con eso cubro la mayor parte del riesgo.\n\nUso las hormigas como indicador. Una fila subiendo por un tallo es una flecha señalando una colonia de chupadores, y no la mato porque perdería la señal y no resolvería nada. Una fila cargando trozos de hoja es otra cosa completamente distinta: ahí sigo el camino hasta el nido.\n\nLa hormiga cortadora tiene rutina propia porque es la amenaza más seria y la única cuyo control no está en la planta. Busco montículos nuevos en cada recorrido, porque un nido joven se elimina fácil y uno maduro no. Si aparece un camino activo, lo sigo hasta el nido antes de tocar nada en las plantas. Combino barreras físicas en el tronco de plantas valiosas, revisión y destrucción de nidos incipientes y vigilancia nocturna en las épocas de actividad. Si llego a usar un producto específico, lo aplico exactamente como diga su etiqueta.\n\nHago una ronda nocturna con linterna de vez en cuando, sobre todo si aparece daño de masticador sin bicho a la vista: es la única forma de ver a los nocturnos en acción y resuelve de un golpe misterios de semanas.\n\nEn la seca reviso más seguido por los ácaros, y aprovecho una medida que no cuesta nada: aspersión ocasional sobre el follaje, que los reduce y que el riego por goteo no da.\n\nY el criterio para actuar es de tiempo, no de umbral emocional: como la población se multiplica por un factor cada generación y en este clima las generaciones son cortas todo el año, cada semana de retraso vale mucho más que la anterior. Actuar cuando el problema todavía se resuelve quitando unas hojas con la mano es la única variable que controla el costo de verdad.\n\nY antes de comprar cualquier producto, leo la etiqueta entera —dosis, cultivos autorizados, plazos y equipo de protección— y contrasto el consejo de la agropecuaria con asistencia técnica independiente, porque el consejo del comercio es comercial.",
+      "criterios": [
+        "Integra el monitoreo en el recorrido semanal existente.",
+        "Instala trampas amarillas y azules y las usa para tendencia, no para control.",
+        "Anota conteos semanales en la libreta.",
+        "Usa lupa y golpeteo sobre papel blanco para trips y ácaros.",
+        "Prioriza brotes tiernos y envés de hoja.",
+        "Usa las hormigas como indicador y no las elimina sin más.",
+        "Distingue hormiga que cosecha melaza de hormiga cortadora.",
+        "Da rutina propia a la cortadora, buscando nidos jóvenes y siguiendo caminos.",
+        "Combina barreras, destrucción de nidos incipientes y vigilancia nocturna.",
+        "Hace ronda nocturna ante daño de masticador sin bicho visible.",
+        "Aumenta la vigilancia en la seca por ácaros y usa aspersión ocasional.",
+        "Justifica la acción temprana con el crecimiento multiplicativo.",
+        "Lee la etiqueta completa y contrasta el consejo comercial."
+      ],
+      "explicacion": "Lo importante de esta lección no es la lista de bichos sino la forma de la curva: en una población que se multiplica, todo el valor está en detectar temprano. Las trampas, la lupa y la linterna existen exactamente para eso."
+    }
+  ]
+}

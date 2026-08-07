@@ -1,0 +1,102 @@
+{
+  "preguntas": [
+    {
+      "id": "hsp",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué son las horas sol pico y para qué sirven?",
+      "opciones": [
+        "El ancho de un rectángulo de altura fija que tiene la misma área que la campana de radiación del día real.",
+        "Un atajo de contabilidad que permite multiplicar en vez de integrar: un panel de 400 Wp con 4 horas sol pico produce 1.600 Wh antes de pérdidas.",
+        "Un dato que se consulta por coordenadas, no se estima.",
+        "Las horas en que el sol está por encima del horizonte."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No son las horas de luz: son bastantes menos, porque la mayor parte del día el sol pega con mucha menos fuerza que en el pico. El truco consiste en aplastar la campana en un rectángulo equivalente de mil vatios por metro cuadrado de altura, y lo que queda es un ancho medido en horas."
+    },
+    {
+      "id": "mes-critico",
+      "tipo": "verdadero_falso",
+      "enunciado": "En el llano tropical boliviano, igual que en climas templados, el mes crítico para dimensionar es el invierno.",
+      "respuesta": false,
+      "explicacion": "Falso, y es una de las traducciones que hay que hacer al leer bibliografía del hemisferio norte. En climas templados el mes malo es el invierno por geometría solar: el sol está bajo y los días son cortos. En el llano tropical el mes malo es la temporada de lluvias, cuando el cielo puede quedarse encapotado semanas enteras aunque los días sean largos y calurosos. Se dimensiona con el valor mensual más bajo de la tabla, no con la media anual."
+    },
+    {
+      "id": "perdidas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que saber sobre la cadena de pérdidas del sistema?",
+      "opciones": [
+        "Incluye temperatura, suciedad, ángulo, cables, regulador, batería e inversor, y se multiplican entre sí.",
+        "Se agrupan en un solo factor de rendimiento, que para un sistema autónomo con baterías ronda el 0,7 como punto de partida.",
+        "Ese factor se puede calcular con datos propios midiendo la producción real desde el primer mes.",
+        "Es un porcentaje fijo que vale igual para cualquier instalación."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Nada de fijo: un sistema con cables cortos y gruesos, regulador MPPT, litio y paneles ventilados rinde bastante mejor que uno con cable fino y largo, regulador simple, plomo viejo y paneles pegados a la calamina. El 0,7 es un punto de partida hasta que tengas tu propio número medido."
+    },
+    {
+      "id": "calculo-arreglo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Consumes 3.000 Wh al día, tu rendimiento es 0,7 y el mes crítico da 3,5 horas sol pico. ¿Cómo calculas el arreglo?",
+      "opciones": [
+        "Primero inflas el consumo por las pérdidas: 3.000 dividido por 0,7 son unos 4.286 Wh a generar.",
+        "Después repartes eso entre las horas sol pico: 4.286 dividido por 3,5 son unos 1.225 Wp de arreglo.",
+        "Y redondeas hacia arriba al número entero de paneles, nunca hacia abajo.",
+        "Divides directamente 3.000 entre 3,5, que da unos 857 Wp."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Saltarse el factor de rendimiento deja el arreglo un tercio corto de origen, que es uno de los errores más frecuentes. Y el redondeo hacia abajo para ahorrarse un panel se nota exactamente el mes que no querías."
+    },
+    {
+      "id": "calculo-banco",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se calcula el banco de baterías y qué entra en la cuenta?",
+      "opciones": [
+        "Solo el consumo que pasa por la batería, es decir el nocturno y el de días nublados, no el consumo total del día.",
+        "Multiplicado por los días de autonomía que quieras aguantar sin sol.",
+        "Dividido por la profundidad de descarga, porque no se puede usar toda la capacidad comprada.",
+        "El consumo total del día multiplicado por los días de autonomía."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Lo que consumes de día va casi directo del panel a la carga y apenas toca la batería. Contarlo dos veces infla el banco, que es el componente más caro y el que se gasta. Y la profundidad de descarga marca una diferencia enorme entre tecnologías: para el mismo servicio, el plomo pide bastante más capacidad instalada que el litio."
+    },
+    {
+      "id": "panel-o-bateria",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cuando el mes crítico no cierra, agrandar el banco de baterías y poner más paneles son opciones equivalentes.",
+      "respuesta": false,
+      "explicacion": "Falso: los paneles son baratos por vatio y duran décadas; las baterías son caras por vatio-hora y se gastan, hay que volver a comprarlas cada varios años. Y un arreglo sobredimensionado tiene dos ventajas añadidas: recarga el banco más rápido después de un día nublado, lo que alarga su vida, y deja excedente al mediodía para mover cargas a esa franja. Ante la duda, más panel."
+    },
+    {
+      "id": "inversor-regulador",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Con qué criterios se eligen el inversor y el regulador?",
+      "opciones": [
+        "El inversor por la potencia instantánea máxima, con el pico de arranque del motor más grande incluido.",
+        "El regulador por corriente: debe aguantar la corriente de cortocircuito del arreglo con margen.",
+        "El regulador también por tensión: su límite de entrada debe superar la suma de tensiones en vacío corregidas por frío.",
+        "Los dos por la energía diaria en vatios-hora, igual que los paneles."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La energía diaria dimensiona paneles y batería; la potencia instantánea dimensiona el inversor. Y el cálculo de tensión del regulador es el único de todo el módulo donde equivocarse rompe hardware el primer día, porque superar el límite de entrada no dispara una protección: quema el equipo."
+    },
+    {
+      "id": "dimensionar-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Tienes la planilla de consumo del vivero y de la casa terminada. Describe todo el proceso de dimensionado, desde conseguir los datos de radiación hasta llegar a los cuatro números, y explica qué decisiones tomarías si el mes crítico no cerrara.",
+      "respuestaModelo": "Empiezo por los datos de radiación, que se consultan y no se estiman. Entro a Global Solar Atlas y pincho exactamente el punto del vivero, no Santa Cruz ciudad, y descargo la tabla mensual. Repito en NASA POWER con las mismas coordenadas y comparo: si los dos coinciden aproximadamente, tengo un dato sólido; si divergen mucho, desconfío del más optimista. También contrasto con el atlas boliviano de la Universidad Mayor de San Simón. Guardo la tabla en la carpeta del proyecto con la fecha de consulta.\n\nDe esa tabla tomo el valor mensual más bajo, no la media anual. En el llano ese mes va a caer en la temporada de lluvias, entre diciembre y marzo, y no en invierno, porque aquí manda la nubosidad y no la geometría del sol. Con la media anual el sistema funcionaría once meses y me dejaría a oscuras justo en el que más falta hace.\n\nCon el consumo diario medido de la planilla, calculo el arreglo en dos divisiones: primero divido el consumo por el factor de rendimiento del sistema, que para un sistema autónomo con baterías arranca en torno a 0,7 y agrupa las pérdidas por calor, suciedad, ángulo, cables, regulador, batería e inversor. Eso me da la energía que hay que generar. Después divido ese resultado por las horas sol pico del mes crítico, y obtengo los vatios pico de arreglo. Redondeo hacia arriba al número entero de paneles.\n\nEl banco lo calculo aparte y solo con el consumo que pasa por la batería, que es el nocturno y el de días nublados, no el total del día: lo que consumo con sol va casi directo del panel a la carga. Multiplico ese consumo nocturno por los días de autonomía que quiero, y divido por la profundidad de descarga que tolera la tecnología elegida. El resultado en vatios-hora lo paso a amperios-hora dividiendo por la tensión del banco.\n\nPara los días de autonomía uso un dato que ninguna base de datos tiene: cuántos días seguidos de cielo encapotado se ven en un enero cualquiera. Eso se lo pregunto a un vecino que lleve años ahí.\n\nEl inversor lo elijo por la potencia instantánea máxima, con el pico de arranque de la bomba coincidiendo con lo demás encendido, mirando su potencia continua y su potencia de pico. El regulador, por corriente de cortocircuito del arreglo con margen y por límite de tensión de entrada por encima de la suma de tensiones en vacío corregidas por la temperatura mínima de una mañana de surazo.\n\nSi el mes crítico no cierra, tengo tres salidas y no son equivalentes. La primera y mejor es reducir el consumo de ese mes: si enero es el mes malo y es también cuando llueve, el riego se puede espaciar y alguna carga puede esperar a un día de sol. La segunda es sobredimensionar el arreglo, que es la opción preferida: los paneles son baratos por vatio, duran décadas, recargan el banco más rápido tras los días nublados —lo que alarga la vida de la batería— y dejan excedente al mediodía. La tercera, agrandar el banco, es la última: caro por vatio-hora y hay que volver a comprarlo cada pocos años.\n\nY monto todo en una planilla, no en papel, porque voy a querer probar varios escenarios antes de comprar. Al primer mes de funcionamiento comparo producción real contra prevista y sustituyo el 0,7 genérico por mi factor medido.",
+      "criterios": [
+        "Consulta radiación por coordenadas propias y contrasta al menos dos fuentes.",
+        "Usa la tabla mensual y toma el mes más bajo, no la media anual.",
+        "Sitúa el mes crítico en la temporada de lluvias y explica por qué.",
+        "Aplica el factor de rendimiento antes de dividir por las horas sol pico.",
+        "Redondea hacia arriba al número entero de paneles.",
+        "Calcula el banco solo con el consumo nocturno, con autonomía y profundidad de descarga.",
+        "Usa observación local para decidir los días de autonomía.",
+        "Elige inversor por pico instantáneo y regulador por corriente y tensión corregida por frío.",
+        "Prioriza reducir consumo, luego más panel, y deja más batería como última opción.",
+        "Prevé verificar producción real y recalcular el factor de rendimiento."
+      ],
+      "explicacion": "Fíjate en que todo el dimensionado descansa en dos números que no calculas tú: las horas sol pico del mes crítico, que se consultan, y el consumo diario, que se mide. El resto son divisiones. Los errores caros casi nunca están en la aritmética — están en haber usado un promedio donde iba un extremo."
+    }
+  ]
+}

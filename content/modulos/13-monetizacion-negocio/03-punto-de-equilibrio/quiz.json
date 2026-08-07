@@ -1,0 +1,97 @@
+{
+  "preguntas": [
+    {
+      "id": "fijos-y-variables",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué distingue a un costo fijo de uno variable?",
+      "opciones": [
+        "El fijo existe aunque no produzcas nada: amortización, agua y energía de base, y tu tiempo.",
+        "El variable aparece con cada planta: envase, sustrato, material de partida e insumos.",
+        "La diferencia es de comportamiento frente al volumen, no de importe.",
+        "Los fijos son siempre los más caros del vivero."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es cuestión de tamaño: un costo variable puede ser mayor que uno fijo. Lo que cambia es cómo se comportan cuando produces una planta más, y eso es lo que decide en qué cálculo entra cada uno."
+    },
+    {
+      "id": "dos-preguntas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué importa la distinción a la hora de decidir?",
+      "opciones": [
+        "Para decidir si producir una planta más, los fijos son irrelevantes: ya están y no cambian.",
+        "Por eso el margen de contribución resta solo el costo variable.",
+        "Para decidir si el negocio entero se sostiene, los fijos son exactamente lo que hay que cubrir.",
+        "Porque los costos fijos se reparten entre todas las plantas y así se obtiene el precio."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Son dos preguntas distintas y se contestan con números distintos; confundirlas es de los errores más comunes. Y repartir los fijos para obtener un precio es exactamente lo que la lección anterior descartaba: el costo no determina el precio."
+    },
+    {
+      "id": "el-calculo",
+      "tipo": "verdadero_falso",
+      "enunciado": "El punto de equilibrio en plantas se obtiene dividiendo los costos fijos del periodo entre el margen de contribución por planta.",
+      "respuesta": true,
+      "explicacion": "Correcto. Y cuando se venden varias especies con márgenes distintos se usa el margen medio ponderado por la proporción en que se vende cada una, lo cual tiene una consecuencia interesante: cambiar la mezcla del catálogo cambia el punto de equilibrio sin tocar ningún precio."
+    },
+    {
+      "id": "las-palancas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se baja el punto de equilibrio, y en qué orden conviene intentarlo?",
+      "opciones": [
+        "Subir el precio: sube el margen y no consume más tiempo, que es el recurso limitante.",
+        "Bajar el costo variable, y la vía más eficaz es reducir la merma.",
+        "Sacar del catálogo la especie que no paga, que libera espacio y tiempo sin vender una planta más.",
+        "Producir más, que es la primera reacción y la más eficaz en un vivero pequeño."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Producir más funciona pero cuesta horas, y en un vivero de una persona esa palanca choca contra el límite del tiempo mucho antes que contra el del terreno. Si el margen por planta es insuficiente, producir más solo escala el problema. El orden correcto es precio, merma, mezcla y solo al final volumen."
+    },
+    {
+      "id": "carga-base",
+      "tipo": "verdadero_falso",
+      "enunciado": "Igual que en un sistema con carga base alta, hay dos formas de mejorar el resultado: subir el rendimiento por unidad o bajar la carga base, y la segunda casi siempre se olvida.",
+      "respuesta": true,
+      "explicacion": "Correcto, y esa es la razón por la que conviene revisar los fijos antes de intentar crecer. Hasta cubrirlos, cada venta solo está pagando la infraestructura; a partir de ahí, cada venta adicional es casi todo beneficio."
+    },
+    {
+      "id": "los-fijos-suben",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que tener en cuenta sobre la evolución de los costos fijos?",
+      "opciones": [
+        "Casi nunca bajan y suben con mucha facilidad: una herramienta, un galpón, una moto, un ayudante.",
+        "Cada una parece pequeña y todas juntas mueven el punto de equilibrio hacia arriba.",
+        "Antes de cada inversión conviene preguntarse cuántas plantas más obliga a vender al año.",
+        "Como son fijos, no afectan al número de plantas que hay que vender."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Son precisamente el numerador de la división, así que subirlos sube el punto de equilibrio directamente. Si la respuesta a la pregunta de la inversión es un número que obliga a cambiar la escala del negocio, eso no es una compra: es una decisión estratégica."
+    },
+    {
+      "id": "equilibrio-en-tiempo",
+      "tipo": "verdadero_falso",
+      "enunciado": "En un vivero con las ventas concentradas al arranque de las lluvias, es previsible que buena parte del año se trabaje solo para cubrir costos.",
+      "respuesta": true,
+      "explicacion": "Correcto, y no es un problema en sí mismo: es el dato que hace imprescindible planificar la caja. El punto de equilibrio en tiempo se calcula repartiendo el año en meses y viendo a partir de qué momento se empieza a ganar de verdad."
+    },
+    {
+      "id": "equilibrio-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Explica cómo vas a calcular y usar el punto de equilibrio en Rizoma del Sur, y qué harías si el resultado sale insuficiente.",
+      "respuestaModelo": "Empiezo listando los costos fijos, que casi todos ya están decididos en los módulos anteriores: la amortización de la estructura de propagación, del tanque y su plataforma, de la malla, del riego y de las herramientas; el agua y la energía de base; y el tiempo que dedico pase lo que pase —regar, vigilar, mantener, atender—, que en un vivero pequeño es el fijo más grande y el que nadie apunta. Si lo dejo fuera, el negocio parece rentable mucho antes de serlo.\n\nLos costos variables ya están en la hoja por lote de la primera lección: envase, sustrato, material de partida, insumos y el trabajo directo.\n\nEl punto de equilibrio en plantas sale de dividir los fijos del periodo entre el margen de contribución por planta. Como vendo especies muy distintas, uso el margen medio ponderado por la proporción en que se vende cada una, y eso tiene una consecuencia que conviene tener presente: cambiar la mezcla del catálogo cambia el punto de equilibrio sin tocar ningún precio. Si el culantro y la batata pesan mucho en las ventas, el margen medio será bajo y el punto de equilibrio alto en unidades; si pesan más los frutales y las ornamentales, al revés.\n\nLo calculo con datos reales del primer año, no con estimaciones, y lo uso como semáforo.\n\nSi el resultado sale insuficiente, no produzco más: esa es la reacción intuitiva y la más cara, porque exige más tiempo, más insumos y más espacio, y si el margen por planta no alcanza, producir más solo escala el problema. El orden de revisión es precio primero, porque sube el margen sin consumir horas; después merma, que es exactamente lo mismo que bajar el costo por planta vendida; después la mezcla de especies; y solo al final volumen.\n\nY tengo siempre sobre la mesa una cuarta opción: sacar del catálogo la especie que no paga. Libera espacio y tiempo para las que sí, y baja el punto de equilibrio sin vender una planta más. Para poder decidir eso necesito los costos y márgenes por especie de las dos lecciones anteriores; sin ellos es imposible saber cuál sobra.\n\nAntes de cada inversión me hago la pregunta que sustituye a «¿me sirve?»: cuántas plantas más me obliga a vender al año. Con el margen por especie ya calculado, ese número sale en un minuto, y convierte una compra impulsiva en una decisión informada. Si el número obliga a cambiar la escala del negocio, la trato como decisión estratégica y no como compra.\n\nTambién calculo el punto de equilibrio en tiempo, repartiendo el año por meses. Con un pico de ventas concentrado al inicio de las lluvias, espero descubrir que buena parte del año trabajo solo para cubrir costos y que la ganancia se concentra en unas pocas semanas. Saberlo de antemano es lo que me permite planificar la caja en vez de sufrirla.\n\nPor último, averiguo temprano los fijos de contexto: obligaciones de registro y tributarias según la escala, consultadas con un contador local, y el costo del jornal en la zona, que decide a la vez cómo valorar mi hora y a partir de qué punto conviene contratar ayuda. Y recalculo la amortización con el precio de reposición, no con el precio pagado: lo que importa para seguir operando no es lo que costó la malla, sino lo que va a costar la próxima.",
+      "criterios": [
+        "Lista los costos fijos concretos del proyecto e incluye el tiempo propio.",
+        "Reconoce que omitir el tiempo hace parecer rentable un negocio que no lo es.",
+        "Aplica correctamente la división de fijos entre margen de contribución.",
+        "Usa el margen medio ponderado y entiende que la mezcla cambia el resultado.",
+        "Descarta producir más como primera reacción y justifica por qué.",
+        "Propone el orden precio, merma, mezcla y volumen.",
+        "Contempla sacar del catálogo la especie que no paga.",
+        "Evalúa cada inversión por las ventas adicionales que obliga a hacer.",
+        "Calcula el punto de equilibrio en tiempo por la estacionalidad.",
+        "Prevé averiguar obligaciones tributarias y costo del jornal localmente.",
+        "Amortiza con precio de reposición y no con precio pagado."
+      ],
+      "explicacion": "La lección tiene un cálculo trivial y una conclusión incómoda: cuando el negocio no cierra, casi todo el mundo intenta producir más, que es justo la palanca que consume el recurso que ya está agotado. Reconocer eso vale más que la división."
+    }
+  ]
+}

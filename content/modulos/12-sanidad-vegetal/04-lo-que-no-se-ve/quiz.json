@@ -1,0 +1,105 @@
+{
+  "preguntas": [
+    {
+      "id": "cuatro-agentes",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué necesita cada tipo de patógeno para entrar?",
+      "opciones": [
+        "El hongo necesita tiempo con la superficie mojada: es un problema de duración de humedad.",
+        "La bacteria necesita agua libre más una puerta: es un problema de heridas y salpicadura.",
+        "El virus necesita un vector o material infectado: es un problema de transporte.",
+        "Los cuatro se manejan igual, corrigiendo el ambiente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El nematodo ya está en el suelo: es un problema de procedencia del sustrato y de rotación. Cambiar el ambiente afecta muchísimo a los dos primeros, poco al tercero y nada al cuarto, y por eso las medidas son distintas para cada uno."
+    },
+    {
+      "id": "firmas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se distinguen sus firmas en la planta?",
+      "opciones": [
+        "El hongo da lesiones con borde definido y fabrica estructuras visibles: pelusa, polvillo, puntitos.",
+        "La bacteria da lesiones húmedas, aceitosas y a menudo angulosas porque los nervios frenan su avance.",
+        "El virus no deja nada que ver: produce patrones de mosaico, deformación y enanismo.",
+        "El nematodo se reconoce por manchas oscuras con halo en la hoja."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El nematodo ataca la raíz y su síntoma aéreo es inespecífico: plantas más pequeñas y amarillentas que se marchitan antes con el calor, en manchas irregulares dentro del lote. Se diagnostica mirando la raíz, no la hoja."
+    },
+    {
+      "id": "camara-humeda",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué consiste la prueba de la cámara húmeda y qué enseña además?",
+      "opciones": [
+        "Trozo de hoja con la lesión en una bolsa con papel mojado, uno o dos días, y mirar con lupa.",
+        "Si aparece pelusa, polvillo o puntitos sobre la lesión, es un hongo.",
+        "Reproduce en una bolsa exactamente las condiciones que provocan el problema en el vivero.",
+        "Sirve también para confirmar virus, que se hacen visibles con la humedad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los virus no se hacen visibles nunca: la ausencia total de agente después de la cámara húmeda es justamente una de sus señales. Y la lección de manejo que deja la prueba son las tres medidas culturales: regar temprano, bajar la densidad y regar al sustrato y no al follaje."
+    },
+    {
+      "id": "hilo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Una planta se marchita de golpe con el sustrato húmedo. ¿Cómo se confirma si es bacteriana?",
+      "opciones": [
+        "Cortando un trozo del tallo bajo y colgándolo en un vaso de agua limpia con el corte sumergido.",
+        "Mirando contra la luz unos minutos sin mover el vaso.",
+        "Si sale un hilo lechoso que baja como humo blanco, es bacteria.",
+        "Aplicando un bactericida y observando si mejora en tres días."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Ese hilo son bacterias saliendo a presión de los vasos conductores, donde estaban en densidad enorme. Y no hay tratamiento curativo práctico: si la prueba sale positiva la respuesta es eliminar la planta con su sustrato, desinfectar herramientas y revisar de dónde vino el material."
+    },
+    {
+      "id": "virus",
+      "tipo": "verdadero_falso",
+      "enunciado": "Con el producto adecuado se puede curar una planta con virus si se detecta a tiempo.",
+      "respuesta": false,
+      "explicacion": "Falso: no existe producto curativo contra virus, y quien ofrezca lo contrario está vendiendo algo que no funciona. Los virus son sistémicos y no se curan. El control en un vivero es, en la práctica, control de material de propagación y control de chupadores como vectores."
+    },
+    {
+      "id": "damping-off",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué dispara el mal de almácigo?",
+      "opciones": [
+        "Exceso de humedad permanente y siembra demasiado densa.",
+        "Falta de ventilación, especialmente bajo plástico o malla cerrada.",
+        "Sustrato con tierra sin tratar y bandejas reutilizadas sin lavar.",
+        "Un patógeno específico que hay que identificar para elegir el producto correcto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es un solo organismo, sino un grupo de hongos y organismos parecidos que viven en el suelo y en el agua. Las cinco causas que lo disparan son de manejo, y por eso la prevención funciona tan bien y ningún producto compensa una cama densa y encharcada."
+    },
+    {
+      "id": "sintoma-damping",
+      "tipo": "verdadero_falso",
+      "enunciado": "En el mal de almácigo el plantín se seca de arriba hacia abajo empezando por las hojas.",
+      "respuesta": false,
+      "explicacion": "Falso: el plantín se cae de golpe con el tallo adelgazado y oscurecido justo en la línea del sustrato, mientras la parte de arriba todavía está verde. Y avanza en manchas que se extienden, arrasando parches enteros de bandeja en pocos días."
+    },
+    {
+      "id": "patogenos-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define la política de Rizoma del Sur frente a hongos, bacterias, virus y nematodos: qué previene, qué prueba y qué hace en cada caso.",
+      "respuestaModelo": "El almácigo es la zona de mayor riesgo sanitario del vivero y también la más fácil de proteger, así que ahí concentro la prevención.\n\nUso sustrato de almácigo drenante y sin tierra de terreno, porque la tierra del predio en una bandeja es la forma más rápida de introducir el mal de almácigo. Lavo bandejas y envases entre tandas: es trabajo aburrido y de altísimo rendimiento, porque el inóculo del lote anterior viaja en el plástico sucio. Siembro menos denso de lo que la intuición pide y riego temprano y al sustrato, no al follaje, porque una hoja que llega mojada a la noche pasa doce horas con agua libre encima y eso es exactamente lo que un hongo necesita para germinar. Y mantengo aire circulando bajo la malla.\n\nPara identificar tengo dos pruebas que no cuestan nada. La cámara húmeda: trozo de hoja con la lesión y su borde sano en una bolsa transparente con papel mojado que no toque la hoja, cerrada, a la sombra, uno o dos días, y mirar con lupa. Si aparece pelusa, polvillo o puntitos, es hongo. Y el hilo en el agua: corto un trozo del tallo bajo de una planta marchita, lo cuelgo en un vaso de agua limpia con el corte apenas sumergido y miro contra la luz sin mover el vaso. Si baja un hilo lechoso como humo blanco, es bacteria.\n\nSi el hilo aparece, la respuesta es eliminación y no tratamiento: no hay cura práctica, el suelo queda contaminado y se transmite con agua, herramientas y material vegetal. Saco la planta con su sustrato, desinfecto herramientas, no reutilizo ese envase ni ese sustrato y reviso de dónde vino el material. Es duro y es lo correcto.\n\nCon los virus la política es la del módulo anterior sin cambios, porque no hay tratamiento posible: material de origen conocido, selección de plantas madre por sanidad, descarte sin intentar recuperar, control de chupadores como vectores y trazabilidad por lote. Los reconozco por patrones de mosaico, deformación del tejido nuevo, enanismo y ausencia total de agente incluso después de la cámara húmeda. Ya lo vi tres veces en el curso: en la yautía por el cormo, en la batata por la degeneración y en los cítricos por el material certificado.\n\nLos nematodos los descarto mirando la raíz, que ya es gesto de rutina: manchas irregulares de plantas pequeñas que se marchitan con el calor, más engrosamientos en la raíz. En vivero con sustrato limpio no deberían aparecer, y si aparecen es que entraron con algo.\n\nEn calendario, sé que la temporada de lluvias favorece hongos y bacterias por humedad y temperatura altas sostenidas, y que en la seca bajan los hongos foliares y suben los ácaros y los problemas de raíz. Anotar en qué época aparece cada cosa es lo que construye mi calendario sanitario propio.\n\nPara una sospecha de bacteria vascular o de virus busco diagnóstico de laboratorio, porque las dos exigen decisiones caras —eliminar plantas, descartar lotes— y conviene tomarlas sobre datos. Averiguo antes qué laboratorios hay operativos en la región y cuánto cuestan.\n\nY si necesito reducir el inóculo del sustrato, uso solarización con plástico transparente, que en este clima funciona bien por la radiación disponible y no cuesta comprar nada.",
+      "criterios": [
+        "Concentra la prevención en el almácigo como zona de mayor riesgo.",
+        "Usa sustrato drenante sin tierra de terreno y lava bandejas entre tandas.",
+        "Baja la densidad de siembra y riega temprano al sustrato.",
+        "Mantiene ventilación bajo la malla.",
+        "Ejecuta correctamente la cámara húmeda e interpreta su resultado.",
+        "Ejecuta correctamente la prueba del hilo en el agua.",
+        "Responde a una bacteria vascular con eliminación y desinfección, no con tratamiento.",
+        "Aplica a los virus la política de material, descarte, vectores y trazabilidad.",
+        "Reconoce las señales de virus, incluida la ausencia de agente.",
+        "Descarta nematodos mirando la raíz.",
+        "Sitúa el calendario sanitario según lluvias y seca.",
+        "Busca diagnóstico de laboratorio ante decisiones costosas.",
+        "Usa solarización para reducir inóculo del sustrato."
+      ],
+      "explicacion": "Fíjate en la asimetría que ordena todo el módulo: hongos y bacterias responden mucho al ambiente, los virus no responden a nada y los nematodos dependen de lo que entró. Por eso el esfuerzo se reparte tan desigual entre prevención, prueba y descarte."
+    }
+  ]
+}

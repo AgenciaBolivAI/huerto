@@ -1,0 +1,105 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-injerto",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué no se propaga un frutal sembrando la semilla de un buen fruto?",
+      "opciones": [
+        "La descendencia no repite a la madre: cada semilla es una combinación nueva.",
+        "El árbol original destaca por ser una excepción seleccionada entre miles.",
+        "Un árbol de semilla arrastra una fase juvenil de años antes de poder florecer.",
+        "Porque la semilla de los frutales no es viable."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La semilla germina perfectamente: el problema es qué sale de ella y cuánto tarda. Son dos problemas independientes, y el injerto resuelve los dos: la identidad porque la púa es el mismo individuo continuado, y la espera porque esa púa ya es tejido adulto y su estado de madurez viaja con ella."
+    },
+    {
+      "id": "dos-plantas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué decide cada mitad de un frutal injertado?",
+      "opciones": [
+        "El patrón decide la relación con el suelo: encharcamiento, salinidad, nematodos, vigor.",
+        "La variedad decide la fruta: sabor, tamaño, color y época.",
+        "En suelo arcilloso que se encharca, el patrón es lo que decide si el árbol vive.",
+        "El patrón influye en el sabor del fruto, así que hay que elegirlo por la fruta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El patrón no aporta la fruta: la aporta la variedad. Y elegir bien el patrón es tan importante como elegir la variedad, aunque sea justo lo que casi nadie pregunta al comprar un frutal."
+    },
+    {
+      "id": "la-union",
+      "tipo": "verdadero_falso",
+      "enunciado": "Enterrar un poco la unión del injerto al plantar da más estabilidad al árbol y no tiene inconvenientes.",
+      "respuesta": false,
+      "explicacion": "Falso, y es un error caro: si la unión queda bajo tierra, la variedad emite sus propias raíces por encima del patrón y todo el trabajo de elegir el patrón se pierde. Además la zona de unión permanentemente húmeda es puerta de entrada para podredumbres. Y su complemento: todo lo que brote por debajo de la unión se elimina, porque el patrón tiene más vigor y se come el árbol."
+    },
+    {
+      "id": "formacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué reglas sigue la poda de formación de un frutal?",
+      "opciones": [
+        "Tres o cuatro ramas principales repartidas alrededor del tronco y en altura.",
+        "Ángulos abiertos y no horquillas cerradas, que dejan corteza atrapada y se abren años después.",
+        "Estructura baja, porque una primera rama a dos metros condena a cosechar con escalera.",
+        "Dejar que el árbol se forme solo y corregirlo cuando ya esté adulto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Después ya no se corrige. Es la misma lógica de las fundaciones: lo que se decide al principio y queda incorporado a la estructura no se arregla más adelante. La forma que le das al árbol en sus dos primeros años es la que tendrá durante décadas."
+    },
+    {
+      "id": "excepciones",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué frutales sí van por semilla y qué papel juegan?",
+      "opciones": [
+        "La papaya, que es una herbácea gigante de vida corta y produce en menos de un año.",
+        "El maracuyá, una trepadora que produce en su primer año.",
+        "Son la sección rápida que sostiene la caja mientras maduran los injertados de ciclo largo.",
+        "Los cítricos, que por su vigor no necesitan injerto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los cítricos son justamente el grupo que más exige injerto y control sanitario. En la papaya hay que conocer además que, según su genética, una planta puede ser masculina, femenina o hermafrodita, y solo las dos últimas dan fruta aprovechable: por eso tradicionalmente se plantan varias por sitio y se elimina lo que sobra tras florecer."
+    },
+    {
+      "id": "citricos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la producción de plantas de cítricos se hace en instalación cerrada?",
+      "opciones": [
+        "Tienen enfermedades que se transmiten por insectos vectores y por el material de propagación.",
+        "No tienen cura una vez que la planta se infecta.",
+        "Por eso se exige malla antiinsecto con doble puerta, plantas sobre bancos y material certificado.",
+        "Porque el cítrico necesita temperatura controlada para germinar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es una cuestión de clima: es de exclusión. La yema infectada que un vivero injerta hoy es una plantación perdida dentro de unos años, y por eso en muchos países la producción de cítricos está regulada. Las exigencias concretas hay que consultarlas con la autoridad nacional de sanidad agropecuaria antes de montar nada."
+    },
+    {
+      "id": "ciclos",
+      "tipo": "verdadero_falso",
+      "enunciado": "El pico comercial de los frutales cae en un mes distinto del resto del catálogo, lo que reparte la carga de trabajo.",
+      "respuesta": false,
+      "explicacion": "Falso: se concentra en el arranque de las lluvias, la misma ventana que el ají dulce y el plátano. Eso es a la vez una oportunidad —mucha gente viene a comprar— y un problema de capacidad, y obliga a tener las plantas listas, clasificadas y presentadas antes de que llegue el pico, no durante."
+    },
+    {
+      "id": "frutales-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define la línea de frutales de Rizoma del Sur: qué produces, con qué material, cómo lo formas y qué consultas antes de empezar.",
+      "respuestaModelo": "Empiezo ya, porque son la parte del catálogo que más tarda en dar dinero, y a la vez no dependo de ellos para vivir el primer año: para eso están el culantro, la batata y la sección rápida de frutales.\n\nLa primera decisión es el patrón, y la tomo con criterio local. En arcilla expansiva que se encharca en enero, la tolerancia del patrón al exceso de agua decide si el árbol vive. Ese dato lo tienen los fruticultores de la zona y los servicios técnicos del departamento, no un manual general. El patrón decide suelo, tolerancia a nematodos y vigor; la variedad decide la fruta.\n\nLas yemas vienen de plantas identificadas y sanas. Es el principio del ají dulce y del plátano llevado al extremo: aquí una yema mal elegida se convierte, tres años después, en un árbol que da fruta que no era en el terreno de un cliente. Llevo trazabilidad de qué yema salió de qué planta madre.\n\nCon los cítricos, primero consulto y después produzco. Antes de montar esa línea averiguo con la autoridad nacional de sanidad agropecuaria qué exige la normativa vigente, qué situación sanitaria hay en la región y qué material está autorizado. Si hace falta instalación cerrada con malla antiinsecto, doble puerta, plantas sobre bancos elevados y material de origen certificado, eso deja de ser opcional y pasa a ser el diseño. No es burocracia: este grupo tiene enfermedades capaces de arrasar la citricultura de una región entera, y un vivero descuidado puede ser el origen del problema.\n\nLa sección rápida sostiene a la lenta. Papaya y maracuyá van por semilla y dan producto vendible en meses. Con la papaya soy honesto con el comprador: según su genética la planta puede ser masculina, femenina o hermafrodita, y solo las dos últimas dan fruta, así que la procedencia de la semilla importa y conviene plantar varias por sitio y elegir después de que florezcan.\n\nProduzco también frutales nativos de la región. El achachairú y el guapurú son parte de la identidad frutícola cruceña, tienen demanda local y su material de propagación no siempre se consigue con calidad. Es el mismo argumento de venta de todo el módulo aplicado a algo que aquí la gente ya conoce y quiere.\n\nLa poda de formación la hago en el vivero y la explico al vender: tres o cuatro ramas repartidas alrededor del tronco y en altura, ángulos abiertos y no horquillas cerradas —que dejan corteza atrapada y se abren años después cargadas de fruta y con viento—, y estructura baja para cosechar a mano. Un árbol vendido ya formado vale más y da menos problemas.\n\nAl entregar la planta señalo físicamente la unión del injerto y digo en voz alta que no se entierra, porque si queda bajo tierra la variedad echa raíces propias y se pierde todo el trabajo de elegir el patrón. Y explico que todo brote por debajo de la unión se elimina, porque el patrón tiene más vigor y se come el árbol.\n\nEl pico de venta es el arranque de las lluvias, el mismo que el del resto del catálogo. Preveo que casi todo se concentra en ese mes y tengo las plantas listas, clasificadas y presentadas antes.\n\nY para las variedades y patrones concretos pregunto aquí: qué cítricos van bien, sobre qué patrón, con qué comportamiento en suelo pesado. Eso lo saben los viveros y fruticultores establecidos, y es mejor preguntarlo que copiar recomendaciones de otro país.",
+      "criterios": [
+        "Empieza pronto y no hace depender la caja de los frutales.",
+        "Elige el patrón por el suelo local, con fuentes locales.",
+        "Separa lo que decide el patrón de lo que decide la variedad.",
+        "Usa yemas de plantas identificadas y sanas, con trazabilidad.",
+        "Consulta la normativa y la situación sanitaria de cítricos antes de producir.",
+        "Acepta la instalación cerrada y el material certificado como diseño, no como opción.",
+        "Incluye papaya y maracuyá como sección rápida, con honestidad sobre el sexo de la papaya.",
+        "Propone frutales nativos como el achachairú y el guapurú.",
+        "Ejecuta poda de formación con ramas repartidas, ángulos abiertos y estructura baja.",
+        "Señala la unión del injerto al vender y advierte que no se entierra.",
+        "Explica la eliminación de brotes del patrón.",
+        "Prevé la concentración del pico comercial al inicio de las lluvias.",
+        "Consulta variedades y patrones con fruticultores y servicios técnicos locales."
+      ],
+      "explicacion": "Esta ficha cierra el módulo con la misma idea con la que empezó: un vivero no vende plantas, vende material con una propiedad garantizada. En frutales esa propiedad tiene nombre y apellido —variedad identificada, patrón elegido, sanidad verificable— y es exactamente lo que el productor no puede conseguir por su cuenta."
+    }
+  ]
+}

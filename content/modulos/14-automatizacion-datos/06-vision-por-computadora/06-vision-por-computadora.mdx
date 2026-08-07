@@ -1,0 +1,235 @@
+«Una cámara que detecta la plaga antes de que la veas» es la promesa más vendida de la agricultura
+digital, y también la más malinterpretada.
+
+No es humo: **algunas cosas funcionan de verdad y son útiles hoy en un vivero pequeño.** Pero funcionan
+por razones distintas de las que la gente supone, y las que no funcionan fallan de un modo concreto que
+conviene entender antes de invertir tiempo en ellas.
+
+## Dos problemas que parecen uno
+
+<Diagrama
+  src="contar-si-diagnosticar-no.webp"
+  alt="Dos paneles lado a lado. Panel izquierdo, marcado con una tilde verde en la esquina: un rectángulo amarillo liso con una docena de puntos oscuros repartidos por él, cada uno rodeado con un círculo, y debajo del rectángulo una caja rectangular vacía donde iría el resultado. Debajo, una franja de rótulo que dice CONTAR PUNTOS SE PUEDE. Panel derecho, marcado con una cruz roja en la esquina: una hoja con una zona amarillenta entre los nervios, y cuatro flechas finas que salen de esa misma zona hacia fuera apuntando a cuatro signos de interrogación idénticos dispuestos en las cuatro esquinas. Debajo, una franja que dice UN SÍNTOMA, MUCHAS CAUSAS. Arriba, CONTAR SÍ, DIAGNOSTICAR NO."
+  pie="Las cuatro causas se ven idénticas en la hoja. Lo que las distingue no está en la imagen."
+/>
+
+La diferencia decisiva está en qué se le pide a la imagen:
+
+**Contar cosas.** ¿Cuántos insectos hay pegados en esta trampa amarilla? La imagen tiene fondo uniforme,
+objetos con contraste alto, y la respuesta es un número. **Esto funciona bien, con métodos clásicos y
+sin aprendizaje automático de por medio.**
+
+**Diagnosticar.** ¿Qué le pasa a esta hoja? La imagen tiene fondo variable, iluminación cambiante, y la
+respuesta es una categoría entre muchas que además **se parecen mucho entre sí.** Aquí es donde la
+promesa se desinfla.
+
+<Dato>
+La razón de fondo, dicha con precisión: **el diagnóstico visual de una planta es un problema mal
+condicionado incluso para un humano experto.**
+
+El módulo de sanidad ya lo estableció: un mismo síntoma —una clorosis entre nervios— puede ser
+deficiencia de hierro, raíz asfixiada, pH desviado o salinidad. **Y esas cuatro causas son
+visualmente idénticas en la hoja.**
+
+Lo que las distingue no está en la imagen: está en el patrón espacial dentro del lote, en el historial
+de riego, en si la mancha crece, en cómo está la raíz al sacar la planta. **Un modelo que solo ve la
+hoja no puede tener la información que hace falta para resolver el problema.**
+
+No es un límite de la técnica, es un límite del dato de entrada. **Más cómputo no lo arregla.**
+</Dato>
+
+## Lo que sí funciona
+
+<Diagrama
+  src="tres-cosas-que-si-sirven.webp"
+  alt="Tres baldosas cuadradas de esquinas redondeadas dispuestas en una fila horizontal, repartidas por igual. La primera contiene una trampa amarilla rectangular con puntos oscuros repartidos y una flecha ascendente al lado. La segunda contiene dos fotografías de la misma hilera de plantas colocadas una junto a otra, con una planta claramente más pálida en la de la derecha. La tercera contiene una bandeja de germinación vista desde arriba con casi todas las celdas ocupadas por plántulas salvo unas pocas vacías, rodeadas con un círculo. Tres franjas de rótulo, una bajo cada baldosa, que dicen de izquierda a derecha: CONTAR EN LA TRAMPA; COMPARAR LA MISMA FOTO; VER LO QUE FALTA. Arriba, TRES COSAS QUE SÍ SIRVEN."
+  pie="Las tres son conteo o comparación, no diagnóstico, y ninguna necesita entrenar un modelo."
+/>
+
+Y sin embargo hay tres aplicaciones que un vivero pequeño puede montar y que rinden de verdad:
+
+**Contar en trampas cromáticas.** Foto semanal de cada trampa amarilla, siempre igual encuadrada, y
+conteo de puntos oscuros sobre fondo amarillo. Un umbral de color y un contador de regiones conexas
+bastan; no hace falta nada más sofisticado. **Lo que aporta no es el número absoluto sino la
+tendencia**, que es exactamente lo que pedía la lección de manejo integrado: contar y comparar contra
+el <Termino slug="umbral-de-accion">umbral de acción</Termino>.
+
+**Comparar la misma escena en el tiempo.** Fotografiar un bancal desde el mismo punto todas las semanas
+y comparar. El ojo humano detecta muy mal los cambios lentos —una planta se va poniendo amarilla
+durante tres semanas y no lo notas— pero **una comparación fotográfica lado a lado lo hace evidente.**
+Esto no requiere ningún modelo: requiere disciplina y un punto de referencia fijo.
+
+**Detectar la ausencia.** Un hueco en una bandeja de germinación, una fila con menos plantas de las que
+debería. **Es un problema de conteo geométrico, no de diagnóstico**, y es muy fiable.
+
+<Analogia>
+Es la misma distinción entre **una alerta sobre una métrica y un sistema que intenta explicar la causa
+raíz.**
+
+La alerta —«este contador subió de su umbral»— es simple, fiable y accionable. El diagnóstico
+automático de causa raíz es un problema abierto, y en la práctica lo que hace un buen sistema es
+**señalar dónde mirar y dejar el diagnóstico a la persona.**
+
+En un vivero es idéntico: **el valor de la cámara es dirigir la atención, no sustituir el criterio.**
+Un sistema que te dice «este bancal cambió más que los demás esta semana» ya ha hecho el 80 % del
+trabajo útil, y no ha diagnosticado nada.
+</Analogia>
+
+## Por qué fallan los modelos de diagnóstico
+
+Si aun así se quiere intentar el diagnóstico automático, conviene saber contra qué se está compitiendo,
+porque los tres obstáculos son de datos y no de código:
+
+**No hay datos locales.** Los conjuntos de imágenes públicos de enfermedades de plantas se tomaron en
+condiciones controladas, con hojas arrancadas sobre fondo liso, y sobre todo **con las especies y las
+enfermedades de otros lugares.** Un modelo entrenado con eso rinde mucho peor sobre una foto real de
+tu vivero, y rinde peor aún sobre especies que no estaban en el conjunto —como la yautía o el culantro.
+
+**Las clases están desbalanceadas.** El 95 % de las hojas de un vivero sano están sanas. Un modelo
+entrenado sin cuidado aprende que decir «sana» siempre acierta el 95 % de las veces, y **una precisión
+del 95 % en ese contexto significa exactamente cero utilidad.**
+
+**Y las tasas base destruyen la interpretación.** Este es el punto que más gente ignora.
+
+<Formula explicacion="Cuando una condición es rara, incluso un detector muy bueno produce sobre todo falsas alarmas. La probabilidad de que un aviso sea correcto depende de cuántos casos reales hay entre los examinados, no solo de la calidad del detector.">
+avisos correctos ÷ avisos totales = enfermas detectadas ÷ (enfermas detectadas + sanas marcadas por error)
+</Formula>
+
+Con números concretos: si de mil plantas hay diez enfermas, y el detector encuentra nueve de esas diez
+pero además marca por error a cincuenta sanas, **el sistema da cincuenta y nueve avisos de los cuales
+solo nueve son ciertos.** Menos de uno de cada seis. Y esas cifras corresponden a un detector bastante
+bueno.
+
+**La consecuencia práctica es previsible: a las dos semanas nadie hace caso de los avisos.** Y ese es el
+verdadero modo de fallo de estos sistemas —no el error técnico, sino que el usuario deja de mirarlos.
+
+<Diagrama
+  src="el-problema-no-es-el-modelo.webp"
+  alt="Un bloque cuadrado muy grande a la izquierda formado por muchísimos símbolos pequeños e idénticos de planta en verde apretados en una retícula, entre los que solo cuatro aparecen dibujados en rojo, claramente en minoría. Una flecha terracota ancha lleva de ese bloque hacia la derecha, a un conjunto mucho más pequeño de símbolos de planta que llevan todos un símbolo de campana encima: en ese conjunto la mayoría de las plantas son verdes y solo unas pocas son rojas. Dos franjas de rótulo con líneas de llamada finas: una al bloque grande dice CASI TODAS ESTÁN SANAS; y otra al conjunto con campanas dice POR ESO CASI TODO AVISO ES FALSO. Arriba, EL PROBLEMA NO ES EL MODELO."
+  pie="Cuando la condición es rara, hasta un detector bueno produce sobre todo falsas alarmas."
+/>
+
+<Advertencia>
+Y hay un error mucho más grave que las falsas alarmas, específico de este
+dominio: **el <Termino slug="falso-negativo">falso negativo</Termino> con consecuencia irreversible.**
+
+El módulo de fichas señalaba que los hongos de suelo del plátano persisten décadas en el terreno, y el
+de sanidad que una enfermedad viral no tiene cura. **En esos casos, un sistema que dice «todo bien»
+cuando no lo está no es un error menor: es la ruina de un lote o de una parcela.**
+
+Por eso, la regla en sanidad es asimétrica y hay que grabarla:
+
+**Un sistema de visión puede añadir vigilancia. No puede sustituir la ronda de observación.**
+
+Si la cámara dice que hay algo, se va a mirar. Si la cámara no dice nada, **también se va a mirar**,
+porque el recorrido de observación de la lección de bioseguridad no es negociable, y el falso negativo
+de una máquina es exactamente el escenario donde más falta hace un par de ojos.
+</Advertencia>
+
+## Cómo hacerlo bien si se hace
+
+<Diagrama
+  src="nada-sustituye-caminar.webp"
+  alt="Una sola escena: una hilera de plantas vista de lado, con una cámara fija sobre un poste a la izquierda apuntando hacia ellas, y sus líneas de campo de visión dibujadas de puntos. A la derecha, una figura de persona camina por la hilera con una lupa en la mano. Dos flechas convergen, una desde la cámara y otra desde la persona, sobre la misma planta del centro de la hilera, que está dibujada en verde oscuro. En el extremo derecho de la hilera, claramente fuera del campo de visión de la cámara, hay una planta coloreada en rojo, y una flecha roja marca que el recorrido de la persona continúa hacia ella. Tres franjas de rótulo con líneas de llamada finas: una a la cámara dice LA CÁMARA SUMA; otra a la persona que camina dice PERO NO RESTA LA RONDA; y otra a la planta roja dice ESTA SOLO LA VE UN OJO. Arriba, NADA SUSTITUYE CAMINAR."
+  pie="Si la cámara avisa, se va a mirar. Si no avisa, también."
+/>
+
+Si se monta algo, estas son las condiciones que separan un experimento útil de una pérdida de tiempo:
+
+**Fija la escena.** Mismo encuadre, misma distancia, misma hora del día. **La variación de iluminación
+domina cualquier señal biológica**, así que si la luz cambia entre fotos, lo que estás midiendo es el
+sol.
+
+**Incluye una referencia de color en el encuadre.** Un trozo de cartulina de color conocido permite
+corregir la dominante de la luz. Sin ella, comparar el verde de dos fotos tomadas en días distintos no
+significa nada.
+
+**Empieza por lo simple.** Umbral de color y conteo de regiones resuelven el problema de las trampas sin
+entrenar nada. **Sólo se pasa a algo más complejo cuando lo simple demuestra quedarse corto**, y con
+datos propios para comprobarlo.
+
+**Y si llegas a entrenar, etiqueta tú.** Un modelo entrenado con doscientas fotos propias, de tus
+especies, con tu luz y tu fondo, rinde mucho mejor que uno entrenado con cien mil fotos de otro sitio.
+**El dato local es la ventaja competitiva, igual que en el módulo anterior.**
+
+<Dato>
+Y una observación honesta sobre esfuerzo y retorno para este perfil concreto:
+
+**El sistema de visión es lo más divertido de construir y no es lo más rentable de construir.**
+
+La alerta de riego de la lección anterior —un aviso cuando un sector no sube de humedad después de
+regar— cuesta unas horas y evita pérdidas reales. Un sistema de detección de plagas por imagen cuesta
+semanas y su mejor versión realista **hace lo mismo que una ronda de observación bien hecha.**
+
+Eso no significa no hacerlo. Significa hacerlo **después**, y hacerlo sabiendo que es un proyecto de
+mejora y no una necesidad operativa.
+</Dato>
+
+<AplicarRizoma>
+**Rizoma usa imágenes para tres cosas concretas y ninguna de ellas es diagnosticar.**
+
+**Conteo en trampas cromáticas.** Foto semanal de cada trampa amarilla, siempre con el mismo encuadre,
+y conteo de puntos oscuros sobre fondo amarillo con un umbral de color. No hace falta nada más
+sofisticado. Lo que importa no es el número absoluto sino la tendencia, que es exactamente lo que pide
+el umbral de acción del módulo de manejo integrado.
+
+**Comparación de la misma escena en el tiempo.** Foto semanal de cada bancal desde un punto fijo
+marcado. El ojo detecta muy mal los cambios lentos —una planta amarilleando durante tres semanas pasa
+desapercibida— y una comparación lado a lado lo hace evidente. Esto no requiere modelo ninguno:
+requiere disciplina y un punto de referencia.
+
+**Y detección de ausencias**: huecos en bandejas de germinación o filas incompletas. Es conteo
+geométrico, no diagnóstico, y es fiable.
+
+**El diagnóstico automático se descarta a propósito**, no por desconocimiento. Un mismo síntoma puede
+ser deficiencia de hierro, raíz asfixiada, pH desviado o salinidad, y las cuatro son visualmente
+idénticas en la hoja: lo que las distingue está en el patrón dentro del lote, en el historial de riego
+y en cómo está la raíz. Es un límite del dato de entrada, no del cómputo.
+
+**Si algún día se entrena un modelo, se entrena con fotos propias**, de las especies del catálogo —
+yautía, culantro, ají dulce, frutales— que casi no aparecen en los conjuntos públicos. Doscientas fotos
+propias baten a cien mil de otro sitio.
+
+**Escena fija, misma hora, y una referencia de color en el encuadre**, porque la variación de
+iluminación domina cualquier señal biológica y sin referencia comparar el verde de dos días distintos
+no significa nada.
+
+**Y la regla asimétrica es innegociable: la cámara añade vigilancia y no sustituye la ronda de
+observación.** Si la cámara avisa, se va a mirar; si no avisa, también. Con los hongos de suelo del
+plátano —que persisten décadas— y con las virosis sin cura, un falso negativo no es un error menor.
+
+**Por último, orden de prioridad honesto**: este es el proyecto más divertido del módulo y no el más
+rentable. Va después de las alertas de riego, que cuestan unas horas y evitan pérdidas reales, y se
+aborda como proyecto de mejora, no como necesidad operativa.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Las especies del catálogo de Rizoma están mal representadas en los conjuntos de imágenes públicos.**
+Yautía, culantro, ají dulce criollo, achachairú o especies nativas de sombra no aparecen, o aparecen en
+condiciones muy distintas. Cualquier herramienta general va a rendir peor aquí que en los cultivos
+sobre los que se entrenó.
+
+**Y eso convierte una limitación en una oportunidad**: un conjunto de imágenes propio y bien etiquetado
+de plagas y síntomas de estas especies en condiciones de Santa Cruz **no existe**, y sería útil más
+allá del propio vivero. Es un proyecto que encaja con el perfil y con el objetivo declarado de aportar
+a la comunidad.
+
+**La instituciones de investigación agrícola de la zona son el interlocutor natural** para validar
+identificaciones antes de etiquetar nada. Una base de imágenes mal etiquetada es peor que no tenerla,
+porque propaga errores con apariencia de dato.
+
+**El clima condiciona el montaje físico**: una cámara fija a la intemperie sufre lo mismo que el
+controlador —humedad, calor, polvo, condensación— y necesita las mismas precauciones de la lección
+anterior. Y bajo malla de sombra la iluminación es muy desigual, con manchas de sol móviles a lo largo
+del día, lo cual refuerza la exigencia de fotografiar siempre a la misma hora.
+
+**Y hay una alternativa mucho más barata que conviene no descartar**: el teléfono. Fotos con el móvil
+desde puntos fijos marcados con una estaca, guardadas por fecha en carpetas. **Es el 90 % del beneficio
+por el 5 % del esfuerzo**, y no tiene nada que pueda fallar a la intemperie.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Queda el cierre del módulo y del curso: **qué no conviene automatizar nunca en un vivero.** No es una
+lista de precauciones técnicas, sino la distinción entre las tareas que una máquina hace mejor que una
+persona y las que no, y por qué confundirlas cuesta caro.

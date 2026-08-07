@@ -1,0 +1,103 @@
+{
+  "preguntas": [
+    {
+      "id": "asimetria",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué implica que la curva de temperatura de germinación no sea simétrica?",
+      "opciones": [
+        "Por debajo del óptimo la germinación se ralentiza, pero es reversible: sube la temperatura y arrancan.",
+        "Por encima de cierto umbral la germinación se detiene y las semillas mueren.",
+        "Ante la duda con una especie desconocida, conviene quedarse corto de calor.",
+        "Los dos extremos son igual de peligrosos, así que da lo mismo por dónde te equivoques."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No son equivalentes: pasarse de frío cuesta tiempo y pasarse de calor cuesta el lote. Un almácigo demasiado fresco te impacienta; uno demasiado caliente no tarda, simplemente no nace, y para cuando lo notas ya perdiste semanas."
+    },
+    {
+      "id": "bandeja-al-sol",
+      "tipo": "verdadero_falso",
+      "enunciado": "En el llano cruceño conviene poner las bandejas de almácigo al sol directo para que tengan calor suficiente.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error más caro del módulo. Una bandeja de plástico con poco sustrato y poca inercia térmica bajo sol directo se convierte en un horno de pocos centímetros, muy por encima de cualquier rango de germinación. Los almácigos van a media sombra o bajo malla: el calor lo da el ambiente, no el sol directo."
+    },
+    {
+      "id": "encharcado",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué es tan grave encharcar un almácigo?",
+      "opciones": [
+        "Porque el agua llena los huecos del sustrato y desplaza el aire.",
+        "Porque la semilla en germinación respira intensamente, y sin oxígeno se asfixia.",
+        "Porque un sustrato sin oxígeno es el hábitat favorito de los hongos del damping-off.",
+        "Porque el exceso de agua arrastra los nutrientes que la semilla necesita del sustrato."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La semilla no depende de nutrientes del sustrato: vive de sus propias reservas hasta que despliega hojas. El problema del encharcamiento es el aire, no la comida. Y el exceso de riego mata más almácigos que la sequía, porque la sequía se ve y se corrige mientras que el exceso da sensación de estar cuidando bien."
+    },
+    {
+      "id": "riego-por-abajo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué resuelve el riego por abajo, apoyando la bandeja en una fuente con agua?",
+      "opciones": [
+        "No descoloca las semillas, porque el agua sube por capilaridad en vez de caer.",
+        "Deja secos el cuello del plantín y las hojas, que es lo que necesitas contra los hongos.",
+        "Deja la humedad pareja en todo el bloque, sin puntos secos ni encharcados.",
+        "Permite dejar la bandeja en el agua todo el tiempo que haga falta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Justamente eso último es su contrapartida: hay que estar presente y retirarla. Una bandeja olvidada media hora en la fuente es un bloque encharcado, y vuelves al problema del que querías escapar."
+    },
+    {
+      "id": "luz-y-tamano",
+      "tipo": "verdadero_falso",
+      "enunciado": "Las semillas que necesitan luz para germinar son casi siempre muy pequeñas, y eso tiene una explicación lógica.",
+      "respuesta": true,
+      "explicacion": "Verdadero. Una semilla diminuta tiene reservas para muy pocos centímetros de crecimiento: si germinara enterrada profundo se quedaría sin combustible antes de llegar a la superficie. Usar la luz como señal es su forma de comprobar que está cerca de la superficie antes de arrancar. Esas se siembran encima del sustrato o apenas espolvoreadas."
+    },
+    {
+      "id": "tierra-del-terreno",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué no se usa tierra del terreno para almácigo, ni siquiera la buena?",
+      "opciones": [
+        "Porque en volumen pequeño y regada a diario se compacta y pierde los poros de aire.",
+        "Porque trae patógenos de suelo, que en una bandeja tibia y húmeda con plantines sin defensas encuentran condiciones perfectas.",
+        "Porque trae semillas de malezas, difíciles de distinguir del plantín cuando ambos tienen dos hojas.",
+        "Porque no contiene suficientes nutrientes para el plantín."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los nutrientes no son el problema: el plantín vive de las reservas de la semilla durante los primeros días. Lo que descalifica a la tierra del terreno es la estructura, los hongos y las malezas. Un sustrato de almácigo es una mezcla que retiene agua, deja pasar aire y da cuerpo al cepellón."
+    },
+    {
+      "id": "envase",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el envase importa tanto si vas a producir árboles?",
+      "opciones": [
+        "Una raíz que llega al fondo gira y sigue creciendo en círculo, y esa espiral no se corrige al trasplantar.",
+        "Un árbol con raíz enroscada se sostiene mal y puede caerse con un viento fuerte años después.",
+        "Los envases altos, estrechos y con nervaduras verticales guían la raíz hacia abajo.",
+        "Con el fondo abierto, la punta de la raíz se seca al llegar al aire y la planta ramifica en vez de enroscarse."
+      ],
+      "correctas": [0, 1, 2, 3],
+      "explicacion": "Las cuatro. Ese último mecanismo se llama poda aérea de raíz y es elegante: el aire hace de tijera. Para hortaliza de ciclo corto importa poco, porque pasa pocas semanas en la bandeja; para un árbol que va a vivir cuarenta años, en una zona con surazos, es de las decisiones que más pesan."
+    },
+    {
+      "id": "mesa-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Vas a montar la mesa de propagación de Rizoma del Sur. Describe dónde la pones, cómo la construyes, con qué sustrato y qué envases trabajas, cómo riegas, y qué mides.",
+      "respuestaModelo": "La ubicación es la decisión número uno y la que más lotes salva: bajo malla de media sombra, nunca a pleno sol. Aquí el modo de fallo por defecto no es el frío, es el calor, y una bandeja de plástico con poco sustrato bajo sol de mediodía se convierte en un horno muy por encima de cualquier rango de germinación. Si el almácigo está al sol, ninguna otra decisión importa.\n\nLa mesa va elevada a altura de trabajo, no con las bandejas en el suelo. Eso resuelve tres cosas de golpe: la espalda de quien trabaja, el acceso de hormigas y bichos del suelo, y las salpicaduras de tierra al llover, que son un vector de patógenos. Y además deja el fondo de los envases al aire, que es lo que hace posible la poda aérea de raíz.\n\nEl sustrato es mezcla, nunca tierra del terreno: la tierra se compacta en volumen pequeño regada a diario, trae hongos de suelo que en una bandeja tibia y húmeda encuentran condiciones perfectas, y trae semillas de malezas que después no sé distinguir del plantín. Con lo que hay aquí, una base razonable es compost muy maduro y tamizado para retener agua, cascarilla de arroz para aireación —que es abundante y barata en Santa Cruz, mucho mejor que comprar perlita importada— y arena gruesa lavada para dar cuerpo. Las proporciones las ajusto con la prueba del puño: humedezco, aprieto, y la mezcla está bien si mantiene la forma al abrir la mano pero se desmorona al tocarla con un dedo. Si queda una bola pegajosa falta grueso; si se desarma sola, falta fino.\n\nEnvases: bandejas de celdas convencionales para hortaliza de ciclo corto, y envases altos, estrechos, cónicos, con nervaduras verticales internas y fondo abierto para todo lo que sea árbol. Una raíz que llega al fondo de un envase ancho gira y crece en círculo, y esa espiral no se corrige nunca: el árbol se sostiene mal y puede caerse con un surazo años después. Si voy a producir nativas, esta decisión define la calidad de mi producto de una forma que se nota una década más tarde.\n\nRiego por abajo siempre que pueda, apoyando la bandeja unos minutos en una fuente con un dedo de agua y retirándola después. No descoloca las semillas, deja el cuello y las hojas secos, y reparte la humedad pareja. Cuando no pueda, aspersión fina, nunca chorro. Siempre temprano en la mañana, para que la superficie se seque durante el día. Y riego comprobando el sustrato con el dedo, no por horario: durante las lluvias la humedad ambiente hace que se seque despacio y es facilísimo encharcar por costumbre.\n\nSiembro a dos o tres veces el diámetro de la semilla, y ante la duda más superficial, porque quedarse corto solo retrasa mientras que sembrar hondo mata. Y lleno las bandejas sin apretar, porque compactar es una de las tres formas de quitarle aire a la semilla, junto con encharcar y sembrar hondo.\n\nMido con un termómetro de máxima y mínima puesto en la mesa, que es barato y dice lo que de verdad pasa ahí, que no es lo mismo que la temperatura del aire libre. Anoto máxima y mínima cada día durante una temporada y tengo el perfil térmico real de mi mesa.\n\nY una precaución de calendario: entre mayo y septiembre consulto el pronóstico antes de sembrar especies sensibles, porque un surazo puede frenar en seco un almácigo tropical durante días. Si entra uno, cubro las bandejas por la noche o las llevo a resguardo.",
+      "criterios": [
+        "Pone la mesa bajo media sombra y justifica que el calor es el modo de fallo por defecto.",
+        "Eleva la mesa y explica las tres ventajas.",
+        "Descarta la tierra del terreno con las tres razones.",
+        "Compone el sustrato con las tres funciones y usa materiales locales.",
+        "Ajusta la mezcla con la prueba del puño y sabe leer los dos fallos.",
+        "Elige envases altos con fondo abierto para árboles y explica la raíz enroscada.",
+        "Riega por abajo o con aspersión fina, temprano, y comprueba en vez de regar por horario.",
+        "Siembra a dos o tres veces el diámetro y erra por superficial.",
+        "Llena sin compactar y nombra las tres formas de quitar aire.",
+        "Instala un termómetro de máxima y mínima y registra.",
+        "Prevé el surazo antes de sembrar especies sensibles."
+      ],
+      "explicacion": "Fíjate en que casi todas las decisiones de esta lección son de montaje, no de manejo diario: dónde va la mesa, cómo es el sustrato, qué envase usas. Se toman una vez y condicionan cada lote que pase por ahí durante años. Por eso vale la pena pensarlas antes de sembrar el primero."
+    }
+  ]
+}

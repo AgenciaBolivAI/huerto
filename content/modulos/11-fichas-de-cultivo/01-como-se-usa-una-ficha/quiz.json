@@ -1,0 +1,103 @@
+{
+  "preguntas": [
+    {
+      "id": "que-es-una-ficha",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué todas las fichas del catálogo llevan los mismos campos en el mismo orden?",
+      "opciones": [
+        "Porque el valor no está en cada ficha suelta, sino en poder compararlas entre sí.",
+        "Porque permite responder preguntas que cruzan especies, como qué puedo propagar sin comprar material.",
+        "Porque una ficha con demasiados campos no se llena nunca, y seis completos valen más que cuarenta a medias.",
+        "Porque el formato uniforme evita tener que medir nada en el sitio."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El formato uniforme no sustituye la medición: la ordena. Una ficha es un esquema y el catálogo es una tabla con una fila por especie, con la misma tentación de diseño de siempre —añadir columnas hasta que llenarlas cuesta más que el valor que dan."
+    },
+    {
+      "id": "nombre-botanico",
+      "tipo": "verdadero_falso",
+      "enunciado": "Anotar el nombre botánico en la ficha es una formalidad académica sin consecuencias prácticas.",
+      "respuesta": false,
+      "explicacion": "Falso. Los nombres comunes cambian de país en país y a veces de barrio en barrio, y comprar semilla o material vegetal por nombre común es exactamente cómo se termina con una especie que no era. La familia también importa, porque plagas y enfermedades se comparten dentro de la familia."
+    },
+    {
+      "id": "el-numero-bueno",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hacer con los datos que trae un manual?",
+      "opciones": [
+        "Tratarlos como punto de partida y orden de magnitud, no como valores.",
+        "Recordar que se midieron con otro clima, otro suelo y otra variedad.",
+        "Anotar cada número con su procedencia, para distinguir el medido del supuesto.",
+        "Copiarlos a la ficha y darlos por buenos si la fuente es seria."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Aquí cambian las cuatro variables a la vez, y las tres restricciones que mandan en la llanura cruceña —la seca larga, los surazos y las arcillas expansivas— no aparecen en la literatura escrita para el Caribe, México o climas templados. Un dato sin procedencia es indistinguible de un dato inventado dos años después."
+    },
+    {
+      "id": "rotacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué mide la rotación del espacio y para qué sirve?",
+      "opciones": [
+        "Cuántas veces se vacía y se vuelve a llenar el mismo sitio en un año.",
+        "Sale de dividir un año entre el tiempo que cada tanda ocupa el espacio.",
+        "Multiplicada por la densidad da las plantas por metro cuadrado y año, que es la productividad real del espacio.",
+        "Es lo mismo que la rotación de cultivos en el terreno, que alterna especies para no agotar el suelo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es lo mismo: la rotación de cultivos es una práctica de manejo de suelo en el terreno. Esto es productividad del espacio en el tiempo, y es la diferencia entre latencia y rendimiento: un árbol injertado tarda años y una hortaliza semanas, y solo mirando el precio unitario se saca la conclusión equivocada."
+    },
+    {
+      "id": "mezcla",
+      "tipo": "verdadero_falso",
+      "enunciado": "Lo óptimo es llenar el catálogo con las especies de mayor margen por unidad.",
+      "respuesta": false,
+      "explicacion": "Falso. Un catálogo hecho solo de árboles se queda sin caja antes de la primera venta, y uno hecho solo de plantines compite contra todo el mundo. Lo rápido paga los gastos corrientes mientras lo lento madura; lo lento da el margen y el producto diferenciado. La pregunta correcta no es cuál es mejor, sino qué papel juega cada especie en la mezcla."
+    },
+    {
+      "id": "ciclo-de-correccion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué consiste el ciclo de corrección de una ficha?",
+      "opciones": [
+        "Anotar lo que pasó con fecha: siembra, germinación, cuántas de cien salieron, cuándo estuvo vendible.",
+        "Comparar el dato contra lo que decía la ficha, que es el paso que casi nadie hace.",
+        "Corregir la ficha dejando anotado que se corrigió y con qué.",
+        "Llenar la ficha una vez al principio, con cuidado, para no tener que volver sobre ella."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La comparación es el único paso que produce información: un dato aislado no dice nada, un dato contra su predicción dice exactamente dónde está el error. Por eso la ficha se llena a lápiz y no en piedra."
+    },
+    {
+      "id": "campos-que-faltan",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué dos campos que las fichas publicadas nunca traen hay que añadir?",
+      "opciones": [
+        "La merma real propia: de cien iniciadas, cuántas se vendieron.",
+        "El tiempo de trabajo por planta, en minutos de persona desde el inicio hasta el despacho.",
+        "El nombre del proveedor de sustrato.",
+        "El precio del envase."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Son los dos campos que convierten una ficha agronómica en una ficha de negocio. La merma es lo que transforma quiero vender cien en tengo que iniciar ciento sesenta, y las tasas se multiplican, no se promedian. Los minutos por planta deciden la rentabilidad real y hacen que una especie cara con mucho manejo resulte mala."
+    },
+    {
+      "id": "catalogo-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Explica cómo vas a construir y mantener el catálogo de fichas de Rizoma del Sur: con qué datos empiezas, cómo los corriges y con qué criterio ordenas las especies.",
+      "respuestaModelo": "Empiezo aceptando una particularidad del proyecto en vez de disimularla: es un catálogo caribeño plantado en el trópico boliviano. Yautía, culantro de hoja ancha, ají dulce, gandul, batata, plátano. Varias de esas especies se cultivan poco por aquí o se conocen con otro nombre y otro uso.\n\nEso tiene dos caras. La buena es la diferenciación: un vivero que ofrece lo mismo que todos compite solo por precio, y uno que ofrece especies que casi nadie propaga en la zona tiene producto propio y puede vender el conocimiento junto con la planta. La difícil es que hay menos datos locales, justamente por ser poco cultivadas aquí: no voy a encontrar quién me diga el ciclo exacto en Zanja Honda.\n\nPor eso el registro sistemático no es opcional en este proyecto: mi libreta va a ser la única fuente confiable que tenga. El primer año no es de producción, es de calibración. Lotes pequeños de cada especie, registro completo, y el catálogo definitivo sale de ahí.\n\nCada ficha lleva las mismas seis preguntas: qué es, con nombre botánico y familia y no con nombre común; dónde vive bien, con temperatura, luz, agua, suelo y pH; cómo se multiplica, que para un vivero es el campo decisivo porque decide si puedo producirla siquiera; cuánto tarda, desglosado por etapas, que es lo que alimenta el calendario del inventario; qué le ataca, con las señales tempranas; y cuánto vale, con precio observado, comprador y época.\n\nCada número lo anoto con su origen. Ciclo de seis meses según manual y ciclo de siete meses y medio medido en el lote de mayo son datos distintos, y el segundo gana siempre. Un dato sin procedencia es indistinguible de un dato inventado dos años después.\n\nCada temporada hago el ciclo entero: anotar con fecha lo que pasó, comparar contra lo que decía la ficha —que es el paso que casi nadie hace y el único que produce información— y corregir dejando constancia de qué se corrigió. A lápiz.\n\nAñado a cada ficha los dos campos que ningún manual trae: la merma real, de cien iniciadas cuántas vendí, porque las tasas se multiplican y no se promedian; y los minutos de trabajo por planta, contando repique, poda, cambio de envase, limpieza y etiquetado.\n\nOrdeno el catálogo por rotación y no por preferencia. Culantro y ají dulce rotan rápido y pagan gastos corrientes. Plátano y yautía ocupan más tiempo. Frutales y árboles de sombra son latencia larga y margen alto. La mezcla es lo que hace que el vivero sobreviva al primer año, porque lo rápido sostiene la caja mientras lo lento madura.\n\nY tengo claro cuál es mi limitante real: con dos mil cuatrocientos setenta y cuatro metros cuadrados y trabajo propio, el cuello de botella no va a ser la superficie, va a ser mi tiempo. La especie que se vende bien pero consume una hora por planta es mala para este vivero por buena que sea su ficha agronómica.\n\nPara los datos de mercado voy al mercado: qué hay, qué falta, qué llega de fuera y qué precio tiene en cada época, anotado en la libreta. Las ferias agropecuarias sirven de canal de información y de venta a la vez. Y consulto a los viveristas y productores de la zona con años encima, que saben qué se muere en agosto y qué aguanta el surazo, información que no está publicada en ninguna parte.\n\nAntes de traer material vegetal de fuera consulto los requisitos sanitarios vigentes con la autoridad competente, porque una plaga introducida en un vivero es el peor escenario posible.",
+      "criterios": [
+        "Reconoce el catálogo caribeño en trópico boliviano como diferenciación y como falta de datos locales.",
+        "Trata el primer año como calibración con lotes pequeños y registro completo.",
+        "Usa las seis preguntas de la ficha y explica por qué la propagación es la decisiva en vivero.",
+        "Usa nombre botánico y familia en vez de nombre común.",
+        "Anota cada número con su procedencia y da prioridad al dato propio.",
+        "Ejecuta anotar, comparar y corregir cada temporada.",
+        "Añade la merma real y los minutos de trabajo por planta.",
+        "Ordena el catálogo por rotación y compone una mezcla de ciclos rápidos y lentos.",
+        "Identifica el tiempo propio, y no la superficie, como limitante real.",
+        "Va al mercado y a los viveristas locales por los datos que no están publicados.",
+        "Consulta los requisitos sanitarios antes de traer material vegetal de fuera."
+      ],
+      "explicacion": "Fíjate en que casi todo lo que hace útil a un catálogo de fichas es disciplina de registro y no conocimiento agronómico. El conocimiento lo dan las nueve lecciones siguientes; lo que las convierte en tuyas es el ciclo de corrección."
+    }
+  ]
+}

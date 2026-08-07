@@ -1,0 +1,97 @@
+{
+  "preguntas": [
+    {
+      "id": "semilla-no-es-copia",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si siembras las semillas de un árbol de mango excepcional, obtendrás árboles con ese mismo mango.",
+      "respuesta": false,
+      "explicacion": "Falso. Una semilla mezcla el material genético de dos plantas, así que cada semilla del mismo fruto es distinta de sus hermanas. Vas a obtener árboles diferentes, la mayoría peores, y todos tardando años en dar fruto para que te enteres. Sembrar es fusionar y compilar; clonar es copiar el binario."
+    },
+    {
+      "id": "totipotencia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un trozo de tallo puede convertirse en una planta entera?",
+      "opciones": [
+        "Por la totipotencia: cada célula viva conserva el juego completo de instrucciones y puede volver a activarlo.",
+        "Al cortar desaparecen las señales que venían de la raíz y se acumulan las que bajan de hojas y yemas.",
+        "Un grupo de células se desdiferencia y forma un callo, una masa sin especializar.",
+        "Porque el trozo de tallo lleva dentro una semilla en miniatura."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hay ninguna semilla involucrada: el tejido del tallo retrocede a un estado indiferenciado y desde ahí construye lo que falta. Es como si cada célula llevara el repositorio completo y no solo el módulo en el que trabaja: el código para ser raíz sigue ahí, presente y ejecutable."
+    },
+    {
+      "id": "la-capa",
+      "tipo": "verdadero_falso",
+      "enunciado": "La capacidad de formar callo y raíces está repartida por igual en todo el grosor del tallo.",
+      "respuesta": false,
+      "explicacion": "Falso: se concentra en una capa muy fina entre la corteza y la madera, que en las leñosas es el cámbium. Ese detalle anatómico decide la técnica de los tres métodos principales: en el esqueje es la que forma el callo, en el acodo es la que hay que interrumpir, y en el injerto es la que hay que hacer coincidir entre las dos piezas. Si no se tocan cámbium con cámbium, el injerto no pega."
+    },
+    {
+      "id": "ventajas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se gana al clonar?",
+      "opciones": [
+        "Fidelidad: el clon es exactamente la planta que elegiste, con su sabor, porte y resistencia.",
+        "Tiempo: el esqueje ya es tejido adulto y salta la fase juvenil, que en frutales son años.",
+        "Uniformidad: un lote de clones crece parejo y se cosecha de una vez.",
+        "Mayor resistencia a plagas que un lote de plantas de semilla."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La resistencia es justamente lo contrario. Un lote de clones no tiene variabilidad genética, así que no tiene la posibilidad de que alguna resista: lo que mata a una mata a todas. Es una flota de máquinas idénticas con la misma versión y la misma vulnerabilidad."
+    },
+    {
+      "id": "virus",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un virus presente en la planta madre pasa a todos sus clones, aunque en la madre no dé síntomas.",
+      "respuesta": true,
+      "explicacion": "Verdadero, y es una de las razones por las que la sanidad de las plantas madre es crítica. Con semilla, la mayoría de los virus no se transmiten; con esqueje, todos. Un virus asintomático en la madre puede no serlo en la descendencia, y para cuando lo notes ya lo habrás multiplicado."
+    },
+    {
+      "id": "metodos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué distingue a los métodos de propagación vegetativa entre sí?",
+      "opciones": [
+        "El acodo enraíza la rama sin separarla de la madre, y solo se corta cuando ya tiene raíces propias.",
+        "La división separa una mata cuyos trozos ya vienen con sus propias raíces, por eso es la de mayor tasa de éxito.",
+        "El injerto no es exactamente clonar: combina dos plantas, una que aporta la parte aérea y otra la raíz.",
+        "Todos requieren hormonas de enraizamiento para funcionar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las hormonas ayudan en esquejes de especies difíciles, pero la división no las necesita en absoluto —cada trozo ya trae raíz— y el injerto tampoco, porque ahí el problema no es formar raíces sino unir dos tejidos. Todos hacen lo mismo, copiar una planta, y se diferencian en qué trozo usan y cuánta ayuda le dan."
+    },
+    {
+      "id": "bolivia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es cierto sobre la propagación vegetativa en el llano cruceño?",
+      "opciones": [
+        "El plátano y el banano se propagan exclusivamente por hijuelos, porque no hay otra vía práctica.",
+        "La yuca se propaga por estacas de tallo, y es el ejemplo más masivo del país.",
+        "El calor y la humedad de la zona favorecen el enraizamiento, y muchas especies enraízan en una cama sencilla bajo malla.",
+        "El clima local hace innecesarias las precauciones de higiene y drenaje."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Justo al revés: ese mismo calor y esa misma humedad que favorecen el enraizamiento favorecen también a los hongos, así que la higiene y el drenaje pesan más aquí que en otros sitios. Lo que en clima templado exige calor de fondo y nebulización, aquí lo regala el clima; lo que aquí exige más cuidado es la sanidad."
+    },
+    {
+      "id": "decidir-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Estás decidiendo qué líneas de producción abre Rizoma del Sur con propagación vegetativa, y en qué orden. Explica tu razonamiento, incluyendo qué decides propagar por semilla y qué preparas desde ya en el predio.",
+      "respuestaModelo": "La pregunta que ordena todo es si necesito que la planta sea idéntica a una concreta. Si no lo necesito —árboles de sombra, un seto, especies sin variedad definida— la semilla es más barata, más rápida de producir en cantidad y me da diversidad, que en un predio es un valor y no un defecto. Si lo necesito —una variedad frutal, una ornamental de color determinado, un clon productivo que seleccioné— hay que clonar.\n\nEn ese orden abriría tres líneas.\n\nPrimero, ornamentales por esqueje. Es lo más rentable para arrancar: ciclo corto, material gratis de mis propias plantas, demanda constante y venta de rotación rápida. Es lo que da flujo de caja mientras los cultivos lentos crecen, y no requiere más inversión que una cama de enraizamiento. Y aquí el clima juega a favor: el calor y la humedad del llano enraízan bien muchas especies en una cama sencilla bajo malla, sin el equipo que haría falta en clima templado.\n\nSegundo, los cultivos que aquí solo se propagan así. Si voy a producir plátano, es por hijuelo y no hay decisión que tomar; si voy a producir yuca, es por estaca de tallo. No es una elección técnica, es la única vía práctica.\n\nTercero, y a más largo plazo, frutales injertados. Es el producto de mayor valor unitario de un vivero y lo que garantiza que la fruta sea la que promete la etiqueta, porque un cítrico de semilla tarda muchos años y no da la fruta del árbol del que salió. Pero requiere aprender una técnica manual y tener patrones, así que no es por donde se empieza: es por donde se llega.\n\nLo que preparo desde ya, aunque los frutales sean para dentro de años, es el bloque de plantas madre. Un área del terreno dedicada a plantas de las que solo saco material de propagación y no producto, bien identificada, con buena sanidad y riego seguro, y separada del área de producción porque su función es distinta: no produce nada vendible por sí misma y sin embargo es el origen de todo lo que voy a vender clonado.\n\nY lo cuido con una atención que no se le pone a una planta de producción, porque clonar propaga los problemas junto con la planta: un virus en la madre pasa a todos los clones, y muchos virus son asintomáticos en ella y no en la descendencia. Con semilla la mayoría de los virus no se transmiten; con esqueje, todos.\n\nDos precauciones más que se derivan de lo mismo. Saco los esquejes de brotes jóvenes y vigorosos, no de ramas viejas, porque el clon hereda la edad además de la genética y el tejido viejo enraíza peor. Y llevo registro de qué planta madre dio origen a qué lote, que es lo que convierte la propagación en algo trazable: la diferencia entre un vivero que puede garantizar la variedad y uno que solo puede afirmarla.\n\nY como contrapeso deliberado, no clono todo. Un predio entero de clones idénticos es una flota con la misma vulnerabilidad, y mantener parte de la producción con diversidad genética es una forma barata de no perderlo todo a la vez.",
+      "criterios": [
+        "Usa la pregunta de la identidad como criterio de decisión inicial.",
+        "Reconoce cuándo la semilla es la mejor opción y por qué la diversidad es un valor.",
+        "Prioriza ornamentales por esqueje por ciclo corto y flujo de caja.",
+        "Aprovecha la ventaja climática local para el enraizamiento.",
+        "Identifica plátano y yuca como casos sin alternativa.",
+        "Sitúa los frutales injertados como meta de mayor valor y no como punto de partida.",
+        "Prepara desde ya el bloque de plantas madre, separado y con sanidad cuidada.",
+        "Explica la transmisión de virus por esqueje frente a semilla.",
+        "Toma esquejes de brotes jóvenes por la herencia de la edad.",
+        "Lleva registro de madre a lote para trazabilidad.",
+        "Mantiene diversidad deliberada como cobertura frente al fallo correlacionado."
+      ],
+      "explicacion": "Fíjate en que la decisión más importante de la lección no es técnica sino de diseño de predio: dónde va el rincón de las madres. Todo lo que vendas clonado en los próximos veinte años va a salir de ahí, y su sanidad es la de todo tu inventario."
+    }
+  ]
+}

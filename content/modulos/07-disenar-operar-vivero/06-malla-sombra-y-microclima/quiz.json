@@ -1,0 +1,105 @@
+{
+  "preguntas": [
+    {
+      "id": "saturacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué dice la curva de fotosíntesis frente a luz?",
+      "opciones": [
+        "Sube al principio, pero llega un punto de saturación en el que más luz no produce más azúcar.",
+        "Más allá de la saturación, el exceso de radiación daña el aparato fotosintético.",
+        "La mayoría de las especies saturan bastante por debajo de la radiación de un mediodía despejado aquí.",
+        "La fotosíntesis crece de forma proporcional a la luz recibida."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Esa proporcionalidad es la intuición que hay que desmontar. Como la saturación llega antes que el mediodía tropical, buena parte de la luz de la tarde en verano no está produciendo nada en muchas de tus plantas: solo calienta, evapora y estresa. Filtrarla no cuesta producción y en muchos casos la aumenta."
+    },
+    {
+      "id": "cuatro-efectos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace una malla de sombra además de filtrar luz?",
+      "opciones": [
+        "Baja la temperatura de la hoja y del envase, que es el efecto grande.",
+        "Sube la humedad relativa, con lo que baja la demanda de transpiración.",
+        "Frena el viento y reduce la evaporación desde el sustrato.",
+        "Aumenta la ventilación bajo la cobertura."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La ventilación no aumenta: la malla frena el aire, y por eso la altura de la estructura importa tanto. Una malla a metro y medio del suelo crea un horno; a dos metros y medio o tres, el aire caliente sube y se va por los costados, y además se puede trabajar de pie."
+    },
+    {
+      "id": "riego-bajo-malla",
+      "tipo": "verdadero_falso",
+      "enunciado": "Al instalar la malla se mantiene la misma frecuencia de riego, porque las plantas siguen siendo las mismas.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la consecuencia operativa más importante de la lección: bajo malla hay menos evaporación y menos transpiración, así que el sustrato tarda mucho más en secarse. Mantener la frecuencia anterior encharca y pudre raíces. Muchos problemas que se atribuyen a la sombra son en realidad problemas de riego que nadie ajustó al cambiar la cobertura."
+    },
+    {
+      "id": "envase-negro",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la raíz sufre el calor más que la hoja?",
+      "opciones": [
+        "La hoja se enfría transpirando, y la raíz no tiene ningún mecanismo equivalente.",
+        "El envase es negro y absorbe casi toda la radiación que le llega.",
+        "Los envases pequeños se calientan más rápido porque tienen poca masa y mucha superficie.",
+        "La raíz resiste temperaturas más altas que la parte aérea, así que no es un problema."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Al contrario: la raíz es la que más sufre, precisamente porque no puede refrigerarse. De ahí dos medidas gratis: los envases del borde del bloque reciben sol también de costado y sufren más que los del centro, y agrupar los envases es en sí mismo una protección, porque se dan sombra unos a otros y el conjunto se comporta como una masa mayor."
+    },
+    {
+      "id": "porcentajes",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se elige el porcentaje de malla?",
+      "opciones": [
+        "El número indica cuánta radiación bloquea, no cuánta deja pasar.",
+        "Un 50 % es el caballo de batalla de la zona de crecimiento y un 65 % va en propagación y almácigos.",
+        "El porcentaje de etiqueta es nominal, varía entre fabricantes y baja con el envejecimiento.",
+        "Un 80 % es la opción segura para todo el vivero, porque cuanta más protección, mejor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un 80 % es demasiado salvo para especies de sotobosque: con esa sombra las plantas se estiran. El porcentaje conviene tomarlo como una categoría y no como un dato exacto, y ajustar observando las plantas, que es lo que de verdad dice si acertaste."
+    },
+    {
+      "id": "etiolacion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una planta criada con mucha sombra que quedó alta y de tallo largo es una planta bien desarrollada.",
+      "respuesta": false,
+      "explicacion": "Falso: es etiolación. Con poca luz la planta alarga el tallo y separa las hojas buscándola, y el resultado parece grande pero es débil —tallo fino, tejidos blandos, pocas reservas, entrenudos larguísimos— y se quema, se dobla o se seca en días al salir al sol del cliente. Es el mismo asunto del endurecimiento visto desde el otro lado: una planta criada en condiciones demasiado benignas no tiene con qué enfrentarse a las reales."
+    },
+    {
+      "id": "estructura",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se monta la malla para que dure?",
+      "opciones": [
+        "Alta, para que el aire caliente suba y se vaya por los costados.",
+        "Tensada firme pero con algo de holgura, porque floja se llena de agua y demasiado tensa se rompe con el surazo.",
+        "Con refuerzo en bordes y amarres, que es siempre donde se rompe.",
+        "Con los costados cerrados, para aprovechar mejor la sombra."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Cerrar los laterales convierte el espacio en una cámara caliente: la malla cenital sombrea y ventila, y los costados se cierran solo si el objetivo es otro —barrera de insectos, protección del viento sur— sabiendo que se pierde ventilación. Y con el surazo lo que falla son los postes y los amarres, no el tejido."
+    },
+    {
+      "id": "malla-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define la cobertura de Rizoma del Sur: qué porcentaje en cada zona, cómo montas la estructura, y qué cambias en el manejo al cubrir.",
+      "respuestaModelo": "Con la radiación de la llanura cruceña la malla no es opcional en propagación ni en crecimiento, y el motivo principal no es la luz sino la temperatura y la pérdida de agua: la mayoría de las especies saturan bastante por debajo de un mediodía despejado de aquí, así que buena parte de la luz de la tarde solo está calentando y estresando.\n\nEl reparto: 65 % sobre camas de enraizamiento, almácigos y el bloque de plantas madre; 50 % sobre la zona de crecimiento, que es el caballo de batalla; y la zona de endurecimiento descubierta, porque estar expuesta es precisamente su función. Si el presupuesto no alcanza para cubrir todo de golpe, la prioridad es propagación, donde el daño por sol es inmediato e irreversible.\n\nAltura mínima de dos metros y medio, y mejor tres. Con el calor de aquí una estructura baja convierte la sombra en un horno y anula la mitad del beneficio, porque el aire caliente necesita sitio para subir e irse por los costados. Y como en el vivero se trabaja de pie todo el día, la altura también es ergonomía.\n\nLa malla va tensada firme pero con algo de holgura calculada: floja se llena de bolsas de agua en las lluvias y se rasga por el peso, y demasiado tensa se rompe con el primer surazo. Bordes doblados y cosidos o con la cinta de refuerzo de fábrica, y amarres que no corten el hilo, porque es siempre ahí donde se rompe. Con el surazo lo que falla son los postes y los amarres, no el tejido, así que postes bien fundados y tensores en las esquinas, con el mismo criterio de anclaje frente a succión del módulo de construcción.\n\nLos costados van abiertos para no perder ventilación, con una excepción aprovechada: un faldón lateral por el lado sur que haga de cortaviento contra el surazo, dejando abiertos los otros tres lados. Una estructura, dos funciones.\n\nEn el manejo cambio dos cosas de inmediato. La primera y más importante, el riego: bajo malla el sustrato aguanta bastante más, así que ajusto la frecuencia el mismo día que cubro, comprobando con el dedo y no siguiendo el calendario viejo. Es el error más frecuente al cubrir un vivero y produce pudrición de raíz que después se le echa la culpa a la sombra.\n\nLa segunda, el agrupamiento de envases: juntos se dan sombra unos a otros y el conjunto se comporta como una masa mayor, y los del borde del bloque, que reciben sol también de costado, son los que hay que vigilar. Es gratis y casi nadie lo hace a propósito.\n\nY vigilo la etiolación: si las plantas de crecimiento se estiran, con tallos largos, entrenudos separados y hojas pálidas, es que sobra sombra. La sombra se reduce a medida que la planta avanza por el vivero —mucha en propagación, media en crecimiento, ninguna en endurecimiento—, y eso es otra razón física por la que esas zonas están separadas.\n\nEn la elección de material miro el gramaje y que declare protección ultravioleta: una malla sin tratamiento UV se degrada muy rápido con esta radiación y se convierte en gasto recurrente, y la diferencia de precio se recupera en un solo recambio evitado. Anoto la fecha de instalación, porque el sombreo real baja con los años y conviene no descubrirlo cuando ya se están quemando las plantas.\n\nY sumo un motivo que suele olvidarse: el granizo. En la zona caen granizadas ocasionales que destrozan un lote de plantas tiernas en minutos, y una malla incluso de porcentaje bajo amortigua el impacto. Es un argumento para cubrir también zonas que por luz no lo necesitarían.\n\nEn invierno seco, con el sol más bajo y los días más cortos, la misma malla puede estar sombreando de más; si veo estiramiento en esos meses, evalúo enrollar o retirar la malla de la zona de crecimiento.\n\nMallas antiáfidos solo en la propagación de material del que dependo, no en todo el vivero: el mecanismo es físico y sí funciona como barrera contra insectos vectores de virus, pero reducen mucho el paso de aire y exigen más altura y ventilación lateral. Y con las mallas de color no pago sobreprecios importantes, porque la evidencia varía mucho según la especie.",
+      "criterios": [
+        "Justifica sombrear por temperatura y agua, no por luz.",
+        "Asigna 65 % a propagación y madres, 50 % a crecimiento y nada a endurecimiento.",
+        "Prioriza propagación si el presupuesto es limitado.",
+        "Fija altura de dos metros y medio a tres y explica ventilación y ergonomía.",
+        "Tensa con holgura y refuerza bordes y amarres.",
+        "Deja costados abiertos salvo un faldón sur como cortaviento.",
+        "Ajusta el riego el mismo día de cubrir, comprobando con el dedo.",
+        "Agrupa envases y vigila los del borde del bloque.",
+        "Detecta etiolación y reduce sombra al avanzar por el vivero.",
+        "Exige gramaje y protección ultravioleta, y anota la fecha de instalación.",
+        "Incluye el granizo como motivo de cobertura.",
+        "Revisa el sombreo en invierno seco.",
+        "Limita las antiáfidos a propagación y relativiza las mallas de color."
+      ],
+      "explicacion": "Fíjate en que la malla es la primera decisión del módulo que cambia varias variables a la vez sin que se note. Por eso el ajuste que hay que hacer no está en la malla sino en el riego, y por eso el error más caro no es elegir mal el porcentaje sino no cambiar nada más después de instalarla."
+    }
+  ]
+}

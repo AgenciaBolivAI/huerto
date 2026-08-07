@@ -1,0 +1,300 @@
+Ya sabes por qué una semilla puede estar viva y no germinar. Queda la pregunta anterior, la que
+nadie se hace y la que decide si vas a perder una temporada: **¿cuántas de estas semillas están vivas
+siquiera?**
+
+Nadie lo pregunta porque parece imposible saberlo sin sembrar. Y sin embargo se sabe, con una
+servilleta de papel y una semana de paciencia, y **el número que sale cambia todas las decisiones que
+vienen después**: cuánto sembrar, cuántas bandejas preparar, cuánto terreno preparar, cuánto cobrar.
+
+## Dos números que se confunden todo el tiempo
+
+<Diagrama
+  src="viabilidad-y-vigor.webp"
+  alt="Dos paneles enmarcados. A la izquierda, seis plantines idénticos y fuertes emergiendo a la vez de una misma línea de suelo, rotulado NACEN TODAS Y RÁPIDO. A la derecha, las mismas seis posiciones pero con solo cuatro plantines de tamaños muy distintos, algunos pequeños y torcidos, y dos huecos vacíos donde no salió nada, rotulado NACEN POCAS Y DESPAREJAS. Cada panel lleva un reloj pequeño en la esquina. Arriba, VIABILIDAD NO ES LO MISMO QUE VIGOR."
+  pie="Los dos lotes se ven idénticos en el sobre. La diferencia solo aparece cuando ya perdiste el tiempo."
+/>
+
+**La <Termino slug="viabilidad">viabilidad</Termino> es cuántas están vivas.** Se expresa como
+porcentaje: de cada cien semillas, cuántas son capaces de germinar. Es un número binario agregado —
+viva o muerta, contadas.
+
+**El <Termino slug="vigor">vigor</Termino> es con cuánta fuerza arrancan las que están vivas.** Es lo
+que decide si nacen rápido y parejas o lentas y desparejas, si el plantín sale robusto o endeble, y
+si aguanta un contratiempo en los primeros días o se muere al primer descuido.
+
+Y aquí está la trampa: **dos lotes pueden tener la misma viabilidad y comportarse de forma
+completamente distinta.**
+
+<Analogia>
+La viabilidad es **cuántos nodos responden**. El vigor es **con qué latencia y bajo qué carga siguen
+respondiendo.**
+
+Dos clústeres pueden reportar la misma cantidad de nodos vivos y ser cosas muy distintas: en uno
+responden todos en milisegundos; en el otro responden, pero tarde, a medias, y el primero que reciba
+carga real se cae.
+
+Un chequeo de disponibilidad que solo cuenta *vivo o muerto* te oculta exactamente eso. Y en semillas
+pasa igual: el porcentaje de germinación es la métrica que todo el mundo mira, y **el vigor es la que
+predice lo que va a pasar en el almácigo de verdad.**
+</Analogia>
+
+<Dato titulo="El vigor es lo que se pierde primero">
+Hay un orden en el deterioro de un lote, y conocerlo es útil:
+
+**Primero se pierde vigor.** Las semillas todavía germinan casi todas, pero tardan más y salen más
+flojas.
+
+**Después se pierde viabilidad.** El porcentaje empieza a caer.
+
+**Al final el lote está muerto** y no germina nada.
+
+La consecuencia práctica es incómoda: **un lote que aún da 80 % de germinación en el papel puede
+estar ya bastante deteriorado.** Ese 80 % en condiciones ideales de laboratorio casero se convierte
+en mucho menos en una bandeja real, con su tierra, sus hongos y sus altibajos de humedad.
+
+Por eso conviene mirar no solo cuántas germinaron, sino **en cuántos días**, que es la forma barata de
+medir vigor.
+</Dato>
+
+## La prueba de germinación
+
+<Diagrama
+  src="prueba-de-germinacion.webp"
+  alt="Cuatro tarjetas numeradas en fila. La primera, una mano colocando semillas en una cuadrícula regular sobre una servilleta de papel húmeda, rotulada CONTAR CIEN. La segunda, la servilleta enrollada holgadamente y metida en una bolsa transparente con una etiqueta colgando, rotulada ENROLLAR Y ETIQUETAR. La tercera, la bolsa en un lugar tibio y sombreado junto a un termómetro pequeño, rotulada TIBIO Y OSCURO. La cuarta, la bolsa abierta y una mano contando las semillas brotadas junto a una libreta y un lápiz, rotulada CONTAR CADA DÍA. Arriba, LA PRUEBA QUE CUESTA UNA SERVILLETA."
+  pie="Cuatro pasos, una semana, y un número que cambia todas las decisiones de la temporada."
+/>
+
+La <Termino slug="prueba-de-germinacion">prueba de germinación</Termino> completa, paso por paso:
+
+1. **Cuenta las semillas.** Cien si tienes de sobra, porque entonces el resultado es directamente el
+   porcentaje. Si el lote es pequeño y valioso, veinte o veinticinco sirven; solo tendrás que hacer
+   la regla de tres.
+2. **Colócalas separadas sobre papel de cocina húmedo**, en cuadrícula, para poder contarlas después
+   sin confusión.
+3. **Enrolla el papel sin apretar** y métela en una bolsa plástica **sin cerrar del todo**, porque la
+   semilla necesita respirar.
+4. **Etiqueta** con especie, fecha y número de semillas. Sin etiqueta, dentro de una semana no vas a
+   saber cuál era cuál.
+5. **Guarda en sitio tibio y a oscuras.** Encima de la heladera, dentro de un armario. Nada de sol
+   directo.
+6. **Revisa cada día**, anotando **cuántas nuevas germinaron ese día**, no solo el total. Retira las
+   germinadas para no contarlas dos veces y para que no se enreden entre sí.
+7. **Cierra la cuenta** cuando pasen varios días sin ninguna nueva.
+
+<Advertencia>
+**Cuenta germinadas de verdad, no semillas hinchadas.**
+
+Una semilla se hincha aunque esté muerta, porque la <Termino slug="imbibicion">imbibición</Termino>
+es un proceso puramente físico —eso ya lo viste en la primera lección—. Lo que cuenta como germinación es **que asome la
+radícula**, la raicilla blanca.
+
+Y afina un poco más: una radícula que asoma un milímetro y se queda ahí, o que sale marrón y
+retorcida, **no es una germinación exitosa.** Cuenta como buena la que sale blanca, recta y sigue
+creciendo.
+</Advertencia>
+
+### El dato que sale gratis: la curva
+
+<Diagrama
+  src="la-curva.webp"
+  alt="Gráfico de línea con los días en el eje horizontal y el acumulado de semillas brotadas en el vertical, sin marcas ni números. Dos curvas parten del origen y terminan a la misma altura: una verde que sube muy empinada al principio y se aplana casi de inmediato, con la llamada MUCHO VIGOR; y una terracota que sube lenta y gradual, ocupando casi todo el ancho del gráfico para llegar a la misma altura, con la llamada POCO VIGOR. Debajo, MISMO PORCENTAJE, DISTINTO LOTE."
+  pie="El total es el mismo. Lo que distingue a los dos lotes es la forma de la curva, y eso es vigor."
+/>
+
+Si anotaste **cuántas germinaron cada día** y no solo el total, tienes gratis la información más
+valiosa de la prueba.
+
+Dibuja el acumulado: días en horizontal, semillas germinadas en vertical. La forma de esa curva **es
+el vigor del lote**, medido.
+
+- **Curva que sube de golpe y se aplana enseguida**: lote vigoroso. En el almácigo va a nacer parejo,
+  y eso es una bendición operativa: todos los plantines llegan al trasplante a la vez.
+- **Curva que sube despacio durante muchos días**: lote deteriorado. Aunque el total final sea
+  aceptable, en la bandeja va a nacer desparejo, y una bandeja despareja es un dolor de cabeza
+  permanente: no puedes regar, fertilizar ni trasplantar a todos igual.
+
+<Analogia>
+Es una distribución de latencias, y como cualquier distribución, **el promedio esconde lo que
+importa.** El total germinado es la media; la forma de la curva es la dispersión.
+
+Y como con las latencias de un servicio, lo que arruina la operación no es la media: es **la cola.**
+Los rezagados que llegan cuando ya cerraste la ventana.
+</Analogia>
+
+## Cuánto sembrar con ese número
+
+<Diagrama
+  src="cuantas-sembrar.webp"
+  alt="Dos paneles enmarcados con una bandeja de almácigo vista desde arriba como una cuadrícula de celdas, y un montoncito de semillas al lado. A la izquierda, una semilla por celda y un montón pequeño, con varias celdas dibujadas vacías y sombreadas donde no salió nada, rotulado UNA SEMILLA POR CELDA. A la derecha, tres semillas por celda y un montón mayor, con un plantín en todas las celdas y ninguna vacía, rotulado TRES SEMILLAS POR CELDA. Debajo, EL PORCENTAJE DECIDE CUÁNTAS SIEMBRAS."
+  pie="Sembrar de más no es desperdicio: es lo que evita una bandeja con huecos, que sí lo es."
+/>
+
+Aquí es donde el número se convierte en decisión. La cuenta es trivial y casi nadie la hace:
+
+<Formula explicacion="Cuántas semillas hay que sembrar para obtener el número de plantas que necesitas, dado el porcentaje de germinación medido. El porcentaje se expresa como fracción: un 60 % es 0,60.">
+semillas a sembrar = plantas que necesitas ÷ porcentaje de germinación
+</Formula>
+
+Si necesitas 200 plantas y tu lote germina al 60 %, no siembras 200 semillas: siembras **200 ÷ 0,60,
+es decir unas 334.** Sembrar 200 te deja con 120 plantas y una bandeja llena de huecos.
+
+<Dato titulo="Por qué un hueco cuesta más que una semilla">
+La tentación de sembrar justo lo necesario es fuerte, sobre todo con semilla cara o escasa. Es un
+mal negocio, y la razón es que **el costo de una celda vacía no es el de la semilla que faltó.**
+
+Una celda vacía ya consumió sustrato, ya ocupa espacio en la bandeja, ya recibe riego, ya ocupa mesa
+de vivero durante semanas, y **no produce nada.** El costo de la semilla extra es despreciable frente
+a todo eso.
+
+Por eso, con lotes de germinación baja, la práctica es **sembrar dos o tres semillas por celda
+y <Termino slug="raleo">ralear</Termino>** —eliminar las sobrantes— dejando el plantín más fuerte de
+cada una. Se gasta más semilla y
+se aprovecha toda la bandeja, que es lo caro.
+
+Es la misma lógica que sobredimensionar un recurso barato para no quedarse corto en el caro: gastas
+de más en lo que casi no cuesta, para no desperdiciar lo que sí.
+</Dato>
+
+**Y una decisión de raleo que conviene tener clara de antemano:** cuando ralees, **corta, no
+arranques.** Arrancar el plantín sobrante remueve la tierra y daña las raíces del que quieres
+conservar, que a esa altura ya están enredadas con las del vecino. Un corte a ras de sustrato con
+tijera pequeña deja intacto al que se queda.
+
+## Guardar sin perder viabilidad
+
+<Diagrama
+  src="guardar.webp"
+  alt="Un frasco de vidrio cerrado en corte, sobre un estante. Dentro, semillas al fondo y una bolsita de tela con material absorbente entre ellas; la tapa a rosca está cerrada y del cuello cuelga una etiqueta. Tres llamadas señalan: las semillas, SECAS ANTES DE GUARDAR; la bolsita, ALGO QUE ABSORBA HUMEDAD; y la etiqueta, ESPECIE Y FECHA. A la derecha, tres iconos apilados tachados con una línea roja —un sol, una gota y un símbolo ondulado de calor— junto al rótulo LOS TRES ENEMIGOS. Arriba, GUARDAR ES FRENAR EL RELOJ."
+  pie="Una semilla guardada no está en pausa: está gastándose despacio. Guardar bien es solo ralentizar el reloj."
+/>
+
+Una semilla seca **no está inerte: está respirando muy despacio.** Sigue gastando sus reservas y
+acumulando daño en sus membranas y su ADN, solo que a un ritmo lentísimo. Guardar bien no detiene ese
+reloj; **lo frena.**
+
+Y lo que marca la velocidad del reloj son tres cosas, en este orden de importancia:
+
+**La humedad.** Es la variable dominante con diferencia. Una semilla húmeda respira mucho más rápido,
+gasta reservas, y además invita a hongos. Es la razón por la que **guardar en bolsa de plástico
+cerrada una semilla que no está bien seca es la forma más eficaz de arruinarla**: el plástico no deja
+salir la humedad que la semilla trae dentro.
+
+**La temperatura.** El calor acelera cualquier reacción química, y aquí también. Fresco es mejor que
+tibio, y constante es mejor que oscilante.
+
+**La luz.** Menos crítica que las otras dos, pero el sol directo calienta y degrada. Recipiente opaco
+u oscuro.
+
+<Advertencia>
+**Nunca guardes una semilla que no esté completamente seca**, y en particular nunca guardes semilla
+recién extraída de un fruto carnoso sin haberla limpiado y secado primero.
+
+La pulpa que queda pegada fermenta, atrae hongos y sube la humedad del recipiente entero. Se lava, se
+extiende en una superficie a la sombra con aire, y **solo cuando está seca al tacto y quebradiza** se
+guarda.
+
+El error inverso también existe: **secar al sol directo o con calor artificial mata el embrión.** El
+secado se hace a la sombra, con corriente de aire, y con paciencia.
+</Advertencia>
+
+**El recipiente ideal es un frasco de vidrio con tapa a rosca**, opaco o guardado en la oscuridad,
+con un poco de material absorbente dentro. Sirve arroz seco tostado en una bolsita de tela, o los
+sobrecitos de sílice que vienen en cajas de zapatos y aparatos electrónicos, que se pueden reutilizar
+indefinidamente si se secan al horno suave de vez en cuando.
+
+Y **etiqueta siempre**: especie, procedencia, fecha de recolección y el porcentaje de germinación que
+mediste. Ese último dato convierte un frasco de semillas en un lote con especificación.
+
+<Dato titulo="Cuánto dura una semilla guardada">
+Depende muchísimo de la especie, y hay tres grupos que conviene distinguir:
+
+**Semillas de vida corta**, que pierden viabilidad en meses aunque las guardes bien. Muchas especies
+de fruto carnoso y algunas nativas de selva húmeda están en este grupo, y algunas ni siquiera toleran
+secarse: hay que sembrarlas frescas o no sirven.
+
+**Semillas de vida media**, que aguantan un par de temporadas bien guardadas. La mayoría de las
+hortalizas.
+
+**Semillas de vida larga**, que duran años y a veces décadas. Muchas leguminosas de cubierta dura,
+justamente porque esa cubierta las aísla del ambiente.
+
+Fíjate en la coincidencia con la lección anterior: **lo que hace difícil germinar una semilla dura es
+lo mismo que la hace durar.** La cubierta impermeable que te obliga a escarificar es también la que
+la protege del reloj.
+</Dato>
+
+<ContextoBolivia>
+El clima del llano cruceño es **el peor escenario posible para guardar semilla**, y conviene decirlo
+sin rodeos: **calor casi todo el año y humedad alta durante siete meses.** Los dos enemigos
+principales, juntos y sostenidos.
+
+Consecuencias prácticas:
+
+**Un sobre de papel en un cajón no es almacenamiento aquí.** En un clima seco y templado podría
+bastar; en la humedad de la temporada de lluvias, el papel absorbe humedad del aire y la semilla la
+absorbe del papel. Frasco cerrado con absorbente, sin excepción.
+
+**La heladera es un aliado, con una condición.** Guardar el frasco bien cerrado en la parte baja de
+la heladera alarga muchísimo la vida del lote. La condición es que **el frasco se saque y se deje
+llegar a temperatura ambiente antes de abrirlo**: si lo abres frío, el aire húmedo del ambiente
+condensa dentro y mojas todo el lote de golpe. Es exactamente lo que le pasa a un vaso frío en un día
+húmedo.
+
+**Y una precaución que casi nadie toma: los gorgojos.** En clima cálido, los insectos de granos
+almacenados son un problema real y silencioso, sobre todo con leguminosas. Un lote perfectamente
+guardado puede aparecer, meses después, con agujeritos redondos y vacío por dentro. El frasco
+hermético ayuda; congelar el lote **seco** durante unos días antes de guardarlo mata huevos y larvas
+sin dañar la semilla, precisamente porque está seca y no tiene agua que forme cristales.
+
+**El calendario local juega en contra:** la recolección de la mayoría de las especies del monte cae
+en la seca, y la siembra al empezar las lluvias. Entre una y otra hay meses de espera, y son los
+meses en que empieza a subir la humedad. Guardar bien no es opcional: **es lo que separa una
+recolección aprovechada de un frasco de semillas muertas.**
+</ContextoBolivia>
+
+## Aplicación práctica
+
+<AplicarRizoma>
+Para Rizoma del Sur, esto se convierte en dos rutinas fijas.
+
+**Rutina uno: ningún lote entra a producción sin prueba.** Cada vez que llegue semilla —comprada,
+recogida o regalada— apártate una muestra y haz la prueba del papel antes de planificar nada. Cuesta
+una servilleta y una semana, y evita descubrir en la bandeja lo que podías haber sabido antes.
+
+Anota **cuántas germinan cada día**, no solo el total. Ese detalle no cuesta nada extra y te da el
+vigor, que es lo que te va a decir si la bandeja va a nacer pareja.
+
+**Rutina dos: el frasco etiquetado.** Todo lo que se guarde va en frasco de vidrio con tapa a rosca,
+con absorbente dentro, en el sitio más fresco y oscuro disponible, y con etiqueta que diga especie,
+procedencia, fecha y porcentaje de germinación medido. Ese último dato es el que después te permite
+calcular cuánto sembrar sin adivinar.
+
+**La cuenta de siembra, siempre:** plantas que necesitas dividido entre el porcentaje. Y con lotes de
+germinación baja, dos o tres semillas por celda y raleo con tijera, porque **una celda vacía cuesta
+más que la semilla que faltó.**
+
+Y un apunte sobre por qué esto importa comercialmente, adelantando el módulo de negocio: cuando
+vendas plantines, **lo que te van a pedir es cantidad y fecha.** Comprometerse a entregar doscientos
+plantines en tal fecha, sin conocer la germinación de tu lote, es comprometerse a ciegas. La prueba
+del papel es lo que convierte una promesa en una estimación con base.
+
+Ese frasco etiquetado con su porcentaje y su curva es, además, el registro que el módulo de fichas de
+cultivo va a querer estructurar por especie. Empieza a llenarlo desde el primer lote.
+</AplicarRizoma>
+
+## Lo que hay que llevarse
+
+**Viabilidad es cuántas están vivas; vigor es con cuánta fuerza arrancan.** Se confunden todo el
+tiempo y no son lo mismo: dos lotes con el mismo porcentaje pueden dar una bandeja pareja o una
+bandeja despareja. **El vigor se pierde antes que la viabilidad**, así que un lote con buen
+porcentaje puede estar ya deteriorado.
+
+La prueba de germinación cuesta una servilleta y una semana. **Cuenta radículas asomadas, no semillas
+hinchadas**, y anota cuántas germinan cada día: esa curva es tu medida de vigor, gratis.
+
+El número se convierte en decisión con una división: **plantas necesarias entre porcentaje**. Y con
+lotes flojos, varias semillas por celda y raleo con tijera, porque el hueco cuesta más que la semilla.
+
+Guardar no detiene el reloj, lo frena, y lo que marca su velocidad es **humedad, temperatura y luz,
+en ese orden**. En el llano cruceño, con calor y humedad casi todo el año, el frasco cerrado con
+absorbente y la etiqueta con fecha y porcentaje no son refinamientos: son lo mínimo.

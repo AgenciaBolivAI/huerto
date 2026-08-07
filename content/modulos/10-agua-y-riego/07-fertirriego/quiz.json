@@ -1,0 +1,123 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-el-envase",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué una planta en envase necesita aporte continuo y una en el terreno no?",
+      "opciones": [
+        "El volumen de sustrato es diminuto comparado con el suelo que explora una raíz en el terreno.",
+        "Los componentes que dan buenas propiedades físicas al sustrato son químicamente casi inertes.",
+        "Sin reserva que amortigüe, lo que la planta come es básicamente lo que le diste hoy.",
+        "El sustrato de vivero tiene más capacidad de intercambio catiónico que el suelo."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Es al revés: cascarilla, perlita, arena y fibra retienen muy poco. El suelo del terreno es un sistema con caché grande y persistente, y el envase es un sistema sin caché, donde cada lectura va directo a la fuente. Por eso un lote grande de fertilizante no se absorbe: se desborda."
+    },
+    {
+      "id": "la-dosis",
+      "tipo": "verdadero_falso",
+      "enunciado": "Dar la dosis semanal completa de una vez es equivalente a repartirla en cada riego, porque el total es el mismo.",
+      "respuesta": false,
+      "explicacion": "Falso. Un fertilizante disuelto es una sal: una dosis grande de golpe sube la salinidad del agua del sustrato, la raíz tiene que trabajar más para absorber y, si se pasa, pierde agua hacia fuera. El síntoma es sed con el sustrato mojado y bordes de hoja quemados. Y hay una segunda pérdida: lo que no se absorbe se lava por el fondo en los siguientes riegos."
+    },
+    {
+      "id": "uniformidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué relación hay entre el fertirriego y la uniformidad de riego?",
+      "opciones": [
+        "Lo que recibe cada planta es la concentración por los litros que esa planta concreta recibe.",
+        "Un sistema desuniforme reparte también la nutrición de forma desuniforme.",
+        "El efecto se acumula: la planta que recibe menos come menos todos los días.",
+        "El fertirriego compensa las diferencias de caudal entre emisores."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "No compensa nada: amplifica. Si la uniformidad es mala, el fertirriego la convierte en un problema de crecimiento visible en pocas semanas, y encima la planta que recibe de más se saliniza. Arreglar el riego viene antes que empezar a fertirrigar."
+    },
+    {
+      "id": "como-se-inyecta",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué método de inyección conviene a un vivero pequeño que riega por gravedad?",
+      "opciones": [
+        "Tanque de mezcla, porque no necesita presión ni electricidad.",
+        "Inyector venturi, porque es barato y no tiene partes móviles.",
+        "Bomba dosificadora, porque es la más precisa.",
+        "Cualquiera de los tres da lo mismo con un tanque elevado."
+      ],
+      "correctas": [
+        0
+      ],
+      "explicacion": "El venturi no tiene partes móviles pero se paga con presión: consume una parte importante de la que hay en la línea, y en un sistema por gravedad la presión ya es escasa. La bomba dosificadora es lo correcto en una instalación seria y lo que no hace falta en un vivero que empieza. El límite del tanque de mezcla es que fertiliza todo el volumen, así que hay que poder regar con agua limpia cuando toca."
+    },
+    {
+      "id": "lo-que-no-se-mezcla",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué se usan dos recipientes de concentrado separados?",
+      "opciones": [
+        "Porque algunos nutrientes precipitan al juntarse en concentración alta y forman sólidos insolubles.",
+        "Porque esas partículas terminan tapando los emisores.",
+        "Porque diluidos en el caudal grande de riego ya no precipitan.",
+        "Porque cada recipiente riega una zona distinta del vivero."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "No tiene nada que ver con zonas: es química. El caso clásico es el calcio con sulfatos y fosfatos, inocuos por separado y formadores de precipitado al juntarse concentrados. El agua se pone lechosa, aparecen copos blancos y el fertilizante que pagaste se convierte en el sólido que te tapa el riego."
+    },
+    {
+      "id": "secuencia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que hacer antes y después de fertirrigar?",
+      "opciones": [
+        "Antes, mojar con agua limpia si el sustrato está seco, para que la solución no entre concentrada sobre raíces estresadas.",
+        "Después, purgar las líneas con agua limpia unos minutos.",
+        "Abrir de vez en cuando los finales de línea para arrastrar lo que se haya acumulado.",
+        "Dejar la solución dentro de las tuberías entre riegos, para que no se pierda fertilizante."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Dejarla dentro es justamente el error: agua tibia con nutrientes disueltos, a media luz y a estas temperaturas, es el medio de cultivo ideal para la biopelícula y las algas que tapan emisores. La secuencia correcta es siempre mojar, alimentar y lavar."
+    },
+    {
+      "id": "conductivimetro",
+      "tipo": "verdadero_falso",
+      "enunciado": "Con fertirriego, dejar drenar agua por el fondo del envase es un desperdicio que conviene eliminar.",
+      "respuesta": false,
+      "explicacion": "Falso, y eliminarlo saliniza el envase en pocas semanas. Con fertirriego tú eres la fuente principal de sal, así que la fracción de lavado pasa a ser obligatoria. Sí es cierto que el fertilizante que se va por el fondo se pierde, y ese es el costo inevitable del método: se minimiza bajando la concentración y ajustando la frecuencia, no cerrando el drenaje."
+    },
+    {
+      "id": "fertirriego-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define el plan de fertirriego de Rizoma del Sur: con qué equipo empiezas, qué dosis por zona, cómo lo controlas y qué rutina sigues en cada aplicación.",
+      "respuestaModelo": "Empiezo con tanque de mezcla, y eso está bien. Mi sistema es un tanque elevado que riega por gravedad: ahí el venturi no encaja porque se come la poca presión disponible, y la bomba dosificadora es un gasto que no toca todavía. Disolver el fertilizante en el tanque y regar con esa solución es simple, barato y suficiente.\n\nLa base es fertilizante de liberación lenta incorporado a la mezcla de crecimiento, con fertirriego encima para ajustar. Así, si un día no preparo la tanda o el tanque se llenó con lluvia sin abono, las plantas no se quedan sin nada. Es redundancia barata.\n\nAntes de empezar a fertirrigar arreglo la uniformidad. La prueba de los vasos deja de ser un detalle: con fertirriego, un sector desuniforme produce plantas visiblemente distintas en pocas semanas, y la diferencia se acumula porque la planta que recibe menos agua recibe menos comida todos los días. Si la prueba sale mal, corrijo el riego primero.\n\nNecesito poder regar con agua limpia cuando toca, porque el tanque de mezcla fertiliza todo el volumen: para mojar antes, para lavar después, y para los lotes que no deben recibir abono, como los esquejes recién puestos a enraizar, que no tienen raíz para absorber nada y solo se salinizarían.\n\nLa dosis la ajusto por zona y no para todo el vivero. Almácigos y esquejes recién puestos, casi nada. Propagación ya enraizada, poco. Crecimiento en envase grande, lo normal. Y las plantas madre llevan lo suyo, porque de ellas corto material varias veces al año y esa extracción hay que reponerla.\n\nLa secuencia de cada fertirriego es mojar, alimentar y lavar, y termina siempre con unos minutos de agua limpia por las líneas. Aquí hace más falta que en climas fríos: con estas temperaturas, agua tibia con nutrientes dentro de una tubería es un caldo de cultivo y tapa emisores en semanas. También abro de vez en cuando los finales de línea.\n\nNunca fertirriego sobre sustrato seco. Con el envase seco la solución entra concentrada sobre raíces ya estresadas y quema; y si el sustrato se volvió hidrófobo, además se canaliza y no moja. Primero agua limpia, después solución.\n\nSi algún día manejo dos concentrados, van en recipientes separados y nunca se mezclan entre sí ni con ácido concentrado, porque el calcio con sulfatos y fosfatos precipita y ese sólido termina en los goteros. Y disuelvo completamente antes de conectar: un fertilizante a medio disolver es arena entrando al sistema.\n\nEl control es el conductivímetro que ya compré para calidad de agua. Una lectura del tanque mezclado antes de regar, que detecta el error de bulto antes de que llegue a las plantas, y una del drenaje de un envase testigo, que dice si estoy acumulando sal. Si la de salida es mucho más alta que la de entrada, dejo drenar más. Dos números por semana anotados en la misma planilla del inventario.\n\nAcepto que el fertilizante que se va con el drenaje se pierde: es el costo del método. Lo minimizo bajando la concentración y ajustando la frecuencia, no cerrando el drenaje, que es lo que la intuición pide y lo que saliniza el envase.\n\nY tengo la alarma visual gratis de siempre: si aparece costra blanca en la superficie, estoy aportando más sal de la que sale.\n\nUna ventaja concreta de la captación de lluvia es que parte de salinidad casi nula, así que todo el margen de conductividad disponible lo puedo usar en nutrientes en vez de gastarlo en sales que no alimentan.\n\nPara comprar, exijo producto etiquetado y soluble para riego: muchos fertilizantes de aplicación al suelo dejan residuo que va directo a los emisores. Ante la duda, disuelvo una cantidad pequeña en un vaso antes de echar un saco al tanque.",
+      "criterios": [
+        "Empieza con tanque de mezcla y justifica por qué el venturi no sirve por gravedad.",
+        "Combina liberación lenta como base con fertirriego para ajustar.",
+        "Arregla la uniformidad antes de fertirrigar y cita la prueba de los vasos.",
+        "Prevé regar con agua limpia y excluye del abono los esquejes sin raíz.",
+        "Ajusta la dosis por zona, incluidas las plantas madre por extracción de material.",
+        "Aplica la secuencia mojar, alimentar y lavar, con purga de líneas.",
+        "No fertirriega sobre sustrato seco y menciona el sustrato hidrófobo.",
+        "Separa concentrados incompatibles y disuelve completamente antes de conectar.",
+        "Mide con conductivímetro la solución preparada y el drenaje de un testigo.",
+        "Acepta la fracción de lavado y no la elimina para ahorrar fertilizante.",
+        "Usa la costra blanca como alarma.",
+        "Aprovecha la baja salinidad del agua de lluvia captada.",
+        "Compra producto soluble para riego y lo comprueba antes de usarlo."
+      ],
+      "explicacion": "Lo que hace bueno a un plan de fertirriego no es la tabla de dosis, es el procedimiento: uniformidad antes, secuencia constante, purga siempre, y dos lecturas por semana. La tabla se corrige en un día; un sistema tapado o un lote salinizado, no."
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+Conectas el sensor, lees el valor y sale **un número**. Digamos que 512, o 43 %, o 0,68.
+
+**Ese número, por sí solo, no significa nada**, y tratarlo como si significara algo es la forma más
+rápida y más silenciosa de automatizar mal. Esta lección trata de convertirlo en información.
+
+## De qué está hecho el número
+
+<Diagrama
+  src="cuatro-traducciones.webp"
+  alt="Cuatro cajas rectangulares de esquinas redondeadas en una fila horizontal unidas por tres flechas terracota gruesas que apuntan a la derecha. La primera contiene una gota de agua grande entre partículas pequeñas de suelo. La segunda, dos placas planas paralelas con una línea ondulada entre ellas. La tercera, una rampa ascendente sencilla en azul pálido. La cuarta, un marco rectangular liso completamente vacío por dentro. Cuatro franjas de rótulo, una bajo cada caja, que dicen de izquierda a derecha: EL AGUA QUE HAY; LO QUE CAMBIA EN LA SONDA; LA TENSIÓN QUE SALE; EL NÚMERO QUE LEES. Arriba, CUATRO TRADUCCIONES."
+  pie="En cada traducción se pierde algo. El número del final no es la humedad: es el resultado de una cadena."
+/>
+
+La cadena que va de la realidad física al valor que ves tiene cuatro traducciones, y en cada una se
+pierde algo:
+
+**La propiedad física.** El agua presente en el sustrato, que es lo que de verdad interesa.
+
+**La magnitud eléctrica.** La capacidad del condensador que forman las placas del sensor con el
+sustrato como dieléctrico, que cambia con esa agua pero también con otras cosas.
+
+**La tensión.** El circuito del sensor convierte esa capacidad en un voltaje, con su propia respuesta,
+que casi nunca es lineal.
+
+**Y el número.**
+El <Termino slug="conversor-analogico-digital">conversor analógico-digital</Termino> del controlador
+mide ese voltaje y lo expresa como un entero dentro de un rango fijo —típicamente de 0 a 1023 o de 0 a
+4095.
+
+<Dato>
+De ahí salen dos consecuencias que conviene entender bien.
+
+**La resolución del número no es la precisión de la medida.** Un conversor de doce bits da 4.096
+valores distintos, lo cual suena preciso; pero si el sensor deriva y el ruido eléctrico mueve la
+lectura, esos dígitos finales son decoración. **Mostrar decimales que no existen es la manera más fácil
+de creerse un dato falso.**
+
+**Y el porcentaje que muestra una biblioteca no suele ser humedad.** Muchas librerías interpolan
+linealmente entre el valor medido en aire y el medido en agua, y llaman «%» al resultado. Eso no es el
+contenido de agua del sustrato: es una posición dentro de una escala arbitraria. **Puede servir para
+comparar consigo mismo, y no sirve para nada más.**
+</Dato>
+
+## Calibrar es solo poner dos anclas
+
+La <Termino slug="calibracion-de-sensor">calibración</Termino> no es un procedimiento de laboratorio;
+en este caso son dos medidas y una regla de tres.
+
+**El extremo seco.** Se mide el sensor en el sustrato **realmente seco** —secado al aire durante días,
+o en un lote que ya está en punto de marchitez—, no al aire libre. Medir en aire da un valor que el
+sensor nunca alcanzará dentro de un sustrato, así que **usar el aire como cero comprime toda la escala
+útil.**
+
+**El extremo húmedo.** Se riega hasta saturar, se deja drenar libremente unas horas y se mide. Ese es
+el punto de <Termino slug="capacidad-de-campo">capacidad de campo</Termino> del módulo de suelo, y es
+el máximo con el que va a trabajar el sistema. Medir con el sustrato encharcado tampoco sirve: es un estado que no debe existir.
+
+<Diagrama
+  src="dos-anclas.webp"
+  alt="Una barra horizontal larga que cruza el centro de la imagen, teñida desde un tono arenoso pálido y seco a la izquierda hasta un azul pálido saturado a la derecha. Dos estacas verticales atraviesan la barra, una cerca del extremo izquierdo y otra cerca del derecho. Sobre la estaca izquierda hay una bolsa de vivero pequeña con el sustrato seco y agrietado. Sobre la derecha, una bolsa idéntica con sustrato oscuro y húmedo y una gota cayendo de su base. Entre las dos estacas, una llave enmarca el tramo intermedio de la barra. Tres franjas de rótulo con líneas de llamada finas: una a la estaca izquierda dice EL SUSTRATO SECO DE VERDAD; otra a la derecha dice DESPUÉS DE REGAR Y DRENAR; y otra a la llave intermedia dice TODO LO ÚTIL ESTÁ AQUÍ. Arriba, DOS ANCLAS Y NADA MÁS."
+  pie="Calibrar no es un procedimiento de laboratorio: son dos medidas en el sustrato real y una regla de tres."
+/>
+
+Con esos dos puntos, cualquier lectura intermedia se puede expresar como una fracción entre ambos, que
+ya sí es una escala con sentido físico.
+
+<Formula explicacion="La lectura relativa expresa el valor actual como una fracción entre el valor medido en sustrato seco y el medido a capacidad de campo. No es el contenido volumétrico de agua, pero sí es una escala estable y comparable dentro del mismo sustrato y con el mismo sensor.">
+lectura relativa = (valor seco − valor actual) ÷ (valor seco − valor a capacidad de campo)
+</Formula>
+
+<Advertencia>
+Y aquí está el punto que invalida la mayoría de los montajes caseros: **la calibración es específica de
+cada sustrato.**
+
+Una mezcla con más materia orgánica retiene más agua y tiene una respuesta dieléctrica distinta a una
+con más arena. **El mismo sensor, en el mismo estado de humedad relativa, da números distintos en dos
+sustratos distintos.**
+
+Eso significa tres cosas concretas:
+
+**Si cambias la receta del sustrato, la calibración anterior deja de valer.** Y las recetas cambian sin
+que uno se dé cuenta, porque un lote de compost no es igual que el siguiente.
+
+**Un umbral copiado de internet no significa nada en tu vivero.** El «riega cuando baje del 40 %» de un
+tutorial se midió con otro sensor, otra librería y otro sustrato.
+
+**Y comparar dos sensores distintos entre sí solo tiene sentido si ambos están calibrados.** Dos
+sensores del mismo modelo, del mismo lote, dan lecturas que pueden diferir bastante en el mismo punto.
+</Advertencia>
+
+## Lo que el sensor no puede decirte
+
+Hay un límite conceptual más importante que cualquier problema de calibración, y viene directamente del
+módulo de suelo:
+
+**Un sensor capacitivo mide cuánta agua hay. La planta no responde a cuánta agua hay, sino a cuánto le
+cuesta sacarla.**
+
+Esa segunda magnitud es
+el <Termino slug="potencial-matrico">potencial mátrico</Termino>: la fuerza con la que el sustrato
+retiene el agua. Y la
+relación entre las dos no es la misma en todos los sustratos. Un sustrato arcilloso con un 30 % de agua
+puede tenerla tan retenida que la planta no la aproveche, mientras que uno arenoso con el mismo 30 %
+está prácticamente encharcado.
+
+Es exactamente la distinción entre **agua presente y agua disponible** de la primera lección del módulo
+de riego, y explica algo que sorprende: **dos lotes con la misma lectura pueden necesitar riegos
+distintos.**
+
+<Diagrama
+  src="no-es-lo-mismo-haber-que-poder.webp"
+  alt="Dos paneles lado a lado, cada uno con un corte de sustrato dentro de un envase y una planta encima, y cada uno con su propio indicador vertical estrecho de pie en el borde exterior. Los dos indicadores están dibujados de la misma altura y llenos de azul pálido exactamente hasta el mismo nivel, y una línea de trazos horizontal larga cruza toda la imagen uniendo la superficie de un indicador con la del otro para demostrar que coinciden. Panel izquierdo: las partículas de sustrato son muy pequeñas y están muy apretadas, cada gota de agua entre ellas aparece sujeta por líneas radiales cortas y gruesas que la unen a las partículas de alrededor, y la planta de arriba está marchita y caída. Panel derecho: las partículas son grandes y están sueltas, las gotas cuelgan libres sin ninguna línea de unión, y la planta de arriba está erguida y sana. Tres franjas de rótulo: una arriba en el centro sobre la línea de trazos dice LA MISMA CANTIDAD DE AGUA; otra bajo el panel izquierdo dice PERO NO LA PUEDE SACAR; y otra bajo el derecho dice Y AQUÍ SÍ. Arriba, NO ES LO MISMO HABER QUE PODER."
+  pie="El sensor mide el nivel de los indicadores. La planta responde a lo fuerte que están agarradas las gotas."
+/>
+
+<Analogia>
+Es la diferencia entre **el espacio libre de un disco y el rendimiento real de escritura.**
+
+Los dos números están relacionados y el primero es trivial de medir, pero es el segundo el que
+determina si el sistema funciona. Y hay configuraciones donde sobra espacio y aun así todo va lento.
+
+**Medir lo fácil en vez de lo que importa es una tentación permanente en cualquier instrumentación**, y
+la única defensa es tener claro desde el principio qué pregunta estás intentando contestar.
+
+Para el nivel de este vivero, **la lectura capacitiva bien calibrada es suficiente** —resuelve el 90 %
+del problema por una fracción del costo—, pero conviene saber qué es lo que no está midiendo.
+</Analogia>
+
+Existe un instrumento que sí mide potencial mátrico directamente —el **tensiómetro**, una cápsula porosa
+llena de agua conectada a un vacuómetro—, pero exige mantenimiento constante, no funciona bien en los
+rangos secos y es difícil de integrar en un sistema automático. **Para un vivero pequeño, la respuesta
+correcta es el sensor capacitivo calibrado más la observación directa de la lección de riego.**
+
+## Dónde poner el sensor
+
+Este es el error más caro y el más frecuente, porque es invisible: **un sensor mal colocado da lecturas
+perfectamente estables y perfectamente inútiles.**
+
+<Diagrama
+  src="donde-va-el-sensor.webp"
+  alt="Un corte grande de un envase de vivero con una planta creciendo en él y la masa de raíces dibujada extendiéndose por el tercio medio del sustrato, que aparece en una banda de color distinto. Se dibujan cuatro sondas pequeñas en cuatro posiciones: una apoyada en la superficie marcada con una cruz roja, otra en el fondo del envase dentro de una capa de agua acumulada marcada con una cruz roja, otra justo debajo de un gotero arriba a la derecha marcada con una cruz roja, y otra insertada en el tercio medio entre las raíces y lejos del gotero, marcada con una tilde verde. Cuatro franjas de rótulo con líneas de llamada finas, una a cada sonda, que dicen: MUY ARRIBA SE SECA; MUY ABAJO SE ENCHARCA; BAJO EL GOTERO MIENTE; ENTRE LAS RAÍCES ES EL BUENO. Arriba, DÓNDE VA EL SENSOR."
+  pie="Poner el sensor en la mejor zona del bancal garantiza que el sistema riegue de menos."
+/>
+
+**A la profundidad de las raíces activas.** No en la superficie, que se seca en una hora al sol y no
+representa nada; no en el fondo del envase, donde el agua se acumula. En el tercio medio del volumen
+radicular.
+
+**En contacto íntimo con el sustrato.** Una bolsa de aire junto al sensor lo aísla y hace que lea seco
+para siempre. Se inserta apretando el sustrato alrededor, no dejándolo caer en un agujero.
+
+**Lejos del gotero.** Justo debajo de un emisor mide el bulbo húmedo en su punto más favorable y dice
+que todo está bien mientras el resto del lote se seca. **A media distancia entre dos plantas o entre dos
+emisores** es mucho más representativo.
+
+**En la zona que más sufre.** Si un extremo del bancal recibe menos agua —y siempre hay uno, como
+recordaba la lección de uniformidad—, ese es el punto que debe decidir el riego. Poner el sensor en la
+mejor zona es garantizar que el sistema riegue de menos.
+
+**Y un sensor por zona de riego, no por planta.** El sensor no representa a la planta que tiene al lado:
+representa a todo el sector que se riega con la misma válvula. Poner veinte sensores en un sector con
+una sola válvula no aporta nada, porque la decisión sigue siendo una.
+
+<Dato>
+Dos sensores en la misma zona valen mucho más que uno, y no por precisión sino **por detección de
+fallos.**
+
+Con un solo sensor no hay forma de saber si está midiendo bien. Con dos, **la discrepancia es la
+alarma**: si dos sensores que llevaban meses de acuerdo empiezan a separarse, uno de los dos se está
+degradando, y la deriva lenta —que era el modo de fallo silencioso de la lección anterior— deja de ser
+invisible.
+
+Es redundancia para diagnóstico, no para exactitud. Y como el sensor es la pieza barata del sistema, es
+de lo más rentable que se puede hacer.
+</Dato>
+
+## Cuándo y cuánto medir
+
+Y una última decisión que parece técnica y en realidad es de criterio:
+
+**La humedad del sustrato cambia despacio.** Medir cada segundo no aporta información: aporta ruido y
+llena el almacenamiento. **Cada quince o treinta minutos es más que suficiente** para decidir un riego.
+
+**Conviene promediar varias lecturas seguidas.** Tomar cinco medidas en unos segundos y quedarse con la
+mediana elimina los valores sueltos por ruido eléctrico, que en un entorno con bombas y cables largos
+son constantes. La mediana es mejor que la media porque un valor absurdo no la arrastra.
+
+**Y hay que alimentar el sensor solo mientras se mide.** Dejar tensión permanente en un sensor enterrado
+acelera su degradación y consume batería sin motivo. Se enciende, se espera a que estabilice, se mide y
+se apaga.
+
+<AplicarRizoma>
+**Ningún sensor de Rizoma entra en servicio sin calibrarse en el sustrato real del vivero.**
+
+**Dos anclas por sustrato**: valor en la mezcla realmente seca —no al aire— y valor a capacidad de
+campo, regando a saturación y dejando drenar unas horas. Con eso, cualquier lectura se expresa como
+fracción entre ambos y ya es una escala con sentido.
+
+**Y la calibración se repite cada vez que cambia la receta del sustrato**, que es más a menudo de lo
+que parece porque un lote de compost no es igual que el siguiente. Un umbral copiado de un tutorial no
+significa nada aquí: se midió con otro sensor, otra librería y otro sustrato.
+
+**Se asume explícitamente qué no mide el sensor.** Da agua presente, no agua disponible, y esa
+distinción de la primera lección del módulo de riego explica que dos lotes con la misma lectura puedan
+necesitar riegos distintos. La lectura capacitiva calibrada resuelve la mayor parte del problema a bajo
+costo, y el tensiómetro se descarta a propósito por mantenimiento, no por desconocimiento.
+
+**La colocación se decide con criterio y se anota**: a la profundidad del tercio medio de las raíces,
+apretando el sustrato alrededor para que no quede aire, lejos del gotero, y **en la zona que menos agua
+recibe** —que la lección de uniformidad ya obliga a identificar con el ensayo de vasos—. Poner el
+sensor en la mejor zona garantiza regar de menos.
+
+**Un sensor por sector de riego, no por planta**, porque la decisión es una sola por válvula.
+
+**Pero dos sensores por sector siempre que el presupuesto lo permita**, no por precisión sino para
+detectar fallos: si dos sensores que llevaban meses de acuerdo empiezan a separarse, uno se está
+degradando. Es la única defensa contra la deriva silenciosa, y el sensor es la pieza barata del
+sistema.
+
+**Muestreo cada quince o treinta minutos**, mediana de cinco lecturas seguidas, y alimentación solo
+durante la medición. La humedad cambia despacio; medir más a menudo solo añade ruido, gasta batería y
+degrada el sensor.
+
+**Y la lectura del sensor se contrasta con el método manual de la lección de riego** durante las
+primeras semanas: meter el dedo, levantar el envase y pesarlo. Si el sensor y la mano no coinciden, la
+mano tiene razón hasta que se demuestre lo contrario.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Las mezclas locales varían mucho de lote a lote**, y eso hace que la advertencia sobre recalibrar sea
+especialmente aplicable aquí. Un compost propio, una tierra de un sitio distinto o un lote de cascarilla
+diferente cambian la respuesta del sensor sin avisar.
+
+**La humedad ambiental alta durante la temporada de lluvias afecta a la electrónica del propio sensor**,
+no solo al sustrato. Las placas mal selladas absorben humedad y derivan, y ese es otro argumento para
+la redundancia de dos sensores: la deriva por humedad ambiental afecta a los dos a la vez de forma
+parecida, pero la entrada de agua en uno concreto los separa.
+
+**Las temperaturas altas también desplazan la lectura.** Muchos sensores tienen dependencia térmica, y
+si además el sensor está al sol, el efecto se suma. Sensor a la sombra del propio cultivo y, si el
+montaje lo permite, registrar la temperatura junto a la humedad para poder detectar después si las dos
+series se mueven juntas.
+
+**Y el suelo de la zona —con arcillas expansivas 2:1— es un caso extremo de la diferencia entre agua
+presente y agua disponible.** Retiene mucha agua a potenciales que la planta no puede vencer, así que
+en cualquier medición hecha directamente en suelo, y no en sustrato de vivero, la lectura de humedad
+sobrestima el agua realmente utilizable. Es una razón más para contrastar con observación directa.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Con un número que ya significa algo, falta decidir qué hacer con él. Hay tres formas de gobernar un
+riego —por reloj, por umbral y por demanda climática— y **cada una falla de una manera distinta.**
+Elegir bien entre ellas importa más que la calidad del sensor, y es la lección siguiente.

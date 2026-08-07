@@ -1,0 +1,111 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-multiplica",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un vivero es el ambiente ideal para que algo se propague?",
+      "opciones": [
+        "La densidad es altísima y la distancia entre un enfermo y su vecino sano es de centímetros.",
+        "Buena parte de lo que hay son clones, así que todos comparten la misma susceptibilidad.",
+        "El agua, las mesas, el sustrato, los envases, las manos y las herramientas son compartidos.",
+        "Porque las plantas de vivero son más débiles que las de campo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es debilidad: es estructura. Alta densidad, genética idéntica, infraestructura compartida y contacto humano constante. En un cultivo de campo alguien toca las plantas un par de veces por ciclo; en un vivero, continuamente."
+    },
+    {
+      "id": "las-tres-palancas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Si cada planta enferma infecta a otras según contactos por probabilidad por tiempo, ¿qué palanca ataca cada medida?",
+      "opciones": [
+        "Separar y bajar densidad reduce los contactos.",
+        "Desinfectar herramientas, no mojar el follaje y no compartir agua reducen la probabilidad.",
+        "Descartar rápido lo enfermo reduce el tiempo que sigue contagiando.",
+        "Solo sirve si se elimina por completo alguno de los tres factores."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hace falta eliminar ninguno del todo: basta con que el producto de los tres baje de uno para que el problema se apague solo. Son tres palancas independientes, cada una fácil, y el resultado es multiplicativo. Por eso la bioseguridad funciona aunque cada medida parezca poca cosa."
+    },
+    {
+      "id": "cuatro-puertas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuáles son las cuatro puertas de un vivero?",
+      "opciones": [
+        "Lo que entra: material, sustrato, envases, agua, herramientas, personas y botas.",
+        "Lo que se mueve adentro: manos, herramientas, envases reutilizados y el orden del recorrido.",
+        "Lo que sale: las plantas vendidas, porque el vivero es un nodo de una red.",
+        "Basta con controlar la primera, porque casi todo entra por ahí."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Falta la cuarta: lo que se tira. Es la puerta que casi nadie considera y la que más veces reintroduce el problema que se acaba de sacar."
+    },
+    {
+      "id": "cuarentena",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo funciona una cuarentena que sirva?",
+      "opciones": [
+        "Separación física real, sin compartir riego ni escurrimiento con el resto.",
+        "Un plazo definido de antemano, no decidido sobre la marcha.",
+        "Observación activa: lupa en el envés, sacar una planta del envase, comparar.",
+        "Guardar el material aparte y volver a mirarlo cuando haya tiempo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarentena no es guardar algo aparte y olvidarlo: es un periodo de prueba. Y un rincón del mismo banco no es separación física."
+    },
+    {
+      "id": "descarte",
+      "tipo": "verdadero_falso",
+      "enunciado": "La decisión de descartar un lote conviene tomarla en el momento, evaluando cada caso con calma.",
+      "respuesta": false,
+      "explicacion": "Falso: en el momento nadie quiere tirar plantas, y ese sesgo va en la dirección equivocada. La política de descarte se escribe antes, con la regla incómoda incluida: si dudas, va afuera. El valor de un lote pequeño es siempre mucho menor que el del inventario entero, y la duda de dos semanas es justo el tiempo que necesita el problema para salir de la cuarentena."
+    },
+    {
+      "id": "orden-del-recorrido",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué orden se recorre el vivero y por qué?",
+      "opciones": [
+        "Primero las plantas madre, porque un problema ahí se multiplica por todo lo que salga de ellas.",
+        "Después las zonas de producción, y la cuarentena al final del día.",
+        "Nunca al revés, porque pasar de la cuarentena a las madres anula toda la separación física.",
+        "El orden da igual mientras se laven las manos al terminar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es el protocolo del campo estéril: de lo limpio a lo contaminado, sin volver atrás. Y conviene que el orden esté en la disposición física del predio —cuarentena y madres en extremos opuestos— para que el recorrido natural ya sea el correcto y no haya que acordarse de nada."
+    },
+    {
+      "id": "pila-de-descarte",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se hace con el material enfermo retirado?",
+      "opciones": [
+        "Sacarlo del área de producción en un recipiente cerrado, no cargándolo abierto sobre las plantas sanas.",
+        "Destruirlo: enterrado profundo, quemado donde sea seguro y permitido, o retirado del predio.",
+        "Con el sustrato incluido, porque en los problemas de raíz el inóculo está sobre todo ahí.",
+        "Amontonarlo junto a las camas para llevarlo cuando haya oportunidad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Una pila al lado no ha sacado nada de ninguna parte: sigue liberando esporas, sigue albergando insectos que se mueven a las plantas vecinas y sigue mojándose con el mismo riego. Y tampoco va al compost, salvo un compostaje que alcance temperaturas altas de forma verificada."
+    },
+    {
+      "id": "plan-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Escribe el plan de bioseguridad de Rizoma del Sur: zonas, rutinas, política de descarte y qué papel juega todo eso en el negocio.",
+      "respuestaModelo": "El plan cabe en una hoja y se decide antes de tener plantas, porque después es mucho más caro.\n\nMonto una zona de cuarentena físicamente separada, en un extremo del predio, sin compartir riego ni escurrimiento con nada. Todo material que entre de fuera pasa por ahí un plazo definido de antemano, con revisión activa: lupa en el envés, sacar una planta del envase y comparar con plantas conocidas. No es guardar y olvidar: es un periodo de prueba.\n\nEscribo el orden del recorrido y lo respeto: primero el banco de plantas madre, después las zonas de producción y la cuarentena al final del día, nunca al revés. Y —esto es lo importante— diseño la disposición física del predio para que ese orden sea el camino natural, con madres y cuarentena en extremos opuestos, así no depende de que me acuerde.\n\nDesinfecto herramientas entre plantas madre: un trapo y un frasco en el bolsillo. El filo recoge savia de una planta y la inyecta en la siguiente, y es la vía de transmisión de varios de los peores problemas del curso.\n\nLavo bandejas y envases entre tandas y no reutilizo sustrato sin tratar, que ya estaba en la lección del mal de almácigo y es la medida de mayor rendimiento por hora de trabajo.\n\nEscribo la política de descarte antes de necesitarla, con la regla incómoda incluida: si dudas, va afuera. En el momento nadie quiere tirar plantas y ese sesgo va en la dirección equivocada; un lote pequeño vale mucho menos que el inventario entero.\n\nY el descarte sale de verdad: en recipiente cerrado, fuera del área de producción, destruido y con su sustrato. Nunca una pila al lado de las camas, que no es un descarte sino una fuente permanente de inóculo a un metro. Antes de quemar me informo de las reglas locales, especialmente en época seca y con viento; enterrar profundo o retirar del predio son alternativas casi siempre disponibles.\n\nLa trazabilidad por lote de la planilla de inventario es mi herramienta de contención: si aparece un problema, saber de qué madre y de qué tanda salió cada bandeja permite descartar tres lotes en vez de todo el vivero. Y si el problema aparece en casa de un cliente, permite saber qué otras plantas salieron de ese mismo lote.\n\nTrato el agua como vector: tanque tapado, tubería opaca, riego al sustrato y no al follaje, y nada de recircular drenaje sin tratamiento. Todo eso ya estaba en el módulo de agua por otras razones y sirve igual para esta.\n\nEl registro sanitario va en la misma libreta que todo lo demás: qué se vio, dónde, cuándo y qué se hizo.\n\nY entiendo por qué todo esto importa más aquí que en cualquier otra explotación: un vivero exporta plantas vivas a muchos sitios, así que es un nodo muy conectado de una red, y los nodos muy conectados son los que más determinan si algo se expande. Por eso la producción de plantas está regulada, y por eso consulto a la autoridad de sanidad agropecuaria antes de montar líneas de cultivos con requisitos específicos o de mover material entre regiones.\n\nY la lectura útil, no la del deber: la bioseguridad es el producto. Igual que el ají dulce garantizado sin picor, la batata seleccionada y el plátano de origen conocido, lo que vendo es material con una propiedad garantizada, y la que más vale es la sanidad, porque el cliente no puede verificarla y le cuesta carísimo si falla. Todo el trabajo aburrido —lavar bandejas, respetar el orden, desinfectar tijeras, cuarentena, descarte, registro— no es un costo: es exactamente lo que estoy vendiendo. Y ese cuaderno es además la evidencia que me permite venderle a un comprador serio.",
+      "criterios": [
+        "Monta cuarentena separada, con plazo definido y observación activa.",
+        "Escribe y respeta el orden del recorrido de lo limpio a lo sucio.",
+        "Diseña la disposición física para que el orden correcto sea el natural.",
+        "Desinfecta herramientas entre plantas madre.",
+        "Lava bandejas y no reutiliza sustrato sin tratar.",
+        "Escribe la política de descarte antes, con la regla de si dudas va afuera.",
+        "Saca el descarte en recipiente cerrado y lo destruye con su sustrato.",
+        "Se informa de las reglas locales antes de quemar y considera alternativas.",
+        "Usa la trazabilidad por lote como herramienta de contención y de aviso a clientes.",
+        "Trata el agua como vector con tanque tapado y riego al sustrato.",
+        "Lleva registro sanitario en la libreta.",
+        "Entiende el vivero como nodo muy conectado y consulta a la autoridad competente.",
+        "Explica que la sanidad es el producto y no un costo."
+      ],
+      "explicacion": "El giro final del módulo es el que más cambia la actitud: la bioseguridad deja de ser una obligación incómoda y pasa a ser lo que se está vendiendo. Todo el trabajo aburrido es el producto."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "preguntas": [
+    {
+      "id": "caudal-vs-presion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué diferencia hay entre caudal y presión?",
+      "opciones": [
+        "El caudal es cuánta agua pasa por unidad de tiempo; la presión, con cuánta fuerza empuja.",
+        "Se puede tener mucho caudal sin presión, y mucha presión con poquísimo caudal.",
+        "Cada emisor necesita las dos cosas a la vez, dentro de su rango de trabajo.",
+        "Son la misma magnitud expresada en unidades distintas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Son independientes, igual que ancho de banda y voltaje. Y fuera de rango el emisor no falla, que sería más fácil de detectar: funciona mal. Con poca presión un microaspersor gotea en vez de pulverizar; con demasiada, atomiza tan fino que el viento se lleva el agua antes de que caiga."
+    },
+    {
+      "id": "caudal-del-sector",
+      "tipo": "verdadero_falso",
+      "enunciado": "La instalación debe dimensionarse para el caudal de todos los sectores abiertos a la vez.",
+      "respuesta": false,
+      "explicacion": "Falso, y esa es la razón hidráulica de sectorizar: regando por turnos, la tubería y la bomba se dimensionan para el sector más grande y no para la suma de todos. Abrir todo a la vez multiplica el caudal necesario, y con él el diámetro y la potencia."
+    },
+    {
+      "id": "perdida-de-carga",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se comporta la pérdida de carga?",
+      "opciones": [
+        "Crece con la longitud del recorrido, de forma proporcional.",
+        "Crece aproximadamente con el cuadrado del caudal: al doblarlo se multiplica por cuatro.",
+        "Baja de forma drástica al subir un escalón de diámetro.",
+        "Depende sobre todo del material del tubo y poco de su diámetro."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El diámetro es la variable dominante, porque la sección crece con su cuadrado: un tubo del doble de diámetro tiene cuatro veces la sección, el agua circula a una cuarta parte de la velocidad y la pérdida cae muchísimo. Es el mismo razonamiento de la caída de tensión del módulo solar, donde se subía la sección del cable en vez de la potencia del panel."
+    },
+    {
+      "id": "tubo-o-bomba",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si al final de la línea falta presión, lo primero que hay que considerar es una bomba más potente.",
+      "respuesta": false,
+      "explicacion": "Falso: casi siempre la respuesta correcta es el tubo más gordo. Subir la potencia de la bomba cuesta dinero para siempre, en equipo y en energía; subir un diámetro cuesta una vez y a menudo resuelve el problema entero. Y con bombeo solar cada vatio se paga en paneles."
+    },
+    {
+      "id": "otras-perdidas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Además de la longitud del tubo, ¿qué más resta presión?",
+      "opciones": [
+        "Cada codo, te, reducción y válvula, porque obliga al agua a cambiar de dirección o sección.",
+        "El filtro, y un filtro sucio puede comerse casi toda la presión disponible.",
+        "Cada metro que el agua tiene que subir.",
+        "Nada más: en un sistema pequeño solo cuenta la longitud."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El filtro sucio es la causa número uno de «el riego dejó de funcionar de golpe», y se arregla en cinco minutos enjuagando la malla. Por eso conviene un manómetro a la entrada con su lectura de referencia anotada: si un día marca mucho menos, hay fuga o filtro sucio."
+    },
+    {
+      "id": "tanque-elevado",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se calcula la presión disponible con un tanque elevado?",
+      "opciones": [
+        "Es la altura del tanque menos la pérdida de carga de todo el recorrido.",
+        "Cada metro de altura del tanque es presión gratis, sin electricidad ni equipo que se rompa.",
+        "Si no alcanza, se puede subir el tanque, subir el diámetro o elegir emisores de menor presión.",
+        "La presión no depende de la altura sino del volumen almacenado en el tanque."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El volumen no influye en la presión: lo que la genera es la altura de la superficie del agua sobre el emisor. Un tanque pequeño y alto da más presión que uno enorme y bajo, aunque el grande dure más días."
+    },
+    {
+      "id": "gravedad-o-bomba",
+      "tipo": "verdadero_falso",
+      "enunciado": "La nebulización se puede alimentar por gravedad desde un tanque elevado modesto.",
+      "respuesta": false,
+      "explicacion": "Falso: la nebulización necesita presión alta, y la microaspersión bastante más que el goteo. El goteo sí funciona bien a presiones bajas y es compatible con un tanque modesto. Eso hay que saberlo antes de elegir el método, porque una decisión que parecía solo de eficiencia arrastra un equipo, un consumo eléctrico y un componente más que se puede romper."
+    },
+    {
+      "id": "hidraulica-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña la hidráulica de Rizoma del Sur: de dónde sale la presión, cómo se reparte, con qué diámetros y qué se instrumenta.",
+      "respuestaModelo": "El orden correcto es tanque elevado primero y bomba solo donde no quede otra.\n\nEl tanque va lo más alto que permitan la estructura y el presupuesto, porque cada metro de altura es presión gratis que no hay que generar ni pagar, y además funciona cuando no hay sol. Es exactamente lo que el módulo solar llamaba que el tanque reemplaza a la batería.\n\nCon esa presión de gravedad alimento el goteo de crecimiento y del bloque de madres, que trabaja bien a presión baja y es el grueso de la superficie regada.\n\nLa nebulización de propagación necesita presión alta, así que ahí sí va bomba, pero es la zona más pequeña del vivero: la trato como circuito aparte con su propia bomba pequeña, funcionando poco tiempo al día, en vez de sobredimensionar todo el sistema para atender a la zona más exigente. Y con bombeo solar cada vatio se paga en paneles, así que esa decisión importa.\n\nEl cálculo de comprobación es una resta de servilleta: presión en el emisor igual a altura del tanque menos pérdida de carga del recorrido. Antes de comprar emisores miro su rango de presión de trabajo y compruebo que esa resta cae dentro del rango. Si no alcanza, hay tres salidas antes de comprar bomba: subir el tanque, subir el diámetro o elegir emisores de menor presión.\n\nCaudal: sumo el caudal de todos los emisores de cada sector, y dimensiono la instalación para el sector más grande, no para la suma. Regar por turnos con una válvula por sector es lo que permite una bomba y una tubería mucho más modestas, y de ese caudal sale también el tiempo de riego de cada válvula.\n\nDiámetros generosos en la tubería principal, que va del tanque al colector: es un tramo corto donde subir un escalón cuesta poco y resuelve mucho. Secundarias según la longitud de cada sector. Y líneas de emisores cortas, porque una línea larga tiene mucha diferencia de presión entre el principio y el final y ahí se pierde la uniformidad. Donde se pueda, alimento las líneas por el centro para que cada rama tenga la mitad de largo, y en los sectores con desnivel uso goteros autocompensantes.\n\nRecuerdo que la pérdida no es solo por longitud: cada codo, te y válvula resta, el desnivel resta o suma según suba o baje, y el filtro sucio puede comerse casi toda la presión disponible. El desnivel entre el tanque y los sectores lejanos lo saco del levantamiento del terreno que hice en la lección de layout.\n\nEl colector de válvulas junto al tanque, con una válvula por sector, rotuladas, y un manómetro. El manómetro es el equivalente hidráulico del termómetro de máxima y mínima: anoto su lectura con el sistema recién instalado y funcionando bien, y esa es la referencia. Si un día marca mucho menos, hay fuga o filtro sucio; si marca mucho más, algo se tapó aguas abajo.\n\nSi el agua viene de pozo con bomba, pongo un regulador de presión a la entrada, porque ahí el problema es el contrario: presión de sobra que revienta accesorios y emisores.\n\nY sobre el bombeo solar, el esquema más robusto es bombear al tanque elevado durante las horas de sol y regar por gravedad a cualquier hora: así la bomba no tiene que coincidir con el momento del riego, no hacen falta baterías y el sistema sigue funcionando el día nublado.",
+      "criterios": [
+        "Prioriza tanque elevado y deja la bomba para donde no quede otra.",
+        "Alimenta el goteo por gravedad y justifica que trabaja a presión baja.",
+        "Aísla la nebulización en un circuito con bomba pequeña propia.",
+        "Aplica la resta de altura menos pérdida y la compara con el rango del emisor.",
+        "Nombra las tres salidas antes de comprar bomba.",
+        "Calcula el caudal por sector y dimensiona para el mayor, no para la suma.",
+        "Usa diámetros generosos en la principal por ser tramo corto.",
+        "Acorta líneas de emisores y alimenta por el centro.",
+        "Usa autocompensantes donde haya desnivel.",
+        "Suma accesorios, filtro y desnivel a las pérdidas.",
+        "Instala manómetro y anota la lectura de referencia.",
+        "Pone regulador de presión si el agua viene de pozo con bomba.",
+        "Describe el esquema de bombeo solar a tanque y riego por gravedad."
+      ],
+      "explicacion": "Fíjate en que la solución más barata de toda esta lección es también la más robusta: un tanque alto no consume energía, no se rompe, funciona de noche y sigue funcionando cuando está nublado. La bomba entra solo donde la física obliga, y ahí conviene que sea pequeña y aislada."
+    }
+  ]
+}

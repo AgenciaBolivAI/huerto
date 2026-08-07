@@ -1,0 +1,100 @@
+{
+  "preguntas": [
+    {
+      "id": "los-cinco",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿De qué se compone el costo de producir un plantín?",
+      "opciones": [
+        "Envase, contado como precio dividido por usos más el lavado.",
+        "Sustrato, material de partida, agua e insumos.",
+        "Tu tiempo, que suele ser el mayor de todos y el que nunca se cuenta.",
+        "Solo lo que se paga con factura, porque lo demás no es un gasto real."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El tiempo no aparece en ninguna factura, y por eso es el único costo que se puede ignorar indefinidamente sin que nadie reclame. Si no se cuenta, todas las especies parecen rentables y no hay forma de compararlas."
+    },
+    {
+      "id": "el-limitante",
+      "tipo": "verdadero_falso",
+      "enunciado": "En un vivero pequeño operado por una persona, el principal limitante es la superficie disponible.",
+      "respuesta": false,
+      "explicacion": "Falso: el limitante es el tiempo. Puedes comprar más envases, no puedes comprar más horas. Dos mil cuatrocientos setenta y cuatro metros cuadrados dan para muchísimo más de lo que cabe en una jornada."
+    },
+    {
+      "id": "merma",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo afecta la merma al costo?",
+      "opciones": [
+        "Los envases, el sustrato y el trabajo se gastan en todas las iniciadas, incluidas las que se pierden.",
+        "El ingreso solo viene de las que se venden, así que el costo se reparte entre esas.",
+        "Reducir la merma equivale exactamente a bajar el costo.",
+        "La merma es un problema de calidad que no afecta al costo unitario."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Si de cien iniciadas se venden sesenta, el costo de cada una de esas sesenta incluye el gasto de las cuarenta que no llegaron: el costo unitario sube más de un cincuenta por ciento respecto del cálculo ingenuo. Y bajar la merma suele ser más barato que negociar el precio del sustrato."
+    },
+    {
+      "id": "amortizacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se cuentan la estructura, el tanque y las herramientas?",
+      "opciones": [
+        "Dividiendo lo que costaron entre los años que van a durar.",
+        "Y ese costo anual entre las plantas producidas en el año.",
+        "Ignorarlas hace que la reposición parezca un gasto extraordinario cuando no lo es.",
+        "No se cuentan, porque ya están pagadas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la misma cuenta que el módulo de estructuras usaba para comparar cubiertas: precio más mano de obra, dividido entre años. Aquí solo se añade repartirlo entre las plantas. Ignorarlo es cómodo y engañoso."
+    },
+    {
+      "id": "el-espacio",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el terreno es propio y no se paga alquiler, el espacio ocupado no representa ningún costo.",
+      "respuesta": false,
+      "explicacion": "Falso: ocupar un metro cuadrado durante seis meses con una especie significa no poder ocuparlo con otra, y eso es un costo real aunque no salga de ningún bolsillo. Es la rotación del espacio vista desde la contabilidad: una especie que ocupa el sitio cuatro veces más tiempo tiene que valer cuatro veces más por unidad para empatar."
+    },
+    {
+      "id": "el-metodo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se calcula el costo sin montar una contabilidad completa?",
+      "opciones": [
+        "Con una hoja por lote: se elige una tanda de una especie y se anota lo que se gastó.",
+        "Anotando el tiempo el día que se trabaja, no de memoria al final.",
+        "Anotando cuántas se vendieron de verdad al cerrar el ciclo, y dividiendo.",
+        "Estimando al final del año a partir del total de gastos del vivero."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El total del vivero no permite comparar especies, que es justamente para lo que sirve el ejercicio. Con dos o tres especies medidas de esta forma ya se ve, casi siempre con sorpresa, que las que parecían más rentables no lo son."
+    },
+    {
+      "id": "exactitud",
+      "tipo": "verdadero_falso",
+      "enunciado": "El cálculo de costos solo sirve si es exacto.",
+      "respuesta": false,
+      "explicacion": "Falso: hace falta que exista y que sea comparable entre especies. Un costo con un margen de error del veinte por ciento aplicado igual a todas sirve perfectamente para decidir qué producir; un costo desconocido no sirve para nada. Y el ejercicio tiene un beneficio extra: al anotar el tiempo se descubre dónde se va."
+    },
+    {
+      "id": "costos-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Monta el sistema de costos de Rizoma del Sur: qué anotas, cómo, y para qué vas a usar el resultado.",
+      "respuestaModelo": "El primer año es, entre otras cosas, un año de medir costos, y el método es una hoja por lote en la misma libreta de las fichas y del inventario.\n\nEn cada lote anoto lo que se gastó: cuántos envases, cuánto sustrato, qué material de partida, agua e insumos. Y sobre todo el tiempo, apuntado el día que se trabaja y no de memoria al final: media línea por sesión. Al cerrar el lote anoto cuántas se vendieron de verdad, que es el dato que casi nadie recoge y sin el cual el resto no sirve.\n\nDivido el costo total del lote entre las plantas realmente vendidas, no entre las iniciadas. Si de cien se venden sesenta, esas sesenta pagan las cien, y el costo unitario sube más de un cincuenta por ciento respecto del cálculo ingenuo. Por eso mido la merma por especie y no en general: un cuarenta por ciento de pérdida en almácigo de ají pesa distinto que el mismo cuarenta por ciento en batata, donde el material de partida es gratis.\n\nValoro mi tiempo aunque sea trabajo propio. Con perfil de desarrollador, el costo de oportunidad de una hora es un número conocido; y aunque no quiera usar ese valor, cualquier número consistente sirve para comparar especies entre sí. Sin eso, todas parecen rentables.\n\nAmortizo las inversiones duraderas desde el principio: la estructura de propagación, el tanque y su plataforma, la malla, el riego, las herramientas. Precio dividido entre años de vida útil, y ese costo anual dividido entre las plantas del año. Da un número pequeño por unidad y evita la sorpresa del año de reposición.\n\nY contabilizo el espacio aunque el terreno sea propio, porque ocupar un metro cuadrado seis meses con una especie es no poder ocuparlo con otra. La rotación del espacio sigue siendo el criterio que ordena el catálogo, aunque el limitante real de este proyecto sea mi tiempo y no la superficie: con dos mil cuatrocientos setenta y cuatro metros cuadrados y una sola persona, la tierra sobra y las horas no.\n\nEspero que la comparación confirme lo que ya anticipaba el módulo de fichas: culantro y batata baratos por unidad y rápidos; ají dulce y ornamentales medios y con más trabajo; frutales injertados y árboles caros y lentos pero de precio unitario alto.\n\nRelevo y anoto con fecha los precios locales de insumos —bolsas, sustratos, mallas, tuberías, fertilizantes— y los actualizo un par de veces al año, porque pueden moverse y un costo calculado hace un año puede estar desactualizado. Y averiguo cuánto cuesta un jornal en la zona, que me da a la vez una referencia para valorar mi hora y un dato para la decisión de crecer.\n\nConsidero comprar en volumen para bajar el costo unitario, sabiendo que eso inmoviliza dinero y ocupa almacenamiento: es una decisión de caja tanto como de costo.\n\nY consulto con un contador local qué obligaciones de registro y tributarias tiene un vivero que vende plantas a mi escala, porque son un costo real que conviene conocer antes de que aparezca.\n\nEl objetivo de todo esto no es la contabilidad: es poder decidir qué dejar de producir, y esa decisión solo se toma con números comparables.",
+      "criterios": [
+        "Lleva una hoja por lote con gastos y tiempo anotado el mismo día.",
+        "Registra las plantas realmente vendidas al cerrar el lote.",
+        "Divide entre vendidas y no entre iniciadas.",
+        "Mide la merma por especie y explica por qué pesa distinto.",
+        "Valora su propio tiempo con un número consistente.",
+        "Amortiza las inversiones duraderas entre años y plantas.",
+        "Contabiliza el espacio y usa la rotación como criterio de catálogo.",
+        "Identifica el tiempo, y no la superficie, como limitante real.",
+        "Anticipa la comparación esperable entre especies del catálogo.",
+        "Releva precios locales con fecha y los actualiza.",
+        "Averigua el costo del jornal local.",
+        "Evalúa la compra en volumen como decisión de caja.",
+        "Consulta obligaciones de registro y tributarias con un contador local.",
+        "Define el objetivo como decidir qué dejar de producir."
+      ],
+      "explicacion": "Fíjate en que el cálculo no busca precisión contable sino comparabilidad. El número que importa no es cuánto cuesta exactamente una planta, sino cuál de tus especies cuesta más que otra por lo que devuelve."
+    }
+  ]
+}

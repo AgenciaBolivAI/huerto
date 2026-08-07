@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "resolucion-vs-precision",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que tener en cuenta sobre el número que devuelve un sensor?",
+      "opciones": [
+        "La resolución del conversor no es la precisión de la medida.",
+        "Si el sensor deriva y hay ruido eléctrico, los dígitos finales son decoración.",
+        "El «%» de muchas librerías es una interpolación entre aire y agua, no contenido de agua.",
+        "Un conversor de doce bits garantiza una medida fiable a tres decimales."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los 4.096 valores de un conversor de doce bits suenan precisos, pero mostrar decimales que no existen es la manera más fácil de creerse un dato falso. Ese porcentaje sirve para comparar el sensor consigo mismo y para nada más."
+    },
+    {
+      "id": "calibrar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se calibra correctamente un sensor de humedad de vivero?",
+      "opciones": [
+        "El ancla seca se mide en el sustrato realmente seco, no al aire.",
+        "El ancla húmeda se mide a capacidad de campo: regar a saturación y dejar drenar unas horas.",
+        "Cualquier lectura intermedia se expresa como fracción entre esos dos puntos.",
+        "Basta con medir en aire y en un vaso de agua, que son los extremos absolutos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Medir en aire da un valor que el sensor nunca alcanzará dentro de un sustrato, así que usar el aire como cero comprime toda la escala útil. Y medir con el sustrato encharcado tampoco sirve, porque es un estado que no debe existir."
+    },
+    {
+      "id": "calibracion-por-sustrato",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una calibración hecha con una mezcla sigue siendo válida si cambias la receta del sustrato.",
+      "respuesta": false,
+      "explicacion": "Falso: una mezcla con más materia orgánica retiene más agua y tiene otra respuesta dieléctrica que una con más arena, así que el mismo sensor da números distintos. Y las recetas cambian sin que uno se dé cuenta, porque un lote de compost no es igual que el siguiente. Por lo mismo, un umbral copiado de internet no significa nada en tu vivero."
+    },
+    {
+      "id": "agua-disponible",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un sensor capacitivo mide cuánta agua hay, pero la planta responde a cuánto le cuesta sacarla, que es el potencial mátrico.",
+      "respuesta": true,
+      "explicacion": "Correcto, y por eso dos lotes con la misma lectura pueden necesitar riegos distintos. Es la distinción entre agua presente y agua disponible del módulo de riego. Para un vivero pequeño la lectura capacitiva calibrada basta; el tensiómetro mide el potencial directamente pero exige mantenimiento constante y es difícil de automatizar."
+    },
+    {
+      "id": "donde-poner",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Dónde debe ir el sensor?",
+      "opciones": [
+        "En el tercio medio del volumen radicular, no en la superficie ni en el fondo del envase.",
+        "En contacto íntimo con el sustrato, apretando alrededor para que no quede aire.",
+        "Lejos del gotero y en la zona del sector que menos agua recibe.",
+        "Justo bajo un emisor, que es donde la medida es más estable."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Bajo el emisor se mide el bulbo húmedo en su punto más favorable, y el sensor dirá que todo está bien mientras el resto del lote se seca. Poner el sensor en la mejor zona garantiza que el sistema riegue de menos: el punto que debe decidir es el que más sufre."
+    },
+    {
+      "id": "dos-sensores",
+      "tipo": "verdadero_falso",
+      "enunciado": "Poner dos sensores en la misma zona es útil sobre todo para detectar fallos, no para ganar precisión.",
+      "respuesta": true,
+      "explicacion": "Correcto: con un solo sensor no hay forma de saber si mide bien. Con dos, la discrepancia es la alarma, y la deriva lenta —el modo de fallo silencioso de la lección anterior— deja de ser invisible. Es redundancia para diagnóstico, y el sensor es la pieza barata del sistema."
+    },
+    {
+      "id": "muestreo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo conviene muestrear?",
+      "opciones": [
+        "Cada quince o treinta minutos basta, porque la humedad cambia despacio.",
+        "Tomar varias lecturas seguidas y quedarse con la mediana, que resiste los valores absurdos.",
+        "Alimentar el sensor solo mientras se mide, para no degradarlo ni gastar batería.",
+        "Muestrear cada segundo, para no perder ningún cambio."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Medir cada segundo no aporta información: aporta ruido y llena el almacenamiento. La mediana es preferible a la media porque un valor suelto por ruido eléctrico no la arrastra, y en un entorno con bombas y cables largos esos valores son constantes."
+    },
+    {
+      "id": "sensores-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define el protocolo de calibración, colocación y muestreo de sensores de Rizoma del Sur, y explica qué límite asumes.",
+      "respuestaModelo": "Ningún sensor entra en servicio sin calibrarse en el sustrato real del vivero, con dos anclas: el valor en la mezcla realmente seca —secada al aire durante días, no midiendo en aire libre, porque el aire da un valor que el sensor nunca alcanza dentro del sustrato y comprime toda la escala— y el valor a capacidad de campo, regando a saturación y dejando drenar libremente unas horas. Con esos dos puntos expreso cualquier lectura como fracción entre ambos, que ya es una escala con sentido físico.\n\nRepito la calibración cada vez que cambia la receta del sustrato, y anoto la receta junto a la calibración. Cambia más a menudo de lo que parece porque un lote de compost no es igual que el siguiente, y una mezcla con más materia orgánica tiene otra respuesta dieléctrica que una con más arena. Por lo mismo, ignoro cualquier umbral copiado de un tutorial: se midió con otro sensor, otra librería y otro sustrato.\n\nDesconfío del porcentaje que muestra la librería, que suele ser una interpolación lineal entre aire y agua, y no muestro decimales que no existen: la resolución del conversor no es la precisión de la medida.\n\nAsumo explícitamente el límite conceptual: el sensor mide agua presente y la planta responde a agua disponible, es decir al potencial mátrico, que es la fuerza con la que el sustrato retiene el agua. Por eso dos lotes con la misma lectura pueden necesitar riegos distintos. Descarto el tensiómetro a propósito, por mantenimiento y por dificultad de integración, no por desconocimiento, y compenso contrastando con la observación directa.\n\nColoco el sensor en el tercio medio del volumen radicular, apretando el sustrato alrededor para que no quede una bolsa de aire que lo aísle y lo haga leer seco para siempre. Lo pongo lejos del gotero —a media distancia entre dos emisores— porque justo bajo un emisor mide el bulbo húmedo en su punto más favorable. Y lo instalo en la zona del sector que menos agua recibe, que la lección de uniformidad ya me obliga a identificar con el ensayo de vasos: poner el sensor en la mejor zona garantiza regar de menos.\n\nUso un sensor por sector de riego y no por planta, porque la decisión es una sola por válvula y veinte sensores en un sector con una válvula no aportan nada.\n\nPero pongo dos por sector siempre que pueda, no por precisión sino para detectar fallos: si dos sensores que llevaban meses de acuerdo empiezan a separarse, uno se está degradando. Es la única defensa contra la deriva silenciosa.\n\nMuestreo cada quince o treinta minutos, tomo cinco lecturas seguidas y me quedo con la mediana, y alimento el sensor solo mientras mido. La humedad cambia despacio, así que medir más a menudo solo añade ruido, gasta batería y acelera la degradación.\n\nDurante las primeras semanas contrasto la lectura con el método manual de la lección de riego: meter el dedo, levantar el envase y pesarlo. Si el sensor y la mano no coinciden, la mano tiene razón hasta que se demuestre lo contrario.\n\nY tengo en cuenta el contexto local: la humedad ambiental alta de la temporada de lluvias afecta a la electrónica del propio sensor y las placas mal selladas derivan; las temperaturas altas desplazan la lectura, así que el sensor va a la sombra del cultivo y registro temperatura junto a humedad para poder ver después si las series se mueven juntas. Y si midiera directamente en el suelo del terreno, con arcillas expansivas 2:1, la lectura sobrestimaría el agua utilizable, porque ese suelo retiene mucha agua a potenciales que la planta no puede vencer.",
+      "criterios": [
+        "Calibra con dos anclas en el sustrato real y no en aire.",
+        "Usa capacidad de campo como ancla húmeda y explica por qué no encharcado.",
+        "Recalibra al cambiar la receta y anota la receta.",
+        "Rechaza umbrales copiados de fuentes externas.",
+        "Distingue resolución de precisión y desconfía del porcentaje de librería.",
+        "Asume el límite entre agua presente y potencial mátrico.",
+        "Descarta el tensiómetro justificadamente.",
+        "Coloca el sensor en el tercio medio radicular y sin bolsas de aire.",
+        "Sitúa el sensor lejos del gotero y en la zona menos regada.",
+        "Usa un sensor por sector y duplica para detectar deriva.",
+        "Fija muestreo espaciado, mediana y alimentación intermitente.",
+        "Contrasta con observación manual y considera los efectos del clima local."
+      ],
+      "explicacion": "El giro de esta lección es que la calidad de un sistema de sensores no está en el sensor sino en la calibración, la colocación y el saber qué no está midiendo. Un sensor caro mal colocado da lecturas peores que uno barato bien puesto."
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+Doce módulos han construido la capacidad de producir plantas. Este módulo pregunta otra cosa: **¿esto
+da dinero?**
+
+Y empieza por la pregunta que casi nadie de un vivero pequeño sabe contestar, aunque parezca elemental:
+**¿cuánto te cuesta a ti producir una planta?**
+
+Sin ese número no se puede fijar un precio con criterio, no se puede saber qué especies conviene
+producir, y no se puede distinguir un negocio que funciona de uno que se está financiando con trabajo no
+pagado.
+
+## Lo que cuesta una planta
+
+<Diagrama
+  src="lo-que-cuesta-una-planta.webp"
+  alt="En el centro, una planta joven creciendo en una bolsa de vivero dibujada grande y de lado. Cinco líneas de llamada finas en terracota salen de distintas partes hacia cinco franjas de rótulo repartidas alrededor. Una línea va a la propia bolsa negra y su franja dice EL ENVASE. Otra va al sustrato oscuro del interior y su franja dice EL SUSTRATO. Otra va a una semilla y un esqueje dibujados justo debajo de la bolsa y su franja dice EL MATERIAL DE PARTIDA. Otra va a una regadera y una pequeña medida de gránulos dibujadas al lado y su franja dice AGUA Y ABONO. Y otra va a un par de manos trabajando y un reloj pequeño dibujados encima de la planta, con la franja TU TIEMPO. Arriba, LO QUE CUESTA UNA PLANTA."
+  pie="Cuatro insumos que se compran y uno que no se factura pero que existe. El quinto es el que más pesa y el que casi nadie cuenta."
+/>
+
+El costo de un plantín se arma sumando cinco cosas, y conviene listarlas en este orden porque es el
+orden en que se olvidan:
+
+**El envase.** Fácil de contar: precio dividido por usos, más el lavado, como decía el módulo de
+envases.
+
+**El sustrato.** El módulo de sustratos ya daba la cuenta: costo de la tanda dividido entre los litros
+de la tanda, multiplicado por los litros del envase.
+
+**El material de partida.** Semilla comprada, o esqueje, o cormo. Y aquí hay una diferencia enorme entre
+especies: la yautía y la batata tienen material propio y gratis, mientras que un frutal injertado lleva
+un patrón criado durante meses más una yema seleccionada.
+
+**Agua y abono.** Salen del módulo de agua, dividiendo el consumo del sistema entre las plantas que
+riega.
+
+**Y tu tiempo**, que es el que nunca aparece en las cuentas de un vivero pequeño y el que casi siempre
+es el mayor de los cinco.
+
+<Formula explicacion="El costo directo de producir una planta es la suma de lo que cuestan el envase, el sustrato, el material de partida, el agua y los insumos, y el trabajo dedicado. Es el costo por unidad iniciada, no por unidad vendida, que es un número distinto y mayor.">
+costo directo por planta iniciada = envase + sustrato + material + agua e insumos + trabajo
+</Formula>
+
+## Tu tiempo también cuesta
+
+<Diagrama
+  src="tu-tiempo-tambien-cuesta.webp"
+  alt="Dos paneles lado a lado, cada uno con una planta en maceta, un par de manos trabajando encima y una esfera de reloj al lado. Panel izquierdo: la planta es trabajosa y complicada, con un tutor, una atadura, varios cortes pequeños de poda y un cambio de envase representado, y la esfera del reloj de al lado tiene un sector amplio relleno en terracota macizo; debajo, una franja de rótulo que dice MINUTOS POR PLANTA. Panel derecho, con una cruz roja en la esquina: el mismo tipo de planta dibujada junto a una mano abierta vacía y un monedero vacío, y el reloj de al lado no tiene ningún sector relleno; debajo, una franja que dice SI NO LO CUENTAS, TRABAJAS GRATIS. Arriba, TU TIEMPO TAMBIÉN CUESTA."
+  pie="El tiempo no aparece en ninguna factura, así que es el único costo que se puede ignorar indefinidamente sin que nadie reclame."
+/>
+
+Esta es la corrección más importante de la lección, y la que más cambia las decisiones:
+
+**Si no cuentas tu trabajo como costo, todas las especies parecen rentables**, y no hay forma de
+comparar unas con otras ni de decidir qué dejar de hacer.
+
+**Se cuenta en minutos por planta**, exactamente el campo que la ficha del módulo once pedía añadir:
+sembrar, repicar, regar, podar, cambiar de envase, limpiar, clasificar, etiquetar, atender la venta.
+
+**Y se valora poniéndole un precio a la hora.** No hace falta que sea un sueldo de mercado; hace falta
+que sea un número, para que la comparación entre especies signifique algo.
+
+<Analogia>
+Es exactamente el mismo error que **no medir el tiempo de desarrollo en un proyecto propio.**
+
+Cuando el trabajo es tuyo y no se factura, parece gratis, y entonces cualquier tarea "sale barata".
+Pero el tiempo es el recurso realmente escaso: **puedes comprar más envases, no puedes comprar más
+horas.**
+
+Y de ahí sale la conclusión práctica más útil de todo el módulo: en un vivero pequeño operado por una
+persona, **el limitante no es la superficie, es el tiempo.** Dos mil cuatrocientos setenta y cuatro
+metros cuadrados dan para muchísimo más de lo que caben en una jornada.
+</Analogia>
+
+## La merma sube el costo
+
+<Diagrama
+  src="la-merma-sube-el-costo.webp"
+  alt="Dos bloques grandes lado a lado unidos por una flecha terracota gruesa que apunta a la derecha, y un tercer elemento debajo. Bloque izquierdo: una cuadrícula cuadrada grande de exactamente cien símbolos de planta pequeños e idénticos, todos en verde salvia, con el número 100 escrito grande al lado. Bloque derecho: una cuadrícula más pequeña de sesenta símbolos de planta en verde bosque intenso, con el número 60 escrito grande al lado, y una dispersión de cuarenta símbolos desvaídos y tachados alejándose por debajo. Debajo de ambos, una barra horizontal ancha de dinero que abarca todo el ancho de la cuadrícula izquierda, y una flecha terracota que la dobla hasta apoyarse entera sobre la cuadrícula más pequeña de la derecha, mostrando que el mismo ancho de barra queda ahora comprimido sobre menos plantas. Tres franjas de rótulo: una bajo la cuadrícula izquierda dice SE INICIAN CIEN; otra bajo la derecha dice SE VENDEN SESENTA; y otra bajo la barra de dinero dice LAS SESENTA PAGAN LAS CIEN. Arriba, LA MERMA SUBE EL COSTO."
+  pie="El costo se reparte entre las que llegan a venderse, no entre las que se iniciaron. Esa división es la que casi nadie hace."
+/>
+
+Aquí está el ajuste que convierte un cálculo bonito en un cálculo verdadero:
+
+**Los envases, el sustrato y el trabajo se gastan en todas las plantas iniciadas**, incluidas las que se
+mueren, las que salen mal y las que se descartan por aspecto.
+
+**Pero el ingreso solo viene de las que se venden.**
+
+Así que el <Termino slug="costo-por-planta">costo por planta</Termino> vendible **no es el costo de producir una planta**: es el costo de
+producir todas las que hicieron falta para conseguir una vendible.
+
+<Formula explicacion="El costo de cada planta vendida es el costo total del lote dividido entre el número de plantas que efectivamente se vendieron, no entre las que se iniciaron. Cuanto mayor es la merma, más sube ese número, y la relación no es lineal.">
+costo por planta vendida = costo total del lote ÷ plantas realmente vendidas
+</Formula>
+
+<Dato>
+Un ejemplo con números redondos deja ver la magnitud del efecto.
+
+Si de **cien** plantas iniciadas se venden **sesenta**, el costo de cada una de esas sesenta incluye el
+gasto de las cuarenta que no llegaron. **El costo unitario sube más de un cincuenta por ciento** respecto
+del cálculo ingenuo.
+
+Y eso conecta con dos módulos anteriores de forma muy directa. La merma es el campo que la ficha de
+cultivo pedía anotar, y las tasas del embudo de propagación **se multiplican, no se promedian.**
+
+Dicho al revés, que es como conviene recordarlo: **reducir la merma es exactamente lo mismo que bajar el
+costo**, y suele ser mucho más barato que negociar el precio del sustrato.
+</Dato>
+
+## El costo que no se ve
+
+<Diagrama
+  src="el-costo-que-no-se-ve.webp"
+  alt="Tres dibujos en una fila horizontal unidos por dos flechas terracota gruesas que apuntan a la derecha. Primer dibujo: una estructura de sombra con postes y malla, y al lado una carretilla y un juego de herramientas de mano, todo dibujado una sola vez y macizo, con un único símbolo de moneda grande encima; franja de rótulo SE PAGA UNA VEZ. Segundo dibujo: esa misma moneda rompiéndose en muchos fragmentos diminutos de moneda que llueven sobre una cuadrícula ancha de símbolos de planta, con un fragmento cayendo sobre cada planta; franja SE REPARTE ENTRE MUCHAS. Tercer dibujo: cuatro formas pequeñas de hoja de calendario en fila, cada una con unos pocos fragmentos dibujados encima, mostrando los fragmentos repartidos entre las cuatro hojas; franja Y ENTRE VARIAS TEMPORADAS. Arriba, EL COSTO QUE NO SE VE."
+  pie="La estructura, las herramientas y el tanque no cuestan por planta, pero cuestan. Repartirlos es lo que evita creer que fueron gratis."
+/>
+
+Además de lo que se gasta en cada planta, hay cosas que se pagan una sola vez y sirven durante años: la
+estructura, la malla, el tanque, el sistema de riego, las herramientas, los bancos.
+
+**Ignorarlas es cómodo y engañoso**, porque cuando toca reponerlas parece que aparece un gasto
+extraordinario, cuando en realidad se llevaba años consumiendo sin apuntarlo.
+
+La forma de contarlas se llama <Termino slug="amortizacion">amortización</Termino> y es sencilla:
+
+<Formula explicacion="El costo anual de una inversión duradera es lo que costó dividido entre los años que va a durar. Dividiendo ese costo anual entre las plantas producidas en el año se obtiene cuánto le corresponde a cada planta.">
+costo por planta y año = (precio de la inversión ÷ años de vida útil) ÷ plantas producidas al año
+</Formula>
+
+Es la misma cuenta que el módulo de estructuras ya usaba para comparar materiales de cubierta: **precio
+más mano de obra, dividido entre años.** Aquí solo se añade el paso de repartirlo entre las plantas.
+
+<Advertencia>
+Y hay un costo fijo más que suele olvidarse por completo y que en este proyecto es central: **el
+espacio.**
+
+Aunque el terreno sea propio y no se pague alquiler, **ocupar un metro cuadrado durante seis meses con
+una especie significa no poder ocuparlo con otra.** Ese es un costo real, aunque no salga de ningún
+bolsillo.
+
+Es exactamente la <Termino slug="rotacion-del-espacio">rotación del espacio</Termino> del módulo de fichas, vista desde la contabilidad: **una
+especie lenta que ocupa el mismo sitio cuatro veces más tiempo tiene que valer cuatro veces más por
+unidad para empatar.**
+
+Ignorarlo es lo que lleva a llenar un vivero de plantas que se ven bien y no dan dinero.
+</Advertencia>
+
+## Cómo se calcula sin volverse loco
+
+El método que funciona en un vivero pequeño no es una contabilidad completa: es **una hoja por lote.**
+
+**Se elige un lote representativo** —una tanda de una especie— y se anota lo que se gastó en él: cuántos
+envases, cuánto sustrato, cuánto material, y sobre todo **cuánto tiempo**, apuntándolo el día que se
+trabaja y no de memoria al final.
+
+**Se anota cuántas se vendieron de verdad** al final del ciclo, que es el dato que casi nadie recoge.
+
+**Se divide.** Y ya está: tienes el costo real por planta vendida de esa especie.
+
+**Y se repite para dos o tres especies distintas.** Con eso ya se puede comparar y se ve, casi siempre
+con sorpresa, que las especies que parecían más rentables no lo son.
+
+<Dato>
+No hace falta que el número sea exacto. **Hace falta que exista y que sea comparable entre especies.**
+
+Un costo estimado con un margen de error del veinte por ciento, aplicado igual a todas las especies,
+sirve perfectamente para decidir qué producir. Un costo desconocido no sirve para nada.
+
+Y hay un beneficio secundario del ejercicio que suele ser el más valioso: **al anotar el tiempo, se
+descubre dónde se va.** Casi siempre está en operaciones repetitivas que se podrían simplificar, y esa
+información sola ya paga el trabajo de medir.
+</Dato>
+
+<AplicarRizoma>
+**El primer año de Rizoma es, entre otras cosas, un año de medir costos.**
+
+**Una hoja por lote desde el primer día**, en la misma libreta de las fichas y del inventario. Envases,
+sustrato, material de partida, y **el tiempo apuntado el día que se trabaja.** Media línea por sesión.
+
+**Y las plantas realmente vendidas al cerrar el lote**, que es el otro extremo del cálculo y el que
+convierte la hoja en información.
+
+**El tiempo se valora aunque sea trabajo propio.** Con un perfil de desarrollador, el costo de
+oportunidad de una hora es un número perfectamente conocido, y aunque no se quiera usar ese valor,
+cualquier número consistente sirve para comparar especies entre sí.
+
+**Y la comparación esperable es la que ya anticipaba el módulo de fichas**: el culantro y la batata van
+a salir baratos por unidad y rápidos; el ají dulce y las ornamentales, medios y con más trabajo; los
+frutales injertados y los árboles, caros y lentos pero con precio unitario alto.
+
+**La merma se mide por especie, no en general.** Una merma del cuarenta por ciento en almácigo de ají
+tiene un efecto completamente distinto que la misma merma en batata, donde el material de partida es
+gratis.
+
+**La amortización se calcula desde el principio**, con las inversiones que ya están en los módulos
+anteriores: la estructura de propagación, el tanque y su plataforma, la malla, el riego, las
+herramientas. Repartirlas entre las plantas del año da un número pequeño por unidad y evita la sorpresa
+del año de reposición.
+
+**Y el espacio se contabiliza aunque el terreno sea propio.** Con dos mil cuatrocientos setenta y cuatro
+metros cuadrados y una sola persona trabajando, la superficie no es el limitante —el tiempo lo es—, pero
+la rotación del espacio sigue siendo el criterio que ordena el catálogo.
+
+**El objetivo del ejercicio no es la contabilidad: es decidir qué dejar de producir.** Y esa decisión
+solo se puede tomar con números comparables.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Los precios de los insumos de vivero en Santa Cruz hay que relevarlos y anotarlos con fecha**, porque
+cambian: bolsas, sustratos, mallas, tuberías, fertilizantes. Una planilla propia de precios, actualizada
+un par de veces al año, vale más que cualquier estimación de un manual.
+
+**Y hay un fenómeno económico que conviene tener en cuenta explícitamente**: en contextos donde los
+precios de los insumos pueden moverse, un costo calculado hace un año puede estar desactualizado. Si el
+costo por planta se recalcula con los precios del momento en que se va a vender, la decisión es mucho
+más sólida.
+
+**Comprar en volumen baja el costo unitario de forma significativa** —bolsas, sustrato, fertilizante—,
+pero inmoviliza dinero y ocupa espacio de almacenamiento. Es una decisión de flujo de caja tanto como de
+costo, y la lección de estacionalidad la va a retomar.
+
+**Sobre el valor de la hora de trabajo**, la referencia útil no es un número abstracto sino el costo real
+de contratar ayuda en la zona cuando haga falta. Averiguar cuánto cuesta un jornal en la región es un
+dato concreto que además sirve para la decisión de crecer.
+
+**Y una nota sobre formalización.** Un vivero que vende plantas puede tener obligaciones de registro y
+tributarias según su escala y su forma de operar, y esas obligaciones son un costo real que conviene
+conocer antes de que aparezcan. Consultarlo con un contador local al empezar es una inversión pequeña
+que evita sorpresas grandes.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Con el costo por planta vendida en la mano —aunque sea aproximado— ya se puede hacer la siguiente
+pregunta, que mucha gente hace primero y por eso se equivoca: **¿a cuánto lo vendo?**
+
+La siguiente lección explica por qué el precio no sale del costo, qué sí sale del costo, y cómo se fija
+un precio en un mercado donde siempre hay alguien vendiendo más barato.

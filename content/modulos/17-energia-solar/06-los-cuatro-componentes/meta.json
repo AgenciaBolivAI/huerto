@@ -1,0 +1,46 @@
+{
+  "titulo": "Los cuatro componentes: regulador, batería e inversor",
+  "subtitulo": "El precio de compra es el peor indicador posible. Lo que decide es cuánto cuesta cada unidad de servicio a lo largo de la vida del equipo — y en baterías esos dos números no se parecen.",
+  "duracionMin": 27,
+  "portada": "portada.webp",
+  "portadaAlt": "Pared de equipos dentro de un cuarto técnico rural con luz cálida indirecta. Sobre un tablero de madera fijado al muro de ladrillo hay un regulador rectangular con pantalla pequeña y, debajo, un inversor con aletas de refrigeración; al lado, un bastidor metálico bajo con cuatro baterías selladas en fila unidas por cables rojos y negros gruesos. Todo el cableado va canalizado y etiquetado, y en lo alto del muro hay una rejilla de extracción",
+  "objetivos": [
+    "Situar los cuatro componentes y la frontera entre continua y alterna que marca el inversor.",
+    "Ordenar el presupuesto por vida útil: paneles décadas, electrónica muchos años, baterías pocos años.",
+    "Distinguir un regulador PWM de uno MPPT y saber cuándo el MPPT se paga solo.",
+    "Comparar plomo y litio por profundidad de descarga y por número de ciclos, no por precio de compra.",
+    "Aplicar el costo por kilovatio-hora ciclado como único criterio que no engaña.",
+    "Prever ventilación al exterior si se elige plomo líquido, por el hidrógeno que desprende al cargar.",
+    "Entender el BMS como lo que hace seguro y duradero al litio, no como un accesorio.",
+    "Respetar las tres reglas del banco: no mezclar, mismo lote, cables de interconexión iguales.",
+    "Elegir inversor de onda senoidal pura y dimensionarlo por potencia continua, potencia de pico y consumo en vacío.",
+    "Decidir entre equipos separados y todo en uno según qué pasa cuando algo falla y cuánto tarda el repuesto."
+  ],
+  "prerrequisitos": [
+    "17-energia-solar/05-dimensionar-el-sistema"
+  ],
+  "videos": [],
+  "referencias": [
+    {
+      "titulo": "Kilovatio-hora (kWh), kilovatio (kW) y kWp: diferencias",
+      "fuente": "SunFields Europe",
+      "url": "https://www.sfe-solar.com/electricidad/kwh-kw/",
+      "nota": "Útil aquí para no confundir la capacidad de una batería, que se expresa en energía, con la potencia de un inversor, que se expresa en potencia: son las dos magnitudes que el catálogo mezcla continuamente."
+    },
+    {
+      "titulo": "Efecto fotovoltaico: qué es, cómo funciona y aplicaciones",
+      "fuente": "SunFields Europe",
+      "url": "https://www.sfe-solar.com/electricidad/efecto-fotovoltaico/",
+      "nota": "Repasa la curva del panel, que es lo que un regulador MPPT recorre en busca del punto de máxima potencia. Ayuda a entender por qué un regulador simple deja rendimiento sin cobrar."
+    }
+  ],
+  "terminos": [
+    "regulador-mppt",
+    "costo-por-kwh-ciclado",
+    "bms",
+    "ciclo-profundo",
+    "inversor",
+    "onda-senoidal-pura"
+  ],
+  "practica": true
+}

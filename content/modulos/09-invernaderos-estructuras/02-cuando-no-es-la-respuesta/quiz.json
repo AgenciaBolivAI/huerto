@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "tres-climas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la imagen mental habitual de invernadero engaña en la llanura cruceña?",
+      "opciones": [
+        "Viene de climas templados y fríos, donde la limitación real es la temperatura.",
+        "Aquí no falta calor: sobra, y la radiación es intensa todo el año.",
+        "Casi toda la literatura, los manuales y las fotos vienen de ese otro contexto.",
+        "Porque los materiales de invernadero no se consiguen en Bolivia."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los materiales se consiguen sin problema; el desajuste es de diseño, no de suministro. Es adoptar una tecnología por su prestigio y no por su ajuste al problema: hay documentación abundante y casos de éxito impresionantes, en otro contexto. Y el fallo no se detecta al instalarla, sino el primer día despejado de noviembre."
+    },
+    {
+      "id": "el-fracaso",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué ocurre dentro de un invernadero cerrado en clima tropical húmedo?",
+      "opciones": [
+        "La temperatura se dispara y las plantas cierran estomas, dejando de fotosintetizar y de refrigerarse.",
+        "La humedad se satura y por la noche condensa sobre las hojas.",
+        "Calor, humedad saturada y agua sobre la hoja son la receta de las enfermedades foliares.",
+        "El manejo se simplifica, porque la estructura estabiliza sola el ambiente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El manejo se dispara: un invernadero cerrado en este clima hay que abrirlo y cerrarlo todos los días, y equivocarse un día de sol cuesta un lote. La estructura que se compró para simplificar termina añadiendo una tarea crítica al calendario, y el error más caro no es construirla sino construirla y no poder atenderla."
+    },
+    {
+      "id": "umbraculo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace un umbráculo que un invernadero cerrado no hace?",
+      "opciones": [
+        "Baja la radiación sin subir la temperatura, porque el aire caliente sigue pudiendo irse.",
+        "No sube la humedad, así que no crea el ambiente fúngico.",
+        "No necesita manejo diario: funciona igual estés o no estés.",
+        "Tapa la lluvia, que es su principal ventaja."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Lo que no hace es tapar la lluvia, y para eso está la tercera opción: el techo sin paredes, con cubierta impermeable y los cuatro costados abiertos. Tapa el aguacero sin encerrar el aire, y si se hace a dos aguas con abertura continua en la cumbrera, el aire caliente que sube tiene por dónde salir y la ventilación se vuelve automática."
+    },
+    {
+      "id": "cuando-si",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué casos sí se justifica cerrar aquí?",
+      "opciones": [
+        "Excluir la lluvia, que puede arrasar una bandeja de almácigo en minutos.",
+        "Excluir insectos con malla antiáfidos, en plantas madre y propagación de material valioso.",
+        "Poder cerrar temporalmente un lateral los pocos días de surazo.",
+        "Elevar la temperatura media de la zona de crecimiento durante la seca."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Elevar la temperatura no está entre los usos legítimos aquí: las cuatro funciones válidas son de exclusión y no de acumulación. La cuarta es secar y guardar —semillas, cascarilla, sustrato, envases—, que no es glamorosa y es de lo más útil que se construye. Y con el surazo la clave es poder cerrarlo, no tenerlo cerrado."
+    },
+    {
+      "id": "costo-real",
+      "tipo": "verdadero_falso",
+      "enunciado": "La diferencia de costo entre un invernadero y un umbráculo se agota en el precio de los materiales.",
+      "respuesta": false,
+      "explicacion": "Falso: el costo real suma materiales, montaje, reposición y mantenimiento anual, y trabajo de manejo, y en el invernadero los cuatro son más altos. El último es el que hunde la cuenta en un proyecto pequeño y no aparece en ningún presupuesto: trescientas sesenta y cinco decisiones al año, cada una con una plantación en juego."
+    },
+    {
+      "id": "convertir",
+      "tipo": "opcion_multiple",
+      "enunciado": "Ya tienes un invernadero cerrado. ¿Cómo lo conviertes en algo que funcione aquí?",
+      "opciones": [
+        "Abriendo una cumbrera continua protegida por un sombrerete, que es lo que más baja la temperatura.",
+        "Sustituyendo los laterales de plástico por malla o haciéndolos enrollables.",
+        "Blanqueando la cubierta con lechada de cal en los meses de más radiación.",
+        "Sellando bien todas las juntas para que el ambiente sea más estable."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Sellar es agravar el problema. La cuarta intervención útil es meter masa —tambores de agua tapados, suelo húmedo, piso pesado—, que no arregla el mediodía pero suaviza la noche y hace la estructura mucho más útil durante los surazos. Con laterales abiertos abajo y cumbrera arriba se consigue ventilación por efecto chimenea, sin ventiladores y sin electricidad."
+    },
+    {
+      "id": "regla-de-decision",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si no hay nadie que pueda abrir la estructura todas las mañanas, se puede compensar regando más.",
+      "respuesta": false,
+      "explicacion": "Falso, y es exactamente al revés: en una estructura cerrada un fallo de riego con sol es catastrófico en horas, porque se pierden a la vez el agua y la refrigeración por transpiración. Si no se puede atender a diario, la estructura tiene que funcionar sola, y eso descarta el cerrado y deja umbráculo o techo abierto."
+    },
+    {
+      "id": "estructuras-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Decide qué estructuras construye Rizoma del Sur y cuáles no, justificando cada una con la física y con la capacidad real de manejo.",
+      "respuestaModelo": "La respuesta es una combinación de estructuras abiertas, y no incluye un invernadero cerrado convencional.\n\nEl razonamiento parte del problema real: en la llanura de Santa Cruz no falta calor, sobra, y la radiación es intensa todo el año. La función clásica de un invernadero —cerrar y retener— resuelve un problema que aquí no tengo, y crea dos que sí tendría: temperatura disparada al cortar la convección, y humedad saturada que condensa cada amanecer sobre las hojas, que es la receta exacta de las enfermedades foliares.\n\nUmbráculo para la zona de crecimiento, que es la superficie grande: postes, malla al 50 % arriba y los costados abiertos. Baja la radiación sin encerrar calor ni humedad, porque el aire caliente sigue pudiendo irse, y no pide manejo diario.\n\nTecho sin paredes sobre camas de propagación y almácigos: cubierta impermeable a dos aguas con abertura continua de cumbrera y los cuatro costados abiertos, con la malla de sombra debajo. Tapa el aguacero de enero, que es el riesgo real de esa zona, sin crear la cámara caliente y húmeda. Y la abertura de cumbrera hace que la ventilación sea automática, porque el aire caliente que sube encuentra salida arriba mientras entra aire fresco por abajo.\n\nParedes enrollables solo en propagación y solo para los surazos: un faldón que se baja por el lado sur esos pocos días con viento fuerte y noches de unos diez grados, y se sube el resto del año. La clave es poder cerrarlo, no tenerlo cerrado.\n\nMalla antiáfidos únicamente sobre el bloque de plantas madre, que es el material del que depende todo lo demás y donde un virus cuesta años. Con altura extra y más superficie de apertura, porque frena mucho el aire.\n\nY un galpón o cobertizo bien ventilado para sustrato, envases y secado de semillas, que enlaza con la zona de mezcla que reservé en el layout y con el módulo de construcción.\n\nEl criterio que fija todo: si la estructura necesita que alguien la abra todas las mañanas para no matar lo que hay dentro, no es la estructura correcta para este proyecto. En un vivero de una o dos personas, el trabajo de manejo diario es el componente más caro y el que no aparece en ningún presupuesto. Todo lo que construya tiene que funcionar solo y cerrarse solo los días que decida cerrarlo.\n\nHay además dos razones que refuerzan lo abierto y no son térmicas. Una es estructural: una cubierta plástica cerrada es una vela frente al viento, y los surazos y las tormentas con ráfagas se llevan por delante lo mal anclado, mientras que una estructura abierta deja pasar el viento y sufre mucho menos. La otra es de costo de propiedad: el film de polietileno bajo esta radiación dura poco y se cambia entero, mientras que la malla dura más y falla de a poco.\n\nY si en algún momento heredara o comprara un invernadero cerrado, no lo tiraría: lo convertiría. Abriría una cumbrera continua con sombrerete, sustituiría los laterales por malla o los haría enrollables, blanquearía la cubierta con lechada de cal en los meses de más radiación, y metería tambores de agua tapados como masa. Con esas cuatro intervenciones baratas queda convertido en una estructura de techo ventilada, que es lo que este clima pedía desde el principio.\n\nSobre la elección de material, exijo tratamiento ultravioleta tanto en film como en malla: la diferencia de precio decide si dura una temporada o varias, y se recupera en un solo recambio evitado.",
+      "criterios": [
+        "Parte de que el problema aquí es el calor y no el frío.",
+        "Nombra los dos problemas que crea cerrar: temperatura y humedad saturada.",
+        "Elige umbráculo para crecimiento con costados abiertos.",
+        "Elige techo sin paredes con cumbrera para propagación y almácigos.",
+        "Explica la ventilación automática por entrada baja y salida alta.",
+        "Limita las paredes enrollables al sur y a los días de surazo.",
+        "Reserva la malla antiáfidos para el bloque de madres, con más altura.",
+        "Incluye galpón ventilado para sustrato, envases y secado.",
+        "Aplica el criterio de que la estructura debe funcionar sin manejo diario.",
+        "Añade el argumento estructural del viento y el de costo de propiedad.",
+        "Sabe convertir un invernadero cerrado con las cuatro intervenciones.",
+        "Exige tratamiento ultravioleta en film y malla."
+      ],
+      "explicacion": "Fíjate en el patrón que aparece dos veces en este módulo: la solución más prestigiosa no es la correcta, y la correcta es más barata, más simple y más aburrida. Es una situación que cualquiera que haya elegido tecnología reconoce, y el criterio que la resuelve es siempre el mismo: empezar por el problema y no por la herramienta."
+    }
+  ]
+}

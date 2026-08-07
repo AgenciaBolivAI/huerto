@@ -1,0 +1,101 @@
+{
+  "preguntas": [
+    {
+      "id": "compas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se pasa un croquis triangulado a un dibujo a escala, sin medir ángulos?",
+      "opciones": [
+        "Se dibuja un solo lado a escala con regla, preferiblemente el más largo y el mejor medido.",
+        "Desde cada extremo de ese lado se traza con el compás un arco con la longitud a escala del lado y de la diagonal.",
+        "La esquina cae donde los dos arcos se cruzan, y se repite triángulo a triángulo hasta cerrar.",
+        "Se mide el ángulo de cada esquina con transportador y se traslada al papel."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El transportador es justo lo que este método evita, porque en campo los ángulos se miden mal. Cada arco es el lugar geométrico de los puntos a esa distancia del centro: una ecuación dibujada. Y tiene una ventaja de diagnóstico — si las medidas eran inconsistentes, los arcos no se cruzan donde deberían y el error salta a la vista."
+    },
+    {
+      "id": "dos-durezas",
+      "tipo": "verdadero_falso",
+      "enunciado": "Conviene dibujar directamente con el trazo definitivo para no perder tiempo repasando.",
+      "respuesta": false,
+      "explicacion": "Falso: la técnica central del dibujo a mano es construir todo primero en lápiz duro y flojo —arcos de compás, ejes auxiliares, tanteos— y repasar al final en blando solo lo que queda. Así el grosor separa lo importante del andamiaje y el plano se lee de un vistazo. Dibujando de una sola pasada, el resultado queda lleno de borrones y de líneas de las que nadie sabe si cuentan."
+    },
+    {
+      "id": "orden",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué se empieza por los ejes y no directamente por los muros?",
+      "opciones": [
+        "Porque los ejes son la referencia de la que cuelga todo lo demás, incluidas las fundaciones.",
+        "Porque si más adelante se mueve un eje, se sabe exactamente qué elementos arrastra.",
+        "Porque son lo que se materializa físicamente con hilos el día del replanteo.",
+        "Porque los muros son más difíciles de dibujar y conviene dejarlos para el final."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La dificultad de trazado no tiene nada que ver. La razón es estructural: los ejes son el sistema de referencia, y una vez que el papel y el terreno usan el mismo sistema, comprobar uno contra el otro es directo. Empezar por los muros obliga a rehacer en cuanto algo se mueve."
+    },
+    {
+      "id": "modular",
+      "tipo": "opcion_multiple",
+      "enunciado": "Estás por fijar el ancho del galpón. ¿Qué criterio aplicas?",
+      "opciones": [
+        "Antes de decidir, voy a la casa de materiales y anoto las medidas reales de lo que voy a comprar.",
+        "Elijo un ancho que sea múltiplo del ancho útil de la chapa, para que no haya que cortar a lo largo.",
+        "Aplico el mismo criterio a la separación entre columnas y a los largos de perfil.",
+        "Elijo la medida que mejor aproveche el espacio disponible y ya se resolverá en obra."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La última opción es exactamente el error: 6,00 y 6,35 se dibujan igual de fácil y en obra son mundos distintos —una mañana cortando chapa, recortes que no sirven para nada y material pagado que termina en el suelo. Es diseñar contra las restricciones reales en lugar de contra un ideal, y ajustar treinta centímetros en el papel no cuesta nada."
+    },
+    {
+      "id": "fundaciones",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se dibuja la planta de fundaciones?",
+      "opciones": [
+        "Calcando el mismo contorno y la misma retícula de ejes, en la misma posición de la hoja para poder superponer las láminas.",
+        "Pasando los muros a línea discontinua y desvaída, y poniendo en primer plano zapatas y cimientos.",
+        "Acotando las fundaciones respecto a los ejes, no respecto a los muros, porque los ejes son lo que se materializa con hilos.",
+        "Dibujándola desde cero en otra hoja, con su propia geometría."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Dibujarla desde cero es cómo se consigue que algún día las dos láminas no coincidan. Son vistas del mismo modelo y no hay compilador que avise: la disciplina la pones tú, y la regla es que cada cambio en la planta obliga a preguntarse qué otras láminas tocaba."
+    },
+    {
+      "id": "cuadro-replanteo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué aporta un cuadro de replanteo que las cotas dibujadas no aportan?",
+      "opciones": [
+        "Elimina la aritmética de campo: nadie suma tramos de pie junto a una zanja.",
+        "Elimina la acumulación de error, porque cada punto se mide contra el origen y no contra el anterior.",
+        "Es verificable: dos personas replanteando con la misma tabla tienen que obtener las mismas estacas.",
+        "Sustituye a las cotas del dibujo, que ya no hacen falta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No sustituye nada: convive. El dibujo es la representación para humanos y el cuadro es la misma información en el formato que consume la obra. Y añadiendo las dos diagonales como filas de comprobación, la tabla trae además sus propios tests."
+    },
+    {
+      "id": "computo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si al hacer el cómputo aparece una partida que no puedes leer del plano, el problema está en el método de cómputo.",
+      "respuesta": false,
+      "explicacion": "Falso: el problema es que falta dibujo. El presupuesto no puede ser mejor que el plano del que sale, y esa es justamente la razón por la que se dibuja antes de comprar. Cada partida —excavación, hormigón, muros, revoque, cubierta, carpintería— debería leerse directamente de una lámina; cuando una no se puede leer, la lámina tiene un agujero."
+    },
+    {
+      "id": "plano-del-galpon",
+      "tipo": "abierta",
+      "enunciado": "Vas a dibujar el juego de planos del galpón del vivero, partiendo de tu levantamiento. Explica qué láminas haces, en qué escala, cómo decides las dimensiones, y qué le añades al dibujo para que sirva el día del replanteo y el día del presupuesto.",
+      "respuestaModelo": "Empiezo por el plano de conjunto del terreno en 1:200 sobre A3, con los lotes, los linderos, el acceso, el punto de agua, los árboles grandes y las zonas que se encharcan. Ese es el mapa base, y conviene tenerlo antes de proyectar nada, porque las buenas decisiones de ubicación salen de mirar el conjunto y no de imaginarse el galpón aislado. Sobre él coloco el galpón en la parte más alta del terreno, que es donde no se moja.\n\nDespués tres láminas del galpón en 1:50: planta de arquitectura, planta de fundaciones y un corte transversal. La de fundaciones la calco de la de arquitectura, en la misma posición de la hoja, con los muros en línea discontinua y desvaída y las zapatas y cimientos en primer plano, acotados respecto a los ejes y con sus profundidades como cotas de nivel contra el cero de la obra. El corte existe porque sin él no hay alturas, y sin alturas no hay cómputo.\n\nLas dimensiones no las elijo libremente. Antes de fijar el ancho voy a la casa de materiales y anoto el ancho útil real de la chapa que voy a comprar, los largos disponibles y las dimensiones del ladrillo local, y después dibujo hacia esos números para que no haya que cortar nada a lo largo. El mismo criterio para la separación entre columnas y para los largos de perfil. Y los anchos de paso los compruebo con el cuerpo: marco el pasillo con cal en el suelo y paso empujando la carretilla cargada antes de fijarlo en el papel.\n\nDibujo en el orden correcto: primero los ejes, luego los muros a caballo sobre ellos con su espesor real repartido, luego las aberturas cuidando hacia dónde barre cada arco, luego las cotas y al final el cajetín y la leyenda. Todo el andamiaje en lápiz duro y flojo, y el repaso definitivo en blando.\n\nPara que sirva en el replanteo añado dos cosas. Cotas acumuladas desde una esquina elegida como origen, además de las parciales; y un cuadro de replanteo con las dos distancias de cada esquina respecto a ese origen, más las dos diagonales como filas de comprobación. Con eso, el día de las estacas nadie tiene que sumar nada de pie junto a la zanja y ningún error se hereda de una marca a la siguiente.\n\nPara que sirva en el presupuesto, me aseguro de que cada partida se pueda leer: largo de zanjas por ancho por profundidad para la excavación, volumen de zapatas y cimientos para el hormigón, superficie de muro descontando huecos, superficie de faldón para la cubierta, y la planilla de carpintería para puertas y ventanas.\n\nY antes de darlo por terminado corro la lista: cajetín completo con escala, fecha y versión; norte; cotas parciales que suman el total en cada lado; espesor de muro dibujado y acotado; al menos un corte con su marca en la planta; planta y fundaciones que coinciden al superponerlas; y el cero de niveles definido y descrito como objeto físico real. Cada versión, foto con fecha al repositorio, y la anterior fuera de la mesa del galpón.",
+      "criterios": [
+        "Empieza por el plano de conjunto y ubica el galpón en la parte alta.",
+        "Produce planta, fundaciones y corte, con escalas coherentes.",
+        "Calca la planta de fundaciones y la acota respecto a ejes.",
+        "Fija las dimensiones contra las medidas reales del material que se compra.",
+        "Comprueba los anchos de paso con la carretilla antes de dibujarlos.",
+        "Dibuja en el orden ejes, muros, aberturas, cotas, cajetín, con dos durezas de lápiz.",
+        "Añade cotas acumuladas y cuadro de replanteo con diagonales de comprobación.",
+        "Verifica que cada partida del cómputo se pueda leer del plano.",
+        "Aplica la lista de siete comprobaciones y versiona las láminas."
+      ],
+      "explicacion": "Fíjate en que las dos cosas que hacen útil el plano —el cuadro de replanteo y la legibilidad de las partidas— no lo hacen más bonito ni más exacto: lo hacen **ejecutable**. Un plano que hay que interpretar antes de usarlo es un plano a medio terminar, y la interpretación siempre acaba haciéndola alguien con las manos ocupadas y prisa."
+    }
+  ]
+}

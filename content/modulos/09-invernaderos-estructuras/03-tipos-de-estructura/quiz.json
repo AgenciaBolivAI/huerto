@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "geometrias",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué distingue a las cuatro geometrías?",
+      "opciones": [
+        "El túnel es lo más barato y fácil, pero no tiene por dónde sacar el aire caliente por arriba.",
+        "El dos aguas con cumbrera ventilada saca el aire por lo alto y entra fresco por los costados.",
+        "El diente de sierra da ventilación cenital permanente y sin partes móviles.",
+        "Los módulos unidos son la opción más simple porque comparten estructura."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los módulos unidos ahorran estructura y espacio pero traen el problema de la canaleta: el valle recoge el agua de dos faldones, y con un aguacero tropical ese caudal es enorme. Una canaleta mal dimensionada convierte la lluvia en una cascada dentro del vivero."
+    },
+    {
+      "id": "cenital-vs-lateral",
+      "tipo": "verdadero_falso",
+      "enunciado": "Abrir bien los costados de una estructura equivale a tener ventilación cenital.",
+      "respuesta": false,
+      "explicacion": "Falso: el aire caliente sube y se estratifica arriba. Si solo abres los costados sacas el aire de abajo, que es el menos caliente, mientras la capa caliente sigue acumulada en lo alto. Con una abertura arriba, el aire entra por abajo y sale por arriba, y el efecto chimenea lo mueve solo, sin ventiladores ni electricidad."
+    },
+    {
+      "id": "la-altura",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la altura es la decisión dimensional más rentable?",
+      "opciones": [
+        "El aire caliente se estratifica, y la altura decide si esa capa queda encima de las hojas o lejos de ellas.",
+        "Más volumen de aire por metro cuadrado significa que la misma energía sube menos la temperatura.",
+        "Encarece la estructura pero casi no encarece la cubierta, que mantiene la misma superficie.",
+        "Aumenta la luz que reciben las plantas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La altura no cambia la luz. Los mínimos prácticos son tres metros a la canal en una estructura de trabajo en clima cálido y cuatro o más en la cumbrera de un dos aguas mediano; por debajo de dos metros y medio, cualquier cubierta se convierte en horno. Y hay un beneficio secundario nada menor: por debajo de dos metros no se puede trabajar de pie."
+    },
+    {
+      "id": "orientacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se decide la orientación y el ancho de una nave?",
+      "opciones": [
+        "Con ventilación solo lateral, más de unos seis u ocho metros de ancho deja un corazón sin renovar.",
+        "El largo es casi libre, porque lo caro son los frontones y no se repiten.",
+        "Cuando el criterio del sol y el del viento chocan, en clima cálido gana la ventilación.",
+        "El eje largo se orienta siempre de este a oeste, sin excepción."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Orientar de este a oeste da luz más pareja, pero en clima cálido manda el viento: el eje se orienta para que el viento dominante atraviese la nave por su lado corto. Perder algo de uniformidad de luz cuesta unos puntos de crecimiento; perder ventilación cuesta lotes enteros en el primer mediodía despejado de noviembre."
+    },
+    {
+      "id": "materiales",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué caracteriza a los materiales de estructura?",
+      "opciones": [
+        "La madera es barata y se repara en el sitio, pero se pudre en contacto con el suelo y la ataca el comején.",
+        "La tacuara es muy resistente para su peso pero tiene vida útil corta sin tratar.",
+        "El tubo galvanizado dura y curva bien, pero es el más caro y exige herramienta o taller.",
+        "El perfil de chapa delgado es la mejor opción estructural para toda la obra."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El perfil de chapa es liviano y económico por metro, pero se oxida en los cortes y pandea si es delgado. La elección práctica en un vivero pequeño suele ser madera bien tratada para postes y estructura principal, con tubo o perfil solo donde la geometría lo exija, que es la combinación que se puede levantar, reparar y ampliar sin depender de un taller."
+    },
+    {
+      "id": "madera-y-suelo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un poste de madera tratada se puede enterrar directamente si el tramo enterrado está bien impregnado.",
+      "respuesta": false,
+      "explicacion": "Falso, o al menos es la peor opción disponible: la madera enterrada se pudre por la línea del terreno, y lo hace justo donde no se ve. La solución correcta es dado de hormigón con platina metálica que levante la madera unos centímetros del suelo. Y en la llanura cruceña hay un segundo enemigo que también ataca por abajo: el comején."
+    },
+    {
+      "id": "viento",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué le hace el viento a una estructura de vivero?",
+      "opciones": [
+        "Al pasar sobre una superficie inclinada el aire acelera, la presión cae y succiona la cubierta hacia arriba.",
+        "Los fallos típicos son de tracción hacia arriba y de uniones, no de aplastamiento.",
+        "Un canto de cubierta suelto deja entrar el aire debajo y desde ahí la cubierta trabaja como vela.",
+        "La cara más castigada es siempre la de barlovento, donde el viento golpea."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cara de sotavento es donde la depresión es mayor y donde nadie mira, y ahí es donde la succión levanta el techo. Las soluciones son anclajes diseñados para tracción, cubierta sujeta en todo el perímetro sin ningún canto libre, arriostramiento diagonal en los planos verticales, y estructuras abiertas antes que cerradas: si el viento puede atravesar, no hay vela."
+    },
+    {
+      "id": "estructura-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Elige y dimensiona las estructuras de Rizoma del Sur: geometría, alturas, orientación, materiales y anclaje.",
+      "respuestaModelo": "Con las decisiones de las lecciones anteriores ya tomadas, la geometría se elige por ventilación.\n\nUmbráculo de techo plano de malla sobre la zona de crecimiento, que es la superficie grande, con los cuatro costados abiertos. Postes de madera tratada, altura libre de dos metros y medio a tres, que además es la altura de trabajo cómoda del layout, y arriostramiento diagonal en las esquinas.\n\nEstructura a dos aguas con cumbrera ventilada sobre propagación y almácigos, que es donde de verdad hace falta tapar el aguacero de enero. Cubierta impermeable, sombrerete sobre la cumbrera para que la abertura no deje entrar la lluvia, costados abiertos, y faldón enrollable solo por el sur para los surazos. Tres metros a la canal como mínimo, cuatro en la cumbrera.\n\nEl diente de sierra queda reservado para una ampliación futura de superficie grande. Térmicamente es la mejor solución porque da ventilación cenital permanente sin partes móviles, pero es más compleja de construir, así que no es por dónde empezar. Si se hace, las aberturas van al lado contrario del viento dominante, para que la depresión detrás del escalón succione el aire de dentro en vez de embolsarlo.\n\nEl ancho lo limita la ventilación: con aberturas solo laterales, más de seis u ocho metros deja un corazón sin renovar, así que las naves sin cumbrera no pasan de ahí. El largo lo dejo libre, porque lo caro son los frontones y no se repiten.\n\nLa orientación la manda el viento y no el sol: el eje largo puesto para que el viento dominante atraviese la nave por su lado corto. Perder algo de uniformidad de luz cuesta unos puntos de crecimiento; perder ventilación cuesta lotes enteros.\n\nMateriales: madera tratada como estructura principal, que se consigue, se trabaja y se repara en el sitio sin depender de un taller; tacuara solo para elementos secundarios y sabiendo que hay que reponerla; tubo galvanizado únicamente donde haga falta curvar, como en arcos.\n\nEl contacto con el suelo es el punto débil de todo, y aquí lo atacan dos cosas a la vez, el agua y el comején. Ningún poste de madera va enterrado directamente: van todos sobre dado de hormigón con platina metálica, levantados unos centímetros del suelo, exactamente como en las fundaciones del módulo de construcción.\n\nY el anclaje se calcula para el surazo y no para el peso. Lo que se lleva las estructuras aquí es el tirón hacia arriba con viento fuerte del sur, porque el viento no empuja el techo hacia abajo sino que lo succiona hacia arriba, con el mismo efecto que sostiene un avión. Eso significa dados generosos con armadura que los ligue al poste, cubierta sujeta en todo su perímetro sin ningún canto libre, arriostramiento diagonal en los planos verticales, y uniones pensadas para trabajar al arranque. Es el mismo criterio que apareció con los paneles solares, y por la misma razón física.\n\nY si en algún momento uno módulos, la canaleta del valle se dimensiona para un aguacero tropical y no para una lluvia normal, con salida fuera del vivero: una canaleta que rebosa descarga el agua de dos techos justo encima de las plantas.",
+      "criterios": [
+        "Elige umbráculo abierto para crecimiento con altura de dos y medio a tres metros.",
+        "Elige dos aguas con cumbrera y sombrerete para propagación.",
+        "Fija tres metros a la canal como mínimo en la estructura cubierta.",
+        "Reserva el diente de sierra para ampliación y orienta sus aberturas a sotavento.",
+        "Limita el ancho por ventilación y deja el largo libre.",
+        "Orienta por viento antes que por sol y justifica la prioridad.",
+        "Usa madera tratada como principal, tacuara secundaria y tubo solo para curvar.",
+        "Resuelve el contacto con el suelo con dado de hormigón y platina.",
+        "Nombra el comején como segundo enemigo por abajo.",
+        "Explica que el viento succiona hacia arriba y calcula el anclaje a tracción.",
+        "Sujeta la cubierta en todo el perímetro y arriostra en diagonal.",
+        "Dimensiona la canaleta para aguacero tropical con salida fuera."
+      ],
+      "explicacion": "Fíjate en que la mitad de esta lección es en realidad el módulo de construcción aplicado a una estructura ligera. La diferencia es que aquí las cargas dominantes no son de peso hacia abajo sino de succión hacia arriba, y eso cambia por completo dónde hay que poner el cuidado."
+    }
+  ]
+}

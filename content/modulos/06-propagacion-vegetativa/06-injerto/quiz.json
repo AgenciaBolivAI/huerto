@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "patron-y-pua",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué aporta cada parte de un árbol injertado?",
+      "opciones": [
+        "El patrón aporta la raíz, y con ella la adaptación al suelo y la tolerancia al encharcamiento.",
+        "El patrón influye además en el vigor y el tamaño final del árbol.",
+        "La púa aporta las hojas, las flores y la fruta, con la variedad exacta que elegiste.",
+        "La púa aporta la resistencia a plagas del suelo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las plagas del suelo las enfrenta la raíz, que es del patrón. Es una separación de capas: el patrón resuelve sobre qué corre el sistema —suelo, agua, plagas de abajo— y la púa resuelve qué hace. Por eso la misma variedad sobre dos patrones distintos da árboles con comportamientos muy diferentes."
+    },
+    {
+      "id": "brotes-de-abajo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Los brotes que salen por debajo de la unión se pueden dejar, porque dan más follaje al árbol.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la causa número uno de decepción con frutales injertados. Esos brotes son del patrón: dan su fruta, que suele ser mala o incomible, y encima son más vigorosos que la púa porque salen directamente de la raíz. En un par de años el patrón se come al injerto. Por la misma razón, la unión no se entierra nunca al plantar."
+    },
+    {
+      "id": "la-regla",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un injerto bien atado y con cortes limpios pega aunque los cámbiums no lleguen a tocarse.",
+      "respuesta": false,
+      "explicacion": "Falso: si los dos cámbiums no se tocan, no pasa absolutamente nada, por perfecta que sea la atadura. Esa capa finísima bajo la corteza es la única capaz de multiplicarse, generar tejido nuevo y soldar las dos piezas. Toda la técnica del injerto es conseguir ese contacto."
+    },
+    {
+      "id": "alineacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "Púa y patrón tienen distinto grosor. ¿Cómo se encajan?",
+      "opciones": [
+        "Empujando la púa hacia un lado, de modo que la corteza de un borde coincida con la del patrón.",
+        "Porque si se centran, los anillos de cámbium quedan a distinta distancia del eje y no se tocan en ningún punto.",
+        "Una sola línea de contacto entre los dos cámbiums basta para que suelde.",
+        "Centrando la púa dentro del patrón, para que quede simétrica."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Centrar es exactamente el error: el injerto queda precioso y no pega. Es un detalle de dos segundos que casi nadie explica, porque suele enseñarse a cortar y a atar pero no a alinear."
+    },
+    {
+      "id": "tres-formas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué distingue a los tres tipos de injerto?",
+      "opciones": [
+        "El de púa encaja una cuña en el patrón hendido, y es el más versátil cuando los grosores se parecen.",
+        "El de yema usa una sola yema con su escudo de corteza, aprovecha mucho material y deja vivo al patrón si falla.",
+        "El de aproximación une dos plantas enteras que conservan su raíz, y es el más seguro mientras suelda.",
+        "El de yema es el más arriesgado porque exige decapitar el patrón."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Justo lo contrario: en el injerto de yema no se decapita el patrón, y esa es una de sus dos grandes ventajas, junto con que de una sola rama salen decenas de yemas. Por eso es el método estándar para producir cítricos. El de aproximación es el acodo de los injertos: verificación antes de cortar."
+    },
+    {
+      "id": "seis-costumbres",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué costumbres deciden el prendimiento de un injerto?",
+      "opciones": [
+        "Cuchillo afiladísimo, porque un filo mediocre machaca células en vez de cortarlas y el tejido machacado no suelda.",
+        "Trabajar rápido, porque las superficies cortadas se oxidan y se secan en minutos.",
+        "Presión firme y sellado completo, porque el aire impide la soldadura y el agua pudre.",
+        "Comprobar el ajuste tocando las superficies cortadas con los dedos antes de unirlas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Tocar las superficies cortadas es justamente lo que no se hace: grasa, suciedad y microorganismos, y en el punto exacto donde más daño hacen. La sexta costumbre es etiquetar siempre, con variedad, patrón y fecha: un injerto sin etiqueta es un árbol de variedad desconocida, y eso lo devalúa por completo."
+    },
+    {
+      "id": "compatibilidad",
+      "tipo": "verdadero_falso",
+      "enunciado": "Con suficiente técnica se puede injertar cualquier especie sobre cualquier otra.",
+      "respuesta": false,
+      "explicacion": "Falso: hay un límite biológico que ninguna técnica salva. Dos plantas solo sueldan si son suficientemente parecidas, en general de la misma especie o de especies emparentadas. Un mango sobre un cítrico no pega por perfecta que sea la ejecución. Y hay casos engañosos de incompatibilidad tardía: sueldan, brotan, crecen un par de años y después se rompen por la unión."
+    },
+    {
+      "id": "injerto-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Planifica la entrada de Rizoma del Sur en la producción de frutales injertados: qué preparas primero, cómo aprendes la técnica, y qué le explicas al cliente al vender.",
+      "respuestaModelo": "El injerto es la meta a mediano plazo, no el punto de partida, y el camino tiene un orden que no se puede saltar.\n\nLo primero es producir los patrones, y ahí se cierra el círculo con el módulo de semillas: los patrones se obtienen de semilla, así que siembro semilla de la especie que sirve de patrón, crío los plantines en envases altos con fondo abierto para que la raíz baje derecha y no se enrosque, y espero a que el tallo tenga el grosor de un lápiz. Ese es el cuello de botella real del injerto: tener patrones listos. Esa siembra hay que empezarla mucho antes de querer injertar.\n\nSegundo, conseguir las púas, de árboles identificados, sanos y de variedad conocida. Aquí vuelve a aparecer el bloque de plantas madre: si acodé dos ejemplares buenos hace un año, ya tengo de dónde sacar púas sin depender de nadie. Las corto la misma mañana, de rama sana y semileñosa con dos o tres yemas, y las llevo envueltas en un trapo húmedo a la sombra.\n\nTercero, practicar con material barato antes de tocar lo valioso: cien injertos sobre patrones de descarte. La técnica está en la mano y no en la cabeza, y el corte largo, plano y de una sola pasada solo sale con repetición. Empezaría por el injerto por aproximación, que es el más seguro porque ninguna de las dos partes arriesga la vida mientras suelda, y después pasaría a púa y a yema.\n\nLa ejecución: cuchillo afilado antes de cada sesión, porque un filo mediocre machaca en vez de cortar y el tejido machacado no suelda; rapidez, porque las superficies se oxidan en minutos; encajar la púa empujada a un lado y no centrada, para que los cámbiums se toquen al menos en una línea; atar firme cubriendo toda la unión para que no entre aire ni agua; no tocar las superficies cortadas con los dedos; y etiquetar con variedad, patrón y fecha.\n\nSobre el momento: injerto cuando el patrón está en crecimiento activo y la corteza se despega con facilidad, que aquí es casi todo el año pero especialmente al arrancar las lluvias. La prueba es física: si al hacer el corte la corteza se levanta sola y limpia, es el momento. Y con el sol fuerte de aquí, la bolsita sobre la púa va sombreada, porque si no cocina la yema en pocas horas.\n\nA las dos o tres semanas compruebo: si la púa sigue verde y firme, va bien; si se puso marrón, falló. La señal definitiva es que la yema brote, porque un brote nuevo no puede alimentarse solo. No quito la cinta demasiado pronto, porque la unión tarda semanas en tener resistencia, ni la dejo indefinidamente, porque estrangula el tallo al engrosar y eso arruina el árbol un año después.\n\nY con las combinaciones nuevas no improviso: la compatibilidad tiene un límite biológico, y hay incompatibilidades tardías que solo se ven con los años. Consulto a viveristas con experiencia local, sobre todo para la elección de patrón en cítricos y en palta, que aquí tiene que resolver el problema del suelo pesado y el encharcamiento.\n\nAl vender le explico al cliente dos cosas que también son mi reputación: que hay que quitar todo lo que brote por debajo de la unión, porque son brotes del patrón y en dos años se comen al injerto; y que la unión no se entierra nunca al plantar, porque si la púa echa raíces propias se anula la ventaja del patrón. Un árbol mío que se convierte en patrón silvestre a los dos años es una mala referencia que camina.\n\nY el argumento comercial: un frutal injertado, etiquetado con variedad y patrón, es un producto con especificación, y eso lo pone en otra categoría frente a un plantín anónimo. Es donde un vivero pequeño puede competir sin pelear por precio.",
+      "criterios": [
+        "Empieza por producir patrones de semilla y reconoce que son el cuello de botella.",
+        "Cría los patrones en envases altos con fondo abierto.",
+        "Obtiene púas de árboles identificados y las transporta protegidas.",
+        "Practica con material de descarte antes de tocar lo valioso.",
+        "Empieza por el injerto por aproximación y justifica por qué.",
+        "Aplica cuchillo afilado, rapidez, alineación a un lado y sellado.",
+        "No toca las superficies cortadas y etiqueta con variedad, patrón y fecha.",
+        "Injerta cuando la corteza se despega y sombrea la bolsita.",
+        "Evalúa a las dos o tres semanas y maneja la cinta ni pronto ni tarde.",
+        "No improvisa combinaciones y consulta la elección de patrón.",
+        "Explica al cliente los brotes de abajo y la unión sin enterrar.",
+        "Formula el argumento comercial del producto con especificación."
+      ],
+      "explicacion": "Fíjate en que la parte más lenta del injerto no es la técnica manual: es tener patrones del grosor correcto, y eso se siembra con un año de antelación. Los viveros que no pueden ofrecer injertos casi nunca es porque no sepan injertar: es porque nunca empezaron la siembra de patrones."
+    }
+  ]
+}

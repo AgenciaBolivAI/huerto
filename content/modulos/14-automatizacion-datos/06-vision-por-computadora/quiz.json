@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "contar-vs-diagnosticar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué contar funciona bien y diagnosticar no?",
+      "opciones": [
+        "Contar tiene fondo uniforme, contraste alto y la respuesta es un número.",
+        "Diagnosticar tiene fondo variable, luz cambiante y categorías que se parecen mucho.",
+        "Un mismo síntoma puede ser deficiencia, raíz asfixiada, pH desviado o salinidad, y las cuatro se ven igual.",
+        "Diagnosticar funcionaría con suficiente capacidad de cómputo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es un límite del dato de entrada, no del cómputo: lo que distingue esas causas está en el patrón espacial del lote, el historial de riego y cómo está la raíz. Un modelo que solo ve la hoja no tiene la información que hace falta, y más cómputo no la crea."
+    },
+    {
+      "id": "lo-que-funciona",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué aplicaciones de imagen rinden de verdad en un vivero pequeño?",
+      "opciones": [
+        "Contar puntos oscuros sobre trampas amarillas, con un umbral de color y sin entrenar nada.",
+        "Comparar la misma escena en el tiempo desde un punto fijo, porque el ojo detecta mal los cambios lentos.",
+        "Detectar ausencias: huecos en bandejas o filas incompletas, que es conteo geométrico.",
+        "Identificar la especie de hongo a partir de una foto de la lesión."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras no requieren modelos, requieren disciplina y un punto de referencia fijo. Y en las trampas lo que importa no es el número absoluto sino la tendencia, que es exactamente lo que pide el umbral de acción del manejo integrado."
+    },
+    {
+      "id": "obstaculos-de-datos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué impide que un modelo de diagnóstico funcione aquí?",
+      "opciones": [
+        "Los conjuntos públicos se tomaron con hojas arrancadas sobre fondo liso y con especies de otros lugares.",
+        "Las clases están desbalanceadas: decir siempre «sana» acierta el 95 % y no sirve de nada.",
+        "Con una condición rara, incluso un buen detector produce sobre todo falsas alarmas.",
+        "La resolución de las cámaras asequibles es insuficiente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La resolución no es el cuello de botella: los tres obstáculos son de datos, no de hardware ni de código. Y el efecto de las tasas base es el que más gente ignora."
+    },
+    {
+      "id": "tasas-base",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si de mil plantas hay diez enfermas y el detector encuentra nueve pero marca por error cincuenta sanas, menos de uno de cada seis avisos es cierto.",
+      "respuesta": true,
+      "explicacion": "Correcto: cincuenta y nueve avisos, nueve ciertos. Y esas cifras corresponden a un detector bastante bueno. La consecuencia práctica es previsible: a las dos semanas nadie hace caso de los avisos, y ese es el verdadero modo de fallo de estos sistemas."
+    },
+    {
+      "id": "regla-asimetrica",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si la cámara no avisa de nada, se puede saltar la ronda de observación esa semana.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la regla más importante de la lección: la cámara añade vigilancia y no sustituye la ronda. Con los hongos de suelo del plátano, que persisten décadas, y con las virosis sin cura, un falso negativo no es un error menor sino la ruina de un lote o de una parcela."
+    },
+    {
+      "id": "como-hacerlo-bien",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué condiciones separan un experimento útil de una pérdida de tiempo?",
+      "opciones": [
+        "Mismo encuadre, misma distancia y misma hora del día.",
+        "Una referencia de color en el encuadre para corregir la dominante de la luz.",
+        "Empezar por umbral de color y conteo, y complicar solo cuando lo simple se quede corto.",
+        "Usar el modelo preentrenado más grande disponible desde el principio."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La variación de iluminación domina cualquier señal biológica: si la luz cambia entre fotos, lo que estás midiendo es el sol. Y si se llega a entrenar, doscientas fotos propias de tus especies con tu luz baten a cien mil de otro sitio."
+    },
+    {
+      "id": "prioridad",
+      "tipo": "verdadero_falso",
+      "enunciado": "El sistema de visión es lo más divertido de construir y no lo más rentable.",
+      "respuesta": true,
+      "explicacion": "Correcto: una alerta de riego cuesta unas horas y evita pérdidas reales, mientras que un sistema de detección por imagen cuesta semanas y su mejor versión realista hace lo mismo que una ronda de observación bien hecha. No significa no hacerlo: significa hacerlo después y como proyecto de mejora."
+    },
+    {
+      "id": "vision-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Decide qué uso de imágenes implementa Rizoma del Sur, en qué orden y con qué límites explícitos.",
+      "respuestaModelo": "Uso imágenes para tres cosas concretas, y ninguna de ellas es diagnosticar.\n\nPrimero, conteo en trampas cromáticas: foto semanal de cada trampa amarilla con el mismo encuadre, y conteo de puntos oscuros sobre fondo amarillo con un umbral de color y un contador de regiones conexas. No hace falta nada más sofisticado. Lo que importa no es el número absoluto sino la tendencia, que es exactamente lo que pide el umbral de acción del módulo de manejo integrado.\n\nSegundo, comparación de la misma escena en el tiempo: foto semanal de cada bancal desde un punto fijo marcado con una estaca. El ojo detecta muy mal los cambios lentos —una planta amarilleando durante tres semanas pasa desapercibida— y una comparación lado a lado lo hace evidente. Esto no requiere ningún modelo, solo disciplina y un punto de referencia.\n\nTercero, detección de ausencias: huecos en bandejas de germinación o filas incompletas. Es conteo geométrico, no diagnóstico, y es fiable.\n\nDescarto el diagnóstico automático a propósito y no por desconocimiento. Un mismo síntoma puede ser deficiencia de hierro, raíz asfixiada, pH desviado o salinidad, y las cuatro son visualmente idénticas en la hoja: lo que las distingue está en el patrón dentro del lote, en el historial de riego y en cómo está la raíz al sacar la planta. Es un límite del dato de entrada y más cómputo no lo arregla.\n\nAdemás, aunque quisiera, las especies de mi catálogo —yautía, culantro, ají dulce, frutales, nativas de sombra— están mal representadas o ausentes en los conjuntos públicos, que se tomaron con hojas arrancadas sobre fondo liso y con cultivos de otros lugares. Y tengo presente el efecto de las tasas base: con pocas plantas enfermas entre muchas sanas, incluso un buen detector produce sobre todo falsas alarmas, y a las dos semanas nadie las mira.\n\nSi algún día entreno algo, lo entreno con fotos propias: doscientas mías, de mis especies, con mi luz y mi fondo, baten a cien mil de otro sitio. Y valido las identificaciones con las instituciones de investigación agrícola de la zona antes de etiquetar, porque una base mal etiquetada es peor que no tenerla: propaga errores con apariencia de dato.\n\nPara que cualquier comparación signifique algo, fijo la escena: mismo encuadre, misma distancia y misma hora, e incluyo una referencia de color en el cuadro para corregir la dominante de la luz. Bajo malla de sombra la iluminación es muy desigual y con manchas de sol móviles, así que la hora fija es especialmente importante; sin eso, lo que mido es el sol y no la planta.\n\nLa regla asimétrica es innegociable: la cámara añade vigilancia y no sustituye la ronda de observación. Si avisa, voy a mirar; si no avisa, también voy a mirar. Con los hongos de suelo del plátano, que persisten décadas en el terreno, y con las virosis sin cura, un falso negativo no es un error menor sino la ruina de un lote o de una parcela.\n\nEn cuanto al orden, soy honesto: este es el proyecto más divertido del módulo y no el más rentable. Va después de las alertas de riego, que cuestan unas horas y evitan pérdidas reales, y lo trato como proyecto de mejora y no como necesidad operativa.\n\nY empiezo por la versión más barata: fotos con el teléfono desde puntos fijos marcados, guardadas por fecha en carpetas. Es el noventa por ciento del beneficio por una fracción del esfuerzo, y no tiene nada que pueda estropearse a la intemperie. Si algún día pongo cámara fija, necesitará las mismas precauciones de caja estanca, sombra y protección de cable que el controlador.",
+      "criterios": [
+        "Elige conteo en trampas, comparación temporal y detección de ausencias.",
+        "Liga el conteo de trampas al umbral de acción y a la tendencia.",
+        "Descarta el diagnóstico automático con la razón correcta.",
+        "Menciona la ausencia de las especies locales en los datos públicos.",
+        "Aplica el razonamiento de tasas base a las falsas alarmas.",
+        "Propone entrenar con datos propios si llega el caso.",
+        "Prevé validar identificaciones antes de etiquetar.",
+        "Fija encuadre, hora y referencia de color.",
+        "Considera la iluminación desigual bajo malla.",
+        "Sostiene la regla asimétrica sobre la ronda de observación.",
+        "Ordena el esfuerzo detrás de las alertas de riego.",
+        "Empieza con el teléfono antes que con cámara fija."
+      ],
+      "explicacion": "Esta lección existe para evitar que el módulo termine construyendo lo más llamativo. La visión por computadora es real y útil, pero su utilidad está en dirigir la atención, no en sustituir el criterio, y ese matiz es lo que separa un proyecto que sirve de uno que se abandona."
+    }
+  ]
+}

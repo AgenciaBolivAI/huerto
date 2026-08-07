@@ -1,0 +1,107 @@
+{
+  "preguntas": [
+    {
+      "id": "los-aliados",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué tipos de enemigos naturales existen y cómo actúan?",
+      "opciones": [
+        "Depredadores, que comen presas enteras y necesitan muchas.",
+        "Parasitoides, avispitas que ponen un huevo dentro de la plaga y la matan desde adentro.",
+        "Hongos y bacterias que infectan artrópodos, algunos de ellos vendidos formulados.",
+        "Todos actúan igual, así que se pueden sustituir unos por otros."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Falta además la vida del sustrato, que no mata sino que ocupa el sitio primero y compite con los patógenos por espacio y recursos. Y hay un detalle práctico importante: las larvas suelen comer más que los adultos y muchas veces no se parecen en nada a ellos, así que la gente las mata creyendo que son plagas."
+    },
+    {
+      "id": "las-tres-formas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué forma de control biológico es realista para un vivero pequeño?",
+      "opciones": [
+        "Conservación: no matar a los que ya están y darles lo que necesitan.",
+        "Es gratis y la más eficaz en un predio rodeado de vegetación.",
+        "Se destruye con una sola aplicación de amplio espectro.",
+        "Control biológico clásico: introducir una especie exótica para controlar otra."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El control biológico clásico no es cosa de un vivero: son programas oficiales, regulados y con años de estudio previo, precisamente porque introducir una especie tiene consecuencias irreversibles. El aumento —comprar y soltar— sí es viable si hay proveedor local. Pero la conservación se hace, sobre todo, no haciendo cosas."
+    },
+    {
+      "id": "la-momia",
+      "tipo": "opcion_multiple",
+      "enunciado": "Ves varios pulgones hinchados, duros y de color bronce pegados al tallo. ¿Qué son y qué haces?",
+      "opciones": [
+        "Son pulgones parasitados por una avispita que se está desarrollando dentro.",
+        "El agujero redondo en el dorso indica que la avispa adulta ya salió.",
+        "Muchas momias significan que la colonia se va a desplomar sola en pocos días.",
+        "Es una plaga distinta y más resistente, así que hay que fumigar de inmediato."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Fumigar en ese momento es lo peor posible: mata a las avispas que van a nacer y deja al pulgón superviviente sin ningún enemigo. Es intervenir sobre un sistema que ya estaba convergiendo, guiándose por un indicador retrasado."
+    },
+    {
+      "id": "flores",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un vivero perfectamente limpio, sin una sola flor, favorece a los enemigos naturales porque no hay competencia.",
+      "respuesta": false,
+      "explicacion": "Falso: los adultos de casi todos los depredadores y parasitoides no comen plagas, comen néctar y polen. Sin flores no tienen qué comer y no se quedan a poner huevos. Y las avispitas parasitoides son diminutas: necesitan flores pequeñas y planas, con el néctar accesible, y florecidas durante todo el año."
+    },
+    {
+      "id": "cero-plagas",
+      "tipo": "verdadero_falso",
+      "enunciado": "El objetivo de cero plagas es compatible con conservar el control biológico.",
+      "respuesta": false,
+      "explicacion": "Falso: un enemigo natural no se mantiene donde no hay presa. Si el objetivo es cero plagas, el resultado inevitable es cero enemigos naturales, y a partir de ahí cada brote empieza sin ningún freno. Una población baja de plaga no es un fracaso: es la que mantiene viva a la que la controla."
+    },
+    {
+      "id": "jabon-y-aceite",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo funcionan el jabón y el aceite y qué condiciones tienen?",
+      "opciones": [
+        "El jabón desorganiza la cubierta exterior de los insectos de cuerpo blando y los deshidrata.",
+        "El aceite actúa por asfixia, cubriendo al insecto y sellando sus aberturas respiratorias.",
+        "Ambos exigen contacto directo, cobertura del envés, y no dejan residuo protector.",
+        "Ambos son inocuos para la planta en cualquier condición por ser naturales."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los dos pueden quemar hojas sensibles, sobre todo aplicados al sol, y el aceite tiene más riesgo de quemadura con calor, que en Santa Cruz no es un detalle. Si algo tiene efecto sobre un ser vivo, es una sustancia activa, se llame como se llame."
+    },
+    {
+      "id": "tabaco",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué no deben usarse los preparados de tabaco?",
+      "opciones": [
+        "La nicotina es muy tóxica para las personas, incluso por contacto con la piel.",
+        "El material de tabaco puede transmitir virus a las solanáceas.",
+        "En un vivero que produce ají, eso significa introducir el problema que se intentaba evitar.",
+        "Porque no tienen ningún efecto sobre los insectos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Efecto sí tiene: la nicotina es un insecticida potente, y ese es justamente el problema. Hay muchas alternativas mejores, y esta receta tradicional es de las que conviene dejar en el pasado."
+    },
+    {
+      "id": "biologico-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña la estrategia biológica de Rizoma del Sur y su política de preparados: qué haces, qué dejas de hacer y qué usas.",
+      "respuestaModelo": "La estrategia es de conservación, y se implementa sobre todo con decisiones que ya están tomadas. De hecho, no aplicar productos de amplio espectro es en sí mismo el programa de control biológico: un predio de dos mil cuatrocientos setenta y cuatro metros cuadrados rodeado de vegetación tiene una fauna de enemigos naturales considerable trabajando gratis, y lo único que hace falta para conservarla es no matarla.\n\nInstalo una franja florida permanente al borde de las zonas de cultivo, con flores pequeñas, abiertas y de varias especies, con floraciones escalonadas para que siempre haya algo. Las avispitas parasitoides son diminutas y no pueden entrar en flores grandes y profundas. Y aprovecho una sinergia: las hierbas del catálogo que dejo florecer para semilla —el culantro a pleno sol, por ejemplo— ya cumplen esa función, así que el banco de semilla y la franja de flores pueden ser lo mismo.\n\nDoy refugio y agua: la línea de gandul, un borde sin barrer, algo de cobertura y un plato de agua poco profundo con piedras para que puedan beber sin ahogarse. Todo cuesta prácticamente nada y en la seca cambia mucho.\n\nAcepto una población baja de plaga, porque es la condición para que los enemigos naturales se queden. Eso encaja con el umbral por zona: bajo en ornamentales, alto en árboles.\n\nY aprendo a reconocer dos cosas que evitan la mayoría de las aplicaciones innecesarias. La larva de mariquita, que no se parece nada a la mariquita y que mucha gente mata. Y la momia: el pulgón hinchado, duro y bronceado, con un agujero redondo en el dorso si la avispa ya salió. Si veo muchas momias, la colonia se va a desplomar sola en días y fumigar sería lo peor que podría hacer.\n\nCon los preparados, jabón y aceite son mis herramientas realistas, entendiendo cómo funcionan: el jabón desorganiza la cubierta de los insectos blandos y el aceite los asfixia. Los dos exigen contacto directo, mojar el envés y no dejan residuo protector. En este clima aplico temprano y nunca al sol, porque el riesgo de quemadura con calor es real.\n\nEl nim, si lo consigo formulado y con etiqueta, tiene actividad real y documentada y merece considerarse; un preparado casero de hoja o semilla tiene concentración desconocida y muy variable, y para tratar un lote de venta esa diferencia importa. Los purines de ajo y ají pueden acompañar, sin esperar de ellos lo que no dan: su efecto es sobre todo repelente, débil e inconsistente.\n\nLos caldos minerales, bordelés y sulfocálcico, son fungicidas reales y no son inocuos: corrosivos, pueden quemar la planta y el cobre se acumula en el suelo. Los uso con la misma seriedad que cualquier producto.\n\nY el tabaco queda fuera de la lista, por toxicidad para quien aplica y por riesgo de transmitir virus a las solanáceas del catálogo.\n\nDos hábitos obligatorios con cualquier preparado: probar en pocas plantas de cada especie y esperar dos días antes de tratar el lote, porque la fitotoxicidad depende de especie, concentración, temperatura y hora; y no mezclar por intuición, que es la forma más común de provocar una quemadura y de anular los dos efectos.\n\nAnoto cada preparado igual que un producto comercial: qué, dónde, cuándo, a qué concentración y qué pasó después, comparando siempre contra un testigo sin tratar. Sin testigo no hay forma de saber si funcionó el preparado o si el problema se resolvió solo.\n\nY averiguo qué bioinsumos registrados hay disponibles en Santa Cruz, sabiendo que un producto biológico también está regulado y también tiene etiqueta.",
+      "criterios": [
+        "Elige conservación y entiende que consiste sobre todo en no aplicar amplio espectro.",
+        "Instala franja florida permanente con flores pequeñas y escalonadas.",
+        "Aprovecha las plantas del catálogo dejadas florecer para semilla.",
+        "Provee refugio y agua poco profunda.",
+        "Acepta población baja de plaga y la liga al umbral por zona.",
+        "Reconoce la larva de depredador y la momia como señales.",
+        "Explica el mecanismo de jabón y aceite y sus tres condiciones.",
+        "Aplica temprano y nunca al sol por riesgo de fitotoxicidad.",
+        "Valora el nim formulado por encima del preparado casero de concentración desconocida.",
+        "Es honesto sobre el efecto débil de purines de ajo y ají.",
+        "Trata los caldos minerales con la seriedad de un producto.",
+        "Descarta el tabaco por toxicidad y por virus.",
+        "Prueba en pocas plantas dos días antes y no mezcla por intuición.",
+        "Registra y compara contra un testigo sin tratar.",
+        "Averigua la oferta local de bioinsumos y sabe que están regulados."
+      ],
+      "explicacion": "Fíjate en que la parte más eficaz de esta lección no cuesta dinero y consiste en abstenerse: no aplicar amplio espectro, no matar lo que no se reconoce y no fumigar cuando aparecen momias. Lo que sí cuesta trabajo es aprender a mirar."
+    }
+  ]
+}

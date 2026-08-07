@@ -1,0 +1,105 @@
+{
+  "preguntas": [
+    {
+      "id": "enroscamiento",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué pasa con una raíz que dio vueltas dentro del envase?",
+      "opciones": [
+        "Al plantar, la estructura principal se queda enrollada porque las raíces gruesas ya están lignificadas.",
+        "El árbol queda sostenido por un sistema de raíces del tamaño de la maceta de la que salió.",
+        "Una raíz circular alrededor del cuello va engrosando y termina estrangulando el tronco.",
+        "Al plantarla en tierra abierta las raíces se desenroscan y salen a explorar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Lo de desenroscarse es justo lo que la intuición espera y no ocurre: algunas raíces finas salen, pero la estructura gruesa se queda en círculo. El resultado es un árbol que aguanta unos años y se vuelca con el primer viento fuerte, con el suelo levantado de un lado, y siempre se le echa la culpa al viento. El estrangulamiento es el mismo mecanismo del anillado del acodo, pero involuntario y letal."
+    },
+    {
+      "id": "defecto-invisible",
+      "tipo": "verdadero_falso",
+      "enunciado": "El enroscamiento es un defecto que el cliente puede evaluar en el momento de comprar la planta.",
+      "respuesta": false,
+      "explicacion": "Falso: es invisible en la compra y devastador a largo plazo, porque el árbol muere o se derrumba cinco o diez años después y nadie relaciona el desastre con el envase de vivero. Eso convierte el control del enroscamiento en el tipo de calidad que hay que saber explicar al vender, precisamente porque no se ve."
+    },
+    {
+      "id": "poda-aerea",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo funciona la poda aérea de raíz?",
+      "opciones": [
+        "La raíz asoma por la abertura, se encuentra con aire seco y la punta muere.",
+        "Al perder la punta la raíz ramifica, igual que un tallo al que se le quita la yema apical.",
+        "Hacen falta las dos cosas: fondo abierto y envase elevado con aire libre debajo.",
+        "Basta con perforar el fondo del envase, aunque se apoye directamente en el suelo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un envase con fondo abierto apoyado en el suelo no poda nada: la raíz sale por el agujero, encuentra tierra húmeda y sigue creciendo hacia fuera, y al levantar la planta se arranca esa raíz y se pierde media planta. Un banco elevado con malla, o una estructura de listones que deje aire debajo, es de las mejoras más baratas y más subestimadas de un vivero."
+    },
+    {
+      "id": "envases-por-etapa",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué resuelve bien cada envase?",
+      "opciones": [
+        "La bandeja de alvéolos permite muchas plantas en poca superficie y manejo por bandeja entera.",
+        "El tubete guía la raíz hacia abajo con costillas y hace poda aérea por el fondo abierto.",
+        "La bolsa de polietileno es baratísima pero no tiene geometría que impida el enroscamiento.",
+        "La maceta rígida es la opción más económica para el grueso de la producción."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La maceta rígida es cara y ocupa mucho en almacén: se justifica en ornamentales de presentación y en frutales de buen tamaño, y en poco más. La bolsa se puede mejorar bastante con perforaciones laterales generosas y apoyándola sobre una superficie donde la raíz no pueda enraizar hacia abajo."
+    },
+    {
+      "id": "costo-por-uso",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un tubete que cuesta muchas veces más que una bolsa siempre sale más caro por planta.",
+      "respuesta": false,
+      "explicacion": "Falso si aguanta decenas de ciclos: el costo por uso es el precio dividido entre el número de usos más el lavado y la desinfección, y con esa cuenta el tubete suele salir más barato. Pero hay una trampa: la disciplina de recuperarlos, lavarlos y guardarlos es el verdadero costo. Si se pierden en el campo o se rompen amontonados, el cálculo se invierte, y entonces la bolsa es la decisión correcta."
+    },
+    {
+      "id": "no-saltar-envase",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué no se planta un plantín pequeño directamente en el envase final?",
+      "opciones": [
+        "El sustrato sin raíces no se seca, porque son las raíces las que extraen el agua.",
+        "El plantín queda rodeado de un volumen permanentemente húmedo y sin aire.",
+        "Se gasta sustrato y espacio de vivero en un volumen que la planta no usa.",
+        "Es correcto hacerlo, porque ahorra un trasplante y el estrés que conlleva."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El ahorro es aparente: lo que se gana en un trasplante se pierde en pudrición de raíz, sustrato y espacio. La regla es que cada trasplante sube un escalón de tamaño y se hace cuando las raíces ya ocuparon el envase actual, lo que se comprueba sacando la planta y viendo si el cepellón se mantiene entero al levantarlo."
+    },
+    {
+      "id": "alto-vs-ancho",
+      "tipo": "opcion_multiple",
+      "enunciado": "Entre dos envases del mismo volumen, ¿por qué preferir el alto y estrecho?",
+      "opciones": [
+        "La capa saturada mide lo mismo, así que en el alto se lleva una fracción menor del volumen.",
+        "Se parece más a lo que hace la raíz en el suelo, que baja antes de repartirse.",
+        "Ocupa menos superficie de vivero por planta, que suele ser el cuello de botella.",
+        "No tiene ningún inconveniente frente al envase ancho."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Sí tiene un inconveniente, y es de estabilidad: un envase muy alto y estrecho con una planta grande encima se vuelca, sobre todo con el viento del sur. Por eso la mezcla de envase grande llevaba arena, y por eso las plantas altas se agrupan juntas para sostenerse entre ellas."
+    },
+    {
+      "id": "envases-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define el sistema de envases de Rizoma del Sur: qué envase en cada etapa, con qué correcciones, y la escalera completa de un frutal injertado.",
+      "respuestaModelo": "El envase es la decisión con más impacto por peso en la reputación del vivero, precisamente porque el defecto que evita es invisible en el momento de la venta.\n\nBandeja de alvéolos para almácigo, siempre sobre bancos elevados con superficie de malla o de listones, y con la mezcla gruesa de la lección anterior, porque el alvéolo es el peor caso posible de capa saturada: mide pocos centímetros y esa capa se lleva casi todo el volumen.\n\nBolsa de polietileno para el grueso del crecimiento, que es la decisión económica correcta en esta región y además lo que el cliente local espera ver. Pero con dos correcciones que casi nadie hace: perforaciones laterales generosas además de las del fondo, y apoyo sobre malla o sobre grava y nunca sobre tierra desnuda, para que la raíz que asome no se enganche al suelo y se arranque al levantar la planta. Solo con eso el cepellón que sale es muy superior al estándar de la zona.\n\nTubete para los frutales injertados, que son el producto de más valor y el que más años va a vivir en casa del cliente. Ahí el enroscamiento es un desastre a diez años y el tubete lo previene con sus costillas verticales y su fondo abierto. Como los frutales se venden con más margen, absorben el costo del envase. Y como pasan a bolsa antes de la venta, el tubete se recupera dentro del vivero: el proceso de retorno es interno y por tanto realista, que es justo la condición que hace o deshace el cálculo del costo por uso.\n\nLos bancos elevados no son un lujo, son la mitad del sistema: sin aire libre debajo, el fondo abierto no poda nada. Una estructura simple de listones o postes con malla encima, a la altura cómoda que salió en la lección del layout, resuelve a la vez la poda aérea, la ergonomía y el drenaje.\n\nLa escalera completa de un frutal injertado queda así: alvéolo o tubete pequeño para germinar el patrón de semilla; tubete para criarlo hasta grosor de lápiz, que es el grosor de injerto; bolsa mediana después de injertar; y bolsa grande para la venta. Cuatro etapas, y en cada una las raíces tienen que haber ocupado el envase antes de pasar a la siguiente, cosa que compruebo sacando la planta y viendo si el cepellón se mantiene entero.\n\nEn cada trasplante, si el cepellón viene enroscado, intervengo: aflojo el exterior con los dedos, desenredo las raíces circulares y corto las gruesas que dan una vuelta completa. Suena brutal y es lo correcto, porque una raíz cortada rebrota en varias y una raíz circular no se arregla nunca. Con cepellones muy enroscados, tres o cuatro cortes verticales por los costados fuerzan la ramificación hacia fuera.\n\nPrefiero envases altos y estrechos a envases anchos del mismo volumen, por las tres razones: se encharcan menos porque la capa saturada se lleva una fracción menor, se parecen más a lo que hace la raíz en el suelo, y ocupan menos superficie de crecimiento, que es mi cuello de botella. El límite es la estabilidad, y por eso la mezcla de envase grande lleva arena y las plantas altas se agrupan juntas para no volcarse con el surazo.\n\nLos envases recuperados se cepillan para quitar el sustrato pegado, que es donde vive casi todo, se lavan con agua y detergente y se desinfectan con lavandina diluida o dejándolos varios días al sol. Se guardan secos, bajo techo y boca abajo: lo primero es sanidad vegetal y lo segundo es control de dengue, porque un montón de envases a la intemperie con agua adentro es criadero de Aedes aegypti, y aquí eso no es un tema aparte del vivero.\n\nY dos consideraciones locales: no compro bolsa de espesor demasiado fino aunque salga más barata, porque el sol de la llanura vuelve quebradizo el polietileno en pocos meses y se rompe justo al levantar la planta; y decido desde el principio qué hago con las bolsas rotas, porque un vivero pequeño genera una cantidad sorprendente al año y no hay infraestructura de reciclaje sólida en la zona.",
+      "criterios": [
+        "Usa bandeja de alvéolos sobre bancos elevados y mezcla gruesa, con el argumento de la capa saturada.",
+        "Elige bolsa para el grueso del crecimiento por economía y por expectativa del cliente.",
+        "Corrige la bolsa con perforaciones laterales y apoyo sobre malla o grava.",
+        "Reserva el tubete para frutales injertados y justifica con el valor y la vida útil.",
+        "Reconoce que el retorno interno del tubete es lo que hace realista el costo por uso.",
+        "Trata los bancos elevados como condición de la poda aérea.",
+        "Describe la escalera de cuatro envases del frutal injertado.",
+        "Comprueba el momento del trasplante con el cepellón entero.",
+        "Interviene los cepellones enroscados aflojando, desenredando y cortando.",
+        "Prefiere envases altos y estrechos y nombra el límite de estabilidad.",
+        "Cepilla, lava, desinfecta y guarda los envases boca abajo bajo techo.",
+        "Relaciona el almacenamiento de envases con el control del dengue.",
+        "Evita el polietileno demasiado fino por la degradación al sol."
+      ],
+      "explicacion": "Fíjate en el patrón que se repite en todo el módulo: la decisión barata que se toma hoy determina un resultado caro dentro de años. El envase cuesta centavos y decide si el árbol sigue de pie a los diez años, y eso convierte una compra de logística en una decisión de calidad del producto."
+    }
+  ]
+}

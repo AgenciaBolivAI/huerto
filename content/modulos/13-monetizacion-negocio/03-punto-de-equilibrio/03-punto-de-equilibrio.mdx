@@ -1,0 +1,201 @@
+Con el costo y el precio ya se sabe cuánto deja cada planta. Falta la pregunta que decide si el negocio
+existe o si es una afición cara:
+
+**¿cuántas plantas hay que vender para no perder dinero?**
+
+La respuesta cabe en una división, y lo interesante no es la cuenta sino lo que revela sobre dónde
+conviene actuar.
+
+## Dos clases de costo
+
+<Diagrama
+  src="dos-clases-de-costo.webp"
+  alt="Dos columnas altas lado a lado separadas por una línea divisoria vertical. La columna izquierda contiene, apilados en vertical, el dibujo de una estructura de sombra, un tanque de agua elevado, un juego de herramientas de mano y un reloj, y junto a toda la columna una única barra maciza de ancho constante que va de arriba abajo para indicar algo que no cambia. La columna derecha contiene, apilados en vertical, una bolsa de vivero, una medida de sustrato, una semilla y un par de manos trabajando, y junto a esa columna una escalera de barras que crece paso a paso para indicar algo que aumenta con cada unidad. Debajo de la columna izquierda, una franja de rótulo que dice ESTÁN AUNQUE NO PRODUZCAS. Debajo de la derecha, otra que dice APARECEN CON CADA PLANTA. Arriba, DOS CLASES DE COSTO."
+  pie="La diferencia no es de importe sino de comportamiento: unos cambian con el volumen y otros no."
+/>
+
+**Los <Termino slug="costo-fijo">costos fijos</Termino> existen aunque no produzcas
+nada.** La <Termino slug="amortizacion">amortización</Termino> de la estructura, del tanque, de la
+malla y de las herramientas; el agua y la electricidad de base; y —muy importante en un vivero
+pequeño— **el tiempo que dedicas pase lo que pase**: regar, vigilar, mantener, atender.
+
+**Los <Termino slug="costo-variable">costos variables</Termino> aparecen con cada planta.** Envase,
+sustrato, material de partida, insumos y el trabajo directo de producir esa planta concreta.
+
+<Dato>
+La distinción no es una sutileza contable: **cambia qué decisión tomas.**
+
+Cuando decides si producir una planta más, los costos fijos son irrelevantes —ya están pagados y no
+cambian—, así que la pregunta es solo si el precio cubre el costo variable. Por eso
+el <Termino slug="margen-de-contribucion">margen de contribución</Termino> de la lección anterior se
+calcula así.
+
+Y cuando decides si el negocio entero se sostiene, los fijos son exactamente lo que hay que cubrir.
+
+**Son dos preguntas distintas y se contestan con números distintos.** Confundirlas es de los errores más
+comunes.
+</Dato>
+
+## Cuántas hay que vender
+
+<Diagrama
+  src="cuantas-hay-que-vender.webp"
+  alt="Un recipiente rectangular alto dibujado como un vaso de medida, de pie en el centro, con una línea horizontal claramente marcada cerca de su borde superior. Una fila de símbolos de planta en maceta entra por la izquierda y de cada planta cae una moneda pequeña dentro del recipiente, de modo que este se va llenando desde abajo con tres columnas de monedas apiladas que llegan exactamente hasta la línea marcada. Más allá de esa línea, por encima del borde, se dibujan monedas de más desbordando y amontonándose fuera del recipiente. Tres franjas de rótulo con líneas de llamada finas: una al espacio vacío del recipiente por encima de las monedas dice LOS COSTOS FIJOS; otra a la fila de plantas que sueltan monedas dice CADA VENTA APORTA SU MARGEN; y otra a las monedas que rebosan por encima de la línea dice AQUÍ EMPIEZAS A GANAR. Arriba, CUÁNTAS HAY QUE VENDER."
+  pie="Hasta llenar el recipiente estás trabajando para pagar lo que existe. Todo lo que entra después es ganancia."
+/>
+
+Con eso, el cálculo es directo:
+
+<Formula explicacion="El punto de equilibrio en unidades es el total de costos fijos de un periodo dividido entre el margen de contribución que deja cada planta vendida. Es el número de plantas que hay que vender en ese periodo para que el resultado sea exactamente cero.">
+punto de equilibrio en plantas = costos fijos del periodo ÷ margen de contribución por planta
+</Formula>
+
+Y como un vivero vende especies con márgenes muy distintos, la versión útil usa un promedio ponderado:
+
+<Formula explicacion="Cuando se venden varias especies con márgenes distintos, se usa el margen medio ponderado por la proporción en que se vende cada una. Cambiar la mezcla de especies cambia ese promedio y, por lo tanto, el punto de equilibrio, aunque no cambie ningún precio.">
+margen medio = suma de (margen de cada especie × proporción que representa en las ventas)
+</Formula>
+
+<Analogia>
+El <Termino slug="punto-de-equilibrio">punto de equilibrio</Termino> es el equivalente económico de
+**la carga base de un sistema.**
+
+Hay un consumo que existe aunque no haya nadie usando el servicio, y hasta cubrirlo cada petición
+atendida solo está pagando la infraestructura. **A partir de ahí, cada petición adicional es casi todo
+beneficio**, porque el costo marginal es bajo.
+
+Y como en cualquier sistema con carga base alta, hay dos formas de mejorar: **subir el rendimiento por
+petición o bajar la carga base.** La segunda casi siempre se olvida.
+</Analogia>
+
+## Dos palancas, una más barata
+
+<Diagrama
+  src="dos-palancas.webp"
+  alt="Dos paneles lado a lado, cada uno con una palanca sencilla apoyada en un punto de apoyo. Panel izquierdo: el brazo de palanca es corto y cómodo, una sola mano pequeña lo empuja suavemente hacia abajo, y en el otro extremo una moneda sube alto; debajo de la palanca hay una esfera de reloj sin ningún sector relleno; debajo, una franja de rótulo que dice SUBIR EL PRECIO NO CUESTA HORAS. Panel derecho: el brazo de palanca es largo y pesado, dos manos empujan con fuerza y líneas de esfuerzo, y en el otro extremo sube una moneda exactamente del mismo tamaño hasta la misma altura; debajo de esa palanca hay una esfera de reloj con un sector muy grande relleno en terracota macizo; debajo, una franja que dice VENDER MÁS SÍ. Arriba, DOS PALANCAS, UNA MÁS BARATA."
+  pie="Las dos llegan al mismo sitio. Una consume tiempo, que es el recurso escaso, y la otra no."
+/>
+
+Para bajar el punto de equilibrio hay exactamente tres palancas, y no valen lo mismo:
+
+**Subir el precio.** Sube el margen por planta, así que hacen falta menos ventas. **Y no consume más
+tiempo**, que es el recurso limitante. Es, con diferencia, la palanca más potente en un vivero pequeño.
+
+**Bajar el costo variable.** Mismo efecto sobre el margen. Aquí la vía más eficaz no es negociar precios
+de insumos sino **reducir la merma**, como decía la primera lección: menos plantas perdidas es
+exactamente lo mismo que menos costo por planta vendida.
+
+**Y vender más.** Funciona, pero **cuesta horas**: más plantas producidas, más manejo, más atención de
+venta. En un vivero operado por una persona, esa palanca choca contra el límite del tiempo mucho antes
+que contra el límite del terreno.
+
+<Advertencia>
+La consecuencia práctica es incómoda pero clara: **si el negocio no cierra, la primera reacción no debe
+ser producir más.**
+
+Producir más es la respuesta intuitiva y la más cara: exige más tiempo, más insumos y más espacio, y si
+el margen por planta es insuficiente, **producir más solo escala el problema.**
+
+El orden correcto de revisión es: **precio, merma, mezcla de especies, y solo al final volumen.**
+
+Y hay una cuarta opción que también cuenta y que casi nunca se considera: **dejar de producir la especie
+que no paga.** Sacarla del catálogo libera espacio y tiempo para las que sí, y baja el punto de
+equilibrio sin vender ni una planta más.
+</Advertencia>
+
+## Los fijos crecen solos
+
+<Diagrama
+  src="los-fijos-crecen-solos.webp"
+  alt="Tres paneles en una fila horizontal unidos por dos flechas terracota gruesas que apuntan a la derecha, cada uno con la misma escena sencilla: una línea roja horizontal que cruza el panel a cierta altura y, por debajo de esa línea, una fila de símbolos pequeños de planta en maceta apoyados en el suelo. En el primer panel la línea roja está baja y hay pocas plantas debajo. En el segundo ha aparecido un elemento nuevo junto a las plantas, un pequeño galpón de herramientas, y la línea roja ha subido, y hay más plantas debajo. En el tercero han aparecido dos elementos más, un tanque de agua y un vehículo, la línea roja ha subido todavía más y la fila de plantas de debajo es mucho más larga y apretada. Dos franjas de rótulo: una bajo el segundo panel dice CADA COSA NUEVA SUBE LA LÍNEA; y otra bajo el tercero dice Y HAY QUE VENDER MÁS PARA LO MISMO. Arriba, LOS FIJOS CRECEN SOLOS."
+  pie="Cada inversión sube el listón sin avisar. La pregunta antes de comprar no es si sirve, sino cuántas plantas más obliga a vender."
+/>
+
+Y aquí está el riesgo silencioso de este módulo:
+
+**Los costos fijos casi nunca bajan y suben con mucha facilidad.** Una herramienta más, un galpón, una
+moto, un ayudante, una estructura más grande. Cada una parece pequeña y todas juntas mueven la línea.
+
+**Y el punto de equilibrio sube con ellos**, lo que significa que hay que vender más para ganar lo
+mismo.
+
+De ahí una pregunta que conviene hacerse antes de cada inversión, y que es mucho más útil que "¿me
+sirve?":
+
+**¿Cuántas plantas más tengo que vender al año para pagar esto?**
+
+Si la respuesta es un número que se alcanza fácil, adelante. Si es un número que obliga a cambiar la
+escala del negocio, entonces la inversión **no es una compra: es una decisión estratégica**, y hay que
+tratarla como tal.
+
+<Dato>
+Y hay una versión de este cálculo especialmente útil en un negocio estacional como este: **el punto de
+equilibrio en tiempo.**
+
+Si se divide el año en meses y se sabe cuánto se vende en cada uno, se puede ver **cuántos meses del
+año se está simplemente cubriendo costos** y a partir de qué momento se empieza a ganar de verdad.
+
+En un vivero con un pico de ventas al arranque de las lluvias, esa respuesta suele ser incómoda: **buena
+parte del año se trabaja para pagar la existencia del vivero**, y la ganancia se concentra en unas
+pocas semanas.
+
+Eso no es un problema en sí mismo. Es el dato que hace imprescindible la lección siguiente.
+</Dato>
+
+<AplicarRizoma>
+**El punto de equilibrio de Rizoma se calcula el primer año con datos reales, y se usa como semáforo.**
+
+**Los fijos se listan explícitamente**, y son casi todos conocidos porque salen de los módulos
+anteriores: la amortización de la estructura de propagación, del tanque y su plataforma, de la malla,
+del riego y de las herramientas; el agua y la energía de base; y el tiempo que se dedica pase lo que
+pase, que en un vivero pequeño es el fijo más grande y el que nadie apunta.
+
+**Los variables ya están en la hoja por lote** de la primera lección.
+
+**Y el margen medio ponderado depende de la mezcla del catálogo**, lo cual tiene una consecuencia
+importante: **cambiar qué se produce cambia el punto de equilibrio sin tocar ningún precio.** Si el
+culantro y la batata pesan mucho en las ventas, el margen medio será bajo y el punto de equilibrio alto
+en unidades; si pesan más los frutales y las ornamentales, al revés.
+
+**Ante un resultado insuficiente, el orden de revisión es precio, merma, mezcla y solo al final
+volumen.** Producir más es la reacción intuitiva y la más cara, y en este proyecto choca antes contra el
+límite del tiempo que contra el de la superficie.
+
+**Y hay una palanca que conviene tener siempre sobre la mesa: sacar del catálogo la especie que no
+paga.** Libera espacio y tiempo, y baja el punto de equilibrio sin vender una planta más. Para poder
+tomar esa decisión hacen falta los costos por especie de la primera lección; sin ellos, es imposible
+saber cuál sobra.
+
+**Antes de cada inversión, la pregunta es cuántas plantas más obliga a vender al año.** Con el margen
+por especie ya calculado, ese número sale en un minuto y convierte una compra impulsiva en una decisión
+informada.
+
+**Y el punto de equilibrio en tiempo hay que calcularlo**, porque con un pico de ventas concentrado al
+inicio de las lluvias, es previsible que buena parte del año se trabaje solo para cubrir costos. Saberlo
+de antemano es lo que permite planificar la caja en vez de sufrirla.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**En un vivero pequeño y de arranque, el fijo dominante suele ser el tiempo del propio productor**, y
+por eso el punto de equilibrio real es mucho más alto de lo que sugiere una cuenta que solo mire gastos
+en efectivo. Si se calcula sin valorar el trabajo propio, el negocio parece rentable mucho antes de
+serlo.
+
+**Y hay costos fijos de contexto que conviene averiguar temprano**: obligaciones de registro y
+tributarias según la escala y la forma de operar, y cualquier requisito aplicable a un vivero que vende
+plantas. Consultarlo con un contador local al empezar permite incorporarlos al cálculo desde el
+principio en lugar de descubrirlos después.
+
+**El costo de un jornal en la zona es el dato que decide dos cosas a la vez**: cómo valorar la propia
+hora y a partir de qué punto conviene contratar ayuda. Averiguarlo es una gestión de una tarde.
+
+**Y sobre las inversiones**, en un contexto donde los precios de materiales pueden moverse, conviene
+recalcular la amortización con el precio de reposición y no con el precio pagado. Lo que importa para
+seguir operando no es lo que costó la malla hace tres años, sino lo que va a costar la próxima.
+</ContextoBolivia>
+
+## Lo que sigue
+
+El punto de equilibrio dice cuánto hay que vender. La siguiente lección trata de **dónde venderlo**,
+porque el mismo plantín vale precios muy distintos según por qué canal salga, y cada canal exige cosas
+distintas.

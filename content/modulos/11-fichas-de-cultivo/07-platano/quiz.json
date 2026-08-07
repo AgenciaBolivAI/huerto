@@ -1,0 +1,112 @@
+{
+  "preguntas": [
+    {
+      "id": "no-es-un-arbol",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es realmente el 'tronco' de un plátano?",
+      "opciones": [
+        "Un pseudotallo formado por las vainas de las hojas enrolladas unas sobre otras.",
+        "Es rígido por presión hidráulica, no por lignina: al cortarlo hay capas y agua, no madera.",
+        "El tallo verdadero es un cormo subterráneo, del que salen raíces, hojas y yemas.",
+        "Un tronco leñoso con anillos de crecimiento anuales."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hay madera en ninguna parte de la planta: es una herbácea gigante. Y el cormo es el mismo tipo de órgano que ya apareció en la yautía, lo que explica que el manejo se parezca tanto."
+    },
+    {
+      "id": "esteril",
+      "tipo": "verdadero_falso",
+      "enunciado": "Se puede seleccionar y mejorar plátano sembrando semilla de los mejores frutos.",
+      "respuesta": false,
+      "explicacion": "Falso: los plátanos cultivados son híbridos triploides estériles y el fruto se forma sin fecundación, por eso no tiene pepitas. La única propagación posible es vegetativa, y todo plátano del mundo es un clon. Todo lo que dice el curso sobre que la propagación vegetativa no filtra nada aquí no admite excepción."
+    },
+    {
+      "id": "ciclo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo funciona el ciclo de vida de una mata?",
+      "opciones": [
+        "Cada pseudotallo florece una sola vez, da un racimo y muere.",
+        "La mata continúa porque del cormo brotan hijos que toman el relevo.",
+        "Lo que sobrevive indefinidamente es el cormo, no el pseudotallo.",
+        "Cada pseudotallo produce un racimo por año durante varios años."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es un patrón de proceso efímero con estado persistente: cada pseudotallo es un proceso de un solo uso y el cormo es el estado compartido que va lanzando procesos nuevos. Por eso la gestión no consiste en cuidar el brote en curso, sino en decidir cuántos se dejan vivos a la vez."
+    },
+    {
+      "id": "deshije",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué se mantienen solo tres generaciones por mata?",
+      "opciones": [
+        "Sin deshije la mata se convierte en un matorral de pseudotallos delgados que no producen.",
+        "Todos los brotes compiten por la misma agua, la misma luz y las mismas reservas.",
+        "Con madre, hijo y nieto la producción es continua y escalonada.",
+        "Cuantos más brotes se dejen, más racimos da la mata."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la lógica del inventario escalonado del módulo de vivero: no se trata de tener muchas plantas, sino de tenerlas en fases distintas para que siempre haya una lista. Cuando la madre termina, el hijo ya está a punto y el nieto pasa a ser hijo."
+    },
+    {
+      "id": "hijo-de-espada",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuál es el mejor hijuelo para llevarse como material de siembra?",
+      "opciones": [
+        "El de hojas estrechas, rígidas y lanceoladas, con base subterránea ancha y cónica.",
+        "Su base ancha es reserva acumulada y buena conexión con el cormo madre.",
+        "El de hojas anchas y lacias parece más vigoroso y es justo el peor.",
+        "El de hojas más grandes, porque tiene más superficie fotosintética."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La regla intuitiva falla aquí: el que parece mejor es el peor. Lo que se juzga no es el aspecto de la parte aérea sino la reserva y la conexión. La hoja ancha en un hijuelo pequeño indica que ese brote salió sin respaldo y vive de fotosíntesis inmediata."
+    },
+    {
+      "id": "induccion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo multiplica de verdad un vivero esta especie?",
+      "opciones": [
+        "Descabezando el cormo para eliminar el punto de crecimiento principal.",
+        "Al desaparecer la dominancia apical, varias yemas laterales brotan a la vez.",
+        "Cada brote se separa cuando tiene tamaño y se enraíza aparte.",
+        "Sembrando semilla de fruto maduro en almácigo caliente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es quitar el bloqueo para liberar el paralelismo: mientras el ápice manda, los recursos van a un solo hilo de crecimiento y las demás yemas esperan. La misma idea de podar para ramificar, aplicada al órgano subterráneo y con otro objetivo: multiplicar en vez de dar forma."
+    },
+    {
+      "id": "bioseguridad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la bioseguridad es innegociable en este cultivo?",
+      "opciones": [
+        "Hay hongos de suelo que provocan marchitez, persisten décadas y no tienen cura.",
+        "Su vía de entrada principal es el material de siembra y el suelo adherido a él.",
+        "Herramientas, botas, vehículos y agua de escorrentía también mueven suelo.",
+        "Existe un tratamiento de suelo que elimina el problema si se aplica a tiempo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hay tratamiento de suelo viable: el manejo es exclusión, no curación. Es el único caso del curso donde un error de material puede inutilizar el terreno de forma permanente, y por eso la regla no es que convenga usar material de origen conocido, es que es obligatorio."
+    },
+    {
+      "id": "platano-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Plantea la producción de plátano en Rizoma del Sur: material, protección, riego, manejo y propuesta comercial.",
+      "respuestaModelo": "La decisión más importante es el material de partida, y en esta especie no admite atajos. No acepto cormos regalados de procedencia desconocida, por muy buena que sea la intención de quien los ofrece. Las opciones correctas son material de propagación controlada de un proveedor identificable, o material de matas concretas y conocidas cuya sanidad pueda verificar. Y antes de mover material de otra región consulto la situación sanitaria con la autoridad competente, porque hay enfermedades de cuarentena cuya presencia o ausencia en una zona es información oficial y actualizable.\n\nLa razón es contundente: hay hongos de suelo que provocan marchitez en Musa, persisten décadas en el terreno y no tienen cura ni tratamiento de suelo viable. Una parcela contaminada deja de servir para plátano, y no por una temporada. Es el único caso del curso en el que un error de material inutiliza el terreno de forma permanente.\n\nUna vez dentro, protejo: retiro todo el suelo adherido antes de que el material entre al predio, desinfecto herramientas al pasar de mata a mata, controlo el paso de personas entre zonas y vigilo por dónde corre el agua de escorrentía, que mueve suelo. Es trabajo aburrido y es la única defensa que existe.\n\nLa ubicación exige cortaviento y drenaje. Es una planta alta, con racimo pesado y raíz superficial: el surazo la vuelca, sobre todo si las raíces están dañadas por nematodos. Las líneas de gandul no son decorativas, son estructura de protección. Y va en la parte alta o en camellón, porque en suelo encharcado se pudre la raíz y entonces se cae con cualquier viento.\n\nEl riego en la seca no es opcional. Con esa superficie foliar, sin riego de mayo a septiembre la planta no produce. Eso entra en el cálculo de litros por día y en el dimensionado del tanque: el plátano es de las especies que más pesan en ese número.\n\nEl deshije es la operación de rutina: madre, hijo y nieto, y todo lo demás cortado a ras sin dañar el cormo. Con esa disciplina el cultivo produce de forma continua; sin ella se convierte en un matorral improductivo en dos años.\n\nPara elegir qué hijo dejar o llevarme, busco el de espada: hojas estrechas, rígidas y lanceoladas, con base subterránea ancha y bien unida al cormo madre. El de hojas anchas y lacias parece más vigoroso y es el peor, porque salió sin reservas.\n\nY para multiplicar de verdad uso la inducción por decapitación del cormo: al descabezarlo desaparece la dominancia apical y brotan varias yemas laterales en lugar de una. Es la diferencia entre producir unos pocos plantines al año y producir decenas a partir del mismo material de partida.\n\nEn sanidad de rutina, corto y retiro las hojas afectadas por manchas foliares, mantengo densidad razonable y circulación de aire, retiro restos de pseudotallo —que son refugio y criadero del picudo— y uso trozos del propio pseudotallo cortado como trampa.\n\nEl calendario: planto con las lluvias, de octubre en adelante, porque el establecimiento exige mucha agua; de enero a abril es el crecimiento máximo; y de mayo a septiembre sostengo el riego, que es cuando se pierden plantas por dejarlas secas. La venta del plantín se concentra al inicio de las lluvias.\n\nComercialmente, mi producto es el plantín de origen conocido y sanidad verificable. En un cultivo donde el material contaminado puede inutilizar el terreno de un cliente para siempre, esa es la propuesta de mayor valor que puedo ofrecer, y también la que más seriedad exige para sostenerla.\n\nY hay un beneficio interno: una línea de plátano en el predio da sombra, biomasa abundante para cobertura y una pantalla verde considerable. Igual que el gandul, también hace de infraestructura.",
+      "criterios": [
+        "Rechaza material de procedencia desconocida y exige origen identificable.",
+        "Consulta la situación sanitaria con la autoridad competente antes de mover material.",
+        "Explica que las enfermedades de suelo persisten décadas y no tienen cura.",
+        "Aplica limpieza de suelo adherido, desinfección de herramientas y control de paso.",
+        "Ubica el cultivo con cortaviento y liga el gandul a esa función.",
+        "Usa camellón o parte alta por drenaje y por riesgo de vuelco.",
+        "Incluye el riego de la seca en el cálculo de litros por día y en el tanque.",
+        "Ejecuta el deshije de madre, hijo y nieto.",
+        "Selecciona hijos de espada y descarta los de hoja ancha.",
+        "Multiplica por inducción de brotación al descabezar el cormo.",
+        "Maneja manchas foliares retirando hojas y el picudo retirando restos y con trampas.",
+        "Planta con las lluvias y vende el plantín al inicio de la temporada.",
+        "Define el producto como plantín de origen conocido y sanidad verificable.",
+        "Aprovecha el cultivo como sombra y biomasa dentro del predio."
+      ],
+      "explicacion": "Fíjate en que en esta ficha el valor comercial y la exigencia técnica son la misma cosa: lo que hace que el plantín valga es exactamente el trabajo aburrido de bioseguridad. No hay atajo que produzca el producto sin hacer el trabajo."
+    }
+  ]
+}

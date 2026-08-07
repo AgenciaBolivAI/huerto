@@ -1,0 +1,100 @@
+{
+  "preguntas": [
+    {
+      "id": "cinco-lecturas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se levanta de un terreno antes de decidir dónde va cada zona?",
+      "opciones": [
+        "En qué franja da el sol todo el día y qué franja recibe sombra, y a qué hora.",
+        "De dónde viene el viento habitual y de dónde entra el surazo.",
+        "Dónde está el punto de agua y hacia dónde escurre la lluvia.",
+        "Basta con una imagen de satélite y las medidas del título de propiedad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las cinco lecturas se hacen en el terreno y con el terreno delante, no de memoria ni desde una foto. Y dos de ellas exigen volver en otro momento: la sombra hay que verla a distintas horas, y el escurrimiento durante una lluvia de verdad. Es el mismo principio que en cualquier otro sistema: medir en producción, no suponer desde el diseño."
+    },
+    {
+      "id": "el-sol-por-el-norte",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un galpón proyecta su sombra hacia el norte, así que lo que quede al norte de él pierde sol.",
+      "respuesta": false,
+      "explicacion": "Falso: en el hemisferio sur el sol pasa por el norte, de modo que las sombras caen hacia el sur. Lo que pierde sol es lo que quede al sur de la construcción o de la fila de árboles. Es lo contrario de lo que dicen los manuales escritos en el hemisferio norte, y es el mismo hecho que decide hacia dónde se orientan los paneles solares."
+    },
+    {
+      "id": "cortaviento",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para proteger del surazo conviene un muro macizo, porque bloquea el viento por completo.",
+      "respuesta": false,
+      "explicacion": "Falso: una barrera sólida obliga al viento a saltarla y a caer en remolino justo detrás, con turbulencia que puede dañar más que el viento original. Una barrera permeable, que deje pasar del orden de la mitad del aire, lo frena de forma progresiva y protege una franja mucho más larga, del orden de diez veces su altura."
+    },
+    {
+      "id": "asignar-zonas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se asignan las zonas a las partes del terreno?",
+      "opciones": [
+        "Empezando por propagación, que es la más exigente, y dándole el mejor sitio disponible.",
+        "Poniendo endurecimiento donde nada le dé sombra, porque necesita justo lo contrario que propagación.",
+        "Dejando para el final las zonas que se acomodan en cualquier parte.",
+        "Empezando por las zonas flexibles, que son las que más superficie ocupan."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Empezar por las flexibles es el error: si las colocas primero, te quedas sin sitio para las exigentes. Es una asignación con restricciones, igual que repartir servicios entre máquinas, y se resuelve empezando por el que tiene los requisitos más duros. Nota que propagación quiere sombra y endurecimiento quiere sol pleno: son requisitos opuestos que no pueden compartir sitio."
+    },
+    {
+      "id": "anchos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿De dónde salen los anchos de camas y caminos?",
+      "opciones": [
+        "Del alcance del brazo, unos 60 o 70 cm, que fija cuánto se puede atender sin pisar.",
+        "Una cama con paso por los dos lados puede llegar a 1,20 m; contra una pared no debe pasar de 0,70 m.",
+        "El camino principal necesita al menos 1,20 m porque por ahí va la carretilla cargada.",
+        "Conviene apurar los anchos de camino al mínimo para no perder superficie productiva."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Apurar los caminos es el error clásico. Un camino demasiado ancho cuesta unos metros cuadrados una vez; uno demasiado estrecho cuesta todos los días durante años, porque la carretilla no pasa, hay que descargar a mano, se rozan las plantas de los bordes y al final se abre el camino a la fuerza pisando el cultivo. El largo de las camas, en cambio, es libre: lo que cuesta trabajo es rodearlas, no recorrerlas."
+    },
+    {
+      "id": "aprovechamiento",
+      "tipo": "opcion_multiple",
+      "enunciado": "Necesitas 60 m² de plantas en crecimiento. Con camas de 1,20 m y caminos de 0,60 m, ¿qué se concluye?",
+      "opciones": [
+        "El módulo que se repite mide 1,80 m, de los cuales 1,20 llevan plantas: dos tercios de aprovechamiento.",
+        "Hay que reservar unos 90 m² de terreno para conseguir esos 60 m² de plantas.",
+        "Si el camino sube a 1,00 m el módulo pasa a 2,20 m y el aprovechamiento cae a algo más de la mitad.",
+        "60 m² de terreno bastan, porque el cálculo de la lección anterior ya era en metros de terreno."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El cálculo de la lección anterior daba metros cuadrados de plantas, no de terreno. Si aplicas esa cifra directamente al terreno te quedas corto en un tercio, y lo descubres cuando ya no hay sitio. Los caminos no son espacio desperdiciado: son la condición para que el resto sirva de algo, igual que nadie planifica un disco al cien por cien de su capacidad."
+    },
+    {
+      "id": "del-croquis-al-plano",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si al pasar el croquis a escala el perímetro no cierra o las diagonales no cuadran, se ajusta el dibujo y se sigue.",
+      "respuesta": false,
+      "explicacion": "Falso: ese desajuste es la señal de que algo se midió mal en el terreno, y hay que volver a medir. Ajustar el dibujo para que cierre significa llevarse el error escondido hasta el replanteo, donde ya cuesta estacas, cuerda y trabajo rehecho. Las diagonales están precisamente para eso: son la comprobación del levantamiento."
+    },
+    {
+      "id": "trazado-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Levanta y traza el terreno de Rizoma del Sur: qué mides, qué zona pones dónde, con qué medidas, y cuánta superficie útil te queda.",
+      "respuestaModelo": "Primero las cinco lecturas, en el terreno y en momentos distintos.\n\nEl sol pasa por el norte, así que la sombra de cualquier construcción, del galpón o de una fila de árboles cae hacia el sur. Eso lo tengo que proyectar a tres años vista, no a hoy: el cortaviento y las plantas madre que planto ahora van a dar sombra después, y hay que contar con esa sombra futura.\n\nEl viento tiene dos regímenes: el habitual del norte, cálido, y el surazo, que entra del sur varias veces al año con viento fuerte y noches de unos diez grados. Eso manda en el trazado: propagación, almácigos y camas de enraizamiento van protegidos por el lado sur, con cortaviento o con la propia construcción de pantalla. Y el cortaviento va permeable, no macizo, porque un muro sólido genera turbulencia justo detrás; una barrera que deja pasar la mitad del aire protege una franja de unas diez veces su altura.\n\nEl agua: el punto de conexión o el pozo condiciona dónde van los grandes consumidores, que son propagación y crecimiento. En la seca hay que regar a diario, así que la red se dibuja en el plano desde el principio.\n\nEl acceso define dónde va el despacho y la zona de mezcla de sustrato, que es lo más pesado que se mueve.\n\nY el escurrimiento hay que mirarlo en enero, con el terreno mojado. Sobre arcillas expansivas el agua no se infiltra, se queda. El punto bajo no lleva ni propagación ni crecimiento; como mucho camino con superficie tratada, o el sitio de residuos.\n\nCon eso encima, asigno empezando por la zona más exigente. Propagación primero, en el extremo protegido del sur y lejos del portón. Endurecimiento donde nada le dé sombra, nunca al sur de una construcción. Crecimiento ocupando el grueso del terreno. Despacho junto al acceso. Y madres en un lateral, cerca de propagación pero fuera de la línea.\n\nLas medidas: camas y mesas de 1,20 m con paso por los dos lados, porque una persona alcanza unos 60 o 70 cm y así cada mitad se atiende desde su lado; 0,70 m como máximo donde la cama quede contra un límite o una pared. El largo lo dejo libre, porque una cama de diez metros no cuesta más trabajo que dos de cinco. Camino principal de 1,20 m, recto y de punta a punta hasta el despacho, para que pase la carretilla cargada; secundarios de 0,60 m; pasos entre camas de 0,50 m si solo se usan para regar y revisar.\n\nY todos los caminos cubiertos. Tierra compactada aguanta la seca y desaparece en la lluvia: sobre arcilla expansiva, en enero, es barro que se pega a las botas y a las ruedas. Cascarilla de arroz gruesa en los secundarios, que aquí es residuo abundante de los ingenios arroceros y además frena malezas; ripio o ladrillo partido en el principal, que es donde pesa la carretilla.\n\nLa superficie útil: con camas de 1,20 y caminos de 0,60, el módulo que se repite mide 1,80 m y lleva plantas en 1,20, o sea dos tercios de aprovechamiento. Sobre 2.474 m² brutos eso deja del orden de mil seiscientos metros cuadrados con plantas, y todavía hay que descontar el bloque de madres, el despacho y la zona de mezcla. Es una cifra bastante menor que la del título de propiedad, y es la que hay que usar para planificar.\n\nEl proceso de dibujo, sin saltarme pasos: croquis a mano en el sitio con todas las medidas anotadas, incluidas las diagonales; pasarlo a escala en la mesa y comprobar que cierra, porque si no cierra es que medí mal y hay que volver; dibujar encima zonas y caminos, varias veces, que es donde se prueban alternativas y cambiar de idea cuesta una goma de borrar; acotar todo, porque sin cotas el plano no se puede replantear; y replantear con estacas, cuerda y cinta.\n\nY dos decisiones que tomo ahora porque después serían caras: por dónde va a crecer el vivero, dejando ese lado libre y con los caminos ya trazados hacia allá, aprovechando que los ocho lotes contiguos permiten ampliar lote a lote sin rehacer el trazado; y la ubicación de todo lo que acumule agua limpia, porque cualquier recipiente destapado es criadero de Aedes aegypti y aquí el dengue es endémico: tanques tapados, envases vacíos bajo techo o boca abajo, y puntos bajos drenados o rellenados.",
+      "criterios": [
+        "Levanta las cinco lecturas y distingue las que exigen volver en otro momento.",
+        "Aplica que el sol pasa por el norte y proyecta la sombra futura a tres años.",
+        "Protege propagación del sur y elige cortaviento permeable, no macizo.",
+        "Sitúa endurecimiento donde nada le dé sombra.",
+        "Empieza la asignación por la zona de restricciones más duras.",
+        "Deja madres en un lateral y despacho junto al acceso.",
+        "Usa 1,20 m de cama a dos lados y 0,70 m contra una pared, justificando con el alcance.",
+        "Fija camino principal 1,20 m, secundario 0,60 m y paso 0,50 m.",
+        "Cubre los caminos y elige material local para cada uno.",
+        "Calcula el aprovechamiento con el módulo de 1,80 m y llega a dos tercios.",
+        "Aplica ese factor a los 2.474 m² y descuenta las zonas no productivas.",
+        "Recorre croquis, escala con comprobación de cierre, zonas, acotado y replanteo.",
+        "Reserva por dónde ampliar aprovechando los lotes contiguos.",
+        "Trata los recipientes con agua limpia como decisión de trazado por el dengue."
+      ],
+      "explicacion": "Fíjate en que el terreno impone más decisiones de las que uno toma. El sol, el surazo y el escurrimiento ya estaban ahí antes de que llegaras, y el buen diseño no es el que los ignora sino el que los usa: la misma orientación que castiga una zona protege otra."
+    }
+  ]
+}

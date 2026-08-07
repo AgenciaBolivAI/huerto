@@ -1,0 +1,322 @@
+Todo lo anterior era proyecto. Esta lección es el día que llegan las cajas, y los años que vienen
+después.
+
+Y empieza con una idea que conviene tener clara antes de tocar un tornillo: **un sistema solar no
+tiene interruptor general de fábrica.** Los paneles producen tensión desde que les da la luz, sin
+que nadie los encienda, y no se pueden apagar. La batería tiene energía almacenada permanentemente y
+tampoco se puede apagar.
+
+<Analogia>
+Es un sistema donde **dos componentes están siempre alimentados y no tienen modo de mantenimiento.**
+No hay un flag para ponerlo en solo lectura mientras trabajas.
+
+Lo que hay, y por eso lo montamos en la lección anterior, es
+el <Termino slug="seccionador-cc">seccionador de continua</Termino>: **el interruptor de
+mantenimiento que el sistema no trae y que tú le añades.** Sin él, cada intervención
+es cirugía en caliente.
+</Analogia>
+
+## El orden de conexión
+
+<Diagrama
+  src="orden-de-conexion.webp"
+  alt="Cuatro pasos numerados en tarjetas de izquierda a derecha, cada uno con su número en un disco terracota. Uno: una batería con dos cables conectándose a un regulador, BATERÍA PRIMERO. Dos: un inversor conectándose a la batería, LUEGO EL INVERSOR. Tres: un panel solar con una tela opaca sobre su cara y una mano conectando su cable al regulador, PANELES TAPADOS. Cuatro: el mismo panel al que se le retira la tela y le llega la luz, DESTAPAR AL FINAL. Debajo, PARA APAGAR, AL REVÉS."
+  pie="El orden no es una preferencia: es lo que evita que el regulador arranque sin saber a qué tensión trabaja."
+/>
+
+**Primero la batería, al final los paneles.** Esta regla tiene dos razones distintas y las dos
+importan.
+
+**La razón técnica:** la mayoría de los reguladores **detectan automáticamente la tensión del banco**
+—si es de 12, 24 o 48 voltios— al arrancar, y para eso necesitan ver la batería antes que nada. Si el
+regulador arranca alimentado por los paneles, sin batería conectada, puede detectar mal, configurarse
+para la tensión equivocada y, cuando después conectes el banco, entregarle una tensión de carga que
+no le corresponde.
+
+**La razón de seguridad:** conectar los paneles al final, y tapados, significa que todo el cableado de
+continua se manipula **sin tensión**. Los paneles son la única fuente que no puedes apagar; taparlos
+es la única forma de apagarlos.
+
+<Advertencia>
+**Se tapan con algo opaco de verdad.** Un cartón grueso, una lona, una manta. Una tela fina deja pasar
+luz suficiente para que el panel genere tensión de sobra para dar un arco al desconectar.
+
+Y una advertencia que ya viste en la lección anterior y que aquí se vuelve operativa: **los conectores
+no se separan bajo carga.** Primero se abre el seccionador de continua, después se separa el conector.
+En ese orden, siempre.
+</Advertencia>
+
+El orden completo, tal como se hace:
+
+1. **Estructura montada, paneles fijados, pero sin conectar entre sí y tapados.** El cableado del
+   arreglo se tiende hasta el cuarto de equipos con los extremos libres y separados.
+2. **Puesta a tierra completa**, marco y equipos, antes de energizar nada. La tierra es lo primero que
+   se conecta y lo último que se desconecta.
+3. **Regulador e inversor montados en pared**, con espacio de ventilación alrededor y ninguno encima
+   de la batería.
+4. **Batería al regulador**, respetando polaridad y con el fusible principal instalado. El regulador
+   despierta y detecta la tensión del banco.
+5. **Inversor a la batería**, con su propio fusible pegado al borne.
+6. **Paneles al regulador**, todavía tapados, después de medir.
+7. **Destapar los paneles.** El sistema arranca.
+
+Y para apagar, exactamente al revés: **tapar paneles, abrir seccionador de continua, desconectar
+paneles, después inversor, y la batería al final.**
+
+## Lo que se mide antes de conectar
+
+<Diagrama
+  src="medir-antes.webp"
+  alt="Ilustración de una mano sosteniendo un multímetro con las dos puntas tocando los extremos de un par de cables solares. La pantalla muestra dígitos genéricos. Tres llamadas señalan: las puntas sobre los extremos del cable, MEDIR ANTES DE CONECTAR; unas marcas de más y menos en los dos extremos, COMPROBAR POLARIDAD; y el selector del multímetro en una posición de tensión continua, ESCALA DE CONTINUA. Arriba, LO QUE SE MIDE ANTES DE ENCHUFAR NADA."
+  pie="Dos minutos con el multímetro antes de conectar valen más que cualquier garantía después."
+/>
+
+Con los paneles ya cableados entre sí pero antes de enchufarlos al regulador, hay tres medidas que
+toman dos minutos y evitan la mayoría de los desastres de puesta en marcha.
+
+**La <Termino slug="tension-en-vacio">tensión en vacío</Termino> del arreglo.** Multímetro en
+escala de tensión continua, puntas en los dos extremos del cable de bajada, paneles destapados. Debe dar aproximadamente la suma de las tensiones
+en vacío de los paneles en serie, corregida por la temperatura del momento. Si da mucho menos, hay
+una rama mal conectada o un panel malo. **Si da más que el límite de entrada del regulador, no lo
+conectas.**
+
+**La polaridad.** Un multímetro con las puntas al revés muestra el mismo número con signo negativo, y
+eso te dice cuál es el positivo sin depender del color del cable, que alguien pudo haber invertido en
+un empalme. Conectar un panel con polaridad invertida a un regulador puede destruirlo al instante.
+
+**La ausencia de fuga a tierra.** Con el multímetro en la escala de resistencia más alta, entre
+cualquier polo del arreglo y el marco metálico no debe haber continuidad. Si la hay, hay un
+aislamiento dañado en algún punto del cableado y hay que encontrarlo **antes** de energizar.
+
+<Dato titulo="Anota los números del día uno">
+Estas tres medidas, más la tensión de la batería en reposo antes de conectar nada, son
+tu <Termino slug="linea-base">línea base</Termino>: exactamente la misma idea que aplicaste al
+terreno antes de intervenirlo, aplicada ahora a una instalación.
+
+Dentro de tres años, cuando el sistema rinda menos y no sepas si es degradación normal, suciedad o
+una avería, vas a querer comparar contra algo. Sin esos números iniciales, la comparación es
+imposible y solo queda adivinar.
+
+Escríbelos en una hoja pegada dentro de la tapa del tablero, con la fecha, la hora y si el día estaba
+despejado. Es el mismo instinto que te lleva a guardar el resultado de un benchmark antes de
+optimizar: **sin medición previa no hay medición posterior.**
+</Dato>
+
+## El primer mes: el sistema todavía no está entregado
+
+Un sistema recién montado no está terminado; está **en observación.** Las primeras semanas es cuando
+aparecen los errores de instalación, y aparecen de forma discreta.
+
+**Qué mirar cada día durante el primer mes:**
+
+- **La batería se llena de verdad.** El regulador debería recorrer
+  sus <Termino slug="etapas-de-carga">etapas de carga</Termino> hasta flotación en un día despejado
+  normal. Si nunca llega, el arreglo es chico, hay sombra, o hay una rama que no aporta.
+- **La batería no se queda baja.** Si por las mañanas amanece más baja cada día, estás consumiendo
+  más de lo que entra. Mejor descubrirlo la primera semana que en la primera temporada de lluvias.
+- **Los equipos no queman al tacto.** Tibio es normal, quemar no. Un regulador o un inversor
+  demasiado caliente indica falta de ventilación o sobrecarga.
+- **Ningún conector está caliente.** Ese es el síntoma temprano del contacto flojo, y es el momento
+  de arreglarlo, antes de que el lazo térmico haga su trabajo.
+- **Ningún cable vibra, roza ni cuelga.** Lo que roza, con el tiempo pela.
+
+<Dato titulo="Aprieta otra vez a la semana">
+Es un detalle de oficio que casi nadie hace y que evita averías reales: **todas las conexiones a
+tornillo se reaprietan una semana después del montaje.**
+
+El cobre fluye ligeramente bajo presión, y una conexión bien apretada en frío se afloja un poco
+después de los primeros ciclos térmicos. Ese aflojamiento es exactamente el contacto de alta
+resistencia que se calienta y termina fallando.
+
+Un reapriete a la semana y otro a los seis meses eliminan el problema de raíz.
+</Dato>
+
+## Limpieza: menos de lo que crees, y con cuidado
+
+<Diagrama
+  src="limpiar-bien.webp"
+  alt="Comparación en dos paneles. A la izquierda, marcado MAL con cruz roja: un panel inclinado limpiándose al mediodía bajo sol fuerte, con cepillo de cerdas duras sobre el vidrio, un balde de agua enjabonada con espuma y un chorro de manguera sobre el vidrio caliente, con pequeñas líneas de fisura dibujadas en el vidrio. A la derecha, marcado BIEN con tilde verde: el mismo panel limpiándose temprano por la mañana con el sol bajo, con un paño suave en un mango largo, un balde de agua limpia sin jabón, caudal suave, sin fisuras y el vidrio limpio."
+  pie="Vidrio caliente y agua fría es la forma más rápida de fisurar un panel que no había hecho nada malo."
+/>
+
+Un panel sucio produce menos, pero **la suciedad importa mucho menos de lo que la gente cree** —salvo
+en dos casos: cuando es una capa uniforme y gruesa de polvo pegado, o cuando es una mancha localizada
+y opaca, como una cagada de pájaro, que actúa exactamente como la sombra de la lección anterior y
+tumba todo un grupo de celdas.
+
+Con la inclinación correcta, **la lluvia hace casi todo el trabajo.** En la temporada de lluvias
+prácticamente no hay que limpiar nada. El problema es la seca: meses sin lluvia, con polvo en
+suspensión y tierra levantada por el viento.
+
+**Cómo se limpia:**
+
+- **Temprano por la mañana o al atardecer**, nunca al mediodía. El vidrio caliente con agua fría se
+  fisura por choque térmico, y esa fisura no se ve pero entra humedad por ella.
+- **Agua limpia y un paño o cepillo suave.** Nada de detergente, que deja película; nada de cerdas
+  duras ni estropajo, que rayan el vidrio; nada de hidrolavadora, que puede meter agua por los
+  sellos del marco.
+- **Desde el suelo si se puede**, con un mango largo. Subirse encima de un panel lo daña: el vidrio
+  aguanta carga distribuida, no una rodilla.
+
+<ContextoBolivia>
+Dos particularidades del llano cruceño.
+
+**En la seca, el polvo es fino y se pega.** No es arena que el viento se lleva: es polvo que se
+adhiere y, con el rocío de la madrugada, forma una película que la brisa ya no arrastra. En esos
+meses, una limpieza mensual está justificada.
+
+**Y hay un factor local muy concreto: el humo.** Entre agosto y octubre, las quemas y los incendios
+en la Chiquitanía y en la zona de expansión agrícola dejan durante semanas una atmósfera cargada de
+ceniza. Esa ceniza se deposita sobre los paneles y además **reduce la radiación que llega**, así que
+la producción cae por dos motivos a la vez.
+
+No hay mucho que hacer contra la reducción de radiación, pero sí contra el depósito: en las semanas
+de humo, revisa los paneles más seguido de lo habitual. Y ten presente que **esa caída de producción
+no es una avería**: si no lo sabes, vas a buscar un fallo donde no lo hay.
+
+Un último detalle: la lluvia de la temporada húmeda es torrencial, y limpia muy bien. Después de una
+tormenta fuerte, los paneles suelen quedar mejor que después de una limpieza a mano.
+</ContextoBolivia>
+
+## El calendario de mantenimiento
+
+<Diagrama
+  src="calendario.webp"
+  alt="Una banda horizontal dividida en cuatro bloques de anchura creciente, cada uno con un icono de línea y un pie. El primero, el más estrecho, con un manómetro pequeño, CADA SEMANA. El segundo, con un paño limpiando un panel, CADA MES. El tercero, con una llave apretando un perno, CADA SEIS MESES. El cuarto, el más ancho, con una lupa sobre un conector, CADA AÑO. Arriba, EL CALENDARIO QUE HACE QUE DURE VEINTE AÑOS."
+  pie="Poco trabajo y muy repartido. Lo que mata a los sistemas rurales no es la avería: es que nadie los mira nunca."
+/>
+
+**Cada semana**, treinta segundos: mirar la pantalla del regulador y comprobar que la batería llegó a
+llena ayer. Si tienes registro automático, ni eso.
+
+**Cada mes**, un cuarto de hora: inspección visual del arreglo desde el suelo —¿hay algo encima, algo
+tapando, algún cable colgando?—, limpieza si hace falta, y un vistazo al cuarto de equipos buscando
+calor, olor raro o polvo acumulado en las rejillas.
+
+**Cada seis meses**, una hora: reapriete de todas las conexiones eléctricas y de las fijaciones
+mecánicas de la estructura, revisión de la tierra, y limpieza de las rejillas de ventilación de los
+equipos. **Este es el mantenimiento que de verdad importa.** Programa uno al terminar la temporada de
+vientos y otro al terminar la de lluvias.
+
+**Cada año**, media jornada: repetir las medidas de la línea base y compararlas con las del día uno.
+Tensión en vacío del arreglo, corriente de cortocircuito, aislamiento a tierra, y capacidad real de
+la batería si tienes forma de estimarla. Revisar cada conector uno por uno buscando decoloración.
+
+<Advertencia>
+**Después de un surazo fuerte o de una tormenta con granizo, se revisa aunque no toque.**
+
+Un evento extremo es exactamente cuando algo se afloja, se dobla o se agrieta. Media hora de
+inspección después de una noche mala vale por seis meses de calendario.
+
+Y si hubo descarga eléctrica cerca: **comprueba que
+el <Termino slug="dps">DPS</Termino> sigue vivo.** Muchos protectores tienen una
+ventanita indicadora que cambia de color cuando el dispositivo ya se sacrificó. Un DPS agotado sigue
+instalado, sigue pareciendo correcto, y ya no protege nada.
+</Advertencia>
+
+## Cómo envejece cada componente
+
+<Diagrama
+  src="como-envejece.webp"
+  alt="Gráfico de línea con el tiempo en años en el eje horizontal y la producción en el vertical. Una línea verde parte alta a la izquierda y desciende muy suavemente hasta la derecha, terminando claramente por encima del fondo del gráfico, con una banda terracota sombreada debajo del extremo derecho y una llamada, A LOS VEINTE AÑOS SIGUE PRODUCIENDO. A la derecha, un dibujo aparte de un panel en corte con una mancha marrón oscura que avanza desde un borde bajo el vidrio, con la llamada LO QUE SÍ LO MATA ES LA HUMEDAD. Arriba, UN PANEL NO SE ROMPE, SE DESGASTA."
+  pie="La degradación normal es lenta y previsible. Lo que acaba con un panel antes de tiempo es siempre agua donde no debía haber."
+/>
+
+**Los paneles** sufren una <Termino slug="degradacion-anual">degradación anual</Termino> pequeña,
+lenta y previsible, y por eso los fabricantes garantizan un porcentaje mínimo de producción a los
+veinticinco años. Esa degradación
+gradual no es lo que mata a un panel. Lo que lo mata es **la entrada de humedad bajo el vidrio**, que
+aparece como una mancha oscura avanzando desde un borde o desde la caja de conexiones, y que viene
+casi siempre de un sello dañado, un golpe o una microfisura. Cuando la ves, el panel ya no tiene
+arreglo.
+
+**El regulador y el inversor** son electrónica de potencia y mueren normalmente por calor: un
+ventilador que se para, unas rejillas tapadas por polvo, un armario sin ventilación. Mantenerlos
+frescos y limpios es literalmente todo lo que puedes hacer por ellos, y es mucho.
+
+**La batería** es la única que se gasta por usarla, y su envejecimiento se acelera con la temperatura
+alta y con las descargas profundas. Los síntomas de que se acerca el final son claros si los estás
+mirando: **se carga cada vez más rápido y se descarga cada vez más rápido.** Eso significa que ya no
+guarda lo que decía guardar.
+
+<Dato titulo="La batería al final de su vida no se tira a la basura">
+Una batería de plomo agotada es **residuo peligroso**: contiene plomo y ácido sulfúrico. Y es también
+uno de los residuos con mejor cadena de reciclaje que existe, porque el plomo recuperado vale dinero.
+
+Casi cualquier comercio de baterías la recibe, y muchos la descuentan del precio de la nueva. **No se
+entierra, no se abandona en el fondo del predio y no se abre nunca.**
+
+Las de litio también son reciclables, aunque la cadena es más difícil de encontrar aquí. Pregunta al
+vendedor por el retorno **al comprarla**, no cuando ya esté muerta.
+</Dato>
+
+## Registrar: el sistema como fuente de datos
+
+Hay una última pieza que no es mantenimiento pero decide si el mantenimiento sirve de algo: **llevar
+registro.**
+
+Con un cuaderno basta para empezar. Fecha, estado del cielo, y las lecturas del regulador. Cinco
+líneas por semana durante un año son cincuenta datos que valen más que cualquier atlas de radiación,
+porque son **de tu terreno, con tu arreglo, con tus sombras.**
+
+Y a partir de ahí aparece lo interesante: con ese registro puedes distinguir una caída por nubes de
+una caída por suciedad, y una por suciedad de una avería. Sin él, todo se parece.
+
+Los reguladores e inversores modernos suelen tener un puerto de comunicación con protocolos abiertos,
+y ahí es donde tu oficio de programador tiene algo que aportar que un instalador no puede: **capturar
+esa serie automáticamente, guardarla y graficarla.** Es exactamente el tipo de trabajo que el módulo
+de automatización y datos va a retomar, y el sistema solar es la fuente de datos más regular y menos
+ruidosa que vas a tener en el predio.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+El día de la instalación en Rizoma del Sur, con el orden ya sabido, hay tres cosas concretas que
+conviene preparar de antemano.
+
+**Una lona opaca y suficiente para tapar todo el arreglo.** Suena tonto anotarlo, pero es la pieza que
+falta el día del montaje y sin la cual el paso siete no se puede hacer con seguridad. Se prepara
+antes de subir un panel.
+
+**La planilla de línea base impresa**, con las casillas vacías: tensión en vacío del arreglo por rama,
+corriente de cortocircuito, aislamiento a tierra, tensión de batería en reposo, fecha, hora y estado
+del cielo. Se rellena con lápiz ese mismo día y se pega dentro de la tapa del tablero, plastificada,
+porque en el cuarto de equipos va a haber humedad.
+
+**Y el <Termino slug="bitacora-del-sistema">cuaderno de bitácora</Termino> del sistema**, que vive
+en el mismo sitio: una libreta donde se anota todo lo que se hace y todo lo raro que se ve, con
+fecha. Cuando dentro de tres años algo falle, esa
+libreta es la diferencia entre diagnosticar y adivinar.
+
+**El calendario, adaptado al clima de aquí**, queda así:
+
+- **El mantenimiento semestral grande, en octubre y en mayo.** Octubre cierra la temporada seca y de
+  vientos, cuando el polvo, el humo y el surazo ya hicieron todo el daño que iban a hacer. Mayo
+  cierra las lluvias, cuando toca revisar humedad, corrosión y sellos.
+- **Limpieza mensual entre junio y octubre**, que es cuando el polvo se acumula y no llueve. El resto
+  del año, la lluvia se encarga.
+- **Revisión extraordinaria después de cada surazo fuerte y de cada granizada.**
+- **Y en las semanas de humo de agosto a octubre**, presta atención pero no te alarmes: la caída de
+  producción por ceniza en el aire y sobre el vidrio es real y no es una avería.
+
+Una última recomendación que tiene que ver con el objetivo declarado de este módulo: **muéstrale el
+sistema a alguien más.** Que otra persona del predio sepa dónde está el seccionador, cómo se apaga el
+sistema y qué se mira cada semana. Un sistema que solo una persona entiende es un sistema con un
+único punto de fallo, y ese punto no es eléctrico.
+</AplicarRizoma>
+
+## Lo que hay que llevarse
+
+Un sistema solar no tiene interruptor general: los paneles producen mientras haya luz y la batería
+está siempre cargada. Por eso se conecta **batería primero y paneles al final, tapados**, y se apaga
+exactamente al revés.
+
+Antes de enchufar nada se miden tres cosas —tensión en vacío, polaridad y aislamiento a tierra— y se
+anotan como **línea base**, porque sin medición previa no hay medición posterior.
+
+El primer mes el sistema está en observación, y todas las conexiones a tornillo se reaprietan a la
+semana, porque el cobre fluye y una conexión que se aflojó es un contacto que se calienta.
+
+La limpieza importa menos de lo que se cree y se hace temprano, con agua limpia y sin frotar fuerte;
+el mantenimiento que de verdad decide la vida del sistema es **el reapriete semestral**. Y un
+cuaderno de bitácora convierte cada avería futura en un diagnóstico en vez de una adivinanza.

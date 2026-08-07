@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "cuando-si",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuándo tiene sentido automatizar una tarea?",
+      "opciones": [
+        "Cuando es repetitiva y su regla se puede escribir por completo.",
+        "Cuando el costo de equivocarse es bajo y acotado.",
+        "Cuando ocurre en momentos en que no puedes estar.",
+        "Cuando es la tarea que más tiempo consume del día."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Que consuma mucho tiempo no basta: la ronda de observación consume tiempo y no es automatizable porque no hay regla que escribir. Las tres condiciones se cumplen a la vez en el riego, y por eso es lo primero y casi lo único que conviene automatizar."
+    },
+    {
+      "id": "mano-y-ojo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué tareas de un vivero no se automatizan?",
+      "opciones": [
+        "La ronda de observación, que integra información dispersa sin regla escrita.",
+        "La decisión de descartar, cuyo error es asimétrico e irreversible.",
+        "La selección de material de propagación y el trato con el cliente.",
+        "El registro de datos, que exige criterio constante."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El registro sí es automatizable: es aburrido y una máquina no se olvida. La distinción es que una máquina puede sustituir la mano y no el ojo, y todo lo que consiste en mirar y decidir queda fuera porque la regla no existe."
+    },
+    {
+      "id": "atrofia",
+      "tipo": "verdadero_falso",
+      "enunciado": "Quien nunca ha regado a mano no sabe qué aspecto tiene una planta con sed, igual que quien nunca ha desplegado a mano no sabe qué hacer cuando la automatización falla.",
+      "respuesta": true,
+      "explicacion": "Correcto, y por eso el módulo insistió en empezar por el reloj y regar a mano una temporada. No era prudencia: era construir el criterio que después permite juzgar si la máquina está haciendo bien su trabajo."
+    },
+    {
+      "id": "la-cuenta",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué entra en la cuenta de si automatizar compensa?",
+      "opciones": [
+        "Las horas de tarea evitadas al año, que es el lado positivo.",
+        "El mantenimiento: sensores que se degradan, baterías, cables mordidos, firmware.",
+        "El tiempo propio de diagnóstico y la instalación repartida en la vida útil.",
+        "El precio de compra del equipo, que es el factor determinante."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El precio de compra suele ser lo menor. Lo que pesa es el tiempo, que es el recurso escaso, y si el resultado de la cuenta ronda cero la respuesta correcta no es automatizar mejor sino no automatizar. Además, el mantenimiento es un costo fijo y los fijos suben el punto de equilibrio."
+    },
+    {
+      "id": "senales",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué indica que un sistema automático se ha convertido en el problema?",
+      "opciones": [
+        "Pasas más tiempo arreglándolo que el que te ahorra.",
+        "Ya no sabrías regar sin él si muriera en plena seca.",
+        "Has dejado de recorrer el vivero, por deriva y no por decisión.",
+        "Necesita revisión periódica de sus componentes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Toda instalación necesita revisión periódica: eso es normal y previsto. La tercera señal es la más peligrosa porque es sutil: primero miras la aplicación además de recorrer, después en vez de recorrer, y el día que un problema no está en los sensores nadie lo ve."
+    },
+    {
+      "id": "la-ronda",
+      "tipo": "verdadero_falso",
+      "enunciado": "La ronda de observación es una tarea programada que se hace igual cuando todo está en verde.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es el antídoto explícito contra la deriva. Si la ronda pasa a ser una reacción a que algo avise, el sistema solo detectará lo que sus sensores pueden ver, que es una fracción pequeña de lo que puede ir mal en un vivero."
+    },
+    {
+      "id": "que-compra",
+      "tipo": "verdadero_falso",
+      "enunciado": "La automatización bien hecha produce plantas mejores.",
+      "respuesta": false,
+      "explicacion": "Falso: produce horas. Y esas horas solo valen algo si se usan en lo que ninguna máquina puede hacer —mirar, decidir, seleccionar, atender al cliente y pensar qué producir—. Un vivero automatizado cuyo dueño usa las horas ganadas en mejorar la automatización no ha ganado nada."
+    },
+    {
+      "id": "cierre-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Cierra el curso: define qué automatiza Rizoma del Sur, qué deja explícitamente fuera y en qué orden lo construye.",
+      "respuestaModelo": "Rizoma automatiza tres cosas y ninguna más: el riego, el registro de datos y las alertas.\n\nEl riego cumple las tres condiciones a la vez: es repetitivo y su regla se puede escribir, el costo de equivocarse es bajo y acotado, y ocurre cuando no puedo estar. Ese último punto es el que compra tiempo de verdad y el que resuelve el cuello de botella que identificó el módulo de negocio. El registro es aburrido y una máquina no se olvida; las alertas son vigilancia continua sobre condiciones que sí se pueden escribir.\n\nDejo explícitamente fuera cinco tareas. La ronda de observación, porque integra información dispersa —dónde está el síntoma, qué forma tiene, a cuántas afecta, cómo cambia— y eso es exactamente lo que una imagen no contiene. La decisión de descartar, cuyo error es asimétrico e irreversible: una planta enferma que pasa el filtro contamina un lote. La selección de material de propagación, que es criterio acumulado y donde la que parece mejor puede ser la peor, como en el plátano. El trato con el cliente, porque automatizarlo destruye justo lo que lo hace valioso. Y la decisión de qué producir, que ninguna hoja de cálculo sabe.\n\nNo es prudencia: es que en esos cinco casos la regla no existe, y donde no hay regla una máquina no puede ayudar. Una máquina sustituye la mano, no el ojo.\n\nLa ronda de observación queda como tarea programada y no como reacción a un aviso: se hace igual cuando todo está en verde. Ese es el antídoto contra la deriva de mirar la aplicación en vez de recorrer el vivero, que es la forma más común de perder la sanidad de un vivero automatizado.\n\nEl orden de construcción es: regar a mano y anotar una temporada, porque eso construye el criterio que después permite juzgar si la máquina lo está haciendo bien; después reloj puro, que resuelve la presencia con lo mínimo que puede fallar; después corrección por umbral con histéresis, cuando la libreta diga qué corregir; después registro y alertas, con las alertas antes que cualquier gráfico; y todo lo demás —visión, paneles, cálculo de evapotranspiración— como proyecto de mejora y no como necesidad.\n\nAntes de automatizar cualquier cosa nueva hago la cuenta: horas de tarea evitadas al año menos mantenimiento, diagnóstico e instalación repartida en la vida útil. Si ronda cero, no automatizo. Y meto el mantenimiento como costo fijo en la hoja del módulo de negocio, porque los fijos suben el punto de equilibrio y este es de los que aparecen sin que nadie los apunte.\n\nVigilo las tres señales: si paso más tiempo arreglándolo que el que me ahorra, si ya no sabría regar sin él, y si he dejado de recorrer el vivero. Y me hago la prueba de dependencia en serio: si el sistema muriera hoy en plena seca, ¿sabría regar? Si la respuesta es no, he cambiado un problema de tiempo por uno de dependencia.\n\nConsidero seriamente la alternativa que compite con automatizar: contratar ayuda unas horas a la semana resuelve riego, observación, descarte y repique a la vez, y una máquina solo resuelve el primero. El costo del jornal en la zona decide entre las dos opciones, y si contrato consulto antes las obligaciones laborales con un contador local.\n\nMantengo la automatización hidráulica y mecánica como capa base robusta —flotador, regulador de presión, temporizador mecánico—, porque no tienen firmware, no se cuelgan y no dependen de la energía, y porque el clima local castiga los sistemas complejos: cada componente añadido es un punto de fallo más.\n\nY diseño para que sea replicable: material que se consigue localmente, costo conocido y documentación clara. Si el objetivo declarado es que esto sirva a la comunidad, un sistema que solo funciona porque su autor sabe programar no vale; la simplicidad es un requisito de diseño y no una preferencia estética.\n\nPor último, las horas que gane las uso en mirar las plantas, seleccionar material, atender clientes y decidir qué producir. Usarlas en mejorar la automatización sería no haber ganado nada.",
+      "criterios": [
+        "Automatiza riego, registro y alertas, y justifica con las tres condiciones.",
+        "Deja fuera las cinco tareas de criterio y explica que la regla no existe.",
+        "Formula la distinción entre sustituir la mano y sustituir el ojo.",
+        "Mantiene la ronda como tarea programada y no reactiva.",
+        "Ordena la construcción empezando por regar a mano y anotar.",
+        "Coloca reloj antes que umbral y alertas antes que gráficos.",
+        "Hace la cuenta de horas netas antes de automatizar.",
+        "Contabiliza el mantenimiento como costo fijo del negocio.",
+        "Vigila las tres señales de alarma y hace la prueba de dependencia.",
+        "Evalúa contratar ayuda como alternativa real a automatizar.",
+        "Conserva la capa hidráulica y mecánica por robustez.",
+        "Diseña para que el sistema sea replicable en la comunidad."
+      ],
+      "explicacion": "El curso entero cabe en tres frases: entender el mecanismo antes que la receta, anotar lo que pasa, y mirar las plantas. Este módulo añade la cuarta, que solo tiene sentido después de las otras tres: automatizar lo que tiene regla, y solo eso."
+    }
+  ]
+}

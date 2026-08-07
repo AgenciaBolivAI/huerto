@@ -1,0 +1,107 @@
+{
+  "preguntas": [
+    {
+      "id": "por-volumen",
+      "tipo": "verdadero_falso",
+      "enunciado": "Da igual medir las partes de una mezcla por peso o por volumen, siempre que se haga siempre igual.",
+      "respuesta": false,
+      "explicacion": "Falso: un balde de cascarilla y uno de compost pesan cosas radicalmente distintas, y lo que le importa a la raíz es el espacio que ocupa cada componente, no su masa. Medir por peso es un error silencioso —la mezcla sale mal, no hay forma obvia de saber por qué, y el resultado no es reproducible—. Todo el instrumental necesario es un balde marcado."
+    },
+    {
+      "id": "tres-familias",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se organiza mentalmente una formulación?",
+      "opciones": [
+        "Agrupando los materiales por lo que hacen: estructura, retención y nutrición.",
+        "Cambiar cascarilla por perlita es cambiar de implementación dentro de la misma capa.",
+        "Cambiar la proporción entre familias sí modifica el comportamiento de la mezcla.",
+        "Cada material tiene su receta propia, así que hay tantas recetas como materiales."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Formular deja de parecer complicado en cuanto agrupas por función y no por material: no decides qué librería usas, decides qué proporción del volumen dedicas a cada responsabilidad y solo después eliges qué implementación concreta ocupa cada capa según lo que tengas a mano."
+    },
+    {
+      "id": "enraizamiento-sin-compost",
+      "tipo": "verdadero_falso",
+      "enunciado": "El sustrato de enraizamiento lleva menos compost que el de crecimiento, pero conviene algo para alimentar el esqueje.",
+      "respuesta": false,
+      "explicacion": "Falso: no lleva nada de compost. Un esqueje sin raíces no puede absorber nutrientes, así que el compost no le aporta absolutamente nada, y en cambio le aporta dos problemas serios: población fúngica y sales. Es la única mezcla del vivero donde deliberadamente se quita alimento, y coincide con lo que decía la lección de esquejes."
+    },
+    {
+      "id": "como-se-mezcla",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué detalles de ejecución separan una mezcla buena de una mediocre?",
+      "opciones": [
+        "Humedecer antes de mezclar, porque la turba y la fibra de coco secas repelen el agua.",
+        "Mezclar sobre losa, lona o piso barrido, nunca sobre la tierra del terreno.",
+        "Voltear el montón tres o cuatro veces hasta que el color sea uniforme.",
+        "Ajustar el tamaño de la tanda a lo que haga falta ese día."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tandas tienen que ser siempre del mismo tamaño: es lo que hace que la receta sea reproducible y que un ajuste se pueda comparar contra el anterior. Preparar sustrato es un build, y lo que importa no es que salga bien una vez sino que salga igual todas las veces, para que cuando algo cambie sepas qué cambió."
+    },
+    {
+      "id": "las-tres-pruebas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué contesta cada una de las tres pruebas de campo?",
+      "opciones": [
+        "La del puño dice cuánta agua retiene: debe mantener la forma y desmoronarse al tocarla.",
+        "La de volcar dice cuánto se encharca ese envase concreto tras regar y drenar media hora.",
+        "La de sembrar dice si la mezcla es tóxica, comparándola con un sustrato que ya funciona.",
+        "Las tres pruebas dan el mismo dato desde ángulos distintos, así que basta con una."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Cada una contesta una pregunta diferente y ninguna sustituye a otra. La de sembrar es la que más gente se salta y la que evita los desastres grandes: un compost inmaduro sigue consumiendo nitrógeno y liberando compuestos que frenan la germinación, y no se distingue a simple vista de uno maduro. Diez días con veinte semillas ahorran una tanda entera de almácigo."
+    },
+    {
+      "id": "solarizar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se desinfecta el sustrato de un vivero pequeño?",
+      "opciones": [
+        "Extendido en capa delgada, cubierto con plástico transparente bien ceñido y con los bordes enterrados.",
+        "Con plástico transparente y no negro, porque el transparente deja pasar la radiación y atrapa el calor debajo.",
+        "Buscando bajar la carga de patógenos, no llegar a cero organismos.",
+        "Esterilizando por completo, porque cuantos menos organismos queden, más seguro es el sustrato."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Esterilizar del todo es contraproducente: un sustrato estéril es un espacio vacío sin competencia, y el primer hongo que llegue —y va a llegar, porque el aire y el riego traen esporas— lo coloniza sin nadie que lo frene. Un sustrato con su comunidad benéfica intacta resiste mejor que uno esterilizado que se recontamina. Y no todo necesita desinfección: almácigo y enraizamiento sí, bolsa grande con compost maduro normalmente no."
+    },
+    {
+      "id": "costo-por-envase",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se deduce del costo de sustrato por envase?",
+      "opciones": [
+        "El sustrato de una bolsa grande cuesta más que el de veinte almácigos juntos.",
+        "En almácigo puedes permitirte el mejor material, porque el volumen es mínimo.",
+        "Pasar de una bolsa de cinco litros a una de diez duplica el sustrato de cada planta.",
+        "El costo de sustrato es despreciable frente al resto, así que no condiciona decisiones."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es despreciable en envases grandes, y ahí es donde compensa haber montado la compostera y haber conseguido cascarilla gratis. La elección de envase determina el gasto de sustrato de todo el vivero, multiplicado por cada unidad producida: no es una decisión de presentación, es una decisión de costo."
+    },
+    {
+      "id": "recetario-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Escribe el recetario de Rizoma del Sur: qué materiales por familia, las cuatro recetas, cómo las preparas, cuándo las solarizas y cómo las vas mejorando.",
+      "respuestaModelo": "Tres materiales y un balde bastan para arrancar.\n\nEstructura: cascarilla de arroz. Cruda bien seca y curada para bolsa y envase grande, y quemada para almácigo y enraizamiento, porque ahí una semilla de arroz germinando es un problema real y una maleza dentro de una bandeja de alvéolos es muy difícil de arreglar sin dañar el plantín.\n\nRetención: fibra de coco lavada, que aquí es más lógica y más barata que la turba importada, y que además evita el problema de sostenibilidad de las turberas. Sin lavar trae sal y la sal deshidrata las raíces por vía osmótica, así que o se compra lavada o se lava con abundante agua. Donde no alcance el presupuesto, cascarilla molida fina cumple parcialmente esa función.\n\nNutrición: compost propio, tamizado con malla fina para almácigo y sin tamizar para bolsa.\n\nY arena gruesa de río sumada a la estructura del envase grande, por una razón concreta de este terreno: un frutal alto en bolsa ligera se vuelca con el viento del sur, y levantar cien bolsas caídas después de un surazo es una mañana perdida.\n\nLas cuatro recetas, en partes de volumen: almácigo 2 de estructura, 3 de retención y 1 de compost, porque el envase es bajísimo y la capa saturada se lleva casi todo, y porque el compost en exceso quema la semilla. Enraizamiento 3 y 2 sin nada de compost, porque el esqueje no tiene raíces que absorban y el compost solo le aportaría hongos y sales. Crecimiento en bolsa 2, 2 y 1, equilibrado y con nutrición sostenida para meses de estancia. Envase grande 3, 2 y 1, con arena dentro de la estructura por el peso.\n\nLa tanda estándar son cien litros medidos con un balde de diez. Para crecimiento las partes suman cinco, así que son cuatro baldes de estructura, cuatro de retención y dos de compost; para enraizamiento, seis y cuatro. Se cuenta en voz alta y se anota.\n\nLa preparación: humedecer los materiales y dejarlos reposar antes de juntarlos, porque secos se apelmazan y la fibra de coco seca repele el agua; mezclar sobre losa o lona limpia y nunca sobre la tierra del terreno, que es justo lo que estoy evitando; voltear tres o cuatro veces con pala hasta que el color sea uniforme, porque una mezcla mal homogeneizada da bolsas con proporciones distintas y después plantas desiguales sin causa aparente; y siempre el mismo tamaño de tanda.\n\nLa comprobación con las tres pruebas. La del puño, para ver que el terrón mantiene la forma y se desmorona al tocarlo soltando una o dos gotas. La de volcar, con el envase real que voy a usar, regando hasta que chorree y dejando drenar media hora: si el fondo sale empapado y compacto, subo la estructura. Y la de sembrar, con veinte semillas de lechuga en un plato contra un sustrato conocido, que es innegociable con cada tanda nueva de compost, porque con material propio y variable es la única forma de detectar compost inmaduro antes de que se lleve un almácigo entero.\n\nLa solarización va en la seca, de mayo a septiembre. Coincide dos veces: es cuando el vivero tiene menos trabajo de producción, y es cuando hay sol continuo y sin lluvias que enfríen el montón, que es exactamente lo que el método necesita. Sustrato húmedo extendido en capa delgada, plástico transparente y no negro bien ceñido con los bordes enterrados, varias semanas. Y sin pasarse: el objetivo es bajar la carga de patógenos, no esterilizar, porque un sustrato estéril lo coloniza sin competencia el primer hongo que llegue. Almácigo y enraizamiento sí se solarizan; la bolsa grande con compost maduro normalmente no hace falta.\n\nEl recetario es una hoja por mezcla con nombre, etapa, partes de cada componente, tamaño de tanda, fecha de versión y observaciones del resultado. Y la regla de método: cambio una sola variable por versión. Si subo la cascarilla y a la vez bajo el compost y encima cambio de proveedor de arena, y el resultado mejora, no sé por qué mejoró ni puedo repetirlo. En tres o cuatro ciclos tengo una mezcla propia mejor que cualquier receta copiada, porque está ajustada a mis materiales y a mis envases.\n\nY calculo el costo por envase desde el principio, dividiendo el costo de la tanda entre sus litros y multiplicando por el volumen del envase, porque esa cifra va a aparecer después en cada decisión de precio y de tamaño de bolsa.",
+      "criterios": [
+        "Asigna cascarilla a estructura y distingue cruda de quemada según la etapa.",
+        "Elige fibra de coco lavada como retención y explica el problema de la sal.",
+        "Usa compost propio tamizado o no según la etapa.",
+        "Añade arena al envase grande por peso frente al surazo.",
+        "Da las cuatro recetas en partes de volumen y justifica cada una.",
+        "Deja el enraizamiento sin compost con el argumento correcto.",
+        "Define tanda estándar de cien litros y la traduce a baldes.",
+        "Humedece antes de mezclar y explica la hidrofobia de la fibra seca.",
+        "Mezcla sobre superficie limpia y voltea hasta color uniforme.",
+        "Aplica las tres pruebas y usa el envase real en la de volcar.",
+        "Hace la prueba de sembrar con cada tanda nueva de compost.",
+        "Solariza en la seca con plástico transparente y bordes enterrados.",
+        "Evita la esterilización total y explica la recolonización.",
+        "Lleva recetario y cambia una sola variable por versión.",
+        "Calcula el costo de sustrato por envase."
+      ],
+      "explicacion": "Fíjate en que la lección entera cabe en una disciplina de trabajo más que en una fórmula: tanda del mismo tamaño, receta escrita, una variable por versión y el resultado anotado. Es exactamente lo que hace reproducible cualquier sistema, y funciona igual con un montón de cascarilla que con un despliegue."
+    }
+  ]
+}

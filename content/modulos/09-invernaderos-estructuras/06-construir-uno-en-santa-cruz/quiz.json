@@ -1,0 +1,107 @@
+{
+  "preguntas": [
+    {
+      "id": "las-cuatro-cotas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿De dónde salen las cuatro cotas del proyecto?",
+      "opciones": [
+        "Seis metros de ancho es lo que permite una cercha simple de madera sin cálculo estructural serio.",
+        "Tres metros a la viga de amarre es el mínimo razonable en clima cálido y permite trabajar de pie.",
+        "Un metro de flecha en seis de luz da pendiente suficiente para el aguacero y para la condensación.",
+        "Los cuarenta centímetros de cumbrera son la única ventilación de la estructura."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cumbrera aporta unos cinco metros cuadrados de salida alta sobre setenta y dos de piso, pero a eso se le suman los dos costados completamente abiertos, que aportan mucho más. La tasa de ventilación resultante queda muy por encima de cualquier recomendación de manual, que era el objetivo."
+    },
+    {
+      "id": "pie-del-poste",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se resuelve el pie de un poste de madera?",
+      "opciones": [
+        "Dado de hormigón que sobresale del terreno para que el agua no llegue ni por salpicadura.",
+        "Anclaje ahogado en el hormigón y ligado a la armadura, para que el poste no se arranque.",
+        "Platina metálica que separa la madera del hormigón y crea una cámara de aire.",
+        "Tirafondos o clavos, que bastan para una estructura tan liviana."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La unión trabaja a tracción, así que van pernos pasantes con tuerca y arandela, no clavos ni tirafondos. Este detalle merece la mitad de la atención de la obra porque es donde fallan casi todas las estructuras de madera de la región, atacadas a la vez por la humedad y por el comején."
+    },
+    {
+      "id": "dado-a-traccion",
+      "tipo": "verdadero_falso",
+      "enunciado": "El dado de hormigón se dimensiona por el peso que tiene que soportar la estructura.",
+      "respuesta": false,
+      "explicacion": "Falso: una estructura ligera pesa muy poco, y lo que el dado tiene que resistir es el tirón hacia arriba de una ráfaga de surazo sobre setenta y dos metros cuadrados de techo. Por eso se pide más volumen de hormigón del que parece necesario y armadura que ligue la varilla de anclaje con la masa del dado; si no, lo que se arranca es la varilla sola."
+    },
+    {
+      "id": "cumbrera",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que respetar al construir la cumbrera ventilada?",
+      "opciones": [
+        "El sombrerete tiene que volar bastante más que el ancho del hueco, para que no entre lluvia de costado.",
+        "Los montantes deben dejar paso libre por los cuatro lados.",
+        "El sombrerete se ancla como si fuera a salir volando, porque es la pieza más expuesta al arranque.",
+        "Conviene cerrar el frente contra el viento para que no entre agua."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Cerrar el frente contra el viento anula el efecto: el aire tiene que poder salir por los cuatro lados. Y el sombrerete es la pieza más vulnerable de toda la estructura porque está arriba, es ligera y tiene aire por debajo, así que se ancla con tirantes si hace falta."
+    },
+    {
+      "id": "faldon-solo-sur",
+      "tipo": "verdadero_falso",
+      "enunciado": "Conviene poner faldón enrollable en los cuatro costados, por si alguna vez hace falta cerrar más.",
+      "respuesta": false,
+      "explicacion": "Falso, y por una razón que no es de material sino de conducta: una estructura que se puede cerrar entera termina cerrada entera algún día de lluvia, y eso es exactamente lo que el módulo lleva cinco lecciones evitando. El faldón va solo en el sur, que es de donde viene el surazo, y los otros tres costados quedan permanentemente abiertos."
+    },
+    {
+      "id": "la-cercha",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la cercha es un triángulo y qué hace cada barra?",
+      "opciones": [
+        "Un triángulo no se deforma sin que alguna barra cambie de longitud, y eso exige una fuerza enorme.",
+        "Los pares trabajan a compresión, empujados por el peso del techo hacia abajo y hacia fuera.",
+        "La viga horizontal trabaja a tracción, impidiendo que los pies de los pares se abran.",
+        "La viga horizontal es un elemento secundario y se puede cortar si estorba."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la pieza que menos parece hacer y la que sostiene todo: si se corta, la cercha se abre y el techo se viene abajo. Si hay que empalmarla se solapa generosamente y se aperna, nunca a tope, porque un empalme a tope no transmite tracción. Y las riostras diagonales cumplen la misma función en los planos verticales: parten el rectángulo en dos triángulos y lo dejan rígido."
+    },
+    {
+      "id": "orden-de-obra",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que respetar en el orden de trabajo?",
+      "opciones": [
+        "Replantear con estacas, cuerda y cinta comprobando diagonales, porque ahí se decide si sale a escuadra.",
+        "Comprobar aplomo y alineación de anclajes antes de vaciar y otra vez con el hormigón fresco.",
+        "Armar todas las cerchas en el suelo usando la primera como plantilla.",
+        "Levantar postes y cerchas y dejar el arriostramiento para el final de la obra."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El arriostramiento va antes de soltar nada: una estructura sin riostras es un mecanismo y no una estructura, y se desploma de costado con solo empujarla. Y la madera hay que tratarla antes de armar, porque una vez montada es imposible llegar a las caras de contacto entre piezas, que es justo por donde entran el agua y el comején."
+    },
+    {
+      "id": "obra-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Planifica la construcción de la estructura de propagación de Rizoma del Sur: sitio, orientación, materiales, detalles críticos y calendario de obra.",
+      "respuestaModelo": "La estructura es la de propagación, seis metros por doce, techo a dos aguas con cumbrera ventilada de cuarenta centímetros, costados abiertos y faldón enrollable solo por el sur. Tres metros a la viga de amarre y cuatro a la cumbrera.\n\nEl sitio ya está decidido en el layout: el extremo del terreno más alejado del portón, que es la zona de menos tránsito y la más protegida, sobre el plano acotado que dibujé en el módulo de planos. La orientación pone el eje largo de modo que el viento dominante atraviese la nave por los seis metros y no por los doce, con el faldón enrollable en la cara sur.\n\nMateriales con lo que hay en la zona: madera tratada de la región para postes, vigas y pares; chapa translúcida en el techo si el presupuesto lo permite, por el granizo y por la vida útil, o film con tratamiento ultravioleta y difusor si hay que ajustarse. Cinta o pintura blanca en toda madera o fierro que vaya a tocar el film, porque el roce abre el primer agujero y el metal oscuro lo quema desde el otro lado.\n\nEl detalle crítico es el pie del poste, y en este terreno no es negociable: dado de hormigón que sobresale del suelo, varilla de anclaje ahogada y ligada a la armadura, platina metálica que deja una cámara de aire, y pernos pasantes. La arcilla expansiva que se hincha y se contrae, la humedad de las lluvias y el comején atacan los tres el mismo punto, y ese detalle decide si la estructura dura cinco años o veinte. Es el mismo detalle de las fundaciones del galpón.\n\nEl dado se dimensiona por arranque y no por peso: lo que tiene que resistir es el tirón hacia arriba de una ráfaga de surazo sobre setenta y dos metros cuadrados de techo, así que más hormigón del que parece necesario y armadura que ligue la varilla con la masa.\n\nLa cumbrera lleva sombrerete separado, con vuelo bastante mayor que el ancho del hueco para que no entre lluvia de costado, montantes que dejen paso libre por los cuatro lados, y anclaje generoso con tirantes si hace falta, porque es la pieza más expuesta a salir volando.\n\nEl faldón sur es deliberadamente rudimentario para que funcione después de años sin usarse: el film cuelga del alero con el borde inferior enrollado en un palo que hace de lastre, y se sube enrollándolo y atándolo en alto con dos cuerdas a cornamusas clavadas en los postes. Sin manivelas ni engranajes. Y solo en el sur: los otros tres costados quedan permanentemente abiertos, porque una estructura que se puede cerrar entera termina cerrada entera algún día de lluvia.\n\nLa madera se trata pieza por pieza antes de armar, con las testas bien empapadas, y se deja secar. Después es imposible llegar a las caras de contacto.\n\nEl orden de obra: replantear con estacas, cuerda y cinta comprobando diagonales; excavar y vaciar los dados con las varillas y platinas ya aplomadas, comprobando antes de vaciar y otra vez con el hormigón fresco; dejar fraguar varios días sin atajos; armar todas las cerchas en el suelo usando la primera como plantilla; levantar postes y cerchas, aplomar y arriostrar en diagonal antes de soltar nada; correas; cubierta empezando por el lado contrario al viento dominante y sujetando todo el perímetro sin cantos libres; cumbrera y sombrerete; y por último faldón y remates.\n\nEl calendario va en la seca, entre mayo y septiembre: hay menos trabajo de producción, el hormigón fragua sin lluvias encima y se puede excavar sin barro. Y llegar con la estructura terminada al arranque de las lluvias es justo lo que hace falta, porque es cuando empieza la propagación. Si hay que hacerlo por partes, primero dados y estructura completa, después cubierta, y el faldón al final: una cubierta mal anclada se va con el primer surazo y se lleva la estructura con ella.\n\nY dejo previsto por dónde ampliar: doce metros se convierten en dieciocho añadiendo dos pórticos, si desde el principio el frontón de ese extremo se arma como cierre desmontable y no como pared definitiva.\n\nSeguridad: nunca trabajar en altura solo, ni para un momento; y las cerchas se levantan entre varios y con la estructura ya arriostrada parcialmente, nunca apoyadas provisionalmente contra algo.",
+      "criterios": [
+        "Define las cuatro cotas del proyecto y su justificación.",
+        "Sitúa la estructura en el extremo protegido y lejos del portón.",
+        "Orienta el eje largo para que el viento cruce por el lado corto.",
+        "Elige materiales locales y protege el film del contacto con cinta o pintura blanca.",
+        "Resuelve el pie del poste con dado, anclaje, platina y pernos pasantes.",
+        "Dimensiona el dado por arranque y no por peso.",
+        "Da al sombrerete vuelo suficiente, paso libre y anclaje generoso.",
+        "Hace el faldón rudimentario y solo en el costado sur.",
+        "Trata la madera pieza por pieza antes de armar.",
+        "Respeta el orden de obra incluido el fraguado y el arriostramiento.",
+        "Arma las cerchas en el suelo con una plantilla.",
+        "Coloca la cubierta desde el lado contrario al viento y sin cantos libres.",
+        "Programa la obra en la seca para llegar a las lluvias.",
+        "Prevé la ampliación con frontón desmontable.",
+        "Enuncia las dos reglas de seguridad."
+      ],
+      "explicacion": "Fíjate en cuántas de las decisiones de esta obra vienen del módulo de construcción y no del de invernaderos: replanteo, dados, anclaje a tracción, arriostramiento. Una estructura de vivero es una construcción pequeña con cargas de viento grandes, y ese es exactamente el caso donde los detalles de unión importan más que el material."
+    }
+  ]
+}
