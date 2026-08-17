@@ -1,0 +1,498 @@
+Servís un vaso de agua del bidón, la mirás a contraluz y está transparente. No huele a nada. Está
+fresca. Y con esa inspección ya decidiste que es buena — porque es la única inspección que tenés a
+mano y porque el ojo humano no fue construido para ver bacterias.
+
+Ahí está el problema entero de esta lección. **El agua que enferma casi siempre se ve bien**, y el
+agua que se ve mal muchas veces solo trae barro. Lo que decide no es el aspecto: es de dónde viene,
+qué le pasó en el camino y qué le hiciste antes de tomarla. Vamos a armar el criterio para juzgar
+cada tratamiento por lo que saca de verdad y por lo que deja pasar, y a terminar en el eslabón que
+casi todo el mundo rompe sin darse cuenta, que no es el tratamiento sino el balde.
+
+## Tres cosas distintas dentro del mismo vaso
+
+«Agua contaminada» no es una sola cosa. Son tres familias de problemas, con causas distintas,
+consecuencias distintas y tratamientos que no se sustituyen entre sí. Confundirlas es el origen de
+casi todos los errores caseros.
+
+La primera son los **seres vivos**: bacterias, virus, protozoos y huevos de gusanos que vienen de
+materia fecal de personas o de animales. Se llaman, en conjunto, patógenos
+entéricos — <Termino slug="patogeno-enterico">del tubo digestivo</Termino> —, y son los que producen
+diarrea, tifoidea, hepatitis A, giardiasis y amebiasis. Son la causa número uno de que un chico se
+deshidrate, y son los únicos de los tres grupos que se **multiplican**: uno solo puede volverse
+millones dentro del cuerpo, y por eso a veces alcanza con muy poquito para enfermar.
+
+La segunda son las **sustancias disueltas**: nitrato, sales, hierro, arsénico, flúor, restos de
+agroquímicos. No están vivas, no se multiplican, no se contagian y **ningún tratamiento casero por
+calor las saca** — como vas a ver, el hervido las empeora. Hacen daño lento, por acumulación, y no se
+detectan sin análisis de laboratorio.
+
+La tercera es lo que enturbia. La <Termino slug="turbidez">turbidez</Termino> es la cantidad de
+partículas sólidas flotando en el agua: arcilla, limo, restos de hojas, óxido. Por sí misma no
+enferma —tomar agua con un poco de limo no te hace nada—, pero es **el gran saboteador de todos los
+tratamientos**, y esa es la razón de que le dediquemos tanto espacio a algo aparentemente
+cosmético. Las partículas hacen dos cosas malas: consumen el desinfectante y le sirven de escondite
+al microbio, que viaja pegado a ellas o metido adentro de un grumo.
+
+De acá sale la primera regla dura, y es contraintuitiva: **el agua clara no es agua segura, y el
+agua turbia no es necesariamente agua peligrosa.** Un pozo al lado de una letrina puede dar agua
+cristalina y llena de bacterias. Un arroyo crecido después de una lluvia puede estar marrón de puro
+barro arrastrado. Distinto es que el agua turbia sea **más difícil de tratar**, que es otra cosa y sí
+importa.
+
+<Analogia>
+Pensá en el agua que entra a tu casa como en la entrada de datos de un sistema. Los seres vivos son
+código ejecutable que llega desde afuera: si entra, corre y se replica. Las sustancias disueltas son
+datos corruptos que no ejecutan nada pero envenenan el estado de a poco, y que ningún antivirus
+detecta porque no son un virus. La turbidez es el ruido en el canal: no es el ataque, pero hace que
+tu validador falle, porque el payload viene envuelto en basura y el escáner no llega a leerlo.
+
+Nadie que haya escrito un sistema serio pone un solo validador y se queda tranquilo. Se ponen varios,
+en cadena, cada uno cubriendo una clase de problema que el anterior no cubre. Con el agua es
+idéntico, y tiene nombre propio: <Termino slug="barreras-multiples">barreras múltiples</Termino>. No
+existe el tratamiento que saque todo. Existe la cadena.
+</Analogia>
+
+## De dónde sale lo que enferma
+
+El agua no se contamina sola. La <Termino slug="contaminacion-fecal">contaminación fecal</Termino> es
+la llegada de materia fecal —humana o animal— al agua que después alguien toma, y en una casa tiene
+tres o cuatro caminos concretos y aburridos: una letrina o un pozo ciego demasiado cerca del pozo de
+agua; la lluvia que lava el suelo del corral y entra por el brocal; un balde que se apoyó en el piso
+y después se metió al tanque; y el ganado o los perros que andan por donde se junta el agua.
+
+Lo del pozo merece detalle, porque es la situación real de media zona. Un pozo saca agua del
+subsuelo saturado, lo que se llama <Termino slug="nivel-freatico">nivel freático</Termino>. Ese agua
+subterránea **no está quieta**: se mueve despacio, cuesta abajo, siguiendo la pendiente del terreno.
+Entonces la pregunta no es solo «a cuántos metros está la letrina» sino **«está pendiente arriba o
+pendiente abajo del pozo»**, porque una letrina a treinta metros pendiente arriba es peor que una a
+quince pendiente abajo. Y en suelo arenoso, que filtra rápido, el agua sucia viaja mucho más lejos
+antes de limpiarse que en suelo arcilloso. Sumale que en época de lluvia el nivel freático sube y
+puede llegar a tocar el fondo de la letrina, y tenés el mecanismo completo de por qué las diarreas
+aumentan justo cuando empieza a llover.
+
+Acá aparece un dato químico que casi nadie conoce y que vale oro:
+el <Termino slug="nitrato">nitrato</Termino>. Cuando materia orgánica con nitrógeno —heces, orina,
+estiércol, urea— entra al suelo, las bacterias la van transformando: primero a amonio, después a
+nitrito y finalmente a nitrato. El amonio tiene carga positiva y el suelo, que tiene carga negativa,
+lo retiene. El nitrato tiene carga **negativa**, igual que el suelo, así que se repelen y el nitrato
+**viaja con el agua sin que nada lo frene**. Por eso un pozo con nitrato alto está diciendo algo muy
+preciso: «hasta acá llegó agua que pasó por materia fecal o por fertilizante». Aunque los microbios
+ya se hayan muerto en el camino, el nitrato sigue ahí, delatando la ruta.
+
+<Advertencia>
+El nitrato importa por sí mismo y sobre todo en bebés. En el estómago de un lactante, que es menos
+ácido que el de un adulto, hay bacterias que convierten el nitrato en nitrito. El nitrito pasa a la
+sangre y **oxida el hierro de la hemoglobina**: el hierro pasa de una forma que agarra oxígeno a otra
+que no lo agarra. Esa hemoglobina averiada se
+llama <Termino slug="metahemoglobinemia">metahemoglobina</Termino>, y un bebé tiene dos
+desventajas — su hemoglobina de recién nacido se oxida más fácil y la enzima que repara el daño
+todavía trabaja poco. El resultado es un bebé que tiene los pulmones y el corazón bien pero **la
+sangre no le lleva oxígeno**, y se pone azulado alrededor de la boca y en las uñas.
+
+Esto **no se diagnostica en casa ni se trata en casa**. Si ves a un bebé azulado o con la respiración
+rara, es traslado inmediato al centro de salud. Y si en tu casa hay un pozo cerca de una letrina, de
+un corral o de una zona que se fertiliza, y hay una embarazada o un bebé que va a tomar mamadera,
+**preguntá en el centro de salud dónde se puede analizar el agua**: es un análisis de laboratorio, no
+hay forma de verlo, olerlo ni deducirlo. No inventes la respuesta ni la des por buena porque el agua
+sale linda.
+</Advertencia>
+
+## Cómo se juzga un tratamiento
+
+De acá en adelante, cada método se evalúa con cuatro preguntas y siempre las mismas. **Qué mata o
+saca** —¿bacterias?, ¿virus?, ¿quistes de protozoo?, ¿huevos de gusano?, ¿cosas disueltas?—. **Qué
+lo sabotea**, que casi siempre es la turbidez. **Cuánto tarda y cuánto cuesta**, en leña, en gas, en
+plata o en horas de sol. Y la que más se olvida: **si deja o no deja protección después**, es decir,
+si el agua tratada queda defendida contra lo que le caiga encima en el balde, o queda desnuda.
+
+Con esas cuatro preguntas, ningún tratamiento es «bueno» o «malo»: cada uno es bueno para una cosa,
+ciego para otra, y por eso se encadenan. El orden de la cadena siempre es el mismo, y tiene lógica de
+proceso: **proteger la fuente, aclarar, desinfectar, guardar bien**. Cada paso le facilita el trabajo
+al siguiente, y saltarse el primero encarece todos los demás.
+
+## Aclarar: lo que se cae solo y lo que se atrapa con tela
+
+El paso más barato del mundo es no hacer nada y esperar. Un balde de agua turbia dejado quieto y
+tapado se aclara solo por <Termino slug="sedimentacion-por-gravedad">sedimentación por
+gravedad</Termino>: cada partícula pesa más que el agua y baja. Lo interesante es la velocidad a la
+que baja, porque no es proporcional al tamaño sino **al tamaño al cuadrado**. Un grano de arena de
+100 micrómetros toca el fondo de un balde en menos de un minuto. Una partícula de arcilla de 1
+micrómetro —cien veces más chica, diez mil veces más lenta— tarda **días** en recorrer treinta
+centímetros. Por eso el agua se aclara rápido al principio y después se queda estancada en un
+turbio lechoso que ya no se cae: eso que queda es arcilla, y no la vas a esperar.
+
+Y hay que trasvasar bien: se **vuelca despacio a otro recipiente**, o se saca con una manguera
+haciendo sifón, dejando el barro del fondo donde está. Si metés el jarro y revolvés, deshiciste el
+trabajo de tres días en tres segundos.
+
+La tela sube un escalón. Un paño de algodón limpio, **doblado en cuatro u ocho veces**, deja huecos
+de unas pocas decenas de micrómetros. Con eso retenés arena, hojitas, larvas de mosquito, los
+bichitos de agua a los que se pegan ciertas bacterias, y buena parte de los huevos de gusano, que son
+grandotes. **No retenés bacterias, ni virus, ni quistes de protozoo**: para esas cosas, un paño
+doblado es una puerta abierta. Aun así el filtrado por tela vale la pena, y hay estudios en países
+donde el cólera es común que midieron una caída importante de casos solo con eso, porque muchas
+bacterias no viajan sueltas sino agarradas a partículas.
+
+Dos detalles que deciden si la tela ayuda o estorba. **Siempre la misma cara hacia arriba**, marcada
+con una puntada o un nudo: la cara sucia acumula lo que retuvo, y si la das vuelta se lo devolvés al
+agua. Y se lava y **se seca al sol** después de cada uso; un trapo húmedo guardado en un rincón es un
+cultivo, no un filtro.
+
+## Hervir: qué destruye y qué concentra
+
+Hervir funciona, y funciona muy bien, por una razón física. Toda la maquinaria de una bacteria, de un
+quiste o de un virus es proteína plegada en una forma exacta, sostenida por uniones débiles. El calor
+agita las moléculas hasta que esas uniones se rompen y la proteína **se desarma y se enreda sin
+posibilidad de volver a plegarse**: eso es
+la <Termino slug="desnaturalizacion">desnaturalización</Termino>, y es exactamente lo que ves cuando
+la clara del huevo pasa de transparente y líquida a blanca y sólida — nadie ha visto una clara
+volver a ser transparente al enfriarse. Al mismo tiempo la membrana pierde consistencia y se agujerea.
+El bicho no «se muere de calor» en sentido figurado: se le destruye la maquinaria.
+
+Lo importante es que ese daño es **acumulativo: temperatura por tiempo**. No hay un umbral mágico en
+100 °C. A 60 °C los patógenos entéricos comunes mueren en minutos; a 70 °C, en segundos; a 80 °C, casi
+al instante. En eso se basa la <Termino slug="pasteurizacion">pasteurización</Termino>, que trabaja
+por debajo del hervor. ¿Y entonces por qué la recomendación de siempre es hervir? Por algo
+puramente práctico y bastante genial: **el burbujeo es un termómetro gratis.** No hace falta medir
+nada; cuando el agua rompe a hervir con burbujas gruesas y parejas, ya pasaste de largo cualquier
+temperatura letal, y lo sabés mirando. Los minutos extra que suelen recomendarse no son el punto en
+que mueren los microbios: son margen de seguridad para que **todo el volumen** llegue, incluida el
+agua pegada a la pared de la olla.
+
+<Dato>
+La altura cambia el punto de hervor porque hay menos aire encima empujando: baja alrededor de 1 °C
+cada 300 metros. En Zanja Honda, a unos 529 metros, el agua hierve a unos 98 °C — diferencia
+irrelevante. En El Alto o en Potosí, a más de 3.500 metros, hierve cerca de 88 °C, y ahí sí conviene
+sostener el hervor unos minutos más, porque la temperatura es menor y hay que compensar con tiempo.
+El mecanismo es el mismo: **lo que mata es temperatura multiplicada por tiempo**; si baja una, sube
+la otra.
+</Dato>
+
+Ahora lo que hervir **no** hace, que es la mitad de la lección. No saca nada de lo disuelto: el
+nitrato, la sal, el arsénico y el flúor no son seres vivos y el calor no los toca. Peor todavía:
+mientras hervís se evapora agua pura y **los solutos se quedan**, así que la concentración
+sube. Hervir agua con nitrato durante veinte minutos te deja agua con más nitrato por litro que
+cuando empezaste. Destilar sí los sacaría —eso es recoger el vapor y condensarlo, otra cosa—, pero
+hervir a olla abierta hace lo contrario. Tampoco elimina las toxinas ya fabricadas por ciertos
+microbios, ni las esporas: hay bacterias que se
+blindan en <Termino slug="endospora-bacteriana">endosporas</Termino> que aguantan el hervor. Para el
+agua de casa esto es un matiz, porque los patógenos del agua no son formadores de esporas; importa
+mucho en conservas, que es otro módulo.
+
+Y queda el defecto que menos se nombra: **el agua hervida no queda protegida.** Queda limpia y
+absolutamente indefensa. Si la volcás a un balde con biopelícula en las paredes, o si alguien mete la
+mano, vuelve a estar contaminada y ahora además tenés la falsa tranquilidad de haberla hervido.
+
+<Formula explicacion="Calentar diez litros de 25 a 100 °C cuesta unos 3.135 kJ. Pero cada litro que dejás evaporar en el hervor cuesta 2.257 kJ más: casi tres cuartas partes de todo lo anterior. Ahí se va la leña.">
+calentar: 10 kg × 4,18 kJ/kg·°C × 75 °C = 3.135 kJ  ·  evaporar 1 L = 2.257 kJ
+</Formula>
+
+Ese número tiene una consecuencia doméstica enorme. Una vez que rompió el hervor, **tapá la olla y
+bajá el fuego al mínimo que mantenga el burbujeo**. El fuego fuerte no calienta más —el agua ya está
+a 100 °C y no sube— , solo evapora más rápido y te quema la leña o el gas en fabricar vapor. Con
+tapa y llama baja, hervir cuesta la mitad. Y el agua se enfría **tapada**, en el mismo recipiente
+donde hirvió, no destapada al aire.
+
+<Advertencia>
+Una olla de diez litros de agua hirviendo es el objeto más peligroso de la casa para un chico, y las
+quemaduras por líquido caliente son de las lesiones infantiles más frecuentes que existen. La
+mecánica es siempre la misma: la olla queda **en el suelo o al borde del fogón enfriándose**, con el
+mango sobresaliendo, y una mano de niño la alcanza. El agua caliente moja la ropa, la ropa la
+retiene contra la piel y la quemadura sigue profundizando después del accidente.
+
+Reglas sin adaptaciones: el mango **siempre hacia adentro**; enfriar arriba, nunca en el piso;
+avisar en voz alta cuando se camina con agua hirviendo; y no dejar a un chico solo en la cocina
+mientras hay algo al fuego. Si igual pasa: agua fría corriendo sobre la quemadura un buen rato,
+sacar la ropa que no esté pegada, no poner nada encima —ni aceite, ni pasta de dientes, ni hielo— y
+al centro de salud.
+</Advertencia>
+
+## Cloro: oxidar y además dejar un guardia
+
+El cloro trabaja de otra manera, y entenderla explica todos sus caprichos. Cuando echás hipoclorito
+al agua, se forma <Termino slug="acido-hipocloroso">ácido hipocloroso</Termino>, una molécula
+chiquita y sin carga eléctrica. Eso es lo decisivo: al no tener carga, **atraviesa la membrana del
+microbio como si no estuviera**, entra y oxida por dentro las enzimas y el material genético. Es un
+sabotaje químico desde adentro, no un veneno que actúa por fuera.
+
+Esa molécula convive con otra forma, el ion hipoclorito, que **sí** tiene carga y por eso rebota
+contra la membrana y desinfecta muchísimo peor. Cuál de las dos domina lo decide el pH del agua: en
+agua neutra o levemente ácida manda la forma buena; en agua alcalina manda la mala. Por eso el mismo
+cloro rinde distinto en dos aguas distintas, y por eso un agua muy alcalina necesita más.
+
+Después está la trampa central. El cloro es un oxidante y **oxida lo primero que encuentra**, no lo
+que a vos te interesa. La materia orgánica, el hierro, el manganeso y el amoníaco se lo comen antes
+de que llegue a ningún microbio. Eso que se consume sin desinfectar
+es la <Termino slug="demanda-de-cloro">demanda de cloro</Termino> del agua, y solo lo que sobra
+después de pagarla queda como <Termino slug="cloro-residual-libre">cloro residual libre</Termino>:
+la parte activa, la que desinfecta y la que sigue de guardia. En agua turbia la demanda se come la
+dosis entera y no queda nada — de ahí que **aclarar antes de clorar no sea prolijidad, sea
+aritmética**.
+
+La tercera variable es el <Termino slug="tiempo-de-contacto">tiempo de contacto</Termino>. La
+desinfección no es instantánea: depende aproximadamente del producto de la concentración por el
+tiempo, así que con la mitad de cloro necesitás como el doble de tiempo. Por eso la pauta habitual es
+dejar el agua reposar al menos media hora antes de tomarla, y más si está fría o turbia. Servirla a
+los cinco minutos es tirar el cloro.
+
+<Tabla>
+
+| Organismo | Tamaño típico | Cloro casero | Hervido | Vela cerámica (0,2–0,5 µm) |
+| --- | --- | --- | --- | --- |
+| Virus (rotavirus, hepatitis A) | 0,02–0,3 µm | Sí | Sí | **No: pasan por el poro** |
+| Bacterias (*E. coli*, cólera, tifoidea) | 0,2–5 µm | Sí | Sí | Sí |
+| Quistes de *Giardia* | 8–12 µm | Con dosis y tiempo altos | Sí | Sí |
+| Ooquistes de *Cryptosporidium* | 4–6 µm | **No, prácticamente resiste** | Sí | Sí |
+| Huevos de gusanos intestinales | 20–80 µm | **No** | Sí | Sí |
+| Nitrato, sales, arsénico | disuelto | No | **No: los concentra** | No |
+
+</Tabla>
+
+Esa tabla es la lección entera en un cuadro. Miralo bien: **el cloro es ciego para los parásitos
+grandes y el filtro es ciego para los virus.** El <Termino slug="ooquiste">ooquiste</Termino> de
+*Cryptosporidium* tiene una pared que resiste el cloro doméstico casi por completo, y el huevo de
+lombriz también. Contra esos, filtro o hervor. Contra virus, hervor o cloro. Y solo el cloro deja
+guardia después.
+
+Ese residual es su ventaja irremplazable. El agua hervida sale limpia y desprotegida; el agua clorada
+sale limpia **y con vigilancia**, capaz de matar lo que le caiga encima durante horas dentro del
+recipiente. Y hay un malentendido que hace daño: **el olorcito a pileta es la prueba de que la
+protección está viva**. Cuando el agua clorada deja de oler, no es que se «purificó»: es que se quedó
+sin defensa.
+
+<Advertencia>
+No damos dosis acá, y el motivo es concreto: **la lavandina comercial no tiene una sola
+concentración**. Se vende en fuerzas muy distintas, pierde potencia con el calor, la luz y los meses,
+y muchas versiones traen perfume, espesante, detergente o aditivos «anti-salpicadura» que **no son
+para tomar**. Una dosis copiada de internet, aplicada a un producto de otra concentración, o queda
+corta —agua sin desinfectar con cara de desinfectada— o queda larga.
+
+Lo que sí sabés ahora son las variables: la concentración del producto, el volumen de agua, la
+turbidez que se come la dosis, el tiempo de reposo y el pH. **La dosis se lee en la etiqueta del
+propio envase**, que muchas veces trae la indicación para agua de consumo, y se confirma en el centro
+de salud, que además suele distribuir gotas o pastillas potabilizadoras con su instrucción escrita.
+Preguntá ahí antes que a un vecino.
+
+Y dos reglas de seguridad que no se negocian. **Nunca mezcles cloro con ácido** —vinagre, limón,
+desincrustante, limpiador de inodoros—: reaccionan y liberan cloro gaseoso, que se disuelve en la
+humedad de tu nariz, tu garganta y tus pulmones formando ácido ahí adentro y quemando el tejido desde
+el interior. Tampoco con amoníaco ni con orina. Se usa solo, en lugar ventilado. **Y jamás guardes
+lavandina en una botella de gaseosa**: cada año se envenenan chicos exactamente así, y ninguna
+etiqueta escrita a mano evita que alguien tome del envase que reconoce.
+</Advertencia>
+
+## El sol adentro de una botella
+
+Cuando no hay leña, no hay gas y no hay cloro, queda
+la <Termino slug="desinfeccion-solar">desinfección solar</Termino>: llenar botellas plásticas
+transparentes y dejarlas al sol pleno. No es folclore, tiene mecanismo. La radiación ultravioleta que
+atraviesa el plástico daña el material genético del microbio y, sobre todo, dispara reacciones que
+generan compuestos oxidantes **dentro de la propia célula**, que se destruye a sí misma desde adentro.
+Encima, si el agua pasa de unos 45 °C, el calor y la luz se potencian y todo va mucho más rápido.
+
+Las condiciones son estrictas porque el mecanismo lo exige. El agua tiene que estar **clara**: la
+turbidez frena la luz de golpe, y a pocos centímetros de profundidad ya no llega nada. Las botellas
+tienen que ser de plástico transparente tipo PET, **no de vidrio** —el vidrio común filtra buena
+parte del ultravioleta—, y **no muy gruesas**: hasta dos o tres litros, acostadas, porque la luz se
+apaga con la profundidad. Van seis horas de sol pleno, o dos días seguidos si está nublado. Y una
+botella rayada, opaca o amarillenta ya no sirve: hay que cambiarla.
+
+Sirve contra bacterias y virus, y reduce bastante los protozoos. Es lenta, es de poco volumen,
+depende del cielo y **no deja ningún residual**, así que el agua sale desprotegida igual que la
+hervida. Pero no cuesta nada, no consume combustible y funciona en un apagón. Es la barrera de
+emergencia, no la de todos los días.
+
+## Filtros: tamaño de poro contra tamaño del bicho
+
+Un filtro no mata: **tamiza**. Y todo tamiz se juzga con una sola cuenta, comparar
+su <Termino slug="tamano-de-poro">tamaño de poro</Termino> con el tamaño del organismo. La unidad
+es el <Termino slug="micrometro">micrómetro</Termino>, la milésima parte de un milímetro: un pelo
+tiene unos 70, y el ojo humano no distingue nada por debajo de unos 40. Todo lo de esta lección pasa
+por debajo de esa línea.
+
+Un paño doblado anda por decenas de micrómetros; una <Termino slug="vela-ceramica">vela
+cerámica</Termino> de filtro casero, entre 0,2 y 0,9; una membrana de fibra hueca puede bajar a 0,02.
+Cruzá eso con la tabla de más arriba y todo se acomoda solo: la cerámica retiene bacterias y
+parásitos, **pero los virus son diez veces más chicos que su poro y pasan derecho**. Por eso un filtro
+de vela en zona con hepatitis A o rotavirus no reemplaza al cloro ni al hervor: los complementa.
+
+Un filtro de arena casero funciona distinto y conviene entenderlo, porque los huecos entre granos de
+arena son gigantes comparados con una bacteria y sin embargo el filtro retiene mucho. No trabaja por
+tamiz: trabaja por **adherencia** —el recorrido largo y sinuoso hace que las partículas choquen y se
+peguen a los granos— y por la capa biológica viva que se forma en los primeros centímetros de arena,
+donde otros microorganismos se comen a los que llegan. De ahí dos consecuencias raras: **un filtro de
+arena nuevo funciona mal** hasta que esa capa madura, y **si lo dejás secar, la matás** y vuelve a
+empezar de cero.
+
+Caso aparte es el <Termino slug="carbon-activado">carbón activado</Termino>, que no filtra por tamaño
+en absoluto: **adsorbe**, o sea, las moléculas se pegan a su superficie interna, que es
+enorme. Mejora sabor y olor, saca cloro y retiene algunos orgánicos y agroquímicos. No saca ni
+nitrato, ni sales, ni bacterias — y peor, si se satura y se queda húmedo, **se vuelve un excelente
+criadero**. Y acá está la trampa fina: **el carbón que te saca el gusto a cloro te está sacando la
+protección residual.** Si tenés un filtro con carbón, el orden correcto es filtrar y después clorar,
+o filtrar y consumir en el día.
+
+Y la regla general que cierra el asunto de lo disuelto: **nada que filtre por tamaño de poro puede
+sacar algo disuelto.** El nitrato, la sal y el arsénico están desarmados en iones del mismo orden de
+tamaño que las moléculas de agua; cualquier poro que deje pasar el agua los deja pasar. Sacarlos
+exige otra física —ósmosis inversa o destilación—, no un filtro más fino.
+
+<Advertencia>
+Un filtro sucio es peor que no tener filtro, porque da confianza. Todo lo que la vela retuvo está
+acumulado en su cara externa, alimentándose y multiplicándose. Se cepilla con un cepillo limpio
+dedicado solo a eso —sin jabón ni detergente— y se maneja con las manos lavadas, sin tocar el lado de
+adentro. Una vela **rajada o golpeada** deja pasar todo por la fisura mientras el agua sigue saliendo
+transparente; la fisura no se ve. Si la vela se cayó, se cambia.
+
+Y una regla dura de recipientes que vale para toda la cadena: **jamás uses para agua un bidón o un
+tacho que tuvo agroquímicos, combustible, solvente o pintura.** El plástico absorbe esas sustancias
+en su masa y las devuelve al agua durante meses; ningún lavado, ni con lavandina ni con detergente,
+lo revierte. No importa cuántas veces se enjuague ni lo limpio que se vea.
+</Advertencia>
+
+## El eslabón que casi todos rompen: el recipiente
+
+Acá se pierde la mayor parte del trabajo. Hay estudios repetidos en muchos países que encuentran lo
+mismo: **agua que sale segura de la fuente o del tratamiento y llega contaminada al vaso**, y la
+diferencia está enteramente en cómo se transportó y se guardó. Es el punto donde más rinde el
+esfuerzo, y es gratis.
+
+El primer mecanismo es el más obvio y el más frecuente: **la mano y el jarro que entran al
+recipiente**. Un balde de boca ancha del que todos sacan con el mismo jarro, apoyado en cualquier
+lado, recibe todos los días un inóculo nuevo. Un bidón de boca angosta del que se sirve volcando, o
+mejor un recipiente con canilla, corta esa vía de raíz. Y el jarro vive colgado de un gancho, no
+adentro del agua.
+
+El segundo es más silencioso: **la biopelícula**. Los microbios que sobreviven se pegan a la pared
+del recipiente y fabrican una baba pegajosa que los envuelve y los protege —eso es
+una <Termino slug="biopelicula">biopelícula</Termino>—. Esa capa es una barrera física contra el
+cloro y además lo consume, así que adentro de la baba los bichos viven tranquilos mientras el agua
+del medio parece bien tratada; cada tanto se desprenden pedazos y siembran el agua nueva. **Por eso
+la biopelícula no se resuelve con química sino con fregado**: primero se raspa con un cepillo, y
+recién después se desinfecta. Y de ahí sale la regla que más gente incumple: **no se rellena sobre lo
+viejo.** Si siempre agregás encima, el fondo nunca se vacía y esa capa nunca se va. Se termina el
+agua, se lava el recipiente, se llena de nuevo.
+
+Después vienen tres condiciones del lugar. **Tapado siempre**, con tapa firme y no con un trapo:
+entra polvo, entran moscas y, en Santa Cruz, entra el mosquito del dengue, que cría justamente en
+agua limpia y quieta y convierte tu tanque de agua tratada
+en <Termino slug="criadero-de-vector">criadero</Termino>. **Opaco o a la sombra**, porque la luz en
+un recipiente translúcido hace crecer algas, que dan mal sabor y se comen el cloro. Y **levantado del
+piso**, lejos de la letrina, del corral y del lugar donde se lavan los pañales, porque el piso es
+donde termina todo lo que se derrama.
+
+<Analogia>
+Todo esto es <Termino slug="contaminacion-cruzada">contaminación cruzada</Termino> pura, la misma
+lógica que en cualquier proceso: **el lado sucio no cruza al lado limpio**. Un balde para agua cruda
+y otro para agua tratada, marcados distinto, que no se intercambian. Es la diferencia entre validar
+la entrada y validar la salida: podés sanear perfectamente el dato al entrar y arruinarlo después si
+cualquier parte del sistema escribe sin control sobre la variable ya limpia.
+
+Y el fallo tiene la peor forma posible, la del error silencioso: no tira excepción. El agua sigue
+saliendo transparente, sin olor, exactamente igual que ayer. **Un sistema que falla en silencio te
+hace confiar más, no menos**, y por eso conviene tratar el balde con la misma sospecha con que
+tratarías una función que escribe en memoria compartida sin candado.
+</Analogia>
+
+<AplicarRizoma>
+**Empezá por saber qué agua tomás, que no es una pregunta obvia.** Sentate una tarde y escribí el
+recorrido completo, paso por paso: de dónde sale —red, pozo, bidón, aljibe—, en qué se transporta,
+dónde se guarda, con qué se sirve y quién la toca. Ese recorrido es tu cadena, y como toda cadena,
+vale lo que valga su eslabón más flojo. En la mayoría de las casas el eslabón flojo no es la fuente:
+es el balde de la cocina o el jarro que anda dando vueltas.
+
+**Después mirá la fuente, que es lo más barato de arreglar.** Si tomás de pozo: dónde está la letrina
+o el pozo ciego respecto del pozo de agua y para qué lado baja el terreno; si el brocal está
+levantado del piso para que no le entre el agua de lluvia; si tiene tapa; si el piso alrededor está
+cementado con caída hacia afuera; si los animales llegan hasta ahí. Levantar un brocal y hacer una
+losita alrededor cuesta una bolsa de cemento y arregla más que cualquier filtro comprado. Si tomás de
+red, el problema suele ser otro: la intermitencia. Una cañería que se vacía cuando cortan el agua
+puede chupar suciedad por sus propias fisuras al despresurizarse — y la instalación en sí, con su
+tanque y sus caños, es el módulo treinta y cuatro.
+
+**Armá tu cadena con lo que ya tenés en la casa, no con lo que habría que comprar.** Si el agua sale
+turbia: dejarla reposar tapada, trasvasar sin revolver, colar con un paño doblado en cuatro y recién
+ahí desinfectar. Si tenés gas o leña: hervir con tapa y llama baja, y enfriar en la misma olla
+tapada. Si conseguís lavandina o pastillas: leer la etiqueta, respetar el reposo y no tocar el
+recipiente en ese rato. Si no hay ni una cosa ni la otra y hay sol: botellas plásticas transparentes,
+acostadas, seis horas. **Ninguna de estas cuatro requiere comprar nada nuevo.**
+
+**Elegí bien el recipiente, que es la decisión que más rinde.** Boca angosta o canilla, tapa firme,
+opaco, levantado del piso, con un jarro colgado afuera. Fijá un día de la semana para vaciarlo,
+cepillarlo por dentro —cepillo, no solo enjuague—, desinfectarlo y volver a llenarlo. Un bidón de
+agua mineral vacío, bien lavado, cumple casi todo esto y no cuesta nada. Un tacho que tuvo
+agroquímico no sirve nunca, aunque se vea impecable.
+
+**Y separá por uso, porque no toda el agua necesita el mismo tratamiento.** La que se toma, la que se
+usa para cocinar sin hervir después, la de la mamadera y la de lavarse los dientes tienen que estar
+tratadas. La de bañarse, lavar ropa o limpiar el piso, no. Tratar solo lo que hace falta baja el
+costo a un tercio y hace que la disciplina se sostenga en el tiempo, que es lo que realmente decide
+si esto funciona o se abandona en dos semanas.
+
+**Si en tu casa hay una embarazada, un bebé con mamadera o alguien con las defensas bajas, subí el
+estándar y consultá.** Ahí es donde el nitrato del pozo, el agua sin hervir y el balde compartido se
+cobran caro. Preguntá en el centro de salud por el análisis del agua y por las pastillas
+potabilizadoras: son preguntas que hacen ahí todos los días y no te van a mirar raro.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El clima de la llanura cruceña tiene un calendario del agua y conviene conocerlo.** De octubre a
+abril llueve fuerte, el suelo se satura, el nivel freático sube y los pozos poco profundos se vuelven
+vulnerables: el agua de superficie —la del corral, la del patio, la que rodeó la letrina— llega abajo
+mucho más rápido que en seca. Es también la época en que aparecen los cortes de energía por
+tormentas, así que se junta la peor combinación posible: más riesgo y menos bomba. De mayo a
+septiembre baja el riesgo de arrastre, pero cae el nivel del agua y muchos pozos empiezan a sacar
+agua más cargada del fondo. **El tratamiento no se abandona en seca: se cambia el motivo.**
+
+**El calor y la humedad aceleran todo lo que hace daño.** Con treinta y pico de grados casi todo el
+año, una bacteria que en clima templado tarda horas en multiplicarse acá tarda mucho menos, y un
+balde de agua tibia con un poco de materia orgánica pasa de aceptable a peligroso en un día. La misma
+temperatura ayuda a la desinfección solar y hace que el cloro se evapore y se degrade más rápido,
+así que el envase de lavandina se guarda **cerrado, en sombra y fresco**, y no se compra en cantidad
+para seis meses.
+
+**Los cortes de energía son parte del diseño, no una excepción.** Sin luz no hay bomba, y sin bomba
+hay que sacar del pozo con balde y soga — que es exactamente el momento en que el agua se contamina,
+porque el balde toca el piso, la soga arrastra y la mano entra. Tener un balde exclusivo para el
+pozo, colgado y nunca apoyado en el suelo, resuelve la mitad del problema por cero peso. Y tener
+guardados diez o veinte litros ya tratados en un bidón con tapa te saca del apuro de tener que tomar
+agua cruda con la excusa de que no había otra.
+
+**Acá hay dengue, y eso cambia la regla del recipiente.** El mosquito del dengue no cría en agua
+podrida: cría en **agua limpia y quieta**, y un turril destapado de agua de lluvia junto a la casa es
+un criadero perfecto. La consecuencia es incómoda pero clara: guardar agua limpia sin tapa es
+resolver un problema sanitario creando otro. Todo recipiente con agua va tapado o con malla, y los
+que no se usan van dados vuelta. El control de criaderos en detalle es del módulo veintiséis, pero la
+tapa empieza acá.
+
+**El agua embotellada y los bidones de reparto no son automáticamente seguros.** Hay marcas
+registradas y controladas, y hay reparto informal donde no se sabe qué hay atrás. Un bidón retornable
+que se rellena sin lavar arrastra biopelícula igual que tu balde, y la boca del bidón viaja destapada
+en la moto. Cosas simples: mirar que el envase esté sellado, limpiar el cuello del bidón antes de
+montarlo en el dispensador y **lavar el dispensador por dentro**, que casi nadie lava y es donde el
+agua se queda tibia y quieta durante días.
+
+**Y la parte honesta: lo que acá no se puede resolver por deducción.** No hay forma de saber si tu
+pozo tiene nitrato, arsénico o exceso de sales sin un análisis de laboratorio, y las normas, los
+límites permitidos y dónde se hace el análisis los define la autoridad competente, no este curso.
+Preguntá en el centro de salud de tu zona, en el municipio o en la cooperativa de agua. **En Rizoma
+del Sur eso lo tratamos como parte del proyecto y no como un trámite ajeno**: si el agua de las casas
+del entorno tiene un problema químico, no se arregla con más disciplina en la cocina, y saberlo a
+tiempo evita años de hacer bien lo que no era el problema.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya tenés el agua bajo control, y con eso cortaste una de las vías de la ruta fecal-oral. Pero es una
+sola. La misma bacteria que no llegó por el agua puede llegar en la mano que sirvió, en el trapo que
+secó el plato, en la tabla donde se cortó el pollo o en la mosca que se paró en la olla — y ninguna
+de esas vías la toca el cloro del bidón.
+
+La lección siguiente, **Manos, cocina y alimentos: por qué la higiene funciona**, va por ese lado con
+el mismo criterio de mecanismo. El jabón explicado por su química —una molécula con dos extremos que
+no mata nada y sin embargo **arrastra**, y por qué desarma la envoltura de ciertos virus—, por qué el
+frote, el enjuague y el secado pesan más que la marca, y dónde falla el alcohol en gel. Después la
+cocina: la zona de temperatura donde las bacterias se duplican en minutos, la contaminación cruzada
+entre tabla, cuchillo y trapo, y la distinción que decide si recalentar salva o no salva, porque hay
+toxinas que el calor ya no destruye. **La misma lógica de barreras múltiples, aplicada a lo que se
+come.**

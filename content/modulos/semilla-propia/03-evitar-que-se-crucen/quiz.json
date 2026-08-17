@@ -1,0 +1,97 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-no-se-nota",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un cruce indeseado no se detecta el mismo año?",
+      "opciones": [
+        "El fruto lo forma tejido de la planta madre, así que su tamaño, color y sabor no cambian.",
+        "Lo que lleva la mitad del padre extraño es el embrión dentro de la semilla.",
+        "El problema aparece al sembrar esa semilla, una temporada después.",
+        "Porque el polen ajeno tarda meses en fecundar la flor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La fecundación es inmediata; lo que se retrasa es la evidencia. Por eso el aislamiento se decide antes y no se comprueba después: cuando puedes comprobarlo, ya invertiste la temporada."
+    },
+    {
+      "id": "cuatro-herramientas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué caracteriza a cada herramienta de aislamiento?",
+      "opciones": [
+        "La distancia es simple pero exige cientos de metros, así que no cabe en una parcela pequeña.",
+        "La barrera física sí cabe: malla, jaula o una franja alta de otro cultivo.",
+        "El embolsado da certeza real, pero solo sirve en especies que se autofecundan.",
+        "El aislamiento por tiempo es el más fiable de los cuatro en clima tropical."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "En clima tropical el aislamiento por tiempo funciona peor de lo esperado, porque muchas especies florecen de forma escalonada y prolongada en vez de concentrarse en unas semanas. Y el embolsado no sirve en alógamas: la flor embolsada no recibe polen de nadie y no cuaja."
+    },
+    {
+      "id": "quien-mueve-el-polen",
+      "tipo": "verdadero_falso",
+      "enunciado": "Existe una distancia de aislamiento universal que sirve para cualquier especie.",
+      "respuesta": false,
+      "explicacion": "Falso: cualquier número que leas está escrito para una especie, un vector y un grado de pureza concretos. Si el polen lo mueve el viento, solo sirve mucha distancia o una barrera muy tupida; si lo mueven insectos, la barrera y el embolsado funcionan y la distancia funciona peor de lo que se cree, porque una abeja recorre kilómetros."
+    },
+    {
+      "id": "la-regla-practica",
+      "tipo": "verdadero_falso",
+      "enunciado": "En una parcela pequeña, la regla que resuelve el problema sin infraestructura es guardar semilla de una sola variedad por especie y temporada.",
+      "respuesta": true,
+      "explicacion": "Correcto: puedes cultivar tres ajíes, pero guardas de uno solo. Deja de haber cruce posible porque no hay con quién cruzarse. Es una restricción real —limita lo que puedes tener en flor a la vez— y a cambio elimina el problema entero sin mallas ni bolsas."
+    },
+    {
+      "id": "el-vecino",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hacer con el entorno que no controlas?",
+      "opciones": [
+        "Caminar el perímetro antes de decidir el lote de semilla y mirar qué hay en flor.",
+        "Acordar con los vecinos qué se siembra cerca del lindero esa temporada.",
+        "Si no se puede controlar, embolsar: es lo único que no depende de terceros.",
+        "Asumir que el alambrado marca el límite del aislamiento."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El aislamiento no termina en el alambrado: un ají picante a cincuenta metros expone tu lote por mucho que tú tengas una sola variedad. El acuerdo con vecinos cuesta una conversación y es justamente lo que un productor aislado no puede conseguir."
+    },
+    {
+      "id": "embolsado-paso-a-paso",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se embolsa correctamente?",
+      "opciones": [
+        "Sobre botones florales todavía cerrados: si la flor abrió, puede estar ya fecundada.",
+        "Con bolsa de papel o tela fina, nunca de plástico, que condensa y pudre la flor.",
+        "Retirando la bolsa al cuajar el fruto pero dejando la cinta de marca puesta.",
+        "Cubriendo la planta entera durante todo su ciclo para mayor seguridad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Cubrir la planta entera todo el ciclo la asfixia y la calienta sin necesidad: basta con proteger las flores concretas de las que vas a guardar. Y el paso donde se pierde todo el trabajo es la cosecha: si alguien recoge el lote sin mirar las cintas, el aislamiento no sirvió de nada."
+    },
+    {
+      "id": "cuanto-embolsar",
+      "tipo": "verdadero_falso",
+      "enunciado": "Seis frutos de seis plantas distintas valen más que veinte frutos de una sola planta.",
+      "respuesta": true,
+      "explicacion": "Correcto: repartir el origen genético importa más que la cantidad total, porque concentrar en una planta lleva a la depresión por consanguinidad. Y un solo fruto de ají da decenas o cientos de semillas, así que cinco o seis flores en cinco o seis plantas ya producen más de lo que vas a sembrar."
+    },
+    {
+      "id": "aislamiento-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define el protocolo de aislamiento de Rizoma del Sur para culantro y ají dulce, incluyendo qué haces con el entorno.",
+      "respuestaModelo": "La regla base es una variedad por especie y temporada para semilla. Puedo producir y vender más de una, pero guardo de una sola: así no hay con quién cruzarse dentro de la parcela y el problema desaparece sin comprar nada.\n\nEl culantro va primero porque es fácil. Con una sola variedad en flor y sin parientes cercanos, basta separación moderada dentro de la parcela.\n\nEl ají dulce exige embolsado y no es negociable. Es Capsicum chinense, se autofecunda bastante —así que la bolsa funciona— pero los insectos lo cruzan lo suficiente para arruinar el lote. Y el daño es el peor del catálogo: la picantez viaja en la semilla y no en el fruto de este año, así que un cruce con un picante no se detecta hasta que el cliente muerde el fruto de la generación siguiente, cuando el material ya se vendió.\n\nEl protocolo concreto para el ají: marco seis plantas con cinta de color, embolso cinco o seis botones todavía cerrados en cada una con bolsa de papel —nunca plástico, que en este clima condensa y pudre la flor en dos días—, ato sin estrangular el tallo, retiro la bolsa cuando cuaja el fruto dejando la cinta puesta, y en cosecha recojo solo lo marcado. Eso da mucha más semilla de la que voy a sembrar y reparte el origen entre seis plantas, que es lo que evita la depresión por consanguinidad.\n\nTodo lo embolsado se anota en la libreta: planta, fecha, número de flores y lote. Sin ese registro, en cosecha nadie sabe qué significa cada cinta.\n\nCon el entorno hago dos cosas. Primero, camino el perímetro antes de decidir el lote de semilla y miro qué hay en flor en los lotes vecinos: con doce lotes contiguos tengo espacio de sobra para separar dentro, pero el perímetro con vecinos es largo y ahí no mando yo. Segundo, hablo: un acuerdo de «este año guardo ají, no lo siembres cerca del lindero» cuesta una conversación y vale más que cualquier malla. Es justamente la clase de coordinación que justifica el banco comunitario y que un productor solo no consigue.\n\nY asumo el contexto: aquí hay insectos activos casi todo el año y abejas nativas que trabajan a distancias largas, así que no existe la ventana natural de aislamiento de los climas con estaciones. La estrategia realista no es aislar del mundo sino embolsar lo que de verdad importa y aceptar que el resto del lote es producción, no semilla.",
+      "criterios": [
+        "Aplica la regla de una variedad por especie y temporada.",
+        "Trata el culantro como caso simple y lo justifica.",
+        "Impone embolsado obligatorio en ají dulce con la razón correcta.",
+        "Explica que la picantez viaja en la semilla y se detecta tarde.",
+        "Detalla el protocolo: marcar, botón cerrado, papel, retirar al cuajar.",
+        "Rechaza el plástico por condensación.",
+        "Reparte el embolsado entre varias plantas.",
+        "Registra en la libreta para poder cosechar solo lo marcado.",
+        "Camina el perímetro antes de decidir el lote.",
+        "Acuerda con vecinos y lo liga al banco comunitario.",
+        "Asume que el clima local anula el aislamiento por tiempo y por distancia."
+      ],
+      "explicacion": "Esta lección introduce la idea que sostiene todo el módulo comunitario: hay problemas que un productor solo no puede resolver por mucho dinero que tenga, y que una conversación entre vecinos resuelve gratis. El aislamiento de semilla es el primero y el más claro."
+    }
+  ]
+}

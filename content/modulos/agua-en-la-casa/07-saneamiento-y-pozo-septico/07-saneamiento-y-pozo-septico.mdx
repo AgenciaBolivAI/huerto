@@ -1,0 +1,550 @@
+Casi todo lo que se enseña de plomería trata de la mitad bonita del problema: hacer que el agua
+llegue. La otra mitad no se enseña, no se ve, no tiene grifo que lucir, y es la que decide si en un
+barrio hay diarrea infantil o no. El agua que sale de tu casa lleva materia fecal, y lo único que la
+separa del agua que vas a tomar mañana son unas pocas decisiones técnicas que nadie te explicó: cuánto
+baja un tubo por metro, si el giro se hizo a 45 o a 90 grados, si hay un tubo abierto al aire sobre el
+techo, y en qué dirección quedó el pozo respecto de la bomba.
+
+Hay una asimetría incómoda entre las dos redes de una casa. **La de entrada avisa cuando falla**: se
+corta el agua, gotea, sube la factura. **La de salida no avisa hasta que ya es tarde**, y avisa por el
+peor camino: agua servida volviendo hacia adentro, un olor que nadie ubica, o —lo más grave y lo más
+silencioso— un pozo de agua contaminado hace meses del que nadie sospecha porque el agua sigue
+saliendo transparente. Esta lección trata el saneamiento como lo que es: **ingeniería de gravedad y
+salud pública**. El sifón de cada aparato fue la lección 04, el agua de tomar la 06, y el sistema
+compartido entre familias es del módulo 17.
+
+## La red que solo baja
+
+La tubería de entrada trabaja **llena y a presión**: puede subir, puede doblar donde quiera, y si
+falta fuerza se pone una bomba. El desagüe no tiene nada de eso. Trabaja **parcialmente lleno y solo
+por gravedad**: adentro hay agua abajo y aire arriba, y lo único que la mueve es que un extremo está
+más alto que el otro. Si te equivocaste en la altura no se corrige con un accesorio: hay que picar el
+piso.
+
+De ahí sale la distinción que decide qué se puede juntar con qué. El <Termino slug="agua-gris">agua
+gris</Termino> es la del lavamanos, la ducha, el lavarropas y la pileta de cocina: trae jabón, grasa y
+pelo, pero no materia fecal. El <Termino slug="agua-negra">agua negra</Termino> es la del inodoro. Y
+el agua de lluvia no es ninguna de las dos: es agua limpia, en cantidades enormes y de golpe. **La
+regla que atraviesa toda la lección es que la de lluvia no se junta jamás con las otras dos.**
+
+<Analogia titulo="Una cola sin control de flujo">
+La red de entrada es una llamada síncrona con reintentos: si algo se traba, presionás más y sale. El
+desagüe es una cola por gravedad, sin reintentos y sin control de flujo: **cada mensaje avanza solo
+porque hay desnivel**, y si uno se atasca, los de atrás se acumulan hasta desbordar por el punto más
+bajo del sistema, que casualmente es la rejilla del baño. La capacidad no se amplía en caliente. Y hay
+dos formas de romperla: mandar más de lo que puede procesar —la lluvia— o mandar mensajes que el
+consumidor no sabe procesar —una toallita húmeda—. Las dos terminan igual: el sistema no rechaza el
+mensaje, lo acumula.
+</Analogia>
+
+## La pendiente: el error es creer que más es mejor
+
+La <Termino slug="pendiente">pendiente</Termino> es cuánto baja el tubo por cada metro que avanza. Uno
+por ciento es un centímetro por metro.
+
+<Formula explicacion="En la práctica: 1 % es 1 cm de caída por cada metro de tubo. Nada más.">
+Pendiente (%) = caída ÷ largo × 100
+</Formula>
+
+Todo el mundo sabe que **poca pendiente tapa**, y casi nadie sabe por qué. La imagen intuitiva es que
+el agua «no corre», pero el agua corre igual: corre despacio, y un líquido lento no arrastra nada. Los
+sólidos no flotan, van rodando por el fondo empujados por el roce del agua que los pasa. Por debajo de
+cierta velocidad —del orden de medio metro por segundo— ese empuje ya no mueve un trozo de papel
+mojado. Eso es la <Termino slug="velocidad-de-arrastre">velocidad de arrastre</Termino>: la mínima que
+necesita el agua para llevarse lo que trae. El tubo se tapa de a poquito, y por eso el atasco aparece
+años después de la obra y nadie lo relaciona con la obra.
+
+Lo que casi nadie sabe es que **demasiada pendiente también tapa**. Si el tubo cae muy pronunciado, el
+agua se acelera, se hace delgada y se adelanta: se va corriendo por el fondo y **deja los sólidos
+atrás, varados en seco**, como al volcar un balde sobre una rampa empinada con arena encima. El sólido
+varado se seca, se pega, y la próxima descarga se le adelanta otra vez hasta formar una costra que
+ninguna descarga levanta. Por eso el oficio busca un término medio, y la regla práctica ronda **el 2 %
+en ramales de 50 mm y entre el 1 y el 2 % en el colector de 100 mm**. La cifra exigible en tu lugar la
+fija la autoridad local: preguntá en el municipio o en tu cooperativa antes de tapar una zanja.
+
+Hay un tercer defecto que no perdona: la <Termino slug="contrapendiente">contrapendiente</Termino>, un
+tramo que sube en vez de bajar. Bastan unos milímetros: el agua se queda quieta, los sólidos se
+depositan siempre en el mismo punto y el tubo se tapa una y otra vez sin importar cuántas veces lo
+destapes. Casi nunca es error de cálculo, es un tubo que se hundió porque debajo quedó tierra suelta o
+porque pasó un vehículo encima. Un desagüe se apoya sobre cama de arena compactada en todo su largo,
+nunca sobre ladrillos sueltos cada dos metros, porque un tubo apoyado en dos puntos **se hamaca en el
+medio y esa panza es una contrapendiente que fabricaste vos**.
+
+## Diámetros: por qué un tubo demasiado grueso se tapa
+
+La otra intuición equivocada es que un tubo más grueso siempre es más seguro. En una red a presión
+sería cierto; por gravedad no: **en un tubo ancho, el mismo caudal forma una lámina de agua más
+baja**, y una lámina baja no arrastra. Un litro por segundo en un tubo de 50 mm llena buena parte de
+la sección y empuja con ganas; ese mismo litro en uno de 150 mm es una película que apenas moja el
+fondo y pasa por encima de los sólidos. Las medidas del oficio no son un mínimo al que agregar margen:
+son un rango, y pasarse es tan malo como quedarse corto.
+
+<Tabla>
+
+| Aparato o tramo | Diámetro habitual | Por qué esa medida |
+| --- | --- | --- |
+| Lavamanos | 40 mm | Poco caudal, casi sin sólidos; más grueso perdería arrastre |
+| Ducha, pileta de cocina, lavarropas | 50 mm | Caudal medio, mucho pelo y grasa: necesita lámina alta |
+| Inodoro y colector principal | 100 mm | Es el único que manda sólidos grandes de una vez |
+| Bajante vertical | Igual o mayor que el mayor que reciba | Nunca se reduce hacia abajo |
+
+</Tabla>
+
+De ahí dos reglas. **Nunca se reduce el diámetro aguas abajo**: la reducción es un embudo que garantiza
+el atasco justo donde no hay acceso. Y **el inodoro nunca se conecta a un ramal de 50 mm**, aunque se
+pueda forzar con una reducción; es la causa número uno de los atascos crónicos que ningún destapador
+arregla.
+
+## Giros de 45°, yees y cámaras de inspección
+
+Un codo de 90 grados es una pared. El agua dobla porque es líquida, pero un sólido que viene rodando
+no dobla: **choca**, pierde toda su velocidad contra la cara exterior y queda ahí. Además el chorro se
+separa de la pared y deja una zona muerta donde el agua gira sin avanzar, y ahí se depositan grasa y
+fibra hasta formar el nudo que después hay que picar. Por eso el desagüe se dobla en dos pasos de 45
+grados con un tramo recto en el medio, o con codos de radio largo: el sólido cambia de dirección de a
+poco y conserva su velocidad. Cuando un ramal se suma al colector tampoco se lo mete en ángulo recto
+sino con una <Termino slug="yee-sanitaria">yee sanitaria</Termino>, un accesorio en «Y» que **entrega
+el agua en el sentido en que ya venía corriendo**, como un carril de aceleración a una carretera.
+
+Ese tubo enterrado no se puede ver, y por eso existe la <Termino slug="camara-de-inspeccion">cámara de
+inspección</Termino>: la cajita con tapa del patio. No es un depósito ni un lugar donde el agua se
+detenga, es **una ventana**. Va en cada cambio de dirección, en cada encuentro de ramales y cada
+cierto tramo recto largo. Su fondo no es plano: lleva una <Termino slug="media-cana">media
+caña</Termino>, un canal semicircular de mortero que continúa la forma del tubo de un lado al otro
+para que el agua pase de largo sin frenarse. Una cámara de fondo plano es una trampa de sólidos que
+vas a limpiar para siempre. Y la tapa importa tanto como la caja: sólida, entera y a ras, porque una
+tapa improvisada con una chapa o una tabla podrida es un pozo abierto disfrazado, y quien se cae
+adentro suele ser un chico.
+
+<Dato titulo="Dibujá tus cámaras antes de taparlas">
+El día que termina la obra es el único en que alguien sabe dónde está cada cámara; a los tres años,
+cuando el baño rebalsa, se pica medio patio buscando una caja de treinta por treinta. **Antes de
+tapar, sacá fotos y hacé un croquis acotado desde dos esquinas fijas** —la pared del baño y el poste,
+por ejemplo—, porque con dos distancias se ubica un punto exacto para siempre. Pegá esa hoja dentro de
+la puerta del tablero eléctrico. Veinte minutos ahorran una jornada de pico y pala en el peor momento
+posible, que siempre es de noche, con lluvia y con el baño desbordado.
+</Dato>
+
+## El tubo de ventilación: el aire que reemplaza al agua
+
+Este es el elemento más incomprendido de una casa y el que más veces se elimina «porque no servía para
+nada». Se entiende con una botella: cuando volcás una botella llena el agua sale a borbotones,
+glu-glu, porque el agua que se va deja un hueco, ese hueco tiene que llenarse de aire, y el aire solo
+puede entrar por el mismo pico por donde sale el agua. Hacele un segundo agujero arriba y sale un
+chorro liso. **El tubo de ventilación es ese segundo agujero.**
+
+Cuando alguien descarga el inodoro, unos litros caen juntos por la bajante y se comportan como un
+pistón. **Adelante comprimen el aire**: eso es la <Termino slug="contrapresion">contrapresión</Termino>,
+y si no encuentra salida se escapa por el único punto débil que tiene enfrente, el agua del sifón de
+un aparato: burbujea a través del <Termino slug="sello-hidraulico">sello hidráulico</Termino> y sopla
+hacia el baño el aire de la cloaca. **Y atrás dejan un vacío**: si no hay un tubo abierto que le dé
+aire, lo va a sacar otra vez del sifón, esta vez chupándolo hasta vaciarlo, que es
+el <Termino slug="sifonaje">sifonaje</Termino>. Un sifón vaciado deja el tubo abierto de par en par, y
+a partir de ahí la casa huele a cloaca sin que nadie haya tocado nada. De ahí el mejor diagnóstico
+gratuito de la plomería: **si al descargar el inodoro se oye gorgotear el lavamanos o la rejilla del
+baño, tu red no tiene ventilación suficiente**. Ese gorgoteo es aire abriéndose paso a través del agua
+de un sifón, y llega antes que el olor.
+
+La <Termino slug="ventilacion-sanitaria">ventilación sanitaria</Termino> es un tubo que sube desde la
+red y termina abierto al aire por encima del techo, **más arriba que cualquier ventana cercana y lejos
+de ella**, porque por ahí salen sulfuro de hidrógeno, amoníaco y metano. Lleva malla o sombrerete
+contra hojas, avispas y —acá importa mucho— mosquitos, sin cerrar el paso del aire. Y no se tapa
+jamás: en muchas casas alguien lo selló porque entraba lluvia, y a los dos días toda la familia le
+echaba la culpa al inodoro. Existen válvulas de admisión de aire que se ponen bajo un lavamanos, con
+un límite honesto: **solo dejan entrar aire, no salir**, así que alivian el sifonaje y no hacen nada
+contra la contrapresión ni contra los gases. Son un parche, no un reemplazo del tubo al techo.
+
+## La grasa: lo que entra líquido y sale sólido
+
+La grasa de cocina entra caliente y líquida; dos metros más allá el tubo está a temperatura ambiente y
+**vuelve a ser sólida ya adentro de tu instalación**, pegada a la pared. Se convierte en una
+superficie rugosa donde se engancha todo lo demás —pelo, hilachas, restos de comida— y el tubo se
+cierra por dentro como una arteria, con años de por medio y sin ningún síntoma hasta el día en que se
+cierra del todo. Aguas abajo hace peor: en la cámara séptica engorda la nata hasta empujar los sólidos
+a la salida, y si llega al terreno **cubre los granos del suelo con una película impermeable y mata la
+infiltración de forma prácticamente irreversible**. Un pozo arruinado por grasa no se destapa, se
+abandona.
+
+La <Termino slug="trampa-de-grasa">trampa de grasa</Termino> es una caja chica entre la pileta de
+cocina y el resto de la red, que solo recibe agua de cocina y nunca la del inodoro. Su mecanismo es
+esperar: el agua entra, se frena, y como la grasa es menos densa sube y se queda flotando. La entrada
+y la salida están sumergidas con un codo o un tabique, de modo que **el agua que sigue viaje se toma
+de la mitad de la profundidad**, por debajo de lo que flota y por encima de lo que se hundió. Necesita
+volumen para que el agua se quede quieta un rato y limpieza a mano cada pocas semanas, con espumadera
+y balde. Una trampa que nunca se limpia es peor que ninguna: se llena, deja de retener y suelta aguas
+abajo trozos grandes de grasa rancia todos juntos. Y no se «limpia» con agua hirviendo ni
+desengrasante, porque eso la derrite, la deja pasar y la vuelve a solidificar donde no hay tapa que
+abrir.
+
+## Qué hace de verdad una cámara séptica
+
+Casi todo el mundo cree que una <Termino slug="camara-septica">cámara séptica</Termino> es un pozo que
+se traga las cosas. No lo es: es un reactor sin motor ni electricidad que hace tres trabajos a la vez.
+
+**Sedimentación.** El agua entra y se frena; lo que pesa más se hunde y forma en el fondo
+el <Termino slug="lodo-septico">lodo</Termino>. Eso requiere una sola cosa: tiempo. Por eso se
+dimensiona por <Termino slug="tiempo-de-retencion">tiempo de retención</Termino> —cuánto tarda en
+salir una gota que entra—, y la regla del oficio es **guardar por lo menos un día de lo que la casa
+manda**, más un extra para que el lodo se acumule sin robar ese tiempo.
+
+<Formula explicacion="Y encima de eso se suma volumen para lodos, o la cámara se llena en un año.">
+Volumen útil ≈ litros por día de la casa × días de retención
+</Formula>
+
+**Flotación.** Lo que pesa menos que el agua sube —grasas, jabón, papel, plásticos— y forma
+la <Termino slug="capa-de-nata">capa de nata</Termino>, que en una cámara vieja tiene un palmo de
+espesor y ayuda a que adentro no haya oxígeno. **Digestión anaerobia.** Sin oxígeno trabajan otras
+bacterias: la <Termino slug="digestion-anaerobia">digestión anaerobia</Termino> descompone parte de la
+materia orgánica y la convierte en gases —metano, dióxido de carbono, sulfuro de hidrógeno—, con lo
+que el lodo crece mucho más despacio de lo que crecería si solo se acumulara. Es lenta, tibia y
+frágil: le va mejor con calor, se frena con el frío de un surazo y se muere con desinfectante.
+
+Faltan los tabiques. La cámara se divide en dos compartimentos, el primero más grande, para que la
+turbulencia de la entrada quede confinada ahí. Y en la entrada y la salida van dos codos sumergidos:
+**el de entrada dirige el chorro hacia abajo para que no rompa la nata; el de salida toma el líquido
+de la mitad de la altura**, la única franja limpia que existe. Si esos codos se rompen —pasa seguido,
+son de PVC en ambiente corrosivo—, la cámara sigue pareciendo entera y ya está mandando lodo y grasa
+al pozo: es la forma más común en que muere un sistema séptico.
+
+<Advertencia titulo="El efluente de una cámara séptica no es agua limpia">
+Lo que sale de una cámara bien construida y mantenida
+es <Termino slug="efluente">efluente</Termino>: líquido clarificado, sí, pero **todavía agua
+servida**. La cámara quita del orden de la mitad a dos tercios de los sólidos en suspensión y parte de
+la carga orgánica; de los microbios que causan enfermedad **no quita casi nada**, y del nitrógeno
+prácticamente nada. Sale turbio, huele y trae la misma población de patógenos intestinales que entró.
+
+De ahí tres prohibiciones sin matices. **No se descarga a una zanja, a una acequia, a un arroyo ni a
+la calle.** **No se usa para regar**, y menos hortalizas que se comen crudas. **Y no se tira al patio
+para que «se seque».** Ese líquido tiene que ir al terreno por debajo de la superficie, que es donde
+ocurre el tratamiento de verdad. Si tu cámara descarga hoy a un canal abierto, esa es la vía por la
+que las enfermedades intestinales entran a las casas vecinas, sobre todo a los chicos, y merece
+consulta con el municipio o el centro de salud sobre qué corresponde hacer en tu caso.
+</Advertencia>
+
+## El destino final: pozo absorbente o campo de infiltración
+
+El tratamiento real no lo hace la cámara: **lo hace el suelo**. Cuando el efluente se infiltra
+lentamente por tierra que tiene aire entre sus granos, pasa por
+la <Termino slug="zona-no-saturada">zona no saturada</Termino>, donde el agua moja los granos pero no
+llena los poros. Ahí hay oxígeno, y ahí crece sobre cada partícula una película viva de bacterias,
+la <Termino slug="capa-biologica">capa biológica</Termino>, que devora la materia orgánica y compite
+con los microbios intestinales hasta agotarlos; a eso se suma el filtrado físico y la adhesión a las
+arcillas. Un metro de suelo no saturado hace más por la salud de tu familia que cualquier producto que
+puedas comprar.
+
+Hay dos formas de entregarle el efluente al suelo.
+El <Termino slug="pozo-absorbente">pozo absorbente</Termino> es un agujero vertical y profundo, de
+ladrillo sin juntas o anillos perforados: ocupa poco, es barato y es lo que se hace casi siempre. Su
+problema es de geometría: **al ser profundo entrega el efluente cerca de la napa y lejos de la capa de
+suelo con oxígeno**, justo al revés de lo que convendría.
+El <Termino slug="campo-de-infiltracion">campo de infiltración</Termino> es lo contrario: varias
+zanjas poco profundas con tubo perforado sobre cama de piedra, que reparten el líquido en mucha
+superficie y en la franja aireada. Cuesta más, ocupa terreno y funciona mejor donde el agua
+subterránea está alta, que es el caso del llano.
+
+Antes de decidir se mide con una pala y un reloj.
+La <Termino slug="prueba-de-percolacion">prueba de percolación</Termino> es cavar un hoyo del tamaño
+de un balde a la profundidad prevista, llenarlo y dejarlo empapar varias horas o toda la noche —para
+que el suelo esté como va a estar trabajando y no seco—, volver a llenarlo y medir cuántos centímetros
+baja por hora. Los dos extremos fallan por motivos opuestos. **Un suelo arcilloso, muy lento, no
+acepta el caudal**: el pozo se llena y el agua termina saliendo por la rejilla del baño. **Uno de
+arena gruesa o grava, muy rápido, acepta todo y no trata nada**: el efluente se va derecho sin tiempo
+de contacto y llega vivo a la napa. La misma cifra que se lee como «terreno excelente» puede ser la
+peor noticia para el pozo de agua del vecino.
+
+Y hay un envejecimiento inevitable: la superficie por donde se infiltra se va tapando con biopelícula
+y sólidos finos, que es la <Termino slug="colmatacion">colmatación</Termino>. Un poco es normal y
+hasta útil; mucho es la muerte del sistema, y llega mucho antes cuando la cámara deja pasar grasa y
+sólidos. Un pozo colmatado no se destapa con nada: no hay producto, no hay químico. Se descansa meses,
+si hay un segundo, o se construye otro. **Toda la disciplina de esta lección se paga acá**: lo único
+que evita rehacer el pozo es no haber mandado nunca lo que no debía.
+
+## La distancia al pozo de agua y por qué importa quedar aguas arriba
+
+El agua subterránea no es un lago quieto: **se mueve**, despacio, siguiendo la inclinación de la napa,
+que casi siempre acompaña la pendiente del terreno hacia el punto más bajo de la zona. Esa inclinación
+es el <Termino slug="gradiente-hidraulico">gradiente hidráulico</Termino>, y es lo que convierte
+«aguas abajo» en una idea con sentido bajo tierra. Todo lo que infiltre tu pozo viaja en esa
+dirección, así que la pregunta correcta no es solo cuántos metros hay entre el pozo séptico y el de
+agua, sino **de qué lado**: uno a veinte metros pero cuesta arriba del séptico está mucho mejor que
+uno a treinta metros cuesta abajo.
+
+Qué viaja y cuánto depende de qué sea. Los huevos de parásito son grandes y pesados y se quedan cerca.
+Las bacterias intestinales, en tierra franca, se filtran entre los granos y mueren en distancias
+cortas; en arena gruesa, grava o suelo agrietado viajan muchísimo más, porque no hay nada que las
+frene. Los virus son mucho más pequeños y llegan más lejos. Y
+el <Termino slug="nitrato">nitrato</Termino> es el caso aparte: viene del nitrógeno de la orina y las
+heces, se disuelve por completo, no se pega a nada y no lo retiene ningún suelo. **Viaja tan lejos
+como viaje el agua**, no huele, no enturbia y no se quita hirviendo. Es perfectamente posible que un
+pozo dé agua clara y sin bacterias y esté cargado de nitrato, y el único modo de saberlo es un
+análisis de laboratorio.
+
+<Advertencia titulo="El nitrato y los bebés">
+El nitrato en el agua de beber es peligroso sobre todo para los menores de seis meses: en su intestino
+se transforma en nitrito, el nitrito se une a la hemoglobina y la deja incapaz de transportar oxígeno,
+y el bebé se pone azulado alrededor de la boca y las uñas. Es
+la <Termino slug="metahemoglobinemia">metahemoglobinemia</Termino>, y hay tres cosas que saber:
+**hervir el agua no la arregla, la empeora**, porque evapora agua y concentra el nitrato; los filtros
+caseros
+de carbón o cerámica tampoco lo quitan; y si en tu casa hay una guagua y el agua sale de un pozo poco
+profundo cerca de un sistema séptico o de un corral, eso se consulta en el centro de salud y se pide
+análisis del agua. Ante un bebé con color azulado se va al centro de salud de inmediato. Nada de esta
+lección reemplaza al personal de salud: acá se explica el mecanismo para que sepas qué preguntar.
+</Advertencia>
+
+**Las distancias mínimas exigibles no las voy a inventar.** Las fija la autoridad de tu lugar, igual
+que quién puede autorizar y construir un sistema séptico, así que se preguntan en el municipio, en la
+cooperativa de agua o con un técnico habilitado antes de cavar nada. Lo universal es el razonamiento:
+más distancia es mejor que menos; la dirección del flujo pesa tanto como la distancia; el terreno
+permeable exige más separación, no menos; y de nada sirve la distancia si la boca del pozo de agua no
+tiene brocal ni sello y le entra la escorrentía del patio, que es un camino directo de un metro en vez
+de veinte. Esa boca es asunto de la lección 06, y es por donde más contaminación entra en la práctica.
+
+## Lo que nunca se mezcla
+
+<Tabla>
+
+| Qué | Por qué parece inofensivo | Qué hace de verdad |
+| --- | --- | --- |
+| **Agua de lluvia** | Es agua limpia | Ahoga el sistema: arrastra los sólidos de la cámara al pozo y lo mata en una tarde |
+| **Lavandina y desinfectantes en cantidad** | «Desinfecta la cámara» | Mata la digestión anaerobia; se llena de lodo crudo y empieza a oler |
+| **Grasa y aceite de cocina** | Entra líquida y se va | Se solidifica adentro, engorda la nata y sella el terreno de infiltración |
+| **Toallitas, algodón, pañales, trapos** | «Se deshacen como el papel» | No se deshacen: son tela; se trenzan en un nudo y no se digieren nunca |
+| **Agroquímicos, combustible, solvente, pintura** | Es poca cantidad | Esterilizan la cámara y llegan a la napa sin ningún tratamiento |
+| **Arena, cemento, restos de obra** | Total, es tierra | Sedimenta en el fondo y roba de forma permanente el volumen de retención |
+
+</Tabla>
+
+El de la lluvia es el que más sistemas mata y el que menos se sospecha, porque es la única mezcla que
+hace daño **sin ser sucia**. Los litros que aporta un techo son su superficie en metros cuadrados por
+los milímetros caídos: un techo de 100 m² bajo una tormenta de las que acá descargan entre 40 y 80
+milímetros por hora entrega varios miles de litros en una hora, mientras que la familia entera manda a
+su cámara unos cientos a lo largo de todo un día. No es una sobrecarga: es un lavado a presión que
+atraviesa la cámara, levanta el lodo, arrastra la nata y lo empuja todo al pozo justo cuando el suelo
+ya está saturado. Por eso el agua de techos y patio va por su propio camino —pluvial, zanja, tanque de
+cosecha o zona de infiltración distinta—: eso es
+el <Termino slug="sistema-separativo">sistema separativo</Termino>, una de las decisiones más baratas
+y más determinantes de una instalación.
+
+Con la lavandina hay que ser justo. El chorrito de limpiar un baño llega diluido en cientos de litros
+y no pasa nada: las bacterias aguantan y se recuperan. Lo que las mata es echar un balde de
+desinfectante concentrado «para que no huela» o vaciar ahí los restos de un bidón. Y una regla que no
+es del pozo sino de tu cara: **nunca mezcles lavandina con un destapador ácido**, ni siquiera
+separados por minutos en el mismo desagüe, porque la reacción libera cloro gaseoso, que ataca las vías
+respiratorias, y ocurre igual aunque no la hayas hecho a propósito.
+
+## Mantenimiento: medir el lodo antes de vaciar
+
+Una cámara séptica no se vacía por calendario ni cuando huele: **se mide**. El instrumento cuesta cero
+y es la <Termino slug="varilla-de-lodos">varilla de lodos</Termino>: un palo largo con un trapo blanco
+atado a lo largo de medio metro en la punta. Se baja despacio hasta tocar el fondo, se deja unos
+minutos y se sube derecho; la marca oscura y pegajosa dice la altura del lodo. La regla práctica es
+vaciar **cuando el lodo del fondo más la nata de arriba ocupan alrededor de un tercio de la
+profundidad útil**, o cuando el lodo se acerca al borde inferior del codo de salida, porque a partir
+de ahí ya se está yendo al pozo.
+
+Al vaciar hay cuatro reglas que la mayoría desconoce. **Se deja un balde de lodo adentro**, porque es
+el inóculo con el que las bacterias arrancan de nuevo; una cámara lavada a chorro tarda semanas en
+volver a funcionar, así que tampoco **se lava a presión ni se raspa la pared**. **No se vacía del todo
+en lluvias con la napa alta**: una cámara enterrada y vacía es un barco, el agua del suelo la empuja
+hacia arriba y puede levantarla y romper las conexiones. Y **el lodo extraído sigue siendo residuo
+peligroso**: va en camión atmosférico a donde el municipio indique, nunca a una zanja, a un arroyo, a
+un baldío ni al fondo del lote. Adónde corresponde llevarlo y quién está habilitado se pregunta en el
+municipio; no lo decidas por lo que hace el vecino.
+
+Sobre los sobres de bacterias que se venden para «no vaciar nunca»: la cámara se siembra sola con lo
+que le entra todos los días. Ninguno de esos productos saca el material mineral —arena, pelo,
+plástico— que es justamente lo que ocupa el volumen, así que **ninguno reemplaza el vaciado**. Peor
+todavía, varios funcionan emulsionando la grasa: la desarman en gotitas que ya no flotan, la nata
+desaparece, el dueño cree que funcionó, y esa grasa se va derecha al terreno a sellarlo.
+
+## Entrar a una cámara mata sin avisar
+
+<Advertencia titulo="Nadie entra a una cámara séptica. Nadie.">
+Una cámara séptica, un pozo absorbente y hasta una cámara de inspección profunda
+son <Termino slug="espacio-confinado">espacios confinados</Termino>, y matan por dos mecanismos que
+actúan juntos y que no duelen.
+
+El primero es el <Termino slug="sulfuro-de-hidrogeno">sulfuro de hidrógeno</Termino> que produce la
+digestión anaerobia. En concentración baja huele a huevo podrido, y por eso todo el mundo cree que lo
+va a notar. **La trampa es que en concentración alta paraliza el olfato en segundos**: el olor
+desaparece, la persona piensa que el aire mejoró y sigue bajando. En concentraciones altas tumba a
+alguien al primer par de respiraciones. Además es más pesado que el aire, así que se acumula justo
+abajo, que es adonde vas.
+
+El segundo es la <Termino slug="deficiencia-de-oxigeno">deficiencia de oxígeno</Termino>. El aire
+normal tiene alrededor de 21 % de oxígeno; en una cámara cerrada, la digestión y la oxidación de los
+metales lo consumieron y el metano y el dióxido de carbono ocuparon su lugar. Por debajo de un 16 % se
+pierden la coordinación y el juicio —o sea, la capacidad de darse cuenta—, y cerca del 10 % se pierde
+el conocimiento sin ninguna sensación previa de ahogo, porque el cuerpo detecta el exceso de dióxido
+de carbono y no la falta de oxígeno. **Un aire que te mata puede sentirse igual que el aire de tu
+casa.** Y hay un tercero: el **metano es inflamable y explosivo**, así que nunca se acerca una llama,
+un encendedor, un cigarrillo ni una herramienta que haga chispa a la boca de una cámara. Se mira con
+linterna, desde afuera.
+
+La regla es una sola y no tiene excepciones domésticas: **nadie baja**. Todo se hace desde la
+superficie: el vaciado con la manguera del camión, la medición con la varilla, la limpieza con un
+rastrillo de mango largo. Se abre la tapa y se ventila un buen rato antes de trabajar cerca, con el
+viento a la espalda, y se mantiene lejos a chicos y animales mientras esté destapada. Si aun así
+alguien cae adentro: **no entres a sacarlo**. La mayoría de las personas que mueren en pozos sépticos
+son las que bajaron a rescatar a la primera, y suelen ser dos o tres de la misma familia. Se grita
+pidiendo ayuda, se llama a los bomberos, se tira una soga, se ventila con lo que haya. Un rescate en
+espacio confinado necesita equipo de aire autónomo y personal entrenado; sin eso, entrar solo agrega
+otra víctima.
+</Advertencia>
+
+## El agua quieta y el mosquito
+
+El último riesgo del saneamiento no viene del agua sucia sino de la quieta. El mosquito del dengue
+pone sus huevos en la pared húmeda de cualquier recipiente que retenga agua, y de huevo a adulto pasa
+alrededor de una semana con el calor de acá: **cualquier cosa que retenga agua más de una semana es
+una fábrica**. Un saneamiento mal terminado tiene varias: la cámara de inspección con la tapa rota, la
+trampa de grasa destapada, el tubo de ventilación sin malla, el charco permanente sobre un campo
+colmatado, y la rejilla de piso de un baño que no se usa, que además de dejar salir olor deja pasar al
+mosquito en las dos direcciones. Todo eso se arregla con la misma disciplina: tapas enteras y bien
+calzadas, malla en toda boca abierta al aire, y ningún charco tolerado. El mosquito vuela poco —se
+cría a pocas decenas de metros de donde pica—, así que **el criadero que te enferma casi siempre es
+tuyo o de al lado**. El módulo 2 lo trata en detalle.
+
+<AplicarRizoma titulo="Llevarlo a la práctica: el saneamiento de la casa donde estás">
+**Empezá por saber qué tenés, que es lo que casi nadie sabe.** Tres preguntas, anotadas: ¿adónde va el
+agua de mi baño —red, cámara séptica, pozo ciego—?, ¿dónde está esa cámara y dónde el pozo?, y
+¿cuándo se vació por última vez? Si alquilás, esas preguntas se le hacen al dueño y la tercera casi
+nunca tiene respuesta; pedirla por mensaje no es desconfianza, es la única forma de que el día que
+rebalse no se discuta de quién era la responsabilidad. Si la casa es tuya, esa hoja vale tanto como el
+título y va con el croquis acotado del que habla el recuadro de más arriba.
+
+**Hacé esta noche la prueba del gorgoteo, que dura dos minutos.** Descargá el inodoro y escuchá el
+lavamanos y la rejilla del piso. Si gorgotean, tu red está sacando aire de los sifones porque le falta
+ventilación, y ese es el diagnóstico que explica el olor que nadie ubicaba. Después buscá el tubo de
+ventilación en el techo: si existe, si termina por encima de las ventanas, si tiene malla, si alguien
+lo tapó con una bolsa. Reponer una malla es media hora; destapar un tubo sellado puede sacarle el olor
+a una casa entera.
+
+**Comprá tres cosas que cuestan monedas y rinden más que cualquier reparación.** Una rejilla o colador
+para cada desagüe —pileta, ducha, lavadero—; un tarro con tapa junto a la cocina para el aceite usado,
+que se tira a la basura y nunca al desagüe; y una espátula barata para raspar los platos al tacho
+antes de lavarlos. Las tres juntas evitan la mayor parte de la grasa y de los sólidos que matan un
+sistema séptico, y funcionan igual si vivís en una casa alquilada sin patio y sin permiso para tocar
+nada.
+
+**Poné en la puerta del baño la lista de lo que no se tira, escrita para la casa entera.** No sirve que
+lo sepas vos: esto falla por el eslabón más desinformado, y basta una visita que tira una toallita por
+semana durante un año para armar el nudo. Sin sermón: papel higiénico sí; toallitas, algodón, hisopos,
+pañales, preservativos, hilo dental, colillas y restos de comida, no. Si hay chicos, contales el
+porqué en un minuto —«se hace un nudo y el baño se tapa»—, porque una regla explicada se cumple y una
+impuesta se olvida. Sumale un calendario con nombre y apellido de quien hace cada cosa: la trampa de
+grasa cada pocas semanas, un balde de agua en cada desagüe poco usado una vez al mes, tapas y mallas
+al cambiar la estación, y la varilla de lodos una vez al año anotando el número. Dos o tres mediciones
+anuales te dicen a qué ritmo se llena tu cámara, y con eso podés prever el vaciado y juntar la plata
+en vez de que te agarre de sorpresa. **Pintá sobre la tapa la fecha del último vaciado**: es el
+registro que sobrevive a todas las mudanzas.
+
+**Andá a mirar tu patio la próxima vez que llueva fuerte, con paraguas y linterna, mientras llueve.**
+Es el único momento en que se ve la verdad: dónde se junta el agua, si hay una bajada de techo que
+descarga a tu cámara, si sale agua de una tapa, si hay olor. Diez minutos bajo la lluvia ahorran años
+de conjeturas, y si descubrís que un caño de techo entra al desagüe cloacal, desviarlo es la mejora
+número uno de tu casa y se resuelve con un codo y dos metros de tubo.
+
+**Y pensalo como oficio, porque lo es y casi nadie lo ofrece con seriedad.** Alguien del barrio que
+sepa ubicar cámaras sin picar todo el patio, medir el lodo y distinguir un atasco de un pozo colmatado
+tiene un servicio que se necesita en cada cuadra. Lo que lo vuelve trabajo pagado no es la fuerza sino
+el diagnóstico y la honestidad: decir «esto se arregla desviando el caño del techo» cuando es eso, y
+«esto ya no se destapa, hay que consultar al municipio» cuando es lo otro. Poner precio a ese tiempo
+está en el módulo 31 y explicarlo sin humillar a nadie, en el 37. Va con una regla de oficio: **se
+trabaja desde afuera y con guantes**, manos lavadas antes de comer o fumar y ropa de trabajo lavada
+aparte, porque la ruta fecal-oral no distingue entre el que se descuidó y el que no sabía. **En Rizoma
+del Sur el baño del vivero obligó a una conversación que muchas familias no tienen**: terreno plano,
+napa que sube en lluvias y pozos de agua alrededor, así que dónde poner la cámara no se resolvió
+copiando al vecino sino preguntando en el municipio y mirando de qué lado corre el terreno. Eso es lo
+único de esta lección que no se puede hacer solo: tu pozo descarga en el mismo subsuelo del que bebe
+el vecino, y el suyo en el tuyo. Cómo se organiza esa conversación entre familias —quién paga el
+camión, quién avisa, qué se acuerda por escrito— es el módulo 17.
+</AplicarRizoma>
+
+<ContextoBolivia titulo="Saneamiento en Zanja Honda: terreno plano, napa alta y lluvia de golpe">
+**El primer problema de la zona es que casi no hay desnivel.** En terreno plano la pendiente es un
+recurso escaso: cada centímetro que baja el desagüe se descuenta de la profundidad que te queda al
+final, y muchas casas descubren tarde que la cámara tendría que quedar más abajo de lo que el terreno
+permite. Eso obliga a planificar al revés de como se suele hacer: primero dónde puede ir la cámara y a
+qué profundidad, y recién después dónde va el baño. Si ya está construido y el recorrido salió largo y
+sinuoso, la mejora barata suele ser acortarlo o enderezarlo, no aumentar la caída, porque **caída no
+hay de dónde sacar**.
+
+**La napa alta cambia todo el cálculo en temporada de lluvias.** Entre octubre y abril el agua
+subterránea sube, y un pozo absorbente que en septiembre tragaba perfectamente puede quedar con su
+fondo dentro del agua en febrero: ahí deja de infiltrar —no se infiltra en un suelo que ya está
+lleno— y el efluente pasa a estar en contacto directo con la napa, sin franja de suelo aireado que lo
+trate. Por eso, en el llano, **la prueba de percolación se hace al final de la época de lluvias y no
+en plena seca**: la prueba de septiembre te miente para bien. Y por eso el campo de infiltración poco
+profundo, aunque cueste más y ocupe terreno, suele ser la opción técnicamente correcta acá, mientras
+que el pozo profundo es la opción cómoda.
+
+**La lluvia de esta zona no es una lluvia cualquiera.** Una tormenta de temporada descarga entre 40 y
+80 milímetros por hora: en sesenta minutos entrega sobre un techo mediano varios miles de litros, y
+ningún sistema séptico doméstico está pensado para eso, ni acá ni en ninguna parte. Por eso **la
+separación del agua de lluvia no es un refinamiento: es la condición para que el sistema sobreviva a
+un verano**. Y como el terreno es plano y el suelo se satura, el patio inundado tampoco es solo
+incomodidad: agua estancada durante días sobre un campo de infiltración es criadero de mosquito en
+zona de dengue endémico.
+
+**El surazo tiene un efecto que sorprende a mucha gente.** Cuando entra aire frío del sur y las noches
+bajan a unos diez grados, la digestión anaerobia se frena porque las bacterias trabajan más despacio.
+La cámara no se rompe, pero durante esos días huele más, digiere menos y acumula lodo un poco más
+rápido. No hay nada que hacer salvo no asustarse y no reaccionar echándole desinfectante, que es lo
+que empeora la situación de verdad. Y con las ventanas cerradas por el frío, un sifón seco o una
+ventilación mal ubicada se notan mucho más.
+
+**Los cortes de energía tocan al saneamiento.** Sin luz no hay bomba, y sin bomba no hay agua para
+descargar el inodoro, así que conviene tener siempre un par de baldes llenos: un inodoro se descarga
+volcando un balde de golpe en la taza, y ese saber elemental evita que una familia deje de usar el
+baño durante un corte largo. Los materiales, en cambio, no son problema: tubo sanitario de 50 y 100
+mm, codos de 45 y yees se consiguen en cualquier ferretería del pueblo. Lo que puede no aparecer es lo
+exótico —una válvula de admisión de aire, una tapa prefabricada—, así que diseñá con lo que hay en el
+mostrador y vas a poder reparar tu instalación dentro de diez años.
+
+**Y el cierre honesto, que es el mismo de todo el módulo.** Acá no vas a encontrar la distancia mínima
+en metros entre tu pozo séptico y tu pozo de agua, ni el volumen que exige un reglamento, ni qué
+trámite hay que hacer ni cuánto cuesta un camión atmosférico, porque inventar esos números sería
+peligroso y porque cambian de un lugar a otro. Todo eso se pregunta en el **municipio**, en la
+**cooperativa de agua** si la hay, y con un **técnico habilitado** antes de construir; las dudas de
+salud —análisis del agua, nitrato, un chico con diarrea repetida en una casa con pozo cerca— se llevan
+al **centro de salud**. Lo que sí es tuyo y no depende de ninguna autoridad es el mecanismo: la
+gravedad, la velocidad de arrastre, el aire que tiene que entrar cuando el agua sale, la
+sedimentación, la digestión anaerobia y el suelo con oxígeno que trata lo que la cámara no trató. Ese
+mecanismo vale igual acá que en cualquier lado, y es lo que te permite entender qué te están
+proponiendo y decir que no cuando algo no cierra.
+</ContextoBolivia>
+
+## Cierre del módulo
+
+El módulo entero fue una sola sustancia atravesando una sola casa. Empezó en la lección 01 con dos
+redes que casi nadie distingue: una que entra a presión y puede subir, otra que sale por gravedad y
+solo baja. Todo lo que vino después fue la misma pregunta con distinta ropa —**de dónde sale la
+energía que mueve esta agua y adónde se está yendo**—. En la entrada, la energía se compra: la pone la
+altura de un tanque, la pone una bomba, la paga alguien, y se pierde en cada codo y en cada aireador
+calcificado. En la salida no se compra nada: la única energía disponible es la que regaló la gravedad,
+y por eso el desagüe no perdona un error de altura como sí lo perdona la entrada.
+
+De esa asimetría sale la idea que atraviesa las siete lecciones. **Los sistemas de agua fallan en
+silencio y presentan la factura tarde.** El grifo que gotea, la fuga enterrada, el inodoro que pasa un
+hilito al tanque, el sifón que se evapora en un baño cerrado, la grasa que se pega un milímetro por
+año, el lodo que sube dos centímetros por mes: ninguno hace ruido el día que empieza, y todos se
+cobran juntos y en el peor momento. La respuesta apareció una y otra vez con distintos disfraces:
+**medir en vez de suponer** —el medidor con todo cerrado, la botella bajo el goteo, el colorante en el
+tanque, el manómetro en un tramo aislado, la varilla en el lodo—, **dejar accesos** —la llave de
+escuadra de cada aparato, la unión universal, la cámara de inspección, la tapa que se puede abrir— y
+**anotar lo que hiciste**, porque la memoria de una instalación no está en la cabeza de nadie.
+
+Y queda lo último, que es la razón por la que este módulo existe en un curso que se propone ayudar a
+una comunidad a progresar. Las seis primeras lecciones se pueden leer como comodidad: que la ducha dé
+bien, que no gotee, que no falte agua. La séptima no. **El saneamiento es la mitad invisible de la
+salud de un barrio**, y no es un asunto privado: tu pozo descarga en el subsuelo del que bebe tu
+vecino, y el suyo en el tuyo. Una familia que sabe qué no tirar por el inodoro, que separa el agua de
+lluvia, que tapa sus cámaras y que mide su lodo no está solo cuidando su instalación: está sacando
+enfermedades de circulación en su cuadra. Ese es el tipo de herramienta que este proyecto quiere poner
+en manos de la gente —barata, entendible y de efecto multiplicador—, y por eso el módulo termina acá
+y no en el grifo. Sigue en tres direcciones: el **módulo 17**, para cuando el oficio deja de ser
+doméstico y pasa a ser de varias familias; el **módulo 32**, para la salud de la familia y las señales
+de cuándo hay que ir al centro de salud; y el **módulo 2**, para el dengue y sus criaderos, que
+aparecieron en casi todas estas lecciones porque acá el agua quieta nunca es un detalle.

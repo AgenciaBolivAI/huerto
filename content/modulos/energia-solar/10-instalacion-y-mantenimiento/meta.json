@@ -1,0 +1,47 @@
+{
+  "titulo": "Instalación, puesta en marcha y mantenimiento",
+  "subtitulo": "Un sistema solar no tiene interruptor general: los paneles producen mientras haya luz y la batería está siempre cargada. De ahí sale el orden de conexión, y de ahí sale todo lo demás.",
+  "duracionMin": 26,
+  "portada": "portada.webp",
+  "portadaAlt": "Una persona con ropa de trabajo y guantes, arrodillada junto a un banco de baterías selladas en un pequeño cuarto de equipos rural, midiendo con un multímetro en los bornes. Sobre la pared, un regulador y un inversor montados en un tablero de madera con los cables etiquetados y canalizados. En el suelo, un cuaderno abierto con columnas escritas a mano y un lápiz. Muro de ladrillo, piso de hormigón y una rejilla de ventilación en lo alto",
+  "objetivos": [
+    "Entender por qué un sistema solar no tiene interruptor general y qué papel juega el seccionador de continua.",
+    "Ejecutar el orden de conexión completo, batería primero y paneles tapados al final, y el orden inverso para apagar.",
+    "Explicar las dos razones —detección de tensión del banco y seguridad— que fijan ese orden.",
+    "Medir tensión en vacío, polaridad y aislamiento a tierra antes de energizar nada.",
+    "Registrar una línea base con fecha, hora y estado del cielo, y saber para qué sirve dentro de tres años.",
+    "Vigilar el primer mes: carga completa, temperatura de equipos y conectores, y cables sueltos.",
+    "Reapretar todas las conexiones a la semana y entender por qué el cobre se afloja.",
+    "Limpiar los paneles sin dañarlos: temprano, con agua limpia y sin frotar fuerte.",
+    "Seguir un calendario de mantenimiento por intervalos y añadir revisiones tras eventos extremos.",
+    "Reconocer cómo envejece cada componente y qué hacer con una batería al final de su vida."
+  ],
+  "prerrequisitos": [
+    "energia-solar/09-bombeo-solar-sin-baterias"
+  ],
+  "videos": [],
+  "referencias": [
+    {
+      "titulo": "Guía de desconexión de paneles solares y seguridad fotovoltaica",
+      "fuente": "PVSTOP México",
+      "url": "https://pvstopmexico.com/guia-desconexion-paneles-solares/",
+      "nota": "Insiste en el punto que más cuesta interiorizar: un arreglo fotovoltaico no se puede apagar, solo se puede tapar o seccionar. Léelo antes del día de la instalación, no después."
+    },
+    {
+      "titulo": "Efecto de las sombras en un panel solar fotovoltaico",
+      "fuente": "SunFields Europe",
+      "url": "https://www.sfe-solar.com/paneles-solares/sombras/",
+      "nota": "Pertinente al mantenimiento: explica por qué una mancha localizada y opaca —una deposición de ave, una hoja pegada— hace mucho más daño que una capa uniforme de polvo, y por qué la limpieza selectiva importa más que la general."
+    }
+  ],
+  "terminos": [
+    "seccionador-cc",
+    "tension-en-vacio",
+    "linea-base",
+    "etapas-de-carga",
+    "degradacion-anual",
+    "dps",
+    "bitacora-del-sistema"
+  ],
+  "practica": true
+}

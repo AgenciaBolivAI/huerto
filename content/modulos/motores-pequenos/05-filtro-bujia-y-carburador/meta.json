@@ -1,0 +1,93 @@
+{
+  "titulo": "Filtro, bujía y carburador: los tres que siempre fallan",
+  "subtitulo": "Casi todas las averías de un motor pequeño ocurren en las tres únicas piezas que tocan el mundo de afuera: el filtro respira el polvo del camino, la bujía vive dentro del fuego y el carburador maneja un líquido que se evapora y deja residuo en agujeros de décimas de milímetro. Esta lección las repara con el mecanismo delante: cómo retiene el polvo un filtro de verdad y por qué aceitarlo mal ahoga el motor o lo raya, cómo se lee una bujía usada como instrumento de diagnóstico, y por qué el aire acelerado del venturi chupa combustible, con el desarme, la limpieza y el ajuste paso a paso. Cierra con la ruta completa del combustible —tapón, filtro de tanque, manguera y llave—, que es donde está la falla buena parte de las veces que alguien desarma un carburador sano.",
+  "duracionMin": 36,
+  "objetivos": [
+    "Explicar los tres mecanismos por los que un filtro retiene polvo —intercepción, impactación inercial y difusión— y por qué el sello de la caja importa más que el propio medio filtrante.",
+    "Lavar, secar y aceitar un filtro de espuma hasta el punto exacto, y tratar sin destruirlos los de papel y los de baño de aceite, sabiendo qué le hace al motor cada error en una dirección y en la otra.",
+    "Describir la bujía pieza por pieza y explicar el grado térmico como la longitud del camino que recorre el calor, no como la fuerza de la chispa.",
+    "Medir y corregir la separación de electrodos con galga de alambre, y montar la bujía en una culata de aluminio sin arrancar la rosca ni dejarla floja.",
+    "Leer una bujía usada como instrumento de diagnóstico, distinguiendo mezcla rica, mezcla pobre, aceite pasando, preencendido y fuga de chispa por fuera del aislador.",
+    "Explicar el venturi y por qué dos leyes cuadráticas se cancelan, de modo que un agujero fijo dosifica bien desde el ralentí hasta el régimen máximo sin ningún sensor.",
+    "Desarmar, limpiar, armar y ajustar un carburador —de cuba con flotador y de membrana— sin tocar los chiclés con alambre, sin deformar los asientos de las agujas y sin empobrecer la alta buscando potencia.",
+    "Recorrer la ruta completa del combustible —ventilación del tapón, filtro de tanque, manguera y llave de paso— y descartarla antes de abrir un carburador."
+  ],
+  "prerrequisitos": [
+    "motores-pequenos/01-como-funciona-un-motor",
+    "motores-pequenos/02-dos-tiempos-y-cuatro-tiempos",
+    "motores-pequenos/04-no-arranca"
+  ],
+  "videos": [],
+  "referencias": [
+    {
+      "titulo": "Carburador",
+      "fuente": "Wikipedia en español",
+      "url": "https://es.wikipedia.org/wiki/Carburador",
+      "nota": "Recorre la construcción y el funcionamiento del carburador con los dibujos que aquí se describen con palabras: la sección donde se mezclan aire y gasolina, la cuba que guarda el nivel, el surtidor principal, el estrangulador y la bomba de aceleración. Sirve para poner imagen a las piezas antes de desarmar una por primera vez."
+    },
+    {
+      "titulo": "Efecto Venturi",
+      "fuente": "Wikipedia en español",
+      "url": "https://es.wikipedia.org/wiki/Efecto_Venturi",
+      "nota": "El fundamento físico del apartado central de la lección: por qué un fluido que pasa por un estrechamiento se acelera y, al acelerarse, baja de presión. Incluye la deducción desde el principio de Bernoulli y la lista de aplicaciones, del carburador al inyector de fertilizante, que es el mismo truco usado en riego."
+    },
+    {
+      "titulo": "Bujía",
+      "fuente": "Wikipedia en español",
+      "url": "https://es.wikipedia.org/wiki/Buj%C3%ADa",
+      "nota": "Artículo completo sobre la bujía de encendido, con una sección propia de grado térmico entendido como capacidad de evacuar calor desde la cámara hacia la culata. Complementa el apartado de esta lección con el detalle de materiales de electrodo y códigos de fabricante."
+    },
+    {
+      "titulo": "Filtro de aire",
+      "fuente": "Wikipedia en español",
+      "url": "https://es.wikipedia.org/wiki/Filtro_de_aire",
+      "nota": "Panorama general de los medios filtrantes —papel, espuma, algodón y los antiguos de baño de aceite— y de dónde se usa cada uno. Útil para ubicar el filtro de tu máquina dentro de la familia y entender por qué el papel desplazó a casi todo lo demás salvo donde el polvo es brutal."
+    },
+    {
+      "titulo": "Manuales de servicio de carburadores de membrana",
+      "fuente": "Walbro",
+      "url": "https://www.walbro.com/service-manuals/",
+      "nota": "Manuales oficiales en PDF de los carburadores de membrana que llevan motosierras, desbrozadoras y sopladores, con despieces, teoría de funcionamiento y secuencia de puesta a punto. Están en inglés, pero los despieces se leen sin idioma y son la mejor referencia para no confundir el orden de las membranas al armar."
+    },
+    {
+      "titulo": "Preguntas frecuentes sobre bujías, respondidas por el fabricante",
+      "fuente": "NGK SPARK PLUG (sitio oficial en español)",
+      "url": "https://www.ngkntk.com/es/sala-de-prensa/blog/castellano/has-preguntado-a-google-ngk-spark-plug-responde-parte-2-bujias/",
+      "nota": "Respuestas del fabricante a diez dudas comunes: qué significa el número de grado térmico en el código, por qué las bujías vienen pre-calibradas de fábrica, con qué instrumento se mide la separación y qué indican las incrustaciones de carbonilla. Fuente directa para el apartado de lectura de bujía."
+    }
+  ],
+  "terminos": [
+    "impactacion-inercial",
+    "restriccion-del-filtro",
+    "filtro-de-espuma",
+    "aceitado-del-filtro",
+    "filtro-de-papel",
+    "filtro-de-bano-de-aceite",
+    "prefiltro",
+    "electrodo-de-masa",
+    "temperatura-de-autolimpieza",
+    "grado-termico-de-la-bujia",
+    "separacion-de-electrodos",
+    "alcance-de-rosca",
+    "lectura-de-bujia",
+    "puente-de-carbon",
+    "relacion-estequiometrica",
+    "mezcla-rica",
+    "mezcla-pobre",
+    "efecto-venturi",
+    "cuba-del-carburador",
+    "valvula-de-aguja",
+    "chicle",
+    "tubo-emulsionador",
+    "circuito-de-ralenti",
+    "mariposa-de-gases",
+    "estrangulador",
+    "bomba-de-cebado",
+    "tornillo-de-ralenti",
+    "tornillo-de-mezcla",
+    "carburador-de-membrana",
+    "diafragma-de-bombeo",
+    "diafragma-de-regulacion"
+  ],
+  "practica": true
+}

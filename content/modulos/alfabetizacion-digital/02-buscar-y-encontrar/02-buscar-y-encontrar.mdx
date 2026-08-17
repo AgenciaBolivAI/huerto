@@ -1,0 +1,396 @@
+Son las nueve de la noche, el ventilador de techo hace un ruido que antes no hacía, y alguien escribe
+en el teléfono: «por qué mi ventilador hace ruido». Sale una lista, entra al primero, lee cuatro
+párrafos que servirían para cualquier ventilador del planeta y cierra. Al día siguiente le dice a un
+vecino que **en internet no dice nada**.
+
+Ahí pasaron dos cosas distintas. Una es que la consulta estaba mal armada: se escribió el problema en
+vez de las palabras que estarían en la página que sirve. La otra es que entró al primer resultado por
+el solo hecho de estar primero. Esta lección resuelve la primera; **si esa página merece que le creas
+es toda la lección siguiente**, y eso no se arregla buscando mejor.
+
+Todo sale de una idea que hay que aceptar antes que nada: **buscar no es preguntarle a alguien.** No
+hay nadie leyendo tu pregunta del otro lado. Cuando entiendas qué pasa al apretar enter vas a entender
+por qué escribir menos funciona mejor y por qué «no hay nada sobre esto» casi siempre significa «no
+acerté las palabras».
+
+## Buscar no es preguntar: es abrir una tabla que ya estaba escrita
+
+Hay que desarmar la imagen mental de una máquina que recibe tu pregunta y sale corriendo a mirar
+internet. **No es así, y no podría serlo**: recorrer internet entera lleva semanas y tu resultado
+aparece en menos de un segundo. La única forma es que el trabajo estuviera hecho de antes.
+
+Se hace en dos etapas. La primera es el <Termino slug="rastreo-web">rastreo</Termino>: programas
+llamados rastreadores o arañas piden páginas una por una, las descargan, sacan de adentro los enlaces
+y van a pedir esas también, saltando de enlace en enlace durante años. **De ahí sale la primera
+consecuencia: lo que nadie enlaza no existe para el buscador.** Un documento que solo vive dentro de
+un grupo de WhatsApp, lo que hay detrás de una contraseña, lo que se dijo por teléfono: nada de eso
+está.
+
+La segunda etapa arma el <Termino slug="indice-de-busqueda">índice de búsqueda</Termino>. El buscador
+no guarda internet: guarda una tabla gigante que, para cada palabra, tiene la lista de páginas donde
+esa palabra aparece —el índice alfabético del final de un libro, pero de todas las páginas del mundo—.
+Cuando escribís tres palabras la máquina no lee tu frase: **busca esas tres entradas y se queda con
+las páginas que están en las tres listas a la vez.**
+
+<Analogia titulo="Un índice invertido y una intersección">
+Para quien programa es literal: una tabla `palabra → lista de documentos`, y la consulta es una
+intersección de listas. Nada de semántica; conjuntos. Por eso **cada palabra que agregás achica el
+conjunto**, y una frase larga es una consulta pésima: mete diez condiciones a la vez y basta una mal
+elegida para vaciarlo entero. Para quien no programa es el fichero de una biblioteca: pedís
+«carpintería» y te dan el cajón; pedís «carpintería, humedad, Bolivia» y te dan los tres libros que
+están en los tres cajones a la vez.
+</Analogia>
+
+Los buscadores de hoy hacen algo más que la intersección pura: reconocen sinónimos, plurales y errores
+de tipeo. Pero **eso los hace generosos, no precisos.** La precisión la vas a tener que pedir vos.
+
+## Quién decide el orden, y por qué no es la verdad
+
+Después de la intersección quedan, digamos, cuarenta mil páginas. Alguien tiene que ponerlas en fila,
+y esa fila es lo único que vas a ver. Ordenar es lo que de verdad hace un buscador, y lo hace
+con <Termino slug="senal-de-ordenamiento">señales de ordenamiento</Termino>: cientos de medidas
+calculadas de antemano. Si tus palabras están en el título o perdidas al final. Cuántas otras páginas
+la enlazan, y qué tan enlazadas están esas a su vez. Si la gente que buscó eso mismo hizo clic ahí y
+se quedó, o volvió a los tres segundos. Qué tan reciente es.
+
+Mirá esa lista, porque falta algo enorme: **no hay ninguna señal que mida si lo que dice la página es
+cierto.** No la hay porque nadie sabe calcularla. Todo lo medible es popularidad, forma y
+comportamiento de los que hicieron clic antes que vos. De ahí la frase para memorizar: **el primer
+resultado es el mejor posicionado, no el más cierto.** Es una apuesta sobre qué va a conformar al
+mayor número de gente que escribe esas palabras. Muchas veces acierta. No es un certificado.
+
+Y como el orden se calcula con señales conocidas, hay una industria dedicada a fabricarlas:
+el <Termino slug="posicionamiento-en-buscadores">posicionamiento en buscadores</Termino>, que vas a
+ver escrito como SEO. Parte de ese trabajo es legítimo; otra parte produce
+el <Termino slug="contenido-hecho-para-posicionar">contenido hecho para posicionar</Termino>: esas
+páginas donde buscás cómo cambiar una empaquetadura y antes del dato hay novecientas palabras de
+relleno, ocho fotos y cuatro avisos. **No está mal escrita: está escrita para el ordenador de la fila,
+no para vos.**
+
+<Dato titulo="Los resultados nunca son los mismos dos veces">
+La <Termino slug="personalizacion-de-resultados">personalización de resultados</Termino> hace que dos
+personas que escriben lo mismo vean listas distintas, según desde dónde preguntan, en qué idioma
+tienen el teléfono y en qué hicieron clic antes. Eso vale oro en una discusión: **«fijate que sale
+primero» no prueba nada.** Y trae algo incómodo: si venís haciendo clic en lo que confirma lo que ya
+creías, el buscador aprende a darte más de eso. Es
+el <Termino slug="sesgo-de-confirmacion">sesgo de confirmación</Termino> con un motor ayudando.
+</Dato>
+
+## El anuncio no es un resultado
+
+Los primeros lugares muchas veces no se ganaron: se compraron.
+Un <Termino slug="resultado-patrocinado">resultado patrocinado</Termino> es un espacio pagado, y el
+mecanismo es una subasta: los anunciantes ofertan por aparecer cuando se escriben ciertas palabras y
+quien paga más sube. **Nadie revisó si lo que ofrece es bueno, honesto o quien dice ser.**
+
+Se distinguen por una palabra chiquita arriba o al costado del enlace —«Anuncio», «Patrocinado»— y
+porque suelen ir todos juntos antes de que empiece la lista de verdad. Es una diferencia de dos
+milímetros de letra: mirá ese renglón **antes** de tocar nada. Que sea pagado no lo hace malo; si
+buscás dónde comprar un ventilador, el anuncio de una tienda de ventiladores es lo que querías. El
+problema es cuando lo que buscás no es un producto.
+
+<Advertencia titulo="Dónde el anuncio hace daño de verdad">
+Hay tres terrenos donde el clic al patrocinado sale caro. **Trámites**: quien paga por estar arriba
+suele ser un intermediario que cobra por gestionar lo que podrías hacer vos. **Bancos**: nunca entres
+a tu banco desde la lista, porque una página falsa también puede pagar por estar arriba; entrá desde
+la dirección escrita a mano o desde un marcador que guardaste vos. **Préstamos y dinero rápido**: el
+que más paga por aparecer es el que más gana con que entres, y eso ya te dice de qué lado está el
+trato. **El orden de arriba no es una recomendación, es una subasta.**
+</Advertencia>
+
+## Tu consulta es una llave: cómo se arma
+
+Sabiendo que del otro lado hay una tabla de palabras, la técnica se deduce sola. Cada término que
+escribís es una <Termino slug="palabra-clave">palabra clave</Termino>, una llave que abre una lista.
+
+**Escribí palabras, no frases.** «Cómo puedo hacer para que el agua de la ducha salga con más fuerza»
+son trece palabras de las cuales nueve no filtran nada, y las que sobran te empujan hacia páginas
+escritas en ese mismo tono. «Poca presión ducha» son tres llaves y las tres cierran.
+
+**Escribí las palabras que estarían en la respuesta, no las de tu problema.** Esta es la regla madre.
+Vos sentís «no sale agua con fuerza»; la página que sirve dice «baja presión», «pérdida de carga»,
+«filtro obstruido», «llave de paso semicerrada». Preguntate: *si alguien ya explicó esto, ¿con qué
+palabras lo tituló?*
+
+**Sacá lo que es tuyo y de nadie más.** Tu nombre, el de tu archivo, el número de tu medidor: palabras
+que aparecen en una sola página del mundo —la tuya— y que, como buscar es intersectar, **vacían el
+conjunto entero**.
+
+**Agregá el contexto que cambia la respuesta, no el que la adorna.** La marca y el modelo, sí. El
+material, sí. Y el país cuando el asunto depende del país: agregar «Bolivia» o «Santa Cruz» cambia por
+completo lo que sale, y casi nadie lo escribe.
+
+## Las palabras que no son las tuyas: nombre local y nombre técnico
+
+Acá está la traba donde más gente se da por vencida sin darse cuenta de que era de vocabulario.
+Un <Termino slug="nombre-tecnico">nombre técnico</Termino> es la palabra con la que el fabricante, el
+manual y el gremio llaman a la cosa; tu nombre local es con la que la llaman en tu barrio. Casi nunca
+coinciden, y el índice **no sabe que son la misma cosa**, porque compara cadenas de letras y no ideas.
+Escribís «chapa» y la página que te salvaría dice «cerradura de embutir»; escribís «goma» y dice
+«empaquetadura» o «sello tórico»; decís «esmeril» y el manual dice «amoladora angular». Es el mismo
+problema que con las plantas, donde el nombre científico es lo único que no se mueve; acá no hay latín
+que te salve.
+
+Pero hay un método que funciona siempre. **La primera búsqueda no sirve para encontrar: sirve para
+averiguar cómo se llama.** Buscá con tu palabra local, andá directo a las imágenes, y cuando veas la
+foto de la cosa que tenés en la mano leé el nombre que le pusieron abajo. Ese es el nombre técnico, y
+recién ahí hacés la búsqueda de verdad: **una búsqueda para el diccionario y otra para el problema.**
+Al revés funciona igual cuando no sabés cómo se llama la herramienta que necesitás: describí lo que
+hace —«aparato para medir si un cable tiene corriente»— y mirá las imágenes hasta reconocerla.
+
+## Los cuatro operadores que valen la pena
+
+Un <Termino slug="operador-de-busqueda">operador de búsqueda</Termino> no se busca: le dice al buscador
+**cómo** buscar lo demás. Hay decenas; con cuatro te alcanza.
+
+<Tabla>
+
+| Operador | Cómo se escribe | Qué hace | Cuándo lo usás |
+| --- | --- | --- | --- |
+| Comillas | `"presión de trabajo 4 bar"` | Exige esa frase exacta y en ese orden | Un error, un código, una frase de un documento |
+| Sitio | `site:nombredelsitio.bo trámite` | Busca solo dentro de un sitio | Instituciones, un foro, un manual que sabés dónde vive |
+| Menos | `jaguar -auto` | Descarta las páginas con esa palabra | Cuando tu palabra tiene dos significados |
+| Archivo | `manual bomba modelo pdf` | Empuja hacia documentos, no páginas | Manuales, planillas, formularios |
+
+</Tabla>
+
+La <Termino slug="busqueda-exacta">búsqueda exacta</Termino> con comillas es la más útil y la que menos
+se usa. Sin comillas el buscador se toma libertades: cambia palabras por sinónimos, ignora las que le
+parecen poco importantes y corrige lo que cree que escribiste mal. Con comillas le prohibís todo eso,
+y es lo que necesitás cuando tenés un texto que **existe literalmente en alguna parte**: el mensaje de
+una pantalla, el código estampado en una pieza, el nombre de un formulario.
+
+Falta un operador que no se escribe: **el filtro de fecha**, ese menú de la página de resultados que
+deja solo lo publicado en el último año. Para todo lo que cambia con el tiempo —programas, precios,
+requisitos, formularios— **una página vieja no es una página menos buena: es una página equivocada**,
+y está arriba porque lleva años acumulando enlaces.
+
+## El texto literal del error, y buscar en otro idioma
+
+Cuando una máquina te muestra un mensaje de error te está dando la mejor palabra clave de tu vida:
+**un texto escrito una sola vez, por el fabricante, que aparece igual en todas las pantallas del mundo
+donde falla lo mismo.** Alguien lo pegó en un foro y alguien contestó.
+
+Copiá el texto tal cual, sin corregirlo ni traducirlo; si no se puede copiar, fotografiá la pantalla y
+transcribilo letra por letra. Ponelo entre comillas. Y después, lo que casi nadie hace: **quitale la
+parte que es tuya.** El mensaje mezcla lo genérico —lo que le sale a todos— con tu ruta, tu usuario,
+tu número de serie. Lo genérico es la llave; lo tuyo vacía la intersección. Es la idea
+del <Termino slug="caso-minimo-reproducible">caso mínimo reproducible</Termino> que el curso trabajó
+con los programas.
+
+Y ahora la puerta que más gente tiene cerrada. **La mayor parte de lo que sirve está en inglés**, y
+buena parte de lo que llega desde Brasil trae el manual en portugués. No hace falta saber el idioma:
+hace falta traducir tres o cuatro palabras clave, no la frase. «Bomba» es *pump*, «no ceba» es *not
+priming*, «rodamiento» es *bearing*. Buscás con esas, entrás y usás el traductor del navegador.
+
+Dos advertencias, y las dos son de seguridad. La traducción automática se equivoca justamente en el
+vocabulario técnico; si algo suena raro, volvé al original. Y **los números y los códigos no se
+traducen: se leen del original.** Una medida, un torque, un código de repuesto o un valor de fusible
+se copian del texto en su idioma, porque una traducción que cambia una coma por un punto convierte 1,5
+en 15.
+
+## La regla de las tres consultas
+
+De todo lo anterior sale una disciplina, y es lo único que hay que convertir en costumbre: **antes de
+decidir que no hay información, probá tres consultas realmente distintas.** No tres versiones de la
+misma con las palabras cambiadas de lugar: tres ángulos.
+
+La <Termino slug="regla-de-las-tres-consultas">regla de las tres consultas</Termino> se arma así. La
+primera, con **tus palabras**, las locales, que sirve sobre todo para descubrir cómo se llama la cosa.
+La segunda, con el **nombre técnico** que aprendiste en la primera, más marca y modelo. La tercera
+cambia de ángulo de verdad: **otro idioma, u otro tipo de fuente.** Porque no todo vive en el mismo
+formato: un gesto con las manos vive en un video, una falla rara vive en un foro, un valor exacto vive
+en un manual y el nombre comercial de una pieza vive en un aviso de venta. **Si buscaste tres veces en
+el mismo lugar, buscaste una sola vez.**
+
+## Leer la página de resultados sin entrar a todo
+
+La lista es información, no una sala de espera: cada resultado te muestra tres cosas gratis. El
+**título** lo escribió quien quiere tu clic, así que informa poco. La **dirección** —el renglón con el
+nombre del sitio— es el filtro más barato que existe: de un vistazo te dice si eso es una tienda, un
+foro, el fabricante, una institución o una página que junta texto de otras. Y
+el <Termino slug="fragmento-de-resultado">fragmento de resultado</Termino>, esas dos líneas de abajo,
+no es un resumen: son los pedazos donde aparecieron tus palabras, recortados por una máquina. **Si ahí
+tus palabras aparecen sueltas y sin relación entre ellas, esa página no habla de tu tema: tiene tus
+palabras.**
+
+Tres costumbres que cambian el rendimiento. Abrí tres o cuatro candidatos **en pestañas nuevas** —con
+un toque largo sobre el enlace— para no perder la lista. Adentro de la página no leas de arriba abajo:
+usá **buscar dentro de la página**, que en la computadora es Ctrl+F y en el teléfono está en el menú
+del navegador. Y si ninguna sirvió, **no pases a la página dos: cambiá la consulta**, porque lo bueno
+casi nunca está más abajo, está detrás de otras palabras.
+
+Falta la trampa de más arriba de todo: el recuadro con la respuesta ya extraída, ese que te ahorra
+entrar. Es un pedazo de página elegido por una máquina, **con el contexto cortado**, y muchas veces la
+frase siguiente —la que no te muestra— empezaba con «pero esto no aplica si…». Cuando importa, entrá a
+la página de donde salió.
+
+## Buscar donde casi nadie busca: adentro de tu propio teléfono
+
+Hay un lugar donde la información ya es tuya, ya está comprobada y no gasta datos, y es el que menos
+se usa: la <Termino slug="busqueda-dentro-del-equipo">búsqueda dentro del equipo</Termino>.
+
+**En los mensajes.** La lupa de arriba de WhatsApp busca en todas tus conversaciones a la vez, y
+adentro de una conversación abierta busca solo en esa. La dirección que te pasaron hace ocho meses, el
+nombre del plomero, la foto del recibo, lo que te cotizaron en marzo: está ahí, escrito por alguien
+que sí sabía. Antes de preguntarle a internet, preguntale a tu propio teléfono.
+
+**En los ajustes.** Casi nadie sabe que la pantalla de configuración tiene su propio buscador arriba.
+En vez de recorrer nueve menús buscando dónde se apaga el respaldo automático, escribís «respaldo» y
+te lleva.
+
+**En las fotos y en el mapa.** La galería busca por fecha y muchas veces por lugar, así que si
+fotografiaste la etiqueta del motor el día que lo compraste, la encontrás por el mes. Y buscar una
+categoría cerca tuyo —«ferretería», «farmacia», «taller»— te da ubicación, teléfono y la foto de la
+fachada, que te dice si el lugar existe antes de salir de tu casa. Con una honestidad necesaria: **los
+horarios y teléfonos que figuran ahí los cargó alguien alguna vez y envejecen mal.** Llamá antes de
+ir.
+
+## Tres búsquedas concretas: un repuesto, un manual, un precio
+
+**Un repuesto.** Las piezas no se buscan por descripción, se buscan por identidad. Antes del teléfono,
+andá al aparato: casi todo lo que tiene motor o enchufe lleva
+una <Termino slug="placa-de-caracteristicas">placa de características</Termino>, esa etiqueta metálica
+o pegatina —atrás, abajo o adentro de la tapa— con marca, modelo, número de serie y voltaje.
+Fotografiala. Después fotografiá la pieza rota por los dos lados y fijate si tiene un código estampado;
+si no lo tiene, medila. Con eso armás la consulta: primero el código entre comillas; si no sale, marca
++ modelo + nombre técnico de la pieza; si tampoco, las medidas + el nombre de la pieza. Y aunque
+compres en la ferretería del barrio, mirar los avisos de venta sirve igual, porque **ahí aprendés cómo
+se llama comercialmente**.
+
+**Un manual.** «Marca + modelo + manual pdf» resuelve la mayoría, y «despiece» o «diagrama de partes»
+te da el dibujo con cada pieza numerada, que es oro cuando desarmaste algo y no sabés cómo volvía.
+Buscarlo en inglés —*service manual*, *parts diagram*— multiplica lo disponible. El manual del
+fabricante es una <Termino slug="fuente-primaria">fuente primaria</Termino>: es lo que dice quien lo
+hizo. Cuando lo encuentres, **descargalo y guardalo**, porque el día que lo necesites puede no haber
+señal. Y una advertencia que no es menor: en electricidad, gas y motores el manual trae los valores de
+seguridad —capacidad del fusible, presión de trabajo, torque de un perno— y esos no se sustituyen por
+un comentario en un video. Un fusible más grande que el que corresponde no protege menos: **deja pasar
+la corriente que iba a incendiar el cable.**
+
+**Un precio.** Un <Termino slug="precio-de-referencia">precio de referencia</Termino> no es un número:
+es una **banda**. Mirá cuatro o cinco ofertas de exactamente la misma cosa —mismo modelo, misma
+medida—, fijate cuáles incluyen el envío y descartá los dos extremos. Lo que queda en el medio sirve
+para una sola pregunta: **si lo que me están cobrando está dentro de lo razonable o muy afuera.** No
+sirve para discutir que «en internet cuesta tal cosa», porque eso no incluye traerlo hasta acá, ni
+impuestos, ni la garantía de alguien que te atienda si sale malo. El número real te lo dan dos
+ferreterías del barrio.
+
+<AplicarRizoma>
+Esto se practica con lo que ya tenés en la casa, hoy, sin comprar nada y sin necesidad de un terreno.
+Y conviene empezar por el trabajo que se hace **antes** de la emergencia, porque el día que se rompe
+algo nadie tiene la cabeza para aprender a buscar.
+
+**El primer ejercicio dura quince minutos y se hace ahora.** Recorré la casa y fotografiá la placa de
+características de todo lo que la tenga: el ventilador, la heladera, la bomba de agua, el motor de la
+moto, el medidor de luz. Guardá esas fotos en un álbum llamado «etiquetas». Ese álbum convierte una
+búsqueda de tres horas en una de dos minutos, porque casi todo el tiempo que se pierde buscando un
+repuesto se va en no saber qué modelo tenés.
+
+**El segundo es un cuaderno de búsquedas**, en papel o como nota en el teléfono: cada vez que una
+consulta funcione, anotá las palabras exactas y qué encontraste con ellas. Una consulta que funcionó
+es una herramienta, igual que una llave del número correcto, y se guarda por la misma razón. A los dos
+meses vas a tener tu propio diccionario de nombres técnicos, y ese no se lo podés pedir a nadie.
+
+**El tercero es la regla de las tres consultas escrita en papel.** La próxima vez que se rompa algo,
+antes de tocar el teléfono escribí las tres líneas: tus palabras, el nombre técnico con marca y
+modelo, y el otro idioma o el otro tipo de fuente.
+
+**El cuarto es de plata y de trámites.** Cuando busques algo de un banco o de un trámite, no entres
+desde la lista: fijate si arriba dice «Anuncio» y salteá esa tanda entera. Para el banco, la dirección
+se escribe a mano o se abre desde un marcador tuyo. Para un trámite, lo que buscás es **el canal
+oficial y las preguntas que vas a llevar hechas**, nunca la lista de requisitos, porque cambian y una
+página vieja te hace perder el viaje.
+
+**Y el quinto va de la casa hacia afuera.** Sentate con alguien de tu familia y hagan juntos una
+búsqueda de algo que esa persona necesite de verdad, en voz alta, diciendo por qué elegís cada
+palabra: lo que hay que copiar no es el resultado, es la decisión. Y si circulan enlaces por WhatsApp,
+poné una costumbre nueva: **quien comparte un enlace comparte también la consulta con la que lo
+encontró.** El enlace resuelve un problema una vez; la consulta le enseña a buscar al que la lee.
+
+En Rizoma del Sur esto está montado como una libreta compartida de consultas que sirvieron, y con las
+fotos de las placas de la bomba y del motor guardadas donde las encuentre cualquiera. La razón es de
+organización: **si el que sabe buscar es uno solo, el grupo depende de que esa persona esté.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+La primera diferencia acá es que **buscar cuesta plata y no siempre hay señal.** Buscar texto consume
+poquísimo; mirar video consume cientos de veces más, y una hora de tutoriales se come el paquete de la
+semana. De ahí tres costumbres: resolver primero con texto y dejar el video para cuando hay que ver un
+movimiento de las manos; descargar el manual una vez y guardarlo; y bajar lo pesado donde haya wifi.
+Con los cortes de energía el router se apaga aunque el teléfono tenga batería, así que **lo que solo
+existe en internet no está justo el día que lo necesitás.** Lo que resolvés hoy, guardalo hoy.
+
+La segunda es de vocabulario y es más grande de lo que parece. Casi todo el texto útil en español lo
+escribieron en España o en México, así que la página que te sirve usa **otro español**: dice ordenador
+y vos computadora; dice móvil y vos celular; dice fontanero y vos plomero; dice bombilla y vos foco;
+dice enchufe y vos tomacorriente; dice amoladora y vos esmeril. **Tu segunda consulta usa la palabra
+del otro español**, y con ese solo cambio aparece la mitad del material que antes «no existía». Y como
+mucho de lo que se vende acá viene de Brasil, cuando el manual no aparece en español probalo en
+portugués.
+
+La tercera es la que más frustración ahorra: **buena parte de la información local no está indexada
+porque nunca fue una página web.** Quién vende ese repuesto en Santa Cruz, a qué hora abre ese taller,
+quién arregla ese modelo de motor: eso vive en un grupo de WhatsApp, en los avisos de compra y venta,
+o en la cabeza del vecino. La técnica honesta es mixta: **el mecanismo se busca en internet, el dato
+local se pregunta.** Y donde hay algo escrito casi siempre está adentro de un grupo, así que hay que
+buscar **dentro** de esos espacios, con su propia lupa.
+
+La cuarta es sobre trámites y es una regla dura del curso. Lo que exige un trámite, lo que cuesta y
+cuánto tarda **no se resuelve con una búsqueda**: cambia, hay páginas viejas bien posicionadas y
+arriba de todo hay intermediarios que pagaron por estar ahí. Lo que sí hace la búsqueda es llevarte al
+canal oficial y ayudarte a llegar con las preguntas escritas; lo concreto se confirma en la entidad
+que corresponde, en la alcaldía o con un contador. Este curso no te va a dar un número ni un plazo,
+porque cualquier cifra sería una invención con apariencia de dato.
+
+La quinta es de salud y es la más delicada. Buscar síntomas empuja hacia lo más alarmante —porque es
+donde más gente hace clic— y cada clic asustado trae otra cosa peor. Acá el dengue es endémico y una
+fiebre no es un asunto para resolver leyendo. **Buscar sirve para saber qué preguntar y para conocer
+los signos de alarma, nunca para diagnosticar y jamás para medicarse.** Ante fiebre alta, dolor fuerte
+de cabeza o detrás de los ojos, dolor de cuerpo intenso, vómitos que no paran, sangrado de encías o
+nariz, manchas en la piel, decaimiento marcado o dificultad para respirar, **se va al centro de
+salud**, y no se toma nada por cuenta propia sin indicación de un profesional, porque hay medicamentos
+comunes que en dengue empeoran el sangrado.
+
+Y la sexta es de por qué esto está en un curso comunitario y gratuito. Saber buscar es el multiplicador
+más barato que existe: no cuesta un peso y es lo que permite seguir aprendiendo un oficio **después**
+de que el curso se termine. Quien sabe llegar al manual de una máquina y al nombre técnico de una
+pieza no necesita que le expliquen cada cosa nueva.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«No hay nada en internet sobre esto.»** Casi siempre significa «no acerté las palabras». Falta la
+segunda consulta, la del nombre técnico, y la tercera, la del otro idioma.
+
+**«Lo dice el primer resultado.»** El primero es el mejor posicionado; nadie midió si es cierto.
+
+**Escribir la pregunta entera como si alguien la fuera a leer.** Del otro lado hay una tabla de
+palabras: cada palabra de más achica la intersección.
+
+**Tocar el primer enlace sin mirar si dice «Anuncio».** Ahí está el que pagó, y en trámites, bancos y
+préstamos, el que más paga es el que más gana con que entres.
+
+**Pegar el error con tu nombre de archivo adentro.** Esa parte es única en el mundo y vacía el
+resultado: se busca la parte genérica, entre comillas.
+
+**Buscar afuera lo que ya está adentro del teléfono.** La dirección y la foto del recibo están en tus
+mensajes, gratis y ya comprobadas.
+
+## Lo que sigue
+
+Ya tenés el mecanismo —rastreo, índice, orden por señales que miden popularidad y no verdad,
+personalización, y el anuncio que se compró en vez de ganarse— y ya tenés el oficio: palabras clave en
+vez de frases, las palabras de la respuesta en vez de las del problema, el nombre técnico aprendido en
+la primera búsqueda, las comillas, los filtros, el texto literal del error, el otro idioma, tres
+consultas antes de rendirte y la búsqueda adentro de tu propio equipo.
+
+Falta la pregunta que esta lección deliberadamente no contestó: **encontraste la página, ¿y ahora por
+qué le creerías?** Una página bien posicionada y de aspecto profesional puede estar desactualizada,
+copiada de otra, pagada por quien vende lo que recomienda, o escrita para otro país.
+
+La siguiente lección, *La fuente: qué crees de lo que encuentras y de lo que te reenvían*, es ese
+método: quién publica y qué gana con que lo leas, de cuándo es y si sigue vigente, si es el origen del
+dato o la repetición número doce. Incluye lo que llega sin que lo busques —la cadena de WhatsApp, la
+captura de pantalla que no prueba nada— y cierra con los terrenos donde equivocarse cuesta caro: salud,
+trámite y dinero.

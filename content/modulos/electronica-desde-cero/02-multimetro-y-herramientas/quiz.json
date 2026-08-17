@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "paralelo-o-serie",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la tensión se mide en paralelo y la corriente en serie?",
+      "opciones": [
+        "El voltímetro tiene una resistencia interna enorme, de millones de ohmios, así que apenas toma corriente y puede apoyarse por fuera sin alterar el circuito.",
+        "El amperímetro tiene una resistencia interna casi nula, de fracciones de ohmio, para no estorbar el paso, y por eso hay que abrir el circuito e intercalarlo.",
+        "Medir tensión no obliga a desconectar nada: se tocan dos puntos por encima con el aparato funcionando.",
+        "Las dos mediciones se hacen igual y la diferencia es solo la posición del selector, que cambia la escala de la pantalla."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la creencia que quema instrumentos. No es la misma conexión con distinta escala: son dos aparatos con resistencias internas opuestas. Uno es un manómetro roscado en el costado del tubo y el otro un caudalímetro de línea que exige cortar el tubo. Poner el segundo donde iba el primero es abrir un caño entre los dos polos de la fuente, es decir, un cortocircuito."
+    },
+    {
+      "id": "el-accidente",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué situaciones producen un cortocircuito a través del propio multímetro?",
+      "opciones": [
+        "Apoyar las puntas sobre un tomacorriente con el selector en amperios.",
+        "Apoyar las puntas sobre los bornes de una batería con el selector en amperios.",
+        "Medir tensión con el selector correcto pero con el cable rojo todavía en el borne de 10 A de la medición anterior.",
+        "Medir tensión alterna en un circuito de corriente continua con el selector en la posición equivocada."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta no es peligrosa, es mentirosa: elegir mal entre continua y alterna no daña el instrumento, pero devuelve un número cercano a cero o un valor que baila, y la conclusión que se saca de él —«acá no llega nada», «la batería está muerta»— es falsa. Las otras tres son la misma cosa: un camino de resistencia casi nula puesto entre dos puntos con tensión y sin carga que limite el paso."
+    },
+    {
+      "id": "continuidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se puede afirmar de la posición de continuidad?",
+      "opciones": [
+        "Se usa siempre con el aparato desenchufado, porque manda corriente propia hacia afuera y con el circuito vivo la lectura no significa nada.",
+        "El pitido responde a que la resistencia está por debajo de un umbral, así que dice «hay camino», no «el camino sirve».",
+        "Sirve para comprobar en segundos cables cortados, fusibles quemados, interruptores muertos y contactos que no deberían tocarse.",
+        "Un pitido limpio garantiza que ese cable puede llevar la corriente de la bomba sin problemas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta confunde un ping con una prueba de carga. Una unión corroída por la que apenas pasa un miliamperio pita perfecto y se cae en pedazos cuando pasan cinco amperios. Para eso hace falta medir caída de tensión con el aparato trabajando, que es la técnica que encuentra lo que la continuidad declara sano."
+    },
+    {
+      "id": "vivo-muerto-vivo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el multímetro marca cero voltios en un circuito, eso basta para declararlo sin tensión y meter la mano.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la clase de error que mata. El procedimiento correcto tiene tres pasos: medir un punto que se sabe vivo para confirmar que el instrumento muestra tensión, medir el circuito que se va a tocar, y volver al punto conocido para comprobar que el instrumento sigue midiendo. Sin ese tercer paso, un instrumento que se rompió en el medio —una punta partida por dentro, un fusible que se fue— enseña un cero perfecto en un circuito con 220 voltios vivos."
+    },
+    {
+      "id": "medicion-en-carga",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una batería que en reposo marca la tensión correcta puede desplomarse en cuanto se le pide corriente, y por eso la medición útil es la que se hace con el sistema trabajando.",
+      "respuesta": true,
+      "explicacion": "Correcto. Medir en vacío responde a una pregunta que a nadie le interesa. Lo mismo pasa con un cargador que da su tensión nominal sin nada conectado y se hunde con el aparato encendido, y con los malos contactos: una unión con fracciones de ohmio es invisible para los miliamperios de la prueba de continuidad y produce una caída de tensión bien visible cuando pasan cinco amperios, además de calentarse justo ahí."
+    },
+    {
+      "id": "resistencia-en-circuito",
+      "tipo": "opcion_multiple",
+      "enunciado": "Mides una resistencia de 1.000 Ω que sigue soldada en su placa y la pantalla marca 470 Ω. ¿Qué está pasando?",
+      "opciones": [
+        "Los componentes que rodean a la pieza ofrecen caminos alternativos a la corriente del instrumento, así que lees el conjunto y no la pieza.",
+        "Los caminos en paralelo siempre bajan la lectura, nunca la suben, así que un valor menor al esperado no prueba que la pieza esté mal.",
+        "Para saberlo de verdad hay que levantar una pata del componente o desconectar un borne, y en todo caso medir sin tensión presente.",
+        "La resistencia se degradó a la mitad de su valor y hay que reemplazarla."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la conclusión apresurada que hace cambiar piezas sanas. Una lectura baja en un componente montado casi nunca significa que el componente se degradó: significa que el instrumento está midiendo varios caminos a la vez. Las resistencias que fallan suelen hacerlo abriéndose —marcan OL— o carbonizándose de forma visible, no bajando a la mitad."
+    },
+    {
+      "id": "herramientas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre las herramientas mínimas y qué se puede improvisar, ¿qué es correcto?",
+      "opciones": [
+        "El destornillador correcto es el que llena la ranura: uno pequeño en un tornillo grande redondea la cabeza en el primer apriete.",
+        "La cinta autovulcanizante no lleva adhesivo y sus capas se sueldan entre sí, así que es la única que sirve en uniones expuestas a la intemperie.",
+        "La tercera mano, la base de soldar, la esponja y el organizador de tornillos se improvisan sin perder nada de calidad.",
+        "Si un fusible se quema repetidamente, se lo puede puentear con alambre mientras se consigue el repuesto correcto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta nunca es aceptable. El fusible es la única pieza diseñada para morir; puentearlo traslada el fallo al cable dentro de la pared, que no tiene cómo apagarse. Además, un fusible que se quema dos veces no es el problema sino el aviso de otro: se reemplaza por uno del mismo valor y del mismo tipo y se busca la causa."
+    },
+    {
+      "id": "diagnostico-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "En Rizoma del Sur, la bomba del lote del fondo arranca con dificultad y a veces no arranca, sobre todo después de una lluvia; enchufada junto al galpón funciona perfecto. Tienes un multímetro, una pinza amperimétrica prestada y la caja de herramientas mínima. Explica en qué orden medirías, qué posición del selector y qué bornes usarías en cada paso, qué mediciones no servirían y por qué, cómo comprobarías el instrumento antes de fiarte de él, y qué dejarías montado para que el diagnóstico no haya que repetirlo desde cero la próxima vez.",
+      "respuestaModelo": "Antes de medir nada, comprobar el instrumento. Selector en continuidad, negro en COM, rojo en VΩmA, juntar las puntas: tiene que pitar y marcar casi cero. Si no pita, el problema es la pila, el fusible interno, una punta partida junto al mango o el cable en el borne equivocado, y cualquier conclusión posterior sería basura. Aprovecho para mirar la resistencia de las propias puntas, que debe quedar por debajo de un ohmio; si salta al mover el cable, la punta está rota por dentro y hay que cambiarla antes de seguir. Después, contra algo conocido: mido una batería de 12 V que sé sana y compruebo que el número está donde debe.\n\nEl síntoma ya orienta el diagnóstico. Que la misma bomba funcione junto al galpón y falle en el fondo dice que la bomba está bien y que el problema está en el camino: en las tiradas largas hasta el lote del fondo, o en algún empalme intermedio. Que empeore después de una lluvia refuerza esa hipótesis, porque las uniones exteriores hechas con cinta aislante común dejan entrar agua cuando el adhesivo cede con el calor, y la corrosión avanza por dentro del cobre sin que se vea nada por fuera.\n\nPrimer paso, con todo desenchufado: continuidad en la extensión y en los empalmes del recorrido, con las puntas en COM y VΩmA. Sirve para descartar lo obvio —un cable cortado por dentro, un fusible quemado, un interruptor que no conmuta— en dos segundos y sin riesgo. Pero hay que saber de antemano que esta prueba probablemente va a decir que todo está bien, y no por eso el problema desaparece: el pitido responde a un umbral de unas decenas de ohmios y una unión corroída de fracciones de ohmio pita perfecto. Es un ping, no una prueba de carga.\n\nSegundo paso, y es el que resuelve el caso: medir caída de tensión con la bomba trabajando. Selector en tensión alterna, en un rango por encima de 220 o en automático, cables en COM y VΩmA, y con el circuito encendido y cargado apoyo las puntas a un lado y otro de cada empalme sospechoso, de cada tomacorriente y de cada tramo largo. Un conductor sano muestra casi cero; una unión mala muestra décimas o unidades de voltio. El culpable es el punto donde aparece la tensión que sobra, y esa energía que falta se está convirtiendo en calor justo ahí, que es como un empalme malo termina derritiendo el plástico. También mido la tensión en el tomacorriente del fondo con la bomba encendida y la comparo con la del galpón: si el arranque pide corriente y la tensión se hunde, el problema es la caída en el recorrido.\n\nComo esto se hace con 220 voltios presentes, van las reglas sin excepción: una sola mano, la otra en el bolsillo; puntas primero y mirada a la pantalla después; suelo y calzado secos, sin tocar caños ni estructuras metálicas; puntas con el aislamiento entero; y nadie midiendo en 220 V estando solo.\n\nTercer paso, con la pinza: medir la corriente que toma la bomba trabajando. La pinza abraza un solo cable sin cortarlo ni tocar el metal, así que no hay que abrir el circuito ni correr el riesgo del cortocircuito. Aquí conviene decir qué NO haría: no intercalaría el multímetro en serie en el borne de 10 A para medir esa corriente, porque no hace falta y porque el accidente clásico no ocurre al medir corriente sino en la medición siguiente, cuando el cable rojo se queda en ese borne y alguien mide tensión. Tampoco mediría resistencia del bobinado con el motor conectado, porque los caminos en paralelo bajan la lectura, ni ninguna resistencia o continuidad con tensión presente.\n\nLa reparación se sigue de lo que aparezca. Si un empalme muestra caída, se rehace: cobre limpio, unión mecánica firme, y sellado con cinta autovulcanizante —que no lleva adhesivo y suelda sus capas entre sí— con una vuelta de aislante común encima contra el sol. Si el problema es la sección del conductor en una tirada larga, no hay empalme que lo arregle y hay que engrosar el cable.\n\nY lo que dejaría montado para no repetir el diagnóstico: el cuaderno de mediciones sanas. Con todo funcionando bien, anotar la tensión en el tomacorriente del galpón y en el del fondo a distintas horas, la corriente que toma la bomba trabajando, los ohmios de su bobinado en frío y la tensión del sistema solar en reposo y con la bomba encendida. Una medición aislada no significa nada; comparada con la de cuando el equipo estaba sano lo significa todo. Sumaría la tensión de entrada a distintas horas del día, porque los cortes y las bajadas en horas pico hacen que los motores tomen más corriente y se calienten, y ese cuaderno permite reclamar a la distribuidora con datos. El instrumento, con clavo fijo en la pared del galpón, hoja de préstamos y pila de repuesto en la misma caja.",
+      "criterios": [
+        "Empieza comprobando el instrumento —puntas juntas en continuidad, prueba contra algo conocido— antes de fiarse de ninguna lectura.",
+        "Detecta que el síntoma (funciona junto al galpón, falla en el fondo) señala el recorrido y no la bomba.",
+        "Relaciona el empeoramiento tras la lluvia con la corrosión en empalmes exteriores sellados con cinta común.",
+        "Usa continuidad, desenergizado y en COM/VΩmA, para descartar lo obvio, y advierte que probablemente no encontrará el fallo.",
+        "Explica por qué la continuidad no ve un mal contacto: el pitido responde a un umbral y la unión corroída es de fracciones de ohmio.",
+        "Propone la medición de caída de tensión a un lado y otro de cada unión con la bomba trabajando, e identifica al culpable como el punto donde aparece la tensión que sobra.",
+        "Selecciona tensión alterna con rango por encima de 220 o automático para todo lo que se mide en la red.",
+        "Enumera las reglas de seguridad al medir con tensión presente: una sola mano, puntas antes que mirada, suelo y calzado secos, puntas enteras, nunca solo.",
+        "Usa la pinza amperimétrica para la corriente y justifica no intercalar el multímetro, mencionando el riesgo del borne de 10 A en la medición siguiente.",
+        "Descarta explícitamente al menos una medición inútil o peligrosa: resistencia con el componente conectado, o continuidad y ohmios con tensión presente.",
+        "Cierra la reparación con autovulcanizante en las uniones exteriores, o con mayor sección de conductor si la caída es del tramo.",
+        "Propone dejar montado el cuaderno de mediciones sanas como línea base, con tensiones, corriente de la bomba y sitio fijo para el instrumento."
+      ],
+      "explicacion": "El caso está construido para separar las tres capas del método. La primera es la disciplina: un instrumento no comprobado produce diagnósticos falsos con toda la apariencia de datos. La segunda es saber qué pregunta contesta cada medición: la continuidad descarta lo obvio y es ciega ante un mal contacto, y solo la caída de tensión bajo carga lo hace visible, que es exactamente lo que ahorra dinero donde un repuesto tarda semanas. La tercera es el orden de riesgo: se empieza desenergizado, se mide con tensión solo cuando no queda otra, y la corriente se mide con pinza para no acercarse nunca al cortocircuito a través del instrumento. Y el cierre, que es lo que convierte una reparación en capacidad instalada, es dejar registrado el estado sano para que la próxima vez el diagnóstico empiece con una comparación en vez de con una suposición."
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "preguntas": [
+    {
+      "id": "grafo-no-lista",
+      "tipo": "verdadero_falso",
+      "enunciado": "El orden de los pasos de preparación es una convención práctica: se puede reordenar según convenga sin consecuencias.",
+      "respuesta": false,
+      "explicacion": "Falso. Cada flecha de la secuencia es una dependencia real: el paso siguiente consume información o condiciones que solo existen si el anterior se hizo antes. Corregir sin analizar es comprar a ciegas; construir sin descompactar sella la capa. No es una lista de tareas, es un grafo."
+    },
+    {
+      "id": "informacion-que-se-borra",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuál es la categoría de operación que causa los errores más caros?",
+      "opciones": [
+        "Las que destruyen la información que necesitabas para decidir el paso siguiente.",
+        "Pasar una máquina mezcla los primeros centímetros y ya no se puede volver a medir cómo estaban.",
+        "Las que cuestan más dinero por metro cuadrado.",
+        "Las que requieren maquinaria en lugar de trabajo manual."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "No son las caras, son las que borran evidencia sin romper nada visible. El coste no aparece el día que las haces: aparece cuando tienes que decidir algo y descubres que el dato que necesitabas ya no existe. La regla de cualquier migración destructiva es la misma: el snapshot va antes."
+    },
+    {
+      "id": "linea-base",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que tener registrado sobre el plano antes de que entre una máquina?",
+      "opciones": [
+        "Dónde se estanca el agua, cuánto tarda en irse y con qué lluvia, con foto y fecha.",
+        "Los altos y los bajos, aunque sean de veinte centímetros, observados con luz rasante.",
+        "Qué vegetación espontánea hay dónde, y qué árboles hay con su posición y su porte.",
+        "Nada: el registro se hace mejor cuando el terreno ya está limpio y se ve todo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Precisamente al contrario: un terreno limpio y nivelado es un terreno del que ya no se puede leer nada. La vegetación espontánea es un análisis de suelo gratis de baja resolución, y las manchas de agua son el mapa de drenaje que ninguna máquina te va a devolver."
+    },
+    {
+      "id": "dos-ventanas",
+      "tipo": "verdadero_falso",
+      "enunciado": "Preparar bien un terreno de 3.666 m² es un proyecto de al menos dos temporadas, porque el diagnóstico y la obra ocurren en estaciones distintas.",
+      "respuesta": true,
+      "explicacion": "Correcto. El diagnóstico de agua solo se puede hacer en lluvias, cuando el terreno está mojado; la obra solo se puede hacer en la seca. Las dos ventanas son complementarias y disjuntas. Quien intenta hacerlo todo en una sola seca está construyendo con el diagnóstico que no tiene. Lo cual no significa quedarse quieto: significa separar lo que ya sabes de lo que aún no."
+    },
+    {
+      "id": "cal-plazo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el encalado es el paso que hay que planificar antes, aunque se ejecute a media lista?",
+      "opciones": [
+        "Porque la cal necesita estar incorporada y húmeda y tarda dos o tres meses como mínimo en reaccionar.",
+        "Porque es el paso con más plazo de entrega de toda la secuencia.",
+        "Porque plantar recién encalado es pagar la enmienda y no recibirla.",
+        "Porque es la enmienda más cara."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es cuestión de precio sino de plazo. Si aplicas y plantas la semana siguiente, el cultivo entra en un suelo que todavía tiene el pH viejo. Y si el análisis llega en septiembre, ya no hay tiempo de que la cal reaccione antes de las lluvias: por eso la muestra tiene que salir en agosto."
+    },
+    {
+      "id": "quemar-y-analizar",
+      "tipo": "verdadero_falso",
+      "enunciado": "Se puede desmontar antes de analizar, pero no se puede quemar antes de analizar.",
+      "respuesta": true,
+      "explicacion": "Correcto, y ese es el corte exacto. Cortar no cambia la química del suelo. Quemar sí: la ceniza aporta potasio y calcio y sube el pH de forma apreciable en los primeros centímetros. Si analizas después de quemar, el informe describe un suelo transitorio que no es ni el que tenías ni el que vas a tener."
+    },
+    {
+      "id": "cama-sobre-capa",
+      "tipo": "opcion_multiple",
+      "enunciado": "Construyes una cama alta encima de una suela de labor que no rompiste. ¿Qué pasa?",
+      "opciones": [
+        "Tienes los treinta centímetros de la cama y ni uno más: las raíces llegan a la capa y se paran.",
+        "El agua que baja se queda retenida sobre la capa, así que la cama se encharca por dentro.",
+        "La cama impide volver a descompactar, porque la máquina ya no puede entrar sin destruirla.",
+        "No pasa nada: la cama aporta profundidad suficiente por sí sola."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es el error que más duele porque el trabajo está bien hecho y el resultado es malo igualmente: cuesta lo mismo que hacerlo bien. Es construir encima de un bug conocido en lugar de arreglarlo, y a partir de ese momento la capa que lo hace fallar queda inaccesible."
+    },
+    {
+      "id": "plan-diez-semanas",
+      "tipo": "abierta",
+      "enunciado": "Estás a finales de julio y las lluvias entran en octubre. Diseña qué haces en esas diez semanas y en qué orden, justifica qué dejas deliberadamente para la seca del año que viene, y di qué tarea tienes durante la temporada de lluvias.",
+      "respuestaModelo": "Las diez semanas se organizan así.\n\nSemanas 1 y 2, lo que no cuesta casi nada y lo condiciona todo: amojonar y levantar un plano sencillo con los doce lotes, los accesos y los árboles existentes con su porte. No hace falta topografía; cinta, estacas y un croquis a escala sirven, y siendo desarrollador lo natural es un plano vectorial versionado con una capa por temporada, porque va a ser la clave de unión de todos los datos del terreno durante años. Sobre ese plano se deciden las cinco cosas que ya sé del Módulo 6: qué árboles se quedan, dónde va la cortina del sur, dónde la zona de endurecimiento en alto, dónde el vivero y qué lote es el bajío.\n\nSemanas 2 y 3, los hoyos y la muestra: hoyos de 60 cm, uno por zona homogénea, fotografiados y descritos, y la muestra compuesta al laboratorio. Antes de quemar nada y antes de que entre ninguna máquina. Esto tiene prioridad sobre todo lo demás porque es lo único del módulo que no se puede repetir.\n\nSemanas 3 a 6, desmonte selectivo y sin fuego, con el plano ya decidido y la muestra ya tomada. La biomasa se queda en el terreno.\n\nSemanas 5 a 8, descompactar solo donde el hoyo lo pidió y encalar si el análisis lo pidió. Es el último momento para que la cal reaccione antes de las lluvias. Ojo con la maquinaria: son los meses de la campaña de invierno y está más demandada y más cara.\n\nSemanas 8 a 10, construir lo mínimo que tiene que estar antes de la lluvia: drenaje de las zonas que ya sé que se encharcan, camas del vivero y riego. El vivero es lo que tiene que estar operativo primero, porque produce en la seca y vende en el pico que empieza en septiembre.\n\nLo que dejo para la seca de 2027, y es una decisión y no una postergación: la red de drenaje definitiva, la cota exacta de las camas en las zonas dudosas y qué bajío es recuperable. Todo eso depende de haber visto una temporada de lluvias, y ahora mismo no la he visto.\n\nY la tarea de la temporada de lluvias es registrar. Después de cada lluvia fuerte, foto con fecha de dónde queda agua y cuánto tarda en irse; anotar qué zonas se secan primero; marcar en el plano cualquier encharcamiento no previsto. Es recolección de telemetría en producción, y es lo que hace que la seca siguiente empiece con datos en lugar de con suposiciones.\n\nLo que no hago esta seca: pasar un rotovator a todo el terreno, rellenar el bajío, comprar enmiendas antes de que llegue el análisis y plantar los frutales definitivos en zonas cuyo drenaje no he visto en lluvias. Los tres primeros son dinero perdido; el cuarto son años perdidos.",
+      "criterios": [
+        "Pone el amojonamiento y el plano primero, y explica que todo lo demás se referencia contra él.",
+        "Da prioridad absoluta a los hoyos y la muestra, justificándola por ser irrepetibles.",
+        "Sitúa la muestra antes de cualquier quema y antes de que entre maquinaria.",
+        "Encaja el encalado con tiempo suficiente de reacción antes de octubre.",
+        "Prioriza el vivero en la fase de construcción, por el desfase producción-venta.",
+        "Separa explícitamente lo que se decide ahora de lo que exige ver una temporada de lluvias.",
+        "Define el registro de la temporada de lluvias como tarea, no como espera.",
+        "Enumera qué NO hacer: labranza total, rellenar el bajío, comprar a ciegas, plantar perennes sin datos de drenaje."
+      ],
+      "explicacion": "Esta pregunta es el plan de obra de Rizoma del Sur para las próximas diez semanas. Fíjate en que la mitad del valor del plan está en las cuatro cosas que decide NO hacer."
+    }
+  ]
+}

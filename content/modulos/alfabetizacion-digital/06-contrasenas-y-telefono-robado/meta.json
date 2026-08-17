@@ -1,0 +1,41 @@
+{
+  "titulo": "Contraseñas, robo del teléfono y qué hacer cuando pasa",
+  "subtitulo": "Una contraseña no se guarda tal como la escribes: se guarda su resumen, y de ese solo hecho salen todas las reglas — por qué la longitud vence al símbolo raro, por qué el ataque no es alguien adivinando frente a tu pantalla sino un programa trabajando sobre la base de datos filtrada de un tercero, y por qué repetir la misma clave convierte la peor seguridad de la cadena en la seguridad de todo lo que tienes. La segunda mitad baja al aparato: prepararlo antes —bloqueo, PIN de la SIM, códigos de respaldo en papel, IMEI anotado fuera del teléfono, localización probada— y ejecutar el día del robo una lista en orden y desde otro equipo, empezando por el correo, que es la llave que abre todas las demás cuentas.",
+  "duracionMin": 34,
+  "objetivos": [
+    "Explicar el mecanismo de la función de resumen y deducir de él por qué un servicio serio no puede devolverte tu contraseña y qué acabas de descubrir el día que un sitio te la manda por correo tal como la escribiste.",
+    "Calcular con la fórmula de combinaciones por qué la longitud, que está en el exponente, le gana siempre al símbolo raro, que solo agranda la base, y por qué las sustituciones de la a por arroba o de la o por cero ya vienen programadas como reglas del diccionario.",
+    "Reconstruir el ataque real —filtración de la base de datos de un tercero, prueba fuera de línea a miles de millones por segundo y relleno de credenciales— y explicar por qué repetir una clave convierte la peor seguridad de la cadena en la de todo lo que se tiene.",
+    "Elegir entre gestor de contraseñas y cuaderno bajo llave a partir del propio modelo de amenaza, aplicando las reglas y asumiendo los riesgos de cada uno.",
+    "Distinguir los factores de autenticación por familias, justificar con el intercambio de SIM por qué el código por mensaje es el más débil, y guardar los códigos de respaldo en papel fuera del teléfono.",
+    "Blindar el correo como cuenta llave, incluidos los datos de recuperación y las reglas de reenvío o filtrado que deja quien ya entró y que un cambio de contraseña no borra.",
+    "Preparar el teléfono antes del robo: bloqueo con PIN y cifrado, PIN de la SIM, notificaciones sin contenido, respaldo al día, IMEI anotado fuera del aparato y localización probada desde otro equipo.",
+    "Ejecutar el día del robo una lista en orden y desde otro equipo —revocación de sesiones, operadora, banco, cambio de claves, denuncia y aviso a los contactos— sin inventar plazos, costos ni normas y remitiendo a la operadora, al banco y a la policía."
+  ],
+  "prerrequisitos": [
+    "ia-para-la-comunidad/06-privacidad-y-estafas"
+  ],
+  "videos": [],
+  "referencias": [],
+  "terminos": [
+    "funcion-de-resumen",
+    "filtracion-de-datos",
+    "ataque-de-diccionario",
+    "fuerza-bruta",
+    "frase-de-paso",
+    "relleno-de-credenciales",
+    "gestor-de-contrasenas",
+    "clave-maestra",
+    "modelo-de-amenaza",
+    "factor-de-autenticacion",
+    "intercambio-de-sim",
+    "codigos-de-respaldo",
+    "cuenta-llave",
+    "cifrado-del-dispositivo",
+    "pin-de-la-sim",
+    "imei",
+    "revocacion-de-sesiones",
+    "borrado-remoto"
+  ],
+  "practica": true
+}

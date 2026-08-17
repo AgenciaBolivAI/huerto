@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "cadena-energetica",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la cadena que va de la gasolina guardada en el tanque hasta el eje que gira, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "La energía sale de que los enlaces nuevos —carbono e hidrógeno unidos al oxígeno del aire— son más «cómodos» que los que había antes, y la diferencia se libera como calor y luz.",
+        "El motor consume mucho más aire que gasolina: unos quince kilos de aire por kilo de combustible, que en volumen son unos nueve mil litros de aire por cada litro de gasolina.",
+        "El gas caliente, al no poder crecer, empuja: eso es presión, y esa presión multiplicada por la superficie de la cabeza del pistón da la fuerza que lo baja.",
+        "Como el motor convierte calor en movimiento, con buen mantenimiento se puede llegar a aprovechar casi toda la energía del combustible, y el calor que sale por el escape es señal de un motor descuidado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son la cadena completa: química, presión y fuerza. La cuarta es falsa y confunde dos cosas distintas. Un motor pequeño aprovecha entre la quinta y la cuarta parte de la energía del combustible, y no porque esté sucio ni mal atendido: es el límite de lo que puede hacer una máquina térmica, y ningún fabricante lo ha esquivado. Aproximadamente un tercio de la energía se va caliente por el escape y otro tanto tiene que salir por el metal, y de ahí vienen las aletas, el ventilador del volante y el deflector. El mantenimiento mejora los márgenes —un filtro limpio, la mezcla correcta, el motor sin recalentar—, no el límite. Creer lo contrario lleva a diagnosticar como avería algo que es física normal: un motor que quema y no se calienta no existe."
+    },
+    {
+      "id": "punto-muerto",
+      "tipo": "verdadero_falso",
+      "enunciado": "Con el pistón exactamente en el punto muerto superior, la presión de la combustión empuja con toda su fuerza sobre él, así que ese es el instante en que el motor produce más giro.",
+      "respuesta": false,
+      "explicacion": "Falso, y entenderlo cambia la forma de ver el motor entero. El giro no lo produce la fuerza sola sino la fuerza multiplicada por el brazo, es decir la distancia entre donde se empuja y el centro de giro. En el punto muerto superior la biela y el codo del cigüeñal quedan alineados con el eje del cilindro: el brazo es cero, y fuerza por brazo cero es giro cero. Toda la presión del mundo no produce ahí ni un grado de giro. Es exactamente lo que pasa al pararse sobre el pedal de una bicicleta cuando el pedal está arriba del todo: pesás ochenta kilos y la bicicleta no avanza. Por eso a esa posición se la llama punto muerto, con razón. De ahí salen dos consecuencias del módulo: el motor necesita un volante que lo lleve más allá de esos puntos, porque solo con pistón, biela y cigüeñal se pararía en seco; y la chispa salta un poco antes del punto muerto superior justamente para que la presión máxima llegue cuando el codo ya tiene brazo y el empujón sirve para algo."
+    },
+    {
+      "id": "ciclo-cuatro-tiempos",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el ciclo de cuatro tiempos tal como funciona en estos motores, ¿qué es correcto?",
+      "opciones": [
+        "Cada tiempo es medio giro del cigüeñal, así que el ciclo completo son dos vueltas, y en esas dos vueltas hay una sola explosión.",
+        "En la compresión las dos válvulas están cerradas, y el trabajo de apretar la mezcla lo paga el volante con la energía que guardó en la explosión anterior.",
+        "El único tiempo que entrega energía es el de trabajo; en los otros tres el motor gasta, y por eso hace falta una rueda pesada que sostenga el giro.",
+        "En el tiempo de escape la válvula de escape se abre sola: la presión de los gases quemados la empuja desde adentro hasta vencer su resorte."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen el ciclo y explican por qué existe el volante. La cuarta es falsa y contradice la idea central de la lección, que es la sincronización. Las válvulas no obedecen a la presión: obedecen a la posición. El resorte las mantiene cerradas por defecto y solo se abren cuando el árbol de levas las empuja, en el momento que le toca a cada una. Si la presión de adentro pudiera abrir una válvula, el motor no tendría compresión y no funcionaría nunca: durante el tiempo de compresión hay presión de sobra empujando esas mismas válvulas contra su asiento, y precisamente por eso el sistema está diseñado para que cierren con más fuerza cuanto más presión hay. El árbol de levas es el reloj de la máquina, engranado al cigüeñal en relación dos a uno para que cada válvula abra una vez cada dos vueltas."
+    },
+    {
+      "id": "el-piston-no-chupa",
+      "tipo": "verdadero_falso",
+      "enunciado": "En el tiempo de admisión el pistón chupa la mezcla hacia adentro del cilindro: es la succión que hace al bajar la que la arrastra.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error de intuición más extendido sobre los motores. Chupar no existe en física: no hay ninguna fuerza de succión. Lo que hace el pistón al bajar es agrandar el espacio disponible, de modo que adentro queda menos presión que afuera, y entonces la atmósfera —que pesa poco más de un kilo por centímetro cuadrado sobre todo lo que existe— empuja el aire hacia el hueco. El aire no es aspirado: es empujado desde afuera. Parece un detalle de palabras y no lo es, porque de esa sola idea salen tres cosas del módulo. Primera: un filtro tapado ahoga el motor, porque le pone un estorbo justo al empujón de la atmósfera. Segunda: el carburador funciona por lo mismo, ya que el aire acelerado en el estrechamiento baja de presión y entonces la atmósfera empuja la gasolina de la cubeta hacia arriba por el agujerito. Y tercera: en la altura hay menos atmósfera empujando, así que entra menos aire por bocanada, la mezcla queda rica y el mismo motor pierde fuerza y humea negro."
+    },
+    {
+      "id": "sincronizacion-y-chispa",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la sincronización del motor —qué manda a qué y en qué momento—, ¿qué es correcto?",
+      "opciones": [
+        "El árbol de levas va engranado al cigüeñal en relación dos a uno, porque las válvulas tienen que abrir una vez cada dos vueltas del cigüeñal y no una por vuelta.",
+        "La chispa salta dos o tres decenas de grados antes del punto muerto superior porque la llama tarda una o dos milésimas de segundo en recorrer la cámara, y a 3.600 vueltas por minuto el cigüeñal gira unos 22 grados por milésima.",
+        "En estos motores el avance no se regula: viene fijado por la posición del imán en el volante, sujeto por una chaveta blanda que puede cortarse si la máquina golpea algo duro y correr el encendido.",
+        "Como la chispa tiene que saltar antes del punto muerto superior, conviene adelantarla todo lo posible: cuanto antes empiece a arder la mezcla, más tiempo tiene el gas para empujar y más fuerza da el motor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son el reloj del motor: el árbol de levas dividiendo la frecuencia a la mitad, la chispa adelantada porque la combustión tarda, y el avance fijado por construcción en las máquinas pequeñas. La cuarta suena razonable y es falsa, y su consecuencia es cara. El avance no es «cuanto más, mejor»: hay un solo momento correcto. Si la chispa salta demasiado pronto, la presión máxima llega mientras el pistón todavía está subiendo, así que el gas empuja contra el pistón en lugar de empujarlo, el motor pierde fuerza y se calienta. Y sobre todo, un encendido demasiado adelantado es una de las causas clásicas de detonación: la mezcla que aún no alcanzó la llama se comprime y calienta tanto que se autoenciende de golpe, dos frentes chocan y aparece un pico de presión que rompe pistones, quema válvulas y perfora culatas. Se oye como un repiqueteo metálico al exigirle al motor, y no se arregla poniéndole una gasolina más cara: el octanaje no da potencia, solo aguanta más compresión sin autoencenderse."
+    },
+    {
+      "id": "par-potencia-revoluciones",
+      "tipo": "opcion_multiple",
+      "enunciado": "Par, potencia y revoluciones se usan como sinónimos en la conversación diaria y no lo son. ¿Qué afirmaciones son correctas?",
+      "opciones": [
+        "El par es la fuerza de torsión —fuerza por brazo—, las revoluciones son las vueltas que da el eje en un minuto, y la potencia es el producto de las dos: trabajo por unidad de tiempo.",
+        "Se puede tener mucho par y poca potencia si el eje gira despacio, y poco par con mucha potencia si gira muy rápido: por eso la desbrozadora necesita una caja reductora que cambie vueltas por par antes de llegar a la cuchilla.",
+        "La potencia que declara la ficha se mide a un régimen concreto y a plena aceleración, así que un motor de «5,5 caballos» no entrega 5,5 caballos a media aceleración ni girando lento.",
+        "Como el caballo es una unidad de potencia única y bien definida, la cifra de la ficha permite comparar directamente dos motores sin mirar a qué revoluciones se entrega."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son la distinción completa y su consecuencia práctica. La cuarta es falsa por dos motivos que se suman. El menor: el caballo no es una unidad única —el caballo de vapor son unos 735 vatios y el mecánico unos 746—, así que la misma máquina puede figurar con cifras algo distintas según quién la mida. El mayor, y el que hace perder plata: una cifra de potencia sin las revoluciones a las que se entrega no dice nada. Es el mismo error que dimensionar un servidor por su número de peticiones por segundo en el folleto sin preguntar con qué carga se midió. Al comparar dos motores hay que mirar a qué régimen entregan lo que prometen y si tu máquina va a trabajar ahí: una bomba que gira parejo a 3.000 vueltas y una desbrozadora que trabaja a diez mil no aprovechan el mismo tramo de la curva."
+    },
+    {
+      "id": "leer-tu-propia-maquina",
+      "tipo": "abierta",
+      "enunciado": "Elegí una máquina con motor que exista de verdad cerca tuyo —la bomba del pozo, una desbrozadora, una moto, un generador, la motosierra de un vecino— y contá, sin desarmar nada, el viaje completo de una bocanada de aire desde afuera hasta el silenciador, nombrando cada pieza que atraviesa y qué le hace. Después explicá qué le pasaría a esa máquina si le faltara cada una de las cuatro condiciones, y terminá diciendo qué vas a hacer con ella esta semana y qué reglas de seguridad vas a cumplir desde hoy.",
+      "respuestaModelo": "Elijo la bomba de agua del pozo de mi casa. Es de cuatro tiempos, la placa dice 163 centímetros cúbicos y tiene arranque de cuerda.\n\nEl viaje empieza afuera. El aire entra por el filtro de aire, que en esta bomba es una esponja dentro de una tapa de plástico. Está ahí porque el motor traga muchísimo aire: unos nueve mil litros por cada litro de gasolina, y todo el polvo que ese aire traiga entra con él. En la seca, ese polvo es fino y abrasivo, y lo que el filtro no retiene termina rayando la pared del cilindro por la que corren los aros, que es justamente de lo que depende la compresión.\n\nDel filtro el aire pasa al carburador, que está pegado debajo. Ahí el conducto se estrecha, el aire se acelera y al acelerarse baja su presión; entonces la atmósfera, que pesa sobre la gasolina de la cubeta, la empuja hacia arriba por un agujerito calibrado y la pulveriza en el chorro de aire. Lo que sale del carburador ya es mezcla aire-combustible.\n\nLa mezcla espera en el conducto hasta que se abre la válvula de admisión, empujada por el árbol de levas. Mientras tanto el pistón baja del punto muerto superior al inferior. Acá corrijo lo que yo creía: el pistón no chupa nada. Agranda el espacio, adentro queda menos presión que afuera, y la atmósfera empuja la mezcla hacia el hueco.\n\nCon las dos válvulas cerradas, el pistón sube y comprime la mezcla unas ocho veces. Eso cuesta trabajo, y ese trabajo lo paga el volante con la energía que guardó en la explosión anterior. Un poco antes del punto muerto superior salta la chispa: los imanes del volante pasan rozando la bobina, el campo magnético que la atraviesa cambia, se genera tensión, un interruptor electrónico corta esa corriente y el segundo bobinado sube la tensión a decenas de miles de voltios, suficientes para que el arco cruce el espacio entre los electrodos de la bujía. Salta antes y no justo en el punto muerto porque la llama tarda una o dos milésimas de segundo en recorrer la cámara.\n\nEl gas se expande y baja el pistón: es el único tiempo que entrega energía. La biela transmite ese empuje al codo del cigüeñal, que está desplazado del centro y por eso no puede hacer otra cosa que dar la vuelta. En el punto muerto el brazo es cero y el empuje no sirve, y por eso hace falta el volante. Después el pistón vuelve a subir con la válvula de escape abierta y barre los gases quemados hacia el silenciador, una caja con tabiques donde los pulsos se expanden y se cancelan.\n\nSi le faltara aire, con el filtro tapado de polvo, el motor se ahogaría: perdería fuerza, humearía y ensuciaría la bujía. Si le faltara combustible —llave cerrada, manguera reseca, el agujerito del carburador obstruido por barniz de gasolina vieja— arrancaría un instante con lo que quedaba en la cubeta y se apagaría. Si le faltara chispa, giraría bien y no daría señales de vida: bujía mojada o sucia, cable suelto, o el interruptor de paro haciendo contacto. Y si le faltara compresión, el fallo sería mecánico: aros gastados, la junta de culata quemada dejando escapar la presión por el costado, o una válvula que no cierra contra su asiento. Y hay un quinto caso que no es la falta de nada sino el desorden: si la chaveta del volante se cortó por un golpe, el imán quedó corrido, la chispa salta fuera de tiempo y el motor no arranca aunque tenga las cuatro cosas.\n\nEsta semana hago tres cosas. Primero, con el motor frío y el capuchón de la bujía desconectado y apoyado contra el metal del motor, tiro despacio de la cuerda para sentir el punto duro de la compresión una vez cada dos vueltas: si girara liviano todo el recorrido, sabría que perdió compresión. Segundo, armo la ficha: foto de la placa con marca, modelo y número de serie, y anotado al lado que es de cuatro tiempos, la cilindrada, el tipo de bujía y el tipo de filtro, para no volver al repuestero con las manos vacías. Tercero, grabo diez segundos del ralentí para tener con qué comparar el día que suene distinto.\n\nY tres reglas desde hoy. La bomba está en un cuartito al lado del pozo, y eso se termina: ningún motor se enciende bajo techo, ni un minuto, porque la combustión incompleta produce monóxido de carbono, que no tiene color ni olor ni sabor, se pega a la sangre mucho mejor que el oxígeno y da sueño en vez de ahogo. Al aire libre y lejos de puertas y ventanas, y ante dolor de cabeza o sueño repentino con un motor cerca, salir al aire e ir al centro de salud. Segunda: el silenciador pasa de los cuatrocientos grados, así que no se toca ni se apoya la máquina sobre pasto seco. Y tercera: se carga combustible con el motor apagado y frío, porque lo que arde es el vapor, que pesa más que el aire y corre por el suelo buscando calor.",
+      "criterios": [
+        "Elige una máquina real y concreta de su entorno y dice de qué tipo es y qué datos tiene a la vista.",
+        "Recorre el camino del aire en orden —filtro, carburador, válvula de admisión, cilindro, válvula de escape, silenciador— nombrando cada pieza.",
+        "Explica el filtro por su mecanismo: el motor traga miles de litros de aire y el polvo abrasivo raya la pared por la que corren los aros.",
+        "Describe el carburador correctamente: el aire se acelera en el estrechamiento, baja su presión y la atmósfera empuja la gasolina por el agujerito.",
+        "Corrige la idea de que el pistón «chupa»: el pistón agranda el espacio y es la atmósfera la que empuja el aire hacia adentro.",
+        "Sitúa los cuatro tiempos con sus válvulas y señala que solo el de trabajo entrega energía, y que el volante paga la compresión.",
+        "Explica la chispa desde el volante magnético y la bobina hasta la bujía, y por qué salta antes del punto muerto superior.",
+        "Menciona que la biela y el cigüeñal convierten el empuje recto en giro y que en el punto muerto el brazo es cero.",
+        "Recorre las cuatro condiciones una por una con un síntoma y una causa concreta para cada falta.",
+        "Añade el caso de la sincronización perdida —los cuatro elementos presentes pero desordenados— y da un ejemplo como la chaveta del volante.",
+        "Propone acciones concretas para esta semana: la prueba de compresión con la mano, la ficha de la máquina y una referencia de cómo suena sana.",
+        "Se compromete con las tres reglas de seguridad y explica el mecanismo del monóxido de carbono, del calor del silenciador y del vapor del combustible."
+      ],
+      "explicacion": "Lo que se evalúa acá no es memoria de nombres, es si el motor dejó de ser una caja negra. Fijate en que la respuesta modelo no repara nada —esta lección todavía no repara— pero ya permite hacer dos cosas que antes eran imposibles: leer una máquina cerrada y decir qué hay adentro de cada tapa, y convertir un «no arranca» en una pregunta concreta sobre cuál de las cuatro condiciones falta. Fijate también en el quinto caso, el de la sincronización: es el que separa a quien entendió el mecanismo de quien memorizó la lista, porque un motor puede tener aire, combustible, chispa y compresión y aun así no arrancar si llegan desordenados. Y fijate en que la seguridad no es un apéndice: la parte del monóxido de carbono es la única de toda la lección que puede salvarle la vida a alguien esta misma semana, sobre todo con un generador durante un corte de luz."
+    }
+  ]
+}

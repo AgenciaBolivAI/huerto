@@ -1,0 +1,99 @@
+{
+  "preguntas": [
+    {
+      "id": "asimetria",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué significa que los materiales de obra tienen resistencia asimétrica?",
+      "opciones": [
+        "El hormigón, el ladrillo y la piedra aguantan mucho a compresión y unas diez veces menos a tracción.",
+        "A tracción fallan de golpe, sin avisar.",
+        "El acero aguanta bien las dos, y por eso se coloca justo donde hay tracción.",
+        "Que resisten lo mismo en cualquier dirección si están bien fabricados."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la idea que sostiene el módulo entero. Hormigón trabajando a tracción no es hormigón malo: es hormigón puesto donde no toca, igual que un array usado para insertar en medio. Todo lo que viene después —armaduras, cimientos, dinteles, vigas— es la misma operación repetida: averiguar dónde va a haber tracción y poner acero ahí."
+    },
+    {
+      "id": "voladizo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a hacer un alero que sobresale de un muro. ¿Dónde va el acero y por qué?",
+      "opciones": [
+        "Arriba, porque un voladizo se dobla hacia abajo desde el empotramiento y se alarga por la cara superior.",
+        "La regla general es visual: la cara que se alarga al deformarse es la que está en tracción.",
+        "Abajo, igual que en una viga apoyada en sus dos extremos.",
+        "Da igual mientras esté dentro del hormigón."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Este es el caso que más se equivoca, y por eso se caen aleros. Una viga apoyada en los dos extremos se pandea hacia abajo y se alarga por abajo, así que el acero va abajo. Un voladizo se alarga por arriba. La regla no exige calcular nada: basta imaginar la pieza deformándose."
+    },
+    {
+      "id": "fraguado",
+      "tipo": "verdadero_falso",
+      "enunciado": "El hormigón endurece porque se seca, es decir, porque pierde el agua de la mezcla.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la confusión más cara de la albañilería. El cemento reacciona químicamente con el agua y forma cristales entrelazados: el agua no se evapora, se consume y se incorpora al material. Si la pieza se seca antes de tiempo, la reacción se detiene en el punto en que estaba y no se reanuda aunque después llueva. Queda algo que parece hormigón y tiene una fracción de la resistencia que debía tener."
+    },
+    {
+      "id": "curado",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué implica curar, y por qué importa más aquí que en un clima templado?",
+      "opciones": [
+        "Mantener la pieza húmeda al menos una semana, regándola o tapándola.",
+        "Porque la reacción que da la resistencia real continúa durante semanas y solo mientras haya agua disponible.",
+        "Porque con sol fuerte y viento una losa sin curar se seca en horas.",
+        "Basta con protegerla el primer día, que es cuando fragua."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El fraguado, el endurecimiento inicial, ocurre en horas; la ganancia de resistencia continúa durante semanas. Curar es la operación más barata de la obra y la que más gente se salta, porque el resultado no se ve. Y ojo con el calendario: ese consumo de agua en agosto y septiembre entra en el mismo presupuesto hídrico que el vivero."
+    },
+    {
+      "id": "agua-cemento",
+      "tipo": "verdadero_falso",
+      "enunciado": "Añadir agua a una mezcla que cuesta trabajar es una solución aceptable si no se abusa.",
+      "respuesta": false,
+      "explicacion": "Falso. La relación agua/cemento es el factor que más determina la resistencia, más que la marca del cemento o el tipo de arena, y la relación es dura: más agua, más fácil de trabajar, menos resistencia. El agua que no reacciona deja poros, y los poros son huecos donde no hay material. Es meter un sleep para tapar una condición de carrera: resuelve lo visible y degrada el sistema de forma permanente. Si la mezcla no se trabaja, hay que revisar la dosificación o los áridos."
+    },
+    {
+      "id": "arena",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué importa la limpieza de la arena y cómo la compruebas?",
+      "opciones": [
+        "La arcilla y la materia orgánica recubren los granos e impiden que el cemento se adhiera.",
+        "Con la misma prueba del frasco del Módulo 5: arena, agua, agitar y dejar reposar.",
+        "Si la capa fina que queda encima de la arena es apreciable, la arena está sucia.",
+        "No importa: con más cemento se compensa cualquier arena."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Arena sucia da un hormigón débil por mucho cemento que le pongas. Y es el mismo gesto que aprendiste para la textura del suelo, en otro oficio y por el mismo motivo: las partículas finas se comportan de forma distinta a las gruesas. Conviene hacerlo antes de pedir el camión, porque el proveedor no siempre lo sabe ni lo dice."
+    },
+    {
+      "id": "recubrimiento",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué pasa si las barras de acero quedan demasiado cerca de la cara exterior del hormigón?",
+      "opciones": [
+        "Pierden la protección química que les da la alcalinidad del hormigón y se oxidan.",
+        "El óxido ocupa varias veces el volumen del acero original, así que al hincharse revienta el hormigón desde dentro.",
+        "Al desprenderse el hormigón queda el acero expuesto, entra más agua y el proceso se acelera.",
+        "Nada relevante: el acero está dentro del hormigón y eso basta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la forma más común de deterioro de una obra de hormigón en clima húmedo, y su causa casi siempre es la misma: las barras se apoyaron directamente en el encofrado en lugar de sostenerse separadas. La solución cuesta céntimos: separadores, o trozos de mortero bajo las barras."
+    },
+    {
+      "id": "eleccion-material",
+      "tipo": "abierta",
+      "enunciado": "Vas a construir el sombreadero, las mesas del vivero, los bordes de cama y el depósito de agua. Explica qué material crítico decide cada obra, qué tres amenazas del clima cruceño gobiernan esas elecciones, y qué tres reglas aplicas a todo lo que lleve cemento.",
+      "respuestaModelo": "Las tres amenazas de este clima son el agua, que está siete meses al año y ataca al acero, a la madera y al mortero; el sol y la radiación ultravioleta, que degradan plásticos, mallas y pinturas; y la biología, sobre todo termitas y hongos, que es la que menos aparece en los manuales europeos y aquí es determinante. De ahí la regla de decisión: se elige el material por su exposición, no por su precio. El error clásico es justo el inverso, poner lo barato donde da el sol y la lluvia y lo durable donde está protegido, y suele venir de comprar por lista en lugar de por ubicación.\n\nObra por obra. Los bordes de cama van en contacto permanente con suelo húmedo, así que exigen madera dura; es donde mueren las blandas. Los postes del sombreadero: el punto de fallo no es el poste entero sino la línea del suelo, así que o madera dura o hormigón, y siempre con la base protegida. Ningún poste debe apoyar directamente en la tierra: o va sobre una base de hormigón que lo levante unos centímetros, o se trata la parte enterrada. La malla del sombreadero tiene que llevar protección ultravioleta; la barata dura una temporada al sol cruceño y es un ahorro que se paga cada año. Las mesas de vivero llevan riego constante encima, así que la estructura tiene que estar protegida y la superficie tiene que drenar, sin nada que acumule agua. Y el depósito de agua es la pieza donde el curado y la relación agua/cemento se cobran de verdad.\n\nY la madera ya la tengo clasificada del desmonte: separé troncos gruesos para postes y estacas, y ahora sé por qué había que separar además por especie. Lo que va enterrado tiene que ser duro; lo blando sirve para tutores y para lo que no toca el suelo.\n\nLas tres reglas para todo lo que lleve cemento. Primera, curar siempre: mantener húmedo al menos una semana, y en agosto y septiembre con sol y viento eso significa regar varias veces al día o tapar con plástico o arpillera mojada; ese consumo entra en el presupuesto de agua del mes más crítico. Segunda, no añadir agua a la mezcla para trabajarla mejor, nunca; si no se deja trabajar el problema es la dosificación. Tercera, separar las barras del encofrado con separadores o trozos de mortero, para que el acero no toque la cara exterior.\n\nY antes de comprar áridos, la prueba del frasco, que ya sé hacer del Módulo 5.",
+      "criterios": [
+        "Enumera las tres amenazas —agua, ultravioleta y biología— y deriva de ellas la regla de elegir por exposición.",
+        "Asigna un material crítico a cada una de las cuatro obras y lo justifica por su exposición.",
+        "Señala que el punto de fallo de un poste es la línea del suelo y exige base protegida.",
+        "Exige malla con protección ultravioleta y explica el coste recurrente de la barata.",
+        "Conecta con la clasificación de madera hecha en el desmonte, separando dura para lo enterrado.",
+        "Da las tres reglas del cemento: curar, no añadir agua y separar las barras del encofrado.",
+        "Incluye la prueba del frasco antes de comprar arena."
+      ],
+      "explicacion": "Fíjate en que ninguna de las decisiones correctas de esta lección cuesta dinero: curar es agua y tiempo, los separadores son céntimos, y elegir la madera dura para lo enterrado es clasificar lo que ya tienes. Lo caro es lo que se hace por defecto."
+    }
+  ]
+}

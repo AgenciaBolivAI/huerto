@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "el-unico-radiador",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué se dice que al mediodía, trabajando al sol, el sudor es el único sistema de enfriamiento que sigue funcionando?",
+      "opciones": [
+        "Porque la piel trabaja entre 33 y 35 °C, y en cuanto el aire supera esa temperatura la convección cambia de signo: el aire deja de enfriarte y pasa a calentarte.",
+        "Porque la radiación también suma en lugar de restar: no solo cae el sol directo, sino el reflejo del suelo desnudo y el calor que radia una calamina cercana.",
+        "Porque evaporar agua consume una cantidad enorme de energía por el calor latente de vaporización, y esa energía sale de tu piel.",
+        "Porque las otras tres vías solo funcionan de noche, cuando el cuerpo está en reposo y no genera calor metabólico."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las otras vías no dependen de la hora ni del reposo: dependen del signo de la diferencia de temperatura. Conducción, convección y radiación enfrían perfectamente cuando el ambiente está más frío que tu piel, y por eso trabajar a las seis de la mañana cuesta tanto menos. Lo que las anula es que el aire supere los 33 a 35 °C de la piel y que haya superficies calientes radiando encima. La consecuencia práctica es la frase de la lección: el sudor que gotea al suelo no enfrió nada, porque solo el que se evapora se lleva energía."
+    },
+    {
+      "id": "el-mito-del-sudor",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si la persona que se sintió mal al sol sigue sudando abundantemente, se puede descartar el golpe de calor.",
+      "respuesta": false,
+      "explicacion": "Falso, y es una de las creencias que más muertes causa. En el golpe de calor por esfuerzo —el que le ocurre a quien está trabajando, no al anciano encerrado en una habitación— es frecuente que la persona siga sudando: la piel caliente y seca es un signo tardío, y si esperas a verlo esperaste demasiado. El criterio que decide no es el sudor ni el termómetro, es el estado mental: confusión, respuestas raras, palabras arrastradas, irritabilidad impropia, andar tambaleante, convulsión o pérdida de conocimiento significan golpe de calor hasta que un profesional de salud diga lo contrario."
+    },
+    {
+      "id": "agua-y-sales",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la reposición de líquido en una jornada de trabajo al calor, ¿qué es correcto?",
+      "opciones": [
+        "Hay que beber por reloj, del orden de un vaso grande cada quince o veinte minutos, porque la sed aparece cuando ya se perdió alrededor del 1 o 2 % del peso corporal y se apaga antes de cubrir el déficit.",
+        "El sudor lleva sal, así que reponer varios litros solo con agua puede diluir el sodio de la sangre y producir una hiponatremia, que confunde porque se parece al golpe de calor.",
+        "El control barato es la orina —poca y oscura indica déficit— y la balanza: un kilo perdido en la jornada equivale a aproximadamente un litro de agua.",
+        "Como el cuerpo repone lo que le falta en cuanto puede, beber un litro de golpe al terminar compensa lo que no se bebió durante la mañana."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El litro de golpe al final no se absorbe: el estómago vacía como máximo alrededor de un litro por hora, así que lo que sobra se queda pesando y provoca náusea, justo cuando la persona ya viene deteriorada. Poco y seguido gana a mucho y tarde, igual que el goteo frente al riego de golpe. Y conviene recordar el motivo real de beber por reloj: con un 2 % de pérdida de peso ya caen la fuerza, la coordinación y sobre todo el juicio, de modo que la deshidratación no empieza con síntomas dramáticos, empieza con errores —un machetazo con la mano mal puesta, una carga mal levantada, una escalera mal calculada—."
+    },
+    {
+      "id": "primeros-veinte-minutos",
+      "tipo": "opcion_multiple",
+      "enunciado": "Alguien que estaba carpiendo a las dos de la tarde está confuso, contesta cualquier cosa y camina tambaleándose. ¿Qué corresponde hacer?",
+      "opciones": [
+        "Empezar a enfriarlo en el lugar mientras otra persona pide ayuda: enfriar y llamar son tareas paralelas, porque lo que decide el resultado es la velocidad con la que baja la temperatura interna.",
+        "Sacarlo del sol, quitarle ropa y equipo de protección, mojarlo de continuo y abanicarlo, porque agua sin aire enfría poco y aire sin agua también, pero juntos enfrían mucho.",
+        "No darle de beber mientras la conciencia esté alterada, por el riesgo de que el líquido se vaya a los pulmones, y ponerlo de costado si queda inconsciente pero respira.",
+        "Darle una pastilla para la fiebre cuanto antes, para que la temperatura interna baje mientras se organiza el traslado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las pastillas para la fiebre no sirven aquí, y entender por qué evita el error: en una fiebre por infección el cuerpo subió a propósito su propia consigna y el medicamento la vuelve a bajar, mientras que en el golpe de calor la consigna sigue en 37 °C y lo que falló es la capacidad de disipar. Bajar una consigna que no está subida no hace nada y encima carga el hígado y el riñón de quien ya los tiene en apuros. Tampoco se friega con alcohol ni se da alcohol de beber, y nunca se manda a la persona sola a su casa: decide quien no se calentó, no el afectado, porque el órgano averiado es justamente el que tendría que evaluar."
+    },
+    {
+      "id": "aclimatacion-se-pierde",
+      "tipo": "verdadero_falso",
+      "enunciado": "Quien lleva meses trabajando al sol y pasa una semana sin exponerse conserva su aclimatación y puede retomar la carga habitual el primer día.",
+      "respuesta": false,
+      "explicacion": "Falso. La aclimatación al calor se gana en una o dos semanas de exposición progresiva —se suda antes y más, el sudor sale más diluido y se hace el mismo trabajo con menos pulso— pero se pierde mucho más rápido de lo que costó ganarla: una semana de vacaciones, una gripe o una semana de lluvia bajo techo bastan para perder buena parte. Es una caché que se vacía. Por eso los golpes de calor le ocurren a la gente en sus primeros días: al trabajador nuevo, al voluntario que llegó el sábado, al que vuelve de estar enfermo y al primer día caluroso después de un surazo. La regla es trabajar al 20 o 30 % de la carga el primer día y subir durante una semana o dos."
+    },
+    {
+      "id": "horario-ropa-sombra",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre horario, ropa y sombra en una parcela de Santa Cruz, ¿qué es correcto?",
+      "opciones": [
+        "La franja a vaciar de trabajo pesado va aproximadamente de las once a las cuatro, porque la radiación es máxima cerca del mediodía solar pero el aire sigue calentándose dos o tres horas más por inercia.",
+        "Bajo sol directo conviene camisa de manga larga, holgada y clara y sombrero de ala ancha, porque bloquean radiación sin impedir que el vapor salga.",
+        "Un cobertizo bajo de calamina al mediodía puede ser más caliente que un árbol, porque el techo alcanza temperaturas altísimas y radia hacia abajo a un metro de la cabeza.",
+        "Con calor extremo lo mejor es trabajar con el torso descubierto, porque cuanta más piel al aire, más superficie de evaporación disponible."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El torso descubierto es la intuición que falla bajo sol directo: la piel desnuda recibe toda la radiación como carga térmica añadida y además se quema, y esa quemadura es también radiación ultravioleta acumulándose año tras año. Lo que funciona es un escudo de radiación con ventilación por detrás —tela clara y holgada, con aire circulando— que bloquea el ingreso de calor sin cerrar la salida del vapor. La misma lógica se aplica a la sombra construida: sirve la sombra alta y con lados abiertos, para que el aire caliente escape por arriba, y sirve sobre todo la que está donde se trabaja, porque una sombra excelente a doscientos metros no la usa nadie."
+    },
+    {
+      "id": "plan-de-calor-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña el plan de calor completo de Rizoma del Sur para el mes de octubre: horario, sombra, agua, gente nueva, instrumentos y respuesta ante una emergencia. Justifica cada decisión con el mecanismo y sé explícito sobre lo que no se sabe y hay que consultar.",
+      "respuestaModelo": "El punto de partida es una colisión de calendarios. Los plantines se producen de mayo a septiembre, el pico de venta cae entre septiembre y noviembre y el calor fuerte aprieta de septiembre a diciembre. El mes más peligroso del año no es el más caluroso: es el que junta calor alto, urgencia comercial y gente nueva ayudando, y octubre reúne los tres. Por eso el plan se escribe en agosto.\n\nLa medida más potente y más barata es el horario. La radiación es máxima cerca del mediodía solar, pero el aire sigue calentándose dos o tres horas más por inercia térmica, así que el pico real está entre la una y las cuatro de la tarde y la franja a vaciar va aproximadamente de las once a las cuatro. La jornada se parte: desde que aclara hasta las once va todo lo pesado —hoyos, carpida, mezcla de hormigón, movimiento de sustrato, carga y descarga—; de once a media tarde solo tareas de banco bajo la malla: repique, llenado de bolsas, selección de semilla, etiquetado y registros; y desde media tarde hasta que oscurece, otra vez campo. No es holgazanear al mediodía, es reasignar. Además coincide con el riego, que ya se hace temprano y tarde. Para decidir en el campo sirve la regla de la sombra: si tu sombra es más corta que tú, el sol está en su tramo más intenso.\n\nLa sombra y el agua se ubican por geometría. Doce lotes contiguos son una franja larga, y en una franja larga es fácil terminar trabajando a cien metros de cualquier techo. La regla de diseño es que nadie esté a más de un minuto de sombra y de agua: dos estaciones, una en cada extremo, más el vivero bajo malla en el medio. La malla de sombra del vivero es infraestructura de salud además de infraestructura de plantas. Cada estación lleva techo alto y con los lados abiertos —una calamina baja radia hacia abajo y puede ser más caliente que un árbol—, un banco, un bidón de agua segura con canilla y tapa, y un cartel. El agua de beber sale de la fuente segura del módulo de salud familiar, nunca del tanque de riego ni de la cisterna de obra, y el bidón se tapa siempre, porque un recipiente destapado de agua limpia en zona de dengue no es higiene, es un criadero.\n\nEl agua se bebe por reloj, no por sed: un vaso grande cada quince o veinte minutos, porque la sed aparece cuando ya se perdió el 1 o 2 % del peso y se apaga antes de cubrir el déficit, y porque el estómago vacía como máximo alrededor de un litro por hora. En jornadas largas hay que reponer sal, con comida salada de por medio o con un sobre de sales de rehidratación oral preparado como dice su envase; la fórmula casera se confirma en el centro de salud, no se inventa aquí. La gaseosa no es un suero y el alcohol descuenta.\n\nLa gente nueva es el riesgo característico de un proyecto comunitario y gratuito, porque hay rotación permanente: voluntarios del sábado, estudiantes, vecinos que vienen un día. La aclimatación tarda una o dos semanas y se pierde en una, así que quien llega nuevo o vuelve trabaja a un tercio de carga y en tareas de sombra, subiendo durante una o dos semanas. Después de un surazo se reinicia esa rampa, porque la semana fresca desaclimata y además deja la costumbre de trabajar al mediodía. Y como el afectado no puede diagnosticarse a sí mismo, rige la vigilancia mutua: nadie trabaja solo en las horas de calor y cada persona tiene asignada por nombre a otra que la mira.\n\nLos instrumentos ya están comprados. Los dos termómetros de la cámara evaporativa, uno con el bulbo envuelto en tela mojada, dicen a las dos de la tarde si el sudor va a rendir hoy, porque la depresión de bulbo húmedo es el techo de todo enfriamiento evaporativo. Un termómetro de máxima y mínima a la sombra da la temperatura del lugar de trabajo, que no es la del pronóstico de la ciudad. Una balanza de cocina pesa a un voluntario al entrar y al salir, y un kilo perdido es un litro a reponer. Tres semanas de libreta dan la curva de calor propia de la parcela, el tipo de dato que este proyecto existe para regalar.\n\nPara la emergencia, en el acopio va un cartel corto: los tres cuadros, la pregunta «¿está siendo él mismo?», la instrucción de mojar y abanicar mientras otro llama, y el número verificado. Ante estado mental alterado se asume golpe de calor y se enfría en el lugar mientras otra persona pide ayuda —sombra, quitar ropa y equipo, mojar de continuo y abanicar, frío en cuello, axilas e ingles—, sin dar de beber a quien esté confuso, poniéndolo de costado si queda inconsciente pero respira, y sin pastillas para la fiebre ni alcohol. Una vez al año, antes de octubre, se ensaya quién hace cada cosa. Y lo que no se sabe se consulta: los umbrales son órdenes de magnitud, el protocolo médico lo da el personal de salud, y la normativa de seguridad e higiene ocupacional se consulta con el Ministerio de Trabajo o un asesor local, sin citar artículos inventados.",
+      "criterios": [
+        "Identifica la colisión de calendarios: octubre junta calor, urgencia comercial y gente sin aclimatar.",
+        "Propone jornada partida y nombra qué tarea va en cada bloque, vaciando la franja de las once a las cuatro.",
+        "Justifica el pico de calor de la tarde por inercia térmica, distinguiéndolo del mediodía solar.",
+        "Usa la regla de la sombra como criterio de campo sin instrumentos.",
+        "Ubica sombra y agua por geometría de la franja, con la regla de no estar a más de un minuto de ambas.",
+        "Exige sombra alta y con lados abiertos, y descarta la calamina baja explicando que radia hacia abajo.",
+        "Separa el agua de beber del tanque de riego y obliga a tapar el bidón, enlazando con el criadero de mosquitos.",
+        "Organiza la bebida por reloj y no por sed, con reposición de sal y remisión al centro de salud para la fórmula.",
+        "Aplica la regla del primer día a voluntarios y visitantes, y reinicia la rampa después de un surazo.",
+        "Establece vigilancia mutua con persona asignada por nombre, argumentando que el afectado no puede diagnosticarse.",
+        "Usa los instrumentos ya disponibles —dos termómetros, máxima y mínima, balanza— y produce la curva de calor de la parcela.",
+        "Define la respuesta de emergencia con enfriar antes de trasladar, lo que no se hace, y remite a la autoridad sanitaria y laboral competente."
+      ],
+      "explicacion": "Una buena respuesta no es una lista de consejos: es una cadena que va del mecanismo a la decisión. Primero se acepta que el único radiador disponible es la evaporación y que la humedad local le pone techo; de ahí sale que la palanca más fuerte sea el horario, porque quita carga térmica sin costar nada. Después vienen sombra y agua colocadas por distancia real de trabajo, no por dónde sobraba espacio. Luego la gestión de personas, que es donde este proyecto tiene su riesgo propio por la rotación de voluntarios sin aclimatar. Y al final la emergencia, con la única regla que la distancia hace innegociable: enfriar en el lugar mientras otro llama. Los tres errores más comunes son confiar en la sed, creer que quien suda no puede estar sufriendo un golpe de calor, y salir corriendo hacia el centro de salud con la persona caliente dentro del vehículo."
+    }
+  ]
+}

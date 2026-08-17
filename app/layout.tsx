@@ -1,89 +1,136 @@
 import type { Metadata, Viewport } from 'next';
-import localFont from 'next/font/local';
-
-import { Cabecera } from '@/components/navegacion/cabecera';
-import { obtenerAjuste } from '@/lib/progreso';
-
+import { Fraunces, Inter } from 'next/font/google';
 import './globals.css';
+import { CartProvider } from '@/components/cart-provider';
+import { ChromeSitio } from '@/components/chrome-sitio';
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
+import { SITE } from '@/lib/site';
 
-/**
- * Tipografías servidas desde el propio repositorio, no desde Google Fonts.
- * `next/font/google` las descargaría durante el primer build, lo que rompería
- * la promesa de que `npm run dev` funcione sin conexión.
- */
-const display = localFont({
-  src: './fuentes/Fraunces-latin.woff2',
-  variable: '--fuente-display',
-  weight: '300 900',
+const display = Fraunces({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  variable: '--font-display',
   display: 'swap',
-  fallback: ['Georgia', 'Cambria', 'serif'],
 });
 
-const cuerpo = localFont({
-  src: './fuentes/Inter-latin.woff2',
-  variable: '--fuente-cuerpo',
-  weight: '100 900',
+const sans = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
   display: 'swap',
-  fallback: ['system-ui', 'Segoe UI', 'sans-serif'],
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE.url),
   title: {
-    default: 'Huerto Class — De 0 a Experto en Huertos y Viveros',
-    template: '%s · Huerto Class',
+    default: 'Rizoma del Sur — Vivero y huerto biológico en Santa Cruz',
+    template: '%s · Rizoma del Sur',
   },
   description:
-    'Curso interactivo de huertos y viveros aplicado a Rizoma del Sur, Santa Cruz de la Sierra, Bolivia.',
+    'Vivero y huerto biológico dentro de la urbanización Prados del Sur, Ruta 9 sur, Santa Cruz de la Sierra. Plantines de cercos vivos, árboles de sombra, palmeras, frutales injertados y cultivos caribeños. Retiro o entrega en tu lote. Síguenos como @rizomaDelSur.',
+  applicationName: 'Rizoma del Sur',
+  keywords: [
+    'vivero Santa Cruz',
+    'vivero Prados del Sur',
+    'plantines Bolivia',
+    'cercos vivos',
+    'árboles de sombra',
+    'palmeras ornamentales',
+    'frutales injertados',
+    'cultivos caribeños',
+    'culantro recao',
+    'ají dulce',
+    'huerto biológico',
+    'Rizoma del Sur',
+    'rizomaDelSur',
+  ],
+  authors: [{ name: 'Rizoma del Sur' }],
+  creator: 'Rizoma del Sur',
+  publisher: 'Rizoma del Sur',
+  category: 'shopping',
+  formatDetection: { telephone: true, address: true },
+  openGraph: {
+    type: 'website',
+    siteName: 'Rizoma del Sur',
+    locale: 'es_BO',
+    url: SITE.url,
+    title: 'Rizoma del Sur — Vivero y huerto biológico en Santa Cruz',
+    description:
+      'Plantines, cercos vivos, árboles de sombra, frutales y cultivos caribeños dentro de Prados del Sur, Ruta 9 sur, Santa Cruz de la Sierra.',
+    images: [
+      { url: '/images/brand/og.jpg', width: 1200, height: 630, alt: 'Rizoma del Sur — vivero y huerto biológico' },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Rizoma del Sur — Vivero y huerto biológico',
+    description:
+      'Vivero biológico dentro de Prados del Sur, Santa Cruz. Cercos vivos, sombra, frutales y sabores caribeños.',
+    images: ['/images/brand/og.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  },
+  icons: {
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    apple: [{ url: '/icon.svg' }],
+  },
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#F5F1E7' },
-    { media: '(prefers-color-scheme: dark)', color: '#131a11' },
+  themeColor: '#1f3d2b',
+  colorScheme: 'light',
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'GardenStore',
+  '@id': `${SITE.url}#business`,
+  name: 'Rizoma del Sur',
+  alternateName: '@rizomaDelSur',
+  description:
+    'Vivero y huerto biológico dentro de la urbanización Prados del Sur, Santa Cruz de la Sierra, Bolivia.',
+  url: SITE.url,
+  logo: `${SITE.url}/images/brand/emblema.jpg`,
+  image: `${SITE.url}/images/brand/og.jpg`,
+  priceRange: 'Bs',
+  currenciesAccepted: 'BOB',
+  areaServed: 'Santa Cruz de la Sierra, Bolivia',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Urbanización Prados del Sur, Ruta 9 sur',
+    addressLocality: 'Santa Cruz de la Sierra',
+    addressRegion: 'Santa Cruz',
+    addressCountry: 'BO',
+  },
+  hasMap: SITE.mapUrl,
+  sameAs: [SITE.instagram, SITE.facebook],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '08:00',
+      closes: '18:00',
+    },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Sunday', opens: '09:00', closes: '13:00' },
   ],
 };
 
-/**
- * Todo en esta aplicación depende del estado del estudiante en SQLite, así que
- * nada tiene sentido prerenderizarlo de forma estática.
- */
-export const dynamic = 'force-dynamic';
-
-export default async function LayoutRaiz({ children }: { children: React.ReactNode }) {
-  // El tema se lee en el servidor y se aplica directamente al <html>. Es lo que
-  // elimina el parpadeo por completo, sin script inline ni localStorage: la
-  // preferencia vive en la base de datos como el resto del estado.
-  const oscuro = (await obtenerAjuste('tema')) === 'oscuro';
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${display.variable} ${cuerpo.variable} ${oscuro ? 'dark' : ''}`}>
-      <body className="min-h-screen font-sans">
-        <Cabecera oscuro={oscuro} />
-        <main>{children}</main>
-        <footer className="mt-20 border-t border-salvia-200/70 py-8 dark:border-crema-100/10">
-          <div className="seccion flex flex-col gap-1.5 text-sm text-tinta-500 dark:text-crema-100/45 sm:flex-row sm:items-center sm:justify-between">
-            <p>
-              <span className="font-serif font-semibold text-tinta-700 dark:text-crema-100/70">
-                Huerto Class
-              </span>{' '}
-              — curso local para Rizoma del Sur
-            </p>
-            <p>2.474 m² · Estrellas del Sur, Zanja Honda · Santa Cruz de la Sierra</p>
-          </div>
-          <div className="seccion mt-4 text-sm text-tinta-500 dark:text-crema-100/45">
-            <p>
-              Made by{' '}
-              <a
-                href="https://bolivai.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-bosque-700 underline-offset-2 hover:underline dark:text-salvia-300"
-              >
-                BolivAI
-              </a>
-            </p>
-          </div>
-        </footer>
+    <html lang="es" className={`${display.variable} ${sans.variable}`}>
+      <body className="flex min-h-screen flex-col font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <CartProvider>
+          <ChromeSitio cabecera={<Header />} pie={<Footer />}>
+            {children}
+          </ChromeSitio>
+        </CartProvider>
       </body>
     </html>
   );

@@ -1,0 +1,100 @@
+{
+  "preguntas": [
+    {
+      "id": "ph-primero",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la corrección del pH va antes que la del fósforo?",
+      "opciones": [
+        "Porque en suelo ácido el fósforo se fija con hierro y aluminio, y corregir el pH puede liberar el que ya tenías.",
+        "Si compras fósforo antes de encalar, una parte se fija y se pierde, y después habrías necesitado menos o nada.",
+        "Porque los valores de fósforo disponible del informe corresponden al pH actual: si encalas, dejan de describir tu suelo.",
+        "Porque el fósforo es más caro que la cal."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El pH es el parámetro del que dependen todas las demás mediciones: cambiarlo invalida el resto del informe. Por eso el orden correcto no es hacer todas las correcciones que dice el análisis, sino corregir el pH, esperar a que reaccione y volver a medir. Lo que quede pendiente entonces es lo que de verdad hacía falta comprar."
+    },
+    {
+      "id": "no-es-el-calcio",
+      "tipo": "verdadero_falso",
+      "enunciado": "Lo que sube el pH del suelo al encalar es el calcio.",
+      "respuesta": false,
+      "explicacion": "Falso, y se desmonta con un solo experimento mental: la cal y el yeso aportan los dos calcio, pero solo la cal sube el pH. Luego no puede ser el calcio. Lo que neutraliza la acidez es el otro componente —el carbonato de la caliza, el óxido o el hidróxido de la cal viva o apagada—, que captura los iones de hidrógeno. En el yeso el calcio viene con sulfato, que no captura hidrógeno."
+    },
+    {
+      "id": "dolomita",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuándo conviene dolomita en lugar de caliza?",
+      "opciones": [
+        "Cuando el magnesio está bajo o la relación calcio/magnesio está desequilibrada.",
+        "En suelos tropicales muy lavados, que suelen estar bajos en magnesio.",
+        "Porque encalar con caliza pura puede inducir por competencia entre cationes una deficiencia de magnesio que antes no era evidente.",
+        "Nunca: la caliza es más barata y hace lo mismo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Cuestan parecido, y elegir mal no se nota hasta que aparecen los síntomas en la hoja. La decisión se toma mirando la relación calcio/magnesio del análisis antes de comprar, y es de un minuto: es de las que más problema evitan por unidad de esfuerzo."
+    },
+    {
+      "id": "prnt",
+      "tipo": "opcion_multiple",
+      "enunciado": "Dos sacos etiquetados «cal» al mismo precio. ¿Qué preguntas antes de comprar?",
+      "opciones": [
+        "La pureza: cuánto carbonato hay de verdad frente a impurezas inertes.",
+        "La granulometría: la reacción ocurre en la superficie de las partículas, y un grano grueso tarda años.",
+        "El PRNT, que combina las dos cosas en un porcentaje: uno del 50 % exige el doble de cantidad que uno del 100 %.",
+        "Nada más: si las dos dicen cal, son equivalentes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es el número que casi nadie pide y que puede duplicar la factura. Un material grueso puede tener el carbonato y no servirte, porque no llega a reaccionar a tiempo. Si el proveedor no sabe decirte el PRNT ni la granulometría, el precio por saco no significa nada."
+    },
+    {
+      "id": "yeso",
+      "tipo": "opcion_multiple",
+      "enunciado": "El yeso no sube el pH. ¿Para qué sirve entonces?",
+      "opciones": [
+        "Para suelos con sodio alto: su calcio desplaza al sodio del complejo y permite lavarlo.",
+        "Para llevar calcio al subsuelo y reducir la toxicidad de aluminio en profundidad, porque es mucho más móvil que la cal.",
+        "Como aporte de azufre asimilable.",
+        "Para nada: si no cambia el pH no tiene uso agrícola."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Su movilidad es la clave del segundo uso: la cal se queda donde la pusiste, y si el problema de aluminio está a 40 cm y no puedes incorporar a esa profundidad, el yeso es la vía. Y en un suelo sódico la cal directamente no sirve."
+    },
+    {
+      "id": "roca-fosforica",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si vas a usar roca fosfórica, tiene que entrar antes o a la vez que el encalado, nunca después.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es la excepción a la regla de «primero el pH». La roca fosfórica necesita acidez para disolverse: en suelo neutro o ya encalado se queda prácticamente inerte y es dinero tirado. Hay que aprovechar la acidez que todavía tienes, que es justo la que estás a punto de eliminar. Si prefieres corregir el pH primero, entonces la roca fosfórica deja de ser tu opción y toca fósforo soluble, más caro por unidad."
+    },
+    {
+      "id": "sobreencalado",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué pasarse encalando es peor que quedarse corto?",
+      "opciones": [
+        "Porque subir el pH es rápido y barato, y bajarlo es lento y caro.",
+        "Por encima del objetivo se bloquean hierro, manganeso, zinc y boro.",
+        "El fósforo se vuelve a fijar, ahora como fosfatos de calcio.",
+        "Porque el exceso de cal contamina el agua subterránea de inmediato."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La operación no es simétrica: bajar el pH exige azufre elemental, que actúa por oxidación biológica y tarda, o esperar años de lluvias. De ahí dos reglas: apuntar al objetivo y no por encima —entre 5,5 y 6,5 es cómodo para casi todos tus cultivos, no hace falta llegar a 7— y, si la dosis calculada es grande, dividirla y medir en medio."
+    },
+    {
+      "id": "plan-enmiendas",
+      "tipo": "abierta",
+      "enunciado": "Llega el informe del laboratorio y muestra saturación de aluminio alta, magnesio bajo y fósforo bajo. Explica qué haces, en qué orden, con qué materiales, cómo lo incorporas sin contradecir la lección de labranza, y qué preguntas antes de comprar.",
+      "respuestaModelo": "Con saturación de aluminio alta, encalar es la intervención con mejor retorno de todo el módulo, porque ninguna otra corrección funciona con la raíz dañada. Es lo único urgente.\n\nMaterial: dolomita, no caliza. El magnesio está bajo, y encalar con caliza pura inundaría el complejo de intercambio de calcio y agravaría la deficiencia de magnesio por competencia entre cationes. Cuestan parecido y elegir mal no se ve hasta que aparecen los síntomas en la hoja.\n\nEl fósforo bajo no lo compro todavía, con una excepción. La regla general es que el valor de fósforo del informe corresponde al pH actual: al encalar, parte del fósforo que estaba fijado con hierro y aluminio se libera, así que después de la corrección voy a necesitar menos, o nada. Comprarlo ahora es pagar dos veces el mismo problema. La excepción es la roca fosfórica: si voy a usarla, tiene que entrar antes o a la vez que el encalado, porque necesita acidez para disolverse y en cuanto suba el pH se queda inerte. Esa decisión hay que tomarla ahora, no después, porque después ya está tomada.\n\nDosis: la calcula el laboratorio, y para suelo ácido tropical normalmente sobre la saturación de aluminio. Como comprobación de orden de magnitud existe la regla de 1,5 a 2 toneladas de carbonato por hectárea por cada cmol(+)/kg de aluminio, pero con dos cuidados: supone unos 20 cm de incorporación, y está en toneladas por hectárea mientras yo trabajo en metros cuadrados. Convertir antes de comprar o el error es de tres órdenes de magnitud. Y si la dosis sale grande, la parto: la mitad ahora, medir en unos meses y decidir el resto con el dato.\n\nApunto al objetivo y no por encima. Entre 5,5 y 6,5 es cómodo para casi todo mi catálogo y no hace falta llegar a 7: por encima se bloquean hierro, manganeso, zinc y boro, el fósforo se vuelve a fijar como fosfato de calcio, y bajar el pH otra vez cuesta años.\n\nIncorporación sin labrar el terreno entero: en las camas altas, mezclando la cal al armarlas, que es coste adicional cero porque ese material se mueve igual; donde no haya cama, incorporación superficial en los primeros 10 a 15 cm y solo en las zonas que el análisis pidió; y en el resto, superficie con cobertura encima aceptando que tarda más. Y solo donde hace falta: los doce lotes no son homogéneos y encalar todo por comodidad es exactamente el gasto que esta lección busca eliminar.\n\nEl calendario aprieta. La cal necesita al menos dos o tres meses húmeda e incorporada. Estamos a finales de julio y las lluvias entran en octubre: si aplico en agosto llega, en septiembre ya no del todo.\n\nY antes de comprar, tres preguntas al proveedor: qué material es exactamente —caliza, dolomita, cal viva, cal hidratada o cal de construcción no son lo mismo—, cuál es su PRNT o su análisis, y qué granulometría tiene. Si no saben responder a ninguna, el precio por saco no significa nada, porque podría necesitar el doble de sacos.",
+      "criterios": [
+        "Prioriza el encalado por la saturación de aluminio y lo justifica.",
+        "Elige dolomita por el magnesio bajo, explicando la competencia entre cationes.",
+        "Pospone la compra de fósforo porque el pH corregido cambia su disponibilidad.",
+        "Identifica la roca fosfórica como excepción que va antes o con el encalado.",
+        "Menciona la conversión de toneladas por hectárea a la superficie real.",
+        "Apunta a un pH objetivo moderado y propone dividir la dosis si es grande.",
+        "Resuelve la incorporación aprovechando las camas altas, sin labrar todo el terreno.",
+        "Pregunta por material exacto, PRNT y granulometría antes de comprar."
+      ],
+      "explicacion": "Esta pregunta es el gasto más grande y más fácil de equivocar del módulo. Fíjate en que la mitad de la respuesta correcta consiste en no comprar todavía."
+    }
+  ]
+}

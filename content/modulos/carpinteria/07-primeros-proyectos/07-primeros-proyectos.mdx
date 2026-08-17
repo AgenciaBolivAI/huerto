@@ -1,0 +1,533 @@
+Seis lecciones de mecanismo y ni un solo objeto terminado. Eso se arregla hoy: **cuatro proyectos y
+un reto**, sin una sola técnica nueva. Y conviene sacarse una idea de encima antes de empezar. El
+primer proyecto **no se elige por lo que más falta te hace**: se elige por lo que perdona. Casi todo
+el mundo empieza por lo que necesita —una mesa, un ropero, una puerta— y se estrella contra el objeto
+más exigente que existe justo el día que menos sabe. Ese carpintero concluye que no sirve para esto,
+y no es verdad: eligió mal el orden.
+
+## Cómo se elige un primer proyecto
+
+La medida que ordena la lección tiene nombre: la <Termino slug="tolerancia-de-armado">tolerancia de
+armado</Termino> es **cuánto se puede desviar una pieza de su medida antes de que el objeto deje de
+cumplir su función**. No es una virtud del carpintero, es una propiedad del diseño. Un caballete con
+una pata dos milímetros corta sigue siendo un caballete perfecto; una puerta con dos milímetros de
+más en el ancho no cierra, y punto. De ahí sale la única regla de progresión que necesitás: **subí de
+proyecto cuando tu error habitual sea más chico que la tolerancia del siguiente.** Tu error habitual
+es un número personal, cambia con la herramienta y solo se averigua midiendo lo que te sale.
+
+<Tabla>
+
+| Proyecto | Qué habilidad agrega | Tolerancia | Si sale mal |
+| --- | --- | --- | --- |
+| **Caballetes y banco** | Cortar y atornillar; nada coincide con nada | ~5 mm | Se hamaca; se arregla con un tornillo |
+| **Estante de pared** | Flexión y anclaje: la primera carga real | ~2 mm | Se comba, o se cae encima de alguien |
+| **Mesa** | Rigidez del bastidor y movimiento de la tapa | ~1 mm | Se hamaca para siempre; la tapa se raja |
+| **Mosquitero** | Un marco a escuadra y plano, sin luces | ~0,5 mm | Entra el mosquito. Es salud, no estética |
+| **Puerta (reto)** | Todo el módulo a la vez, y durante años | ~0,5 mm | No cierra en febrero, o no cierra en agosto |
+
+</Tabla>
+
+Ninguno repite la habilidad del anterior: se van sumando, y la puerta las pide todas juntas además de
+que aguanten dos estaciones. Saltarse pasos no ahorra tiempo: lo gasta en madera arruinada.
+
+<Analogia titulo="La herramienta que se construye a sí misma">
+El primer proyecto es un banco de trabajo, y ahí aparece una rareza que a un programador le va a
+resultar familiar: **se necesita un banco para construir un banco**. El primer compilador de un
+lenguaje no se puede escribir en ese lenguaje, así que se escribe a mano en algo más tosco, sale feo
+y lento, y con él se compila el segundo, que ya es bueno. Tu primer banco se va a hacer en el suelo,
+sobre dos ladrillos, con la tabla pisada por una rodilla: **va a salir torcido y no importa**, porque
+su trabajo no es ser bonito sino sujetar la pieza del proyecto siguiente. La calidad no viene de tu
+mano, viene de que cada objeto sujeta mejor al que sigue.
+</Analogia>
+
+## Antes de cortar: la lista de cortes y el orden de armado
+
+Dos papeles antes de tocar el serrucho, y son los que separan un proyecto de un montón de madera
+cortada. El primero es la <Termino slug="lista-de-cortes">lista de cortes</Termino>: **cada pieza con
+su nombre, su cantidad, sus tres medidas y de qué tabla sale.** El segundo es
+el <Termino slug="orden-de-armado">orden de armado</Termino>: **la secuencia en que se juntan las
+piezas, elegida para que ninguna junta quede encerrada donde ya no entra el sargento.**
+
+La lista tiene tres columnas que la gente olvida. **De qué tabla sale cada pieza**, porque una tabla
+de 2,40 m da dos piezas de 1,10 m y no tres. **El ancho del corte**: cada pasada de la sierra se come
+dos o tres milímetros, y ocho cortes son más de dos centímetros que desaparecen. Y **qué piezas se
+cortan al final**: las que tienen que coincidir con algo que todavía no existe se dejan largas y se
+ajustan copiando de lo ya armado, que es la regla de la lección 04 contra la acumulación del error.
+
+<Dato titulo="Repartir los cortes en la tabla es un problema conocido, y tiene una receta">
+Acomodar piezas de largos distintos en tablas de largo fijo, desperdiciando lo menos posible, es un
+problema que en informática se llama empaquetado y no tiene solución rápida y perfecta. Pero tiene
+una **heurística que funciona casi siempre y se hace de cabeza**: ordená las piezas de la más larga a
+la más corta y colocá cada una en la primera tabla donde entre. Primero las patas, después los
+faldones, y las piezas cortas en lo que sobró; al revés vas a llenar las tablas de piezas chicas y no
+te va a quedar ninguna larga completa. Sumale **cinco a diez centímetros de sacrificio en cada
+punta**, porque la rajadura de testa está ahí aunque no se vea (lección 01).
+</Dato>
+
+El orden de armado se piensa hacia atrás, desde la última junta, con una sola pregunta: **¿voy a
+poder apretar esto cuando llegue el momento?** Un bastidor se arma en dos marcos planos que después
+se unen entre sí, porque un marco plano se aprieta sobre la mesa y se comprueba con las diagonales;
+armar las cuatro caras a la vez deja seis juntas fraguando al mismo tiempo y ninguna sujeta. Y la
+escuadra **no se comprueba al final**: se comprueba con la cola todavía fresca, porque después ya no
+se corrige nada.
+
+## Proyecto 1: caballetes y banco de trabajo
+
+Un <Termino slug="caballete-de-carpintero">caballete</Termino> es un larguero horizontal sostenido
+por dos pares de patas abiertas, y su gracia es que **ninguna pieza tiene que coincidir con ninguna
+otra**: si una pata queda larga se recorta al final, y si el larguero no está centrado no pasa nada.
+
+**Lista de cortes, por cada caballete** (hacen falta dos, así que todo por dos):
+
+<Tabla>
+
+| Pieza | Cantidad | Medida | Nota |
+| --- | --- | --- | --- |
+| Larguero superior | 1 | 100 cm × 9 × 4 cm | La pieza más noble que tengas |
+| Patas | 4 | 75 cm × 9 × 2,5 cm | **Cortar largas**: se recortan al final |
+| Cabezales laterales | 2 | 45 cm × 9 × 2 cm | Atan cada par de patas |
+| Riostra baja | 2 | ~50 cm × 7 × 2 cm | Opcional, quita el bamboleo |
+
+</Tabla>
+
+Las patas **van abiertas en los dos sentidos**, y el mecanismo es de palanca pura: una pata vertical
+apoya justo debajo del punto donde entra la carga, así que basta un empujón de costado para que el
+peso caiga fuera de la base; una pata abierta pone su apoyo **más lejos del eje**, y el peso tiene
+que correrse mucho más para salirse. Con unos 15 grados alcanza y sobra. El corte de arriba de cada
+pata se copia y no se calcula: se apoya la pata contra el larguero en la inclinación que querés, se
+marca la línea del larguero sobre la pata y se corta por ahí. Copiar en vez de medir elimina la
+trigonometría del problema.
+
+La unión es **tornillo con pretaladro, sin cola**, y es decisión de diseño y no pereza: un caballete
+se cae, se golpea y se repara, y querés poder sacar una pata rota y poner otra, cosa que la cola
+convierte en un destrozo. Cada par de patas lleva además su cabezal lateral, que es lo que lo
+triangula: sin él, las dos patas y el larguero forman un cuadrilátero, y un cuadrilátero se deforma;
+con él hay un <Termino slug="triangulacion">triángulo</Termino>, la única figura rígida.
+
+<Advertencia titulo="Las cuatro patas nunca apoyan a la vez, y eso tiene arreglo">
+Tres puntos definen un plano y cuatro no. Es geometría, no mala mano: por bien que cortes, la cuarta
+pata va a quedar en el aire y el caballete se va a hamacar. Se
+llama <Termino slug="regla-de-los-tres-apoyos">regla de los tres apoyos</Termino> y vuelve en la
+mesa, en el banco y en cualquier cosa de cuatro patas que hagas en tu vida.
+
+La solución no es medir mejor, es **copiar el piso**. Se arma el caballete con las patas largas, se
+lo pone en el suelo más parejo que tengas y se lo calza con cuñas hasta que quede firme y a nivel.
+Después se toma un taco de dos o tres centímetros de espesor con un lápiz apoyado encima y se lo
+arrastra alrededor de cada pata: el lápiz dibuja en las cuatro una línea paralela al piso. Se corta
+por esas líneas y **las cuatro patas apoyan a la vez**, sin haber medido nada. El taco tiene que ser
+el mismo para las cuatro y no puede levantarse del piso ni un milímetro mientras marcás.
+</Advertencia>
+
+El banco de trabajo es el mismo caballete con **tapa** ancha encima y **masa**: uno liviano se corre
+cuando serruchás y se levanta cuando tirás de un formón, así que atornillalo a la pared o cargale
+peso abajo. La altura sale del cuerpo y no de un catálogo: **parate derecho, dejá caer los brazos y
+medí del piso al pliegue de la muñeca**. Ahí el hombro queda encima de la herramienta y empujás con
+el peso del cuerpo; más alto empujás solo con el brazo y te cansás en diez minutos, más bajo trabajás
+con la espalda doblada. Sobre la tapa va un **tope**, un listón atornillado contra el que la pieza se
+apoya: no sujeta, **impide que la pieza se vaya**, y resuelve la mitad de los trabajos sin usar un
+solo sargento. De acabado, **nada o un aceite fino**: un banco barnizado es resbaloso y se pega con
+la cola que le cae. Un banco es una superficie de sacrificio.
+
+## Proyecto 2: el estante de pared
+
+Primer objeto que sostiene peso y que está a la vista, y el primero donde el error no es feo sino
+peligroso: un estante no falla despacio, falla de golpe y cargado.
+
+Lo que hace bueno a un estante no es la madera, es la geometría. Cuando se comba, esa curva tiene
+nombre: es la <Termino slug="flecha">flecha</Termino>, la distancia que baja el centro respecto de
+los apoyos.
+
+<Formula explicacion="La flecha crece en proporción a la carga y al CUBO de la luz entre apoyos, y baja en proporción al ancho de la tabla y al CUBO de su canto, que es el espesor puesto en vertical. Los dos cubos son los que mandan: duplicar la luz multiplica la flecha por ocho con la misma carga total, y por dieciséis si el estante sigue lleno de punta a punta. Duplicar el canto la divide por ocho.">
+flecha ∝ (carga × luz³) ÷ (rigidez del material × ancho × canto³)
+</Formula>
+
+Traducido a decisiones: **antes de comprar mejor madera, acortá la luz o subí el canto**. Un estante
+de 1,20 m que se comba se arregla poniendo una ménsula en el medio, y esa sola ménsula lo deja en la
+dieciseisava parte de la flecha que tenía. La otra salida es un listón de 2 × 4 cm encolado y
+atornillado **de canto** en el borde delantero: convierte la tabla plana en una viga con forma de L y
+sube la rigidez de manera muy notoria por el precio de un listón. Como ese listón **corre a lo largo
+de la veta del estante**, se puede encolar sin miedo, porque las dos piezas se mueven juntas; un
+travesaño cruzado a lo ancho por debajo sería veta cruzada, y ahí la lección 05 es terminante: se
+atornilla por agujeros alargados, nunca se encola.
+
+**Lista de cortes** para un estante de 1,10 m, 25 cm de fondo, sobre tres ménsulas:
+
+<Tabla>
+
+| Pieza | Cantidad | Medida | Nota |
+| --- | --- | --- | --- |
+| Tabla del estante | 1 | 110 × 25 × 2 cm | De palet: dos tablas juntas de canto |
+| Listón de borde | 1 | 110 × 4 × 2 cm | Encolado y atornillado desde abajo |
+| Ménsulas | 3 | 22 cm de brazo | Metálicas, o dos listones y una diagonal |
+
+</Tabla>
+
+<Analogia titulo="El estante no se cae hacia abajo: se arranca hacia afuera">
+El peso de los libros no tira del tornillo hacia abajo: tira de él **hacia afuera**, y con mucha más
+fuerza que la del peso. Pensá en una llave inglesa. El tornillo de arriba y el apoyo de abajo de la
+ménsula forman un par: el peso, que actúa a cierta distancia de la pared, hace girar todo el
+conjunto, y ese giro empuja la parte de abajo contra el muro y **estira el tornillo de arriba hacia
+afuera**. Eso es un <Termino slug="esfuerzo-de-arrancamiento">esfuerzo de arrancamiento</Termino>, y
+es el que se cobra las víctimas.
+</Analogia>
+
+<Formula explicacion="La fuerza que trata de arrancar el tornillo de arriba es el peso multiplicado por la distancia a la que está la carga respecto de la pared, dividido entre la altura de la ménsula. Con 20 kg de libros sobre una ménsula, con la carga centrada a 15 cm de la pared y una ménsula de 20 cm de alto: 20 × 15 ÷ 20 = 15 kg tirando del tornillo hacia afuera. Si la ménsula fuese de 10 cm, la misma carga daría 30 kg.">
+Fuerza de arrancamiento = Peso × distancia a la pared ÷ altura de la ménsula
+</Formula>
+
+De ahí salen dos conclusiones que se usan siempre: **una ménsula alta trabaja mucho mejor que una
+baja**, porque la altura está dividiendo, y **un estante hondo castiga mucho más que uno angosto**,
+porque la distancia está multiplicando —pasar de 20 a 40 cm de fondo duplica el tirón sin agregar un
+solo libro.
+
+Falta la otra mitad, que es la pared. Un taco expandible en **ladrillo macizo** o en una junta de
+mortero agarra bien. En **ladrillo hueco** el taco se expande adentro del hueco, contra nada, y lo
+único que lo sostiene es la cáscara exterior de un centímetro: ese es el estante que se viene abajo.
+Las salidas honestas son tres —taco largo que atraviese dos tabiques, anclaje específico para hueco,
+o **un listón atornillado horizontalmente a la pared con varios tornillos repartidos**, del que
+después cuelgan las ménsulas—, y la tercera es a la vez la más segura y la más barata. Qué anclaje
+existe y cuál sirve para tu pared se pregunta en la ferretería mostrando un pedazo del ladrillo; acá
+no se van a inventar productos ni marcas.
+
+<Advertencia titulo="Nunca un estante cargado sobre una cama o donde duermen las guaguas">
+El modo de falla de un estante es súbito: el anclaje va cediendo sin ruido durante meses, el tornillo
+de arriba se sale unos milímetros por vez, y el día que se suelta cae todo el peso junto. No hay
+aviso previo.
+
+Por eso la regla es de ubicación antes que de cálculo: **nada cargado encima de una cama, de una
+cuna, de un sillón ni a la altura de la cabeza de un chico.** Si tiene que ir ahí, va anclado a un
+listón corrido con muchos tornillos y con una prueba de carga honesta: cargalo con el doble de lo que
+va a llevar, dejalo una semana y recién después ponelo en servicio. Y comprobá los tornillos de
+arriba una vez al año.
+</Advertencia>
+
+De acabado, un aceite penetrante de los de la lección 06 — y **la cara de abajo se trata igual que la
+de arriba**. Un estante sellado por una cara y crudo por la otra intercambia humedad a distinta
+velocidad por cada lado, que es la receta exacta del abarquillado de la lección 01.
+
+## Proyecto 3: la mesa
+
+La mesa son **dos problemas independientes** que la gente mezcla y por eso le sale mal: un armazón
+que no se hamaque, y una tapa que se mueva sin partirse.
+
+El armazón es el <Termino slug="bastidor-de-mueble">bastidor</Termino>: las cuatro patas unidas por
+cuatro faldones, que son las tablas horizontales que corren justo debajo de la tapa. Visto de costado
+es un rectángulo, y un rectángulo con las esquinas articuladas **no es rígido**: se deforma en rombo
+con un empujón, y eso es el bamboleo. Como nadie pone una diagonal cruzada donde van las piernas, la
+rigidez sale de otros dos sitios. El primero es **el alto del faldón**: la unión entre faldón y pata
+no resiste una fuerza sino un giro, y lo que le da capacidad para resistirlo es la distancia entre su
+punto de arriba y su punto de abajo. Un faldón de 15 cm tiene tres veces el brazo de palanca de uno
+de 5 cm con la misma madera y la misma cola. **Faldón alto, mesa firme; faldón bajito, mesa que se
+hamaca para siempre.**
+
+El segundo es el <Termino slug="taco-de-esquina">taco de esquina</Termino>: un pedazo de madera
+cortado en triángulo y atornillado por dentro a los dos faldones que llegan a cada pata. Cierra el
+triángulo que faltaba, cuesta un recorte y es lo que salva a las uniones sencillas; si además pasás
+un perno desde ese taco hacia la pata, tenés una unión desarmable y muy firme sin haber cortado una
+sola espiga. Sobre la unión del faldón hay que ser honesto: la buena es la caja y espiga de la
+lección 05, que aguanta décadas, y la de la primera mesa es a tope con tarugos y taco de esquina, que
+**aguanta bastante menos** pero aguanta y se puede reapretar. La trampa real es la contraria: gente
+que no hace la mesa nunca porque no sabe cortar una espiga.
+
+**Lista de cortes**, mesa de 120 × 70 cm y 75 cm de alto:
+
+<Tabla>
+
+| Pieza | Cantidad | Medida | Nota |
+| --- | --- | --- | --- |
+| Patas | 4 | 72 × 7 × 7 cm | 75 menos el espesor de la tapa. **Cortar largas** |
+| Faldones largos | 2 | 106 × 15 × 2,5 cm | 120 − 2 patas de 7 cm |
+| Faldones cortos | 2 | 56 × 15 × 2,5 cm | 70 − 2 patas de 7 cm |
+| Tacos de esquina | 4 | ~12 cm de lado | De recortes |
+| Tapa | 1 | 120 × 70 × 3 cm | Tablas unidas de canto, o un tablero |
+
+</Tabla>
+
+El orden de armado evita la desgracia: **primero los dos marcos cortos** —pata, faldón corto, pata—,
+apretados sobre una superficie plana, comprobados con las diagonales y dejados fraguar; **después los
+dos faldones largos** uniendo esos marcos. Nunca las cuatro esquinas a la vez. Las diagonales del
+bastidor completo se miden antes de que la cola agarre: si difieren, se empuja la esquina de la
+diagonal larga y se vuelve a medir. Después, la regla de los tres apoyos y el taco con el lápiz.
+
+Y llega la parte que arruina la mayoría de las mesas caseras. La tapa tiene la veta a lo largo, el
+faldón la tiene atravesada, y **fijar rígidamente dos maderas con la veta cruzada es partir una de
+las dos**. El número está en la lección 01: una tapa de 60 cm de ancho se mueve casi 9 mm por año en
+este clima, y una de 70 cm más de 10. Ningún tornillo aguanta eso; lo que cede es la madera. La
+solución es la <Termino slug="sujecion-flotante">sujeción flotante</Termino>: sujetar firme en un
+sentido y **dejar deslizar en el otro**. En la práctica, agujeros alargados en el faldón —una ranura
+de un centímetro, hecha con dos o tres perforaciones seguidas y limpiada con la lima—, con tornillo y
+arandela ancha apretados sin exagerar, y la ranura orientada **a lo ancho de la veta de la tapa**,
+que es la única dirección en que se mueve. El tornillo del centro de cada faldón va en agujero
+redondo y bien apretado: eso fija el centro y hace que la tapa crezca la mitad para cada lado en vez
+de irse toda para un costado. De acabado, **las dos caras se tratan igual**, incluida la de abajo que
+nadie ve: una tapa abarquillada no la endereza nadie.
+
+## Proyecto 4: el mosquitero de marco
+
+Este proyecto está en el módulo de carpintería y en realidad pertenece a salud pública. En zona de
+dengue, un <Termino slug="mosquitero">mosquitero</Termino> bien hecho es una intervención sanitaria
+que cuesta un listón y un pedazo de malla, y es probablemente lo más útil que vas a construir en tu
+primer mes.
+
+El mecanismo es simple y por eso se subestima. **El mosquito no se cuela por la malla: se cuela por
+el borde.** Las mallas corrientes tienen aberturas de alrededor de un milímetro, que ningún mosquito
+atraviesa; pero una luz de tres milímetros a lo largo de un metro de marco mal ajustado son tres mil
+milímetros cuadrados de puerta abierta. De ahí la conclusión que gobierna el proyecto: **lo difícil
+no es la malla, es que el marco cierre en todo su perímetro**, y para eso tiene que estar a escuadra
+y además **plano**. Un marco que salió en hélice apoya en tres esquinas y deja la cuarta levantada, y
+esa cuarta esquina es la entrada.
+
+**Lista de cortes** para un vano de 100 × 60 cm:
+
+<Tabla>
+
+| Pieza | Cantidad | Medida | Nota |
+| --- | --- | --- | --- |
+| Largueros (verticales) | 2 | 100 × 4 × 2 cm | Medida exterior completa |
+| Travesaños (horizontales) | 2 | 60 × 4 × 2 cm | Medida exterior completa |
+| Travesaño central | 1 | 60 × 4 × 2 cm | Si el marco pasa de 1 m de alto |
+| Junquillos | 4 | Los cuatro lados | Listones de 1 × 1 cm |
+| Malla | 1 | 110 × 70 cm | Sobra 5 cm por lado para tirar de ella |
+
+</Tabla>
+
+La unión de las esquinas es **a media madera**, la de la lección 05: en un marco las cuatro esquinas
+son uniones de testa contra canto, y la cola casi no pega en la testa. La media madera resuelve las
+dos cosas de un saque — pone cara contra cara, que es donde la cola sí trabaja, y encaja
+mecánicamente, así que la pieza queda ubicada sola mientras apretás. El inglete a 45 grados queda más
+lindo, es más difícil de cortar y es más débil, porque enfrenta testa contra testa. Y el travesaño
+central no es decoración: un marco alto y flaco se tuerce con la mano, la malla tensada tira de los
+dos largueros hacia adentro y los arquea, y el travesaño corta ese arqueo.
+
+<Dato titulo="Tensar la malla como se aprieta la tapa de un motor">
+La malla se engrapa **desde el medio hacia afuera y alternando lados opuestos**, nunca recorriendo el
+perímetro de corrido. Es el mismo patrón en cruz con el que se aprietan los bulones de una tapa de
+cilindros o las tuercas de una rueda, y por la misma razón: si apretás todo de un lado primero, el
+tejido se corre en diagonal, los hilos dejan de estar en escuadra y aparecen bolsas que después no
+salen. La tensión es **firme, no brutal**: si estirás la malla hasta deformar los cuadraditos, las
+aberturas se agrandan y se abre la puerta que estabas cerrando.
+
+Sobre el material: la <Termino slug="tela-mosquitera">tela mosquitera</Termino> de fibra de vidrio es
+la que conviene acá porque no se oxida, y con humedad alta buena parte del año la malla de acero se
+llena de óxido y se rompe sola en un par de temporadas. La de aluminio no se oxida pero se abolla y
+no vuelve.
+</Dato>
+
+Encima de las grapas van los <Termino slug="junquillo">junquillos</Termino>: listones finitos
+clavados sobre el borde de la malla, que **tapan las grapas y agregan un segundo apriete a lo largo
+de todo el borde**, justamente donde estaba el problema. Y el mosquitero se monta **desmontable**,
+con girantes de madera o tornillos a la vista, porque una malla se tapa de polvo y una malla tapada
+corta el aire; cuando corta el aire, alguien la saca en una noche de calor y no la vuelve a poner
+nunca. Que se pueda desmontar, lavar y volver a colgar en cinco minutos es lo que decide si el
+mosquitero sigue puesto en febrero. El perímetro se cierra con un rebaje, un solape o un burlete:
+**el marco tiene que apoyar contra algo, no quedar simplemente arrimado.**
+
+<Advertencia titulo="El mosquitero es una capa, no la solución del dengue">
+Un mosquitero bien hecho reduce las picaduras dentro de la casa y eso importa mucho, pero **no toca
+la causa**. El mosquito del dengue se cría en agua limpia y quieta dentro de recipientes que están en
+el patio: baldes, floreros, cubiertas viejas, canaletas tapadas, el plato de la maceta, el tanque sin
+tapa. Si esos criaderos siguen ahí, hay mosquitos igual, adentro y afuera. **Vaciar, tapar, dar
+vuelta y cambiar el agua cada pocos días es la mitad del trabajo**, y la carpintería es la otra
+mitad.
+
+Y lo que no se negocia: **ante fiebre, dolor de cabeza fuerte, dolor detrás de los ojos o dolor de
+cuerpo, se va al centro de salud y no se toma nada por cuenta propia.** Nada de lo que se explica en
+este curso reemplaza a un profesional de salud, y en dengue la automedicación es peligrosa.
+</Advertencia>
+
+## El reto de cierre: una puerta de tablas
+
+El quinto es un reto y se plantea como tal, porque exige que las seis lecciones estén entendidas y
+porque **es el único objeto que además tiene que seguir funcionando dentro de dos años**. Todo lo
+demás se juzga el día que lo terminás; una puerta se juzga en febrero.
+
+La <Termino slug="puerta-de-tablas">puerta de tablas y travesaños</Termino> es la puerta más simple
+que existe: tablas verticales una al lado de la otra, tres travesaños horizontales que las cosen y
+una diagonal. Nada de ensambles finos. Y sin embargo tiene dos mecanismos que hay que entender o la
+puerta se cae sola.
+
+El primero es la diagonal, y su dirección **no da lo mismo**. Una puerta cuelga de las bisagras de un
+lado y su propio peso tira hacia abajo del borde libre del otro: el rectángulo se va convirtiendo en
+rombo y la esquina de arriba del lado que se abre baja hasta rozar el piso. La diagonal impide eso si
+trabaja como puntal, apretada, y para eso tiene que ir **con el pie abajo, del lado de las bisagras,
+subiendo hacia el lado que se abre.** Cuando esa esquina libre intenta bajar, la distancia entre las
+dos puntas de la diagonal se acorta y la diagonal se comprime — y la madera comprimida a lo largo de
+la fibra es fortísima y **no necesita ninguna unión**, solo entrar justa. Puesta al revés, la misma
+pieza tendría que trabajar
+a <Termino slug="traccion">tracción</Termino>: tendría que **tirar** de sus dos extremos, y ahí todo
+el esfuerzo se lo comen los tornillos de las puntas, que es exactamente lo que la madera hace peor.
+Esa puerta se descuelga igual, solo que más tarde. La diagonal cumple aquí el papel
+de <Termino slug="tornapunta">tornapunta</Termino>, la pieza inclinada que trabaja comprimida y que
+ya apareció en las cerchas del módulo 23: el razonamiento es el mismo, cambia el tamaño.
+
+El segundo mecanismo es el movimiento. Una puerta maciza de 80 cm de ancho **se mueve más de un
+centímetro por año** en este clima —la cuenta está en la lección 01— y si las tablas están encoladas
+entre sí, ese centímetro se descarga en una raja. Por eso la puerta de tablas hace lo contrario:
+**parte el ancho.** Cinco tablas de 16 cm mueven lo mismo en total, pero cada una mueve dos
+milímetros y esos dos milímetros se reparten en cuatro juntas, que se tapan con un listón encima o
+con un rebaje que solape. Cada tabla se atornilla a cada travesaño **por su cuenta**, con un tornillo
+por cruce y no tres en fila, para que pueda moverse sin pelearse con su vecina.
+
+Faltan cuatro detalles. Las **bisagras van tres, no dos**, por el mismo mecanismo del estante: la de
+arriba trabaja arrancando hacia afuera del marco, y los tornillos más largos del proyecto van ahí. Se
+deja <Termino slug="holgura-de-servicio">holgura de servicio</Termino>, unos tres milímetros
+alrededor, y la cantidad depende del mes: colgada en plena seca la puerta va a hinchar en la lluvia,
+así que se le deja más luz del lado que cierra; colgada en febrero va a encoger, así que se ajusta
+más. El **canto de abajo** es la testa de todas las tablas verticales —la punta abierta de los tubos
+de la lección 01— y está a diez centímetros del piso que se moja al trapear: se sella con mano doble,
+porque de ahí arranca casi toda la pudrición de puertas. Y **la puerta se termina de ajustar
+colgada**, no en el banco: se cuelga sin ajustar el borde de cierre, se marca dónde roza y recién ahí
+se cepilla.
+
+Si tu puerta cierra bien en agosto y sigue cerrando bien en febrero, terminaste el módulo. No hace
+falta más certificado que ese.
+
+<AplicarRizoma titulo="Llevarlo a la práctica: tu primer mes, semana por semana">
+**Semana 1: los caballetes y el banco, con lo que sea.** No compres nada todavía. Conseguí tres o
+cuatro palets en una ferretería, una distribuidora o una obra —preguntando, que casi siempre
+estorban— y desarmalos con la técnica de la lección 02, con el imán pasado por cada tabla antes de
+acercarle un filo. Los primeros cortes van a salir torcidos y ese es el plan: el caballete no se
+entera. Si vivís en un cuarto alquilado sin patio, el banco puede ser una tapa de 60 × 120 cm sobre
+los dos caballetes, que a la noche se apoya de canto contra la pared y desaparece. Un taller no es un
+lugar: es una superficie firme a la altura de tu muñeca.
+
+**Semana 2: el estante, y que sea para alguien.** Hacé el primero en tu casa, donde puedas revisarlo,
+y el segundo para tu mamá, tu abuela o el vecino. Antes de anclar, mirá dónde hay una junta de
+mortero o sacale un pedacito al ladrillo en un lugar escondido, y llevá esa información a la
+ferretería en vez de comprar el taco más barato. Poné el listón corrido si tenés la más mínima duda:
+cuesta un listón más y es la diferencia entre un estante y un accidente.
+
+**Semana 3: el mosquitero, y si estamos entre octubre y abril, este va primero.** En temporada de
+lluvias salta al puesto número dos, apenas terminados los caballetes. Empezá por la ventana del
+cuarto donde duermen los chicos y por la del cuarto donde duerme quien esté enfermo o embarazada.
+Medí el vano en tres alturas distintas, porque casi ningún vano de albañilería es un rectángulo
+perfecto, y usá **la medida más chica de las tres**. Y el mismo día que colgás el primero, dá una
+vuelta por el patio con un balde: vaciá, dá vuelta o tapá todo lo que junte agua.
+
+**Semana 4: la mesa.** Es el primer proyecto donde vas a necesitar sargentos de verdad; si no los
+tenés, sirven las prensas improvisadas de la lección 03 —cuerda y palo para torcer, cuñas contra un
+tope clavado al piso, el peso de una bolsa de cemento—. Armá los dos marcos cortos un día y unilos al
+día siguiente, y no toques la tapa hasta tener el bastidor firme y con las cuatro patas apoyando.
+
+**La libreta de errores es el proyecto invisible y el más importante.** De cada pieza que cortás,
+anotá la medida que querías y la que te salió. En una semana vas a tener tu número: si tus cortes
+salen con ±3 mm, todavía no estás para el mosquitero y te falta guía en la sierra o afilado. Ese
+número baja solo con las repeticiones, y verlo bajar es lo que sostiene las ganas cuando algo sale
+mal. Es lo mismo que medir antes de optimizar: sin la medición, la mejora es una opinión.
+
+**El dinero del primer mes se va en consumibles, no en madera.** La madera puede ser toda recuperada,
+pero hay una lista corta que sí hay que comprar: tornillos de varias medidas, cola, lija, tacos para
+la pared, tela mosquitera, grapas o puntillas finas y el acabado. No pongo precios porque cambian por
+ciudad, por temporada y por quién pregunta; lo que sí sirve es **anotar la lista completa antes de
+salir y preguntar en dos lugares el mismo día**.
+
+**Y lo que esto vale más allá de tu casa.** Con estos cuatro objetos ya podés hacerle el mosquitero a
+un vecino, el estante a la tienda de la esquina y un banco a quien lo necesite, y eso todavía no es
+un oficio pero es cómo empieza uno: no con un taller montado, sino con tres o cuatro cosas que la
+gente ve todos los días y que están bien hechas. Si son varios, hagan los mosquiteros del barrio en
+tandas: el marco número doce sale en la mitad de tiempo y con la mitad de error, porque ya tenés las
+plantillas y el orden de armado en la cabeza.
+
+<Advertencia titulo="Las cuatro cosas que lastiman en estos proyectos">
+**La pieza que no está sujeta.** Casi todo corte que termina en la mano es el mismo accidente: la
+madera se movió y la herramienta siguió. Nada se corta sostenido con la mano libre a menos de un
+palmo del filo, nada se corta apoyado sobre la pierna y nada se taladra sobre la rodilla. Para eso
+hiciste el banco primero.
+
+**El clavo escondido de la madera recuperada.** Vale entero lo de la lección 02, porque todo este mes
+se trabaja con madera de palet: mirada a contraluz, mano abierta y plana por las dos caras, imán, y
+lo que no salga se marca con lápiz de color y se corta por otro lado. Si el disco de una sierra
+circular agarra un clavo, la pieza puede salir disparada hacia atrás con toda la energía del motor, a
+la altura del abdomen de quien empuja.
+
+**Los ojos.** Al grapar la malla, al clavar puntillas finas y al taladrar mampostería salta material
+a velocidad, y una puntilla que rebota va justo a la altura de la cara de quien está agachado. Lentes
+o antiparras siempre; una vez que se pierde un ojo no vuelve.
+
+**El polvo y la escalera.** Barbijo al lijar, y trabajo con la puerta abierta o afuera. Y para colgar
+el estante, la escalera bien apoyada y alguien que la sujete: buena parte de las caídas serias de un
+trabajo casero pasan al estirarse de costado desde una escalera en lugar de bajarse y moverla.
+</Advertencia>
+</AplicarRizoma>
+
+<ContextoBolivia titulo="Construir en Zanja Honda: el mes en que armás cambia las medidas">
+**Acá el calendario es un dato de diseño, no un detalle.** Entre octubre y abril la madera de tu casa
+está en equilibrio con un aire húmedo y anda por un 16 % de contenido de humedad; entre mayo y
+septiembre baja a 11 o 12. Eso significa que **lo que armás en plena lluvia va a encoger y lo que
+armás en plena seca va a hinchar**, cinco o seis puntos todos los años. Anotá en la libreta el mes en
+que armaste cada cosa: cuando algo trabe o baile dentro de seis meses, esa anotación te va a decir si
+es movimiento normal o un error.
+
+**Los surazos meten el movimiento rápido, que es el que raja.** Cuando entra el aire frío del sur la
+temperatura se desploma y la humedad relativa pega un salto en horas. El interior de una tabla ni se
+entera, pero la superficie sí, y esa diferencia entre cáscara y corazón es la que abre las juntas.
+Por eso las piezas recién armadas no se dejan al sol ni contra una pared de calamina esperando el
+acabado: se guardan a la sombra, con aire por las dos caras, y se les da el acabado a las dos caras
+el mismo día.
+
+**Con cortes de energía frecuentes, ningún proyecto puede depender de que haya luz.** Los cinco de
+esta lección se hacen enteros con herramienta de mano —serrucho, formón, martillo, destornillador,
+escuadra y berbiquí—, y no es una postura romántica: si tu plan del sábado depende de la sierra
+circular y se corta la luz a las nueve, perdiste el sábado. El taladro es el que más se extraña,
+sobre todo para los tacos de la pared, así que si vas a comprar una sola máquina que sea esa, a
+batería. Todo lo eléctrico en un patio húmedo va con la instalación revisada y sin alargues tirados
+en el piso mojado.
+
+**El mosquitero es, en esta zona, el proyecto de mayor rendimiento por peso de madera.** El dengue es
+endémico acá y el mosquito que lo transmite pica de día, dentro de la casa, y se cría en agua limpia
+y quieta de recipientes domésticos. Eso convierte a la ventana de un dormitorio en el lugar donde una
+tarde de carpintería hace más bien que en ningún otro sitio. La mayoría de las ventanas de la zona
+tienen marco metálico o son directamente un vano con reja, y el marco de madera se resuelve de dos
+maneras: si hay un rebaje de albañilería, el marco entra adentro y apoya contra el fondo; si no lo
+hay, va **por la cara de afuera**, un poco más grande que el vano, apoyado contra un listón tope
+clavado alrededor. La capa que le corresponde está descrita en el módulo 23: reja afuera, mosquitero
+en el medio, postigo adentro, cada capa con un solo trabajo.
+
+**El material del primer mes sale de donde ya está.** Palets de ferreterías, distribuidoras y obras;
+cajones de fruta del mercado; madera de demolición cuando aparece, que suele ser de especies que hoy
+no podrías pagar y está seca desde hace décadas. La barraca vende mayormente verde, así que si
+comprás para la mesa o para la puerta, la madera entra a la casa estibada dos a cuatro semanas antes
+de armar, en el cuarto donde va a vivir el mueble. Y todo lo que hagas apoya levantado del piso de
+tierra: las patas de un caballete parado sobre tierra húmeda son autopista de termitas y se pudren
+desde abajo. Dos ladrillos debajo, y listo.
+
+**En Rizoma del Sur, el vivero comunitario de 3.666 m² en doce lotes, la secuencia se probó en ese
+orden y por ese motivo.** Los primeros caballetes salieron de palets, con las patas torcidas y todo,
+y siguen sirviendo; sobre ellos se armó el banco, y sobre el banco salieron los mosquiteros del
+galpón, hechos en tanda con plantillas. La primera tanda de mesas se abarquilló entera —madera
+comprada esa misma semana y una cara al sol—, y esa fue la lección que dejó instalada la regla de
+aclimatar antes de armar. Lo que se aprende ahí sirve igual en una casa alquilada del barrio: el
+banco, el estante, el mosquitero y la mesa no necesitan un vivero, ni un patio, ni tierra.
+
+**Una advertencia final sobre lo que este curso no te puede decir.** No hay precios en esta lección y
+no los va a haber, porque cambian por ciudad, por temporada y por quién pregunta. Tampoco hay marcas
+de anclaje, de cola ni de acabado: qué existe hoy en tu ferretería y cuál sirve para tu pared se
+averigua mostrando un pedazo de tu ladrillo y leyendo la etiqueta del producto. Y en lo que toca a la
+salud —dengue, síntomas, qué tomar y qué no— la fuente es el centro de salud de tu zona.
+</ContextoBolivia>
+
+## Cierre del módulo
+
+Siete lecciones y una sola idea debajo de todas. **La madera nunca deja de moverse, así que un
+carpintero no es alguien que la obliga a quedarse quieta: es alguien que sabe hacia dónde se va a
+mover, cuánto, y le deja lugar.** Esa frase abrió el módulo con una puerta que trababa en febrero y
+lo cierra con una puerta diseñada para no trabar nunca.
+
+Todo lo demás fue el mismo razonamiento aplicado a distintas capas. La 01 dio el mecanismo del
+material y su movimiento. La 02 lo convirtió en criterio de compra, porque no hay maderas buenas sino
+maderas adecuadas a un puesto de trabajo. La 03 puso la herramienta y el filo, y sobre todo el
+problema que nadie menciona, que es sujetar la pieza. La 04 mostró que la mitad del oficio es medir,
+trazar y cortar recto, y que el error no se elimina midiendo mejor sino copiando en vez de medir. La
+05 ordenó las uniones por los tres únicos mecanismos que existen —geometría, fricción y adhesión— y
+dejó la restricción que gobierna todo: nunca fijar rígidamente dos maderas de veta cruzada. La 06
+explicó por qué un detalle constructivo protege más que cualquier producto. Y esta lección las puso a
+las seis a trabajar juntas en cuatro objetos.
+
+Queda una última idea, y no es técnica. **Un oficio no empieza con un taller: empieza con objetos que
+la gente ve.** El banco que armaste con palets, el estante de la abuela que no se cae, el mosquitero
+que sigue puesto en febrero y la mesa donde come tu familia son, todos juntos, más credencial que
+cualquier papel. Y son transferibles: lo que aprendiste acá sobre triángulos rígidos, sobre palancas
+que arrancan tornillos, sobre secuencias de armado y sobre materiales que se mueven vuelve a aparecer
+casi idéntico en la soldadura del módulo 34, en las tuberías del 34 y en los motores del 36. La
+carpintería es barata de aprender y por eso suele ser la primera; el modo de pensar que deja es el
+que sirve después en todas.

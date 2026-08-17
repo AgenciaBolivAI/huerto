@@ -1,0 +1,95 @@
+{
+  "preguntas": [
+    {
+      "id": "es-tallo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se demuestra que un rizoma es un tallo y no una raíz?",
+      "opciones": [
+        "Tiene nudos a intervalos regulares, mientras una raíz se afina y ramifica sin ese patrón.",
+        "Tiene hojas escamosas en cada nudo, papiráceas y sin clorofila; una raíz no tiene hojas de ninguna clase.",
+        "Y sobre todo tiene yemas alojadas en los nudos, que contienen la información para generar una planta entera; una raíz no tiene yemas.",
+        "Se demuestra por su posición: todo lo que crece bajo tierra y es pálido es raíz."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La posición engaña: el rizoma vive enterrado, es pálido y parece una raíz gruesa. La prueba es estructural, y tiene consecuencias prácticas — del rizoma salen raíces hacia abajo y brotes hacia arriba, ambos en los nudos, y cuando intentas eliminarlo como si fuera raíz estás combatiendo el órgano equivocado."
+    },
+    {
+      "id": "familia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué distingue a rizoma, estolón, tubérculo y bulbo?",
+      "opciones": [
+        "El rizoma es un tallo horizontal bajo tierra; el estolón corre sobre la superficie y echa raíces donde toca, así que es mucho más fácil de controlar.",
+        "El tubérculo es un tallo engrosado y compacto con yemas en su superficie — los «ojos» de la papa son exactamente eso, y por eso brota sola en la despensa.",
+        "El bulbo es un tallo cortísimo con hojas carnosas superpuestas: las capas de una cebolla son hojas y el disco del fondo es el tallo.",
+        "Son cuatro tipos de raíz especializados en almacenar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los cuatro son tallos modificados y todos son órganos de reserva: presupuesto guardado en forma de almidón, que la planta puede gastar de golpe para rebrotar, atravesar una seca o arrancar en terreno nuevo con ventaja sobre cualquier semilla."
+    },
+    {
+      "id": "clon",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué implica que la propagación por rizoma produzca clones?",
+      "opciones": [
+        "Que cada planta nueva es genéticamente idéntica a la madre, a diferencia de la semilla, que mezcla información y da hijos distintos.",
+        "Que la uniformidad se puede vender: un cliente que compra cincuenta plantas iguales está comprando previsibilidad, y el rizoma es la única forma honesta de garantizarla.",
+        "Que el lote comparte todas sus vulnerabilidades: si un patógeno afecta a la madre, afecta a las cincuenta.",
+        "Que el clon es siempre más sano y vigoroso que una planta de semilla."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es monocultivo llevado al nivel del genoma, con el problema conocido de cualquier conjunto de nodos idénticos: una sola vulnerabilidad los tumba todos. Y hay una trampa peor — muchos virus se transmiten perfectamente por propagación vegetativa, y la madre puede estar infectada sin síntomas visibles."
+    },
+    {
+      "id": "planta-madre",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para propagar por división da igual qué mata se use, siempre que tenga rizoma suficiente y buen aspecto.",
+      "respuesta": false,
+      "explicacion": "Falso: un clon copia el genoma y también se lleva lo que la madre tenía encima, incluidos virus que con frecuencia no dan síntomas visibles. De ahí la regla dura de vivero — la planta madre se elige, se marca y se vigila. Multiplicar una planta enferma es multiplicar la enfermedad con eficiencia industrial."
+    },
+    {
+      "id": "control",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué fallan los dos métodos intuitivos para eliminar una maleza rizomatosa?",
+      "opciones": [
+        "Cortar la parte aérea deja intactas la reserva y todas las yemas: la planta rebrota usando el almidón guardado, sin necesitar fotosíntesis para arrancar.",
+        "Pasar una rotativa no la mata, la multiplica: cada fragmento que conserve un nudo con yema es una planta nueva con reservas propias.",
+        "Una pasada de labranza puede convertir un foco de cinco plantas en cincuenta repartidas por todo el lote.",
+        "Fallan porque la dosis de herbicida usada suele ser insuficiente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El error de fondo es tratar el problema como si estuviera arriba. Lo que funciona ataca la reserva: agotamiento sistemático cortando cada rebrote sin fallar durante una temporada, extracción completa a mano en focos pequeños, cobertura opaca prolongada, y sobre todo detección temprana — un foco de un metro cuadrado es una mañana de trabajo; el mismo foco a los dos años es una decisión de convivir con él."
+    },
+    {
+      "id": "barrera",
+      "tipo": "opcion_multiple",
+      "enunciado": "Quieres cultivar jengibre o un bambú sin que se apodere del terreno. ¿Qué reglas sigue la contención?",
+      "opciones": [
+        "La barrera va más profunda que lo que el rizoma viaja: si la especie llega a treinta centímetros y la barrera baja veinte, no hay barrera.",
+        "Sobresale unos centímetros del suelo, porque algunas especies pasan por arriba con estolones si encuentran el borde.",
+        "No tiene juntas abiertas: una barrera con un hueco es una barrera con una puerta. Y el contenedor es una barrera cerrada por definición.",
+        "Basta con revisar el perímetro dos veces al año y cortar lo que se escape."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la misma idea de confinar de la mampostería confinada del Módulo 23, aplicada bajo tierra: no se combate lo que se puede encerrar. Y contener desde el primer día cuesta una tarde, mientras erradicar después cuesta temporadas."
+    },
+    {
+      "id": "plan-rizoma",
+      "tipo": "abierta",
+      "enunciado": "En Rizoma del Sur quieres producir jengibre y cúrcuma por división, y a la vez has detectado una gramínea rizomatosa avanzando por el borde de dos lotes. Explica el plan completo para las dos cosas y por qué cada decisión es la correcta.",
+      "respuestaModelo": "Son el mismo mecanismo con signos opuestos, así que conviene tratarlos con el mismo criterio y decisiones inversas.\n\nPara producir jengibre y cúrcuma, lo primero es elegir plantas madre y marcarlas: un sector propio, identificadas con nombre y ubicación fija, vigiladas más que el resto y registradas en la planilla como el activo que son. Eso es indispensable porque un clon copia el genoma y también lo que la madre tenga encima, y muchos virus viajan por propagación vegetativa sin dar síntomas visibles — multiplicar una madre enferma es multiplicar la enfermedad con eficiencia industrial. Al dividir, cada trozo lleva al menos un nudo con yema y algo de reserva, porque la yema es lo que contiene la planta completa y la reserva es lo que le permite arrancar sin fotosíntesis. Limpio la herramienta entre madres distintas, porque estoy moviendo material vivo. Y anoto fecha, madre de origen y cantidad, que es lo que convierte una división en trazabilidad — y la trazabilidad es lo único que me permite vender variedad, porque la variedad se rastrea y no se identifica.\n\nAdemás, las dos especies entran confinadas desde el primer día: contenedor, o cantero con barrera más profunda de lo que la especie viaja, sobresaliendo unos centímetros del suelo y sin juntas abiertas. Es la misma lógica de confinar de la mampostería del Módulo 23: no combato lo que puedo encerrar. Confinar cuesta una tarde; erradicar cuesta temporadas, y en 3.666 m² divididos en doce lotes una especie suelta contamina el trazado entero.\n\nPara la gramínea del borde hago exactamente lo contrario, y empiezo descartando los dos reflejos que fallan. No corto solo lo verde, porque eso deja intactas la reserva y todas las yemas y la planta rebrota con el almidón guardado. Y sobre todo no le paso la rotativa: fragmentar el rizoma no lo mata, lo multiplica, porque cada pedazo con un nudo con yema es una planta nueva e independiente, y una pasada puede convertir cinco plantas en cincuenta repartidas por el lote. Si tengo que labrar, planifico la labranza alrededor del foco y trabajo el foco aparte, a mano.\n\nLo que sí hago es atacar la reserva. Como el foco está identificado y todavía es chico, excavo y extraigo siguiendo el rizoma completo, que es viable justamente por ser pequeño y recién detectado. Donde no pueda extraerlo, corto el rebrote cada vez que aparece, sin fallar, durante toda una temporada: cada rebrote gasta reservas y la fotosíntesis no llega a reponerlas. Ese trabajo pega más fuerte en la seca, cuando la planta repone peor, y falla si me distraigo un mes. Como refuerzo puedo tapar con cobertura opaca durante meses, que es privar de luz para forzar gasto sin reposición.\n\nY monto la prevención, que es lo que decide a largo plazo: recorrer los perímetros al final de las lluvias, cuando el avance del año ya se ve, y usar la serie de fotos desde punto fijo del Módulo 39 — el avance de un rizoma es lento y muy visible comparando dos fotos del mismo punto separadas por semanas. También pongo en cuarentena cualquier material de propagación regalado antes de acercarlo a las madres, porque un trozo de rizoma de un vecino puede traer virus, nematodos u hongos de suelo sin síntomas.",
+      "criterios": [
+        "Elige, marca, vigila y registra plantas madre, justificándolo por la transmisión de virus asintomáticos.",
+        "Divide con al menos un nudo con yema y reserva, y limpia la herramienta entre madres.",
+        "Registra fecha, madre y cantidad como trazabilidad que habilita vender variedad.",
+        "Confina las especies deseadas desde el primer día con las tres reglas de la barrera o en contenedor.",
+        "Descarta cortar solo la parte aérea explicando que quedan reserva y yemas.",
+        "Descarta la rotativa explicando que fragmentar multiplica, y planifica la labranza alrededor del foco.",
+        "Extrae el foco completo a mano por ser pequeño y recién detectado.",
+        "Usa agotamiento sistemático sin fallar, y aprovecha la seca por peor reposición de reservas.",
+        "Monta prevención con recorridos de perímetro y la serie de fotos desde punto fijo.",
+        "Pone en cuarentena el material de propagación de origen externo."
+      ],
+      "explicacion": "Fíjate en que producir y erradicar usan el mismo conocimiento: que cada fragmento con yema es una planta completa. Cuando la especie te interesa, eso es una ventaja de multiplicación; cuando no, es la razón de que nada intuitivo funcione. Y las dos respuestas correctas son físicas y no químicas — confinar por un lado, agotar reservas por el otro."
+    }
+  ]
+}

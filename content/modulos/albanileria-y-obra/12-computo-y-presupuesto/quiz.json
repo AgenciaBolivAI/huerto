@@ -1,0 +1,87 @@
+{
+  "preguntas": [
+    {
+      "id": "cadena",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuál es la cadena completa del cómputo métrico y por qué no se salta ningún eslabón?",
+      "opciones": [
+        "Plano → cantidades de obra → materiales → precio: cada eslabón convierte el anterior en algo más cercano a la compra.",
+        "Las cantidades se miden en la unidad natural de cada partida: m³ el hormigón, m² los muros, metros lineales las tuberías, piezas las puertas.",
+        "Quien va «del plano al precio» de memoria está adivinando con decimales: sin cantidades ni rendimientos no hay presupuesto.",
+        "La cadena es solo para obras grandes: en una obra chica se puede estimar el total directamente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cadena es el método, y la obra chica es justamente donde conviene practicarla completa: mismas partidas, mismos rendimientos, números más pequeños. La cuarta opción describe cómo se generan los sobrecostos, no cómo se evitan."
+    },
+    {
+      "id": "partida",
+      "tipo": "verdadero_falso",
+      "enunciado": "«Construcción del galpón» es una partida válida de un presupuesto.",
+      "respuesta": false,
+      "explicacion": "Falso: una partida es una unidad de trabajo homogénea que se computa y cotiza por separado — excavación en m³, muro de ladrillo en m², cubierta en m². Si una partida es demasiado grande para estimarla con confianza, se parte: es la misma regla de oro de descomponer un proyecto en tareas estimables."
+    },
+    {
+      "id": "rendimiento",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es el rendimiento y cuál es su letra chica?",
+      "opciones": [
+        "El puente entre la cantidad de obra y la lista de compras: cuánto material consume una unidad de cada partida — ~15-17 ladrillos de 6 huecos por m² de muro, ~7 bolsas de cemento por m³ de hormigón 1:2:3.",
+        "Los valores de tabla son órdenes de magnitud para planificar, no constantes universales: el ladrillo local varía de tamaño y la junta de gordura.",
+        "El rendimiento que más vale es el que mides tú en tu primera obra, con tu ladrillo y tu albañil.",
+        "Los rendimientos son constantes físicas exactas: si la tabla dice 16 ladrillos, serán 16."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El cómputo no introduce técnica nueva: introduce contabilidad sobre la técnica que ya tienes — las dosificaciones son las de la lección de dosificación y los volúmenes salen del plano que ya sabes leer. Y la primera obra medida convierte la tabla ajena en dato propio."
+    },
+    {
+      "id": "margen",
+      "tipo": "opcion_multiple",
+      "enunciado": "Entre lo que la cuenta dice y lo que la obra consume hay dos brechas. ¿Cuáles son y cómo se presupuestan?",
+      "opciones": [
+        "El desperdicio, físico y por material: ladrillos rotos (5-10 %), recortes de chapa, mortero que se seca — se suma partida por partida.",
+        "Los imprevistos, lo que no está en el plano porque aún no se sabe: se cubren con un 10-15 % sobre el total.",
+        "El margen no es pesimismo, es estadística: ninguna obra termina exactamente en su cómputo, y la asimetría manda — el sobrante pequeño no cuesta casi nada, el faltante cuesta viaje, día y precio de apuro.",
+        "Con un cómputo bien hecho no hace falta margen: los porcentajes son para los que cuentan mal."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es el buffer de la estimación de software con una ventaja: la varianza física es acotada — el muro no duplica sus metros cuadrados a mitad de obra. Presupuestar sin margen no es optimismo: es decidir de antemano que la sorpresa te agarre sin plata."
+    },
+    {
+      "id": "puesto-en-obra",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para comparar dos proveedores de arena basta comparar el precio por metro cúbico que tienen en pizarra.",
+      "respuesta": false,
+      "explicacion": "Falso: la cifra que importa es el puesto en obra — precio más flete hasta tu terreno. Un árido baratísimo a cuarenta kilómetros no es barato, y en compras grandes el descuento real suele estar en el flete incluido más que en la pizarra. El flete es una partida con nombre propio, no un redondeo."
+    },
+    {
+      "id": "por-etapas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se decide cuándo comprar cada material?",
+      "opciones": [
+        "Por lo que aguanta almacenado: el cemento se compra por etapas y poco antes de usarlo, porque en clima húmedo pierde condición en pocos meses.",
+        "Áridos y ladrillo no caducan: se compran cuando el precio o el flete convengan, si hay dónde acopiarlos.",
+        "Cada fase se arranca con su material asegurado: una fase de hormigonado no se empieza con la mitad de las bolsas.",
+        "Todo junto al inicio, que comprando en volumen siempre sale más barato."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La compra sigue a la obra, no al entusiasmo: el descuento por volumen de la cuarta opción se evapora en cemento endurecido y acero manchado a la intemperie. Y lo que define seguridad o precisión —protecciones, válvulas, la cinta— se compra bueno una vez, sin esperar ofertas."
+    },
+    {
+      "id": "computo-deposito",
+      "tipo": "abierta",
+      "enunciado": "Vas a computar y presupuestar el depósito de herramientas de Rizoma del Sur antes de meterte con el galpón. Describe el proceso completo: partidas, cadena, márgenes, política de compra y qué harás con la planilla durante y después de la obra.",
+      "respuestaModelo": "Empiezo por descomponer la obra en partidas homogéneas, cada una con su unidad natural: limpieza y nivelación de la huella en m², excavación de zanjas en m³, hormigón de cimientos en m³, sobrecimiento en metros lineales, muro de ladrillo de 6 huecos en m², revoque en m², cubierta de calamina en m² —chapa, cumbrera y tornillería juntas—, puerta y ventana en piezas, y una fila de menudencias: alambre, clavos, discos de corte, que nunca están en el plano y siempre están en la caja. «Depósito» no es una partida: si no puedo estimarla con confianza, la parto.\n\nDespués recorro la cadena sin saltarme eslabones. Del plano saco las cantidades: largo por ancho por espesor para los volúmenes de hormigón, largo por alto para los metros cuadrados de muro, descontando vanos. De las cantidades paso a materiales con los rendimientos: del orden de 15-17 ladrillos por m² de muro, unas 7 bolsas de cemento por m³ de hormigón 1:2:3 con sus áridos según la dosificación que ya conozco — sabiendo que son órdenes de magnitud, no constantes: mi rendimiento real lo voy a medir en esta misma obra. Y de materiales a precio, cotizando en dos o tres casas y comparando siempre puesto en obra: precio más flete hasta el terreno, con el flete como partida visible.\n\nSobre la cuenta aplico las dos brechas: desperdicio por material —5-10 % en ladrillo por rotura, recortes en chapa— sumado partida por partida, y un 10-15 % de imprevistos sobre el total, que no es pesimismo sino estadística: ninguna obra termina en su cómputo exacto, y el sobrante pequeño cuesta mucho menos que el viaje extra por el faltante. Redondeo siempre hacia arriba.\n\nLa compra sigue a la obra: cemento fresco por etapas y con la fase asegurada antes de arrancarla, áridos y ladrillo cuando convenga el flete si tengo dónde acopiarlos, el acero bajo techo y sobre tarimas, y la cubierta completa de una vez porque su flete es uno solo.\n\nLa planilla la armo en una hoja de cálculo con la estructura clásica —número, partida, unidad, cantidad, precio unitario, subtotal, imprevistos, total— y le añado la columna «Real», que lleno durante la obra guardando cada factura contra su partida. Al terminar tengo dos números por fila y un cociente: si gasté 1,15 veces lo estimado, ese es mi factor de calibración personal para el cómputo del galpón, que es la verdadera razón de hacer primero la obra chica: ensayar el método completo y ganar mis rendimientos reales donde equivocarse cuesta poco. Esa planilla con estimado, real y fechas es además la primera base de datos del vivero: la que el módulo de monetización va a consultar para el costo por plantín y la que el Módulo 38 heredará en digital.",
+      "criterios": [
+        "Descompone en partidas homogéneas con unidad natural (m³, m², ml, pieza) e incluye menudencias como fila propia.",
+        "Recorre la cadena completa plano → cantidades → materiales → precio sin saltar eslabones.",
+        "Usa rendimientos como órdenes de magnitud y planifica medir el rendimiento propio en esta obra.",
+        "Aplica desperdicio por material (5-10 %) e imprevistos sobre el total (10-15 %) y redondea hacia arriba.",
+        "Cotiza en varias casas y compara puesto en obra, con el flete como partida visible.",
+        "Compra por etapas según lo que cada material aguanta, con cada fase asegurada antes de arrancar.",
+        "Arma la planilla clásica con columna «Real», guarda facturas y calcula el factor real/estimado como calibración para el galpón.",
+        "Reconoce la planilla como primera base de datos del vivero, puente a monetización y al Módulo 38."
+      ],
+      "explicacion": "La obra chica es el ensayo del método completo a escala donde equivocarse cuesta poco — la misma pedagogía del techo del depósito. Y el entregable más valioso no es el depósito: son tus rendimientos reales y tu factor de calibración, que convierten el cómputo del galpón en una estimación medida en vez de una adivinanza con decimales."
+    }
+  ]
+}

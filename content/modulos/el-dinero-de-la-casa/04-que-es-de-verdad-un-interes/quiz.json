@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "tres-cantidades",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un vecino te dice: «te consigo plata al 3%». ¿Qué es correcto sobre esa frase?",
+      "opciones": [
+        "No es una oferta: falta el período de la tasa, y sin él el número no se puede usar.",
+        "Faltan además el capital y el plazo; sin las tres cantidades no hay nada que calcular.",
+        "Un 3% mensual y un 3% anual se escriben igual y son cosas completamente distintas.",
+        "Como el porcentaje es bajo, se puede suponer sin riesgo que es anual."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Suponer el período es exactamente el error que la frase incompleta busca provocar. Un 3% mensual, capitalizado doce veces, pasa del 42% al año; un 3% anual es un 3%. Como el número chico se lee siempre en el sentido más favorable, quien no dice el período está aprovechando esa suposición, y no hace falta mala intención para que funcione. La regla es que no se contesta a una frase: se contesta a tres números —capital, tasa con su período y plazo—."
+    },
+    {
+      "id": "nominal-y-efectiva",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un 2% mensual que capitaliza equivale a un 24% efectivo anual, porque 2 × 12 = 24.",
+      "respuesta": false,
+      "explicacion": "Falso. El 24% es la tasa nominal anual, que es una convención de escritura: se obtiene multiplicando, e ignora que cada mes el interés se suma al capital y el mes siguiente cobra sobre el total nuevo. La tasa efectiva anual sale de elevar 1,02 a la doce y restar 1, y da 26,82%. Y al revés falla igual: un 24% efectivo anual no equivale a un 2% mensual, sino a poco más de 1,80% mensual. Cuando hay capitalización, convertir es una potencia, no una multiplicación."
+    },
+    {
+      "id": "simple-y-compuesto",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué distingue al interés compuesto del simple?",
+      "opciones": [
+        "El simple cobra siempre sobre el capital original; el compuesto cobra sobre el saldo, que ya incluye el interés anterior.",
+        "El compuesto es un lazo que se realimenta: la salida de un período es la entrada del siguiente.",
+        "La brecha entre los dos no crece en línea recta, se abre, y por eso la intuición se queda corta.",
+        "El compuesto solo perjudica: cuando ahorras funciona la aritmética del interés simple."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es el mismo lazo en las dos direcciones, y nada en la aritmética distingue de qué lado del signo estás: cuando debes trabaja contra ti, cuando ahorras trabaja para ti. En código la diferencia es una línea: `total = total + capital * i` suma una constante en cada vuelta, mientras que `saldo = saldo * (1 + i)` tiene la variable a los dos lados. Con 1.000 al 2% mensual inventado, a los cinco años el simple lleva 1.200 de interés y el compuesto 2.281."
+    },
+    {
+      "id": "la-tabla",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la tabla de amortización de una cuota fija, ¿qué es cierto?",
+      "opciones": [
+        "Cada cuota paga primero el interés del mes y con el resto baja el capital.",
+        "El interés se calcula sobre el saldo que todavía debes, no sobre lo que pediste.",
+        "Como el interés baja mes a mes y la cuota es fija, la parte que devuelve capital sube.",
+        "La cuota fija se reparte siempre mitad interés y mitad capital hasta la última fila."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El reparto cambia en cada fila, y ese es todo el asunto. Con 1.000 al 2% mensual y 6 cuotas, la primera cuota lleva 20,00 de interés y 158,53 de capital, y la última 3,50 y 175,01. Estirado a 60 cuotas, la primera cuota es 70% interés. La cuota es constante por fuera y por dentro se va reacomodando sola, y por eso la única forma de saber qué estás pagando es correr la tabla fila por fila."
+    },
+    {
+      "id": "mitad-del-plazo",
+      "tipo": "verdadero_falso",
+      "enunciado": "En un préstamo de 1.000 al 2% mensual inventado y 60 cuotas, después de pagar 30 cuotas todavía se deben más de 600 de capital.",
+      "respuesta": true,
+      "explicacion": "Verdadero: se deben 644,22. Con la cuota de 28,77, en 30 meses se pagaron 863,10, de los cuales solo 355,78 bajaron la deuda y los otros 507,32 fueron interés. A mitad del plazo no se ha devuelto ni el 36% del capital. La sensación de que la deuda no se mueve durante años no es una impresión: es la tabla, y es la razón por la que aplicar plata extra al capital —cuanto antes, mejor— borra todo el interés futuro que ese capital iba a generar."
+    },
+    {
+      "id": "cuota-contra-total",
+      "tipo": "opcion_multiple",
+      "enunciado": "Dos ofertas por el mismo capital: A al 2,5% mensual en 12 cuotas de 97,49 sin cargos, total 1.169,88; B al 1,8% mensual en 24 cuotas de 51,68 más 3,00 de seguro por cuota y 25,00 de comisión, total 1.337,32. ¿Qué conclusiones son correctas?",
+      "opciones": [
+        "B tiene la tasa más baja y la cuota casi a la mitad, y aun así cuesta 167,44 más.",
+        "Lo único comparable es el total a devolver con comisiones, seguros y gastos incluidos.",
+        "Alargar el plazo siempre baja la cuota y sube el total: se alquila la misma plata más tiempo.",
+        "Como B tiene la tasa más baja, es la opción más barata de las dos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La tasa más baja no gana si el plazo es el doble y hay cargos colgados: la tasa es solo uno de los ingredientes del total. Ninguno de los dos vendedores mintió —uno dijo la tasa y el otro dijo la cuota, y las dos cosas son ciertas—, pero ninguna de las dos es el precio. Por eso, cuando alguien pregunta «¿cuánto quieres pagar por mes?» en vez de «¿cuánto necesitas?», la conversación cambió de tema: la cuota siempre se puede bajar estirando el plazo, y el precio de estirarlo va entero al total."
+    },
+    {
+      "id": "sin-interes-y-tasa-plana",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a comprar algo para la casa. En la etiqueta dice 1.440 y te ofrecen «doce cuotas sin interés» de 120. ¿Cómo averiguas si el «sin interés» es cierto?",
+      "opciones": [
+        "Preguntas cuánto cuesta pagando todo hoy en efectivo, y lo preguntas antes de decir que quieres cuotas.",
+        "Sumas todas las cuotas, incluidas la inicial y cualquier cargo o seguro obligatorio, y comparas esa suma con el precio de contado.",
+        "Si el contado son 1.200, hay 240 de interés escondido en el precio de lista, y es todavía peor porque no debes 1.200 los doce meses.",
+        "Si la tienda no cobra ningún recargo por cuota, ya está probado que el financiamiento es gratis."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Que no aparezca un recargo separado no prueba nada: el interés puede estar metido en el precio de lista, que es donde no se ve. La prueba limpia es la resta entre la suma de las cuotas y el precio de contado. Si son iguales, el financiamiento sí es gratis para ti y hay que aprovecharlo; si el de cuotas es mayor, esa diferencia es lo que pagas por el tiempo. En el ejemplo inventado, la tasa implícita ronda el 2,92% mensual, que capitalizada pasa del 41% efectivo anual."
+    },
+    {
+      "id": "tu-propia-cuenta",
+      "tipo": "abierta",
+      "enunciado": "Elige algo concreto de tu casa o de tu taller que estés pagando en cuotas o que estés pensando comprar o financiar: un celular, una moto, una máquina de coser, un juego de muebles, materiales para una obra. Explica paso a paso qué le vas a preguntar a quien te lo ofrece, cómo vas a armar la tabla, cómo vas a comparar dos ofertas, y qué harías si te dan la cuota pero se niegan a darte el total.",
+      "respuestaModelo": "Voy a hacerlo con la máquina de coser que quiero para trabajar desde la casa. Antes de decir una palabra sobre cuotas, pregunto cuánto cuesta pagando todo hoy en efectivo, porque después el precio de contado deja de estar disponible. Con ese número apuntado, recién ahí pregunto por el financiamiento.\n\nLo que necesito de cada oferente son tres cantidades, y sin las tres no tengo una oferta sino una frase: el capital, o sea cuánta plata me están prestando de verdad; la tasa con su período, porque un 3% mensual y un 3% anual se escriben igual y no se parecen en nada; y el plazo, cuántas cuotas son. Si me dicen un porcentaje suelto, la pregunta es «¿por período de cuánto?», y si no me lo dicen cuando lo pido, ya me están diciendo otra cosa.\n\nA eso le agrego dos preguntas más. «¿El interés se calcula sobre el saldo o sobre el monto original?», porque con la misma tasa anunciada los dos esquemas cuestan muy distinto: en el ejemplo de la lección, 1.000 al 2% mensual por seis meses da 71,16 de interés sobre saldo y 120 si me lo cobran sobre el capital original, casi un 70% más caro con la misma frase. Y «¿cuánto es el total a devolver con absolutamente todo incluido?», o sea con comisión de desembolso, gastos administrativos, seguros por cuota y cualquier otro cargo. También pregunto qué pasa si me atraso un mes y qué pasa si quiero pagar antes.\n\nDespués armo la tabla en el cuaderno, con cinco columnas: saldo al empezar, cuota, interés del mes, capital devuelto y saldo al terminar. La primera fila arranca con el capital completo; el interés es la tasa por ese saldo; el capital devuelto es la cuota menos el interés; y el saldo final es el saldo menos ese capital. Ese saldo final es el saldo inicial de la fila siguiente, y así hasta que llegue a cero. Si me dan la cuota ya calculada, la verifico corriendo la tabla: si no cierra en cero, hay algo dentro de esa cuota que no me contaron. Y si tengo que encontrar la cuota yo, la busco probando: pruebo un número, corro la tabla, y si sobra saldo la subo y si se pasa de cero la bajo, partiendo la diferencia cada vez.\n\nLa tabla también me dice algo que la conversación no dice: si el plazo es largo, las primeras cuotas son casi todo interés. Con 60 cuotas al 2% mensual, la primera cuota es 70% interés, y a mitad del plazo todavía debo casi dos tercios del capital. Saber eso me cambia la decisión, porque me dice que si en algún momento me entra plata extra y la aplico al capital, borro todo el interés futuro que esa parte iba a generar.\n\nPara comparar dos ofertas hago una hoja con una columna por oferta y las mismas filas siempre: capital que recibo, tasa y su período, cantidad de cuotas, monto de la cuota, seguros por cuota, comisiones al inicio, otros cargos y, abajo y en grande, el total a devolver. Comparo por esa última fila y por ninguna otra. No comparo por la cuota, porque la cuota siempre se puede bajar estirando el plazo y el precio de estirarlo se va entero al total: en el ejemplo de la lección, pasar de 6 a 60 cuotas baja la cuota a la sexta parte y multiplica el interés por diez. Tampoco comparo por la tasa sola, porque la oferta de tasa más baja puede salir más cara si tiene el doble de plazo y cargos colgados.\n\nSi es una compra en cuotas, la comparación es todavía más simple: sumo todas las cuotas, incluidas la inicial y cualquier cargo o seguro obligatorio, y comparo esa suma con el precio de contado que anoté al principio. Si son iguales, el «sin interés» es cierto y lo aprovecho. Si la suma es mayor, la diferencia es lo que estoy pagando por el tiempo, y ahí decido si vale la pena.\n\nY si me dan la cuota pero se niegan a darme el total o el plan de pagos completo por escrito, para mí eso cierra la conversación. Puedo calcularlo yo multiplicando la cuota por el número de cuotas y sumando los cargos, pero una casa comercial o una entidad que no quiere poner el total en un papel no me está diciendo cuánto cuesta lo que me vende. Prefiero perder la promoción antes que firmar un número que no conozco. El plan de pagos que sí me den lo guardo con los papeles de la casa, anoto cada pago con fecha y monto, y cada tanto comparo el saldo real con el de mi tabla; si no coinciden, tengo una pregunta concreta y una hoja con la que hacerla.",
+      "criterios": [
+        "Elige un caso propio y concreto de su casa, su taller o su familia, no un ejemplo abstracto.",
+        "Pregunta el precio de contado antes de mencionar que va a pagar en cuotas.",
+        "Exige las tres cantidades —capital, tasa con su período y plazo— y rechaza una tasa sin período.",
+        "Pregunta si el interés se calcula sobre el saldo o sobre el monto original, y explica por qué importa.",
+        "Pide el total a devolver con comisiones, seguros y gastos incluidos, y pregunta por la mora y por el pago anticipado.",
+        "Describe correctamente la construcción de la tabla fila por fila, con el saldo final de una fila como saldo inicial de la siguiente.",
+        "Sabe verificar o encontrar la cuota, ya sea probando y ajustando o con la fórmula.",
+        "Menciona que en plazos largos las primeras cuotas son casi todo interés y qué consecuencia práctica tiene.",
+        "Compara las ofertas por el total a devolver y no por la cuota ni por la tasa sola.",
+        "Explica por qué alargar el plazo baja la cuota y sube el total.",
+        "Aplica la resta contado contra suma de cuotas para evaluar un «sin interés», incluyendo la cuota inicial y los cargos.",
+        "Tiene una respuesta clara para cuando le niegan el total o el plan de pagos por escrito."
+      ],
+      "explicacion": "Lo que se evalúa no es la aritmética —una tabla la corre cualquiera con una calculadora—, sino el procedimiento completo: preguntar antes de comprometerse, exigir por escrito el único número comparable y no dejar que la conversación se mueva desde «cuánto cuesta» hacia «cuánto quieres pagar por mes». Una respuesta que arma bien la tabla pero elige por la cuota más baja no aprobó. Todos los números que se usen deben ser los que dé cada entidad o ejemplos declarados como inventados: aquí no se supone ninguna tasa."
+    }
+  ]
+}

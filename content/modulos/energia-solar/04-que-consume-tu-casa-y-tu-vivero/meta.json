@@ -1,0 +1,46 @@
+{
+  "titulo": "Qué consume tu casa y tu vivero",
+  "subtitulo": "Un sistema mal dimensionado casi nunca falla por el lado del sol: falla porque nadie midió el consumo. Y trae el dato que hunde inversores y no aparece en ninguna etiqueta.",
+  "duracionMin": 26,
+  "portada": "portada.webp",
+  "portadaAlt": "Estante de madera rústica dentro de un taller rural, con luz cálida entrando por una ventana lateral. Sobre el estante, un medidor de consumo enchufado a un tomacorriente con el cable de un aparato conectado a él; al lado, una pinza amperimétrica con las mordazas abiertas, un cuaderno de espiral abierto en una tabla dibujada a mano con columnas a lápiz, y un lápiz corto. Al fondo, desenfocados, un rollo de cable y una caja de herramientas metálica",
+  "objetivos": [
+    "Construir una planilla de consumo con carga, potencia real, horas, días y vatios-hora al día.",
+    "Añadir la columna de día o noche y entender por qué cambia el tamaño del banco de baterías.",
+    "Medir con medidor de enchufe y pinza amperimétrica en lugar de sumar etiquetas.",
+    "Medir en la estación más exigente, porque el consumo de un compresor cambia con el calor.",
+    "Explicar el pico de arranque de un motor y que puede multiplicar por varias veces su potencia nominal.",
+    "Separar las dos decisiones: la energía diaria dimensiona paneles y batería, el pico dimensiona el inversor.",
+    "Evitar el pico escalonando arranques, usando arranque suave o sacando la carga del inversor.",
+    "Aprovechar que el consumo diurno casi no pasa por la batería y mover cargas al mediodía.",
+    "Detectar y medir el consumo en vacío, que dura veinticuatro horas al día.",
+    "Ordenar las cargas por costo real y sacar del sistema todo lo que calienta por resistencia."
+  ],
+  "prerrequisitos": [
+    "energia-solar/01-electricidad-desde-cero",
+    "albanileria-y-obra/09-instalacion-electrica"
+  ],
+  "videos": [],
+  "referencias": [
+    {
+      "titulo": "¿Cuál es la diferencia entre potencia (kW) y energía (kWh)?",
+      "fuente": "Factor Energía",
+      "url": "https://www.factorenergia.com/es/blog/factura-luz/cual-es-la-diferencia-entre-potencia-kw-y-energia-kwh/",
+      "nota": "Refuerza desde el lado del consumo doméstico la distinción entre la potencia que se contrata y la energía que se factura, que es exactamente la distinción entre lo que dimensiona el inversor y lo que dimensiona el arreglo."
+    },
+    {
+      "titulo": "Kilovatio-hora (kWh), kilovatio (kW) y kWp: diferencias",
+      "fuente": "SunFields Europe",
+      "url": "https://www.sfe-solar.com/electricidad/kwh-kw/",
+      "nota": "Útil aquí para no mezclar las unidades al llenar la planilla: la columna de potencia va en vatios y la de resultado en vatios-hora al día."
+    }
+  ],
+  "terminos": [
+    "auditoria-de-consumo",
+    "medidor-de-enchufe",
+    "pinza-amperimetrica",
+    "pico-de-arranque",
+    "consumo-en-vacio"
+  ],
+  "practica": true
+}

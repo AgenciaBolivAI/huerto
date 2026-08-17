@@ -1,0 +1,461 @@
+La lección anterior terminó en una decisión argumentada: en un sitio comunitario, con vecinos, niños
+y visitas que entran a ver el vivero, las abejas sin aguijón entran primero y la melífera entra
+después y con condiciones. Una decisión, sin embargo, no es un sistema funcionando. Entre "elegimos
+la base de datos" y "la base está en producción, con respaldos y alguien de guardia" hay un abismo
+operativo entero, y ese abismo es esta lección.
+
+Aquí está lo que hay que construir, dónde ponerlo, cada cuánto tocarlo, qué mirar cuando se toca y
+—la parte que casi nadie escribe— **cuándo lo correcto es no tocarlo**. La segunda mitad es la
+seguridad de todo lo que rodea a la caja, que en un proyecto abierto a la comunidad no es un anexo:
+es la condición para que el proyecto siga existiendo después del primer incidente.
+
+## La caja no es una caja: es una interfaz
+
+Una colmena manejable no se define por ser de madera ni por tener tapa. Se define por
+un <Termino slug="espacio-de-abeja">espacio de abeja</Termino> respetado en todo su interior: el
+hueco de entre seis y nueve milímetros que las abejas dejan libre para circular. Si un hueco es más
+chico, lo sellan con propóleo; si es más grande, lo llenan con panal. **Fuera de esa ventana, todo
+queda pegado**, y una caja donde todo está pegado es una caja que solo se puede abrir rompiendo.
+
+Ese es el descubrimiento que hace posible la apicultura moderna, y de él sale
+la <Termino slug="colmena-langstroth">colmena Langstroth</Termino>: cajones sin fondo ni tapa
+propios, apilables, dentro de los cuales cuelgan marcos de madera separados exactamente por ese
+hueco. Sus piezas son un piso con la <Termino slug="piquera">piquera</Termino> —la entrada, con una
+tablilla que la reduce—, la <Termino slug="camara-de-cria">cámara de cría</Termino> abajo, una o
+varias <Termino slug="alza-melaria">alzas melarias</Termino> encima, una entretapa y un techo. Dentro
+de cada cajón, entre ocho y diez <Termino slug="cuadro-movil">cuadros móviles</Termino>, cada uno con
+alambres tensados y una lámina de cera estampada que guía a las obreras a construir panal recto,
+dentro del marco y no atravesado entre marcos.
+
+<Analogia>
+El cuadro móvil es **una interfaz estable**. Sin él, la colonia es un blob: para ver qué hay dentro
+tienes que destruirlo, y cada consulta es una operación destructiva. Con él, cada panal es un objeto
+que se extrae, se inspecciona, se devuelve en su sitio y hasta se mueve a otra colmena.
+
+La medida estándar no es burocracia: **es el contrato de la interfaz**. Un cuadro que entra en tu
+caja y en la del apicultor del camino permite pasarle un cuadro de cría a una colonia débil, comprar
+un núcleo o prestar material. Si mandas a hacer cajas "parecidas" con las medidas que le salieron al
+carpintero, tienes un formato propietario: **nada de lo que se produce en la zona es compatible con
+lo tuyo**, y la primera vez que necesites ayuda vas a descubrirlo. Antes de encargar la primera caja,
+mide la que usan los apicultores de la zona y copia esa.
+</Analogia>
+
+## La caja racional de meliponas es otra arquitectura, no una Langstroth chica
+
+El nido de una abeja sin aguijón no está organizado en panales verticales de doble cara. Tiene los
+potes de cría agrupados en el centro, envueltos en un involucro de láminas finas, y alrededor los
+potes de alimento —miel y polen— como vasijas separadas. Todo está construido con cerumen, mezcla de
+cera y resina, y la entrada es un tubo que las guardianas controlan.
+
+La <Termino slug="caja-racional">caja racional</Termino> es el envase que respeta esa organización:
+módulos apilables donde el nido de cría ocupa el módulo o los módulos centrales, con un módulo
+inferior que recoge basura y humedad y un sobrenido arriba para los potes de alimento, más una
+entrada tubular hacia afuera. Las paredes son gruesas —del orden de dos centímetros y medio o tres—
+porque una colonia de meliponas **no termorregula como una melífera**: no puede levantar la
+temperatura del nido a voluntad ni ventilar un cajón recalentado con la misma eficacia, así que la
+madera hace el trabajo que la colonia no puede hacer.
+
+**Las medidas concretas dependen de la especie**, y ahí no hay tabla universal que valga: el volumen
+que le queda chico a una le queda enorme a otra, y una caja sobredimensionada se enfría, se humedece
+y se llena de enemigos. Esa medida se consigue de quien críe esa especie en la zona, no de un plano
+de internet.
+
+<Advertencia titulo="Abrir una caja de meliponas cuesta mucho más de lo que parece">
+En una Langstroth, abrir cuesta cera rota y humo. En una caja de meliponas, abrir rompe el involucro
+y las conexiones de cerumen que la colonia tardó semanas en construir, y **el cerumen no se repone
+rápido**: depende de resina que hay que salir a buscar.
+
+Peor: la abertura es la puerta de entrada de los enemigos. Los <Termino slug="forido">fóridos</Termino>
+—moscas diminutas que ponen sus huevos sobre el polen expuesto y cuyas larvas arruinan las reservas—
+detectan un nido abierto en minutos. La regla operativa es brutalmente simple: **se abre poco, se
+abre rápido, no se deja un pote roto sin limpiar y no se abre nunca en el pico de calor del día**.
+</Advertencia>
+
+## Poblar la caja: tres rutas y sus costos reales
+
+Una caja vacía no atrae nada por sí sola. Hay tres formas de que dentro haya una colonia y son muy
+distintas en riesgo.
+
+La primera es el <Termino slug="nucleo-de-abejas">núcleo</Termino>: una colonia pequeña ya armada,
+con reina en postura, tres a cinco cuadros con cría de todas las edades y reservas, que se compra a
+un apicultor y se traspasa a tu caja. Es **el arranque con estado ya poblado**: la colonia tiene
+población de todas las edades, la reina ya demostró que pone y el sistema no depende de que ocurra un
+evento afortunado. Es la ruta recomendada para empezar, y su calidad depende enteramente de a quién
+se lo compres.
+
+La segunda es la <Termino slug="division-de-colonia">división</Termino>: partir en dos una colonia
+fuerte que ya tienes, dejando cría, reservas y abejas jóvenes en cada mitad, y dando reina —comprada,
+o dejando que la mitad huérfana críe la suya a partir de larvas jóvenes— a la parte que quedó sin
+ella. Es la forma de multiplicar sin gastar, pero **exige saber leer la colonia**, que es justo lo
+que todavía no sabes hacer el primer año. En meliponas, la división es todavía más delicada porque
+hay que repartir potes de cría y garantizar que la parte huérfana tenga celdas reales o una reina
+virgen disponible, y una división mal hecha mata las dos mitades.
+
+La tercera es el <Termino slug="enjambre">enjambre</Termino> capturado: el grupo de abejas con reina
+que sale de una colonia que se reprodujo y se posa en una rama mientras las exploradoras buscan
+cavidad. Se recoge, o se atrae con una <Termino slug="caja-trampa">caja trampa</Termino> —una caja
+vacía con un cuadro viejo de cera, colocada en alto y a la sombra en la época de enjambrazón—. Es
+gratis y **su genética y su sanidad son una caja negra**: no sabes de qué colonia salió, cuán
+defensiva es ni qué trae dentro.
+
+<Analogia>
+Las tres rutas son tres formas de poblar un entorno nuevo. El núcleo es **restaurar un respaldo
+verificado** de alguien que sabe lo que hace. La división es **clonar tu propio entorno**, que solo
+funciona si el original está sano y tú sabes qué estás copiando. El enjambre capturado es **levantar
+un contenedor que encontraste en internet sin mirar de dónde viene**: arranca, es gratis y quizá
+funcione años, pero aceptaste sin auditar todo lo que trae dentro, incluida la defensividad y las
+esporas.
+</Analogia>
+
+Con las abejas sin aguijón hay una cuarta ruta que no es ruta: sacar un nido del monte partiendo el
+tronco. La lección anterior ya lo cerró y aquí solo se repite la consecuencia práctica: **una colonia
+extraída así muere la mayoría de las veces y el hueco de árbol que se destruyó no vuelve**. La forma
+correcta de conseguir la primera colonia es la división de una colonia ya manejada, hecha por quien
+sabe hacerla.
+
+## Dónde va: la ubicación decide la mitad del manejo
+
+Un lugar mal elegido no se corrige después. Estos son los criterios y su porqué.
+
+**Sol de la mañana, sombra de la tarde.** El sol temprano activa la salida de pecoreadoras; el sol de
+las dos de la tarde en el llano recalienta la caja y obliga a la colonia a gastar agua y trabajo en
+enfriarla. Para meliponas la exigencia sube: **sombra permanente y protección de la lluvia**, techo o
+copa, porque sus paredes finas y su termorregulación limitada convierten una hora de sol directo en
+una pérdida de cría.
+
+**Levantada del suelo y con drenaje.** Estamos en llanura aluvial con arcillas expansivas: el agua se
+queda encima. La caja va sobre un soporte de cuarenta a cincuenta centímetros, con las patas
+apoyadas en recipientes con agua o aceite, que es la única barrera que las hormigas no cruzan.
+Y **con una leve inclinación hacia adelante**, para que el agua que entre por la piquera salga sola.
+
+**Piquera protegida del sur.** El <Termino slug="surazo">surazo</Termino> entra por el sur con viento
+fuerte y noches de unos diez grados. Una piquera orientada al sur recibe ese viento directamente
+dentro del nido y obliga a la colonia a gastar reservas en calentarse. La piquera mira al norte o al
+noreste, con algo sólido al sur —un cerco vivo, una pared, un montón de tierra— haciendo de cortina.
+
+**Agua a menos de un par de cientos de metros.** Si no hay agua en el sitio, la buscan donde la haya:
+el bebedero de un animal, el tanque del vecino, la ropa mojada del tendedero. Un bebedero propio con
+piedras o arena húmeda resuelve eso, pero en zona de dengue endémico **no puede ser un recipiente con
+agua quieta que nadie vacía**: se vacía y rellena dos veces por semana, o mejor se usa arena
+mantenida húmeda, que da agua capilar sin lámina libre.
+
+**Acceso para el que trabaja.** Espacio para pararse detrás de la colmena, no delante; camino para
+llegar con el ahumador encendido sin cruzar la línea de vuelo; y suelo despejado, porque el momento
+en que hay que salir rápido no es el momento de descubrir que hay alambre en el pasto.
+
+<Dato titulo="La barrera de vuelo, la pieza más barata de la seguridad">
+Una <Termino slug="barrera-de-vuelo">barrera de vuelo</Termino> es una pared, un cerco vivo denso o
+una malla de dos metros o más, puesta a pocos metros frente a la piquera.
+
+El mecanismo es puramente geométrico: la abeja que sale se ve obligada a **subir por encima de la
+altura de una cabeza** antes de tomar rumbo, y sigue viajando alto. Con eso, el camino, la vereda y
+el patio dejan de estar en la trayectoria de miles de vuelos diarios. Una barrera bien puesta hace
+más por la convivencia con el vecino que cualquier cartel, y cuesta lo que cuesta plantar un cerco.
+</Dato>
+
+## Calendario mínimo: el año cruceño manda
+
+Revisar por costumbre es tan malo como no revisar. Cada apertura tiene un costo real para la colonia
+—se enfría la cría, se rompe propóleo, se interrumpe el trabajo, se dispara la alarma— y para el que
+la abre.
+
+<Formula explicacion="La perturbación que sufre una colonia no depende solo de cuántas veces la abres, sino de cuánto dura cada apertura y de qué tan adentro llegas. Bajar cualquiera de los tres factores baja el costo, y la manera más barata de bajarlo es entrar sabiendo qué vas a buscar.">
+perturbación = frecuencia de apertura × duración × profundidad de la intervención
+</Formula>
+
+<Tabla>
+
+| Época | Qué está pasando | Revisión interna | Qué se busca |
+| --- | --- | --- | --- |
+| Lluvias, octubre a abril | Floración y crecimiento; la colonia se expande | Cada 10 a 15 días, corta | Espacio, celdas reales, humedad, patrón de cría |
+| Transición, abril y mayo | Se acaba la floración; empieza a bajar la entrada | Una vez, con calma | Reservas para la seca, población, sanidad |
+| Seca, mayo a septiembre | Escasez; la colonia consume lo guardado | Mensual y muy breve | Peso, reservas, pillaje, hormigas |
+| Surazo, en cualquier momento | Frío, viento y encierro | Ninguna | Solo observación externa desde lejos |
+| Floración de arranque, septiembre | Vuelve a entrar néctar; crece rápido | Cada 10 días | Espacio y enjambrazón |
+
+</Tabla>
+
+Dentro del día también hay ventana. Se abre **con sol, entre media mañana y media tarde**, cuando la
+mayor parte de las pecoreadoras está afuera y quedan dentro menos abejas dispuestas a defender. No se
+abre con lluvia, ni con cielo cerrado y viento, ni al atardecer, ni con menos de unos dieciocho
+grados, ni con un surazo entrando: **en todos esos casos está toda la población en casa y de mal
+humor**, y la cría se enfría.
+
+## Qué se mira, en orden, y por qué
+
+Lo primero es gratis y no requiere abrir nada. **La piquera es el panel de métricas de la colonia**:
+cuánto tráfico hay comparado con las colmenas vecinas y con la semana pasada; si entran abejas con
+bolitas de polen en las patas, señal casi segura de que hay cría y por lo tanto reina; si hay abejas
+muertas acumuladas al frente; si hay abejas caminando sin poder volar o con alas deformes; si hay
+peleas en la entrada, que es la firma del <Termino slug="pillaje">pillaje</Termino>. Y el peso: se
+levanta apenas la caja por detrás y se compara con la última vez.
+
+<Analogia>
+Mirar la piquera es **leer las métricas expuestas del servicio**; abrir la colmena es **entrar a la
+base de datos en producción con un candado que bloquea la tabla**. Lo primero es barato, continuo y
+te dice el ochenta por ciento; lo segundo es caro, hay que hacerlo con una consulta escrita de
+antemano y hay que salir rápido.
+
+El error del principiante es el mismo que el del programador ansioso: **abrir a ver qué pasa**. Si no
+sabes qué vas a buscar, no encuentras nada y pagas el costo completo igual.
+</Analogia>
+
+Cuando sí se abre, se buscan cinco cosas en este orden. **Uno: ¿hay reina funcional?** No hace falta
+verla; basta encontrar huevos —bastoncitos blancos parados en el fondo de la celda— y larvas
+pequeñas. **Dos: ¿cómo es el <Termino slug="patron-de-cria">patrón de cría</Termino>?** Una zona
+de <Termino slug="cria-operculada">cría operculada</Termino> compacta, con pocas celdas vacías
+salteadas, indica reina joven y colonia sana; un patrón salpicado indica reina vieja, enfermedad de
+cría o hambre. **Tres: ¿cuántas reservas hay?**, contando cuadros con miel y con polen, que es la
+proteína de la cría. **Cuatro: ¿hay espacio?** Una cámara llena de cría y miel sin celdas libres es
+el disparador de la enjambrazón. **Cinco: ¿hay algo raro?** Olor, celdas hundidas o perforadas,
+larvas de color anormal, polilla, hormigas.
+
+Y hay dos hallazgos que cambian la conversación entera. Uno es la aparición de celdas reales colgando
+en los bordes inferiores de los panales: la colonia se está preparando para dividirse. El otro es la
+señal de <Termino slug="colonia-huerfana">colonia huérfana</Termino> con obreras ponedoras: cuando
+lleva mucho tiempo sin reina, algunas obreras empiezan a poner y, como no están fecundadas, solo
+salen zánganos. Se reconoce por **varios huevos en una misma celda, puestos torcidos contra la
+pared**, y por cría de zángano abultada en celdas de obrera. Una colonia así está en cuenta regresiva
+y no se arregla sola.
+
+Nada de esto sirve si no queda escrito. **Una ficha por colmena** —fecha, quién revisó, qué se vio en
+las cinco preguntas, qué se hizo— es lo que convierte veinte revisiones sueltas en una serie temporal
+con la que se puede decidir. Sin registro no hay comparación con la semana pasada, y sin comparación
+no hay diagnóstico: hay opinión.
+
+## Lo que hay que saber reconocer
+
+No se trata de convertirse en patólogo, sino de distinguir lo que se maneja de lo que exige llamar a
+alguien.
+
+**Hormigas.** El problema número uno de una caja de meliponas y una molestia constante en la
+melífera. Se resuelve con la barrera física de las patas en agua o aceite y con no dejar miel, cera
+ni potes rotos alrededor.
+
+**Polilla de la cera.** Las larvas de la <Termino slug="polilla-de-la-cera">polilla de la
+cera</Termino> perforan los panales y los llenan de galerías con hilo de seda. Lo importante es el
+sentido de la flecha: **la polilla no mata colonias sanas, aparece donde la colonia ya está débil** y
+donde hay panal almacenado sin proteger. Encontrarla es un síntoma, no la causa; es el log lleno de
+errores después de la caída, no la caída.
+
+**Fóridos**, en meliponas, ya descritos: consecuencia de una apertura larga o de un pote roto.
+
+**Varroa**, el ácaro parásito de la melífera que se alimenta de las abejas y transmite virus, con
+alas deformes como signo visible. Está presente en el continente y **cuál es su situación y qué
+manejo se considera aceptable en Santa Cruz es exactamente el tipo de dato que hay que preguntar a un
+apicultor de la zona y a la instancia técnica competente**, no deducirlo de un texto.
+
+**Enfermedades de la cría.** La que hay que saber nombrar es
+la <Termino slug="loque-americana">loque americana</Termino>, una bacteria cuyas esporas resisten
+décadas en la cera y en el material. Sus signos son opérculos hundidos, húmedos y perforados, larvas
+que se vuelven una masa parda y un olor desagradable. **No es un problema que se resuelva
+observando**: si aparece algo parecido, se cierra, no se pasan cuadros a otras colmenas, no se presta
+material y se consulta con el servicio de sanidad agropecuaria competente, que en Bolivia es el
+SENASAG, para saber qué corresponde hacer y qué obligaciones existen. **Ni el diagnóstico ni el
+tratamiento se improvisan, y ningún texto de curso reemplaza esa consulta.**
+
+De ahí sale la regla de <Termino slug="bioseguridad">bioseguridad</Termino> más importante del
+apiario, que ya conoces del vivero: **el material usado de origen desconocido es una deuda oculta**.
+Cajas regaladas, cuadros viejos, cera de procedencia incierta y el intercambio alegre de cuadros
+entre colmenas son las tres vías por las que una enfermedad entra y se queda. Material nuevo o
+material del que sabes su historia.
+
+## Cuándo lo correcto es no abrir
+
+Esta sección vale tanto como todas las anteriores. **No se abre** durante un surazo ni en las
+veinticuatro horas siguientes; con lluvia, viento o cielo cerrado; en el pico de calor; al final de
+la tarde; en plena escasez de la seca, cuando abrir es una invitación al pillaje que puede terminar
+con una colonia saqueada por sus vecinas; en las primeras cuarenta y ocho a setenta y dos horas
+después de instalar un núcleo o un enjambre, porque todavía no decidió quedarse; sin el equipo
+completo o sin ahumador encendido; con prisa; con visitas o niños en el sitio; o **sin una pregunta
+concreta que responder**.
+
+<Analogia>
+Es la regla del despliegue en viernes. No porque el viernes tenga nada de malo, sino porque **lo que
+hace peligroso a un cambio no es el cambio: es no tener margen para lo que salga mal**.
+
+Abrir una colmena es una operación con efectos secundarios que duran horas: abejas alteradas,
+feromona de alarma en el aire, colonia expuesta. Si en esas horas va a pasar por ahí una visita, si
+se hace de noche, si entra el frío o si tú tienes que irte, **no tienes ventana de mantenimiento**.
+Entonces no se abre. La colmena espera; el incidente, no.
+</Analogia>
+
+## El equipo y el ahumador: para qué sirve cada pieza
+
+El **velo o careta es lo único absolutamente innegociable**. La mayoría de las picaduras se toleran;
+las que están cerca de los ojos, la boca y las vías respiratorias son las que convierten un mal rato
+en una urgencia. Después: overol claro y de tela lisa, guantes, botas, y puños y tobillos cerrados
+con elástico o cinta, porque **una abeja dentro de la ropa es la causa más común de que alguien se
+arranque el equipo en pánico en el peor momento**.
+
+El color y la textura no son estética. La respuesta defensiva de la abeja está calibrada contra sus
+depredadores históricos, que son **oscuros, peludos y respiran cerca del nido**. Ropa oscura, lana,
+cabello suelto, aliento y sudor sobre la piquera, movimientos bruscos y golpes en la caja son
+literalmente la firma de un ataque. Ropa clara y lisa, movimientos lentos, nada de perfume y no
+respirar sobre los cuadros son manejo, no superstición.
+
+El <Termino slug="ahumador">ahumador</Termino> hace dos cosas a la vez. Enmascara la feromona de
+alarma que emiten las guardianas —la señal química que recluta a las demás—, cortando la cadena de
+reclutamiento; y provoca que las abejas se llenen el buche de miel, lo que las vuelve más torpes y
+menos propensas a picar. Se carga con material seco y natural —viruta, hojas secas, cartón sin
+tinta, bosta seca—, **nunca con plástico ni madera tratada**, y debe dar humo frío y abundante: el
+humo caliente quema abejas y las enfurece. Se enciende antes de acercarse, se echan dos o tres
+bocanadas en la piquera, se espera un minuto y recién se abre. Y se apaga bien al terminar: **en
+plena seca cruceña, un ahumador dejado sobre pasto seco es un incendio**.
+
+<Advertencia titulo="Reacción normal, reacción extendida y anafilaxia">
+Una picadura normal duele, se hincha unos centímetros, pica y se va en horas o pocos días. Una
+reacción local extendida hincha mucho más y dura más, y sigue siendo local.
+
+La <Termino slug="anafilaxia">anafilaxia</Termino> es otra cosa por completo. No es "una reacción muy
+grande": es una **reacción sistémica** en la que el cuerpo responde en órganos lejos del punto de la
+picadura, normalmente en minutos. Las señales son ronchas o picazón en zonas del cuerpo alejadas,
+hinchazón de labios, lengua o garganta, dificultad para respirar o voz apagada, mareo, desmayo,
+vómitos, dolor abdominal o sensación de que algo va muy mal. **Cualquiera de ellas es una urgencia
+médica inmediata**, y no importa cuántas picaduras fueron: puede ocurrir con una sola.
+
+Distinta también es la reacción por envenenamiento masivo, con decenas o cientos de picaduras, que
+depende de la dosis y afecta a personas sin ninguna alergia. También es urgencia médica.
+
+**Este curso no da tratamiento.** Qué hay en el botiquín, cómo se retira el aguijón, a quién se llama
+y qué hace la adrenalina en una persona con alergia diagnosticada es el módulo 2, y la conducta ante
+un caso concreto la define personal de salud. Lo que sí es decisión de manejo: **quien tenga alergia
+conocida a picaduras no trabaja con las colmenas ni está cerca cuando se abren**, y eso se pregunta
+antes, por escrito, no después.
+</Advertencia>
+
+## Distancias, señalización y el protocolo del ataque
+
+La geometría del apiario es seguridad. Los criterios, con su razón:
+
+**Del camino y de la casa**, lo suficiente para que nadie pase por la línea de vuelo, reforzado con
+la barrera que obliga a las abejas a volar alto. **Del vecino**, además de distancia, aviso previo:
+un vecino informado avisa de un enjambre; un vecino sorprendido llama a otra gente. **De animales
+atados**, todo lo que se pueda, y esta es la más importante de todas: **un animal atado no puede
+huir**. Perros encadenados, un caballo estacado, gallinas encerradas y un ternero con soga son las
+víctimas más frecuentes y más evitables de un incidente con abejas africanizadas, porque el único
+mecanismo de defensa que existe —irse— les fue quitado por una cuerda.
+
+Cerca del apiario no se corta pasto con desbrozadora ni se hace ruido de motor, no se trabaja con la
+motosierra y no se hace fuego. La vibración y el golpe son estímulos de alarma tan potentes como
+abrir la caja. Y va **señalización visible en los accesos**, en lenguaje claro, más una tranquera o
+un cerco que impida que un niño llegue caminando sin querer.
+
+Sobre metros exactos: **las distancias mínimas obligatorias a viviendas, caminos y linderos, si
+existen en el municipio, se consultan con la autoridad municipal competente antes de instalar**, y lo
+que corresponda en materia sanitaria o de registro, con el SENASAG. Este curso no inventa números de
+ordenanza. Lo que sí puede afirmarse es el mecanismo: distancia y barrera se compensan entre sí, y
+donde no hay espacio para distancia hace falta más barrera.
+
+Y hace falta un protocolo ensayado, no un párrafo leído. **Si una colonia se dispara: alejarse rápido
+y en línea recta**, cientos de metros, sin dar manotazos —cada abeja aplastada libera más feromona de
+alarma— y protegiendo cara y cuello con lo que haya. **No meterse al agua**: esperan arriba. **No
+correr hacia donde hay gente, niños o animales atados**: el que corre lleva la nube consigo. Meterse
+en un vehículo cerrado o en una habitación cerrada y quedarse ahí. La ropa queda marcada con feromona
+y hay que quitarla y lavarla, o seguirán atacando al mismo objetivo. Los aguijones se sacan lo antes
+posible: **la velocidad importa más que la técnica**. Y alguien cuenta las picaduras y vigila a la
+persona durante al menos la hora siguiente, porque los signos sistémicos aparecen después del susto.
+
+<AplicarRizoma>
+En Rizoma del Sur, la primera pregunta no es qué caja comprar sino **en cuál de los 12 lotes va**, y
+la respuesta sale de restar. El vivero queda descartado: es donde entran las visitas, donde se
+trabaja agachado horas y donde hay agua y movimiento constante. Los lotes por los que pasa el camino
+de acceso quedan descartados por la línea de vuelo. Los lotes que dan al lindero con el vecino
+quedan descartados si del otro lado hay animales atados o una vivienda cercana. Con 3.666 m² en 12
+lotes contiguos, lo que queda es **el lote más alejado del acceso, con el mayor número de lotes
+propios entre las cajas y cualquier persona que no vino a ver abejas**.
+
+Dentro de ese lote, la geometría concreta: piquera al norte o noreste, con el cerco vivo del módulo
+de agroecología haciendo de pantalla por el sur, que es por donde entra el surazo. Sombra de tarde de
+los árboles de sombra del catálogo, sol de mañana libre. Cajas sobre soporte de cuarenta a cincuenta
+centímetros con las patas en latas con aceite, porque en llanura aluvial el suelo se encharca y las
+hormigas son el enemigo permanente. Y una barrera de vuelo de dos metros al frente, que puede ser el
+mismo cerco vivo llevado unos metros más allá de la piquera. Si el arranque es con meliponas —que es
+lo que la lección anterior recomendó—, todo esto se mantiene pero **la caja va bajo techo o bajo copa
+densa, con sombra todo el día**, porque una hora de sol directo sobre una caja de paredes finas mata
+cría.
+
+El calendario se engancha con el que ya existe en la parcela. Las revisiones cada diez o quince días
+caen en la época de lluvias, de octubre a abril, que es la de más trabajo en el vivero: hay que
+ponerlas en el mismo cuaderno donde está el riego y el trasplante, no en la cabeza de nadie. De mayo
+a septiembre la revisión pasa a mensual y muy breve, y la pregunta cambia: ya no es cuánto espacio
+hay, es **cuánto peso queda**. Los días de surazo se marcan como días sin apertura, igual que se
+marcan como días sin trasplante. Y hay una restricción de calendario propia del sitio: **los días de
+visita de la comunidad no se abre ninguna caja**, ni antes, ni durante, ni al terminar la tarde.
+
+El registro se resuelve con lo que la parcela ya usa: una ficha por colmena, con las cinco preguntas
+como campos fijos y espacio para el peso relativo. Al año son unas veinte anotaciones por colmena, lo
+suficiente para saber si la colonia entra a la seca con más o menos reservas que el año pasado. Eso
+es lo que convierte la apicultura del proyecto en algo transmisible: **si el responsable se enferma,
+otra persona abre el cuaderno y sabe dónde está parada cada caja**.
+
+La seguridad se organiza como una función del sitio, no como un consejo. Hay un responsable nombrado
+de las colmenas, y hay una segunda persona que sabe hacer lo mismo, porque nadie abre una caja solo y
+sin que nadie sepa dónde está. Se pregunta por escrito, antes de que alguien se acerque, **si tiene
+alergia conocida a picaduras**, y quien la tenga no participa de esa actividad y punto. Hay
+señalización en el acceso al lote y una tranquera que un niño no abre solo. Se avisa a los vecinos
+antes de instalar la primera caja y se les dice a quién llamar si ven un enjambre. Y el protocolo de
+ataque se ensaya una vez, caminando: por dónde se sale, hacia dónde no se corre, qué construcción o
+vehículo cerrado hay disponible, quién cierra la tranquera y quién llama. **Ensayarlo cuesta veinte
+minutos y es lo único que funciona cuando llega el momento en que nadie va a leer nada.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+El dato que cambia todo el manejo en el llano cruceño es que **la abeja melífera que hay aquí es
+africanizada**. No es una raza distinta en su biología básica ni produce menos: es una población con
+un umbral de defensa mucho más bajo, que recluta más individuos, responde más rápido, persigue más
+lejos y tarda mucho más en calmarse. Todo lo que este texto dice sobre humo, ropa clara, movimientos
+lentos, barrera de vuelo y distancia a animales atados **no es prudencia general: es la respuesta
+específica a esa población**. La misma colmena manejada con descuido en Europa da un mal rato; aquí
+puede dar un incidente grave.
+
+También cambia la disponibilidad del material. Una Langstroth se fabrica sin problema con
+carpintería local, y ahí está la trampa de la medida: en Santa Cruz hay apicultores con material
+estándar y hay cajas hechas a ojo que no son compatibles con nada. Antes de encargar, se mide la caja
+de un apicultor de la zona y se copia esa medida exacta, porque **la compatibilidad es lo que permite
+comprar un núcleo, recibir un cuadro de cría prestado o vender material más adelante**. Con
+meliponas la situación es distinta: hay tradición de criarlas en el oriente boliviano, hay gente que
+las maneja, y la caja se dimensiona por especie, así que el paso obligatorio es conseguir tanto la
+colonia como la medida de quien ya la críe aquí.
+
+En materia de trámites y sanidad, el mecanismo es el mismo que el curso repite en todos los módulos y
+la honestidad manda decirlo así: **existe una autoridad competente, y lo que corresponde hacer se le
+pregunta a ella**. En Bolivia, la sanidad agropecuaria y la inocuidad de alimentos dependen del
+SENASAG; los requisitos de instalación de un apiario en relación con viviendas, caminos y linderos
+pueden estar reglamentados a nivel municipal. Ni los requisitos, ni las distancias, ni los plazos, ni
+los costos de un registro se inventan en un texto de curso: se consultan antes de instalar, y se
+consultan otra vez antes de vender miel, que es tema de la lección siguiente.
+
+Hay dos condiciones locales más que modifican el protocolo de seguridad. La primera es el fuego:
+mayo a septiembre es seca y es temporada de quemas en el llano, y un ahumador mal apagado sobre pasto
+seco no es una anécdota. Se apaga tapado, lejos de material seco, y se comprueba antes de irse. La
+segunda es la distancia a atención médica: desde Zanja Honda, al sur de Santa Cruz, **la atención de
+urgencia no está a la vuelta de la esquina**, y esa demora es justamente lo que convierte un traslado
+en el eslabón crítico. Por eso el protocolo tiene que incluir, escrito y visible, cómo se sale del
+sitio, con qué vehículo y a dónde, y a quién se avisa. Un plan de emergencia que depende de que ese
+día haya alguien con movilidad es **un respaldo que nunca se probó**.
+
+Y una nota de convivencia que en Bolivia pesa más que cualquier reglamento: la relación con los
+vecinos. En zonas periurbanas de Santa Cruz, la reacción habitual ante abejas que molestan es
+fumigar o quemar el nido, y eso termina con el proyecto y con los polinizadores del sitio. Un
+proyecto comunitario tiene una ventaja enorme aquí: **puede explicar antes de que ocurra el problema,
+y puede ofrecer algo a cambio** —retirar enjambres del barrio en vez de que los maten, enseñar a
+distinguir una abeja sin aguijón de una avispa, avisar cuándo se va a trabajar con las cajas—. La
+lección de comunidad ya lo dijo en otros términos: el permiso social se construye antes, y no se
+compra después.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Con esto tienes la operación completa de una primera colmena: la caja y por qué sus medidas son un
+contrato, cómo se puebla sin heredar problemas, dónde va según el sol, el agua y el surazo, cada
+cuánto se abre y cada cuánto no, las cinco preguntas de cada revisión, lo que hay que saber reconocer
+y todo el aparato de seguridad que hace posible tener abejas en un sitio por el que camina gente.
+
+Falta lo que ocurre después de que la colonia trabajó: **el pote lleno y el cuadro operculado**. La
+lección siguiente, **la miel como ingreso, higiene y actividad comunitaria**, entra ahí: rendimientos
+realistas frente a las cifras de folleto, extracción higiénica, humedad y fermentación —que en la
+miel de meliponas no es un detalle sino la variable que decide si el producto se conserva—,
+cristalización, envasado, etiquetado y la adulteración como el riesgo que destruye lo más valioso que
+tiene un proyecto comunitario, que es la confianza. Y el modelo de fondo: colmenas del grupo,
+responsable nombrado, reparto de lo que entra y el apiario funcionando como aula.

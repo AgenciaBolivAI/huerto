@@ -1,0 +1,79 @@
+{
+  "preguntas": [
+    {
+      "id": "factores-formadores",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuáles son los cinco factores que determinan qué suelo se forma sobre una roca?",
+      "opciones": [
+        "Clima, organismos, relieve, roca madre y tiempo.",
+        "El tiempo funciona distinto que los otros cuatro: determina cuántas veces se ha aplicado la transformación.",
+        "Clima, riego, fertilización, laboreo y cultivo.",
+        "Solo la roca madre importa: el resto son detalles."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Es el modelo clásico de la edafología y funciona bien. Clima y organismos son las entradas activas, el relieve decide si el resultado se queda o se va cuesta abajo, la roca madre es el material de partida, y el tiempo actúa como exponente. Riego y laboreo son intervenciones humanas posteriores, no factores formadores."
+    },
+    {
+      "id": "escudo-vs-llanura",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué los suelos del escudo brasileño y los de la llanura chaco-beniana son casi opuestos?",
+      "opciones": [
+        "El escudo es una masa continental antiquísima cuyos suelos llevan millones de años lavándose con lluvia tropical.",
+        "La llanura es una cuenca de sedimentación donde los ríos andinos han depositado material fresco en tiempo geológico reciente.",
+        "En el escudo solo queda lo que no se disuelve: óxidos de hierro y aluminio, con caolinita como arcilla y CIC baja.",
+        "El escudo recibe mucha más lluvia que la llanura, y por eso está más lavado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La diferencia es el tiempo, no la lluvia actual. El escudo ha tenido millones de años para que la lluvia lave sus bases y deje atrás lo insoluble, de ahí el color rojo, la acidez y la CIC baja. La llanura recibe sedimento cuaternario, es decir material fresco depositado hace miles de años y no millones, con minerales todavía sin agotar."
+    },
+    {
+      "id": "renovacion-llanura",
+      "tipo": "verdadero_falso",
+      "enunciado": "La llanura chaco-beniana es un suelo que se está renovando, no agotando.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es la razón de fondo por la que el oriente es la zona agrícola productiva de Bolivia. Los Andes se erosionan y ese material tiene que ir a algún sitio: va a la llanura. Lo que la cordillera pierde, la llanura lo gana. Por eso es razonable esperar en tu terreno mejor estado de bases y mejor CIC de lo que sugeriría el tópico del suelo tropical lavado."
+    },
+    {
+      "id": "filtro-regional",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un consejo agronómico dado por un técnico boliviano es aplicable en cualquier parte del país.",
+      "respuesta": false,
+      "explicacion": "Falso, y es uno de los usos más prácticos de esta lección. Bolivia va de 6.500 a 90 metros en pocos cientos de kilómetros: prácticas de valle como el manejo de pendiente o el riego por gravedad en ladera no aplican en llano, y las de altiplano tampoco. La primera pregunta ante cualquier consejo es de qué región habla. Lo que sí sirve viene del área integrada, del Chaco, del Beni o de regiones análogas fuera de Bolivia, como el Cerrado brasileño."
+    },
+    {
+      "id": "planitud-heterogeneidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "«Mi terreno es plano, así que el suelo será igual en todas partes.» ¿Qué falla en ese razonamiento?",
+      "opciones": [
+        "La llanura es plana precisamente porque es sedimentaria, depositada por agua en movimiento.",
+        "El agua en movimiento clasifica el material según su tamaño, dejando arena donde iba rápida y limo o arcilla donde se frenaba.",
+        "La planitud es el síntoma de la heterogeneidad, no de la uniformidad.",
+        "Nada falla: en terreno plano el suelo es homogéneo por definición."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es exactamente al revés de lo que sugiere la intuición. Un río que divaga durante siglos cambia de cauce y deposita material distinto en sitios distintos, y esos cauces abandonados siguen ahí bajo el suelo actual. Por eso en el Módulo 5 se justificaron ocho pruebas del frasco y no una."
+    },
+    {
+      "id": "tierra-negra-procedencia",
+      "tipo": "verdadero_falso",
+      "enunciado": "Al comprar «tierra negra» para llenar camas o formular sustrato, la procedencia importa tanto como el precio.",
+      "respuesta": true,
+      "explicacion": "Correcto, y casi nadie la pregunta. Si el material viene de una zona del escudo brasileño será ácido y de CIC baja; si viene de un bajío aluvial puede ser excelente o puede ser arcilla pesada. El color negro viene de la materia orgánica y del hierro, y no dice nada de textura, pH ni CIC. Cuando estés formulando sustratos en volumen, esta será una decisión de compra recurrente."
+    },
+    {
+      "id": "situar-terreno",
+      "tipo": "abierta",
+      "enunciado": "Sitúa tu terreno de Zanja Honda en el contexto geológico de Bolivia. Explica qué expectativas razonables te da eso sobre el suelo, cuáles son sus límites, y cómo usarías esa información para filtrar los consejos agronómicos que recibas.",
+      "respuestaModelo": "El terreno está a unos 529 msnm en la zona sur de Santa Cruz de la Sierra, de lleno en la llanura chaco-beniana, en una zona de transición: al oeste queda el subandino y al este el escudo brasileño. La llanura es una cuenca de sedimentación donde los ríos que bajan de los Andes han depositado, durante el Cuaternario, el material que erosionaban de la cordillera.\n\nEso da expectativas razonables en dos direcciones. Lo favorable: suelo profundo, sin piedras, formado sobre sedimento reciente cuyos minerales todavía no se han agotado, con CIC y estado de bases previsiblemente mejores que los de un suelo tropical antiguo, y con un pH más cercano a neutro de lo que sugiere el tópico del «suelo tropical ácido». Es un suelo que se renueva, no que se agota.\n\nLo desfavorable, y es igual de importante: variabilidad. Sedimento fluvial significa que un río divagó durante siglos, cambió de cauce y depositó arena donde iba rápido y limo o arcilla donde se frenaba. La textura puede cambiar en pocos metros, y esos cauces abandonados siguen ahí bajo el suelo actual. La planitud es síntoma de heterogeneidad, no de uniformidad.\n\nEl límite de todo esto es que es una expectativa regional bien fundada, no un diagnóstico. Lo que decide es el análisis de los doce lotes, y precisamente por la variabilidad hay que hacerlos por separado.\n\nComo filtro de información, la primera pregunta ante cualquier consejo agronómico boliviano es de qué región habla. Prácticas de valle —terrazas, manejo de pendiente, riego por gravedad en ladera— no aplican en llano. Recomendaciones de altiplano —variedades para frío extremo, manejo de suelos salinos, ciclos muy cortos— tampoco. Lo que sí sirve viene del área integrada, del Chaco o del Beni, y fuera de Bolivia lo más aplicable es la bibliografía brasileña del Cerrado y de la Amazonía, porque comparten historia geológica y clima.",
+      "criterios": [
+        "Sitúa el terreno en la llanura chaco-beniana y menciona la posición de transición entre subandino y escudo brasileño.",
+        "Explica el origen sedimentario cuaternario y el aporte de material desde los Andes.",
+        "Deriva las expectativas favorables: suelo profundo, minerales frescos, mejor CIC y pH menos ácido de lo esperado.",
+        "Identifica la variabilidad espacial como consecuencia directa del origen fluvial.",
+        "Reconoce que es una expectativa regional y no un diagnóstico, y que el análisis por lote es lo que decide.",
+        "Aplica el filtro regional para descartar consejos de valle y altiplano, y señala el Cerrado brasileño como fuente análoga."
+      ],
+      "explicacion": "Esta pregunta convierte la geología en criterio operativo. Si te salió completa, ya sabes qué esperar de tu suelo antes de abrir el primer hoyo, y qué mitad de los consejos que te den puedes descartar sin discutirlos."
+    }
+  ]
+}

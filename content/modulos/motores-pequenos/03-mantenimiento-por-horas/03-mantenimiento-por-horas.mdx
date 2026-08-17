@@ -1,0 +1,430 @@
+Casi ningún motor pequeño se muere de viejo. Se muere de descuidado, y casi siempre por una de cinco
+cosas: aceite pasado, filtro tapado, aletas llenas de pasto, tornillos flojos y gasolina que se quedó
+seis meses adentro. **Las cinco son baratas de evitar y caras de reparar.**
+
+El mantenimiento se explica mal: «cambiá el aceite cada seis meses» no significa nada, porque seis
+meses de una desbrozadora diaria no se parecen a seis meses de una motobomba que arranca dos veces al
+mes. **El reloj de un motor no marca meses: marca horas de trabajo.**
+
+## Por qué se cuenta en horas y no en meses
+
+El desgaste es proporcional al trabajo hecho: cada vuelta del cigüeñal es una carrera del pistón
+raspando el cilindro, una apertura y un cierre de cada válvula, un golpe sobre el cojinete.
+
+<Formula explicacion="Carreras que hace el pistón en un rato de trabajo: las revoluciones por minuto multiplicadas por los minutos trabajados. Un motor pequeño trabaja habitualmente entre 2.500 y 3.600 vueltas por minuto según el equipo y la carga.">
+carreras del pistón = revoluciones por minuto × minutos de trabajo
+</Formula>
+
+A tres mil vueltas por minuto, **una sola hora son ciento ochenta mil carreras**; veinticinco horas
+—una semana larga de desbrozadora— pasan de cuatro millones y medio. **Dos motores comprados el mismo
+día tienen vidas que no se parecen en nada.**
+
+<Analogia titulo="Rotar los registros por tamaño, no por fecha">
+Si programas, esto es **rotar los registros por tamaño o por fecha**. Por fecha es cómodo y es
+mentira: dos servidores con el mismo calendario y tráfico distinto no tienen el mismo archivo. El
+criterio serio es **lo que se cumpla primero**, porque hay degradaciones que dependen del uso
+—cizalladura, hollín, desgaste— y otras del tiempo —oxidación, humedad, goma reseca—.
+</Analogia>
+
+De ahí la regla que ordena el calendario:
+el <Termino slug="intervalo-de-servicio">intervalo de servicio</Termino> se cumple **cuando llegan
+las horas o cuando llega la fecha, lo que ocurra antes.**
+
+## Cómo llevar la cuenta sin horómetro
+
+Un <Termino slug="horometro">horómetro</Termino> es un contador que avanza solo mientras el motor
+gira. Los hay adhesivos, con batería propia, que se pegan a la carcasa y cuentan por vibración:
+cuestan poco y se ponen en cinco minutos. Si vives de una máquina, **ponle uno**.
+
+Sin horómetro hay dos formas de contar. **La jornada declarada**: anotas el tiempo real de motor en
+marcha, no el que estuviste en el chaco. **El tanque como reloj**: el consumo a régimen es bastante
+constante, así que se calibra una vez —llenas, anotas la hora, trabajas hasta que se apaga solo,
+anotas otra vez— y cada llenada pasa a ser una unidad de tiempo.
+
+<Formula explicacion="Estimación de horas acumuladas sin horómetro: los tanques consumidos por la duración medida de un tanque trabajando normal. Es aproximado —a media carga rinde más y a plena carga menos—, pero para disparar un mantenimiento sobra.">
+horas acumuladas ≈ tanques consumidos × duración medida de un tanque (h)
+</Formula>
+
+Las dos valen poco si viven en la memoria. Lo que las sostiene es
+la <Termino slug="bitacora-de-la-maquina">bitácora de la máquina</Termino>: una libreta por equipo,
+guardada con la máquina.
+
+<Tabla>
+
+| Fecha | Horas | Qué se hizo | Qué se notó | Próximo servicio |
+| --- | --- | --- | --- | --- |
+| 14/05 | 38 | Trabajo normal, 3 tanques | Arrancó al cuarto tirón | Aceite a 50 h |
+| 22/05 | 46 | Limpieza de filtro | Filtro casi tapado en 8 h | Aceite a 50 h |
+| 28/05 | 51 | Aceite y tornillos | Silenciador flojo otra vez | Aceite a 100 h |
+
+</Tabla>
+
+La columna que más sirve es **«qué se notó»**: «cuesta más arrancar que el mes pasado», escrito tres
+veces, ya es un diagnóstico. La última se copia a una etiqueta pegada en la máquina, porque **el
+sistema no puede depender de que alguien abra la libreta.**
+
+## El aceite: por qué se muere aunque el motor esté limpio
+
+La película que impide que dos metales se toquen se degrada por cuatro caminos a la vez.
+
+**Primera, la cizalladura.** Un multigrado como un 10W-30 es fino en frío y espeso en caliente porque
+lleva moléculas largas, enrolladas como ovillos, que se despliegan con el calor. Cada paso por el
+juego entre el aro y la pared las estira y **algunas se parten**; una molécula partida ya no espesa.
+Con ese <Termino slug="cizallamiento-del-aceite">cizallamiento</Termino> el aceite termina más fino
+que lo que dice la lata, y una película más delgada que la rugosidad del metal deja de serlo.
+
+**Segunda, la dilución con combustible.** En cada explosión una parte de los gases se cuela entre los
+aros y la pared y baja al cárter, y con ella gasolina sin quemar.
+Ese <Termino slug="soplado-al-carter">soplado al cárter</Termino> se vuelve problema con el motor
+frío, en ratos cortos o con la mezcla rica de un filtro tapado, y
+la <Termino slug="dilucion-por-combustible">dilución por combustible</Termino> baja la viscosidad de
+golpe. Su firma es inconfundible: **el nivel sube y huele a gasolina.**
+
+**Tercera, el hollín y las partículas.** La combustión deja carbón, el polvo que el filtro no atrapó
+entra con el aire, y un motor nuevo suelta virutas durante
+el <Termino slug="rodaje">rodaje</Termino>.
+
+<Dato titulo="Tu motor pequeño no tiene filtro de aceite">
+Los motores de auto filtran el aceite en cada vuelta. **La enorme mayoría de los motores pequeños no
+lleva filtro**: como mucho, un colador de malla gruesa. Así que **todo lo que entra al cárter se
+queda ahí hasta que tú lo saques con el aceite viejo**, y por eso estos intervalos son cortísimos:
+«estirarlo un poco» es seguir moliendo con la misma arena.
+</Dato>
+
+**Cuarta, el agua y los ácidos.** Quemar gasolina produce agua, y parte se cuela al cárter como
+vapor. Si el motor llega a temperatura y se mantiene un buen rato, ese vapor sale por
+el <Termino slug="respiradero-del-carter">respiradero del cárter</Termino>; si trabaja diez minutos y
+se apaga, condensa contra las paredes frías. Esa
+agua <Termino slug="condensacion-en-el-carter">condensada</Termino> emulsiona el aceite —color café
+con leche— y forma **ácidos que muerden cojinetes**: domina en la máquina que se usa poco y a ratos.
+
+Contra todo esto el aceite trae defensas químicas
+—<Termino slug="aditivo-detergente">aditivos detergentes</Termino>, dispersantes, antioxidantes—,
+pero **se consumen**. **El aceite negro no está sucio: está gastado**, y por eso el cambio va por
+reloj y no por aspecto.
+
+### Cómo se cambia, y por qué cada paso
+
+**Caliente, no hirviendo.** Cinco o diez minutos de marcha y se apaga: el aceite caliente sale
+arrastrando lo que lleva en suspensión, el frío deja la mitad pegada al fondo. Guante, igual. Y **el
+motor nivelado**, porque inclinado deja aceite dentro y engaña a la varilla.
+
+**Antes de volcarlo, cierra el paso de combustible y saca la bujía.** Muchos de estos motores se
+vacían por la boca de llenado sobre una bandeja ancha, y si no lo haces así derramas gasolina y le
+entra aceite al cilindro.
+
+**El nivel exacto.** Poco aceite es obvio; **demasiado también hace daño** y casi nadie lo sabe. El
+cigüeñal bate el sobrante y lo llena de burbujas, y **el aceite con espuma no sostiene película**;
+además sube la presión del cárter y empuja aceite por el respiradero hasta el filtro de aire. Si
+encuentras el filtro empapado, mira el nivel antes de culpar a nada más.
+
+**El que dice el manual**, que especifica un <Termino slug="grado-sae">grado SAE</Termino> y una
+categoría de servicio: en el calor del llano suele indicarse un monogrado grueso, o
+un <Termino slug="aceite-multigrado">multigrado</Termino> si hay arranques en frío. **Decide la placa
+del motor, no lo que sobró en el galpón.**
+
+**El intervalo.** El primer cambio va mucho antes que los demás, por las virutas del rodaje; después,
+el del manual —suele moverse en pocas decenas de horas—, **partido por la mitad en polvo, en calor o
+a plena carga**, y uno al año aunque no se cumplan las horas.
+
+<Advertencia titulo="El aceite usado no se tira al suelo">
+**El aceite usado no se tira al suelo, ni al monte, ni al pozo, ni a la quebrada.** Un solo litro
+contamina una cantidad enorme de agua, y donde se toma agua de pozo el daño cae sobre la familia que
+la toma. Tampoco sirve para «pintar» postes ni matar hormigas: lleva metales pesados que la piel
+absorbe. Se guarda en un bidón cerrado y rotulado y se lleva a un taller o lubricentro que lo acopie
+—**pregunta en tu zona cuál lo recibe**—. Guantes siempre.
+</Advertencia>
+
+## El filtro de aire: la pieza más barata que salva el motor
+
+Un motor traga **del orden de diez mil litros de aire por cada litro de gasolina**: es la puerta por
+donde más materia entra, y por eso el filtro es la pieza más rentable de la máquina.
+
+Dejarlo pasar tiene un mecanismo con nombre:
+el <Termino slug="desgaste-abrasivo">desgaste abrasivo</Termino>. El polvo de la sabana es sobre todo
+sílice, y **la sílice es más dura que el acero del cilindro**. Una partícula llega a la pared, queda
+atrapada entre el aro y el metal y raya; cada carrera la arrastra de nuevo, ciento ochenta mil veces
+por hora. Queda un cilindro ovalado y unos aros que no sellan: **cae la compresión, arranca mal,
+consume aceite, humea azul y pierde fuerza.** Eso ya no se arregla con un filtro nuevo, se arregla
+rectificando.
+
+Dejarlo tapado hace lo contrario. La restricción de aire enriquece la mezcla: humo negro, hollín en
+la bujía, más consumo, menos potencia y más gasolina bajando al cárter. **Un filtro sucio diluye y
+ensucia el aceite más rápido.**
+
+<Analogia titulo="El filtro es la validación de entrada">
+El filtro de aire es **la validación de entrada** del motor: todo lo demás está diseñado suponiendo
+que lo que entra viene limpio. Y los dos fallos son simétricos: dejar pasar lo que corrompe el
+núcleo, o bloquear tanto que se ahogue el sistema.
+</Analogia>
+
+**El filtro no se calendariza, se mira**: a contraluz, antes de cada jornada polvorienta; si no se ve
+la luz a través, ya no filtra aire. Y **revisa el lado limpio**: si detrás del filtro hay tierra, el
+aire entra por otro lado —tapa mal cerrada, sello endurecido, carcasa rajada—. Jamás se hace andar el
+motor sin filtro.
+
+## La bujía y los tornillos que la vibración afloja
+
+La bujía por dentro es asunto de la lección cinco; aquí interesa lo preventivo. **Una bujía se
+refrigera por su rosca**, cediendo calor a la culata: floja no evacúa ese calor, se sobrecalienta y
+sopla gases que queman el asiento; demasiado apretada arranca la rosca de la culata de aluminio, que
+ya no es un repuesto sino una reparación seria. Se aprieta a mano hasta que asienta y luego la
+fracción de vuelta que indica el fabricante, **con el motor frío o tibio**, porque el aluminio
+caliente está dilatado y su rosca cede más fácil.
+
+El segundo tema es enorme en máquinas portátiles: **la vibración afloja todo lo que no esté
+frenado.** El <Termino slug="autoaflojamiento-por-vibracion">autoaflojamiento por
+vibración</Termino> ocurre porque cada sacudida hace deslizar un poquito las superficies de la rosca,
+y en ese instante desaparece el rozamiento que sostenía la tuerca, que «camina». Así que **los mismos
+tornillos se aflojan siempre en los mismos sitios.**
+
+<Advertencia titulo="Tres aflojamientos que son peligro, no molestia">
+Tres aflojamientos no son molestias, son peligro.
+
+**La tuerca de la cuchilla de una desbrozadora.** Suelta, la cuchilla sale disparada girando a
+velocidad de proyectil. En muchos modelos **esa tuerca es de rosca izquierda** —se afloja girando al
+derecho— para que el giro la apriete, y quien no lo sabe la destroza abriéndola al revés. Se
+comprueba antes de cada uso, con el motor apagado y el capuchón de la bujía desconectado.
+
+**Los tornillos del silenciador**, que se aflojan más que ninguno por el ciclo térmico. Si se suelta,
+sopla gas a varios cientos de grados sobre tu pierna o sobre pasto seco; y si el espárrago se rompe
+dentro de la culata, la reparación es de taller.
+
+**Los soportes del motor y de la bomba**, porque un motor que camina sobre su base rompe mangueras y
+desalinea la transmisión.
+</Advertencia>
+
+La ronda de tornillos es una tarea más de la bitácora: motor frío, llave del tamaño correcto —no
+pinza—, apriete firme y no bestial, y donde el fabricante dé
+un <Termino slug="par-de-apriete">par de apriete</Termino>, ese es el número.
+
+## Las aletas: de una hoja de pasto a un pistón fundido
+
+Estos motores se enfrían **al aire**, con tres piezas humildes: el volante lleva paletas que hacen de
+ventilador; las <Termino slug="aletas-de-refrigeracion">aletas de refrigeración</Termino> —esas ondas
+de metal alrededor del cilindro— multiplican la superficie en contacto con ese aire; y
+el <Termino slug="deflector-de-aire">deflector</Termino>, la tapa de chapa o plástico, obliga al aire
+a pasar **entre** las aletas en vez de escaparse por el costado.
+
+<Formula explicacion="Ley general de la evacuación de calor al aire: crece con la superficie expuesta, con lo bien que circula el aire y con la diferencia de temperatura entre metal y aire. Es cualitativa a propósito: sirve para razonar, no para calcular.">
+calor evacuado ∝ superficie de aletas × circulación de aire × (temperatura del metal − temperatura del aire)
+</Formula>
+
+Léela al revés. Si tapas media superficie con pasto y tierra, el motor **tiene que subir su
+temperatura** para evacuar el mismo calor. El aceite de la pared se adelgaza, la
+película se rompe primero en el punto más caliente y —el detalle decisivo— **el pistón es de aluminio
+y el cilindro de hierro, y el aluminio dilata casi el doble por cada grado**. La holgura entre ambos
+se cierra sola; menos holgura es más roce, más roce es más calor local, y ese lazo termina con el
+aluminio soldado a la pared: el gripado que ya conoces.
+
+La limpieza falla casi siempre en el mismo sitio, y no es en las aletas: es en **la rejilla del
+arrancador de cuerda**, por donde entra todo el aire. Un puñado de pasto pegado ahí anula el sistema
+entero aunque las aletas estén impecables. Se limpia con **el motor frío**, con cepillo o un palito
+de madera, nunca con agua a presión sobre un motor caliente, porque el choque térmico agrieta el
+aluminio. Y **el deflector va puesto siempre**: la máquina a la que le quitaron la tapa «porque se
+recalentaba» se recalienta más.
+
+## Calibrar válvulas: por qué una válvula apretada se quema
+
+Esta tarea es solo de cuatro tiempos.
+La <Termino slug="holgura-de-valvulas">holgura de válvulas</Termino> es el juego mínimo que debe
+existir, con el motor frío y la válvula cerrada, entre el balancín y la cola de la válvula. Existe
+porque **al calentarse el metal crece**: sin holgura en frío, en caliente el mecanismo empujaría la
+válvula y no la dejaría cerrar. Y cambia sola con las horas, casi siempre **hacia abajo**, porque la
+válvula se va hundiendo unas micras en su asiento.
+
+Cuando llega a cero, la válvula queda levantada aunque el mecanismo diga que está cerrada. Primer
+efecto, se pierde compresión: cuesta arrancar, patea, pierde fuerza. Segundo, el grave: **la válvula
+de escape se refrigera apoyándose en su asiento.** Es la pieza más caliente del motor y su única
+forma de soltar calor es el contacto metal con metal contra la culata mientras está cerrada; si no
+apoya bien, se pone al rojo, se deforma y **se quema**, con una muesca por donde soplan los gases.
+Ahí ya no se calibra: se rectifica o se cambia. La holgura excesiva es menos grave y más ruidosa:
+**golpeteo metálico**, menos apertura y martilleo que desgasta.
+
+Se calibra con el motor **frío**, con el pistón en el punto muerto superior de la carrera de
+compresión y con una <Termino slug="galga-de-laminas">galga de láminas</Termino>: la lámina correcta
+entra con un roce apenas perceptible. **La cifra la da el manual de tu motor**, es distinta para
+admisión y para escape y se mide en centésimas de milímetro; no hay número universal y no te voy a
+inventar uno. Si no tienes galgas ni manual, esto se le paga a un mecánico: saber que existe y qué la
+delata —arranque duro en caliente, pérdida de fuerza, tableteo— ya es casi todo.
+
+## El guardado: el motor que se usa tres semanas al año
+
+Este es el que más máquinas mata en la zona: **el motor que menos trabaja es el que más se muere**, y
+no se muere trabajando, se muere en el galpón.
+
+**La gasolina se descompone.** Las fracciones ligeras se evaporan y las pesadas se oxidan
+formando <Termino slug="gomas-del-combustible">gomas y barnices</Termino> que se depositan donde el
+paso es más estrecho: los chiclés del carburador, agujeros de décimas de milímetro. Y la gasolina con
+etanol es <Termino slug="higroscopico">higroscópica</Termino>; pasado cierto punto ocurre
+una <Termino slug="separacion-de-fases">separación de fases</Termino> y el agua se va al fondo del
+tanque, que es de donde chupa el carburador.
+
+**El cilindro se oxida.** Sin película fresca y con la humedad del llano, la pared y los aros se
+cubren de óxido, y ese óxido es abrasivo: los primeros segundos del arranque siguiente rayan como
+lija. Peor si quedó **con una válvula abierta**, porque entonces respira aire húmedo. A eso se suman
+**las gomas que se resecan** y **los bichos**: avispas que nidifican en el silenciador, ratones que
+roen cables.
+
+<Analogia titulo="Un respaldo que nadie probó restaurar">
+Un motor guardado sin procedimiento es **un respaldo que nadie probó restaurar**: da tranquilidad, y
+el día que hace falta —la bomba en plena seca, el generador la noche del apagón— descubres que no
+sirve. La solución no es tener más, es **ensayar la restauración**.
+</Analogia>
+
+**Cambia el aceite antes de guardar, no después**, porque los ácidos del aceite usado van a estar
+meses sobre los cojinetes. **Resuelve el combustible entero**: o vacías todo el sistema o llenas el
+tanque con un <Termino slug="estabilizador-de-combustible">estabilizador de combustible</Termino> y
+lo haces circular unos minutos; lo que no vale es dejar medio tanque de gasolina vieja. El carburador
+se vacía cerrando la llave de paso y **dejando el motor andando hasta que se apaga solo**.
+
+**Deja película fresca en el cilindro**: saca la bujía, echa una cucharadita de aceite por el
+agujero, tira despacio de la cuerda dos o tres veces y vuelve a ponerla. **Déjalo en compresión**,
+tirando despacio hasta sentir la resistencia y soltando ahí;
+ese <Termino slug="guardado-en-compresion">guardado en compresión</Termino> deja las válvulas
+cerradas y el cilindro aislado del aire húmedo. **Limpia la máquina** y tapa escape y entrada de aire
+con un trapo **y una etiqueta que diga que están tapados**. Guárdala cubierta pero que respire, sobre
+una tarima y nunca con plástico ajustado, que la vuelve una cámara de condensación.
+
+<Dato titulo="Arrancarlo un minuto es peor que no arrancarlo">
+Prender la máquina guardada «un ratito para que no se trabe» le hace daño: un arranque corto en frío
+mete gasolina y agua al cárter y **se apaga antes de calentar lo suficiente para evaporarlas**.
+
+La <Termino slug="marcha-de-mantenimiento">marcha de mantenimiento</Termino> que sí sirve es larga:
+**diez o quince minutos**, hasta que el motor esté caliente de verdad y, si se puede, con carga —al
+generador se le enchufa un consumo real, a la bomba se le hace circular agua—.
+</Dato>
+
+## El calendario, todo junto
+
+<Tabla>
+
+| Tarea | Cuándo | Qué pasa si no |
+| --- | --- | --- |
+| Nivel de aceite (4T) | Antes de cada uso | Trabaja en seco; gripado |
+| Filtro a contraluz | Antes de jornada polvorienta | Desgaste abrasivo o mezcla rica |
+| Rejilla y aletas | Al terminar la jornada | Sobrecalentamiento, pistón agarrado |
+| Cuchilla y silenciador | Antes de cada uso | Proyectil o quemadura |
+| Cambio de aceite (4T) | Horas del manual, o al año | Ácidos, hollín, película que cede |
+| Limpiar o cambiar filtro | Horas del manual, mitad en la seca | Cilindro rayado, potencia perdida |
+| Revisar bujía | Horas del manual | Arranque duro, falla en carga |
+| Calibrar válvulas (4T) | Horas del manual | Válvula quemada, compresión perdida |
+| Ronda de tornillos | Cada cambio de aceite | Piezas sueltas, roscas rotas |
+| Guardado completo | Al terminar la temporada | Carburador engomado, cilindro oxidado |
+| Marcha de mantenimiento | Cada pocas semanas si está guardado | No arranca cuando hace falta |
+
+</Tabla>
+
+## Prevenir contra reparar, con honestidad
+
+No pongo precios: cambian, y una cifra inventada es peor que ninguna. Lo que no cambia es **la
+estructura del gasto**. El mantenimiento se paga en dinero poco, tiempo poco y sorpresa ninguna; la
+reparación, en dinero mucho, el tiempo que tarde el repuesto y sorpresa completa. Esa última es la
+que arruina un trabajo: **la máquina no se rompe en enero, se rompe la semana en que más la
+necesitas**. Y donde los repuestos tardan, estar parado cuesta más que la pieza: el mantenimiento
+**es parte del precio de cada hora trabajada**.
+
+Pero seamos honestos al revés: **no todo mantenimiento paga.** Cambiar aceite cada cinco horas no da
+más vida, y desarmar un carburador que anda bien es la mejor forma de que deje de andar bien. Se hace
+**lo del manual, cuando toca**, y solo se acorta por una razón física: polvo, calor, plena carga.
+
+<AplicarRizoma>
+Empieza por la máquina que ya tienes, aunque sea vieja, aunque sea prestada.
+
+**Primero, encontrar el manual.** En el motor hay una placa con el modelo, y ese dato importa más que
+la marca de la máquina, porque muchísimos equipos montan el mismo motor o una copia de él. Con ese
+número buscas el manual desde el celular e imprimes una hoja con los intervalos, el aceite
+recomendado y las holguras de válvula. Esa hoja en una bolsa transparente, colgada donde vive la
+máquina, resuelve casi todas las dudas de esta lección.
+
+**Segundo, la libreta y la etiqueta**: una libreta barata por máquina, guardada con ella, y una
+etiqueta pegada al depósito con dos números, horas actuales y horas del próximo servicio. Si te
+manejas mejor con el celular, una nota por máquina sirve, pero **la etiqueta física va igual**,
+porque quien use la máquina el sábado puede no ser quien tiene el celular. Y dedícale una tarde a
+calibrar el tanque con reloj: sales de ahí con el horómetro que la máquina no trae.
+
+**Tercero, la caja de mantenimiento**, que se arma una vez y dura años: llave de bujía, llaves fijas,
+galga de láminas si tienes cuatro tiempos, embudo con malla fina, jarra medidora, bandeja ancha,
+bidón rotulado «ACEITE USADO», guantes y un cepillo duro. Todo junto en un solo lugar, porque **la
+tarea que exige buscar herramientas es la que no se hace.** No pongo precios: cotiza en los comercios
+de repuestos de tu zona.
+
+**Cuarto, ponle fecha.** El primer domingo del mes, una hora, con la libreta en la mano: aceite si
+tocan las horas, tornillos, aletas, filtro y una mirada general. Y aprovecha para que **alguien más
+de la casa aprenda a revisar el nivel de aceite y a limpiar el filtro**: una máquina que solo una
+persona sabe mantener está a un viaje de distancia de morirse.
+
+**Quinto, si esto va a ser tu oficio:** el dinero no está solo en reparar, está en **mantener**. Un
+acuerdo con los vecinos que tienen desbrozadora, motobomba o generador —una visita cada tanto, la
+revisión completa y la bitácora que llevas tú— es un ingreso previsible y una reputación más sólida
+que la de apagar incendios. Cobra la visita, no el milagro, y nunca prometas que no se va a romper:
+prometes que se romperá menos y con menos sorpresa. Y al prestarla, que el acuerdo incluya **las
+horas anotadas y el tanque como se recibió**.
+
+En Rizoma del Sur eso se traduce en una decisión que vale la pena copiar: **el servicio completo de
+la motobomba se hace en abril**, antes de la seca, que es cuando trabaja todos los días y quedarse
+sin ella cuesta plantines. La desbrozadora va al revés. **El mantenimiento se programa antes de la
+temporada de trabajo, no en medio.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+Los mecanismos de esta lección son de física y valen en todas partes. Lo que cambia en el sur de
+Santa Cruz es **cuánto más rápido corren**.
+
+**La seca convierte el filtro en la tarea número uno.** De mayo a septiembre no llueve, la tierra
+queda suelta y cualquier trabajo cerca del suelo levanta una nube. Los manuales suponen condiciones
+normales y esto no lo es: **en esos meses el filtro se mira todos los días y el intervalo
+de aceite se acorta también**, porque el polvo que el filtro deja pasar termina en el cárter y ahí se
+queda. Entre agosto y octubre se suma el humo de las quemas, y la ceniza pasa por donde el polvo no
+pasa y encima es higroscópica.
+
+**El calor le quita margen a la refrigeración.** Un motor enfriado por aire evacúa calor gracias a la
+diferencia entre el metal y el aire, y con treinta y cinco o treinta y ocho grados a la sombra esa
+diferencia es menor que en el país donde se escribió el manual: **el mismo motor trabaja más caliente
+aquí**, así que las aletas limpias importan más y conviene evitar la plena carga a mediodía. La
+humedad juega contra el aceite, porque en un motor que se usa a ratos cortos el agua de condensación
+no llega a evaporarse nunca. Y con un surazo el metal se enfría por debajo del aire cálido que vuelve
+al día siguiente, que condensa sobre él: **el galpón cerrado sin ventilación es el peor lugar para
+guardar una máquina**, aunque parezca el más seguro.
+
+**Las temporadas mandan sobre el guardado.** La desbrozadora trabaja de octubre a abril, cuando el
+pasto crece con las lluvias, y la motobomba hace lo contrario, así que **se guarda al terminar la
+temporada, con la máquina todavía en la mano**, no seis meses después con el carburador engomado. El
+caso extremo es el generador: se usa por sorpresa, poco rato y justo cuando hace falta, así que es el
+que más necesita la marcha de mantenimiento.
+
+**La gasolina y el etanol.** En Bolivia se ha ido incorporando etanol a la gasolina; el porcentaje y
+las condiciones son cosa de la autoridad del sector y del surtidor, no de este curso. **Pregunta en
+el surtidor y, ante la duda, asume que tu gasolina lleva etanol.** De ahí dos hábitos: comprar poco y
+fresco en vez de tener un bidón para todo el año, y guardarlo bien cerrado, a la sombra y lejos de
+toda llama.
+
+**Los repuestos tardan, así que se compran antes.** Filtro, bujía y aceite del grado correcto se
+compran cuando bajas a Santa Cruz: una caja de consumibles por máquina es dinero quieto, pero también
+la diferencia entre perder una tarde y una semana. Y no subestimes al mecánico de moto del
+pueblo: **llegar con la bitácora en la mano cambia la conversación**, porque dejas de traer una
+máquina que «no anda» y pasas a traer datos. Para el destino del aceite usado y para lo que exija la
+normativa, pregunta en los talleres que acopian, en el municipio y en la autoridad competente.
+</ContextoBolivia>
+
+## Lo que hay que llevarse
+
+**El reloj de un motor marca horas, no meses**, pero el calendario tampoco se ignora: cada tarea se
+hace cuando llegan las horas o cuando llega la fecha, lo que ocurra primero. Sin horómetro, el tanque
+es tu reloj.
+
+El aceite no se ensucia, **se gasta**. El filtro de aire es lo más barato y lo que más protege,
+porque **la sílice del polvo es más dura que el cilindro**. Las aletas tapadas terminan en un pistón
+dilatado contra la pared. Una válvula sin holgura **se quema porque deja de refrigerarse contra su
+asiento**. Y sobre todo: **el motor que se usa tres semanas al año es el que más se muere**, y se
+muere guardado.
+
+## Lo que sigue
+
+Algún día la máquina no va a arrancar, y ahí empieza el error más caro del oficio: cambiar piezas a
+ver si suena.
+
+En **04-no-arranca** se convierte la tesis del módulo en un procedimiento: ¿gira?, ¿tiene compresión?,
+¿tiene chispa?, ¿le llega combustible?, ¿respira? En ese orden, con la prueba de cada pregunta y lo
+que significa cada resultado. Ahí va también la seguridad crítica del módulo: monóxido de carbono,
+retroceso del arranque y vapores de gasolina.

@@ -1,0 +1,60 @@
+{
+  "titulo": "Del diagrama al cable",
+  "subtitulo": "Un esquema no dibuja el aparato: dibuja qué está unido con qué. Dos puntos alejados en el papel pueden ser el mismo punto eléctrico, y entender eso convierte un aparato sin documentación en algo que se puede reparar. Después viene la mano: soldar, prensar y cerrar una unión que aguante la intemperie de Santa Cruz.",
+  "duracionMin": 30,
+  "objetivos": [
+    "Distinguir un esquema eléctrico de un diagrama de cableado y reconocer los símbolos que cubren casi cualquier esquema, en sus dos familias de dibujo.",
+    "Explicar qué es un nodo y por qué todo lo unido por cobre está siempre a la misma tensión.",
+    "Levantar la lista de conexiones de un aparato sin documentación usando la prueba de continuidad.",
+    "Diagnosticar midiendo la caída de tensión sobre una unión con el aparato encendido y consumiendo.",
+    "Entender la masa como cero de referencia acordado y por qué dos equipos que se hablan deben compartirla.",
+    "Traducir un esquema a protoboard nodo por nodo y saber cuándo el montaje debe abandonarla.",
+    "Soldar con el gesto correcto y distinguir a simple vista una soldadura buena de una fría.",
+    "Cerrar empalmes y terminales con sujeción mecánica, aislamiento y alivio de tracción, y explicar la cadena que arruina una unión a la intemperie."
+  ],
+  "prerrequisitos": [
+    "energia-solar/01-electricidad-desde-cero",
+    "albanileria-y-obra/09-instalacion-electrica",
+    "automatizacion-datos/01-sensores-y-valvulas"
+  ],
+  "videos": [],
+  "referencias": [
+    {
+      "titulo": "How to Read a Schematic",
+      "fuente": "SparkFun Electronics",
+      "url": "https://learn.sparkfun.com/tutorials/how-to-read-a-schematic",
+      "nota": "Recorrido visual por los símbolos y por la lectura de nodos, con los dos estilos de dibujo (americano y europeo) puestos uno al lado del otro. Está en inglés, pero se sigue casi solo por las figuras."
+    },
+    {
+      "titulo": "Guide to Excellent Soldering",
+      "fuente": "Adafruit Learning System",
+      "url": "https://learn.adafruit.com/adafruit-guide-excellent-soldering",
+      "nota": "Fotografías comparadas de soldaduras buenas y frías, que es justo lo que hace falta para entrenar el ojo. En inglés; conviene mirarlo mientras se practica sobre chatarra, no antes."
+    },
+    {
+      "titulo": "Soldering is Easy (historieta de introducción a la soldadura)",
+      "fuente": "Mitch Altman, Andie Nordgren y Jeff Keyzer — mightyohm.com",
+      "url": "https://mightyohm.com/blog/2011/04/soldering-is-easy-comic-book/",
+      "nota": "Historieta breve, de descarga libre y traducida a varios idiomas, pensada para quien nunca tocó un soldador. Sirve muy bien como material fotocopiable para un taller comunitario."
+    }
+  ],
+  "terminos": [
+    "esquema-electrico",
+    "diagrama-de-cableado",
+    "nodo-electrico",
+    "lista-de-conexiones",
+    "masa-electrica",
+    "protoboard",
+    "mojado-de-la-soldadura",
+    "fundente",
+    "estanado",
+    "soldadura-fria",
+    "terminal-de-cable",
+    "alivio-de-traccion",
+    "termorretractil",
+    "efecto-mecha",
+    "corrosion-galvanica",
+    "lazo-de-goteo"
+  ],
+  "practica": true
+}

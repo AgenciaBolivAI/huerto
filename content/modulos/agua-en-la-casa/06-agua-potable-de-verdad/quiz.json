@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "q1-indicador",
+      "tipo": "opcion_multiple",
+      "enunciado": "El análisis bacteriológico de tu pozo vuelve del laboratorio sin coliformes fecales. ¿Qué podés afirmar honestamente con ese resultado en la mano?",
+      "opciones": [
+        "Que en esa muestra, ese día y ese punto no había señal de contaminación fecal reciente.",
+        "Que conviene repetirlo en otra época del año, porque en lluvias el mismo pozo puede dar otro resultado.",
+        "Que el agua tampoco tiene arsénico ni nitrato, porque un agua limpia de bacterias es agua limpia.",
+        "Que no dice nada de lo que pueda entrar después, entre el pozo y el vaso: tanque, biopelícula o una conexión cruzada."
+      ],
+      "correctas": [0, 1, 3],
+      "explicacion": "La incorrecta es la tercera. El organismo indicador contesta una sola pregunta —¿llegó hasta acá materia fecal?— y no contesta ninguna otra. El arsénico y el nitrato no tienen color, olor ni sabor, no son seres vivos y no aparecen en un cultivo bacteriológico: para verlos hace falta un análisis fisicoquímico, que es un pedido distinto y se cobra aparte. Confundir las dos preguntas es exactamente la trampa del healthcheck que devuelve verde: el chequeo pasó, pero solo comprobó lo que sabía mirar. Las otras tres son correctas y describen los tres límites reales del resultado: es puntual en el tiempo, es puntual en el espacio y es puntual en el tipo de contaminante."
+    },
+    {
+      "id": "q2-vela-ceramica",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un vecino instaló una vela cerámica debajo de la pileta y dice que con eso el agua de su casa ya es potable. ¿Qué objeciones tienen fundamento?",
+      "opciones": [
+        "La cerámica retiene bacterias, quistes y huevos, pero los virus son unas diez veces más chicos y le pasan de largo.",
+        "No saca nada de lo disuelto: arsénico, nitrato y sal atraviesan cualquier poro que deje pasar el agua.",
+        "Una fisura en la vela no se nota, porque el agua sigue saliendo igual de clara mientras pasa todo.",
+        "Con el uso el poro se va tapando, y un filtro tapado empieza a dejar pasar bacterias cada vez más grandes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La incorrecta es la cuarta, y es un distractor plausible porque mezcla dos cosas ciertas para llegar a una falsa. Es verdad que la vela se tapa con el uso, pero al taparse el filtro pierde caudal, no gana permeabilidad: el poro se estrecha, no se ensancha, así que un filtro sucio deja pasar menos, no más. El riesgo verdadero de una vela es otro y es el de la tercera opción —una fisura por un golpe o por el cepillado, que abre un camino directo sin cambiar en nada el aspecto del agua—. Las tres primeras son las tres limitaciones reales: tamaño de poro frente a virus, ceguera total ante lo disuelto, y fallo silencioso."
+    },
+    {
+      "id": "q3-conexion-cruzada",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre las conexiones cruzadas y cómo protegerse de ellas, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "El corte de aire es la primera protección porque no tiene partes móviles: no se traba, no se vence y el aire no se sifona.",
+        "El sifonaje inverso ocurre cuando cae la presión aguas arriba y el caño succiona desde donde tenga la punta sumergida.",
+        "Una válvula antirretorno bien instalada protege igual que el corte de aire y, al ser una pieza sellada, no necesita revisión.",
+        "El caño que llena un tanque debe descargar por encima del nivel máximo del agua, nunca sumergido."
+      ],
+      "correctas": [0, 1, 3],
+      "explicacion": "La incorrecta es la tercera. La válvula antirretorno sirve y tiene su lugar, pero es una pieza mecánica con resorte y asiento: se traba con arenilla, se ensucia y se vence con los años, y lo peor es que una válvula vencida no avisa de ninguna manera. Por eso va como segunda línea y se revisa periódicamente, mientras que el corte de aire es la primera opción justamente porque no tiene nada que pueda romperse: es un tramo de aire, y un sifón no puede saltar aire. La regla práctica que se desprende es la de la cuarta opción, y el mecanismo que la justifica es el de la segunda."
+    },
+    {
+      "id": "q4-cloro-turbidez",
+      "tipo": "opcion_multiple",
+      "enunciado": "Clorás el agua de tu tanque, que está algo turbia. Al rato el olor a cloro ya no está y las diarreas en la casa siguen. ¿Qué explica lo que pasó?",
+      "opciones": [
+        "Las partículas en suspensión consumen el cloro oxidándose, así que se gasta antes de llegar a ningún microbio.",
+        "Los microbios viajan pegados a los grumos o metidos adentro, donde el cloro no los alcanza.",
+        "La biopelícula de la pared consume el residual y se desprende a pedazos, sembrando agua nueva cada tanto.",
+        "El cloro se evapora en cuestión de minutos, así que hay que servir el agua enseguida después de clorarla."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La incorrecta es la cuarta, y además invierte la conducta correcta. La desinfección no es instantánea: lo que mata es el producto de la concentración por el tiempo de contacto, así que el agua clorada se deja reposar antes de tomarla, y servirla a los cinco minutos es tirar el cloro. Que el olor desaparezca no significa que el cloro se evaporó: significa que el agua se lo comió, que es la demanda de las tres primeras opciones. De ahí las dos conductas que sí corrigen el problema: aclarar antes de desinfectar, porque cada partícula que sacás es cloro que no se gasta, y cepillar el tanque, porque a la biopelícula no la mata la química sino el cepillo."
+    },
+    {
+      "id": "q5-hervir-disuelto",
+      "tipo": "verdadero_falso",
+      "enunciado": "Hervir el agua es una buena manera de bajar el nitrato y la sal que trae el agua de un pozo.",
+      "respuesta": false,
+      "explicacion": "Es falso, y además hervir los empeora. Hervir destruye todo lo vivo —bacterias, virus, protozoos y huevos— y es una barrera excelente contra lo microbiológico, pero no toca absolutamente nada de lo que está disuelto. Peor todavía: lo que se va en el vapor es agua pura, así que el nitrato y la sal que quedan en la olla están ahora en menos agua, o sea más concentrados. El arsénico, el nitrato, la sal y el flúor no los saca hervir, ni colar, ni una vela cerámica, ni el carbón activado: están desarmados en partículas del mismo orden de tamaño que la molécula de agua, y cualquier poro que deje pasar el agua los deja pasar. Sacarlos exige otra física —ósmosis inversa o destilación—, y muchas veces la respuesta correcta no es un equipo sino otra fuente."
+    },
+    {
+      "id": "q6-presion-intrusion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Mientras una cañería está con presión, una fisura deja salir agua pero no deja entrar nada; el riesgo de que entre suciedad aparece justamente cuando la red se queda sin presión.",
+      "respuesta": true,
+      "explicacion": "Es verdadero, y es una de las ideas más contraintuitivas del oficio. Con la cañería presurizada, el agua empuja hacia afuera por cualquier fisura, así que una pérdida es un problema de plata y de estructura, no de salud. El día que la red se despresuriza —un corte, una rotura, la bomba parada— esa misma fisura cambia de sentido y chupa desde el suelo mojado que la rodea, que en un barrio sin alcantarillado es exactamente donde está el agua del pozo séptico: eso es la intrusión por depresión. El golpe de ariete hace lo suyo, porque tras el pico de presión viene una onda negativa que deja el tubo por debajo de la presión atmosférica un instante. La consecuencia doméstica es simple y barata: cuando vuelve el agua después de un corte, se purga antes de tomar, y si vuelve turbia se purga hasta que salga limpia."
+    },
+    {
+      "id": "q7-diagnostico-de-mi-casa",
+      "tipo": "abierta",
+      "enunciado": "Recorré el agua de tu casa desde la fuente hasta el vaso y escribí un diagnóstico propio. Primero, cuáles son las puertas por donde puede entrar contaminación en TU instalación y cuál te parece la más grave. Segundo, qué arreglarías este mismo fin de semana sin gastar plata. Tercero, qué cadena de tratamiento armarías con lo que ya tenés en la casa. Y cuarto, qué le pedirías a un laboratorio y por qué. Si vivís en una casa alquilada, sin patio o con tanque compartido, resolvelo igual con lo que esté a tu alcance: la respuesta tiene que ser sobre tu casa real, no sobre una casa ideal.",
+      "respuestaModelo": "Vivo alquilando dos ambientes en una casa dividida, sin patio propio. El agua viene de la cooperativa, entra por un medidor común, sube por bomba a un tanque de plástico negro compartido en el techo y de ahí baja a la pileta de la cocina, al baño y a una canilla de lavar en el pasillo. No tengo pozo, así que la primera puerta —boca de pozo, brocal y sello sanitario— no me toca, y eso me ahorra la parte más cara del problema.\n\nLas puertas que sí tengo son cuatro. La primera es el tanque, y es la más grave de todas: subí a mirarlo y la tapa está apoyada pero no cierra, el caño de rebalse no tiene malla y la pared por dentro se siente babosa al pasar el dedo. Ese tanque es la puerta de entrada más grande que tengo y, además, en zona de dengue es un criadero perfecto. La segunda es la biopelícula de ese mismo tanque y de los caños: si somos tres familias con un tanque grande, el tiempo de residencia es de varios días, y con el calor de acá cuando esa agua sale ya no queda nada de desinfectante. La tercera es una conexión cruzada que yo mismo construí sin darme cuenta: la manguera de la canilla del pasillo queda tirada en el piso, muchas veces dentro del balde de trapear, y el balde tiene agua sucia. La cuarta es la pérdida de presión: acá cortan seguido, y cada vez que vuelve el agua sale turbia un rato.\n\nLo que arreglo este fin de semana sin gastar un peso es la ronda de conexiones cruzadas, porque es lo que más rinde por lo que cuesta. Cuelgo la manguera de un clavo en la pared para que su punta nunca quede por debajo del nivel de ningún líquido, y me acostumbro a llenar el balde dejando un palmo de aire entre la boca y la superficie. Reviso el flexible del inodoro para que su boca no quede sumergida en el depósito. Y me fijo si el caño que llena el tanque descarga por encima del nivel máximo o entra sumergido: si entra sumergido, se lo comento al dueño, porque eso es lo que convierte a todo el tanque en algo que se puede succionar. Además, cuando vuelve el agua después de un corte, purgo un balde por canilla antes de tomar, y esa agua la uso para el piso o para las macetas en vez de tirarla.\n\nCon el dueño y las otras dos familias propongo lo único que cuesta algo pero se divide entre tres: comprar una tapa que cierre y un pedazo de malla fina para el rebalse y la ventilación, y vaciar el tanque para cepillarlo. Insisto en el cepillo porque la biopelícula no se saca con química ni enjuagando: primero se frota, después se desinfecta, y recién después se enjuaga hasta que se vaya el olor. Dejamos anotada la fecha en un papel pegado en la cocina para que no pasen dos años hasta la próxima.\n\nLa cadena de tratamiento la armo con lo que ya tengo y solo para el agua que se toma, que es una fracción chica del consumo: la de tomar, la de cocinar sin hervor posterior y la de lavarse los dientes van tratadas, y la de bañarse y lavar la ropa no. Cuando el agua viene turbia la dejo reposar tapada y la trasvaso despacio sin revolver, o la paso por un paño doblado en cuatro; después hiervo con la olla tapada y llama baja; y la guardo en un bidón de boca angosta, opaco, levantado del piso, con el jarro colgado afuera y no adentro. Nunca relleno sobre lo viejo: termino el agua, lavo el bidón y lo lleno de nuevo, porque si siempre agrego encima el fondo no se vacía nunca. Aclarar antes de hervir o de clorar no es prolijidad: cada partícula que saco es desinfectante que no se gasta y un escondite menos para los microbios.\n\nAl laboratorio le pediría dos análisis distintos, porque no se sustituyen. Un bacteriológico, y no una sino dos muestras: una en la entrada, antes del tanque, y otra en la canilla más lejana de mi cocina. Si la entrada sale limpia y la lejana sale sucia, ya sé que el problema no es la cooperativa sino el tanque y los caños de esta casa, que es exactamente donde estoy sospechando. Y un fisicoquímico, aunque tome de red, para saber de dureza, hierro y sales. Antes de tomar cada muestra dejo correr el agua unos minutos para purgar la línea, uso el frasco que da el laboratorio sin enjuagarlo, no toco la parte de adentro de la tapa, lo rotulo, lo mantengo frío y lo entrego el mismo día. Dónde se hace y cuánto sale lo pregunto en el centro de salud o en la cooperativa, y los límites de lo que es aceptable no los saco de un curso: los consulto ahí, sobre todo porque en la casa de al lado hay una guagua que toma mamadera.",
+      "criterios": [
+        "Distingue transparente de potable y no usa el aspecto del agua como prueba de nada.",
+        "Recorre el agua de la fuente al vaso y nombra puertas de entrada concretas de su propia casa, no una lista genérica.",
+        "Identifica al menos una puerta de las trabajadas en la lección: boca de pozo, tanque, biopelícula, ramal muerto, pérdida de presión o conexión cruzada.",
+        "Detecta al menos una conexión cruzada real y propone el corte de aire como solución, con la punta de la manguera siempre por encima del nivel del líquido.",
+        "Explica el mecanismo, y no solo la regla: por qué al caer la presión el caño succiona, o por qué la biopelícula protege a los microbios del cloro.",
+        "Separa lo que arregla gratis y hoy de lo que necesita plata, permiso del dueño o acuerdo con los vecinos.",
+        "Propone cepillado y no solo enjuague o cloro para el tanque, y en el orden correcto: frotar, desinfectar, enjuagar.",
+        "Ordena una cadena de barreras en vez de confiar en una sola, y aclara el agua antes de desinfectarla.",
+        "Separa el agua por uso y trata solo la que hace falta, reconociendo que de eso depende que la costumbre se sostenga.",
+        "Cuida el almacenamiento y el servido: recipiente tapado, boca angosta, jarro afuera y sin rellenar sobre lo viejo.",
+        "Pide los dos análisis distintos y explica que uno no contesta la pregunta del otro; idealmente muestrea en dos puntos para separar fuente de instalación.",
+        "Remite dosis, límites y costos al centro de salud, a la cooperativa o al laboratorio, sin inventar cifras ni normas."
+      ],
+      "explicacion": "El ejercicio no busca que repitas la lección sino que la apliques a la casa donde vivís de verdad, que es donde se decide si tomás agua segura o no. Lo que se evalúa es el orden del razonamiento: primero mirar por dónde puede entrar la contaminación —porque proteger la entrada es gratis y le abarata el trabajo a todo lo que viene después—, y recién entonces pensar en tratar. Una respuesta que arranca comprando un filtro y no menciona el tanque destapado ni la manguera dentro del balde tiene el orden invertido y va a gastar plata sin resolver el problema. También se evalúa la honestidad de los límites: reconocer que ninguna barrera casera saca arsénico, nitrato ni sal, que un análisis bacteriológico limpio no dice nada de la química, y que las dosis, los valores máximos y los precios se preguntan en el centro de salud, en la cooperativa o en un laboratorio, y no se deducen. Si vivís alquilando o con tanque compartido, la respuesta buena no es «no puedo hacer nada»: es separar lo que está a tu alcance hoy —colgar una manguera, purgar después de un corte, hervir y guardar bien— de lo que hay que negociar con el dueño o con los vecinos."
+    }
+  ]
+}

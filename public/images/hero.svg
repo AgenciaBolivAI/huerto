@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="system-ui, sans-serif">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#34522a"/>
+      <stop offset="1" stop-color="#558544"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#cielo)"/>
+  <!-- Sol -->
+  <circle cx="1300" cy="180" r="90" fill="#f2d16b" opacity="0.85"/>
+  <!-- Colinas -->
+  <path d="M0 640 Q400 520 800 640 T1600 620 V900 H0 Z" fill="#2b4324"/>
+  <path d="M0 740 Q500 640 1000 740 T1600 720 V900 H0 Z" fill="#23371e"/>
+  <!-- Árboles estilizados -->
+  <g fill="#121f0f">
+    <g transform="translate(250 560)">
+      <rect x="-10" y="0" width="20" height="120" rx="8"/>
+      <circle cx="0" cy="-40" r="75"/>
+      <circle cx="-50" cy="-10" r="45"/>
+      <circle cx="50" cy="-10" r="45"/>
+    </g>
+    <g transform="translate(1350 590) scale(0.8)">
+      <rect x="-10" y="0" width="20" height="120" rx="8"/>
+      <circle cx="0" cy="-40" r="75"/>
+      <circle cx="-50" cy="-10" r="45"/>
+      <circle cx="50" cy="-10" r="45"/>
+    </g>
+    <!-- Palmera -->
+    <g transform="translate(1050 600)">
+      <path d="M0 120 q12 -110 -8 -160" stroke="#121f0f" stroke-width="14" fill="none" stroke-linecap="round"/>
+      <g>
+        <path d="M-8 -40 q-80 -35 -125 -8 q60 28 125 8z"/>
+        <path d="M-8 -40 q80 -35 125 -8 q-60 28 -125 8z"/>
+        <path d="M-8 -40 q-50 -70 -95 -80 q35 60 95 80z"/>
+        <path d="M-8 -40 q50 -70 95 -80 q-35 60 -95 80z"/>
+      </g>
+    </g>
+  </g>
+  <!-- Wordmark sutil -->
+  <text x="1560" y="868" text-anchor="end" font-size="30" letter-spacing="3" fill="#9bbf8d" opacity="0.75">@rizomaDelSur</text>
+</svg>

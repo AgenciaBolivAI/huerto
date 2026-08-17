@@ -1,0 +1,78 @@
+{
+  "preguntas": [
+    {
+      "id": "que-se-compra",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se compra realmente al comprar semilla cada temporada?",
+      "opciones": [
+        "Dependencia de que la variedad siga existiendo, y dejan de fabricarse constantemente.",
+        "Dependencia de un precio que no pones tú y que se repite cada ciclo.",
+        "Dependencia de que le vaya bien en tu clima, cosa que el sobre no dice.",
+        "Una garantía de que germinará mejor que la semilla propia."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hay tal garantía: la germinación depende de cómo se guardó, y una semilla propia bien secada y almacenada puede germinar igual o mejor. Lo que se compra de verdad es una dependencia que se renueva cada ciclo, y pesa igual que un costo fijo del módulo de negocio."
+    },
+    {
+      "id": "adaptacion-local",
+      "tipo": "verdadero_falso",
+      "enunciado": "Guardar semilla de las plantas que mejor se comportaron en tu terreno, ciclo tras ciclo, produce una población adaptada a tu sitio que ninguna casa comercial vende.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es la ventaja que el software no tiene: la semilla no solo se conserva, mejora. Nadie selecciona para Zanja Honda, así que esa adaptación solo puede construirla quien siembra ahí."
+    },
+    {
+      "id": "limites-honestos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué límites hay que asumir antes de empezar?",
+      "opciones": [
+        "De un híbrido F1 no se guarda semilla: es genética, no una prohibición.",
+        "Hay especies fáciles y especies que exigen aislamiento cuidadoso.",
+        "Guardar mal es peor que no guardar, porque el fallo se descubre sin tiempo de reaccionar.",
+        "Toda planta del catálogo de un vivero se puede multiplicar por semilla."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Buena parte del catálogo no va por semilla en absoluto: yautía, plátano, batata y los frutales injertados se propagan por vía vegetativa, que es el módulo 9. Este módulo trata solo de lo que sí viene de semilla."
+    },
+    {
+      "id": "que-es-variedad",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una variedad es un archivo genético que, una vez conseguido, se mantiene solo mientras se guarde bien la semilla.",
+      "respuesta": false,
+      "explicacion": "Falso: una variedad es una población cuyos caracteres se mantienen estables porque alguien la selecciona, y si se deja de seleccionar se desdibuja. Aparecen plantas distintas, se cruza con lo cercano, y en unos ciclos ya no responde a la descripción. Mantener una variedad es trabajo continuo, no un archivo guardado."
+    },
+    {
+      "id": "ficha-y-poblacion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si tu ají dulce lleva cuatro ciclos seleccionado en tu parcela, la ficha de cultivo que vale es la tuya y no la del manual.",
+      "respuesta": true,
+      "explicacion": "Correcto: la ficha describe un comportamiento, y el comportamiento depende de la población que tengas en la mano. Y funciona al revés también: si la dejaste cruzarse sin control, la ficha del manual ya no describe lo que tienes. La libreta es también el registro genético del vivero."
+    },
+    {
+      "id": "compartir",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una semilla se multiplica al regalarla: das un puñado y sigues teniendo el tuyo.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es la base del banco comunitario. Es de las pocas herramientas que se comparten sin perderlas, y por eso es la más barata que existe para que una zona gane autonomía."
+    },
+    {
+      "id": "semilla-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Explica qué va a guardar Rizoma del Sur, qué no, y qué se persigue a tres años.",
+      "respuestaModelo": "Guardo semilla propia desde el primer ciclo, pero solo de lo que se puede: del catálogo actual, la vía de semilla aplica sobre todo al culantro y al ají dulce.\n\nEl culantro es el caso fácil y por eso empiezo por él: me permite aprender el procedimiento completo —selección, aislamiento, cosecha, limpieza, secado, prueba de germinación y almacenamiento— con poco riesgo.\n\nEl ají dulce es el delicado. Es Capsicum chinense, se autofecunda bastante pero los insectos lo cruzan, y como advertía su ficha la picantez viaja en la semilla y no en el fruto de este año: un cruce con un ají picante cercano no se nota hasta la generación siguiente. O lo aíslo por distancia, barrera o embolsado, o directamente no guardo de ese lote.\n\nNo intento guardar semilla de yautía, batata, plátano ni de los frutales injertados: esos van por propagación vegetativa, que es el módulo 9. Tenerlo claro evita perder una temporada.\n\nAntes de sembrar leo el sobre y lo anoto en la libreta: si dice F1 o híbrido, ese lote se produce y se vende pero queda fuera del programa de semilla, porque su descendencia sale desigual y peor. Cuando pueda elegir, elijo polinización abierta aunque el primer año rinda algo menos, porque la que se puede guardar me da todos los años siguientes.\n\nLa selección la hago en la parcela y con la libreta delante, no de memoria, comparando solo dentro del mismo lote y las mismas condiciones. Es el mismo ciclo de anotar, comparar y corregir del módulo de negocio, aplicado a la genética.\n\nEl objetivo declarado a tres años es tener una población de culantro y otra de ají dulce adaptadas a Zanja Honda, con su ficha corregida por observación propia. Ese es exactamente el activo que la lección de crecer y medir describía como imposible de copiar: cualquiera compra la misma malla, nadie tiene mi población seleccionada tres ciclos en mi suelo.\n\nY el final del camino es el banco comunitario, que encaja con la misión del proyecto: la semilla se multiplica al compartirla, así que es la herramienta más barata para que la zona gane autonomía. Antes de vender semilla —que es distinto de guardarla e intercambiarla— consulto los requisitos con la autoridad competente, porque hay registro y certificación de por medio.\n\nAdemás pregunto a los vecinos mayores qué se sembraba aquí y si alguien todavía lo guarda: esa semilla ya pasó décadas de clima local, y esa información no está en ningún catálogo.",
+      "criterios": [
+        "Identifica culantro y ají dulce como las vías de semilla del catálogo.",
+        "Empieza por el culantro justificando el menor riesgo.",
+        "Explica el problema de cruce del ají dulce y que el picor aparece en la generación siguiente.",
+        "Excluye correctamente las especies de propagación vegetativa.",
+        "Descarta los híbridos F1 y lo anota desde la siembra.",
+        "Prefiere polinización abierta y explica el porqué a largo plazo.",
+        "Selecciona con libreta y comparando dentro del mismo lote.",
+        "Fija un objetivo de población adaptada a tres años.",
+        "Liga el resultado al activo imposible de copiar del módulo de negocio.",
+        "Plantea el banco comunitario y consulta la normativa antes de vender.",
+        "Busca semilla local entre vecinos como material ya adaptado."
+      ],
+      "explicacion": "El módulo entero descansa en una idea: producir bien es una temporada, poder seguir produciendo es una decisión sobre la semilla. Y en un proyecto comunitario esa decisión deja de ser individual, porque la semilla es lo único que se multiplica al repartirse."
+    }
+  ]
+}

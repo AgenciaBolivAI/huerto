@@ -1,0 +1,35 @@
+{
+  "titulo": "Probar, equivocarse, corregir",
+  "subtitulo": "Depurar no es un talento que unos tienen y otros no: es un procedimiento de cinco movimientos que se aprende en una tarde. Reproducir el fallo antes de tocar nada, cambiar una sola cosa a la vez, partir el programa por la mitad e imprimir el estado en lugar de suponerlo, y después probar a propósito con los datos que nadie quiere probar.",
+  "duracionMin": 30,
+  "objetivos": [
+    "Escribir la receta de reproducción de un fallo —qué le di, qué esperaba, qué pasó— antes de tocar el código.",
+    "Localizar la variable oculta que hay detrás de un fallo intermitente en lugar de atribuirlo al azar.",
+    "Aplicar la regla de un cambio, una ejecución y una anotación, deshaciendo lo que no mejoró nada.",
+    "Acorralar un fallo por búsqueda binaria en el código, en los datos y en las versiones fechadas.",
+    "Imprimir el estado con etiqueta y tipo, dentro del bucle, y comparar esa salida con la tabla de traza en papel.",
+    "Probar a propósito los casos límite: cero, vacío, negativo, duplicado, el límite exacto y el dato que nunca llegó.",
+    "Escribir el caso de prueba que delata el fallo antes de corregirlo y conservarlo para detectar regresiones.",
+    "Mantener copias fechadas y probadas que permitan volver atrás, y reconocer cuándo parar y anotar antes de seguir."
+  ],
+  "prerrequisitos": [
+    "programar-desde-cero/04-leer-un-error",
+    "automatizacion-datos/05-registro-de-datos"
+  ],
+  "videos": [],
+  "referencias": [],
+  "terminos": [
+    "depuracion",
+    "fallo-reproducible",
+    "fallo-intermitente",
+    "busqueda-binaria",
+    "impresion-de-estado",
+    "caso-limite",
+    "dato-faltante",
+    "caso-de-prueba",
+    "regresion-de-software",
+    "vision-de-tunel",
+    "bitacora-del-sistema"
+  ],
+  "practica": true
+}

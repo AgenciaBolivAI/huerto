@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-funciona",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la rotación baja la población de un patógeno de suelo especializado?",
+      "opciones": [
+        "Porque cada ciclo sin hospedante multiplica la reserva de inóculo por un factor menor que uno.",
+        "Porque las estructuras de resistencia se agotan si no encuentran una raíz que puedan infectar.",
+        "Porque el descenso es exponencial: los primeros ciclos de ausencia son los que más bajan.",
+        "Porque el cultivo siguiente compite con el patógeno y lo desplaza del suelo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La última es falsa y confunde dos cosas distintas. El cultivo siguiente no pelea con el patógeno: simplemente no le sirve de comida, y esa ausencia es todo el mecanismo. Un patógeno especializado no se desplaza por competencia con la planta, se apaga por inanición y por el desgaste natural de sus estructuras de resistencia. Confundir ausencia de hospedante con antagonismo lleva a esperar de la rotación efectos inmediatos que no va a dar."
+    },
+    {
+      "id": "cuando-no-sirve",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué situaciones la rotación NO crea un período sin hospedante real?",
+      "opciones": [
+        "Cuando el organismo es polífago y ataca casi cualquier cosa que tenga raíz.",
+        "Cuando queda en el lote una maleza de la misma familia o un resto de cosecha que rebrota.",
+        "Cuando el material de siembra del turno siguiente reintroduce el inóculo que se había perdido.",
+        "Cuando el cultivo que entra pertenece a otra familia botánica pero se cosecha por el mismo órgano."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta no es un problema: el órgano cosechado importa para la extracción de nutrientes y para la operación que sufre el suelo, pero un patógeno especializado reconoce a su hospedante por la familia botánica, no por si lo que se cosecha es hoja, fruto o raíz. Dos familias distintas con el mismo órgano de cosecha sí rompen el ciclo del patógeno; lo que no rompen es la secuencia de dos excavaciones seguidas, que es otro asunto."
+    },
+    {
+      "id": "acortar-el-ciclo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si no hay superficie para una rotación de cinco sectores, lo razonable es acortar el ciclo a tres y aceptar un beneficio parcial.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error más caro de la lección. Media rotación no da medio beneficio: al devolver el hospedante cuando la reserva de inóculo todavía está alta se reinicia la multiplicación desde un valor alto, y el mecanismo casi no aporta nada. La salida correcta es reducir el número de familias que se cultivan en terreno —tres cultivos bien rotados baten a seis mal rotados— o mover al envase, con sustrato de origen conocido, lo que el terreno no puede sostener."
+    },
+    {
+      "id": "movilidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué variable decide si la rotación sirve contra una plaga de insectos?",
+      "opciones": [
+        "La movilidad del adulto comparada con el tamaño de la parcela.",
+        "Si la plaga pasa una fase en el suelo del lote y emerge donde estaba.",
+        "El rango de familias botánicas que acepta como hospedante.",
+        "La cantidad de daño que causa por planta afectada."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El daño por planta define si vale la pena actuar, no si la rotación es la herramienta adecuada: es una pregunta de umbral, no de mecanismo. Lo que decide es geometría y biología —cuánto se desplaza el adulto, si hay una fase en el suelo y de cuántas familias come—. Contra un alado que recorre cientos de metros, rotar de una cama a la de al lado es mover el objetivo tres metros dentro de su radio de búsqueda."
+    },
+    {
+      "id": "restaurador",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el turno restaurador honesto combina una leguminosa con una gramínea?",
+      "opciones": [
+        "La leguminosa aporta nitrógeno nuevo por fijación con sus rizobios.",
+        "La gramínea aporta volumen de residuo con carbono, que es materia orgánica futura y cobertura.",
+        "Si la leguminosa se cosecha por grano, buena parte del nitrógeno fijado se va con el grano.",
+        "Porque cualquier mezcla de dos especies rinde más que una sola por el simple hecho de ser mezcla."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la versión vacía del argumento y no se sostiene: una mezcla rinde más solo si sus componentes cubren funciones distintas, que es exactamente lo que aquí ocurre —nitrógeno por un lado, carbono y cobertura por el otro—. Sin esa complementariedad declarada, dos especies juntas son dos especies juntas. Y el matiz de la tercera opción es el que más gente ignora: una leguminosa cosechada por grano exporta buena parte del nitrógeno que fijó."
+    },
+    {
+      "id": "sectores",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el culantro cabe tres veces al año en la misma cama, esas tres siembras cuentan como tres turnos de rotación.",
+      "respuesta": false,
+      "explicacion": "Falso: son un solo turno, y además concentran inóculo de esa familia en ese sector. La unidad de la rotación no es el año ni la siembra: es el turno, el período completo que una familia ocupa un sector antes de cederlo. Escalonar siembras de la misma familia todo el año en la misma cama es monocultivo a escala fina disfrazado de intensidad, y con las apiáceas —sensibles a nematodos— eso tiene consecuencias reales."
+    },
+    {
+      "id": "registro",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace que un registro de rotación sea auditable y no un simple cuaderno de siembras?",
+      "opciones": [
+        "Una columna de familia botánica, que es la unidad sobre la que opera la regla.",
+        "Una columna de incidencias sanitarias, que permite alargar la ausencia en el sector que la necesita.",
+        "El origen del material de siembra, para reconstruir hacia atrás un problema que aparezca años después.",
+        "Que esté en una planilla digital, porque el papel no permite consultas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El soporte no es lo que decide: en papel es suficiente y suele ser preferible a una aplicación que nadie llenará con las manos sucias, siempre que exista un respaldo —una foto de la ficha al cerrar cada turno—. Lo que hace auditable el registro son las columnas: sin familia botánica no se puede comprobar la regla, sin incidencias la rotación no aprende, y sin origen del material no se puede rastrear de dónde vino un problema."
+    },
+    {
+      "id": "rotacion-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña la rotación de Rizoma del Sur: qué superficie rotas, con qué familias y en qué orden, cuántos sectores, qué registro llevas, y qué haces con la parte del catálogo que es perenne y no rota.",
+      "respuestaModelo": "Empiezo por lo que casi nadie hace: separar lo rotable de lo que no lo es. De los 3.666 m² en 12 lotes, una parte está o va a estar ocupada por el plátano, los frutales injertados, los árboles de sombra, el cerco vivo y la infraestructura del vivero. Nada de eso rota. Lo rotable es lo que queda, y el primer trabajo es dibujarlo en el plano y aceptar ese número, menor de lo que parece.\n\nSobre esa superficie monto una rotación de cinco turnos, uno por cada familia real del catálogo más el restaurador: aráceas con yautía, solanáceas con ají dulce, convolvuláceas con batata, apiáceas con culantro, y un turno de leguminosa más gramínea que no se cosecha, se corta antes de que semille y se deja encima como cobertura muerta. Cinco sectores le dan cuatro turnos de ausencia a cada familia. Si la superficie no alcanza para cinco sectores manejables, no acorto el ciclo —eso no da medio beneficio, no da casi ninguno— sino que saco una familia del terreno, empezando por la que peor historial sanitario tenga aquí.\n\nEl orden lo justifico paso a paso. El turno restaurador va justo antes de la yautía, que es la más exigente y la de ciclo más largo, para que cobre el nitrógeno cuando está disponible y encuentre el perfil abierto por los bioporos que dejó la raíz pivotante del gandul. Detrás de la yautía, que se cosecha excavando y deja el suelo removido y pisoteado, va el ají dulce, que agradece suelo mullido y se cosecha sin tocar el suelo. Detrás del ají va el culantro, de cosecha de hoja, que le da al perfil un turno de descanso mecánico. Y la batata va antes del restaurador, porque su cosecha es la segunda excavación del ciclo y conviene que la siga algo que recomponga estructura y cobertura.\n\nHay cuatro trampas del catálogo que vigilo. Las aráceas ornamentales del vivero son la misma familia que la yautía, así que un bloque de plantas madre de filodendros o anturios plantado en terreno cuenta como turno de aráceas para cualquier patógeno de esa familia. El culantro tiene la rotación más rápida y la tentación es escalonar siembras en la misma cama todo el año: se puede dentro de su turno, pero sigue siendo un solo turno y las apiáceas son sensibles a nematodos. La batata rebrota de cualquier trozo de raíz o guía enterrado, así que su turno solo termina cuando el lote está realmente limpio. Y el ají dulce no va donde hubo otra solanácea el turno anterior aunque el nombre comercial sea distinto: tomate, berenjena y papa son la misma familia.\n\nSé además que la rotación no es universal. Contra organismos polífagos no crea período sin hospedante, y ahí las palancas son drenaje, materia orgánica y material sano. Contra plagas aladas no aísla nada. Y una rotación impecable queda invalidada si el material de siembra reintroduce el inóculo: rotación y trazabilidad son la misma política.\n\nCon los perennes digo la verdad: no rotan, y el mecanismo de ausencia de hospedante no está disponible. En su lugar hago cinco cosas. Roto el sotobosque y no el árbol: bajo el plátano y bajo los frutales alterno culantro, cobertura y descanso, y no meto nunca ahí un cultivo que se coseche cavando. Reparto el plátano en bloques discontinuos en lugar de un macizo único, que es diversidad en el espacio sustituyendo a la del tiempo. Muevo todo el peso de la prevención al control de entrada: material de origen conocido, cuarentena, control de herramientas, de calzado y del agua que escurre entre lotes. Uso rotación de ciclo largo, con la unidad puesta en la vida útil de la plantación: cuando un bloque de plátano decline y se levante, lo que sigue en ese suelo no es plátano sino un turno restaurador largo y después otra familia. Y no replanto nunca en el mismo hoyo, porque ahí se juntan inóculo acumulado y autotoxicidad.\n\nEl registro es lo que hace que todo esto exista de verdad. Una ficha por sector, con una fila por turno y estas columnas: fechas de entrada y salida, especie, familia botánica, origen del material con su lote, operación de suelo, qué se hizo con el residuo, incidencias sanitarias y cosecha con jornales. La familia botánica es la columna que hace auditable el registro, y las incidencias son las que convierten la rotación en un sistema que aprende: un sector marcado tres turnos seguidos con marchitez recibe una ausencia más larga. En papel, colgado donde se trabaja, con una foto al cerrar cada turno como respaldo. Y como Rizoma es un proyecto comunitario y gratuito, esa ficha es lo más fácil de regalar: un vecino no puede copiar una instalación, pero sí una tabla de cinco columnas y la regla de no repetir familia.\n\nPor último, ajusto el calendario al sitio. El turno restaurador va en lluvias, porque un abono verde necesita agua para producir la biomasa que justifica el turno. Y con arcillas expansivas y encharcamiento en las partes bajas, un sector que se encharca no recibe en lluvias a las especies que mueren con la raíz en agua, como el gandul y el ají dulce, aunque eso obligue a desincronizar los turnos entre sectores. Ese desvío se anota en la ficha con su motivo; lo que no hago es resolverlo repitiendo familia.",
+      "criterios": [
+        "Separa explícitamente la superficie rotable de la ocupada por perennes antes de diseñar nada.",
+        "Propone un número de sectores y lo justifica como turnos de ausencia más uno.",
+        "Asigna una familia botánica a cada turno usando el catálogo real: aráceas, solanáceas, convolvuláceas, apiáceas y el turno restaurador.",
+        "Justifica el orden con mecanismos: nitrógeno disponible, bioporos, alternancia de cosecha destructiva y no destructiva.",
+        "Reconoce que la unidad es la familia botánica y no la especie, y aplica eso a las aráceas ornamentales y a las solanáceas.",
+        "Rechaza acortar el ciclo y propone en su lugar sacar una familia del terreno o moverla al envase.",
+        "Nombra al menos dos límites honestos de la rotación: polifagia, persistencia larga, hospedante oculto o material de siembra contaminado.",
+        "Explica qué se hace con los perennes: rotar el sotobosque, bloques discontinuos, control de entrada, rotación de ciclo largo y no replantar en el mismo hoyo.",
+        "Afirma que el hongo de suelo de la marchitez del plátano no se maneja por rotación.",
+        "Define un registro con las columnas de familia botánica, origen del material e incidencias sanitarias, y explica para qué sirve cada una.",
+        "Ajusta el calendario al régimen de lluvias y seca y a las zonas que se encharcan.",
+        "Incluye el encuadre comunitario: el registro como algo replicable y transmisible a un vecino sin recursos."
+      ],
+      "explicacion": "La respuesta completa tiene que hacer tres cosas que se sostienen entre sí: aceptar que la superficie rotable es menor de lo que parece, ordenar las familias con un mecanismo detrás de cada paso, y montar el registro que permite comprobar la regla dentro de tres años. Y tiene que decir con claridad lo que la lección no esconde: que buena parte del catálogo de Rizoma es perenne, que para esa parte el mecanismo de ausencia de hospedante no existe, y que ahí toda la defensa se juega en el control de entrada y en el diseño espacial."
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "preguntas": [
+    {
+      "id": "actividad-de-agua",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es la actividad de agua y por qué importa más que el contenido de humedad?",
+      "opciones": [
+        "Mide la fracción de agua libre, la única que un microorganismo o una reacción pueden usar.",
+        "Es igual a la humedad relativa de equilibrio del aire encerrado con el producto, dividida entre cien.",
+        "Dos productos con el mismo porcentaje de humedad pueden tener actividades de agua muy distintas.",
+        "Es simplemente otra forma de expresar el porcentaje de agua sobre el peso total."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es lo mismo: el contenido de humedad cuenta toda el agua, y buena parte está ligada a las capas de hidratación de proteínas, almidones, azúcares y sales, químicamente ocupada y sin servir a nadie. Una mermelada y una rodaja de yautia pueden tener ambas un 20 % de humedad y comportarse en mundos opuestos, porque en la mermelada la sacarosa secuestra el agua y la aw baja a alrededor de 0,8, mientras que en la rodaja buena parte del agua es libre."
+    },
+    {
+      "id": "el-secado-no-mata",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un producto correctamente secado puede considerarse esterilizado, porque la deshidratación mata a los microorganismos que traía.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error más caro del oficio. El secado no mata: suspende. Las esporas de hongos sobreviven perfectamente a la deshidratación —para eso existen— y el resto de la población queda inmovilizada por falta de agua, no eliminada; ninguna etapa del secado solar alcanza temperaturas de esterilización. Por eso un producto seco que se rehumedece no empieza limpio, empieza colonizado, y por eso la higiene de la cosecha es parte del secado: el proceso no tiene ninguna etapa correctiva y además concentra diez veces todo lo que el producto traía encima."
+    },
+    {
+      "id": "curva-de-secado",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre los dos periodos de la curva de secado, ¿qué es correcto?",
+      "opciones": [
+        "En el periodo de velocidad constante la superficie está empapada y manda el aire: temperatura, humedad y caudal.",
+        "En el periodo de velocidad decreciente manda el producto, porque el agua tiene que difundir desde dentro.",
+        "En el constante se pierde la mayor parte del peso; en el decreciente se consume la mayor parte del tiempo.",
+        "Subir la temperatura del aire en el periodo decreciente acelera el secado en la misma proporción que en el constante."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "En el periodo decreciente el cuello de botella se mudó adentro: el agua no llega antes a la superficie porque tú soples más fuerte, así que subir la temperatura ya casi no acelera y lo único que consigues es cocinar y degradar color, aroma y vitaminas. Es la diferencia entre un proceso limitado por entrada/salida y uno limitado por cómputo, y optimizar el recurso equivocado se paga en calidad. Lo que sí habría acelerado esa fase es haber cortado más fino, y esa decisión se tomó antes, con el cuchillo."
+    },
+    {
+      "id": "escaldado-y-pardeamiento",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es cierto del pardeamiento enzimático y del escaldado?",
+      "opciones": [
+        "El corte pone en contacto la polifenoloxidasa con fenoles que estaban en otro compartimento celular.",
+        "El escaldado desnaturaliza la enzima de forma irreversible, y el enfriado inmediato es parte del método.",
+        "Las hojas aromáticas no se escaldan, porque el agua hirviendo se lleva los aceites esenciales volátiles.",
+        "El escaldado es siempre conveniente porque no tiene ningún costo sobre el producto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Sí tiene costo: arrastra vitaminas y azúcares solubles al agua y devuelve al producto una humedad superficial que hay que volver a quitar, además de alargar el trabajo. Es un intercambio que se decide producto por producto: conviene en rodajas de batata o yautia, y está descartado en culantro, donde el aroma es el valor entero. La alternativa sin calor es acidular con limón o vinagre, que saca a la polifenoloxidasa de su rango de pH cómodo pero deja sabor y no reduce la carga microbiana."
+    },
+    {
+      "id": "lo-que-seca-es-el-aire",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué se dice que lo que seca es el aire y no el sol?",
+      "opciones": [
+        "Calentar aire sin añadirle agua desploma su humedad relativa y le da capacidad de carga.",
+        "El aire tiene que salir del secador: si se sella para no perder calor, se satura y se vuelve un baño de vapor.",
+        "Mientras la superficie está mojada, el producto se mantiene a la temperatura de bulbo húmedo, no a la del aire.",
+        "El sol es imprescindible porque su radiación arranca el agua directamente de las células."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La radiación no arranca agua: solo aporta energía. La función del sol en un secador es calentar aire, y aire a 30 °C con 80 % de humedad relativa calentado a 45 °C sin ganar una gota baja a alrededor del 35 %. En un secador directo la radiación ultravioleta además destruye clorofila y carotenos, así que el sol sobre el producto es más un problema que una ayuda. El caudal no es una pérdida de calor: es el vehículo que se lleva el agua."
+    },
+    {
+      "id": "punto-final",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se comprueba que un lote está realmente seco sin instrumentos caros?",
+      "opciones": [
+        "Pesando: el balance de masa da el peso final que corresponde a la humedad objetivo.",
+        "Con la prueba del frasco: si aparece condensación en el vidrio cerrado, el producto sigue cediendo vapor.",
+        "Igualando el lote en un recipiente cerrado varios días y vigilando si condensa.",
+        "Juzgando el producto recién sacado del secador, todavía caliente, que es cuando mejor se aprecia."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Siempre se juzga en frío: un producto caliente se siente mucho más seco de lo que está, porque el calor le da rigidez momentánea y su humedad superficial se está evaporando en tu mano. La prueba del frasco es literalmente verificar el respaldo restaurándolo, y el igualado reparte la humedad de las piezas más húmedas hacia las más secas hasta que el lote entero queda parejo, que es lo que convierte un promedio aceptable en un lote uniformemente seguro."
+    },
+    {
+      "id": "humedad-de-equilibrio",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un producto seco guardado sin envase en un depósito cuyo aire está al 80 % de humedad relativa tenderá a estabilizarse en torno a una actividad de agua de 0,80.",
+      "respuesta": true,
+      "explicacion": "Correcto, y por eso el secado no es un estado permanente sino una posición fuera del equilibrio que solo se sostiene con una barrera. Todo material vegetal seco es higroscópico e intercambia vapor con el aire hasta que su aw iguala la humedad relativa dividida entre cien. Una aw de 0,80 es exactamente donde los mohos vuelven a crecer y donde Aspergillus empieza a producir aflatoxina, que no se destruye con el calor de una cocción normal. Además la isoterma tiene histéresis: un lote rehumedecido tiene mayor actividad de agua que uno que llegó al mismo contenido de humedad secándose, así que es más peligroso de lo que su peso indica."
+    },
+    {
+      "id": "aplicacion-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Rizoma del Sur quiere montar un secador comunitario y empezar a procesar excedente de ají dulce y de culantro. Diseña el sistema y el protocolo completo: qué tipo de secador y por qué, cómo se prepara cada producto, cómo se decide la carga y el corte, cómo se comprueba el punto final, qué se hace en la seca y qué en lluvias, qué riesgos concretos del sitio hay que cubrir y qué se registra de cada lote.",
+      "respuestaModelo": "El secador debe ser indirecto o mixto, nunca directo, y la razón está en los dos productos elegidos. El ají dulce vale por su color rojo y el culantro vale por su aroma, y la radiación ultravioleta de un secador directo destruye carotenos y degrada compuestos volátiles: el ají saldría apagado y el culantro sin aroma, que es perder la mitad del valor en un caso y el valor entero en el otro. La configuración es un colector de chapa oscura bajo plástico transparente, orientado al norte geográfico y tumbado en torno a los dieciocho grados de la latitud del sitio —los mismos criterios que el módulo 26 fija para los paneles y por la misma física—, alimentando una cámara opaca con bandejas y salida alta en chimenea. El aire entra abajo por una malla fina que excluye moscas, atraviesa las bandejas y sale por arriba; el tiro lo da el efecto chimenea, y un ventilador de doce voltios sobre el sistema fotovoltaico multiplica el caudal justo en el periodo de velocidad constante, que es donde el aire manda. La estructura va elevada del suelo y lejos de la compostera, porque la lluvia salpica barro hasta media altura y el barro trae esporas.\n\nLa preparación difiere. El culantro, por ser hoja aromática, no se escalda bajo ningún concepto: se lava, se escurre, se extiende en capa fina y se seca a la temperatura más baja que permita terminar el mismo día. El ají dulce se lava, se descarta lo dañado y se corta en tiras de espesor parejo; el escaldado es opcional y hay que probarlo, sabiendo que ablanda y acorta el secado pero arrastra solubles. En ambos casos la higiene previa es parte del proceso, porque el secado no esteriliza y concentra diez veces lo que entró.\n\nEl corte manda sobre el tiempo: la difusión hace que el tiempo crezca con el cuadrado del espesor, así que rodajas de cinco milímetros secan en torno a la cuarta parte que las de diez. Pero importa aún más la uniformidad, porque el lote termina cuando termina la pieza más gruesa: si se saca la bandeja con el promedio listo, las piezas gordas entran húmedas y arruinan el resto. La carga arranca en tres a seis kilos por metro cuadrado, en capa fina y sin solapes, y se ajusta con la balanza y el reloj según el caudal real del secador. Las bandejas son de malla abierta de plástico alimentario, inoxidable o madera sin tratar, nunca galvanizada con producto ácido, y se rotan porque la posición cercana a la entrada recibe el aire más seco. El ají y el culantro no comparten cámara: los volátiles viajan con el aire.\n\nTérmicamente se empieza caliente y se termina suave. Al principio la superficie mojada se mantiene a la temperatura de bulbo húmedo y tolera aire mucho más caliente de lo que parecería; al final, sin agua que evaporar, el producto sube rápido a la temperatura del aire, así que la última hora se vigila, se baja o se abre. Si se ataca demasiado caliente desde el minuto uno aparece el endurecimiento superficial: costra impermeable, corazón húmedo y un lote que se estropea en el frasco semanas después.\n\nEl punto final se comprueba de tres formas. Con la balanza y el balance de masa —masa final igual a masa inicial por cien menos humedad inicial, dividido entre cien menos humedad final—, que para culantro al 88 % llevado al 8 % da unos 130 gramos por kilo y para ají cerca de 100. Con las pruebas sensoriales en frío: la hoja se desmenuza en polvo y el tallito se parte en seco. Y con la prueba del frasco, que es la verificación real: muestra fría en vidrio transparente cerrado, unas horas en sitio cálido, y si condensa vuelve al secador. Después el igualado, varios días en recipiente cerrado no lleno del todo, agitando a diario.\n\nEn el calendario, la seca de mayo a septiembre es la ventana de trabajo y la época de lluvias es hostil de forma estructural, porque la humedad de equilibrio del ambiente mantiene el producto por encima de donde debería estar; en lluvias solo funcionan lotes pequeños con aire forzado y envasado inmediato con desecante. La franja útil es la central del día: la bandeja entra bajo techo antes de las cuatro o cinco de la tarde, porque media noche a la intemperie borra medio día de secador. Y no se inicia lote grande con un surazo en el pronóstico, porque un lote a mitad de camino es el peor estado posible; siempre hay salida de emergencia con ventilador o terminando bajo el invernadero con la ventilación abierta.\n\nLos riesgos del sitio son concretos: quemaduras si se escalda, con superficie estable, guantes y procedimiento acordado; y dengue, porque los baldes de enfriado son agua estancada y limpia, así que se vacían y se voltean al terminar cada jornada. De cada lote se anota producto, espesor, kilos cargados, metros cuadrados de bandeja, hora de inicio, clima, si se escaldó, peso final y horas totales, porque ese cuaderno da el rendimiento real y las horas de trabajo con las que la última lección del módulo decidirá si transformar compensa. Y como el secado concentra todo lo que traía el producto, al secador comunitario no entra excedente de procedencia dudosa.",
+      "criterios": [
+        "Elige secador indirecto o mixto y justifica con el daño del ultravioleta al color del ají y al aroma del culantro.",
+        "Describe el colector orientado al norte geográfico e inclinado en torno a la latitud, con cámara opaca y salida alta.",
+        "Menciona el efecto chimenea y el ventilador de doce voltios como mejora sobre el caudal, y la necesidad de que el aire salga.",
+        "Excluye el escaldado del culantro por ser hoja aromática y lo plantea como opcional y verificable en el ají.",
+        "Relaciona el espesor del corte con el crecimiento cuadrático del tiempo de secado.",
+        "Señala que el lote termina con la pieza más gruesa y que la uniformidad pesa más que el grosor absoluto.",
+        "Da una carga de partida por metro cuadrado y la presenta como valor a verificar, no como dato fijo.",
+        "Prohíbe mezclar aromáticos con neutros en la misma cámara y elige malla no galvanizada para producto ácido.",
+        "Aplica la regla térmica de caliente al principio y suave al final, citando bulbo húmedo y endurecimiento superficial.",
+        "Comprueba el punto final por peso con el balance de masa, por prueba sensorial en frío y por prueba del frasco, e incluye el igualado.",
+        "Sitúa el trabajo en la seca, explica por qué la época de lluvias es hostil por humedad de equilibrio y fija el retiro de bandejas por la tarde.",
+        "Prevé el surazo con protocolo de lote y salida de emergencia.",
+        "Cubre los riesgos de quemadura y de dengue en los baldes de enfriado como consecuencia directa de la operación.",
+        "Define el registro por lote y lo conecta con la decisión económica de la última lección del módulo."
+      ],
+      "explicacion": "La respuesta buena no es una lista de pasos: es una cadena de decisiones donde cada elección se justifica con el mecanismo. El tipo de secador sale de qué se va a secar, la carga y el corte salen de la curva de secado, el calendario sale de la humedad de equilibrio, y el registro sale de que la lección 07 necesita datos reales y no intuiciones."
+    }
+  ]
+}

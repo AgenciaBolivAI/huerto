@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "paso-sin-ambiguedad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuáles de estos pasos están escritos de forma que otra persona solo pueda ejecutarlos de una manera?",
+      "opciones": [
+        "Aplicar 1,5 litros por bandeja con la regadera de roseta fina, en dos pasadas.",
+        "Recorrer las bandejas 1 a 12 de la mesa norte, en ese orden.",
+        "Regar las bandejas que estén bastante secas antes de que apriete el calor.",
+        "Anotar en la libreta el número de bandeja y el síntoma observado."
+      ],
+      "correctas": [0, 1, 3],
+      "explicacion": "Los tres primeros tienen un verbo, un dato con unidad y un resultado que se puede ver al terminar. «Bastante secas» y «antes de que apriete el calor» son juicios, no datos: dos personas razonables los ejecutarían de forma distinta y ninguna estaría equivocada, que es exactamente la definición de un paso mal escrito. Se arreglan con un criterio observable —el sustrato no se pega al dedo al hundirlo 2 cm— y una hora concreta."
+    },
+    {
+      "id": "negacion-de-morgan",
+      "tipo": "opcion_multiple",
+      "enunciado": "La regla es «regar si el sustrato está seco y no está lloviendo ni hay surazo». ¿Qué afirmaciones sobre su traducción a una condición son correctas?",
+      "opciones": [
+        "«NO (lloviendo O surazo)» equivale a «(NO lloviendo) Y (NO surazo)».",
+        "«sustrato_seco Y (NO lloviendo O NO surazo)» riega bajo la lluvia cuando no hay surazo.",
+        "Al negar un paréntesis, «o» se convierte en «y» y «y» se convierte en «o».",
+        "«NO (lloviendo O surazo)» equivale a «(NO lloviendo) O (NO surazo)»."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La última es la trampa clásica: repartir el «no» por dentro sin cambiar el operador. Las dos expresiones solo coinciden en dos de las cuatro combinaciones posibles; en las otras dos, la versión mal negada da permiso para regar en plena lluvia —porque no hay surazo— y durante el surazo —porque no llueve—, los dos casos que la regla quería evitar. La forma correcta cambia «o» por «y» al negar, que es lo que dicen las leyes de De Morgan."
+    },
+    {
+      "id": "terminacion-del-bucle",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace falta para poder afirmar que un bucle termina?",
+      "opciones": [
+        "Que la condición de salida dependa de algo que cambie dentro del bucle.",
+        "Que ese cambio se acerque al límite en cada vuelta, no que se aleje.",
+        "Que el límite sea alcanzable con el paso que se usa para avanzar.",
+        "Que el bucle tenga un tope máximo de vueltas por seguridad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son los requisitos reales, y juntas describen la variante del bucle: una cantidad que se acerca al límite sin excepción. El tope máximo no garantiza nada: no corrige el bucle, lo amordaza. En vez de colgarse —que al menos se nota— el programa devuelve un número calculado con datos incompletos y sigue como si nada, cambiando un fallo ruidoso por uno silencioso. Solo es legítimo cuando el bucle espera algo de afuera que puede no llegar nunca y el programa avisa de que salió por el tope."
+    },
+    {
+      "id": "traza-intencion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Al hacer una tabla de traza es válido saltarse las vueltas intermedias cuando ya sabes lo que el programa pretende hacer.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error que arruina la técnica. Si trazas lo que pretendías, lo único que compruebas es que tu idea es coherente con tu idea; la traza sirve precisamente porque ejecuta lo que está escrito. Sí se puede comprimir a una fila por vuelta completa, pero solo después de haber recorrido el interior del bucle instrucción por instrucción al menos una vez, que es cuando aparecen el contador que nunca sube o la rama que nunca se evalúa."
+    },
+    {
+      "id": "error-por-uno-silencioso",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un error por uno se nota enseguida porque el programa se detiene o avisa de algo.",
+      "respuesta": false,
+      "explicacion": "Falso, y por eso es peligroso. El bucle de grados-día escrito con «mientras dia menor que 4» sobre una planilla de cuatro días procesa tres, no da ningún aviso, termina en su tiempo y devuelve 48,5 en vez de 51,5: un número de aspecto perfectamente razonable al que le falta justamente el día del surazo. El programa no se rompió, simplemente contestó otra cosa. La forma de cazarlo es la traza y las dos preguntas de siempre: ¿entra el primero?, ¿entra el último?"
+    },
+    {
+      "id": "rama-inalcanzable",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuáles de estas situaciones producen una rama a la que la ejecución no llega nunca?",
+      "opciones": [
+        "«SI temperatura menor que 10 Y temperatura mayor que 30» para avisar de frío o de calor.",
+        "Clasificar «mediano» si la altura es mayor o igual que 10 y, después, «grande» si es mayor o igual que 20.",
+        "Copiar de un manual del hemisferio norte una condición que pregunta si hubo helada.",
+        "«SI regando es falso Y humedad menor que 35» para abrir la válvula del almácigo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La primera es una condición imposible: ninguna temperatura es a la vez menor que 10 y mayor que 30, y el operador correcto era «o». La segunda es orden mal puesto: un plantín de 25 cm ya cumple la condición de 10 y en una cadena de decisiones encadenadas solo se ejecuta la primera que se cumple, así que nada será nunca «grande». La tercera es la versión local del mismo problema: una condición que en Santa Cruz no se cumple ninguna temporada. La cuarta, en cambio, es correcta: es la regla de riego con histéresis, y sus dos ramas se alcanzan a lo largo del día."
+    },
+    {
+      "id": "datos-de-la-traza",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para trazar un programa en papel conviene usar muchos datos, cuantos más mejor, para que la prueba sea representativa.",
+      "respuesta": false,
+      "explicacion": "Falso. Trazar trescientas vueltas es un castigo inútil: si el programa está bien en la primera vuelta, en el borde y en la última, está bien. Lo que hay que cuidar es cuáles son los datos, no cuántos: uno normal, uno exactamente en el umbral —el que descubre si te faltó un «igual»— y uno vacío, cero bandejas, que es donde se rompen los bucles que dan por sentado que siempre hay al menos un elemento. Y un dato de más de 20 si quieres que la rama de los plantines grandes se delate."
+    },
+    {
+      "id": "aplicar-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Escribe en papel el algoritmo de la ronda de riego de la mañana en Rizoma del Sur, con su decisión de riego bien compuesta y bien negada, y explica cómo lo trazarías con datos de la semana pasada, incluyendo un día de surazo. Di qué esperas encontrar y cómo sabrías que el bucle termina.",
+      "respuestaModelo": "El algoritmo empieza por la descomposición, no por la condición. La ronda recorre las mesas del vivero y los doce lotes en un orden que no es indiferente: primero el almácigo y las bandejas con cepellón pequeño, cuando todavía no pega el sol y el sustrato de poco volumen se seca antes; después los lotes de campo. Escrito como pseudocódigo, es un bucle con contador sobre una lista conocida —doce lotes— con una decisión dentro:\n\nlitros_gastados ← 0 · PARA CADA lote DESDE 1 HASTA 12 · humedad ← medir el sustrato del lote · SI toca_regar ENTONCES regar el lote y sumar los litros a litros_gastados · FIN SI · FIN PARA · ESCRIBIR litros_gastados.\n\nEl contador es «lote» y el acumulador es «litros_gastados», y los dos se inicializan antes del bucle, nunca dentro: un acumulador reiniciado adentro terminaría valiendo lo del último lote en lugar de la suma.\n\nLa decisión hay que escribirla con números, no con juicios. «toca_regar» es: el sustrato no se pega al dedo al hundirlo 2 cm (o la lectura del sensor está por debajo del umbral bajo), y no hay agua de sobra. Compuesta: hay_agua_de_sobra ← llovió_ayer O suelo_encharcado; toca_regar ← sustrato_seco Y NO hay_agua_de_sobra. Darle nombre al pedazo evita el error de negación: si en vez de eso escribiera «sustrato_seco Y (NO llovió_ayer O NO suelo_encharcado)» estaría regando en plena lluvia, porque basta con que una de las dos negaciones sea cierta. De Morgan dice que la negación de un «o» es un «y» con las dos partes negadas, y la tabla de cuatro filas lo confirma. Al negar también hay que cuidar el borde: si la regla de arriba usa «menor que 35», su contraria es «mayor o igual que 35», no «mayor que 35», o el valor exactamente 35 se cae de las dos ramas.\n\nDonde el surazo entra es en las condiciones extra: durante un surazo el viento fuerte y la noche de unos 10 °C cambian el balance, y regar a las ocho con el sustrato frío no es lo mismo que un día normal de la seca. Eso se escribe como otra condición unida con «y», no como una excepción mental.\n\nPara trazarlo uso datos de la semana pasada, y esa es la clave del ejercicio: ya sé cuál tenía que ser la respuesta, así que la traza tiene contra qué compararse. Elijo tres juegos: un día normal de la seca, el día del surazo —el borde, donde las reglas escritas para el promedio se caen— y un caso vacío, cero lotes por regar porque llovió toda la noche. Y trazo con tres lotes, no con doce: si está bien en la primera vuelta, en el borde y en la última, está bien.\n\nLa tabla lleva una columna por variable —lote, humedad, toca_regar, litros_gastados— más la columna de la instrucción. Espero encontrar tres cosas. Primero, si me olvidé de sumar 1 al contador, la columna «lote» será una pared de unos y el bucle no termina. Segundo, si escribí «desde 1 hasta menos de 12», la traza mostrará once vueltas y el lote 12 se quedará sin regar: un error por uno que no da ningún aviso, igual que la planilla de grados-día que devuelve 48,5 en lugar de 51,5 porque se comió el día del surazo. Tercero, si la condición del surazo está unida con «y» donde debía ir «o», la columna «toca_regar» será falsa en todas las filas: una rama inalcanzable.\n\nQue el bucle termina lo sé porque puedo señalar la variante con el dedo: «lote» sube de uno en uno en cada vuelta, va hacia el límite y no lo salta, porque avanza de uno en uno y el límite se comprueba con «menor o igual». Los tres requisitos se cumplen. Y la prueba final no es mía: le doy el pseudocódigo a alguien que no lo haya visto y le pido que lo ejecute al pie de la letra. Todo lo que haga distinto de lo que yo esperaba es un paso mal escrito, no un error suyo.",
+      "criterios": [
+        "Descompone la ronda en pasos ejecutables, con un dato y una unidad en lugar de juicios como «un poco» o «si hace falta».",
+        "Justifica el orden de recorrido con una razón real del sitio: almácigo y cepellón pequeño primero, antes de que pegue el sol.",
+        "Escribe el algoritmo como pseudocódigo con palabras clave estables y sangría, no como prosa.",
+        "Usa un bucle con contador, identifica cuál es el contador y cuál el acumulador, y los inicializa antes del bucle explicando por qué no puede ser dentro.",
+        "Compone la condición de riego con «y» y «o», y le da nombre a los pedazos para que se lea sin equivocarse.",
+        "Niega la condición aplicando De Morgan: la negación de un «o» es un «y» con las partes negadas.",
+        "Cuida el borde al negar la comparación, incluyendo el «igual» para que el valor del umbral no se caiga de las dos ramas.",
+        "Elige datos de traza reales de los que ya conoce la respuesta correcta, e incluye el día de surazo como caso borde.",
+        "Usa pocos datos —tres lotes, no doce— y justifica por qué eso basta.",
+        "Dibuja la tabla con una columna por variable y anticipa el bucle infinito, el error por uno y la rama inalcanzable.",
+        "Señala explícitamente la variante del bucle y comprueba los tres requisitos de terminación.",
+        "Menciona la validación con otra persona ejecutando el pseudocódigo al pie de la letra."
+      ],
+      "explicacion": "La respuesta completa junta las tres piezas de la lección sobre una tarea real: descomponer sin ambigüedad, escribir el pseudocódigo con su decisión bien compuesta y bien negada, y trazarlo con datos cuya respuesta ya se conoce. El criterio más importante es el último tercio: quien solo escribe el algoritmo se queda a mitad de camino, porque el valor de esta lección está en ejecutarlo a mano antes de que exista una máquina que lo ejecute por él."
+    }
+  ]
+}

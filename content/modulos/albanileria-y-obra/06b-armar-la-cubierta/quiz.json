@@ -1,0 +1,103 @@
+{
+  "preguntas": [
+    {
+      "id": "triangulo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la estructura de una cubierta ligera está hecha de triángulos?",
+      "opciones": [
+        "Porque un rectángulo articulado es un mecanismo: se pliega en paralelogramo sin que ninguna barra se rompa ni se estire.",
+        "Porque un triángulo con las tres longitudes fijadas solo tiene una forma posible: deformarlo exigiría alargar o acortar una barra.",
+        "Porque la cercha, las tornapuntas y las cruces de arriostramiento son maneras distintas de meter triángulos donde había rectángulos.",
+        "Porque el triángulo reparte mejor el peso al tener menos barras."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La rigidez no viene de la resistencia de las barras sino de la geometría: con los lados fijos, el triángulo no tiene ningún movimiento disponible. Es un hecho tan barato de aprovechar que se repite tres veces en el mismo techo, a tres escalas: dentro de la cercha, entre cercha y cercha con las cruces, y en los puntales provisionales del montaje."
+    },
+    {
+      "id": "tirante",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace exactamente el tirante de una cercha, y por qué no se corta jamás?",
+      "opciones": [
+        "Dos pares apoyados sin tirante empujan los muros hacia afuera, como una escalera de tijera sin la correa que une las patas.",
+        "El tirante convierte ese empuje horizontal en tracción dentro de la propia cercha, y a los muros solo les llega carga vertical.",
+        "Cortarlo no debilita una barra: rompe el sistema, y el empuje que contenía aparece de golpe sobre la coronación de los muros.",
+        "Sostiene el vértice de la cercha para que no baje."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta confunde los papeles: el vértice se sostiene solo por los pares comprimidos; quien cuelga del vértice es el centro del tirante, a través del pendolón. Lo que conviene retener es la idea de encapsulado: dentro del triángulo hay compresión y tracción, pero nada de eso sale al exterior. Por eso «recortar el tirante para ganar altura de paso» es de las pocas intervenciones capaces de tirar un edificio entero."
+    },
+    {
+      "id": "plantilla",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se arman las cerchas y por qué así?",
+      "opciones": [
+        "Completas en el suelo y se suben terminadas: en el suelo se mide, se aprieta y se corrige; en una escalera, no.",
+        "Todas sobre la misma plantilla de topes, trazada una vez con la primera cercha y comprobada con lados y diagonales.",
+        "Porque diez cerchas «parecidas» en vez de idénticas significan correas que no apoyan plano y chapa que ondula.",
+        "Cada una se mide por separado con cuidado, que es más preciso que copiar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es el patrón de la fuente de verdad, fabricado por ti: se fija una referencia y todo lo demás se copia de ella, igual que la cinta única del replanteo o la primera chapa del faldón. Medir cada cercha por separado no es más cuidadoso: es multiplicar las fuentes de error. Y armar en el suelo tiene además la cuenta de seguridad: el tiempo en altura, que es donde están los accidentes, se reduce a la décima parte."
+    },
+    {
+      "id": "izado",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué orden se izan y arriostran las cerchas?",
+      "opciones": [
+        "La primera se iza, se aploma y se apuntala inmediatamente al terreno con dos puntales diagonales a estacas firmes.",
+        "Cada cercha siguiente se ata a la anterior con riostras provisionales por cumbrera y media altura: ninguna queda suelta ni un minuto.",
+        "Los anclajes definitivos a la viga de amarre se fijan conforme se aploma cada una, y en los vanos extremos van cruces de San Andrés.",
+        "Se izan todas primero y al final se arriostra el conjunto, que es más rápido."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la receta del dominó. La clave está en la asimetría de la cercha: completamente rígida en su plano, completamente incapaz perpendicular a él —de canto es un triángulo, de frente es una línea—. Una fila de cerchas sueltas no es una estructura a medio hacer: es una fila de fichas esperando la racha. La primera apuntalada al terreno es el ancla de todas las demás, y no se le quitan los puntales hasta que la cubierta esté cerrada."
+    },
+    {
+      "id": "correas",
+      "tipo": "verdadero_falso",
+      "enunciado": "La separación entre correas se elige según la costumbre de la zona, alrededor de un metro.",
+      "respuesta": false,
+      "explicacion": "Falso: la decide la chapa que compraste, no la costumbre. Cada calamina tiene una distancia máxima de apoyo según su espesor —el dato es del fabricante y en la práctica ronda entre 0,8 y 1,2 metros—, y una chapa fina sobre correas separadas ondula con el viento, retiene agua y cede al pisarla. Si compraste chapa delgada, la pagas aquí en correas adicionales. Y dos detalles de ejecución: correas alineadas a cuerda, y siempre correa debajo de cada solape de chapa, que es el punto que más trabaja."
+    },
+    {
+      "id": "orden-chapa",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué orden se coloca la chapa y por qué?",
+      "opciones": [
+        "La primera chapa, a escuadra contra alero y hastial, comprobada dos veces: todas las demás la copian y su error se propaga al faldón entero.",
+        "Se avanza desde el extremo contrario al viento dominante hacia él —aquí, del norte hacia el sur, contra el surazo—.",
+        "Cada chapa se fija completa antes de soltar la siguiente: una chapa presentada sin atornillar es la que se lleva la primera racha.",
+        "Se empieza por el lado más cómodo para el acopio, que es donde menos se camina."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El sentido del avance no es una preferencia: colocando contra el viento, cada borde expuesto de solape queda a sotavento, de espaldas a la racha. Al revés, el surazo encuentra todos los cantos abiertos de frente y mete agua —y fuerza— por cada junta. Y la primera chapa es otra fuente de verdad: la chapa es rectangular y se autoalinea contra la anterior, así que no hay corrección posible a mitad de faldón."
+    },
+    {
+      "id": "viento-altura",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el día amanece con algo de viento pero el equipo ya está contratado, se avanza con las cerchas y se deja la chapa para el final del día.",
+      "respuesta": false,
+      "explicacion": "Falso dos veces. Cerchas y chapas son precisamente las dos tareas que el viento prohíbe: una cercha de pie es una vela rígida y una chapa en las manos es literalmente una vela. Y en este terreno el viento fuerte tiene nombre, estación y aviso previo: el día de izado se elige mirando el pronóstico del surazo, con la misma seriedad con la que se eligió la fecha de siembra, y si hay frente anunciado no es día de cubierta aunque la mañana esté en calma —el Módulo 6 ya explicó que el frente entra en horas—. Para los días dudosos se planifica el trabajo a ras de suelo, que en una obra nunca falta."
+    },
+    {
+      "id": "plan-cubierta",
+      "tipo": "abierta",
+      "enunciado": "Vas a techar el depósito de herramientas de Rizoma del Sur, tu primer techo completo. Describe el proceso de principio a fin —desde la madera comprada hasta el caballete puesto—, con las decisiones de seguridad incluidas y el porqué de cada paso.",
+      "respuestaModelo": "Antes de cortar nada, dos comprobaciones y una compra. Compruebo que la viga de amarre está nivelada y con sus flejes de anclaje embebidos, porque todo lo que sigue apoya ahí. Compruebo la madera: comprada en barraca, de especie estructural —almendrillo o verdolago, no ochoó, que es para encofrados— y seca, porque una cercha armada con madera verde se destensa sola en tres meses cuando la madera termina de secar. Y compro dos tablones sanos de andamio, que son los diez bolivianos mejor gastados de toda la cubierta.\n\nArmo en el suelo, nunca en el aire. Sobre la plataforma compactada del movimiento de tierras trazo la primera cercha con cuidado, clavo estacas contra sus barras y esa cama de topes se vuelve la plantilla de todas las demás. La compruebo como un replanteo: las tres barras y la altura del pendolón. A partir de ahí, cada cercha se arma con sus piezas apretadas contra los mismos topes, para que salgan intercambiables y no «parecidas»: diez cerchas parecidas son correas que no apoyan plano y chapa que ondula. Uniones con pernos y arandela, pretaladrando para que la madera dura no raje, y placas en los apoyos, donde el par encuentra al tirante. Y el tirante no se toca nunca: es lo que convierte el empuje horizontal de los pares en tracción interna, y sin él el techo abre los muros.\n\nEl día de izado se elige con el pronóstico: si hay surazo anunciado, no es día de cubierta, aunque amanezca en calma. Y ese día somos tres como mínimo, dos arriba y uno abajo, porque es la única fase de la obra donde trabajar solo no es lento sino peligroso.\n\nMarco sobre la viga de amarre la posición de todas las cerchas de una vez, con cinta y cuerda. Izo la primera con cuerdas, la aplomo y la apuntalo inmediatamente al terreno con dos puntales diagonales a estacas firmes: esa cercha es el ancla de la fila y no pierde los puntales hasta que la cubierta esté cerrada. Cada cercha siguiente se iza, se aploma, se ata a la anterior con riostras por cumbrera y media altura —ninguna queda suelta ni un minuto, porque de frente una cercha es una línea sin ninguna rigidez— y se le fija su anclaje definitivo. En los vanos extremos, cruces de San Andrés, que son la rigidez longitudinal definitiva.\n\nLas correas van del alero a la cumbrera, alineadas con clavos de guía y cuerda, con la separación que manda la chapa que compré —el dato es del fabricante, no de la costumbre— y con correa debajo de cada solape, que se planifica contando las longitudes reales de chapa.\n\nLa chapa: la primera a escuadra contra alero y hastial, comprobada dos veces, porque todas las demás se autoalinean contra ella y un error ahí se propaga al faldón entero sin corrección posible. Avanzo desde el norte hacia el sur, contra el surazo, para que cada borde expuesto de solape quede a sotavento. Cada chapa fijada completa antes de soltar la siguiente —tornillo en cresta, arandela, más densidad en bordes, como manda la lección anterior—. Y para moverme, nunca piso la chapa entre correas: sobre la línea de correas o sobre el tablón, siempre, porque la calamina entre apoyos no soporta un cuerpo.\n\nCierro con el caballete montando generosamente sobre ambos faldones, atornillado por las crestas, con sus tramos solapados también contra el viento. Si va ventilación de cumbrera, la ejecuto ahora, con el caballete sobre soportes y la ranura como salida de aire: decidirlo después significa desatornillar la cumbrera entera. Y rematado el techo, la canaleta de la lección de techos, que es la protección de los cimientos.\n\nPor qué empezar por el depósito: luz corta, altura baja, chapa común. Es el procedimiento completo a una escala donde el error cuesta poco, y lo que fabrico ahí no es solo un techo: es el oficio para el galpón, donde la luz de ocho metros me va a pedir además una decisión de estructura —fila de columnas centrales o cerchas calculadas— que tomaré antes de comprar la madera.",
+      "criterios": [
+        "Comprueba viga de amarre y flejes antes de empezar, y elige madera estructural seca.",
+        "Arma en el suelo sobre plantilla de topes y justifica la intercambiabilidad de las cerchas.",
+        "Protege el tirante y explica qué pasa si se corta.",
+        "Uniones con pernos, arandela y pretaladrado; placas en los apoyos.",
+        "Elige el día de izado con el pronóstico del surazo y trabaja con tres personas mínimo.",
+        "Primera cercha apuntalada al terreno; cada siguiente atada a la anterior; cruces de San Andrés al final.",
+        "Correas a la separación que dicta la chapa, alineadas a cuerda, con correa bajo cada solape.",
+        "Primera chapa a escuadra; avance contra el viento; cada chapa fijada completa.",
+        "Pisa solo sobre correas o tablón, nunca la chapa entre apoyos.",
+        "Caballete solapado contra el viento y ventilación de cumbrera decidida en ese momento.",
+        "Entiende el depósito como entrenamiento y anticipa la decisión estructural del galpón."
+      ],
+      "explicacion": "Si miras el procedimiento entero, hay una idea que se repite tres veces con tres disfraces: la plantilla es la fuente de verdad de las cerchas, la primera cercha apuntalada es el ancla de la fila, y la primera chapa a escuadra es la referencia del faldón. En cada fase hay un elemento que se hace con un cuidado desproporcionado **para que todos los demás se puedan hacer rápido**. Saber cuál es ese elemento en cada fase es, más que ninguna destreza manual, lo que distingue un montaje limpio."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-varios",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué problemas resuelve un banco que un productor aislado no puede resolver?",
+      "opciones": [
+        "La base genética: diez parcelas mantienen una población que ninguna sostiene sola.",
+        "El aislamiento, porque el vecino decide tanto como tú sobre la pureza de tu semilla.",
+        "El riesgo y la diversidad: una copia se pierde entera, y una parcela no puede mantener veinte variedades.",
+        "El costo de la semilla, que solo baja comprando en volumen."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El costo ya era cero desde la primera lección: guardar semilla propia elimina esa línea del presupuesto. Lo que un banco añade no es precio, es lo que el dinero no compra: diversidad, coordinación y redundancia."
+    },
+    {
+      "id": "repositorio-distribuido",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un banco funciona mejor como copias repartidas entre varias casas que como un almacén central.",
+      "respuesta": true,
+      "explicacion": "Correcto: cada copia es completa y funciona sola, la redundancia es el mecanismo de seguridad, y un almacén único es un punto de fallo que además crea un dueño, que es justo lo que hay que evitar."
+    },
+    {
+      "id": "cuatro-decisiones",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que decidir por escrito antes del primer frasco?",
+      "opciones": [
+        "Qué se guarda: polinización abierta, procedencia conocida y prueba de germinación hecha.",
+        "Quién lo guarda: cada variedad en dos o tres casas, con lista de quién tiene qué.",
+        "Cómo se presta: se lleva un puñado y se devuelve el doble tras la cosecha.",
+        "Qué sanción económica se aplica a quien no devuelve."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La respuesta razonable ante un incumplimiento no es una sanción sino una conversación: entender por qué falló la cosecha suele valer más que la semilla perdida. Lo que sí se escribe antes es que quien no devuelve tres veces deja de recibir."
+    },
+    {
+      "id": "registro-minimo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuál es el registro mínimo de un banco de barrio?",
+      "opciones": [
+        "Por variedad: nombre local, especie, procedencia, quién la tiene y desde cuándo.",
+        "Por entrega: qué se llevó, quién, cuándo y cuánto se espera de vuelta.",
+        "Por lote: fecha de cosecha, poder germinativo y fecha de esa prueba.",
+        "Un acta firmada de cada movimiento y una reunión mensual de seguimiento."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Cabe en un cuaderno, y esa es la clave: si pedir semilla exige formularios y reuniones, la gente deja de pedir y el banco muere. La regla es que el registro sirva al banco y no al revés."
+    },
+    {
+      "id": "el-nombre",
+      "tipo": "verdadero_falso",
+      "enunciado": "El nombre útil de una variedad comunitaria es el científico, no el que usa la gente.",
+      "respuesta": false,
+      "explicacion": "Falso: «el ají de doña Rosa» o «el culantro del bajío» suenan informales y son exactamente lo que funciona, porque llevan dentro la procedencia y la historia. Una variedad sin nombre no se pide, no se recomienda y no se recuerda, y el nombre viaja con la semilla."
+    },
+    {
+      "id": "como-muere",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo muere un banco de semillas?",
+      "opciones": [
+        "Se convierte en el banco de una persona, y se va con ella cuando se cansa.",
+        "Se llena de semilla vieja por no hacer pruebas anuales ni renovar las de vida corta.",
+        "Se vuelve un trámite, y la gente deja de pedir.",
+        "Crece demasiado rápido en número de variedades."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Crecer no lo mata; lo matan la concentración, el envejecimiento y la burocracia. Las tres se previenen desde el diseño: repartir copias desde el primer día, calendario de pruebas, y un cuaderno en lugar de formularios."
+    },
+    {
+      "id": "como-empieza",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un banco empieza con tres personas, una variedad y un cuaderno, no con una asamblea ni con estatutos.",
+      "respuesta": true,
+      "explicacion": "Correcto: alguien tiene semilla de algo que va bien aquí, se reparte a dos o tres más con su nombre y su historia, cada uno la siembra y devuelve el doble, y se anota. Lo demás crece encima si esa primera vuelta se completa, y no tiene sentido diseñarlo antes."
+    },
+    {
+      "id": "banco-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Explica cómo va a construir Rizoma del Sur el banco comunitario, en qué orden y con qué límites.",
+      "respuestaModelo": "No monto el banco el primer año. Primero aprendo a guardar y demuestro que sé.\n\nDurante el primer ciclo guardo culantro y ají dulce con todo el procedimiento —selección, embolsado, cosecha en madurez fisiológica, secado con desecante, prueba de germinación— y compruebo que funciona. Repartir semilla mal guardada a los vecinos sería la peor forma posible de empezar, porque quemaría la confianza que el proyecto entero necesita.\n\nEl segundo ciclo abro a tres personas con una sola variedad, la que mejor haya funcionado: un puñado, su nombre, su historia y el compromiso de devolver el doble tras la cosecha.\n\nLas copias se reparten desde el primer día. Rizoma no es el almacén del banco, es una de las casas que guarda. Es la única forma de que el banco no dependa de que este proyecto siga existiendo, y encaja con la misión: aportamos herramientas, no creamos dependencia.\n\nEl culantro es la variedad de arranque natural. Es fácil de guardar, de ciclo corto y de vida corta, y eso último es una ventaja aquí: obliga a resembrarlo cada año, así que genera movimiento constante y mantiene el banco vivo mucho mejor que una variedad que se guarda cinco años y se olvida. Con este clima el banco tiene que ser activo, no un depósito: ninguna semilla se queda quieta cinco años sin degradarse.\n\nEl registro es un cuaderno con tres tablas —variedades, entregas y lotes— y nada más. En cuanto pida formularios, la gente deja de pedir.\n\nAntes de repartir nada de lo mío, pregunto a los mayores de la zona qué se sembraba aquí y si alguien todavía lo guarda. Ese material ya pasó décadas de surazos, humedad y enfermedades locales, y esa información no está en ningún catálogo. El banco recoge lo que ya existe antes de repartir lo que yo produje.\n\nDefino por escrito y antes del primer frasco las cuatro reglas: qué se guarda —polinización abierta, procedencia conocida y prueba hecha—, quién lo guarda —dos o tres casas por variedad, con lista—, cómo se presta —un puñado, se devuelve el doble— y qué pasa si no se devuelve: una conversación para entender qué falló, y si ocurre tres veces, deja de recibir.\n\nY tengo claro el límite legal: guardar e intercambiar dentro de la comunidad no es comercializar. En Bolivia hay registro de variedades y certificación de semillas, y las condiciones cambian, así que antes de vender semilla lo consulto con la autoridad competente. También puedo apoyarme en las instituciones de investigación agrícola del departamento para validar identificaciones: ellas conservan a largo plazo y el banco mantiene el material en uso, que es lo que de verdad lo adapta.",
+      "criterios": [
+        "Pospone el banco hasta demostrar que sabe guardar, y explica por qué.",
+        "Arranca con tres personas y una variedad.",
+        "Reparte copias desde el principio y no se erige en almacén.",
+        "Justifica el culantro como variedad de arranque por su vida corta.",
+        "Sostiene que el clima obliga a un banco activo y no a un depósito.",
+        "Usa un cuaderno con tres tablas y rechaza la burocracia.",
+        "Recoge primero las variedades locales de los mayores.",
+        "Fija por escrito las cuatro decisiones antes del primer frasco.",
+        "Resuelve el incumplimiento con conversación y límite de tres veces.",
+        "Distingue intercambio de comercialización y consulta antes de vender.",
+        "Sitúa el papel complementario de las instituciones de investigación."
+      ],
+      "explicacion": "Cierra el módulo y abre el bloque comunitario con su lógica: hay problemas que no se resuelven con más dinero ni más técnica, sino con vecinos que se hablan. Y aporta una regla de implantación que se repetirá: primero demuestra que funciona en tu parcela, después repártelo."
+    }
+  ]
+}

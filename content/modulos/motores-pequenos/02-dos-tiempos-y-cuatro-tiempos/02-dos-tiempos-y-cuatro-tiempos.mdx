@@ -1,0 +1,414 @@
+Una desbrozadora casi nueva se para en caliente, con un ruido seco, y la cuerda del arranque ya no se
+mueve. Adentro está lo de siempre: el pistón rayado con surcos que se sienten con la uña y manchas
+grises de aluminio pegado en la pared del cilindro. No se rompió ninguna pieza ni entró tierra. **Lo
+único que pasó es que dos metales se tocaron.**
+
+La causa suele ser la misma: alguien le cargó combustible de la moto —gasolina pura— porque la
+máquina «anda a gasolina». Esta lección trata de por qué hay **dos familias de motores que por fuera
+se parecen y no comen lo mismo**, de cómo distinguirlas antes de abrir un bidón, y de qué pasa por
+dentro cuando falta la capa de aceite que impide que dos piezas que se rozan cincuenta veces por
+segundo lleguen a tocarse.
+
+## Una sola diferencia de fondo: dónde vive el aceite
+
+En la lección anterior viste el ciclo de **cuatro tiempos**: cuatro carreras del pistón, dos vueltas
+del cigüeñal, una sola explosión. El <Termino slug="carter">cárter</Termino> —la bandeja del fondo
+del motor— es ahí un depósito cerrado: el aceite vive meses, sube a lubricar, escurre y vuelve a caer
+al mismo sitio. **Combustible y aceite son dos circuitos separados que no se tocan nunca.**
+
+El **dos tiempos** se define por otra cosa: **su cárter no es un depósito de aceite, es una bomba de
+aire.** El espacio bajo el pistón forma parte del camino que recorre la mezcla desde el carburador
+hasta la cámara de combustión.
+
+De ese único hecho sale el resto. Si por el cárter pasa lo que va a quemarse, **ahí abajo no se puede
+poner aceite**: lo aspiraría la corriente. Pero el pistón, la biela y los cojinetes necesitan
+lubricación, así que solo queda una salida: **que el aceite viaje disuelto dentro del combustible.**
+Esa es la mezcla, y esa es toda la historia.
+
+<Analogia titulo="Lubricación en banda">
+Un cuatro tiempos lleva la lubricación **fuera de banda**: canal aparte, con su propio estado
+persistente. Un dos tiempos la lleva **dentro de la banda**, como un token incrustado en cada
+petición porque no hay sesión donde guardarlo. Y tiene el defecto de todo canal compartido: **un dato
+mal formado no degrada el servicio, lo destruye.**
+</Analogia>
+
+## El ciclo de dos tiempos, carrera por carrera
+
+Un dos tiempos no tiene válvulas. Tiene agujeros en la pared del cilindro que **el propio pistón tapa
+y destapa al subir y bajar**. Se llaman <Termino slug="lumbrera">lumbreras</Termino> y son tres:
+admisión, transferencia —que comunica el cárter con la parte alta del cilindro— y escape. El pistón
+hace de válvula con su propio cuerpo, y por eso este motor tiene **tres piezas móviles**: pistón,
+biela y cigüeñal.
+
+**Carrera de subida.** Encima del pistón, la mezcla que ya estaba dentro se comprime. Debajo, el
+pistón que sube deja un volumen creciente en el cárter, y esa depresión aspira mezcla fresca
+—gasolina, aire y aceite— por la admisión. Arriba del todo salta la chispa.
+
+**Carrera de bajada.** La combustión empuja el pistón hacia abajo: el único tramo en que el motor
+entrega trabajo. Abajo, mientras tanto, **comprime la mezcla encerrada en el cárter**, y
+esa <Termino slug="precompresion">precompresión en el cárter</Termino> es lo que le dará energía para
+subir sola. Todavía bajando, el pistón descubre primero la **lumbrera de escape** y los gases
+quemados salen por su propia presión; más abajo descubre la **de transferencia**, y la mezcla
+precomprimida sube en tromba al cilindro.
+
+Ahí está el momento delicado. Se llama <Termino slug="barrido">barrido</Termino>: la carga fresca
+tiene que **empujar hacia afuera los gases quemados**, y lo hace con la lumbrera de escape todavía
+abierta. Entrada y salida ocurren a la vez y en la misma habitación, así que buena parte de la mezcla
+fresca sale derecho por el escape sin quemarse. Eso es
+el <Termino slug="cortocircuito-de-barrido">cortocircuito de barrido</Termino>, y explica casi todos
+los defectos de la familia: **gasta más combustible del que aprovecha, contamina mucho más, y el
+aceite disuelto en esa mezcla sale por el caño sin quemar del todo.** El humo azulado no es una
+avería: es el diseño. Se pelea inclinando las transferencias para que barran en rulo, **pero nunca se
+elimina.**
+
+## Más potencia por cilindrada, y qué cuesta
+
+Un cuatro tiempos entrega una explosión cada dos vueltas; un dos tiempos, una **en cada vuelta**.
+
+<Formula explicacion="Explosiones por minuto de cada familia a las mismas revoluciones: la razón teórica de que un dos tiempos dé casi el doble de potencia con la misma cilindrada. En la práctica el factor real es menor, porque el barrido nunca es perfecto.">
+dos tiempos:    explosiones por minuto = revoluciones por minuto
+cuatro tiempos: explosiones por minuto = revoluciones por minuto ÷ 2
+</Formula>
+
+A eso se suma el peso, y que **funciona en cualquier posición** porque no tiene bandeja de aceite que
+derramar: por eso motosierra, desbrozadora y fumigadora de mochila son dos tiempos. Lo que se paga:
+más consumo, mucha más contaminación y **ninguna tolerancia a un error de carga**.
+
+## Cómo saber cuál tenés en la mano
+
+Esto se hace **antes** de destapar ningún bidón. La señal maestra es que un cuatro tiempos tiene
+siempre un segundo lugar por donde se le echa aceite, separado del tanque de combustible.
+
+<Tabla>
+
+| Señal | Dos tiempos | Cuatro tiempos | Qué tan segura es |
+| --- | --- | --- | --- |
+| Tapón de aceite con varilla de nivel | No lo tiene | Lo tiene casi siempre | La más segura de todas |
+| Tapón de vaciado en el fondo del motor | No lo tiene | Lo tiene | Muy segura |
+| Etiqueta con proporción: 25:1, 40:1, 50:1 | La lleva | No la lleva | Segura si es la original |
+| Etiqueta que dice SAE 30 o 10W-30 | No | Sí | Segura |
+
+</Tabla>
+
+Las trampas son tres. **Una motosierra tiene dos tapones y es dos tiempos**: el segundo no es aceite
+de motor sino <Termino slug="aceite-de-cadena">aceite de cadena</Termino>, espeso y pegajoso, que
+lubrica la espada por fuera y no entra jamás al combustible. **Existen dos tiempos con aceite
+separado**, sobre todo en motos, con un tanquecito y una bombita que lo inyecta en la admisión. Y
+**hay desbrozadoras y motobombas de cuatro tiempos.**
+
+<Advertencia titulo="La regla que no se salta nunca">
+**Si no podés decir con certeza qué motor tenés delante, no le eches nada.** Buscá la etiqueta del
+fabricante, el manual o una foto del modelo antes de abrir un bidón. Ante la duda, la máquina se
+queda parada: un motor que hoy no arrancó no cuesta nada.
+</Advertencia>
+
+## Por qué dos metales no se tocan: la película
+
+Dos superficies de metal pulido parecen lisas al ojo y al dedo, pero **a escala pequeña son cadenas
+de montañas**: se tocan solo en unos pocos picos, y toda la carga cae sobre esa fracción diminuta, de
+modo que la presión local es enorme. Ahí el metal cede y pasa algo que suena exagerado y es literal:
+**los picos se sueldan en frío**, y al seguir el movimiento esas microsoldaduras se arrancan. Eso es
+el desgaste: no que las piezas «se gasten», sino que **se sueldan y se rompen miles de veces por
+segundo**.
+
+El trabajo del aceite es impedir ese contacto. Entre las piezas se mantiene
+una <Termino slug="pelicula-lubricante">película lubricante</Termino> más gruesa que esas montañas
+microscópicas, de modo que **la carga la sostiene el líquido y no el metal**. Y esa presión no la
+pone una bomba: **la pone el propio movimiento.** Una pieza que se desliza sobre otra en un espacio
+que se estrecha arrastra aceite hacia la parte angosta, y ese aceite se presuriza y separa las
+piezas. Se llama <Termino slug="lubricacion-hidrodinamica">lubricación hidrodinámica</Termino>, y de
+ahí sale la consecuencia clave: **si no hay movimiento, no hay película.**
+
+<Dato titulo="El momento en que un motor más se desgasta">
+No es trabajando a fondo bajo el sol. Es **en los primeros segundos después de arrancar en frío**,
+cuando la película todavía no se formó y el pistón sube y baja casi a metal desnudo. De ahí un hábito
+que no cuesta nada: **arrancar y dejarlo un minuto a bajas vueltas antes de exigirle**.
+</Dato>
+
+El aceite además **refrigera** —en un motor enfriado por aire, buena parte del calor del pistón sale
+por la película hacia el cilindro y de ahí a las aletas— y **sella** el juego entre los aros y la
+pared, sin lo cual se pierde compresión.
+
+## Lo que el calor le hace al aceite
+
+La magnitud clave de un aceite es la <Termino slug="viscosidad">viscosidad</Termino>, su resistencia
+a fluir, y **baja mucho cuando sube la temperatura**. Si es demasiado fino, la película se rompe bajo
+carga; si es demasiado espeso, no llega a tiempo a los rincones al arrancar en frío. Y la temperatura
+empuja siempre hacia lo primero: **justo cuando el motor está más caliente y más cargado es cuando el
+aceite está más fluido.**
+
+De ahí los aceites con dos números. En un <Termino slug="aceite-multigrado">aceite
+multigrado</Termino> como un 10W-30, el número con la W —de *winter*, invierno— describe su
+comportamiento en frío y el segundo, en caliente. **Cuál corresponde a tu motor lo dice el manual, no
+la costumbre del barrio.**
+
+El calor tampoco lo adelgaza y ya: lo destruye. A alta temperatura el oxígeno ataca sus moléculas —es
+la <Termino slug="oxidacion-del-aceite">oxidación del aceite</Termino>— y aparecen ácidos que corroen
+y barnices que se depositan como una laca sobre las piezas calientes. **La película tiene un margen y
+el calor lo estrecha**, y cuando se acaba pasa lo que viene ahora.
+
+## El gripado, paso a paso
+
+**Primero, los picos se tocan**, porque la película se adelgazó por debajo de la altura de las
+asperezas. Y aparece calor donde peor cae: cada microsoldadura que se arranca lo genera en el pistón,
+**la pieza peor refrigerada del motor**, que está dentro del fuego y evacúa casi todo su calor **a
+través de la película** hacia el cilindro. Si la película falla, el pistón pierde justo el camino por
+donde se enfriaba.
+
+**Segundo, el pistón crece.** Es de aluminio, y el aluminio se dilata aproximadamente **el doble**
+que el acero por cada grado; encima está mucho más caliente que el cilindro, que sí tiene aletas y
+aire. Y esa <Termino slug="dilatacion-termica">dilatación térmica</Termino> se calcula:
+
+<Formula explicacion="Cuánto crece de diámetro una pieza al calentarse. El coeficiente del aluminio ronda 0,000023 por grado y el del acero 0,000012, la mitad. Un pistón de 50 mm que se ponga 200 °C más caliente que su cilindro crece 0,23 mm: varias veces el juego con que salió de fábrica.">
+crecimiento del diámetro (mm) = diámetro (mm) × coeficiente del material × aumento de temperatura (°C)
+</Formula>
+
+**Tercero, se acaba el espacio.** Entre pistón y cilindro hay un juego calculado,
+la <Termino slug="holgura-de-montaje">holgura de montaje</Termino>, del orden de centésimas de
+milímetro. Cuando la dilatación se la come, el pistón deja de flotar y **empieza a apretar contra la
+pared**.
+
+**Cuarto, el aluminio se transfiere.** Apretando, sin película y caliente, el aluminio del pistón se
+suelda a la pared: arrastres sobre la camisa, surcos verticales sobre el pistón. Esos depósitos
+**estrechan todavía más el espacio**: más roce, más calor, más dilatación. Un lazo de realimentación
+positiva sin nada que lo frene, y por eso ocurre en segundos.
+
+**Quinto, el motor se para en seco.** El pistón queda soldado a la camisa y el cigüeñal no gira: eso
+es el <Termino slug="gripado">gripado</Termino>. Al enfriarse suele soltarse y la cuerda vuelve a
+moverse, y mucha gente cree que se salvó. No se salvó: el cilindro ya está rayado, los aros
+probablemente rotos, y hay partículas de metal camino de los cojinetes.
+
+<Advertencia titulo="Un gripado en una moto en marcha bloquea la rueda">
+En una moto de dos tiempos el motor está unido a la rueda trasera por la transmisión: si el pistón se
+agarrota a velocidad, **la rueda de atrás se traba de golpe** y la moto se va de lado.
+
+La reacción hay que tenerla decidida de antes: **apretar la maneta del embrague**, que desconecta el
+motor de la rueda, y recién después frenar y salir de la calzada. Las señales llegan segundos antes
+—pierde fuerza, se vuelve ruidoso, arrastra—: al primer síntoma se corta gas.
+</Advertencia>
+
+La variante que más confunde es
+el <Termino slug="gripado-parcial">gripado parcial</Termino>: el pistón raya el cilindro pero no
+llega a trabarse. Su firma es inconfundible: **pierde fuerza cuando se calienta, a veces se apaga
+solo, y al rato de enfriarse vuelve a arrancar.** Se lo atribuye a la bujía durante meses mientras el
+cilindro se termina de arruinar.
+
+Las causas son cuatro: **falta de lubricante** —gasolina pura, mezcla mal medida, aceite equivocado—,
+**recalentamiento** —aletas tapadas, silenciador obstruido, trabajar a fondo al sol—, **mezcla
+demasiado pobre**, que quema más caliente, y **exigirle en frío**.
+
+## La mezcla: proporción, preparación y medida
+
+Una <Termino slug="relacion-de-mezcla">relación de mezcla</Termino> como 50:1 significa **cincuenta
+partes de gasolina por una de aceite, medidas en volumen**, y
+la <Termino slug="mezcla-de-dos-tiempos">mezcla de dos tiempos</Termino> que sale de ahí es un
+líquido nuevo: el aceite queda **disuelto**, no flotando ni decantado.
+
+<Formula explicacion="Mililitros de aceite que corresponden a una cantidad de gasolina: se pasan los litros a mililitros multiplicando por mil y se divide entre el primer número de la relación. Para 5 litros al 50:1: 5 × 1000 ÷ 50 = 100 ml.">
+aceite (ml) = gasolina (litros) × 1000 ÷ primer número de la relación
+</Formula>
+
+<Tabla>
+
+| Relación | Aceite por 1 litro | Aceite por 5 litros | Dónde suele pedirse |
+| --- | --- | --- | --- |
+| 20:1 | 50 ml | 250 ml | Máquinas viejas, con aceite mineral |
+| 25:1 | 40 ml | 200 ml | Frecuente en equipos de años atrás |
+| 40:1 | 25 ml | 125 ml | Común con aceites modernos |
+| 50:1 | 20 ml | 100 ml | La más común hoy con aceite sintético |
+
+</Tabla>
+
+Con la tabla delante, lo importante: **la proporción la mandan el fabricante del motor y el tipo de
+aceite, no la costumbre.** La etiqueta de la máquina, el manual y el envase son las fuentes válidas.
+
+Porque hay dos errores, no uno. Que poco aceite gripa el motor lo entiende todo el mundo. Que **más
+aceite del debido también hace daño** casi nadie lo sabe: el aceite de más ocupa el lugar de la
+gasolina en el mismo volumen, así que la mezcla queda **más pobre en combustible y quema más
+caliente**, y el sobrante se deposita como carbón en la ranura de los aros y en la lumbrera de
+escape. **Es un óptimo con castigo en los dos lados.**
+
+La preparación se hace siempre igual, porque el error se comete el día que se improvisa:
+
+- **Un bidón exclusivo para mezcla**, rotulado con la proporción y la fecha.
+- **Nunca se mezcla dentro del tanque de la máquina**: ahí no se puede agitar y el aceite se va al
+  fondo, así que las primeras succiones se llevan casi todo y las últimas nada.
+- **Primero algo menos de la mitad de la gasolina, después todo el aceite medido, y encima el resto.**
+  El último chorro es el que mezcla; el aceite en un bidón vacío se queda pegado abajo.
+- **Se agita de verdad**, y otra vez antes de cada llenado.
+- **Se mide con jeringa de 20 ml, nunca a ojo**, y se prepara poco: la mezcla envejece rápido.
+
+## Por qué el aceite de cuatro tiempos funde un dos tiempos
+
+Un <Termino slug="aceite-de-dos-tiempos">aceite de dos tiempos</Termino> está formulado para algo que
+suena raro: **está hecho para quemarse.** Termina en la cámara de combustión en cada ciclo, así que
+se diseña para arder limpio y lleva un disolvente para **disolverse** en la gasolina. El de cuatro
+tiempos está hecho para lo contrario: **para no quemarse nunca** y durar cientos de horas en el
+cárter. Para eso lleva aditivos con compuestos metálicos —zinc, calcio, fósforo— que no arden: en una
+cámara de combustión dejan un <Termino slug="cenizas-del-aceite">residuo de cenizas</Termino> duro y
+abrasivo. **No lubrica peor: deja basura que no se va.**
+
+- **Los aros se pegan.** La ceniza llena la ranura donde el aro debe moverse libre. Deja de apoyar
+  contra la pared, se pierde compresión y —peor— se pierde el camino por donde el pistón evacuaba su
+  calor. Volvés al gripado.
+- **La lumbrera de escape se cierra.** El carbón estrecha el paso, el barrido empeora y el motor
+  trabaja más caliente cada semana.
+- **Aparece el preencendido.** Un grumo de carbón incandescente enciende la mezcla **antes** de que
+  salte la chispa. Ese <Termino slug="preencendido">preencendido</Termino> equivale a martillar el
+  pistón mientras todavía sube: perfora cabezas de pistón.
+
+Nada de esto se ve el primer día. El motor muere entre el tercer y el décimo tanque, cuando ya nadie
+se acuerda del envase.
+
+<Advertencia titulo="Los cuatro errores de carga, ordenados por gravedad">
+**Gasolina pura en un dos tiempos:** destrucción en minutos. El peor y el más frecuente, y casi
+siempre lo comete alguien que no sabía. Si sospechás que pasó, **no lo arranques para probar**: vaciá
+el tanque y cargá mezcla correcta.
+
+**Aceite de cuatro tiempos como aceite de mezcla:** muerte lenta por cenizas y carbón. **Aceite de
+cadena en la mezcla:** no lubrica y se quema pésimo; va en la espada, por fuera.
+
+**Mezcla en un cuatro tiempos:** el menos grave. Humea y ensucia la bujía, pero se recupera cambiando
+el combustible.
+</Advertencia>
+
+## Gasolina vieja, etanol y el bidón que engaña
+
+La gasolina es un cóctel de hidrocarburos, y los que la hacen arrancar son **los más ligeros y
+volátiles**. En un bidón que respira esos se van primero, y lo que queda cuesta encenderlo: de ahí el
+clásico «en abril andaba y en septiembre no arranca». Además se oxida y forma
+unas <Termino slug="gomas-del-combustible">gomas</Termino> que se secan como resina dentro de los
+conductos finísimos del carburador y los tapan.
+
+Y está el etanol. En Bolivia se venden gasolinas con alcohol mezclado, y **cuánto lleva cada producto
+no es algo que este curso pueda afirmar**: eso se consulta en el surtidor, en la distribuidora o en
+YPFB. Lo que no depende del porcentaje son sus dos efectos. **El alcohol atrae agua:**
+esa <Termino slug="gasolina-con-etanol">gasolina con etanol</Termino> es higroscópica, y un bidón
+medio vacío carga agua sin que se vea nada. **Y pasado cierto punto la mezcla se parte en dos:** el
+conjunto de alcohol y agua se vuelve insoluble y se va al fondo como una capa aparte. Es
+la <Termino slug="separacion-de-fases">separación de fases</Termino>, y acá está el peligro del dos
+tiempos: **el aceite va disuelto en la gasolina y no baja con esa capa**. La máquina chupa del fondo
+del tanque, o sea de la capa que tiene agua, tiene alcohol y no tiene lubricante: **un motor puede
+gripar por esto sin que nadie haya medido nada mal.** De ahí dos reglas baratas: comprar **lo que vas
+a usar** y guardar los envases **llenos y bien cerrados**.
+
+## Lo que arde no es el líquido, es el vapor
+
+Casi todos los accidentes con combustible vienen de una idea equivocada sobre qué se prende. **Un
+líquido no arde.** Lo que arde es su vapor mezclado con aire. Un fósforo caído en un charco de diésel
+se apaga; en gasolina, no, y la diferencia está en cuánto vapor produce cada uno a la temperatura que
+hace. El <Termino slug="punto-de-inflamacion">punto de inflamación</Termino> es la temperatura a la
+que un líquido desprende vapor suficiente para encenderse con una llama. El del diésel está del orden
+de más de cincuenta grados; **el de la gasolina, por debajo de los cuarenta grados bajo cero.** En un
+patio de Santa Cruz a treinta y cinco grados, sobre cualquier gasolina destapada **siempre** hay una
+nube de vapor lista para encenderse.
+
+Ese vapor solo arde dentro de un rango de concentración: si hay muy poco no prende, y si hay
+demasiado tampoco, porque falta aire. Son
+los <Termino slug="limites-de-inflamabilidad">límites de inflamabilidad</Termino>, y de ahí sale algo
+que contradice la intuición de todos: **un bidón casi vacío es más peligroso que uno lleno**, porque
+el lleno tiene arriba una mezcla demasiado rica para arder y el casi vacío la tiene en proporción
+explosiva.
+
+**Y el vapor pesa más que el aire.** Escurre por el piso, se acumula en los rincones bajos, entra en
+una fosa o en un desagüe. Puede recorrer varios metros hasta una llama, encenderse allá y **volver
+por el mismo camino** hasta el charco.
+
+Las fuentes de ignición son cuatro: **llama abierta**; **superficie caliente**, sobre todo el
+silenciador recién apagado, que enciende la gasolina derramada sin chispa ninguna; **chispa mecánica
+o eléctrica**; y la **estática**. Esta última se explica poco: al caer el líquido dentro de un envase
+se separan cargas, y
+esa <Termino slug="electricidad-estatica">electricidad estática</Termino> alcanza para saltar hacia
+el metal más cercano, justo donde está el vapor. De ahí tres costumbres: **llenar despacio**,
+mantener **el pico en contacto con la boca del envase**, y **poner el bidón en el suelo**.
+
+<Advertencia titulo="Manejo de combustible: lo que no se negocia">
+**Se carga con el motor apagado y el silenciador frío**, afuera, nunca en una pieza ni en un galpón
+cerrado. Un tanque caliente además se presuriza: al destaparlo escupe combustible. Después de cargar
+se cierra el bidón, se limpia lo derramado y **se aleja la máquina unos metros antes de arrancarla.**
+
+**Nunca se guarda combustible en botellas de gaseosa.** Es la causa más común de intoxicación de
+niños con hidrocarburos. Y si alguien traga gasolina, **no se le provoca vómito jamás**: el daño
+grave no es tragarla sino que entre al pulmón, y el vómito es lo que la mete ahí. Se lo lleva de
+inmediato al centro de salud, con el envase. **Nunca se hace sifón con la boca**, por lo mismo.
+
+**El fuego de gasolina no se apaga con agua:** la gasolina flota y el agua la reparte encendida. Se
+apaga sofocando: extintor de polvo químico seco, o arena o tierra seca.
+</Advertencia>
+
+<AplicarRizoma titulo="Media hora que te ahorra un motor">
+Salí al patio y juntá todo lo que tenga motor a gasolina. Con cada máquina aplicá la tabla de esta
+lección y **escribí la respuesta encima** con marcador o sobre una cinta pegada: «2T — MEZCLA 50:1»,
+«4T — GASOLINA PURA». No lo escribís para vos: lo escribís para quien la agarre cuando no estés.
+
+Seguí por los envases, que es donde se juega el asunto. Necesitás **tres recipientes distintos y
+rotulados en letra grande**: gasolina pura, mezcla con su proporción y su fecha, y el aceite.
+Ninguno, una botella de bebida. Al lado, **una jeringa de 20 ml de farmacia sin aguja**, un embudo
+con malla y un papelito con las cuentas hechas. Con eso desaparece el «más o menos un chorrito».
+
+Fijate un ritual de carga siempre igual: confirmar que el bidón que tenés en la mano es el de esa
+máquina, agitar la mezcla antes de servir, cargar afuera con el motor frío y el bidón en el piso, y
+**dejarlo un minuto a bajas vueltas** antes de exigirle. El combustible vive a la sombra, lejos de la
+cocina, del calefón y del tablero, donde los chicos no llegan, con **un balde de arena seca** al lado.
+
+Ahora la parte del barrio, que es donde esto se vuelve oficio. **La forma más común de matar un dos
+tiempos es prestarlo**: quien la pide va a cargar donde le quede cerca y le van a dar lo que haya.
+Así que la máquina no se presta sola, **se presta con su bidón de mezcla rotulado**. Y sentate diez
+minutos con la gente de tu casa a explicar tres cosas: cuál máquina toma mezcla y cuál gasolina pura,
+que el combustible vive afuera y jamás en una botella de gaseosa, y que se carga con el motor apagado
+y frío. Quien funde un motor por cargarle lo que no era casi nunca es un descuidado: nadie le había
+explicado que dos máquinas iguales por fuera comen distinto.
+
+Por último, abrí un cuaderno con **una hoja por máquina**: dos o cuatro tiempos, proporción, aceite
+que le corresponde, y fecha de cada carga y cada arreglo. En la lección siguiente vas a necesitar esa
+hoja para llevar las horas.
+</AplicarRizoma>
+
+<ContextoBolivia titulo="Motores chicos en el calor del llano">
+Todo lo anterior es física universal. Lo que cambia en Zanja Honda y en el sur de Santa Cruz es
+**cuánto margen te queda antes de que la física cobre**, y el calor es lo primero que lo recorta. Un
+motor enfriado por aire evacúa calor gracias a la diferencia entre sus aletas y el aire que pasa; con
+tardes de treinta y cinco grados o más esa diferencia es menor que en cualquier ensayo de fábrica,
+así que **el mismo motor haciendo el mismo trabajo corre más caliente acá**, con película más fina y
+menos distancia hasta el gripado. Los tramos duros, temprano o al atardecer.
+
+**La humedad y la estación muerta se combinan contra el bidón.** Un envase medio vacío que se abre y
+se cierra varias veces carga agua rápido, y con gasolina alcoholizada eso termina en separación de
+fases. Y cada máquina descansa media temporada —la desbrozadora trabaja de octubre a abril, cuando el
+pasto crece; la motobomba, al revés—, así que pasa meses con **combustible quieto adentro**.
+
+**El surazo cambia el arranque.** Una mañana de julio a diez grados, el aceite está más espeso y la
+película tarda más en formarse; y como cuesta que el motor se sostenga, la tentación es acelerarlo.
+Motor frío, aceite espeso y acelerador a fondo es la receta exacta del gripado en frío.
+
+**El combustible que hay es el que hay.** Ni el porcentaje de alcohol ni las condiciones de cada
+producto son cosa que este curso pueda afirmar: eso se consulta en el surtidor, en la distribuidora o
+en YPFB. La regla que funciona sin conocer el dato es tratar **toda** gasolina de surtidor como si
+pudiera llevar alcohol. Y como el repuesto acá es lento y caro, **una máquina parada se queda parada
+mucho tiempo**.
+
+Y una última, con los cortes de energía de por medio: el generador se llena de noche, apurado, a
+oscuras y muchas veces recién apagado y caliente, o sea con todas las condiciones del fuego juntas.
+Se carga con linterna, con el motor frío, afuera de la casa. Tené **confirmado antes de necesitarlo**
+el número de bomberos de tu localidad y dónde queda el centro de salud más cercano: un número que se
+busca durante una quemadura no sirve.
+</ContextoBolivia>
+
+## Lo que hay que llevarse
+
+**En un cuatro tiempos el aceite vive en el cárter y en un dos tiempos viaja dentro del
+combustible**, porque el cárter del dos tiempos es parte del camino del aire: de ahí salen las
+lumbreras, el barrido, el humo y la obligación de preparar mezcla. La lubricación es una **película
+más gruesa que las montañas microscópicas del metal**, sostenida por el propio movimiento; cuando
+falta, el pistón se calienta, se dilata el doble que el acero y termina soldado a la camisa. Y el
+aceite de cuatro tiempos no lubrica peor: **deja cenizas** que pegan los aros.
+
+## Lo que sigue
+
+Ya sabés qué le entra a cada motor y por qué un error de carga lo mata. Falta lo otro: **cuándo hay
+que atenderlo**, que resulta no medirse en meses sino en horas de trabajo.
+
+En **03-mantenimiento-por-horas** vas a ver por qué el calendario se cuenta en horas, cómo llevar esa
+cuenta sin horómetro, y la lista de tareas con su mecanismo: el aceite, el filtro de aire, la bujía,
+las aletas de refrigeración —que enlazan directo con el gripado que acabás de entender—, las válvulas
+y el guardado de la máquina que se usa tres semanas al año.

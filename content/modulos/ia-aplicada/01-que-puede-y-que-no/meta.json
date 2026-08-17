@@ -1,0 +1,56 @@
+{
+  "titulo": "Qué puede y qué no puede hacer la IA en tu vivero",
+  "subtitulo": "El único módulo donde llegas con ventaja: ya sabes cómo funciona la herramienta. Lo que hay que aprender es el dominio nuevo — dónde el fallo se paga con plantas muertas y por qué el bucle de verificación tarda semanas.",
+  "duracionMin": 29,
+  "portada": "portada.webp",
+  "portadaAlt": "Interior de un vivero tropical bajo malla de sombra al atardecer: unas manos curtidas sostienen un teléfono junto a la hoja de un plantín en bolsa negra, fotografiándola; la pantalla brilla con una interfaz borrosa e ilegible. Sobre la mesa de madera hay un portátil cerrado, un cuaderno abierto con anotaciones manuscritas y un lápiz; al fondo, hileras de plantines sobre mesas de trabajo",
+  "objetivos": [
+    "Entender por qué el vivero es un dominio hostil para la IA: verificación en semanas, sin rollback, error propagado por lotes y sin compilador que rechace una respuesta bien formada.",
+    "Reconocer los tres agravantes agronómicos de la alucinación: vocabulario regular que hace verosímil lo inventado, unidades que esconden factores de mil, y síntomas multicausales donde cualquier diagnóstico encaja.",
+    "Clasificar cada tarea en la matriz costo del error × verificabilidad y aplicar la política de su zona: delegar, confirmar contra fuente o prohibido delegar.",
+    "Anticipar el sesgo del entrenamiento: consejos calibrados para estaciones templadas, nombres locales mal cubiertos y el trópico boliviano subrepresentado.",
+    "Aplicar los tres filtros antes de tocar plantas: la fuente manda (la etiqueta del producto, el SENASAG), prueba con testigo, y registro escrito.",
+    "Usar el vivero como plataforma de experimentación: cientos de unidades casi idénticas permiten un grupo de control barato, cambiando una sola variable.",
+    "Empezar hoy por la zona verde —catálogo, traducciones, resúmenes, planilla— y diseñar con el modelo la ficha de registro que alimentará el resto del módulo."
+  ],
+  "prerrequisitos": [
+    "ciencia-del-suelo/01-textura-prueba-frasco",
+    "albanileria-y-obra/12-computo-y-presupuesto"
+  ],
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=0vYXd4O3UMU",
+      "idioma": "es",
+      "porQue": "Un agricultor muestra seis usos reales de la IA en campo —cálculos, planillas, entender etiquetas y análisis, trámites, segunda opinión— y dedica una parte a los errores que hay que evitar. Es casi el índice de la zona verde y amarilla de esta lección, con manos en la tierra.",
+      "titulo": "Cómo usar la INTELIGENCIA ARTIFICIAL en AGRICULTURA (6 usos reales)",
+      "canal": "Cultiva y Emprende",
+      "duracion": "11:11",
+      "verificado": true
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=-Cie_vZcW7w",
+      "idioma": "es",
+      "porQue": "Documental de DW que recorre el otro extremo de la escala: una app de escaneo de cultivos para pequeños agricultores en Camerún y agricultura de precisión en el sur de España. Sirve para calibrar qué de todo eso baja a 3.666 m² y qué no — la mitad de la lección es distinguirlo.",
+      "titulo": "Inteligencia artificial en la agricultura | DW Documental",
+      "canal": "DW Documental",
+      "duracion": "25:56",
+      "verificado": true
+    }
+  ],
+  "referencias": [
+    {
+      "titulo": "Inteligencia artificial aplicada al agro: ¿dónde estamos y qué podemos esperar?",
+      "fuente": "IICA — Instituto Interamericano de Cooperación para la Agricultura",
+      "url": "https://blog.iica.int/en/blog/artificial-intelligence-ai-agriculture-where-are-we-and-what-can-we-expect-es",
+      "nota": "El organismo interamericano del agro sitúa las expectativas: insiste en que las imprecisiones vienen tanto de la cantidad y calidad de los datos como de los límites de los modelos, y en que hay que formar a quien los usa para saber cuándo funcionan y cuándo no. Es exactamente la tesis de esta lección, dicha por una institución del rubro."
+    }
+  ],
+  "terminos": [
+    "alucinacion",
+    "etiqueta-del-producto",
+    "ingrediente-activo",
+    "mochila-de-aspersion",
+    "testigo"
+  ],
+  "practica": true
+}

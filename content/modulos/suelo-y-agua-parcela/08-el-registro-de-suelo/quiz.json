@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "p1",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué prácticas hacen que dos medidas separadas por diez años se puedan restar de verdad?",
+      "opciones": [
+        "Volver siempre al mismo punto codificado, con la profundidad de muestreo fijada de antemano.",
+        "Medir en la misma quincena del año y anotar como metadato la lluvia de los siete días previos.",
+        "Mantener el mismo procedimiento aunque se sepa algo desviado, en vez de cambiarlo a mitad de la serie.",
+        "Pasarse a un método más exacto en cuanto se pueda pagar, porque un dato más exacto siempre mejora la serie."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son el punto permanente, la ventana de medición y la comparabilidad. La cuarta confunde exactitud con comparabilidad, que es el error conceptual central de la lección: lo que mide un registro no es el valor absoluto de un año sino la diferencia entre años, y esa diferencia solo es verdadera si el procedimiento no cambió. Un método mediocre aplicado siempre igual queda desviado lo mismo todos los años y la resta sigue siendo válida; un método mejor introducido a mitad produce una deriva de método, es decir, un salto indistinguible de un cambio real del suelo. Si de todos modos hay que cambiar, se cambia con muestra de archivo, mandando lo viejo y lo nuevo juntos al mismo laboratorio."
+    },
+    {
+      "id": "p2",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre las tres capas del registro —bitácora de eventos, indicadores de campo y laboratorio—, ¿qué afirma la lección?",
+      "opciones": [
+        "La bitácora de eventos es la capa que da sentido a las otras dos; si solo se puede hacer una cosa, es esa.",
+        "Un dato que nunca se tomó se marca como faltante y jamás se anota como cero.",
+        "La bitácora se lleva como registro de solo escritura: un error se enmienda con una entrada nueva y fechada.",
+        "Un análisis de laboratorio, por ser el dato más caro y preciso, se interpreta por sí solo sin necesidad de bitácora."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son la prioridad de capas, la regla del hueco y la disciplina de solo escritura. La cuarta es falsa y es el error más caro de los tres: un análisis sin bitácora es un número huérfano. Si la materia orgánica subió medio punto y nadie anotó que ese año entraron treinta metros cúbicos de material, el dato no permite decidir nada, porque no se sabe si mejoró el manejo o si se compró la mejora. Es la misma relación que hay entre métricas y logs: la métrica dice que algo cambió, el log dice por qué, y sin el segundo el primero es un escalón que nadie sabe explicar."
+    },
+    {
+      "id": "p3",
+      "tipo": "verdadero_falso",
+      "enunciado": "En un suelo con arcillas expansivas conviene medir la densidad aparente cuando el terreno está agrietado, porque así el cilindro entra con más facilidad y se maltrata menos la estructura.",
+      "respuesta": false,
+      "explicacion": "Falso, y por un motivo que va más allá de la comodidad. En una arcilla 2:1 el mismo punto agrietado en septiembre e hinchado en marzo son dos suelos distintos, y la diferencia entre ambos estados supera con holgura diez años de mejora real: una densidad aparente medida en seco no describe el suelo en el que van a vivir las raíces durante la temporada de crecimiento, y además no será comparable con la del año siguiente si ese año se midió con el perfil mojado. Por eso la lección insiste en que la fecha y la humedad forman parte de la definición del dato, igual que la unidad, y en que se fija una ventana de medición —la misma quincena todos los años, con una condición de humedad escrita— y se anota siempre la lluvia de los días previos."
+    },
+    {
+      "id": "p4",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué afirmaciones sobre el ruido y la señal en un registro de suelo son correctas?",
+      "opciones": [
+        "Dos muestras tomadas a cinco metros pueden diferir más que diez años de cambio real, y por eso existen los puntos permanentes y las muestras compuestas.",
+        "Medir una vez al año la repetibilidad entre dos personas fija el piso de lo que la serie tiene derecho a afirmar.",
+        "Con dos años de datos no se concluye una tendencia: dos medidas son una diferencia y hacen falta tres puntos.",
+        "Si se prueba una enmienda en el lote que peor se veía y mejora, la mejora se puede atribuir con confianza al tratamiento."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son variabilidad espacial, repetibilidad de la medición y la regla de los tres puntos. La cuarta ignora dos trampas a la vez. La primera es la regresión a la media: el lote que peor se veía estaba en su punto más bajo y tenía muchas más maneras de subir que de bajar, así que parte de la mejora habría ocurrido igual sin hacer nada. La segunda es el clima como variable de confusión: un año de lluvias bien repartidas mejora todo el terreno a la vez. Separar el efecto del manejo del efecto del año solo se consigue con un testigo medido el mismo día y con el mismo protocolo."
+    },
+    {
+      "id": "p5",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si en diez años de registro la materia orgánica de un suelo trabajado del sur de Santa Cruz se mantiene plana, hay que concluir que el manejo fracasó.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error de interpretación más frecuente al leer un registro tropical con tablas de clima templado. En clima cálido y húmedo la materia orgánica se comporta como un flujo y no como un stock: se mineraliza mucho más rápido que en un suelo frío, de modo que la trayectoria por defecto de un suelo trabajado es hacia abajo y hace falta un aporte constante solo para mantenerla donde está. Mantenerla plana durante una década significa que el aporte igualó a la pérdida, lo cual es un resultado, no un empate. Quien lea esa serie con una tabla europea concluirá que no sirvió de nada y abandonará justo la práctica que estaba funcionando. La conclusión, eso sí, solo es sólida si hubo protocolo estable y un testigo con el que comparar."
+    },
+    {
+      "id": "p6",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el uso del laboratorio dentro de un registro de largo plazo, ¿qué recomienda la lección?",
+      "opciones": [
+        "Pedir el nombre del método de cada determinación y anotarlo en la libreta junto al resultado.",
+        "Guardar de cada campaña una porción seca, tamizada y rotulada como muestra de archivo, para reanalizarla junto con la nueva.",
+        "Asumir que las determinaciones biológicas no sobreviven al frasco, así que el archivo sirve sobre todo para las químicas estables.",
+        "Confiar en que dos informes con membrete de laboratorios distintos son comparables entre sí sin más precauciones."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son la anotación del método, la muestra de archivo y su límite honesto. La cuarta es exactamente lo que rompe las series largas: la materia orgánica no se determina de una sola manera ni el fósforo se extrae con la misma solución en todos los laboratorios, así que dos informes impecables pueden dar números distintos para el mismo suelo. Ese salto —la deriva de método— es indistinguible de un cambio real, y un registro de doce años puede quedar partido en dos mitades incomparables por una decisión administrativa que nadie anotó. La defensa cuesta un frasco: mandar la muestra vieja y la nueva en el mismo lote, para que cualquier desviación afecte a las dos por igual."
+    },
+    {
+      "id": "p7",
+      "tipo": "abierta",
+      "enunciado": "Te encargan diseñar desde cero el registro de suelo de Rizoma del Sur —3.666 m² en 12 lotes contiguos en Zanja Honda, sur de Santa Cruz, con vivero, plátano, yautía, culantro, ají dulce, gandul, ornamentales y frutales— pensado para que en 2036 se pueda contestar si lo que se hizo sirvió. Describe el diseño completo: qué se mide y por qué, dónde y cuándo, cómo se protege la serie del ruido y de la deriva, cómo se guarda para que sobreviva a las personas, y qué se deja explícitamente sin decidir por falta de datos.",
+      "respuestaModelo": "Empezaría por el filtro que evita que el registro se abandone en cuatro meses: a cada cosa que se mida le escribo al lado la decisión que va a cambiar según el resultado. La cobertura decide si se sigue trayendo material; el espesor de la capa oscura, si un lote entra en descanso; el nivel del pozo, si se recorta el riego. Lo que no dispare ninguna decisión no entra. Y dejo las métricas prespecificadas por escrito antes de aplicar nada, para no poder elegir después la variable que salió a favor.\n\nEl registro tiene tres capas. La bitácora de eventos es continua y gratis —lluvia en milímetros, labores, material orgánico aportado con su cantidad, siembras y cosechas por unidad, riegos, encharcamientos con su duración, la quema del vecino—, y se lleva como registro de solo escritura: nunca se borra, los errores se enmiendan con una entrada nueva y fechada, y un dato que no se tomó se marca como faltante y no como cero. Encima van los indicadores de campo, una o dos veces al año, y arriba del todo el laboratorio, cada cuatro o cinco años.\n\nLos puntos se estratifican por el mapa del agua de la primera lección y no por las líneas de los lotes: la parte alta y mejor drenada, la zona de acumulación, la franja de paleocauce si aparece, y el sector del vivero. Cuatro a seis puntos de muestreo permanentes, codificados R-01 a R-06 con códigos que nunca se reutilizan, cada uno con estaca, dos distancias medidas a referencias que no se van a mover, foto y descripción escrita, y con la profundidad fijada: de cero a veinte centímetros y, cuando se pueda, de veinte a cuarenta. Dentro de cada unidad de manejo se toma muestra compuesta con quince a veinte piquetes en zigzag, y nunca se mezclan unidades distintas, porque el promedio de un dique natural y un bajío describe un suelo que no existe.\n\nEl calendario son dos fechas y una regla de disparo. Ronda principal en la misma quincena de marzo, al final de las lluvias y con el perfil hinchado: espesor de la capa oscura con pala y regla, densidad aparente con lata, penetrómetro de varilla, prueba del hoyo, terrón en el vaso puntuado de 0 a 3, conteo de lombrices en un bloque de veinte centímetros de lado, transecto de cobertura y fotos desde los puntos fijos con la misma referencia de escala. Ronda ligera en agosto: cobertura, fotos y nivel del pozo. Nivel estático del pozo el mismo día de cada mes. Y cada lluvia grande dispara la recorrida de las lecciones 1 y 2 —charcos y su duración, abanicos de barro, color del agua en el punto de salida—, que alimenta la bitácora. En arcillas expansivas la fecha no es burocracia: forma parte de la definición del dato, así que se anota siempre la lluvia de los siete días previos.\n\nContra el ruido y la deriva, cuatro defensas. Un testigo de verdad: con doce lotes se puede dejar uno entero, o franjas de tres metros en varios, sin la práctica que se prueba, medido el mismo día y con el mismo protocolo; es lo único que separará el efecto del manejo del efecto de la década. La muestra de archivo: de cada campaña se seca a la sombra, se tamiza y se guarda medio kilo rotulado con punto, profundidad y fecha, para mandarlo en 2036 junto con la muestra nueva al mismo laboratorio, pidiendo siempre el nombre del método. La repetibilidad: una vez al año dos personas miden el mismo hoyo sin verse los números, y esa diferencia se escribe como el margen de todo el registro. Y la regla de los tres puntos, más el contraste de alambrado con el vecino, pidiendo permiso antes de cavar.\n\nLa línea de base se toma ahora y solo se puede tomar una vez: si en un lote se van a construir camas altas esta temporada, la muestra, las fotos y el análisis del año cero se hacen antes de que entre la primera pala. El plátano, que va aguas abajo de todo, lleva su registro de bioseguridad: fecha y origen de cada entrada de material y quién entró. El sustrato del vivero no es suelo y lleva cuaderno aparte.\n\nSe guarda en papel primero —cuaderno de tapa dura, a lápiz porque la tinta corre, protocolo entero en la primera página—, con copia en CSV de una fila por punto, fecha y variable, con columnas de valor, unidad, método y quién midió; tres copias, dos soportes y una fuera del sitio, que en un proyecto comunitario es la casa de otra persona. Dos responsables que rotan, para que el procedimiento exista en más de una cabeza.\n\nY declaro lo que no decido: no invento cifras locales de lluvia, erosividad, precios ni plazos. Los datos de clima se piden al servicio nacional de meteorología e hidrología, los análisis y métodos a la universidad pública y a las instituciones de investigación agrícola, y cualquier permiso a la autoridad competente. Tampoco prometo porcentajes de mejora de suelo: lo que Rizoma puede ofrecer es publicar la serie tal como sale, con sus huecos y sus años malos, que es lo que la convierte en evidencia local para el vecino que empieza con veinte metros cuadrados.",
+      "criterios": [
+        "Filtra qué se mide con la decisión asociada a cada indicador y prespecifica las métricas por escrito antes de aplicar nada.",
+        "Distingue las tres capas —bitácora de eventos, indicadores de campo y laboratorio— y sostiene que la bitácora es la que da sentido a las otras dos.",
+        "Lleva la bitácora como registro de solo escritura y trata el dato faltante como hueco marcado, nunca como cero.",
+        "Estratifica los puntos por unidad de manejo del mapa del agua y no por las líneas de los lotes, y no mezcla unidades distintas en una misma muestra compuesta.",
+        "Instala puntos de muestreo permanentes con código que no se reutiliza, dos distancias a referencias fijas, foto y profundidad fijada de antemano.",
+        "Fija una ventana de medición anual con condición de humedad escrita y anota la lluvia de los días previos, justificándolo por el comportamiento de las arcillas expansivas.",
+        "Enumera indicadores de campo concretos y ejecutables sin gastar dinero, con su frecuencia, e incluye pluviómetro propio y fotos desde punto fijo con referencia de escala.",
+        "Reserva un testigo sin intervención aprovechando los doce lotes y reconoce que es lo único que separa el efecto del manejo del efecto del clima.",
+        "Incluye muestra de archivo guardada cada campaña y el pedido del nombre del método al laboratorio como defensa contra la deriva de método.",
+        "Mide la repetibilidad entre dos personas y aplica la regla de no concluir con menos de tres puntos.",
+        "Toma la línea de base antes de cualquier obra o enmienda, sabiendo que solo hay una oportunidad, e integra el registro de bioseguridad del plátano y el cuaderno aparte del sustrato del vivero.",
+        "Resuelve conservación y sucesión —papel a lápiz, protocolo de una página, CSV, respaldo fuera del sitio, dos responsables— y declara explícitamente qué no decide, remitiendo clima, análisis y permisos a las instituciones competentes sin inventar cifras."
+      ],
+      "explicacion": "Una respuesta buena no es una lista de aparatos: es un procedimiento con orden y con defensas. Primero se decide qué decisión justifica cada medición, después dónde y cuándo se mide —que es donde se gana o se pierde la comparabilidad—, después cómo se protege la serie del ruido, de la deriva y de la desaparición de las personas, y solo al final qué se hace con los números. Tres señales distinguen un diseño honesto de uno decorativo: que reserve un testigo aunque cueste producción, que guarde muestra de archivo aunque hoy no sirva para nada, y que diga con todas las letras qué no sabe y a quién va a preguntárselo en vez de rellenar el hueco con una cifra inventada."
+    }
+  ]
+}

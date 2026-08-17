@@ -1,0 +1,439 @@
+Tres de la madrugada. Nadie despierto, ningún grifo abierto. Y la bomba arranca sola, trabaja cuarenta
+segundos y se calla. Media hora después vuelve a arrancar. A la mañana, el tanque que anoche estaba
+lleno amanece por la mitad y nadie se bañó.
+
+**Eso no es un misterio: es un sistema informando.** El agua se va y, como nadie la usa, se va por un
+sitio que no es un grifo. Eso es una <Termino slug="fuga-oculta">fuga oculta</Termino>: una pérdida en
+la red de presión que no se ve, porque el agua sale dentro de una pared, bajo un contrapiso o en una
+zanja tapada.
+
+Esta lección no trata del grifo que gotea —eso es la 04—, sino del método para encontrar lo que no se
+ve, porque **casi todo el dinero y casi todo el destrozo de una fuga oculta se gastan buscándola en el
+lugar equivocado**. Un programador lo reconoce al instante: **es un bug**. Valen las reglas de
+la <Termino slug="depuracion">depuración</Termino>: no adivinar, medir; cambiar una cosa a la vez;
+partir el sistema en mitades; anotarlo todo, porque la memoria miente.
+
+## Por qué una fuga no espera a que abras el grifo
+
+La red de abastecimiento está **llena de agua a presión las veinticuatro horas**. Cuando cerrás los
+grifos el agua no se va a dormir: se queda adentro empujando, y un agujero trabaja de noche con la
+misma constancia con que un grifo llena un balde. Trabaja **más** de noche, además: con el barrio
+dormido nadie consume y la presión sube. **La fuga tiene su hora pico a las tres de la mañana**, que es
+cuando arranca esa bomba. No es fantasma: es física.
+
+<Formula explicacion="A es el área del agujero en metros cuadrados, g es 9,81 m/s², h es la presión expresada en metros de columna de agua y C es un coeficiente de descarga que en un agujero irregular ronda 0,6. El resultado sale en metros cúbicos por segundo. Lo importante no es el número exacto sino de qué depende: el caudal crece con el ÁREA del agujero, o sea con el cuadrado de su diámetro, pero solo con la RAÍZ CUADRADA de la presión.">
+Q = C · A · √(2 · g · h)
+</Formula>
+
+Ese <Termino slug="caudal-por-orificio">caudal por orificio</Termino> enseña dos cosas. Un agujero del
+doble de diámetro pierde **cuatro veces más**, así que una fisura que crece poco se vuelve cara rápido.
+Y bajar la presión a la mitad **no** baja la fuga a la mitad: la baja apenas un 30 %. Reducir presión
+ayuda mientras buscás, pero nunca es la solución.
+
+## Leer la evidencia antes de tocar nada
+
+Cada señal tiene un mecanismo, y entender el mecanismo es lo que permite descartar.
+
+**La factura** no se compara con la del vecino sino con tu propia historia: tres o cuatro facturas
+anteriores son tu <Termino slug="linea-base">línea de base</Termino>. Un salto sostenido que no
+coincide con visitas, obra ni riego es una fuga; uno de un mes solo fue una manguera olvidada.
+
+**La prueba del medidor** es la mejor herramienta que ya tenés instalada, y es gratis.
+La <Termino slug="prueba-del-medidor">prueba del medidor</Termino> se hace cerrando **todos** los
+grifos y aparatos —lavarropas, calefón, riego— y mirando. Muchos medidores traen una estrellita o un
+disco rojo que gira con caudales mínimos: es
+la <Termino slug="aguja-testigo">aguja testigo</Termino>, y **si se mueve, hay agua pasando**. Si no la
+tiene, anotá la lectura, esperá tres horas y releé: la diferencia dividida por las horas es
+tu <Termino slug="consumo-de-base">consumo de base</Termino>, que en una casa cerrada debe ser cero.
+
+<Dato titulo="La prueba de la noche: el número que vale por veinte opiniones">
+De noche la presión es máxima y es fácil garantizar que nadie use agua.
+
+1. A las diez cerrás todo y anotás la lectura **con todos sus dígitos**, incluidos los rojos de los
+   litros. Sacale una foto: la foto trae fecha y hora.
+2. A las seis volvés a anotar y fotografiar. La diferencia son los litros que se fueron en ocho horas
+   sin que nadie abriera nada.
+
+Doscientos litros en ocho horas son veinticinco por hora: fuga franca. Diez litros también es fuga, y
+es la que nadie ve durante tres años. **Repetila tres noches**, porque una sola medición no distingue
+una fuga de un error de lectura. Sin medidor, se hace sobre el tanque: cerrás su entrada, marcás el
+nivel con cinta y comparás a la mañana.
+</Dato>
+
+**La bomba que arranca sola** es un detector de fugas que te regalaron: arranca cuando la presión baja,
+y la presión no baja sola. Que arranque cada media hora con todo cerrado es
+un <Termino slug="ciclo-corto-de-bomba">ciclo corto de bomba</Termino>, y significa fuga, antirretorno
+que deja pasar hacia atrás, o colchón de aire perdido. Además **destruye la bomba**, porque cada
+arranque es el momento de máxima corriente.
+
+**El tanque que amanece vacío** tiene tres explicaciones y solo una es fuga de la red: el rebalse
+porque el flotador no cierra, el retorno por el llenado si falta antirretorno, o la distribución. Se
+separan cerrando la salida del tanque de noche: si igual baja, el problema es el tanque.
+
+**La mancha que sube por la pared** no marca el agujero: marca por dónde **sale** el agua. Distinguila
+de la <Termino slug="humedad-ascendente">humedad ascendente</Termino>, agua del terreno que sube por
+capilaridad desde el cimiento: esa forma una franja horizontal pareja en varios metros de muro, empeora
+en lluvias y aparece donde no pasa ningún caño. La de fuga es **local**, sigue el trazado de un caño y
+**no le importa la estación**. Si además hay salitre —esa costra blanca
+es <Termino slug="eflorescencia">eflorescencia</Termino>, sales que el agua disuelve, transporta y
+deja al evaporarse— hay agua circulando de forma sostenida ahí adentro, y esas sales al cristalizar
+revientan el revoque desde dentro.
+
+**El moho** necesita agua durante días seguidos, así que no dice dónde entra el agua sino **dónde se
+queda**, y puede aparecer a metros del agujero. **El piso tibio** delata una fuga en la línea de agua
+caliente: se busca descalzo, temprano, con el piso frío. Y si el calefón trabaja solo sin que nadie se
+bañe, lo hace trabajar la fuga.
+
+**El silbido** es turbulencia: agua a presión atravesando un agujero chico hace un siseo agudo y
+constante. Se escucha de madrugada pegando la oreja a la pared o —mejor— a una parte metálica de la
+instalación, porque el sonido viaja por el metal mucho más lejos que por el aire. El truco de oficio es
+apoyar la punta de un destornillador largo en el caño y la oreja en el mango: eso
+es <Termino slug="escucha-acustica">escucha acústica</Termino> hecha en casa.
+
+## El agua viaja: por qué la mancha miente
+
+**El agua que sale de un agujero no cae ahí: recorre.** Va por afuera del caño, baja por la cara de un
+ladrillo, sigue una junta de mortero y aparece en el punto más bajo o más poroso del camino, a varios
+metros. La mancha es **el final del recorrido**; el principio está más arriba y más cerca de un caño. Y
+el agujero está donde hay una unión, un cambio de dirección o un tramo castigado, casi nunca en medio
+de un tubo recto sano. Antes de picar, preguntate **qué caño pasa por arriba de esa mancha**, no cuál
+pasa por la mancha.
+
+## Acorralar el tramo: la bisección aplicada a la casa
+
+La herramienta mental es la <Termino slug="busqueda-binaria">búsqueda binaria</Termino>: en vez de
+adivinar dónde está la fuga, **partís el sistema en dos y averiguás en qué mitad está**. Cada prueba
+borra la mitad del territorio: ocho tramos se acorralan en tres pruebas y dieciséis en cuatro.
+
+Para partir una red hacen falta puntos de corte, y ahí aparece el descubrimiento incómodo: **la mayoría
+de las casas no tiene ninguno.** Una instalación sin llaves intermedias es como un programa sin ninguna
+forma de ver qué pasa adentro: se puede depurar, pero a martillazos. Poner llaves de corte por sector
+es la <Termino slug="sectorizacion">sectorización</Termino>, la mejora más barata que existe.
+
+**Paso 1. ¿Está dentro de la casa o antes de entrar?** Cerrá la llave que aísla la casa entera y dejá
+el medidor abierto. Si **sigue girando**, la fuga está entre el medidor y esa llave: la acometida
+enterrada. Si se **detiene**, está adentro. Partiste el problema en dos sin romper nada.
+
+**Paso 2. Descartá los aparatos.** Cerrá las llaves de escuadra de todos los aparatos y mirá otra vez.
+Si se detiene, la fuga está **en un aparato**: inodoro que pasa agua al vaso en silencio, flexible
+transpirando, grifo de patio mal cerrado. Eso se resuelve en la lección 04, con la prueba del
+colorante. Es imprescindible: **el inodoro es el falso culpable número uno de los caños.**
+
+**Paso 3. Partí la red por la mitad.** Con las llaves que tengas, o creándolas: se corta el caño en un
+punto estratégico y se le pone un <Termino slug="tapon-de-prueba">tapón de prueba</Termino>, un tapón
+roscado o cementado que cierra provisionalmente una boca para presurizar el resto. Si al abrir el
+medidor se detiene, la fuga está del lado tapado; si sigue, del lado vivo. Se repite con la mitad
+sospechosa.
+
+**Paso 4. Buscá el punto dentro del tramo culpable.** Recién ahora tienen sentido la escucha acústica,
+el piso tibio, el charco que no seca y la varilla clavada para notar dónde está blando el terreno. Si
+el tramo tiene una sola unión, empezá por la unión.
+
+<Advertencia titulo="Las tres reglas sin las cuales el método no funciona">
+**Una variable a la vez.** Cerrás una llave, medís, anotás, la volvés a abrir. Si cerrás tres y el
+medidor se detiene, no sabés cuál fue: perdiste la prueba.
+
+**Todo por escrito, con hora.** Lectura, hora, qué estaba cerrado, qué observaste. Al tercer día vas a
+estar seguro de haber probado algo que no probaste.
+
+**Avisá a la casa**, porque la prueba se arruina si alguien se lava las manos y porque, si abren un
+grifo mientras tenés un caño cortado, te inundan. **Antes de cortar nada, cerrá el paso, abrí el grifo
+más bajo de la casa y esperá a que deje de salir agua.** Que la línea está despresurizada se comprueba
+abriendo, nunca suponiendo: un tramo que baja del tanque sigue teniendo litros adentro aunque la llave
+esté cerrada, y un tubo a presión que se abre de golpe no gotea, dispara.
+</Advertencia>
+
+## El manómetro: la prueba que da un número
+
+Todo lo anterior contesta sí o no. El <Termino slug="manometro">manómetro</Termino> —un reloj con aguja
+que marca la presión, con rosca para enroscarlo a una salida de agua— contesta **cuánto**, y se pone en
+la llave de manguera del patio o en la toma del lavarropas.
+
+Su uso potente es la <Termino slug="prueba-de-estanqueidad">prueba de estanqueidad</Termino>: **aislar
+un tramo, llenarlo, presurizarlo, cerrar la fuente y mirar si la aguja se queda quieta.** Se tapan
+todas sus salidas menos la del manómetro, se abre despacio la alimentación hasta llenarlo, **se purga
+el aire abriendo el punto más alto hasta que salga agua sin escupir**, se cierra la alimentación y se
+anota hora y presión. Después se mira a los quince minutos, a la hora y a la mañana siguiente.
+
+<Analogia titulo="Por qué el agua es un detective y el aire no">
+El agua es prácticamente **incompresible**: apretarla no la achica. Un tramo lleno de agua y sin aire
+es casi rígido, así que basta que se escapen unos pocos mililitros para que la presión se desplome, y
+por eso la prueba detecta pérdidas que jamás verías a simple vista. El aire, en cambio, es un resorte:
+una burbuja atrapada se comprime y va soltando presión a medida que el agua se escapa, sosteniendo la
+aguja durante horas. Esa prueba **puede darte
+un <Termino slug="falso-positivo">falso positivo</Termino> tranquilizador** y hacerte borrar del mapa
+un tramo enfermo. Por eso se purga antes de probar.
+</Analogia>
+
+Cómo se lee. **Cae a cero en minutos**: fuga franca y grande. **Cae, se detiene en un valor y ahí se
+queda**: el agujero está a cierta altura y deja de salir cuando la columna sobre él iguala la presión
+restante, así que ese valor te dice **a qué altura está la fuga**,
+en <Termino slug="metro-de-columna-de-agua">metros de columna de agua</Termino>. **Baja lentísimo y
+parejo**: fuga pequeña, o una llave que pasa un poquito. **No se mueve**: tramo sano, borralo del mapa.
+Cuidado con dos confusores: el sol calienta el agua, la dilata y sube la aguja tapando una fuga chica
+—se prueba de noche o a la sombra—, y una llave que no cierra del todo hace aparecer fugas en tramos
+sanos.
+
+<Advertencia titulo="Nunca hagas la prueba con aire comprimido">
+Existe la tentación de conectar un compresor porque llena rápido y no moja. **No se hace, y el motivo
+es que puede matar.** Un tramo lleno de aire comprimido es un resorte cargado con muchísima energía
+almacenada: si un tapón salta o un tubo revienta, esa energía se descarga de golpe y acelera el tapón o
+los pedazos de PVC como proyectiles. Con agua, el mismo reventón es un chorro y un susto, porque el
+agua casi no guarda energía al comprimirse.
+
+Tampoco subas la presión por encima de lo que aguanta tu tubería: **cada tubo trae impresa su clase,
+leela en el propio caño**, y el valor exacto de prueba lo fija el fabricante, no el vecino ni este
+curso. Y no encierres un calefón entre dos llaves cerradas mientras calienta: el agua al calentarse se
+dilata y necesita a dónde ir.
+</Advertencia>
+
+## Dónde nacen las fugas de verdad
+
+Los agujeros no aparecen en cualquier lado, sino en unos pocos sitios que son siempre los mismos.
+
+<Tabla>
+
+| Nace en | Mecanismo | Cómo se reconoce |
+| --- | --- | --- |
+| **Unión roscada** | La rosca cónica sella por el flanco: poco teflón deja canal, mucho apriete abre el plástico como una cuña | Gotea el accesorio mismo |
+| **Unión cementada mal curada** | Presurizada antes de que el cemento cure, la junta queda con canales | Falla a los días o semanas |
+| **Tubo bajo paso de vehículos** | La carga puntual aplasta el tubo y la campana concentra el esfuerzo | Charco o pasto verde en la huella |
+| **Zanja mal compactada** | El relleno se asienta, el tubo cuelga y trabaja a flexión | Falla el primer verano tras la obra |
+| **Raíces** | No perforan un tubo sano: encuentran una fuga y la agrandan al engordar | Árbol grande cerca; empeora de a poco |
+| **Golpe de ariete repetido** | Cada cierre brusco manda una onda que multiplica la presión normal | Martilleo audible; falla la unión más floja |
+| **Galvanizado corroído** | Se gasta el zinc y el acero se pica desde adentro | Agua anaranjada; aparece uno y vienen más |
+
+</Tabla>
+
+**Las uniones cementadas fallan tarde.** Una hecha con prisa —sin desbarbar, con el tubo mojado, sin el
+cuarto de giro que reparte el cemento, o presurizada antes del curado— casi nunca gotea el primer día:
+gotea a los quince días o a los tres meses. Eso es
+una <Termino slug="falla-diferida">falla diferida</Termino>, y es tan común que si tu fuga apareció
+poco después de una obra, esa obra es la sospechosa principal y ahí está
+la <Termino slug="causa-raiz">causa raíz</Termino>.
+
+**El tubo enterrado no falla por estar enterrado, sino por cómo lo enterraron.** Bajo un vehículo con
+poca tierra encima la carga deforma el caño
+—<Termino slug="ovalizacion-del-tubo">ovalización del tubo</Termino>—, y como el PVC fluye lentamente
+bajo carga sostenida no se recupera; la unión, más rígida, se raja en el borde de la campana. Y si la
+zanja se rellenó con terrones sin compactar,
+el <Termino slug="asentamiento-de-zanja">asentamiento de zanja</Termino> deja el tubo colgado entre dos
+apoyos, trabajando como una viga.
+
+**La fatiga.** Cerrar de golpe una llave detiene una columna de agua en movimiento y esa inercia se
+vuelve un pico de presión que viaja por el caño: es
+el <Termino slug="golpe-de-ariete">golpe de ariete</Termino>, y lo producen las electroválvulas del
+lavarropas, que cierran en milisegundos, y los monomando cerrados de un manotazo. Un pico aislado no
+rompe nada; miles sí, porque el material se degrada por repetición aunque cada golpe esté lejos de su
+resistencia. Eso es <Termino slug="fatiga-por-ciclos-de-presion">fatiga por ciclos de presión</Termino>
+y explica que reviente una unión que llevaba once años bien. Se combate cerrando despacio, sujetando
+los caños, y con una <Termino slug="camara-de-aire-antiariete">cámara de aire antiariete</Termino>: un
+tubo cerrado en su punta, montado hacia arriba junto al aparato, que queda con aire adentro y amortigua
+el pico como un resorte.
+
+**La corrosión del galvanizado** cambia la decisión, no solo el diagnóstico. Es acero con una capa de
+zinc que se corroe en su lugar:
+un <Termino slug="zinc-de-sacrificio">zinc de sacrificio</Termino>. Consumida esa capa, el acero se
+oxida desde adentro, primero con montículos de óxido que estrechan el paso
+—la <Termino slug="tuberculizacion">tuberculización</Termino>, que es por qué la presión de una casa
+vieja baja durante años— y después perforando la pared:
+la <Termino slug="corrosion-por-picadura">corrosión por picadura</Termino>. Lo decisivo es que **la
+picadura no es un accidente local sino el estado de todo el tramo**, así que van a salir más agujeros y
+parchear ahí es tirar plata. Si alguien enroscó bronce directo al acero galvanizado, en esa junta
+hay <Termino slug="corrosion-galvanica">corrosión galvánica</Termino>: dos metales distintos con agua
+forman una pila y uno se disuelve, siempre el acero.
+
+## Reparar: cortar, empalmar y saber qué es provisorio
+
+Acá hay un hecho geométrico que sorprende a quien viene de la carpintería: **una unión de PVC cementada
+no se desarma.** No hay rosca ni tornillo. Reparar es **cortar el pedazo malo y meter uno nuevo**, y
+ahí aparece el problema: los dos extremos que quedaron están fijos, y un tubo nuevo no entra a la vez
+en dos campanas enfrentadas.
+
+La pieza que resuelve eso es la **unión universal**: tres partes, dos mitades que se cementan cada una
+a su lado y una tuerca que las aprieta contra un empaque, de modo que **se cierra después de alinear**.
+El <Termino slug="empalme-de-reparacion">empalme de reparación</Termino> típico es cortar el tramo
+dañado con generosidad, armar un tubo nuevo con una unión universal en un extremo y cerrar la tuerca al
+final; la otra salida es armar el reemplazo con dos codos haciendo un rodeo, para que el conjunto entre
+girando. El corte a escuadra, el desbarbado y el curado son los de la lección 02.
+
+<Advertencia titulo="El caño mojado no se puede cementar, y la prisa arruina la reparación">
+El cemento solvente necesita superficie **seca y limpia**: un tubo que sigue goteando no se pega y la
+unión falla en semanas. Cerrá el paso, abrí el grifo más bajo, esperá a que escurra de verdad —en un
+tramo que baja del tanque tarda varios minutos—, secá por dentro y por fuera, y si aún gotea, abrí un
+punto más bajo. **Y respetá el curado antes de dar presión**: acá, con humedad alta, tarda más que lo
+que dice el envase. Cerrar la pared el mismo día, sin probar con presión, es la manera más segura de
+repetir el trabajo entero.
+</Advertencia>
+
+Los **parches** sirven, con la condición de llamarlos por su nombre.
+Una <Termino slug="abrazadera-de-reparacion">abrazadera de reparación</Termino> —banda metálica con
+empaque de goma que se cierra sobre el caño— tapa un agujerito en un tramo recto y sano y te salva un
+domingo.
+Tiene dos límites: **no funciona sobre una unión ni sobre una rajadura longitudinal**, porque la fisura
+sigue creciendo por debajo del parche, y **no arregla un galvanizado picado**. Un parche es una medida
+temporal explícita: se anota en el mapa con fecha, y **nunca se cierra una pared ni se tapa una zanja
+sobre un parche.**
+
+## Cuándo se abandona un tramo y se tiende otro
+
+Llega un punto en que seguir buscando cuesta más que rendirse: un caño bajo un contrapiso terminado o
+bajo la entrada de vehículos, con fuga confirmada por medidor pero sin localizar. La salida se
+llama <Termino slug="tramo-abandonado">tramo abandonado</Termino>: se corta la conexión en los dos
+extremos, **se tapa de los dos lados**, se lo deja donde está y se tiende un tubo nuevo **por otra
+ruta**. Y se anota en el mapa con fecha y con la frase "no conectar", porque dentro de quince años
+alguien va a encontrar ese caño y se va a preguntar qué es. Es la misma decisión que toma un equipo
+de software con un módulo viejo que falla seguido y no tiene pruebas: **cuando el costo de
+diagnosticar supera al de rehacer, y cuando la falla es sistémica y no puntual, se reescribe.**
+
+Por eso el tramo nuevo se tiende con criterios de mantenibilidad: **por una ruta accesible** —por
+afuera, bajo un alero, o en zanja poco profunda con tapa—; **con una llave al principio**; **sin
+ninguna unión debajo de lo que no se puede levantar**; dentro de
+un <Termino slug="tubo-camisa">tubo camisa</Termino> —un tubo más grueso que envuelve al de agua— en
+los cruces bajo pisos o veredas, para poder cambiar el caño tirando de él sin volver a picar; y con el
+recorrido **fotografiado con una cinta métrica antes de tapar**.
+
+## La aritmética del goteo
+
+Con la fórmula del orificio y una presión de dos bar, esto es lo que se va:
+
+<Tabla>
+
+| Pérdida | Caudal aproximado | Al día | Al mes |
+| --- | --- | --- | --- |
+| Una gota por segundo | 0,05 L/min | ~4 L | ~130 L |
+| Goteo rápido, casi hilo | 0,25 L/min | ~21 L | ~640 L |
+| Hilo continuo fino | 0,1 – 0,5 L/min | 150 – 700 L | 4 – 21 m³ |
+| Agujero de 0,5 mm a 2 bar | 0,14 L/min | ~200 L | ~6 m³ |
+| Agujero de 1 mm a 2 bar | 0,55 L/min | ~800 L | ~24 m³ |
+| Agujero de 2 mm a 2 bar | 2,2 L/min | ~3.200 L | ~96 m³ |
+
+</Tabla>
+
+Un agujero **del grosor de la punta de un alfiler**, que no se ve y que no hace charco porque el
+terreno se lo traga, mueve el consumo de una familia entera. Y el costo no termina en el agua: si la
+sube una bomba, pagás electricidad y la bomba se acorta la vida; si sale de un pozo, bajás tu propia
+napa; si está en un muro, se suman el revoque y —si llega al cimiento— algo mucho más caro. **Para
+saber cuánto es en dinero, tomá los metros cúbicos de la tabla y multiplicalos por lo que dice tu
+propia factura**: este curso no te va a inventar tarifas.
+
+<AplicarRizoma titulo="Llevarlo a la práctica: tres noches y un cuaderno">
+Esto se empieza hoy, sin comprar nada, sin obra y sin permiso de nadie, vivas donde vivas y alquiles o
+no.
+
+**Esta noche, la prueba.** Después de la cena cerrá todo, avisá a la casa que nadie toca el agua hasta
+la mañana, y anotá con hora la lectura del medidor; sin medidor, marcá el nivel del tanque con cinta y
+fotografiá. **Hacelo tres noches seguidas.** Si las tres dan cero, tu casa está sana; si dan algo, ya
+tenés litros por hora, un dato con el que se trabaja.
+
+**Armá el cuaderno de la instalación**, una hoja dentro de la carpeta de los papeles de la casa: las
+tres lecturas, el mapa de la lección 01, dónde está la llave general, qué llaves de corte existen y
+cuáles faltan, y de ahora en más cada arreglo con su fecha. **Cada vez que alguien abra una pared o una
+zanja, foto con cinta métrica antes de tapar.**
+
+**La caja de la fuga.** Un manómetro con adaptador de manguera, cinta de teflón, un par de tapones, una
+abrazadera del diámetro de tus caños, un destornillador largo para escuchar y un marcador indeleble. No
+es para hacerse plomero: es para poder medir y aguantar hasta el lunes.
+
+**Si alquilás, tu margen es chico pero real.** Medir, escuchar, fotografiar y escribir no rompe nada ni
+requiere permiso. Lo que cambia todo es **cómo lo comunicás**: "el medidor marca 180 litros en ocho
+horas con la casa cerrada, tres noches seguidas, y hay salitre en la pared del pasillo, van las fotos
+con fecha" obliga a actuar; "hay una fuga" se posterga. Avisá **por escrito el día que lo notás**, para
+que no se discuta después cuándo empezó ni quién paga esos litros.
+
+**Si compartís la red con otras casas** —un lote con varias familias, un pasillo, una comunidad—, la
+fuga deja de ser un problema doméstico y pasa a ser un acuerdo. Sin llaves de corte por casa nadie
+puede demostrar de quién es, y eso termina en pelea. Funciona esto: **una llave de corte por casa**, la
+prueba nocturna hecha una vez entre todos y anotada, y dos personas turnándose para el corte y la
+lectura. Esas llaves cuestan menos que un mes de factura discutida.
+
+**Y la parte de la familia.** Enseñales a todos, chicos grandes incluidos, que un siseo con la casa en
+silencio se avisa el mismo día, que una mancha nueva se avisa el mismo día, y dónde está la llave
+general. Más el hábito de **cerrar los grifos despacio**, que no es delicadeza sino prevención del
+golpe de ariete y de la fuga que aparece dentro de once años.
+</AplicarRizoma>
+
+<ContextoBolivia titulo="Buscar fugas en Zanja Honda: sin medidor, con arcilla que se mueve y con dengue">
+**Acá muchas casas no tienen medidor.** Con pozo propio no hay ningún aparato contando, así que la
+prueba estrella se reemplaza por tres: marcar el **nivel del tanque** y comparar a la mañana; apuntar
+con hora cuántas veces **arranca la bomba** de noche; y cerrar la salida del tanque para ver si el
+nivel igual baja. Si tu agua viene de una **cooperativa o comité de agua**, sí hay medidor y factura, y
+en la oficina te explican cómo leen y qué hacen cuando alguien reporta una fuga: **eso se pregunta ahí,
+porque las reglas, las tarifas y los plazos los pone cada cooperativa y este curso no los va a
+inventar.**
+
+**Los cortes de luz enmascaran el diagnóstico.** Si la bomba no arranca, la presión cae sola y la
+prueba se arruina; peor, al volver la luz la red se rellena de golpe con aire adentro, y ese aire
+comprimiéndose castiga las uniones. Después de un corte largo, **purgá abriendo el grifo más alto** y
+repetí la medición: una fuga nueva después de un corte no es coincidencia.
+
+**El calendario decide cuándo se puede buscar.** De octubre a abril llueve y todo está mojado: una
+mancha en el patio no prueba nada, porque el suelo está saturado y el aire húmedo condensa sobre
+cualquier superficie fría. **La ventana buena para cazar fugas enterradas es la seca, de mayo a
+septiembre**, cuando un charco que no seca o una franja de pasto más verde en el terreno reseco cantan
+solas. La prueba del medidor, en cambio, funciona todo el año.
+
+**La arcilla de acá se mueve, y mueve los caños.** Los suelos arcillosos del llano se hinchan al
+mojarse y se agrietan al secarse, así que un tubo enterrado ahí no está quieto: por eso **las fugas
+enterradas aparecen con dos picos, al empezar las lluvias y al empezar la seca**. Si tendés un tramo
+nuevo, rodealo de arena o tierra fina en lugar de terrones y evitá pasar por debajo de donde entran los
+vehículos; si no hay más remedio, ahí va el tubo camisa.
+
+**El sol y el surazo castigan el PVC a la vista.** El PVC blanco al sol se pone blanquecino y
+quebradizo y termina rajándose con un golpe cualquiera; se resuelve pintándolo. Y con
+los <Termino slug="surazo">surazos</Termino>, cuando la temperatura cae de treinta y cinco grados a
+diez en unas horas, un tramo largo y rígidamente sujeto se contrae y tira de sus uniones.
+
+**El agua de pozo del llano acelera la corrosión**, porque trae hierro y sales disueltas: un caño
+galvanizado se pica antes que en otros lados, y por eso en tantas casas viejas de la zona la presión
+fue bajando año tras año. La señal temprana es el agua **anaranjada al abrir por la mañana**. Y como
+los repuestos tardan, preguntá al comprar si el diámetro y la clase que usás **se consiguen en la
+zona**: esperar una unión rara son días de llave general cerrada.
+
+**Y lo más importante, que no es plomería sino salud.** Una fuga enterrada mantiene un punto de tierra
+permanentemente húmedo, y una en un muro mantiene humedad y moho en el aire que respira la familia, con
+consecuencias reales para quien tiene asma o alergias. Además, todo charco permanente **es criadero de
+mosquito**, y el dengue es endémico acá. Si aparece fiebre alta con dolor de cabeza y de cuerpo, eso no
+se resuelve leyendo: **se va al centro de salud.**
+
+**Rizoma del Sur como caso.** Un terreno de 3.666 m² repartido en doce lotes con una línea de agua
+común es, en términos de esta lección, una red sin puntos de corte: cualquier fuga es de todos y de
+nadie, y la línea compartida es
+un <Termino slug="punto-unico-de-falla">punto único de falla</Termino>, porque se rompe una vez y
+quedan doce sin agua. La solución es organizativa apoyada en un detalle barato: **una llave de corte
+por lote**, un mapa guardado, y una prueba nocturna anual hecha entre dos personas.
+</ContextoBolivia>
+
+## Errores comunes
+
+**"Pico donde está la mancha."** La mancha es la salida, no la entrada. Acorralá el tramo con llaves y
+medidor primero: picar es la última prueba.
+
+**"Como no se ve agua, no hay fuga."** El terreno se traga cientos de litros por día sin hacer charco.
+El medidor ve lo que tus ojos no ven.
+
+**"Le puse una abrazadera y quedó."** Quedó por ahora. Un parche se anota con fecha y no se tapa nunca
+con revoque ni con tierra.
+
+**"Cambio el pedacito podrido del galvanizado."** Todo el tramo tiene la misma edad: vas a volver a la
+misma pared en unos meses.
+
+**"Cerré varias llaves de una y se detuvo el medidor."** No sabés cuál fue. Una variable a la vez, o la
+prueba no vale.
+
+## Lo que sigue
+
+Ya tenés el método: reconocer que el agua se va sin que nadie la use, leer las señales que el sistema
+regala, acorralar el tramo partiendo la red por la mitad, poner un número con el manómetro, reconocer
+los pocos sitios donde las fugas nacen de verdad, reparar con un empalme que aguante y saber cuándo
+abandonar un tramo en vez de seguir peleando con él.
+
+Con eso el agua de tu casa llega, se puede medir y ya no se pierde por el camino. Falta la pregunta que
+nada de eso contesta: **¿esa agua se puede tomar?** La lección 06, **Agua potable de verdad: qué la
+contamina y cómo se hace segura en casa**, separa transparente de potable —que no son lo mismo— y
+clasifica lo que el agua puede traer con su mecanismo: microbios por la ruta fecal-oral, química del
+subsuelo como hierro, nitratos o arsénico, y turbidez, que escuda a los microbios de la desinfección.
+Su ángulo propio es el mismo que trabajamos acá, la instalación: por dónde entra la contaminación a
+**tu** sistema —boca de pozo sin sello, tanque destapado, biopelícula en sus paredes, sifonaje inverso
+que chupa agua sucia cuando la red pierde presión— y el tren de tratamiento doméstico con sus límites
+dichos con honestidad.

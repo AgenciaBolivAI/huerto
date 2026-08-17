@@ -1,0 +1,90 @@
+{
+  "preguntas": [
+    {
+      "id": "dos-madureces",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué diferencia hay entre madurez de consumo y madurez fisiológica?",
+      "opciones": [
+        "La de consumo es cuando el fruto está en su punto para comer o vender.",
+        "La fisiológica es cuando la semilla terminó de formarse y puede germinar sola.",
+        "No coinciden, y casi siempre la fisiológica llega después.",
+        "Coinciden en la mayoría de las hortalizas de fruto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un ají que se come verde tiene dentro semilla inmadura. Cosechar para semilla en el punto de venta es guardar material que no germinará o germinará mal, y el fallo no aparece al cortar sino al sembrar. Para semilla se deja pasar el punto de venta, sacrificando producto."
+    },
+    {
+      "id": "fruto-carnoso",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se procesa la semilla de un fruto carnoso?",
+      "opciones": [
+        "Lavando y frotando hasta que no quede pulpa pegada, que es lo que después enmohece.",
+        "Descartando lo que flota: la semilla vacía o mal formada sube y la buena se hunde.",
+        "Escurriendo bien antes de pasar al secado.",
+        "Dejando algo de pulpa adherida, porque protege la semilla durante el almacenamiento."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Al contrario: la pulpa contiene sustancias que inhiben la germinación —la planta no quiere que sus semillas broten dentro del fruto— y además es el origen del moho. El paso de flotación es una selección gratuita y bastante fiable."
+    },
+    {
+      "id": "fermentacion-tomate",
+      "tipo": "verdadero_falso",
+      "enunciado": "La fermentación de la semilla de tomate se puede dejar el tiempo que haga falta sin riesgo.",
+      "respuesta": false,
+      "explicacion": "Falso: es un procedimiento con ventana. Dos o tres días disuelven la funda gelatinosa y eliminan algunos patógenos, pero si se pasa la semilla empieza a germinar dentro del frasco y se pierde el lote entero. Pasado el punto hay que lavar de inmediato."
+    },
+    {
+      "id": "fruto-seco",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué exige el fruto seco?",
+      "opciones": [
+        "Cosechar cuando la planta ha secado: tallos pajizos y semilla que suena al agitar.",
+        "Adelantarse a la dehiscencia, porque muchas especies abren la vaina y sueltan la semilla solas.",
+        "Trillar para separar de la cáscara y aventar para separar de la broza por diferencia de peso.",
+        "Esperar siempre a la madurez completa en la planta para máxima calidad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Si esperas a la perfección, cosechas el suelo: la solución práctica es cortar la planta algo antes y terminar de secarla bajo techo sobre una tela que recoja lo que caiga. El aventado es una técnica de mil años y sigue siendo la mejor a esta escala."
+    },
+    {
+      "id": "errores-de-prisa",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuáles son los tres errores que cuestan el lote entero?",
+      "opciones": [
+        "Cosechar con rocío o después de lluvia, metiendo agua justo cuando todo depende de que no la haya.",
+        "Amontonar material húmedo en bolsa plástica, que se calienta y enmohece en horas.",
+        "No etiquetar en el acto: dos lotes de semilla limpia son indistinguibles a ojo.",
+        "Usar recipientes de tela o papel en lugar de herméticos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La tela y el papel son precisamente lo correcto en esta fase; lo hermético llega después, cuando la semilla ya está seca. Y el fallo de la etiqueta es el más tonto de todos: semilla perfecta que no sabes qué es."
+    },
+    {
+      "id": "limpiar-de-verdad",
+      "tipo": "verdadero_falso",
+      "enunciado": "Descartar la semilla pequeña y arrugada es además un paso de selección, no solo de limpieza.",
+      "respuesta": true,
+      "explicacion": "Correcto: la semilla más grande de un lote suele tener más reservas y dar una plántula más vigorosa, así que descartar la pequeña es seguir seleccionando, ahora sobre la semilla en vez de sobre la planta. Y sale gratis."
+    },
+    {
+      "id": "cosecha-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Describe los dos protocolos de cosecha de semilla en Rizoma del Sur y las precauciones locales.",
+      "respuestaModelo": "Tengo un caso carnoso y uno seco, y los trato como los dos protocolos base.\n\nEl ají dulce es el carnoso. Cosecho para semilla solo los frutos marcados con cinta del embolsado, y los dejo en la planta más allá del punto de venta: hasta que el color esté plenamente virado y el fruto empiece a ablandarse. Eso es producto que sacrifico como venta para ganarlo como semilla, y lo asumo al planificar el lote. Después extraigo, lavo frotando contra un colador hasta que no quede pulpa —lo que queda pegado es lo que enmohece—, descarto lo que flota porque esa es semilla vacía o mal formada, y escurro bien antes de secar.\n\nCon el ají tomo una precaución propia: aunque sea dulce, manipulo con cuidado y me lavo las manos antes de tocarme los ojos; con lotes grandes, guantes. Y no proceso ajíes dulces y picantes con el mismo colador y la misma bandeja: la capsaicina se transfiere por el utensilio. No cambia la genética, pero arruina una cata y puede hacerme creer que un lote se cruzó cuando solo se contaminó la herramienta.\n\nEl culantro es el seco, y su riesgo es la dehiscencia: las umbelas sueltan el grano justo cuando están listas. Corto la planta entera algo antes de la madurez completa y termino de secarla bajo techo sobre una tela que recoja lo que caiga. Después trillo frotando entre las manos y avento con un ventilador suave, que da un chorro constante y controlable, mejor que el viento natural de la zona, que es irregular.\n\nEl gandul, cuando entre en producción, es el otro caso seco y lleva el mismo procedimiento, porque sus vainas también abren solas.\n\nEscribo la etiqueta en el sitio, antes de mover nada: especie, variedad, lote de origen y fecha. Sin eso, dos frascos de semilla limpia son indistinguibles y pierdo la trazabilidad que el módulo de bioseguridad exige.\n\nDescarto semilla partida, picada, pequeña y arrugada. No es solo limpieza: es continuar la selección sobre la semilla, y sale gratis. Para verlo uso una bandeja de fondo contrastado, clara para lo oscuro y oscura para lo claro.\n\nY adapto el calendario al clima: cosecho a media mañana con la planta seca al tacto, nunca amontono en plástico porque con la humedad de Zanja Honda un montón húmedo enmohece en horas, y planifico los lotes destinados a semilla para que su maduración caiga en la época seca, aunque no coincida con el mejor momento comercial. Esa decisión se toma en la siembra, no en la cosecha.",
+      "criterios": [
+        "Cosecha solo los frutos marcados del embolsado.",
+        "Deja pasar el punto de venta y asume el sacrificio comercial.",
+        "Lava, descarta lo que flota y escurre en el ají.",
+        "Toma precauciones con capsaicina y utensilios compartidos.",
+        "Se adelanta a la dehiscencia del culantro secando bajo techo.",
+        "Trilla y aventa con ventilador por su chorro constante.",
+        "Extiende el protocolo seco al gandul.",
+        "Etiqueta en el sitio con especie, variedad, lote y fecha.",
+        "Descarta semilla pequeña como paso de selección.",
+        "Cosecha a media mañana y evita el plástico.",
+        "Planifica la maduración de los lotes de semilla en la época seca."
+      ],
+      "explicacion": "La lección concentra los errores de prisa, que son los que más semilla arruinan y los más fáciles de evitar. Y aparece una decisión de calendario que sorprende: el lote de semilla se planifica en la siembra para madurar en seca, aunque eso choque con el mejor momento de venta."
+    }
+  ]
+}

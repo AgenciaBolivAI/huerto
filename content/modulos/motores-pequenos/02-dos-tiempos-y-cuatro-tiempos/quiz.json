@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "donde-vive-el-aceite",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la diferencia de fondo entre un motor de dos tiempos y uno de cuatro tiempos, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "En un cuatro tiempos el cárter es un depósito cerrado de aceite, que sube a lubricar, escurre y vuelve a caer siempre al mismo sitio.",
+        "En un dos tiempos el cárter forma parte del camino que recorre la mezcla desde el carburador hasta la cámara de combustión.",
+        "Como por el cárter de un dos tiempos pasa lo que va a quemarse, la única salida es que el aceite viaje disuelto dentro del combustible.",
+        "El dos tiempos necesita mezcla porque sus piezas trabajan más forzadas y hace falta más aceite del que cabría en un cárter pequeño."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La última es falsa y confunde la causa. No es una cuestión de cuánto aceite hace falta ni de cuán forzado trabaja el motor: es una cuestión de dónde puede vivir el aceite. Un dos tiempos usa el volumen de debajo del pistón como bomba de aire, así que por ahí pasa mezcla fresca muchas veces por segundo; cualquier aceite depositado en ese espacio sería aspirado y quemado de inmediato. Al no quedar sitio para un depósito, el lubricante tiene que llegar disuelto en el combustible. Todo lo demás —lumbreras, barrido, humo azul, obligación de preparar mezcla— se deduce de ese único hecho."
+    },
+    {
+      "id": "barrido-y-cortocircuito",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el barrido en un motor de dos tiempos, ¿qué es correcto?",
+      "opciones": [
+        "La carga fresca tiene que empujar hacia afuera los gases quemados mientras la lumbrera de escape todavía está abierta.",
+        "Parte de la mezcla fresca sale derecho por el escape sin quemarse, y eso es el cortocircuito de barrido.",
+        "Por ese cortocircuito el motor gasta más combustible del que aprovecha y expulsa aceite sin quemar del todo: el humo azulado es el diseño, no una avería.",
+        "Inclinando bien las lumbreras de transferencia el cortocircuito de barrido se elimina por completo en los motores modernos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa: se reduce, nunca se elimina. Inclinar las transferencias para que los chorros se encuentren, suban por la pared del fondo y bajen barriendo en rulo mejora mucho el rendimiento, pero entrada y salida siguen ocurriendo a la vez y en la misma habitación, así que algo de carga fresca siempre se escapa. Esa es la razón estructural de que un dos tiempos consuma y contamine más que un cuatro tiempos de la misma cilindrada, por bien construido que esté."
+    },
+    {
+      "id": "dos-tapones",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si una máquina tiene dos tapones de llenado, se puede concluir que es de cuatro tiempos.",
+      "respuesta": false,
+      "explicacion": "Falso, y es una de las confusiones que más motores funde. Una motosierra tiene dos tapones y es de dos tiempos: el segundo depósito lleva aceite de cadena, un aceite espeso y pegajoso que lubrica la espada por fuera, se consume solo y no entra jamás al motor ni al combustible. También existen motores de dos tiempos con aceite separado, sobre todo en motos, que llevan un tanquecito y una bombita que inyecta el aceite en la admisión: dos tapones y siguen siendo dos tiempos. Lo que sí es señal fiable es el tapón con varilla de nivel apoyado sobre el cárter y el tapón de vaciado en el fondo del motor, que solo aparecen en un cuatro tiempos. Ante la duda, no se le echa nada."
+    },
+    {
+      "id": "cadena-del-gripado",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el mecanismo del gripado, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Al romperse la película los picos microscópicos se sueldan en frío, y ese roce genera calor justo en el pistón, que es la pieza peor refrigerada del motor.",
+        "El pistón evacúa buena parte de su calor a través de la película hacia el cilindro, así que al fallar la película pierde su propio camino de enfriamiento.",
+        "El aluminio del pistón se dilata aproximadamente el doble que el acero por cada grado, y además el pistón está más caliente que el cilindro.",
+        "Si al enfriarse el motor vuelve a girar y arranca, quiere decir que el gripado no llegó a dañar nada y basta con cargarle mezcla correcta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y es una ilusión muy cara. Al enfriarse, el pistón se contrae y suele soltarse de la camisa, de modo que la cuerda vuelve a moverse y el motor incluso arranca; pero el cilindro ya quedó rayado, los aros probablemente rotos y hay partículas de metal circulando camino de los cojinetes. El daño ocurrió mientras estaba caliente y no se deshace al enfriar. Seguir usándolo así solo agrega desgaste sobre una superficie ya arruinada."
+    },
+    {
+      "id": "mas-aceite-no-es-mejor",
+      "tipo": "verdadero_falso",
+      "enunciado": "Ante la duda sobre la proporción, conviene agregarle un poco más de aceite a la mezcla, porque el exceso protege y lo único peligroso es quedarse corto.",
+      "respuesta": false,
+      "explicacion": "Falso: la proporción es un óptimo con castigo en los dos lados. El aceite de más ocupa el lugar de la gasolina dentro del mismo volumen, así que la mezcla queda más pobre en combustible y quema más caliente, justo lo contrario de lo que se buscaba. Además el sobrante que no se quema se deposita como carbón en la cabeza del pistón, en la ranura de los aros —donde los deja pegados y sin sellar— y en la lumbrera de escape, que se va cerrando y empeora el barrido. La proporción correcta la mandan el fabricante del motor y el tipo de aceite que vas a usar, y se lee en la etiqueta de la máquina, el manual o el envase del aceite."
+    },
+    {
+      "id": "aceite-de-cuatro-tiempos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un aceite de motor de cuatro tiempos arruina un motor de dos tiempos?",
+      "opciones": [
+        "Porque lleva aditivos con compuestos metálicos que no arden y dejan un residuo de cenizas duro dentro de la cámara de combustión.",
+        "Porque esa ceniza y el carbón pegan los aros en su ranura, con lo que se pierde compresión y también el camino por el que el pistón evacuaba su calor.",
+        "Porque los depósitos incandescentes pueden encender la mezcla antes de que salte la chispa, y ese preencendido llega a perforar la cabeza del pistón.",
+        "Porque tiene mucha menos capacidad lubricante que un aceite de dos tiempos, y el motor se agarrota en los primeros minutos por falta de película."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa, y creerla hace que nadie relacione la causa con el efecto. Un aceite de cuatro tiempos lubrica perfectamente bien; el problema es que está diseñado para lo contrario de lo que aquí se le pide, o sea para no quemarse nunca y durar cientos de horas dentro de un cárter. Sus aditivos detergentes y antidesgaste hacen un trabajo excelente en su sitio, pero al pasar por una cámara de combustión no arden y dejan ceniza abrasiva. Por eso el motor no se para el primer día: arranca, anda, humea un poco más, y muere entre el tercer y el décimo tanque, cuando ya nadie se acuerda de qué envase se usó."
+    },
+    {
+      "id": "etanol-y-fases",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la gasolina vieja y la gasolina con etanol guardada en un bidón, ¿qué es correcto?",
+      "opciones": [
+        "Los hidrocarburos más ligeros son los que hacen arrancar el motor y son los primeros que se evaporan de un envase que respira.",
+        "El alcohol es higroscópico y va tomando humedad del aire, sobre todo en un envase que se abre y se cierra varias veces.",
+        "Al separarse las fases, la capa de agua y alcohol se va al fondo sin llevarse el aceite de la mezcla, y la máquina chupa justamente de ahí.",
+        "Como el aceite de dos tiempos es más denso que la gasolina, siempre acompaña a la capa del fondo y protege el motor incluso si hay separación de fases."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte el hecho que hace peligroso este fenómeno. El aceite de dos tiempos va disuelto en la gasolina, no flotando ni decantado, y no baja con la capa de agua y alcohol que se forma al separarse las fases. Esa capa del fondo queda con agua, con alcohol y sin lubricante, y es exactamente de donde toma combustible la máquina. Por eso un motor puede gripar por combustible viejo sin que nadie haya medido mal la mezcla. La defensa es barata: comprar la cantidad que vas a usar, guardar los envases llenos y bien cerrados, y darle a la mezcla una vida corta."
+    },
+    {
+      "id": "auditoria-de-combustible-en-casa",
+      "tipo": "abierta",
+      "enunciado": "En tu casa hay una desbrozadora que usás en época de lluvias, una motobomba que trabaja en la seca y una moto. El combustible vive en dos bidones sin rótulo debajo del lavandero, junto a una botella de gaseosa con algo adentro que nadie recuerda qué es, y a tres metros del calefón. Tu cuñado suele pedir prestada la desbrozadora y la devuelve con el tanque lleno. Escribí el plan que aplicarías este fin de semana: cómo determinás qué motor tiene cada máquina, cómo reorganizás envases y rotulado, cómo preparás y medís la mezcla, qué cambiás en el lugar de guardado y por qué, y qué acordás con tu cuñado. Justificá cada decisión con el mecanismo que la explica, no solo con la regla.",
+      "respuestaModelo": "Empiezo por lo que no cuesta nada y evita el desastre más caro: saber qué come cada máquina. A cada una le busco el tapón de aceite con varilla de nivel y el tapón de vaciado en el fondo del motor; si los tiene, es de cuatro tiempos y toma gasolina pura del surtidor. Si solo hay un depósito, es de dos tiempos y toma mezcla. Leo además las etiquetas: una proporción como 40:1 o 50:1 dice dos tiempos, y una indicación de SAE 30 o 10W-30 dice cuatro tiempos. Voy con cuidado con las trampas: si hubiera una motosierra, sus dos tapones no la hacen de cuatro tiempos, porque el segundo es de aceite de cadena, que lubrica la espada por fuera y no entra nunca al combustible. Con la respuesta en la mano escribo sobre cada máquina, con marcador indeleble o sobre una cinta pegada, «2T — MEZCLA 50:1» o «4T — GASOLINA PURA», con la proporción que indique el fabricante. No lo escribo para mí, que ya lo sé: lo escribo para quien la agarre cuando yo no esté. Si de alguna no logro estar seguro, no le echo nada hasta confirmarlo con el manual o una foto del modelo, porque un motor que no arrancó hoy no cuesta nada y uno agarrotado cuesta un pistón, un cilindro y semanas esperando el repuesto.\n\nLos envases son lo siguiente, y son la causa real del problema. Los dos bidones sin rótulo no me sirven porque no sé qué tienen. Armo tres recipientes claramente distintos y rotulados en letra grande: gasolina pura, mezcla con su proporción y la fecha en que la preparé, y el aceite. La botella de gaseosa la vacío y la saco de circulación hoy mismo, porque guardar combustible en botellas de bebida es la causa más común de intoxicación de niños con hidrocarburos; y si alguna vez alguien traga gasolina, no se le provoca vómito jamás, ya que el daño grave no es tragarla sino que entre al pulmón y el vómito es exactamente lo que la mete ahí: se lo lleva de inmediato al centro de salud con el envase.\n\nPara la mezcla hago la cuenta y la mido con instrumento. La proporción sale de multiplicar los litros por mil y dividir entre el primer número de la relación: al 50:1 son 20 ml de aceite por litro, o 100 ml por cinco litros. Uso una jeringa de 20 ml de farmacia sin aguja, que es lo más barato y preciso que existe, y no una tapa de gaseosa. Preparo en el bidón, nunca dentro del tanque de la máquina, porque ahí no se puede agitar y el aceite se va al fondo: las primeras succiones se llevarían casi todo el aceite y las últimas ninguna. Echo algo menos de la mitad de la gasolina, después todo el aceite medido y encima el resto de la gasolina, de modo que el último chorro haga la mezcla; agito medio minuto largo y vuelvo a agitar antes de cada llenado. Preparo poco, lo que gaste en pocas semanas, y uso aceite de dos tiempos, nunca de cuatro tiempos: el de cuatro tiempos lubrica bien pero está hecho para no quemarse, y sus aditivos metálicos dejan cenizas que pegan los aros, cierran la lumbrera de escape y provocan preencendido, matando el motor en pocos tanques sin que nadie relacione la causa.\n\nEl lugar de guardado lo cambio entero, y aquí el mecanismo es el del fuego. Lo que arde no es el líquido sino el vapor mezclado con aire, y el punto de inflamación de la gasolina está muy por debajo de la temperatura ambiente, así que sobre cualquier gasolina destapada siempre hay una nube de vapor lista para encenderse. Ese vapor pesa más que el aire, escurre por el piso y puede recorrer varios metros hasta una llama, encenderse allá y volver por el mismo camino. El calefón a tres metros es una llama piloto al final de ese recorrido, así que los bidones salen de ahí: van afuera de la vivienda, a la sombra, lejos de la cocina y del tablero eléctrico, donde los chicos no llegan, llenos y bien cerrados —el aire de arriba es el que trae humedad y se lleva lo volátil— y con un balde de arena seca al lado, porque un fuego de gasolina no se apaga con agua: la gasolina flota y el agua la reparte encendida. Y como cada máquina descansa media temporada, ninguna se queda meses con mezcla vieja adentro.\n\nCon mi cuñado la conversación dura un minuto y vale más que cualquier reparación, porque la forma más común de matar un dos tiempos es prestarlo: él va a cargar donde le quede cerca y le van a dar lo que haya, que casi seguro será gasolina pura, y eso destruye un dos tiempos en minutos de trabajo a fondo. Así que la desbrozadora no se presta sola, se presta con su bidón de mezcla rotulado; si quiere poner el combustible, que traiga la gasolina y yo le preparo la mezcla delante de él. Y si alguna vez sospecho que le entró gasolina pura, no la arranco para probar: vacío el tanque y cargo mezcla correcta. Por último abro un cuaderno con una hoja por máquina: tipo, proporción, aceite y fecha de cada carga y cada arreglo.",
+      "criterios": [
+        "Determina el tipo de motor con señales verificables —tapón con varilla, tapón de vaciado, etiqueta con proporción o con grado SAE— y no por el aspecto de la máquina.",
+        "Menciona la trampa de los dos tapones y distingue el aceite de cadena del aceite de motor.",
+        "Rotula cada máquina físicamente y explica que el rótulo es para terceros, no para uno mismo.",
+        "Establece tres envases distintos y rotulados, con proporción y fecha en el de mezcla.",
+        "Elimina la botella de gaseosa y explica el riesgo de intoxicación, incluyendo que no se provoca vómito y que se acude al centro de salud.",
+        "Calcula correctamente la proporción y mide con jeringa u otro instrumento graduado, no a ojo.",
+        "Prepara la mezcla en el bidón y no en el tanque, con el orden gasolina–aceite–gasolina, y justifica que el aceite decanta si no se agita.",
+        "Descarta el aceite de cuatro tiempos para la mezcla explicando las cenizas, los aros pegados y el preencendido, no una supuesta falta de lubricación.",
+        "Aleja el combustible del calefón usando el mecanismo del fuego: arde el vapor, el vapor pesa más que el aire y viaja por el piso hasta la llama.",
+        "Guarda los envases llenos, cerrados y a la sombra, y relaciona el aire del envase con la humedad y la pérdida de volátiles.",
+        "Prevé el apagado del fuego con arena o polvo químico seco y descarta el agua explicando que la gasolina flota.",
+        "Acuerda prestar la máquina con su bidón de mezcla rotulado y anticipa el caso de una carga equivocada sin arrancar el motor para probar."
+      ],
+      "explicacion": "La pregunta no busca que recites reglas, sino que conectes cada decisión con su mecanismo, porque es el mecanismo el que te permite decidir bien en una situación que esta lección no previó. Fijate que los cuatro problemas del enunciado son independientes y cada uno tiene su propia física detrás: los bidones sin rótulo son el problema de la mezcla, la botella de gaseosa es un problema de toxicidad, el calefón a tres metros es el problema del vapor que pesa más que el aire y viaja por el piso, y el cuñado es el problema social, que es el que de verdad funde más motores. Una respuesta que solo diga «hay que rotular y guardar bien» acierta la conducta pero no demuestra entender nada; una que explique por qué el vapor llega al calefón aunque el bidón esté cerrado a tres metros, o por qué el aceite de cuatro tiempos mata sin que el motor se pare el primer día, ya sabe lo suficiente para enseñárselo a otro. Y esa última parte —enseñárselo a quien va a tocar la máquina— es la mitad del oficio."
+    }
+  ]
+}

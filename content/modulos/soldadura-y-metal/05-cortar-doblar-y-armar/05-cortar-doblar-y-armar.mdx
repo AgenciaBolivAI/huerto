@@ -1,0 +1,556 @@
+En las lecciones anteriores el metal llegaba ya cortado a la medida, limpio y apoyado en la mesa. En la
+vida real no llega así: llega en una barra de seis metros que alguien trajo al hombro, torcida en la
+punta y con la etiqueta del comercio todavía pegada. Entre esa barra y una estructura que aguante hay
+tres operaciones —**cortar, perforar y doblar**— y una decisión: **qué pieza va dónde y por qué**.
+
+Y hay una noticia buena para quien todavía no tiene máquina de soldar: **la mitad de lo que viene aquí
+no necesita arco**. Con una amoladora prestada, un taladro y una caja de pernos se fabrican estructuras
+reales que no se caen. Soldar amplía lo que puedes hacer; no es el peaje para empezar.
+
+La otra mitad de la noticia es que estas tres herramientas son las que más manos lastiman en un taller
+chico, y no por descuido de la gente: por **mecanismos concretos** que casi nadie explica. Vamos a
+explicarlos donde tocan, porque una vez que entiendes por qué la máquina salta, dejas de estar en el
+sitio adonde salta.
+
+## La amoladora no corta: gasta
+
+Un <Termino slug="disco-de-corte">disco de corte</Termino> no tiene filo. Es un montón de granos duros
+—óxido de aluminio, casi siempre— pegados con resina y armados con una malla de fibra de vidrio, girando
+a una velocidad enorme. Cada grano arranca una viruta microscópica y se rompe, dejando un grano nuevo
+detrás: por eso el disco **se consume mientras trabaja** y va achicándose hasta que ya no llega al fondo
+del corte. Las chispas no son «energía»: son partículas de acero arrancadas y calentadas al rojo blanco,
+que salen despedidas por la tangente y siguen encendidas metros más allá.
+
+De ahí sale la primera distinción que hay que tener grabada. El disco de corte es **delgado**, entre uno
+y dos milímetros, y está calculado para trabajar **solo con su borde**, con la fuerza empujando en la
+dirección de su propio plano. El <Termino slug="disco-de-desbaste">disco de desbaste</Termino> es
+grueso, unos seis milímetros, con el centro hundido, y está calculado para trabajar **con su cara**,
+apoyado en ángulo, rebajando material. Usar el costado de un disco de corte para limar un rebaba es
+cargarlo en la dirección en que no tiene resistencia: la resina se fisura, y un disco fisurado no avisa.
+
+<Dato titulo="Todo disco trae impresas dos cosas que hay que leer antes de comprarlo">
+Las **revoluciones máximas** y una **fecha de vencimiento**. Lo primero es literal: un disco marcado
+para 6.600 vueltas por minuto montado en una máquina que gira a 11.000 se sale de lo que la resina
+aguanta y revienta, aunque el diámetro parezca calzar. Lo segundo sorprende a todos: la resina que pega
+los granos **envejece y absorbe humedad**, y un disco viejo o guardado en un galpón húmedo pierde
+cohesión sin cambiar de aspecto. Un disco sin marca de revoluciones no es barato: es un disco del que
+nadie se hace responsable.
+</Dato>
+
+Esas revoluciones máximas dependen del diámetro, y el motivo es puramente geométrico: lo que rompe el
+disco no son las vueltas sino la **velocidad con que se mueve su borde**, y a igualdad de vueltas un
+disco más grande tiene el borde moviéndose más rápido. Por eso
+las <Termino slug="revoluciones-maximas-del-disco">revoluciones máximas del disco</Termino> tienen que
+ser **iguales o mayores** que las de la máquina, nunca al revés, y por eso una máquina chica y rabiosa
+es más peligrosa con un disco grande que una máquina grande y lenta.
+
+<Advertencia titulo="El reventón, y por qué la careta de soldar no sirve aquí">
+Cuando un disco se rompe, sus pedazos salen **por la tangente**, en el plano del disco, a la velocidad
+que llevaba el borde. No es una astilla: es un trozo de piedra artificial lanzado como una honda. Contra
+eso hay tres defensas y las tres son de mecanismo, no de suerte.
+
+**La <Termino slug="guarda-del-disco">guarda</Termino> se queda puesta, siempre.** No es una tapa
+estorbosa: es una pared de acero colocada entre el disco y tu cuerpo, y su única función es **desviar
+los fragmentos y las chispas** hacia el lado contrario a donde estás. Girarla o sacarla —lo primero que
+hace media ferretería— convierte la máquina en algo que apunta a quien la sostiene.
+
+**No te pares en el plano del disco.** Ni delante ni detrás: a un costado. El plano del disco es el
+único sitio adonde puede ir un fragmento, y es gratis no estar ahí.
+
+**La careta de soldar no protege de esto.** Está hecha contra la radiación del arco, no contra el
+impacto: el visor no está calculado para recibir un proyectil, la mayoría son de plástico que se pica
+con las chispas, y sobre todo **deja el mentón y los costados abiertos**, que es justo por donde entra
+lo que rebota de la mesa. Para amolar se usan **anteojos de seguridad envolventes** —los que tocan la
+cara por los lados— y encima, si vas a cortar mucho, una **pantalla facial** transparente. Los anteojos
+van debajo de la pantalla, no en vez de ella: la pantalla para la cara, los anteojos para lo que sube
+desde abajo.
+</Advertencia>
+
+El segundo peligro no es el disco que se rompe sino el que **se traba**. Si la ranura se cierra sobre él
+—porque el recorte se venció, porque la pieza se movió, porque metiste el disco muy hondo y lo
+torciste—, el disco deja de girar de golpe. Pero el motor, el rotor y el engranaje siguen con toda su
+energía de rotación, y esa energía tiene que ir a algún lado: si el disco no puede girar respecto a la
+pieza, **es la máquina la que gira respecto al disco**. A eso se le
+llama <Termino slug="retroceso-de-la-amoladora">retroceso</Termino>, y salta hacia ti en menos de un
+parpadeo.
+
+<Analogia titulo="La energía no desaparece, se redirige">
+Es exactamente la conservación del momento angular, y para quien programa es una idea familiar: un error
+que no se maneja donde ocurre no se evapora, sube por la pila hasta que alguien lo recibe. Aquí el que
+lo recibe eres tú. Y como en el código, la defensa buena no es aguantar más fuerte al final —los brazos
+pierden esa pelea siempre— sino **quitar la condición que lo dispara**: que la ranura nunca se cierre.
+Apoya la pieza de modo que **el recorte quede libre y se abra**, no que se venza hacia adentro; corta
+con el disco poco enterrado y en línea recta, sin torcer; sostén con las dos manos, una en el mango
+lateral; y no sueltes la máquina hasta que el disco pare solo, porque un disco girando apoyado en el
+piso se va caminando.
+</Analogia>
+
+Dos cosas más y salimos de la amoladora. **No aprietes**: el disco corta a su ritmo y forzarlo lo
+calienta, lo vidria y lo rompe; si el corte va lento, el disco está gastado o es el equivocado. Y **nada
+de discos de madera en una amoladora**: los discos dentados para sierra existen para máquinas que giran
+a un tercio de esa velocidad y con guarda envolvente, y en una amoladora arrancan la mano. Lo que se
+corta con la amoladora es metal, y punto.
+
+## La sierra de arco, la cizalla y cuándo pagar un oxicorte
+
+No todo se corta con disco, y a veces conviene que no.
+La <Termino slug="sierra-de-arco">sierra de arco</Termino> es una hoja delgada tensada en un marco de
+acero, con dientes que miran hacia adelante y cortan **al empujar**; en el retroceso se levanta apenas
+para no despuntarlos. No hace chispas, no calienta la pieza, no necesita electricidad y cuesta lo que
+cuesta un almuerzo. Corta despacio, sí, pero en un caño de media pulgada la diferencia con la amoladora
+son dos minutos, y un corte a sierra sale más limpio y más a escuadra que uno a pulso con disco.
+
+<Dato titulo="La regla de los tres dientes">
+La hoja se elige por sus dientes por pulgada —18, 24, 32—, y la regla es que **al menos tres dientes
+tienen que estar tocando el material a la vez**. Con menos, el diente entra solo en el borde de la
+chapa, se engancha en vez de cortar y se arranca. Traducido:
+la <Termino slug="regla-de-los-tres-dientes">regla de los tres dientes</Termino> manda hoja de 32 para
+caño de pared fina y chapa, y de 18 para macizos. Y la hoja va **bien tensada**: una hoja floja se va de
+la línea y se rompe.
+</Dato>
+
+Una <Termino slug="cizalla">cizalla</Termino> —y su prima chica, la tijera de hojalatero— no arranca
+material: hace pasar dos filos uno junto al otro y **el metal falla por corte** en el plano entre ambos.
+No hay viruta, no hay chispa, no hay calor, y por lo tanto no hay zona recalentada ni pintura quemada.
+Su límite es el espesor, y su defecto es que **deforma el borde**, enroscándolo un poco hacia un lado;
+en chapa fina eso se endereza a martillo sobre una superficie plana.
+
+El <Termino slug="oxicorte">oxicorte</Termino> es otra cosa entera: se calienta el acero con una llama
+hasta cerca de los 900 grados y entonces se le lanza un chorro de oxígeno puro, que **quema el hierro**
+—lo oxida violentamente— y sopla afuera el óxido líquido. No corta por fuerza sino por reacción química,
+y por eso solo funciona en aceros comunes: en inoxidable, en aluminio y en fundición no se comporta.
+Casi nadie tiene equipo, y no hace falta tenerlo: es un servicio que se paga en cualquier taller con
+soplete, y conviene mandarlo cuando el espesor pasa el centímetro, cuando son muchas piezas iguales o
+cuando hay que cortar una forma que no es una línea recta.
+
+<Tabla>
+
+| Herramienta | Dónde gana | Lo que cuesta |
+| --- | --- | --- |
+| Amoladora con disco de corte | rapidez, cualquier perfil, cortes en el sitio | chispas, riesgo, borde recalentado, ruido |
+| Sierra de arco | precisión, silencio, sin energía, caño y varilla | tiempo y brazo |
+| Cizalla o tijera | chapa y platina fina, sin chispa ni calor | espesor limitado, borde deformado |
+| Oxicorte de taller | espesores gruesos, formas, series | hay que llevar el material y esperar |
+
+</Tabla>
+
+## Trazar sobre metal y descontar el disco
+
+En madera se traza con lápiz; en metal el lápiz no se ve o se borra con el primer roce. Se usa
+un <Termino slug="rayador">rayador</Termino>: una varilla de acero endurecido con la punta afilada que
+**raya la superficie** en vez de dibujar encima. La raya es un surco: no tiene ancho apreciable, no se
+borra con la mano sucia y se lee incluso con el metal mojado. Uno se fabrica en cinco minutos afilando
+un clavo de acero duro o una vieja lima. Sobre acero brillante, si la raya no se distingue, se pinta
+antes la zona con marcador indeleble oscuro y el rayador la abre en blanco.
+
+Todo lo que aprendiste en carpintería sobre no acumular errores vale igual aquí y no lo vamos a repetir:
+mides desde un mismo origen, cortas por el lado de desecho, y si necesitas seis piezas iguales usas la
+primera como plantilla o pones un tope, en vez de medir desde el corte anterior. Lo que cambia en el
+metal son dos cosas.
+
+**El disco se come su propio espesor.** Un disco de un milímetro y medio se lleva milímetro y medio de
+material en cada corte, y en una barra de seis metros de la que sacas ocho piezas eso son doce
+milímetros que no aparecen en la suma. Se resuelve igual que en madera: sumas el espesor del disco por
+cada corte al calcular el material, y trazas **dos rayas separadas ese espesor**, cortando entre ellas
+cuando la pieza buena está de los dos lados.
+
+**Escuadrar un perfil exige darle la vuelta.** Para cortar a escuadra un tubo cuadrado no basta rayar la
+cara de arriba: hay que **rayar las cuatro caras** con la escuadra apoyada siempre en el mismo canto de
+referencia, porque el disco entra por una cara y sale por la de enfrente, y si te fuiste dos grados
+salen dos grados de rendija en la unión. En un tubo redondo el truco es envolverlo con una tira de papel
+de borde recto: el papel, al cerrar sobre sí mismo, define un plano perpendicular al eje.
+
+Un corte deja siempre <Termino slug="rebaba">rebaba</Termino>: un labio de metal desplazado, filoso como
+una hoja de afeitar, en el borde por donde salió la herramienta. La rebaba **corta las manos que la
+tocan** —es la lesión más común del taller y la que menos se anota— e impide que la pieza apoye plana
+contra otra, lo que en una unión atornillada significa que el perno aprieta contra nada. Se saca con una
+pasada suave de disco de desbaste o de lima, y se saca **siempre**, antes de seguir.
+
+## Perforar: el agujero sale donde lo pusiste, o no sale
+
+Perforar acero parece la operación fácil de esta lección y es donde más brocas se queman y más piezas se
+arruinan. Empecemos por el mecanismo. Una <Termino slug="broca-de-acero-rapido">broca de acero
+rápido</Termino> —«HSS» en las cajas— es una barra de acero aleado con la punta afilada en dos filos
+inclinados. Pero **el centro de la punta no es un filo**: es un pequeño borde plano que no corta, que
+solo aplasta y arrastra el metal. Por eso una broca apoyada sobre una superficie lisa **no muerde: se
+pasea**, y sale a caminar buscando cualquier irregularidad donde agarrarse.
+
+La solución es el <Termino slug="punto-de-centro">punto de centro</Termino>: un golpe de martillo sobre
+un punzón —el granete— que hunde un pequeño cráter cónico donde el centro muerto de la broca **queda
+atrapado**. Sin ese cráter no hay taladrado preciso posible, ni con pulso de cirujano; con él, la broca
+arranca exactamente donde marcaste. Es el paso que todos se saltan y el que decide el resultado.
+
+Después viene la velocidad, y aquí hay una idea contraintuitiva que hay que entender de una vez: lo que
+importa no son las vueltas del taladro sino **a qué velocidad se mueve el filo**, que está en el borde
+de la broca. Una broca gorda tiene el filo mucho más lejos del centro, así que con las mismas vueltas su
+filo va mucho más rápido. Esa velocidad del filo es
+la <Termino slug="velocidad-de-corte">velocidad de corte</Termino>, y para acero común con broca de
+acero rápido anda alrededor de 25 a 30 metros por minuto. De ahí sale todo lo demás.
+
+<Formula explicacion="Vueltas por minuto a las que hay que hacer girar el taladro, a partir de la velocidad de corte del material (unos 25 a 30 metros por minuto para acero común con broca de acero rápido) y del diámetro de la broca en milímetros. La consecuencia práctica es sencilla: broca chica, rápido; broca gorda, lento.">
+vueltas por minuto ≈ (velocidad de corte en m/min × 318) ÷ diámetro en mm
+</Formula>
+
+<Tabla>
+
+| Diámetro de la broca | Vueltas orientativas en acero | Señal de que vas mal |
+| --- | --- | --- |
+| 3 mm | 2.500 a 3.000 | la broca se dobla o se parte: exceso de presión lateral |
+| 6 mm | 1.300 a 1.600 | polvo en vez de viruta: no penetra, está frotando |
+| 10 mm | 800 a 900 | humo y chirrido: falta refrigerante |
+| 13 mm | 600 a 700 | la punta se pone azul: temple perdido, broca muerta |
+
+</Tabla>
+
+El azul de la punta merece su propio párrafo. El acero rápido es duro porque recibió un tratamiento
+térmico, y ese tratamiento **se deshace con el calor**: pasados unos 250 o 300 grados la punta pierde
+dureza para siempre, y no se recupera dejándola enfriar. El color azul en la punta es el aviso de que ya
+ocurrió. Por eso se refrigera —unas gotas de aceite, cualquier aceite mineral, repuestas cada tanto— y
+por eso se **empuja con firmeza y constancia**: una broca que empuja poco no corta, frota, y frotar
+calienta el filo y además endurece el acero de la pieza, de modo que a los treinta segundos tienes una
+broca muerta sobre un agujero que se volvió imposible. Con la presión correcta salen **dos virutas
+continuas y enroscadas**, una por cada filo: esa es la señal de que todo está bien.
+
+<Advertencia titulo="La chapa fina que se convierte en hélice">
+Cuando la broca está por atravesar una chapa delgada, el material que queda debajo es un anillo fino que
+ya no la sostiene: los filos lo enganchan de golpe, la broca **se atornilla sola** hacia abajo y arrastra
+la chapa consigo. Si la chapa no está sujeta, empieza a girar con la broca, y una chapa girando a
+seiscientas vueltas es un disco de bordes filosos a la altura de tus manos y tu cara. A
+ese <Termino slug="enganche-de-la-broca">enganche</Termino> se le llama en el taller «la hélice», y
+manda cortes profundos todos los años.
+
+Se previene por mecanismo. **Sujeta siempre la pieza**: con prensa, con sargento, o atornillada a la
+mesa; nunca con la mano, y muchísimo menos en un taladro de banco. **Pon una tabla de sacrificio debajo**
+de la chapa, para que la broca salga hacia madera y no hacia el aire. **Aflojá la presión** en el último
+milímetro, cuando escuchas que cambia el sonido. Y para agujeros grandes en chapa, la herramienta
+correcta es la **broca escalonada**, esa cónica con escalones, que agranda de a poco y nunca engancha.
+
+Sobre el taladro mismo: **nunca guantes** con una máquina que gira, ni mangas sueltas, ni pulseras, ni
+pelo suelto. Un guante no protege de una broca: la broca lo agarra y **mete la mano adentro** en una
+vuelta. Anteojos siempre, porque la viruta de acero sale caliente y con filo.
+</Advertencia>
+
+Dos remates del agujero. El <Termino slug="avellanado">avellanado</Termino> es abrir un cono en la boca
+del agujero para que la cabeza de un tornillo cónico quede **enrasada con la superficie**, sin
+sobresalir; se hace con una fresa de avellanar o, si no la tienes, con una broca del doble de diámetro
+girada a mano o a muy pocas vueltas. Sirve además para quitar la rebaba interior.
+
+Y el roscado. Un <Termino slug="macho-de-roscar">macho de roscar</Termino> es una barra endurecida con
+la forma de la rosca tallada y unas ranuras que evacuan la viruta: al entrar girando en un agujero,
+**talla la rosca en la pared**. El agujero previo no se adivina, se calcula, y la cuenta es de las más
+útiles del oficio.
+
+<Formula explicacion="Diámetro de la broca con la que se hace el agujero antes de roscar: el diámetro nominal del perno menos el paso de su rosca. Para una rosca M8 de paso 1,25 mm da 6,75 mm, y se usa la broca de 6,8. Para M6 de paso 1 da 5 mm exactos. Si el agujero es más chico, el macho se rompe adentro; si es más grande, la rosca sale sin fondo y se pela con el primer apriete.">
+broca previa = diámetro nominal del perno − paso de la rosca
+</Formula>
+
+El macho es durísimo y por eso **es frágil como un vidrio**: un macho partido dentro del agujero no se
+saca casi nunca, y esa pieza se pierde. Se entra a escuadra, comprobando con una escuadrita apoyada en
+dos posiciones distintas; se avanza **media vuelta adelante y un cuarto atrás**, para cortar la viruta
+en pedazos que salgan por las ranuras en vez de trabarse; se aceita; y si de pronto cuesta más, se
+retrocede y se limpia en vez de forzar. En chapa de menos de tres milímetros no vale la pena roscar: no
+hay hilos suficientes y se pela. Ahí se usa una tuerca del otro lado, o un tornillo autoperforante.
+
+## Doblar sin que se raje
+
+Cuando doblas una platina, la cara de afuera de la curva recorre un camino más largo que la de adentro.
+Como el material es el mismo, eso significa que **la cara exterior se estira y la interior se aplasta**,
+y entre las dos hay una superficie que no cambia de largo: la <Termino slug="fibra-neutra">fibra
+neutra</Termino>. Toda la mecánica del doblado sale de ahí.
+
+<Analogia titulo="Un mazo de hojas que se desliza">
+Dobla un cuaderno grueso y mira el canto: las hojas de afuera sobresalen, las de adentro se meten,
+porque cada una recorrió un arco distinto. En el cuaderno las hojas pueden deslizarse una sobre otra;
+en el acero no pueden, están soldadas entre sí, así que **la diferencia de longitud tiene que salir del
+propio material**: la de afuera estirándose y la de adentro comprimiéndose. Cuanto más cerrada la curva,
+mayor esa diferencia; y todo material tiene un límite de cuánto se deja estirar antes de partirse.
+</Analogia>
+
+De ahí sale el <Termino slug="radio-minimo-de-doblado">radio mínimo de doblado</Termino>: la curva más
+cerrada que ese metal aguanta sin fisurarse. Para acero común y blando anda cerca de **una vez el
+espesor** medido por dentro de la curva; para aceros más duros, para el galvanizado y para el aluminio,
+bastante más. Doblar sobre un canto vivo —el filo de la morsa, la punta del yunque— es doblar con radio
+casi cero, y ahí es donde aparecen esas grietitas transversales en el lomo del doblez que después
+revientan solas. La defensa es física: **dobla contra un radio**, un pedazo de caño o una barra redonda
+puesta en el vértice.
+
+Dos fenómenos más que hay que conocer. El primero es
+la <Termino slug="recuperacion-elastica">recuperación elástica</Termino>: el acero se comporta en parte
+como un resorte, así que cuando sueltas la fuerza **el doblez se abre unos grados**. No es un error de
+ejecución, es el material; se corrige pasándose a propósito y comprobando contra una escuadra o contra
+una plantilla de cartón. El segundo es
+el <Termino slug="endurecimiento-por-deformacion">endurecimiento por deformación</Termino>: doblar
+endurece la zona doblada y le quita capacidad de estirarse. Por eso **enderezar y volver a doblar en el
+mismo punto es la receta para partirlo**, y por eso una pieza que ya fue enderezada una vez no merece
+confianza. Es el mismo mecanismo que en su forma lenta se llama <Termino slug="fatiga-por-flexion">fatiga
+por flexión</Termino>.
+
+<Formula explicacion="Al doblar, la pieza necesita menos largo que la suma de las dos alas medidas hasta la esquina exterior, porque la fibra neutra recorre el arco por dentro. Para un doblez a 90 grados con radio interior parecido al espesor, el descuento ronda 1,7 veces el espesor. Es una aproximación: la cuenta verdadera es doblar un recorte del mismo material y medir el resultado, y esa medida vale para todos los dobleces iguales que hagas después.">
+largo de la pieza plana ≈ ala A + ala B − 1,7 × espesor   (doblez de 90°, radio ≈ espesor)
+</Formula>
+
+En frío se dobla con lo que hay: la pieza mordida en la morsa lo más cerca posible de la línea del
+doblez, y presión sostenida con un caño largo como palanca. **Presión sostenida, no martillazos**: el
+golpe seco concentra la deformación en una línea y fabrica la fisura. Un doblador casero es dos pernos
+gruesos soldados o atornillados a una platina, separados el espesor de la pieza más un poco, con una
+palanca: pasas la platina entre ellos y giras.
+
+En caliente el metal cambia de reglas. Al rojo cereza, cerca de los 800 grados, el acero se vuelve
+plástico: se dobla con radio pequeño, no se fisura, no se recupera y no hace falta fuerza. Es la salida
+para piezas gruesas y para curvas cerradas.
+
+<Advertencia titulo="El metal caliente se ve exactamente igual que el frío">
+A 400 grados el acero no está rojo: está **del mismo color gris que hace un rato**, y quema hasta el
+hueso al primer contacto. Esta es la quemadura número uno de los talleres chicos, y le pasa siempre a la
+persona que solo pasaba a mover la pieza. Adopta una regla de la casa: **lo que se calentó no se toca
+con la mano ni se apoya en cualquier lado**; se deja en un sitio declarado, con una tiza que diga
+CALIENTE encima, y se prueba con unas gotas de agua desde lejos antes de tocar.
+
+Tres cosas más. **Nunca calientes galvanizado**: el zinc hierve y sus humos producen la fiebre del zinc,
+esa gripe con escalofríos que aparece por la noche; si es inevitable, se rebaja el zinc antes y se
+trabaja con mucha ventilación. **Nunca calientes nada pintado ni desengrasado con solventes**: los humos
+son tóxicos de verdad. Y **no enfríes en agua** una pieza estructural que calentaste al rojo: el
+enfriamiento brusco endurece el acero y lo vuelve frágil, y esa pieza se parte después sin aviso. Se
+deja enfriar sola, al aire.
+</Advertencia>
+
+## Unir sin arco: perno, remache y autoperforante
+
+Un perno bien apretado **no trabaja como un pasador**: trabaja estirándose como un resorte muy rígido y
+apretando las dos piezas una contra otra, de modo que la carga la aguanta el **rozamiento** entre las
+chapas y no el perno. A esa tensión guardada se le
+llama <Termino slug="precarga-del-perno">precarga</Termino>, y explica casi todo: un perno flojo deja
+que las piezas se corran, y en cuanto se corren el perno recibe el golpe de costado, ovala el agujero y
+la unión se afloja más. La secuencia de la falla siempre empieza por el apriete, no por el perno.
+
+De ahí salen las reglas prácticas. **Arandela plana bajo la cabeza y bajo la tuerca**, para repartir la
+presión y no hundir la chapa. Contra vibración —una estructura al viento, un soporte de motor—,
+**arandela de presión, tuerca con inserto plástico o dos tuercas contrapuestas**. El agujero, apenas
+mayor que el perno: uno o dos milímetros de más ya es juego. Y **nunca uses un perno para acercar dos
+piezas desalineadas**: lo que estás haciendo es guardar esa fuerza dentro de la unión, que después la
+devuelve.
+
+Un <Termino slug="remache-ciego">remache ciego</Termino> —el «pop»— es un tubito con un vástago adentro:
+la remachadora tira del vástago, la cabecita del extremo **deforma el tubo del lado de atrás** formando
+una segunda cabeza, y el vástago se corta. Es la única unión mecánica que se hace **desde un solo lado**,
+por eso sirve en un caño cerrado o en una chapa contra un tubo. Aguanta poco: es para chapa, tapas,
+canaletas y forros, no para lo que sostiene peso. Y ojo con el material: un remache de aluminio en acero
+en este clima húmedo arma
+una <Termino slug="corrosion-galvanica">pila galvánica</Termino> y se come a sí mismo.
+
+Un <Termino slug="tornillo-autoperforante">tornillo autoperforante</Termino> lleva una punta de broca y
+una rosca de paso grande: en una sola pasada perfora la chapa, talla su rosca y aprieta. Es lo que arma
+un techo de calamina o un cerramiento en la décima parte del tiempo. Pide **vueltas suficientes y
+presión constante** —si patina, la punta se recalienta y deja de perforar— y no admite apretar de más:
+pasado el punto justo, la rosca **pela la chapa** y el tornillo gira eternamente sin sujetar nada. Para
+techos van con arandela de goma bajo la cabeza, que sella el agujero.
+
+## Perfiles: por qué un tubo aguanta más que una barra
+
+Un mismo kilo de acero aguanta cosas muy distintas según la forma que tenga. La razón es que, cuando una
+pieza se flexiona, el material que trabaja de verdad es **el que está lejos del centro**: las fibras del
+borde se estiran y se comprimen mucho, y las del medio casi no hacen nada. Por eso un tubo cuadrado
+—material puesto lejos, hueco en el centro— es enormemente más rígido que una barra maciza del mismo
+peso. Esa propiedad de la forma es
+la <Termino slug="inercia-de-la-seccion">inercia de la sección</Termino>.
+
+<Analogia titulo="Cambiar el exponente, no la constante">
+Para una sección rectangular la rigidez crece con **el cubo del alto**: duplicar el alto la multiplica
+por ocho, mientras que duplicar el ancho solo la duplica. Es la diferencia entre optimizar la constante
+y cambiar el exponente. Por eso una platina de canto aguanta muchísimo más que la misma platina
+acostada, y por eso una regla de acero fina se dobla sola en una dirección y no se deja doblar en la
+otra. Antes de comprar más fierro, **prueba a girar el que tienes**.
+</Analogia>
+
+Con eso ya se elige. El **ángulo** —la «L»— es barato, fácil de atornillar por sus dos alas y perfecto
+para marcos, bastidores y esquinas; el **tubo cuadrado** es lo más rígido por kilo y lo más cómodo de
+armar a escuadra, pero por dentro se oxida sin que lo veas; la **platina** sirve de unión, de refuerzo y
+de diagonal, casi nunca de viga; el **caño redondo** es el mejor a torsión y el peor de encontrar en
+ángulos exactos. En el comercio vienen en barras de seis metros, así que conviene **planificar los
+cortes sobre esa longitud** antes de comprar, igual que se planifica un despiece de madera.
+
+## Armar una estructura que aguante
+
+Aquí no necesitas teoría nueva: el módulo de albañilería ya explicó cómo baja una carga hasta el suelo y
+por qué una <Termino slug="cercha">cercha</Termino> descompone el peso en barras que solo tiran o solo
+empujan. Lo que cambia con el metal es que ahora puedes fabricar esas barras y esos nudos tú mismo. Tres
+ideas gobiernan el armado.
+
+**Un rectángulo no es rígido; un triángulo sí.** Cuatro barras unidas por sus puntas forman un
+mecanismo: se caen de costado sin que ninguna barra se rompa. Basta agregar una diagonal para partirlo
+en dos triángulos y que la figura quede fija. Eso ya lo
+conoces como <Termino slug="triangulacion">triangulación</Termino>, y en una estructura completa se
+llama <Termino slug="arriostramiento">arriostramiento</Termino>: es lo que hace que una mesa, un portón
+o un soporte de tanque no se «caigan en rombo» con el tiempo.
+
+**Tirar y empujar no son lo mismo.** Una barra
+en <Termino slug="traccion">tracción</Termino> aguanta con toda su sección, sin importar si es larga o
+flaca: una varilla delgada tirando resiste una barbaridad. Una barra empujada es otra historia, y esa
+diferencia decide dónde pones el material bueno. Si tu diagonal solo va a tirar, con una platina o una
+varilla alcanza; si además va a empujar, tiene que ser un tubo o un ángulo. Por eso las cruces de San
+Andrés —dos diagonales cruzadas y delgadas— funcionan tan bien: **venga el empuje del lado que venga,
+siempre hay una que trabaja tirando**.
+
+**Lo que empuja se puede pandear.** Una barra comprimida no falla aplastándose sino
+**arqueándose de costado**: aparece una desviación mínima, esa desviación aumenta el brazo con que la
+carga la empuja, el aumento agranda la desviación, y el proceso se realimenta hasta el colapso. A eso se
+le llama <Termino slug="pandeo">pandeo</Termino>, y es el mismo fenómeno que en un muro delgado se
+estudia como <Termino slug="esbeltez">esbeltez</Termino>.
+
+<Analogia titulo="Una recursión sin caso base">
+El pandeo es una realimentación positiva pura: más desviación causa más momento, que causa más
+desviación. Debajo de cierta carga el sistema converge y la barra se queda quieta; pasada esa carga
+**diverge**, y la divergencia es instantánea. No hay aviso, no hay deformación previa que puedas ver, no
+hay «va a empezar a fallar»: la barra está recta y de pronto no lo está. La defensa es cortar el bucle
+poniendo un apoyo en el medio, y eso paga muchísimo.
+</Analogia>
+
+<Formula explicacion="La carga con que una barra empujada se pandea cae con el cuadrado de su largo libre. Traducido a taller: poner un travesaño en la mitad de un parante largo lo hace cuatro veces más resistente al pandeo sin gastar casi material. Es la intervención con mejor relación entre fierro y resultado de toda la estructura.">
+carga de pandeo ∝ rigidez de la sección ÷ (largo libre)²
+</Formula>
+
+Sobre los nudos, dos reglas que se ven poco y valen mucho. La primera: **los ejes de las barras tienen
+que cruzarse en un punto**. Si dos barras llegan al nudo desalineadas, la fuerza no puede seguir en línea
+recta y se genera un momento que dobla la unión; los nudos que se rajan solos casi siempre son nudos
+descentrados. La segunda: **los cordones van donde la fuerza cruza de una pieza a otra**, repartidos a lo
+largo del contacto y en los dos lados de la unión, no en un punto en la punta. Una unión con dos cordones
+de cinco centímetros a los costados aguanta mucho más que una con un montón de material apilado en la
+esquina, aunque la segunda tenga más soldadura. La técnica del cordón ya la viste; lo que decide aquí es
+**dónde lo pones**.
+
+## Anclar a un muro o a hormigón
+
+Una estructura metálica no termina en su última barra: termina donde entrega su carga al edificio, y ahí
+es donde más gente sale lastimada. El primer principio es
+la <Termino slug="placa-base">placa base</Termino>: una platina soldada al extremo del perfil que
+**reparte la carga en una superficie grande** en lugar de concentrarla en un punto. Sin ella, un tubo
+apoyado directo pica el revoque y se hunde.
+
+Un <Termino slug="perno-de-expansion">perno de expansión</Termino> es un vástago con una camisa metálica
+que, al apretar la tuerca, **se abre contra las paredes del agujero** y agarra por fricción. Funciona
+bien en hormigón y en ladrillo macizo, y **no funciona en ladrillo hueco**: ahí la camisa aplasta el
+tabique de dos milímetros y el anclaje sale con la mano. En hueco se usa anclaje químico con camisa de
+malla, o mejor todavía, **un perno pasante con una platina del otro lado del muro**, que es la solución
+más barata y la más confiable de todas.
+
+<Advertencia titulo="El cono que se arranca">
+Un anclaje en hormigón casi nunca falla por el perno: falla arrancando **un cono de hormigón** alrededor
+de él, porque la carga se reparte hacia afuera en forma de embudo. Eso tiene dos consecuencias que hay
+que respetar. Si el anclaje está **cerca de un borde**, ese cono queda cortado por el aire y la
+capacidad se desploma; y si dos anclajes están **muy juntos**, sus conos se superponen y entre los dos
+no suman lo que aguantaría uno solo. La regla de taller es mantenerse lejos del borde y separar los
+anclajes, por lo menos el doble de lo que penetra el perno; a
+ese <Termino slug="cono-de-arrancamiento">cono de arrancamiento</Termino> nunca se le gana con un perno
+más grueso, solo con más distancia o más profundidad.
+
+Practica: para hormigón se usa **broca de percusión con punta de widia** y el taladro en modo martillo;
+la broca de acero rápido se destruye al instante. Para metal, al revés: **nunca uses percusión**, porque
+la broca se despunta. Se sopla el polvo del agujero antes de meter el anclaje, porque el polvo impide
+que la camisa agarre. Y si lo que vas a colgar puede caer sobre una persona —un tanque de agua, un
+estante alto, un portón, un techo—, **no lo resuelvas por intuición**: consulta con un albañil con
+experiencia o con un profesional, porque las cargas y las condiciones reales de un muro no se ven desde
+afuera.
+</Advertencia>
+
+<AplicarRizoma>
+**Empieza fabricando las dos herramientas que no vas a comprar.** Un rayador sale de un clavo de acero
+duro afilado en la amoladora; un granete, de un perno grueso al que le sacas punta cónica. Con esos dos
+y una escuadra de fierro ya trazas cualquier cosa. Guárdalos con la punta protegida, porque una punta
+mellada devuelve rayas gordas y agujeros corridos.
+
+**Ordena tus discos y tus brocas como si fueran perecederos, porque lo son.** Los discos, en una caja
+cerrada y elevada del piso, jamás sueltos en el fondo de un balde donde se golpean; mira la fecha y las
+revoluciones antes de comprar y descarta sin dudar cualquiera que se te haya caído. Las brocas, en un
+soporte de madera con un agujero por diámetro: una broca perdida en una lata se despunta contra las
+otras y se busca durante diez minutos cada vez.
+
+**Antes del primer trabajo real, gasta media hora en recortes.** Corta seis pedazos de ángulo de la
+misma medida y compruébalos con la escuadra: vas a descubrir hacia qué lado te vas, y eso se arregla
+cambiando cómo te paras, no esforzándote más. Después haz seis agujeros de distintos diámetros en un
+retazo, con punto de centro y aceite, y mírales la viruta: dos tiras enroscadas es bien, polvo es que
+estás frotando, azul es una broca menos.
+
+**Elige un primer proyecto que no necesite soldar.** Un soporte de repisa de ángulo atornillado a la
+pared, una base de tubo para el tanque de agua, una parrilla, un portabicicletas, un bastidor de
+mosquitero de ángulo con la tela remachada, una reja simple para la ventana del fondo. Todos se arman
+con perno, remache y autoperforante. Cuando tengas la máquina, esa misma estructura se refuerza en una
+tarde, y mientras tanto ya está en uso.
+
+**Instala tres costumbres en la casa, y enséñaselas a quien vive contigo.** La primera: **nadie se para
+en el plano del disco**, ni siquiera para mirar. La segunda: **la pieza que se calentó lleva una tiza
+que dice CALIENTE** y nadie la levanta con la mano. La tercera: cuando se cortó o se soldó, **alguien
+vuelve al rato a revisar** dónde cayeron las chispas, porque el trapo o el pasto que se enciende lo hace
+callado y con retraso. Estas tres reglas no cuestan nada y valen más que toda la herramienta junta.
+
+**Haz que el saber quede en más de una cabeza.** La cuenta de la broca previa para roscar, el radio
+mínimo, la velocidad según diámetro: escríbelas en una tablita de madera clavada donde trabajas, no en
+un cuaderno que se pierde. En Rizoma del Sur, las medidas de los perfiles y el descuento del disco están
+anotados en la pared del galpón justo por eso: para que quien llegue nuevo no tenga que preguntarle a
+una persona en particular, y para que quien sabe pueda faltar sin que el trabajo se detenga.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La humedad de aquí ataca los discos y las brocas antes que a ti.** Con meses enteros de humedad alta,
+la resina de un disco de corte guardado en un galpón abierto envejece más rápido de lo que dice su
+fecha, y un disco degradado revienta con una carga que antes aguantaba sin problema. Guárdalos en una
+caja plástica cerrada, con una bolsita de arroz seco adentro que haga de secante, y no compres el
+paquete gigante en oferta si vas a tardar un año en usarlo.
+
+**En el mercado conviven discos serios con discos sin marca de revoluciones.** Un disco que no dice a
+qué velocidad puede girar es un disco sobre el que nadie te va a responder; el ahorro de esa compra vale
+mucho menos que un ojo. Lo mismo con los anteojos: los que no son envolventes dejan entrar por el
+costado exactamente lo que rebota de la mesa.
+
+**Los cortes de energía cambian cómo se trabaja.** Muchas amoladoras baratas traen un botón que traba el
+gatillo apretado, y si la luz se corta con la máquina trabada, la máquina **arranca sola** cuando la
+energía vuelve y se va caminando por el piso con el disco girando. La regla es simple: **no uses la
+traba, y desenchufa en cuanto se corte la luz**. Y por eso la sierra de arco no es nostalgia: es la
+herramienta que sigue funcionando cuando no hay luz, que en esta zona es varias veces por mes.
+
+**La seca, de mayo a septiembre, convierte cada chispa en un riesgo de incendio.** El pasto seco y el
+barbecho de esos meses prenden con una partícula que viajó diez metros y quedó descansando, y el viento
+del norte la lleva más lejos todavía. Corta con el suelo mojado alrededor, con un balde de agua o arena
+a mano, y **vuelve a revisar la zona media hora después**, porque un foco puede pasar mucho rato
+escondido antes de levantar llama.
+
+**Los perfiles vienen en barras de seis metros y el transporte pesa en el costo.** Conviene ir con el
+despiece hecho y comprar contando los cortes, porque una barra mal aprovechada se paga igual. Y hay una
+fuente de material que en la zona sobra: **catres viejos, portones caídos, camas de bicicleta,
+estructuras de cartel**. Son ángulo y tubo perfectamente utilizables, con la advertencia de siempre:
+revisa que no sea galvanizado antes de calentarlo, y no confíes en un perfil que ya estuvo doblado y
+enderezado.
+
+**El agua de pozo con hierro, que aquí es lo normal, no es refrigerante de brocas.** Enfría, sí, pero
+deja la pieza y la herramienta oxidándose en cuestión de horas con esta humedad. Usa unas gotas de
+aceite —de motor, de cocina en apuros, de cualquier tipo mineral— y después de trabajar **seca y pasa un
+trapo aceitado** por la herramienta antes de guardarla. Ese trapo es más barato que reponer brocas dos
+veces al año.
+
+**Un tubo cortado y dejado a la intemperie es un criadero de mosquitos.** El dengue es endémico en la
+zona, y el tubo cuadrado o redondo con la boca hacia arriba junta agua de lluvia por dentro y la
+mantiene ahí, oscura y quieta, exactamente donde el mosquito quiere poner. Es una de esas fuentes que
+nadie mira porque no parece un recipiente. **Tapa los extremos** de todo perfil hueco que quede a la
+intemperie —una platina soldada, un tapón plástico, hasta un pedazo de bolsa amarrado— o si el tubo va
+inclinado, **hazle un agujerito de drenaje en el punto más bajo**. Es un minuto por pieza y es sanidad
+de la familia.
+
+**Con los repuestos que tardan y cuestan, la reparación de herramienta es parte del oficio.** Aprender a
+afilar una broca a mano en la amoladora —respetando el ángulo de la punta y que los dos filos queden
+iguales— convierte una caja de brocas quemadas en una caja de brocas. Y comprar el macho de roscar de la
+medida más común, con su broca justo al lado en el soporte, evita el escenario habitual: la pieza lista
+y el proyecto parado una semana esperando una herramienta de dos bolivianos.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya puedes tomar una barra cruda y devolverla convertida en piezas a medida, agujereadas donde va, con
+sus dobleces sin fisura, unidas con o sin arco, dispuestas en triángulos que no se caen y ancladas a un
+muro que las aguanta. Eso es fabricar.
+
+Lo que viene ahora es lo contrario: **piezas que llegan ya rotas, sucias y viejas, hechas de un metal
+que no sabes cuál es**. La lección siguiente, **Reparar sin que vuelva a romperse, y ganarle al óxido**,
+empieza por la pregunta que casi nadie se hace antes de encender la máquina —por qué se rompió— y
+demuestra que volver a soldar la misma unión igual que estaba la rompe otra vez en el mismo sitio.
+Después ordena qué se puede reparar y qué no se toca nunca, y cierra con el enemigo permanente de esta
+sabana húmeda: la corrosión, que es una pila eléctrica trabajando en silencio contra todo lo que
+acabas de construir.

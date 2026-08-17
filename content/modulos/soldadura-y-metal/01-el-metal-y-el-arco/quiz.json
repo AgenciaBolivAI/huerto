@@ -1,0 +1,124 @@
+{
+  "preguntas": [
+    {
+      "id": "granos-y-enfriamiento",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la estructura interna de un metal y lo que el calor le hace, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Un metal no es una masa uniforme: es un montón de cristales pegados entre sí, y la costura entre dos de esos granos es donde se frena una grieta y también por donde se cuela el desorden.",
+        "Los electrones sueltos del enlace metálico explican de una sola vez que el metal conduzca electricidad y calor y que se deje deformar sin romperse, porque los átomos deslizan y la nube los sigue agarrando.",
+        "Cómo queda un metal después de calentarse depende de la velocidad con que se enfría: lento deja granos parejos y metal dócil, rápido deja una estructura tensa y quebradiza.",
+        "Como el acero es un material industrial y llega con una estructura ya fijada de fábrica, calentarlo y volver a enfriarlo no le cambia nada por dentro mientras no se lo funda."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras describen el mismo hecho en tres escalas: la red y sus electrones, los granos, y la velocidad de enfriamiento que decide el resultado. La cuarta es falsa y es exactamente el error que rompe rejas. La estructura de un acero no viene sellada de fábrica: por encima de cierta temperatura su red cristalina se reorganiza, y al enfriar vuelve a hacerlo tomando una forma u otra según cuán rápido baje. Por eso la franja que rodea un cordón —que nunca llegó a fundirse— puede quedar durísima y frágil, y por eso ahí se rompe la mayoría de las soldaduras que fallan. Sin fundir nada, solo con calentar y enfriar, el metal cambia."
+    },
+    {
+      "id": "carbono-y-fundicion",
+      "tipo": "opcion_multiple",
+      "enunciado": "Se rompió la tapa de una bomba de agua. Es hierro fundido. ¿Qué es correcto decir?",
+      "opciones": [
+        "Con más de un 2 % de carbono el sobrante no entra en la red y se separa en láminas de grafito, que al no tener resistencia funcionan como miles de rajaduras diminutas ya hechas dentro de la pieza.",
+        "Por eso la pieza se parte en pedazos limpios en vez de doblarse: no hay ductilidad que absorba el golpe, la grieta ya tiene por dónde correr.",
+        "Al soldarla, el charco enfría rapidísimo contra la masa fría de alrededor, el carbono no vuelve a acomodarse en grafito y forma un compuesto vidrioso y durísimo, así que la grieta puede aparecer sola incluso con la pieza ya fría.",
+        "Como es hierro igual que un ángulo o una platina, se suelda con el mismo electrodo y el mismo procedimiento; si se rompe otra vez es porque el cordón quedó chico y hay que hacerlo más grueso."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras son la misma historia: el grafito, la fractura frágil y la fisuración al soldar. La cuarta es falsa y hace perder tiempo y dinero. La fundición y el acero dulce tienen composiciones muy distintas, y el problema no se arregla con más metal encima: un cordón más grueso mete más calor, aumenta la contracción y empeora la grieta. Soldar fundición se puede, pero pide precalentamiento, criterio y aceptar que puede salir mal, y eso se ve en la lección 06 del módulo. Antes de encender el arco sobre una pieza rota, lo primero es saber qué metal es —la fundición se delata por la piel de molde, el sonido corto y sordo y la fractura limpia—, porque tratar a todos los metales igual es el atajo que devuelve la pieza rota una segunda vez."
+    },
+    {
+      "id": "fusion-contra-lo-demas",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una pata de catre partida se puede arreglar bien con estaño y un buen cautín, porque el estaño también es soldadura y agarra el metal.",
+      "respuesta": false,
+      "explicacion": "Falso, y la confusión es entendible porque las dos cosas se llaman soldadura. En la soldadura blanda —la del estaño y el módulo de electrónica— el metal base **nunca se funde**: se funde solo el estaño, por debajo de unos 450 °C, y lo que sostiene es una capa finísima de aleación formada en la superficie de contacto. Eso alcanza y sobra para que pase corriente por un cable, donde el esfuerzo mecánico es casi nulo, y no alcanza en absoluto para que una pata aguante el peso de una persona. La soldadura por fusión es otra cosa: el metal de las dos piezas se derrite de verdad, se mezcla en un charco común y solidifica junto, con los granos creciendo cruzando la frontera, de modo que al terminar no hay dos piezas con algo en el medio, hay una sola pieza continua. Entre las dos está la unión mecánica —perno, remache, tornillo—, que no funde nada y sostiene abrazando: es una respuesta legítima y a veces la mejor, sobre todo en aluminio o en chapa fina, pero su carga entera pasa por el agujero, que es donde se concentra el esfuerzo y donde empieza la rajadura."
+    },
+    {
+      "id": "el-arco-y-su-calor",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el arco eléctrico y de dónde sale el calor con el que se suelda, ¿qué es correcto?",
+      "opciones": [
+        "El arranque es un cortocircuito hecho a propósito: al tocar la pieza con el electrodo se abre un camino sin nada que limite la corriente, y toda la resistencia del circuito se concentra en un punto de contacto minúsculo.",
+        "El calor de ese punto sale del efecto Joule, que crece con el cuadrado de la corriente: duplicar los amperios no duplica el calor, lo multiplica por cuatro.",
+        "El aire calentado se ioniza, deja de ser aislante y se vuelve plasma conductor, así que al separar la punta unos milímetros la corriente sigue pasando por el aire y el arco se sostiene.",
+        "Como el arco es una llama muy caliente, mientras más lejos se lleve el electrodo de la pieza más se abre esa llama y mejor calienta el metal."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras encadenan el mecanismo completo: contacto, calor por efecto Joule, aire ionizado que conduce. La cuarta es falsa dos veces. Primero, el arco no es una llama: no hay combustión, hay corriente pasando por un gas ionizado. Y segundo, la distancia manda en sentido contrario al que sugiere la opción: si el electrodo se aleja, el arco se estira, se enfría, salpica y termina apagándose, mientras que si se pega, se queda soldado a la pieza. La longitud de arco correcta es de apenas un par de milímetros —más o menos el diámetro del electrodo— y sostenerla es una de las cuatro variables que se trabajan en la lección 04."
+    },
+    {
+      "id": "revestimiento-y-humedad",
+      "tipo": "opcion_multiple",
+      "enunciado": "El revestimiento del electrodo, esa capa gris que parece pintura seca, ¿qué hace y qué le pasa en un clima húmedo?",
+      "opciones": [
+        "Al quemarse genera gases que empujan el aire afuera y forma una escoria líquida que flota y tapa el charco, porque el acero fundido a 1.600 °C se traga el oxígeno y el nitrógeno del aire y los suelta al solidificar en forma de burbujas.",
+        "Lleva desoxidantes como el silicio y el manganeso, que tienen más ganas de combinarse con oxígeno que el hierro, se sacrifican y se llevan ese oxígeno con la escoria.",
+        "Es poroso y absorbe humedad del aire, y esa agua se descompone en el arco y libera hidrógeno, que queda encerrado en el acero al solidificar y puede abrir una fisura horas o días después, con la pieza ya fría y guardada.",
+        "Como la escoria es lo que protege el cordón, conviene dejarla puesta entre una pasada y la siguiente para que el metal siga cubierto mientras se sigue soldando."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras son el revestimiento haciendo su trabajo y el revestimiento traicionado por el clima. La cuarta invierte la conclusión. La escoria protege mientras el baño está caliente y frena el enfriamiento, que es bueno, pero una vez solidificada es una costra vidriosa que hay que picar y tirar: si se deja y encima se pasa otro cordón, queda escoria atrapada dentro de la unión, que es uno de los defectos más comunes y de los que menos se ven desde afuera. Protege por arriba, nunca por dentro. Y sobre el hidrógeno, la medida que lo evita cuesta cero: electrodos en un tarro con tapa y arriba de un estante, nunca la caja abierta en el suelo de un galpón."
+    },
+    {
+      "id": "enfriar-con-agua",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para avanzar más rápido conviene enfriar el cordón recién hecho tirándole un poco de agua, así se puede manipular la pieza antes y no se pierde tiempo.",
+      "respuesta": false,
+      "explicacion": "Falso, y es de los consejos que más piezas arruinan. No estás enfriando: estás templando. Cuando el acero baja de temperatura muy rápido, el carbono no alcanza a acomodarse, queda atrapado y deforma la red desde adentro, y aparece martensita, una estructura durísima y frágil como el vidrio —la misma que se busca a propósito para hacer un cuchillo y que en una unión es un desastre—. El agua le hace eso a la vez al cordón y a la franja de al lado, la zona afectada por el calor, que es justo donde se rompe la mayoría de las soldaduras que fallan. La grieta puede no aparecer ese día: aparece después, con la pieza fría, montada y cargando. Y conviene saber que la pieza a veces se templa sola sin que nadie le tire nada: una pieza grande y gruesa, o fría por un surazo, o mojada de rocío, o con viento encima, chupa el calor del cordón a una velocidad enorme. Por eso en esas condiciones se trabaja más despacio, no más rápido."
+    },
+    {
+      "id": "por-que-electrodo-revestido",
+      "tipo": "opcion_multiple",
+      "enunciado": "En una casa de Zanja Honda, con poco dinero y trabajando en un galpón abierto, ¿por qué la respuesta realista suele ser electrodo revestido?",
+      "opciones": [
+        "Porque lleva su protección pegada encima, en el revestimiento, mientras que MIG y TIG dependen de una cortina de gas que una brisa se lleva, y sin gas el cordón sale poroso sin que se note hasta que se rompe.",
+        "Porque el equipo es lo más simple y barato —una inversora chica, dos cables y una pinza— y el consumible se compra por kilo en cualquier ferretería y, guardado seco, espera.",
+        "Porque tolera mejor el metal oxidado y sucio que es el que se tiene a mano, aunque limpiar la pieza siga siendo obligatorio.",
+        "Porque es el proceso más versátil de todos y con él se resuelve cualquier trabajo, incluidos el aluminio, la chapa muy delgada y el inoxidable fino, si se baja bastante el amperaje."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras son las razones locales, y ninguna es tradición: viento, plata y repuestos, y material de segunda vida. La cuarta es falsa y es importante que lo sea, porque saber dónde termina un proceso es parte del oficio. El electrodo revestido no hace chapa muy delgada sin agujerearla, no hace aluminio —cuya capa de óxido funde por encima de los 2.000 °C mientras el metal de abajo funde a 660 y se derrumba sin cambiar de color— y no hace trabajo fino en inoxidable. Bajar el amperaje no lo arregla: da un arco inestable y un cordón sin penetración, que se ve bien y no une nada. Cuando aparece un trabajo así, la respuesta madura es unir con pernos o remaches, cambiar el diseño, o pagarle a un taller que tenga el equipo."
+    },
+    {
+      "id": "leer-el-metal-de-mi-casa",
+      "tipo": "abierta",
+      "enunciado": "Sin comprar nada y sin encender ninguna máquina, contá la recorrida que vas a hacer esta semana por tu propia casa —la que sea, tuya o alquilada, con patio o sin patio— para leer el metal que ya tenés. Explicá qué vas a anotar de cada pieza y cómo vas a decidir de qué material es; después elegí una pieza rota o floja que exista de verdad donde vivís y razoná qué le pasó, qué harías y qué no harías con ella. Terminá diciendo qué de todo esto podés hacer solo, qué necesitás acordar con alguien más, y cuándo la respuesta correcta es no soldar.",
+      "respuestaModelo": "Arranco por el inventario, porque no puedo decidir nada sobre un metal que no sé cuál es. Una hoja, un lápiz y una vuelta lenta por la casa: catre, reja de la ventana, portón, escalera, tendedero, el soporte del tanque, la parrilla, el marco de la ventana, la reja del medidor, la moto. De cada cosa anoto tres columnas: qué es, de qué metal creo que es, y con qué prueba lo decidí.\n\nLas pruebas son gratis. El imán primero: si pega fuerte, es acero o fundición; si no pega y la pieza es liviana, aluminio; si no pega y pesa, puede ser un inoxidable de los no magnéticos, bronce o cobre. Después el peso en la mano, que separa el aluminio de todo lo demás porque pesa como un tercio que el acero del mismo tamaño. Después el golpecito: el acero suena con timbre largo y la fundición suena corta y sorda, como una piedra, porque el grafito que tiene adentro se come la vibración. Y por último la superficie: el galvanizado es gris opaco con dibujos que parecen escarcha, la fundición sale de molde y se le nota la piel rugosa, y el inoxidable no cría óxido naranja aunque lleve años a la intemperie. Espero encontrarme con que media casa es galvanizado, porque acá lo es: calamina, tubo de agua, alambre, tanque. Y eso ya me cambia la conducta para el día que tenga máquina, porque el zinc hierve a 907 °C, mucho antes de que el acero funda alrededor de 1.500, y sale como humo blanco que se respira sin toser y da fiebre horas después.\n\nEn la misma vuelta aprovecho para mirar soldaduras que ya existen. La reja tiene cordones a la vista: busco la banda de colores dorados y azules a los costados, porque esa franja es la zona afectada por el calor, la parte que no llegó a fundirse y aun así se calentó muchísimo, y por lo tanto la más frágil del conjunto. Anoto dónde está esa banda en cada unión, porque cuando algo se rompa quiero saber si se rompió ahí o en otro lado.\n\nLa pieza que elijo es el soporte del tanque, que está tomando color naranja en la base, justo donde el fierro toca el piso mojado. Ahí la causa no es la soldadura: es corrosión, y tiene sentido, porque el óxido necesita metal, oxígeno y agua líquida haciendo de conductor, y en esta zona esas tres cosas están juntas casi todo el día entre octubre y abril. Lo que haría es rascar hasta ver metal sano y anotar con fecha cuánto espesor queda, para comparar en seis meses. Lo que no haría es poner un cordón encima del óxido para tapar el problema: una unión hecha sobre metal sucio queda porosa y engaña, porque se ve maciza y por dentro está llena de burbujas.\n\nLa segunda pieza es la parrilla, que tiene una pata rajada. Le hago el golpecito y suena corta y sorda, y la fractura es limpia, sin haberse doblado nada antes de partirse. Eso huele a fundición, y la conclusión es directa: no la sueldo. La fundición se raja al soldarla porque el charco enfría rapidísimo contra la masa fría de al lado, el carbono no vuelve a acomodarse en grafito y forma un compuesto vidrioso y durísimo, y las láminas de grafito le dan a la grieta por dónde empezar. La respuesta razonable es un refuerzo atornillado o reemplazar la pieza.\n\nLo que puedo hacer solo es todo lo anterior: mirar, probar, anotar y decidir. También puedo preparar el rincón desde ahora, aunque no tenga equipo: piso que no sea de madera, nada que arda a varios metros a la redonda, la garrafa de la cocina lejos, y algo con qué apagar fuego. Y si algún día compro electrodos, van desde el primer kilo a un tarro con tapa arriba de un estante, porque el revestimiento absorbe humedad, esa agua entra al baño como hidrógeno y abre una fisura días después, con la pieza fría y guardada.\n\nLo que tengo que acordar con otros es más de lo que parece. Con quien vive conmigo, que nadie levante del banco una pieza recién trabajada, porque entre 200 y 400 °C el acero está gris, se ve igual que frío y quema hasta el hueso, y que quien esté cerca mientras suelde necesita careta: la radiación del arco quema la córnea sin doler y el dolor llega de noche. Con el dueño de casa, si alquilo. Y con los vecinos, porque una máquina se usa por ratos y es de las compras que más sentido tienen entre varios.\n\nY hay casos donde la respuesta correcta es no soldar, aunque tenga el equipo y las ganas. Nunca un recipiente que tuvo combustible, aceite, solvente o pintura: un tambor vacío y hasta lavado conserva vapores en las paredes que explotan con la primera chispa. Nunca una garrafa ni nada que haya estado a presión. Nada de galvanizado en un lugar cerrado. Nada de aluminio con arco común. Y nada en pleno surazo, con la pieza fría, mojada y el viento encima, porque eso endurece el cordón y me fabrica la grieta de la semana que viene. Si aparece una lesión en los ojos, una quemadura seria o fiebre y escalofríos horas después de haber soldado galvanizado, eso se resuelve en el centro de salud, contando que se estuvo soldando.",
+      "criterios": [
+        "Hace un inventario escrito del metal de la casa anotando, para cada pieza, qué material cree que es y con qué prueba lo decidió.",
+        "Usa las cuatro pruebas gratis —imán, peso, sonido y superficie— y explica qué distingue cada una, no solo que existen.",
+        "Reconoce que el galvanizado está por todas partes en esta zona y liga esa observación al zinc que hierve a 907 °C y al humo que produce fiebre horas después.",
+        "Busca la banda de colores al costado de cordones que ya existen y la identifica como la zona afectada por el calor, la parte más frágil del conjunto.",
+        "Elige una pieza real y razona la causa de su falla —corrosión, sobrecarga, mala unión, material frágil— antes de proponer cualquier arreglo.",
+        "Descarta soldar sobre metal oxidado o sucio explicando el mecanismo: el baño se contamina y el cordón queda poroso aunque se vea macizo.",
+        "Detecta una pieza de fundición por sonido y por fractura limpia, y concluye que no la suelda, con el mecanismo del grafito y el enfriamiento rápido.",
+        "Prepara el rincón de trabajo antes de tener equipo y descarta explícitamente soldar dentro de un cuarto cerrado.",
+        "Menciona guardar los electrodos secos en tarro con tapa, ligándolo al hidrógeno y a la fisura que aparece días después.",
+        "Advierte a quienes conviven sobre el metal que se ve frío entre 200 y 400 °C y sobre la careta que necesita cualquiera que esté en el ambiente, no solo quien suelda.",
+        "Identifica con quién hay que acordar: la familia, el dueño de casa si alquila, y los vecinos si la máquina se compra entre varios.",
+        "Nombra al menos tres casos en los que la respuesta correcta es no soldar, incluido el recipiente que tuvo combustible, y sabe cuándo hay que ir al centro de salud."
+      ],
+      "explicacion": "Fijate en que la lección entera se practica sin gastar un peso y sin encender nada: un cuaderno, un imán de heladera y la mano. Lo que se está entrenando no es el pulso, es el criterio, y el criterio es lo que decide el resultado antes de que exista un cordón. Notá también la forma de la respuesta: primero identificar el material, después entender por qué falló, y recién al final decidir qué hacer. Invertir ese orden —soldar primero y averiguar después— es lo que devuelve la misma pieza rota una segunda vez, un dedo más allá. Y notá dónde la lección deja de ser técnica: la careta para quien está mirando, el acuerdo con el dueño de casa, la máquina comprada entre varios y el tambor que no se toca no se resuelven con habilidad, se resuelven hablando con alguien o diciendo que no."
+    }
+  ]
+}

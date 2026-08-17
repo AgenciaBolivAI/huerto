@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "que-ocurre-en-cada-paso",
+      "tipo": "opcion_multiple",
+      "enunciado": "Cada vez que el modelo produce una pieza de texto, ¿qué ocurre realmente por dentro?",
+      "opciones": [
+        "Arma una lista con todas las piezas posibles y, al lado de cada una, un número que dice cuán probable es que sea la que sigue.",
+        "Sortea una pieza entre las candidatas, dando más chances a las de número alto pero dejando que a veces salga una de más abajo.",
+        "Mete la pieza recién escrita otra vez por la entrada y vuelve a hacer el mismo cálculo sobre el texto ya alargado.",
+        "Comprueba en su base de conocimiento si la pieza elegida hace que la frase resulte verdadera antes de escribirla."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen el mecanismo completo: tabla de probabilidades, muestreo y generación autorregresiva. La cuarta es la falsa, y es la que causa todos los malentendidos: no existe ninguna base de conocimiento que se consulte ni ningún paso de comprobación. La tabla tiene una sola columna, y esa columna mide con qué frecuencia esa pieza sigue a un texto parecido, no si el resultado corresponde con el mundo. La verdad no está mal medida dentro del aparato: no está medida en absoluto."
+    },
+    {
+      "id": "por-que-inventa",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué se afirma que inventar es comportamiento normal del sistema y no una falla que alguien vaya a arreglar?",
+      "opciones": [
+        "Porque producir una continuación verosímil es exactamente lo mismo que el modelo hace cuando acierta: no hay un modo alucinación y un modo normal.",
+        "Porque no existe dentro del modelo un inventario de lo que sabe y de lo que no, así que no puede notar cuándo el material le faltaba.",
+        "Porque en toda la cadena —entrenamiento, tokenización, muestreo, ajuste por preferencia— no hay un solo paso que compare lo escrito contra el mundo real.",
+        "Porque a las empresas que los fabrican no les conviene comercialmente corregirlo y por eso lo dejan así."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta y además es una explicación cómoda que impide entender el problema. Sí se trabaja en reducirlo, y de hecho se ha reducido: modelos más grandes, con mejor material, conectados a un buscador o a documentos concretos y ajustados para admitir ignorancia más seguido inventan menos que los de hace unos años. Lo que no se elimina es la propiedad estructural: el sistema siempre produce una continuación para cualquier entrada, y ninguna parte del proceso la contrasta con la realidad. Atribuirlo a mala voluntad comercial lleva a esperar un arreglo que no va a llegar, en vez de construir el criterio propio que sí resuelve el problema."
+    },
+    {
+      "id": "confianza-declarada",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cuando el modelo escribe «estoy seguro de esto», está informando el resultado de una comprobación interna sobre su propia certeza.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la trampa más costosa de todas. Las palabras «estoy seguro» son piezas predichas por el mismo mecanismo que produjo el resto de la respuesta: la frase que resulta verosímil en ese contexto. No hay ningún medidor interno que se esté leyendo. Por eso un modelo puede escribir «con total seguridad» delante de una invención completa y «no estoy del todo seguro» delante de algo perfectamente cierto, sin ninguna contradicción interna. A esto se lo llama falta de calibración de la confianza, y hace tanto daño porque las personas usamos el tono del otro como atajo para decidir cuánto creerle."
+    },
+    {
+      "id": "consecuencias-de-los-tokens",
+      "tipo": "opcion_multiple",
+      "enunciado": "El modelo no trabaja con palabras enteras sino con tokens, pedazos de texto de tamaño variable. ¿Qué consecuencias prácticas tiene eso?",
+      "opciones": [
+        "Cuenta mal las letras de una palabra y falla al escribirla al revés, porque no ve letras sueltas sino bloques.",
+        "Las cuentas largas le salen mal, porque los dígitos también se parten en pedazos y lo que produce es la cadena de dígitos más verosímil, no una suma.",
+        "Los nombres poco frecuentes —yautía, gandul, ají dulce criollo, motacú— quedan partidos en muchos pedazos y se manejan peor que trigo o tomate.",
+        "No puede trabajar en castellano, porque el procedimiento de partir en tokens solo funciona con el inglés."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa: el modelo trabaja perfectamente en castellano. Lo que sí ocurre es más sutil y conviene no confundirlo: el corte en tokens se optimizó para el idioma predominante del material, así que las lenguas menos representadas consumen más pedazos por palabra y gastan más ventana de contexto. Eso encarece y degrada, pero no impide. El problema real de las tres primeras opciones no es el idioma sino la frecuencia: cuantos menos ejemplos vio de algo, más está rellenando en vez de recordando, y por eso la invención se concentra en lo raro, que es justamente donde vive un huerto boliviano."
+    },
+    {
+      "id": "respuestas-distintas",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si la misma pregunta hecha tres veces en conversaciones separadas devuelve tres respuestas que se contradicen, lo más probable es que la aplicación esté fallada.",
+      "respuesta": false,
+      "explicacion": "Falso: está funcionando exactamente como debe. En cada pieza hay un sorteo entre las candidatas, y por eso dos preguntas idénticas dan dos textos distintos. Lo importante es que esa propiedad, que parece molesta, es la herramienta de diagnóstico más barata que existe: cuando el material estaba sólido en el entrenamiento, las tres respuestas se parecen; cuando se contradicen, ahí no hay conocimiento, hay relleno. Repetir la pregunta por separado cuesta dos minutos y no requiere saber nada del tema, así que es la primera comprobación que conviene enseñarle a cualquier vecino."
+    },
+    {
+      "id": "ventana-de-contexto",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es cierto sobre la ventana de contexto y sobre qué se le puede pedir con más confianza?",
+      "opciones": [
+        "Es lo único que la máquina tiene delante en el momento de escribir: funciona como la pizarra del vivero, y no hay cuaderno detrás.",
+        "Un dato que el modelo inventó diez mensajes atrás sigue dentro de la ventana y condiciona con coherencia todo lo que escriba después.",
+        "Pedirle algo sobre un texto que uno mismo le pegó es mucho más seguro que pedirle algo sobre el mundo de memoria, porque en el primer caso el material está delante.",
+        "Todo lo conversado queda guardado dentro del modelo y lo recuerda por su cuenta en la próxima conversación."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa: el modelo no recuerda nada de una conversación a otra. Cuando parece que se acuerda de uno, es porque la aplicación guardó esas notas en algún lado y se las vuelve a pegar dentro de la ventana cada vez. La confusión importa porque lleva a dos errores opuestos: creer que le contamos algo «al modelo» de forma privada y permanente, cuando en realidad lo guarda un servicio; y esperar continuidad donde no la hay, y desconcertarse cuando el modelo contradice en el mensaje treinta lo que se le pidió en el primero, simplemente porque el principio ya salió de la ventana."
+    },
+    {
+      "id": "politica-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Te toca explicarle el tema a una asamblea de vecinos en Rizoma del Sur. Con lo aprendido, escribe: cómo describirías el mecanismo sin jerga; qué política de uso se deduce de ese mecanismo para el proyecto, separando lo que se delega, lo que se comprueba y lo que la máquina no decide nunca; qué dos demostraciones harías en vivo en la reunión; y por qué esta lección es coherente con la misión comunitaria y gratuita del proyecto.",
+      "respuestaModelo": "Empezaría por el mecanismo, porque toda la política sale de ahí y una regla sin mecanismo no se sostiene. Le diría a la asamblea que el aparato hace una sola cosa: mira el texto que tiene delante y calcula qué pedacito viene después con más probabilidad; escribe ese pedacito, lo mete otra vez por la entrada y calcula el siguiente, varios cientos de veces por respuesta. La comparación que usaría es el refrán: a caballo regalado, y la boca sola termina. Nadie necesita saber de caballos para completarlo, y ese es el punto: completar bien el refrán no requiere saber si el refrán es cierto.\n\nDe ahí seguiría con tres cosas. Primero, que aprendió leyendo una montaña de texto escrito por gente, y que ese texto no quedó guardado adentro: quedaron las regularidades del lenguaje y se perdió el detalle de lo que apareció poco, así que puede repetir casi exacto un poema famoso e inventar entero el nombre de un reglamento del barrio. No hay una raya interna que separe lo que recuerda de lo que rellena. Segundo, que en cada pedacito hay un sorteo, y por eso la misma pregunta da respuestas distintas. Tercero, y es lo que más cuesta aceptar, que el tono seguro y amable se entrenó aparte, en una fase donde se les mostraban a personas dos respuestas y se les preguntaba cuál preferían: nadie midió la verdad, se midió la preferencia, y la gente prefiere respuestas completas, seguras y que le den la razón. Conclusión que repetiría dos veces: la seguridad con la que contesta no tiene ninguna relación con que sea cierto, porque salen de dos lugares distintos del proceso. En toda la cadena no hay un paso que compare lo escrito con el mundo, y por eso inventar no es una falla que vayan a arreglar: es el mismo mecanismo funcionando.\n\nLa política del proyecto es un cartel de tres columnas colgado donde se guardan las herramientas. Columna uno, lo que se delega sin miedo porque el error se ve al leerlo: el borrador de una solicitud, las notas de la reunión ordenadas, la traducción de una etiqueta en inglés, un párrafo enredado explicado en palabras simples. La razón no es que ahí el aparato sea más honesto, sino que el material está dentro de la ventana y el trabajo es de forma. Columna dos, lo que se le pide pero se comprueba antes de actuar: cómo se llama técnicamente algo, qué preguntas hacerle a un técnico, qué partes tiene un formulario. Columna tres, lo que no decide nunca: dosis de cualquier producto, que se lee en la etiqueta y punto; diagnóstico sanitario; identificación de una especie que se va a entregar a un vecino; y cualquier ley, plazo, requisito de trámite o precio. Eso se consulta donde corresponde: lo tributario con un contador, lo municipal en la alcaldía, lo sanitario y fitosanitario en el SENASAG, lo de semillas e investigación agrícola en el INIAF. La columna tres es la frontera donde el error se paga con plantas muertas, con un viaje perdido o con plata que nadie tiene de sobra.\n\nLas dos demostraciones en vivo convierten la teoría en experiencia. La primera es el sorteo: tres personas hacen la misma pregunta desde tres conversaciones separadas y se leen las tres respuestas en voz alta, eligiendo algo local y verificable contra lo que el curso ya estableció, como en qué meses llueve acá o cuántos metros cuadrados tiene el terreno. Cuando el grupo escucha tres respuestas seguras y distintas, la explicación deja de ser un discurso. La segunda es la prueba de lo raro: preguntarle por la yautía, el gandul, el ají dulce criollo o el manejo del tajibo con los nombres que se usan acá, y ver cómo la respuesta se desliza hacia otro cultivo, hacia otro país o hacia consejos genéricos, y cómo aparece el calendario del otro hemisferio hablando de primavera donde acá hay lluvias de octubre a abril, seca de mayo a septiembre y surazos. No está fallando: está rellenando lo que casi no vio.\n\nY agregaría la regla de convivencia del grupo de mensajes, porque es donde ocurre el daño real: todo lo que salga de la máquina y se reenvíe va rotulado como no comprobado, porque en dos reenvíos el texto pierde el origen y alguien lo repite como si lo hubiera dicho el técnico.\n\nEsto es coherente con la misión por dos razones. La herramienta ya está en los teléfonos del barrio: prohibirla no la saca de ahí, solo garantiza que se use sin criterio, y lo único que el proyecto puede repartir gratis es justamente el criterio. Y está la asimetría: quien la maneja con criterio redacta en veinte minutos lo que antes le llevaba una tarde, y quien la maneja sin criterio desinforma a veinte personas a la misma velocidad, con un tono que nadie se anima a discutir. Hay un cierre que le da vuelta al miedo: lo que se sabe en Rizoma del Sur —qué germinó en qué lote, con qué sustrato, qué mes se perdió todo por el agua— no está adentro de ninguna máquina del mundo, y por eso el cuaderno de registro es el único lugar donde vive ese conocimiento.",
+      "criterios": [
+        "Describe el mecanismo central sin jerga: el modelo calcula la pieza siguiente, la agrega y repite, y la explica con una comparación entendible por alguien sin estudios previos.",
+        "Explica que el texto de entrenamiento no queda guardado adentro y que por eso no hay una separación interna entre lo que recuerda y lo que rellena.",
+        "Menciona el muestreo y deduce de él que la misma pregunta puede dar respuestas distintas, sin llamarlo falla.",
+        "Explica la ventana de contexto o su consecuencia: el modelo solo ve lo que tiene delante, se olvida del principio y arrastra sus propios errores.",
+        "Nombra la fase de ajuste por preferencia humana y señala que en ella se midió preferencia y no verdad, incluida la tendencia a dar la razón.",
+        "Enuncia con claridad que la seguridad del tono no tiene relación con la verdad del contenido, y lo justifica diciendo que ningún paso del proceso compara lo escrito con el mundo.",
+        "Afirma que inventar es comportamiento normal del sistema, reducible pero no eliminable, y no un defecto que alguien vaya a corregir.",
+        "Separa con criterio explícito lo que se delega (trabajo de forma, con el material dentro de la ventana) de lo que se afirma sobre el mundo de memoria.",
+        "Incluye la columna prohibida completa: dosis, diagnóstico sanitario, identificación de especie para entregar, y cualquier ley, plazo, requisito o precio.",
+        "Deriva a la autoridad o al profesional que corresponde en Bolivia sin inventar normas, plazos ni cifras concretas.",
+        "Propone las dos demostraciones en vivo —la repetición de la misma pregunta y la prueba con nombres locales o con el calendario de lluvias y surazos— con un criterio verificable contra lo que el curso ya estableció.",
+        "Cierra conectando con la misión comunitaria y gratuita: el criterio es lo que se reparte, la asimetría entre usar con y sin criterio, y el valor del registro propio de Rizoma que ninguna máquina tiene."
+      ],
+      "explicacion": "La respuesta buena no es la que enumera reglas, sino la que las deduce del mecanismo: cada prohibición del cartel tiene que poder justificarse señalando qué parte del proceso no existe. Quien solo memoriza «no le creas las leyes» se queda sin saber por qué sí puede confiarle una traducción, y termina desconfiando de todo por igual, que desperdicia la herramienta tanto como confiar en todo. El punto que separa una respuesta completa de una incompleta es haber entendido que la seguridad del tono y la verdad del contenido vienen de dos lugares distintos del proceso: el tono se entrenó a propósito midiendo preferencia humana, y la verdad no se entrenó en ninguna parte."
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+Este es el módulo donde el perfil del alumno deja de ser un obstáculo y pasa a ser una ventaja. Todo lo
+que viene —lectura de sensores, control por umbral, registro de series temporales, tratamiento de
+imágenes— es territorio conocido.
+
+Y precisamente por eso conviene empezar con una advertencia: **el riesgo aquí no es no saber
+programarlo, es automatizar lo que no había que automatizar.** El módulo entero está construido para
+evitar eso, y termina con una lección dedicada exclusivamente a qué no tocar.
+
+Pero antes hay que entender cómo funciona de verdad cada pieza.
+
+## La cadena completa
+
+<Diagrama
+  src="la-cadena-completa.webp"
+  alt="Cuatro cajas rectangulares de esquinas redondeadas en una única fila horizontal unidas por tres flechas terracota gruesas que apuntan a la derecha, formando una cadena. La primera caja contiene una sonda de dos púas clavada en un montículo de tierra. La segunda contiene una placa de circuito pequeña con un chip encima. La tercera contiene un cuerpo de válvula con una bobina arriba. La cuarta contiene un gotero soltando una gota sobre una planta. Cuatro franjas de rótulo, una bajo cada caja, que dicen de izquierda a derecha: MIDE; DECIDE; ABRE; RIEGA. Arriba, LA CADENA COMPLETA."
+  pie="Cuatro eslabones. Cualquiera de los cuatro puede fallar, y tres de ellos fallan en silencio."
+/>
+
+Todo riego automático, por sofisticado que sea, son cuatro piezas en serie:
+
+**Un sensor** convierte una propiedad física —humedad, temperatura, luz— en una señal eléctrica.
+
+**Un controlador** lee esa señal, aplica una regla y decide.
+
+**Un <Termino slug="actuador">actuador</Termino>** —normalmente
+una <Termino slug="valvula-solenoide">válvula solenoide</Termino>— convierte la decisión eléctrica en
+un movimiento físico.
+
+**Y el sistema hidráulico** hace el trabajo real, que es el del módulo de riego.
+
+<Dato>
+Conviene fijarse en dónde está el conocimiento en esa cadena: **el sensor no sabe nada y la válvula
+tampoco.** Toda la inteligencia está en la regla, y la regla la escribe una persona.
+
+Un sistema automático **no decide mejor que tú: decide más veces y a las tres de la mañana.** Esa es su
+única ventaja real, y es una ventaja grande, pero no es la que la gente imagina.
+
+Si la regla es mala, el sistema aplica la regla mala con una constancia admirable.
+</Dato>
+
+## Qué mide un sensor de humedad
+
+Aquí hay que ser preciso, porque es el punto donde más dinero se tira en un vivero.
+
+**Un sensor resistivo** son dos electrodos separados; mide la resistencia eléctrica entre ellos, que
+baja cuando hay agua con sales disueltas. Es el sensor de dos púas metálicas que aparece en cualquier
+kit barato.
+
+**Y tiene tres defectos que lo hacen inservible a la intemperie:**
+
+**Se corroe.** Pasar corriente continua por dos metales en un medio húmedo con sales es exactamente el
+montaje de una electrólisis. El electrodo se disuelve, y en semanas o meses de riego constante deja de
+medir bien.
+
+**Mide sales, no agua.** La conductividad depende de cuántos iones haya disueltos. Un sustrato
+fertilizado y uno lavado con la misma humedad dan lecturas distintas, y con fertirriego eso es un
+problema serio.
+
+**Y depende del contacto.** Si el sustrato se contrae al secarse y se separa del electrodo, la lectura
+se desploma sin que la humedad haya cambiado.
+
+<Diagrama
+  src="no-todo-lo-que-mide-sirve.webp"
+  alt="Dos paneles lado a lado, cada uno mostrando un corte de suelo con la superficie arriba. Panel izquierdo, marcado con una cruz roja en la esquina: dos púas metálicas desnudas clavadas en el suelo, con una costra corroída roja dibujada comiéndose el metal justo donde entra en la tierra, y pequeñas escamas rojas desprendiéndose alrededor. Debajo, una franja de rótulo que dice DOS CLAVOS SE COMEN SOLOS. Panel derecho, marcado con una tilde verde en la esquina: una pala de sonda lisa, plana y sellada clavada en el suelo, sin metal expuesto, dibujada limpia e intacta, con varias líneas curvas que salen de sus caras hacia el suelo circundante para sugerir un campo invisible. Debajo, una franja que dice UNA SONDA SELLADA DURA. Arriba, NO TODO LO QUE MIDE SIRVE."
+  pie="La diferencia no es de precisión: es de si el sensor sigue existiendo dentro de seis meses."
+/>
+
+Un <Termino slug="sensor-capacitivo">sensor capacitivo</Termino> funciona de otra forma. Dos placas
+conductoras **selladas dentro del plástico**
+forman un condensador, y el sustrato que las rodea actúa como dieléctrico. Como el agua tiene una
+constante dieléctrica muy alta comparada con el aire y con las partículas del sustrato, **la capacidad
+del conjunto cambia mucho con la humedad.** El circuito mide esa capacidad a alta frecuencia.
+
+Las tres ventajas se siguen directamente:
+
+**No hay metal en contacto con el sustrato**, así que no hay corrosión electrolítica.
+
+**Responde al agua y no a las sales**, porque lo que mide es una propiedad del medio y no su
+conductividad iónica.
+
+**Y funciona a través de una capa de plástico**, así que es mucho más robusto.
+
+<Analogia>
+La diferencia entre los dos es la misma que entre **medir la temperatura de un servidor por su consumo
+eléctrico o con un sensor térmico.**
+
+Las dos señales correlacionan, y por eso el método indirecto parece funcionar al principio. Pero la
+primera responde a media docena de cosas a la vez, así que **cuando cambia no sabes por qué ha
+cambiado**, y una correlación que se rompe silenciosamente es peor que no tener medida.
+
+Y hay una segunda parte que también se traslada: **el sensor barato no falla, se degrada.** No hay un
+momento en que deje de responder; simplemente sus lecturas se van alejando de la realidad. Un fallo
+limpio se detecta; una deriva lenta se convierte en decisiones malas durante meses.
+</Analogia>
+
+## Temperatura y luz
+
+Los otros dos sensores son mucho menos problemáticos, pero tienen su propia trampa.
+
+**Temperatura y humedad del aire** se miden con sensores digitales integrados que entregan un valor ya
+convertido. Son baratos, razonablemente fiables y **el error habitual no es el sensor sino dónde se
+pone**: al sol directo mide la temperatura del propio encapsulado, no la del aire, y puede dar varios
+grados de más. Va a la sombra, ventilado y a la altura de las plantas.
+
+**La luz** se mide con una fotorresistencia o un fotodiodo, y aquí hay que entender qué se está midiendo
+de verdad. Un sensor barato responde a la **intensidad luminosa tal como la percibe el ojo humano**, que
+no es lo mismo que la radiación útil para la fotosíntesis. Sirve perfectamente para saber si es de día,
+si el cielo está cubierto o si la malla se rompió; **no sirve para calcular producción de biomasa.**
+
+Es una distinción del módulo de fundamentos: la planta usa unas longitudes de onda concretas, y un
+sensor calibrado para el ojo humano pesa el verde mucho más de lo que la planta lo aprovecha.
+
+## Cómo abre una válvula
+
+<Diagrama
+  src="como-abre-una-valvula.webp"
+  alt="Un corte grande y sencillo del cuerpo de una válvula visto en sección en el centro, con una bobina de alambre enrollada alrededor de un cilindro vertical apoyado encima. Dentro del cilindro hay un vástago pequeño dibujado a media altura, y una flecha curva fina indica que el vástago sube. Debajo de la válvula, un canal horizontal ancho que atraviesa el cuerpo aparece abierto, con agua fluyendo por él en azul pálido de izquierda a derecha. Tres franjas de rótulo con líneas de llamada finas: una a la bobina dice LA BOBINA TIRA DEL VÁSTAGO; otra a la pequeña abertura que queda justo bajo el vástago dice ESO ABRE UN AGUJERO CHICO; y otra al canal ancho con agua dice Y LA PRESIÓN HACE EL RESTO. Arriba, CÓMO ABRE UNA VÁLVULA."
+  pie="La bobina no mueve el agua: solo abre un orificio piloto y deja que la presión de la línea haga la fuerza."
+/>
+
+Una **válvula solenoide** es un electroimán acoplado a un obturador. Al pasar corriente por la bobina se
+genera un campo magnético que tira de un vástago ferromagnético, y ese vástago destapa un orificio.
+
+Y aquí está el detalle que casi nadie explica y que decide si tu válvula va a funcionar:
+
+**Las válvulas de riego habituales son de acción indirecta o servoasistidas.** El solenoide **no tiene
+fuerza suficiente para abrir contra la presión de la línea**; lo que hace es destapar un orificio piloto
+muy pequeño. Al abrirse ese orificio, la presión que había por encima de la membrana se escapa, el
+equilibrio se rompe y **es la propia presión del agua la que empuja la membrana y abre el paso grande.**
+
+La consecuencia práctica es inmediata y sorprende a mucha gente: **estas válvulas necesitan una presión
+mínima para funcionar.** Por debajo de ella, la bobina hace clic y el agua no pasa. Cada modelo indica
+su presión mínima de trabajo, y en un sistema por gravedad —como el que sale del tanque elevado del
+módulo de riego— **hay que comprobar ese número antes de comprar**, porque una altura de un par de
+metros puede no bastar.
+
+<Advertencia>
+Tres cosas más sobre válvulas que evitan errores caros:
+
+**La bobina consume mientras esté abierta.** Una válvula normalmente cerrada mantiene la corriente todo
+el tiempo que dura el riego, y eso importa mucho si la alimentación es solar y con batería.
+
+**Existen las válvulas biestables**, que consumen solo un pulso breve para abrir y otro para cerrar, y
+mantienen su posición sin corriente. Son la elección correcta en sistemas a batería, y su contrapartida
+es que **si pierdes el control con la válvula abierta, se queda abierta.**
+
+**Y la bobina es una carga inductiva.** Al cortar la corriente, el campo magnético que colapsa genera un
+pico de tensión inverso que puede destruir el transistor o pegar los contactos del relé. **Hace falta un
+diodo de rueda libre** en paralelo con la bobina en corriente continua, o una red supresora en alterna.
+Este es el error de electrónica más común en estos montajes y no da síntomas hasta que algo se quema.
+
+**Y nunca uses la tensión de red directamente si puedes evitarlo.** Hay válvulas de 12 o 24 voltios
+pensadas exactamente para esto. Trabajar con 220 V en un entorno mojado es una mala idea, y todo lo del
+módulo de construcción sobre diferencial y puesta a tierra sigue aplicando.
+</Advertencia>
+
+## Lo que pasa cuando falla
+
+<Diagrama
+  src="que-pasa-cuando-falla.webp"
+  alt="Una tubería de riego horizontal que cruza todo el ancho, con un cuerpo de válvula sobre ella. De la válvula baja una flecha roja gruesa hacia el suelo, donde se dibuja un gran charco de agua que se extiende y ahoga varias plantas pequeñas en maceta volcadas. Sobre la tubería hay un símbolo de batería pequeño tachado con una cruz roja para indicar que se ha ido la energía. A la derecha, lejos de la inundación, hay dibujada aparte una llave de paso manual sobre la tubería, cerrada y con una tilde verde al lado. Tres franjas de rótulo con líneas de llamada finas: una a la batería tachada dice SE FUE LA LUZ; otra al charco dice LA VÁLVULA QUEDÓ ABIERTA; y otra a la llave manual dice POR ESO VA UNA LLAVE MANUAL. Arriba, QUÉ PASA CUANDO FALLA."
+  pie="Un fallo de energía no es hipotético aquí. Lo que decide el daño es en qué estado queda la válvula."
+/>
+
+Y aquí está la parte de ingeniería que este módulo no va a dejar de repetir.
+
+Un sistema automático tiene **modos de fallo**, y hay que decidir a propósito qué pasa en cada uno,
+porque si no se decide, el sistema decide solo y normalmente elige mal.
+
+**Se corta la energía con la válvula abierta.** Una válvula normalmente cerrada se cierra sola, que es
+el comportamiento seguro. Una biestable se queda como estaba, que puede significar **el tanque entero
+vaciándose sobre un bancal.**
+
+**El sensor se estropea y devuelve un valor absurdo.** Si la regla dice «riega cuando la humedad esté
+por debajo de X» y el sensor roto devuelve cero, el sistema riega para siempre. **Todo sensor necesita
+un rango de validez**: un valor fuera de él no significa «riega mucho», significa «el sensor está
+roto».
+
+**El controlador se cuelga.** Sin protección, se cuelga con la válvula en el estado en que estuviera.
+
+**Y la línea se rompe.** El sistema seguirá abriendo la válvula puntualmente, y el agua saldrá por
+donde no debe hasta que alguien lo vea.
+
+De ahí salen tres reglas de diseño que valen para todo el módulo:
+
+**Límite de tiempo por riego, siempre.** Ningún riego puede durar más de un máximo fijado por hardware
+o por software, independientemente de lo que digan los sensores. Es la red de seguridad que atrapa
+todos los fallos anteriores a la vez.
+
+**Llave manual en serie.** Un grifo normal antes de la válvula automática, para poder cerrar todo sin
+depender de nada eléctrico. Cuesta poco y es lo que salva el vivero un domingo.
+
+**Y <Termino slug="fallo-seguro">fallo hacia el estado seguro</Termino>.** En un vivero, con las
+arcillas expansivas 2:1 y el riesgo de asfixia radicular del módulo de suelo, **el estado seguro es
+cerrado.** Es mejor que el sistema no
+riegue —y las plantas pasen unas horas de estrés recuperable— a que riegue sin parar y las ahogue.
+
+<Analogia>
+Es el mismo criterio que se aplica al diseñar cualquier proceso que actúa sobre el mundo real: **ante
+la duda, no actúes.**
+
+Un proceso que se queda sin hacer nada es un incidente; un proceso que sigue actuando con datos
+corruptos es un desastre. Y la diferencia entre ambos casos suele ser una comprobación de rango de tres
+líneas que nadie escribió porque «el sensor no va a devolver eso nunca».
+</Analogia>
+
+<AplicarRizoma>
+**Rizoma automatiza el riego por etapas, y la primera etapa no lleva sensores.**
+
+**Se empieza por un temporizador con válvula, y nada más.** Es la automatización que más problema
+resuelve con menos que puede fallar: elimina la obligación de estar presente a una hora fija, que es
+justamente el cuello de botella que identificó el módulo anterior. Los sensores vienen después, cuando
+haya datos de la libreta que digan qué corregir.
+
+**Todos los sensores de humedad son capacitivos y sellados**, nunca de dos púas metálicas. Con riego
+diario, fertirriego y un clima húmedo, un sensor resistivo se corroe, mide sales en lugar de agua y
+además pierde contacto cuando el sustrato se contrae. No es que sea menos preciso: es que deja de
+existir.
+
+**El sensor de temperatura y humedad del aire va a la sombra, ventilado y a la altura de las plantas.**
+Al sol mide su propia carcasa.
+
+**El sensor de luz sirve para vigilar la malla y saber si el día estuvo cubierto**, no para calcular
+producción. Esa distinción está en el módulo de fundamentos y conviene no olvidarla.
+
+**Antes de comprar válvulas hay que comprobar la presión mínima de trabajo contra la altura real del
+tanque elevado.** El sistema es por gravedad, y una válvula servoasistida que necesite más presión de
+la que da la plataforma hará clic sin abrir. Es el error que más tiempo hace perder.
+
+**Si la alimentación es solar, la elección son válvulas biestables**, que consumen solo un pulso. Pero
+entonces hay que asumir que se quedan como estaban al perder el control, y por eso la llave manual y
+el límite de tiempo dejan de ser opcionales.
+
+**Diodo de rueda libre en toda bobina de continua**, sin excepción. Es el fallo de electrónica más
+común aquí y no avisa hasta que algo se quema.
+
+**Válvulas de baja tensión, 12 o 24 voltios**, nunca red directa. El entorno está mojado y todo lo del
+módulo de construcción sobre diferencial y puesta a tierra sigue vigente.
+
+**Y las tres reglas de fallo son obligatorias en cualquier montaje**: límite de tiempo por riego, llave
+manual en serie, y fallo hacia cerrado. En un suelo con arcillas expansivas y riesgo de asfixia
+radicular, unas horas sin riego son recuperables y un riego continuo de una noche no lo es.
+
+**Todo sensor lleva rango de validez.** Un valor fuera de rango significa «el sensor está roto», no
+«riega más». Sin esa comprobación, un sensor averiado riega hasta ahogar el lote.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El material electrónico básico —placas, sensores, relés, fuentes— se consigue en Santa Cruz sin
+dificultad**, y también por importación. La calidad es muy variable y conviene comprar dos unidades de
+cada sensor para poder comparar lecturas: dos sensores que discrepan avisan de un problema que uno solo
+oculta.
+
+**El clima local es exigente con la electrónica.** Humedad alta durante la temporada de lluvias,
+temperaturas elevadas y polvo en la seca. Todo va en caja estanca con prensaestopas hacia abajo, y las
+uniones de cable fuera de la caja son el punto por donde entra el agua. La lección de construcción
+sobre instalación eléctrica ya establecía el criterio.
+
+**Los cortes de energía son un modo de fallo real, no teórico**, y se combinan con el surazo y las
+lluvias fuertes. Diseñar suponiendo alimentación continua es diseñar mal aquí, y refuerza el argumento
+de la alimentación solar y de las reglas de fallo seguro.
+
+**Las hormigas y los roedores muerden cables**, y en un entorno tropical eso ocurre. Cable protegido en
+conducto o enterrado en manguera es más barato que buscar una avería intermitente en 3.666 m².
+
+**Y hay una alternativa que conviene tener presente antes de automatizar nada eléctrico**: la
+automatización hidráulica. Un flotador mecánico en el tanque, un regulador de presión, un temporizador
+mecánico de riego. No tienen firmware, no se cuelgan y no dependen de la energía. En un vivero pequeño
+resuelven una parte grande del problema y hay que descartarlos a propósito, no por olvido.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya sabemos qué hay dentro de cada pieza. Falta la pregunta incómoda, que es de qué sirve realmente el
+número que devuelve un sensor: **un valor de humedad no significa nada por sí mismo**, y usarlo como si
+significara algo es la forma más rápida de automatizar mal. Es la lección siguiente.

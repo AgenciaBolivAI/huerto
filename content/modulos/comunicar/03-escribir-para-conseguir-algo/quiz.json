@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "p1",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un mensaje escrito tiene que llevar dentro su propio contexto, en lugar de apoyarse en lo que ya conversaron?",
+      "opciones": [
+        "Del otro lado no hay memoria de la conversación: quien lee tiene otros asuntos abiertos y el tuyo no está cargado en su cabeza.",
+        "Cada duda que dejas abierta obliga a una pregunta y a una respuesta, y ese ciclo de ida y vuelta dura lo que dure el canal más lento.",
+        "El tono que el texto no lleva lo rellena el lector, y ante una señal ambigua tiende a elegir la lectura que lo protege.",
+        "Si el mensaje es bien corto, el otro no alcanza a malinterpretarlo, así que la brevedad reemplaza al contexto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son las razones del canal asincrónico: la petición llega sin estado, la duda cuesta un ciclo entero del canal y el hueco de tono lo rellena el lector con sesgo de negatividad. La cuarta es incorrecta y confunde dos cosas distintas: un mensaje autocontenido suele ser más corto que el malo, pero no porque sea corto es autocontenido. «Sobre lo que hablamos, avíseme» es brevísimo y no se puede contestar; lo que evita el malentendido no es la falta de palabras sino que estén las cinco piezas —quién eres, qué necesitas, para cuándo, qué pasa después y cómo contestarte."
+    },
+    {
+      "id": "p2",
+      "tipo": "opcion_multiple",
+      "enunciado": "Tienes que pedirle algo por WhatsApp a un cliente que hace meses que no te escribe. ¿Qué decisiones de armado son correctas?",
+      "opciones": [
+        "El pedido va en las primeras líneas, porque quien abandona la lectura a la mitad no rechazó tu pedido: nunca supo que existía.",
+        "El pedido se formula de modo que se pueda contestar con un sí, con un no o con un acto concreto, y no con «bueno».",
+        "Si tienes tres cosas que pedir, van en tres mensajes separados, para que cada una lleve su propio estado de pendiente o resuelta.",
+        "Conviene cerrar con «quedo a la espera de su pronta respuesta», que deja el pedido abierto sin presionar a nadie."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son la pirámide invertida, el pedido accionable y un pedido por mensaje. La cuarta es incorrecta porque esa fórmula es exactamente lo contrario de un pedido accionable: suena educada y no pide nada que se pueda contestar, así que la respuesta natural es no contestar. Comparada con «¿le sirve que empiece el lunes 3 a las siete?», deja al otro con la tarea de inventar qué se espera de él, y esa tarea —costo de respuesta— es la que hace que el mensaje se posponga."
+    },
+    {
+      "id": "p3",
+      "tipo": "verdadero_falso",
+      "enunciado": "Meter los tres pedidos que tienes en un solo mensaje es más eficiente, porque ahorra notificaciones y el otro los ve todos juntos.",
+      "respuesta": false,
+      "explicacion": "Lo que pasa en la práctica es que el otro contesta el más fácil de los tres, siente que ya te contestó y los otros dos quedan muertos sin que nadie los haya rechazado; y encima ya no puedes reclamar sin parecer pesado, porque técnicamente sí te respondió. Es el mismo error que meter tres operaciones en un solo endpoint y devolver un único código de estado: no sabes cuál falló y no puedes reintentar la parte rota sin repetir la que salió bien. Un pedido por mensaje le da a cada uno su propio estado —pendiente, aceptado, rechazado— y te deja reclamar exactamente el que quedó abierto."
+    },
+    {
+      "id": "p4",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a presentar una nota en una oficina pública para pedir una autorización. ¿Qué corresponde hacer?",
+      "opciones": [
+        "Antes de escribir nada, ir o llamar a preguntar qué formato piden, a qué cargo se dirige, cuántas copias y qué hay que adjuntar.",
+        "Dirigirla al cargo y no a la persona, porque el cargo dura y la persona cambia.",
+        "Cerrar con nombre completo, número de documento de identidad, teléfono y dirección o correo, y firmar todas las copias.",
+        "Bajar de internet un modelo con las fórmulas solemnes de rigor, porque una nota sin ellas no tiene validez ante una autoridad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son la forma general que vale en cualquier ventanilla y el orden que ahorra viajes: preguntar primero, escribir después. La cuarta es incorrecta por dos motivos. Primero, porque el requisito inventado: ni este curso ni un modelo de internet saben qué formato pide esa oficina en concreto, y eso varía de una a otra y cambia con las gestiones. Segundo, porque copiar una fórmula que no entiendes te expone a usarla mal, mientras que una nota clara y ordenada se atiende igual: quien decide sobre tu asunto también lee en diagonal."
+    },
+    {
+      "id": "p5",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si entregaste la nota en persona y quien te atendió en la ventanilla fue amable y te dijo que la iban a hacer llegar, ya no hace falta llevarse una copia con la señal de recibido.",
+      "respuesta": false,
+      "explicacion": "Un papel entregado sin constancia es casi un papel no entregado. Meses después el expediente puede haberse traspapelado, la persona que te atendió puede ya no trabajar ahí, y te van a decir de buena fe «acá no llegó nada» diciendo la verdad, porque de verdad no llegó a ese escritorio. El mecanismo general es siempre el mismo: llevas dos ejemplares, entregas uno y pides que te devuelvan el otro con la señal de recibido que use esa oficina; cómo se llama esa señal y qué forma tiene se pregunta ahí mismo, no se supone. Y conviene anotar la fecha, la hora y el nombre de quien te atendió, que es lo que te permite volver y retomar en vez de empezar de cero."
+    },
+    {
+      "id": "p6",
+      "tipo": "opcion_multiple",
+      "enunciado": "Alguien te dice que no manda mensajes escritos ni presenta notas porque escribe con faltas y le da vergüenza. ¿Qué es correcto contestarle?",
+      "opciones": [
+        "Las faltas hacen ruido en el canal —gastan atención y un poco de credibilidad— pero casi nunca impiden entender.",
+        "Escribir en frases cortas quita la mitad de las dudas, porque las faltas de puntuación y concordancia viven dentro de las frases largas.",
+        "Lo único verdaderamente caro son los nombres propios, los números y las fechas, y esos se revisan aparte al final.",
+        "Mientras no esté seguro de escribir sin faltas, lo prudente es pedir todo hablando y dejar que otro escriba por él."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras separan lo que cuesta poco de lo que cuesta caro y dan herramientas concretas. La cuarta es incorrecta y es justamente la trampa que hay que desarmar: un mensaje claro con tres faltas consigue el trabajo, y un mensaje que no se mandó por vergüenza no consigue nada nunca. Además, quien no escribe termina dependiendo de que otro escriba por él, con lo que eso cuesta en tiempo, en privacidad y en pedidos que nunca se hacen. Existen el dictado por voz, el corrector, alguien que relea y las plantillas propias: ninguna de esas soluciones exige dejar de pedir."
+    },
+    {
+      "id": "p7",
+      "tipo": "abierta",
+      "enunciado": "Elige un pedido real que tengas pendiente ahora mismo: cobrarle a un cliente, pedirle a un vecino que arregle algo que te afecta, solicitar una autorización o un permiso en una oficina, o pedirle algo a un familiar. Escribe el plan completo: por qué canal lo mandas y por qué ese, el texto tal como lo vas a mandar, cómo lo revisas antes de enviarlo, qué constancia te queda y qué haces si no te contestan.",
+      "respuestaModelo": "Mi pedido pendiente es que la junta vecinal autorice poner una mesita los sábados en la esquina de la plaza para vender plantines y verdura. Es un pedido a una organización, no a un amigo, así que el canal no puede ser solo un mensaje: va a haber que dejar un papel. Pero antes de escribir nada, el primer paso es ir a preguntar. Voy un sábado temprano, pregunto a quién se dirige la nota —al cargo, porque la persona cambia—, cuántas copias piden, si hay que adjuntar algo y en qué horario reciben. Anoto todo en el cuaderno junto con el nombre de quien me atendió. Eso no es prolijidad: desde Zanja Honda cada viaje cuesta pasaje y medio día, y un viaje fallido por una copia que faltaba cuesta el doble.\n\nCon eso escribo la nota en una hoja. Arriba lugar y fecha, el destinatario por su cargo y una referencia de una línea que diga de qué se trata. El cuerpo en tres párrafos cortos: quién soy y en qué calidad escribo, cuál es el hecho, y qué pido exactamente. Y la petición redactada de modo que se pueda contestar con un sí o con un no tal como está escrita: «Solicito autorización para instalar una mesa de venta de plantines en la acera norte de la plaza, los sábados de siete a doce, de mayo a julio». No pongo «solicito una respuesta favorable a nuestra situación», porque eso no se puede aprobar y lo único que se puede responder es «vuelva el mes que viene». Cierro con nombre completo, número de documento, teléfono y dirección, que es lo que permite que me contesten y lo que más se olvida, y firmo todas las copias, no solo la que se queda ella.\n\nAntes de imprimirla la releo en voz alta. Leyendo con los ojos mi cabeza autocompleta lo que ya sabe y no ve las palabras que faltan; leyéndola en voz alta, donde me trabo hay algo mal escrito y donde me falta el aire va un punto. Después corto: fuera el «espero que se encuentren bien, me dirijo a ustedes para ver si sería posible» y todo lo que repite el párrafo anterior. Reviso aparte, uno por uno, los nombres propios, los números y las fechas, porque una falta en un adverbio no cuesta nada y un dígito cambiado en mi teléfono convierte una respuesta favorable en una respuesta que nunca me llega. Como no estoy seguro de mi ortografía, escribo con frases cortas —ahí es donde se van la mitad de las dudas—, uso el dictado por voz y el corrector, y se la hago leer a mi hija antes de imprimir: eso no es ignorancia, es control de calidad.\n\nLlevo dos ejemplares. Entrego uno y pido que me devuelvan el otro con la señal de recibido que esa oficina use; cómo se llama y qué forma tiene lo pregunto ahí, no lo supongo. Anoto fecha, hora y nombre de quien recibe, y antes de irme pregunto dos cosas: en cuánto tiempo suele haber respuesta y con quién hay que hablar para saber cómo va. Al llegar a casa fotografío la copia sellada y la guardo en una carpeta del teléfono con el nombre empezado por la fecha al revés, más el papel en la carpeta de cartón, porque aquí el papel se moja y se lo comen los bichos.\n\nEn paralelo mando el aviso por WhatsApp al dirigente, que es el canal escrito que de verdad se lee, y ahí aplico las cinco piezas: quién soy y de qué me conoce en la primera línea, qué presenté, cuándo lo presenté, qué pasa después y una pregunta que se conteste con un sí. Un solo pedido en ese mensaje: si además necesito la llave del portón, eso va en otro mensaje otro día, porque si mando los dos juntos me va a contestar el fácil y el otro queda muerto.\n\nSi no contestan, el silencio no es un no: casi siempre es una bandeja llena. A la semana mando un mensaje nuevo y más corto, no un reenvío, con quién soy, el pedido en una línea y una fecha. Espacio los recordatorios y pongo un límite de dos o tres; después voy en persona con la copia sellada en la mano, que es la que hace que la conversación empiece en «acá está» y no en «yo creo que presenté algo». Y si el tema se pone delicado o hay que negociar condiciones, no lo discuto por escrito: llamo o voy, y después mando las tres líneas que dejan por escrito lo que acordamos.",
+      "criterios": [
+        "Elige la situación propia del lector —casa, taller, barrio o familia— y no un caso genérico ni del vivero.",
+        "Justifica el canal según la regla de que lo que hay que recordar va escrito, lo que hay que entender va hablado y lo que hay que acordar va cara a cara.",
+        "Si el pedido va a una institución, dice explícitamente que primero va a preguntar en la ventanilla qué pide esa oficina, sin inventar formato, requisitos ni plazos.",
+        "El texto que redacta incluye las cinco piezas: quién es y de qué lo conocen, qué necesita, para cuándo con su motivo, qué pasa después y cómo contestarle.",
+        "Coloca el pedido en las primeras líneas y usa una primera frase que diga de qué se trata, en lugar de un saludo vacío.",
+        "Formula una petición accionable, contestable con un sí, un no o un acto concreto, y evita fórmulas como «quedo a la espera de su pronta respuesta».",
+        "Manda un solo pedido por mensaje y explica qué haría con los pedidos adicionales.",
+        "Baja el costo de respuesta: adjunta el dato que el otro tendría que buscar o propone opciones concretas en vez de pedir que invente una.",
+        "Ajusta el registro al destinatario —usted y frases completas para lo institucional— sin copiar fórmulas solemnes que no entiende.",
+        "Revisa antes de enviar: relectura en voz alta, recorte de lo que sobra y control aparte de nombres propios, números y fechas.",
+        "Se queda con constancia: dos ejemplares y copia con la señal de recibido, o la conversación guardada, más fotografía y archivo con la fecha al revés en el nombre.",
+        "Planifica el seguimiento: el silencio no es un no, mensaje nuevo y más corto en vez de reenvío, recordatorios espaciados con un límite y un cierre del asunto."
+      ],
+      "explicacion": "La pregunta obliga a recorrer la lección en el orden en que se usa de verdad. Primero la elección del canal y, si hay institución de por medio, el paso que casi nadie da: preguntar antes de escribir, que es también donde se sostiene la honestidad —el formato, las copias y los plazos concretos no salen de un curso, salen de esa ventanilla—. Después el armado, que es donde se juega el resultado: las cinco piezas para que el escrito sea autocontenido, el pedido arriba porque el lector no está cautivo, uno solo por mensaje para que cada uno tenga su propio estado, y accionable para que exista una respuesta posible. Luego la revisión, que es el paso más rentable y el que más se salta, con la relectura en voz alta y el control aparte de nombres, números y fechas, que son el único error caro. Y al final la constancia y el seguimiento, que son lo que convierte un pedido en un trámite vivo en vez de en un papel que nadie recuerda haber recibido."
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+La lección anterior te dejó un método: reproducir el fallo antes de tocar nada, cambiar una sola cosa
+a la vez, partir el programa por la mitad, imprimir el estado. Ese método resuelve la enorme mayoría
+de los problemas de quien empieza, pero no todos y no siempre el mismo día. Llega un punto —a veces a
+los veinte minutos, a veces a la tercera tarde— en que se agota: ya reprodujiste el fallo, ya
+acorralaste la línea, ya viste el estado, y sigues sin entender por qué esa línea hace eso.
+
+Ahí se pide ayuda, y pedir ayuda es una técnica con reglas, no un gesto de rendición. Esta lección
+trata dos cosas que parecen una y no lo son: **cómo conseguir una respuesta** y **cómo salir de esa
+respuesta sabiendo más que antes de preguntar.** La segunda es la difícil, y es la que decide si
+dentro de un año programas o solo pegas cosas.
+
+## Por qué «no me funciona» no se puede contestar
+
+Del otro lado no hay un adivino: hay alguien —persona o máquina— con acceso a una sola cosa, las
+palabras que le mandaste. Tú tienes el programa entero, la pantalla, los datos, el recuerdo de lo que
+cambiaste anoche y la sensación de qué anda raro; el que responde no tiene nada de eso. **Todo el
+contexto que no escribas, el otro lo tiene que adivinar, y adivinar cuesta más que responder.**
+
+Esto ya lo conoces desde el otro lado del mostrador, con catorce años de recibir reportes. «La app
+está caída» no es un reporte: es una emoción con puntuación. Cuando te llega uno así no contestas
+mal: no contestas. Y esa es la consecuencia real: **una pregunta incontestable no recibe una
+respuesta equivocada, recibe silencio o una generalidad.** No es descortesía; es que no hay
+información suficiente para producir nada mejor.
+
+<Analogia titulo="Tu pregunta también es un programa">
+Piensa la pregunta con la cabeza con la que piensas una función: tiene entradas, tiene una salida
+esperada y tiene que ser determinista. Las entradas son el código, los datos y el comando; la salida
+esperada es lo que creías que iba a pasar; determinista significa que **cualquiera que siga tus pasos
+obtiene el mismo fallo**, no «a veces». Una pregunta bien escrita es un caso de prueba que otro puede
+ejecutar; una mal escrita es un programa al que le faltan las entradas.
+</Analogia>
+
+## Las cuatro partes de una pregunta contestable
+
+Una pregunta contestable tiene cuatro partes, y ninguna es opcional.
+
+| Parte | Qué contiene | Error típico |
+|---|---|---|
+| Qué esperabas | El resultado concreto, con número: «esperaba que imprimiera 12,5» | «esperaba que funcionara» |
+| Qué hiciste | El código mínimo, los datos y el comando exacto con que lo corriste | «lo corrí normal» |
+| Qué pasó | El mensaje completo copiado literal, o el resultado equivocado al lado del correcto | «me da error» |
+| Qué probaste | Lo que ya descartaste y qué te dijo cada intento | «probé de todo» |
+
+A eso se suma el **contexto mínimo**: qué lenguaje y qué versión, en qué sistema y cómo lo ejecutas.
+Tres líneas que ahorran la mitad de las respuestas inútiles, porque buena parte de los fallos de
+principiante son diferencias de versión y no errores de lógica.
+
+Y hay una quinta parte que casi nadie escribe y vale más que las otras cuatro juntas: **cuál crees tú
+que es la causa.** Aunque te equivoques —sobre todo si te equivocas—, decirlo permite que el otro
+corrija tu modelo mental y no solo tu síntoma, que es la diferencia entre quedar igual y aprender
+algo.
+
+## El caso mínimo reproducible
+
+La parte «qué hiciste» no significa pegar tu programa de trescientas
+líneas. Significa <Termino slug="caso-minimo-reproducible">construir un caso mínimo
+reproducible</Termino>: el programa más corto posible que sigue fallando igual.
+
+Se construye por recorte, y es la bisección de la lección anterior con otro objetivo —allá
+localizabas el fallo, aquí quieres mostrarlo—. Haces una **copia fechada** (nunca mutiles el
+original) y empiezas a borrar: borras la mitad y ejecutas; si sigue fallando, sigues borrando; si
+dejó de fallar, devuelves lo borrado y cortas por otro lado.
+
+El resultado tiene que cumplir cuatro condiciones:
+
+- **Se ejecuta tal cual.** Nada de puntos suspensivos ni de «aquí va mi función». Si el otro tiene
+  que completar algo para correrlo, no lo va a correr.
+- **Trae sus datos adentro.** Tres filas inventadas en el propio archivo, no tu planilla de 4.000
+  líneas ni un archivo que la otra persona no tiene.
+- **No depende de tu máquina.** Rutas propias, un sensor conectado, una clave: todo eso se reemplaza
+  por un valor fijo escrito a mano.
+- **Falla siempre.** Si falla una de cada cinco veces, todavía no entendiste el fallo, y eso hay que
+  decirlo, porque cambia la clase de problema.
+
+Si pasa de veinte o treinta líneas, sigue recortando. Y aquí viene el efecto que justifica el trabajo
+aunque nunca llegues a preguntar: **la mitad de las veces resuelves el problema mientras construyes
+el caso mínimo.** Recortar obliga a decidir, línea por línea, si esa línea es necesaria para que el
+fallo aparezca, y cada decisión de esas es una hipótesis sobre la causa.
+
+Lo mismo pasa cuando le explicas el problema en voz alta a alguien que ni siquiera sabe programar y a
+mitad de la explicación te callas y vuelves corriendo a la
+computadora. Es la <Termino slug="depuracion-por-explicacion">depuración por explicación</Termino>, y
+el mecanismo es lingüístico: hablar obliga a poner en fila cosas que en la cabeza estaban en un bulto
+simultáneo, y el hueco aparece en la costura que la cabeza saltaba. **Por eso conviene escribir la
+pregunta entera aunque no pienses mandarla.**
+
+<Advertencia>
+Antes de pegar código en un lugar público —un foro, un chat de grupo, una máquina que no es tuya—
+revisa que no lleve **contraseñas, claves de acceso a servicios, números de teléfono, datos de
+personas ni la clave del wifi.** Lo que se pega en internet queda indexado y no se borra de verdad
+aunque borres la publicación. En el caso mínimo, toda clave se reemplaza por el texto `CLAVE_AQUI` y
+toda ruta propia por algo genérico.
+</Advertencia>
+
+## Buscar antes de preguntar, y buscar bien
+
+Casi siempre alguien ya tuvo tu problema y escribió la respuesta. La habilidad no es buscar: es saber
+**qué parte del mensaje es la consulta.** Todo mensaje de error tiene dos partes mezcladas. Una es
+genérica, la escribió el lenguaje y es idéntica en todas las máquinas del mundo. La otra es tuya: el
+nombre de tu archivo, tu ruta, tu variable, tu número de línea. **La consulta es la parte genérica; la
+parte tuya es lo que hace que la búsqueda no encuentre nada.** Quien busca pegando el mensaje entero
+con su ruta `C:\Users\...` adentro concluye que su problema es único, y no lo es.
+
+Cuando la búsqueda no da nada en quince minutos, la conclusión útil no es «nadie sabe»: es que
+probablemente tu problema no es el que crees. Vuelve al mensaje y léelo otra vez con la anatomía de
+la lección cuatro.
+
+## Cómo se juzga una respuesta encontrada
+
+Encontrar una respuesta y aplicarla son dos actos distintos, y entre uno y otro hace falta un juicio.
+Cuatro criterios, en orden de importancia.
+
+**La fecha y la versión.** Una respuesta puede ser correcta y estar obsoleta al mismo tiempo: los
+lenguajes cambian y lo que era la forma recomendada hace ocho años hoy puede no existir.
+
+**Que sea tu causa, no solo tu síntoma.** Este es el error de razonamiento más caro de todos:
+**mismo mensaje no significa misma causa.** Un mismo error puede venir de cinco orígenes distintos y
+el arreglo de uno no toca el de los otros. Si la respuesta no explica qué causaba el problema, no es
+una respuesta: es una apuesta.
+
+**Que explique el porqué.** Una buena respuesta dice qué pasaba, por qué el arreglo funciona y cuándo
+no aplica. Una mala dice «probá esto», y puede resolverte el día y dejarte peor.
+
+**Que arregle la causa y no apague el aviso.** Hay una familia entera de respuestas populares que
+comparten forma: desactivar la comprobación que molesta, envolver todo en un capturador de errores
+vacío que se traga cualquier fallo, ejecutar con permisos de administrador «porque así anda». Todas
+hacen lo mismo: **convierten un fallo que hablaba en un fallo silencioso**, la familia peor de la
+lección cuatro. Sacarle la pila al detector de humo porque suena cuando cocinas es efectivo hasta la
+noche en que el humo es de verdad.
+
+Y un protocolo de aplicación: copia fechada antes de tocar nada; **una respuesta a la vez**, nunca
+tres a ver cuál pega; probarla sobre el caso mínimo antes de meterla al programa grande; y dejar en
+un comentario qué hace esa línea, de dónde salió y cuándo.
+
+Si preguntaste en un lugar público y lo resolviste, **vuelve y escribe qué era.** No es cortesía: la
+próxima persona que busque ese mensaje va a caer en tu pregunta, y de ti depende que encuentre una
+respuesta o un callejón con tres años de polvo.
+
+## Pedirle código a una máquina: la regla dura
+
+Un modelo de lenguaje contesta preguntas de programación al instante, a cualquier hora y sin hacerte
+sentir tonto: es la ayuda más accesible que ha existido nunca, y para alguien que aprende solo en
+Zanja Honda puede ser la diferencia entre avanzar y abandonar. También es la forma más rápida de
+terminar con un programa que funciona y que no entiendes.
+
+Cómo se le pide algo a un modelo en general, y por qué inventa cosas con
+total <Termino slug="alucinacion">seguridad</Termino>, son materia de los módulos 39 y 40 y no se
+tratan aquí. Para programar te basta un hecho: **te va a devolver código que parece correcto
+siempre**, con el mismo tono seguro esté bien o mal. Ahí está la asimetría peligrosa: cuando el
+código está roto de verdad no arranca o revienta a mitad, y eso te avisa; cuando está sutilmente mal,
+corre perfecto y devuelve un número equivocado —la familia que no habla—, y una máquina que escribe
+lo plausible produce mucho de lo segundo.
+
+De ahí sale la regla dura de esta lección, la única que hay que memorizar:
+
+**No pegues nunca en tu programa código que no puedas explicar línea por línea.**
+
+No es una regla moral ni una cuestión de orgullo, es operativa. El código que no entiendes lo vas a
+tener que **depurar** el día que falle, y va a fallar, porque el dato cambia. No puedes **juzgar** si
+hace lo que pediste ni si hace además otra cosa. Y sobre todo: **el fallo no llega cuando estás
+tranquilo, llega en el peor momento** —a las tres de la mañana de
+un <Termino slug="surazo">surazo</Termino>, con la bomba encendida y el tanque vaciándose sobre las
+bandejas.
+
+<Analogia titulo="Deuda a interés diario, cobrada de madrugada">
+Pegar código que no entiendes es contraer <Termino slug="deuda-tecnica">deuda técnica</Termino> en su
+forma más cara, y tú ya conociste esta deuda del otro lado: el módulo heredado que nadie sabe cómo
+funciona, la dependencia que se metió sin leer, la función que nadie toca porque «anda». La
+diferencia es brutal: allá al menos hubo un autor que lo entendió alguna vez; aquí el autor eres tú y
+no lo entendiste **nunca**, ni siquiera el primer día, que era cuando más fácil resultaba.
+</Analogia>
+
+Hay un nombre para esto en el oficio: el <Termino slug="culto-al-cargo">culto al cargo</Termino>,
+copiar la forma de algo que funcionó esperando que el resultado venga solo. Se reconoce en frases
+como «esta línea la tengo que poner, no sé para qué» y en programas donde sobreviven tres líneas
+inútiles que nadie se anima a borrar: cada una es un pedazo de tu programa que dejó de ser tuyo.
+
+## Cómo se apropia un código que no escribiste
+
+La regla dura no dice «no pidas código». Dice que el código que entra a tu programa tiene que ser
+tuyo antes de entrar. Apropiárselo son cuatro pasos, y el cuarto es el que casi nadie hace.
+
+**Uno: leerlo y nombrarlo.** Línea por línea, en voz alta y en tu idioma: qué hace esta, qué guarda
+esta, por qué esta condición. La línea que no puedas decir con tus palabras queda marcada y no pasa.
+
+**Dos: trazarlo en papel.** La tabla de traza de la segunda lección, con un dato real de tu vivero:
+21 bandejas, 3,2 mm de lluvia, la mínima de 10 grados de la noche del surazo. Después compara el
+resultado de tu traza con lo que se supone que ese código hace: si no coinciden, uno de los dos se
+equivocó —el código o tú— y averiguar cuál es el ejercicio que te hace programador.
+
+**Tres: probarlo con casos límite.** Los de la lección cinco: cero, vacío, negativo, texto donde
+esperaba un número, la lista de un solo elemento, el dato que nunca llegó porque el sensor estaba
+desconectado. El código generado suele estar afinado para el caso feliz, y es en los bordes donde
+aparece lo que le falta.
+
+**Cuatro: reescribirlo.** Cierra lo que te dieron y escríbelo otra vez de memoria, con tus nombres de
+variable. Si no te sale, no lo entendiste: vuelve al paso uno. Parece una pérdida de tiempo
+deliberada y es lo contrario: **es lo único que convierte una respuesta recibida en una capacidad
+propia.**
+
+De aquí sale una regla de tamaño: **pide trozos pequeños.** Cinco líneas se apropian en diez minutos;
+ochenta no se apropian nunca. Si pides «hazme el programa de riego», lo que recibes es un programa
+que no es tuyo, y el día que haya que cambiarle el umbral vas a estar pidiendo otra vez.
+
+## Pedir explicación en vez de solución
+
+El cambio más rentable que puedes hacer hoy es cambiar la forma del pedido. «Arréglame este código»
+devuelve un programa que no entiendes; «explícame por qué esta línea da este error, no me lo
+arregles» devuelve un concepto que sirve para las próximas veinte veces. Cuatro formas de pedir que
+dejan aprendizaje: que te expliquen qué hace una línea que ya tienes; la **causa** de un error sin la
+corrección; tres entradas con las que tu función se rompería, que es pedir casos de prueba en vez de
+código; y **dónde mirar** en vez del resultado.
+
+Hay además usos donde no arriesgas nada porque no entra código a tu programa: traducir un mensaje de
+error del inglés, que te expliquen un concepto de otra manera, generar datos de prueba, o —el más
+rentable— **darle tu código para que lo critique**. Tú escribes, la máquina señala qué no
+consideraste, tú decides qué corriges: la relación está en el orden correcto, porque revisar es más
+barato que escribir y el que aprende sigue siendo el que escribe.
+
+Queda la trampa de la velocidad. La máquina resuelve en cinco segundos algo que te habría costado dos
+horas, y **esas dos horas eran el aprendizaje.** No siempre importa: si el objetivo es que la tarea
+salga hoy, atajo bienvenido. Pero en los primeros meses tu objetivo es aprender a hacerla. Si quieres
+mover la caja, usa la grúa; si quieres fortalecerte, la grúa no sirve aunque la caja llegue antes.
+
+<AplicarRizoma>
+En Rizoma del Sur el código no es un ejercicio: mueve agua sobre 3.666 m² repartidos en doce lotes.
+Un bucle mal escrito deja la bomba abierta toda la noche sobre las bandejas de yautía o corta el
+riego en pleno septiembre seco. Por eso la regla dura del taller está escrita en la pared y no se
+negocia: **nadie carga en el controlador de riego una línea que no pueda explicar en voz alta.**
+
+El mecanismo para hacerla cumplir es la **revisión de a dos**: antes de que un programa pase a la
+máquina que controla las electroválvulas, su autor se lo explica línea por línea a otra persona del
+grupo, aunque esa persona sepa menos que él. No se busca que el segundo detecte el error, se busca
+que el primero se escuche; el que se traba explicando su propia línea la marca y vuelve otro día. Con
+conexión intermitente, además, es la ayuda más disponible que tenemos.
+
+El vivero mantiene un archivo `errores.md` en la carpeta compartida, que es
+una <Termino slug="bitacora-de-errores">bitácora de errores</Termino> con cuatro columnas: fecha,
+síntoma tal como apareció, causa real y qué lo arregló. La disciplina es la del registro de bandejas:
+**el fallo se anota el mismo día y con causa, aunque la causa sea «no sé»**. A los seis meses ese
+archivo es el mejor manual que tenemos, porque no es genérico: son nuestros errores, en nuestro
+código, con nuestros datos.
+
+Cuando alguien se traba, la pregunta va al chat con las cuatro partes obligatorias —qué esperaba, qué
+hizo, qué pasó literal, qué probó— y con el caso mínimo pegado como texto, nunca como foto de la
+pantalla. Y hay una regla de convivencia deliberada: **el que sabe no pega la solución, pega la
+pista.** Responder «mirá qué tipo de dato tiene esa variable en la línea 12» enseña; responder con el
+programa corregido resuelve el día y no deja nada. En un proyecto que existe para que la comunidad
+aprenda, la respuesta que ahorra el aprendizaje sale cara.
+
+Los primeros proyectos propios ya están definidos y los tres son pequeños **y terminables**: la
+planilla de <Termino slug="grados-dia">grados-día</Termino> de la tercera lección, que lee las máximas
+y mínimas anotadas y escribe el acumulado por especie con fecha; el conteo de germinación por bandeja,
+que recibe sembradas y nacidas y guarda el porcentaje del día; y el aviso de surazo, que compara la
+mínima prevista con el umbral de cada cultivo y avisa la tarde anterior para tapar los almácigos. Cada
+uno cabe en cincuenta líneas y le ahorra tiempo real a alguien esta semana.
+
+«Terminado» tiene definición explícita aquí y es exigente: el programa corre sin su autor al lado,
+otra persona lo usa sin que nadie le explique, y tiene un `LEEME.txt` de tres líneas —para qué sirve,
+cómo se corre, qué hacer si falla—. Y una última pieza, que es de la misión y no de la técnica:
+**el que termina este módulo da el taller del siguiente**, dos tardes con la lógica en papel y un
+problema del vivero. No hace falta ser experto, hace falta ir un paso adelante y haberse escuchado
+explicar.
+</AplicarRizoma>
+
+<ContextoBolivia>
+La primera restricción es material: **la conexión no siempre está y los datos móviles se pagan por
+megabyte.** La pregunta se escribe completa sin conexión, con el caso mínimo ya recortado, y se manda
+cuando hay señal; la documentación del lenguaje se descarga una vez y se consulta sin datos; el video
+de veinte minutos se reemplaza por la página de texto que dice lo mismo.
+
+La segunda es el idioma. **Casi toda la ayuda de programación del mundo está escrita en inglés**, y
+mucha gente abandona por eso y no por incapacidad. La estrategia es la contraria a la que parece: no
+traduzcas el mensaje de error para buscarlo —búscalo tal cual, porque así está escrito en todas
+partes— y usa el traductor o el modelo para entender la respuesta que encontraste. El inglés se
+necesita para leer, no para escribir, y para leer bastan doscientas palabras que se aprenden solas en
+tres meses de errores.
+
+En Santa Cruz hay más comunidad de la que parece: universidades con carreras de informática y
+sistemas, grupos de estudiantes y colectivos en línea en español. No te doy nombres ni horarios
+porque cambian, se disuelven y se refundan, y una lista inventada sería peor que nada: **averigua
+cuáles están activos hoy** preguntando en la universidad más cercana o en los grupos locales. Sí vale
+como regla que una comunidad de programación acepta preguntas de principiante mucho mejor de lo que
+la gente teme, siempre que estén bien formuladas.
+
+Con las herramientas de inteligencia artificial hay una asimetría de acceso que conviene nombrar: las
+versiones más capaces suelen cobrarse en dólares y con tarjeta internacional, algo que mucha gente de
+la zona no tiene. **No construyas tu forma de trabajar sobre una herramienta que puedes perder el mes
+que no alcanza**: verifica qué opciones gratuitas existen y con qué límites, y asegúrate de que tu
+método funcione entero sin ninguna de ellas.
+
+Hay un límite de la ayuda ajena específico de aquí: **nadie en un foro conoce tu clima.** Para
+programación pura la ayuda global sirve tal cual, porque un error de tipo de dato es idéntico en
+Zanja Honda y en Berlín. Pero en cuanto tu programa toma una decisión agronómica —cada cuánto regar,
+con qué umbral avisar de un surazo, qué acumulado térmico espera una especie— los valores no vienen
+de internet: vienen de tu libreta, de los viveristas vecinos y de instituciones locales como el INIAF
+o las universidades con carreras agropecuarias. Un código correcto con constantes ajenas produce
+riegos equivocados con precisión impecable.
+
+Y una última cosa, de reciprocidad y de misión. **La documentación en español, aplicada al trópico
+boliviano, prácticamente no existe.** Cuando resuelvas algo, escríbelo en español con palabras de
+aquí y déjalo donde otro lo encuentre: en el archivo de errores del vivero, en el hilo donde
+preguntaste, en un cuaderno que se presta. Cada explicación clara escrita en español queda como
+herramienta para la comunidad, y esa es la razón por la que este curso es gratuito.
+</ContextoBolivia>
+
+## Seguir aprendiendo cuando el curso se acaba
+
+Al terminar el módulo vas a saber lo suficiente para escribir programas útiles y lo suficiente para
+darte cuenta de todo lo que no sabes. Eso no se arregla con otro curso: se arregla con tres hábitos.
+
+**Proyectos propios, pequeños y terminados.** Pequeño significa que cabe en una semana de ratos
+sueltos; si a las dos semanas no está terminado, era demasiado grande y hay que recortarlo, no
+abandonarlo. Terminado significa lo ya dicho: corre sin ti, otro lo usa, tiene escrito para qué
+sirve. Y que resuelva un problema real, porque el programa que le sirve a alguien esta semana se
+termina y el ejercicio abstracto se abandona.
+
+**Leer código ajeno.** Nadie escribe bien sin leer, y en programación casi nadie lee. Empieza por
+programas cortos y por el tuyo de hace tres meses, que es la lectura más instructiva y más humillante
+que existe. Léelo con método, no como una novela: busca dónde entran los datos, dónde salen, y traza
+un caso concreto. Hay veinte maneras de escribir lo mismo y algunas se entienden y otras no; ese
+juicio separa a quien programa de quien copia.
+
+**Enseñarle a otro.** Es el más incómodo y el que más rinde, y el módulo 18 está dedicado a cómo se
+hace bien. Explicar obliga a poner en fila lo que uno cree saber, y el hueco aparece siempre en el
+mismo sitio: la frase donde te trabas.
+
+Sobre el ritmo: **media hora tres veces por semana gana por goleada a seis horas un sábado al mes**,
+porque programar se parece más a un idioma que a un examen. Y lleva tu bitácora de errores desde hoy:
+el conocimiento genérico lo tiene cualquiera, y el registro de tus propios errores no lo tiene nadie
+más.
+
+## Las puertas que abre este módulo
+
+Este módulo existe como rampa de entrada a otros tres, y ahora los puedes empezar.
+
+La primera es **automatización y datos**. El controlador que riega por umbral
+con <Termino slug="histeresis">histéresis</Termino>, el registro que se escribe solo, la alerta que
+avisa antes del daño: todo eso es secuencia, decisión y repetición, y nada más. La diferencia es que
+ahora vas a poder leer ese código, cambiarle un valor sabiendo qué rompes y decidir si el
+comportamiento en caso de falla es el que quieres —que en riego es cerrado, por
+el <Termino slug="fallo-seguro">fallo seguro</Termino> que ya conoces.
+
+La segunda es **electrónica desde cero**, donde el programa se conecta a un relé, una válvula y una
+bomba: un error deja de imprimir un número equivocado y pasa a mover agua o a dejar de moverla, y
+todo lo que aprendiste sobre casos límite y fallos silenciosos se vuelve la diferencia entre un lote
+sano y un lote perdido.
+
+La tercera es **inteligencia artificial para la comunidad**, y con lo de hoy llegas en la postura
+correcta: sabiendo que una respuesta plausible no es una respuesta verificada, y con el hábito de
+apropiarte de lo que recibes antes de usarlo.
+
+## Errores comunes
+
+**«Busqué y no hay nada.»** Buscaste con tu ruta y el nombre de tu variable adentro. Quita lo tuyo y
+deja la parte genérica del mensaje.
+
+**«Mando la foto de la pantalla.»** Una imagen no se puede buscar, ni copiar, ni corregir, y suele
+estar recortada justo donde estaba el dato. El error va como texto, completo.
+
+**«Pegué el programa entero, así ven todo.»** Trescientas líneas no las lee nadie; veinte que fallan
+solas las lee cualquiera.
+
+**«Anda, no sé por qué, pero anda.»** Es una bomba con temporizador: explota el día que cambie el
+dato, y ese día no vas a poder desarmarla.
+
+**«Le pedí el programa completo.»** Ochenta líneas no se apropian. Pide de a cinco.
+
+**«Pegué el archivo con la clave adentro.»** Ya está indexado. Cambia la clave hoy, y revisa antes de
+pegar siempre.
+
+## Cierre del módulo
+
+Seis lecciones para una sola frase, la misma con la que empezó la primera: **la máquina no adivina.**
+Hace exactamente lo que dice el texto, y por eso todo el oficio consiste en entender el texto.
+Escribirlo con las tres únicas piezas que hay; pensarlo primero en papel; ejecutarlo en algo que
+sirva desde el primer día; leer el mensaje cuando la máquina protesta, porque es una coordenada y no
+un reproche; interrogarla con método cuando calla y devuelve un número equivocado; y —esta lección—
+**no dejar entrar a tu programa ni una línea que no entiendas, venga de un foro, de un vecino o de
+una máquina que escribe muy bien.**
+
+Eso es aquí la autonomía, y no es no pedir ayuda: es no depender de que te la den. Puedes preguntar
+cinco veces al día siempre que después de cada respuesta sepas más que antes. El que pega sin
+entender tiene mañana la misma capacidad que hoy; el que se apropia acumula, y en un año la
+diferencia entre los dos es un abismo.
+
+Y una última razón, que no es técnica. Este curso es gratuito y existe para que la comunidad pueda
+aprender y desarrollarse, y eso solo funciona si lo aprendido se puede pasar. **El código que no
+puedes explicar no lo puedes enseñar, y lo que no se puede enseñar no se puede regalar.**

@@ -1,0 +1,65 @@
+{
+  "titulo": "Escala y acotado: lo que hace medible a un plano",
+  "subtitulo": "La cota manda sobre el dibujo. El papel se dilata, la fotocopia reduce y la impresora ajusta a página sin avisar — la cifra escrita es lo único que sobrevive intacto.",
+  "duracionMin": 28,
+  "portada": "portada.webp",
+  "portadaAlt": "Fotografía cenital de una mesa de madera gastada junto a una ventana, con un plano arquitectónico desenrollado sobre ella y los bordes aún curvados por el rollo. Encima del plano descansan una regla de canto biselado, un lápiz afilado y un compás de puntas metálicas. Una mano curtida entra por el borde inferior sujetando la regla contra el papel. Luz cálida y lateral de tarde",
+  "objetivos": [
+    "Convertir entre papel y realidad en los dos sentidos, entendiendo la escala como una razón constante en toda la hoja.",
+    "Elegir la escala adecuada según lo que hay que mostrar, desde 1:500 para el terreno hasta 1:10 para un detalle constructivo.",
+    "Usar el escalímetro para leer metros directamente en lugar de calcularlos.",
+    "Aplicar la regla central del módulo: cuando el dibujo y la cifra no coinciden, la cifra tiene razón.",
+    "Enumerar las cuatro razones por las que un dibujo pierde escala: humedad del papel, fotocopia, ajuste a página e intención deliberada.",
+    "Dibujar una escala gráfica y entender por qué sobrevive a transformaciones que la escala numérica no sobrevive.",
+    "Identificar las cuatro partes de una cota y declarar siempre la unidad usada.",
+    "Comprobar una cadena de cotas como un checksum: la suma de las parciales debe dar el total.",
+    "Explicar la acumulación de error al medir encadenando y resolverla midiendo todos los puntos desde un mismo origen.",
+    "Elegir y materializar el cero de la obra en un punto permanente, y anotar en el plano qué objeto físico es."
+  ],
+  "prerrequisitos": [
+    "planos-de-obra/01-que-es-un-plano",
+    "albanileria-y-obra/03-replanteo"
+  ],
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=kmYb5N7zDjI",
+      "idioma": "es",
+      "porQue": "Explica la escala como razón y la relación entre papel y realidad con ejemplos numéricos hechos en pantalla. Es el vídeo más visto del tema en español y funciona bien justo después de la tabla de escalas, cuando ya sabes para qué sirve cada una.",
+      "titulo": "CÓMO ENTENDER LA ESCALA O ESCALÍMETRO. Tutoriales de arquitectura.",
+      "canal": "Tutoriales de arquitectura",
+      "duracion": "8:40",
+      "verificado": true
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=X5ZUXaQ-Dk0",
+      "idioma": "es",
+      "porQue": "El complemento manual del anterior: la herramienta en la mano, cara por cara, leyendo medidas sobre un dibujo. Si nunca has tenido un escalímetro entre los dedos, este es el vídeo que convierte el concepto en un gesto.",
+      "titulo": "Aprende a usar tu escalímetro",
+      "canal": "Fernández-Coca [coca.plus]",
+      "duracion": "18:47",
+      "verificado": true
+    }
+  ],
+  "referencias": [
+    {
+      "titulo": "Escalas normalizadas",
+      "fuente": "Dibujo Técnico",
+      "url": "https://dibujotecnico.com/escalas-normalizadas/",
+      "nota": "Desarrolla la serie de escalas normalizadas, el escalímetro de seis caras y la construcción de una escala gráfica. Es la referencia técnica de la primera mitad de esta lección, y el sitio donde comprobar si una escala poco habitual es normalizada o inventada."
+    },
+    {
+      "titulo": "Escalas: interpretación gráfica y normas",
+      "fuente": "Editorial Alarcón — Dibujo Técnico Aplicado, capítulo 2",
+      "url": "https://www.editorial-alarcon.es/dta/pdf/c02.pdf",
+      "nota": "Capítulo en PDF con los cálculos de conversión resueltos paso a paso y la construcción de escalas gráficas. Útil si quieres ver la aritmética completa en lugar de la regla práctica."
+    }
+  ],
+  "terminos": [
+    "escala",
+    "escalimetro",
+    "cota",
+    "cotas-acumuladas",
+    "nivel-de-piso-terminado"
+  ],
+  "practica": true
+}

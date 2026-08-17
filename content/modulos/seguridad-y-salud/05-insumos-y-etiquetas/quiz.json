@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "donde-esta-la-exposicion",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un vecino va a aplicar un fungicida líquido concentrado con mochila. ¿Cuáles de estas afirmaciones sobre por dónde entra realmente el producto al cuerpo son correctas?",
+      "opciones": [
+        "La vía dérmica es la principal en un aplicador, y la exposición se concentra en manos y antebrazos, y en muslos y espalda, que es donde chorrea la mochila",
+        "El momento de mayor concentración de producto —y por lo tanto de mayor riesgo— es la mezcla y la carga, no la aplicación",
+        "El calor y el sudor aumentan la absorción por la piel, y la ropa mojada de producto lo sostiene contra el cuerpo durante horas",
+        "Un barbijo de tela bien ajustado cierra la vía inhalatoria frente a los vapores del concentrado, así que no hace falta nada más para respirar"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen el mecanismo real: la piel es la puerta principal porque no duele ni se siente, y el concentrado sin diluir de la mezcla es lo más peligroso que se toca en toda la jornada. La cuarta es falsa y es el malentendido más caro del campo: un barbijo de tela o de papel es un filtro mecánico, retiene gotas grandes y polvo grueso, y los vapores y gases lo atraviesan como si no existiera. Contra vapor hace falta un respirador con filtro de carbón activado, que funciona por adsorción, que se agota aunque se vea limpio y que tiene que sellar contra la cara —con barba no sella, y un respirador que no sella no filtra."
+    },
+    {
+      "id": "que-dice-y-que-no-dice-la-etiqueta",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la lectura de una etiqueta de producto comprado, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "El ingrediente activo con su concentración es el nombre real de lo que estás aplicando; el nombre comercial es solo un alias que puede cambiar de contenido entre campañas",
+        "El período de reingreso protege sobre todo a terceros: el aplicador ya se cuidó, y el que entra dos horas después a cortar hoja no sabe nada",
+        "Si un vecino, un video o un modelo de inteligencia artificial dicen algo distinto de la etiqueta, gana la etiqueta",
+        "Una banda de color verde en la base del envase indica que el producto es inofensivo, también para las abejas y para el suelo"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son el uso correcto de la etiqueta como documentación vinculante. La cuarta es falsa por dos motivos: la banda toxicológica clasifica toxicidad aguda para personas, de modo que un producto de banda verde puede ser devastador para abejas o dejar residuo en el suelo; y los esquemas de clasificación se revisan y varían entre países, así que manda lo impreso en tu envase y no el color que recordás. Ninguna banda convierte a un producto en inofensivo: eso lo decide la dosis, la vía de entrada y quién está expuesto."
+    },
+    {
+      "id": "casero-no-es-suave",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un preparado casero es, por definición, menos peligroso que un producto comprado, porque sus ingredientes son naturales.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el punto que esta lección existe para dejar clavado. La palabra natural no es una propiedad farmacológica: lo que decide el riesgo es qué molécula es, cuánta entra y por dónde. La nicotina de un macerado de tabaco es un tóxico agudo potente que se absorbe muy bien por la piel; la capsaicina de un extracto de ají es la misma molécula del gas pimienta; el caldo sulfocálcico desprende sulfuro de hidrógeno, un gas que además anestesia el olfato, de modo que dejar de olerlo es señal de peligro y no de que se acabó. Y encima un preparado casero no es un insumo más suave: es un insumo del que sabés menos, porque no tiene activo declarado, ni concentración medida, ni plazo de seguridad, ni instrucciones de primeros auxilios, ni constancia entre tandas."
+    },
+    {
+      "id": "vomito-y-leche",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si alguien traga accidentalmente un insumo, lo primero que hay que hacer es provocarle el vómito para sacar el producto, y después darle leche como antídoto.",
+      "respuesta": false,
+      "explicacion": "Falso en las dos mitades, y las dos son costumbre extendida. No se induce el vómito por iniciativa propia: con un producto corrosivo vuelve a quemar el esófago al subir, y con líquidos livianos como los combustibles hay riesgo de que pasen al pulmón. La leche no es un antídoto: no neutraliza nada y con productos liposolubles puede incluso facilitar la absorción. Lo que sí se hace siempre es sacar a la persona del lugar, quitarle la ropa contaminada, lavar la piel con abundante agua y jabón, lavar el ojo con agua corriente durante muchos minutos, seguir lo que dice la etiqueta y buscar atención médica de inmediato, llevando el envase o una foto de la etiqueta al centro de salud."
+    },
+    {
+      "id": "guardar-es-contener",
+      "tipo": "opcion_multiple",
+      "enunciado": "Estás ordenando el armario de insumos de un predio comunitario. ¿Qué decisiones son correctas?",
+      "opciones": [
+        "El equipo de protección se cuelga fuera del armario, porque encerrar guantes y respirador junto a productos que emiten vapores los contamina y después te ponés el tóxico en la cara",
+        "La cal viva se apaga agregándola al agua y nunca al revés, con careta y a distancia, porque la reacción libera calor de golpe y salpica pasta cáustica",
+        "La lavandina no comparte estante ni balde con ácidos —vinagre, muriático, limpiadores de baño— porque la mezcla libera cloro gaseoso",
+        "Trasvasar un producto a una botella de gaseosa es aceptable si se le escribe el nombre con marcador, porque así queda identificado"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras aplican la lógica de fondo del almacenamiento, que no es orden sino contención: el diseño asume que el accidente va a ocurrir y limita hasta dónde llega. La cuarta es falsa y es la causa de intoxicación rural más repetida y evitable que existe. El envase original es el tipo de dato y la etiqueta son sus metadatos; al trasvasar borrás el tipo, y un marcador no lo repone: se borra con el sol y la humedad, no dice ingrediente activo, ni dosis, ni plazo de seguridad, ni primeros auxilios, y no lo lee quien no sabe leer o quien no lo está buscando. Cualquiera —un chico, una visita— asume el tipo que sugiere la forma del envase, y una botella conocida con un líquido de color amable es una invitación a beberla."
+    },
+    {
+      "id": "despues-de-aplicar",
+      "tipo": "opcion_multiple",
+      "enunciado": "Terminaste de aplicar y quedó medio bidón de caldo en la mochila. ¿Qué afirmaciones sobre el cierre de la tarea son correctas?",
+      "opciones": [
+        "El sobrante se aplica diluido en el mismo cultivo autorizado, y la mochila se lava el mismo día en un punto fijo lejos del pozo, del canal y de la casa",
+        "El envase vacío no vuelve a usarse jamás: va con triple lavado —tres enjuagues cuya agua se vierte dentro de la mochila, nunca al suelo— y perforado",
+        "En la bitácora se anota, además de fecha, producto, ingrediente activo, lote, dosis real y superficie, la fecha en que ese cultivo vuelve a ser cosechable",
+        "Como el sobrante ya está muy diluido, tirarlo al zanjón es la salida limpia: el agua corriente lo diluye hasta volverlo inofensivo"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras cierran el ciclo del insumo sin dejar exposición pendiente ni promesas de memoria: sin la fecha de cosecha habilitada escrita, el plazo de seguridad es solo una intención. La cuarta es falsa porque lo que llega al agua no se diluye hacia la nada: baja por la escorrentía hasta donde alguien saca agua, o se filtra como lixiviado hacia el agua subterránea de los pozos del barrio. En una zona de pozos someros y zanjas que se llenan con cada aguacero, el zanjón no es un destino final sino un atajo hacia el agua de consumo del vecino."
+    },
+    {
+      "id": "procedimiento-de-insumos-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Sos la persona responsable de insumos en Rizoma del Sur. Un vecino llega con dos cosas: un bidón de cinco litros sin etiqueta que le regalaron —«es para el pulgón, va una tapita por mochila»— y una botella de gaseosa con un líquido ámbar que compró fraccionado en la agropecuaria del barrio. Además pide que el sábado, en el taller abierto al que van familias con chicos, se enseñe a preparar caldo sulfocálcico. Escribí qué hacés con cada envase y por qué; qué le contestás sobre el taller; y el procedimiento de insumos que dejás colgado en la puerta del armario, con las separaciones, el equipo de protección por vía de exposición, la regla por cultivo del catálogo de Rizoma y lo que se anota en la bitácora.",
+      "respuestaModelo": "Los dos envases se rechazan, y por la misma razón de fondo: ninguno tiene documentación. El bidón sin etiqueta no es un insumo barato, es un insumo desconocido. No sé cuál es el ingrediente activo ni en qué concentración viene, y sin eso no puedo comparar nada, no puedo saber si repito la misma molécula creyendo que alterno, y no puedo informarme. No sé la formulación, y de ella depende la protección: un concentrado líquido lleva disolventes que ayudan al activo a atravesar la piel, y un polvo mojable levanta nube respirable al abrirse. No sé el plazo de seguridad, así que no puedo decir cuándo ese cultivo vuelve a ser cosechable. No sé el período de reingreso, así que no puedo avisar a nadie. Y no sé qué instrucciones de primeros auxilios dar si a alguien le entra en el ojo. «Una tapita por mochila» no es una dosis: es el recuerdo de otra persona sobre otro producto y otra mochila.\n\nLa botella de gaseosa es peor, porque suma el error más repetido y más evitable del campo. Al trasvasar se borra el tipo de dato: el envase original es el tipo y la etiqueta son sus metadatos, y sin ellos cualquiera asume el tipo que sugiere la forma del envase. Una botella conocida con un líquido ámbar es una invitación explícita a beberla, y la víctima suele ser un chico o una visita, no quien trasvasó. Además, la venta fraccionada e informal es la versión comercial exacta de ese error. Ninguno de los dos entra al predio ni al armario. Al vecino se lo explico sin retarlo, le ofrezco guardarlos aparte, bajo llave y fuera del alcance de los chicos hasta que averigüe en la agropecuaria de qué se trata, y le pido que la próxima compra sea envase cerrado, con etiqueta legible y con factura.\n\nSobre el taller, la respuesta es sí a una parte y no a la otra, y el límite se explica. Se enseña a todo el mundo, siempre: cómo se lee una etiqueta, el guante de nitrilo, el horario, la separación en el armario y la regla de la botella de gaseosa. Biol y compost también. El sulfocálcico no se enseña como receta suelta en una tarde con chicos alrededor, porque es el preparado más peligroso de todo el curso: se cocina sobre fuego, desprende sulfuro de hidrógeno —un gas tóxico que anestesia el olfato, de modo que dejar de olerlo es señal de peligro y no de que se acabó— y el líquido caliente es cáustico. Va dentro de una sesión aparte, con protección, umbral, registro y sin menores en el sector. La frase que resume la charla es que casero no quiere decir inofensivo: quiere decir que no sabés qué le pusiste.\n\nEl procedimiento colgado en la puerta empieza por las cuatro separaciones. Insumos aparte de alimento, semilla y agua. Insumos aparte del equipo de protección, porque encerrar guantes y respirador con vapores los contamina y después uno se pone el tóxico en la cara. Incompatibles aparte entre sí: lavandina lejos de ácidos y de amoníaco, y cal viva con su propia regla, que es agregarla al agua y nunca al revés. Y combustibles aparte de todo. Dentro del armario, estante alto para producto comprado con etiqueta ordenado por vencimiento, estante bajo para cal, cobre y azufre a granel, y fuera, colgados, el equipo y el inventario.\n\nEl equipo va asignado por vía de exposición, no por costumbre. Guantes de nitrilo y gafas cerradas contra la vía dérmica y la ocular, que son las dos que más se usan y lo más barato de comprar primero; delantal impermeable y botas con el pantalón por fuera para el momento de mezcla y carga, que es el de mayor concentración; respirador con filtro de carbón contra vapores, con el filtro en bolsa cerrada, porque un barbijo de tela no retiene vapor. La ropa se saca antes de entrar a la casa y se lava aparte de la de la familia. Y si no hay equipo para lo que ese producto exige, la decisión correcta no es aplicar con menos protección: es no aplicar ese producto.\n\nLa regla por cultivo se decide una vez. Culantro y ají dulce se comen crudos y la parte comestible es la que se rocía: solo producto autorizado por etiqueta en ese cultivo, con el plazo de seguridad anotado en el calendario de cosecha, y ningún fermentado no higienizado. Yautía, batata y plátano dan más margen porque el órgano comestible va enterrado o pelado y cocido. Ornamentales, árboles de sombra y frutales injertados no se comen, y ahí va el bordelés si va a algún lado, con umbral y planilla de cobre por lote. El vivero queda fuera de todo caldo mineral.\n\nEn la bitácora se anota fecha, producto, ingrediente activo, lote, dosis real, superficie, qué se vio que motivó la aplicación, quién aplicó y la fecha en que ese cultivo vuelve a ser cosechable. Se cuelga el cartel de reingreso y se avisa hablado, porque en un predio comunitario el que se intoxica casi nunca es el que aplicó. Y hay una persona responsable y una suplente, con nombre, que hacen la caminata de diez minutos: envases sin etiqueta, trasvases, agua parada, filtro en su bolsa y fecha de cosecha habilitada escrita.",
+      "criterios": [
+        "Rechaza el bidón sin etiqueta explicando qué información concreta falta (ingrediente activo y concentración, formulación, dosis, plazo de seguridad, período de reingreso, primeros auxilios) y por qué cada dato faltante impide una decisión",
+        "Señala que «una tapita por mochila» no es una dosis y explica que la dosis se calcula desde la etiqueta y se mide con recipiente graduado",
+        "Rechaza la botella de gaseosa nombrando el trasvase como la causa de intoxicación rural más repetida y evitable, y explica el mecanismo: se borra el tipo de dato y la víctima suele ser un tercero",
+        "Menciona la venta fraccionada e informal y la regla de comprar envase cerrado, con etiqueta legible y con factura",
+        "Trata al vecino sin descalificarlo y ofrece una salida concreta (guardar aparte y bajo llave, averiguar en la agropecuaria) en lugar de solo prohibir",
+        "Distingue lo que se enseña a todo el mundo (etiqueta, guante, horario, separaciones, botella de gaseosa, biol y compost) de lo que no se enseña como receta suelta, y justifica el límite",
+        "Explica el riesgo específico del sulfocálcico —fuego, sulfuro de hidrógeno, anestesia del olfato, líquido cáustico— y pone la condición de sesión aparte, con protección y sin menores",
+        "Enumera las cuatro separaciones del almacenamiento, incluida la del equipo de protección fuera del armario y el motivo (contaminación por vapores)",
+        "Nombra al menos una incompatibilidad química con su producto peligroso y la regla de la cal viva (agregarla al agua y nunca al revés)",
+        "Asigna las piezas de protección a las vías de exposición que cierran, e incluye que el barbijo simple no sirve contra vapores y que el filtro va en bolsa cerrada",
+        "Aplica la regla por cultivo al catálogo real de Rizoma, separando lo que se come crudo de lo que va pelado o cocido y de lo que no se come, y deja el vivero fuera de los caldos minerales",
+        "Cierra con la bitácora —incluida la fecha en que el cultivo vuelve a ser cosechable—, el aviso de reingreso y una persona responsable con nombre"
+      ],
+      "explicacion": "La pregunta obliga a usar la lección entera en un caso que va a pasar de verdad en un proyecto comunitario. Lo que se evalúa no es memoria de listas, sino que la decisión salga del mecanismo: los dos envases se rechazan porque no tienen documentación, no porque el producto sea «químico»; el límite del taller sale del riesgo real del preparado, no de una preferencia; y el procedimiento del armario asigna cada regla a una puerta de entrada al cuerpo o a un accidente concreto que contiene. Una respuesta que prohíbe sin explicar el mecanismo, o que acepta la botella «con un rótulo», no ha entendido que la seguridad de insumos es un procedimiento y no un reflejo."
+    }
+  ]
+}

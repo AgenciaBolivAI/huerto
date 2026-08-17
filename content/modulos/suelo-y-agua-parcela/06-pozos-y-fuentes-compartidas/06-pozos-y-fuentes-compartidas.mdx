@@ -1,0 +1,485 @@
+La lección anterior resolvió el problema de que sobra agua. Ahora viene el opuesto, y es el que decide
+si el proyecto sobrevive: **de mayo a septiembre aquí no llueve**, y todo lo que esté vivo tiene que
+beber de algún lado durante cinco meses.
+
+Hasta este punto, cada cosa que hizo el módulo se decidía dentro del alambrado. La cobertura es tuya, la
+curva de nivel es tuya, y si te equivocas te equivocas en tu terreno. **El agua de abajo no funciona
+así.** Es el único recurso del curso donde tu decisión llega a la parcela del otro sin cruzar el cerco,
+sin que nadie lo vea y sin que haya nada concreto que reclamar. Por eso la lección tiene dos mitades
+inseparables: cómo funciona el agua subterránea, y cómo se reparte entre los que están arriba de ella.
+
+## Debajo de tus pies no hay un lago
+
+Casi todos imaginan el agua subterránea como una laguna oscura o un río en una cueva. Esa imagen es
+falsa y produce decisiones malas, así que hay que reemplazarla antes de seguir.
+
+Un <Termino slug="acuifero">acuífero</Termino> es una formación de arena, grava o roca fracturada **cuyos
+huecos están llenos de agua y conectados entre sí**. No hay cámara vacía: hay material sólido con agua
+metida en los espacios entre los granos. Si escurrieras un metro cúbico de acuífero no sacarías mil
+litros, sino la fracción que ocupaban los huecos.
+
+Ahí hacen falta dos propiedades que la gente confunde.
+La <Termino slug="porosidad">porosidad</Termino> dice **cuánta agua cabe**: qué proporción del volumen son
+huecos. La <Termino slug="permeabilidad">permeabilidad</Termino> dice **con qué facilidad el agua pasa**
+de un hueco al siguiente. Y no van juntas: la arcilla tiene porosidad altísima y permeabilidad ridícula,
+porque sus poros son diminutos y mal conectados. Por eso **una arcilla llena de agua no sirve como
+acuífero**: tiene el agua y no la entrega.
+
+<Analogia titulo="Espacio libre no es espacio contiguo">
+Un disco con 40 GB libres no tiene un hueco de 40 GB: tiene millones de bloques repartidos. Cuánto hay y
+a qué velocidad se puede leer son preguntas independientes.
+
+El acuífero es idéntico. La porosidad es el espacio libre; la permeabilidad es el ancho de banda para
+llegar a él. Un pozo perforado en arcilla es un disco lleno de datos con la controladora quemada: **el
+contenido está ahí y no se puede leer a ninguna velocidad útil**.
+</Analogia>
+
+Bajando desde la superficie hay dos regiones. Arriba, el suelo tiene aire y agua mezclados en sus poros:
+por ahí se infiltra la lluvia y de ahí comen las raíces. Más abajo, **todos los poros están llenos de
+agua y no queda aire**: es la zona saturada, y su techo es
+el <Termino slug="nivel-freatico">nivel freático</Termino>, que ya apareció en el módulo 5 como el límite
+que decide si un cultivo se ahoga. El agua que ves dentro de un pozo se para justo a esa altura.
+
+Y hay dos maneras muy distintas de que el agua esté ahí.
+Un <Termino slug="acuifero-libre">acuífero libre</Termino> tiene encima material permeable hasta la
+superficie: la lluvia local lo recarga, su nivel sube y baja con las estaciones y **todo lo que se
+derrame arriba termina abajo**. Un <Termino slug="acuifero-confinado">acuífero confinado</Termino> está
+tapado por una capa impermeable —un <Termino slug="acuitardo">acuitardo</Termino>, normalmente arcilla—
+que lo aísla de la superficie de ese punto; se recarga lejos, donde esa capa no existe, reacciona muy
+despacio y su agua puede tener siglos.
+
+<Dato titulo="Por qué a veces el agua sale sola">
+En un acuífero confinado el agua está a presión, porque su zona de recarga queda más alta. Al perforar
+la capa que lo tapa, el agua sube por el tubo sin bomba y a veces sale sola: eso es
+un <Termino slug="pozo-artesiano">pozo artesiano</Termino>, y de ahí viene la fama de que perforar hondo es
+siempre mejor.
+
+Conviene entender qué significa ese chorro antes de festejarlo. **No es agua gratis: es presión
+acumulada durante siglos soltándose de golpe.** Un artesiano sin válvula descarga día y noche todo el
+año, riegue o no riegue alguien, y baja la presión de un depósito que ningún vecino puede reponer. La
+primera obra de un pozo artesiano es la llave que lo cierra.
+</Dato>
+
+## El pozo no crea agua: abre una puerta
+
+Un pozo es un acceso, no una fuente. **No fabrica ni un litro**: solo pone un punto donde el agua puede
+salir más rápido de lo que sale por su cuenta. Todo lo demás es consecuencia de esa diferencia de
+velocidades.
+
+Con la bomba apagada, el agua dentro del pozo se queda a la altura del nivel freático de la zona: es
+el <Termino slug="nivel-estatico">nivel estático</Termino>, medido en metros desde el brocal hacia abajo.
+Al encender la bomba sacas del tubo más rápido de lo que el acuífero repone a través del material, así
+que **el nivel dentro del pozo baja** hasta estabilizarse donde el acuífero entrega justo lo que sacas:
+ese es el <Termino slug="nivel-dinamico">nivel dinámico</Termino>. La diferencia entre ambos es
+el <Termino slug="abatimiento-del-pozo">abatimiento del pozo</Termino>.
+
+<Formula explicacion="Los tres valores van en metros desde el brocal. El abatimiento no es propiedad de la bomba ni del tubo: es la respuesta del acuífero al caudal que le pides, y solo se conoce midiendo.">
+abatimiento (m) = nivel dinámico (m) − nivel estático (m)
+</Formula>
+
+Ese descenso no ocurre solo dentro del tubo. El agua tiene que viajar hacia el pozo a través del
+material, y para viajar necesita pendiente, así que **el nivel freático se hunde también alrededor**.
+Esa depresión en forma de embudo invertido, con el pozo en el centro, es
+el <Termino slug="cono-de-depresion">cono de depresión</Termino>, y la distancia a la que su efecto deja de
+notarse es el <Termino slug="radio-de-influencia">radio de influencia</Termino>.
+
+Aquí está el corazón de la lección, sin adornos: **el cono no se detiene en tu alambrado**. Es ancho y
+plano en material permeable, estrecho y profundo en material pobre. Su tamaño lo deciden la geología y
+el caudal que bombeas, nunca el título de propiedad.
+
+<Analogia titulo="Es exactamente una caída de tensión">
+Quien hizo el módulo 26 ya tiene este modelo. Una batería en reposo mide 12,7 voltios; le conectas una
+carga fuerte y cae a 11,9. No se descargó en dos segundos: eso es la caída bajo carga, y depende de la
+resistencia interna.
+
+El pozo se comporta igual, término por término. El nivel estático es la tensión en circuito abierto. El
+nivel dinámico es la tensión bajo carga. El abatimiento es la caída. Y
+el <Termino slug="caudal-especifico">caudal específico</Termino> —litros por segundo por cada metro de
+abatimiento— es **la inversa de la resistencia interna del acuífero**: cuánto te entrega por cada metro
+que te cuesta.
+
+De ahí sale una manera limpia de leer un pozo. Poco abatimiento con mucho caudal es un acuífero
+generoso. Mucho abatimiento con poco caudal es un acuífero de alta resistencia, y por más bomba que le
+pongas **lo único que consigues es hundir más el nivel**, igual que una batería sulfatada a la que le
+exiges corriente y solo entrega calor.
+</Analogia>
+
+## La cuenta que decide si el pozo dura
+
+Eso era el comportamiento de un día. La pregunta larga es otra: ¿cuánto se puede sacar todos los años
+sin que el pozo se muera?
+
+La <Termino slug="recarga-del-acuifero">recarga del acuífero</Termino> es la fracción de la lluvia que
+consigue infiltrarse, atravesar la zona con aire y llegar a la zona saturada. Es siempre mucho menor que
+la lluvia total, porque antes se descuenta lo que escurre, lo que se evapora y lo que se llevan las
+plantas. Aquí, además, **toda la recarga entra en cinco meses**: la temporada de lluvias es la única
+ventana en que el depósito se llena.
+
+Cuando la extracción anual supera a la recarga de forma sostenida
+hay <Termino slug="sobreexplotacion">sobreexplotación</Termino>, y su síntoma no es que el pozo se seque un
+día. Es que **el nivel estático de enero, medido cada año, baja un poquito cada vez**. Nadie lo nota,
+porque contra el mes anterior no pasó nada; solo aparece al comparar diez años. El caudal que se puede
+extraer indefinidamente sin que esa línea baje es
+el <Termino slug="caudal-sostenible">caudal sostenible</Termino>, y no es un dato de catálogo: sale de la
+geología del sitio y solo lo estima quien tenga los datos de la zona.
+
+<Analogia titulo="Interés contra capital">
+Una cuenta recibe un depósito fijo cada mes y tiene un saldo acumulado de años. Puedes gastar el
+depósito para siempre; el saldo, una sola vez.
+
+El acuífero es esa cuenta: la recarga es el depósito, el agua almacenada es el saldo. La trampa es que
+el resumen no llega por correo. Quien saca de más ve exactamente lo mismo que quien saca de menos —agua
+saliendo del caño— y solo un registro de niveles distingue un caso del otro. **Bombear el saldo funciona
+perfectamente hasta el día que deja de funcionar**, y ese día se manifiesta como una bomba chupando aire
+en septiembre, con dos mil plantines dependiendo de ella.
+</Analogia>
+
+<Formula explicacion="Sirve para comparar tu extracción con cualquier estimación de recarga que consigas. Los datos de recarga de una zona no se inventan: se piden a la autoridad del agua, a la universidad pública o a una institución de investigación agrícola.">
+extracción anual (m³) = caudal (m³/h) × horas de bombeo al día × días de riego al año
+</Formula>
+
+## Las preguntas antes de perforar
+
+Perforar es de las decisiones más caras e irreversibles de una parcela. La secuencia correcta es
+**preguntar primero y perforar al final**, y las preguntas van de la más barata a la más cara.
+
+**¿De verdad hace falta un pozo?** Primero se agota lo gratis. La captación del módulo 25 entrega agua
+sin trámite y sin bomba desde techos que ya existen, y las cinco lecciones anteriores suben el agua útil
+del suelo, que es el mayor depósito que vas a tener. **Un pozo perforado para compensar un suelo que no
+infiltra es un gasto grande tapando un problema barato.**
+
+**¿Qué exige la autoridad competente?** En Bolivia el agua es un bien de dominio público y su uso está
+sujeto a un marco legal, con instituciones del Estado, gobernaciones, municipios y, en muchos barrios,
+cooperativas y comités de agua. **Este curso no te va a dar números de ley, montos ni plazos, porque
+inventarlos sería peor que callar.** Lo que sí se afirma es el orden: **se consulta antes de perforar**.
+Un pozo hecho sin averiguar puede quedar sin poder registrarse, y regularizar un hueco ya abierto
+siempre cuesta más que preguntar con el terreno intacto.
+
+**¿Qué dicen los pozos que ya existen alrededor?** Es el estudio hidrogeológico más barato del mundo y
+está a cien metros. A cada vecino con pozo se le pregunta lo mismo: a qué profundidad encontró agua, a
+qué profundidad está el nivel hoy, cuánto entrega, si baja al final de la seca, si alguna vez se secó,
+cómo sabe el agua y si hizo análisis. **Cinco vecinos dan un perfil de la zona que ningún catálogo
+tiene.**
+
+**¿Qué hay debajo, capa por capa?** Un perforador serio anota el material que saca a cada profundidad:
+eso es el <Termino slug="perfil-litologico">perfil litológico</Termino>, el documento que dice de qué
+capa viene tu agua y cuáles hay que aislar. Sin él, el pozo es una caja negra.
+
+**¿Cuánto entrega sostenido?** Lo responde
+una <Termino slug="prueba-de-bombeo">prueba de bombeo</Termino>: bombear a caudal constante durante horas
+anotando cómo baja el nivel, y después cómo se recupera al apagar. Un pozo que entrega mucho durante
+diez minutos y luego se hunde **no entrega mucho**: estaba vaciando el tubo, que es un tanque flaquísimo.
+
+**¿Cuánto cuesta el sistema, no el agujero?** Faltan entubado, bomba, cable sumergible, tablero,
+protecciones, tanque y la energía de todos los días de la seca. **El agujero sin bomba no riega nada.**
+
+**¿Y si sale poco o sale mala?** Se decide antes y por escrito. Un caudal pequeño sirve si un tanque se
+llena despacio de noche; un agua salobre puede regar árboles adultos y arruinar almácigos. Tener esa
+respuesta lista evita la peor decisión posible, que es perforar otro pozo por impulso el mismo día.
+
+## Lo que se le pide por escrito al perforador
+
+El pozo se termina el día que se termina. Lo que no se pidió antes se paga después al doble, o no se
+arregla.
+
+El <Termino slug="entubado">entubado</Termino> es el tubo que sostiene las paredes para que no se
+derrumben. En el tramo que atraviesa el acuífero
+lleva <Termino slug="rejilla-de-pozo">rejilla</Termino>: aberturas calibradas que dejan pasar el agua y
+retienen la arena, rodeadas de grava seleccionada que hace de prefiltro. Rejilla mal elegida es un pozo
+que bombea arena, y **la arena destruye la bomba y llena el tanque de sedimento**.
+
+Y está la pieza que más se omite. El <Termino slug="sello-sanitario">sello sanitario</Termino> es el
+relleno impermeable —cemento o bentonita— colocado entre el tubo y la pared en los primeros metros, más
+el brocal levantado sobre el terreno y la tapa. Impide que el agua sucia de la superficie **baje pegada
+por fuera del tubo** y entre al acuífero saltándose todo el suelo que la habría filtrado.
+
+<Analogia titulo="Un puerto abierto que se salta todos los filtros">
+El suelo es una pila de filtros: la lluvia atraviesa metros de material que retienen partículas, materia
+orgánica y buena parte de los microorganismos. Ese es el camino normal, lento y con validación en cada
+capa.
+
+Un pozo sin sello sanitario es un túnel que conecta la superficie con el almacén y **se salta todas las
+capas de validación**. Lo que se derrame junto al brocal —agua de lavar, un envase de plaguicida, la
+escorrentía del corral— entra sin filtrar. Y el sistema que compromete no es solo el tuyo: es el mismo
+cuerpo de agua del que bombea el vecino.
+</Analogia>
+
+<Advertencia>
+Los pozos matan gente todos los años, casi siempre por las mismas cuatro causas. **Un pozo excavado a
+mano se derrumba**, y quien está abajo no tiene salida. **En el fondo puede faltar oxígeno o acumularse
+gas**, y una persona pierde el conocimiento en segundos sin sentir nada raro antes: nadie baja a un pozo
+sin ventilación forzada, arnés y dos personas afuera, y **jamás se baja a rescatar a quien se desmayó
+abajo**, porque así muere el segundo. **Un pozo destapado es una trampa mortal para un niño o un
+animal**: la tapa asegurada no es opcional. Y **la instalación eléctrica de una bomba está en ambiente
+mojado**, con las reglas del módulo 23 y del módulo 26: protección diferencial, puesta a tierra y tablero
+fuera del alcance del agua.
+
+Súmale la parte sanitaria: **cualquier depósito destapado asociado al pozo es criadero de mosquito**, y
+el dengue es endémico aquí. Tapa hermética y malla en cada abertura, sin excepciones.
+</Advertencia>
+
+## El pozo del vecino y el tuyo son el mismo pozo
+
+Si el cono de depresión pasa el alambrado y el vecino tiene un pozo dentro de ese radio, **los dos conos
+se suman**. Cada uno ve lo mismo desde su lado: el nivel bajó, la bomba trabaja más, el caudal cayó. Y
+ninguno de los dos hizo nada indebido.
+
+Ese solapamiento se llama <Termino slug="interferencia-entre-pozos">interferencia entre pozos</Termino>.
+Dos pozos cercanos en el mismo acuífero **no son dos fuentes: son una fuente con dos bombas**, y lo que
+uno saca es agua que el otro no tendrá. La distancia a la que deja de importar depende de la
+permeabilidad y de los caudales, y no hay cifra universal que este texto pueda darte: es exactamente el
+dato que se pide a quien conoce la zona.
+
+<Analogia titulo="Dos servicios contra la misma base de datos">
+Dos equipos despliegan contra la misma instancia. Cada uno prueba el suyo aislado y anda perfecto. En
+producción consultan a la vez y la latencia se dispara para ambos.
+
+Ninguna consulta es abusiva y ningún equipo hizo nada mal. El recurso compartido no tiene cuota ni
+límite de tasa, y el costo de cada consulta no lo paga quien la lanza sino el conjunto. La solución
+tampoco es técnica: es acordar cuotas, medir el uso y hacerlo visible.
+
+El acuífero del barrio es esa instancia. **Cada bomba nueva es razonable para su dueño y una degradación
+para todos**, y no hay a quién culpar. Por eso el problema no se arregla perforando más hondo, igual que
+la latencia no se arregla abriendo más conexiones.
+</Analogia>
+
+Conviene distinguirlo de la <Termino slug="externalidad">externalidad</Termino> del módulo 17. En una
+externalidad hay causante identificable: el que fumigó, el que mandó agua al vecino. Aquí no. El
+acuífero es un <Termino slug="recurso-de-uso-comun">recurso de uso común</Termino> en estado puro, y de
+él sale la <Termino slug="tragedia-de-los-comunes">tragedia de los comunes</Termino> clásica: **el
+beneficio de bombear es individual y el costo se reparte entre todos**, así que a cada uno le conviene
+bombear un poco más.
+
+Hay un segundo efecto que no es de cantidad sino de calidad. Mientras bombeas, el cono arrastra agua
+desde toda un área alrededor, y ese terreno es
+la <Termino slug="zona-de-captura">zona de captura</Termino> del pozo. **Todo lo que se infiltre dentro de
+esa zona termina, tarde o temprano, en tu bomba**: un pozo ciego, un corral, un depósito de combustible,
+el lavado de una mochila fumigadora. Y como los conos se solapan, **la zona de captura de tu pozo
+incluye terreno que no es tuyo**, y la del vecino incluye el tuyo.
+
+<Dato titulo="El pozo abandonado es el peor de todos">
+El riesgo más grande y más ignorado es
+un <Termino slug="pozo-abandonado">pozo abandonado</Termino>: una perforación vieja, seca o mala, que quedó
+destapada o tapada con cualquier cosa.
+
+Ese hueco es un atajo abierto entre la superficie y el acuífero, sin filtro y sin dueño: le entra
+escorrentía sucia, basura y animales muertos. Si atraviesa varias capas, **conecta un acuífero
+contaminado de arriba con uno limpio de abajo** y arruina el bueno de forma prácticamente irreversible.
+
+Un pozo que se deja de usar hay que sellarlo, no taparlo con una calamina y una piedra. El sellado se
+hace rellenando la perforación con material impermeable, y cómo hacerlo bien se consulta con la
+autoridad del agua o con quien perfora. **Es la obra más barata con más consecuencias colectivas del
+módulo**, y casi nadie la hace porque no beneficia visiblemente a quien la paga.
+</Dato>
+
+## El pozo como instrumento de medida
+
+Un pozo entrega dos cosas: agua y datos. Casi todos usan la primera y tiran la segunda, y la segunda es
+la que permite decidir dentro de diez años.
+
+El instrumento cuesta casi nada. Un <Termino slug="freatimetro">freatímetro</Termino> casero es un
+cordel marcado cada metro con un peso hueco en la punta —un tubito de PVC tapado abajo— que suena al
+golpear el agua; se baja hasta escuchar el golpe y se lee la marca. También sirven dos cables pelados
+conectados a una pila y un foquito que se enciende al tocar el agua.
+
+<Tabla>
+
+| Qué se anota | Cada cuánto | Para qué sirve |
+| --- | --- | --- |
+| Nivel estático, con la bomba parada horas | Una vez al mes, mismo día | Es la serie que revela sobreexplotación |
+| Nivel dinámico tras una hora de bombeo | Cada tres meses | Da el abatimiento y el caudal específico |
+| Caudal, con balde y reloj | Cada tres meses | Detecta rejilla tapada o bomba gastada |
+| Horas de bombeo | Cada vez que se riega | Convierte caudal en extracción real |
+| Análisis de agua completo | Al perforar y luego periódico | Línea de base de calidad y salinidad |
+| Arena, olor o turbiedad nuevos | Cuando aparezcan, con fecha | Aviso temprano de pozo o sello dañado |
+
+</Tabla>
+
+La medición clave es la primera, y su valor está en comparar contra el mismo mes del año anterior. **El
+nivel estático de agosto solo significa algo al lado del de agosto pasado.** Esa serie es
+la <Termino slug="linea-base">línea de base</Termino> del agua subterránea y tiene una sola oportunidad de
+empezar: hoy.
+
+## Repartir un agua que nadie ve
+
+Un recurso compartido sin instrumentación no se administra, solo se disputa. Esta parte decide si un
+barrio conserva su agua, y no es técnica.
+
+Primero, la aritmética incómoda: **coordinar reparte el agua, pero no crea agua**. Si el acuífero da lo
+que da, ponerse de acuerdo no aumenta el total; lo que hace es evitar que se destruya el recurso y bajar
+muchísimo el costo por litro. Un pozo bueno compartido por seis familias entrega más agua por peso
+invertido que seis pozos malos, y concentra en un punto la calidad, el mantenimiento y el sello.
+
+De ahí sale el intercambio central: **muchos pozos individuales convierten esto en un problema
+hidrológico, que no tiene solución; un pozo compartido lo convierte en un problema de organización, que
+sí la tiene.** El módulo 17 trata entero ese segundo problema.
+
+Lo que muestra la experiencia con recursos comunes en todas partes es que los grupos que conservan su
+recurso comparten unas pocas cosas, y ninguna es un reglamento largo.
+
+**Se sabe quiénes son.** Está claro quién tiene derecho a sacar y quién no. Un grupo con borde difuso no
+administra nada, porque el esfuerzo se diluye en gente que llega, saca y se va.
+
+**Las reglas se ajustan a este sitio.** Turnos por día, horarios que no se solapan, un techo de horas de
+bomba en la seca. Copiar el reglamento de otro barrio con otra geología es tan malo como copiar el
+diseño de una zanja.
+
+**Las hacen los que las cumplen.** Una regla impuesta desde afuera se rompe en la primera seca fuerte;
+una acordada por los que bombean se sostiene, porque cada uno sabe qué obtiene a cambio.
+
+**Alguien mide, y no es un extraño.** Aquí está la clave práctica:
+el <Termino slug="monitoreo-comunitario">monitoreo comunitario</Termino> más barato es que **todos midan su
+propio nivel estático el mismo día del mes y lo pongan en una lista común**. Nadie tiene que confiar en
+nadie: los números son el árbitro. Si bajó el nivel del barrio entero, el problema es del acuífero; si
+bajó uno solo, el problema es de ese pozo.
+
+**Las sanciones empiezan suaves.** Una <Termino slug="sancion-graduada">sanción graduada</Termino>
+arranca en un aviso y sube solo si se repite. Un grupo cuya única sanción es la expulsión no sanciona
+nunca, porque el castigo es tan desproporcionado que nadie se atreve, y entonces la regla deja de
+existir.
+
+**Y hay dónde discutir antes de que se rompa.** El conflicto por agua en septiembre llega igual; lo que
+decide el resultado es si en marzo existía un espacio acordado para tratarlo. Para el agua, el acuerdo
+de una página del módulo 17 cabe entero: quiénes, cuánto, cuándo, quién mide, qué pasa si alguien se
+pasa y quién arregla la bomba cuando se queme.
+
+<Dato titulo="La regla gratis que casi nadie aplica">
+Si dos pozos cercanos bombean **al mismo tiempo**, sus conos se suman y cada uno sufre el abatimiento
+del otro. Si bombean **en horarios distintos**, cada uno encuentra el nivel más recuperado.
+
+Turnarse no cuesta un peso, no requiere obra, no exige comprar nada y mejora el caudal de los dos. Es la
+intervención con mejor relación entre resultado y costo de toda la lección, y casi nunca se aplica por
+una razón sencilla: **exige hablar con el vecino**, que sale más caro emocionalmente que comprar una
+bomba más grande.
+</Dato>
+
+## Errores que se repiten
+
+**Perforar más hondo cuando baja el nivel.** A veces corresponde, pero casi siempre trata el síntoma: si
+el problema es sobreexplotación, más profundidad compra dos años y empeora el conjunto.
+
+**Poner una bomba más grande en un pozo pobre.** Con alta resistencia interna, más bomba solo hunde más
+el nivel. Una <Termino slug="bomba-sumergible">bomba sumergible</Termino> se refrigera con el agua que
+la rodea y en vacío se quema:
+la <Termino slug="sumergencia-de-la-bomba">sumergencia de la bomba</Termino> se calcula con el nivel
+dinámico del final de la seca, nunca con el de enero.
+
+**Dimensionar con el dato de lluvias.** Todo pozo parece bueno en febrero; el número que manda es el de
+septiembre del peor año registrado.
+
+**Perforar sin consultar antes**, y **no hacer análisis de agua al terminar**, que es el único momento en
+que ese análisis sale barato. **Y dejar un pozo viejo abierto**, que no cuesta nada y por eso pasa
+siempre.
+
+<ContextoBolivia>
+**En el sur de Santa Cruz el agua subterránea sostiene la temporada seca, y eso vuelve el tema un asunto
+de barrio y no de parcela.** De mayo a septiembre no hay lluvia útil, y en zonas periurbanas como Zanja
+Honda o Prados del Sur lo típico es red pública incompleta o intermitente más pozos particulares.
+Cada casa que se conecta y cada huerto que arranca añade una bomba a un cuerpo de agua que nadie está
+midiendo. **El resultado no es un conflicto: es una serie de decisiones razonables que suman una
+tendencia que ninguno de los participantes ve.**
+
+**El marco institucional existe y hay que usarlo, y aquí es donde este curso se calla.** En Bolivia el
+agua es un bien de dominio público, su gestión reconoce los usos y costumbres de las comunidades, y hay
+instituciones del Estado, gobernaciones y municipios con competencia sobre el recurso, además de
+cooperativas de agua y comités barriales que en muchas zonas administran el servicio de hecho. **No vas
+a encontrar aquí un número de ley, un costo de trámite ni un requisito concreto, porque inventarlos
+sería el peor daño posible.** Lo que sí se afirma con seguridad es la secuencia: antes de contratar una
+perforación se consulta con la autoridad competente y con la organización de agua del barrio si existe.
+Preguntar es gratis; regularizar un pozo ya hecho, no.
+
+**La geología de la llanura tiene una consecuencia muy concreta.** Estas son planicies de sedimentos
+donde se alternan capas de arena y de arcilla, así que **es normal encontrar más de un acuífero
+superpuesto a distintas profundidades**, con calidades y presiones distintas. Eso explica dos cosas que
+se oyen todo el tiempo en el barrio: que dos pozos vecinos den agua muy distinta, y que un pozo hondo dé
+mejor agua que uno somero. También explica por qué aquí el entubado y el sello sanitario importan tanto:
+**un pozo mal sellado mezcla capas** y arruina la buena con la mala.
+
+**Los cortes de energía son parte del diseño, no un imprevisto.** Aquí se cortan con frecuencia y justo
+en temporada de tormentas. Un riego que depende de que la bomba arranque en el momento en que se
+necesita falla el peor día, así que la arquitectura sensata es la del módulo 26: **bombear cuando hay
+energía y guardar en tanque**, con el tanque haciendo de batería de agua. Es el criterio de fallo seguro
+del módulo de automatización aplicado al pozo.
+
+**Y una condición local que se olvida al hablar de calidad.** El pozo mal protegido y los depósitos
+destapados asociados a él son problemas distintos: el primero es contaminación del agua que se bebe o se
+riega, el segundo es criadero de mosquito en zona con dengue endémico. Los dos se resuelven con lo
+mismo —**brocal levantado, sello, tapa asegurada y malla en toda abertura**— y los dos se pasan por alto
+porque no se ven hasta que alguien se enferma.
+</ContextoBolivia>
+
+<AplicarRizoma>
+**Rizoma del Sur son 3.666 m² a unos 529 msnm, y la primera decisión sobre el pozo es no tomarla
+todavía.** El orden para este sitio es: agotar la captación de techos ya proyectada, subir el agua útil
+del suelo con lo que enseñan las cinco lecciones anteriores, medir cuánta agua consume de verdad el
+vivero en el mes crítico y recién entonces preguntar cuánta falta. **Perforar antes de conocer el
+consumo es dimensionar a ciegas**, y esa ceguera se paga en el equipo de bombeo, que es donde está la
+plata.
+
+**La ronda de vecinos con pozo es la primera tarea y cuesta cero.** El barrio tiene perforaciones y tiene
+memoria: a qué profundidad apareció el agua, dónde está el nivel hoy, cuánto entrega cada uno, si alguno
+se secó al final de una seca fuerte, quién perforó y si entregó papeles. Diez conversaciones producen un
+mapa hidrogeológico aproximado que ninguna institución tiene escrito, y de paso **abren la conversación
+de gestión antes de que haya conflicto**, que es el único momento en que esa conversación es fácil.
+
+**Los doce lotes contiguos vuelven a ser la ventaja estructural del sitio.** Doce títulos podrían
+justificar doce pozos; una sola unidad de manejo justifica **un pozo bien hecho, bien sellado, bien
+medido y con la mejor bomba que se pueda pagar**, más una red que distribuya. Sale más barato por litro,
+concentra el mantenimiento en un punto y evita el peor escenario, que es un racimo de perforaciones
+interfiriéndose dentro del mismo predio. La misma lógica que hace de Rizoma un solo mapa de agua en la
+primera lección hace de Rizoma un solo pozo en esta.
+
+**El contrato con el perforador se escribe antes de que llegue la máquina** y pide cuatro entregables:
+perfil litológico anotado por profundidad, detalle del entubado y de la rejilla, sello sanitario
+ejecutado con brocal sobre el terreno, y prueba de bombeo con su planilla de niveles y tiempos. Nada de
+eso es un lujo: **es la diferencia entre un pozo y un agujero con agua**, y pedirlo después de que la
+máquina se fue es imposible.
+
+**El análisis de agua se hace el mes de terminar el pozo y se repite al final de la seca**, por un motivo
+específico: la calidad empeora justo cuando más se riega, porque el nivel está más bajo y las sales se
+concentran. Ese análisis es la línea de base contra la que se comparará todo, y enlaza directo con la
+lección siguiente, donde se decide si esa agua puede regar almácigos o solo árboles adultos.
+
+**El vivero ya tiene una jerarquía de calidad que define quién bebe qué.** El agua de lluvia captada de
+los techos es la mejor y va a almácigos y propagación, donde una sal de más arruina un lote entero de
+plantines. El agua de pozo va a crecimiento, frutales injertados y riego de campo: el plátano, la yautía
+y los árboles de sombra toleran bastante más que una bandeja de culantro recién sembrada. **Es la
+jerarquía de caché del módulo 25: el recurso escaso y bueno se reserva para lo que no perdona.**
+
+**El pozo se instrumenta el primer día y pasa a ser el sensor más valioso del terreno.** Un freatímetro
+casero de cordel y tubito, una planilla pegada en el galpón y una regla: nivel estático el primer sábado
+de cada mes con la bomba parada desde la noche anterior, nivel dinámico y caudal cada tres meses, horas
+de bombeo siempre. En diez años esa planilla vale más que cualquier estudio y hoy cuesta cinco minutos
+al mes. Va al mismo registro de largo plazo que cierra este módulo.
+
+**Y ahí Rizoma tiene una obra comunitaria que encaja exacto con su misión.** Nadie en el barrio está
+midiendo niveles, y basta con que unos pocos lo hagan el mismo día para que el barrio tenga por primera
+vez un dato propio sobre su acuífero. La propuesta concreta es que Rizoma **fabrique freatímetros
+caseros y los regale con la planilla impresa**, mida el suyo puntualmente y publique la serie donde
+todos la vean. No cuesta casi nada, no exige que nadie firme nada ni se obligue a nada, y **construye lo
+único capaz de sostener una decisión colectiva sobre el agua: un número compartido**. Es exactamente lo
+que Rizoma dice que hace, que es brindar herramientas para que la comunidad progrese empezando por la
+educación.
+</AplicarRizoma>
+
+## Lo que sigue
+
+El agua de abajo no es una laguna sino material poroso lleno de agua, y el pozo no la fabrica: abre una
+puerta y hunde alrededor un embudo que no respeta alambrados. El abatimiento se lee como una caída de
+tensión, el caudal específico es la inversa de la resistencia interna del acuífero, y la única cuenta
+que importa a largo plazo es recarga contra extracción, medida como una serie de niveles estáticos del
+mismo mes año tras año. Antes de perforar se pregunta —a la autoridad competente, a los vecinos y al
+perforador— y se exige por escrito perfil, entubado, rejilla, sello sanitario y prueba de bombeo. Y como
+el acuífero es un recurso de uso común, media solución no es hidráulica sino organizativa: saber quiénes
+son, medir todos el mismo día, turnarse y tener dónde discutir antes de que haga falta.
+
+Falta la otra pregunta sobre esa agua, la que hace daño sin avisar. Ya sabes cuánta sale y por cuánto
+tiempo va a salir; no sabes **qué trae disuelta**. Un agua de pozo puede regar perfectamente durante
+tres temporadas mientras saliniza el suelo todo ese tiempo, sin que se vea nada, hasta que un día los
+cultivos sensibles dejan de prosperar justo en la parcela que mejor andaba.
+
+La lección siguiente, **calidad del agua y salinización**, entra en ese daño lento: qué trae el agua
+adentro, cómo se mide la conductividad eléctrica y qué significa el número, por qué regar sin drenaje
+concentra sales en la zona de raíces, cómo se detecta a tiempo con observaciones que no cuestan nada y
+qué se hace cuando el problema ya empezó —incluida la razón por la que todo lo que aprendiste sobre
+drenaje en la lección 5 resulta ser la defensa principal contra la salinización.

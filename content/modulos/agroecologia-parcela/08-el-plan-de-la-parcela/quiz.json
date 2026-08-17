@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "p1",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuáles de estas decisiones pertenecen al 'esquema' de la parcela, es decir, las que casi no se pueden deshacer y por eso se toman mirando el conjunto?",
+      "opciones": [
+        "La altura y el sitio del tanque, porque de esa altura sale la presión de toda la red de riego.",
+        "El trazado del camino principal, porque cambiarlo obliga a arrancar lo que se plantó a los lados.",
+        "La posición de los árboles de dosel, porque su sombra futura condiciona todo lo que quepa debajo.",
+        "Qué hortaliza de ciclo corto se siembra en la cama más cercana a la casa esta temporada."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son esquema: cuestan años o una obra entera revertirlas, y por eso se deciden el primer día con la información más pobre que uno va a tener nunca. La cuarta es dato, no esquema: una hortaliza de ciclo corto se cambia en la temporada siguiente sin arrastrar ningún costo, así que no merece la lentitud ni el cuidado que exige una decisión irreversible. Confundir las dos categorías produce el error típico del principiante: discutir tres horas qué sembrar y clavar el tanque donde quede cómodo el primer día."
+    },
+    {
+      "id": "p2",
+      "tipo": "opcion_multiple",
+      "enunciado": "A una latitud cercana a 17,8° sur, ¿qué consecuencias de diseño se siguen de la geometría solar?",
+      "opciones": [
+        "Un árbol alto plantado al norte de una cama la sombrea la mayor parte del año, porque el sol pasa por el norte de febrero a octubre.",
+        "Una cortina densa en el borde sur estorba poquísimo al mediodía, porque en los meses en que el sol viene del sur está casi vertical.",
+        "La sombra del mediodía cambia de lado dos veces al año, cuando el sol cruza el cenit.",
+        "Como el sol está siempre al norte, cualquier estructura al sur del terreno es inofensiva a cualquier hora del día."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras salen directamente de la fórmula de altura solar al mediodía y del rango de declinación. La cuarta es falsa por dos motivos: el sol no está siempre al norte —cruza el cenit alrededor del 10 de noviembre y del 31 de enero y en ese periodo el mediodía viene del sur—, y sobre todo el mediodía es el caso fácil: la sombra real barre el terreno de oeste a este y a media mañana o media tarde es larguísima venga de donde venga. Por eso la lección insiste en el método empírico de la estaca y las tres fotos."
+    },
+    {
+      "id": "p3",
+      "tipo": "verdadero_falso",
+      "enunciado": "En una parcela de 3.666 m², donde todo queda a menos de ochenta metros, la zonificación por frecuencia de visita deja de tener sentido porque las distancias son despreciables.",
+      "respuesta": false,
+      "explicacion": "Falso, y por dos razones distintas. Primera, aritmética: un almácigo visitado dos veces al día son 730 viajes al año, de modo que veinte metros de diferencia se convierten en decenas de kilómetros caminados —y pagados en jornales— sin que ninguna planta lo haya pedido. Segunda, y más importante en un terreno chico: lo que manda no es la distancia en metros sino el camino. Un elemento que queda de paso hacia la llave de agua se visita solo; uno que exige un desvío de diez metros se termina abandonando aunque en el plano parezca cerquísima."
+    },
+    {
+      "id": "p4",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué afirmaciones sobre la circulación son correctas según la lección?",
+      "opciones": [
+        "El ancho del camino se obtiene midiendo el vehículo real que va a entrar, incluido su radio de giro, y no copiando una cifra de un manual.",
+        "Conviene levantar las líneas de deseo como dato del sitio y trazar el camino encima de ellas, en vez de pelear contra el atajo que la gente ya usa.",
+        "Como la compactación del tránsito es inevitable, se concentra a propósito en franjas definidas y no se pisa nunca dentro de la cama.",
+        "Basta con separar las zonas enfermas de las sanas por distancia; el sentido en que la gente recorre la parcela cada día no influye en la sanidad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son las reglas de ancho, conducta y suelo. La cuarta es falsa y peligrosa: la distancia no protege de nada si el recorrido diario lleva suelo pegado a las botas y a las herramientas desde el bloque enfermo hacia la zona de propagación. Por eso el recorrido tiene que ir siempre de lo más limpio a lo más sucio, y el punto de limpieza de calzado y herramienta se dibuja en el plano como un elemento más del sistema. En un cultivo clonal con enfermedades de suelo incurables esa geometría es la única barrera que existe."
+    },
+    {
+      "id": "p5",
+      "tipo": "verdadero_falso",
+      "enunciado": "Como los árboles de sombra tardan años en producir, lo sensato es dejarlos para la última fase y empezar por las camas de hortalizas, que dan cosecha pronto.",
+      "respuesta": false,
+      "explicacion": "Falso: es exactamente el orden inverso al que impone la lógica de camino crítico. Lo que más tarda en estar listo se planta primero, aunque sea lo último que produzca, porque un árbol sembrado en la fase 1 recién estructura el microclima en la fase 3; si se deja para el final, la fase 3 simplemente no existe. Las camas de hortalizas son lo más flexible del plan y se abren el año que uno quiera. Lo que sí limita la superficie que se abre no es el entusiasmo sino el menor de dos techos: el agua disponible en el mes más seco y las horas de trabajo de la semana más cargada."
+    },
+    {
+      "id": "p6",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el plan como documento vivo, ¿qué prácticas describe la lección?",
+      "opciones": [
+        "Cada hoja lleva versión y fecha, no se destruye ninguna versión anterior y cada cambio se anota junto con el motivo del cambio.",
+        "Se lleva un registro de plantación con lo que efectivamente se plantó —fecha, cantidad, origen del material y quién lo hizo—, equivalente agrícola de un plano conforme a obra.",
+        "Cada lote y cada cama llevan un código estable que nunca se reutiliza, aunque el elemento desaparezca.",
+        "Cuando la realidad se aparta del plan hay que corregir el terreno para que vuelva a coincidir con el papel, porque el plan es la referencia."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son la disciplina mínima de versionado, el registro de lo realmente plantado y la clave primaria estable que permite que bitácora, registro y plano hablen del mismo objeto. La cuarta invierte la relación: la deriva del plan no es un fracaso que haya que forzar de vuelta, es un dato que se mide caminando el terreno una vez al año con el plano en la mano. Lo que no está y no se echa de menos se borra del plan, y lo que apareció sin estar planificado y funciona se dibuja y se le nombra la función —buena parte de la deriva son mejoras que alguien improvisó y nadie documentó."
+    },
+    {
+      "id": "p7",
+      "tipo": "verdadero_falso",
+      "enunciado": "Antes de dibujar el plan de la parcela conviene averiguar en este curso qué dice la normativa boliviana sobre linderos, uso de suelo y perforación de pozos, para incorporar esos requisitos al plano.",
+      "respuesta": false,
+      "explicacion": "Falso, y el motivo es de honestidad, no de pereza. Este curso no puede darte artículos, plazos, costos ni requisitos de trámite sin inventarlos, y no lo va a hacer. Lo que corresponde es medir tú mismo el terreno para poder diseñar, y llevar cualquier discrepancia entre la cinta y los documentos, cualquier duda de lindero o servidumbre y cualquier trámite de uso de suelo o de pozo a la autoridad municipal competente y a un profesional habilitado. Conviene además tener claro que el plano de diseño y el plano con validez legal son documentos distintos y no se sustituyen el uno al otro."
+    },
+    {
+      "id": "p8",
+      "tipo": "abierta",
+      "enunciado": "Te encargan producir la primera versión completa del plan de Rizoma del Sur: 3.666 m² en 12 lotes contiguos en Zanja Honda, al sur de Santa Cruz, con vivero, plátano, yautía, culantro, ají dulce, gandul, ornamentales, árboles de sombra y frutales injertados, y con la misión de que un vecino sin tierra pueda copiar el patrón. Describe el proceso completo —levantamiento, análisis de sitio, zonificación, circulación, ubicación de elementos, faseado y versionado— indicando qué mides, en qué orden decides y qué dejas explícitamente sin decidir por falta de datos.",
+      "respuestaModelo": "Empezaría por el plano base, sin dibujar ni una idea propia. Salgo con cinta y estacas, levanto el perímetro y los doce lotes por triangulación y ordenadas comprobando el error de cierre, y anoto todo con tres tintas —lo medido, lo estimado a ojo y lo pendiente de medir—, porque la tercera es el mapa de mi propia ignorancia y dice dónde todavía no puedo comprometer una decisión cara. En ese plano registro lo que un levantamiento de albañil no registra: cada árbol de más de dos metros con especie, diámetro de tronco y radio de copa, incluidos los del otro lado del alambre; construcciones, tuberías y cables; los puntos de agua con su caudal medido a balde y cronómetro en la peor semana de agosto y no en marzo; las zonas donde el suelo se ve distinto; y por dónde camina hoy la gente que entra. El plano base se fecha y no se dibuja encima nunca más.\n\nDespués vienen las tres capas del análisis de sitio, que no son opinión sino medición. Sol: con la fórmula de altura solar al mediodía y una latitud cercana a 17,8° sur sé que de febrero a octubre el sol pasa por el norte —en junio a unos 49°, con un árbol de seis metros tirando cinco metros de sombra hacia el sur— y que hacia noviembre y enero cruza el cenit y la sombra del mediodía cambia de lado; aun así clavo estacas donde pienso poner árboles y fotografío sus sombras a las 9, 12 y 16 cerca del solsticio de junio. Viento: dos capas, el dominante cálido y el surazo del sur, marcando los pasillos entre construcciones o filas de árboles, que aceleran el aire y donde no va nada frágil. Agua: camino el terreno durante un aguacero y media hora después, marco líneas de flujo, charcos que duran y bajíos, levanto el microrrelieve con nivel de manguera y cota de referencia propia —en esta llanura la topografía que decide se mide en centímetros y las arcillas expansivas cierran los poros justo cuando más llueve— y dibujo la cuenca de aporte, la superficie de afuera que drena hacia adentro. Las obras de zanja o retención no las diseño aquí: el plan solo les reserva sitio.\n\nCon eso zonifico por frecuencia de visita, no por especie: almácigos y trasplantes recientes en la franja diaria, camas de ciclo corto en la semanal, franjas florales y banco de plantas madre en la mensual, árboles y cerco maduro en la estacional. Lo corrijo con dos criterios: la frecuencia es propiedad de la etapa y no de la especie, y en un terreno donde todo queda a menos de ochenta metros manda el camino y no la distancia. Trazo entonces la circulación: mido el vehículo real con su radio de giro para que no salga en reversa, levanto las líneas de deseo y trazo los caminos encima de ellas, concentro el tránsito en franjas definidas para que la compactación caiga donde no importa, y fijo el recorrido de lo más limpio a lo más sucio con el punto de limpieza de botas y herramienta dibujado como un elemento más.\n\nUbico luego por restricción decreciente. Primero el tanque, porque cada metro de altura es un metro de columna de agua y ninguna decisión agronómica posterior arregla un tanque bajo. Después el acceso, el camino principal y el punto de acopio. Después el vivero, el elemento de mayor frecuencia de visita, que necesita agua diaria, sombra controlable y salida directa al vehículo, con los almácigos todavía más cerca. Después los árboles de dosel y el cerco vivo: el cerco denso va en el borde sur, contra el surazo, que es justamente el lado que menos sombra proyecta al mediodía, y la franja al sur de cada grupo de árboles queda reservada como piso sombreado para yautía y culantro. El plátano va aguas abajo de todo lo susceptible y del vivero, con el recorrido diario yendo del vivero hacia él y nunca al revés. Las camas anuales rellenan lo que queda.\n\nEl faseado sale del menor de dos techos que todavía no puedo calcular con datos reales: los litros por día que llegan al terreno en agosto y las horas semanales de trabajo que existen de verdad. Mientras no los mida dejo explícitamente sin decidir cuántos lotes se abren; mi hipótesis es dos o tres, los más cercanos al agua, mientras toda la superficie recibe desde el año uno lo que tarda años y no pide riego: cerco vivo del sur, árboles de dosel y gandul. Cada fase debe caber en los dos techos y dejar el sistema coherente aunque no haya siguiente.\n\nTambién dejo sin decidir, y anotado como tal, lo que dependa de terceros: linderos, servidumbres, uso de suelo y perforación de pozo van a la autoridad municipal competente y a un profesional habilitado, y los datos climáticos a las instituciones y a los vecinos mayores, nunca a una cifra inventada. Por último el plan se versiona: cada hoja con versión y fecha, ningún cambio sin motivo escrito, registro de plantación de lo realmente plantado, códigos de lote y cama que nunca se reutilizan y una caminata anual con el plano en la mano para medir la deriva. Y como Rizoma existe para enseñar, produzco la hoja derivada: un plano de patio de veinte metros con los mismos criterios, legible para quien no dibuja planos.",
+      "criterios": [
+        "Empieza por un plano base fechado que solo registra lo existente, sin diseñar encima, y separa lo medido de lo estimado y de lo pendiente.",
+        "Incluye en el levantamiento datos agronómicos que un levantamiento de obra no lleva —árboles con especie, tronco y copa, variación de suelo, recorridos actuales— y mide el caudal del punto de agua en la peor semana de la seca, no en lluvias.",
+        "Resuelve la capa de sol con la geometría real del trópico sur —sol al norte de febrero a octubre, cenit hacia noviembre y enero— y añade la comprobación empírica con estaca y fotos.",
+        "Trata el viento como dos capas distintas, dominante cálido y surazo del sur, e identifica los pasillos que aceleran el aire.",
+        "Mapea escorrentía, charcos, bajíos, microrrelieve en centímetros y cuenca de aporte, y deja las obras para el módulo correspondiente.",
+        "Zonifica por frecuencia de visita corrigiendo por etapa del cultivo y por camino, no solo por distancia en metros.",
+        "Traza la circulación desde el vehículo real y su radio de giro, respeta las líneas de deseo y concentra la compactación fuera de las camas.",
+        "Fija el sentido del recorrido de lo limpio a lo sucio y ubica el bloque de plátano aguas abajo del vivero y de lo susceptible.",
+        "Ordena la ubicación por restricción decreciente empezando por tanque y acceso y terminando por las camas anuales.",
+        "Fasea con el menor de los dos techos —agua de agosto y jornales de la semana más cargada— y planta primero lo que más tarda en estar listo.",
+        "Declara explícitamente qué queda sin decidir por falta de datos y remite linderos, uso de suelo, pozos y datos climáticos a la autoridad competente y a las instituciones, sin inventar cifras.",
+        "Incluye versionado con motivo del cambio, registro de plantación, códigos estables, revisión anual de la deriva y la hoja derivada replicable para un vecino con veinte metros cuadrados."
+      ],
+      "explicacion": "La respuesta buena no es una lista de elementos bonitos sobre un dibujo: es un procedimiento con orden. Primero se registra lo que hay, después se miden las tres capas invisibles, después se zonifica y se traza la circulación —que son las decisiones más permanentes—, después se ubica por restricción decreciente y solo al final se decide cuánta superficie se abre cada año. Dos señales distinguen un plan honesto de uno decorativo: que diga con todas las letras qué no sabe todavía y por qué no lo decide, y que prevea cómo se va a mantener vivo el documento cuando la realidad lo corrija."
+    }
+  ]
+}

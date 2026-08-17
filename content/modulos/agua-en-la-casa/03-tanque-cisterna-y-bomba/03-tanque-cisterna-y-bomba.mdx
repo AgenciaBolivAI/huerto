@@ -1,0 +1,474 @@
+Se corta la luz un jueves a las siete de la tarde. En una casa la olla sigue llenándose y los chicos se
+bañan: el agua está arriba, en un tanque, y **la gravedad no se corta**. En la de al lado, con la misma
+cañería y el mismo pozo, no sale nada, porque lo único que empujaba el agua era una bomba enchufada. Las
+dos gastaron plata parecida; lo que las separa es **dónde decidieron guardar la energía**.
+
+De eso trata esta lección: por qué una casa almacena agua, cuánta, a qué altura, apoyada sobre qué, y
+qué máquina la mueve cuando la gravedad no alcanza. Es donde el agua pasa a ser un problema de
+**estructura, de higiene y de electricidad a la vez**.
+
+## Por qué una casa guarda agua
+
+Guardar agua resuelve dos problemas distintos. El primero es **la interrupción**: la cooperativa corta,
+la bomba se queda sin luz, se rompe una matriz, y el depósito desacopla el momento en que el agua llega
+del momento en que se usa.
+
+El segundo existe **aunque nunca falte agua**: la fuente entrega poco y parejo, y la casa consume mucho
+de golpe. Una acometida puede estar dando un hilo las veinticuatro horas, y aun así una ducha pide ocho
+o diez litros por minuto durante diez minutos. El depósito acumula el hilo durante horas y lo devuelve
+en chorro: **convierte caudal continuo y flaco en caudal intermitente y gordo**.
+
+<Analogia titulo="Un buffer entre un productor lento y un consumidor a tirones">
+Quien haya programado con colas reconoce el patrón: un productor de caudal bajo y constante, un
+consumidor que duerme casi todo el día y de pronto pide una ráfaga, y entre los dos un **buffer** cuyo
+tamaño se elige por el pico y por cuánto puede caerse el productor, nunca por el promedio. La otra mitad
+se olvida siempre: **un buffer agrega latencia y agrega estado**. El agua que sale hoy entró hace tres
+días, y en esos tres días le pasaron cosas: un buffer enorme suena a robustez y en realidad guarda datos
+viejos, así que no se maximiza, se dimensiona.
+</Analogia>
+
+Y algo que aquí decide más que lo anterior: **el corte de agua y el corte de energía son fallas
+independientes, y las dos ocurren**. Un sistema que entrega por gravedad sobrevive al corte de luz sin
+hacer nada. Uno donde una bomba es lo único que empuja **se cae con la luz**, de noche y con calor.
+
+## Cuánto guardar, y por qué más grande no siempre es mejor
+
+<Formula explicacion="Volumen de reserva de una vivienda: cuánta gente vive ahí, cuánto gasta cada una por día y cuántos días se quiere aguantar sin ninguna recarga. Los días de autonomía son una decisión, no un dato: dependen de cuánto suelen durar los cortes en tu zona, cosa que se sabe preguntando en el barrio y anotando durante unos meses.">
+volumen del tanque = personas × litros por persona y día × días de autonomía
+</Formula>
+
+El número del medio se arma sumando usos reales, porque una casa con inodoro de descarga y lavadora
+gasta varias veces lo que una con letrina y balde, y las dos son casas de la zona.
+
+<Tabla>
+
+| Uso | Consumo típico | Dónde se va la cuenta |
+| --- | --- | --- |
+| Beber y cocinar | 3 a 6 litros por persona y día | Lo único que no se puede recortar |
+| Lavado de manos y cara | 1 a 3 litros cada vez | Muchas veces al día: suma |
+| Ducha | 6 a 12 litros por minuto | El pico más grande de la casa |
+| Descarga de inodoro | 6 a 12 litros por descarga | Multiplicá por las veces que se usa |
+| Lavar ropa | 40 a 100 litros por carga | Concentrado en uno o dos días |
+
+</Tabla>
+
+Una casa con ducha e inodoro suele caer en el orden de **cien a doscientos litros por persona y día**;
+una sin conexión interior, en unas pocas decenas.
+
+Contra la intuición, **el tanque más grande posible no es la mejor decisión**: cuesta más, pesa más y
+empeora el agua. Lo explica el <Termino slug="tiempo-de-residencia">tiempo de residencia</Termino>, el
+volumen almacenado dividido entre el consumo diario. Mil litros en una casa que gasta quinientos por día
+se renuevan en dos; en una que gasta cien, en diez, y en diez días con treinta grados ya se fue
+cualquier desinfectante y creció la película de microorganismos pegada a la pared. Qué hacer con eso es
+la lección 06; acá vale la regla: **el tanque se elige por los días de autonomía, no por lo que entra en
+la losa**.
+
+## La altura es la presión
+
+La presión en el fondo de una columna de agua no depende del ancho de la columna ni de cuánta agua hay:
+depende **solo de la altura**.
+
+<Formula explicacion="Presión en la base de una columna de líquido: densidad por gravedad por altura. Con agua —unos 1.000 kilos por metro cúbico— cada metro da unos 0,098 bar, que en la práctica se redondea a 0,1 bar por metro. El ancho del tanque no aparece en la fórmula: un tanque de mil litros y uno de doscientos, a la misma altura, dan exactamente la misma presión.">
+P = ρ · g · h
+</Formula>
+
+Por eso el oficio usa una unidad que dice de dónde viene:
+el <Termino slug="metro-de-columna-de-agua">metro de columna de agua</Termino>. Diez metros de altura
+son aproximadamente un bar, y con eso una cinta métrica predice presión. Tres precisiones explican la
+mitad de las quejas. **Cuenta la superficie del agua, no la base del tanque**, y por eso la ducha del
+final del día sale más floja. **La altura se mide hasta el punto de uso**: un tanque a tres metros sobre
+la planta baja está a medio metro sobre la regadera del primer piso, el error caro de las casas que
+crecen. **Y esa es la presión con todo cerrado**: apenas abrís una canilla aparece la fricción, y lo que
+llega es esa altura menos la pérdida de carga de la lección 01.
+
+<Tabla>
+
+| Altura del agua sobre el punto de uso | Presión estática | Qué se puede esperar |
+| --- | --- | --- |
+| 1 metro | ~0,1 bar | Llena un balde, despacio. Ducha: no |
+| 2 metros | ~0,2 bar | Canilla aceptable, ducha pobre |
+| 4 metros | ~0,4 bar | Ducha razonable si la tubería es generosa |
+| 6 a 8 metros | ~0,6 a 0,8 bar | Ducha cómoda, varios puntos a la vez |
+| 10 metros | ~1 bar | Como una red pública en buen día |
+
+</Tabla>
+
+Y ojo: **algunos aparatos tienen presión mínima de funcionamiento**, no de comodidad. Un calefón de paso
+a gas abre su válvula solo cuando el agua empuja lo suficiente, y una ducha eléctrica de paso necesita
+un caudal mínimo para no recalentarse. Ese mínimo está en la placa del aparato y **no se negocia**.
+
+## Lo que la altura no arregla
+
+**No arregla un tubo demasiado fino.** Con el agua en movimiento manda la fricción, y depende del
+diámetro de forma brutal: para el mismo caudal, la pérdida crece con la quinta potencia del inverso del
+diámetro, así que pasar de media pulgada a tres cuartos **divide la pérdida por alrededor de siete**.
+Ningún metro de torre compite con eso. Es la caída de tensión de un cable fino: cuando la lámpara del
+fondo alumbra poco, la solución no es forzar la fuente, es engrosar el conductor.
+
+**No arregla una obstrucción**, porque el aireador o la regadera llenos de sarro reducen el paso. **Y no
+crea agua**: si el tanque se vacía a media tarde, el problema es de volumen o de recarga.
+
+## El tanque como obra: mil kilos por metro cúbico
+
+Un metro cúbico de agua son mil litros y **mil kilos**, concentrados en el círculo donde el tanque
+apoya. Es la carga puntual más grande que la mayoría de las casas recibe en su vida, y se coloca sin que
+nadie haga una cuenta.
+
+**El peso tiene que llegar a algo que baje hasta el suelo.** Sobre una losa, el tanque va **encima de un
+muro o de una viga**, nunca en el medio del vano, que es donde más flexiona y menos carga admite. Sobre
+una torre, la torre necesita fundación propia, arriostramiento y anclaje: cuatro palos clavados en
+tierra floja no son una torre. **Y la base tiene que ser continua y plana**, porque los tanques de
+plástico apoyan toda su base: sobre dos vigas o sobre ladrillos separados se deforman en los huecos,
+trabajan fatigados en esos bordes y se rajan meses después, casi siempre de noche.
+
+<Advertencia titulo="Antes de subir mil litros, preguntá dónde caen">
+Un tanque lleno que se desploma desde tres metros **mata**, y no es una figura retórica. Los dos modos
+de falla reales son la estructura que cede —losa no pensada para eso, torre improvisada, apoyo en dos
+puntos— y **el vuelco por viento**, que aquí importa porque un surazo le pega fuerte a un tanque alto y
+un tanque vacío ofrece mucha superficie y casi no pesa. Por eso se ancla, lleno o vacío.
+
+Si no sabés qué aguanta la losa o el muro donde pensás ponerlo, **consultalo con un albañil con
+experiencia o con un ingeniero antes de comprarlo**. Acá no vas a encontrar cargas admisibles ni normas:
+dependen de cómo esté hecha cada casa, y una cifra inventada podría tirarte un techo encima.
+</Advertencia>
+
+## El tanque como higiene: tapa, malla y las cinco bocas
+
+Un depósito es también un recipiente con agua quieta a treinta grados. **Opaco, siempre**, porque un
+tanque que deja pasar luz con agua adentro es literalmente un cultivo de algas; y mejor claro que negro,
+porque el oscuro absorbe radiación y el calor acelera todo lo que crece.
+
+**Tapa que cierre, pero no hermética.** La tapa deja afuera hojas, polvo, lagartijas y mosquitos. Pero
+un tanque sellado tiene un problema mecánico: cuando el agua sale rápido —una bomba aspirando de él—
+adentro baja la presión y la atmósfera puede **aplastarlo como a una botella**. Por eso lleva una
+abertura de ventilación con **malla fina antimosquito**, que deja entrar aire y no bichos.
+
+<Tabla>
+
+| Boca | Dónde va | Qué problema resuelve |
+| --- | --- | --- |
+| Entrada | Arriba, descargando **sobre** el nivel máximo | Que el agua del tanque no vuelva a la red |
+| Salida | Unos centímetros **sobre** el fondo | Deja el sedimento abajo, no en las canillas |
+| Rebalse | Cerca del borde, más gordo que la entrada | Que el sobrante salga por donde vos querés |
+| Purga | En el punto **más bajo** | Sacar el barro sin desmontar todo |
+| Ventilación | Arriba, con malla | Que no se aplaste ni críe mosquitos |
+
+</Tabla>
+
+Si el caño de llenado descarga por encima del nivel máximo queda un tramo de aire entre el chorro y el
+agua: eso es un <Termino slug="corte-de-aire">corte de aire</Termino>, y ninguna caída de presión en la
+red puede chupar agua del tanque hacia atrás, porque **el aire no se sifona**. Si el caño entra por
+abajo y queda sumergido, el día que la red pierde presión el tanque se vacía hacia la cañería del
+barrio. Es la protección más barata que existe.
+
+El <Termino slug="rebalse">rebalse</Termino> va **más gordo que la entrada**, para que si el flotador
+falla abierto pueda sacar todo lo que entra, y **descargando donde se vea y no dañe**, nunca al pie de
+la torre, porque el agua concentrada socava fundaciones.
+La <Termino slug="purga-de-fondo">purga de fondo</Termino> decide si el tanque se limpiará alguna vez:
+sin ella limpiar es un operativo, con ella es abrir una válvula.
+
+El cierre automático lo hace la <Termino slug="valvula-de-flotador">válvula de flotador</Termino>: una
+boya que sube con el agua y empuja una palanca que corta el paso, sin electricidad, sin programa y sin
+estado que corromper. Falla de dos formas reconocibles: el empaque gastado la deja goteando, la boya
+pinchada la deja sin cerrar. Cuando quien manda es una bomba, el equivalente es
+un <Termino slug="interruptor-de-nivel">interruptor de nivel</Termino>, y ahí importa que **la distancia
+entre el nivel que arranca y el que para sea grande**, o el motor arrancará todo el día.
+
+La limpieza se hace **cepillando** paredes y fondo, porque la película biológica está pegada y enjuagar
+no la saca; con qué desinfectar y cada cuánto se consulta con el centro de salud o la cooperativa. Y un
+peligro que hay que decir: **una cisterna enterrada es un espacio confinado**, donde puede faltar
+oxígeno o haberse acumulado gas, y eso mata sin aviso y sin olor. No se entra solo, se ventila antes y
+queda alguien afuera mirando. La lección 07 lo retoma con las cámaras.
+
+## Dos arquitecturas: bombear al tanque o presurizar la casa
+
+**Cisterna abajo, bomba, tanque arriba, casa por gravedad.** El volumen grande se guarda barato al ras o
+enterrado —sin peso sobre nada, fresco y sin luz— y una bomba lo sube por tandas a
+un <Termino slug="tanque-elevado">tanque elevado</Termino> más chico. La bomba trabaja a ratos, mandada
+por un flotador, y **la casa no depende de ella para tener agua**. El precio es que la presión es la que
+da la altura.
+
+**Presurización directa.** Una bomba toma de la <Termino slug="cisterna">cisterna</Termino> y mantiene
+la cañería con presión, arrancando sola cuando alguien abre una canilla. Da la presión que uno quiera y
+ahorra la torre, pero **sin electricidad no hay una gota**, ni para descargar el inodoro. El híbrido
+suele ser lo más sensato: **gravedad para toda la casa y una bomba chica solo donde hace falta**.
+
+## Qué hace de verdad una bomba
+
+Una bomba no "tira" del agua. Casi todas las de una casa son
+una <Termino slug="bomba-centrifuga">bomba centrífuga</Termino>:
+un <Termino slug="impulsor">impulsor</Termino> —un disco con paletas— gira rápido dentro de una carcasa;
+el agua entre las paletas sale despedida y adquiere **velocidad**; al llegar al borde entra en un caracol
+que se ensancha, la <Termino slug="voluta">voluta</Termino>, donde frena y esa velocidad se convierte en
+**presión**. En el centro, del que el agua acaba de irse, queda una zona de baja presión que atrae más
+agua desde la tubería.
+
+La <Termino slug="bomba-periferica">bomba periférica</Termino>, barata y muy común, usa un rodete chico
+en un canal estrecho: el agua da varias vueltas recibiendo empujones sucesivos, así que **entrega mucha
+presión y poco caudal**, justo el perfil de una casa; a cambio es intolerante con la arena, porque las
+holguras son mínimas. La <Termino slug="bomba-sumergible">bomba sumergible</Termino> está adentro del
+agua y **empuja** en vez de aspirar.
+
+Toda bomba tiene una <Termino slug="curva-de-la-bomba">curva</Termino>: **caudal y altura están
+acoplados**. La máquina que entrega mucho caudal subiendo dos metros entrega poquísimo subiendo veinte,
+y a la altura máxima de la caja entrega **cero**; ese número grande del catálogo no es el punto de
+trabajo, es donde la bomba ya no sirve. Lo que se compara contra la curva es
+la <Termino slug="altura-manometrica-total">altura manométrica total</Termino> —lo que hay que subir de
+verdad más lo que se pierde en fricción—, y donde la curva corta a lo que pide la instalación está
+el <Termino slug="punto-de-funcionamiento">punto de funcionamiento</Termino>, el único caudal que esa
+bomba va a dar en esa casa.
+
+## El techo de la succión: por qué el límite es la atmósfera
+
+Una bomba de superficie no puede aspirar desde más de unos pocos metros, y **eso no mejora comprando una
+bomba más potente**. La razón es que la bomba no tira del agua: lo único que puede hacer es sacar el
+aire de su interior y bajar la presión. Quien empuja el agua hacia arriba por el caño de aspiración es
+la <Termino slug="presion-atmosferica">presión atmosférica</Termino>, el peso de la columna de aire que
+hay sobre el pozo.
+
+A nivel del mar la atmósfera equivale a unos 10,3 metros de columna de agua; en Zanja Honda, a unos 529
+metros de altitud, alrededor de **9,7 metros**. Ese es el techo absoluto, con una bomba capaz de hacer
+vacío perfecto y sin pérdidas. Descontando la fricción del caño, el agua tibia y el margen que la bomba
+necesita, la <Termino slug="altura-de-succion">altura de succión</Termino> práctica rara vez pasa de
+**seis o siete metros**, y un diseño prudente se queda **por debajo de cinco**.
+
+<Analogia titulo="El sorbete de once metros">
+Con un sorbete tomás del vaso porque al aspirar bajás la presión adentro y la atmósfera empuja el
+líquido. Si midiera once metros, **no hay pulmón, ni bomba, ni motor que sirva**: aunque hicieras vacío
+absoluto, la atmósfera solo sostiene unos diez metros de agua. Para quien programa es un límite del
+entorno y no del proceso, como resolver con más CPU un problema topado por el ancho de banda: la salida
+no es empujar más fuerte desde arriba, es **cambiar de arquitectura** y poner la bomba abajo o meterla
+adentro del agua.
+</Analogia>
+
+De ese límite salen las reglas de la aspiración: **corta, recta y de diámetro igual o mayor que la boca
+de la bomba**; **siempre subiendo hacia la bomba**, sin lomos donde se junte aire; **sin fugas**, porque
+un empalme flojo en ese tramo no gotea agua, **traga aire**, y no hay nada que ver; y con
+una <Termino slug="valvula-de-pie">válvula de pie</Termino> con canastilla en el extremo sumergido, que
+retiene el agua cuando la bomba para. Del otro lado,
+una <Termino slug="valvula-antirretorno">válvula antirretorno</Termino> impide que la columna se
+devuelva de golpe al apagar, que es una de las fuentes
+del <Termino slug="golpe-de-ariete">golpe de ariete</Termino>.
+
+De ahí el <Termino slug="cebado-de-bomba">cebado</Termino>: antes de arrancar, el cuerpo de la bomba y
+la aspiración tienen que estar **llenos de agua**, porque el impulsor no puede mover aire —casi mil
+veces menos denso— y gira en vacío. La consecuencia diagnóstica vale días de trabajo: **una bomba que se
+desceba una y otra vez no está fallando, está avisando** que entra aire por la aspiración o que la
+válvula de pie ya no retiene.
+
+## Cavitación y marcha en seco: las dos formas de matar una bomba
+
+La <Termino slug="cavitacion">cavitación</Termino> ocurre cuando se estira demasiado esa succión. Si la
+presión dentro de la bomba baja lo suficiente, el agua **hierve en frío**: a treinta grados basta con
+acercarse al vacío para que empiece a evaporarse. Se forman burbujas de vapor, viajan a la zona donde la
+presión vuelve a subir y ahí **colapsan de golpe**, cada una como un martillazo microscópico contra el
+metal. Suena como si bombeara piedritas, y deja el impulsor picado. Las causas son siempre las mismas:
+aspiración demasiado alta, caño flaco, tapado o con fugas, o agua caliente.
+
+La <Termino slug="marcha-en-seco">marcha en seco</Termino> es más rápida. El agua que pasa por la bomba
+es también lo que **refrigera y lubrica** el sello del eje: sin agua, las caras de ese sello rozan sin
+película, se calientan en segundos, la goma se quema y un impulsor de plástico puede deformarse. Se
+arruina en minutos, y pasa sin que nadie haga nada mal —se vació la cisterna de madrugada y siguió
+andando hasta la mañana—. Se evita con el interruptor de nivel o con un protector que corta cuando no
+detecta caudal.
+
+## Presostato e hidroneumático: el colchón de aire
+
+En un sistema presurizado, quien decide cuándo arranca la bomba es
+el <Termino slug="presostato">presostato</Termino>: un interruptor mandado por la presión del agua, con
+dos ajustes, a qué presión conecta y a qué presión desconecta.
+
+El problema es que **el agua no se comprime**. Con la cañería llena y todo cerrado, apenas la bomba
+empuja un chorrito la presión se dispara, y sin nada que amortigüe el motor arrancaría y pararía varias
+veces por minuto. Para eso existe
+el <Termino slug="hidroneumatico">tanque hidroneumático</Termino>: un recipiente con agua y, separado de
+ella por una membrana de goma, **aire a presión**. El aire sí se comprime y trabaja como un resorte: la
+bomba mete agua y el aire guarda energía; se abre una canilla y la devuelve empujando. Lo que entra y
+sale entre las dos presiones del presostato es el <Termino slug="volumen-util">volumen útil</Termino>,
+lo que la casa consume **sin que la bomba arranque**. Ese aire tiene
+una <Termino slug="precarga-de-aire">precarga</Termino> que se ajusta con el tanque vacío de agua, en
+una válvula igual a la de una llanta; el valor correcto va referido a la presión de arranque de tu
+presostato y viene en la placa del equipo, así que **no lo inventes ni lo copies de otra casa**.
+
+Cuando la membrana se rompe o el aire se pierde, el tanque se llena de agua y deja de amortiguar, y
+aparece el síntoma más común: **la bomba arranca y para cada pocos segundos**. Eso se
+llama <Termino slug="ciclado-corto">ciclado corto</Termino> y es un asesino lento, porque cada arranque
+mete un pico de corriente varias veces mayor que el consumo normal: a un motor no lo gastan las horas de
+marcha sino los arranques.
+
+<Tabla>
+
+| Síntoma | Causa más probable | Qué mirar primero |
+| --- | --- | --- |
+| Arranca y para cada pocos segundos | Hidroneumático sin aire o membrana rota | Precarga con el tanque sin agua |
+| Arranca sola de noche sin que nadie use agua | Fuga, o antirretorno que no cierra | Cerrar todo y ver si igual arranca |
+| Anda pero no da presión | Se descebó, entra aire, impulsor gastado | Cebado y fugas en la aspiración |
+| Suena como piedritas | Cavitación | Altura y diámetro de la aspiración |
+| Zumba y no arranca; arranca con un empujón | Capacitor agotado o eje trabado | Capacitor y giro del eje, **desenchufada** |
+| Gotea entre el motor y el cuerpo | Sello mecánico vencido | Cambio de sello; no seguir usándola |
+| Se calienta y corta sola | Sobrecarga, ciclado corto, poca ventilación | Arranques por hora y ventilación |
+
+</Tabla>
+
+## Electricidad al lado del agua
+
+Acá el tono cambia, porque esto mata gente todos los años. El daño no lo hace el aparato: lo hace **la
+corriente que atraviesa tu cuerpo**, y cuánta pasa depende de la resistencia del camino. La piel seca
+ofrece mucha resistencia; la mojada, muchísima menos, y un piso húmedo con los pies descalzos es un
+contacto excelente con la tierra. Por eso la misma falla que en un cuarto seco da un cosquilleo, junto a
+una bomba y con los pies en el agua, mata. **El agua no electrifica: baja tu resistencia y te convierte
+en buen conductor.**
+
+De ahí tres reglas. La <Termino slug="puesta-a-tierra">puesta a tierra</Termino> de la carcasa le da a
+una fuga un camino más fácil que vos: si un bobinado toca la carcasa, la corriente se va por la jabalina
+y no espera a la primera mano mojada, y la tercera pata del enchufe es ese cable, que no se corta jamás.
+El <Termino slug="diferencial">interruptor diferencial</Termino> compara la corriente que va
+con la que vuelve, y si falta una parte es porque se está yendo por la tierra o por una persona, así que
+corta en fracciones de segundo: es **el único dispositivo que protege al cuerpo humano**, porque el
+térmico protege al cable. Y **circuito propio con cable del grosor correcto**, porque un motor pide un
+golpe de corriente al arrancar y un cable fino o largo produce caída de tensión, con lo que el motor no
+llega a su velocidad y se recalienta. Nada de empalmes con cinta dentro del pozo de la bomba ni de
+alargues tiradas en el piso mojado.
+
+<Advertencia titulo="Antes de tocar una bomba">
+**Cortar en el interruptor no basta: se corta en el tablero.** Un interruptor puede estar cortando el
+neutro en vez de la fase, y entonces el aparato queda apagado pero con tensión adentro. Si la bomba
+tiene capacitor, además **un capacitor guarda carga con el equipo desenchufado** y puede dar un golpe al
+tocar sus bornes: se descarga a través de una resistencia, nunca haciendo puente con un destornillador.
+
+Y la señal que nunca se ignora: si al tocar la bomba, el caño o la canilla **sentís un cosquilleo**, hay
+corriente donde no debe haberla. No es estática ni algo que se aguanta: es una falla de aislamiento con
+la tierra desconectada o inexistente, y el próximo que la toque puede estar descalzo y mojado. Se corta
+la energía desde el tablero y se llama a un electricista. Si alguien queda pegado a un aparato, **no lo
+agarres**: cortá primero la energía, porque si lo tocás quedan dos.
+</Advertencia>
+
+## Instalar la bomba y las averías de siempre
+
+**Base firme y a nivel**, sobre algo que no se moje ni vibre. **La tubería no cuelga de la bomba**: los
+caños van sostenidos por su cuenta, porque si el peso y la desalineación se descargan sobre la carcasa,
+el eje trabaja forzado y el sello se muere temprano. **Una unión universal y una válvula a cada lado**,
+para sacar la bomba en diez minutos sin cortar nada. Y **un manómetro**, que es lo único que dice qué
+pasa adentro.
+
+Las averías que aparecen una y otra vez son tres. El **sello mecánico**: dos caras muy lisas —una gira
+con el eje, otra queda fija— apretadas por un resorte con una película de agua entre ellas; cuando se
+vence aparece un goteo entre el motor y el cuerpo, y ese goteo no se aguanta, porque el agua entra al
+motor y la reparación pasa de barata a cara.
+El <Termino slug="capacitor-de-arranque">capacitor</Termino>, que es lo que le dice al motor hacia qué
+lado girar: cuando se agota, zumba, no arranca y sí arranca si se le da un empujón. Y el **impulsor
+trabado**, típico de una bomba parada semanas y pegada por sedimento u óxido, que se comprueba girando
+el eje a mano desde el lado del ventilador, **con el equipo desenchufado**. Lo que hay adentro del motor
+es el módulo 36; alimentarla con panel solar, el 17.
+
+## Errores comunes
+
+**«Le subo el tanque un metro y se arregla la ducha.»** Un metro son 0,1 bar; engrosar la bajada de
+media a tres cuartos divide la fricción por siete.
+
+**«Compré la bomba que sube treinta metros.»** Esa cifra es donde entrega caudal cero.
+
+**«No aspira, voy a comprar una más potente.»** Si el agua está a nueve metros, el que empuja es la
+atmósfera y su techo acá es 9,7 metros.
+
+**«El tanque va bien sobre unos ladrillos.»** Necesita base continua; apoyado en puntos se raja meses
+después.
+
+**«Se llenó de agua el hidroneumático, pero anda igual.»** Anda ciclando corto, y cada arranque gasta
+más que una hora de marcha.
+
+**«No tiene tapa, total el agua se ve limpia.»** Transparente no es potable, y en zona de dengue un
+depósito destapado es un criadero.
+
+<AplicarRizoma titulo="Llevarlo a la práctica: una tarde con un balde, un reloj y una linterna">
+**Empezá midiendo, que no cuesta nada.** Poné un balde de volumen conocido bajo la ducha, abrí a fondo y
+cronometrá: eso da los litros por minuto reales de tu casa. Después medí la altura desde la superficie
+del agua del tanque —no desde su base— hasta la regadera, con una cuerda o con una manguera transparente
+llena de agua. Con esos dos números ya podés decir si tu problema es de altura o de fricción, y dejar de
+gastar en la solución equivocada.
+
+**Contá tu gente y tu consumo antes de hablar de tamaño.** Sumá los usos de la tabla durante una semana
+anotando en un papel pegado en la cocina, y multiplicá por los días que querés aguantar sin recarga, que
+se deciden preguntando en el barrio cuánto duran los cortes. Mirá también el otro extremo: si tu tanque
+se renueva cada ocho o diez días, es demasiado grande y el agua se está añejando adentro.
+
+**Hacé la revisión de las cinco bocas este fin de semana, con una linterna.** ¿La tapa cierra? ¿Hay
+malla en la ventilación y en el rebalse? ¿El caño de llenado descarga por encima del agua o entra
+sumergido? ¿La salida está en el fondo mismo, mandando barro a las canillas? ¿Adónde va a parar el
+rebalse: a la vista, o adentro del muro? ¿Hay purga abajo? Casi todo eso se arregla en una mañana con
+material de ferretería, y **la tapa con malla es, en este lugar, salud pública**. Y antes de instalar o
+mudar un tanque, mirá por dónde bajan los muros, dale base llena y lisa, anclalo, y si dudás de qué
+aguanta esa losa preguntale a alguien que sepa **antes** de llenarlo.
+
+**Si tenés bomba, adoptá tres costumbres de dos minutos.** Poné una hoja de diario debajo una vez al mes:
+si amanece manchada, el sello se está yendo y te enteraste barato. Escuchala: si suena a piedritas está
+cavitando. Y fijate si arranca sola de madrugada sin que nadie use agua, porque eso es una fuga o un
+antirretorno que no cierra, y es plata que se va todas las noches. Etiquetá su térmico en el tablero
+para que cualquiera pueda cortarla en una emergencia.
+
+**Escribí el plan de corte y colgalo**: dónde está la llave general, cómo se cierra, qué se hace si el
+tanque se está vaciando, dónde está la purga, a quién se llama. Que lo sepan todos en la casa y no solo
+el que arregla las cosas, porque los cortes pasan de noche. **Y en el barrio esto se comparte:** una
+persona que sabe cebar una bomba y reconocer un ciclado corto le resuelve el problema a diez familias, y
+comprar entre varios un manómetro y una llave de caño sale mucho más barato que cada uno el suyo. La
+herramienta que se presta y el conocimiento que se enseña son la parte del sistema que no se rompe con
+un corte de luz.
+</AplicarRizoma>
+
+<ContextoBolivia titulo="Zanja Honda: dos cortes distintos, treinta grados y un mosquito">
+**Acá se corta el agua y se corta la luz, y son fallas independientes.** Esa sola frase decide la
+arquitectura del sistema de una casa en esta zona: **si tu agua depende de que haya electricidad en ese
+momento, vas a quedarte sin agua en el peor momento**. El tanque elevado por gravedad no es una
+antigüedad: es lo único que sigue funcionando con el barrio a oscuras. La presurización directa da mejor
+ducha y es válida, pero acá se diseña como complemento de una reserva por gravedad, no en su lugar.
+Quien viene del software lo reconoce: es la diferencia entre un sistema con **degradación gradual** y
+uno con punto único de falla.
+
+**Muchas casas toman de pozo, y la profundidad decide la máquina.** Si el agua está a menos de cinco o
+seis metros, una bomba de superficie bien instalada trabaja; más abajo no hay potencia que sirva, porque
+el techo lo pone la atmósfera. Y hay un detalle que confunde a mucha gente: **el nivel del agua baja
+mientras la bomba trabaja**, así que un pozo que en reposo tiene agua a cuatro metros puede tenerla a
+siete bombeando, y entonces la bomba se desceba a media mañana todos los días. Se mide en reposo y
+bombeando, y se diseña con el segundo número.
+
+**El calor trabaja en contra todo el año.** Un tanque negro al sol entrega agua tibia, y el agua tibia
+acelera lo que crece adentro, se lleva antes cualquier desinfectante y además **acerca la bomba a la
+cavitación**, porque cuanto más caliente el agua, menos hay que bajar la presión para que hierva. Un
+tanque claro, opaco y con sombra es una decisión técnica, no estética.
+
+**El dengue cambia el orden de prioridades.** El mosquito del dengue cría en **agua limpia y quieta**,
+que es exactamente lo que hay en un tanque doméstico, en una cisterna sin tapar, en el balde de reserva
+del baño y en el charco que forma un rebalse mal dirigido. Tapa que cierre, malla fina en toda abertura
+y ningún recipiente destapado en el patio no es prolijidad: es la medida de salud pública que una
+familia puede tomar sola. Sobre potabilidad y tratamiento, la lección 06; sobre la enfermedad y cuándo
+ir al centro de salud, el módulo 32.
+
+**Los surazos y los repuestos ordenan el resto.** El viento fuerte del sur le pega a un tanque alto,
+sobre todo vacío, así que se ancla siempre. Y como los repuestos tardan y cuestan, conviene elegir la
+bomba por lo que se consigue en Santa Cruz —capacitor, sello mecánico, presostato de un modelo
+corriente— antes que por la ficha técnica más linda: **elegí lo mantenible por encima de lo óptimo**.
+Precios, tarifas, plazos y qué está permitido conectar a la red se consultan con la cooperativa de agua,
+con el municipio y con un electricista matriculado, no acá.
+
+**El caso trabajado.** En **Rizoma del Sur**, el vivero comunitario de 3.666 m² en doce lotes, el
+esquema es el que esta lección recomienda para una casa: guardar abajo, subir por tandas con una bomba
+mandada por flotador y repartir por gravedad, de modo que la bomba no tenga que estar prendida cuando
+alguien necesita agua. **Lo importante no es el tamaño, es el orden de las piezas**, y ese orden se
+copia igual en una casa alquilada con un tanque de mil litros sobre el muro del baño.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Quedan cinco ideas. **Se almacena por dos razones distintas** —la interrupción y el pico de consumo—, y
+donde el agua y la luz se cortan por separado, la reserva por gravedad es lo que mantiene la casa
+funcionando. **La altura es la presión**, pero **no arregla la fricción**: engrosar la bajada gana más
+que subir la torre. **Mil kilos por metro cúbico** obligan a mirar por dónde baja ese peso, y **la tapa
+con malla** es a la vez higiene y prevención del dengue. **El límite de succión lo pone la atmósfera**,
+no la bomba. Y **una bomba se mata de dos maneras**: cavitando y girando en seco.
+
+Con esto el agua llega con presión hasta la pared de cada ambiente, y falta lo que más se usa: **la
+lección 04, Instalar y reparar: grifo, ducha e inodoro**. Empieza por lo que evita una inundación
+—cortar, despresurizar y vaciar antes de abrir nada—, sigue con la anatomía del grifo y el diagnóstico
+por síntoma, el mecanismo por el que una ducha eléctrica mal aterrada mata, las dos válvulas del inodoro
+con la prueba del colorante para cazar la fuga silenciosa, y el sifón de cada aparato: ese sello de agua
+que separa tu baño de los gases del desagüe.

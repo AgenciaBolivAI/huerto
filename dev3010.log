@@ -1,0 +1,29 @@
+[32m✔[0m [33mConsole Ninja[0m extension is connected to [33mNext.js[0m, see [36mhttps://tinyurl.com/2vt8jxzw[0m
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3010
+  - Environments: .env.local
+
+ ✓ Starting...
+[Error: EPERM: operation not permitted, open 'C:\Users\celie\OneDrive\Desktop\huertoClass\.next\trace'] {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'open',
+  path: 'C:\\Users\\celie\\OneDrive\\Desktop\\huertoClass\\.next\\trace'
+}
+ ✓ Ready in 10.2s
+ ○ Compiling /glosario ...
+ ✓ Compiled /glosario in 16.7s (682 modules)
+ GET /glosario 200 in 17381ms
+ GET /glosario?letra=C 200 in 187ms
+ GET /glosario?q=palanca 200 in 170ms
+ ○ Compiling /herramientas ...
+ ✓ Compiled /herramientas in 1603ms (671 modules)
+ GET /herramientas 200 in 1743ms
+ GET /glosario 200 in 246ms
+ GET /glosario?q=palanca 200 in 162ms
+ GET /herramientas 200 in 20ms
+ GET /glosario 200 in 222ms
+ GET /glosario?q=palanca 200 in 122ms
+ ✓ Compiled in 524ms (666 modules)
+ GET /glosario 200 in 359ms
+ GET /glosario?letra=A&p=2 200 in 143ms

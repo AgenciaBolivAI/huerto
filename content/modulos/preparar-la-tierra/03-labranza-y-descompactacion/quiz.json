@@ -1,0 +1,100 @@
+{
+  "preguntas": [
+    {
+      "id": "dos-operaciones",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué se diferencian labrar y descompactar?",
+      "opciones": [
+        "Labrar voltea, mezcla y desmenuza la capa superficial; descompactar fractura una capa densa en profundidad sin voltear la superficie.",
+        "Labrar destruye los agregados, corta la continuidad de los poros y acelera la mineralización de la materia orgánica.",
+        "El implemento que afloja arriba presiona abajo, así que labrar fabrica una suela de labor a su profundidad de trabajo.",
+        "Son grados de la misma operación: descompactar es labrar más profundo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No son grados de lo mismo, son opuestas en geometría y en intención. Descompactar no busca aflojar: busca agrietar, y deja la capa superficial donde estaba. Labrar, además de destruir la estructura de arriba, crea la capa compacta de abajo que normalmente se quería resolver."
+    },
+    {
+      "id": "paradoja",
+      "tipo": "verdadero_falso",
+      "enunciado": "Al final de una temporada, un suelo labrado puede estar más compacto que antes de labrarlo.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es lo que hace que la labranza sea difícil de abandonar: funciona el primer día. Después, los agregados destruidos ya no resisten la lluvia, el suelo se asienta y se forma una costra que reduce la infiltración; con menos materia orgánica y menos agregados estables es más susceptible de compactarse; y el implemento dejó su propia suela. Así que el año siguiente hace falta labrar otra vez, y con más intensidad."
+    },
+    {
+      "id": "cuando-si",
+      "tipo": "opcion_multiple",
+      "enunciado": "El hoyo no muestra ninguna capa restrictiva dentro de la profundidad que necesitan tus cultivos. ¿Qué haces?",
+      "opciones": [
+        "Nada. Descompactar un suelo que no está compactado destruye estructura buena y cuesta dinero.",
+        "Un pase de rotovator ligero para dejarlo suelto antes de plantar.",
+        "Subsolar de todas formas, por si acaso, ya que la máquina está contratada.",
+        "Es el caso más frecuente y el más difícil de aceptar."
+      ],
+      "correctas": [0, 3],
+      "explicacion": "Y es difícil de aceptar precisamente porque «no hacer nada» no se siente como preparar el terreno. Descompactar mecánicamente se justifica solo si el hoyo mostró una capa restrictiva real dentro de la profundidad que el cultivo necesita: no por defecto, no «ya que entra la máquina», no para dejarlo parejito."
+    },
+    {
+      "id": "geometria",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se ajusta un subsolador para que funcione?",
+      "opciones": [
+        "Trabajando entre cinco y diez centímetros por debajo de la capa restrictiva.",
+        "Con una separación entre dientes de entre una y una vez y media la profundidad de trabajo.",
+        "Si separas los dientes más de eso, los abanicos de fractura no se solapan y solo dejas ranuras.",
+        "Lo más profundo posible, porque más profundidad siempre es mejor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Trabajar mucho más profundo de lo necesario es pagar combustible por remover subsuelo que no molestaba. Y la separación es lo que más se descuida: entre ranura y ranura el suelo sigue igual de compacto, así que un subsolado mal separado gasta lo mismo y no fractura nada. La geometría importa más que la potencia."
+    },
+    {
+      "id": "prueba-del-cordon",
+      "tipo": "opcion_multiple",
+      "enunciado": "El tractorista te dice que mejor entrar con el suelo algo húmedo, porque el implemento penetra mejor. ¿Qué haces?",
+      "opciones": [
+        "Comprobarlo con la prueba del cordón, sacando suelo de la profundidad a la que va a trabajar el implemento y no de la superficie.",
+        "Si sale un cordón liso que se sostiene, el suelo está plástico: se cancela el día. Si se deshace en terrones, está friable y se puede entrar.",
+        "Entiendo que penetra mejor y precisamente por eso no sirve: el suelo plástico se deforma en lugar de romperse, así que no se generan grietas y además se compacta por debajo del diente.",
+        "Hacerle caso: si el implemento entra con menos esfuerzo, el trabajo sale mejor y más barato."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El subsolado funciona por fractura frágil, y un material solo se rompe así si está frágil. Con el suelo mojado el diente deja una ranura de paredes lisas y ni una grieta: sales del campo habiendo gastado un día de tractor y con el suelo peor que antes. Ojo con dónde sacas la muestra: la superficie puede estar seca y el fondo mojado, y manda el fondo. Es la misma prueba del cordón del Módulo 5, un solo gesto que responde dos preguntas distintas, y cuesta menos cancelar el día que arreglar un suelo amasado."
+    },
+    {
+      "id": "no-dura-solo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Subsolaste correctamente. ¿Qué más hace falta para que el efecto no se pierda en una a tres temporadas?",
+      "opciones": [
+        "Caminos fijos: la mayor parte de la compactación la producen las ruedas y se concentra en las pasadas.",
+        "Cobertura sobre el suelo, porque el suelo desnudo golpeado por la lluvia se sella y se asienta.",
+        "Raíces profundas que mantengan y renueven los canales, como el gandul.",
+        "Nada más: un subsolado bien hecho es permanente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un subsolado aislado se pierde, y entonces la conclusión típica es «hay que subsolar cada año», que es la trampa de la labranza anual con otro nombre. El subsolado solo abre la ventana; mantenerla abierta es otro trabajo. De las tres medidas, los caminos fijos son la más valiosa y la única gratis, y un vivero recién trazado es la ocasión ideal para decidirlos."
+    },
+    {
+      "id": "biodescompactacion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cuando una raíz pivotante atraviesa una capa compacta y luego muere, deja un canal que el cultivo siguiente puede usar.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es el mecanismo de la biodescompactación. La raíz perfora buscando grietas y puntos débiles con una precisión que ninguna máquina tiene; al descomponerse deja un canal vertical estable con las paredes enriquecidas en materia orgánica, y la raíz siguiente no tiene que romper la capa, solo encontrar el agujero. Es lento, es gratis y, a diferencia del subsolado, no se recompacta, porque el mecanismo se renueva cada campaña."
+    },
+    {
+      "id": "plan-descompactacion",
+      "tipo": "abierta",
+      "enunciado": "Has abierto los hoyos de Rizoma del Sur y encuentras una capa compacta continua a 30 cm bajo dos de los lotes de producción, y nada en el resto. Decide qué haces en cada zona, cómo lo ejecutas y qué haces después para que no vuelva. Explica también por qué el implemento más disponible es el que no vas a usar.",
+      "respuestaModelo": "Primero, la parte que más cuesta aceptar: en los lotes donde el hoyo no mostró capa restrictiva no hago nada. Descompactar un suelo que no está compactado destruye estructura que estaba bien y cuesta dinero. Tampoco toco las zonas que van a ser caminos o servicio: que estén compactadas ahí es incluso conveniente.\n\nEn los dos lotes con capa a 30 cm, la decisión depende de la superficie. Si es la zona de camas del vivero o son hoyos de frutales, lo resuelvo con horca de doble mango: entra, hace palanca, agrieta y sale, sin voltear nada y sin depender de alquiler ni de ventana de maquinaria. Si es superficie grande y continua, subsolado, una sola vez.\n\nSi toca subsolar, cinco decisiones. Ahora, en agosto o septiembre, porque la ventana de obra y la de friabilidad son la misma. Compruebo el cordón sacando suelo de la profundidad de trabajo, no de la superficie: si sale un cordón liso que se sostiene, el suelo está plástico y se cancela el día; cuesta menos cancelar que arreglar un suelo amasado. Ajusto la profundidad a 35 o 40 cm, es decir de cinco a diez centímetros por debajo de la capa, y la separación entre dientes a entre una y una vez y media esa profundidad para que los abanicos de fractura se solapen; si los separo más, entre ranura y ranura no pasa nada. Negocio con antelación, porque son los meses de la campaña de invierno y un subsolador exige mucha potencia. Y solo esos dos lotes: pagar por superficie completa cuando necesito dos lotes es el error de coste más común.\n\nDespués vienen las tres medidas sin las cuales no vale la pena, porque un subsolado aislado se pierde en una a tres temporadas y entonces se concluye que hay que subsolar todos los años, que es la trampa de la labranza anual con otro nombre.\n\nCaminos fijos desde el primer día: la mayor parte de la compactación la producen las ruedas y se concentra en las pasadas. Al trazar el vivero decido por dónde se pasa con la carretilla y por dónde entra un vehículo, y esas franjas no vuelven a ser zona de producción. Es la medida más valiosa y la única gratis, y un vivero recién trazado es la ocasión ideal.\n\nCobertura sobre el suelo descompactado, con el material picado del desmonte. Sin ella, la primera lluvia fuerte empieza a cerrar lo que acabo de abrir.\n\nY gandul en las zonas subsoladas, que aprovecha las grietas recién abiertas para meter raíz profunda; cuando esas grietas se cierren, sus canales seguirán ahí. Es la diferencia entre un subsolado que dura dos años y uno que se vuelve permanente.\n\nSobre el implemento: el rotovator es el más fácil de conseguir y el más barato por hora, y es justamente el que no debo usar. Pulveriza los primeros centímetros, destruye los agregados, quema materia orgánica al airearla y deja una suela nueva a su propia profundidad de trabajo. El riesgo real no es técnico sino de decisión: la disponibilidad empuja a elegir por lo que hay en lugar de por lo que el hoyo pidió. Por eso conviene decidirlo antes de empezar a preguntar precios.",
+      "criterios": [
+        "Decide no intervenir donde el hoyo no mostró capa, y lo justifica.",
+        "Distingue la solución manual para superficie pequeña de la mecánica para superficie grande.",
+        "Fija la profundidad de trabajo por debajo de la capa y la separación en función de la profundidad.",
+        "Incluye la prueba del cordón a la profundidad de trabajo y la disposición a cancelar el día.",
+        "Sitúa el trabajo en la seca por coincidencia de la ventana de obra con la de friabilidad.",
+        "Enumera las tres medidas de acompañamiento y explica que sin ellas el efecto se pierde.",
+        "Identifica los caminos fijos como la medida más valiosa y gratuita.",
+        "Explica el riesgo de decidir por disponibilidad del implemento en lugar de por diagnóstico."
+      ],
+      "explicacion": "Fíjate en que la respuesta correcta empieza por no hacer nada en la mayor parte del terreno, y que la parte que de verdad decide el resultado a cinco años —los caminos fijos— no cuesta un peso: es una decisión de trazado que se toma una vez."
+    }
+  ]
+}

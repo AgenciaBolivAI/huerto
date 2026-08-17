@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "que-apaga-el-corte",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué le ocurre a un vegetal en el momento en que se lo separa de la planta?",
+      "opciones": [
+        "La fotosíntesis se apaga o queda en algo irrelevante, así que la entrada de azúcar se va a cero.",
+        "La columna de agua queda cortada: la transpiración sigue funcionando igual, pero ya no hay reposición desde la raíz.",
+        "La respiración, las enzimas y la señalización hormonal siguen trabajando como si nada hubiera pasado.",
+        "El metabolismo entra en un estado de reposo del que se sale al guardar el producto en buenas condiciones."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son exactamente las tres cosas que hace el corte: quita la entrada de azúcar, quita la reposición de agua y no apaga ningún gasto. La cuarta es la idea que arruina más comida que cualquier plaga. No existe ningún estado de reposo ni ninguna operación de recarga: el producto está corriendo con batería y lo único que puede hacerse es frenar la velocidad de descarga. Ninguna técnica de poscosecha devuelve reservas, agua ni firmeza a un producto que ya las perdió; guardar bien no restaura nada, solo deja de gastar."
+    },
+    {
+      "id": "tasa-por-organo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la tasa respiratoria de los distintos órganos del catálogo de Rizoma del Sur, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Una hoja de culantro tiene una tasa muy alta porque es tejido metabólicamente activo con una superficie enorme respecto a su masa.",
+        "Un cormo de yautía o una batata tienen tasa muy baja porque son órganos que evolucionaron precisamente para esperar meses.",
+        "Una vaina tierna de gandul tiene tasa altísima porque es tejido joven que en el momento del corte todavía estaba en división celular.",
+        "La tasa respiratoria es una constante de cada especie, así que basta consultarla una vez para saber cuánto dura ese producto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen el mismo principio desde tres ángulos: lo que era el órgano en la planta decide su tasa, y la relación superficie/volumen explica el porqué. La cuarta es falsa y es un error caro: la tasa respiratoria no es un número por especie, es un número por especie Y por temperatura. El mismo culantro gasta cuatro o nueve veces más rápido a 32 °C que a 12 °C según el Q10 que se aplique, así que una cifra sin su temperatura no dice nada."
+    },
+    {
+      "id": "q10-primera-hora",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un producto recién cortado y expuesto al sol puede estar a una temperatura superior a la del aire que lo rodea, y esa primera hora vale por varias de las que vendrán después.",
+      "respuesta": true,
+      "explicacion": "Verdadero, y por dos razones que se suman. Primero, el calor de campo tiene dos fuentes: la temperatura del aire y la radiación solar directa, que calienta el tejido por encima del ambiente igual que la chapa de un auto estacionado; además, cortado y sin reposición de agua, el enfriamiento por transpiración que refrigeraba ese tejido se acaba pronto. Segundo, la relación entre temperatura y velocidad de gasto es exponencial, no lineal: con un Q10 entre 2 y 3, veinte grados de diferencia significan entre cuatro y nueve veces más velocidad. El producto arranca su vida poscosecha en el punto más caliente y más rápido de toda su curva."
+    },
+    {
+      "id": "climatericos",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el etileno y la división entre frutos climatéricos y no climatéricos, ¿qué es correcto?",
+      "opciones": [
+        "El plátano es climatérico: separado de la planta dispara un pico de respiración con producción de etileno que se autoalimenta, y madura sin la planta.",
+        "El ají dulce es no climatérico: se deteriora tras el corte pero no mejora, así que lo que se corta es lo que se tiene.",
+        "El etileno también perjudica a las hojas y a las raíces, y además lo emiten los motores de combustión y cualquier tejido vegetal en descomposición cercano.",
+        "Un fruto no climatérico es inmune al etileno, porque no tiene el mecanismo que lo reemite en avalancha."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son el núcleo de la sección. La cuarta confunde dos cosas distintas: no tener climaterio significa no reemitir la señal en avalancha autoamplificada, no ser insensible a ella. Un fruto no climatérico expuesto a etileno se ablanda y envejece antes, una hoja de culantro amarillea y muchas raíces amargan. Y el emisor no tiene por qué ser el propio producto: el humo, un motor y un resto vegetal pudriéndose al lado son fuentes reales."
+    },
+    {
+      "id": "patogeno-tejido-sano",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cuando un producto cosechado se pudre, el hongo o la bacteria son casi siempre la causa raíz de la pérdida.",
+      "respuesta": false,
+      "explicacion": "Falso, y confundirlo lleva a comprar productos en vez de a manejar mejor. Casi ningún patógeno de poscosecha ataca tejido sano e intacto: necesita una puerta, y esa puerta es casi siempre una herida mecánica, una abertura natural o tejido ya senescente por calor. Las tres vías están encadenadas y la causalidad va en un solo sentido: el golpe abre la puerta y acelera la fisiología local, la fisiología acelerada deja al producto sin capacidad de resistir, y entonces entra el patógeno. La podredumbre es el último eslabón, y actuar sobre el último eslabón no evita nada. Existe además un caso que refuerza la idea: la infección latente del plátano, contraída en el campo con el fruto verde y que solo arranca cuando la maduración baja las defensas."
+    },
+    {
+      "id": "transpiracion-sin-raiz",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la pérdida de agua de un producto ya cortado, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Lo que fija la velocidad de la pérdida es el déficit de presión de vapor, agravado por el viento, y no el número del termómetro.",
+        "Tiene dos costos distintos: peso entregado, porque el producto se cuenta por kilo, y turgencia, que es lo que decide si se acepta.",
+        "Cualquier herida o raspadura es un agujero en la barrera: el mismo cormo que aguantaría semanas pierde por esa raspadura como si fuera una hoja.",
+        "Como la transpiración quema reservas, un producto que pierde agua está gastando además su presupuesto de azúcares."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son correctas y describen la física y las dos consecuencias económicas. La cuarta mezcla los dos presupuestos: la transpiración no es metabolismo, es física, y no consume azúcares. Eso no la hace inofensiva —destruye lo que se entrega y lo que se ve—, pero conviene mantenerlos separados: son dos presupuestos que se agotan por caminos independientes, y basta que se agote uno para que el producto ya no sirva."
+    },
+    {
+      "id": "aplicar-a-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Sin proponer ninguna técnica —eso es materia de las lecciones siguientes—, ordena el catálogo de Rizoma del Sur por fragilidad poscosecha y justifica cada posición con la fisiología de esta lección. Explica qué vía de pérdida amenaza a cada producto, cómo cambia el cuadro entre la época de lluvias y la seca, y qué medirías desde mañana para dejar de razonar a ciegas.",
+      "respuestaModelo": "El catálogo se ordena solo en cuanto se pregunta qué era cada órgano en la planta.\n\nEn el extremo frágil está el CULANTRO. Es hoja: tejido de trabajo, metabólicamente activo, finísimo, lleno de estomas y con cutícula delgada. Su relación superficie/volumen es enorme, así que intercambia calor, vapor y gases a máxima velocidad y no tiene reservas de donde tirar. Es la caché del sistema: rapidísima y volátil. Su tasa respiratoria es la más alta del catálogo y su vida útil se mide en horas o pocos días. Un manojo cortado a las once de la mañana y dejado en un balde al sol está en el peor tramo posible de su curva, porque acumula las dos aceleraciones: calor de campo alto —temperatura del aire más radiación directa, sin la refrigeración por transpiración que ya no puede sostener— y un Q10 que convierte veinte grados de diferencia en cuatro o nueve veces más gasto. Además es el producto que más rápido pierde turgencia y el que antes se vuelve invendible por aspecto: con una pérdida de peso de un solo dígito ya se marchita a la vista.\n\nEn el extremo opuesto están la YAUTÍA y la BATATA. Son órganos de reserva, evolucionados exactamente para esperar meses de seca y rebrotar: metabolismo lento, piel protectora, poca superficie por unidad de volumen. Son almacenamiento persistente. Su tasa respiratoria es muy baja y por la vía fisiológica aguantan semanas. Pero el orden de fragilidad no es el mismo en las tres vías, y ahí está el matiz importante: su punto débil es la vía MECÁNICA. La ficha de yautía ya advertía que los cormos se magullan con facilidad y que una magulladura es la puerta de entrada de la podredumbre, y ahora sabemos que eso es literal por dos mecanismos: el golpe rompe membranas y mezcla compartimentos celulares que nunca debieron comunicarse —de ahí el pardeamiento tardío, el síntoma que aparece tres días después de la caja que se dejó caer—, y la herida dispara un pico local de etileno y de respiración además de abrir la puerta a los patógenos. Una raspadura convierte una piel excelente en una superficie que pierde agua como una hoja.\n\nEn medio hay tres casos con lógicas distintas. El AJÍ DULCE es un fruto no climatérico: tasa baja-media, y sobre todo, no mejora después del corte. No hay ninguna maniobra posterior que arregle un ají cortado antes de tiempo; lo que se corta es lo que se tiene. El PLÁTANO es climatérico: puede madurar sin la planta disparando un pico de respiración con producción autoamplificada de etileno, lo que significa que un racimo entero puede arrancar a la vez, en avalancha, después de un rato en que no pasaba nada visible. Arrastra además el riesgo de infección latente contraída en el campo con el fruto verde, que solo se manifiesta cuando la maduración baja las defensas del fruto — manchas que aparecen en fruta manejada impecablemente. El GANDUL son dos productos distintos: en vaina verde es tejido joven de tasa alta, con el comportamiento de un órgano en crecimiento; en grano seco es prácticamente una semilla, y su gestión pertenece al mundo del almacenamiento de semilla.\n\nEl cuadro cambia de naturaleza, no solo de intensidad, entre las dos estaciones. De octubre a abril, con calor y aire húmedo, el déficit de presión de vapor es moderado y la transpiración pega menos, pero la vía patológica se dispara: calor y humedad son lo que un hongo pide, y el producto llega mojado y embarrado de la cama. De mayo a septiembre, con aire seco, se invierte: menos podredumbre y mucho más marchitamiento y pérdida de peso. La misma bandeja de culantro se pierde por dos motivos distintos según el mes, así que aplicar la solución del mes anterior es un error garantizado. Y el surazo añade la trampa opuesta: una noche en torno a los diez grados mete a un catálogo entero de origen tropical dentro de la ventana del daño por frío, sin hielo y con síntomas que aparecen días después, cuando ya nadie relaciona la mancha con el evento.\n\nHay una ventaja del sitio que conviene explotar antes que ninguna otra: 3.666 m² en doce lotes contiguos significa que desde cualquier cama hasta un lugar con sombra hay pocos minutos. Con el Q10 en la mano, esos minutos son los más valiosos de toda la operación.\n\nY lo que mediría desde mañana es lo más barato que existe: una balanza y un cuaderno. Peso de lo que sale de cada cama y peso de lo que finalmente se entrega o se come; la diferencia es la merma. Sin ese número todo el módulo es teoría, y ese registro es exactamente lo que los módulos de automatización y de negocio saben convertir en decisiones. No hay estadística boliviana de pérdidas poscosecha que se pueda citar con honestidad, ni tablas locales de tasas respiratorias para estas especies en estas condiciones: los datos concretos se piden a instituciones de investigación agrícola y a técnicos de la zona, y los propios se miden. Todo esto importa por una razón que no es comercial: cada kilo que se deja de perder es un kilo producido sin sembrar nada más, sin más tierra, sin más agua y sin más semilla. Para un vecino que cosecha en un patio, eso vale más que cualquier módulo de producción.",
+      "criterios": [
+        "Sitúa el culantro como lo más frágil y lo justifica con hoja, tejido activo y relación superficie/volumen, no solo diciendo que «se marchita rápido».",
+        "Sitúa yautía y batata como lo más resistente por la vía fisiológica, explicando que un órgano de reserva evolucionó para esperar.",
+        "Señala que el orden cambia según la vía: yautía y batata son frágiles por la vía mecánica aunque sean robustas por la fisiológica.",
+        "Explica el mecanismo real de la magulladura —mezcla de compartimentos celulares y pardeamiento tardío, más el pico local de etileno y respiración que abre la puerta al patógeno— y no solo que «se golpea».",
+        "Clasifica correctamente el ají dulce como no climatérico y extrae la consecuencia: lo que se corta es lo que se tiene.",
+        "Clasifica correctamente el plátano como climatérico y menciona el pico autoamplificado y el riesgo de infección latente del campo.",
+        "Trata el gandul como dos productos distintos según el momento de corte, con comportamientos de tasa muy diferentes.",
+        "Usa el Q10 y el calor de campo cuantitativamente, aunque sea de forma aproximada, y no solo dice que «el calor es malo».",
+        "Distingue la época de lluvias de la seca y explica que cambia la vía dominante, no solo la intensidad del problema.",
+        "Menciona el surazo y el daño por frío como la trampa inversa en un catálogo tropical.",
+        "Propone medir la merma con balanza y cuaderno, y no inventa ninguna cifra de pérdidas ni ninguna tabla local.",
+        "No propone técnicas de cosecha, de frío ni de transformación: se queda en el diagnóstico fisiológico, que es el alcance de esta lección."
+      ],
+      "explicacion": "La respuesta correcta no es una lista de productos ordenados: es una lista razonada donde cada posición sale de un mecanismo. El indicador de que se entendió la lección es que el orden de fragilidad cambie según la vía de pérdida que se considere — la yautía es de lo más robusto por la vía fisiológica y de lo más vulnerable por la mecánica, y quien la ponga en un único puesto de la lista todavía está pensando en una sola dimensión. El segundo indicador es que no aparezca ninguna técnica: esta lección da la razón, no la hora."
+    }
+  ]
+}

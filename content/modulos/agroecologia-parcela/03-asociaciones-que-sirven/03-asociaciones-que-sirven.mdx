@@ -1,0 +1,374 @@
+Circula por internet y por los libros de huerto una tabla de dos columnas: «amigos» y «enemigos». La
+albahaca protege al tomate. La cebolla odia al frijol. Nunca dice cuánta albahaca, ni a qué distancia, ni
+de qué protege, ni cómo se comprobó.
+
+Esa tabla es **una constante mágica copiada del repositorio de otro proyecto**: fue calibrada para otro
+hardware —otro clima, otras plagas, otras densidades—. Copiarla a la llanura de Santa Cruz es la misma
+clase de error que copiar un `timeout` de 30 milisegundos desde un servicio que corre en la misma sala
+de máquinas y pegarlo en otro que atraviesa el océano.
+
+La lección anterior explicó cómo interactúan dos plantas vecinas —compiten, se complementan o se
+facilitan— y la métrica que decide si el conjunto vale la pena. Esta hace el trabajo sucio: **aplicar
+esos mecanismos a parejas concretas y separar lo que se sostiene de lo que es folclore**, y termina con
+lo único que convierte una creencia en conocimiento propio: un protocolo para probarla con testigo.
+
+## Por qué las tablas de asociaciones no se pueden copiar
+
+Hay tres razones de fondo, y las tres son de ingeniería.
+
+**La plaga no es la misma.** Casi toda la literatura popular de asociaciones nació en climas templados y
+apunta a insectos que aquí no existen o son otros. Una planta que confunde a la mosca de la col europea
+no tiene por qué confundir a la mosca blanca del trópico, que busca con otro sistema sensorial. **El
+mecanismo es específico de la especie que quieres frenar**: si no puedes nombrar esa especie, no estás
+aplicando un mecanismo, estás repitiendo una frase.
+
+**El calendario no es el mismo.** En clima templado hay una sola estación de crecimiento y una plaga con
+una o dos generaciones al año. Aquí las lluvias empujan el crecimiento de octubre a abril, la seca lo
+frena de mayo a septiembre y muchos insectos completan generaciones cortas casi todo el año. Una
+asociación que depende de que la compañera esté florecida cuando llega la plaga se rompe si el calendario
+se corre dos meses. **La sincronía es parte del diseño, y ninguna tabla la declara.**
+
+**Y la tabla no declara ni la dosis ni la geometría.** Todos los mecanismos que veremos dependen de la
+cantidad y del arreglo: tres plantas en una esquina no hacen lo mismo que una cama entera sembrada densa.
+Afirmar un efecto sin decir cuántas, cuánto tiempo y en qué disposición **es como publicar un número de
+rendimiento sin decir el tamaño de la máquina ni la carga de trabajo**.
+
+<Dato>
+El caso de la caléndula (*Tagetes*) ilustra la diferencia entre mecanismo y folclore. Ahí **sí hay
+química real**: sus raíces liberan compuestos con actividad contra ciertos nematodos del suelo.
+
+Pero el efecto descrito corresponde a sembrarla **en masa y durante un ciclo entero**, como un cultivo de
+servicio que limpia esa cama, no a un bordecito decorativo; y depende de la especie de caléndula y de la
+de nematodo. El folleto se quedó con la conclusión y tiró la letra pequeña.
+</Dato>
+
+Hay un cuarto problema, más silencioso: **el sesgo del registro**. Nadie escribe un folleto contando que
+puso albahaca entre los tomates y no pasó nada; las que «funcionan» se cuentan y las que no, se olvidan.
+Es <Termino slug="sesgo-de-supervivencia">sesgo de supervivencia</Termino> puro: solo ves a los que quedaron en pie.
+
+## Una asociación es una afirmación falsable, o no es nada
+
+El filtro que hay que aplicar a cualquier recomendación es este: **¿nombra un mecanismo, un sujeto y una
+magnitud?** «El culantro y el ají dulce se llevan bien» no se puede comprobar ni desmentir; es el
+equivalente agrícola de un reporte de error que dice «va lento». «Sembrar culantro entre las hileras de
+ají dulce reduce el número de pulgones alados que aterrizan, porque elimina el contraste visual entre
+hoja verde y suelo desnudo» sí: nombra mecanismo, sujeto y efecto, y admite un número. **Y por eso mismo
+puede salir falsa**, que es lo que la hace útil.
+
+Y una asociación que no hace nada **no es neutra: es una pérdida**. Ocupa espacio, bebe del mismo riego,
+complica la cosecha y consume jornales. Una compañera tiene que ganarse el lugar, igual que una
+dependencia tiene que justificar su peso.
+
+## Mecanismo 1: el cultivo trampa
+
+Un <Termino slug="cultivo-trampa">cultivo trampa</Termino> es una planta que la plaga prefiere más que a tu cultivo, sembrada a propósito
+para que la plaga vaya ahí. No repele: **atrae**, y concentra el problema donde puedes actuar sobre pocas
+plantas. Necesita tres condiciones.
+
+**La preferencia tiene que ser real y fuerte.** Si es débil, lo único que hiciste fue meter más comida y
+subir la población total.
+
+**La sincronía tiene que estar resuelta.** La trampa debe estar en el estado que atrae —brote tierno,
+floración— justo cuando llega la plaga, lo que casi siempre obliga a sembrarla antes, con un desfase
+calculado a partir de los días a floración de cada una. Una trampa que llega tarde es una planta más.
+
+**Y la trampa tiene que ser un sumidero, no una fuente.** La plaga llega, se concentra… y si la dejas
+ahí, se reproduce ahí: a la generación siguiente sales con más población que al principio, criada por ti.
+La trampa **obliga a una operación programada** —cortar y sacar, tratar dirigido o aplastar a mano antes
+de que el ciclo del insecto se complete—, y esa operación tiene fecha, no intención.
+
+<Analogia>
+Un cultivo trampa es **un honeypot**: un servidor deliberadamente apetecible, expuesto para que el
+atacante vaya ahí y no a producción.
+
+Todo el mundo entiende la parte bonita. La que hunde proyectos es la otra: **un honeypot que nadie
+limpia se convierte en una cabeza de puente dentro de la red.** El mecanismo no es la planta: **es la
+planta más la rutina de limpieza.**
+</Analogia>
+
+Existe una variante elegante, la trampa muerta: una planta donde la hembra pone huevos pero las larvas
+no sobreviven, y el sumidero se limpia solo. Depende de una combinación concreta de planta e insecto que
+**para este catálogo no se puede dar por existente.**
+
+## Mecanismo 2: empujar y tirar
+
+El sistema de <Termino slug="empujar-tirar">empujar y tirar</Termino> combina dos señales químicas en direcciones opuestas. Dentro del
+cultivo se intercala una planta cuyos volátiles el insecto evita, y en el borde va otra más atractiva que
+el cultivo. El resultado es un gradiente: adentro incómodo, afuera apetecible.
+
+Funciona porque el insecto se orienta por olfato. Muchos localizan sus plantas siguiendo <Termino slug="kairomona">kairomonas</Termino>:
+volátiles que emite la planta y que benefician a quien los detecta, no a quien los emite. La planta no
+los produce para llamar a la plaga —son subproductos de su metabolismo—, pero la plaga aprendió a
+leerlos y vuela contra el viento siguiendo esa pluma de olor.
+
+<Analogia>
+Empujar y tirar es **manipular la relación señal-ruido de un canal que no controlas.**
+
+El «tirar» es un servicio señuelo publicado con más prioridad, que se lleva el tráfico antes de que
+llegue al real; el «empujar» es meter ruido para que la señal del objetivo sea difícil de resolver. Y
+como en redes, **no se bloquea el ataque: se le baja la probabilidad de éxito**, y si el emisor grita más
+fuerte —mucha superficie de cultivo emitiendo su volátil— el ruido deja de alcanzar.
+</Analogia>
+
+El caso mejor documentado del mundo es un sistema desarrollado en África oriental para maíz, con una
+leguminosa forrajera intercalada dentro y una gramínea alta en el borde. Enseña sobre todo del método:
+**fueron años de investigación para identificar qué volátiles usa el insecto, qué planta los perturba,
+cuál lo atrae más y en qué geometría.** Y la conclusión honesta para Rizoma es incómoda: **no existe un
+sistema de empujar y tirar validado para yautía, culantro, ají dulce, gandul o plátano en Santa Cruz.**
+Lo prestable es la lógica, como hipótesis a probar y no como receta.
+
+## Mecanismo 3: dilución y disrupción de la búsqueda
+
+Este es el más general y el más robusto, y el que **no depende de ninguna especie mágica: depende de
+geometría y densidad**. Por eso es el que más probablemente te sirva.
+
+Empieza por cómo encuentra un insecto su planta: no es un paso, es una cadena de filtros. Una fase
+olfativa a distancia, siguiendo la pluma de volátiles contra el viento; una fase visual a pocos metros,
+en la que la mayoría busca **una silueta verde contra un fondo contrastante** —y el que más contrasta es
+el suelo desnudo—; el aterrizaje; y una fase de contacto en la que tantea y prueba con el estilete. Solo
+entonces decide si se queda y pone huevos.
+
+<Formula explicacion="La tasa a la que una plaga encuentra tu cultivo, escrita como lo que es: un producto de factores, no una propiedad de la planta.">
+encuentros ≈ densidad de hospedante × área explorada × probabilidad de aceptación
+</Formula>
+
+Esa forma de producto es la clave: **bajar cualquiera de los tres factores baja el resultado**, y el
+diseño puede tocar los tres.
+
+La <Termino slug="dilucion-del-hospedante">dilución del hospedante</Termino> ataca el primero. Si en un metro cuadrado hay diez plantas de la especie
+buscada, cada aterrizaje al azar acierta; si hay tres y las otras siete no le sirven, la mayoría falla.
+**El efecto es más que proporcional**, y lo explica el modelo de aterrizajes apropiados e inapropiados.
+Un insecto que cae sobre una planta que no es su hospedante no se queda, vuelve a despegar, y al hacerlo
+**su contador interno se reinicia**: necesita varios contactos aceptables seguidos antes de decidir que
+el sitio sirve para poner huevos, y cada <Termino slug="aterrizaje-inapropiado">aterrizaje inapropiado</Termino> borra el progreso. Con suficientes
+fallos agota su energía y se va. Por eso una cubierta verde de cualquier cosa que no sea hospedante hace
+trabajo real, aunque no huela a nada especial.
+
+**Esto reinterpreta media tabla de folclore.** Muchas asociaciones «aromáticas» probablemente funcionan
+por esto y no por su aroma: cualquier planta no hospedante a esa densidad haría un trabajo parecido. La
+prueba está al alcance de cualquiera —comparar la aromática contra una no aromática de porte similar— y
+si las dos dan lo mismo, el mecanismo era geometría.
+
+Los otros dos factores también se tocan. **El suelo desnudo es una baliza de aterrizaje**, y una cubierta
+—<Termino slug="cobertura-muerta">cobertura muerta</Termino> o viva— reduce el contraste; un ambiente cargado de volátiles de muchas
+especies estorba seguir una pluma concreta.
+
+<Advertencia>
+Este mecanismo tiene un dominio de validez estrecho. **Funciona contra especialistas** —insectos que
+buscan una familia concreta— y funciona mal contra generalistas, que aceptan casi cualquier cosa verde:
+para ellos, más plantas puede ser simplemente más comida.
+
+**Y no funciona en absoluto contra lo que ya viene dentro del material de siembra.** Un hongo de
+marchitez o un nematodo que viaja en el <Termino slug="cormo">cormo</Termino> de plátano o de yautía entra por la puerta
+principal, y ninguna asociación lo detiene; tampoco frena esporas traídas por el viento. Confundir el
+dominio es el error clásico: usar el mecanismo correcto contra el problema equivocado y concluir que no
+sirve. **Sirve, pero para otra cosa.**
+</Advertencia>
+
+## Mecanismo 4: planta nodriza y tutor vivo
+
+Los dos primeros mecanismos son químicos; el tercero es geométrico. El cuarto es físico: **una planta le
+presta a otra un servicio de estructura o de microclima.**
+
+La nodriza trabaja sobre el ambiente. Una planta alta sobre una recién plantada baja la radiación
+directa y la temperatura de la hoja, sube la humedad del aire inmediato y por tanto baja
+el <Termino slug="dpv">déficit de presión de vapor</Termino>, que decide cuánta agua tiene que mover la planta chica.
+También amortigua el <Termino slug="surazo">surazo</Termino>: menos viento a ras de planta y menos pérdida de calor por radiación
+al cielo despejado. El costo es luz, el recurso que se disputa primero, y por eso **la nodriza tiene
+ventana de utilidad y fecha de caducidad**: la misma sombra que salva un plantín en septiembre lo ahoga
+en marzo, cuando ya tiene que producir.
+
+<Analogia>
+La nodriza es **un andamio, no el edificio**: sostiene mientras la estructura definitiva no se sostiene
+sola, y después estorba.
+
+Es la misma figura que un *feature flag* puesto para una migración: nació con fecha de retiro. **Y todo
+el mundo sabe qué pasa cuando esa fecha no se escribe en ningún lado.** Anota, el día que plantas la
+nodriza, en qué mes se poda y en qué mes se saca: un andamio sin fecha de desmontaje es deuda técnica
+con raíces.
+</Analogia>
+
+El <Termino slug="tutor-vivo">tutor vivo</Termino> trabaja sobre la estructura: una planta de tallo firme reemplaza al poste muerto que
+sostiene a una trepadora. Se repara solo y no se pudre en la base. A cambio impone cuatro condiciones.
+**Tiene que estar listo antes**, porque la trepadora crece rápido y el soporte no, lo que obliga a
+plantarlo con un ciclo de ventaja. **Tiene que aguantar el enroscamiento** —hay trepadoras que aprietan
+el floema del soporte y lo matan despacio— y el peso el día de viento fuerte. **Tiene que poder podarse**,
+porque sin recorte la trepadora queda a la sombra de su propio soporte. **Y la cosecha tiene que ser
+alcanzable**: un soporte que levanta la producción a cuatro metros la convirtió en trabajo de altura.
+
+## La milpa leída como una pieza de ingeniería
+
+La milpa —maíz, frijol y calabaza en la misma superficie— es el policultivo más citado del mundo y el
+peor leído: se cita como prueba de que «la naturaleza sabe». Leída de verdad, **es un sistema con
+interfaces especificadas.**
+
+Cada miembro cumple una función que los otros no cubren. El maíz aporta estructura vertical y ocupa el
+estrato alto: exigente en luz y fuerte extractor de nitrógeno. El frijol es leguminosa —en asociación
+con <Termino slug="rizobios">rizobios</Termino> fija nitrógeno atmosférico— y usa el tallo del maíz como tutor vivo, con lo que
+consigue luz sin pagar el costo de construir un tronco. La calabaza es rastrera y de hoja enorme: cubre
+el suelo, baja su temperatura, corta la evaporación, ahoga malezas y —esto casi nadie lo ve— **elimina el
+suelo desnudo que servía de baliza de aterrizaje** a los especialistas de los otros dos. Los tres
+reparten estratos, profundidades de raíz y momentos de máxima demanda distintos, y por eso el conjunto
+puede rendir más que las tres parcelas separadas: lo que mide el uso equivalente de la tierra de la
+lección anterior.
+
+Ahora lo que el folleto no cuenta. **La afirmación de que «el frijol alimenta al maíz» es en buena medida
+falsa dentro del mismo ciclo**: el nitrógeno que fija va sobre todo a su propio grano y a su propia
+biomasa. El beneficio real llega **después**, cuando los residuos se descomponen y el ciclo siguiente
+arranca con más nitrógeno del que habría con maíz solo. No es un subsidio en tiempo real: es un aporte
+diferido, y confundirlos lleva a no fertilizar un maíz que sí lo necesitaba.
+
+Y la milpa se rompe si se copia mal: con el maíz demasiado denso la calabaza no recibe luz, y si el
+frijol se siembra el mismo día la trepadora puede doblar a un tutor que todavía es un plantín, **por eso
+la práctica tradicional lo siembra cuando el maíz ya tiene altura.** Densidad y sincronía otra vez.
+
+De ahí sale el filtro que se le hace a cualquier candidata: **¿qué función distinta cumple cada una?
+¿ocupan estratos distintos? ¿tienen el pico de demanda en momentos distintos? ¿hay un mecanismo por el
+que no se estorben?** Si las cuatro no tienen respuesta, no hay diseño: hay dos plantas juntas.
+
+<ContextoBolivia>
+Casi todo lo que circula como tabla de asociaciones en castellano viene traducido de la horticultura de
+Europa central y de Norteamérica. Las plagas que nombra —la mosca de la col, el escarabajo de la papa, la
+mosca de la zanahoria— o no están aquí o no son el problema principal. El de la llanura de Santa Cruz es
+otro: mosca blanca y los virus que transmite, pulgones, trips, ácaros en la seca, hormigas cortadoras,
+orugas, y en el suelo nematodos y hongos de marchitez. **Una tabla que no nombra ninguna de esas cosas
+no está hablando de tu parcela.**
+
+El calendario tampoco coincide. La literatura templada asume una sola ventana de crecimiento entre dos
+inviernos; aquí el año se parte en lluvias de octubre a abril y seca de mayo a septiembre, con dos
+regímenes de plaga distintos: los ácaros y los chupadores aprietan con el aire seco y caliente, y los
+hongos foliares con la humedad y el follaje mojado. Una asociación que en un régimen ayuda —más
+cobertura, más humedad al ras— puede empeorar el otro. **En un clima de dos estaciones marcadas casi
+ninguna asociación es buena todo el año, y hay que decidir para cuál de las dos se diseña.**
+
+La milpa, en cambio, es americana y nació en un clima con estación seca marcada, lo que la hace mucho más
+informativa para nosotros que cualquier tabla europea. En los valles y en el altiplano hay una tradición
+larga de asociar maíz con leguminosas y cucurbitáceas; en el oriente, la agricultura de barbecho de las
+comunidades ha usado durante generaciones mezclas de yuca, maíz, plátano y frutales en la misma
+superficie, que es un policultivo multiestrato hecho y derecho. **Ese conocimiento local es la mejor
+fuente de hipótesis disponible para este catálogo**, y hay que tratarlo con respeto y con verificación:
+un vecino que lleva veinte años sembrando culantro bajo los frutales ha corrido un experimento larguísimo
+sin testigo, y su resultado puede deberse a otra cosa que hacía al mismo tiempo. Preguntar, anotar qué
+hace exactamente —distancias, fechas, riego— y probarlo después con testigo propio es lo que convierte esa
+experiencia en conocimiento transferible, que Rizoma pueda enseñar a otro sin mentirle.
+
+Cuando la pregunta sea sobre una plaga concreta o sobre una recomendación con base experimental, las
+instituciones a las que se consulta en esta región existen y son accesibles: el INIAF, el Centro de
+Investigación Agrícola Tropical en Santa Cruz y la Facultad de Ciencias Agrícolas de la UAGRM. **Este
+curso no va a inventar una cifra de reducción de plaga ni a atribuirle a nadie una recomendación que no
+dio**; sí puede enseñar a formular la pregunta con precisión suficiente para llevarla ahí.
+</ContextoBolivia>
+
+<AplicarRizoma>
+Con ese filtro encima, estas son las asociaciones candidatas para los 3.666 m² de Rizoma del Sur.
+Candidatas: ninguna es conclusión, todas son hipótesis con mecanismo declarado.
+
+**Yautía bajo plátano.** La más prometedora y la más fácil de justificar. El plátano ocupa el estrato
+alto y deja debajo un espacio de sombra parcial y aire húmedo que hoy está vacío o con maleza; la yautía
+tolera bien esa sombra —lo dice su propia ficha— y sufre menos en la seca cuando la tiene. Abajo cubre el
+suelo entre matas, corta evaporación y compite con la maleza, que en un platanal es gasto permanente de
+jornal. Estratos distintos, funciones distintas, mecanismo claro de no interferencia. Con dos riesgos.
+El primero es la cosecha: la yautía se saca cavando, y cavar dentro del anillo de raíces superficiales
+del plátano lo daña; la solución de diseño es ponerla **entre hileras y no en el ruedo de la mata**, y
+agendar la cosecha respecto del ciclo del plátano. El segundo es sanitario: los dos son cultivos de
+órgano subterráneo con problemas de suelo —nematodos, hongos de marchitez—, y cuánto se solapan sus
+hospedantes hay que consultarlo antes de meterlos juntos en un lote que después no se puede limpiar. Esa
+consulta va al CIAT o al INIAF, no a una tabla.
+
+**Culantro a media sombra.** Aquí la asociación invierte el signo del costo. En casi todos los cultivos
+la sombra es el precio que paga el de abajo; en culantro la sombra **es la técnica de producción**:
+retrasa la floración, mantiene la planta en roseta y produce la hoja grande que es el producto vendible.
+Eso lo convierte en el mejor sotobosque del catálogo y le da destino a espacios que hoy son pérdida: bajo
+los frutales injertados en sus años de formación, en la sombra del gandul, bajo la malla, en el costado
+sombreado de las estructuras del vivero. Además es de ciclo corto y ocupa esos huecos sin comprometer el
+terreno. El riesgo está en su ficha: sombra más densidad alta más humedad es la receta de las manchas
+foliares — **sombra sí, aire quieto no.**
+
+**Gandul como nodriza y estructura provisional.** El curso ya lo describe como infraestructura viva: fija
+nitrógeno con sus rizobios, su raíz profunda trabaja la capa dura, corta el viento y produce en plena
+seca. Aquí su papel es de andamio. En líneas al sur y al sureste protege del surazo lo recién plantado, y
+alrededor de un frutal recién trasplantado da sombra parcial en los primeros meses, que es cuando se
+pierden las plantas. Sirve además como soporte ligero, con el límite honesto de que es un arbusto de dos
+metros y no un poste. Arrastra dos condiciones. La de su ficha: si en ese lote nunca creció una
+leguminosa emparentada, puede que las bacterias adecuadas no estén y el gandul crezca verde sin fijar
+nada, y se comprueba cavando y mirando si hay nódulos rosados por dentro. Y la fecha de
+desmontaje: **cada línea de gandul plantada como nodriza entra en el registro con el mes en que se poda y
+el mes en que se saca**, o en tres años será el competidor que le quita la luz al frutal.
+
+**Ají dulce.** Su asociación es la más delicada, y por una razón que no tiene que ver con plagas. La
+ficha lo dice: el ají dulce cruza con otros *Capsicum* por polinización de abejas, y ese cruce arruina el
+catálogo sin que se vea hasta la generación siguiente. Es decir que **una decisión de asociación puede
+romper una decisión de aislamiento de semilla**: las plantas destinadas a semilla no se mezclan con nada
+que obligue a moverlas de su distancia de aislamiento. Aclarado eso, el ají de producción es el mejor
+candidato para probar dilución. Sus enemigos serios son chupadores, y buena parte del daño no es la
+picadura sino los virus que los pulgones alados transmiten al probar la hoja; bajar el número de
+aterrizajes es casi la única palanca, porque una vez que el pulgón probó el virus ya entró. La hipótesis
+concreta: **cubrir el suelo entre hileras de ají dulce con culantro y comparar aterrizajes de alados y
+plantas con síntoma contra un testigo de suelo limpio.** Las dos especies ya están en el catálogo.
+
+Y una que conviene **no** hacer: cosecha destructiva dentro del área de raíces de los frutales
+injertados, porque cada cosecha ahí es una labranza en el peor sitio. Bajo frutal va lo que se cosecha
+cortando, no lo que se cosecha cavando.
+</AplicarRizoma>
+
+## Cómo se prueba una asociación en tu propia parcela
+
+Todo lo anterior son hipótesis. Lo que sigue convierte una hipótesis en un dato que puedas defender
+delante de un vecino: **una prueba A/B, con todas sus trampas metodológicas.**
+
+**Escribe la hipótesis antes de empezar, con mecanismo, métrica y magnitud**: qué esperas que pase, por
+qué mecanismo, qué vas a medir y **cuánta diferencia te haría cambiar de práctica**. Ese último número es
+el que más protege, porque fijar de antemano el umbral de adopción evita el vicio de mirar los datos y
+después decidir qué métrica contar.
+
+**Monta el <Termino slug="testigo">testigo</Termino> al lado y el mismo día.** Mismo lote de material, misma fecha, mismo riego,
+mismo suelo, mismo manejo; la única diferencia debe ser la asociación. Un testigo del año pasado o del
+otro extremo del terreno no es un testigo: es otro experimento.
+
+**No confundas muchas plantas con muchas repeticiones.** Medir treinta plantas de una sola cama no da
+treinta datos independientes: da uno, medido treinta veces, y si esa cama está en la parte baja donde se
+encharca, las treinta comparten el mismo error. Eso es <Termino slug="pseudorreplicacion">pseudorreplicación</Termino>, el error más común de
+los ensayos caseros. Necesitas **tres o cuatro parcelas separadas de cada tratamiento**, intercaladas.
+
+<Analogia>
+Es el error de medir el rendimiento de un servicio lanzando mil peticiones contra una sola instancia y
+reportar la desviación estándar como si midiera la variabilidad del sistema. **Los errores están
+correlacionados dentro del bloque, y promediarlos no los cancela: los disimula.**
+
+Bloque en un ensayo es lo mismo que instancia en un benchmark. Y el terreno de Rizoma tiene gradientes
+conocidos —zonas que se encharcan, sombra de tarde, la línea del viento del sur—, así que los bloques
+se trazan atravesando el gradiente.
+</Analogia>
+
+**Cuida la distancia entre parcelas, porque el efecto se escapa.** Si el mecanismo que pruebas es
+atracción o repelencia, opera a la escala a la que vuela el insecto, que son decenas de metros: un
+cultivo trampa a dos metros del testigo **le está limpiando el testigo también**. Cada parcela necesita
+una <Termino slug="bordura">bordura</Termino> —una franja de guarda que no se cosecha ni se cuenta— más una separación acorde con el
+bicho, y si el terreno no da para esa separación, **el ensayo honesto es de rendimiento y de manejo, no
+de control de plagas.**
+
+**Mide los dos cultivos y mide el trabajo.** Sin las dos cifras no puedes calcular el uso equivalente de
+la tierra, y sin los jornales no ves que una asociación que sube el rendimiento un diez por ciento y
+duplica las horas de cosecha es una asociación que pierde. **Repite en las dos estaciones antes de
+concluir**, porque un ciclo es una anécdota. Y **anota todo** —fechas, distancias, croquis de qué parcela
+recibió qué, fotos fechadas—: la <Termino slug="bitacora-del-sistema">bitácora del sistema</Termino> del módulo de automatización sirve igual
+aquí.
+
+Y una última honestidad, la que separa a un técnico de un vendedor de folletos. **Con 3.666 m² no se
+puede correr un ensayo con potencia estadística real**: las diferencias pequeñas quedan ahogadas en la
+variabilidad del terreno, y un resultado negativo casi nunca prueba que el mecanismo no exista — puede
+ser un <Termino slug="falso-negativo">falso negativo</Termino>. Lo que este protocolo produce es **conocimiento local y verificable**: «en
+este suelo, con este material, en estos dos años, esto pasó». Mucho más que cualquier tabla de amigos y
+enemigos.
+
+## Lo que sigue
+
+Todo lo de esta lección ocurre en el espacio: quién va al lado de quién, en el mismo momento. Pero la
+milpa ya asomó el otro eje —el frijol se siembra cuando el maíz tiene altura, la nodriza tiene fecha de
+retiro—: el tiempo.
+
+La siguiente lección, **04-rotacion-a-escala-de-parcela**, toma la misma cama y pregunta qué viene
+después: por qué la rotación funciona por mecanismo y no por costumbre —romper el ciclo del inóculo
+dejando al patógeno sin hospedante, alternar extractores con restauradores, cambiar la arquitectura de
+raíz que explora el perfil— y qué familia botánica sigue a cuál. Y afronta el problema que este catálogo
+tiene de verdad: **buena parte de lo que Rizoma produce es perenne y no rota.**

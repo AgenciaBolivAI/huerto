@@ -1,0 +1,100 @@
+{
+  "preguntas": [
+    {
+      "id": "aerobio-anaerobio",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué separa el compostaje termofílico de la putrefacción?",
+      "opciones": [
+        "Que llegue oxígeno al interior del montón.",
+        "El proceso aerobio libera calor y sube a 55–65 °C; el anaerobio es lento y frío.",
+        "El anaerobio produce compuestos que huelen mal y que además son fitotóxicos.",
+        "Son el mismo proceso: uno es simplemente más rápido que el otro."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Son procesos distintos con microorganismos distintos, y desde fuera se parecen. Lo único que decide cuál ocurre es el oxígeno. Y solo si la pila alcanza temperatura consigues las tres cosas que importan: matar semillas de malezas, reducir patógenos y estabilizar el material deprisa."
+    },
+    {
+      "id": "termometro",
+      "tipo": "verdadero_falso",
+      "enunciado": "La temperatura es la única métrica observable que tienes sobre lo que ocurre dentro de la pila.",
+      "respuesta": true,
+      "explicacion": "Correcto. No puedes ver la población microbiana ni medir el consumo de oxígeno, pero puedes clavar un termómetro, y esa lectura te dice si el proceso corre bien, si se quedó sin nitrógeno, sin aire o sin agua. Sin termómetro operas a ciegas y no te enteras de que el proceso falló hasta meses después, cuando el material no funciona."
+    },
+    {
+      "id": "mezcla-cn",
+      "tipo": "opcion_multiple",
+      "enunciado": "Tienes varias toneladas de material leñoso picado del desmonte. ¿Por qué no composta bien solo?",
+      "opciones": [
+        "Porque su relación C/N está entre 100 y 600, muchísimo por encima del punto de partida de 25–30.",
+        "Con tanto carbono y tan poco nitrógeno el proceso se queda parado durante mucho tiempo.",
+        "La gallinaza, con C/N de 7 a 10, es el otro extremo y es lo que le falta.",
+        "Porque la madera no es materia orgánica compostable."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Tus dos materiales son exactamente los dos extremos de la tabla, y ese es el encaje que hace la operación barata: el desmonte dejó el carbono repartido por el terreno y a pocos kilómetros hay avicultura con el nitrógeno. Como punto de partida, una parte de gallinaza por cada seis a ocho de material leñoso, en volumen; después ajusta con el termómetro."
+    },
+    {
+      "id": "tamano-pila",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si tienes poco material, es mejor hacer varias pilas pequeñas que una sola grande.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la razón número uno por la que una pila no calienta. La pila genera calor en todo su volumen y lo pierde por su superficie: cuanto más pequeña, más superficie en proporción al volumen y más rápido se enfría. Por debajo de aproximadamente un metro cúbico no conserva su propio calor, por bien mezclada que esté. Con poco material, una sola pila que supere ese umbral."
+    },
+    {
+      "id": "humedad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo compruebas la humedad de la pila y qué pasa en la seca cruceña?",
+      "opciones": [
+        "Aprietas un puñado con fuerza: deben salir una o dos gotas.",
+        "Si chorrea, va camino de anaerobia; si no sale ninguna gota, la actividad se frena.",
+        "En la seca hay que regar la pila: una pila descuidada en agosto no se pudre, se para.",
+        "Cuanta más agua, mejor: la humedad acelera siempre la descomposición."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los microorganismos viven en la película de agua que rodea las partículas, así que sin agua se paran; pero si el agua desplaza al aire, el proceso se vuelve anaerobio. Entre 50 y 60 % es el rango, y la prueba del puñado lo resuelve sin instrumentos. Y sí: en agosto y septiembre el riego de la pila entra en tu consumo de agua del mes más crítico."
+    },
+    {
+      "id": "curva",
+      "tipo": "opcion_multiple",
+      "enunciado": "La temperatura de tu pila lleva tres días bajando. ¿Qué significa y qué haces?",
+      "opciones": [
+        "Se está agotando el oxígeno o el material accesible: toca voltear.",
+        "El volteo reintroduce aire, remezcla y devuelve material de fuera hacia dentro, y la temperatura vuelve a subir.",
+        "Cada repunte es algo menor que el anterior; cuando ya no responde al volteo, el proceso pasa a maduración.",
+        "Significa que el compost ya está listo para usar en bolsas de vivero."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La fase de maduración no se puede saltar y es la que más gente se salta. Que la pila esté fría no quiere decir que el material esté maduro: quiere decir que terminó la fase activa. Lo que decide si puede ir a una bolsa es la prueba de germinación, no la temperatura ni el aspecto."
+    },
+    {
+      "id": "madurez",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el compost inmaduro es mucho más peligroso en una bolsa de vivero que en suelo abierto?",
+      "opciones": [
+        "Inmoviliza nitrógeno dentro de un volumen pequeño del que la raíz no puede escapar.",
+        "Sigue generando calor y libera compuestos fitotóxicos que en suelo abierto se diluirían.",
+        "La prueba de germinación contra un sustrato de referencia es la única forma fiable de saber si está maduro.",
+        "El aspecto negro y desmenuzado es prueba suficiente de madurez."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El aspecto no dice nada sobre la madurez. La prueba de germinación es un test de integración antes de desplegar a producción: siembras en tu compost y en un sustrato de referencia y comparas germinación y aspecto de las raicillas. Vale la pena porque el fallo no aparece el día que llenas las bolsas, aparece tres semanas después y en todo el lote a la vez."
+    },
+    {
+      "id": "sistema-completo",
+      "tipo": "abierta",
+      "enunciado": "Diseña el sistema de producción de materia orgánica de Rizoma del Sur: qué hace cada uno de los dos procesos, dónde va cada instalación y por qué, cómo arrancas la primera pila con los materiales que tienes, y qué cuidados específicos exige este clima que no aparecen en los manuales.",
+      "respuestaModelo": "Los dos sistemas hacen cosas distintas y hacen falta los dos, pero no para lo mismo.\n\nEl compost termofílico aporta el volumen: es lo que repone materia orgánica en los lotes de producción y lo que procesa las varias toneladas del desmonte. Va cerca del agua, con acceso para carretilla y a media sombra, porque a pleno sol se seca y en el punto bajo del terreno se encharca en lluvias. Pilas de al menos un metro cúbico, y mejor alargadas tipo camellón que cúbicas, porque se voltean con menos esfuerzo.\n\nLa mezcla de partida es material picado del desmonte como base de carbono más gallinaza como activador, en torno a una parte por cada seis a ocho de material leñoso, en volumen. A partir de ahí manda el termómetro: si no sube en dos o tres días, falta nitrógeno, falta agua o la pila es pequeña; si huele a amoníaco, hay demasiado nitrógeno y toca añadir leñoso y voltear; si huele a podrido, está anaerobia y hay que voltear ya.\n\nEl vermicompost aporta calidad, no volumen: mejora el sustrato de las bolsas. Producir todo el sustrato del vivero solo con lombriz no es realista; producir el componente que lo hace bueno, sí. Va bajo sombra densa obligatoriamente, se alimenta solo con material ya compostado y se arranca con un lecho de prueba antes de montar tres.\n\nY aquí está el conflicto de trazado que hay que resolver en el plano: la sombra densa es el mismo sitio que en el Módulo 6 quedó asignado a culantro y propagación. Compiten por el mismo recurso y hay que decidirlo, no descubrirlo.\n\nLos cuidados que este clima exige y que los manuales no traen son dos, y los dos son por calor. Primero, en la seca hay que regar la pila: una pila descuidada en agosto no se pudre, se para, y ese riego entra en el consumo de agua del mes más crítico. Segundo, y más grave: casi toda la literatura de lombricultura viene de climas templados y se preocupa de que el lecho no se congele. Aquí el problema es el opuesto. Por encima de unos 35 grados las lombrices mueren o huyen, así que sombra obligatoria, volumen suficiente para amortiguar la oscilación térmica y revisar la humedad con más frecuencia de la que dice cualquier manual europeo. Las recomendaciones de cubrir y abrigar el lecho que aparecen en manuales de Cochabamba o La Paz pueden ser exactamente lo contrario de lo que necesito: es el mismo filtro por piso ecológico del Módulo 6 aplicado a las lombrices.\n\nY tres reglas que no se saltan. La gallinaza nunca fresca sobre una planta ni dentro del lecho de lombrices, siempre compostada, y preguntando qué cama trae porque la cascarilla o la viruta cambian bastante la relación C/N de lo que estoy comprando. Todo lo que vaya a una bolsa de vivero pasa antes la prueba de germinación. Y el calendario: el compost tarda meses, así que si armo las primeras pilas en agosto el material está utilizable hacia el final de las lluvias, a tiempo para la temporada siguiente; si espero a necesitarlo, llego tarde.",
+      "criterios": [
+        "Asigna al compost el papel de volumen y al vermicompost el de calidad para sustrato.",
+        "Ubica la pila cerca del agua, con acceso y a media sombra, justificándolo.",
+        "Exige el mínimo de un metro cúbico y prefiere pilas alargadas.",
+        "Da una mezcla de partida concreta con los dos materiales disponibles y usa el termómetro para ajustar.",
+        "Detecta el conflicto de trazado entre el lecho de lombrices y la zona de sombra ya asignada.",
+        "Identifica el calor, y no el frío, como el riesgo del vermicompost en Santa Cruz.",
+        "Advierte contra la gallinaza fresca y menciona la cama como variable de la relación C/N.",
+        "Incluye la prueba de germinación como requisito previo a la bolsa y razona el plazo de meses."
+      ],
+      "explicacion": "Esta pregunta convierte un residuo y un subproducto barato en la enmienda más cara del mercado. Fíjate en que el error más probable no es técnico sino de calendario: empezar cuando ya hace falta el material."
+    }
+  ]
+}

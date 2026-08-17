@@ -1,0 +1,124 @@
+{
+  "preguntas": [
+    {
+      "id": "prueba-dos-preguntas",
+      "tipo": "opcion_multiple",
+      "enunciado": "La prueba que clasifica cualquier deuda tiene dos preguntas y las dos tienen que dar que sí. ¿Cuáles de estas afirmaciones describen correctamente esa prueba?",
+      "opciones": [
+        "Lo comprado tiene que producir o ahorrar por mes más de lo que cuesta la cuota, y ahorrar un gasto que se repite vale exactamente lo mismo que ganarlo",
+        "La vida útil de lo comprado tiene que ser más larga que el plazo de la deuda, porque si no, llega un mes en que pagás una cuota por algo que ya no existe y que además hay que reemplazar",
+        "El ingreso que la compra va a generar tiene que existir antes de la deuda: si depende de clientes que todavía no conseguiste, lo que estás financiando es una apuesta con cuota fija",
+        "Si la cuota entra cómodamente en el ingreso de este mes, la deuda pasa la prueba y conviene tomarla"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras son las dos condiciones de la prueba más la advertencia que la hace honesta. La cuarta es el distractor y es el error más común de todos, porque mezcla dos cosas distintas: que la cuota entre en el ingreso es la prueba de capacidad, que contesta «¿puedo pagarlo?». La prueba de dos preguntas contesta algo anterior y más importante: «¿esto se paga solo y sigue existiendo cuando termine de pagarlo?». Una deuda puede ser perfectamente pagable y aun así destruir plata neta todos los meses, y de hecho la mayoría de las deudas de consumo son exactamente eso: pagables y caras. Además, «entra en el ingreso de este mes» usa el mes equivocado, porque la cuota se mide contra el peor mes y no contra el que se tiene delante al firmar."
+    },
+    {
+      "id": "productiva-depende-del-uso",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una moto comprada en cuotas es siempre deuda productiva, porque una moto es una herramienta de trabajo.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el malentendido central de la clasificación. «Productiva» no es una propiedad del objeto, es una propiedad del uso. La misma moto, al mismo precio y con la misma cuota, es deuda productiva para quien reparte pedidos todos los días o hace mototaxi —porque produce un ingreso medible que se puede comparar contra la cuota— y es deuda de consumo para quien la usa el fin de semana, porque no produce nada y además pierde valor de reventa mientras la deuda baja despacio. Nadie puede decidirlo desde afuera y ninguna vendedora puede decírtelo: lo dice tu propia cuenta de cuánto entra por esa moto cada mes. El mismo razonamiento se aplica a una máquina de coser, a un horno o a un taladro: primero se demuestra el ingreso, después se firma la cuota."
+    },
+    {
+      "id": "espiral-y-refinanciar",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la deuda que se pide para pagar otra deuda y sobre el refinanciamiento, ¿qué es correcto?",
+      "opciones": [
+        "El rasgo que define la espiral es que el total que debés sube mes a mes sin que hayas comprado nada, porque el capital no baja: cambia de acreedor y en cada mudanza se le suman intereses, comisiones y a veces mora",
+        "Refinanciar sólo vale la pena si el total a devolver, con todo incluido, baja; si la cuota baja porque el plazo se estiró, el total sube",
+        "Cuando el total crece solo, ajustar el gasto de la casa ya no alcanza: hay que dejar de pedir y salir a hablar con cada acreedor",
+        "Ante un atraso, lo sensato es conseguir un préstamo rápido que cubra la cuota, porque así se evita entrar en mora y se gana tiempo para ordenarse"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta opción es el distractor y describe exactamente la puerta chica por la que entra todo el mundo: nadie decide endeudarse en espiral, sólo decide cubrir la cuota de este mes. El problema es que el sistema tiene realimentación positiva, igual que una tormenta de reintentos: cada préstamo individual parecía razonable, pero el mes siguiente hay dos cuotas donde había una con el mismo ingreso, así que falta más. «Ganar tiempo» es justo lo que no se compra, porque el ingreso no cambió y el total sí. La salida no es reintentar más rápido sino cortar la realimentación: dejar de pedir, escribir todas las deudas en una hoja y negociar. Y nunca, en ningún caso, pedirle a un acreedor caro para pagarle a uno barato."
+    },
+    {
+      "id": "capacidad-de-pago",
+      "tipo": "opcion_multiple",
+      "enunciado": "Una casa con ingresos irregulares quiere saber cuánto puede comprometer al mes. ¿Qué afirmaciones sobre la capacidad de pago son correctas?",
+      "opciones": [
+        "La cuota se compara contra el ingreso del peor mes de los últimos doce, no contra el mejor ni contra el promedio, porque un promedio no paga una cuota y una cuota vence en una fecha",
+        "Hay que sumar todas las cuotas que ya existen —banco, tienda, pariente, fiado del almacén— y también las que se firmaron como garante, aunque hoy las esté pagando otro",
+        "El techo de cuotas es lo que queda después de restarle al ingreso del peor mes el piso de gasto, la provisión de lo anual y el aporte al fondo: la cuota es lo último que se calcula",
+        "Cada préstamo se evalúa por separado y con su propio acreedor, porque cada entidad mira solamente lo suyo"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor y es peligrosa porque describe bien cómo mira el acreedor y mal cómo tiene que mirar la casa. Cada préstamo, evaluado solo, parece pagable: ese es precisamente el mecanismo por el que se llega al sobreendeudamiento sin haber tomado nunca una decisión mala de forma aislada. Quien paga no es cada préstamo por separado, es un solo ingreso, y ese ingreso tiene un techo. Por eso la pregunta correcta nunca es «¿puedo con esta cuota?» sino «¿puedo con la suma de todas las cuotas que ya tengo, más esta?». El síntoma temprano de haber pasado el techo es muy reconocible y aparece antes que cualquier embargo: empezar a decidir a quién no pagarle este mes."
+    },
+    {
+      "id": "garantia-y-garante",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre lo que se pone en garantía y sobre salir de garante de otra persona, ¿qué es correcto?",
+      "opciones": [
+        "Nunca se pone en garantía la cosa que produce el ingreso con el que vas a pagar, porque el día que te atrasás te quitan aquello con lo que ibas a ponerte al día",
+        "Salir de garante no es una recomendación: es firmar una promesa de pagar vos, con tu plata y tu patrimonio, si el otro no paga",
+        "Una firma como garante puede estar ocupando parte de tu propio techo de cuotas, y no se apaga cuando se apaga la amistad: sigue viva hasta que la deuda esté pagada",
+        "El acreedor siempre tiene que perseguir primero al deudor y agotar el cobro con él antes de poder reclamarle al garante"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor y es exactamente lo que la mayoría de la gente cree cuando firma. Que el acreedor tenga que perseguir primero al deudor, o que pueda cobrarte a vos directamente, de una vez y por el total, sin haberlo intentado con él, depende de cómo esté redactado el documento; la segunda forma es habitual y es la que sorprende. Cuál se aplica en un caso concreto se pregunta antes de firmar y se pide por escrito: no se supone, y no lo puede contestar este curso. La regla que resume todo el asunto es que firmar como garante equivale a regalar esa plata con la esperanza de que te la devuelvan, y si no podés regalarla, no la firmes."
+    },
+    {
+      "id": "interes-descontado",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el papel dice que te prestan mil pero te entregan novecientos porque el interés se descuenta por adelantado, la tasa real se calcula sobre los mil que dice el papel.",
+      "respuesta": false,
+      "explicacion": "Falso. La tasa real siempre se calcula sobre lo que recibiste en la mano, que es la plata que de verdad estás usando, y no sobre la cifra que figura en el documento. Descontar el interés al momento de entregar hace que la tasa efectiva sea más alta que la enunciada, porque devolvés en función de mil habiendo dispuesto de novecientos. Es una de las tres formas de esconder el precio que conviene reconocer: la tasa dicha por período corto —un porcentaje semanal o diario suena chico y se compara con uno anual multiplicándolo por la cantidad de períodos que tiene el año—, el cobro diario, que hace que nadie sume el total, y este descuento por adelantado. La defensa contra las tres es la misma y es la de la lección anterior: escribí y sumá el total a devolver, con todo incluido, antes de recibir la plata."
+    },
+    {
+      "id": "no-poder-pagar-y-orden",
+      "tipo": "opcion_multiple",
+      "enunciado": "No vas a poder pagar la cuota de este mes y además tenés varias deudas encima. ¿Qué corresponde hacer?",
+      "opciones": [
+        "Avisar antes de la fecha de vencimiento y llevar una propuesta concreta de cuánto podés pagar de verdad al mes, calculada con el piso de gasto en la mano, y pedir por escrito lo que acuerden",
+        "Poner todas las deudas al día en su pago mínimo para que ninguna entre en mora, dejar un fondo mínimo, y recién entonces volcar todo lo que sobre a una sola deuda hasta cerrarla",
+        "No aceptar un arreglo con una cuota que ya sabés que no vas a poder pagar, porque incumplir el arreglo gasta la credibilidad, que era tu único activo",
+        "Repartir por igual entre todas las deudas lo poco que sobra cada mes, para que ningún acreedor se sienta postergado"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor y suena a justicia, pero no cierra ninguna deuda: repartir el excedente entre todas hace que todas bajen despacio y que ninguna libere jamás su cuota. El método que funciona concentra todo lo que sobra en una sola —la más cara si una es muchísimo más cara que el resto, o la más chica si los costos son parecidos— porque cada deuda cancelada libera su cuota completa, que se suma al ataque sobre la siguiente. Eso es el efecto bola de nieve, y por eso las últimas caen mucho más rápido que las primeras. Con dos condiciones sin las cuales nada de esto sirve: mientras se paga deuda no se abre deuda nueva, y conviene preguntar si pagar antes de tiempo reduce el interés, porque en algunos arreglos se cobra igual."
+    },
+    {
+      "id": "aplicar-a-tu-casa",
+      "tipo": "abierta",
+      "enunciado": "Vivís en una casa alquilada en Zanja Honda, sin patio. El ingreso es irregular: changas de albañilería en temporada, la comida que vende tu pareja los fines de semana y una remesa que llega de vez en cuando. Ya tenés tres compromisos: la cuota de la moto con la que te movés al trabajo, que además quedó en garantía de su propio préstamo; un saldo grande de fiado en la tienda de la esquina; y una plata que te prestó tu hermana sin fecha. Este mes pasan tres cosas a la vez: te ofrecen una máquina de coser en cuotas para que tu pareja deje de cobrar por hora, tu cuñado te pide que le salgas de garante de un préstamo, y la cuota de la moto vence el viernes y no la vas a tener. Aplicá lo de esta lección: qué hacés con cada una de las tres, en qué orden, y qué escribís esta semana.",
+      "respuestaModelo": "Lo primero es no contestarlas en el orden en que llegaron, porque sólo una tiene fecha. La cuota del viernes es lo urgente; las otras dos son decisiones que empeoran si se toman apuradas.\n\nLa cuota de la moto se resuelve hablando, no escondiéndose, y antes del viernes. La mora corre sola, el recargo se suma a lo que ya debías y cada día que pasa la posición para negociar es peor. Antes de la conversación hay que hacer la cuenta: con el piso de gasto de la lección dos en la mano, cuánto se puede pagar de verdad al mes, sostenidamente, y no lo que suena bien. Después se avisa antes del vencimiento, se lleva una propuesta concreta —«puedo pagar esto cada mes durante estos meses»— y se pide por escrito lo acordado. Si ofrecen bajar la cuota alargando el plazo, hay que pedir el total nuevo con todo incluido, porque la cuota baja y el total sube. Y no se acepta una cuota que ya se sabe que no se va a poder pagar.\n\nLo que no se hace bajo ninguna circunstancia es pedir plata prestada para cubrir esa cuota. Ese es el primer paso de la espiral: el mes siguiente habría dos cuotas donde había una, con el mismo ingreso, y el capital no habría bajado un peso, sólo habría cambiado de acreedor sumando intereses y comisiones.\n\nHay además un problema de diseño que esta situación deja al descubierto: la moto es a la vez la garantía del préstamo y la herramienta con la que se llega al trabajo que genera el ingreso con el que se paga. Es poner el respaldo en el mismo disco que los datos. Si te la quitan, perdés el ingreso con el que ibas a ponerte al día. Eso no cambia hoy, pero se anota, se pregunta al acreedor si la garantía se puede cambiar, y se prioriza esa deuda por encima de las que no ponen en juego la herramienta de trabajo.\n\nEl aval del cuñado se contesta que no, y ahora. No porque él sea mala persona, sino porque salir de garante no es dar una recomendación: es firmar la promesa de pagar esa deuda entera, con la propia plata, si él no paga. Las tres preguntas dan que no: no se puede pagar entera hoy sin que se caiga la casa, no se sabe el total ni qué pasa si se atrasa, y hay una relación en juego que una deuda impaga rompe casi siempre. Esa firma ocuparía además parte del techo de cuotas propio, justo cuando ya está desbordado, y no se apagaría si la relación se enfría. «No» es una respuesta completa. Si se quiere ayudar, se ayuda con tiempo, acompañándolo a negociar o con una herramienta, no con una firma.\n\nLa máquina de coser es la única que podría ser deuda que levanta, y hay que probarlo con números. Primera pregunta: cuánto produce o ahorra por mes, contando sólo los encargos que ya le están pidiendo hoy a tu pareja y no puede hacer; si el ingreso extra no existe todavía, no es una máquina, es una apuesta con cuota fija. Segunda: cuánto dura la máquina contra cuánto dura el plazo, porque si el plazo es más largo se termina pagando algo que ya no existe. Y aunque las dos den que sí, hoy no se firma, porque la capacidad ya está desbordada. Se deja en espera hasta que la moto esté renegociada, y mientras tanto se escriben al lado las opciones sin deuda: postergar cuatro meses ahorrando esa misma cuota, buscarla usada probándola funcionando, repararla, alquilarla por día o compartirla con una vecina.\n\nEl fiado de la tienda es deuda aunque nadie lo llame así, y hay que traerlo a la hoja: registro propio, cuadrado cada tanto sin pelear, y fijarse si el precio al fiado es más alto que al contado, porque esa diferencia es interés. Lo de la hermana también entra aunque no tenga fecha ni interés: es el compromiso que más puede costar en la relación si queda indefinido, así que conviene hablarlo y ponerle un plazo escrito.\n\nLo que se escribe esta semana es una sola hoja con todas las deudas, una por línea: a quién, cuánto falta, de cuánto es la cuota, cada cuánto se paga y cuándo termina, incluidos el fiado y lo de la hermana. Debajo, la suma de las cuotas comparada contra el ingreso del peor mes del último año, restándole el piso de gasto, lo que hay que guardar para lo anual y el aporte al fondo. Si el resultado es negativo —y aquí probablemente lo sea— hay sobreendeudamiento, y el plan es el de la lección: nada nuevo, todo al día en su mínimo para que ninguna entre en mora, un fondo mínimo, y todo lo que sobre concentrado en una sola deuda hasta cerrarla. Y esto se conversa entre los adultos que aportan a la casa, con los números delante, porque una deuda la firma una persona y la paga la casa entera.",
+      "criterios": [
+        "Ordena las tres situaciones por urgencia real y trata la cuota que vence el viernes como lo único con fecha",
+        "Resuelve el atraso avisando antes del vencimiento, con la cuenta hecha de lo que se puede pagar de verdad y una propuesta concreta pedida por escrito",
+        "Descarta explícitamente pedir prestado para cubrir la cuota y nombra el mecanismo de la espiral: el capital no baja, cambia de acreedor",
+        "Detecta que la moto es a la vez garantía y fuente del ingreso, explica por qué ese cruce es peligroso y propone preguntar si se puede cambiar la garantía",
+        "Rechaza el aval del cuñado y explica que salir de garante es prometer pagar uno mismo, no dar una recomendación",
+        "Aplica las tres preguntas del garante y menciona que la firma ocuparía el propio techo de cuotas y que no se apaga con la amistad",
+        "Pasa la máquina de coser por las dos preguntas con números: el ingreso que ya existe hoy, y la vida útil contra el plazo",
+        "Concluye que la máquina no se firma ahora aunque pase la prueba, porque la capacidad ya está desbordada, y enumera opciones sin deuda: postergar, usado, reparar, compartir o pasar sin eso",
+        "Trata el fiado del almacén como deuda, propone llevar registro propio y señala que la diferencia entre el precio al fiado y al contado es interés",
+        "Incluye el préstamo de la hermana en la hoja y lo trata como decisión sobre la relación, proponiendo ponerle plazo escrito",
+        "Construye la hoja con las cinco columnas y compara la suma de cuotas contra el ingreso del peor mes, restando piso de gasto, provisión anual y aporte al fondo",
+        "Cierra con el plan de cancelación —nada nuevo, todo al día, fondo mínimo, ataque a una sola— y con la conversación entre los adultos de la casa"
+      ],
+      "explicacion": "La lección no se aprueba diciendo que hay que endeudarse menos, sino demostrando que se sabe separar tres decisiones que llegaron el mismo mes y que tienen naturalezas distintas: una obligación con fecha que sólo se resuelve hablando, un compromiso ajeno que se rechaza, y una compra que puede ser buena y que aun así no toca ahora. El error típico es contestar en el orden en que llegaron y quedarse en la máquina de coser, que es la más interesante, dejando el viernes para el final. El segundo error, más caro, es resolver el atraso pidiendo prestado: cada préstamo individual parece razonable y por eso funciona la espiral. El tercero es firmarle el aval al cuñado por vergüenza a decir que no, sin haber visto que esa firma ocupa capacidad propia y sobrevive a la relación. Y el cuarto, más sutil, es aprobar la máquina de coser sólo porque «es para trabajar»: productiva es el uso, no el objeto, y hay que demostrar el ingreso con encargos que ya existen. Ninguna respuesta debería inventar tasas, precios, plazos de trámite ni normativa boliviana: lo que se afirma es mecanismo, y lo que se desconoce se pregunta a la entidad, a un abogado o a un contador."
+    }
+  ]
+}

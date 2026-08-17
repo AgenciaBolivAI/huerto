@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-falla-la-tabla",
+      "tipo": "opcion_multiple",
+      "enunciado": "Encuentras una tabla de asociaciones traducida de un libro de huerto europeo. ¿Qué razones de fondo hacen que no se pueda aplicar tal cual en Zanja Honda?",
+      "opciones": [
+        "La plaga a la que apunta la recomendación no es la misma que la de aquí, y el mecanismo es específico de la especie que se quiere frenar.",
+        "El calendario es distinto: aquí hay dos estaciones marcadas y generaciones cortas casi todo el año, así que la sincronía entre compañera y plaga se rompe.",
+        "La tabla no declara ni la dosis ni la geometría, y todos los mecanismos de asociación dependen de la cantidad y del arreglo.",
+        "Las plantas europeas no pueden crecer en suelo tropical, así que cualquier asociación es imposible de reproducir."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son las razones reales: otra plaga, otro calendario y ausencia de dosis y geometría. La cuarta es falsa y además desplaza el problema: muchas de esas especies sí crecen aquí, y aunque no crecieran, el fallo de la tabla no es de adaptación de la planta sino de que la afirmación nunca declaró contra qué insecto, en qué cantidad y en qué disposición funcionaba."
+    },
+    {
+      "id": "trampa-sumidero",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un cultivo trampa bien elegido resuelve el problema por sí solo: como la plaga lo prefiere, se concentra ahí y deja de molestar al cultivo, sin que haga falta ninguna operación posterior.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error que invierte el signo del efecto. Si la plaga se concentra en la trampa y nadie la destruye, se reproduce ahí y a la generación siguiente hay más población que al principio, criada en la propia parcela y pegada al cultivo. La trampa solo funciona si es sumidero, y eso obliga a una operación con fecha: cortar y sacar, tratar dirigido o aplastar a mano antes de que el ciclo del insecto se complete. Es el mismo fallo que un honeypot que nadie limpia."
+    },
+    {
+      "id": "dilucion-mecanismo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué una cubierta de plantas que no son hospedantes reduce el daño de un insecto especialista más de lo que haría suponer la simple proporción de plantas?",
+      "opciones": [
+        "Porque el insecto que aterriza sobre una planta que no le sirve vuelve a despegar y su contador interno de contactos aceptables se reinicia.",
+        "Porque necesita acumular varios contactos aceptables seguidos antes de aceptar el sitio para poner huevos, y cada aterrizaje inapropiado borra el progreso.",
+        "Porque la cubierta elimina el suelo desnudo, que es el fondo contrastante contra el que el insecto resuelve la silueta verde de su hospedante.",
+        "Porque las plantas no hospedantes emiten sustancias tóxicas que matan al insecto cuando se posa sobre ellas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen el mecanismo real: reinicio del contador de aterrizajes apropiados e inapropiados y pérdida del contraste visual. La cuarta es falsa y es justamente la explicación mágica que sobra: el mecanismo no requiere que la compañera sea tóxica ni aromática, solo que no sea hospedante, y esa es la razón por la que muchas asociaciones «aromáticas» funcionan por geometría y no por química."
+    },
+    {
+      "id": "dominio-de-validez",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Contra cuáles de estos problemas NO hay que esperar nada de la dilución del hospedante y la disrupción de la búsqueda?",
+      "opciones": [
+        "Un hongo de marchitez que viaja dentro del cormo de plátano que se acaba de comprar.",
+        "Un nematodo que ya está instalado en el suelo del lote antes de plantar.",
+        "Un insecto generalista que acepta casi cualquier planta verde como alimento.",
+        "Un insecto especialista que llega volando desde fuera buscando una sola familia botánica."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los tres primeros quedan fuera del dominio del mecanismo: lo que entra dentro del material de siembra atraviesa la puerta principal, lo que ya está en el suelo no tiene que buscar nada, y para un generalista más plantas puede significar simplemente más comida. El cuarto es precisamente el caso en el que sí funciona, porque toda la cadena de búsqueda —olfato, contraste visual, aterrizaje, contacto— se puede perturbar. Confundir el dominio y concluir que el mecanismo no sirve es el error clásico."
+    },
+    {
+      "id": "milpa-nitrogeno",
+      "tipo": "verdadero_falso",
+      "enunciado": "En la milpa, el nitrógeno que fija el frijol alimenta al maíz durante esa misma campaña, y por eso el maíz asociado no necesita fertilización nitrogenada.",
+      "respuesta": false,
+      "explicacion": "Falso, y es una de las frases de folleto más repetidas. El nitrógeno que fija el frijol va sobre todo a su propio grano y a su propia biomasa; lo que pasa al maíz en el mismo ciclo es poco. El beneficio real es de balance del sistema y llega después, cuando los residuos se descomponen y el ciclo siguiente arranca con más nitrógeno del que habría con maíz solo. Es un aporte diferido, no un subsidio en tiempo real, y confundir los dos lleva a dejar sin fertilizar un maíz que sí lo necesitaba."
+    },
+    {
+      "id": "nodriza-y-tutor",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a plantar gandul como nodriza alrededor de frutales injertados recién trasplantados. ¿Qué decisiones forman parte del diseño correcto?",
+      "opciones": [
+        "Escribir en el registro, el día que se planta, en qué mes se poda y en qué mes se saca.",
+        "Aceptar que el servicio de la nodriza tiene ventana de utilidad, porque la sombra que salva en septiembre limita la producción más adelante.",
+        "Comprobar que el gandul nodula de verdad, cavando y mirando si hay nódulos y si por dentro son rosados.",
+        "Dejar el gandul indefinidamente, porque al fijar nitrógeno cuanto más tiempo esté, mejor le va al frutal."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son el diseño: fecha de desmontaje escrita, conciencia de que el servicio caduca y verificación de que la fijación existe de verdad. La cuarta es el error del andamio que nunca se retira: la nodriza cobra su servicio en luz, y pasada su ventana deja de ser nodriza y se convierte en el competidor que le quita la luz a un frutal que ya debería estar produciendo."
+    },
+    {
+      "id": "diseno-del-ensayo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Quieres probar si cubrir el suelo con culantro entre las hileras de ají dulce reduce los pulgones alados. ¿Qué exige un ensayo honesto?",
+      "opciones": [
+        "Un testigo montado al lado y el mismo día, con el mismo material, el mismo riego y el mismo manejo.",
+        "Tres o cuatro parcelas separadas de cada tratamiento, intercaladas y con los bloques trazados atravesando los gradientes conocidos del terreno.",
+        "Una bordura de guarda y una separación entre parcelas acorde con la distancia a la que vuela el insecto.",
+        "Treinta plantas medidas dentro de una sola cama, que ya dan treinta datos independientes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son las condiciones que hacen interpretable el resultado. La cuarta es pseudorreplicación: treinta plantas de la misma cama son un dato medido treinta veces, porque comparten suelo, sombra y drenaje, y sus errores están correlacionados. Promediarlos no cancela el sesgo del sitio, solo lo disimula."
+    },
+    {
+      "id": "plan-de-asociaciones-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Escribe el plan de asociaciones de Rizoma del Sur: qué combinaciones vas a probar en los 12 lotes, con qué mecanismo declarado, qué riesgos aceptas de cada una y cómo vas a comprobar si funcionan sin creerle a ninguna tabla.",
+      "respuestaModelo": "El plan arranca con una regla: en Rizoma no se planta nada junto a nada porque «se llevan bien». Cada asociación tiene que nombrar un mecanismo, un sujeto y una magnitud, y tiene que pasar el filtro de cuatro preguntas que sale de leer la milpa como ingeniería: qué función distinta cumple cada especie, si ocupan estratos distintos, si tienen el pico de demanda en momentos distintos y por qué mecanismo concreto no se estorban.\n\nLa primera candidata es yautía bajo plátano. El mecanismo es de complementariedad en el espacio: el plátano ocupa el estrato alto y deja debajo sombra parcial y aire húmedo, que es justo donde la yautía trabaja bien y sufre menos en la seca; abajo, la yautía cubre el suelo entre matas, corta evaporación y compite con la maleza, que en un platanal es gasto permanente de jornal. Acepto dos riesgos y los manejo por diseño. La cosecha de yautía es destructiva, así que va entre hileras y nunca en el ruedo de la mata, y se agenda respecto del ciclo del plátano para no cavar en el anillo de raíces superficiales en el peor momento. El segundo riesgo es sanitario: los dos son cultivos de órgano subterráneo con problemas de suelo —nematodos y hongos de marchitez—, y cuánto se solapan sus hospedantes no me lo puedo inventar; eso se consulta al CIAT o al INIAF antes de comprometer un lote que después no se puede limpiar.\n\nLa segunda es culantro a media sombra. El mecanismo es de facilitación de microclima, y la particularidad es que la sombra no es el precio que paga el de abajo sino la técnica de producción: retrasa la floración, mantiene la planta en roseta y agranda la hoja, que es el producto vendible. Eso convierte al culantro en el sotobosque de los frutales injertados en formación, del gandul y del costado sombreado del vivero, y como es de ciclo corto ocupa esos huecos sin comprometer el terreno. El riesgo de su ficha manda el diseño: sombra sí, aire quieto no, porque sombra más densidad alta más humedad es la receta de las manchas foliares.\n\nLa tercera es gandul como nodriza y estructura provisional. Fija nitrógeno con sus rizobios, su raíz profunda trabaja la capa dura, corta viento y produce en plena seca. Va en líneas al sur y al sureste para proteger del surazo lo recién plantado, y alrededor de los frutales recién trasplantados para darles sombra parcial los primeros meses. Dos condiciones: comprobar que nodula de verdad, cavando y mirando si hay nódulos rosados por dentro, porque si en ese lote nunca creció una leguminosa emparentada puede crecer verde sin fijar nada; y escribir en el registro, el día que se planta, el mes de poda y el mes de retiro. La nodriza es andamio, no edificio, y un andamio sin fecha de desmontaje es deuda técnica con raíces.\n\nLa cuarta es ají dulce, y ahí lo primero es un límite que no viene de las plagas: el ají dulce cruza con otros Capsicum por polinización de abejas, así que las plantas destinadas a semilla no se mezclan con nada que obligue a moverlas de su distancia de aislamiento. Una decisión de asociación puede romper una decisión de aislamiento. Para el ají de producción, en cambio, la hipótesis es de dilución: cubrir el suelo entre hileras con culantro para reducir el número de pulgones alados que aterrizan. El mecanismo es de contraste visual y de aterrizajes inapropiados, y es la palanca correcta porque el daño grave no es la picadura sino los virus que el alado transmite al probar la hoja: una vez que probó, el virus ya entró, y matarlo después no lo deshace.\n\nLo que no voy a decir es que estas cuatro funcionan. Son hipótesis, y por eso cada una se prueba. El protocolo es una prueba A/B: hipótesis escrita antes de empezar con mecanismo, métrica y umbral de adopción; testigo montado al lado y el mismo día con el mismo material y el mismo riego; tres o cuatro parcelas separadas de cada tratamiento, intercaladas y con los bloques atravesando los gradientes conocidos del terreno —las zonas que se encharcan, la sombra de tarde, la línea del viento del sur—, porque treinta plantas de una sola cama son un dato medido treinta veces y no treinta datos. Cada parcela con su bordura de guarda y con separación acorde con la distancia a la que vuela el bicho: si la trampa está a dos metros del testigo, le está limpiando el testigo también, y si el terreno no da para esa separación, el ensayo honesto es de rendimiento y de manejo, no de control de plagas. Se miden los dos cultivos y se anotan los jornales, porque sin ambas cifras no hay uso equivalente de la tierra y porque una asociación que sube el rendimiento un diez por ciento y duplica las horas de cosecha pierde. Y se repite en la seca y en las lluvias, porque un ciclo es una anécdota.\n\nTodo va a la bitácora con fechas, distancias, croquis y fotos fechadas. Y asumo el límite: con 3.666 m² no hay potencia estadística real, así que un resultado negativo puede ser un falso negativo y no una prueba de que el mecanismo no exista. Lo que este trabajo produce es conocimiento local y verificable, que es lo único que Rizoma puede enseñarle a un vecino sin mentirle.",
+      "criterios": [
+        "Declara la regla de entrada: cada asociación nombra mecanismo, sujeto y magnitud, y pasa el filtro de cuatro preguntas de la milpa.",
+        "Propone yautía bajo plátano con el mecanismo de estratos y cobertura de suelo, no como costumbre.",
+        "Resuelve por diseño el conflicto de la cosecha destructiva de yautía dentro del anillo de raíces del plátano.",
+        "Reconoce el riesgo sanitario compartido de los dos cultivos de órgano subterráneo y lo remite a consulta institucional en lugar de afirmar una cifra.",
+        "Justifica el culantro a media sombra por fisiología —retraso de floración, roseta, hoja más grande— y no por gusto.",
+        "Añade la restricción de ventilación del culantro para no crear manchas foliares.",
+        "Usa el gandul como nodriza con fecha de poda y de retiro escrita en el registro.",
+        "Incluye la comprobación de nodulación del gandul antes de contar con la fijación de nitrógeno.",
+        "Señala que la asociación del ají dulce está limitada por el aislamiento de semilla frente al cruce con otros Capsicum.",
+        "Explica la dilución en ají dulce por reducción de aterrizajes de alados y por la irreversibilidad de la transmisión de virus.",
+        "Describe el ensayo con testigo simultáneo, repeticiones reales en bloques y bordura de guarda con separación acorde al insecto.",
+        "Mide los dos cultivos y los jornales, repite en las dos estaciones y admite el límite de potencia estadística y el falso negativo."
+      ],
+      "explicacion": "La respuesta completa tiene que hacer tres cosas a la vez: proponer combinaciones concretas del catálogo con su mecanismo declarado, aceptar por escrito los riesgos y conflictos que cada una arrastra —cosecha destructiva, sanidad de suelo, ventilación, aislamiento de semilla, nodriza sin fecha de retiro— y cerrar con un protocolo de comprobación con testigo. Un plan que solo enumere parejas bonitas, aunque sean las del catálogo, sigue siendo una tabla de folleto escrita con otras palabras."
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+Tu terreno se llama Zanja Honda. El topónimo no es decorativo: describe el accidente geográfico
+que define el drenaje de toda la zona. Y entre octubre y abril, cuando caen las lluvias, el
+drenaje va a ser el factor que decida qué sobrevive y qué se pierde.
+
+Esta es la lección que convierte los dos módulos anteriores en decisiones con pala y cinta
+métrica. Vamos a medir tres cosas —a qué velocidad entra el agua, si hay una capa compactada
+bloqueándola, y a qué profundidad se satura el suelo— y de esas tres medidas sale el diseño de
+tus camas y tus canales.
+
+Todo se hace con una lata, una regla, un cronómetro y un hoyo.
+
+## Infiltración no es lo mismo que cantidad de lluvia
+
+La <Termino slug="infiltracion">infiltración</Termino> es la **velocidad** a la que el agua entra
+en el suelo, y se mide en milímetros por hora. No cuánta agua cabe: a qué ritmo entra.
+
+Esa distinción es la clave de todo, porque cuando la intensidad de la lluvia supera la capacidad
+de infiltración, el exceso no espera: se encharca y luego escurre. Y da igual que el suelo esté
+seco por debajo.
+
+<Diagrama
+  src="lluvia-vs-infiltracion.webp"
+  alt="Dos paneles comparados: con lluvia suave el agua se absorbe entera y entra al suelo; con lluvia intensa solo una parte entra, se forma un charco en la superficie y el resto escurre de lado."
+  pie="El suelo de los dos paneles es el mismo y tiene la misma capacidad de infiltración. Lo único que cambia es la intensidad de la lluvia. La derecha es octubre en Santa Cruz."
+/>
+
+<Analogia>
+La infiltración es tu **ancho de banda de escritura**. La intensidad de la lluvia es la tasa de
+peticiones entrantes.
+
+Mientras las peticiones lleguen por debajo del ancho de banda, todo se procesa. En cuanto la
+superan, se forma una cola —el charco— y cuando la cola desborda, las peticiones se descartan: eso
+es la escorrentía. El agua descartada no vuelve.
+
+Y el detalle que más importa: **el volumen total es irrelevante si la tasa excede la capacidad**.
+Cien milímetros repartidos en un día se absorben; los mismos cien milímetros en una hora se
+pierden casi enteros, y además se llevan tu suelo por delante.
+</Analogia>
+
+### Cuánta infiltración es suficiente
+
+| Infiltración | Valoración | Situación típica |
+|---|---|---|
+| Más de 50 mm/h | Muy buena | Suelo arenoso, o franco bien estructurado con cobertura |
+| 20 – 50 mm/h | Buena | Franco con estructura granular |
+| 5 – 20 mm/h | Moderada | Franco arcilloso, o suelo algo compactado |
+| 1 – 5 mm/h | Baja | Arcilloso, o con costra superficial |
+| Menos de 1 mm/h | **Crítica** | Compactado, encostrado, o arcilla masiva |
+
+Y ahora el número que hace que esta tabla importe: en Santa Cruz, una lluvia fuerte de la
+temporada puede descargar **entre 40 y 80 mm en una hora**. Compara eso con la columna izquierda.
+Un suelo con infiltración moderada —5 a 20 mm/h, que es un valor perfectamente normal— pierde
+por escorrentía más de la mitad del agua de esa lluvia.
+
+## Cómo medirla con una lata
+
+No necesitas un infiltrómetro de doble anillo profesional para tomar la decisión que tienes que
+tomar. Necesitas saber en qué orden de magnitud estás.
+
+<Diagrama
+  src="prueba-de-infiltracion.webp"
+  alt="Prueba de infiltración de campo: un cilindro metálico sin fondo clavado en el suelo, con agua dentro, una regla midiendo cuánto baja el nivel y un cronómetro al lado."
+  pie="Una lata de conserva grande sin tapa ni fondo, clavada 5 cm en el suelo, es un infiltrómetro de anillo simple perfectamente válido para decidir."
+/>
+
+**El procedimiento:**
+
+1. Consigue una lata grande y quítale las dos tapas, para que quede un cilindro abierto. Un tubo
+   de PVC de 15 cm de diámetro también sirve.
+2. Clávala verticalmente **5 cm** en el suelo, sin remover la tierra alrededor. Si el suelo está
+   duro, pon una tabla encima y golpea la tabla, nunca el borde de la lata directamente.
+3. **Satura primero.** Llena de agua, deja que se infiltre por completo, y repite. Esto es
+   imprescindible: lo que quieres medir es la infiltración en suelo húmedo, que es la condición
+   real durante una temporada de lluvias. Un suelo seco absorbe mucho más al principio y te daría
+   un número optimista y falso.
+4. Vuelve a llenar hasta una altura conocida —marca 5 cm con la regla— y arranca el cronómetro.
+5. Anota cuánto baja el nivel cada 5 minutos, durante 30 minutos o hasta que el descenso por
+   intervalo se estabilice.
+6. La infiltración es el descenso del último intervalo, extrapolado a una hora.
+
+<Formula explicacion="Si en los últimos 5 minutos el nivel bajó 1,5 cm, la infiltración es 15 mm ÷ 5 min × 60 min = 180 mm/h. Suelo muy permeable.">
+Infiltración (mm/h) = descenso en mm ÷ minutos del intervalo × 60
+</Formula>
+
+<Video id="u7vEgzeoWUU" />
+
+Y la versión rigurosa, con doble cilindro, explicada por el Centro AGUA de la Universidad Mayor de
+San Simón. Merece la pena verla completa aunque uses la lata: entender por qué el anillo exterior
+evita el flujo lateral te dice también por qué tu medición con una sola lata sobreestima un poco.
+
+<Video id="ofOkvNR4LIs" />
+
+<Advertencia titulo="El error que invalida la medición">
+Medir sobre suelo seco. La primera carga de agua entra rapidísimo por las grietas y los poros
+vacíos, y te da un número que puede ser diez veces el real. Satura antes, siempre, y mide cuando
+el descenso por intervalo ya se haya estabilizado.
+</Advertencia>
+
+## La compactación: el cuello de botella invisible
+
+Si la infiltración sale baja, la siguiente pregunta es **dónde** está el bloqueo. Y muy a menudo
+no está en la superficie, sino en una capa densa a 15–30 cm de profundidad:
+la <Termino slug="suela-de-labor">suela de labor</Termino>.
+
+<Diagrama
+  src="suela-de-labor.webp"
+  alt="Corte de un perfil de suelo con una capa compactada intermedia de placas horizontales; las raíces bajan desde arriba, chocan con ella y giran creciendo de lado, y solo una raíz fina encuentra una grieta y continúa hacia abajo."
+  pie="El diagnóstico definitivo lo dan las raíces. Cuando bajan y de pronto giran 90 grados y crecen horizontales, han encontrado algo que no pueden atravesar."
+/>
+
+<Analogia>
+Es un **cuello de botella en medio de la tubería**. Puedes labrar los primeros 15 cm todo lo que
+quieras: estás ensanchando el tramo que ya era ancho. El caudal lo sigue fijando la sección
+mínima, que está justo debajo de donde llega tu herramienta.
+
+Peor: cada pasada de labranza a la misma profundidad **estrecha más ese punto**, porque el peso y
+el corte de la herramienta comprimen el suelo inmediatamente inferior. Es un cuello de botella que
+la propia operación de mantenimiento va agravando.
+</Analogia>
+
+### Tres formas de detectarla, de la más pobre a la mejor
+
+**El destornillador.** Clava un destornillador largo o una varilla de acero verticalmente,
+empujando con fuerza constante. Cuando encuentres una resistencia clara y súbita, mide la
+profundidad. Es tosco pero gratis, y repetido en varios puntos ya dibuja el mapa.
+
+**El penetrómetro.** Mide la resistencia a la penetración en kPa o psi, y da un número
+comparable entre puntos y entre fechas. Por encima de unos 2.000 kPa las raíces de la mayoría de
+los cultivos dejan de penetrar.
+
+<Video id="Zq_785JqRq8" />
+
+**El hoyo.** Y esta es, sin discusión, la que más te va a decir.
+
+<Analogia titulo="Cavar el hoyo es leer los logs">
+Todo lo demás son métricas indirectas: un número que resume y esconde. El hoyo es el registro
+completo, sin agregación.
+
+Cavas 60 cm, limpias una cara con la pala para dejarla vertical, y **lees**: dónde cambian el
+color y la textura, a qué profundidad las raíces giran de lado, si hay placas horizontales, si
+aparecen manchas grises o azuladas.
+
+Ninguna medición sustituye a mirar. Y cuesta media hora.
+</Analogia>
+
+**Qué buscar en la cara del hoyo:**
+
+| Lo que ves | Lo que significa |
+|---|---|
+| Raíces que giran y crecen horizontales a cierta profundidad | Capa compactada exactamente ahí |
+| Estructura en placas horizontales | Compactación, casi seguro por labranza en húmedo |
+| Manchas grises, azuladas o verdosas | **Saturación prolongada.** El suelo ha estado sin oxígeno |
+| Manchas de óxido color herrumbre | El nivel del agua sube y baja: saturación intermitente |
+| Color uniforme y raíces que bajan rectas | Sin problema de drenaje. Buena noticia |
+
+Ese punto de las manchas grises merece énfasis: se llama **gleyzación**, y es el registro
+histórico de tu drenaje. Si aparece a 40 cm, ese suelo se satura hasta 40 cm todos los años,
+llueva o no llueva este.
+
+## Drenaje: qué hacer con el agua que sobra
+
+Medida la infiltración y localizada la compactación, queda la tercera pregunta: cuando el suelo se
+sature, **¿por dónde sale el agua?**
+
+La prueba es un hoyo y paciencia. Cavas un hoyo de unos 30 cm de profundidad y 20 de ancho, lo
+llenas de agua, dejas que se infiltre entera, y lo vuelves a llenar. Entonces mides cuánto baja el
+nivel por hora:
+
+| Descenso | Diagnóstico | Qué implica |
+|---|---|---|
+| Más de 5 cm/h | Drenaje excelente | Ojo con la sequía, no con el encharcamiento |
+| 2,5 – 5 cm/h | Bueno | Sin restricciones |
+| 1 – 2,5 cm/h | Lento | Camas altas recomendables para cultivos sensibles |
+| Menos de 1 cm/h | **Muy deficiente** | Camas altas obligatorias, más drenaje superficial |
+| No baja en 24 h | Nivel freático o capa impermeable | Solo cultivos tolerantes, o drenaje construido |
+
+### La solución que casi siempre funciona: elevar
+
+La cama alta no mejora el drenaje del suelo. Hace algo más sencillo y más robusto: **sube la zona
+de raíces por encima del nivel que se satura**.
+
+<Diagrama
+  src="cama-alta-cotas.webp"
+  alt="Corte de una cama alta con sus cotas: unos 30 a 40 cm de altura, 90 a 120 cm de ancho útil, pasillo de 50 cm con un canal por donde escurre el agua, y una línea discontinua que marca el nivel saturado por debajo de la zona de raíces."
+  pie="Las cotas son un punto de partida razonable para clima tropical con lluvias intensas. La altura se decide con el dato del hoyo: hasta dónde llegan las manchas grises."
+/>
+
+Y por eso las cotas no son un dogma: **la altura la decide tu hoyo**. Si las manchas de
+gleyzación aparecen a 25 cm, necesitas al menos 30 cm de cama para que la mayor parte de las
+raíces queden por encima. Si aparecen a 10 cm, necesitas más, o necesitas además canales.
+
+Las otras herramientas, por orden de a qué se recurre primero:
+
+1. **Cobertura permanente.** Lo más barato y lo más efectivo a medio plazo. Protege de la costra,
+   alimenta la biología que construye macroporos, y sube la infiltración con el tiempo.
+2. **Descompactación biológica.** Plantas de raíz pivotante y potente —nabo forrajero, rábano
+   daikon, algunas leguminosas— perforan capas compactadas y dejan canales al descomponerse. Es
+   lento, es barato y no genera suela de labor nueva.
+3. **Descompactación mecánica.** Subsolador o cincel, trabajando **por debajo** de la capa
+   compactada y con el suelo **seco**. Con el suelo húmedo no rompe: amasa. Y sin cobertura ni
+   raíces después, la compactación vuelve en un par de temporadas.
+4. **Canales de drenaje.** Para sacar el agua superficial. Solo tienen sentido si hay a dónde
+   llevarla y con qué pendiente, así que esto se decide con el terreno delante.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Este es el trabajo de campo concreto para esta semana, y es la mejor inversión de tiempo que
+puedes hacer ahora mismo.**
+
+Estás en el único momento del año en que el suelo está seco y accesible, y en el único momento del
+proyecto en que todavía no has construido nada encima. Las decisiones de drenaje que tomes ahora
+son casi irreversibles después.
+
+**Día 1 — Los hoyos.** Cava **tres hoyos de 60 cm**: uno en el punto más bajo del terreno, uno en
+el más alto y uno intermedio. Limpia una cara de cada uno con la pala y fotografíala con una cinta
+métrica al lado, para tener registro. Anota para cada hoyo:
+
+- a qué profundidad aparecen manchas grises o azuladas, si aparecen;
+- a qué profundidad hay cambio de textura o color;
+- si hay placas horizontales y a qué profundidad;
+- si encuentras raíces viejas del monte que giren de lado.
+
+**Día 1, en paralelo — La varilla.** Mientras están abiertos los hoyos, recorre los doce lotes con
+una varilla de acero clavando cada 10 metros y anotando a qué profundidad topa. Es media hora y te
+da el mapa de compactación de todo el terreno.
+
+**Día 2 — Infiltración y percolación.** Una prueba de la lata por lote, y la prueba del hoyo de 30
+cm en los dos o tres lotes que peor pinta tengan. Recuerda saturar antes.
+
+**Y ahora la decisión, cruzando las tres lecciones del módulo:**
+
+| Textura (L1) | Densidad o estructura (L2) | Percolación (L3) | Decisión |
+|---|---|---|---|
+| Franco / franco arenoso | Buena | Más de 2,5 cm/h | Cama plana. Tu mejor tierra |
+| Franco | Densidad alta | 1 – 2,5 cm/h | Descompactar en seca + cobertura, luego cama plana |
+| Franco arcilloso | Cualquiera | Menos de 2,5 cm/h | **Cama alta de 30–40 cm** |
+| Arcilloso | Cualquiera | Menos de 1 cm/h | Cama alta de 40 cm **más canal** en el pasillo |
+| Cualquiera | Cualquiera | No baja en 24 h | Ni cultivo de suelo ni frutales. Vivero en contenedor |
+
+**Dos cosas específicas de tu sitio:**
+
+La **Ruta 9** y la urbanización tienen sus propias obras de drenaje, y el agua que escurre de una
+superficie compactada o pavimentada no desaparece: va a algún sitio. Antes de trazar tus camas,
+camina el terreno después de una lluvia y observa por dónde entra y por dónde sale el agua. Si tu
+terreno recibe escorrentía de arriba, la solución no está dentro de tus lotes: está en un canal
+de intercepción en el borde alto.
+
+Y el **achachairú, los cítricos y el mango** que tienes previstos en el catálogo son perennes de
+raíz profunda. Un frutal plantado sobre una capa compactada a 30 cm crece bien dos años y luego se
+estanca o se cae con el primer viento fuerte, porque nunca pudo anclar. Para los lotes de frutales,
+la descompactación no es opcional y hay que hacerla **antes de plantar**: después ya no hay forma
+de llegar ahí sin destrozar el sistema radicular.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La intensidad de la lluvia es la diferencia que invalida media bibliografía.** Los manuales de
+drenaje escritos para Europa o el norte de EE. UU. dimensionan para lluvias prolongadas y de baja
+intensidad. En el trópico de Santa Cruz el patrón es el opuesto: eventos cortos y muy intensos, con
+40 a 80 mm en una hora perfectamente posibles durante la temporada.
+
+Consecuencia práctica: aquí **la escorrentía es el problema dominante, no el exceso acumulado**. Un
+sistema dimensionado con criterios templados se desborda el primer aguacero fuerte. Y la medida más
+rentable no es cavar más canales, es **subir las camas y tapar el suelo**.
+
+**Los camellones tienen precedente local y muy antiguo.** La técnica de elevar el terreno de
+cultivo sobre camellones o *lomas* está documentada en las tierras bajas bolivianas desde época
+precolombina, precisamente en llanuras de inundación. No es una importación: es la respuesta que
+ya funcionaba aquí. Si en la zona ves parcelas trabajadas en camellones, hay razón detrás.
+
+**Sobre la maquinaria de la zona.** Para descompactar en profundidad hace falta subsolador o
+cincel, que no es lo que trae por defecto el servicio de maquinaria del área integrada —lo normal
+es arado de discos y rastra, que trabajan superficial y de hecho crean suela de labor. Si vas a
+contratar descompactación, hay que pedirla explícitamente y confirmar la profundidad de trabajo.
+Para movimiento de tierra y canales, la retroexcavadora es lo habitual y se contrata por hora.
+
+Y una advertencia de contratación que vale dinero: **el operador va a querer entrar con el suelo
+algo húmedo porque avanza más rápido**. Con el suelo húmedo el subsolador amasa en vez de romper, y
+pagas por un trabajo que empeora el problema. La conversación importante es la humedad del suelo,
+no el precio por hora.
+
+**El nivel freático de la llanura.** En zonas bajas del área integrada el nivel del agua puede
+estar a poca profundidad y sube durante la temporada de lluvias. Si en tu hoyo aparece agua libre
+antes de los 60 cm, eso no es un problema de infiltración: es nivel freático, y no se resuelve con
+labranza. Se resuelve eligiendo cultivos tolerantes, elevando mucho, o produciendo en contenedor.
+El plátano tolera bastante humedad; el achachairú y los cítricos, mucho menos.
+</ContextoBolivia>
+
+## Errores comunes
+
+**"Voy a labrar más profundo para que drene."** Si labras a la misma profundidad de siempre,
+refuerzas la suela de labor. Y si labras más profundo con el suelo húmedo, creas una suela nueva
+más abajo. La descompactación es una operación puntual, en seco y por debajo de la capa dura, no
+una labranza más intensa.
+
+**"El agua se va sola, ya bajará."** Con nivel freático alto o capa impermeable, no baja. La prueba
+del hoyo de 30 cm resuelve esta duda en una tarde y evita plantar un frutal que morirá en dos años.
+
+**"Hice el test de infiltración y salió buenísimo."** Comprueba si saturaste antes. En suelo seco
+la primera medición puede dar diez veces el valor real, y es el error más frecuente del ensayo.
+
+**"Las camas altas son para huertos pequeños de gente aficionada."** Son una respuesta hidráulica a
+un problema hidráulico. En llanura de inundación con lluvias intensas son la solución técnicamente
+correcta, y hay precedente local de siglos.
+
+**"Descompacté y a los dos años estaba igual."** Probablemente sí. La descompactación mecánica sin
+cobertura, sin materia orgánica y sin raíces vivas después es temporal por definición: has abierto
+poros que nada mantiene abiertos. Lo mecánico abre la puerta; lo biológico la sostiene.
+
+## Lo que sigue
+
+Con estas tres lecciones ya puedes caracterizar tu terreno y decidir la infraestructura: qué lotes
+van a cama plana, cuáles a cama alta y de qué altura, dónde hacen falta canales y qué hay que
+descompactar antes de plantar.
+
+Lo que aparece una y otra vez como respuesta —a la estructura pobre, a la infiltración baja, a la
+compactación que vuelve— es la **materia orgánica**. Es la palanca más potente que tienes sobre un
+suelo, y hasta ahora la he mencionado sin explicarla. Toca hacerlo: qué es exactamente, qué le pasa
+cuando la incorporas, por qué en clima tropical desaparece mucho más rápido que en clima templado,
+y cuánta hace falta de verdad.

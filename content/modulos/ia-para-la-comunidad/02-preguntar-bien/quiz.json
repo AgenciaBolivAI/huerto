@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "texto-no-es-consulta",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué escribir mucho contexto ayuda con un modelo de lenguaje y estorba en un buscador?",
+      "opciones": [
+        "El buscador usa tu texto como llave contra un índice, y cada palabra de más achica la intersección hasta dejarla vacía.",
+        "El modelo no busca tu texto, lo continúa: todo lo que escribiste queda como condición del cálculo.",
+        "Lo que no escribes no queda sin especificar, queda rellenado con un valor por defecto que no elegiste y que no ves.",
+        "El modelo tiene un límite de palabras y por eso conviene llenarlo hasta arriba para aprovecharlo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Llenar el espacio disponible no es el objetivo y no mejora nada por sí solo: lo que mejora la respuesta es que el contexto sea el correcto, no que sea largo. Trescientas palabras de relleno genérico dejan las mismas claves sin llenar que tres palabras. Las otras tres opciones sí describen el mecanismo: el buscador filtra un índice ya existente, el modelo continúa lo que le diste, y los huecos que dejas los completa el promedio del texto del mundo."
+    },
+    {
+      "id": "respuesta-promedio",
+      "tipo": "verdadero_falso",
+      "enunciado": "La respuesta promedio que devuelve una petición vaga es una respuesta vaga.",
+      "respuesta": false,
+      "explicacion": "Falso, y esta es la confusión que más caro sale. La petición vaga no produce vaguedad: produce una respuesta precisa, ordenada y segura de sí misma, pero calibrada para el centro de masa del texto que existe sobre el tema. Ese centro está en el hemisferio norte, en clima templado, con la helada de invierno como límite del calendario y con acceso a insumos y laboratorio. No es una respuesta equivocada: es una respuesta correcta para otro, y por eso no se nota que está mal."
+    },
+    {
+      "id": "seis-piezas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué piezas hacen falta en una petición útil?",
+      "opciones": [
+        "Las restricciones duras, es decir lo que no hay y no va a haber: dinero, electricidad, herramienta, tiempo, gente.",
+        "El formato de salida: tabla con estas columnas, lista de ocho pasos, párrafo de 150 palabras, sin introducción ni despedida.",
+        "El criterio de qué sería una buena respuesta, es decir para qué la vas a usar y cómo la vas a juzgar.",
+        "Un tono cortés y frases completas, porque el modelo responde mejor cuando se le pide con amabilidad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cortesía no cambia el cálculo: lo que cambia la respuesta es la información que agregas, no el trato. Escribir «por favor» no le dice al modelo dónde estás ni qué no tienes. Las otras tres son piezas de verdad: sin restricciones duras te propone análisis de laboratorio y fertilizante de marca; sin formato devuelve un muro de prosa donde los huecos quedan disimulados; y sin criterio de aceptación no sabe qué está optimizando, así que optimiza lo genérico."
+    },
+    {
+      "id": "supuestos",
+      "tipo": "verdadero_falso",
+      "enunciado": "Pedir los supuestos sirve incluso a alguien que no sabe nada de agronomía.",
+      "respuesta": true,
+      "explicacion": "Correcto, y por una razón muy concreta: los supuestos no hablan de agronomía, hablan de tu sitio, y de tu sitio sabes tú. Si el modelo escribe «asumo riego disponible a diario» y tú riegas dos veces por semana, ya sabes que todo lo que sigue está mal sin entender una palabra de fisiología. Pedir supuestos convierte en revisable lo que de otro modo quedaría rellenado en silencio, y es de las pocas comprobaciones que puede hacer alguien que recién empieza."
+    },
+    {
+      "id": "iteracion",
+      "tipo": "opcion_multiple",
+      "enunciado": "La respuesta no sirvió. ¿Qué hace la iteración dirigida?",
+      "opciones": [
+        "Diagnostica qué clase de falla tuvo —genérica, inaplicable, mal formateada, mal tono— y corrige solo esa pieza.",
+        "Corrige sobre la conversación que ya existe, para no perder el contexto que costó escribir.",
+        "Abre una conversación nueva cuando el modelo ya afirmó algo falso y sigue volviendo al mismo lugar equivocado.",
+        "Reformula la pregunta entera con otras palabras hasta que salga algo mejor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Reformular entero con otras palabras es cambiar diez variables a la vez: si el resultado cambia, no sabes qué lo cambió, y si vuelve a fallar tampoco. Las otras tres son el método: diagnosticar la clase de falla, corregir encima de lo que ya funcionaba, y reiniciar cuando la conversación se contaminó, porque cada intercambio queda condicionando lo que sigue y una afirmación falsa temprana se comporta como una caché envenenada."
+    },
+    {
+      "id": "pregunta-cargada",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es cierto sobre la pregunta cargada y la complacencia del modelo?",
+      "opciones": [
+        "La prueba para detectarla es si podría contestarse «no» cómodamente; si la negativa sonaría rara, ya trae la respuesta adentro.",
+        "El acuerdo está reforzado dos veces: por cómo se continúa el texto humano y por el ajuste posterior según preferencia humana.",
+        "Cualquier cifra que menciones se vuelve el centro de gravedad de la respuesta, aunque lo sensato fuera otro número.",
+        "Si el modelo te da la razón con argumentos sólidos y bien redactados, es señal de que la idea era buena."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es exactamente la trampa: la calidad de la redacción no es evidencia de nada, porque el sistema escribe igual de bien a favor y en contra. Su acuerdo no cuesta nada —no tiene intereses, ni reputación, ni mañana—, y lo que no cuesta nada no vale como evidencia. Haz la prueba del espejo: plantea la posición contraria con la misma seguridad en otra conversación; si te da la razón en las dos direcciones, no te estaba informando en ninguna."
+    },
+    {
+      "id": "unidades-escala",
+      "tipo": "verdadero_falso",
+      "enunciado": "Como la conversión de unidades es aritmética de escuela, conviene rehacerla a mano aunque no sepas nada de agronomía.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es una de las pocas verificaciones que están enteramente a tu alcance desde el primer día. Una dosis pensada por hectárea aplicada por planta arruina un almácigo entero, y el error no se ve en el texto porque el texto está bien escrito. Exige la unidad en la que vas a trabajar de verdad, con su referencia dicha —gramos por mochila de veinte litros, no «tanto por hectárea»— y rehaz la cuenta en papel antes de tocar nada."
+    },
+    {
+      "id": "aplicacion-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Es 20 de agosto, plena seca. En Rizoma del Sur hay un lote de unos 300 m² donde el ají dulce viene amarilleando desde las hojas de abajo y una parte del grupo quiere comprar fertilizante y arrancar todo el gandul de la orilla para «que no le quite comida». No hay presupuesto, no hay electricidad en el lote, no hay análisis de suelo y el trabajo lo hacen tres personas los sábados. Escribe la petición completa que le mandarías a un modelo de lenguaje, explicando qué pieza cumple cada parte de lo que escribiste; después explica cómo evitarías que la pregunta salga cargada, qué le pedirías además de la respuesta, y qué harías con lo que te conteste antes de tocar el lote.",
+      "respuestaModelo": "La petición se arma por piezas y ninguna es opcional. Primero el bloque fijo de lugar y fecha, que es el que corrige el error del hemisferio: sur de Santa Cruz de la Sierra, Bolivia, comunidad Prados del Sur, Zanja Honda, unos 529 metros sobre el nivel del mar; sabana tropical con lluvias de octubre a abril y seca de mayo a septiembre; surazos en invierno con mínimas cercanas a diez grados y viento fuerte; llanura aluvial con arcillas expansivas que se hinchan mojadas y se rajan secas; hoy es 20 de agosto, plena seca. Sin esto la respuesta va a hablar de sembrar al final del invierno, temer la helada tardía y regar menos «en invierno», que aquí es justo al revés.\n\nDespués la situación real y completa, descrita como se ve y no como la interpreto: unos 300 m² de ají dulce, hojas de abajo amarilleando desde hace tantos días y hojas de arriba todavía verdes, distribución del amarilleo en el lote (¿parejo, en manchas, en la parte baja donde se junta el agua?), cómo y cada cuánto se riega, qué se hizo en ese lote la temporada pasada, si hubo lluvia fuerte reciente y cuánto tardó en drenar, y si hay una franja del mismo cultivo que esté sana. Escribo lo que vería alguien parado ahí, no mi conclusión.\n\nLuego las restricciones duras, que son las que evitan una respuesta correcta e inaplicable: proyecto comunitario y gratuito, sin presupuesto para insumos comprados; no hay electricidad en el lote; no hay análisis de suelo disponible ni certeza de poder pagarlo; el trabajo lo hacen tres personas los sábados; se prefiere lo que se hace con materiales que ya están en el sitio; y cualquier propuesta tiene que poder explicársela un vecino a otro sin diccionario.\n\nLuego el formato de salida y el criterio de buena respuesta. Formato: una tabla con causa posible, qué observaría en el lote para distinguirla de las otras, y qué haría el sábado con lo que ya tengo; máximo seis filas, sin introducción ni despedida. Criterio: una buena respuesta me deja saber qué mirar mañana temprano y qué hacer el sábado sin comprar nada, y marca lo que no puede saber. Si tengo a mano una ficha anterior del curso con el formato que usamos, la pego como ejemplo guía, porque un ejemplo transmite en diez líneas lo que no transmiten tres párrafos de adjetivos.\n\nSobre no cargar la pregunta: no escribo «¿verdad que le falta fertilizante?» ni «¿es buena idea sacar el gandul?», porque las dos traen adentro el sí que alguien quiere oír y lo van a recibir bien redactado. Tampoco menciono la cifra que tengo en la cabeza, porque cualquier número que ponga se vuelve el centro de gravedad de la respuesta por anclaje. Pregunto en forma abierta: «¿qué causas explican un amarilleo que empieza por las hojas de abajo y qué observación distingue una de otra?», y «¿qué determina si conviene o no mantener el gandul en la orilla de un lote de ají dulce?». Además, como en el grupo ya hay una decisión tomada, la consulta la escribe otra persona, o la escribe el mismo interesado pero pidiendo explícitamente los tres argumentos más fuertes en contra de arrancar el gandul.\n\nAdemás de la respuesta pido cuatro cosas. Uno, los supuestos explícitos sobre clima, suelo, riego y recursos, que los puedo revisar aunque no sepa agronomía porque hablan de mi sitio: si asume riego diario o suelo arenoso, ya sé que lo que sigue está mal. Dos, tres alternativas con lo que hace falta para cada una y en qué condiciones fracasa, en vez de una recomendación única, porque la decisión la cargamos nosotros. Tres, qué es lo que más probablemente falle y qué información me falta y no le di. Cuatro, que marque con [VERIFICAR] cualquier dato que dependa de una norma, un precio, un plazo o una fecha.\n\nY antes de tocar el lote: leo los supuestos en voz alta en la reunión y tacho los que no son ciertos aquí, con lo que la mitad de la respuesta se cae sola. Si aparece alguna dosis, rehago la conversión a mano y la paso a la unidad en la que vamos a trabajar de verdad, gramos por mochila de veinte litros y cuántas plantas cubre, porque una dosis por hectárea aplicada por planta arruina el lote. Contrasto lo que dice contra lo que el curso ya enseñó en los módulos de suelo y de sanidad vegetal. Ninguna respuesta entra directa a los doce lotes: se prueba en una franja y se deja un testigo donde no se cambia nada, anotando qué se hizo, qué se esperaba y qué pasó. Y ninguna afirmación normativa o de precio se da por buena: eso se confirma con la institución que corresponde. Una buena petición sirve para llegar antes a la hipótesis correcta, no para saltarse la prueba en el terreno.",
+      "criterios": [
+        "Incluye lugar explícito (sur de Santa Cruz, Zanja Honda, ~529 msnm) y régimen de lluvias octubre-abril / seca mayo-septiembre.",
+        "Incluye la fecha (20 de agosto, plena seca) y explica por qué sin fecha el consejo llega del hemisferio equivocado.",
+        "Describe la situación observable —distribución del amarilleo, hojas viejas contra nuevas, riego, historia del lote— en vez de la conclusión.",
+        "Enumera las restricciones duras: sin presupuesto, sin electricidad, sin análisis de suelo, tres personas los sábados.",
+        "Pide un formato de salida concreto (tabla con columnas definidas, límite de filas, sin introducción ni despedida).",
+        "Declara el criterio de qué sería una buena respuesta y para qué se va a usar.",
+        "Menciona el ejemplo guía o un contraejemplo como forma de fijar el tono y la forma.",
+        "Reformula la pregunta para que no esté cargada y aplica la prueba de si podría contestarse «no» cómodamente.",
+        "Evita mencionar cifras propias por el riesgo de anclaje, o explica ese riesgo.",
+        "Prevé quién escribe la consulta cuando ya hay una decisión tomada, o pide explícitamente los argumentos en contra.",
+        "Pide supuestos explícitos y alternativas con condiciones de fracaso en vez de una recomendación única.",
+        "Cierra con verificación propia: revisar supuestos en reunión, rehacer conversiones a mano en la unidad real de trabajo, probar en franja con testigo y no dar por buena ninguna afirmación normativa o de precio."
+      ],
+      "explicacion": "La respuesta buena no es la que redacta una pregunta bonita: es la que muestra que cada pieza de la petición existe para tapar un hueco concreto que el modelo rellenaría solo. Lugar y fecha tapan el hemisferio; situación observable tapa las cuarenta causas posibles; restricciones duras tapan el fertilizante de marca y el laboratorio; formato y criterio tapan el muro de prosa. Y la parte que separa a quien entendió la lección de quien la leyó es la doble defensa contra la complacencia: reformular para que la pregunta admita un «no», y sacar la consulta de las manos de quien ya decidió. Todo lo demás —conversiones a mano, franja de prueba, testigo, no creerle nada normativo— es el puente hacia la lección siguiente, que es la verificación."
+    }
+  ]
+}

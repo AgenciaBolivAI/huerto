@@ -1,0 +1,234 @@
+Última lección del módulo y del curso. Y trata de lo contrario de todo lo anterior: **de dónde parar.**
+
+No es una advertencia genérica sobre no depender de la tecnología. Es una distinción concreta, y una
+vez vista es difícil de olvidar.
+
+## Lo que una máquina hace mejor
+
+Automatizar tiene sentido cuando la tarea cumple tres condiciones a la vez:
+
+**Es repetitiva y su regla está escrita.** Abrir una válvula a las siete durante diez minutos es una
+instrucción completa. No hay nada que interpretar.
+
+**El costo de equivocarse es bajo y acotado.** Un riego de más o de menos es recuperable.
+
+**Y ocurre cuando no puedes estar.** De noche, en un viaje, en el turno de la mañana cuando estás en
+otra parte. **Este es el criterio que más valor aporta**, porque es el que compra tiempo de verdad.
+
+El riego cumple los tres, y por eso es lo primero y casi lo único que conviene automatizar en un
+vivero pequeño.
+
+También cumplen, en menor medida: **el registro de datos** —que es aburrido y una máquina no se olvida—
+y **las alertas**, que son vigilancia continua sobre condiciones que se pueden escribir.
+
+## Lo que no
+
+Y aquí está la distinción que ordena la lección:
+
+**Una máquina puede sustituir la mano. No puede sustituir el ojo.**
+
+<Diagrama
+  src="la-mano-y-el-ojo.webp"
+  alt="Dos paneles lado a lado separados por un divisor vertical. Panel izquierdo, con una tilde verde en la esquina: un brazo mecánico con pinza sujetando una planta mientras una mano humana riega con una regadera, y en una columna al costado tres iconos pequeños: una válvula, un trazo ondulado y una campana. Debajo, una franja de rótulo que dice LA MANO SÍ SE PUEDE. Panel derecho: un ojo humano dibujado grande y sencillo, con una gran cruz roja sobre un brazo mecánico con pinza que se acerca a él y queda bloqueado, y en una columna al costado cinco iconos pequeños: una lupa sobre una hoja, una mano echando una planta a un cesto, una mano eligiendo un brote, dos personas dándose la mano, y una planta con una moneda. Debajo, una franja que dice EL OJO NO. Arriba, LA MANO Y EL OJO."
+  pie="Donde no hay regla escrita no hay nada que automatizar. No es prudencia, es una cuestión de definición."
+/>
+
+Todo lo que en este curso ha consistido en **mirar y decidir** es exactamente lo que no se automatiza,
+y no por nostalgia: **porque la regla no existe.**
+
+**La ronda de observación.** El módulo de sanidad la construyó entera sobre preguntas que no tienen
+regla escrita: dónde está el síntoma, qué forma tiene, a cuántas plantas afecta, cómo cambia. Es
+integración de información dispersa, y **es exactamente lo que la lección anterior explicó que una
+imagen no contiene.**
+
+**La decisión de descartar.** Qué planta va afuera es un juicio sobre calidad, sanidad y riesgo, y su
+error es asimétrico e irreversible: una planta enferma que pasa el filtro contamina un lote entero.
+
+**La selección de material de propagación.** Elegir la planta madre, el sucker de espada correcto, el
+esqueje sano. Es criterio acumulado, y el módulo de fichas mostró que **en el plátano la que parece
+mejor es la peor.**
+
+**El trato con el cliente.** La lección de marca lo dejó claro: explicar, responder, reponer sin
+discutir. Automatizar eso destruye exactamente lo que lo hace valioso.
+
+**Y la decisión de qué producir.** Ninguna hoja de cálculo sabe qué va a querer tu vecindario el año
+que viene.
+
+<Analogia>
+Es la diferencia entre **automatizar un despliegue y automatizar la decisión de desplegar.**
+
+Lo primero es claramente bueno: elimina el error humano en una secuencia conocida y repetitiva. Lo
+segundo requiere juicio sobre contexto que el sistema no tiene, y quien lo ha intentado sabe cómo
+termina.
+
+**Y hay un segundo paralelismo, más incómodo: la automatización atrofia la comprensión.** Quien nunca
+ha desplegado a mano no sabe qué hacer cuando la automatización falla, y **quien nunca ha regado a mano
+no sabe qué aspecto tiene una planta con sed.**
+
+Por eso este módulo insistió tanto en empezar por el reloj y regar a mano una temporada. No era
+prudencia: era construir el criterio que después permite juzgar si la máquina está haciendo bien su
+trabajo.
+</Analogia>
+
+## El costo que nadie cuenta
+
+Y aquí es donde el módulo de negocio se cruza con este:
+
+**Todo sistema automático tiene un costo de mantenimiento**, y es
+un <Termino slug="costo-fijo">costo fijo</Termino> de los que suben el punto de equilibrio.
+
+Sensores que se degradan y hay que reponer. Baterías que envejecen. Cables que las hormigas muerden.
+Firmware que hay que revisar. **Y sobre todo, tiempo tuyo de diagnóstico**, que es el recurso escaso.
+
+<Diagrama
+  src="la-cuenta-honesta.webp"
+  alt="Una balanza ancha en el centro con dos platillos y el brazo prácticamente nivelado. En el platillo izquierdo hay una esfera de reloj grande con un sector amplio relleno en verde oscuro. En el derecho hay cuatro objetos pequeños dispuestos juntos: una sonda corroída, una pila, un cable mordido y una lupa sobre una placa de circuito. Tres franjas de rótulo con líneas de llamada finas: una al platillo izquierdo dice LAS HORAS QUE TE AHORRA; otra al derecho dice LAS QUE TE VA A PEDIR; y otra al brazo casi nivelado dice SI QUEDA ASÍ, NO LO HAGAS. Arriba, LA CUENTA HONESTA."
+  pie="Si el resultado ronda cero, la respuesta correcta no es automatizar mejor: es no automatizar."
+/>
+
+De ahí una cuenta honesta antes de automatizar cualquier cosa:
+
+<Formula explicacion="La automatización compensa si las horas que ahorra al año superan las horas que consume mantenerla, contando el tiempo de instalación repartido en su vida útil y el tiempo de diagnóstico cuando falla. Si el resultado es cercano a cero, la respuesta correcta no es automatizar mejor sino no automatizar.">
+horas ganadas = horas de tarea evitadas al año − (mantenimiento + diagnóstico + instalación ÷ años de vida)
+</Formula>
+
+<Advertencia>
+Tres señales de que un sistema automático se ha convertido en un problema, y conviene reconocerlas
+pronto:
+
+**Pasas más tiempo arreglándolo que el que te ahorra.** Es medible y es la señal más clara. La
+respuesta correcta suele ser simplificar, no mejorar.
+
+**Ya no sabes regar sin él.** Si el sistema muere en plena temporada seca y no tienes criterio propio
+para decidir cuánto regar, has cambiado un problema de tiempo por un problema de dependencia.
+
+**Y has dejado de recorrer el vivero.** Esta es la más peligrosa de las tres, y es sutil: no ocurre por
+decisión, ocurre por deriva. Al principio miras la aplicación además de recorrer; después miras la
+aplicación en vez de recorrer. **Y el día que un problema no está en los sensores, nadie lo ve.**
+
+El antídoto es explícito: **la ronda de observación es una tarea programada, no una consecuencia de que
+algo avise.** Se hace igual cuando todo está en verde.
+</Advertencia>
+
+<Diagrama
+  src="tres-avisos-de-alarma.webp"
+  alt="Tres baldosas cuadradas de esquinas redondeadas dispuestas en una fila horizontal, todas con el contorno en rojo. La primera contiene una figura de persona arrodillada ante una caja estanca abierta con destornilladores y llaves esparcidos por el suelo. La segunda, una figura de persona de pie junto a una planta en maceta con los dos brazos abiertos en gesto de no saber y una regadera apoyada sin usar en el suelo. La tercera, un sendero entre dos hileras de plantas cubierto de maleza y sin pisar, con una mano sosteniendo un teléfono en primer plano. Tres franjas de rótulo, una bajo cada baldosa, que dicen de izquierda a derecha: LO ARREGLAS MÁS DE LO QUE TE SIRVE; YA NO SABRÍAS REGAR SIN ÉL; HACE SEMANAS QUE NO CAMINAS. Arriba, TRES AVISOS DE ALARMA."
+  pie="La tercera es la más peligrosa porque no ocurre por decisión: ocurre por deriva."
+/>
+
+## Lo que de verdad compra la automatización
+
+Conviene terminar donde empezó el módulo de negocio, porque es el mismo argumento:
+
+**El <Termino slug="cuello-de-botella">cuello de botella</Termino> de un vivero pequeño no es el
+terreno ni el dinero: es el tiempo de quien lo lleva.**
+
+La automatización bien hecha no produce más plantas ni mejores plantas. **Produce horas.** Y esas horas
+solo valen algo si se usan en lo que ninguna máquina puede hacer: mirar, decidir, seleccionar, atender
+al cliente y pensar qué producir el año que viene.
+
+**Un vivero automatizado cuyo dueño usa las horas ganadas en mejorar la automatización no ha ganado
+nada.** Es el bucle más fácil de entrar para este perfil, y merece decirse claramente.
+
+<Diagrama
+  src="para-que-sirven-las-horas.webp"
+  alt="A la izquierda, una esfera de reloj grande con un sector relleno en verde. De ella sale hacia la derecha una banda terracota ancha que se bifurca en dos ramas. La rama superior, marcada con una tilde verde, sube hacia un grupo de cuatro iconos pequeños: una lupa sobre una hoja, una mano plantando un brote, dos personas dándose la mano y una planta con una moneda. La rama inferior, marcada con una cruz roja, baja, se curva y regresa al propio reloj formando un lazo cerrado, y sobre ese lazo hay una placa de circuito pequeña. Tres franjas de rótulo con líneas de llamada finas: una al reloj dice LO QUE GANAS SON HORAS; otra a la rama superior dice GÁSTALAS EN ESTO; y otra al lazo cerrado inferior dice NO EN MEJORAR LA MÁQUINA. Arriba, PARA QUÉ SIRVEN LAS HORAS."
+  pie="El bucle cerrado es el error más fácil de cometer con este perfil, y merece decirse claramente."
+/>
+
+<Dato>
+El orden correcto para todo el módulo, resumido:
+
+**Primero, riega a mano y anota.** Una temporada. Es lo que construye el criterio.
+
+**Segundo, automatiza el riego por reloj.** Resuelve el problema principal —la presencia— con lo mínimo
+que puede fallar.
+
+**Tercero, añade una corrección por umbral con histéresis**, cuando la libreta diga qué corregir.
+
+**Cuarto, registra y pon alertas.** Las alertas antes que cualquier gráfico.
+
+**Y quinto, todo lo demás —visión, paneles, cálculo de evapotranspiración— como proyecto de mejora**, no
+como necesidad.
+
+Y en cada paso, la misma pregunta: **¿esto me devuelve horas o me las quita?**
+</Dato>
+
+<AplicarRizoma>
+**Rizoma automatiza el riego, el registro y las alertas. Nada más.**
+
+**Y no automatiza nunca la ronda de observación, la decisión de descartar, la selección de material de
+propagación, el trato con el cliente ni la decisión de qué producir.** No es prudencia: es que en esos
+cinco casos la regla no existe, y donde no hay regla escrita una máquina no puede ayudar.
+
+**La ronda de observación queda como tarea programada y no como reacción a un aviso.** Se hace igual
+cuando todo está en verde. Ese es el antídoto contra la deriva de mirar la aplicación en vez de
+recorrer el vivero, que es la forma más común de perder la sanidad de un vivero automatizado.
+
+**Antes de automatizar cualquier cosa nueva se hace la cuenta de horas**: horas de tarea evitadas al
+año menos mantenimiento, diagnóstico e instalación repartida en la vida útil. Si el resultado ronda
+cero, la respuesta no es automatizar mejor sino no automatizar.
+
+**El mantenimiento del sistema entra como costo fijo** en la hoja del módulo de negocio, porque los
+fijos suben el punto de equilibrio y este es exactamente uno de esos costos que aparecen sin que nadie
+los apunte.
+
+**El orden de construcción es el del módulo**: regar a mano y anotar una temporada; después reloj;
+después umbral con histéresis cuando la libreta diga qué corregir; después registro y alertas —alertas
+antes que gráficos—; y todo lo demás como proyecto de mejora.
+
+**Y hay una prueba de dependencia que conviene hacerse en serio: si el sistema muriera hoy en plena
+seca, ¿sabría regar?** Si la respuesta es no, el sistema ha cambiado un problema de tiempo por uno de
+dependencia, y hay que recuperar el criterio antes de seguir añadiendo capas.
+
+**Las horas que gane la automatización se usan en lo que ninguna máquina hace**: mirar las plantas,
+seleccionar material, atender clientes y decidir qué producir. Usarlas en mejorar la automatización
+sería no haber ganado nada, y es el bucle más fácil de entrar con este perfil.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**En un vivero pequeño de Santa Cruz, la automatización que más cambia la vida es la más simple**:
+poder no estar a las siete de la mañana y a las cinco de la tarde todos los días del año. Todo lo demás
+es refinamiento sobre ese logro.
+
+**Y hay una alternativa que compite de verdad con automatizar y que conviene no descartar por sesgo
+técnico: contratar ayuda.** Una persona unas horas a la semana resuelve el riego, la observación, el
+descarte y el repique a la vez, y una máquina solo resuelve el primero. El costo del jornal en la zona
+es el dato que decide entre las dos opciones, y hay que averiguarlo antes; si se contrata, conviene
+consultar con un contador o asesor local las obligaciones laborales aplicables antes de empezar.
+
+**El clima local castiga los sistemas complejos.** Humedad alta, calor, polvo, tormentas eléctricas y
+cortes de energía. Cada componente añadido es un punto de fallo más en un entorno hostil, y esa es una
+razón física —no filosófica— para preferir lo simple.
+
+**La automatización hidráulica y mecánica sigue siendo la opción más robusta** para la capa base:
+flotador en el tanque, regulador de presión, temporizador mecánico. No tienen firmware, no se cuelgan y
+no dependen de la energía.
+
+**Y hay un valor comunitario que encaja con el objetivo declarado del proyecto**: un sistema documentado
+y replicable, hecho con material que se consigue localmente y a un costo conocido, es transmisible a
+otros productores de la zona. **Un sistema que solo funciona porque su autor sabe programar no lo es.**
+Si la intención es que esto sirva a la comunidad, la simplicidad no es una preferencia estética: es un
+requisito de diseño.
+</ContextoBolivia>
+
+## Cierre del curso
+
+Aquí termina el recorrido: de la fisiología de una planta a la instalación de una válvula, pasando por
+el suelo, la propagación, la obra, el agua, las especies, la sanidad, el negocio, los planos y la
+energía.
+
+Y el hilo que lo atraviesa todo se puede decir en tres frases:
+
+**Entender el mecanismo antes de aplicar la receta**, porque la receta solo funciona en las condiciones
+donde se escribió y el mecanismo funciona en las tuyas.
+
+**Anotar lo que pasa**, porque el manual es el punto de partida y la libreta es el dato; después de dos
+o tres ciclos, tus anotaciones de este sitio valen más que cualquier bibliografía y son lo único que
+nadie puede copiar.
+
+**Y mirar las plantas**, que es lo que ninguna herramienta de este módulo —ni ninguna que se invente—
+va a hacer por ti.
+
+Lo que sigue no está en ninguna lección: son 3.666 m² en Zanja Honda, una temporada de lluvias que
+empieza en octubre, y una libreta en blanco.

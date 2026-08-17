@@ -1,0 +1,107 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-se-almacena",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué una casa de esta zona guarda agua, y por qué la forma de guardarla decide qué pasa durante un corte de luz?",
+      "opciones": [
+        "Porque la fuente se interrumpe —corta la cooperativa, se rompe una matriz, la bomba del pozo se queda sin energía— y el depósito desacopla el momento en que el agua llega del momento en que se usa.",
+        "Porque aunque nunca faltara agua, la fuente entrega poco y parejo mientras la casa consume a golpes: el depósito acumula un hilo durante horas y lo devuelve en chorro cuando alguien se ducha.",
+        "Porque el corte de agua y el corte de energía son fallas independientes, así que un sistema que entrega por gravedad sigue funcionando con el barrio a oscuras y uno que depende de una bomba, no.",
+        "Porque la presurización directa también resuelve el corte de luz: el tanque hidroneumático guarda agua a presión y con eso la casa aguanta perfectamente hasta que vuelva la energía."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el error que más caro sale al elegir arquitectura. Un hidroneumático no es una reserva de agua: es un amortiguador. Lo que guarda es el volumen útil, la poca agua que entra y sale entre la presión de arranque y la de parada del presostato, y su función es evitar que el motor arranque cada vez que alguien abre una canilla. Con la bomba sin energía, ese volumen se agota en cuestión de segundos de uso y después no sale nada, ni siquiera para descargar el inodoro. Quien confunde el amortiguador con la reserva construye un sistema con punto único de falla y se entera la primera noche de calor sin luz. Por eso acá la presurización directa se diseña como complemento de una reserva por gravedad, no en su lugar."
+    },
+    {
+      "id": "limite-de-succion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si una bomba de superficie no logra levantar el agua de un pozo de doce metros, comprar una bomba más potente o poner una tubería de aspiración más gruesa resolvería el problema.",
+      "respuesta": false,
+      "explicacion": "Falso, y entenderlo evita gastar dos veces. Una bomba no tira del agua: lo único que puede hacer es sacar el aire de su interior y bajar la presión ahí adentro. Quien empuja el agua hacia arriba por la tubería de aspiración es la presión atmosférica, el peso de la columna de aire que hay sobre el pozo, y ese empuje tiene un techo físico: unos 10,3 metros de columna de agua a nivel del mar y alrededor de 9,7 metros en Zanja Honda, a unos 529 metros de altitud. Ni siquiera una bomba capaz de hacer vacío perfecto pasaría de ahí, así que la potencia no cambia el límite; lo único que consigue una bomba más fuerte es acercarse antes al punto donde el agua hierve en frío y empieza a cavitar. Un tubo más grueso ayuda a no perder margen por fricción, pero no mueve el techo. La única salida es cambiar de arquitectura: acercar la bomba al agua o meterla adentro, que es exactamente para lo que existe la bomba sumergible."
+    },
+    {
+      "id": "altura-y-ducha",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la relación entre la altura del tanque y la ducha, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Lo que da presión es la altura de la superficie del agua sobre el punto de uso, no la del piso del tanque, y por eso la ducha del final del día, con el tanque en las últimas, sale más floja.",
+        "La altura hasta la ducha del primer piso es mucho menor que hasta la de la planta baja, así que una casa que crece hacia arriba se queda sin presión donde antes le sobraba.",
+        "Con el agua en movimiento la fricción manda y depende del diámetro con la quinta potencia, de modo que pasar de media pulgada a tres cuartos divide la pérdida por alrededor de siete.",
+        "Cuando la ducha da poco, subir el tanque un metro es la corrección más rentable, porque cada metro añadido compensa una bajada demasiado larga y demasiado fina."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta invierte las magnitudes y por eso lleva a gastar en la obra equivocada. Un metro de altura son unos 0,1 bar; ese es todo el aporte. En cambio, un escalón de diámetro divide la pérdida por fricción por un factor cercano a siete, y en un recorrido largo y con codos esa pérdida es justamente la que se está comiendo la presión. Levantar la torre un metro, con lo que cuesta y con los mil kilos que hay que volver a apoyar, sirve de poco si el agua se sigue frenando en veinte metros de media pulgada. La regla práctica es diagnosticar antes de construir: medí el caudal con un balde y un reloj, medí la altura real hasta el punto de uso, y si la presión estática es razonable pero el caudal se derrumba al abrir, el problema es fricción u obstrucción, no altura."
+    },
+    {
+      "id": "tanque-obra-e-higiene",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a instalar un tanque de mil litros sobre una losa. ¿Qué afirmaciones son correctas?",
+      "opciones": [
+        "Lleno pesa del orden de mil kilos concentrados en su huella, así que se apoya sobre un muro o una viga y nunca en el medio del vano, que es donde la losa flexiona más y menos carga admite.",
+        "Los tanques de plástico apoyan toda su base: sobre dos vigas o sobre ladrillos separados se deforman en los huecos, trabajan fatigados en esos bordes y terminan rajándose meses después.",
+        "Va anclado aunque parezca innecesario, porque vacío pesa poco y ofrece mucha superficie, y un surazo con viento fuerte puede voltear un tanque alto.",
+        "Conviene que la tapa selle herméticamente y sin ninguna abertura, para que no entre absolutamente nada al agua almacenada."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta suena a prolijidad y es un error con dos consecuencias. La primera es mecánica: si el tanque queda cerrado a presión y el agua sale rápido —una bomba aspirando de él, por ejemplo—, adentro baja la presión y la atmósfera lo aplasta igual que a una botella de plástico, porque no tiene por dónde entrar aire que reemplace al agua que se va. La segunda es sanitaria al revés de lo que parece: lo que se necesita no es ausencia de aberturas sino aberturas protegidas. La tapa y la ventilación llevan malla fina antimosquito, y también el rebalse, porque en zona de dengue cualquier abertura sin malla convierte una reserva de agua limpia y quieta en un criadero. Cerrar sin ventilar y ventilar sin malla son los dos extremos equivocados; lo correcto está en el medio."
+    },
+    {
+      "id": "bomba-que-se-desceba",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una bomba de superficie que hay que cebar una y otra vez está avisando de una entrada de aire en la aspiración o de una válvula de pie que ya no retiene, más que de un defecto propio.",
+      "respuesta": true,
+      "explicacion": "Verdadero, y es de los diagnósticos que más tiempo ahorran. Una bomba centrífuga mueve el agua lanzándola hacia afuera con un impulsor que gira, y el aire, casi mil veces menos denso, no le sirve: si dentro hay aire, el impulsor gira en vacío y no pasa nada. Por eso hay que cebarla, es decir, llenar de agua el cuerpo y toda la tubería de aspiración antes de arrancarla. Ahora bien, ese tramo trabaja a menos presión que la atmósfera, así que una junta floja ahí no gotea agua hacia afuera: traga aire hacia adentro, y no hay nada que ver, ninguna mancha, ningún charco. La otra causa habitual es la válvula de pie del extremo sumergido, que debería retener la columna cuando la bomba para y ya no lo hace, con lo que el agua se escurre de vuelta al pozo o a la cisterna en cuanto se apaga. Cambiar la bomba sin revisar esas dos cosas es cambiar la pieza sana."
+    },
+    {
+      "id": "ciclado-corto",
+      "tipo": "opcion_multiple",
+      "enunciado": "La bomba de una casa presurizada arranca y para cada pocos segundos mientras alguien se lava las manos. ¿Qué es correcto?",
+      "opciones": [
+        "El agua no se comprime, así que sin un colchón elástico la presión sube de golpe al cerrar y el presostato no tiene más remedio que conmutar sin parar.",
+        "El síntoma apunta al tanque hidroneumático, que probablemente perdió el aire o tiene la membrana rota y quedó lleno de agua, con lo que dejó de amortiguar.",
+        "No es un detalle menor, porque cada arranque mete un pico de corriente varias veces mayor que el consumo normal, y a un motor lo gastan los arranques más que las horas de marcha.",
+        "La corrección adecuada es subir la presión de corte del presostato, porque así la bomba trabaja más rato cada vez y deja de conmutar."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta cambia el ajuste equivocado y esconde la avería. El presostato no es el culpable: está haciendo exactamente lo que le pide la presión que mide. Subirle el corte no devuelve el colchón de aire, hace trabajar la instalación más apretada, castiga uniones y accesorios y deja el motor arrancando igual de seguido. Lo que hay que reparar es el hidroneumático: comprobar y ajustar la precarga de aire con el tanque vacío de agua, en su válvula igual a la de una llanta, tomando como referencia la presión de arranque de tu presostato y lo que indique la placa del equipo, nunca un número copiado de otra casa; y si la membrana está rota, cambiarla o cambiar el tanque. Solo cuando el resorte de aire vuelve a existir se recupera el volumen útil y el motor deja de arrancar cien veces por día."
+    },
+    {
+      "id": "plan-de-tu-casa",
+      "tipo": "abierta",
+      "enunciado": "Levantá el diagnóstico del agua almacenada de tu casa —o de la casa donde vivís aunque sea alquilada— y escribí su plan. Contá qué mediste y con qué, si tu sistema sobrevive a un corte de luz y por qué, en qué estado están el depósito y sus bocas, qué harías con la bomba si tenés, qué vas a arreglar primero y con qué plata, y qué le dejás escrito a tu familia. Si no tenés tanque ni bomba, decidí qué instalarías y justificá el orden de las piezas.",
+      "respuestaModelo": "Vivo en una casa alquilada de Zanja Honda con cuatro personas. Hay un tanque de mil litros sobre el muro del baño y una bomba chica que lo llena desde un pozo. Empecé midiendo, porque hasta ahora todo lo que sabía del sistema era que \"la ducha es floja\".\n\nQué medí. Con un balde de diez litros y el reloj del celular, la ducha llena el balde en un minuto y veinte segundos: unos siete litros y medio por minuto. La canilla de la cocina da más. Después medí la altura, y ahí apareció la primera sorpresa: yo pensaba en la altura del tanque, pero lo que manda es la superficie del agua sobre el punto de uso. Con una cuerda marcada, del pelo de agua a la regadera hay dos metros y medio con el tanque lleno y poco más de metro y medio cuando está por acabarse: entre 0,15 y 0,25 bar. La ducha floja no es una avería, es la presión que corresponde a esa altura, y por eso a la noche sale peor.\n\nSi sobrevive a un corte de luz. Sí, y esa es la parte buena del sistema. La bomba solo sube agua al tanque; de ahí a la casa baja por gravedad, así que cuando se corta la luz seguimos teniendo agua para cocinar, lavarnos y descargar el inodoro hasta que se acabe lo que hay arriba. Con presurización directa no saldría ni una gota, porque el hidroneumático no es una reserva sino un amortiguador y se vacía en segundos. Acá el agua y la luz se cortan por separado, así que no cambio esa arquitectura; si quiero mejor ducha, le pongo una bomba chica solo para el baño.\n\nCuánto guardamos. Somos cuatro con ducha e inodoro, o sea entre cuatrocientos y ochocientos litros diarios: con mil litros tenemos uno o dos días de autonomía y el agua rota rápido. No voy a poner un tanque enorme, porque si el tiempo de residencia sube a ocho o diez días, con este calor se va cualquier desinfectante y crece la película pegada a las paredes. Prefiero mil litros que rotan a tres mil que se añejan.\n\nEl estado del depósito y sus bocas. Con una linterna encontré cuatro cosas. La tapa apoya pero no cierra bien y no tiene malla en ninguna abertura: eso es lo primero, porque el mosquito del dengue cría justo en agua limpia y quieta como esta, y una tapa con malla es salud pública y cuesta poco. El caño de llenado entra por arriba y descarga sobre el nivel del agua, así que el corte de aire está bien resuelto y no puede sifonarse hacia la red. La salida está en el fondo mismo, mandando a las canillas el sedimento que debería quedarse abajo; la voy a levantar unos centímetros. Y no hay purga en el punto bajo, así que limpiar es un operativo: le pongo una válvula y la limpieza pasa a ser abrir y cepillar, porque enjuagar no saca la película. El rebalse descarga contra el muro, y eso hay que desviarlo, porque el agua concentrada socava la base.\n\nDel peso no me olvido: mil litros son mil kilos sobre el muro. Está sobre muro y no en el medio de la losa, que es lo correcto, pero la base son tablas sobre dos vigas y eso no sirve para un tanque de plástico, que apoya toda su base y se raja en los huecos. Le voy a armar una plataforma llena y lisa, y antes de tocar nada le pregunto al albañil del barrio si ese muro está bien para esta carga, porque no lo voy a suponer yo.\n\nLa bomba. El pozo tiene el agua a unos cuatro metros en reposo, pero no sé a cuánto baja bombeando, así que lo voy a medir mientras trabaja: si baja a siete, estamos al filo del techo de la atmósfera, que acá es 9,7 metros, y por eso a veces se desceba a media mañana. Si se desceba seguido, reviso primero las juntas de la aspiración —que no gotean, tragan aire— y la válvula de pie, no la bomba. Le puse una hoja de diario debajo para vigilar el sello mecánico, la escucho una vez al mes por si suena a piedritas —cavitación—, y le pongo un interruptor de nivel, porque quedarse sin agua una noche le quema el sello en minutos.\n\nSeguridad eléctrica y plan. La bomba está enchufada a un alargue que pasa por el piso húmedo del patio: eso se cambia por una toma fija, con tierra conectada y diferencial, y el térmico queda etiquetado en el tablero. Si alguna vez alguien siente cosquilleo al tocar la bomba o un caño, se corta desde el tablero, no se usa el equipo y se llama a un electricista; y si alguien queda pegado, primero se corta la energía y después se lo toca. Orden de gasto por lo que rinde: tapa con malla, desviar el rebalse, purga, base llena, salida elevada, toma fija con tierra, y solo al final pensar en subir el tanque o poner una bomba para la ducha. Y el plan colgado en la cocina: dónde está la llave general, cómo se cierra, dónde está la purga y a quién se llama, porque los cortes pasan de noche y no puede saberlo una sola persona de la casa.",
+      "criterios": [
+        "Mide de verdad antes de opinar: caudal con balde y reloj, y altura desde la superficie del agua —no desde la base del tanque— hasta el punto de uso.",
+        "Convierte esa altura en presión con el metro de columna de agua y explica con ella un síntoma concreto, como la ducha más floja con el tanque bajo.",
+        "Determina si el sistema entrega por gravedad o depende de la bomba, y razona qué pasa en un corte de luz distinguiendo reserva de amortiguador hidroneumático.",
+        "Dimensiona el volumen con personas, consumo por persona y día y días de autonomía, en vez de elegir el tanque por lo que entra en la losa.",
+        "Usa el tiempo de residencia para rechazar el sobredimensionado y relaciona el agua estancada con el calor y con la película biológica.",
+        "Revisa las cinco bocas una por una —entrada con corte de aire, salida elevada, rebalse sobredimensionado y bien dirigido, purga de fondo, ventilación mallada— y no solo la tapa.",
+        "Trata la tapa con malla como medida de dengue y no como prolijidad, e incluye toda abertura, ventilación y rebalse.",
+        "Toma en serio el peso: mil kilos por metro cúbico, apoyo sobre muro o viga, base continua y plana, anclaje, y consulta a alguien con criterio antes de cargar la estructura.",
+        "Si hay bomba, mide o se propone medir el nivel del pozo en reposo y bombeando, y relaciona el descenso con el techo de succión de la atmósfera.",
+        "Diagnostica el descebado buscando entrada de aire en la aspiración o válvula de pie, en lugar de culpar a la bomba, y vigila sello mecánico y cavitación con pruebas de dos minutos.",
+        "Previene la marcha en seco con interruptor de nivel o protector, entendiendo que el agua es lo que refrigera y lubrica el sello.",
+        "Ordena el gasto por rendimiento, resuelve la seguridad eléctrica con tierra, diferencial y toma fija, y deja un plan escrito y compartido con el resto de la casa."
+      ],
+      "explicacion": "La respuesta buena se reconoce en el orden de las decisiones, no en la lista de compras. Quien entendió la lección mide primero y descubre que su ducha floja es la presión que corresponde a la altura que tiene, no una avería; comprueba si su casa sigue teniendo agua sin electricidad, que es la pregunta central en un lugar donde los dos servicios se cortan por separado; arregla las bocas del tanque y la tapa con malla, que cuestan poco y valen mucho, antes de soñar con una bomba nueva; y respeta los dos límites físicos que no negocia nadie, los mil kilos por metro cúbico y los 9,7 metros de la atmósfera. Quien no la entendió empieza por comprar una bomba más potente para arreglar una fricción o una succión imposible, sube un tanque sin preguntar dónde cae el peso, y deja destapada la reserva en zona de dengue. El detalle que más separa a los dos es dónde ponen la altura y dónde ponen el diámetro: es la diferencia entre gastar una tarde y gastar un sueldo."
+    }
+  ]
+}

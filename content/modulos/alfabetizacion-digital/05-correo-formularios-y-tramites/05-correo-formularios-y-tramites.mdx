@@ -1,0 +1,410 @@
+La lección anterior terminó con un archivo bien hecho: el papel escaneado y derecho, el nombre con
+fecha, la copia guardada. Falta lo que viene después, y es donde se atasca casi todo el mundo:
+**mandárselo a alguien que no te conoce y que no va a hacer nada si el envío no está en forma.**
+
+Para la vida diaria alcanza con WhatsApp. Pero hay una franja de asuntos —un trabajo, un curso, un
+reclamo— donde hace falta otra cosa: **un canal que deje constancia, que no dependa de tu número de
+teléfono y que la otra parte reconozca como serio.**
+
+Aquí va el mecanismo y el procedimiento. Lo que **no** va es qué papel pide cada trámite, cuánto
+cuesta ni en qué página se hace: eso cambia de oficina en oficina, y un requisito inventado manda a la
+gente a juntar papeles que nadie le pidió. **Qué pide ese trámite se pregunta en la entidad que lo
+atiende.**
+
+## Una cuenta es una fila en la tabla de otro
+
+Una <Termino slug="cuenta-de-usuario">cuenta</Termino> no es un programa que se instala ni un archivo
+guardado en tu teléfono: **es un renglón en la base de datos de una empresa**, con un identificador
+que dice quién afirmas ser y una prueba de que eres tú. Esa prueba se
+llama <Termino slug="credencial">credencial</Termino>, y es lo único que te separa de cualquier otro
+que escriba tu mismo nombre de usuario.
+
+De ahí sale lo que más cuesta creer: **tu cuenta no vive en el aparato.** Si el teléfono se moja o te
+lo roban, la cuenta sigue intacta en el servidor y entrar desde otro aparato la recupera entera; lo
+que se pierde es lo que solo estaba ahí. Al revés también vale, y por eso importa la lección
+siguiente: **quien consiga tu credencial entra sin tocar tu teléfono.**
+
+<Analogia titulo="La ficha del cliente en la tienda del barrio">
+La tienda tiene un cuaderno con una hoja por cliente. La hoja no es tuya: es del tendero y él decide
+cuánto la guarda. Para quien programa es literal: una cuenta es una fila con clave única —el correo—
+más un campo que verifica la contraseña, y todo lo «tuyo» son filas de otras tablas que apuntan a esa
+clave. Por eso perder el aparato no borra la fila, y por eso el proveedor puede cerrártela: **el
+esquema es de él.**
+</Analogia>
+
+## Por qué el correo sigue haciendo falta
+
+Si todo llega por WhatsApp, ¿para qué? Por tres cosas que el número de teléfono no da.
+
+**Es una dirección que no depende de tu número.** El número de la SIM es prestado: es de la operadora,
+se pierde si dejas de recargar y se recicla para otra persona meses después. Cambias de chip, te roban
+el teléfono, y con el número se va todo lo que estaba atado a él. Una dirección de correo es tuya
+mientras la sigas usando, y funciona desde cualquier aparato prestado.
+
+**Deja constancia con fecha.** Cada mensaje enviado queda en tu carpeta de enviados con día, hora,
+texto, adjuntos y la dirección exacta a la que fue. No te prometo que sea prueba judicial, pero es
+mucho mejor que «yo le avisé por teléfono» y **se puede buscar dentro de seis meses**, cuando ya nadie
+recuerda qué se acordó.
+
+**Es el identificador que piden.** Postular a un trabajo, inscribirse a un curso o recibir el
+comprobante de un trámite: en todos los casos se pide un correo, porque es lo único que una
+institución puede escribir en un campo y usar después sin depender de que su empleado tenga tu
+WhatsApp. Y de ahí un cuarto motivo, el más serio: **el correo es la llave maestra de tus otras
+cuentas**, porque por ahí llegan los enlaces para restablecer contraseñas.
+
+## Cómo viaja un correo y qué dice la dirección
+
+Una <Termino slug="direccion-de-correo">dirección de correo</Termino> tiene siempre la misma forma:
+algo, una arroba y algo más. A la izquierda va el nombre de la casilla, que lo eliges tú; a la derecha
+va el <Termino slug="dominio">dominio</Termino>, el nombre de la organización que se hace cargo de esa
+casilla. La arroba significa «en»: fulano **en** tal casa. Todo lo que sirve para no caer en engaños
+está a la derecha, porque la izquierda se escribe como uno quiera.
+
+Y no viaja como un mensaje de chat. Tu aplicación se lo entrega
+al <Termino slug="servidor-de-correo">servidor de correo</Termino> de tu proveedor, una máquina
+encendida todo el día en un centro de datos; ese servidor pregunta en el directorio de internet qué
+máquina recibe el correo de ese dominio y se lo entrega, y esa segunda máquina lo deja en la casilla
+del destinatario, donde espera aunque él tenga el teléfono apagado tres semanas. Por eso ves los
+mismos mensajes desde cualquier aparato: **están en el servidor, no en tu teléfono.**
+
+Ese diseño explica el <Termino slug="rebote-de-correo">rebote</Termino>: si el dominio está mal
+escrito o el buzón no existe, vuelve un aviso automático. Pero atención al caso peligroso: **si te
+equivocaste en una letra y esa dirección equivocada sí existe, no rebota nada.** El mensaje llegó
+completo a un desconocido que ahora tiene tu currículum, y tú esperas una respuesta que nunca se va a
+escribir. Un correo mal tecleado no da error; da silencio.
+
+<Dato titulo="Elegir la dirección que vas a usar veinte años">
+La parte de la izquierda es lo primero que lee quien recibe una postulación, y decide antes de abrir:
+nombre y apellido, en minúsculas, sin tildes ni ñ. Escríbela en el cuaderno letra por letra, porque la
+vas a dictar por teléfono muchas veces y la mitad de los trámites fallidos son una letra dictada mal.
+</Dato>
+
+## Asunto, cuerpo y firma: qué hace cada casilla
+
+Un correo tiene cuatro partes con trabajos distintos: **Para**, quien tiene que actuar; **Asunto**, el
+índice; **Cuerpo**, el mensaje; y **adjuntos**, los archivos que viajan pegados.
+
+La <Termino slug="linea-de-asunto">línea de asunto</Termino> es la que más rinde y la que más se
+descuida: es lo único que se ve antes de abrir y es lo que te permitirá encontrar ese mensaje dentro
+de un año. «Buenas tardes» no dice nada; «Solicitud de certificado — Juan Pérez Mamani, CI 1234567 —
+14 de agosto» dice quién, qué y cuándo.
+
+En el cuerpo, el pedido va arriba: quien recibe cincuenta correos al día lee la primera pantalla y
+decide. Y abajo va siempre **tu nombre completo, tu teléfono y, si corresponde, tu número de documento
+o de trámite**, porque sin eso quien quiere ayudarte no tiene con qué buscarte en su sistema. Un
+detalle de mecánica: **responde dentro del mismo mensaje** en vez de escribir uno nuevo, y el programa
+arrastra el historial completo para los dos.
+
+## Adjuntar: el límite de tamaño y por qué existe
+
+Un <Termino slug="archivo-adjunto">archivo adjunto</Termino> no viaja como archivo. El correo es un
+sistema de texto, así que el archivo se traduce a texto antes de salir y se vuelve a armar del otro
+lado. Esa traducción tiene un costo que explica muchos rechazos incomprensibles.
+
+<Formula explicacion="La traducción a texto engorda alrededor de un tercio.">
+peso que viaja ≈ peso de los archivos × 1,37
+</Formula>
+
+De ahí el <Termino slug="limite-de-adjunto">límite de adjunto</Termino>: cada proveedor fija un tamaño
+máximo por mensaje y si te pasas el envío se rechaza. No doy la cifra porque cada servicio pone la
+suya y la cambia; búscala en el tuyo. Lo general es el orden de magnitud —unas decenas de megabytes— y
+la aritmética de arriba: **el archivo de veinte megabytes que parecía caber en un límite de
+veinticinco no cabe.**
+
+Cuando no entra hay tres salidas, en este orden. **Reducir**: la foto de un documento no necesita el
+tamaño con que salió de la cámara. **Juntar**: ocho fotos del mismo papel pesan más y se ven peor que
+un solo PDF de ocho páginas. **Enlazar**: subirlo a la nube y mandar el enlace, con un cuidado — si
+queda como «cualquiera con este enlace puede ver», reenviado abre tu documento para quien sea.
+
+<Advertencia>
+El adjunto es la puerta de entrada más antigua que existe. Un archivo que llega sin que lo esperaras
+—una factura que no pediste, una supuesta citación— puede ser un programa disfrazado de documento. La
+regla no depende de saber reconocerlo: **no se abre un adjunto que no esperabas, aunque venga de
+alguien conocido**, porque la cuenta de un conocido es justo lo que usa un atacante después de
+robarla. Si el asunto es real, se comprueba llamando al número que ya tenías.
+</Advertencia>
+
+## Copia y copia oculta: el error que expone a cuarenta personas
+
+Además de **Para**, hay dos casillas que casi nadie usa bien. **Copia** es para quien tiene que
+enterarse pero no actuar, y su nombre queda a la vista de
+todos. La <Termino slug="copia-oculta">copia oculta</Termino> hace lo mismo, pero cada destinatario
+recibe el mensaje sin ver a los demás.
+
+El fallo clásico ocurre el día que mandas una convocatoria a cuarenta personas poniéndolas a todas en
+**Para**. Acabas de repartir cuarenta direcciones entre cuarenta desconocidos sin permiso de ninguno;
+alguien tocará «responder a todos» y los cuarenta lo recibirán; y si una sola de esas cuentas se ve
+comprometida después, quien la tenga se lleva la lista entera. **Una dirección de correo es un dato
+personal, y publicarla no es tuyo para decidirlo.**
+
+<Analogia titulo="Grupo o difusión">
+Es la diferencia que ya conoces en WhatsApp. Un grupo pone a todos en la misma sala: se ven los
+números y basta que uno escriba de más para que suenen cuarenta teléfonos. Una difusión manda el
+mismo mensaje a cuarenta conversaciones separadas y nadie ve la lista. **Para** y **Copia** son el
+grupo; la copia oculta es la difusión.
+</Analogia>
+
+## Spam, carpetas y buscar
+
+El <Termino slug="filtro-de-spam">filtro de spam</Termino> es un clasificador automático: mira quién
+manda, desde qué servidor y con qué palabras. Como toda decisión estadística se equivoca en las dos
+direcciones, y la que duele es que **el correo de la institución que esperabas puede terminar en no
+deseados**; si no llega, mira ahí antes de darlo por perdido. Sobre carpetas, una idea ahorra horas:
+**archivar no es borrar, y buscar rinde más que ordenar.** El correo busca por remitente, por palabra
+del asunto, por fecha y por si tiene adjunto, así que con dos carpetas alcanza y el resto se archiva
+sin clasificar.
+
+## El formulario: no se rompe nada
+
+Aquí está el miedo que paraliza a más gente que ningún otro: *«y si toco algo y rompo el sistema».* No
+se puede. Un formulario es una lista de casillas que tu aparato manda juntas a la computadora de la
+institución cuando tocas **Enviar**; mientras no lo toques, no salió nada. Y lo peor que puede pasar
+después es un dato equivocado registrado —que se corrige avisando— o un envío rechazado. **El sistema
+está construido para rechazar; rechazar es que funcione, no que se haya roto.**
+
+Ese rechazo se llama <Termino slug="validacion-de-campo">validación de campo</Termino> y ocurre en dos
+lugares distintos, cosa que explica por qué a veces el error aparece al instante y a veces después de
+esperar.
+
+<Analogia titulo="El portero de la puerta y el cajero de adentro">
+En la puerta hay un portero que revisa lo obvio: que el número tenga siete cifras, que la casilla del
+correo tenga arroba. Adentro hay un cajero que revisa lo que importa: que ese carnet exista, que esa
+cuenta sea tuya, que ese trámite no esté ya presentado. En un formulario el portero es tu propio
+navegador y el cajero es el servidor: **la primera revisión es comodidad, la segunda es la verdad.**
+Por eso el mensaje rojo instantáneo es fácil de arreglar y el que sale después de enviar exige
+corregir de verdad.
+</Analogia>
+
+Los campos marcados con asterisco son los <Termino slug="campo-obligatorio">campos
+obligatorios</Termino>: sin ellos el envío no sale, y no son capricho, son los datos sin los cuales el
+registro no sirve para nada del otro lado. Si te falta uno, la respuesta no es inventarlo: es cerrar,
+conseguirlo y volver.
+
+## Fechas, números y listas: donde la máquina no adivina
+
+Aquí se cae la mitad de los formularios, y la causa es siempre la misma: **una casilla no lee como lee
+una persona.** Tú ves «03/05/2026» y entiendes tres de mayo; la máquina puede esperar el mes primero y
+entender cinco de marzo. La regla que resuelve todos los casos es mirar el ejemplo gris de la casilla
+vacía: ahí está escrito el <Termino slug="formato-de-fecha">formato de fecha</Termino> que ese
+formulario espera. Con los números pasa algo más traicionero: aquí escribimos mil quinientos como
+«1.500» y para la mayoría de los sistemas el punto es
+el <Termino slug="separador-decimal">separador decimal</Termino>, así que «1.500» en una casilla de
+importe puede registrarse como uno con cinco.
+
+<Tabla>
+
+| En la casilla escribes | La máquina suele entender | Lo que hay que hacer |
+| --- | --- | --- |
+| `1.500` como mil quinientos | uno coma cinco | escribir `1500`, sin punto de miles |
+| `2,75` como dos con setenta y cinco | error, o dos | escribir `2.75`, con punto decimal |
+| `Bs 350` en un campo de monto | error de formato | solo el número: `350` |
+| `03/05/2026` sin mirar el ejemplo | tal vez 5 de marzo | copiar el formato del ejemplo gris |
+| Nombre con tildes o en MAYÚSCULAS | a veces lo rechaza | escribirlo **igual que el carnet** |
+
+</Tabla>
+
+Las listas desplegables te obligan a elegir de un conjunto cerrado porque del otro lado hay una tabla
+con esas opciones y no más. Cuando tu caso no está, casi siempre existe «otro», y elegirlo con una
+explicación en el campo libre es mejor que forzar la opción más parecida. Y distingue las dos formas
+de marcar: **los círculos permiten una sola respuesta y los cuadraditos permiten varias.**
+
+## La sesión que caduca y el archivo que no entra
+
+Cuando entras con tu usuario, el servidor no te recuerda de una página a la siguiente: te entrega una
+ficha temporal que tu navegador enseña en cada paso, y esa ficha vence sola tras un rato de
+inactividad. A eso se le llama <Termino slug="caducidad-de-sesion">caducidad de sesión</Termino>, y
+existe por seguridad: para que la sesión abierta en el ciber no quede viva para el siguiente que se
+siente.
+
+La consecuencia le pasa a todo el mundo una vez: llenas cuarenta casillas, te levantas a buscar el
+carnet, vuelves a los veinte minutos, tocas enviar y el sistema te devuelve a la pantalla de entrada
+**con todo en blanco.** No hubo falla; venció la ficha. Las defensas son de procedimiento: **tener
+todo reunido antes de empezar**, escribir los textos largos primero en una nota del teléfono y
+pegarlos, y usar el guardar borrador si existe.
+
+<Analogia titulo="La ficha del guardarropa">
+Dejas el bolso, te dan una ficha y con esa ficha te lo devuelven: el guardarropa no reconoce tu cara,
+reconoce la ficha, y si el local cierra a las diez y vuelves a las once, la ficha no vale. Es el mismo
+objeto que el identificador de sesión, necesario porque el protocolo de la web no recuerda nada entre
+una petición y la siguiente.
+</Analogia>
+
+Subir un archivo es la otra pieza. La casilla suele decir qué formatos acepta y cuánto puede pesar, y
+los dos son límites duros del otro lado: si tu foto pesa ocho megabytes y el tope son dos, no hay
+insistencia que valga. Y si pide PDF, una foto renombrada a `.pdf` no es un PDF: la extensión es una
+etiqueta, no el contenido. Un último detalle que cuesta dinero: **el botón Enviar se toca una vez.**
+Si la señal está lenta, la petición ya salió y está viajando; tocar otra vez puede generar dos
+registros o dos cobros, y ese <Termino slug="doble-envio">doble envío</Termino> es caro de deshacer,
+porque anular exige otro trámite.
+
+## El riesgo real: pagar a quien no era
+
+El peligro de verdad nunca fue romper nada. Son dos, y los dos son de identidad: **pagar a quien no
+era** y **escribir tus datos en una página que imita a la buena.** A esa copia se le
+llama <Termino slug="pagina-falsa">página falsa</Termino>, y es la herramienta principal de
+la <Termino slug="suplantacion-de-identidad">suplantación de identidad</Termino>.
+
+La copia puede ser perfecta: mismo logo, mismos colores, hasta el candado en la barra —ese candado
+dice que lo que escribes viaja cifrado, **no dice a quién se lo estás mandando**—. Lo único que no se
+puede copiar es el dominio, y se lee de un modo que no es evidente: **manda lo que está pegado justo
+antes de la primera barra.** Así, `laentidad.bo/pagos` es la entidad, pero
+`laentidad.bo.pagos-rapidos.xyz/tramite` no lo es: ahí el dominio real es `pagos-rapidos.xyz`.
+
+<Advertencia>
+La defensa que aguanta no es mirar bien: es **cómo llegas**. No entres a un trámite ni a un pago desde
+un enlace que te llegó por mensaje ni desde un resultado patrocinado del buscador —los primeros
+resultados suelen ser anuncios pagados, y ahí se cuelan intermediarios que cobran por algo gratuito—.
+Se entra escribiendo la dirección que te dieron en la oficina o yendo a la ventanilla.
+
+Y antes de cualquier pago, tres cosas. **Confirma la cuenta de destino por un canal distinto del que
+te la mandó**, llamando al número que buscaste tú. **Desconfía de la prisa**, porque el apuro no es un
+dato del trámite sino una herramienta del que empuja. Y **ningún sistema legítimo te pide tu
+contraseña ni el código que acaba de llegarte por mensaje**, jamás.
+</Advertencia>
+
+## El trámite es un procedimiento, no un momento
+
+Un trámite se parece más a un pedido en un taller que a una compra: entra, alguien lo revisa, puede
+ser observado y vuelve a ti, y solo después se aprueba. Un procedimiento se prepara; un momento solo
+se sufre.
+
+**Antes.** Preguntar en la entidad qué se necesita exactamente y anotarlo punto por punto —esta
+lección no te lo puede decir, y sospecha de quien te lo diga sin consultar—. Reunirlo todo **antes de
+abrir el formulario**: documentos escaneados, derechos, legibles, en el formato que piden, reducidos
+de peso y con nombres claros como `ci-juan-perez.pdf`.
+
+**Durante.** Llenar sin apuro y **revisar antes de enviar, en voz alta**, tres cosas: tu nombre letra
+por letra como está en el documento, el número de documento dígito por dígito, y tu dirección de
+correo. Esa última es la que más caro sale: un correo mal escrito manda la respuesta y el comprobante
+a un buzón que no es el tuyo mientras tú esperas.
+
+**Después.** Aquí está lo que casi nadie hace y decide todo lo que venga:
+el <Termino slug="numero-de-tramite">número de trámite</Termino> y
+el <Termino slug="comprobante-de-tramite">comprobante</Termino>. Guarda el que ofrezca el sistema y
+además **hazle una captura a la pantalla de confirmación**: el correo automático puede no llegar, la
+página de «listo» a veces es lo único que existe, y la captura queda en tu teléfono con
+su <Termino slug="metadato">metadato</Termino> de fecha y hora. Después, al cuaderno.
+
+<Tabla>
+
+| Qué se anota | Por qué |
+| --- | --- |
+| Fecha y hora exactas | Todo plazo se cuenta desde ahí y nadie lo recuerda a los dos meses |
+| Número o código del trámite | Es la forma de que te encuentren sin contar la historia entera |
+| Qué entidad y qué oficina | Trámites parecidos se atienden en lugares distintos |
+| Con qué correo se hizo | Si tienes dos direcciones, vas a buscar en la equivocada |
+| Qué se presentó | Para saber qué falta el día que te observen |
+| Cuándo volver a preguntar | Un trámite sin dueño se queda en la cola |
+
+</Tabla>
+
+**Y si se corta a mitad** —se fue la luz, se cayó la señal—, hay una regla y va contra el instinto:
+**no vuelvas a empezar a ciegas.** Primero se averigua si quedó registrado: se entra otra vez y se
+mira si aparece como iniciado o en proceso, se busca en el correo alguna confirmación, y si el corte
+fue en un pago se revisa el movimiento en la cuenta o se llama al banco antes de volver a pagar.
+Repetir sin comprobar es reiniciar un proceso a la mitad sin saber si escribió: **puedes terminar con
+dos solicitudes o dos pagos.**
+
+<AplicarRizoma titulo="Llevarlo a la práctica: tu dirección, tu carpeta y un trámite de verdad">
+Esta semana, con el teléfono que ya tienes y sin gastar un peso. **Primero, la dirección seria.** Si
+no tienes correo, ábrete uno con tu nombre y apellido; si tienes uno de la adolescencia con apodo,
+ábrete otro y deja el viejo para promociones. Entra a la configuración del perfil y escribe tu nombre
+completo como está en el documento: es lo que ve quien recibe tu mensaje, y una casilla firmada como
+«princesita05» pesa en contra sin que nadie te lo diga nunca.
+
+**Segundo, la prueba de cinco minutos.** Mándate un correo a ti mismo con un asunto de verdad —«Prueba
+— adjunto carnet — 14 de agosto»— y la foto de un papel adjunta, y ábrelo desde otro aparato si
+puedes. Con eso verificas sin riesgo que la dirección está bien escrita, que sabes adjuntar y que el
+archivo se abre del otro lado. Después búscalo escribiendo una palabra del asunto, para tener ya en el
+cuerpo el gesto de buscar.
+
+**Tercero, la carpeta y el cuaderno.** En el teléfono, una carpeta «Documentos» con todo escaneado en
+PDF, derecho y legible: carnet por ambos lados, certificado de nacimiento, título si lo hay, y los
+certificados de cursos. El día que aparezca una convocatoria que cierra mañana, la diferencia entre
+postular y no postular van a ser esos veinte minutos que ya no tienes que buscar. Al lado, una hoja
+por trámite con las seis filas de la tabla de arriba, que sirve igual para lo de la familia. En muchas
+casas hay una sola persona que sabe manejar el teléfono y hace los trámites de todos; ese cuaderno
+evita que sea además la única memoria.
+
+**Cuarto, en el taller o el negocio, si tienes uno.** Una dirección del oficio, distinta de la
+personal. Cuando pases un precio por WhatsApp porque así te lo piden, mándalo además por correo con
+asunto claro: «Presupuesto — portón 2,40 m — válido 15 días». El día que haya discusión sobre lo
+acordado, uno de los dos va a tener la fecha por escrito y el otro no. Y la lista de avisos a clientes
+va en copia oculta.
+
+**Y el caso trabajado.** En Rizoma del Sur la correspondencia del proyecto no sale de la casilla
+personal de quien coordina, y fue una decisión: cuando la dirección es de una persona, el día que esa
+persona se cansa, se muda o se pelea, el proyecto pierde de golpe el historial, los contactos y los
+trámites en curso. Tiene su propia dirección, la clave la conocen dos personas y toda gestión pasa por
+ahí. Lo mismo vale para una junta vecinal o tres compañeros que se asocian: **la cuenta institucional
+no es lujo de empresa grande, es lo que hace que la organización sobreviva a las personas.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+Aquí el correo compite con un canal que gana casi siempre, y hay que decirlo sin romanticismo: en
+Santa Cruz, y más en un pueblo como Zanja Honda, **todo pasa por WhatsApp.** Las instituciones
+atienden por ahí, los comercios venden por ahí, los avisos de la escuela llegan por ahí. La lección no
+te pide que dejes eso, te pide que separes: lo cotidiano por donde sea, y **lo que puede terminar en
+discusión, en plata o en un papel, por correo —o al menos con una foto del comprobante mandada por
+correo a ti mismo—.** Reenviarte a tu propia casilla lo que llegó por chat es la manera más barata de
+tener archivo.
+
+La segunda condición es física y la conoces: **la luz se corta y la señal se cae.** Un formulario
+largo en una tarde de lluvia, con la batería a la mitad, es una apuesta perdida: se hace temprano, con
+el teléfono cargado y los archivos listos. Y si el corte llega igual, la regla de no repetir a ciegas
+aquí no es teoría: en un mismo día se puede caer la señal a mitad de un pago y volver a pagar por
+nervios.
+
+La tercera es económica. **Los datos móviles se pagan**, y subir archivos es lo que más consume; por
+eso reducir la foto antes no es solo por el límite del formulario, es por el saldo, y conviene guardar
+los trámites pesados para cuando haya wifi. Muchas casas, además, tienen **un solo teléfono para toda
+la familia**, así que la casilla abierta en ese aparato la ve quien lo agarre. Y en el ciber, la única
+computadora para muchísima gente, tres cuidados: **cerrar sesión al terminar**, no aceptar cuando el
+navegador ofrece guardar la contraseña, y no dejar los archivos descargados ahí.
+
+Un detalle boliviano que rompe formularios sin que nadie entienda por qué: **los nombres.** Apellidos
+compuestos, apellidos originarios con letras que algunos sistemas no aceptan, tildes y ñ, y nombres
+escritos de una manera en el carnet y de otra en la partida. La regla evita rechazos: **escribe
+exactamente lo que dice el documento con el que estás haciendo el trámite**, letra por letra aunque
+esté mal; si hay diferencia entre dos papeles tuyos, eso se arregla en la entidad que los emite.
+
+Y el cierre honesto: **no te voy a decir qué papeles pide tu trámite, cuánto cuesta, cuánto demora ni
+en qué página se hace.** No los sé, cambian, y un dato inventado te haría perder un viaje. Lo que sí
+digo es a quién se pregunta: a la oficina que atiende ese trámite, en persona o al número que ella
+misma publique; a tu banco para lo que mueva plata; a un contador si es tributario; al centro de salud
+si es de salud. Y una verdad que ninguna lección de internet debe ocultar: **muchas veces el trámite
+presencial es más rápido y más seguro que el trámite en línea**, sobre todo la primera vez. Ir a
+preguntar no es atraso, es leer el manual antes de apretar botones.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«La dirección estaba casi bien.»** Casi bien no rebota si esa dirección existe: tu documento llegó
+completo a un desconocido y tú sigues esperando.
+
+**«Puse a todos en Para.»** Repartiste las direcciones de cuarenta personas sin permiso. Eso era copia
+oculta.
+
+**«Se me cerró todo y perdí lo escrito.»** Venció la sesión: es diseño, no falla. Los textos largos se
+escriben antes en una nota.
+
+**«Toqué enviar varias veces porque no pasaba nada.»** Sí pasaba: estaba viajando. Ahora puede haber
+dos registros o dos pagos.
+
+**«Ya está enviado, listo.»** Sin número, sin fecha y sin comprobante guardado no tienes con qué
+reclamar. Captura, número, cuaderno.
+
+## Lo que sigue
+
+Ya tienes el canal formal completo: qué es una cuenta, por qué el correo es la dirección que te
+representa aunque cambies de número, cómo viaja un mensaje, qué dice el dominio, por qué la copia
+oculta protege a la gente de tu lista, y cómo se hace un trámite como procedimiento.
+
+Todo eso descansa sobre una sola pieza, y es hora de blindarla. La casilla que acabas de volver tu
+identidad ante el mundo es también **la llave maestra**: por ahí llega el enlace que restablece la
+contraseña de todas tus otras cuentas. La lección que cierra el módulo, *Contraseñas, robo del
+teléfono y qué hacer cuando pasa*, explica el mecanismo real de una contraseña —por qué la longitud
+vence al símbolo raro y por qué repetir la misma clave en dos sitios lo hunde todo—, el segundo factor
+con sus códigos de respaldo, el gestor de contraseñas y el cuaderno bajo llave como alternativa
+honesta, y el procedimiento del día del robo, desde otro aparato y en orden: bloquear, avisar a la
+operadora, cambiar claves empezando por el correo, avisar al banco y denunciar.

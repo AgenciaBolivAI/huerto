@@ -1,0 +1,395 @@
+En Zanja Honda, como en todas partes, la herramienta llegó antes que la explicación. Está en el
+teléfono, dentro de las mismas aplicaciones de mensajes de siempre; la ocupa el sobrino para las
+tareas del colegio y el vecino para redactar una solicitud. Nadie contó qué es, así que se la usa
+apoyándose en dos suposiciones falsas y caras.
+
+La primera es que **es un pozo de sabiduría**: si contesta rápido, completo y sin dudar, será porque
+sabe. La segunda es la contraria: **es un juguete que inventa cosas** y no sirve para nada serio.
+Quien cree lo primero va a una oficina con un requisito que no existe, o le echa a un lote una dosis
+salida de la nada. Quien cree lo segundo se queda afuera de algo que abre puertas cerradas por no
+saber redactar o no entender un formulario.
+
+Este módulo existe para la tercera posición: **entender qué hace la máquina por dentro y deducir de
+ahí en qué se le puede confiar.** Esta lección enseña el mecanismo, sin una línea de código y sin
+humo, porque todo lo que viene después —cómo preguntar, cómo comprobar, qué no escribirle nunca— se
+deduce solo cuando el mecanismo está claro.
+
+## Lo único que hace: adivinar la siguiente pieza
+
+Un <Termino slug="modelo-de-lenguaje">modelo de lenguaje</Termino> hace una sola cosa: recibe un
+texto y calcula qué pieza de texto viene después con más probabilidad. Agrega esa pieza al final,
+vuelve a mirar el texto entero —ahora una pieza más largo— y calcula la siguiente. Y otra vez, hasta
+que le toca producir una pieza que significa «aquí termino».
+
+Eso es todo. No hay una segunda parte del programa que razone, ni una tercera que consulte una
+enciclopedia, ni una cuarta que revise si lo escrito es verdad. Cuando respondió tres párrafos sobre
+la yautía, ocurrió esa rueda dando varios cientos de vueltas, cada una decidiendo un pedacito.
+
+A esa forma de trabajar —escribir una pieza, meterla otra vez por la entrada, escribir la
+siguiente— se la llama <Termino slug="generacion-autorregresiva">generación autorregresiva</Termino>,
+y trae una consecuencia que hay que retener: **la máquina lee su propia salida como si fuera texto
+que le dieron.** Si en la pieza treinta dijo un dato falso, desde la treinta y uno ese dato forma
+parte de lo que está leyendo, y todo lo que siga será coherente con él. No hay marcha atrás ni un
+momento en que se relea y diga «esto que escribí no existe».
+
+<Analogia titulo="El que completa el refrán">
+Si a alguien le dicen «a caballo regalado…», la boca sola termina «no se le mira el diente». No hizo
+falta pensar ni saber de caballos: la frase estaba tan gastada de oírla que la continuación salió
+sola.
+
+Un modelo es eso llevado hasta el final: **una máquina que completa el refrán, pero con cualquier
+texto.** Si le empiezan una receta, la continúa como se continúan las recetas; si le hacen una
+pregunta, la continúa como se continúan las preguntas en el material que vio: con una respuesta.
+
+Y aquí está lo que hay que masticar despacio: **completar bien el refrán no requiere saber si el
+refrán es cierto.** «Al que madruga Dios le ayuda» se completa igual lo crea uno o no. La máquina
+hace todo el tiempo esa clase de trabajo: continuar de forma verosímil. Nunca la otra.
+</Analogia>
+
+## De dónde salió: leyó una montaña de texto y no guardó ninguno
+
+Antes de contestarle a nadie, el modelo pasó por un proceso largo y carísimo llamado entrenamiento.
+Se le puso delante una cantidad descomunal de texto escrito por
+personas —el <Termino slug="corpus-de-entrenamiento">corpus de entrenamiento</Termino>: páginas web,
+libros digitalizados, foros, manuales, noticias— y se le hizo repetir un ejercicio mecánico miles de
+millones de veces: se tapa la pieza que sigue, la máquina apuesta, se destapa la real, y **se la
+corrige un poquito para que la próxima vez apueste mejor.**
+
+Lo que se corrige son números: un modelo es por dentro una cantidad enorme de números
+ajustables —del orden de miles de millones— que no significan nada por separado, que nadie escribió a
+mano y que nadie puede leer para decir «este guarda la fecha de la independencia». De aquí salen dos
+consecuencias grandes.
+
+**El texto original no está adentro.** No es un depósito con los libros guardados: se parece más a
+una destilación con pérdida. Quedaron las regularidades de cómo se encadena el lenguaje y lo que se
+repetía mucho; se perdió el detalle de lo que apareció poco. Por eso puede reproducir casi palabra
+por palabra un poema famosísimo, que vio diez mil veces, e inventar entero el nombre de un reglamento
+municipal del sur de Santa Cruz, que no vio nunca. **No hay una raya que separe lo que recuerda de lo
+que rellena:** es el mismo mecanismo en los dos casos.
+
+**El corpus no es una biblioteca revisada.** Es lo que había escrito, y ahí conviven un manual serio
+de agronomía y un foro donde alguien afirma una barbaridad con total seguridad. El entrenamiento no
+premia lo verdadero: premia acertar la pieza que sigue. Si una tontería está escrita muchas veces, la
+máquina aprendió a continuarla igual de bien que a una verdad.
+
+<Dato titulo="Y hay una fecha en que se cerró la puerta">
+El entrenamiento no es continuo: se hizo sobre el texto disponible hasta cierto momento, y a eso se
+le llama <Termino slug="fecha-de-corte">fecha de corte</Termino>. Lo que pasó después no entró.
+
+Lo peligroso no es que falte información reciente, sino que **el modelo no se calla por eso.**
+Preguntado por algo posterior a su corte no dice «eso no lo vi»: produce la continuación más
+verosímil, que suele tener forma de dato actual y suena igual que las demás.
+
+Precios, insumos, convocatorias abiertas, requisitos vigentes y quién atiende en tal oficina cambian
+todo el tiempo. **Nada de eso se le pregunta a una máquina congelada en una fecha**, aunque conteste
+con aplomo, y aunque la aplicación busque en internet, porque entonces la respuesta vale lo que valga
+la página que encontró.
+</Dato>
+
+## Las piezas no son palabras: los tokens
+
+Se viene diciendo «pieza» a propósito, porque el modelo no trabaja con palabras enteras. Trabaja
+con <Termino slug="token">tokens</Termino>: pedazos de texto de tamaño variable. A veces un token es
+una palabra completa y muy común, a veces una sílaba, a veces un solo carácter, y una palabra rara
+puede quedar partida en cuatro o cinco pedazos. El corte no lo eligió nadie con criterio gramatical:
+salió de un procedimiento automático que buscó los pedazos más rentables para el idioma predominante
+del material. Eso explica tres rarezas que cualquiera nota.
+
+**Cuenta mal las letras.** Si se le pide cuántas erres tiene una palabra, o escribirla al revés,
+falla, porque no ve letras sueltas: ve bloques. Es como contar ladrillos en una foto donde vienen
+pegados de a tres.
+
+**Las cuentas largas le salen mal.** Los números también se parten en tokens, así que no está
+sumando: produce la cadena de dígitos que le parece verosímil después de un signo igual, y se
+equivoca por un factor de mil con la misma cara con la que acierta. Algunas aplicaciones le enchufan
+por detrás una calculadora de verdad y esa parte sí es confiable, pero eso ya no es el modelo: es una
+herramienta aparte que alguien le conectó.
+
+**Las palabras poco frecuentes salen picadas**, y eso pega justo donde vive este curso.
+La <Termino slug="alucinacion">alucinación</Termino> se concentra en lo raro, y en el texto del mundo
+la yautía, el gandul, el ají dulce criollo o el motacú son rarísimos comparados con el trigo o el
+tomate. Cuantos menos ejemplos vio, más está rellenando.
+
+## No elige una palabra: arma una lista de probabilidades
+
+En cada paso el modelo no produce una respuesta: produce **una tabla enorme con todas las piezas
+posibles y, al lado de cada una, un número que dice cuán probable es que sea la que sigue.** Después
+de «la capital de Bolivia es», la pieza «Sucre» se lleva un número alto, «La» otro número alto, y
+miles de piezas absurdas números diminutos pero distintos de cero.
+
+Ahora la pregunta que lo cambia todo: **¿en qué columna de esa tabla dice si algo es verdad?** En
+ninguna. La tabla mide **con qué frecuencia esa pieza sigue a un texto parecido**, no si el resultado
+corresponde con el mundo. No existe dentro del aparato una representación separada de «esto es
+cierto» frente a «esto me lo estoy inventando». No está oculta ni mal calibrada: **no está.**
+
+Todo lo que se ve después —el tono seguro, la estructura ordenada, las citas, los números
+redondos— sale de esa misma tabla: lenguaje que suena como el de alguien que sabe, producido por un
+aparato que no tiene ningún mecanismo para saber.
+
+## El muestreo: por qué no contesta dos veces lo mismo
+
+Con la tabla en la mano hay que elegir una pieza, y hay dos maneras. Una es tomar siempre la del
+número más alto, y sale un texto plano y repetitivo que se traba en bucles. La otra
+es <Termino slug="muestreo">muestrear</Termino>: sortear entre las candidatas, dando más chances a
+las de número alto pero dejando que a veces salga una de más abajo. Eso es lo que se hace, y le da a
+la salida ese aire natural.
+
+Consecuencia comprobable en dos minutos: **la misma pregunta hecha dos veces da dos respuestas
+distintas.** No es una falla, es el sorteo. Y esa propiedad es la herramienta de diagnóstico más
+barata que existe: si al preguntar tres veces por separado salen tres respuestas contradictorias, ahí
+no hay conocimiento, hay relleno.
+
+<Analogia titulo="La bifurcación del camino">
+Quien va a Zanja Honda por primera vez y en una bifurcación agarra a la izquierda cuando era a la
+derecha no se da cuenta de nada. **El camino equivocado también es un camino**: sigue teniendo
+curvas, casas, postes y perros, todo perfectamente coherente. Lo único que pasa es que ya no lleva
+adonde había que ir, y cuanto más se avanza, más lejos queda.
+
+El muestreo pone al modelo en esa bifurcación varios cientos de veces por respuesta. Cuando por
+sorteo agarra una pieza de las de abajo —un apellido que no era, una cifra que no era, un nombre de
+norma que no existe— **el resto del párrafo se construye impecablemente sobre ella**, porque el
+mecanismo autorregresivo obliga a continuar de forma coherente con lo escrito.
+
+Por eso las invenciones no aparecen como frases sueltas y raras, sino como **historias completas,
+redondas y bien contadas.** La coherencia no es señal de que algo sea cierto: es lo único que la
+máquina garantiza siempre.
+</Analogia>
+
+## La ventana de contexto: toda su memoria cabe en la conversación
+
+Cuando escribe la pieza siguiente, el modelo mira una cantidad limitada de texto: la pregunta, lo
+conversado antes y lo que él mismo lleva escrito. Ese espacio tiene un tamaño máximo y se llama
+la <Termino slug="ventana-de-contexto">ventana de contexto</Termino>. Es grande, pero finita, y sobre
+todo **es lo único que la máquina tiene delante en ese instante.**
+
+Quien haya seguido el módulo de programación ya tiene el molde: la ventana es la pizarra, y **no hay
+cuaderno.** De ahí salen tres comportamientos que todo el mundo vio sin entender por qué. Se
+**olvida del principio** en conversaciones largas y contradice instrucciones dadas al comienzo,
+porque ya no las está leyendo. Se **queda pegado a sus propios errores**, porque lo que inventó hace
+diez mensajes sigue en la ventana y es texto que debe continuar con coherencia. Y **no recuerda nada
+de una conversación a otra** salvo que la aplicación se lo vuelva a pegar adentro.
+
+<Advertencia titulo="Lo que está en la ventana pesa más que lo que aprendió">
+Esta asimetría vale oro y sostiene la mitad de los usos honestos de la herramienta.
+
+Cuando se le pide algo **sobre un texto que uno mismo le pegó** —resumir, traducir, reordenar,
+explicar más simple, encontrar contradicciones—, el material está delante de sus ojos y el trabajo es
+de forma. Ahí es fuerte, y el error es visible al leerlo.
+
+Cuando se le pide algo **sobre el mundo, de memoria** —qué dice la norma, cuánto cuesta, qué dosis
+lleva, en qué mes se siembra aquí—, no hay material delante: está reconstruyendo con los números que
+le quedaron del entrenamiento. Ahí es débil, y el error no se ve.
+
+**La misma máquina, dos niveles de confianza distintos, y la diferencia es si el material está en la
+ventana o no.** Esa sola distinción evita la mayoría de los desastres.
+</Advertencia>
+
+## El ajuste por preferencia: por qué suena amable, seguro y de acuerdo contigo
+
+Un modelo recién entrenado sobre texto no es un asistente, es un continuador: si se le escribe una
+pregunta, lo más verosímil es que la siga con otras cinco, porque así se ven los cuestionarios. Para
+convertirlo en algo que responde viene una segunda fase, mucho más corta, que se llama
+el <Termino slug="ajuste-por-preferencia-humana">ajuste por preferencia humana</Termino>.
+
+El procedimiento, sin adornos: personas contratadas escriben ejemplos de buenas respuestas y sobre
+todo **comparan de a pares** —se les muestran dos respuestas a la misma pregunta y dicen cuál
+prefieren—. Con muchísimas comparaciones se construye una señal automática que puntúa respuestas, y
+con ella se ajusta el modelo para que produzca las de puntaje alto.
+
+Ahora la deducción central de la lección. **Nadie en esa fase midió la verdad: se midió la
+preferencia.** Y las personas prefieren sistemáticamente respuestas completas antes que incompletas,
+seguras antes que dubitativas, ordenadas antes que desprolijas, amables antes que secas, y —esto está
+estudiado y tiene nombre— **prefieren que les den la razón.**
+
+Así que el aparato quedó empujado hacia lo que la gente puntúa bien. «No lo sé» puntúa peor que algo
+razonable, aunque el «no lo sé» fuera lo correcto; «habría que verificarlo» puntúa peor que dar un
+número; y llevarle la contraria a quien pregunta puntúa peor que acompañarlo. A esa tendencia a
+plegarse se la llama <Termino slug="adulacion-del-modelo">adulación</Termino>, y por eso una pregunta
+que ya trae adentro la respuesta que uno quiere oír casi siempre la recibe de vuelta confirmada.
+
+De ahí sale la frase que hay que llevarse tatuada: **la seguridad del tono no tiene ninguna relación
+con la verdad del contenido, porque salen de dos lugares distintos del proceso.** El tono seguro es
+un producto entrenado a propósito. La verdad del contenido no es producto de ningún paso: en toda la
+cadena descrita no hay un solo momento en el que algo se compare contra el mundo real.
+
+## Por eso inventa, y no es una falla que alguien vaya a arreglar
+
+Cuando el modelo produce un nombre de ley que no existe, un estudio que nadie escribió, un
+ingrediente activo inventado o una fecha equivocada, **no se rompió nada.** Hizo lo mismo que cuando
+acierta: producir la continuación más verosímil. Solo que el material que necesitaba no estaba en los
+números, y no tiene cómo notar la diferencia, porque **no hay dentro de ella un inventario de lo que
+sabe.**
+
+Conviene ser preciso con las palabras. Esto **no es mentir**: mentir requiere conocer la verdad y
+decir otra cosa a propósito. Tampoco **es equivocarse** como se equivoca una persona distraída. Es
+funcionamiento normal. Por eso el nombre técnico —alucinación— engaña: sugiere un estado anormal, un
+delirio, algo que se cura. No hay un modo alucinación y un modo normal: hay un solo modo.
+
+<Advertencia titulo="Tampoco puede decir cuánto está seguro">
+La salida que se le ocurre a todo el mundo es: «que avise cuando no esté seguro». No puede, y la
+razón es incómoda.
+
+Cuando escribe «estoy seguro» o «no estoy del todo seguro», **esas palabras son también piezas
+predichas por el mismo mecanismo.** No lee un medidor interno: produce la frase verosímil en ese
+contexto. Puede escribir «con total seguridad» delante de una invención completa y «no estoy seguro»
+delante de algo cierto, sin ninguna contradicción interna.
+
+A esto se lo llama falta de <Termino slug="calibracion-de-confianza">calibración de la
+confianza</Termino>, y es lo que más daño hace, porque las personas usamos el tono del otro como
+atajo para decidir cuánto creerle. Con una máquina, ese atajo no funciona.
+</Advertencia>
+
+¿Se va a arreglar? Se reduce: modelos más grandes, con mejor material, conectados a un buscador o a
+documentos concretos y ajustados para admitir ignorancia más seguido inventan menos que los de hace
+unos años. Pero **no se elimina**, y la razón es estructural: el sistema siempre produce una
+continuación para cualquier entrada, y nada compara lo producido contra la realidad. Planificar
+suponiendo que el año que viene lo arreglan es planificar sobre un deseo. **El criterio de quien lo
+usa es la única verificación que hay.**
+
+## Lo que no es
+
+Media docena de confusiones explican casi todos los accidentes, y cada una se disuelve comparando
+mecanismo real con mecanismo imaginado.
+
+<Tabla>
+
+| Se cree que es… | Cómo funciona eso de verdad | Qué hace en cambio el modelo |
+| --- | --- | --- |
+| Un buscador | Devuelve documentos que existen, con su dirección | Compone texto nuevo; si no fue a buscar, hasta el enlace es texto compuesto |
+| Una base de datos | Guarda registros intactos y devuelve el mismo dos veces | No guarda nada intacto; dos preguntas iguales dan dos textos distintos |
+| Una calculadora | Aplica un procedimiento exacto, siempre el mismo | Predice la cadena de dígitos más verosímil, salvo que le conecten una calculadora aparte |
+| Un oráculo | — | No sabe el futuro, y tampoco el presente: se congeló en su fecha de corte |
+| Una conciencia | Quiere, siente, recuerda, se hace responsable | Ninguna de las cuatro; su «yo» es una forma gramatical del texto que vio |
+| Alguien que sabe lo que sabe | Puede decir «de esto entiendo, de esto no» | No tiene inventario de sí mismo; no distingue lo que vio mil veces de lo que vio una |
+
+</Tabla>
+
+Las dos últimas filas engañan hasta a quien entendió todo lo anterior. Tratamos al aparato como si
+fuera alguien porque **en toda la historia de la especie el lenguaje bien armado solo salió de
+mentes**, y no tenemos defensa instintiva contra un texto fluido producido por otra cosa. A ese
+reflejo se lo llama <Termino slug="antropomorfizacion">antropomorfización</Termino>, y no se apaga
+sabiendo que existe: se apaga preguntándose, cada vez, si lo que se está creyendo viene de la
+evidencia o del tono. **Esa misma vulnerabilidad es la que explotan las estafas** de la lección 06. Y
+tampoco es neutral: refleja un texto dominado por unos pocos idiomas, países y climas, y qué rompe
+eso en un huerto de Santa Cruz es materia de la lección 05.
+
+## Entonces sí sirve, y la regla es simple
+
+**Es fuerte con la forma y débil con el mundo.** Ordenar, redactar, traducir, resumir, desarmar un
+párrafo enredado: ahí el material está delante y el resultado se juzga leyéndolo. Afirmar cómo es el
+mundo de memoria —una ley, un plazo, un precio, una dosis, un diagnóstico, una cita— es lo que su
+mecanismo no puede garantizar: ahí no es una fuente, sino a lo sumo un punto de partida para saber
+qué preguntar y a quién.
+
+<AplicarRizoma>
+**Lo primero es una decisión de proyecto, no técnica: en Rizoma del Sur esta herramienta se enseña, no
+se prohíbe.** El proyecto es comunitario y gratuito, y existe para que la gente pueda aprender y
+desarrollarse. Prohibirla no la saca del barrio —ya está en los teléfonos— y solo garantiza que se
+use sin criterio. Lo único que sirve es dar el criterio, y eso se hace en una tarde bajo el
+umbráculo, sin computadora, con lo que se explicó acá.
+
+**Escriban el cartel de las tres columnas y cuélguenlo donde se guardan las herramientas.** Columna
+uno, lo que se le pide sin miedo porque el error se ve al leerlo: el borrador de una solicitud, las
+notas de la reunión ordenadas, la traducción de una etiqueta en inglés, un párrafo enredado explicado
+en palabras simples. Columna dos, lo que se le pide pero se comprueba antes de actuar: cómo se llama
+técnicamente algo, qué preguntas hacerle a un técnico, qué partes tiene un formulario. Columna tres,
+lo que no decide nunca: **dosis de cualquier producto —eso se lee en
+la <Termino slug="etiqueta-del-producto">etiqueta del producto</Termino> y punto—, diagnóstico
+sanitario, identificación de una especie que se va a entregar, y cualquier requisito, plazo, norma o
+precio.** Esa tercera columna es la frontera donde el error se paga con plantas muertas, con un viaje
+perdido o con plata que nadie tiene de sobra.
+
+**Hagan la demostración del sorteo, porque convence más que cualquier explicación.** En la próxima
+reunión, que tres personas le hagan la misma pregunta desde tres conversaciones separadas y se lean
+las tres respuestas en voz alta. Elijan algo local y verificable contra lo que el curso ya
+estableció: en qué meses llueve acá, cuántos metros cuadrados tiene el terreno, a qué altura está.
+Cuando el grupo escuche tres respuestas seguras y distintas, «contesta lo que suena más probable»
+deja de ser una teoría.
+
+**Hagan también la prueba de lo raro, que es la que más enseña.** Pregúntenle por la yautía, por el
+gandul, por el ají dulce criollo, por el manejo del tajibo, con los nombres que se usan acá, y
+observen cómo la respuesta se desliza hacia otro cultivo parecido, hacia otro país o hacia consejos
+genéricos. No está fallando: está rellenando lo que casi no vio. De ahí sale la conclusión más
+importante para este proyecto: **lo que se sabe en Rizoma del Sur —qué germinó en qué lote, con qué
+sustrato, qué mes se perdió todo por el agua— no está adentro de ninguna máquina del mundo.** El
+cuaderno de registro es el único lugar donde vive ese conocimiento.
+
+**Y una regla de convivencia para el grupo de mensajes, que es donde ocurre el daño.** Todo lo que
+salga de la máquina y se reenvíe al grupo va rotulado: «esto lo escribió la aplicación, no está
+comprobado». Sin ese rótulo, en dos reenvíos el texto pierde el origen y alguien lo repite como si lo
+hubiera dicho el técnico. Es la misma disciplina
+del <Termino slug="testigo">testigo</Termino> que el curso viene pidiendo desde el vivero: **nada
+pasa a escala sin comprobarse antes en chico.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Acá la herramienta entra por el teléfono, y eso condiciona todo.** No llega en una computadora de
+escritorio sino dentro de aplicaciones de mensajería, mezclada con las cadenas que reenvía la tía y
+con la publicidad. Por eso mucha gente ni sabe que está hablando con un programa, y por eso la
+primera enseñanza útil del barrio no es cómo usarla sino **cómo darse cuenta de que se la está
+usando.**
+
+**No hay una sola, y las diferencias son reales.** Existen varias, de empresas distintas, con
+versiones gratuitas y de pago que no se comportan igual: la gratuita suele ser un modelo más chico,
+con ventana de contexto menor y a veces sin búsqueda. La misma pregunta en dos aplicaciones da dos
+respuestas distintas, y eso no significa que una mienta: son dos aparatos haciendo el mismo sorteo.
+**No existe la versión oficial ni la respuesta oficial.**
+
+**El castellano general le sale bien; el de acá, flojo.** Con vocabulario técnico neutro responde
+correctamente, pero el habla del oriente boliviano, los nombres locales de las plantas y las
+prácticas de la zona están muy poco escritos en internet, y lo que casi no se escribió, casi no se
+aprendió. Con las lenguas originarias el problema es del mismo tipo y mucho más severo: **la calidad
+sigue a la cantidad de texto disponible, no a la de hablantes.** Una traducción a esas lenguas hay
+que darla por dudosa hasta que la revise una persona que las hable.
+
+**El calendario que trae adentro es de otro hemisferio.** Cuando dice «sembrar en primavera» repite
+texto escrito para lugares con cuatro estaciones templadas. Acá el año se organiza por
+la <Termino slug="epoca-de-lluvias">época de lluvias</Termino>, de octubre a abril, y la seca de mayo
+a septiembre, con los <Termino slug="surazo">surazos</Termino> metiendo noches de unos 10 °C en pleno
+invierno seco. Nada de eso está en el centro de su material; la lección 05 desarrolla qué se rompe
+por esto.
+
+**Y la regla dura, la que no admite excepción en todo este curso.** Ninguna ley boliviana, ningún
+número de norma, ningún plazo, ningún requisito de trámite y ningún precio se dan por buenos porque
+los dijo la máquina, por convincentes que suenen. Lo tributario se consulta con un contador; lo
+municipal, en la propia alcaldía; lo sanitario y fitosanitario, en el SENASAG; lo de semillas e
+investigación agrícola, en el INIAF. Este curso tampoco inventa esos datos: explica el mecanismo y
+manda a preguntar donde corresponde, porque un requisito inventado cuesta un viaje perdido y una
+norma inventada repetida en público cuesta la credibilidad del proyecto.
+
+**Hay una asimetría comunitaria que conviene mirar de frente.** Quien maneja esto con criterio
+redacta en veinte minutos lo que antes le llevaba una tarde y entiende un formulario que antes lo
+frenaba; donde no todos terminaron el colegio, eso es una puerta que se abre de verdad. Quien la
+maneja sin criterio **desinforma a veinte personas a la misma velocidad**, con un tono tan seguro que
+nadie duda. La diferencia no es el aparato ni el plan de datos: es lo que se acaba de leer. Por eso
+enseñar esto vale más que enseñar a usarla.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Contestó rapidísimo y sin dudar, así que sabe.»** El aplomo sale de la fase de preferencia, donde
+se premió sonar así; no toca la verdad del contenido.
+
+**«Le pregunté si estaba seguro y me dijo que sí.»** Esa frase también es una pieza predicha.
+
+**«Me dio tres fuentes con autor y año.»** Producir algo con forma de cita es justo lo que sabe
+hacer; que exista es otra cosa, y se comprueba. Ese método es la lección 03.
+
+**«Entonces no hay que creerle nada.»** Tampoco: sobre un texto que uno le pegó es fuerte y el error
+se ve al leerlo. Desconfiar de todo desperdicia la herramienta tanto como confiar en todo.
+
+## Lo que sigue
+
+El mecanismo ya está: una máquina que predice la pieza siguiente sobre lo que tiene en la ventana,
+que sortea entre candidatas, que quedó ajustada para sonar segura y agradable, y en la que nada
+compara lo escrito con el mundo.
+
+De ahí sale directamente la lección 02, **Preguntar bien: la mitad del resultado.** Si lo único que
+la máquina mira es el texto de la ventana, lo que uno escribe no es una formalidad previa: **es
+literalmente la mitad del material con el que se produce la respuesta.** Vamos a ver qué lleva una
+petición útil —situación completa, lugar y fecha, restricciones duras, formato de salida, ejemplos y
+criterio de qué sería una buena respuesta—, cómo pedir supuestos y alternativas en vez de una
+respuesta única, y cómo corregir sobre lo que salió mal. Y las dos trampas grandes: la pregunta sin
+lugar, sin unidades y sin escala, y la peor de todas, **la pregunta que ya lleva adentro la respuesta
+que uno quiere oír** — que, con un aparato entrenado para agradar, es la forma más rápida de que le
+den a uno la razón en algo que no la tiene.

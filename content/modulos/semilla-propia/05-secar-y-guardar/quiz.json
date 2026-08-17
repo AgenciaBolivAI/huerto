@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "bateria-que-se-descarga",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué una semilla almacenada pierde viabilidad?",
+      "opciones": [
+        "Está viva y respira muy despacio, consumiendo sus propias reservas.",
+        "La humedad acelera esa respiración y además permite que crezcan hongos.",
+        "El calor acelera toda la química de la semilla.",
+        "Porque el aire del frasco la oxida, y por eso conviene abrirlo con frecuencia."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Abrir el frasco es justo lo contrario de lo que conviene: introduce humedad ambiente. La pérdida es continua y silenciosa, y lo decisivo es que no se puede recargar: la viabilidad perdida no vuelve por bien que guardes después."
+    },
+    {
+      "id": "la-regla",
+      "tipo": "verdadero_falso",
+      "enunciado": "Con unos 28 °C en Santa Cruz, la regla de almacenamiento pediría mantener la humedad relativa por debajo de aproximadamente el 18 %.",
+      "respuesta": true,
+      "explicacion": "Correcto: 28 °C son unos 82 °F, y la regla aproximada dice que temperatura en °F más humedad en porcentaje no debería pasar de 100. Como la temperatura no se va a bajar mucho sin refrigeración, toda la partida se juega en la humedad, y por eso el desecante deja de ser un lujo."
+    },
+    {
+      "id": "secar-bien",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se seca correctamente?",
+      "opciones": [
+        "A la sombra, porque el sol calienta el embrión por encima de lo tolerable y seca desigual.",
+        "Con aire en movimiento: un ventilador suave hace más que un sitio caliente.",
+        "En capa fina, porque un montón se seca por fuera y guarda humedad dentro.",
+        "Al sol directo durante unas horas para acelerar el proceso."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El sol directo es el error más común y el más caro, y por encima de unos 35 °C se empieza a dañar el embrión: nada de horno, chapa al sol ni encima de la heladera."
+    },
+    {
+      "id": "comprobar-secado",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se comprueba el punto de secado sin instrumentos?",
+      "opciones": [
+        "Una semilla grande y plana se parte en seco y se dobla si aún tiene humedad.",
+        "Sobre superficie dura, la seca suena y salta; la húmeda cae sorda.",
+        "Al morderla con cuidado, la seca cruje limpiamente y la húmeda se aplasta.",
+        "Pesándola: la semilla seca pesa más que la húmeda."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Pesa menos, no más, porque ha perdido agua. Ninguna de las tres pruebas es un higrómetro, pero las tres son claramente distinguibles con práctica y son lo que se usaba antes de que existieran los aparatos."
+    },
+    {
+      "id": "desecante",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que saber del desecante?",
+      "opciones": [
+        "El arroz tostado sirve, siempre que se enfríe tapado para que no recupere humedad.",
+        "El gel de sílice es mejor y el de color indicador avisa cuando está saturado.",
+        "Un desecante saturado ya no seca: hay que cambiarlo o reactivarlo.",
+        "Basta con ponerlo una vez, porque su capacidad no se agota."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Sí se agota, y un desecante saturado solo ocupa sitio. La proporción orientativa es una parte de desecante por cada dos de semilla en volumen, separado de ella por un paño o papel."
+    },
+    {
+      "id": "secuencia",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cerrar la semilla en frasco hermético ayuda a que termine de secarse.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error de secuencia que arruina el lote: el hermetismo no seca nada, conserva el estado en el que entró. Si entró húmeda, mantiene la humedad dentro. Siempre secar primero y cerrar después. Y al sacar un frasco del frío hay que dejarlo templar cerrado, o el aire frío condensa agua sobre la semilla al abrirlo."
+    },
+    {
+      "id": "longevidad",
+      "tipo": "verdadero_falso",
+      "enunciado": "El culantro, por ser umbelífera, es de vida corta y hay que sembrarlo para semilla todos los años aunque el catálogo no lo necesite.",
+      "respuesta": true,
+      "explicacion": "Correcto: pierde viabilidad en uno o dos años por bien que se guarde. El ají dulce, en cambio, es de vida larga, y por eso es la especie donde el trabajo de embolsado rinde más: un ciclo cuidadoso sirve para varias temporadas. Sin renovar las de vida corta, el banco se llena de frascos con etiqueta bonita y semilla muerta."
+    },
+    {
+      "id": "guardado-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define el protocolo de secado y almacenamiento de Rizoma del Sur, justificándolo con el clima de la zona.",
+      "respuestaModelo": "En Zanja Honda toda la partida se juega en la humedad y no en la temperatura, y el protocolo se diseña sobre eso. Con unos 28 °C, la regla de la suma pediría menos de un 18 % de humedad relativa, y el ambiente está muy por encima buena parte del año.\n\nSeco siempre a la sombra, en capa fina y con un ventilador a baja velocidad, nunca al sol y nunca por encima de unos 35 °C. Es exactamente lo contrario del instinto de ponerlo al sol para que seque antes: el sol calienta el embrión por encima de lo que tolera y además seca desigual.\n\nCompruebo el punto con la prueba de doblar en semilla grande y la del golpe en semilla pequeña, sin instrumentos.\n\nDesecante obligatorio en todos los frascos. Arroz tostado en sartén sin aceite y enfriado tapado es la opción de partida, porque está en cualquier casa de la zona y hace este protocolo replicable sin comprar nada; gel de sílice si se consigue, por reutilizable y porque el indicador avisa cuando se satura. Una parte de desecante por cada dos de semilla, separado por un paño, y revisión cada pocos meses porque saturado ya no seca.\n\nFrasco de vidrio hermético, y solo después de secar: cerrar sobre semilla húmeda es fabricar una cámara de moho, porque el hermetismo conserva el estado en el que entró. El vidrio además excluye insectos de grano almacenado, que aquí existen, cosa que una bolsa de tela no hace.\n\nEl sitio de guardado es el más fresco, oscuro y estable de la casa, nunca la cocina, que es el más caliente y húmedo. No dependo de la heladera porque los cortes de energía provocarían ciclos de enfriamiento y calentamiento, y esa condensación repetida es peor que una temperatura ambiente estable. Si alguna vez uso frío, dejo el frasco templar cerrado antes de abrirlo.\n\nTrabajo el banco en la época seca: es cuando se puede secar bien y cuando conviene envasar y revisar. En plena lluvia, abrir un frasco es meterle humedad.\n\nY organizo el stock por longevidad. El culantro es umbelífera y de vida corta, así que lo siembro para semilla todos los años aunque el catálogo no lo pida, solo para renovar. El ají dulce es de vida larga y una buena cosecha bien guardada me da varias temporadas, que es lo que hace que el esfuerzo de embolsado valga tanto la pena.\n\nCada frasco lleva especie, variedad, lote, fecha de cosecha y fecha de la última prueba de germinación. Sin esa última fecha, un frasco es una incógnita.",
+      "criterios": [
+        "Identifica la humedad como la variable decisiva en este clima.",
+        "Aplica la regla de la suma con números concretos.",
+        "Seca a la sombra, en capa fina, con aire y bajo 35 °C.",
+        "Comprueba el secado con pruebas sin instrumentos.",
+        "Usa arroz tostado como desecante replicable y explica el enfriado tapado.",
+        "Dosifica y revisa el desecante.",
+        "Respeta la secuencia secar antes de cerrar.",
+        "Elige vidrio hermético y justifica la exclusión de insectos.",
+        "Descarta depender de la heladera por los cortes de energía.",
+        "Concentra el trabajo de banco en la época seca.",
+        "Renueva el culantro anualmente por su vida corta.",
+        "Etiqueta incluyendo la fecha de la última prueba de germinación."
+      ],
+      "explicacion": "Es la lección donde el clima local cambia el procedimiento más que en ninguna otra del módulo: en un clima seco bastaría con un frasco, y aquí sin desecante el trabajo de todo un ciclo se pierde en silencio."
+    }
+  ]
+}

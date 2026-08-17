@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-el-sobrante-da-cero",
+      "tipo": "opcion_multiple",
+      "enunciado": "Llevas años intentando ahorrar «lo que sobre a fin de mes» y nunca sobra, aunque no recuerdas ningún derroche. ¿Qué explica correctamente lo que pasa?",
+      "opciones": [
+        "El ahorro residual no es una decisión sino una esperanza: nadie decidió cuánto ahorrar, se decidió gastar y se dejó que el ahorro fuera el resto de una resta.",
+        "Decides mirando el saldo y no el plan: la pregunta que se hace tu cabeza en medio segundo es «¿tengo?», y la plata visible funciona como señal de permiso.",
+        "No hay un momento de debilidad, hay treinta momentos sensatos: cada gasto suelto es razonable por separado y la suma es exactamente el sobrante que no apareció.",
+        "Es un problema de carácter: con más disciplina personal el mismo método de ahorrar el resto funcionaría bien."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta y es justamente la lectura que impide arreglar el problema, porque manda a corregir al sujeto en lugar de al sistema. Lo que falla no es la voluntad, es el orden de las operaciones: mientras el ahorro sea lo último de la fila va a dar cero todos los meses, y va a seguir dando cero si mañana ganas el doble. Es el mismo comportamiento del disco de un servidor, que se llena hasta el 100 % porque nada tenía un límite: la solución nunca fue pedirle disciplina al proceso que escribe, fue poner una cuota para que lo reservado deje de estar disponible."
+    },
+    {
+      "id": "pagarse-primero-monto-y-orden",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si al medir los treinta días descubres que apenas alcanzas, lo correcto es esperar a tener un monto respetable antes de empezar a apartar: ahorrar cantidades ridículas no sirve de nada.",
+      "respuesta": false,
+      "explicacion": "Falso. El monto es negociable, el orden no: se empieza con una cantidad tan pequeña que dé risa —lo que cuesta un pan, un pasaje— porque lo que se está instalando no es un capital, es una operación que ocurre sola. Al principio la regularidad vale más que el monto por dos razones mecánicas: lo que produce dinero a lo largo de los años no es la cantidad de un mes sino que la operación ocurra sin volver a decidirse, y subirle el monto a una operación que ya existe es trivial mientras que crearla desde cero cuesta muchísimo. Hay un caso distinto, y es honesto decirlo: si estás por debajo del piso de gasto mensual, no tienes un problema de ahorro sino de ingreso, y ahí lo que corresponde es tapar la fuga más grande o sumar una entrada."
+    },
+    {
+      "id": "friccion-de-retiro",
+      "tipo": "opcion_multiple",
+      "enunciado": "Apartaste el primer monto y quieres decidir dónde ponerlo. ¿Qué afirmaciones sobre la fricción de retiro son correctas?",
+      "opciones": [
+        "El ahorro que puedes alcanzar en treinta segundos es plata de gastar: si está a un gesto de distancia, el sistema lo trata como saldo disponible.",
+        "Funciona porque el impulso dura poco: casi todo el daño lo hacen decisiones tomadas en menos de un minuto y casi ninguna sobrevive a un día de espera, mientras que una emergencia de verdad sí sobrevive.",
+        "Se gradúa según para qué es la plata: ninguna para el gasto diario, media para el fondo de emergencia —disponible en un día o dos—, alta para el ahorro de largo plazo.",
+        "Cuanta más fricción, mejor: lo ideal es que el fondo de emergencia quede donde no se pueda tocar en mucho tiempo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta y describe una de las dos maneras de arruinar la fricción. Un fondo de emergencia al que no puedes llegar en un par de días es plata inmovilizada, y el día del problema vas a pedir prestado teniendo el dinero — el mismo error que un respaldo guardado en un sitio del que no sabes recuperarlo: existe en el papel y no existe cuando hace falta. La otra manera de arruinarla es comprarla: si la única forma de ponerle dificultad a tu ahorro es un arreglo que te cobra por sacarlo, estás pagando por tu propia disciplina, y esos costos hay que preguntarlos en la entidad."
+    },
+    {
+      "id": "pasanaku-mecanismo-y-riesgo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Te invitan a un pasanaku de doce personas y te ofrecen elegir en qué ronda cobrar. ¿Qué es correcto?",
+      "opciones": [
+        "Quien cobra en la primera ronda recibió en la práctica un préstamo del grupo y todavía debe todos sus aportes; quien cobra en la última le prestó al grupo durante todo el ciclo.",
+        "El riesgo estructural es de contraparte —que el que ya cobró deje de aportar— y lo paga sobre todo quien todavía no cobró.",
+        "El aporte es una obligación fija que hay que poner también el mes malo, así que se dimensiona sobre el piso de gasto y nunca sobre el mes bueno.",
+        "Como no se paga interés y todos ponen lo mismo, es el mejor lugar para guardar el fondo de emergencia."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta por una razón de calendario, no de confianza: en un pasanaku la fecha de cobro no la eliges tú, y una emergencia no espera a tu ronda. El pasanaku sirve para lo que sirve —juntar de golpe un monto grande con una fecha cierta y con la fricción social más fuerte que existe, la de deberle a gente que te conoce—, y por eso funciona entre gente que se conoce hace años y se va a seguir viendo, mientras que se vuelve peligroso cuando el grupo es de paso. Lo mínimo siempre es la lista escrita con nombres y orden de cobro y alguien que no sea el organizador llevando también la cuenta."
+    },
+    {
+      "id": "tres-filtros-de-emergencia",
+      "tipo": "verdadero_falso",
+      "enunciado": "Aparece una oferta excelente que se acaba mañana en algo que hace tiempo querías. Como es imprevista y no se va a repetir, califica para sacarla del fondo de emergencia.",
+      "respuesta": false,
+      "explicacion": "Falso: una oportunidad no es una emergencia, y confundirlas es la forma más común de vaciar el fondo. Los tres filtros tienen que cumplirse a la vez. Imprevisto: no lo sabías de antemano —la oferta lo es—. Urgente: el costo de esperar crece rápido; aquí no crece, simplemente no compras. Necesario: no hay sustituto aceptable; si se puede postergar o pasar sin eso, no era necesario. Falla dos de los tres, y con que falle uno ya no aplica. Sin una definición que se aplique sin discutir, el fondo se vuelve una segunda billetera y dura tres meses."
+    },
+    {
+      "id": "dimensionar-y-reponer-el-fondo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a dimensionar el fondo de emergencia de tu casa y a decidir qué hacer después de usarlo. ¿Qué corresponde?",
+      "opciones": [
+        "Medirlo en meses del piso de gasto mensual y no del ingreso, porque lo que hay que sostener cuando se corta la entrada es el piso y no el nivel de vida del mes bueno.",
+        "Subirlo por etapas: primero un monto chico que cubra el golpe que hoy obliga a pedir prestado, después un mes del piso, después tres, y más si el ingreso es muy irregular o depende de una sola fuente.",
+        "Después de usarlo, la reposición vuelve a ser el primer gasto del mes, y no se declara repuesto en cuanto roza el número sino un poco por encima, como la histéresis de un control de riego.",
+        "Si el fondo hubo que usarlo, el método falló y conviene reemplazarlo por otra estrategia."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte el sentido de la herramienta: usarlo es que funcionó. Un fondo que nunca se toca en diez años no demuestra disciplina, demuestra suerte. Su rendimiento no se mide en lo que crece sino en los desastres que no ocurrieron: sin fondo, la moto rota lleva al préstamo caro, el préstamo al recorte de comida y el recorte a vender la herramienta que generaba el ingreso, y un solo fallo se convirtió en cuatro. El fondo es el fusible que se quema para detener la cadena; convierte una catástrofe en una molestia. Lo único que sí es un límite honesto es otro: si las emergencias son todos los meses, no son emergencias, es un gasto que el presupuesto subestima."
+    },
+    {
+      "id": "poder-de-compra-plata-quieta",
+      "tipo": "verdadero_falso",
+      "enunciado": "Como la plata guardada pierde poder de compra cuando los precios suben, lo sensato es no tener fondo de emergencia y gastar cuanto antes en cosas que no se devalúen.",
+      "respuesta": false,
+      "explicacion": "Falso en las dos mitades. Primero: la pérdida de poder de compra es real y silenciosa —el monto se conserva y lo que compra se va, sin que aparezca ningún cargo—, pero no es un argumento contra tener fondo de emergencia, sino contra tener mucho más que eso quieto durante años. La comparación correcta no es contra un ahorro perfecto: es contra lo que te habría costado el préstamo que no pediste. Segundo: «los precios suben, mejor gasto ahora» es el razonamiento con el que se compran cosas que después no se pueden vender ni usar; adelantar una compra solo tiene sentido si la ibas a hacer de todos modos, si no se echa a perder y si tienes dónde guardarla. Y no se puede afirmar a qué velocidad ocurre: depende del año, del producto y del lugar, y lo honesto es medirlo con tu propia lista de compras anotada cada tres o cuatro meses."
+    },
+    {
+      "id": "caso-de-tu-casa",
+      "tipo": "abierta",
+      "enunciado": "Diseña el sistema de ahorro de TU casa, con lo que tienes hoy. Parte de tu situación real: quién trae plata, cómo entra (jornal, changa, venta, temporada, remesa, sueldo), qué se paga sí o sí y qué mide tu cuaderno de treinta días. Después decide y justifica: (a) cuánto apartas y con qué regla, y por qué esa regla y no un monto fijo mensual; (b) dónde lo pones, con qué fricción y por qué ese lugar y no los otros dos; (c) qué cuenta como emergencia en tu casa, quién puede abrir el fondo y bajo qué prueba; (d) de cuántos meses quieres el fondo y por qué esa cantidad y no otra; y (e) qué haces si al hacer las cuentas honestamente resulta que no puedes apartar nada. Escribe lo que harías tú, no lo que haría un vivero.",
+      "respuestaModelo": "Mi casa vive de dos entradas irregulares: un jornal que a veces es de cuatro días a la semana y a veces de dos, y changas de reparación que caen sin aviso; además, dos veces al año llega una remesa de un hermano. El cuaderno de treinta días dio un piso de gasto —alquiler, comida, garrafa, pasajes, luz y agua— y una fuga clara en gastos chicos diarios que sumados pesan más que la luz. Con eso ya sé lo que necesito saber: cuánto cuesta que la casa funcione sin lujos.\n\n(a) Aparto un porcentaje fijo de cada entrada, el día que entra, no un monto fijo a fin de mes. La razón es mecánica: con ingreso a golpes, un monto fijo mensual se incumple la primera quincena mala y ahí se rompe la costumbre, mientras que un porcentaje se adapta solo —entra poco, se aparta poco, pero se aparta—. Elijo un porcentaje bajo, del que sobrevivo aplicándolo en el peor mes, porque al principio la regularidad vale más que el monto: lo que rinde a lo largo de los años no es la cantidad de un mes, es que la operación ocurra sin volver a decidirse, y subirle el monto después es cambiar un número. La remesa entra en la misma regla y con más cuidado, porque llega junto con una lista de encargos: aparto antes de repartir. Y el ahorro va escrito en el presupuesto como una fila más, con el mismo estatus que el alquiler, porque si queda como «lo que sobre» va a dar cero: el gasto se expande hasta llenar la plata disponible.\n\n(b) No lo dejo en otro bolsillo de la misma billetera; eso es saldo disponible con otro nombre, y el ahorro que se alcanza en treinta segundos es plata de gastar. Reparto: una parte chica en efectivo en casa, en un envase que hay que abrir rompiendo algo, guardado alto y seco —aquí se inunda y con esta humedad los billetes se hongean—, y el grueso en una cuenta de una entidad autorizada, sin tarjeta y con la aplicación no instalada en el teléfono. Esa es fricción administrativa gratis. Mantengo efectivo porque los cortes de energía son frecuentes y sin luz no hay cajero ni lector de tarjetas. No uso pasanaku para esto: sirve para juntar de golpe con fecha cierta, pero la fecha de cobro no la elijo yo y una emergencia no espera a mi ronda; además, quien ya cobró puede dejar de aportar y ese riesgo de contraparte lo paga quien todavía no cobró. Antes de abrir la cuenta voy a un banco y a una cooperativa con las mismas preguntas escritas —cuánto cuesta mantenerla, qué saldo mínimo pide, qué cobra por retirar, qué documentos hacen falta— y comparo lo que me digan; no acepto cifras de memoria de nadie.\n\n(c) Emergencia es lo que pasa los tres filtros a la vez: imprevisto, urgente y necesario. La matrícula del colegio no lo es —sale todos los años el mismo mes y va provisionada aparte—, y una oferta buenísima tampoco, porque no es urgente ni necesaria. Sí lo son la moto de trabajo rota, una enfermedad que saca de circulación al que trae la plata, o el techo que se abre en plena lluvia. El fondo es de la casa, no mío: las tres preguntas van escritas en un papel dentro del envase y se leen en voz alta delante de todos, porque una regla que solo conoce una persona falla el día que esa persona no está. Ponemos espera de veinticuatro horas antes de abrirlo, con una excepción que no se discute: ante una urgencia de salud se abre ya y se va al centro de salud; el fondo existe para que «no hay plata» nunca sea el motivo de esperar con un enfermo. Y lo separo físicamente de las provisiones de lo anual, porque si comparten envase, en enero descubro que el fondo era la matrícula.\n\n(d) Empiezo por la etapa cero: un monto chico del tamaño del golpe que hoy me obliga a pedir prestado —una consulta, un repuesto, un pasaje urgente—, porque eso corta el hábito de endeudarse por cosas chicas. Después un mes del piso, y después tres. Apunto a más de tres porque mi ingreso es muy irregular y depende de pocas fuentes; si la moto o el jornal fallan, no hay una segunda entrada independiente que sostenga la casa, y eso es un punto único de fallo. Lo mido en meses de gasto y no de ingreso, porque lo que hay que sostener cuando se corta la entrada es el piso.\n\n(e) Si las cuentas honestas dicen que no puedo apartar nada, no me miento. Ahí el problema no es de ahorro sino de ingreso, y hago dos cosas: tapo la fuga más grande que encontró el cuaderno, y empiezo el fondo con algo que no es plata —una despensa: un kilo de arroz de más, aceite, jabón, la garrafa llena antes de que se vacíe la otra—, porque un amortiguador no tiene que ser dinero y el mes que no entra nada la casa come de ahí en vez de pedir prestado. En paralelo, la salida de fondo es sumar una entrada, que es para lo que estoy aprendiendo un oficio.",
+      "criterios": [
+        "Parte de datos propios y concretos —quién trae plata, cómo entra, piso de gasto medido— en lugar de responder en abstracto o hablar de un vivero.",
+        "Elige un porcentaje de cada entrada aplicado el día que entra, y justifica por qué un monto fijo mensual falla con ingreso irregular.",
+        "Fija un porcentaje bajo que sobreviva al mes malo y explica por qué al principio la regularidad vale más que el monto.",
+        "Coloca el ahorro como fila del presupuesto con el mismo estatus que un gasto fijo, invirtiendo el orden a entrada → ahorro → gastos.",
+        "Descarta el «otro bolsillo de la misma billetera» y diseña fricción concreta —física, administrativa o social— proporcional a para qué es la plata.",
+        "Justifica el reparto entre efectivo y cuenta con razones locales verificables: humedad, inundación, cortes de energía.",
+        "Compara con el pasanaku y da una razón estructural para no meter ahí el fondo de emergencia: la fecha de cobro no la elige uno y existe riesgo de contraparte.",
+        "Remite a preguntar condiciones y costos en la entidad, con preguntas concretas, sin inventar tasas, productos ni requisitos.",
+        "Aplica los tres filtros —imprevisto, urgente y necesario, los tres a la vez— con ejemplos propios que pasan y ejemplos que no pasan.",
+        "Establece quién puede abrir el fondo y deja la regla escrita y dicha en voz alta, con la excepción de salud que no se discute.",
+        "Dimensiona en meses del piso de gasto, no del ingreso, sube por etapas y justifica el número de meses por la irregularidad del ingreso y el número de fuentes independientes.",
+        "Da una salida honesta para el caso de no poder apartar nada: reserva no monetaria, tapar la fuga mayor y sumar ingreso, sin fingir que el ahorro resuelve un problema de ingreso."
+      ],
+      "explicacion": "La pregunta se responde bien cuando el diseño es de una casa concreta y cada decisión viene con su mecanismo, no con una recomendación suelta. Las tres piezas que separan una buena respuesta de una lista de buenos propósitos son: invertir el orden de las operaciones (apartar antes, no al final), poner fricción proporcional en vez de confiar en la voluntad, y dimensionar el fondo sobre el gasto con una definición de emergencia que se pueda aplicar sin discutir. Si la respuesta deja el ahorro para el final del mes, guarda la plata a un gesto de distancia, mete el fondo en un pasanaku, o inventa tasas, costos o productos concretos de alguna entidad, el método no se aplicó."
+    }
+  ]
+}

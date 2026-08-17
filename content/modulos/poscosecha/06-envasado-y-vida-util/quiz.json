@@ -1,0 +1,105 @@
+{
+  "preguntas": [
+    {
+      "id": "barrera-es-una-tasa",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace realmente un envase?",
+      "opciones": [
+        "Reduce la velocidad a la que entra o sale algo, sin llegar a impedirlo.",
+        "Salvo el vidrio y el metal, todos los materiales de envase son permeables a algo.",
+        "La pregunta de diseño no es si aguanta, sino si aguanta el tiempo que declaraste en la etiqueta.",
+        "Un buen envase aísla el producto por completo del oxígeno y del vapor de agua."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Ningún plástico aísla por completo: es una malla molecular por la que una molécula pequeña se disuelve, difunde y sale por el otro lado, despacio pero sin parar nunca. Por eso la barrera es una tasa y no un sí o un no, y una tasa solo se juzga contra un tiempo. Es un rate limiter, no un firewall."
+    },
+    {
+      "id": "oxigeno-autocatalitico",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el enranciamiento oxidativo y el oxígeno en un producto seco:",
+      "opciones": [
+        "Es una reacción en cadena de radicales libres que se alimenta de sus propios productos.",
+        "Tiene un periodo de inducción en el que no parece pasar nada y después se dispara: la curva es un codo, no una recta.",
+        "El oxígeno además decolora carotenoides y clorofilas y se lleva los volátiles del aroma.",
+        "Un producto vegetal seco está a salvo porque prácticamente no tiene grasa."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Tiene poca grasa, y con poca basta. Y como el deterioro es un codo y no una recta, probar el producto al mes y encontrarlo perfecto no dice nada sobre el sexto mes: los antioxidantes propios van neutralizando radicales hasta que se agotan, y ahí la curva se vuelve casi vertical."
+    },
+    {
+      "id": "vapor-deshace-conservacion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si un envase deja entrar vapor de agua durante meses, lo peor que puede pasar es que el producto seco pierda calidad: se apelmaza y pierde el crujido, pero sigue siendo seguro.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el punto que eleva esto de un problema de calidad a uno de inocuidad. La actividad de agua es lo único que mantiene detenidos a los mohos en un producto seco; si el agua entra, el producto cruza el umbral en el que los mohos vuelven a crecer. Un envase que falla no estropea el producto: deshace la conservación."
+    },
+    {
+      "id": "materiales-y-capas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la elección de material de envase:",
+      "opciones": [
+        "En un frasco de vidrio la fuga nunca está en el vidrio, está en la tapa.",
+        "Los polímeros que frenan bien el agua son apolares y dejan disolverse el oxígeno; los que frenan bien el oxígeno son polares y se estropean con la humedad.",
+        "El laminado multicapa existe porque ningún material único hace bien las dos barreras, y cada capa tiene una sola responsabilidad.",
+        "Dos bolsas plateadas por dentro y de aspecto idéntico tienen barreras equivalentes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Pueden diferir en dos órdenes de magnitud en barrera al oxígeno, y desde fuera no se ve: un laminado vale lo que valga su capa más débil, y la única forma de saberlo es preguntar la composición al proveedor. Además, la capa metalizada es de pocos nanómetros y se agrieta al doblarla, por lo que una bolsa metalizada no se dobla ni se guarda arrugada."
+    },
+    {
+      "id": "cierre-y-boton",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el cierre de un frasco envasado en caliente:",
+      "opciones": [
+        "El vacío lo hace la física del enfriamiento: el vapor del espacio de cabeza condensa y la presión interior cae.",
+        "Demasiado poco espacio de cabeza moja el borde y contamina la superficie de sellado; demasiado encierra un depósito de oxígeno.",
+        "El botón hundido es una verificación independiente de que el cierre ocurrió, y si salta el tarro no se abre y no se entrega.",
+        "Las tapas metálicas se pueden reutilizar mientras el disco no esté abollado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No se reutilizan: el compuesto sellador blando de la cara interna se deforma en el primer cierre y no recupera su forma, y esa es la causa número uno de tarros que parecen cerrados y no lo están. El frasco de vidrio sí se reutiliza; la tapa es consumible del proceso y se presupuesta como insumo."
+    },
+    {
+      "id": "etiqueta-y-senasag",
+      "tipo": "verdadero_falso",
+      "enunciado": "Declarar «seis meses» a secas es una afirmación incompleta: una vida útil sin condiciones de conservación declaradas no significa nada.",
+      "respuesta": true,
+      "explicacion": "Correcto. «Seis meses en envase cerrado, en lugar fresco, seco y oscuro; una vez abierto, refrigerar y consumir en pocos días» sí es una afirmación, porque el envase deja de trabajar en cuanto alguien lo abre y la etiqueta es el único sitio donde puedes decírselo. Y lo que la ley boliviana exige exactamente —campos obligatorios, qué productos necesitan registro sanitario— se pregunta en SENASAG antes de imprimir nada; nunca se pone un número de registro que no se tiene, porque eso es falsificar una autorización sanitaria."
+    },
+    {
+      "id": "vida-util-medida",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se estima una vida útil real?",
+      "opciones": [
+        "Apartando testigos de cada lote el día que se cierra, guardados como los va a guardar quien se los lleve.",
+        "Escribiendo los criterios de fallo antes de empezar, y no después de ver el resultado.",
+        "Pesando el envase cerrado cada mes: si gana peso está entrando agua y si pierde peso está fugando.",
+        "Copiando la fecha de un producto parecido del supermercado, que ya tiene el ensayo hecho."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Ese producto tiene otra actividad de agua, otro pH, otro envase, otro proceso y probablemente conservantes: lo único que comparte con el tuyo es el nombre. El pesado mensual es además la única medición no destructiva, y la prueba acelerada por Q10 sirve para ordenar opciones pero no para declarar una fecha, porque la extrapolación solo vale si el mecanismo de deterioro es el mismo a las dos temperaturas."
+    },
+    {
+      "id": "envasado-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña el sistema completo de envasado, etiquetado, lotes y vida útil de Rizoma del Sur para sus productos transformados, justificando cada decisión con el flujo que amenaza a cada producto y con el clima de Zanja Honda.",
+      "respuestaModelo": "Empiezo por reconocer que el envase no aísla, retrasa: es un rate limiter cuya tasa de fuga tengo que comparar contra la fecha que voy a declarar. Por la barrera entra oxígeno, entra o sale vapor de agua, entra luz y sale material del propio envase hacia el alimento, y cada producto del catálogo falla principalmente por uno de esos flujos.\n\nEl ají dulce seco es el caso más exigente: pierde color por fotooxidación, pierde aroma porque el oxígeno se lleva los volátiles y recupera humedad porque es higroscópico. Lo guardo entero y no molido, porque eso divide la superficie expuesta y es la medida más barata que existe, y lo muelo solo al entregar. Va en bolsa laminada de buena barrera, en formato pequeño, sellada con plancha sobre papel de horno, guardada plana y sin doblar dentro de una caja cerrada del galpón: la caja resuelve la luz sin gastar nada, y el no doblar evita agrietar la capa metalizada, que tiene pocos nanómetros de espesor.\n\nEl culantro seco pierde exactamente lo que se le pide, los volátiles del aroma: frasco de vidrio recuperado con tapa nueva, lleno hasta arriba para dejar poco espacio de cabeza, a oscuras y en formato pequeño porque una vez abierto el reloj corre. El gandul seco desgranado tiene un problema biológico y no químico, los gorgojos, así que va en vidrio bien cerrado, que los excluye como en el banco de semillas del módulo dieciocho, aunque una bolsa laminada sería mejor barrera al vapor: cada producto se protege contra su enemigo principal. Las conservas húmedas, mermelada y encurtido de ají, van en frasco recuperado con tapa nueva siempre, envasadas en caliente para que el vapor del espacio de cabeza condense al enfriar y forme el vacío, con el espacio de cabeza justo y con revisión del botón antes de etiquetar; en el encurtido la etiqueta declara peso escurrido, porque la salmuera no es lo que se come.\n\nEl vidrio recuperado se reutiliza sin problema, revisando la boca con el dedo por si hay muescas y esterilizando; las tapas metálicas no se reutilizan nunca, porque el compuesto sellador se deforma en el primer cierre. Y jamás un recipiente que tuvo agroquímico, combustible o detergente.\n\nEl día de envasado se decide en el calendario, no en la mesa: al cerrar un envase estoy encerrando el aire de ese momento con su humedad, así que envasar producto seco una mañana de lluvia de enero es sellar aire al noventa por ciento de humedad dentro de la bolsa. El seco se envasa en temporada seca o en una tarde despejada, y si no hay más remedio, con desecante dentro.\n\nCada envase lleva etiqueta con qué es en lenguaje común, ingredientes en orden decreciente de peso, alérgenos, contenido neto y peso escurrido cuando corresponde, quién lo hizo y cómo encontrarlo, código de lote, fecha y condiciones de conservación, incluida la instrucción de después de abierto. No pongo afirmaciones de salud ni un número de registro sanitario que no tengo, porque eso último es falsificar una autorización. Lo que la ley exige exactamente lo pregunto en la oficina departamental de SENASAG antes de imprimir nada, con el caso concreto en la mano, y anoto cada respuesta con nombre y fecha; ninguna cifra de internet vale como fuente.\n\nEl código de lote es legible por una persona —producto, fecha en seis dígitos y tanda del día— y ata cada envase a una cama del terreno. En el cuaderno del galpón, cada línea lleva código, producto, de qué cama y de qué cosecha salió la materia prima, quién cosechó, kilos de entrada, parámetros del proceso, envases obtenidos, envases descartados y a quién se entregó cada uno. Ese último campo es el que convierte el cuaderno en un sistema de aviso: un retiro aquí son ocho llamadas, y solo se pueden hacer si están escritos los ocho nombres.\n\nLa vida útil la mido, no la invento. Aparto testigos de cada lote el día que se cierra, marcados con código y peso, guardados como los va a guardar quien se los lleve y no en el mejor rincón de la casa. Escribo los criterios de fallo antes de empezar —apelmazado, pérdida de color, olor a rancio, cualquier moho, botón saltado— y abro uno al mes, a los dos, a los tres y a los seis, anotando fecha, peso antes de abrir, aspecto, olor, textura y veredicto. Guardo uno de cada lote hasta pasada la fecha declarada. Declaro menos de lo que medí, amplío después con datos de varios lotes y no copio la fecha de ningún producto del supermercado.\n\nTodo el sistema está elegido para poder hacerse en una casa del barrio: frascos recuperados, tapas nuevas, una plancha de ropa, una balanza de cocina, un rotulador indeleble y un cuaderno. Ninguna máquina.",
+      "criterios": [
+        "Plantea el envase como una tasa de fuga que se compara contra la fecha declarada, no como una protección absoluta.",
+        "Identifica para cada producto cuál de los cuatro flujos es el que lo amenaza principalmente.",
+        "Guarda el ají entero y no molido, justificándolo por la superficie expuesta al oxígeno.",
+        "Elige bolsa laminada para el seco y vidrio para el gandul, y explica por qué el criterio del gandul es el gorgojo y no el vapor.",
+        "Usa frasco recuperado pero tapa nueva siempre, con la razón del compuesto sellador deformado.",
+        "Explica el vacío de tapa como física del enfriamiento y usa el botón como verificación antes de entregar.",
+        "Resuelve la luz con caja cerrada en vez de con envase caro.",
+        "Decide el día de envasado por el calendario, porque se sella el aire húmedo del momento.",
+        "Lista los campos de la etiqueta e incluye las condiciones de conservación y la instrucción de después de abierto.",
+        "Remite a SENASAG lo legal y descarta afirmaciones de salud y cualquier número de registro que no se tenga.",
+        "Define un código de lote legible que ata el envase a una cama, y anota también a quién se entregó cada envase.",
+        "Estima la vida útil con testigos, criterios escritos de antemano, control de peso y una fecha declarada por debajo de la medida.",
+        "Mantiene todo replicable en una casa del barrio, sin equipo que haya que comprar."
+      ],
+      "explicacion": "La respuesta tiene que unir las tres mitades de la lección: el envase elegido contra un flujo concreto, la etiqueta como afirmación sostenible con lo legal remitido a la autoridad, y la fecha como resultado de una medición con testigos. Si falta cualquiera de las tres, el sistema no funciona: un envase perfecto con una fecha inventada transfiere el riesgo al que confía en ti, y una etiqueta impecable sin código de lote convierte cualquier reclamo en un reporte de bug que no se puede reproducir."
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "esquema-vs-cableado",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué diferencia hay entre un esquema eléctrico y un diagrama de cableado?",
+      "opciones": [
+        "El esquema conserva la topología —qué está unido con qué— y desprecia a propósito dónde está cada cosa.",
+        "El diagrama de cableado dibuja las piezas donde están de verdad, con colores y números de borne, y sirve para armar y desarmar.",
+        "Dos esquemas del mismo aparato pueden verse muy distintos y ser idénticos, siempre que cada nodo tenga las mismas patas.",
+        "El esquema es una versión simplificada del diagrama de cableado, con menos información sobre las conexiones."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El esquema no tiene menos información sobre las conexiones: tiene exactamente la misma, y de hecho es la representación que la muestra mejor. Lo que sacrifica es la geometría —dónde está físicamente cada pieza y por dónde pasa cada cable—, que es información de montaje y no de funcionamiento. Por eso el esquema explica y el diagrama de cableado ejecuta: son complementarios, no uno la versión pobre del otro."
+    },
+    {
+      "id": "que-es-un-nodo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué afirmaciones sobre un nodo son correctas?",
+      "opciones": [
+        "Todos los puntos de un mismo nodo están a la misma tensión, aunque en el dibujo estén en esquinas opuestas de la hoja.",
+        "Un nodo puede estar formado por un cable, por una pista de cobre, por un tornillo o por la chapa del aparato.",
+        "Con el multímetro en continuidad se pueden descubrir los nodos de un aparato del que no se tiene ningún esquema.",
+        "Cuanto más largo es el cable que une dos puntos, más se separan sus tensiones y más dejan de ser el mismo nodo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La longitud no convierte un cable en un componente. Medio metro de cobre tiene centésimas de ohmio, y frente a los cientos o miles de ohmios de cualquier componente eso es cero, así que la diferencia de tensión entre sus extremos también es cero. Cuando aparece una caída apreciable sobre un tramo de cable, eso no es normal por ser largo: es la avería, y hay resistencia donde no debería haber ninguna."
+    },
+    {
+      "id": "caida-sobre-el-conductor",
+      "tipo": "verdadero_falso",
+      "enunciado": "Poner las dos puntas del multímetro en los dos extremos de una misma unión, con el aparato encendido y consumiendo, debe dar prácticamente cero voltios.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es la medición que resuelve la mitad de las averías. Los dos extremos de una unión sana son el mismo nodo, así que la caída de tensión entre ellos es casi cero. Cualquier otra lectura señala resistencia donde no debería haberla: un borne flojo, una soldadura fría, un contacto oxidado, un cable partido por dentro. Además se hace en caliente, con el aparato trabajando, que es cuando aparecen los fallos que desaparecen apenas se desarma, y caza contactos malos que la prueba de continuidad no detecta porque en continuidad circula una corriente ridícula."
+    },
+    {
+      "id": "masa-comun",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un sensor en el lote y un controlador en el galpón, cada uno con su alimentación, unidos por un solo cable de señal. Las lecturas son basura. ¿Qué es correcto?",
+      "opciones": [
+        "Falta un segundo cable que una las dos masas: sin referencia común, cada equipo mide desde un cero distinto.",
+        "Sin unir las masas tampoco hay circuito cerrado, así que no existe un camino de vuelta para la corriente.",
+        "En tiradas largas conviene llevar la señal junto a su propia masa, porque la caída sobre el cable de masa desplaza el cero.",
+        "Basta con conectar la chapa de cada aparato a una varilla de tierra en su extremo para que compartan referencia."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Dos varillas de tierra separadas no son la misma referencia: el terreno tiene resistencia, y entre dos jabalinas alejadas puede haber una diferencia de tensión apreciable. La puesta a tierra es una medida de seguridad —llevar al terreno la corriente de una falla— y no un cable de señal. La masa se comparte con un conductor entre los dos equipos, igual que dos albañiles miden desde la misma estaca."
+    },
+    {
+      "id": "protoboard",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si un montaje probado en protoboard funciona bien, puede dejarse instalado en la protoboard mientras no se toque.",
+      "respuesta": false,
+      "explicacion": "Falso. La protoboard fabrica nodos temporales y sus contactos son flojos por diseño: la resistencia de contacto crece cada vez que se mete y se saca una pata, un par de amperios recuecen las grapas y la humedad y el polvo del galpón terminan el trabajo. El resultado son fallos intermitentes que parecen del circuito y no lo son. Si el montaje va a quedar puesto, se pasa a placa perforada soldada o a cables prensados con terminal dentro de una caja cerrada."
+    },
+    {
+      "id": "soldadura",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es cierto sobre soldar bien?",
+      "opciones": [
+        "El estaño tiene que mojar el metal y formar aleación con el cobre; una gota apoyada encima no es una soldadura.",
+        "Se calienta la unión y se lleva el estaño del lado contrario a la punta: si hay que derretirlo sobre la punta, la pieza está fría.",
+        "Una soldadura buena queda brillante y cóncava, y una fría queda opaca, granulada y con forma de bola.",
+        "La soldadura sirve además como sujeción mecánica, así que un cable soldado ya no necesita nada que lo sostenga."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El estaño es blando y se fatiga: no es un elemento de sujeción. Si un cable soldado queda tirando o moviéndose, la unión se rompe con el tiempo. Por eso el orden correcto es siempre primero mecánico y después eléctrico —empalme trenzado o terminal prensado, y un alivio de tracción que impida que el esfuerzo llegue nunca al cobre—, con la soldadura asegurando el contacto, no sosteniendo el cable."
+    },
+    {
+      "id": "intemperie",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué una unión con cinta aislante común falla a la intemperie en Santa Cruz?",
+      "opciones": [
+        "El adhesivo se ablanda con el calor, la cinta se desliza y aparece un labio por donde entra agua.",
+        "El agua sube por los canales capilares entre los hilos del cable, así que el cobre se corroe lejos de donde entró.",
+        "La corrosión sube la resistencia, eso calienta, y el calor acelera la corrosión: es una realimentación positiva.",
+        "El problema es solo estético, porque el cobre verde conduce igual que el cobre limpio."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El cobre corroído no conduce igual: la corrosión come sección conductora, y menos sección es más resistencia justo en ese punto. Esa resistencia disipa calor, el calor acelera la corrosión y el lazo se retroalimenta hasta el empalme carbonizado y, con corriente suficiente, el fuego. El verde en un borne no es suciedad: es el aviso de que la unión está en marcha hacia el fallo."
+    },
+    {
+      "id": "aplicacion-rizoma",
+      "tipo": "abierta",
+      "enunciado": "En Rizoma del Sur hay un controlador de riego en el galpón, sensores de humedad repartidos por los doce lotes y cajas de conexión a la intemperie. Un sensor del fondo empezó a dar lecturas absurdas y una válvula deja de responder de a ratos. Explicá cómo usarías el concepto de nodo y de masa para diagnosticar, qué medirías exactamente y en qué orden, y cómo dejarías reparadas y documentadas esas uniones para que aguanten la temporada de lluvias y para que otro vecino pueda repararlas sin vos.",
+      "respuestaModelo": "Antes de tocar nada, el trabajo es de papel. Levanto el esquema de lo que hay: fuente, controlador, salida a la válvula, línea de cada sensor y masa común. Numero los nodos y etiqueto cada cable en sus dos extremos con cinta y marcador indeleble, con el mismo número en los dos lados. Si no existe esquema, lo construyo con el multímetro en continuidad tocando pares de puntos: todo lo que pita entre sí es un nodo, y en veinte minutos tengo la lista de conexiones, que es el esquema sin dibujo. Sobre esa hoja escribo qué espero medir en cada nodo —doce voltios acá, cinco allá, cero después del fusible si está quemado— y recién entonces mido, porque la avería va a estar entre el último punto donde la realidad coincidió con mi predicción y el primero donde dejó de coincidir.\n\nPara el sensor que lee absurdo, la primera sospecha es la masa y no el sensor. Un sensor a cuarenta o cincuenta metros del galpón, con alimentación propia, entrega su voltaje respecto de su cero; si ese cero no es el mismo que el del controlador, el controlador escucha desde otra referencia y el número que interpreta no significa nada. Compruebo que exista un conductor de masa entre los dos y que la señal viaje junto a su propia masa, no sola. Después mido la caída sobre esa masa con el sistema trabajando: pongo las dos puntas en los dos extremos del conductor de masa, que deberían ser el mismo nodo y dar casi cero. Si aparecen décimas de voltio, ese desplazamiento del cero ya falsea la lectura, y las causas típicas son un borne flojo, un empalme corroído dentro de una caja o un cable partido por dentro. Si la caída es limpia y la lectura sigue loca, ahí sí sospecho del sensor o del cable, y para tiradas largas la solución de fondo es llevar señal digital en vez de un voltaje crudo.\n\nPara la válvula que responde de a ratos, el problema es intermitente y eso apunta a una unión a medias antes que a un componente muerto. Mido en caliente, con el sistema intentando abrir: caída sobre cada tramo del camino, desde la salida del controlador hasta la bobina, poniendo las puntas a los dos lados de cada unión, cada borne y cada conector. Donde aparezcan medio voltio o dos, ahí está. Los sospechosos habituales son una soldadura fría en la placa alrededor de un conector o de una pieza pesada, un borne de bornera que el calor y el surazo aflojaron con la dilatación, y un empalme con verde de corrosión dentro de una caja que entró agua. En la placa, resoldar las uniones de los conectores y de los componentes grandes con estaño fresco cuesta cero y arregla más aparatos que cualquier cambio de pieza.\n\nLa reparación se hace con el orden correcto: primero mecánico, después eléctrico. Empalme trenzado o terminal prensado con la pinza, nunca cable de muchos hilos desnudo bajo un tornillo —para eso está la puntera hueca— y nunca la punta estañada bajo un tornillo, porque el estaño fluye en frío y el contacto se afloja solo. Si suelda, la unión se calienta primero y el estaño se lleva del lado contrario a la punta, y al terminar se mira el brillo: brillante y cóncava es buena, opaca y granulada es fría y se rehace. Después el aislamiento: termorretráctil con adhesivo interior, ensartado antes de hacer la unión, y encima cinta autofundente, que no tiene pegamento y se fusiona consigo misma; la cinta aislante común solo va por fuera como protección mecánica y contra el sol, nunca como sello, porque con cuarenta grados dentro de una caja el adhesivo corre y la cinta se desenrolla sola.\n\nLa geometría cierra el trabajo. Caja cerrada montada en un poste a la altura de la cintura, nunca a ras de suelo donde llega el barro; entradas hacia abajo con prensacables; lazo de goteo antes de cada entrada, para que el agua que baja por el cable gotee ahí y no siga adentro; alivio de tracción en cada cable, y la prueba final que es tirar fuerte: si algo se mueve, se rehace. Todas las cajas iguales por dentro, con los mismos colores y números, negro para la masa y rojo para el positivo.\n\nY la parte que hace que esto sirva a la comunidad y no solo a mí: la hoja de nodos plastificada dentro de la puerta del tablero, con lo que se cambió, en qué nodo y con qué fecha; una revisión anual de todas las uniones de exterior antes de octubre, buscando verde en el cobre y apretando los tornillos que la dilatación aflojó; y una tarde de práctica con los vecinos haciendo veinte uniones sobre chatarra y comparándolas a la luz, porque el ojo aprende a ver el brillo antes de que la mano aprenda a hacerlo.",
+      "criterios": [
+        "Empieza por levantar el esquema o la lista de conexiones y por etiquetar los cables en ambos extremos.",
+        "Usa la prueba de continuidad para descubrir los nodos cuando no hay documentación.",
+        "Escribe las tensiones esperadas antes de medir y acota la avería entre la última coincidencia y la primera discrepancia.",
+        "Sospecha de la masa antes que del sensor y explica que cada equipo mide desde su propio cero.",
+        "Propone medir la caída sobre el conductor con las dos puntas en la misma unión y con el sistema funcionando.",
+        "Reconoce que la intermitencia apunta a una unión a medias (soldadura fría, borne flojo, empalme corroído) y no a un componente muerto.",
+        "Menciona resoldar las uniones de conectores y piezas pesadas como primera medida barata en la placa.",
+        "Aplica el orden mecánico antes que eléctrico: trenzado o terminal prensado, puntera hueca, nada de estañar bajo tornillo.",
+        "Distingue una soldadura buena de una fría por brillo y forma, y rehace la fría.",
+        "Cierra con capas que hacen trabajos distintos: termorretráctil con adhesivo y cinta autofundente, con la cinta común solo por fuera.",
+        "Incluye la geometría de la caja: entradas hacia abajo, prensacables, lazo de goteo, altura sobre el barro y alivio de tracción con prueba de tirón.",
+        "Deja documentación accesible para la comunidad y una revisión anual antes de octubre, más práctica compartida con vecinos."
+      ],
+      "explicacion": "Las dos averías del enunciado son de familias distintas y por eso el orden importa. La lectura absurda es casi siempre un problema de referencia —dos ceros distintos— y no de sensor, así que se resuelve entendiendo la masa como acuerdo compartido. La válvula intermitente es un problema de unión a medias, y solo se caza midiendo la caída sobre cada unión con el sistema trabajando, porque en frío y sin corriente el contacto malo engaña a la prueba de continuidad. Y lo que convierte la reparación en algo duradero no es el componente que se cambia sino cómo se cierra la unión y qué queda escrito para el que venga después."
+    }
+  ]
+}

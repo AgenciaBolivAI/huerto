@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "alfabetizacion-funcional",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es la alfabetización funcional y qué consecuencias tiene para quien prepara material?",
+      "opciones": [
+        "Es la capacidad de extraer información de un texto real y actuar sobre ella sin que nadie ayude, que no es lo mismo que declarar en un formulario que se sabe leer.",
+        "No es una variable de dos valores: leer de corrido, sostener un párrafo, leer una tabla de doble entrada y manejar la parte numérica son peldaños muy separados.",
+        "Como casi nadie declara que no lee bien, se diseña de modo que la pregunta no haga falta y el texto sea un canal redundante y no obligatorio.",
+        "Conviene comprobarla al inicio de cada taller pidiendo a alguien que lea en voz alta la ficha, para saber a qué nivel hablar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Hacer leer en voz alta delante de otros es exactamente lo que la lección prohíbe: no se diagnostica a nadie. La vergüenza asociada a no leer es real y una comprobación pública destruye la relación antes de empezar; además es innecesaria, porque si el texto nunca es el único canal de algo importante, saber quién lee y quién no deja de ser un dato que necesites."
+    },
+    {
+      "id": "acuse-de-recibo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Que alguien reciba tu hoja impresa, la doble y la guarde en el bolsillo con una sonrisa prueba que hubo acuse de recibo, no que hubo procesamiento.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es la parte incómoda: como el servicio que responde 200 OK sin parsear el payload, el fallo es silencioso. No llega ningún aviso de «formato no soportado»; te enteras tres semanas después, con el trasplante hecho mal. Por eso la regla de diseño es no mandar nunca lo crítico en un formato único."
+    },
+    {
+      "id": "apoyos-de-memoria",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué caracteriza a un buen apoyo de memoria?",
+      "opciones": [
+        "Que el objeto codifique la medida: la información deja de estar en un papel y pasa a estar en la forma de la cosa, que es donde no se pierde.",
+        "Que se juzgue no por si se entiende, sino por qué tan difícil hace equivocarse teniéndolo delante.",
+        "Que lo importante viaje por tres canales redundantes: dicho, mostrado y depositado en un objeto.",
+        "Que el instructivo esté impreso en letra grande y con los doce pasos numerados, para que no falte ninguno."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El instructivo grande sigue siendo texto, y el problema no era el tamaño de la letra: cinco fotos numeradas funcionan donde doce pasos escritos no funcionan. La vara con muescas es el modelo del apoyo bien hecho porque hace el estado inválido imposible de construir, igual que un tipo que no admite el valor equivocado; con una instrucción escrita, en cambio, basta leer mal, olvidar o no leer."
+    },
+    {
+      "id": "jerga-y-registro",
+      "tipo": "opcion_multiple",
+      "enunciado": "Estás explicando la capacidad de intercambio catiónico a un vecino. ¿Cómo se maneja el registro?",
+      "opciones": [
+        "Se traduce el mecanismo a palabras comunes —cuánta comida se queda agarrada en esa tierra sin que la lluvia se la lleve— y solo después se añade el nombre técnico.",
+        "El nombre técnico se enseña igual, porque es la llave para buscar más información y lo que impide que le vendan cualquier cosa en la tienda de insumos.",
+        "El nombre local de la planta va primero y el científico se guarda para la etiqueta: tu trabajo es mapear el vocabulario del otro al tuyo, no corregir el suyo.",
+        "Se omite el concepto entero y se entrega la instrucción práctica: ponerle esto cada quince días."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Quitar el porqué y dejar la receta parece amable y es destructivo: funciona hasta la primera vez que cambian las condiciones, y entonces falla sin sus condiciones de borde, de modo que la persona no puede saber si falló la receta o si falló ella. Y una receta que falla quema confianza mucho más rápido de lo que la construye un consejo que funciona. Se simplifica el vocabulario, nunca el mecanismo."
+    },
+    {
+      "id": "desconfianza-racional",
+      "tipo": "verdadero_falso",
+      "enunciado": "La desconfianza del vecino ante un consejo nuevo es sobre todo un rasgo cultural de resistencia al cambio, que se vence insistiendo con buenos argumentos.",
+      "respuesta": false,
+      "explicacion": "Falso, y creerlo es el error más caro del módulo. Hay una asimetría de costos real: si el consejo falla, tú pierdes prestigio y él pierde la temporada, sin vuelta atrás posible. Y hay un historial: quien vio al vendedor que llamaba asesoría a su venta, al proyecto que se fue con el financiamiento y al insumo regalado que se acabó tiene un prior bien calibrado. Insistir es justamente lo que empeora el cálculo."
+    },
+    {
+      "id": "como-se-gana",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Con qué se responde a una desconfianza bien calibrada?",
+      "opciones": [
+        "Con evidencia local: para quien decide sobre su parcela pesa más lo que le pasó a él o a un vecino en las mismas condiciones que lo que dice un manual, y eso es rigor y no ignorancia.",
+        "Bajando el costo de adopción: una fracción pequeña, con el resto intacto como testigo, reversible y sin tocar lo que da de comer.",
+        "Declarando los fracasos propios y usando el «no sé» con el nombre de a quién preguntar cuando el tema es de trámites, permisos, plazos o precios.",
+        "Dando una cifra aproximada de rendimiento cuando la piden, para no quedar mal delante del grupo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cifra aproximada es el peor negocio posible: una sola cifra inventada que alguien comprueba y encuentra falsa borra todo lo demás, incluso lo que era correcto, porque el otro no puede saber qué parte de lo tuyo era del mismo tipo. Y quien solo muestra éxitos es indistinguible de un vendedor: mostrar la fila muerta es información en contra de tu propio interés, y por eso vale como señal."
+    },
+    {
+      "id": "gratis-y-dependencia",
+      "tipo": "verdadero_falso",
+      "enunciado": "Mientras el proyecto siga en marcha, regalar fertilizante y regalar semilla o conocimiento producen el mismo efecto sobre la comunidad.",
+      "respuesta": false,
+      "explicacion": "Falso. El conocimiento, la semilla y el esqueje se multiplican en manos de quien los recibe y siguen existiendo cuando el proyecto ya no está; el fertilizante y el plaguicida se acaban, y si el sistema que enseñaste dependía de ellos, lo que dejaste no fue capacidad sino una dependencia con fecha de vencimiento. Un proyecto que crea dependencia y luego se retira deja más desconfianza de la que había antes de llegar."
+    },
+    {
+      "id": "ensenar-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña la política de comunicación de Rizoma del Sur hacia los vecinos de Zanja Honda: qué canales usas y por qué, qué apoyos de memoria dejas, cómo ofreces una práctica nueva, qué haces con tus fracasos y cómo explicas que todo esto sea gratuito.",
+      "respuestaModelo": "Parto de dos supuestos que asumo como caso normal y no como excepción: que la persona que tengo delante puede no leer con soltura, y que no tiene ninguna razón previa para creerme.\n\nSobre los canales, la regla es que **nada importante existe solo en papel**. Todo lo que quiero transmitir viaja en tres formas a la vez: dicho en la visita, visible en el terreno y depositado en un objeto que se puede prestar. No es repetir por inseguridad, es no tener un punto único de fallo en el único sitio donde no puedo monitorear nada. El texto queda como canal redundante: si alguien lee, mejor; si no, no se pierde nada crítico.\n\nEn lo oral aplico el techo de la memoria de trabajo. Tres cosas por sesión, elegidas por mí antes de empezar, y no veinte. La frase clave se dice igual, con las mismas palabras, tres veces a lo largo de la tarde, porque para quien aprende cada variación señala que algo cambió. Uso números redondos y referentes del cuerpo —un palmo, hasta el segundo nudillo— y no centímetros que exigen una herramienta que quizá no hay. Y cada instrucción trae dentro su criterio de comprobación, de modo que la persona pueda verificarla sola en su terreno, sin mí delante.\n\nLos apoyos de memoria son objetos. La vara de siembra marcada por especie —yautía, culantro, ají dulce, y el gandul aparte porque su marco es otro— es la ficha de cultivo convertida en madera: se presta, se copia cortando otro palo del mismo largo y no se puede leer mal. La botella cortada a la marca fija la dosis. La cinta de color dice «en prueba, no tocar» sin escribir nada. Y el teléfono es el canal oral real de la zona: notas de voz de dos minutos, donde caben el qué, el porqué y la condición de borde, y series de cinco fotos numeradas para cada tarea. Como los datos se pagan, todo se graba corto y además se deja impreso en el vivero para quien prefiera venir a mirarlo.\n\nEn lengua y registro, uso los nombres de aquí. Si a la yautía se le dice gualusa, en esa conversación es gualusa, y el nombre científico se reserva para la etiqueta, donde hace trazabilidad. La jerga técnica la traduzco a palabras comunes sin quitar el mecanismo, y solo después añado el término, porque el término es la llave para buscar información y para no comprar cualquier cosa en la tienda de insumos. Nunca corrijo el vocabulario del otro: lo mapeo al mío.\n\nCuando ofrezco una práctica nueva, la ofrezco en su versión de costo de adopción mínimo. No propongo cambiar la parcela: propongo una cama con su mitad testigo, con material del vivero, sin comprar nada y sin tocar lo que le da de comer este año. La mitad intacta no es timidez, es lo que hace interpretable la comparación cuando el año viene raro. Si no funciona, perdió una cama; si funciona, lo vio en su propio suelo y ya no necesita creerme.\n\nLa evidencia que ofrezco es local. Sé que para quien decide sobre su parcela pesa más lo que le pasó a él, o a un vecino en las mismas condiciones, que cualquier manual, y sé que eso es rigor: un ensayo de otro clima y otro suelo no transfiere sus conclusiones. Por eso el trabajo es producir evidencia aquí, con estas arcillas y estas lluvias, y anotar sus condiciones para que otro pueda repetirla.\n\nCon los fracasos hay una decisión tomada: se muestran. El almácigo perdido por un surazo mal previsto, la especie que no prendió en el lote más bajo, el riego calculado de más. Se enseñan con fecha y con la explicación de qué falló. Eso es lo que me separa de un vendedor, y además ahí están las condiciones de borde reales del sitio. Y cuando preguntan por trámites, permisos, plazos o precios de mercado, la respuesta es «no sé» más el nombre de a quién preguntar: el municipio, la entidad sanitaria competente, un contador, la institución de investigación agropecuaria. Una sola cifra inventada que resulte falsa borraría todo lo demás.\n\nSobre lo gratuito, respondo la pregunta del truco antes de que la hagan, con una frase que digo siempre igual: esto es gratuito, no vendemos el curso, no pedimos datos ni afiliación ni apoyo político, y lo que se regala es semilla, esqueje y conocimiento, nunca insumos que se acaben y dejen a alguien colgado. Cuando sí vendemos algo, como plantines, lo digo en la misma frase en que recomiendo plantar, porque declarar el interés propio cuesta cinco segundos y que lo descubran después confirma la sospecha para siempre. La reciprocidad se paga en la moneda del proyecto: semilla devuelta al banco comunitario, una mañana de trabajo o enseñarle a otro.\n\nY me vigilo el paternalismo con tres preguntas después de cada conversación: quién habló más, quién decidió qué se iba a probar y qué me llevé yo. Si no me llevé nada, no hubo enseñanza. Antes de corregir una práctica local averiguo por qué existe, porque suele ser código de producción con historia; y cuando estoy convencido de que hace daño, no discuto por autoridad: pongo media cama con la práctica de siempre y media con la propuesta, y que decida lo que se vea a los dos meses. Ese mecanismo también me corrige a mí.",
+      "criterios": [
+        "Separa el fallo de formato del fallo de confianza y los trata con herramientas distintas.",
+        "Establece la redundancia de canal: lo importante se dice, se muestra y se deposita en un objeto.",
+        "Aplica el límite de la memoria de trabajo: tres ideas por sesión y repetición literal de la frase clave.",
+        "Incluye criterios de comprobación verificables sin el instructor presente y referentes del cuerpo en vez de unidades que exigen herramienta.",
+        "Propone apoyos de memoria concretos que no dependen del texto (vara marcada, botella, cinta de color, fotos numeradas, nota de voz).",
+        "Usa el nombre local de las plantas y reserva el científico para la etiqueta y la trazabilidad, sin corregir el vocabulario ajeno.",
+        "Traduce la jerga a palabras comunes conservando el mecanismo y enseña el término técnico después, justificando para qué sirve.",
+        "Ofrece la práctica nueva con costo de adopción mínimo: fracción pequeña, testigo intacto, reversible y sin comprar nada.",
+        "Justifica la evidencia local por transferencia de condiciones y no por deferencia, y asume producirla en el sitio.",
+        "Declara los fracasos propios con fecha y causa, y usa el «no sé» con el nombre de a quién preguntar en trámites, permisos y precios.",
+        "Explica el encuadre gratuito con quién paga, qué se espera a cambio y qué no se pedirá nunca, y distingue regalar lo reproducible de regalar lo consumible.",
+        "Incluye una comprobación explícita del propio paternalismo y resuelve los desacuerdos con una prueba comparada en vez de con autoridad."
+      ],
+      "explicacion": "La respuesta completa no es una lista de buenas intenciones: cada decisión sale de un mecanismo. Los tres canales salen de la tolerancia a fallos; las tres ideas por sesión, del techo de la memoria de trabajo; el testigo intacto, de que sin él la comparación no significa nada; los fracasos declarados, de que la señal creíble es la que va en contra del interés propio; y la prueba comparada, de que la evidencia decide mejor que la autoridad y encima corrige al que enseña."
+    }
+  ]
+}

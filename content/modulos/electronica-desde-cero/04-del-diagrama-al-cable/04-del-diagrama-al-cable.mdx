@@ -1,0 +1,401 @@
+Ya sabes qué es la corriente, ya mides con el multímetro y ya reconoces los componentes. Falta el
+paso que nadie enseña y que separa a quien entiende de quien arregla: **el papel y el cobre son dos
+idiomas distintos, y hay que traducir en las dos direcciones.**
+
+Un esquema es una hoja limpia, con líneas rectas. El aparato es un nudo de cables desteñidos, uno de
+los cuales cruza por encima de otros seis y termina en un conector escondido bajo la placa. Parecen no
+tener nada que ver, y son **exactamente la misma información**.
+
+La segunda mitad de la lección es el otro lado del oficio: cómo se hace una unión que dure diez años a
+la intemperie, porque **la mayoría de las averías que vas a encontrar no están en ningún componente,
+están en las uniones.**
+
+## El esquema no es un dibujo del aparato
+
+Hay dos dibujos distintos y confundirlos hace perder tardes enteras.
+
+El primero es
+el <Termino slug="esquema-electrico">esquema eléctrico</Termino>: dice **qué está conectado con qué**,
+y nada sobre dónde está cada cosa. Sus líneas no son cables reales: son la afirmación "estos dos
+puntos son el mismo punto eléctrico". El esquema conserva la **topología** —la estructura de las
+conexiones— y desprecia la geometría a propósito, porque la geometría cambia de un aparato a otro y la
+topología es lo que hace que funcione.
+
+El segundo es
+el <Termino slug="diagrama-de-cableado">diagrama de cableado</Termino>, que hace lo contrario: dibuja
+las piezas donde están de verdad, con el color de cada cable y el número de cada borne. No sirve para
+entender el aparato; sirve para armarlo y para volver a encontrar el cable marrón entre otros cinco
+marrones. **El esquema explica, el diagrama de cableado ejecuta**, y el orden de trabajo es ese.
+
+<Analogia titulo="Analogía de sistemas">
+El esquema es el código fuente y el aparato es el binario compilado: uno está ordenado y se lee de
+arriba abajo, el otro es un bloque ilegible que hace exactamente lo mismo. No son dos programas, son
+el mismo programa en dos representaciones. **Reparar sin esquema es depurar sin código fuente.** Y hay
+una tercera pieza, que es el corazón de esta lección: dos nombres de variable distintos pueden apuntar
+al mismo dato en memoria. En electrónica pasa igual, y eso es un nodo.
+</Analogia>
+
+## El alfabeto mínimo
+
+Los símbolos son un alfabeto pequeño: con doce entras en casi cualquier esquema. La mala noticia es
+que **hay dos familias de símbolos**, la americana y la europea, y muchos esquemas las mezclan. La
+resistencia es zigzag en una y rectángulo liso en la otra: no memorices un solo dibujo.
+
+| Componente | Cómo se dibuja | Cómo lo reconoces |
+| --- | --- | --- |
+| Pila o batería | Rayas paralelas alternadas, larga y corta | La raya larga es el positivo |
+| Resistencia | Zigzag o rectángulo liso | Dos patas, sin marca de polaridad |
+| Condensador | Dos rayas paralelas enfrentadas | Si una es curva o hay un `+`, tiene polaridad |
+| Diodo y LED | Triángulo contra una barra; el LED suma flechas | La corriente pasa hacia la barra |
+| Interruptor | Una línea que se levanta y deja un hueco | Se dibuja siempre en reposo |
+| Fusible | Rectángulo estrecho atravesado por una línea | Va pegado a la fuente, no al aparato |
+| Relé | Una bobina y, aparte, unos contactos | Bobina y contactos quedan lejos en el papel |
+| Masa | Tres rayas horizontales decrecientes | Aparece repetida muchas veces, a propósito |
+| Unión de cables | Un punto gordo en el cruce | Sin punto, los cables se cruzan y no se tocan |
+
+Una advertencia vale más que la tabla entera: **el punto en el cruce es la diferencia entre dos
+circuitos distintos**, y en esquemas viejos o mal fotocopiados ese punto se pierde. Cuando dudes,
+sigue cada línea entera de extremo a extremo.
+
+## El nodo: dos puntos lejos en el papel que son el mismo punto
+
+Acá está la idea que sostiene todo lo demás: **un cable no es un componente, es un signo igual.**
+
+Medio metro de cable de cobre tiene una <Termino slug="resistencia-electrica">resistencia</Termino> de
+centésimas de ohmio. Frente a los cientos o miles de ohmios de cualquier componente, eso es cero. Y si
+la resistencia entre dos puntos es cero, la diferencia de tensión también: son el mismo punto
+eléctrico, aunque en el dibujo estén en esquinas opuestas y en el aparato haya cuarenta centímetros de
+cable de por medio.
+
+A ese conjunto de puntos unidos se lo llama un <Termino slug="nodo-electrico">nodo</Termino>. Puede
+tener dos patas o quince, y puede estar formado por un cable, una pista de cobre, un tornillo o la
+chapa del aparato. **Todo lo que pertenece a un nodo está siempre a la misma tensión.**
+
+<Formula explicacion="Todo lo unido por cobre es un solo punto; de ahí sale el resto de la lección.">
+un nodo = un potencial · el cable no separa nada · el papel miente sobre la distancia
+</Formula>
+
+**Puedes redibujar un esquema como quieras.** Mientras cada nodo tenga las mismas patas, el circuito es
+el mismo aunque el dibujo quede irreconocible; por eso, cuando uno te resulta confuso, redibujarlo es
+la mejor forma de comprobar que lo entendiste.
+
+**El aparato te dice sus nodos aunque no tengas esquema.** Pon el multímetro en continuidad y toca
+pares de puntos: todo lo que pite entre sí es un nodo. Anótalo dándole un número a cada uno, y en
+veinte minutos tienes la <Termino slug="lista-de-conexiones">lista de conexiones</Termino> del aparato,
+que es el esquema sin dibujo. **Ese es el truco entero de reparar sin documentación.**
+
+**Y el nodo es el mejor instrumento de diagnóstico que existe.** Si dos puntos deben ser el mismo
+nodo, entre ellos tiene que haber cero voltios. Cuando mides medio voltio, dos o doce, la conclusión
+no admite discusión: **hay resistencia donde no debería haber ninguna** —un cable partido por dentro,
+un borne flojo, una soldadura mala, un contacto oxidado.
+
+<Dato titulo="La medición que resuelve la mitad de las averías">
+Se llama **medir la caída sobre el conductor** y es lo contrario de lo que hace todo el mundo. En vez
+de medir de un punto a masa, pones las dos puntas del multímetro en los **dos extremos de la misma
+unión** —los dos lados de un empalme, las dos patas de un interruptor cerrado— con el aparato
+encendido y consumiendo. Lo que leas es la <Termino slug="caida-de-tension">caída de tensión</Termino>
+de esa unión sola, y **debe dar prácticamente cero: cualquier otra cosa es la avería.** Además funciona
+en caliente, que es cuando aparecen los fallos que desaparecen apenas desarmas: un interruptor gastado
+que se come dos voltios ahoga al motor que alimenta, y la prueba de continuidad no lo detecta porque
+ahí circula una corriente ridícula que el contacto malo alcanza para engañar.
+</Dato>
+
+## Masa: el cero que alguien tuvo que elegir
+
+La tensión **no existe sola**. Ningún punto tiene doce voltios por sí mismo: lo que existe es la
+diferencia entre dos puntos. Preguntar cuánta tensión hay en un cable es tan incompleto como preguntar
+a qué altura está una piedra sin decir respecto a qué.
+
+Por eso todo circuito elige un punto y lo declara cero. Ese punto es
+la <Termino slug="masa-electrica">masa</Termino>, y desde ahí ya se puede decir "acá hay cinco
+voltios", que significa cinco voltios más que la masa. La masa **no es un componente, es un acuerdo**.
+En un sistema de <Termino slug="corriente-continua">corriente continua</Termino> con batería suele ser
+el negativo, y en el esquema se dibuja repetida en muchos sitios —igual que una variable global— para
+no cruzar la hoja con una línea.
+
+<Analogia titulo="Analogía de obra">
+La masa es la <Termino slug="cota-de-referencia">cota de referencia</Termino> del replanteo: la estaca
+clavada donde nadie va a excavar, desde la cual se miden todas las alturas de la obra. El nivel del
+mar tampoco es una altura real, es un acuerdo que funciona porque todos comparten el mismo.
+
+**Si dos albañiles miden desde estacas distintas, sus números son correctos y el techo sale torcido
+igual.** No hay error de cálculo, hay error de origen. Dos circuitos que se hablan **tienen que
+compartir la estaca**.
+</Analogia>
+
+Ese es el error número uno de quien empieza. Tienes un sensor de humedad en el lote y un controlador en
+el galpón, cada uno con su alimentación. Llevas **un solo cable**, el de la señal, y el controlador
+lee basura. La causa no es el sensor ni el cable: **el sensor dice "dos voltios" desde su cero y el
+controlador escucha desde otro cero distinto.** La solución es un segundo cable que una las dos masas.
+Sin masa común no hay conversación posible, y tampoco hay
+un <Termino slug="circuito">circuito</Termino> cerrado por donde vuelva la corriente.
+
+<Advertencia titulo="Masa no es tierra, y confundirlas se paga">
+Masa es el cero de referencia del circuito: un acuerdo interno.
+La <Termino slug="puesta-a-tierra">puesta a tierra</Termino> es una varilla de cobre clavada en suelo
+húmedo, y su función es de seguridad: llevar al terreno la corriente de una falla para que no te la
+lleves vos.
+
+En un equipo a batería la masa **flota**: no tiene relación con el suelo. En uno alimentado desde los
+220 V con una fuente barata, la masa puede estar a media tensión de red respecto al piso aunque el
+aparato funcione perfecto. **Nunca supongas que la chapa de un aparato enchufado es tierra ni que es
+seguro tocarla.** Y si el trabajo es sobre la instalación fija de 220 V, eso pertenece al módulo de
+albañilería y a un electricista habilitado.
+</Advertencia>
+
+## Recorrer un esquema con un lápiz en la mano
+
+Leer un esquema no es mirarlo: es marcarlo. **Uno:** encuentra la fuente y la masa, que son el marco de
+todo lo demás. **Dos:** pinta los nodos, uno por color, recordando que todos los símbolos de masa son
+el mismo nodo. **Tres:** sigue el camino cerrado; si no vuelves al punto de partida, falta un cable o
+falta un trozo del esquema.
+
+**Cuatro, y es el paso que convierte esto en reparación: escribe qué esperas medir en cada nodo antes
+de tocar nada.** Doce voltios acá, cinco allá, cero después del fusible si está quemado. Después
+mides. **La avería está entre el último punto donde la realidad coincidió con tu predicción y el
+primero donde dejó de coincidir**, y eso reduce un aparato entero a un tramo de dos centímetros.
+
+## De la protoboard al cable definitivo
+
+La <Termino slug="protoboard">protoboard</Termino> es una plancha de plástico llena de agujeros con
+grapas metálicas por dentro. Cada grupo de cinco agujeros de una columna está unido —es un nodo— y las
+filas largas de los bordes sirven para la alimentación y la masa. Ese es todo su secreto: **la
+protoboard fabrica nodos temporales.**
+
+Traducir un esquema es entonces un ejercicio repetido: por cada nodo, elige una columna y clava ahí
+todas sus patas. Si dos patas están en el mismo nodo del papel, van a la misma columna; si no, no.
+**No hay más regla.** Lleva siempre primero alimentación y masa a los bordes, y usa el mismo color
+para la masa en todos tus montajes —el negro es la costumbre—: ese hábito que parece cosmético es lo
+que te deja entender tu propio montaje seis meses después.
+
+<Advertencia titulo="La protoboard prueba ideas, no construye aparatos">
+Sus límites son físicos. **Los contactos son flojos por diseño**, con una resistencia que crece cada
+vez que metes y sacas una pata: una protoboard vieja da fallos intermitentes que parecen del circuito.
+**No aguanta corriente**, porque un par de amperios recuecen las grapas, ni **vibración, humedad o
+polvo**, y en el galpón hay las tres cosas.
+
+La regla es simple: **si el montaje va a quedar puesto, tiene que dejar la protoboard.** El paso
+intermedio barato es la placa perforada, donde repites el mismo montaje soldando; el definitivo son
+cables soldados o prensados dentro de una caja cerrada.
+</Advertencia>
+
+<ContextoBolivia titulo="Con lo que hay en la ferretería de la esquina">
+**El soldador.** El de tipo lápiz de 30 a 40 vatios se consigue en cualquier casa de electrónica y es
+el correcto; el de 100 vatios en forma de pistola es para hojalatería y en una placa levanta las
+pistas de cobre. Acá aparece un problema local: **los cortes de energía.** Un soldador tarda minutos
+en calentar, así que si la luz se va a mitad del trabajo la unión queda a medias. Suelda en tandas
+cortas, con las piezas ya limpias antes de enchufar; y si hay paneles y batería, aliméntalo desde el
+inversor.
+
+**El estaño.** La aleación estaño-plomo, que suele venderse como 60/40, funde a menor temperatura,
+moja mejor y perdona más a quien empieza; lleva plomo, así que se trabaja con ventilación y **te lavas
+las manos antes de comer**. El llamado sin plomo funde más caliente y es menos indulgente. Y hay un
+tercer producto, el rollo muy barato de origen dudoso, que en la práctica no moja: la unión queda gris
+y granulada hagas lo que hagas. **Si te pasa con todas, sospecha del estaño antes que de tu pulso.**
+Compra el que trae alma de resina en el centro.
+
+**Fundente, limpieza y aislamiento.** La resina de pino sirve como fundente y es barata; el alcohol
+isopropílico de farmacia limpia sus restos mejor que nada. El tubo termorretráctil se vende por metro:
+compra varios diámetros de una vez, porque el que falta siempre es el que necesitas. La cinta
+autofundente —la que se pega consigo misma y no tiene pegamento— cuesta más de encontrar y es la que
+resuelve la intemperie: pídela como cinta de vulcanizar, que es como la conocen los electricistas.
+
+**El clima manda.** Con treinta y cinco grados y humedad alta, el pegamento de la cinta aislante común
+se ablanda y la cinta se desenrolla sola en pocos meses; al sol directo, la radiación ultravioleta la
+vuelve quebradiza en una temporada. Y los surazos, al pasar de treinta y cinco grados de tarde a diez
+de madrugada, dilatan y contraen todo, y ese movimiento afloja los tornillos de los bornes. **Una
+unión que en clima templado dura años, acá dura una temporada de lluvias.**
+
+**Y lo que no se decide acá.** Toda instalación fija de 220 V, medidor, tablero o acometida se rige
+por reglas y trámites que no vamos a inventar: consulta con un electricista habilitado y con la
+empresa distribuidora de tu zona. Esta lección se ocupa de baja tensión —baterías, sensores,
+controladores, doce voltios— y ahí sí puedes trabajar con tus manos y tu criterio.
+</ContextoBolivia>
+
+## Soldar es mojar, no pegar
+
+Casi todo el mundo cree que soldar es pegar dos cosas con una gota derretida, y **eso es exactamente
+lo que sale mal.** El estaño fundido tiene que **mojar** el metal: extenderse sobre él como el agua
+sobre un vidrio limpio y formar una capa de aleación con el cobre. Eso es
+el <Termino slug="mojado-de-la-soldadura">mojado</Termino>, y es la diferencia entre una unión que dura
+veinte años y una que falla el mes que viene.
+
+Para que el metal se deje mojar tiene que estar limpio, y todo cobre expuesto al aire tiene óxido. Ahí
+entra el <Termino slug="fundente">fundente</Termino>: una resina que a la temperatura de trabajo
+disuelve el óxido y evita que se vuelva a formar mientras el estaño se extiende; casi todo el estaño
+en rollo lo lleva en el alma. **El fundente no pega nada: solo limpia**, y esa limpieza es media
+soldadura. La otra media es
+el <Termino slug="estanado">estañado</Termino> de la punta: una capa fina de estaño que hace de puente
+térmico, porque una punta oxidada puede estar a trescientos cincuenta grados y no transmitir calor. El
+óxido aísla. Punta limpia en la esponja húmeda, un toque de estaño, y recién ahí se trabaja.
+
+El gesto correcto tiene cuatro tiempos y se aprende en una tarde. **Uno: calentar la unión, no el
+estaño**; la punta toca a la vez la pata y la almohadilla de cobre, uno o dos segundos. **Dos: llevar
+el estaño a la unión, del lado contrario a la punta**; si el metal está caliente se derrite solo al
+tocarlo, y si tienes que derretirlo sobre la punta y dejarlo caer, la pieza está fría y la unión va a
+fallar. **Tres: retirar primero el estaño y después el soldador. Cuatro: no mover nada mientras
+solidifica**; lo que se mueve ahí queda cristalizado y frágil aunque se vea bien.
+
+<Tabla>
+
+| | Soldadura buena | <Termino slug="soldadura-fria">Soldadura fría</Termino> |
+| --- | --- | --- |
+| Brillo | Brillante y lisa | Opaca, gris, granulada |
+| Forma | Cóncava, como falda de volcán | Bola redonda o gota apoyada |
+| Bordes | El estaño se estira hacia el cobre y se afina | Borde abrupto, como gota de cera |
+| Contacto | Cubre pata y almohadilla por igual | Toca una cosa y no la otra |
+| Al tirar | No se mueve nada | La pata gira o se sale |
+| Causa | Pieza caliente, metal limpio, fundente activo | Poco calor, metal sucio, movimiento al enfriar |
+
+</Tabla>
+
+<Dato titulo="Por qué la soldadura fría es la avería más traicionera">
+Una soldadura fría **no está abierta: está a medias.** Conduce lo suficiente para que el aparato
+funcione, y falla cuando la placa se calienta, vibra o cambia de temperatura de la noche a la mañana.
+El resultado es el peor tipo de avería: la intermitente, la que funciona cuando lo llevas al técnico y
+falla cuando vuelves a casa.
+
+**Son mayoría absoluta en aparatos de más de cinco años**, sobre todo alrededor de las piezas pesadas
+—transformadores, conectores, bornes de potencia— que hacen palanca sobre su propia soldadura. Repasar
+esas uniones con soldador y estaño fresco arregla más aparatos que cualquier cambio de componente. Se
+llama resoldar, cuesta cero y es lo primero que hay que probar.
+</Dato>
+
+Tres reglas de seguridad, sin excepción. **No se suelda nunca sobre un aparato enchufado o con batería
+conectada**, y los condensadores grandes guardan carga después de desenchufar. **Se suelda con
+ventilación**: el humo blanco es resina evaporándose y es un irritante respiratorio. **El soldador se
+apoya en su soporte y se desenchufa al terminar**, porque una punta a trescientos cincuenta grados
+sobre madera es un principio de incendio.
+
+## Empalmes y terminales: primero mecánico, después eléctrico
+
+Una regla que casi nadie escucha la primera vez: **la soldadura no es un elemento de sujeción.** El
+estaño es blando y se fatiga; si un cable soldado queda tirando, la unión se rompe. La unión buena se
+hace en dos pasos: **primero se sujeta mecánicamente y después se asegura eléctricamente.**
+
+Para unir dos cables sueltos, el empalme clásico es el trenzado: se pelan dos o tres centímetros y se
+enrolla cada conductor sobre el otro en espiral apretada, de modo que al tirar el empalme aprieta más.
+Eso solo ya sujeta; después se suelda por encima y se aísla. **Un cable retorcido con los dedos y
+envuelto en cinta** es la unión que vas a encontrar en la mitad de las averías que te toque reparar.
+
+Para llegar a un tornillo, un motor o una batería, lo correcto es
+un <Termino slug="terminal-de-cable">terminal de cable</Termino>: la pieza de ojal, horquilla o pala
+que se prensa sobre el cable y presenta una superficie plana al borne. Prensar bien deforma el metal
+en frío hasta que no queda aire entre los hilos, y esa unión no se oxida por dentro. **Nunca metas
+cable de muchos hilos desnudo bajo un tornillo**: los hilos se escapan, el tornillo aplasta unos pocos
+y con el tiempo el cobre fluye y se afloja solo. Para eso existe la puntera hueca; estañar la punta no
+sirve, porque el estaño también fluye en frío.
+
+Falta la pieza que se olvida siempre:
+el <Termino slug="alivio-de-traccion">alivio de tracción</Termino>. Ningún esfuerzo debe llegar a la
+unión eléctrica: el cable se sujeta antes con una abrazadera, un prensacables o un nudo, para que si
+alguien tropieza el tirón lo aguante el plástico y no el cobre. La prueba es honesta: **agarra el
+cable y tira con ganas.** Si algo se mueve, se rehace. Y no unas cobre con aluminio directamente: dos
+metales distintos con humedad forman una pila diminuta y se comen entre ellos. Es
+la <Termino slug="corrosion-galvanica">corrosión galvánica</Termino>, la causa de esos bornes con
+polvo blanco que terminan derritiendo el plástico.
+
+## Por qué la cinta aislante sola no basta a la intemperie
+
+Una unión con cinta funciona el día que la haces. Qué le pasa en dieciocho meses de Santa Cruz es una
+cadena de cinco pasos que explica la mitad de las averías del sitio.
+
+**Uno: el pegamento corre.** El adhesivo de la cinta de PVC se ablanda con calor; a cuarenta grados
+dentro de una caja al sol fluye, la cinta se desliza y aparece un labio abierto. **Dos: entra agua**,
+por ese labio o por condensación, porque un cable que se calienta de día y se enfría de noche respira
+y mete aire húmedo. **Tres: el agua camina.** Un cable flexible de cincuenta hilitos tiene entre ellos
+cincuenta canales capilares; es el <Termino slug="efecto-mecha">efecto mecha</Termino>, y por eso una
+unión mojada arruina metros de cable hacia adentro y el cobre aparece verde lejísimos de donde entró
+el agua. **Cuatro: el cobre se corroe** y la sección conductora se reduce, así que crece la
+resistencia justo ahí. **Cinco: eso se calienta**, y el calor acelera la corrosión, que sube más la
+resistencia, que calienta más. Es una realimentación positiva y termina siempre igual: empalme
+carbonizado y, con corriente suficiente, fuego.
+
+<Advertencia titulo="Cómo se hace una unión que aguanta afuera">
+No hay una solución sino una combinación, y la clave es que **cada capa hace un trabajo distinto**.
+La sujeción mecánica va primero: empalme trenzado o terminal prensado, más alivio de tracción.
+
+**Aislamiento con tubo termorretráctil**: el <Termino slug="termorretractil">termorretráctil</Termino>
+se encoge con calor y abraza el cable; el que trae adhesivo por dentro se sella al contraerse y es el
+que corresponde a la intemperie. Se ensarta **antes** de hacer la unión, error clásico que todos
+cometen una vez.
+
+**Estanqueidad con cinta autofundente**: no tiene pegamento, se estira y se fusiona consigo misma
+formando una goma continua. La cinta aislante común, si se usa, va **encima** y solo como protección
+mecánica y contra el sol, nunca como sello.
+
+**Geometría**: la unión va en una caja cerrada, con los agujeros hacia abajo y con prensacables, por
+encima del nivel del barro. Y antes de cada entrada se deja
+un <Termino slug="lazo-de-goteo">lazo de goteo</Termino>: una panza de cable por debajo de la entrada,
+para que el agua que baja por el cable gotee ahí y no siga adentro. Cuesta diez segundos y evita la
+mitad de las cajas inundadas.
+</Advertencia>
+
+<AplicarRizoma titulo="Del papel al cobre en los doce lotes">
+**Empieza levantando el esquema de lo que ya existe, antes de tocar nada.** El riego, el tablero del
+vivero, la bomba, los paneles: una hoja, el multímetro en continuidad y una tarde tranquila. Numera
+cada nodo y ponle una etiqueta física —cinta y marcador indeleble— a cada cable en sus dos extremos.
+Cuando algo falle un domingo a las seis de la tarde con las bandejas pidiendo agua, esa hoja es la
+diferencia entre veinte minutos y una tarde entera. Y como el proyecto es comunitario, no es tuya: va
+plastificada dentro de la puerta del tablero.
+
+**Define una masa y un código de colores, y escríbelos en la pared del galpón.** Negro para la masa,
+rojo para el positivo, un color fijo para cada señal. Y que todo comparta una sola masa, unida en un
+solo punto, porque varias uniones a masa por caminos distintos crean lazos por donde circulan
+corrientes que ensucian las lecturas.
+
+**El caso del sensor lejano va a pasar sí o sí.** Un sensor de humedad en el lote del fondo y el
+controlador en el galpón, con cuarenta o cincuenta metros de por medio. Si llevas solo el cable de
+señal, las lecturas serán basura por falta de masa común; y aun llevándola, en esa distancia la propia
+caída de tensión sobre el cable de masa desplaza el cero y falsea la medida. Por eso la señal se lleva
+por un par de cables juntos —señal y su masa— y por eso en tiradas largas conviene una señal digital
+en vez de un voltaje crudo. La consecuencia práctica: **cuando una lectura se vuelve loca, revisa
+primero la masa y después el sensor.**
+
+**Cada lote necesita su caja de conexión, y todas iguales.** Cerrada, en un poste a la altura de la
+cintura —nunca a ras de suelo, donde llega el barro—, con las entradas hacia abajo, prensacables, lazo
+de goteo y terminal prensado sobre bornera. Que las doce sean idénticas por dentro no se nota hasta la
+primera reparación nocturna: quien abre la del lote 9 ya sabe lo que va a encontrar porque abrió la
+del lote 3 el mes pasado.
+
+**Monta un rincón de soldadura, aunque sea de un metro.** Tabla, soporte, esponja, estaño con alma de
+resina, alcohol isopropílico, alicate, pelacables, pinza de prensar terminales, termorretráctil de
+varios diámetros y un encendedor. Junto a una ventana para el humo y con un balde de arena a mano,
+porque en el galpón hay sustrato seco y cascarilla. Y una regla escrita: **el soldador no se deja
+enchufado ni un minuto sin alguien delante.**
+
+**La práctica es una tarde de sábado con gente del barrio y chatarra.** Cada persona hace veinte
+uniones sobre cable viejo y una placa muerta; después el grupo las mira todas a la luz y las separa en
+brillantes y opacas sin decir de quién es cada una. El ojo aprende a ver el brillo antes de que la
+mano aprenda a hacerlo. La segunda parte es el tirón: cada quien tira de su propio empalme hasta que
+algo cede, y ahí se entiende para siempre por qué el alivio de tracción no es un lujo. Un solo
+soldador alcanza para diez personas si se turnan.
+
+**Y el calendario manda: todas las uniones de exterior se revisan y se sellan antes de octubre**, no
+en diciembre con el agua encima. Abrir cada caja, mirar si hay verde en el cobre, apretar los
+tornillos de bornera que el calor y el surazo aflojaron, comprobar los lazos de goteo y que ningún
+cable quedó tirante: media jornada para las doce cajas, una vez al año, y desaparece la mayor parte de
+los fallos eléctricos de la temporada. Reparar acá no es gesto de pobreza sino de sensatez: un
+repuesto tarda semanas, y un empalme bien hecho lo hace cualquier vecino con un poco de estaño.
+</AplicarRizoma>
+
+## La rutina mínima
+
+**Antes de armar**: esquema en la mano, nodos numerados, tensiones esperadas escritas. **Al soldar**:
+punta limpia y estañada, calentar la pieza y no el estaño, no mover mientras enfría, mirar el brillo.
+**Al cerrar**: sujeción mecánica primero, aislamiento después, alivio de tracción y lazo de goteo
+siempre, y un tirón fuerte como prueba final. **Al terminar**: anotar qué cambiaste y en qué nodo,
+porque lo que no está escrito no existe la próxima vez que falle.
+
+## Lo que sigue
+
+Ya puedes leer un esquema, encontrar los nodos de un aparato sin documentación, montar una idea en
+protoboard, pasarla a cable soldado y cerrar una unión que aguante una temporada de lluvias. Con eso
+tienes las manos listas; falta la cabeza del reparador.
+
+La lección siguiente, **Por qué fallan las cosas**, hace el inventario de los modos de fallo reales de
+un aparato, que casi nunca son el chip: humedad y corrosión, calor, vibración, condensadores
+electrolíticos secos, soldaduras agrietadas y contactos oxidados. Vas a reconocer varios que ya
+asomaron acá —la soldadura fría intermitente, el empalme que se llena de agua por efecto mecha, el
+borne que el surazo afloja— y vas a entender por qué unos pocos mecanismos explican casi todas las
+averías. Eso es lo que te deja abrir un aparato y mirar directo al lugar correcto.

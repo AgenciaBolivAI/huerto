@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "que-hace-el-procesador",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace realmente un procesador mientras corre un programa?",
+      "opciones": [
+        "Guarda un solo número —en qué casilla está la instrucción que le toca— y lo va avanzando.",
+        "Repite sin parar tres pasos: busca la instrucción, la descifra y la ejecuta.",
+        "Hace la vez número diez mil exactamente lo mismo que la primera, sin cansarse y sin mejorar.",
+        "Cuando una instrucción es claramente absurda, la corrige o la salta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y es justo la creencia que hay que desmontar: no existe ningún punto del ciclo de instrucción donde la máquina evalúe si lo que le mandaste tiene sentido. No hay «claramente absurdo» para ella, porque no hay nadie mirando. Esa es la diferencia con la persona que cuenta plantines y levanta la cabeza para preguntar si cuenta la bandeja vacía: la máquina ejecuta la instrucción absurda igual de rápido y con la misma exactitud que la correcta."
+    },
+    {
+      "id": "estado-y-memoria",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el estado de un programa y la memoria donde vive, ¿qué es cierto?",
+      "opciones": [
+        "El estado es el conjunto de todos los valores que el programa tiene guardados en un instante.",
+        "La máquina no recuerda nada que no se le haya pedido explícitamente que recuerde.",
+        "La memoria de trabajo es volátil: al terminar el programa, o al cortarse la luz, se pierde.",
+        "Un dato leído hace tres instrucciones sigue disponible aunque no se haya guardado en ningún lado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y es una de las suposiciones que más tiempo hace perder al principio. No hay un fondo de memoria donde las cosas queden «por si acaso»: si no creaste una variable para guardar la lectura de ayer, esa lectura se leyó, se usó y se perdió. La consecuencia práctica es doble: dentro del programa hay que guardar a propósito lo que se va a necesitar después, y fuera del programa hay que escribirlo en un archivo, porque cuando el proceso termina el estado entero desaparece."
+    },
+    {
+      "id": "tipos-de-dato",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué afirmaciones sobre los tipos de dato son correctas?",
+      "opciones": [
+        "El texto «32» y el número 32 no son la misma cosa, aunque en pantalla se vean idénticos.",
+        "Sumar dos textos no suma, pega: «3» más «4» da «34», no 7.",
+        "Los números con decimales no deben compararse por igualdad exacta, sino por rango o umbral.",
+        "Un dato que nadie llegó a medir puede guardarse como cero, porque los promedios se corrigen solos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y el daño que hace es silencioso, que es lo peor. «Llovió cero milímetros» y «nadie miró el pluviómetro» son hechos distintos; si los dos se anotan como cero, el promedio de lluvia del mes queda mal para siempre y ya no hay forma de saber cuáles filas eran medidas y cuáles huecos. Un promedio no se corrige solo: arrastra el cero inventado en cada cuenta posterior. El dato ausente se guarda como ausente, nunca como cero, texto vacío ni guion."
+    },
+    {
+      "id": "inventario-cerrado",
+      "tipo": "opcion_multiple",
+      "enunciado": "El módulo sostiene que el inventario de estructuras está cerrado. ¿Qué lo compone?",
+      "opciones": [
+        "Secuencia: las instrucciones se ejecutan una detrás de otra, en el orden en que están escritas.",
+        "Decisión: mirar un valor verdadero o falso y, según sea, tomar un camino u otro.",
+        "Repetición: hacer lo mismo un número conocido de veces o hasta que se cumpla una condición.",
+        "Organización: funciones, objetos y bibliotecas, que son una cuarta forma de decidir."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta confunde organizar con poder. Funciones, objetos, módulos, bibliotecas y marcos de trabajo sirven para que un programa grande siga siendo legible por una persona: resuelven un problema humano, no uno de la máquina, y ninguno agrega una forma de decidir que no fuera ya secuencia, decisión o repetición. Böhm y Jacopini lo demostraron formalmente en 1966. Por eso lo que se aprende en este módulo no es un escalón inicial que después se descarta: es el mecanismo entero."
+    },
+    {
+      "id": "asignacion-no-es-igualdad",
+      "tipo": "verdadero_falso",
+      "enunciado": "Escribir `humedad = 32` es una orden que mete el valor 32 en la caja llamada humedad, no una afirmación de que las dos cosas sean iguales.",
+      "respuesta": true,
+      "explicacion": "Verdadero, y es la trampa que más desconcierta al principio porque el signo se parece al de la matemática del colegio. Se lee de derecha a izquierda, como una flecha: el valor de la derecha entra en el nombre de la izquierda. Por eso `contador = contador + 1` es correcto y frecuentísimo —«toma lo que hay en contador, súmale uno y vuelve a guardarlo ahí»— cuando como igualdad matemática sería falso siempre. Y por eso asignar destruye: el valor anterior se pierde sin deshacer ni papelera."
+    },
+    {
+      "id": "requisitos-de-entrada",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para empezar a programar hacen falta matemáticas avanzadas, saber inglés y memorizar el lenguaje; sin eso no se puede empezar.",
+      "respuesta": false,
+      "explicacion": "Falso en las tres partes. La aritmética de este módulo es la de comprar en el mercado, y cuando hay una cuenta más seria detrás —los grados-día— el curso ya la da hecha. Las palabras reservadas del lenguaje son entre veinte y cuarenta, y funcionan como símbolos, no como idioma. Y nadie se aprende un lenguaje de memoria: quien programa a diario consulta cómo se escribe algo varias veces por hora. Lo que sí hace falta es tolerar equivocarse muchas veces por hora y leer lo que dice la pantalla en vez de suponerlo."
+    },
+    {
+      "id": "registro-del-vivero-con-tipos",
+      "tipo": "abierta",
+      "enunciado": "Rizoma del Sur lleva el registro del vivero en un cuaderno de papel: para cada uno de los doce lotes se anota especie, bandejas sembradas, fecha de siembra, sustrato, humedad medida del sustrato, si se regó ese día, lluvia de la noche anterior y bajas con su causa. Sin escribir una sola línea de código, prepara ese registro para que algún día un programa pueda usarlo. Asigna un tipo a cada columna y justifícalo; señala dónde puede aparecer un dato ausente y cómo se anota; explica qué comparaciones serán seguras y cuáles no; separa qué parte de todo eso es estado que vive solo mientras el programa corre y qué parte tiene que quedar escrita en un archivo; y termina eligiendo cuál sería tu primer programa y diciendo qué piezas del inventario usa.",
+      "respuestaModelo": "Los tipos, columna por columna. «Especie» es texto, y con eso llega el primer problema real: comparar textos es comparar símbolo por símbolo, así que «ají dulce», «Ají dulce» y «aji dulce» son tres especies distintas para la máquina. La solución no es informática sino de disciplina: una lista cerrada de nombres, escrita en la primera hoja del cuaderno, y todos escriben igual. «Bandejas sembradas» es un entero —240, nunca 240,5— porque se cuenta de a uno, y lo mismo «bajas»; las dos se suman y se comparan sin sorpresas. «Fecha de siembra» conviene tratarla con un formato fijo y único, escrito siempre igual, porque tal como se teclea es texto y dos formatos distintos en la misma columna son dos columnas distintas disfrazadas de una. «Sustrato» es texto y también pide lista cerrada. «Humedad medida del sustrato» es un número con decimales. «¿Se regó hoy?» es verdadero o falso, y no se anota con una cruz ambigua que después nadie sabe si significaba «sí» o «revisado»: se anota sí o no. «Lluvia de anoche» es un número con decimales, en milímetros.\n\nDónde aparece el dato ausente. En «humedad medida» y en «lluvia de anoche», sobre todo, y también en «¿se regó hoy?» cuando nadie estuvo. Que el pluviómetro marque cero significa que no llovió; que nadie lo haya mirado significa otra cosa completamente distinta, y si las dos se anotan como cero el promedio del mes queda mal para siempre y ya no hay forma de distinguir las filas medidas de los huecos. Así que la celda vacía se deja explícitamente marcada como ausente —una convención escrita en la primera hoja, por ejemplo «s/d»— y nunca como cero, texto vacío ni guion suelto. Es la misma disciplina que el módulo de automatización le exige a la bitácora del sistema.\n\nQué comparaciones son seguras. Las de enteros lo son: «bandejas sembradas mayor que cero», «bajas iguales a cero», «bajas mayores que veinte». Las de texto lo son solo si la escritura está normalizada, y por eso la lista cerrada no es cosmética. Las de números con decimales no son seguras por igualdad: preguntar si la humedad es exactamente 30,0 puede fallar aunque el número «sea» ese, porque en base dos hay fracciones que no se escriben exactas, igual que un tercio no se escribe exacto en base diez. Por lo tanto la humedad se compara siempre por umbral o por rango: por debajo de, por encima de, entre tal y tal. Y eso no es una molestia impuesta por la máquina, es lo que ya pedía la regla de riego con histéresis del módulo de automatización, donde hay dos umbrales separados por más que el ruido de la medida: arranca por debajo del bajo, para por encima del alto. Las comparaciones con verdadero o falso son las más simples y son las que alimentan la decisión.\n\nQué es estado pasajero y qué tiene que quedar escrito. Mientras el programa corre, viven en memoria la última lectura de humedad, la hora actual, el acumulado que se está calculando, el número de lote que se está revisando y el resultado de la decisión. Todo eso es la pizarra: se borra al terminar el programa, y también si se corta la luz a mitad, que en Zanja Honda ocurre. Lo que tiene que sobrevivir es el cuaderno: cada fila del registro con su fecha, cada riego con la hora en que empezó y cuánto duró de verdad, cada baja con su causa, y también los eventos raros —lecturas fuera de rango, riegos abortados—. Un programa que decide bien y no escribe nada en el archivo es un programa que trabajó gratis, porque dentro de seis meses nadie podrá reconstruir por qué el lote 7 salió mal.\n\nEl primer programa. La regla de riego: dados el umbral bajo, el umbral alto, la última lectura y la hora, decidir si toca regar. Es una secuencia con una decisión adentro, cabe en una hoja y sustituye una cuenta que ya se hace a mano y que la mano hace mal. El segundo sería la planilla de grados-día: por cada día, máxima más mínima dividido dos, menos la temperatura base, acumulando desde la siembra de cada lote. Ese es una secuencia dentro de un bucle. Entre los dos usan las tres piezas del inventario y ni una más, lo cual es la prueba de que el inventario está cerrado. Y como el proyecto es comunitario y gratuito, ambos se escriben pensando en el vecino que los va a leer después: nombres largos y en castellano, y todo lo que se decida guardado en un archivo, porque la memoria se borra y el cuaderno no.",
+      "criterios": [
+        "Asigna un tipo a cada una de las ocho columnas y no deja ninguna sin justificar.",
+        "Identifica «especie» y «sustrato» como texto y señala el problema de las variantes de escritura.",
+        "Propone una lista cerrada de nombres como solución de disciplina, no informática.",
+        "Trata «bandejas sembradas» y «bajas» como enteros porque se cuentan de a uno.",
+        "Señala que la fecha exige un formato fijo y único para no convertirse en dos columnas.",
+        "Marca «¿se regó hoy?» como verdadero o falso y rechaza la cruz ambigua.",
+        "Distingue el cero medido del dato ausente y propone una convención explícita de ausencia.",
+        "Explica por qué los números con decimales no se comparan por igualdad exacta, con el motivo en base dos.",
+        "Conecta esa regla con la comparación por umbral y con la histéresis de la regla de riego.",
+        "Separa el estado en memoria —lecturas, hora, acumulados— de lo que debe escribirse en archivo.",
+        "Justifica la escritura en archivo por la volatilidad de la memoria y los cortes de luz.",
+        "Elige un primer programa concreto y nombra qué piezas del inventario usa: secuencia, decisión y repetición."
+      ],
+      "explicacion": "El ejercicio no pide programar: pide la mitad del trabajo que casi nadie hace y que decide si el programa servirá. Un registro sin tipos y sin convención de ausencia produce programas que corren perfectamente y devuelven resultados equivocados, que es la familia de fallos más cara porque no da ningún aviso. Ponerle tipo a cada columna del cuaderno es el trabajo más valioso que se puede hacer hoy en Rizoma del Sur, y se hace con lápiz y sin encender nada."
+    }
+  ]
+}

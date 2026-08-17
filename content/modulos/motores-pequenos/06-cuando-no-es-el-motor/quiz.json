@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "no-tiene-fuerza",
+      "tipo": "opcion_multiple",
+      "enunciado": "Llega una máquina con la queja de siempre: «este motor no tiene fuerza». ¿Qué afirmaciones son correctas?",
+      "opciones": [
+        "El motor entrega par en la punta de un eje y no tiene manera de saber qué hay del otro lado, así que la frase describe al conjunto —motor más carga— y no necesariamente al motor.",
+        "Nadie percibe el par directamente: lo que se nota es la caída de vueltas cuando la carga exige más par del que el motor entrega a ese régimen, y por eso el síntoma se siente igual con un motor sano y una carga pesada.",
+        "La prueba que ordena el diagnóstico es separar las dos mitades: con el cable de bujía fuera se gira la carga a mano buscando puntos duros y juego, y después se arranca el motor sin carga para escucharlo subir libre.",
+        "Si el motor acelera libre y contento pero la máquina no hace nada, lo que hay es una pérdida de compresión: el motor sube de vueltas porque ya no está comprimiendo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte el razonamiento. Un motor que sube de vueltas suelto, parejo y sin humo está demostrando justamente que comprime: sin compresión no llegaría a régimen ni sonaría sano. Que acelere y la máquina no se mueva significa lo contrario de una falla de motor: el motor no está trabajando, porque la energía se está perdiendo entre las dos mitades —embrague patinando, chaveta cortada, correa floja, eje partido, acople suelto—. Además, una pérdida de compresión se nota antes en el arranque y en la falta de fuerza bajo carga, no en un motor que gira libre y alegre."
+    },
+    {
+      "id": "embrague-centrifugo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el embrague centrífugo de una desbrozadora o una motosierra, ¿qué es correcto?",
+      "opciones": [
+        "En ralentí los resortes mantienen las zapatas recogidas y la campana quieta; al subir de vueltas la fuerza centrífuga —que crece con el cuadrado del régimen— las vence y la carga arranca patinando un momento.",
+        "El patinaje convierte en calor toda la diferencia de velocidad entre motor y campana, y cuando se vuelve permanente se realimenta: el forro se calienta, se endurece, patina más y termina con la campana azul de temperatura.",
+        "Si un resorte se rompe o se cansa, las zapatas pueden enganchar en ralentí y la herramienta girar cuando uno cree que está detenida, así que antes de trabajar se comprueba que en marcha lenta la cuchilla o la cadena estén completamente quietas.",
+        "Cuando el motor tiende a apagarse en ralentí, la solución práctica es subir el tornillo de ralentí hasta que se sostenga con holgura, porque un ralentí alto no afecta al embrague."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es peligrosa justamente por lo cómoda que parece. El embrague engancha por encima de una velocidad determinada, así que subir el ralentí puede colocarlo por encima de esa velocidad de enganche: la herramienta de corte queda girando con el motor en marcha lenta, que es cuando el operador la apoya en el suelo, la lleva del mango o se acerca a destrabar algo. Si el motor no sostiene el ralentí, la causa está en otro lado —mezcla, entrada de aire falso, chiclé de ralentí sucio, filtro—, y eso se corrige donde está el problema. Con la herramienta girando en ralentí la máquina no sale a trabajar."
+    },
+    {
+      "id": "bomba-que-no-sube-agua",
+      "tipo": "opcion_multiple",
+      "enunciado": "Una bomba de superficie que antes llenaba bien el tanque ahora tarda el doble, y el motor suena perfecto. ¿Qué afirmaciones son correctas?",
+      "opciones": [
+        "Una bomba centrífuga llena de aire no aspira: el aire es cientos de veces menos denso que el agua y el mismo rodete girando en aire produce una presión ridícula, por eso existen el cebado y la válvula de pie.",
+        "Una fuga en el tramo de succión no gotea, porque ahí adentro hay menos presión que afuera: la rosca floja que no moja nada puede estar chupando aire mientras uno busca el problema en el motor.",
+        "La altura desde la que puede aspirar cualquier bomba de superficie está limitada por la presión atmosférica del lugar, y descontando fricción, temperatura del agua y margen de seguridad rara vez pasa de seis o siete metros.",
+        "Si el agua está a diez metros por debajo de la bomba, la solución es comprar una bomba de más potencia, porque el límite de aspiración depende de la fuerza del equipo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la compra equivocada más frecuente. Una bomba de superficie no tira del agua: hace una zona de baja presión y quien empuja el agua hacia arriba por el tubo es la atmósfera. En el llano cruceño la atmósfera da del orden de nueve metros y medio de columna de agua como techo teórico, y ese número no lo cambia ninguna marca, ninguna potencia ni ningún precio: descontadas la fricción del tubo y la evaporación del agua caliente, la aspiración práctica se queda en seis o siete metros. Si el agua está más abajo, hay dos salidas reales —bajar la bomba hasta acercarla al agua o poner una bomba sumergible— y una salida falsa, que es gastar en más potencia. Ojo además con el nivel dinámico: en un pozo el agua baja mientras la bomba trabaja, así que hay que medir en la peor condición y en la peor época."
+    },
+    {
+      "id": "sello-y-marcha-en-seco",
+      "tipo": "verdadero_falso",
+      "enunciado": "El sello mecánico de una bomba se lubrica y se refrigera con una película de agua de micras entre sus dos caras pulidas, de modo que hacer girar la bomba en seco puede arruinarlo en segundos.",
+      "respuesta": true,
+      "explicacion": "Verdadero, y es la razón de la regla más terminante del apartado: esa bomba no gira ni un segundo en seco. Las dos caras del sello —una girando con el eje, otra fija— van apretadas por un resorte y lo único que impide que se toquen es una lámina de agua finísima que además se lleva el calor que generan al rozar. Sin agua, esa fricción concentra calor en un punto, las caras se rayan o se agrietan y el sello queda perdido aunque después la bomba vuelva a llenarse. La avería no se anuncia el mismo día: empieza como un goteo por el agujerito de drenaje entre la bomba y el motor, y si nadie lo mira, el agua sigue camino hacia el rodamiento y de ahí al bobinado o al cárter, convirtiendo un repuesto barato en una reparación cara. Por eso una bomba que se desceba sola es doblemente urgente: cada arranque descebado es un rato girando en seco."
+    },
+    {
+      "id": "estrangular-la-salida",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cerrar parcialmente la llave de salida de una bomba centrífuga hace que el motor tenga que esforzarse más, así que es una maniobra que conviene evitar por el motor.",
+      "respuesta": false,
+      "explicacion": "Falso, y el detalle importa porque la intuición engaña. En una bomba centrífuga, estrangular la salida reduce el caudal, y como hay menos agua que acelerar por segundo, el motor trabaja menos: se lo escucha aliviado mientras el agua no llega. Por eso el sonido del motor no sirve para juzgar si una bomba centrífuga está rindiendo. Donde la maniobra sí es peligrosa es en una bomba de desplazamiento positivo —la de membrana o de pistón de una fumigadora—, que está obligada a mover un volumen fijo por vuelta: si se cierra la salida, la presión sube hasta que revienta una manguera, se rompe la bomba o se cala el motor. De ahí que esas bombas lleven válvula de alivio y que no sea un accesorio opcional. Conocer de qué tipo es la bomba que se tiene en la mano cambia por completo qué maniobra es inofensiva y cuál no."
+    },
+    {
+      "id": "hilo-cuchilla-y-rebote",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el corte con desbrozadora, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "El hilo no corta por filo sino por velocidad, y el hilo largo roba par y hace caer las vueltas por debajo del umbral donde el nailon corta, así que el hilo corto y grueso corta mejor que el largo y fino.",
+        "El rebote ocurre cuando un diente del disco muerde algo que no puede cortar y el disco se frena de golpe: como la máquina no está anclada, esa energía la lanza de lado hacia el operador.",
+        "El rebote depende de qué sector del disco tocó, y por eso se corta con el sector que empuja la reacción hacia afuera del corte y se barre siempre en el mismo sentido, evitando el sector prohibido.",
+        "Con buena técnica y agarrando firme con los dos brazos, un operador experimentado puede contener el rebote de una cuchilla, así que el arnés y el manillar de doble asa son recomendaciones para principiantes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta mata gente. La energía que guarda un disco de acero girando a miles de vueltas se descarga en una fracción de segundo y con un brazo de palanca largo: ningún brazo humano tiene ni la fuerza ni el tiempo de reacción para detener eso, y la experiencia no cambia la física. Lo que sí funciona es un conjunto de tres cosas: el manillar de doble asa, que da dos puntos de agarre separados y una barrera entre la máquina y las piernas; el arnés de doble hombro bien ajustado, que reparte el peso y limita el recorrido de la máquina si te sorprende; y el protector, que decide en qué dirección salen las cosas. De ahí sale la regla que conviene grabarse: si la desbrozadora tiene manillar de lazo y no hay arnés, no se le pone cuchilla. Con hilo hace el mismo trabajo en pasto y no parte una pierna."
+    },
+    {
+      "id": "moto-y-generador",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la moto y el generador como cargas, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "La cadena no se estira: se alarga porque se desgastan los pasadores y los bujes por dentro, y al crecer el paso deja de encajar en el fondo de los dientes y se come el piñón y la corona, por eso los tres se cambian juntos.",
+        "El embrague de casi toda moto pequeña va sumergido en el mismo aceite del motor, así que un aceite de automóvil con modificadores de fricción puede hacerlo patinar: sube de vueltas y no acelera.",
+        "En un generador, la carga eléctrica se traduce en par resistente mecánico, y por eso los aparatos se encienden de a uno y del más grande al más chico, para que el pico de arranque de cada motor eléctrico no tumbe las vueltas.",
+        "Un dibujo profundo en los neumáticos agarra más en seco, así que la ventaja de cambiar una goma gastada se nota sobre todo en el camino seco de la temporada de estiaje."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte para qué sirve el dibujo. En seco, lo que agarra es la superficie de caucho en contacto con el piso, y un dibujo profundo en realidad quita superficie de contacto: por eso los neumáticos de competición en seco son lisos. El dibujo existe para evacuar el agua de debajo de la goma cuando el piso está mojado, dándole al agua por dónde escapar para que el caucho toque el suelo. Cuando el dibujo se gasta, el agua ya no tiene salida, se forma una cuña líquida bajo la rueda y el neumático flota sobre ella: eso es el hidroplaneo, y llega sin ningún aviso previo. Con lluvias de octubre a abril, ese es exactamente el riesgo de la zona, y se suma la presión de inflado: baja, el flanco flexiona, se calienta y la moto entra perezosa en curva."
+    },
+    {
+      "id": "diagnostico-y-decision",
+      "tipo": "abierta",
+      "enunciado": "Elegí una máquina con motor que exista de verdad en tu vida —la motobomba de tu casa o la del pozo que comparten, la desbrozadora con la que cortás, la moto con la que trabajás, el generador que sacan cuando se corta la luz— y que te haya fallado alguna vez con la queja de «no tiene fuerza» o «anda pero no sirve». Escribí el diagnóstico completo mirando hacia afuera del motor. Decí qué máquina es, quién la usa, qué pasa el día que se para y qué síntoma exacto tuvo. Después, cómo hacés la prueba de desacople y qué te dice cada resultado; qué revisás en la carga y en qué orden, con el mecanismo de por qué cada cosa produce ese síntoma; y qué comprobaciones son gratis y van primero. Terminá con la decisión: cómo armás la cuenta de reparar contra reemplazar sin inventar precios, qué le decís al dueño o a los vecinos y qué parte del trabajo derivás a alguien más.",
+      "respuestaModelo": "Tomo la motobomba del pozo de la casa. Es de cuatro tiempos, de superficie, y de ella sacamos agua nosotros y dos familias vecinas, así que es un punto único de falla: el día que se para, tres casas acarrean baldes y a alguien se le va la mañana en eso. El síntoma fue el clásico: en agosto el tanque empezó a tardar casi el doble en llenarse y el dueño dijo que el motor «ya no tenía fuerza». Yo ya había cometido el error de cambiarle la bujía y limpiarle el carburador antes de mirar la bomba; eso es costo hundido y no cuenta para la decisión de hoy, pero sirve para no repetirlo.\n\nLa prueba de desacople primero, porque es gratis y decide en qué mitad estoy. Con el motor apagado y el cable de bujía fuera —siempre, porque un motor puede arrancar de un tirón de la carga— giro el eje con la mano desde el lado del ventilador: giraba, pero con un roce arenoso y un punto duro. Después arranco el motor sin carga, con la salida abierta, y sube de vueltas parejo, sin humo y sin ahogarse. Motor sano, problema en la carga: eso me ahorra desarmar el motor entero.\n\nEn la bomba voy en orden, de lo gratis a lo caro. Primero la succión, que es donde está casi siempre. Medí el nivel del pozo con una cuerda y una piedra, en reposo y con la bomba trabajando, y en plena seca el agua quedaba mucho más abajo que en marzo, cerca del techo práctico de una bomba de superficie. Eso solo ya explica que en agosto cebe mal aunque nadie haya tocado nada: la atmósfera empuja siempre lo mismo, y si el agua bajó, la bomba se queda sin margen. Segundo, fugas de aire: repasé cada rosca del tramo de succión sabiendo que una fuga ahí no gotea, porque adentro hay menos presión que afuera; con la bomba andando y agua jabonosa encontré una unión que chupaba sin mojar nada. Tercero, la válvula de pie: la saqué y estaba con arena, y la canasta apoyada en el fondo del pozo, que es donde está toda la arena; la subí bien por encima del fondo. Cuarto, el ruido: los últimos días sonaba como si moliera piedritas, que es cavitación —la presión a la entrada del rodete cae tanto que el agua hierve a temperatura ambiente y las burbujas colapsan contra el metal—, y eso no se arregla en la bomba sino en la succión. Quinto, el sello mecánico: goteaba por el agujerito de drenaje entre bomba y motor, y no me extraña, porque cada vez que se descebó estuvo girando en seco y ese sello se destruye en segundos sin su película de agua. Sexto, al abrirla, el rodete tenía las paletas comidas y mucha luz contra la carcasa: el agua recirculaba adentro en vez de salir, y eso es caudal perdido de a poco durante meses, sin ningún ruido nuevo. Todo eso junto explica el síntoma sin culpar al motor.\n\nLa decisión la armo con una división, no con una corazonada: repuestos más mano de obra más costo de parada, dividido por lo que cuesta hoy una bomba equivalente que funcione, usada incluida. No pongo cifras acá porque cambian y porque no las conozco: las cotizo en dos lugares de la zona antes de decidir. Lo que sí anoto es el costo de parada, que es lo que la gente olvida: cada semana esperando un repuesto son tres familias acarreando agua. Y anoto un dato que cambia todo: aunque le ponga sello y rodete nuevos, si en la seca el agua queda más abajo del alcance de una bomba de superficie, va a seguir fallando cada agosto. Entonces la reparación no compite contra una bomba nueva igual, sino contra bajar la bomba a una plataforma más cerca del agua o pasar a una sumergible. Comprar otra bomba de superficie sin resolver la altura es tirar la plata dos veces.\n\nA los vecinos les llevo un presupuesto por escrito antes de tocar nada, con tres cifras separadas: repuestos, trabajo y plazo, porque un número dicho al aire siempre se recuerda más bajo. Les digo en voz alta lo que cuesta decir: qué parte conviene arreglar, qué parte no y por qué, con la cuenta delante. Y digo también lo que no hago: el cálculo de diámetros y pérdidas de la instalación lo veo con quien sepa, y cualquier cosa del tablero eléctrico del pozo la deriva alguien habilitado, porque el daño de meter mano donde no sé lo paga el dueño y lo paga mi nombre. Guardo la bomba vieja del vecino, que murió por el motor, como máquina donante: de ahí sale una tapa y quizá un rodete. Fotografío la placa, anoto en una libreta el nivel del pozo en reposo y bombeando y lo que se le hizo, y dejo escrita la regla que sostiene todo lo demás: esta bomba no gira ni un segundo en seco.",
+      "criterios": [
+        "Elige una máquina real de su casa, su barrio o su trabajo, dice quién la usa y qué consecuencia concreta tiene el día que se para.",
+        "Describe la prueba de desacople completa —cable de bujía fuera, girar la carga a mano, arrancar el motor suelto— y dice qué conclusión saca de cada resultado.",
+        "Justifica la seguridad de esa prueba: por qué se desconecta el cable de bujía antes de tocar cualquier cosa después del embrague.",
+        "Ordena las revisiones de lo gratis y reversible a lo caro e irreversible, en vez de empezar desarmando.",
+        "Explica los mecanismos y no solo los síntomas: por qué una bomba con aire no aspira, por qué una fuga en la succión no gotea, por qué el sello muere girando en seco, por qué un embrague que patina se calienta y patina más.",
+        "Reconoce un límite físico que ninguna compra resuelve —la altura de aspiración que impone la atmósfera, o el equivalente en su máquina— y lo mide en la peor condición y la peor época.",
+        "Distingue la falla de la carga de la falla que está entre las dos mitades: embrague, chaveta, correa, acople o eje.",
+        "Arma la decisión de reparar o reemplazar como una cuenta explícita, incluyendo el costo de parada y el valor de una máquina equivalente que funcione.",
+        "No inventa precios, plazos de repuestos ni cifras concretas: dice que va a cotizar en su zona y en qué se va a fijar.",
+        "Separa el costo hundido de la decisión de hoy y no usa lo ya gastado como argumento para seguir gastando.",
+        "Dice qué le comunica al dueño o a los vecinos: presupuesto por escrito con repuestos, trabajo y plazo, y la frase honesta de cuándo no conviene arreglar.",
+        "Marca qué parte del trabajo deriva a alguien más —servicio técnico, mecánico de la zona, electricista habilitado— y deja algo anotado para la próxima vez: placa fotografiada, libreta, piezas de una máquina donante."
+      ],
+      "explicacion": "Esta pregunta no pide repetir la lección sino usarla como método sobre una máquina que existe. Una buena respuesta se reconoce en cuatro cosas. La primera es que separa las dos mitades antes de opinar, porque casi todos los desarmes inútiles nacen de saltarse ese paso de dos minutos. La segunda es que cada revisión viene con su mecanismo: quien sabe por qué una fuga en la succión no gotea la busca con agua jabonosa en vez de mirar si moja, y quien sabe qué hace la atmósfera deja de buscar una bomba más potente. La tercera es que la decisión final es una cuenta con dos números que casi nadie escribe —el costo de parada y el valor de una máquina equivalente que funcione— y no una corazonada disfrazada de experiencia. Y la cuarta, la que convierte esto en oficio y no en pasatiempo, es lo que se le dice al dueño: un presupuesto por escrito antes de tocar, un «no conviene arreglarlo» dicho con la cuenta delante, y un «esto no lo hago» cuando algo te excede. Si además tu respuesta identifica un límite físico que ninguna compra resuelve, ya estás haciendo el trabajo que la mayoría de los talleres no hace."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "titulo": "Construir algo propio",
+  "subtitulo": "Se cierra el módulo construyendo una herramienta de verdad: un probador de continuidad con pila, zumbador y dos puntas, explicando cada decisión —por qué ese componente, por qué esa conexión, cómo se comprueba que el instrumento no miente—. Después, el método para que el segundo proyecto sea más ambicioso sin perderse, y los dos puentes hacia la automatización del módulo 38 y la energía solar del 17.",
+  "duracionMin": 30,
+  "objetivos": [
+    "Elegir un primer proyecto que resuelva un problema real, quepa en una tarde y se pruebe sin ambigüedad.",
+    "Escribir la lista de materiales de un aparato justificando por qué cada pieza es esa y no otra.",
+    "Explicar el probador de continuidad como circuito en serie deliberadamente incompleto que cierra el objeto medido.",
+    "Calcular con la ley de Ohm la resistencia limitadora de un LED y decidir hacia qué lado conviene errar.",
+    "Armar el aparato probando en cada etapa, con alivio de tracción, caja, etiqueta y documentación adentro.",
+    "Verificar el instrumento contra dos muestras conocidas antes de creerle, y detectar el probador que siempre suena.",
+    "Enunciar los cuatro límites del probador y la regla de usarlo solo sobre circuitos desconectados y descargados.",
+    "Escalar a proyectos mayores con una novedad por versión, versión mínima útil, margen de diseño y documentación."
+  ],
+  "prerrequisitos": [
+    "electronica-desde-cero/02-multimetro-y-herramientas",
+    "electronica-desde-cero/04-del-diagrama-al-cable",
+    "electronica-desde-cero/06-cuatro-reparaciones",
+    "energia-solar/01-electricidad-desde-cero"
+  ],
+  "videos": [],
+  "referencias": [
+    {
+      "titulo": "Light-Emitting Diodes (LEDs)",
+      "fuente": "SparkFun Electronics",
+      "url": "https://learn.sparkfun.com/tutorials/light-emitting-diodes-leds",
+      "nota": "Explica por qué un LED necesita resistencia en serie y desarrolla la misma cuenta de esta lección, con la curva de tensión-corriente dibujada. Está en inglés, pero las figuras y las fórmulas se siguen sin traducir nada."
+    },
+    {
+      "titulo": "Repair Café — red internacional de talleres de reparación gratuitos",
+      "fuente": "Stichting Repair Café / Repair Café International Foundation",
+      "url": "https://www.repaircafe.org/en/",
+      "nota": "Modelo probado de encuentro comunitario donde vecinos reparan juntos lo que iban a botar. Interesa sobre todo por su forma de organizar la jornada y de registrar qué se arregló, que es exactamente lo que propone el taller de esta lección."
+    },
+    {
+      "titulo": "The Restart Project",
+      "fuente": "The Restart Project (organización sin fines de lucro, Reino Unido)",
+      "url": "https://therestartproject.org/",
+      "nota": "Publica material sobre reparación colectiva de aparatos eléctricos y sobre cómo llevar la cuenta de lo que la reparación ahorra. Sirve de referencia para armar la hoja de registro del galpón y defender el proyecto con números propios."
+    },
+    {
+      "titulo": "The Repair Manifesto",
+      "fuente": "iFixit",
+      "url": "https://www.ifixit.com/Manifesto",
+      "nota": "Una página breve con el argumento completo de por qué reparar es una habilidad política y económica y no solo técnica. Útil para imprimir y colgar en el galpón; su versión en español circula en la misma web."
+    }
+  ],
+  "terminos": [
+    "probador-de-continuidad",
+    "lista-de-materiales",
+    "circuito",
+    "consumo-en-vacio",
+    "resistencia-limitadora",
+    "ley-de-ohm",
+    "prueba-de-humo",
+    "alivio-de-traccion",
+    "verificacion-con-muestra-conocida",
+    "fallo-intermitente",
+    "busqueda-binaria",
+    "caida-de-tension",
+    "version-minima-util",
+    "margen-de-diseno",
+    "punto-unico-de-falla",
+    "microcontrolador",
+    "aislamiento-galvanico",
+    "valvula-solenoide",
+    "fallo-seguro",
+    "corriente-continua",
+    "arco-electrico",
+    "seccion-de-conductor",
+    "puesta-a-tierra",
+    "surazo",
+    "mantenimiento-preventivo",
+    "costo-de-indisponibilidad"
+  ],
+  "practica": true
+}

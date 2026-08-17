@@ -1,0 +1,93 @@
+{
+  "preguntas": [
+    {
+      "id": "dos-reglas",
+      "tipo": "opcion_multiple",
+      "enunciado": "«Suelo cubierto» y «suelo con raíces vivas» no son lo mismo. ¿Qué hace cada uno?",
+      "opciones": [
+        "La cobertura protege la superficie: intercepta el impacto de la gota, reduce la evaporación y modera la temperatura.",
+        "Las raíces vivas alimentan la biología del suelo con exudados: azúcares y ácidos orgánicos que entrega la planta.",
+        "Sin raíces vivas las micorrizas desaparecen, porque son simbiontes obligados y necesitan una raíz a la que asociarse.",
+        "Son dos formas de decir lo mismo: si hay cobertura, hay raíces."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un suelo con cobertura pero sin raíces vivas está protegido y parado: no se degrada físicamente, pero la biología que construye estructura y solubiliza nutrientes está en mínimos porque nadie la alimenta. Lo que mantiene vivo un suelo no es la materia orgánica almacenada, es el flujo continuo de carbono que entra por las raíces, y ese flujo solo existe si algo está creciendo."
+    },
+    {
+      "id": "sellado",
+      "tipo": "verdadero_falso",
+      "enunciado": "Lo que sella un suelo desnudo no es tanto la cantidad de lluvia como el impacto de las gotas sobre la superficie descubierta.",
+      "respuesta": true,
+      "explicacion": "Correcto. La gota rompe los agregados de la superficie, las partículas finas liberadas taponan los poros y se forma una costra. A partir de ahí el agua escurre en vez de entrar, y arrastra suelo. Una capa de cobertura absorbe ese impacto: la diferencia no está en cuánta agua cae sino en cuánta entra."
+    },
+    {
+      "id": "bomba",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es la bomba de nutrientes y por qué importa especialmente en tu clima?",
+      "opciones": [
+        "Una especie de raíz profunda toma nutrientes de un volumen de suelo al que tus cultivos no llegan y los incorpora a su biomasa.",
+        "Al cortarla y dejarla en superficie, esos nutrientes quedan depositados en la capa donde sí hay raíces productivas.",
+        "Rescata lo que la lluvia lavó hacia abajo, que en siete meses de lluvias es bastante.",
+        "Es una bomba mecánica que sube agua del subsuelo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Funciona con energía solar y no cuesta nada: la planta hace el transporte. El lavado de bases hacia abajo es un problema real en un clima con siete meses de lluvia, y una especie de raíz profunda es la única forma barata de recuperar lo que se fue."
+    },
+    {
+      "id": "abono-vs-cobertura",
+      "tipo": "verdadero_falso",
+      "enunciado": "Abono verde y cultivo de cobertura son la misma práctica con distinto nombre.",
+      "respuesta": false,
+      "explicacion": "Falso, aunque una misma especie puede jugar los dos papeles. Un abono verde se siembra para terminarlo: su valor está en lo que aporta al morir, y se corta en un momento elegido. Un cultivo de cobertura se siembra para que esté: su valor está en ocupar el suelo, y puede durar años o convivir con el cultivo principal. Lo que cambia es cuándo lo cortas."
+    },
+    {
+      "id": "mezclas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué una mezcla de leguminosa y gramínea rinde más que cualquiera de las dos sola?",
+      "opciones": [
+        "La leguminosa aporta el nitrógeno que la gramínea necesita para producir biomasa.",
+        "La gramínea aporta carbono de C/N alta, así que la cobertura resultante dura más.",
+        "Ocupan dos estratos de raíz distintos y aguantan mejor un contratiempo, una plaga o una semana sin lluvia.",
+        "Es indiferente: sembrar una sola especie da el mismo resultado y es más sencillo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Cada familia tiene una arquitectura de raíz y una función: las leguminosas fijan nitrógeno vía rizobios, las gramíneas dan biomasa y raíz fibrosa que construye estructura, y las crucíferas perforan capas compactas con su raíz pivotante. La mezcla es más robusta y más completa, y no cuesta más trabajo que una sola."
+    },
+    {
+      "id": "terminar",
+      "tipo": "opcion_multiple",
+      "enunciado": "Llega el momento de terminar la cobertura. ¿Qué haces y cuándo?",
+      "opciones": [
+        "Cortar en floración, que es el punto de máxima biomasa antes de que el tejido endurezca.",
+        "Dejar el material en superficie, donde se descompone despacio y protege mientras lo hace.",
+        "No dejar que llegue a semilla, porque así es como una cobertura se convierte en la maleza del año siguiente.",
+        "Incorporarla con máquina para que se aproveche mejor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Incorporar destruye la estructura que la cobertura acababa de construir, dispara la mineralización de golpe y, con material de C/N alta, provoca inmovilización de nitrógeno. Es la misma regla de la lección 2: encima, nunca enterrado."
+    },
+    {
+      "id": "calendario-agua",
+      "tipo": "verdadero_falso",
+      "enunciado": "En tu clima conviene mantener cobertura viva durante todo el año.",
+      "respuesta": false,
+      "explicacion": "Falso, y el motivo es el agua. Una cobertura viva transpira: en lluvias eso es irrelevante, pero en la seca compite directamente con lo que estás produciendo, y el agua es tu cuello de botella de agosto y septiembre. De ahí la regla estacional: cobertura viva en lluvias, cobertura muerta en la seca. Es el mismo material haciendo dos trabajos distintos según la estación."
+    },
+    {
+      "id": "plan-cobertura",
+      "tipo": "abierta",
+      "enunciado": "Diseña el plan de cobertura de Rizoma del Sur: por qué es urgente pese a que todavía no produces casi nada, qué mezcla siembras y dónde, cómo encaja en el calendario, y qué dos advertencias tienes presentes.",
+      "respuestaModelo": "Es urgente precisamente porque todavía no produzco casi nada. El vivero ocupa una fracción pequeña de los 3.666 m², los frutales tardan y las camas se construyen poco a poco porque cada 10 metros lineales son 3 m³ de material. Mientras tanto el resto del terreno o está cubierto o se está degradando, y no hay tercera opción. Esa superficie sin producir es exactamente donde va la cobertura: no compite con nada porque no había nada, y en dos o tres años, cuando llegue a ese lote a construir, me lo voy a encontrar mejor de lo que lo dejé, con más materia orgánica, mejor estructura y las capas compactas perforadas. Es la única parte del proyecto que mejora sola mientras me ocupo de otra cosa.\n\nLa mezcla de partida: gandul como base leguminosa, que ya tengo decidido para la cortina del sur y las zonas subsoladas y cuya semilla se consigue aquí; una gramínea de mucha biomasa, sorgo forrajero o mijo, para el volumen de carbono y la raíz fibrosa; y nabo forrajero en las zonas donde el hoyo mostró capa compacta y no voy a subsolar.\n\nDónde va cada cosa: mezcla completa en los lotes sin producir; cobertura baja bajo los frutales jóvenes, a distancia del tronco; nada en los pasillos del vivero, que son tráfico y van cubiertos con picado; gandul en la zona subsolada, para que la raíz aproveche las grietas recién abiertas; y gandul en línea en el borde sur, que además es la cortina temporal.\n\nEl calendario: agosto y septiembre, conseguir semilla, que es ahora. Octubre, con las primeras lluvias, sembrar la mezcla en todo lo que no vaya a producir. Marzo o abril, en floración, cortar y dejar en superficie. De mayo a septiembre ese material es la cobertura muerta de la seca y no se toca. Encaja con el reparto estacional: viva cuando sobra agua, muerta cuando falta.\n\nY el gandul suma aquí su quinta función. Cuando lo pode —y hay que podarlo para que ramifique y no se haga leñoso— esa poda es material verde rico en nitrógeno. En la lección de compost el problema era que todo mi material era carbono puro y la única fuente de nitrógeno era la gallinaza comprada; el gandul me da una fuente de nitrógeno que produzco yo, renovable cada temporada y sin flete. Recuento: cortina rompevientos temporal, abono verde, biodescompactación, cultivo del catálogo y activador del compost.\n\nLas dos advertencias. Primera: no dejar que semille lo que no quiero perpetuar, porque una cobertura que llega a semilla es la maleza del año siguiente y algunas especies vigorosas cuestan mucho de sacar. Segunda: cuidado con la mucuna, que es excelente como abono verde y muy agresiva, trepa y ahoga lo que encuentre; en un lote vacío es perfecta, cerca de frutales jóvenes o del vivero es un problema.",
+      "criterios": [
+        "Explica que la urgencia viene de la superficie que va a estar sin producir durante años.",
+        "Propone una mezcla con leguminosa, gramínea y crucífera, y justifica cada una.",
+        "Asigna especie a zona, incluidos pasillos y frutales jóvenes.",
+        "Encaja el calendario con siembra en octubre y corte en floración hacia marzo o abril.",
+        "Aplica el reparto estacional entre cobertura viva y cobertura muerta por competencia de agua.",
+        "Identifica la quinta función del gandul como fuente propia de nitrógeno para el compost.",
+        "Advierte de no dejar semillar y del riesgo de la mucuna cerca de cultivos establecidos."
+      ],
+      "explicacion": "Con esta pregunta cierras el Módulo 7. Fíjate en lo que tiene de particular: es la única intervención del módulo cuyo resultado mejora con el tiempo sin que hagas nada más, y la que ocupa justamente el terreno que de otro modo estaría perdiéndose."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "preguntas": [
+    {
+      "id": "fallo-silencioso",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la lección insiste en que el compostaje necesita telemetría y pruebas de aceptación?",
+      "opciones": [
+        "El proceso no emite ninguna señal de error: una pila que nunca calentó termina pareciéndose mucho a una que sí lo hizo.",
+        "La única variable observable durante la fase activa es la temperatura, y sin registro no queda rastro de lo que pasó.",
+        "El fallo se manifiesta semanas después de aplicar el material, cuando ya se comprometió un lote entero de plantines.",
+        "Porque el compost mal hecho se reconoce a simple vista por el color y el olor antes de usarlo."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La última es justo lo que la lección desmonta: un compost frío acaba oscuro, desmenuzable y de olor tolerable, indistinguible a tres metros de uno bien hecho. El color y el olor descartan una pila claramente podrida, pero no distinguen la que se quedó en 35 °C, y esa es la que trae semillas de maleza y material inmaduro."
+    },
+    {
+      "id": "geometria-de-la-pila",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué consecuencias tiene la relación superficie/volumen sobre una pila de compost?",
+      "opciones": [
+        "El calor se genera en proporción al volumen y se pierde en proporción a la superficie, así que reducir el lado a la mitad duplica la pérdida específica.",
+        "Los primeros quince o veinte centímetros son una corteza que nunca alcanza temperatura, y en una pila mínima esa corteza es la mayor parte de la masa.",
+        "Una pila alargada tiene una fracción de núcleo caliente mucho mayor que un cubo del tamaño mínimo, y por eso se composta en camellones.",
+        "Una pila pequeña calienta igual que una grande siempre que la mezcla y la humedad estén bien ajustadas."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el error más frecuente del compostaje casero: la geometría manda sobre la receta. Una pila de medio metro de lado pierde calor al doble de velocidad específica que una de un metro, y ninguna corrección de C/N ni de humedad compensa eso. Si el volumen no da, lo honesto es asumir que se está haciendo compostaje frío, sin higienización."
+    },
+    {
+      "id": "humedad-dos-estaciones",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una pila detenida por falta de agua en agosto y una pila detenida por exceso de agua en enero son el mismo problema y se corrigen igual.",
+      "respuesta": false,
+      "explicacion": "Falso, y confundirlas es el fallo de humedad más caro. La pila seca está pausada: los microorganismos se quedaron sin la película de agua donde viven, pero el material no se ha estropeado y se recupera regando mientras se voltea. La pila ahogada está destruida como proceso aerobio: el agua desplazó el aire, el oxígeno difunde en agua unas diez mil veces más lento, y el resultado son ácidos orgánicos, sulfuro de hidrógeno y compuestos fitotóxicos. Una pide agua y la otra pide aireación y material estructurante."
+    },
+    {
+      "id": "volteo-por-curva",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuándo se voltea una pila?",
+      "opciones": [
+        "Cuando la temperatura baja claramente desde la meseta, señal de que se agotó el oxígeno o el material accesible.",
+        "Cuando sube por encima de unos 65–70 °C, porque más arriba la propia comunidad termófila se inhibe.",
+        "Cuando la sonda o la nariz detectan anaerobiosis en alguna zona, aunque el promedio se vea correcto.",
+        "Cada siete días, para mantener una rutina que no dependa de que alguien esté midiendo."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta convierte una respuesta a una señal en tarea de agenda, y hace daño en las dos direcciones: voltear en plena meseta tira por la ventana el calor que costó tres días producir, y esperar al día de calendario deja pasar la ventana útil. Además, el volteo cumple una función sanitaria —llevar la corteza al núcleo— que solo tiene sentido si se hace invirtiendo la pila, no empujándola."
+    },
+    {
+      "id": "perdida-de-nitrogeno",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es cierto sobre la pérdida de nitrógeno como amoníaco en una pila caliente?",
+      "opciones": [
+        "El equilibrio entre amonio y amoníaco se desplaza hacia el gas con pH alto y con temperatura alta, y la pila termófila produce ambas condiciones por sí misma.",
+        "Arrancar con una C/N por debajo de 25 no acelera el proceso: solo aumenta el excedente que se ventila.",
+        "Una manta de carbono fino sobre la pila funciona como filtro biológico donde el amoníaco vuelve a disolverse.",
+        "Echar cal o ceniza a la pila reduce el olor a amoníaco y por tanto conserva el nitrógeno."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es una costumbre extendida y contraproducente: la cal y la ceniza suben el pH, que es exactamente la variable que empuja el equilibrio del amonio hacia el amoníaco gaseoso. Lejos de conservar nitrógeno, aceleran su fuga. Y el olor no es un indicador de que la pila trabaja fuerte: es la alarma de una fuga, además de un riesgo respiratorio en espacio cerrado."
+    },
+    {
+      "id": "estabilidad-vs-madurez",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un compost estable —que ya casi no consume oxígeno ni genera calor— es por definición un compost maduro y puede ir a bolsas de vivero.",
+      "respuesta": false,
+      "explicacion": "Falso: son dos propiedades relacionadas pero distintas. La estabilidad mide cuánta actividad biológica le queda al material; la maduración mide si puede estar en contacto con una raíz, y depende de la ausencia de compuestos fitotóxicos. Un material razonablemente estable puede conservar amoníaco y ácidos orgánicos de cadena corta suficientes para frenar una germinación. Por eso el ensayo de autocalentamiento y el índice de germinación miden cosas diferentes y hay que hacer los dos."
+    },
+    {
+      "id": "pruebas-de-calidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué comprueba cada una de las pruebas de calidad de la lección?",
+      "opciones": [
+        "El índice de germinación, con extracto acuoso y medición de la raicilla contra un testigo de agua, detecta fitotoxicidad.",
+        "El ensayo de autocalentamiento en recipiente aislante mide la estabilidad por cuánto sube la temperatura sobre el ambiente.",
+        "El bioensayo de malezas en bandeja comprueba si la higienización alcanzó todo el volumen y no solo el núcleo.",
+        "Todas juntas permiten certificar que el compost está libre de patógenos y apto para producto de consumo fresco."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta cruza la línea de lo que estas pruebas caseras pueden decir. Ninguna cuenta patógenos, ninguna detecta metales pesados y ninguna da el contenido real de nutrientes: eso exige laboratorio, y en Santa Cruz hay instituciones de investigación agrícola y universidades a las que consultar. Además, cualquier afirmación pública sobre inocuidad o condición de higienizado es materia regulada y se consulta con la autoridad sanitaria agropecuaria competente, no se deduce de un curso."
+    },
+    {
+      "id": "aplicacion-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Estás en Rizoma del Sur: 3.666 m² en 12 lotes en Zanja Honda, llanura aluvial con arcillas expansivas, lluvias de octubre a abril y seca de mayo a septiembre con surazos. Tienes varias toneladas de material leñoso picado del desmonte y acceso a gallinaza de granjas avícolas cercanas. Diseña el sistema de compostaje completo: (a) cómo dimensionas y dónde ubicas la pila, con la geometría justificada; (b) cómo calculas la mezcla y con qué mediciones; (c) el calendario del ciclo dentro del año cruceño, con techo y cobertura; (d) el protocolo de operación —volteos, mediciones, registro— y las medidas contra la pérdida de nitrógeno y la contaminación cruzada; y (e) qué pruebas exiges antes de liberar un lote y con qué criterio distinto según el destino.",
+      "respuestaModelo": "(a) Dimensión y ubicación. Primero dos números escritos antes de tocar una pala: cuántos metros cúbicos de compost necesito el año que viene —reposición de materia orgánica en los lotes más la fracción de compost de las mezclas de bolsa del vivero— y cuántos metros cúbicos de material tengo. Y la corrección que casi nadie aplica: el material pierde del orden de la mitad de su volumen, así que hay que medirlo en el primer lote marcando la altura inicial con dos estacas. La geometría no se elige por comodidad: una pila genera calor en proporción a su volumen y lo pierde en proporción a su superficie, y para un cubo esa relación es 6 dividido entre el lado, de modo que reducir el lado a la mitad duplica la pérdida específica. Peor todavía, los primeros quince o veinte centímetros nunca alcanzan temperatura: en un cubo de un metro, descontada esa corteza, el núcleo caliente es poco más de una quinta parte del material. Por eso: un solo camellón de metro y medio de alto, dos de base y tres o cuatro de largo, no cuatro cubos dispersos que no van a calentar. Cerca del punto de agua, con acceso de carretilla desde los lotes y desde donde descarga la gallinaza, y nunca en el punto bajo del terreno, porque con arcillas expansivas el agua no infiltra; base elevada, con material grueso abajo que hace de drenaje y de entrada de aire. (b) La mezcla. La regla de una parte de gallinaza por seis de material picado es punto de partida, no cálculo, porque la relación C/N es una proporción entre masas secas y la carretilla mide volúmenes húmedos: la gallinaza fresca puede pesar tres o cuatro veces lo que el mismo volumen de material leñoso. Mido la densidad aparente de cada material con un balde de veinte litros y una balanza, una sola vez, y calculo la C/N de la mezcla como la suma de los carbonos partida por la suma de los nitrógenos, con masas secas. La cuenta sirve para no errar por un factor de tres, no para acertar al decimal: el carbono lignificado cuenta en la planilla y no está disponible. Apunto a 25–30 y no por debajo, granulometría entre uno y cinco centímetros y una fracción gruesa que haga de agente estructurante; nada de triturar fino, que fabrica un bloque anaerobio. Y pregunto qué cama trae la gallinaza, porque la cascarilla o la viruta cambian mucho la C/N: peso y anoto cada carga. (c) Calendario. El compost tiene plazo de entrega largo, de cuatro a seis meses. Armo al principio de la seca, cuando el desmonte y las podas dejan material y aún queda agua en los tanques; la fase activa cae en invierno seco, cuando la lluvia no ahoga la pila y el único trabajo es regar, con ese riego contado dentro del consumo de agosto; maduración al final de la seca, de cuatro a ocho semanas sin alimentar la pila; cribado y guardado antes de las lluvias de octubre. Techo fijo con cubierta arriba y los cuatro costados abiertos, nunca la pila envuelta en plástico ni los laterales cerrados, porque eso corta la convección; cobertura respirable sobre el material, nunca plástico apoyado encima, que condensa y crea una capa anaerobia. Y el balde de lixiviado y cualquier tambor, tapados o vaciados, porque el agua estancada a la sombra es criadero de mosquito y el dengue es endémico. (d) Operación. Volteo por curva y no por calendario: cuando la temperatura baja claramente desde la meseta, cuando pasa de 65–70 °C, o cuando la nariz o la sonda detectan anaerobiosis. Mido en cuatro o cinco puntos y a dos profundidades y anoto el rango, no el promedio, porque el punto frío decide la calidad del lote; y observo el rebote térmico tras cada volteo para saber si la fase activa terminó o si la pila se había ahogado. No volteo el día que anuncian surazo. Contra la pérdida de nitrógeno: arrancar en 25–30 de C/N, manta de carbono fino de unos diez centímetros como filtro del amoníaco, no voltear de más la primera semana, y nunca cal ni ceniza, que suben el pH y empujan el equilibrio hacia el gas. Contra la contaminación cruzada: lado sucio y lado limpio, con palas y carretillas que no cruzan. Cada pila es un lote etiquetado con fecha, materiales, temperatura máxima, días por encima de 55 °C, volteos, fin de maduración y pruebas. (e) Liberación del lote. Índice de germinación con extracto acuoso y medición de raicilla contra testigo, con tres platos por tratamiento; autocalentamiento para la estabilidad; olor, con la prueba de la bolsa cerrada; y bioensayo de malezas en bandeja durante dos o tres semanas. Dos umbrales distintos: para enmendar los lotes de yautía, batata o gandul basta un índice intermedio y algo de maleza, porque el suelo abierto diluye y ya tiene banco de semillas; para bolsas de vivero y bandejas de almácigo hay que pasar las cuatro sin excepción, porque en dos litros la raíz no puede escapar de un material que sigue respirando, inmoviliza nitrógeno y libera fitotóxicos. Lo que estas pruebas no dicen —patógenos, metales pesados, nutrientes— se consulta con laboratorio, y cualquier afirmación pública de inocuidad, con la autoridad sanitaria competente. Todo queda en una planilla, que en un proyecto comunitario es el producto exportable: la receta escrita con sus fallos anotados es lo que un vecino puede copiar.",
+      "criterios": [
+        "Dimensiona el sistema con números antes de armar, e incluye la pérdida de aproximadamente la mitad del volumen durante el proceso.",
+        "Justifica la geometría con la relación superficie/volumen y con la fracción de masa que queda en la corteza fría, y elige un camellón alargado en vez de varias pilas pequeñas.",
+        "Ubica la pila cerca del agua, con acceso de carretilla y fuera del punto bajo del terreno, con base elevada y capa gruesa de drenaje.",
+        "Reconoce que la C/N se calcula con masas secas y propone medir la densidad aparente con balde y balanza en lugar de estimar volúmenes húmedos.",
+        "Distingue carbono contable de carbono disponible y fija la mezcla en torno a 25–30, con granulometría entre uno y cinco centímetros y una fracción estructurante.",
+        "Ordena el ciclo dentro del año cruceño: armado al principio de la seca, fase activa en invierno con el riego contado en agosto, maduración al final de la seca y guardado antes de octubre.",
+        "Propone techo con costados abiertos y cobertura respirable, descarta envolver la pila en plástico y contempla el agua estancada como criadero de mosquito.",
+        "Voltea por curva de temperatura y por rebote térmico, mide en varios puntos y a dos profundidades, y registra el rango en vez del promedio.",
+        "Aplica al menos tres de las cuatro medidas contra la volatilización de amoníaco y rechaza la cal y la ceniza sobre la pila.",
+        "Separa flujo sucio y flujo limpio con herramientas que no cruzan, y trata la contaminación cruzada como problema de flujo y no de lavado final.",
+        "Nombra las cuatro pruebas de calidad y fija dos umbrales distintos según el destino, suelo abierto frente a contenedor de vivero.",
+        "Declara los límites de las pruebas caseras, remite a laboratorio y a la autoridad competente sin inventar requisitos, y cierra con el registro por lote como receta que otro vecino puede repetir."
+      ],
+      "explicacion": "El ejercicio recorre la lección en el orden en que se usa en terreno: primero se dimensiona y se decide la geometría, que es lo único que no se puede corregir después; luego se calcula la mezcla con mediciones propias; luego se encaja el ciclo en el clima real; luego se opera por señales en vez de por calendario; y solo al final se decide si el lote sale. Lo que se evalúa no es que enumeres los ocho fallos, sino que cada decisión venga con su mecanismo detrás y con una medición asociada. Si tu respuesta no contiene ningún número medido por ti —densidad de un balde, altura marcada con estacas, temperatura en varios puntos, plántulas contadas en una bandeja—, has descrito una intención, no un sistema."
+    }
+  ]
+}

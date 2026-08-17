@@ -1,0 +1,389 @@
+En las tres lecciones anteriores el estrato alto apareció siempre como un dato de entrada: «el plátano
+ocupa arriba», «el gandul hace de pantalla», «bajo los frutales queda un hueco». Se hablaba de lo que
+hay debajo del árbol dando por hecho el árbol.
+
+Esta lección invierte el foco y trata la capa alta como lo que es: **la única pieza del sistema que fija
+condiciones para todas las demás y la única que no se puede rehacer el año que viene.** Un cultivo anual
+es un despliegue; si sale mal, se corrige en el siguiente ciclo. Un árbol es la plataforma sobre la que
+corren todos los despliegues: se decide una vez y cuando estorba ya cuesta una motosierra y un tocón.
+
+## El árbol no es una planta grande, es infraestructura
+
+La <Termino slug="agroforesteria">agroforestería</Termino> es el diseño deliberado de sistemas donde
+leñosas perennes comparten espacio y tiempo con cultivos. La palabra clave es *deliberado*: un mango que
+creció donde alguien tiró un carozo no es agroforestería, es un árbol. Lo que convierte a uno en sistema
+es que **cada leñosa tiene una función declarada, una geometría elegida y un calendario de
+intervención**.
+
+La diferencia de fondo es la constante de tiempo. Un culantro responde a una decisión en tres semanas;
+un árbol de sombra, en cinco o diez años, y responde a decisiones tomadas cuando era un plantín en
+bolsa. Ese desfase hace que **la mayoría de los errores con árboles sean invisibles el año que se
+cometen**.
+
+<Analogia>
+Trabajar con árboles es trabajar en la capa de infraestructura, con sus reglas conocidas: los cambios
+son caros de revertir, el efecto se ve tarde y los errores se pagan con interés. Elegir mal la especie
+es elegir mal el motor de base de datos —durante un año no se nota nada, y cuando se nota, migrar cuesta
+más que todo lo que se ahorró.
+
+Hereda también la otra propiedad: **es lo primero que hay que dimensionar y lo último que hay que
+tocar.** Los anuales son código de aplicación y se reescriben sin drama; el árbol es el esquema.
+</Analogia>
+
+Y hay una tercera propiedad que casi nadie contabiliza: **el árbol no da sombra, modifica todas las
+variables del ambiente a la vez.** Baja la radiación, la temperatura y el viento, sube la humedad
+inmediata, cambia el reparto de la lluvia y ocupa un volumen de suelo con raíces que beben y comen. Nada
+de eso se contrata por separado: **cuando pones un árbol contratas el paquete completo**, y diseñar es
+elegir el paquete cuyo saldo te conviene.
+
+## Estratificación vertical: cuántas capas caben de verdad
+
+La <Termino slug="estratificacion-vertical">estratificación vertical</Termino> es el reparto de las
+especies en capas de altura distintas, cada una operando con la luz que le deja pasar la de arriba. No
+es una metáfora del bosque: es el reparto de un presupuesto de radiación que llega una sola vez y se
+gasta de arriba abajo.
+
+En el catálogo de Rizoma las capas ya existen aunque nadie las haya dibujado. Los árboles de sombra
+ocupan el estrato alto; el plátano, un estrato medio con hoja enorme y horizontal; el gandul es
+arbustivo, de hoja pequeña y compuesta; la yautía es herbácea de hoja grande y de sotobosque por origen;
+el culantro va casi al ras y la batata cubre el suelo rastreando. Debajo de todas hay una capa más, la
+que nunca se dibuja: **el volumen de suelo explorado por raíces, que tiene su propia estratificación y
+no coincide con la de arriba.**
+
+<Advertencia>
+El error clásico de quien descubre el multiestrato es creer que más capas es más producción. **No lo es,
+y la razón es aritmética: la radiación que llega al terreno es una cantidad fija y se reparte, no se
+multiplica.**
+
+Una capa nueva solo suma si aprovecha luz que la de arriba estaba desperdiciando —por encima de
+su <Termino slug="saturacion-luminica">saturación lumínica</Termino>, o contra el suelo desnudo— y si su
+producto tiene destino real. Una capa que apenas crece, en el límite de su punto de compensación, no
+produce: consume agua, espacio y jornales para mantenerse verde. **Tres capas bien elegidas rinden más
+que seis mal elegidas.**
+</Advertencia>
+
+## La luz que pasa: extinción, transmisividad y sombra moteada
+
+La luz se apaga hacia abajo de forma aproximadamente exponencial con la hoja acumulada encima.
+La <Termino slug="transmisividad-del-dosel">transmisividad del dosel</Termino> —la fracción de radiación
+que llega al suelo— sigue una ley de extinción con dos factores, y el segundo es el que casi nadie usa y
+el que más manda.
+
+<Formula explicacion="La fracción de luz que llega abajo cae exponencialmente con el índice de área foliar acumulado por encima. El coeficiente k depende de la forma y la inclinación de las hojas, no de su cantidad: es la propiedad óptica de la copa.">
+luz que llega abajo ≈ luz de arriba × e^(−k × índice de área foliar)
+</Formula>
+
+El índice de área foliar es *cuánta* hoja hay: metros cuadrados de hoja por metro cuadrado de suelo.
+El <Termino slug="coeficiente-de-extincion">coeficiente de extinción</Termino> es *cómo* está puesta esa
+hoja. Una copa de hojas anchas, horizontales y opacas intercepta casi todo en las primeras capas y da
+sombra profunda; una de hojas pequeñas, compuestas e inclinadas deja pasar mucha más luz con la misma
+cantidad de hoja, porque cada una intercepta poco y el resto se cuela entre ellas.
+
+De ahí una consecuencia contraintuitiva: **la sombra de un árbol no la decide su tamaño, la decide la
+arquitectura de su follaje.** Por eso la primera pregunta que se le hace a una especie candidata no es
+«¿cuánto crece?» sino **«¿qué clase de sombra da?»**.
+
+Esa sombra tampoco es uniforme. Bajo una copa abierta lo que
+hay es <Termino slug="sombra-moteada">sombra moteada</Termino>: un mosaico de penumbra atravesado por
+manchas de sol directo que se desplazan. Cada mancha es
+un <Termino slug="destello-de-sol">destello de sol</Termino>, y en el sotobosque los destellos aportan
+una parte del carbono del día mucho mayor de lo que sugiere el tiempo que duran.
+
+<Analogia>
+Los destellos tienen una trampa que cualquiera que haya medido latencias reconoce: **la hoja no responde
+al sol de forma instantánea, tiene arranque en frío.** Cuando llega el destello los estomas están medio
+cerrados y las enzimas de fijación desactivadas por haber estado a la sombra; alcanzar el ritmo máximo
+lleva del orden de minutos. Un destello corto se aprovecha mal —se paga el arranque y termina antes de
+llegar a régimen— y una serie seguida mucho mejor, porque la maquinaria queda caliente entre uno y otro.
+**Es una caché caliente contra una fría.**
+
+De ahí una regla que no está en ningún folleto: **para el piso de abajo es mejor una sombra pareja y
+moteada que una alternancia de bloques de sol duro y sombra densa.** Ese patrón lo da una copa alta y
+aireada, y lo destruye una copa baja y compacta.
+</Analogia>
+
+Y se mide barato con algo que Rizoma ya tiene: **la malla de sombra del vivero es un patrón calibrado.**
+La pregunta ante un sitio bajo un árbol no es «¿hay mucha sombra?» sino **«¿esto se parece a la malla
+con la que el culantro va bien?»**, y se contesta con el medidor de luz de un teléfono: una lectura al
+sol abierto y otra bajo el árbol en el mismo minuto, y quedarse con **el cociente**. El valor absoluto
+de un teléfono no es radiación fotosintéticamente activa y no sirve; el cociente sí.
+
+## Lo que la sombra hace además de quitar luz
+
+Si la sombra solo restara luz, el árbol sería un impuesto. Lo que lo justifica es que **modifica el
+balance de energía del sitio**: la radiación que llega a una superficie se reparte en tres destinos
+—calienta el aire, evapora agua y entra al suelo— e interceptarla arriba reduce los tres abajo. **La
+superficie de un suelo desnudo al sol de octubre alcanza temperaturas que matan raíz fina y esterilizan
+la capa biológicamente activa**, y basta una cubierta para devolverla a un rango donde la vida trabaja.
+
+El efecto más valioso es sobre el <Termino slug="dpv">déficit de presión de vapor</Termino>, y lo es
+porque es **no lineal**: el vapor que el aire puede contener crece exponencialmente con la temperatura,
+aproximadamente al doble cada diez u once grados. Bajar unos pocos grados la temperatura de la hoja **no
+baja la demanda evaporativa en la misma proporción: la baja mucho más.** Tres o cuatro grados a mediodía
+separan a una planta que cierra los estomas a las once de otra que sigue fijando carbono hasta las dos.
+
+Ahí está el argumento completo: **la planta de abajo recibe menos luz, pero convierte en azúcar una
+fracción mucho mayor de la que recibe, porque no tiene que cerrar la puerta.** Es el razonamiento de
+la <Termino slug="malla-de-sombra">malla de sombra</Termino> del vivero, con la diferencia de que el
+árbol no se compra ni se cambia de grado.
+
+<Dato>
+El mecanismo tiene un dominio de validez: **solo paga donde sobra radiación.** Bajo cielo cubierto o
+para una especie de saturación alta, la sombra es pérdida limpia. Por eso la misma copa que salva a un
+culantro es un problema para un ají dulce en producción, y por eso la respuesta a «¿conviene sombra?»
+empieza siempre por «¿a qué especie, en qué mes y con qué agua?».
+
+Y por eso el árbol de hoja caduca es interesante: **es un interruptor estacional que funciona solo**, y
+en qué semanas está sin hoja no se copia de un libro, se observa durante un año.
+</Dato>
+
+De noche el efecto cambia de mecanismo. Una copa reduce la pérdida de calor por radiación al cielo
+abierto, que es lo que produce el <Termino slug="frio-radiativo">frío radiativo</Termino> de las noches
+despejadas y en calma. Pero el <Termino slug="surazo">surazo</Termino> tiene dos caras: cuando entra la
+masa de aire frío hay
+también <Termino slug="frio-advectivo">frío advectivo</Termino> —aire frío que llega desplazándose, con
+viento— y contra eso una copa hace poco, porque el aire frío está por todas partes. **Lo que sí hace la
+capa alta durante el surazo es frenar el viento**, y ese beneficio es mecánico: menos hoja de plátano
+desgarrada, menos plantas volcadas. La geometría de las cortinas rompeviento es materia de la lección
+siguiente; aquí basta retener que **el estrato alto interior ya frena el viento sin habérselo
+propuesto**.
+
+## Abajo: la zona real de competencia radicular
+
+Todo lo anterior es el lado bueno. El que hunde sistemas está bajo tierra y empieza por un error de
+dibujo repetido en todos los manuales: **la sombra se dibuja del tamaño de la copa, y la raíz también.**
+La segunda mitad es falsa.
+
+La <Termino slug="zona-de-competencia-radicular">zona de competencia radicular</Termino> —el volumen
+donde las raíces finas del árbol absorben de verdad— suele extenderse bastante más allá del borde de la
+copa, y está concentrada en los primeros veinte o treinta centímetros, exactamente donde tiene sus
+raíces el cultivo de abajo: **el área de competencia es mayor que el área de sombra y se solapa justo en
+la capa que importa.** Cuánto más depende de la especie, del suelo y de dónde encuentre agua, y no hay
+número copiable. Sí hay método: **abrir una zanja pequeña a distintas distancias del tronco y mirar.**
+Media hora de pala contesta lo que ninguna tabla contesta.
+
+De ahí dos decisiones. **El anillo pegado al tronco es el peor sitio del sistema para cultivar** —máxima
+densidad de raíz, sombra profunda, poca circulación—: se cubre y se deja tranquilo. Y si la competencia
+se vuelve intolerable existe una palanca, **cortar las raíces del árbol con una zanja del lado del
+cultivo**; funciona, pero estresa al árbol y, hecha demasiado cerca o demasiado profunda, **compromete
+el anclaje**, que es lo último que uno quiere donde el viento del sur derriba árboles.
+
+En la otra dirección hay un servicio que compensa parte de eso. Un árbol de raíz profunda funciona
+como <Termino slug="bomba-de-nutrientes">bomba de nutrientes</Termino>: extrae de un volumen de suelo al
+que los cultivos no llegan, lo incorpora a hojas y ramas y lo devuelve arriba cuando esa biomasa cae o
+se poda. Y funciona como red de captura: en las lluvias fuertes el nitrato se lava por debajo de la zona
+de raíces del cultivo, y unas raíces más profundas lo interceptan camino abajo.
+
+<Analogia>
+La raíz profunda es **un consumidor de la cola de mensajes fallidos**: recoge lo que el servicio
+principal dejó caer y lo reinyecta en vez de perderlo.
+
+Y hereda el problema de todo procesamiento diferido: **la reinyección no es inmediata.** El nutriente
+vuelve cuando la hoja cae o cuando alguien poda, no cuando el cultivo lo necesita; creer que el árbol
+«alimenta» al cultivo en tiempo real es el error que ya se cometió con la leguminosa. Y hay una
+condición que se olvida siempre: **si la poda y la hojarasca se retiran del lote, la bomba se convierte
+en una fuga.**
+</Analogia>
+
+## La poda es la perilla de la luz
+
+Esta es la idea operativa central. **La sombra de un árbol no es un dato fijo: es un parámetro
+ajustable, con actuador lento y respuesta rara.** Y los dos tipos de corte lo mueven en sentidos
+opuestos.
+
+El <Termino slug="corte-de-aclareo">corte de aclareo</Termino> elimina una rama entera en su punto de
+origen, sin dejar tocón. No deja yemas que rebroten con fuerza, respeta la forma natural del árbol y
+**abre luz de forma duradera**: la que entra por ese hueco sigue entrando el año que viene.
+
+El <Termino slug="corte-de-rebaje">corte de rebaje</Termino> acorta una rama por la mitad y deja un
+muñón. Al quitar el ápice se libera
+la <Termino slug="dominancia-apical">dominancia apical</Termino> que ejercía sobre las yemas de abajo y
+esas yemas brotan todas a la vez. El resultado, una o dos temporadas después, es **un penacho más denso
+que la rama original**: se podó para dar luz y se terminó con más sombra y ramas mal ancladas.
+
+<Analogia>
+Podar es operar un lazo de control con **retardo largo y respuesta inversa**: el sistema primero se mueve
+al lado contrario del que se quiere y la corrección tarda temporadas en verse.
+
+Cualquiera que haya ajustado un controlador sabe qué pasa al corregir fuerte un proceso con retardo:
+**oscila.** Se poda a fondo porque hay mucha sombra, al año siguiente sobra luz y todo se quema, se deja
+crecer, vuelve la sombra, se vuelve a podar a fondo. La regla es la de siempre: **ajustes pequeños, una
+variable por vez y medición antes y después.** Cociente de luz antes de podar y cociente después,
+anotados con la fecha. Sin esas dos lecturas no se regula: se adivina.
+</Analogia>
+
+Hay una tercera operación, la más barata y la más olvidada: **subir la copa** quitando las ramas bajas.
+Deja entrar la luz rasante y sobre todo **hace trabajable el espacio de abajo**, y un sistema
+agroforestal por el que no se puede caminar deja de mantenerse en pocas semanas.
+
+Y el material de la poda **no es basura, es la mitad del mecanismo del árbol**. Se pica y se deja en el
+sitio, separando por grosor: hoja y ramilla fina van sobre las camas; la madera gruesa tiene
+una <Termino slug="relacion-c-n">relación C:N</Termino> muy alta y, picada sobre una siembra,
+produce <Termino slug="inmovilizacion">inmovilización</Termino> de nitrógeno justo donde no conviene, así
+que va a los caminos o a una pila aparte.
+
+## Los cuatro arreglos clásicos
+
+En el <Termino slug="cultivo-en-callejones">cultivo en callejones</Termino> hay hileras de una leñosa
+—casi siempre una leguminosa— separadas por franjas de cultivo anual, y esas hileras se mantienen
+**cortas a propósito**, podándolas varias veces al año y echando el material al callejón: el árbol nunca
+llega a sombrear porque se lo poda antes. Es el arreglo con la lógica más limpia —fábrica de biomasa y
+de nitrógeno junto a donde se usa— y el que peor sobrevivió al contacto con la realidad: **la poda
+repetida consume muchos jornales y la hilera compite con las dos filas que tiene pegadas.** En Rizoma,
+donde el jornal es el recurso escaso, **la versión completa es cara y la parcial es sensata**: unas
+pocas líneas de gandul cuya poda alimenta las camas vecinas.
+
+El <Termino slug="sistema-multiestrato">sistema multiestrato</Termino> es lo que la mayoría imagina al
+oír «agroforestería»: capas permanentes superpuestas, con árboles altos, un estrato medio productivo y
+un sotobosque. Es el patrón del cacao bajo sombra y **lo que ya insinúa el catálogo de Rizoma**. Su
+riesgo es que se estabiliza en el lugar equivocado si nadie decide la transmisividad, y termina siendo
+un sitio bonito donde no crece nada.
+
+La <Termino slug="agricultura-sucesional">agricultura sucesional</Termino> añade el eje del tiempo y es
+la más exigente. Parte de que un terreno recorre
+una <Termino slug="sucesion-ecologica">sucesión ecológica</Termino> —de especies pioneras rápidas y de
+vida corta hacia especies lentas y longevas— y propone **plantarlo todo a la vez y muy denso,
+clasificando cada especie por estrato y por duración**, para después ir retirando por poda y por corte
+las que ya cumplieron su papel. Se difundió desde el nordeste de Brasil, de clima estacional parecido al
+del oriente boliviano. Y exige decir lo que cuesta: **el sistema no es la plantación, es el manejo.**
+Quien no poda ni ralea con criterio no obtiene un bosque productivo, obtiene un matorral cerrado en el
+año cinco.
+
+El <Termino slug="huerto-de-traspatio">huerto tropical de traspatio</Termino> es el más viejo y el que
+menos aparece en los libros técnicos: el patio de una casa con plátano, un frutal o dos, yuca, hierbas
+junto a la cocina y ornamentales en el borde, en capas y sin plano. Rinde poco por especie y muchísimo
+por metro cuadrado de atención, porque está donde la gente pasa todos los días. **Para un vecino sin
+tierra y sin dinero, este es el arreglo que puede empezar mañana.**
+
+## Diseñar la sucesión: qué se ralea y cuándo
+
+Un sistema agroforestal no se diseña como un plano, se diseña como un calendario. La densidad inicial es
+alta a propósito —cubrir suelo rápido mientras las copas son pequeñas— y **es insostenible más adelante
+por definición**. Lo que lo resuelve es
+el <Termino slug="raleo-progresivo">raleo progresivo</Termino>: retirar plantas enteras en fechas
+previstas, no cuando ya se estorban.
+
+<Tabla>
+
+| Papel | Ejemplos del catálogo | Entra | Sale |
+| --- | --- | --- | --- |
+| Cobertura y nodriza rápida | Gandul, batata rastrera | Con la plantación | Se rebaja desde el primer año y se retira al cerrar el estrato medio |
+| Estrato medio productivo | Plátano | Con la plantación o poco después | Se mantiene por deshije; sin fecha de salida |
+| Sotobosque de ciclo corto | Culantro, yautía | Cuando ya hay sombra parcial | Se cosecha y se repone; ocupa el hueco disponible |
+| Estructura permanente | Árboles de sombra, frutales injertados | Con la plantación | No sale; se regula por poda |
+
+</Tabla>
+
+Tres reglas gobiernan esa tabla, y las tres son de gestión antes que de botánica.
+
+**La fecha de salida se escribe el día de la entrada, no el día que molesta.** Es la disciplina de la
+nodriza con fecha de caducidad, llevada a la escala del árbol: un gandul sin fecha de retiro acaba
+siendo el competidor del frutal al que vino a proteger.
+
+**El disparador se escribe como condición observable, no como intuición.** «Cuando la copa del frutal
+alcance al gandul», «cuando el cociente de luz bajo el plátano baje de la mitad», «cuando dos copas se
+toquen». Un criterio que se comprueba mirando lo puede ejecutar otra persona, y en un proyecto
+comunitario esa es la diferencia entre un sistema y una dependencia personal.
+
+**Y se ralea antes de que duela**, porque quitar una planta sana que uno mismo plantó se siente como
+destruir trabajo y todo el mundo lo posterga. La lógica es la contraria: **la que se quita a tiempo
+devuelve luz, agua y espacio a las que quedan; la que se quita tarde ya cobró tres años de recursos y
+dejó a las vecinas deformadas.**
+
+<AplicarRizoma>
+En los 3.666 m² de Rizoma del Sur la capa alta ya está tomando decisiones sin que nadie las haya
+firmado, así que el primer trabajo es hacer explícito lo que existe. **El inventario del estrato alto es
+una tarde**: recorrer los 12 lotes, marcar cada leñosa en pie —la plantada, la que quedó del desmonte y
+la que nació sola— y anotarle cuatro datos: altura y diámetro de copa, si pierde la hoja y en qué meses,
+qué clase de sombra da al mediodía y qué crece debajo. Ese registro es la línea base, y sin él cualquier
+plan agroforestal es literatura.
+
+**La geometría del sol en Zanja Honda no es la de un libro tropical genérico.** A esta latitud, del
+orden de 18 grados al sur, el sol de mediodía pasa por el norte la mayor parte del año y en el solsticio
+de junio no supera unos 49 grados sobre el horizonte: la sombra es larga y apunta al sur, justo en los
+meses del surazo. En diciembre está a más de 84 grados, casi vertical, y esa sombra es un charco a los
+pies del árbol. **La huella de sombra no es una mancha fija: se estira, se encoge y bascula a lo largo
+del año.** Y no hace falta calcularla, se dibuja: marcar con cal el contorno de la sombra de los árboles
+principales al mediodía en cuatro fechas del año y guardarlos en el croquis. Con ese dibujo encima,
+decidir dónde va el semillero, dónde el ají dulce y dónde el culantro deja de ser opinión.
+
+**El arreglo multiestrato con lo que ya hay es el más realista y no obliga a comprar nada.** Árbol de
+sombra arriba, plátano en el estrato medio, yautía entre hileras de plátano, culantro en los huecos de
+sombra parcial y batata cubriendo suelo en los bordes soleados. La lección anterior ya fijó que la
+yautía va entre hileras y no en el ruedo de la mata, para no cavar sobre las raíces superficiales del
+plátano; aquí se añade la restricción del árbol: **bajo la copa de un árbol de sombra no va nada que se
+coseche cavando**, porque cada cosecha ahí es una labranza en el peor sitio posible. Bajo árbol va lo
+que se corta —culantro, hoja, ornamentales de sombra— y nunca lo que se saca con pala.
+
+**El gandul es la pieza que exige más disciplina, precisamente porque es la más útil.** En líneas
+orientadas contra el viento del sur protege lo recién plantado durante el surazo; como nodriza de un
+frutal recién trasplantado cubre los meses en que se pierden las plantas; y su poda es una fábrica de
+cobertura para las camas vecinas. Las tres funciones exigen lo mismo: **una fecha.** Cada línea entra al
+registro con el mes de la primera poda, el mes en que se rebaja para dejar pasar luz al frutal y el mes
+en que se corta a ras dejando el material en el suelo. Sin esas tres fechas, en tres años el gandul es
+el problema y no la solución.
+
+**El vivero da la calibración y el terreno da la validación, y ese circuito es lo que hace de Rizoma un
+lugar donde se aprende.** Los árboles de sombra que el vivero vende se observan aquí durante años —qué
+sombra dan de verdad a los cinco años, qué hojarasca sueltan, cómo responden a un aclareo— y eso se
+puede entregar junto con la planta. **Vender un árbol de sombra diciendo qué clase de sombra da y qué se
+puede sembrar debajo es un servicio que casi nadie ofrece**, y solo cuesta llevar el registro.
+
+Y una advertencia de escala: **con 3.666 m² no se puede tener todo a pleno sol y todo bajo sombra a la
+vez.** Cada árbol que entra compromete una superficie mucho mayor que su copa, y por décadas. Cuánta
+superficie va a quedar sombreada es de las poquísimas decisiones irreversibles del proyecto, y se toma
+con el plano delante.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**En el oriente boliviano la agroforestería no es una importación técnica: es lo que quedó en pie
+después del desmonte.** La costumbre de dejar árboles al abrir terreno —por sombra, por fruta o por
+madera— produce sistemas mezclados que un técnico reconocería como agroforestales aunque nadie los llame
+así. **Esa es la mejor fuente de hipótesis disponible**, y se trata como cualquier fuente: preguntando
+qué especie es y qué problemas dio, y verificando después.
+
+**La referencia técnica más cercana es la agroforestería del norte amazónico y del trópico de
+Cochabamba**, donde el cacao bajo sombra es un sistema de varias capas con historia larga. Lo importante
+de esa cercanía es lo que evita: **importar diseños de trópico húmedo sin estación seca**, donde el
+problema de la sombra es el contrario. Aquí la competencia por agua entre árbol y cultivo se concentra
+entera en la mitad seca del año: un arreglo complementario en lluvias puede ser competencia dura en
+agosto.
+
+**Las especies concretas se resuelven localmente y con criterio de riesgo.** La llanura y la Chiquitanía
+tienen una flora arbórea extraordinaria, con nativas adaptadas al clima, al suelo y a los surazos, y con
+la ventaja añadida de sostener fauna local. Este curso no va a publicar una lista de especies con
+velocidades de crecimiento ni diámetros de copa, porque esos datos dependen del suelo y de la
+procedencia y no se pueden inventar: **lo que corresponde es consultarlos con las instituciones que
+trabajan el tema en la región —el INIAF, el Centro de Investigación Agrícola Tropical, la Facultad de
+Ciencias Agrícolas de la UAGRM— y con viveristas y productores de la zona**, anotando la respuesta con
+su fuente. Y varias exóticas de crecimiento rápido que se recomiendan con entusiasmo tienen
+comportamiento invasor: en un predio rodeado de vegetación nativa, ese problema se hereda.
+
+**Y hay una parte que este curso no puede resolver y no va a fingir que resuelve: la legal.** Plantar,
+podar y sobre todo cortar árboles —muy especialmente especies forestales valiosas o árboles en terreno
+con cobertura nativa— está sujeto a normativa y a permisos que cambian con el tiempo, con la categoría
+del terreno y con la especie. **No hay cifra, plazo ni trámite que se pueda dar por bueno desde aquí.**
+Lo que sí se puede decir es a quién se pregunta: a la autoridad forestal competente y al gobierno
+municipal, antes de cortar y no después.
+
+**Por último, la dimensión comunitaria.** Un árbol de sombra bien puesto es de las poquísimas
+inversiones agrícolas cuyo beneficio es evidente sin explicar nada: se siente al pararse debajo. Eso lo
+convierte en el mejor punto de entrada para enseñar diseño de sistemas a un vecino que llega sin
+estudios previos y sin tierra. Y como el efecto tarda años, hay algo que vale la pena decir en voz alta:
+**quien planta un árbol de sombra está trabajando para alguien que todavía no conoce.** Esa es, con
+precisión, la definición de infraestructura pública.
+</ContextoBolivia>
+
+## Lo que sigue
+
+El árbol quedó convertido en lo que era: una pieza de infraestructura con función declarada,
+transmisividad que se mide, zona de competencia que se comprueba con una pala, una perilla de control
+que es la poda y una fecha de salida escrita para lo que no es permanente. El interior de la parcela ya
+tiene estructura vertical.
+
+Falta el borde. La siguiente lección, **06-cerco-vivo-productivo**, toma el perímetro de los 12 lotes y
+lo trata con la misma lógica de funciones apiladas: límite, cortina rompeviento con su porosidad óptima
+y su distancia protegida en múltiplos de la altura, barrera de polvo, privacidad y hábitat. Y sobre
+todo, lo trata como lo que en un vivero debería ser siempre: **un banco de plantas madre** que produce
+esquejes, varas de injerto y semilla de los árboles de sombra que Rizoma ya vende. El cerco pasa a ser
+el primer proveedor del vivero.

@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "cebar-y-despegar",
+      "tipo": "opcion_multiple",
+      "enunciado": "Estás encendiendo el arco por primera vez y el electrodo se te queda pegado a la pieza. ¿Qué es correcto sobre cebar y despegar?",
+      "opciones": [
+        "El arco se sostiene sobre el vapor ionizado del propio metal, y por eso hay que separarse enseguida después de tocar: si tardas no hay vapor todavía, y si te alejas se enfría y se apaga.",
+        "Si moviéndolo de lado a lado no cede en un par de segundos, se abre la pinza y se suelta el electrodo, porque eso corta el circuito y deja de calentarse todo.",
+        "El arco se ceba dentro de la junta o sobre un recorte de chatarra, nunca en cualquier parte de la pieza buena.",
+        "Cuando el electrodo se pega, lo más rápido y seguro es tirar del portaelectrodo hacia arriba con fuerza hasta arrancarlo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Tirar hacia arriba es el reflejo de todo el mundo y es el peor movimiento posible, por dos motivos mecánicos. La unión pegada es una película delgadísima que cede al doblarla, no al tirar de ella: la palanca de lado a lado la rompe con una fracción del esfuerzo. Y mientras tiras, la máquina sigue en cortocircuito franco entregando toda la corriente que puede a través de una barra que se pone roja en segundos, con el revestimiento cayéndose y el transformador corriendo hacia el corte térmico; el tiempo que pierdes forcejeando es exactamente el tiempo que está sufriendo el equipo. Abrir la pinza resuelve las dos cosas a la vez, porque abre el circuito antes de tocar nada. Lo del cebado suelto tampoco es manía: funde un punto sin protección que se enfría de golpe contra la masa fría de alrededor y queda duro, frágil y con un pocito, o sea una entalla, que es por donde la pieza se rompe meses después."
+    },
+    {
+      "id": "calor-aportado",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el amperaje y el calor que de verdad entra en la junta, ¿qué es correcto?",
+      "opciones": [
+        "El calor aportado por milímetro sube con la corriente y baja con la velocidad de avance, así que ir lento a 90 amperios puede meter más calor que ir rápido a 130.",
+        "El diámetro del electrodo no debe pasar el espesor de la chapa más fina que estás uniendo, porque si no la agujereas antes de fundir la otra.",
+        "Una pinza de masa apoyada sobre óxido o una extensión larga y delgada hacen que sueldes con el dial en 120 y el cordón se comporte como si fueran 80.",
+        "El número del dial es la referencia fiable del amperaje que llega al arco, siempre que la máquina no sea vieja."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa aunque la máquina esté recién comprada, porque el problema no está en la máquina sino en todo lo que hay entre ella y el charco. Entre el dial y el arco hay un cable, una pinza, una superficie de contacto y una red eléctrica, y cada uno de esos puede robar corriente sin que nada lo indique: la masa apoyada sobre pintura u óxido hace resistencia, la extensión larga produce caída de tensión, y la red con la tensión baja a las siete de la tarde entrega menos. De ahí la regla del oficio, que es la que hay que retener: la referencia es el charco, no el dial. El número solo sirve para volver mañana al mismo punto de partida, y solo si nada más cambió. Antes de subir amperaje se revisa la masa —limpia, bien apretada y lo más cerca posible de la junta—, porque además la corriente de retorno busca el camino más corto y si le toca pasar por un rodamiento o una bisagra los pica por dentro."
+    },
+    {
+      "id": "refuerzo-no-es-resistencia",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un cordón alto y abombado, con bastante metal encima, es más resistente que uno bajo y con transición suave hacia la chapa.",
+      "respuesta": false,
+      "explicacion": "Falso, y va contra la intuición de casi todo el mundo, que asocia más material con más resistencia. La unión no se rompe por el centro del cordón sino por el pie, que es donde el cordón se encuentra con la chapa, y ahí lo que manda no es cuánto metal hay sino qué tan brusco es el cambio de forma. Cuanto más abrupto es ese encuentro, más se concentra la tensión en él: la carga que venía repartida por toda la sección se amontona en ese rincón, con valores muchas veces mayores que en el resto. Un cordón gordo con pie abrupto concentra más que uno bajo y bien empalmado, así que es más débil pese a tener más material. Encima trae dos problemas de regalo: mete más calor y deforma más la pieza, y deja rincones profundos en el pie donde la escoria se mete y ya no sale. Se corrige yendo más rápido, y en una pieza importante amolando el pie hasta suavizar la transición."
+    },
+    {
+      "id": "leer-el-arco",
+      "tipo": "opcion_multiple",
+      "enunciado": "Mientras sueldas, el arco cambia de sonido y aparece humo. ¿Qué lecturas son correctas?",
+      "opciones": [
+        "Un soplido hueco y grave, en vez del crepitar parejo como de tocino friéndose, indica arco largo.",
+        "Al alargarse el arco, la campana de gas del revestimiento deja de tapar el charco y entra aire: aparecen poros, salpicadura y bordes comidos.",
+        "Mantener la longitud de arco obliga a bajar la mano continuamente, a la misma velocidad a la que se consume el electrodo, mientras además avanzas por la junta.",
+        "Un humo blanco denso y dulzón que deja gusto metálico indica que falta calor, y se corrige subiendo el amperaje para que funda mejor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Ese humo blanco dulzón con gusto metálico no es un problema de regulación: es zinc de un galvanizado hirviendo, y ahí no se corrige la técnica, se para. El zinc hierve muy por debajo de la temperatura a la que funde el acero, así que se evapora antes de que el charco se forme, y hace dos cosas a la vez: enferma a quien lo respira —la fiebre de los humos metálicos— y fabrica porosidad, porque ese vapor entra al metal líquido. Subir el amperaje empeora las dos. Lo correcto es ventilar, usar la protección respiratoria que viste en la lección de la máquina y amolar el recubrimiento unos centímetros a cada lado de la junta antes de encender. Vale la pena retener el principio general: soldar es el único oficio con telemetría en tiempo real y gratis, y quien suelda con música fuerte en los auriculares renuncia a la mitad de la información."
+    },
+    {
+      "id": "crater-y-pasadas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Se te acabó el electrodo en mitad del cordón y la junta es de chapa gruesa biselada. ¿Qué es correcto?",
+      "opciones": [
+        "Antes de reiniciar se pica y se cepilla la escoria del cráter, sin excepción.",
+        "Se ceba un centímetro por delante del cráter, se lleva el arco hacia atrás hasta el fondo del cráter para rellenarlo, y recién entonces se sigue hacia adelante.",
+        "Entre pasada y pasada se pica y se cepilla hasta ver metal brillante, porque la escoria es un vidrio aislante que el arco siguiente no funde: la sella adentro.",
+        "En chapa gruesa lo eficiente es subir bastante el amperaje y resolver la junta con un solo cordón grande, en vez de complicarse con varias pasadas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El cordón único a base de amperaje es tentador y no funciona, porque el problema de una junta gruesa no es cuánto metal depositas sino llegar al fondo del bisel. Subiendo la corriente ensanchas y ahondas el charco más allá de lo que puedes sostener, metes un calor enorme que deforma la pieza y ablanda una franja ancha, y aun así la raíz puede quedar sin tocar. Se resuelve con una pasada de raíz al fondo, con electrodo más fino y menos corriente, y encima pasadas de relleno que traslapan cada una entre un tercio y la mitad de la anterior. Hay además un beneficio metalúrgico que el cordón único no tiene: cada pasada recalienta la anterior y le afina el grano, así que el propio proceso repara parte del daño del paso previo. Y sobre el reinicio, la lógica de cebar por delante es que el arco recién encendido está frío y funde mal durante el primer segundo: ese segundo defectuoso queda dentro de la zona que después vas a volver a fundir, no en la unión final."
+    },
+    {
+      "id": "enfriar-con-agua",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cuando hay apuro, echarle agua a un cordón recién terminado para que enfríe rápido y poder seguir trabajando es una práctica aceptable en acero común.",
+      "respuesta": false,
+      "explicacion": "Falso, y es probablemente la costumbre que más piezas ha roto. Hace tres cosas malas a la vez, y las tres apuntan al mismo sitio. Endurece la zona de golpe, que es fabricar a mano la microestructura frágil que necesita la fisuración en frío; suma tensiones por contracción brusca, que es la segunda condición que esa fisura necesita; y mete vapor y agua justo donde entra el hidrógeno, que es la tercera. O sea que el enfriado con agua no favorece una de las condiciones de la fisura retardada: favorece las tres. Y hay riesgo inmediato además del diferido, porque el agua sobre metal al rojo revienta y lanza gotas hirviendo y escoria. De la misma familia es soldar sobre un contrapiso mojado o cemento fresco: la humedad atrapada se convierte en vapor bajo el metal caliente y puede saltar un pedazo de piso. Lo correcto es al revés —dejarla enfriar despacio y tapada— y por eso una reparación que va a cargar peso no se prueba el mismo día."
+    },
+    {
+      "id": "lo-que-no-se-ve",
+      "tipo": "opcion_multiple",
+      "enunciado": "Terminaste una unión a tope y el cordón se ve parejo y bonito. ¿Qué es correcto sobre lo que puedes concluir y cómo comprobarlo?",
+      "opciones": [
+        "La falta de fusión puede quedar debajo de un cordón impecable por fuera: el aporte se apoyó sobre el metal base sin llegar a fundirlo, como cera de vela sobre una mesa.",
+        "En el ensayo de doblado, si el metal base se pliega y el cordón no abre la unión es buena; si abre por la soldadura, era más débil que la chapa.",
+        "La cara de fractura de una probeta rota por entalla muestra a simple vista poros redondos, escoria brillante y zonas lisas donde no hubo fusión.",
+        "Si el cordón salió parejo, con ondas regulares y sin defectos visibles, se puede dar por comprobada la penetración."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la creencia que esta lección existe para desarmar: un cordón bonito no es un cordón bueno. La superficie solo cuenta lo que pasó arriba, y los dos defectos que de verdad rompen piezas —la falta de fusión y la falta de penetración— son justamente invisibles desde afuera, porque uno ocurre en la interfaz con la pared del bisel y el otro en el fondo de la junta. Conviene no confundirlos, además: en la falta de fusión el arco llegó pero no fundió lo que tocaba; en la falta de penetración el arco nunca llegó hasta abajo. Sin rayos X ni ultrasonido te queda un recurso que en la práctica vale casi igual, que es romper a propósito una probeta hecha el mismo día, con el mismo electrodo y el mismo amperaje. Cuesta diez minutos, y donde abre la fractura te dice qué falló: burbujas es porosidad, una cara lisa pegada a la pared del bisel es falta de fusión, una línea de vidrio oscuro es escoria enterrada."
+    },
+    {
+      "id": "tu-plan-de-practica",
+      "tipo": "abierta",
+      "enunciado": "Piensa en tu casa concreta —el patio o el cuarto donde podrías soldar, lo que hay alrededor, quién más vive ahí— y en el equipo que de verdad tienes o podrías conseguir prestado. Escribe tu plan para aprender a hacer un cordón: de dónde vas a sacar el material de práctica, en qué orden vas a ir subiendo la dificultad y cómo sabrás que puedes pasar de etapa, cómo vas a registrar lo que funciona, cómo vas a comprobar que tus cordones sirven de verdad, cuál va a ser tu primer trabajo real de la casa y cuál no, y qué vas a hacer antes de encender el arco por la gente y las cosas que están alrededor.",
+      "respuestaModelo": "Vivo en una casa alquilada con un patio de tierra chico, techo de calamina y una pared medianera de madera vieja del vecino. Empiezo por ahí, porque el sitio manda más que la técnica: la máquina me la presta mi cuñado los fines de semana, así que el plan cabe en tardes sueltas.\n\nEl material de práctica no lo compro. Paso por la tornería de la esquina, por el taller mecánico de la avenida y por la obra que están levantando a tres cuadras, y pido recortes: los regalan, porque para ellos son basura. Junto una caja de pedazos de platina, ángulo y chapa de distintos espesores, y los separo por grosor, porque el diámetro del electrodo no debe pasar el espesor de la chapa más fina.\n\nLa progresión va sumando una dificultad por vez. Primero, cordones sobre una plancha sola, sin unir nada: veinte o treinta cordones rectos. La condición para pasar de etapa no es que se vean lindos, es que salgan del mismo ancho, con las ondas parejas y que la escoria salte sola en tiras, curvándose; cuando eso pasa tres cordones seguidos, anoto el amperaje y recién ahí avanzo. Segundo, cordón al lado de cordón traslapando la mitad hasta cubrir la plancha, que es lo que enseña a manejar el calor acumulado. Tercero, junta a tope en plana con su separación de raíz, y romperla. Cuarto, unión en T, y romperla también. Recién quinto, vertical ascendente. No empiezo por vertical aunque tenga apuro, porque cada posición agrega una variable encima de las cuatro que todavía no domino, y lo único que aprendería es a hacer mal las cuatro básicas echándole la culpa a la posición.\n\nEl registro es un cuaderno de escuela con cuatro columnas: diámetro del electrodo, amperaje, posición y qué pasó. Y un clavo en la pared del galpón donde cuelgo las probetas rotas numeradas, con el amperaje escrito con marcador en la propia chapa. En seis meses eso es una biblioteca física de mis errores, y puedo comparar el cordón de hoy con el de marzo en vez de fiarme de la memoria.\n\nPara comprobar de verdad, rompo a propósito. Corto una tira de tres centímetros que cruce el cordón, la pongo en la prensa con el cordón al medio y la doblo a martillazos: si la chapa se pliega y el cordón no abre, la unión es buena; si abre por la soldadura, era más débil que el metal base. Y donde abre me dice qué falló: burbujas es porosidad, una cara lisa pegada a la pared del bisel es falta de fusión, una línea de vidrio oscuro es escoria que no piqué. Para mirar por dentro hago los dos cortes de entalla a los costados y la rompo de un golpe. Además pienso practicar los defectos a propósito, uno por sesión: una probeta con el amperaje demasiado bajo, otra con arco largo deliberado, otra sobre chapa sucia sin limpiar, otra yendo lento hasta que la escoria se adelante. El diagnóstico se aprende viendo la enfermedad, no viendo la salud.\n\nMi primer trabajo real no va a ser la reja de la calle, que se ve desde la vereda y me va a poner nervioso, y sobre todo no va a ser nada que sostenga peso encima de una persona. Va a ser un caballete, el marco del mosquitero de la ventana y la pata que se rompió en la mesa de la cocina: cosas donde un cordón mediocre cuesta rehacerlo y nada más. Para cualquier cosa que vaya a cargar peso sobre alguien, hago una probeta el mismo día con el mismo electrodo y el mismo amperaje, la rompo, y si no me convence consulto con un soldador con experiencia antes de confiar.\n\nAntes de encender miro alrededor, que es lo que más se olvida. Las chispas vuelan varios metros y buscan lo que ni miramos: la garrafa de la cocina, el bidón de gasolina, la ropa tendida, el pasto seco y la pared de madera del vecino. Retiro lo que se pueda mover, mojo el suelo y tapo con una chapa lo que no, tengo un balde de agua al lado, y vuelvo a mirar la zona media hora después de apagar, porque una chispa puede arder en silencio un buen rato. De mayo a septiembre, que es cuando el pasto está seco, esto se vuelve el punto más serio del día. Aviso adentro que voy a soldar y la palabra es «¡arco!»: todos miran para otro lado, porque el destello quema los ojos del que pasa, no solo los del que suelda. A mi hermano, que se ofreció a ayudar, la primera regla que le enseño no es soldar: es picar escoria con anteojos puestos y sin nadie enfrente, porque las lascas saltan hacia arriba y hacia el que pica y van a doscientos y pico de grados. Y la pieza recién soldada se agarra con pinza, porque a trescientos grados el acero no cambia de color y parece frío.\n\nDos cosas más de acá. Los electrodos los compro poco y seguido y los guardo en un tarro con tapa hermética, porque con esta humedad una caja abierta absorbe agua en días y eso es porosidad hoy y fisuras mañana. Y si hay surazo, no suelto: ese viento barre la campana de gas y me deja el cordón poroso con todos los parámetros correctos. Tampoco pongo el ventilador apuntándome.",
+      "criterios": [
+        "Parte de su vivienda y su situación reales —el patio o cuarto concreto, lo que hay alrededor, quién más vive ahí, qué equipo tiene o puede conseguir— y no de un taller imaginario.",
+        "Resuelve el material de práctica consiguiendo recortes gratis (tornería, taller mecánico, obra) en lugar de comprar o de practicar directamente sobre la pieza que necesita.",
+        "Propone una progresión que suma una dificultad por vez: cordones sobre plancha sola, cordón al lado de cordón, junta a tope, unión en T y solo al final vertical.",
+        "Define una condición objetiva para cambiar de etapa —ancho parejo, ondas regulares y escoria que salta sola, repetido varias veces— en vez de guiarse por si el cordón se ve lindo.",
+        "Justifica por qué se aprende en plana antes que en vertical o sobre cabeza: cada posición agrega una variable encima de las cuatro que todavía no domina.",
+        "Incluye un registro escrito de parámetros (diámetro, amperaje, posición, resultado) y una colección de probetas identificadas, con el argumento de comparar en vez de recordar.",
+        "Comprueba la soldadura rompiéndola a propósito —doblado o rotura por entalla— y sabe leer la cara de fractura: poros, cara lisa sin fusión, línea de escoria.",
+        "Reconoce que un cordón bonito no garantiza nada, porque la falta de fusión y la de penetración son invisibles desde afuera.",
+        "Propone practicar defectos deliberadamente para aprender a diagnosticarlos.",
+        "Elige un primer trabajo real de bajo riesgo y descarta explícitamente lo que sostenga peso sobre una persona, o exige probeta del mismo día y consulta con alguien con experiencia antes de confiar.",
+        "Detalla el control del entorno antes de encender: retirar o mojar combustibles y pasto seco, garrafas y bidones, balde de agua, revisión de la zona un rato después de apagar, y avisar a la gente de la casa por el destello.",
+        "Menciona al menos una precaución propia del clima o del lugar (humedad que arruina los electrodos, surazo que barre la protección del charco, cortes de energía) sin inventar datos, precios ni normativa."
+      ],
+      "explicacion": "Lo que se evalúa no es que recite las cuatro variables, sino que arme un plan de aprendizaje que se sostenga en la casa que tiene y que incluya cómo va a saber si está mejorando. Hay tres cosas que separan una buena respuesta de una mediocre. La primera es la condición de paso de etapa: quien no la define va a pasar a la junta a tope cuando se aburra, no cuando esté listo. La segunda es la comprobación destructiva: un cordón que no se rompió a propósito no está verificado, está sin probar, y una respuesta que confía en el aspecto no aprobó por bien redactada que esté. La tercera es el entorno, porque el accidente típico de este oficio no le pasa al que suelda sino a la casa alrededor —una chispa en el pasto seco, un destello en los ojos de quien cruzó el patio, una lasca de escoria en el ojo del que ayuda a picar— y el plan que no lo contempla está incompleto aunque la técnica sea correcta. También cuenta la honestidad: los precios, las marcas y la disponibilidad se preguntan donde uno vive, y para lo que carga peso sobre personas se consulta con un profesional."
+    }
+  ]
+}

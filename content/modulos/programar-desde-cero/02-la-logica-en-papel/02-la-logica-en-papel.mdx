@@ -1,0 +1,451 @@
+La lección anterior dejó el modelo mental montado: una máquina que ejecuta una instrucción a la vez,
+que no entiende nada y que hace exactamente lo que dice el papel aunque eso no sea lo que querías. Y
+dejó el inventario cerrado: secuencia, decisión y repetición. **Ya está todo el material.** Falta el
+oficio de usarlo, y ese oficio se practica con una hoja y un lápiz: aquí no hay computadora ni ningún
+lenguaje.
+
+## El paso que casi todos se saltan
+
+Hay una creencia extendida y cara: que programar es un problema de vocabulario. **Es al revés.** El
+vocabulario de un lenguaje cabe en dos páginas y se consulta cuando hace falta.
+
+Lo que cuesta es **convertir una intención en una lista de órdenes que no admita más de una
+interpretación.** Ahí se pierde la gente, y ahí el teclado no ayuda: la máquina acepta sin protestar
+cualquier disparate bien escrito. Un programa con un error de lógica arranca, corre, termina y
+entrega un número equivocado con toda la confianza del mundo. Por eso el papel va primero: ahí el
+error se ve en dos minutos, y en la máquina se disfraza de resultado y sobrevive meses dentro de una
+planilla que todos dan por buena.
+
+<Dato>
+Tres piezas y ninguna más: **descomponer** una tarea en pasos sin ambigüedad, **escribirlos** como
+pseudocódigo, y **trazarlos** a mano para ver qué hace realmente lo que escribiste. La tercera es la
+que más rinde: quien traza sus programas en papel encuentra en diez minutos errores que otro persigue
+dos días delante de la pantalla, y se aprende en una tarde.
+</Dato>
+
+## Descomponer: de una orden a una lista de pasos
+
+Empecemos con una orden real del vivero: **«revisá el almácigo y regá si hace falta».** Para una
+persona con dos meses de oficio, esa frase alcanza. Para una máquina no significa nada, y partirla en
+piezas ejecutables es la <Termino slug="descomposicion-de-un-problema">descomposición</Termino> del
+problema. Fíjate en cuántas preguntas escondían siete palabras: qué bandejas son «el almácigo», qué
+significa «revisar», cómo se decide que «hace falta» y cuánta agua es regar.
+
+La prueba para saber si un paso está bien escrito es dura y muy útil: **otra persona, que no conozca
+tu intención ni el vivero, tiene que poder ejecutarlo de una sola manera.** Si puede ejecutarlo de
+dos maneras y ambas son defendibles, el paso está mal escrito. No está mal la persona. Las palabras
+que lo delatan son siempre las mismas: *un poco*, *si está muy seco*, *cuando haga falta*,
+*temprano*. Son juicios, y un juicio no es una instrucción: se reemplaza por un dato con unidad y un
+criterio observable.
+
+| Orden ambigua | La pregunta que la desarma | Paso ejecutable |
+|---|---|---|
+| «Revisá el almácigo» | ¿Qué bandejas, en qué orden? | Recorrer las bandejas 1 a 12 de la mesa norte, en orden |
+| «Si hace falta» | ¿Qué se mira, y cuál es el corte? | Si el sustrato no se pega al dedo al hundirlo 2 cm |
+| «Regá» | ¿Cuánta agua, con qué? | Aplicar 1,5 litros con regadera de roseta fina, en dos pasadas |
+| «Anotá si algo anda mal» | ¿Qué es «mal», y dónde? | Escribir número de bandeja y síntoma en la libreta |
+
+Un buen paso tiene tres propiedades: **un solo verbo** —si hay dos acciones, son dos pasos—, **un
+dato explícito con su unidad** y **un resultado que se pueda ver**. Y una regla más: si contiene un
+«si», no es un paso, es una decisión, y se escribe como decisión.
+
+<Analogia titulo="La receta de sustrato ya es un programa">
+Es probable que ya hayas escrito un programa sin llamarlo así. La receta de mezcla
+de <Termino slug="sustrato">sustrato</Termino> —tres partes de tierra cernida, dos de arena, una de
+compost maduro, mezclar hasta que el color sea uniforme, humedecer hasta que un puñado apretado
+mantenga la forma sin gotear— tiene **las tres piezas completas**.
+
+Secuencia: cerner antes de mezclar, mezclar antes de humedecer, y el orden no es negociable.
+Decisión: *si* el puñado gotea, hay demasiada agua. Repetición: *mientras* el color no sea uniforme,
+seguir mezclando. Hasta la condición de salida está bien puesta, porque «color uniforme» es algo que
+se mira, no que se opina. **Lo que estás aprendiendo no es a pensar distinto: es a escribir sin dejar
+huecos.**
+</Analogia>
+
+## Pseudocódigo: el programa escrito en tu idioma
+
+La lista de pasos ya es un programa, pero en prosa se vuelve inmanejable en cuanto hay decisiones
+dentro de decisiones. Para eso existe el <Termino slug="pseudocodigo">pseudocódigo</Termino>:
+escribir el <Termino slug="algoritmo">algoritmo</Termino> con unas pocas palabras clave fijas, con la
+estructura marcada por la sangría, en el idioma que uno habla. Ninguna máquina lo va a leer, así que
+**no hay forma de escribirlo mal por culpa de una coma.**
+
+```
+LEER          traer un dato de afuera (el sensor, la libreta, la persona)
+ESCRIBIR      mostrar un resultado
+←             guardar un valor en una variable:  acumulado ← 0
+SI … ENTONCES / SI NO / FIN SI     decisión
+MIENTRAS … / FIN MIENTRAS          repetición mientras algo sea cierto
+PARA CADA … / FIN PARA             repetición sobre una lista conocida
+```
+
+Dos convenciones más. **La sangría dice qué está dentro de qué**: lo que está corrido a la derecha de
+un `SI` solo ocurre si ese `SI` se cumple. Y **los nombres de variables son sustantivos
+descriptivos**: `acumulado_grados_dia` se entiende dentro de tres meses, `x` no. Con eso ya se
+escribe la regla de riego del almácigo entera:
+
+```
+REPETIR PARA SIEMPRE
+    humedad ← LEER sensor de la mesa norte
+    SI regando = falso Y humedad < 35 ENTONCES
+        ABRIR válvula
+        regando ← verdadero
+    FIN SI
+    SI regando = verdadero Y humedad > 45 ENTONCES
+        CERRAR válvula
+        regando ← falso
+    FIN SI
+    ESPERAR 5 minutos
+FIN REPETIR
+```
+
+Esos dos umbrales separados —abre al bajar de 35, cierra al pasar de 45— son
+la <Termino slug="histeresis">histéresis</Termino> del módulo de automatización, escrita como
+programa por primera vez. Observa qué pasa cuando la humedad vale exactamente 35: **no se cumple
+ninguna de las dos condiciones y no ocurre nada.** Todo umbral tiene que decir qué pasa exactamente
+en el umbral, y aquí la respuesta es «nada», deliberadamente.
+
+## Decisiones: y, o, no
+
+Una decisión pregunta algo que solo puede ser cierto o falso. Lo interesante empieza al preguntar
+varias cosas a la vez, y para eso hay exactamente
+tres <Termino slug="operador-logico">operadores lógicos</Termino>: **y**, **o**, **no**.
+
+| A | B | A **y** B | A **o** B |
+|---|---|---|---|
+| cierto | cierto | cierto | cierto |
+| cierto | falso | falso | cierto |
+| falso | cierto | falso | cierto |
+| falso | falso | falso | falso |
+
+De esa tabla salen las dos únicas cosas que hay que memorizar. **«Y» es exigente**: basta con que una
+parte falle para que el conjunto sea falso, así que cada condición unida con «y» deja pasar menos
+casos. **«O» es generoso, y además es inclusivo**: se cumple si una, si otra, o si las dos. En
+castellano muchas veces decimos «o» queriendo decir «una u otra, pero no ambas»; en lógica no es así,
+y ese malentendido produce reglas que disparan de más. El tercero, **«no»**, invierte. Hay un orden
+de aplicación —primero «no», después «y», por último «o»— que **no conviene usar nunca**: la regla
+profesional es más simple, **paréntesis siempre**.
+
+## Negar bien: la trampa que se lleva a todos por delante
+
+Aquí está el error de lógica más común del mundo, y no se ve venir. La regla en castellano es:
+**«regar si el sustrato está seco y no está lloviendo ni
+hay <Termino slug="surazo">surazo</Termino>»**. La primera traducción es la correcta; la segunda es
+la que escribe todo el mundo, repartiendo el «no» por dentro:
+
+```
+SI sustrato_seco Y NO (lloviendo O surazo) ENTONCES regar        ← correcta
+SI sustrato_seco Y (NO lloviendo O NO surazo) ENTONCES regar     ← riega bajo la lluvia
+```
+
+Parecen lo mismo. Compruébalo:
+
+| ¿Llueve? | ¿Hay surazo? | NO (lloviendo O surazo) | (NO lloviendo) O (NO surazo) |
+|---|---|---|---|
+| sí | sí | falso | falso |
+| sí | no | falso | **cierto** |
+| no | sí | falso | **cierto** |
+| no | no | cierto | cierto |
+
+Coinciden en dos filas de cuatro. En las otras dos, la versión mal negada da permiso para regar en
+plena lluvia —porque no hay surazo— y durante el surazo —porque no llueve—: los dos casos que la
+regla quería evitar, y en el vivero eso son bandejas encharcadas y un brote
+de <Termino slug="damping-off">damping-off</Termino> dos semanas después.
+
+La corrección son las <Termino slug="leyes-de-de-morgan">**leyes de De Morgan**</Termino>: al meter
+un «no» dentro de un paréntesis, **«o» se convierte en «y», y «y» se convierte en «o»**, y cada parte
+queda negada:
+
+```
+NO (A O B)   equivale a   (NO A) Y (NO B)
+NO (A Y B)   equivale a   (NO A) O (NO B)
+```
+
+Hay una segunda mitad de la misma trampa: **al negar una comparación hay que acordarse del borde.**
+Lo contrario de «altura mayor que 10» no es «altura menor que 10»: es **«altura menor o igual que
+10»**, porque el plantín que mide exactamente 10 tiene que caer en algún lado. Si te olvidas del
+igual, creaste un caso que no entra en ninguna rama y desaparece sin dejar rastro.
+
+<Advertencia>
+La forma más segura de negar una condición complicada no es negarla: **es darle la vuelta al `SI`.**
+En vez de pelearse con `NO (A Y B)`, se escribe la condición en positivo y se intercambian las dos
+ramas. El resultado es idéntico y sigue siendo legible, que es lo único que importa cuando alguien la
+lea dentro de seis meses —y ese alguien vas a ser tú.
+
+Y cuando ya tiene tres o cuatro partes: **darle nombre a los pedazos.** Escribir primero
+`hay_agua_de_sobra ← lloviendo O suelo_saturado` y después `SI sustrato_seco Y NO hay_agua_de_sobra`
+convierte un enredo en dos líneas legibles.
+</Advertencia>
+
+## Repetición: contar vueltas o esperar una condición
+
+La tercera pieza. Hay dos formas de repetir, y la diferencia es **si sabes de antemano cuántas
+vueltas vas a dar.** Cuando sí lo sabes, se repite con
+un <Termino slug="contador">contador</Termino>: una variable que empieza en un valor, sube de uno en
+uno y marca en qué vuelta va. Es la forma de recorrer las 12 bandejas de la mesa o las filas de una
+planilla. Cuando no lo sabes, se repite con una condición: seguir mientras algo sea cierto. Ese es
+el <Termino slug="bucle">bucle</Termino> de «seguir mezclando mientras el color no sea uniforme»; la
+cantidad de vueltas se descubre ejecutando.
+
+Dentro aparecen casi siempre dos variables con papeles distintos: el **contador** cuenta vueltas o
+elementos y el **acumulador** suma valores. Los dos empiezan en cero **antes** del bucle, nunca
+dentro: un acumulador reiniciado dentro termina valiendo lo del último elemento en lugar de la suma
+de todos, y ese error no da ninguna señal.
+
+## Qué garantiza que un bucle termine
+
+Un bucle termina si y solo si se cumplen tres cosas a la vez. No dos: **las tres**.
+
+**Primero, la <Termino slug="condicion-de-salida">condición de salida</Termino> tiene que depender de
+algo que cambie dentro del bucle.** Si pregunta por `dia` y nadie toca `dia` dentro, la respuesta
+será la misma para siempre. **Segundo, el cambio tiene que ir en la dirección correcta**: si sales
+cuando `dia` llega a 4 y dentro del bucle `dia` baja, se aleja de la salida en cada vuelta.
+**Tercero, el límite tiene que ser alcanzable.** Si sales cuando `dia` vale exactamente 10 pero
+avanzas de tres en tres desde 2, pasas por 2, 5, 8, 11 y **te saltas el 10 para siempre**. Por eso
+salir con «mayor o igual» es más seguro que salir con «igual».
+
+Las tres juntas se resumen en una idea que vale la pena nombrar: tiene que existir
+una <Termino slug="variante-de-bucle">variante de bucle</Termino>, una cantidad que se acerque al
+límite en cada vuelta sin excepción. Si no puedes señalar con el dedo cuál es esa cantidad en tu
+programa, **tu bucle no termina y todavía no lo sabes**.
+
+Un caso parece violar todo esto y no lo hace: el `REPETIR PARA SIEMPRE` del riego, que **no debe
+terminar nunca** porque su trabajo es vigilar. La diferencia entre un bucle infinito deliberado y un
+error está en si lo escribiste a propósito y en si puedes detenerlo desde afuera. Uno que no termina
+y que además no puedes parar sí es un problema, y serio si hay una válvula abierta al otro lado.
+
+## La tabla de traza
+
+Llegamos al centro de la lección, y a la técnica que vas a seguir usando en las cuatro que quedan.
+Una <Termino slug="tabla-de-traza">tabla de traza</Termino> se describe en una frase: **una tabla con
+una columna por variable, donde escribes fila por fila lo que vale cada una después de ejecutar cada
+instrucción, haciendo tú de máquina.** Se le añade una columna para la instrucción y otra para la
+salida.
+
+<Advertencia>
+La única regla que hace que esto funcione, y la que cuesta respetar: **ejecuta lo que está escrito,
+no lo que quisiste escribir.**
+
+Todo el mundo, la primera vez, traza su intención: lee `dia < 4`, piensa «claro, los cuatro días» y
+anota cuatro vueltas. La traza dejó de servir ahí, porque acabas de comprobar que tu idea es
+coherente con tu idea.
+
+El antídoto es leer cada línea **fuera de contexto y en voz alta**, como la leería alguien que no
+sabe para qué es el programa. «Mientras el día sea menor que cuatro.» El día vale cuatro. Se sale.
+Sin negociación.
+</Advertencia>
+
+## Primer trazado: el bucle que no avanza
+
+Vamos a construir en papel algo que el curso ya calcula a mano: la suma
+de <Termino slug="grados-dia">grados-día</Termino> de un lote. La aritmética ya la conoces
+—temperatura media del día, menos la temperatura base de la especie, acumulado— y digamos que la
+ficha de la especie dice 10 °C. Cuatro días de estación seca, con un surazo el último:
+
+| Día | Máxima | Mínima | Media | Aporte (media − 10) |
+|---|---|---|---|---|
+| 1 | 31 | 21 | 26 | 16 |
+| 2 | 33 | 22 | 27,5 | 17,5 |
+| 3 | 30 | 20 | 25 | 15 |
+| 4 | 17 | 9 | 13 | 3 |
+
+El acumulado correcto es **51,5**. Ahora el programa, tal como sale la primera vez:
+
+```
+acumulado ← 0
+dia ← 1
+MIENTRAS dia < 4
+    maxima ← máxima de la fila numero dia
+    minima ← mínima de la fila numero dia
+    media ← (maxima + minima) / 2
+    SI media > 10 ENTONCES
+        acumulado ← acumulado + (media - 10)
+    FIN SI
+FIN MIENTRAS
+ESCRIBIR acumulado
+```
+
+Se lee bien. Trazémoslo instrucción por instrucción:
+
+| # | Instrucción | dia | media | acumulado | ¿Sigue el bucle? |
+|---|---|---|---|---|---|
+| 1 | `acumulado ← 0` | — | — | 0 | |
+| 2 | `dia ← 1` | 1 | — | 0 | |
+| 3 | `MIENTRAS dia < 4` | 1 | — | 0 | sí: 1 es menor que 4 |
+| 4 | `media ← (31+21)/2` | 1 | 26 | 0 | |
+| 5 | `SI media > 10` | 1 | 26 | 0 | sí |
+| 6 | `acumulado ← 0 + 16` | 1 | 26 | 16 | |
+| 7 | `FIN MIENTRAS` → vuelve | 1 | 26 | 16 | |
+| 8 | `MIENTRAS dia < 4` | 1 | 26 | 16 | sí: 1 es menor que 4 |
+| 9 | *(se repiten 4, 5 y 6)* | 1 | 26 | 32 | |
+| 10 | `MIENTRAS dia < 4` | 1 | 26 | 32 | sí: 1 es menor que 4 |
+
+Mira la columna `dia`. **Es una pared de unos.** Nadie la mueve, la condición pregunta por ella, y la
+respuesta será «sí» hasta el fin de los tiempos: escribiste
+un <Termino slug="bucle-infinito">bucle infinito</Termino>, y encima uno que suma el mismo día una y
+otra vez. En papel te costó diez filas; en una máquina se habría quedado colgado sin decir nada. El
+arreglo es una línea, `dia ← dia + 1` antes de `FIN MIENTRAS`: **la variable de la condición no
+cambiaba dentro del bucle.**
+
+<Advertencia>
+Un atajo que parece sensato y arruina el programa: «le pongo un tope de mil vueltas y así seguro
+termina».
+
+Un tope de seguridad no es una corrección, **es una mordaza**. El bucle sigue estando mal, pero ahora
+falla en silencio: en vez de colgarse —que al menos se nota— devuelve un número calculado con datos
+incompletos. Cambiaste un fallo ruidoso por uno silencioso, y el silencioso es peor.
+
+Solo es legítimo cuando el bucle depende de algo de afuera que puede no llegar nunca —una lectura de
+sensor, una respuesta de la red— y **el propio programa avisa de que salió por el tope**.
+</Advertencia>
+
+## Segundo trazado: el error por uno
+
+Con la línea añadida el bucle ya avanza, y se puede trazar comprimido —**una fila por vuelta completa
+en lugar de una por instrucción**—, un lujo permitido solo cuando ya comprobaste el interior del
+bucle.
+
+| Vuelta | dia al entrar | Media del día | Aporte | acumulado al salir | dia al salir |
+|---|---|---|---|---|---|
+| 1 | 1 | 26 | 16 | 16 | 2 |
+| 2 | 2 | 27,5 | 17,5 | 33,5 | 3 |
+| 3 | 3 | 25 | 15 | 48,5 | 4 |
+| — | 4 | — | — | 48,5 | 4 |
+
+En la última fila la condición `4 < 4` es falsa y el bucle sale. El programa escribe **48,5**. El
+resultado correcto era **51,5**.
+
+Y aquí está lo que lo hace peligroso: **el programa no se rompió**. No dio ningún aviso, devolvió un
+número de aspecto razonable, y se comió el día del surazo. Es
+un <Termino slug="error-por-uno">error por uno</Termino>: `dia < 4` deja fuera al día 4. Se corrige
+con `dia <= 4`, o mucho mejor con `dia <= cantidad_de_dias`, porque un número escrito a mano dentro
+de un programa deja de ser cierto en cuanto la planilla crece una fila.
+
+<Analogia titulo="Los postes y los tramos de la alambrada">
+Este error no es de programación: es de contar, y confunde a la gente desde mucho antes de que
+existieran las computadoras. Para cerrar un lado recto de 100 metros con postes cada 10 metros hacen
+falta **once postes, no diez**: diez tramos, pero un poste más al final.
+
+Es la misma cuenta que `dia < 4` frente a `dia <= 4`, y aparece cada vez que hay que contar extremos:
+del 1 al 4 hay tres días de diferencia pero cuatro días de datos. Antes de dar por bueno un bucle
+sobre un rango, hazte estas dos preguntas: **¿entra el primero?** y **¿entra el último?**
+</Analogia>
+
+## La decisión que nunca se cumple
+
+El tercer bicho que la traza caza el primer día es una rama a la que la ejecución no llega nunca:
+una <Termino slug="rama-inalcanzable">rama inalcanzable</Termino>. Aparece de dos formas. La primera es
+**la condición imposible**: la regla dice «avisar si hace mucho frío o mucho calor», y sale escrita
+así.
+
+```
+SI temperatura < 10 Y temperatura > 30 ENTONCES avisar
+```
+
+Ninguna temperatura del universo es a la vez menor que 10 y mayor que 30, así que ese aviso no se
+disparará jamás: el operador correcto era «o», porque «frío o calor» describe **dos casos
+alternativos**. La segunda forma es **el orden que tapa**, donde la condición sí es posible pero una
+decisión anterior se lleva todos los casos:
+
+```
+SI altura >= 10 ENTONCES
+    tamaño ← "mediano"
+SI NO, SI altura >= 20 ENTONCES
+    tamaño ← "grande"
+SI NO
+    tamaño ← "chico"
+FIN SI
+```
+
+Ningún plantín será nunca «grande». Uno de 25 cm cumple la primera condición, entra por ahí y **la
+segunda ni siquiera se evalúa**: en una cadena de decisiones encadenadas solo se ejecuta la primera
+que se cumple. Se corrige ordenando de más restrictivo a menos, el 20 antes que el 10. La traza lo
+delata al instante, **siempre que elijas un dato de prueba de más de 20**; si trazas solo con
+plantines chicos, la rama muerta se queda escondida.
+
+Ese detalle es la clave de cómo se eligen los datos de una traza. **Tres juegos bastan**: uno normal,
+uno en el borde —el valor exactamente igual al umbral— y uno vacío, cero bandejas, que es donde se
+rompen los bucles que dan por sentado que siempre hay un elemento. Y con datos pequeños: tres
+bandejas, no trescientas.
+
+<AplicarRizoma>
+**Empieza por la libreta, no por la pantalla.** Un algoritmo por página, con fecha y título arriba.
+Los tres primeros van a ser tareas que ya haces con las manos, y ese es el punto: no estás inventando
+procesos nuevos, estás **poniendo por escrito lo que hoy vive en la cabeza de quien riega**, que es
+el conocimiento que se pierde cuando esa persona falta una semana.
+
+**Algoritmo uno: la ronda de la mañana por los doce lotes.** Escríbela con el orden de recorrido
+explícito, porque el orden no es indiferente: el <Termino slug="almacigo">almácigo</Termino> y las
+bandejas con <Termino slug="cepellon">cepellón</Termino> pequeño van primero, cuando todavía no pega
+el sol. Fíjate en cuántas decisiones descubres al escribirla —qué hacer si una manguera está
+desconectada, qué hacer si ayer llovió— que hoy tomas sin darte cuenta.
+
+**Algoritmo dos: la regla de repique.** ¿Cuándo pasa un plantín de la bandeja a la bolsa? Escribe la
+condición completa con sus números: hojas verdaderas, altura, y que el cepellón se sostenga al
+levantarlo. Después niégala correctamente para obtener la regla contraria —cuándo **no** se repica— y
+comprueba con De Morgan que no te comiste ningún caso. Esa condición negada es la que va a leer el
+ayudante nuevo, y es donde más caro sale un «o» mal puesto.
+
+**Algoritmo tres: la planilla de grados-día por lote.** Es el que vas a convertir en programa en la
+lección siguiente: un bucle sobre las filas, un acumulado por lote y las tres preguntas de
+terminación contestadas por escrito.
+
+**Traza los tres con datos de la semana pasada.** Usa días que ya ocurrieron, porque **ya sabes cuál
+tenía que ser la respuesta**: si tu tabla de traza da otra cosa, el error está en el papel, en la
+fila exacta donde los números se separaron. Un surazo reciente es el mejor dato de prueba que existe:
+es el borde, el día en que las reglas escritas para el promedio se caen.
+
+**Y después, la prueba definitiva: dáselo a otra persona.** Entrega el pseudocódigo de la ronda a
+alguien que no lo haya visto y pídele que lo ejecute al pie de la letra, sin interpretar. Todo lo que
+haga distinto de lo que esperabas es un paso mal escrito —no un error suyo—, y acabas de encontrar
+gratis los agujeros que la máquina te iba a señalar con un mensaje mucho menos amable. Es, además,
+cómo se enseña esto a otro vecino: **quien puede ejecutar tu algoritmo puede escribir el suyo.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El pseudocódigo se escribe en castellano, y eso no es una versión rebajada de nada.** Las palabras
+clave de los lenguajes reales están en inglés, pero el pseudocódigo no lo lee ninguna máquina, así
+que escribirlo en tu idioma no tiene ningún costo y sí una ventaja: puedes discutirlo en voz alta con
+alguien que no sepa una palabra de inglés. **En este módulo, no saber inglés no bloquea nada.**
+
+**Esta lección no necesita computadora, y eso importa aquí más que en otros lugares.** Se hace con
+una libreta a la sombra, sin electricidad y sin datos móviles. Si en tu casa la computadora es
+prestada o se comparte con toda la familia, **la parte más difícil del oficio la puedes practicar
+igual**, y llegarás a la máquina con la mitad del trabajo hecho.
+
+**Las condiciones que escribas tienen que hablar del clima de acá, y no es un detalle folclórico.**
+Casi todo el material de programación aplicada a cultivos viene del hemisferio norte y razona con
+heladas y con un invierno que aquí no existe. Si copias esas condiciones tal cual, escribes reglas
+que **no se cumplen nunca** —la rama inalcanzable de esta misma lección— y tu programa se queda
+callado toda la temporada. Las nuestras son otras: la seca de mayo a septiembre, la lluvia de octubre
+a abril, el surazo que en dos horas baja la noche a unos 10 °C con viento fuerte, y el aguacero que
+descarga en una tarde lo de un mes.
+
+**Los números concretos de esas condiciones no se copian ni se inventan: se miden.** Cuántos
+milímetros de lluvia hacen innecesario el riego en tu suelo, qué humedad de sustrato es el corte real
+en tus bandejas, qué temperatura base tiene una especie nativa del oriente: nada de eso está en un
+manual extranjero, y varias de esas cifras no están publicadas en ningún lado. Hay que medirlo en el
+sitio durante una temporada, o consultarlo con una institución de investigación agrícola o una
+universidad local. **Un algoritmo impecable con un umbral inventado sigue decidiendo mal.**
+
+**Dos avisos de escritura.** En castellano escribimos los decimales con coma —27,5 grados— pero en
+programación el separador decimal es casi siempre el punto, y la coma separa cosas en una lista: un
+`27,5` mal interpretado no da error, da dos números. Y al nombrar variables, evita tildes y eñes
+—`temperatura_media`, no `año_siembra`—: en una máquina, según el sistema, a veces funciona y a veces
+produce un fallo incomprensible.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya tienes lo necesario para escribir programas: los descompones en pasos sin ambigüedad, los escribes
+como pseudocódigo, compones sus decisiones con «y», «o» y «no» sabiendo negarlas, repites con
+contador o con condición sabiendo qué garantiza que termine, y —lo más importante— **los ejecutas a
+mano en una tabla de traza antes de que ninguna máquina los vea**. Con esa tabla ya cazaste los tres
+errores que te van a acompañar toda la vida: el bucle que no avanza, el que recorre uno de menos y la
+decisión que nunca se cumple.
+
+En **El primer programa que sirve para algo** damos el salto al teclado: qué hace falta de verdad
+para empezar y qué opciones hay si no tienes computadora propia, por qué se elige un lenguaje y no
+otro, y el ciclo de escribir, guardar, ejecutar y mirar el resultado. El primer programa no será un
+saludo en la pantalla: serán las dos cosas que ya trazaste en papel —la regla de riego y la planilla
+de grados-día—, haciendo trabajo útil desde el primer día.

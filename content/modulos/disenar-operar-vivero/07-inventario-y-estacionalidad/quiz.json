@@ -1,0 +1,100 @@
+{
+  "preguntas": [
+    {
+      "id": "inventario-vivo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el inventario de un vivero es un problema distinto al de un depósito?",
+      "opciones": [
+        "Las plantas crecen y al crecer cambian de categoría comercial y de precio.",
+        "Las plantas se mueren sin transacción, sin aviso y sin registro.",
+        "Una planta que estuvo lista y no se vendió sigue creciendo y pierde valor.",
+        "Como en cualquier inventario, solo cambia cuando ocurre una transacción."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Justo eso es lo que no se cumple: un vivero cambia aunque nadie lo toque. Es un inventario con caducidad en los dos sentidos —antes de una fecha no está listo y después de otra se degrada— y que además muta de tipo por su cuenta. Por eso hay que releerlo de la realidad periódicamente y no basta con ir anotando movimientos."
+    },
+    {
+      "id": "el-lote",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué caracteriza al lote como unidad de gestión?",
+      "opciones": [
+        "Agrupa plantas de la misma especie y variedad, iniciadas el mismo día y con el mismo método.",
+        "Todas sus plantas van a comportarse parecido y estar listas parecido.",
+        "Su ficha incluye dónde está, que es el campo que más tiempo ahorra.",
+        "La unidad correcta sería la planta individual, pero se agrupa por comodidad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Gestionar planta por planta no es que sea incómodo: es imposible y no aporta nada. Y el campo de ubicación es el que casi todo el mundo omite: en un vivero con veinte lotes repartidos por 3.666 m², encontrar un lote sin anotación puede llevar diez minutos cada vez. Dividir el vivero en celdas con letra y número, como una hoja de cálculo, lo resuelve."
+    },
+    {
+      "id": "cerrar-con-motivo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cuando un lote termina basta con marcarlo como cerrado en la planilla.",
+      "respuesta": false,
+      "explicacion": "Falso: el cierre con motivo es lo que da valor al registro. «Cerrado» a secas no enseña nada el año siguiente; «vendidos 180, perdidos 40 por damping-off» es un dato que cambia decisiones. Es la diferencia entre un registro que solo sirve para saber qué hay y uno que además enseña."
+    },
+    {
+      "id": "contar-por-muestreo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se cuentan tres mil plantas sin perder la tarde?",
+      "opciones": [
+        "Contando bien una fila, multiplicando por el número de filas y restando los huecos visibles.",
+        "Requiere filas completas del mismo largo y un solo lote por fila o bloque.",
+        "Un conteo por lote al mes, más un conteo completo antes de la temporada de venta.",
+        "Hay que contar planta por planta, porque un inventario aproximado no sirve para nada."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Contar una por una es lo que hace que el inventario deje de existir, porque nunca se hace. Un inventario aproximado y actualizado vale infinitamente más que uno exacto y de hace ocho meses, sobre todo porque la cifra se usa para decidir cuánto comprometerse a vender, no para cuadrar una contabilidad."
+    },
+    {
+      "id": "la-merma",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se controla la merma no registrada?",
+      "opciones": [
+        "Retirando las plantas muertas el día que se ven y anotando el hueco en ese momento.",
+        "Anotando la causa de cada pérdida, porque en tres meses aparece un patrón corregible.",
+        "Comparando cada conteo con el anterior y tratando una caída fuerte como una alarma.",
+        "Confiando en el estado acumulado del registro, que se actualiza con cada movimiento."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El estado acumulado es justamente lo que falla: las plantas que se mueren no generan ningún evento, así que el registro y la realidad se separan un poco cada día sin que nada avise. Es deriva de estado pura, y se corrige igual que en cualquier sistema, reconciliando contra la realidad de forma periódica."
+    },
+    {
+      "id": "planificar-al-reves",
+      "tipo": "verdadero_falso",
+      "enunciado": "La planificación de un vivero parte de cuándo se inicia el lote y calcula hacia adelante cuándo estará listo.",
+      "respuesta": false,
+      "explicacion": "Falso: se hace al revés. El único dato que se conoce con certeza es cuándo quiere comprar el cliente, y todo lo demás se deduce restando plazos desde ahí, más un margen porque los tiempos biológicos varían y no se pueden acelerar. En la llanura cruceña eso significa que, para vender frutales en las lluvias del año que viene, hay que estar cortando púas y sembrando patrones en las lluvias de este."
+    },
+    {
+      "id": "sobreproducir",
+      "tipo": "verdadero_falso",
+      "enunciado": "Conviene producir todo lo que quepa en el vivero y ver después qué se vende.",
+      "respuesta": false,
+      "explicacion": "Falso: cada planta no vendida no es stock parado, es espacio ocupado, agua consumida y trabajo hecho durante meses, y además bloquea el ciclo siguiente. Un vivero lleno de invendibles está lleno de dinero convertido en algo que ya no puede volver a ser dinero. Es mejor producir menos y vender todo."
+    },
+    {
+      "id": "inventario-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Monta el sistema de inventario y el plan anual de Rizoma del Sur: cómo registras, cómo cuentas, cómo planificas y con qué herramienta.",
+      "respuestaModelo": "El sistema cabe en una planilla y en unas estacas de madera.\n\nDivido el vivero en celdas con nombre, tipo A1, A2, B1, sobre el mismo plano acotado que dibujé en la lección del layout. Cada lote vive en una celda y la celda va escrita en la ficha, de modo que encontrar un lote deja de ser un paseo por el terreno.\n\nLa unidad es el lote, no la planta: conjunto de la misma especie y variedad, iniciado el mismo día, con el mismo método y desde el mismo origen. Su ficha tiene siete campos y ninguno sobra: especie y variedad, de qué madre salió, fecha de inicio, método, cantidad, dónde está y estado. Los estados son pocos a propósito: en propagación, en crecimiento, listo y cerrado.\n\nCada lote lleva su estaca con la misma clave que la planilla, escrita con marcador indeleble y no con lápiz. Si la estaca solo lleva un código corto, la planilla tiene el resto: es menos que escribir y no se borra con el sol.\n\nConteo por muestreo una vez al mes por lote, y conteo completo antes de la temporada de lluvias, que es cuando comprometo ventas. Cuento bien una fila, multiplico por el número de filas y resto los huecos visibles. Para que eso funcione, las filas tienen que ser completas, del mismo largo y con un solo lote cada una, lo que es otro argumento a favor del layout ordenado y de las camas rectas de largo fijo.\n\nLa merma la ataco en tres frentes, porque es el problema silencioso: las plantas muertas no generan ningún evento y el registro se separa de la realidad un poco cada día. Retiro la planta muerta el día que la veo, porque ocupa sitio, es foco de hongos y falsea el conteo visual, y anoto el hueco en ese momento. Anoto siempre la causa —se secó, se pudrió, se la comió algo, se rompió al mover—, porque en tres meses aparece un patrón que casi siempre es algo corregible del manejo. Y comparo cada conteo con el anterior: si un lote perdió el veinte por ciento entre dos revisiones, eso es una alarma que atiendo ahora, no un dato de planilla.\n\nCierro cada lote con motivo y no solo con la palabra cerrado: vendidos tantos, perdidos tantos por tal causa. Es lo que convierte el registro en algo que enseña.\n\nEl plan se hace al revés, partiendo de lo único que sé con certeza, que es cuándo quiere comprar el cliente. A la fecha de venta le resto propagación, crecimiento y endurecimiento, y añado margen porque los plazos biológicos varían y no se pueden acelerar.\n\nEl calendario de Rizoma queda así: venta fuerte de octubre a marzo, con el pico al empezar las lluvias, porque aquí la gente planta cuando llueve; endurecimiento y preparación en las semanas previas; el grueso del crecimiento durante la temporada húmeda anterior; la propagación al arrancar esas lluvias; y las plantas madre plantadas un año antes de todo eso. Si hoy decido producir frutales injertados, la primera venta seria es la temporada del año siguiente, no la que viene, y ese desfase es el que hace que la mayoría de los viveros nuevos pierdan la primera temporada entera.\n\nUna planta que termina fuera de temporada no es un logro: se queda meses ocupando espacio y consumiendo riego en plena seca, que es cuando el agua es más cara, y encima crece y se pasa de punto. Por eso me impongo la disciplina de no sobreproducir: con 3.666 m² es fácil llenarlo todo, y un vivero lleno de invendidos bloquea el ciclo siguiente. Mejor comprometerme con menos, venderlo entero y liberar espacio a tiempo.\n\nPara romper algo de la estacionalidad busco dos clientes que no dependen del clima: proyectos de reforestación o arborización urbana, que compran por volumen y con fecha propia ligada a un presupuesto, y ornamentales de maceta o interior, que se venden todo el año. Y si comprometo un lote grande con plazo, el inventario tiene que ser real y no estimado a ojo, porque ese es exactamente el escenario donde la merma no anotada sale cara: descubrir que faltan doscientas plantas la semana de la entrega.\n\nY la herramienta es una planilla, no un sistema. Una fila por lote con las siete columnas, más una hoja de conteos con fecha; se llena desde el teléfono en el terreno y no falla nunca. Con mi perfil la tentación de construir algo va a ser fuerte y es justo lo que no toca todavía: si el proceso manual no se cumple, automatizarlo solo produce datos malos más rápido; y si se cumple, entonces ya sé qué campos son los de verdad y dónde está el dolor. Seis meses de planilla llenada en serio, y con eso en la mano decido qué automatizar.",
+      "criterios": [
+        "Divide el vivero en celdas con nombre sobre el plano acotado.",
+        "Usa el lote como unidad con los siete campos de la ficha.",
+        "Etiqueta con estaca y marcador indeleble ligada a la planilla.",
+        "Cuenta por muestreo mensual y completo antes de la temporada.",
+        "Exige filas completas de un solo lote para que el muestreo funcione.",
+        "Retira las plantas muertas el día que las ve y anota el hueco.",
+        "Anota la causa de la merma y busca el patrón.",
+        "Compara conteos consecutivos y trata las caídas como alarma.",
+        "Cierra los lotes con motivo y no solo con el estado.",
+        "Planifica hacia atrás desde la fecha de venta con margen.",
+        "Sitúa la venta fuerte en lluvias y el arranque un año antes.",
+        "Evita la sobreproducción y explica el costo del invendido.",
+        "Busca clientes que rompan la estacionalidad.",
+        "Usa planilla y pospone construir un sistema hasta tener proceso."
+      ],
+      "explicacion": "Fíjate en que la parte difícil de este módulo no fue ninguna técnica agronómica: fue aceptar que el vivero es un sistema con estado que deriva, plazos que no se pueden acelerar y una ventana de venta que no eliges tú. Todo lo demás son consecuencias de esas tres cosas."
+    }
+  ]
+}

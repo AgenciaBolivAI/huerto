@@ -1,0 +1,309 @@
+Vuelves del terreno con un croquis feo, un cuaderno de números y unas fotos. Toca la transformación:
+convertir eso en un plano a escala, y después dibujar sobre esa base **la obra que quieres
+construir** — de forma que el dibujo sirva de verdad para replantear y para computar, y no solo para
+que se vea bonito colgado.
+
+Es el paso donde el módulo deja de ser lectura y se vuelve producción.
+
+## El compás resuelve la triangulación
+
+<Diagrama
+  src="del-croquis-al-plano.webp"
+  alt="Tres paneles con flechas terracota entre ellos. El primero muestra un croquis a mano alzada de un terreno cuadrangular con sus anotaciones y una diagonal, rotulado EL CROQUIS CON SUS MEDIDAS. El segundo muestra papel blanco donde solo se ha trazado con regla un lado recto, y desde sus dos extremos un compás barre dos arcos en terracota que se aproximan por encima de la línea, rotulado UN LADO A ESCALA Y DOS ARCOS. El tercero muestra el cuadrilátero terminado con la esquina exactamente en el cruce de los arcos, que quedan visibles de fondo, rotulado LA ESQUINA CAE DONDE SE CRUZAN. Arriba, EL COMPÁS RESUELVE LA TRIANGULACIÓN."
+  pie="Es el sistema de restricciones de la lección anterior resuelto a mano: cada arco es una ecuación y el cruce es la solución."
+/>
+
+Recuerda por qué mediste las diagonales: porque un cuadrilátero con los lados fijos se deforma y
+hacen falta triángulos. Ahora ese mismo razonamiento se convierte en un procedimiento manual con
+compás, y es sorprendentemente satisfactorio:
+
+1. **Elige la escala** y dibuja **un solo lado** a escala, con regla. Ese lado es tu punto de partida
+   y conviene que sea el más largo y el mejor medido.
+2. Para encontrar la siguiente esquina, **abre el compás a la longitud a escala** del lado que sale
+   de un extremo, y traza un arco. Repite desde el otro extremo con la diagonal.
+3. **La esquina está donde los dos arcos se cruzan.** No hay que medir ángulos ni calcular nada.
+4. Se repite triángulo a triángulo hasta cerrar la figura.
+
+<Analogia>
+Cada arco de compás es el lugar geométrico de todos los puntos que están a esa distancia del centro
+— es decir, **una ecuación dibujada**. Dos arcos son dos ecuaciones, y su intersección es la
+solución del sistema.
+
+Estás resolviendo geométricamente lo que un programa resolvería numéricamente, con la ventaja de que
+la construcción hace visible el problema: si tus medidas eran inconsistentes, **los arcos no se
+cruzan donde deberían y el error salta a la vista** en lugar de esconderse detrás de una cifra.
+</Analogia>
+
+Y si al cerrar la figura no cierra, ahí tienes tu error de cierre hecho dibujo. Un desajuste de un
+par de milímetros en el papel se reparte; uno grande manda a revisar el cuaderno.
+
+### Lo que necesitas sobre la mesa
+
+Papel A3 o A2 —milimetrado si quieres facilitarte la vida—, una regla larga, dos escuadras, un
+compás decente, el escalímetro, y **lápices de dos durezas**: uno duro, 2H, para todas las líneas de
+construcción, y uno blando, HB o B, para el trazo definitivo.
+
+Esa distinción es la técnica central del dibujo a mano: **todo se dibuja primero flojo y ligero, y
+solo al final se repasa lo que queda.** Los arcos de compás, los ejes auxiliares y los tanteos van en
+duro y casi invisibles; los muros, en blando y firmes. Un plano hecho así se lee de un vistazo,
+porque el grosor separa lo importante del andamiaje.
+
+## En qué orden se dibuja
+
+<Diagrama
+  src="orden-de-dibujo.webp"
+  alt="Cinco paneles en fila con la misma planta rectangular en estados sucesivos y flechas terracota entre ellos. El primero, rotulado EJES, solo tiene líneas de raya y punto. El segundo, MUROS, añade las bandas gruesas sobre esos ejes. El tercero, ABERTURAS, añade huecos de puerta con arco de barrido y huecos de ventana. El cuarto, COTAS, añade líneas de cota alrededor. El quinto, CAJETÍN, añade el recuadro de identificación en la esquina y una leyenda. Arriba, EN QUÉ ORDEN SE DIBUJA."
+  pie="Cada etapa se apoya en la anterior. Empezar por los muros en lugar de por los ejes obliga a rehacer en cuanto algo se mueve."
+/>
+
+El orden no es capricho: cada etapa se apoya en la anterior, y saltárselo obliga a borrar.
+
+**1 · Los ejes.** Primero la retícula de <Termino slug="ejes-de-replanteo">líneas de eje</Termino>,
+que son las referencias. Todo lo
+demás cuelga de ahí, y si más adelante mueves un eje, sabes exactamente qué arrastra.
+
+**2 · Los muros.** Se dibujan **a caballo sobre los ejes**, con su espesor real repartido a los dos
+lados. Aquí es donde el espesor deja de ser un detalle: un muro de quince centímetros dibujado como
+una raya es un plano que no sirve para computar.
+
+**3 · Las aberturas.** Puertas con su arco de abatimiento, ventanas con su marco. Y aquí se piensa —
+no se dibuja una puerta donde queda linda, se dibuja donde el arco no estorba y por donde de verdad
+va a pasar una carretilla.
+
+**4 · Las cotas.** Parciales y totales, y las acumuladas desde el origen, como en la lección de
+acotado. Este es el momento de correr el checksum: que las parciales sumen el total.
+
+**5 · El cajetín y la leyenda.** Lo último, y nunca opcional: obra, contenido, escala, fecha,
+versión, autor, más la tabla de símbolos que hayas usado.
+
+<Video id="NjYIpXukRZU" />
+
+## Diseña con las medidas que compras
+
+<Diagrama
+  src="medidas-modulares.webp"
+  alt="Dos paneles con un techo visto desde arriba cubierto con chapas acanaladas. En el izquierdo el ancho del techo no coincide con un número entero de chapas, la última está cortada a lo largo y el recorte sobrante queda tirado al lado rayado en rojo; hay una cruz roja y el rótulo MEDIDA CUALQUIERA, HAY QUE CORTAR. En el derecho el ancho coincide con chapas enteras, todas iguales y sin cortes, sin sobras; hay un visto verde y el rótulo MEDIDA MÚLTIPLE, NO SOBRA NADA. Arriba, DISEÑA CON LAS MEDIDAS QUE COMPRAS."
+  pie="La diferencia entre las dos no es de diseño ni de calidad: es de cuánto material acaba en el suelo y cuántas horas se van cortando."
+/>
+
+Aquí hay un cambio de mentalidad que separa un plano de aficionado de uno útil, y que a ti te va a
+resultar familiar por otro lado: **las dimensiones no son libres.**
+
+Elegir una <Termino slug="medida-modular">medida modular</Termino> no cuesta nada en el papel y
+cambia la obra. Un galpón de 6,00 metros de ancho y otro de 6,35 se dibujan igual de fácil. En la obra son
+mundos distintos: si la chapa que venden mide un ancho determinado y tu techo no es un múltiplo de
+ese ancho útil, alguien va a pasar una mañana cortando chapa a lo largo, va a producir recortes que
+no sirven para nada, y vas a pagar material que termina en el suelo. Lo mismo con los largos de
+chapa, con los perfiles, con el ladrillo y hasta con la separación entre columnas.
+
+**La regla práctica:** antes de fijar las dimensiones, **ve a la casa de materiales y anota las
+medidas reales de lo que vas a comprar** — ancho útil de la chapa, largos disponibles, dimensiones
+del ladrillo, secciones de perfil. Y después dibuja hacia esos números.
+
+<Analogia>
+Es diseñar contra las restricciones de la plataforma en lugar de contra un ideal. Nadie elige un
+tamaño de buffer arbitrario si sabe que el sistema trabaja en bloques de un tamaño concreto: se
+elige un múltiplo y desaparece una clase entera de trabajo desperdiciado.
+
+En obra el desperdicio es literal y se mide en pilas de recortes en un rincón. Ajustar una medida
+treinta centímetros en el papel no cuesta nada. Ajustarla después de comprar cuesta el material.
+</Analogia>
+
+<Dato titulo="Y hay una restricción más, que es humana">
+Además de las medidas de material, hay medidas de uso que conviene no adivinar: por dónde pasa una
+carretilla cargada, cuánto espacio necesita alguien para girar con una bandeja de plantines en las
+manos, a qué altura se trabaja cómodo de pie.
+
+Esas se miden **con las manos y el cuerpo, no con un manual.** Vale la pena marcar en el suelo con
+tiza el ancho de un pasillo antes de dibujarlo y pasar por ahí empujando la carretilla que tienes.
+Diez minutos, y decide una medida que después está en hormigón.
+</Dato>
+
+## La planta de fundaciones se deriva de la planta
+
+<Diagrama
+  src="planta-y-fundaciones.webp"
+  alt="Diagrama en dos mitades alineadas. Arriba, rotulada PLANTA, una planta arquitectónica con muros gruesos, cuatro columnas cuadradas en las esquinas, un tabique interior y una puerta con arco. Abajo, rotulada FUNDACIONES, el mismo contorno con los muros en línea discontinua desvaída y, en primer plano, cuatro zapatas cuadradas hachuradas en terracota justo bajo las columnas y cimientos corridos hachurados bajo las líneas de muro, con los rótulos ZAPATA BAJO COLUMNA y CIMIENTO CORRIDO BAJO MURO. Guías verticales discontinuas conectan cada columna con su zapata. Arriba, LA FUNDACIÓN SE DERIVA DE LA PLANTA."
+  pie="Una lámina no se inventa: se deriva de la otra. Si mueves una columna arriba y no mueves su zapata abajo, las dos láminas se contradicen."
+/>
+
+La planta de fundaciones es la segunda lámina obligatoria de cualquier obra, y no se dibuja desde
+cero: **se calca de la planta de arquitectura y se cambia lo que está en primer plano.**
+
+El procedimiento es directo:
+
+1. Se repite exactamente el mismo contorno y la misma retícula de ejes, **en la misma posición de la
+   hoja** para poder superponerlas.
+2. Los muros pasan a línea discontinua y desvaída: están, pero no son el tema.
+3. Bajo cada columna se dibuja su <Termino slug="zapata">zapata</Termino>; bajo cada muro portante,
+   el cimiento corrido o el <Termino slug="sobrecimiento">sobrecimiento</Termino> que corresponda.
+4. Se acotan las fundaciones **respecto a los mismos ejes**, no respecto a los muros, porque los ejes
+   son lo que se va a materializar con hilos en el replanteo.
+5. Se anotan las profundidades como cotas de nivel contra el cero de la obra.
+
+Ese calco es lo que garantiza la coherencia entre láminas. Y como no hay compilador que avise, la
+disciplina la pones tú: **cada vez que cambies algo en la planta, la pregunta obligatoria es qué
+otras láminas tocaba eso.**
+
+## El cuadro de replanteo: el plano hablándole a la cinta
+
+<Diagrama
+  src="cuadro-de-replanteo.webp"
+  alt="A la izquierda, la planta de un edificio rectangular con la esquina inferior izquierda marcada con un círculo terracota rotulado ORIGEN y la letra A; las otras tres esquinas llevan círculos con las letras B, C y D. Desde el origen salen dos ejes de medición, uno horizontal y otro vertical, y líneas discontinuas proyectan cada esquina sobre ambos ejes. A la derecha, una tabla de cuatro filas con encabezados PUNTO, HACIA EL ESTE y HACIA EL NORTE, con las filas A, B, C y D y las celdas de valores vacías. Arriba, EL CUADRO DE REPLANTEO."
+  pie="Convierte el plano en una lista de instrucciones ejecutables con una cinta y dos personas."
+/>
+
+Este es el detalle que convierte un plano correcto en un plano **útil en obra**, y casi nadie lo
+incluye en construcciones pequeñas.
+
+Además de las cotas dibujadas, añade un <Termino slug="cuadro-de-replanteo">cuadro de
+replanteo</Termino>: una tabla que dé, **para cada esquina de la obra, sus dos distancias desde un
+único punto de origen**: cuánto hacia un lado y cuánto hacia el otro. Eliges una
+esquina como origen, la marcas en el plano, y listas el resto contra ella.
+
+Lo que hace esa tabla es enorme:
+
+- **Elimina la aritmética de campo.** Nadie tiene que sumar tramos de pie junto a una zanja, que es
+  donde se cometen los errores.
+- **Elimina la acumulación de error**, porque cada punto se mide contra el origen y no contra el
+  anterior.
+- **Es verificable**: dos personas distintas replanteando con la misma tabla tienen que obtener las
+  mismas estacas.
+
+<Analogia>
+Es exportar el diseño a un formato que la obra puede ejecutar directamente. El dibujo es la
+representación para humanos; el cuadro de replanteo es **la misma información en el formato que
+consume la máquina** — y aquí la máquina son dos personas con una cinta.
+
+Añade a la tabla las **dos diagonales del rectángulo** como filas de comprobación, y ya tienes
+además los tests.
+</Analogia>
+
+## Del plano al cómputo
+
+La otra cosa que un buen plano habilita es contar. Con la planta y el corte terminados,
+el <Termino slug="computo-metrico">cómputo métrico</Termino> deja de ser una estimación y se vuelve
+lectura:
+
+| Partida | Se lee del plano como |
+|---|---|
+| Excavación | Largo de zanjas × ancho × profundidad, del plano de fundaciones |
+| Hormigón de cimientos | Volumen de zapatas y cimientos corridos, de la misma lámina |
+| Muros | Superficie de muro **menos** los huecos de puertas y ventanas |
+| Revoque | Superficie de muro, por una cara o por dos |
+| Cubierta | Superficie de faldón, del plano de techos |
+| Carpintería | Directamente de la planilla, sin contar sobre el dibujo |
+
+Ese es el motivo real por el que se dibuja antes de comprar: **el presupuesto no puede ser mejor que
+el plano del que sale.** Y si en el cómputo aparece una partida que no puedes leer del plano, no es
+un problema de cómputo — es que falta dibujo.
+
+## La lista antes de dar un plano por terminado
+
+Antes de imprimir y llevarlo a la obra, esta comprobación de siete puntos cuesta cinco minutos:
+
+1. **¿Tiene cajetín completo**, con escala, fecha y versión?
+2. **¿Tiene norte?**
+3. **¿Suman las cotas parciales el total**, en cada lado?
+4. **¿Está el espesor de los muros dibujado y acotado**, o son rayas?
+5. **¿Hay al menos un corte**, con su marca de corte en la planta?
+6. **¿Coinciden la planta y la planta de fundaciones** al superponerlas?
+7. **¿Está el cero de niveles definido y descrito** como objeto físico real?
+
+Un plano que falla en cualquiera de las siete no está terminado, por bonito que se vea.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Empieza por el plano de conjunto en 1:200**, sobre A3: los doce lotes, los linderos, el acceso, el
+punto de agua, los árboles grandes y las zonas que se encharcan. Ese es el **mapa base** sobre el que
+todo lo demás se dibuja, y conviene tenerlo en limpio antes de proyectar nada — porque las decisiones
+buenas salen de mirar el conjunto, no de imaginarse el galpón aislado.
+
+**Después el galpón en 1:50**, en dos láminas: planta de arquitectura y planta de fundaciones,
+calcada de la primera y en la misma posición de la hoja. Con un corte transversal en la tercera
+lámina para que existan las alturas.
+
+**Fija las dimensiones del galpón contra el material que se vende en Santa Cruz.** Antes de decidir
+el ancho, anota el ancho útil real de la chapa que vas a comprar y los largos disponibles, y elige
+un ancho que sea múltiplo. Lo mismo con la separación entre columnas y los largos de perfil o de
+tirante. Media hora en la casa de materiales antes de dibujar te ahorra una pila de recortes en un
+rincón del vivero.
+
+**Y comprueba los anchos con el cuerpo, no con la teoría:** marca con cal en el suelo el pasillo
+central del galpón y pasa empujando la carretilla cargada. Si roza, súbelo veinte centímetros en el
+papel, que ahí es gratis.
+
+**Prepara el cuadro de replanteo** eligiendo como origen la esquina del galpón más cercana a un punto
+fijo que no se vaya a mover, y añade las dos diagonales como filas de comprobación. El día del
+replanteo, esa tabla y una cinta larga son todo lo que hace falta: nadie suma nada de pie junto a la
+zanja.
+
+**Aprovecha el versionado que ya sabes hacer.** Cada lámina lleva versión y fecha en el cajetín, y
+cada vez que cambie algo, foto de la versión nueva a un repositorio de planos y la vieja fuera de la
+mesa del galpón. En dos años vas a querer saber por qué la zapata sureste quedó más ancha, y la
+respuesta va a estar en la diferencia entre dos versiones.
+
+**Un consejo de orden:** dibuja primero el galpón, que es la construcción con más restricciones, y
+solo después acomoda camas, sombreadero y circulaciones a su alrededor. Lo rígido se coloca primero
+y lo flexible se adapta — no al revés.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Las medidas de material que hay que ir a anotar** antes de fijar dimensiones son sobre todo tres:
+el ancho útil de la calamina —el ancho que queda descontando el traslape, que no es el ancho total de
+la hoja—, los largos de hoja disponibles en la ferretería donde vas a comprar, y las dimensiones
+reales del ladrillo local, que varían de fábrica a fábrica más de lo que uno esperaría.
+
+**El papel y la impresión:** dibujar a mano sobre A3 y llevar el original al galpón funciona
+perfectamente para una obra chica. Si necesitas copias, cualquier centro de copiado grande imprime
+en A3 y en plotter — recordando lo de imprimir a tamaño real y no ajustado a página, y dibujando la
+escala gráfica por si acaso.
+
+**El vocabulario de obra:** la lámina de fundaciones se pide como **plano de fundaciones** o
+**plano de cimientos**; el cimiento continuo bajo un muro es **cimiento corrido**; la base ensanchada
+bajo una columna es **zapata**; y el cuadro de replanteo, si no lo conocen por ese nombre, se
+entiende perfectamente como **la tabla de medidas desde una esquina**.
+
+**Y una advertencia local sobre las fundaciones:** en llanura aluvial con arcillas expansivas, las
+dimensiones y la profundidad de una zapata no se copian de un plano ajeno ni se sacan de una regla
+general de internet. Dibuja la lámina, sí, pero **las secciones y profundidades para una construcción
+que vaya a soportar carga conviene consultarlas** con alguien que conozca el suelo de la zona. El
+dibujo es tuyo; el criterio estructural, cuando hay carga en juego, se comparte.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Dibujo directamente con el trazo definitivo.»** Todo se construye primero en lápiz duro y flojo, y
+se repasa al final. Si no, el plano queda lleno de borrones y de líneas que no se sabe si cuentan.
+
+**«El muro lo dibujo con una raya.»** Sin espesor no hay cómputo, no hay encuentro de muros y no hay
+ancho de vano real.
+
+**«Empiezo por los muros y los ejes los pongo después.»** Al revés: los ejes primero, porque son la
+referencia de la que cuelga todo, incluido el replanteo.
+
+**«El ancho lo pongo en 6,35 porque me cuadra el espacio.»** Puede que te cuadre en el papel y que
+te obligue a cortar cada chapa. Las dimensiones se eligen contra el material que se compra.
+
+**«La planta de fundaciones la dibujo de nuevo desde cero.»** Se calca de la planta, en la misma
+posición. Dibujarla aparte garantiza que algún día no coincidan.
+
+**«Acoto las fundaciones respecto a los muros.»** Respecto a los ejes, que es lo que se materializa
+con hilos.
+
+**«El cuadro de replanteo es cosa de obras grandes.»** Es justo al revés: en la obra chica es donde
+no hay topógrafo y donde más se agradece no tener que sumar de pie junto a la zanja.
+
+**«Ya está dibujado, está terminado.»** Corre la lista de siete puntos. Un plano sin corte, sin norte
+o con cotas que no suman está sin terminar, aunque se vea impecable.
+
+## Lo que sigue
+
+Ya sabes dibujar a mano un plano que sirve. La pregunta natural, y más viniendo de donde vienes, es
+si no tendría más sentido hacer todo esto en la computadora.
+
+La respuesta es *depende*, y la lección siguiente la desarrolla con honestidad: qué gana y qué cuesta
+cada herramienta, cuándo el papel sigue ganando, qué opciones libres hay, y cómo aprovechar tu perfil
+técnico sin caer en la trampa de montar una infraestructura de dibujo para un galpón de seis por
+doce.

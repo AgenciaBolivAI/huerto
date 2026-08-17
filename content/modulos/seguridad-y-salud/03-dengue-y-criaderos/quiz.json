@@ -1,0 +1,124 @@
+{
+  "preguntas": [
+    {
+      "id": "criadero-y-no-aire",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué el control del dengue se hace en los criaderos y no fumigando el aire?",
+      "opciones": [
+        "Porque la fumigación espacial solo alcanza al mosquito que está volando en ese momento: no toca huevos, ni larvas, ni pupas, y no deja nada actuando después, así que al día siguiente el mismo recipiente sigue produciendo.",
+        "Porque la fase acuática es el cuello de botella del sistema: está concentrada —cientos de individuos en veinte litros—, está inmóvil y está localizada en recipientes que se pueden listar y dar vuelta, mientras que el adulto tiene las tres propiedades contrarias.",
+        "Porque repetir el mismo insecticida selecciona resistencia por el mecanismo del módulo doce: sobreviven los menos sensibles, se reproducen, y con los años el producto deja de servir.",
+        "Porque la fumigación no sirve en ninguna circunstancia, de modo que una autoridad sanitaria que la ordena durante un brote está desperdiciando recursos."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es falsa por exceso, y conviene decirlo con claridad para que la lección no se lea como una consigna: durante un brote, decidida por la autoridad sanitaria, la fumigación es una medida de emergencia razonable, porque baja rápido la cantidad de adultos infectados que están picando esta semana. Lo que no es, es una estrategia: en pocos días la población vuelve a estar donde estaba, porque la fuente nunca se tocó. Hay además un detalle de comportamiento que la limita todavía más: el Aedes aegypti descansa adentro y a la sombra —detrás de un ropero, entre la ropa colgada, bajo los bancos del vivero— y no en el aire libre del camino, que es justo por donde pasa el humo. Y el daño mayor de fumigar suele ser indirecto: es el momento exacto en que la gente deja de dar vuelta los baldes, o sea lo único que estaba funcionando."
+    },
+    {
+      "id": "el-agua-limpia",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un tanque con agua limpia de la red y la tapa apoyada encima, corrida dos dedos, no es un criadero importante: el Aedes aegypti busca agua sucia y estancada, como la del pozo ciego o el charco del camino.",
+      "respuesta": false,
+      "explicacion": "Falso, y es al revés en las dos mitades. El Aedes aegypti prefiere agua limpia y quieta, sin barro y sin materia podrida: agua de lluvia en un turril, agua de la red guardada en un tacho, el plato de una maceta, el bebedero del perro. El pozo ciego y el charco sucio le interesan poco, de modo que la ronda no empieza en el camino sino en los recipientes. Y la tapa apoyada es peor que ninguna tapa: un tanque abierto se ve y molesta, mientras que uno con la tapa corrida dos dedos se da por resuelto y nadie vuelve a mirarlo. La regla que evita el autoengaño es dura: tapa firme, mosquitero bien atado que ceda al tirar, o el recipiente se considera abierto. Ese es también el motivo por el que el bidón de agua para beber de la estación de sombra se tapa siempre: un recipiente destapado de agua limpia en zona de dengue no es higiene, es un criadero."
+    },
+    {
+      "id": "el-huevo-en-la-pared",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un balde se vació hace ocho días, se dejó un rato dado vuelta y se volvió a usar. Hoy tiene larvas. ¿Qué lo explica?",
+      "opciones": [
+        "Que la hembra no deja los huevos flotando: los pega en la pared del recipiente un poco por encima del nivel del agua, que es justo la franja que nadie limpia porque «esa parte está seca».",
+        "Que esos huevos resisten meses en seco y eclosionan cuando el recipiente vuelve a llenarse, así que vaciar sin refregar es reiniciar el proceso sin borrar el estado que quedó guardado en disco.",
+        "Que la hembra reparte la postura entre varios recipientes y en varias visitas, de modo que vaciar uno solo no interrumpe la reproducción del conjunto.",
+        "Que las larvas aguantaron dentro del barro húmedo del fondo mientras el balde estuvo dado vuelta, porque respiran el oxígeno disuelto que queda en el agua del sedimento."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta confunde qué etapa es la resistente y cómo respira. La larva no extrae oxígeno del agua: sube a la superficie y saca un tubito, el sifón respiratorio, así que respira aire y muere cuando el agua se va. Lo que sobrevive a la desecación es el huevo, pegado a la pared por encima de la línea de agua, y esa es la ventaja brutal del Aedes en un clima con seis meses de seca. De ahí salen los dos cambios de verbo que valen toda la lección: no es «vaciar», es «vaciar, refregar y secar» —con cepillo, trapo áspero o la mano con arena, y sobre toda la pared por encima de donde llegaba el agua—, y no es «una vez», es «cada semana». El mismo mecanismo explica por qué el dengue estalla poco después de las primeras lluvias fuertes: toda la reserva de huevos acumulada durante la seca se moja al mismo tiempo y eclosiona junta."
+    },
+    {
+      "id": "cada-cuanto-la-ronda",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿De dónde sale que la ronda de inspección de recipientes sea semanal y no quincenal?",
+      "opciones": [
+        "De un número biológico: con el calor de Santa Cruz un huevo llega a mosquito volando en siete a diez días, así que el intervalo entre inspecciones tiene que ser más corto que ese tiempo.",
+        "De un problema de frecuencia de muestreo, idéntico al de un cron que corre cada diez días para atrapar un proceso que dura ocho: no lo va a ver nunca, y además muestra pocos positivos mientras la población crece.",
+        "Además hay dos rondas extraordinarias que no dependen del calendario: tras las primeras lluvias fuertes, cuando de golpe hay agua en objetos que llevaban meses secos, y al día siguiente de cada tormenta grande.",
+        "Porque la ronda quincenal cubre la mitad del trabajo, así que sirve igual como medida parcial mientras no haya gente suficiente para hacerla cada semana."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es la trampa aritmética que hunde muchos planes comunitarios: una ronda cada quince días no es «media ronda semanal», es cero. Deja pasar generaciones enteras completas entre pasada y pasada, de modo que los mosquitos que produce cada recipiente vuelan igual; y encima, como cada visita encuentra pocos recipientes con larvas, produce la sensación de que el problema está controlado justo cuando no lo está. Si no hay gente para la ronda semanal, la respuesta correcta no es espaciarla: es reducir el número de recipientes que hay que revisar, eliminándolos, perforándolos, guardándolos bajo techo o tapándolos con malla, hasta que la lista quepa en el tiempo disponible. Vale la pena recordar también el gesto de la inspección: destapar, no mover el agua, esperar veinte segundos y mirar, porque las larvas se hunden apenas notan una sombra."
+    },
+    {
+      "id": "cuatro-serotipos",
+      "tipo": "verdadero_falso",
+      "enunciado": "Quien ya pasó un dengue puede despreocuparse, porque la enfermedad deja defensa de por vida y una segunda vez sería más leve.",
+      "respuesta": false,
+      "explicacion": "Falso en las dos partes. No hay un dengue: hay cuatro serotipos, lo bastante parecidos para dar la misma enfermedad y lo bastante distintos para que las defensas no los confundan. Haber pasado uno deja defensa duradera contra ese y no contra los otros tres, de modo que «yo ya tuve dengue» no cubre nada frente a los demás. Y lo que contradice de plano a la intuición: una segunda infección con un serotipo distinto puede ser más grave que la primera, no más leve. Por eso la frase se usa mal cuando sirve para relajar la ronda de recipientes o para no ir al centro de salud. Y dos recordatorios que pertenecen al mismo bloque: con fiebre, en zona de dengue, se va al centro de salud siempre, porque en casa no hay forma de distinguirlo de otra cosa; y el momento de mayor riesgo suele aparecer cuando la fiebre baja, que es justo cuando la familia se tranquiliza."
+    },
+    {
+      "id": "inventario-del-vivero",
+      "tipo": "opcion_multiple",
+      "enunciado": "Al levantar el inventario de agua quieta de un vivero, ¿qué es correcto?",
+      "opciones": [
+        "Los platos bajo las macetas son el punto de decisión más importante, porque no son diez sino cientos y nadie va a dar vuelta cientos de platos cada semana: la salida realista es el diseño —bancos con pendiente y drenaje libre, o platos rellenos de arena gruesa— y no la disciplina.",
+        "El separador de primeras aguas es, por diseño, un tubo vertical lleno de agua limpia, así que si el agujerito del tapón se tapa con una hoja deja de vaciarse solo y se vuelve un criadero perfecto instalado por nosotros mismos.",
+        "Hay que anotar también los objetos que ese día están secos y los que no parecen recipientes —envases apilados boca arriba, llantas, lonas flojas, axilas de plátano, horcones huecos—, porque en enero van a tener agua.",
+        "Como el objetivo es la limpieza general del predio, conviene empezar por drenar los charcos del camino y por tratar el pozo ciego, que son los focos de mayor producción de mosquitos."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta ordena el trabajo al revés y desperdicia la mayor parte del esfuerzo: el Aedes aegypti cría en agua limpia y quieta dentro de recipientes, no en el charco sucio ni en el pozo ciego, así que ese día de trabajo produce un predio más prolijo y exactamente los mismos mosquitos. El inventario es un inventario de superficie de ataque y tiene el fallo clásico de los inventarios: lo que rompe el sistema no es el recipiente documentado, sino el que quedó ahí y nadie recordaba. Por eso se camina el sitio con libreta, una sola vez y antes de la primera ronda, y por eso se anota lo que hoy está seco. Con la lista hecha, cada punto se clasifica por una sola pregunta —cuánto dura la solución sin que nadie haga nada— y se empuja lo más arriba posible: eliminar dura para siempre, perforar o rellenar dura años, tapar dura meses, refregar dura una semana y depende de que alguien se acuerde."
+    },
+    {
+      "id": "el-enfermo-y-el-repelente",
+      "tipo": "opcion_multiple",
+      "enunciado": "En una casa donde alguien tiene fiebre y se sospecha dengue, ¿qué medidas corresponden y por qué?",
+      "opciones": [
+        "Poner a la persona bajo mosquitero durante el día mientras tiene fiebre: no la protege a ella, que ya está enferma, sino a los vecinos, porque su sangre es la fuente que carga a los mosquitos del barrio.",
+        "Hacer una revisión extraordinaria de los recipientes de esa casa y de las de al lado, porque el mosquito vive en un radio corto y en una sola comida pica a varias personas, lo que explica que en una casa con dengue caiga más de uno casi al mismo tiempo.",
+        "Preguntar en el centro de salud cuáles son los signos de alarma y qué analgésico se puede tomar, porque hay medicamentos comunes desaconsejados en dengue por el riesgo de sangrado.",
+        "Repartir repelente a toda la familia y al vecindario, que es la medida que más baja la transmisión en el barrio porque corta las picaduras en su origen."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta confunde protección individual con control. Un repelente registrado sí funciona, y protege a la persona que lo lleva puesto durante las horas que diga su etiqueta; lo que no hace es bajar el dengue del barrio ni un punto, porque no toca ni un criadero. Es la diferencia entre ponerse casco y arreglar el camino: lo primero es sensato y lo segundo es lo que cambia la estadística. En la etiqueta está lo que hay que respetar —principio activo, concentración, a partir de qué edad se puede usar y cada cuántas horas se repite—, y para bebés, embarazo y pieles sensibles la pregunta va al centro de salud. Y no hay que olvidar lo gratis: manga larga, pantalón largo y ropa clara en las horas de más picadura, que en un vivero son justo las horas de trabajo, porque este mosquito pica de día."
+    },
+    {
+      "id": "plan-de-criaderos-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña el plan completo de control de criaderos de Rizoma del Sur para un ciclo de un año: el inventario, qué se elimina y qué se vigila, cómo es la ronda y qué se registra, qué se hace en la seca y qué en lluvias, y qué se hace fuera del predio. Justifica cada decisión con el mecanismo biológico y sé explícito sobre lo que hay que consultar con el centro de salud o el municipio.",
+      "respuestaModelo": "El plan arranca por el inventario, que es donde arrancan todos los fracasos. No se puede controlar lo que no está listado, así que la primera tarea —una sola vez, y en la seca— es caminar los 3.666 m² lote por lote, los doce, con una libreta, anotando cada objeto que junte o pueda juntar agua aunque ese día esté seco, porque en enero no lo va a estar. Es un inventario de superficie de ataque con el fallo clásico: lo que rompe el sistema no es el recipiente documentado, sino el que quedó ahí y nadie recordaba. Saldrán decenas de puntos, y está bien que el número asuste: es la medida real del problema.\n\nCon la lista en la mano, cada punto se clasifica por una sola pregunta: cuánto dura la solución sin que nadie haga nada. Eliminar el recipiente dura para siempre; perforarlo, rellenarlo de tierra o guardarlo bajo techo dura años; una tapa firme o un mosquitero atado duran meses con revisión; vaciar, refregar y secar dura una semana y depende de la disciplina de alguien; el larvicida dura semanas y hay que repetirlo; fumigar dura horas. La regla es empujar cada punto lo más arriba posible, porque lo que dependa de que alguien se acuerde va a fallar algún mes y que el turril ya no esté no falla nunca. Y una regla de compra: ningún recipiente entra al predio sin tapa.\n\nAplicado al vivero, que es una fábrica involuntaria de criaderos: los tanques de riego y la reserva para los cortes de energía se cierran con malla fina atada con un aro de cámara de neumático, no con una lona apoyada, y se comprueba tirando; la malla gana a la tapa maciza porque se ve a través de ella. Los platos bajo las macetas son el punto de decisión más importante, porque no son diez sino cientos y nadie va a dar vuelta cientos de platos cada semana: la salida es el diseño —bancos con pendiente y drenaje libre, y donde el plato haga falta, arena gruesa dentro, que sostiene la maceta y no deja lámina libre—. Los envases vacíos, bajo techo o boca abajo. Las bandejas de subirrigación, vaciadas y refregadas o sin lámina permanente. Los bidones de biol ya llevan sello de agua, pero el balde de caldo y el tacho de remojo se tapan al terminar la jornada. Los bebederos y la bandeja de agua de las abejas no se rellenan: se vacían y refriegan cada dos o tres días. Las canaletas se limpian al empezar las lluvias, y el separador de primeras aguas se abre para comprobar que su agujerito no está tapado, porque por diseño es un tubo lleno de agua limpia y, si deja de vaciarse solo, es un criadero que instalamos nosotros. Y lo que no parece recipiente: axilas de plátano, tocones y horcones huecos.\n\nLa ronda se fija por biología: con el calor de acá un huevo llega a mosquito volando en siete a diez días, así que el intervalo tiene que ser más corto y la ronda es semanal. Quincenal no es media ronda: es cero. Tiene día fijo —el jueves—, persona nombrada con suplente y recorrido escrito en el mismo orden, porque «lo hacemos entre todos» es la forma más segura de que no lo haga nadie. El verbo no es mirar: es dar vuelta, destapar, refregar y tensar. Para ver larvas hay que destapar, no mover el agua, esperar veinte segundos y mirar, porque se hunden con la sombra. Se anota en la planilla de lotes con dos columnas —revisados y con larvas—, y su cociente es el índice de recipientes positivos del predio, útil por su tendencia y no como cifra comparable con nadie. Rondas extraordinarias tras las primeras lluvias fuertes y al día siguiente de cada tormenta grande.\n\nEl año se reparte solo. De mayo a septiembre la transmisión baja, pero los huevos siguen ahí, secos y viables: es el momento del trabajo estructural —eliminar recipientes, comprar tapas, cortar llantas, corregir canaletas, rediseñar bancos— sin la presión de los casos, y quien empieza en enero llega tarde. De octubre a abril se sostiene la ronda y se refuerza tras cada lluvia. El surazo da sensación de alivio unos días, pero no mata los huevos.\n\nFuera del predio, el radio de vuelo corto tiene doble filo: el mosquito que pica es propio, pero si el lote de al lado tiene llantas, el trabajo perfecto tiene un techo. Eso se lleva a la parcela demostrativa —se destapa un balde, se ven las larvas moverse y se entiende en diez segundos— y a la organización vecinal y al municipio, que es la vía de las campañas de recojo de inservibles; en un barrio donde el agua llega por horas, la medida que más dengue baja no es un insecticida, son tapas. Y lo que no se decide acá: qué larvicida se usa en agua de consumo o de riego de hortaliza que se come cruda, en qué cantidad y cada cuánto, más los índices oficiales, los umbrales, los productos autorizados y las campañas, se pregunta en el centro de salud y en el municipio, y se lee la etiqueta.",
+      "criterios": [
+        "Empieza por el inventario completo de los doce lotes, hecho una sola vez y anotando también los objetos que ese día están secos.",
+        "Clasifica cada punto por cuánto dura la solución sin intervención humana y prefiere eliminar antes que vigilar.",
+        "Establece la regla de compra de que ningún recipiente entra al predio sin tapa.",
+        "Resuelve tanques y reserva de energía con mosquitero atado y comprobado, y argumenta por qué la malla gana a la tapa maciza.",
+        "Trata los platos bajo las macetas como problema de diseño y no de disciplina, por su número.",
+        "Cubre la lista propia del vivero: envases apilados, bandejas de subirrigación, baldes de caldos, bebederos, agua de las abejas, canaletas y criaderos naturales.",
+        "Detecta el separador de primeras aguas como criadero de fabricación propia y manda comprobar su orificio de vaciado.",
+        "Deriva la frecuencia semanal del tiempo de huevo a adulto y descarta explícitamente la ronda quincenal.",
+        "Convierte la ronda en procedimiento: día fijo, persona nombrada con suplente, recorrido escrito, tocar en vez de mirar, y esperar veinte segundos antes de juzgar un recipiente.",
+        "Registra recipientes revisados y positivos, y usa el índice como tendencia propia, no como cifra comparable.",
+        "Reparte el año: trabajo estructural en la seca, ronda sostenida y rondas extraordinarias en lluvias, sin confiarse por el surazo.",
+        "Sale del predio hacia la demostración, la organización vecinal y el municipio, y remite al centro de salud lo que no se puede decidir aquí: larvicidas, dosis, umbrales y campañas."
+      ],
+      "explicacion": "Una buena respuesta se reconoce en que cada decisión cuelga de un mecanismo, no de una recomendación. El huevo pegado a la pared y resistente a la desecación obliga a refregar y no solo a vaciar. El tiempo de huevo a adulto fija la frecuencia. El radio de vuelo corto explica a la vez la buena noticia —lo que hagas en tu patio se nota en tu patio— y el techo que impone el vecino. Y la preferencia por el agua limpia y quieta manda el esfuerzo a los recipientes y no al charco. Los dos errores que más se repiten son planificar la vigilancia de decenas de recipientes que se podían haber eliminado, y confiar el control a la constancia de las personas en vez de al diseño: en un proyecto comunitario, donde el entusiasmo dura unas semanas, cualquier plan que dependa de que alguien se acuerde todos los jueves durante un año va a fallar algún mes. Por eso la métrica de calidad del plan no es cuánta gente moviliza, sino cuántos recipientes deja de haber."
+    }
+  ]
+}

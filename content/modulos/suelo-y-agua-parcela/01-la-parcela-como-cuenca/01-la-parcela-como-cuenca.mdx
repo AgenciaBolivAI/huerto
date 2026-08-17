@@ -1,0 +1,414 @@
+El módulo 25 contestó una pregunta de caudal: cuántos litros por día pide un vivero. Este módulo
+contesta otra, más lenta y mucho más barata de resolver: **qué le pasa al terreno entero, año tras año,
+con el agua que le cae encima y con la que le llega de afuera**. No se resuelve comprando nada, sino
+entendiendo por dónde va el agua, y eso solo se aprende mirando.
+
+La primera corrección es de encuadre. Casi todo el mundo piensa la parcela como un recipiente: llueve,
+se llena, se seca. **Una parcela no es un recipiente: es un tramo de tubería.** Entra agua por un lado,
+sale por otro y se queda un rato en el medio; de esas tres, la única que decides tú es la del medio.
+
+## Toda parcela está dentro de una cuenca
+
+Una <Termino slug="cuenca">cuenca</Termino> es **toda la superficie de terreno cuya agua de lluvia
+termina saliendo por el mismo punto**. No es una figura poética: es una definición operativa que se
+traza con un palo en el barro.
+
+Se delimita por el borde, no por el centro. Ese borde es
+la <Termino slug="divisoria-de-aguas">divisoria de aguas</Termino>, la línea que une los puntos altos: una
+gota que caiga un centímetro a un lado se va para un sitio y la que caiga al otro, para el opuesto. En
+la montaña es una cresta visible desde lejos; en el llano, una línea invisible que cruza un potrero.
+
+El otro extremo es el <Termino slug="punto-de-salida">punto de salida</Termino>, el sitio único por
+donde el agua abandona el sistema: una alcantarilla, la zanja del camino, el rincón más bajo donde se
+queda hasta evaporarse. **Toda cuenca tiene exactamente un punto de salida; si crees que la tuya tiene
+tres, estás mirando tres cuencas pegadas.**
+
+Y ahora lo que cambia la manera de decidir para siempre: **las cuencas están anidadas**. Tu cama de
+cultivo descarga en el pasillo; el pasillo, en el lote; el lote, en la manzana; la manzana, en el canal
+del barrio. La pregunta nunca es *si* tu parcela es una cuenca, sino **de qué tamaño es la que miras y
+cuál es la que te está mirando a ti desde arriba**.
+
+<Analogia>
+Es la diferencia entre dimensionar un servicio por su propia carga y dimensionarlo por su tráfico real:
+recibe peticiones de un cliente que no controlas, con picos que no programaste, y **entrega a un
+sistema aguas abajo que se cae si le mandas de más**. El incidente casi nunca nace en el nodo que se
+cayó, nace tres saltos más arriba. Tu parcela es un nodo con aristas de
+entrada que **no declaraste** y una arista de salida que **le importa a otro**, y el módulo entero
+consiste en dibujar ese grafo antes de que lo dibuje el aguacero.
+</Analogia>
+
+De ahí sale un concepto que el curso ya nombró y que aquí pasa al centro:
+la <Termino slug="cuenca-de-aporte">cuenca de aporte</Termino>, **la superficie de fuera de tu terreno que
+drena hacia adentro** —un camino más alto, el patio del vecino, una canaleta apuntando a tu pared—.
+Muchas veces es mayor que la parcela, y entonces la mayor parte del agua que manejas **nunca fue
+tuya**. Con ella llegan **caudal**, **sedimento** —tierra ajena sobre la tuya— y **lo que venga pegado
+a ese sedimento**: agroquímicos y, lo más grave para un vivero, hongos de suelo de la parcela de
+arriba.
+
+## Los cinco destinos del agua que cae
+
+Toda gota acaba en uno de cinco sitios. Casi todos los errores de manejo de agua consisten en olvidar
+que **el agua no se elimina, solo se cambia de casilla**.
+
+**Uno: se va por la superficie.** Es la <Termino slug="escorrentia">escorrentía</Termino>, el agua que
+no alcanzó a entrar y corre encima. Aparece cuando
+la <Termino slug="intensidad-de-lluvia">intensidad de la lluvia</Termino> supera a
+la <Termino slug="infiltracion">infiltración</Termino> —la velocidad de entrada del agua en el suelo, en
+milímetros por hora—. **Arrastra la capa superficial, que es la más fértil del perfil.**
+
+**Dos: entra y baja.** Tras infiltrar, el agua atraviesa el perfil; si sigue bajando sale del alcance
+de las raíces. Esa <Termino slug="percolacion">percolación</Termino> recarga lo de abajo pero, para el
+cultivo, es agua perdida. **Tres: se evapora y se transpira**,
+la <Termino slug="evapotranspiracion">evapotranspiración</Termino> del módulo 25, que en la seca cruceña
+es probablemente la salida más grande de todas.
+
+**Cuatro: se queda guardada en el suelo**, retenida entre las partículas. Es la despensa entre lluvia y
+lluvia, **el único destino que nos interesa aumentar**, y casi todo el módulo trabaja para eso.
+
+**Cinco: se queda encima, quieta.** Es el <Termino slug="encharcamiento">encharcamiento</Termino>: agua
+que llegó a un sitio del que no puede salir ni hacia abajo ni hacia los lados. Su pariente peligroso es
+el <Termino slug="anegamiento">anegamiento</Termino>, la zona de raíces saturada y sin oxígeno, que
+**puede estar ocurriendo sin que se vea una gota en la superficie** y mata cultivos con una eficacia
+que asombra a quien creía tener un problema de sequía.
+
+<Formula explicacion="La ecuación de continuidad de la parcela: todo lo que entra aparece en alguna salida o en el almacenamiento. No hay casilla «se eliminó».">
+lluvia + entrada de afuera = escorrentía + percolación + evapotranspiración + cambio de almacenamiento
+</Formula>
+
+<Analogia>
+Es contabilidad por partida doble: **no existe la operación «borrar», solo «mover de cuenta»**. Quien
+dice «voy a drenar esta parte» no elimina agua, la mueve de *almacenamiento* a *escorrentía*, y esa
+cuenta desemboca en el punto de salida, que casi siempre es el terreno de otra persona. Por eso
+«drenar» nunca es aquí una respuesta completa: lo es **drenar hacia dónde**, y
+ese <Termino slug="punto-de-descarga">punto de descarga</Termino> se decide al principio del diseño.
+</Analogia>
+
+## Por qué en el llano el agua corre igual
+
+Aquí está el malentendido que más caro sale en Santa Cruz: *«mi terreno es plano, así que no tengo
+problema de agua corriendo»*.
+
+Una pendiente del 0,3 % son **treinta centímetros de caída en cien metros**. A ojo eso es plano: un
+albañil no la nota, una foto no la registra. **Al agua le sobra.** Lo único que cambia con la pendiente
+es la velocidad, no la dirección.
+
+En el llano el agua avanza como una **sábana ancha, delgada y lenta** por todo el frente a la vez: es
+el <Termino slug="flujo-en-manto">flujo en manto</Termino>, con una propiedad traicionera —**no excava
+un canal**—, así que no deja marca de por dónde pasó. En una ladera hay una zanja y la zanja es un
+mapa; en el llano hay pasto, y el pasto vuelve a pararse en dos días.
+
+Cuando el manto encuentra una depresión, una huella de llanta o el pie de una pared, deja de ser sábana
+y se vuelve cuerda: eso
+es <Termino slug="flujo-concentrado">flujo concentrado</Termino>, y su capacidad de arrastre sube
+muchísimo más deprisa que la velocidad. **El paso de manto a concentrado es el momento exacto en que un
+problema de humedad se convierte en uno de erosión.**
+
+<Dato titulo="El llano no es plano: es de baja pendiente">
+El curso ya dio la herramienta, el <Termino slug="microrrelieve">microrrelieve</Termino>: diferencias
+de veinte o treinta centímetros deciden textura y drenaje, y se leen mejor con **luz rasante de primera
+hora o del atardecer**, porque una sombra larga delata un desnivel que a mediodía no existe.
+Un <Termino slug="dique-natural">dique natural</Termino> es la parte alta, arenosa y bien drenada;
+un <Termino slug="bajio">bajío</Termino> es la baja, fina y mal drenada;
+un <Termino slug="paleocauce">paleocauce</Termino> es una franja de arena enterrada que drena aunque
+arriba parezca arcilla. **Los tres se ven después de una lluvia fuerte**, no desde la puerta.
+</Dato>
+
+## La lluvia es el único momento en que el sistema habla
+
+En la estación seca el terreno no dice nada útil sobre el agua: cualquier conclusión será una
+suposición con cara de dato. **La lluvia es la única prueba de carga que tiene una parcela, es gratis y
+viene con calendario.** Pero la evidencia **caduca**: las líneas de flujo, el pasto peinado y la marca
+de barro en el poste desaparecen en cuarenta y ocho horas.
+
+<Analogia>
+Un sistema en reposo no emite las trazas que importan: las emite bajo carga, durante el pico, y esas
+trazas tienen retención. Nadie sensato espera a que se caiga producción para instalar el logging. La
+lluvia fuerte es el pico de carga de tu parcela y
+la <Termino slug="recorrida-de-lluvia">recorrida de lluvia</Termino> es el logging: cuesta un par de
+botas. **Lo que no anotes durante el aguacero no existe hasta el año que viene.**
+</Analogia>
+
+### Los cuatro momentos de la recorrida
+
+**Durante el aguacero, desde un sitio seguro.** Se mira, no se camina el interior, y lo que se busca es
+grande y evidente: **por dónde entra agua desde afuera** y por dónde sale.
+
+**En los veinte minutos siguientes a que pare.** El momento de oro: el agua todavía se mueve, se ven
+las **líneas de flujo** en vivo y dónde el manto se vuelve cuerda. Aquí se camina y se clavan estacas
+donde luego habrá que volver.
+
+**A las veinticuatro y a las cuarenta y ocho horas.** Ya no importa por dónde pasó sino **dónde sigue
+habiendo agua**: un charco que aguanta dos horas y uno que aguanta dos días son dos diagnósticos
+distintos, y esa diferencia vale más que un análisis.
+
+**Y a los cuatro o cinco días** se mira lo contrario, **qué se secó primero**: la franja dura y clara
+mientras el resto sigue húmedo suele ser arena enterrada. De cada recorrida se anotan las mismas cuatro
+cosas —**fecha**, **qué lluvia fue**, **qué se vio**, **desde dónde**—, porque una observación sin
+fecha y sin tamaño de lluvia no es un dato: es una anécdota.
+
+<Advertencia titulo="La recorrida tiene reglas de seguridad, y no son opcionales">
+La lluvia fuerte aquí viene con **tormenta eléctrica**: no se camina el terreno abierto con rayos
+cerca, ni con herramienta larga de metal, ni se busca refugio bajo un árbol aislado. Tampoco se camina
+**al borde de un canal lleno** —el talud mojado cede sin aviso—, y el agua **desplaza animales**:
+serpientes y alacranes suben a lo que sobresalga, así que se mira antes de agarrar un poste.
+
+Una que parece menor y no lo es: **pisar suelo saturado lo compacta**, y
+la <Termino slug="compactacion">compactación</Termino> está entre lo más caro de deshacer; se camina por
+pasillos, nunca por las camas. Y la tarea de salud: **el agua quieta que dura más de una semana puede
+completar el ciclo del mosquito**, y aquí eso significa dengue, así que las llantas, baldes y turriles
+destapados que aparezcan se voltean el mismo día.
+</Advertencia>
+
+## Las señales que deja el agua
+
+El agua escribe, y aprender su letra no cuesta nada: funciona igual en tres mil metros cuadrados que en
+un patio de veinte.
+
+**La línea de restos flotantes.** Hojas secas, plásticos y espuma alineados en una raya continua contra
+una pared o un alambrado. Es
+la <Termino slug="marca-de-agua-maxima">marca de agua máxima</Termino>: **hasta ahí llegó el agua y ahí
+perdió velocidad**, porque lo que flota flota hasta que el agua se retira. Con una cinta, esa marca da
+la altura que decide dónde se monta un tablero, una bomba o
+una <Termino slug="cama-alta">cama alta</Termino>.
+
+**El depósito de tierra fina en abanico.** Una lengua de limo o arena clara que se abre después de un
+estrechamiento, un caño o un hueco en la pared: dice que **el agua venía cargada** y que **ahí se
+frenó**. Si sobre una hoja hay película de barro seco, esa hoja estuvo bajo agua sucia.
+
+**El pasto peinado.** Los tallos se acuestan apuntando hacia donde iba la corriente: una flecha gratis
+para dibujar líneas de flujo sin instrumento.
+
+**La superficie lavada.** Donde la lámina raspó, el suelo queda limpio y con raicillas descubiertas:
+**eso es material que se fue de tu parcela**. Unos metros aguas abajo está lo mismo al revés, una
+costra lisa de material fino. **Y en agosto, con todo amarillo, hay franjas que siguen verdes**: ahí el
+suelo guardó agua.
+
+**Los charcos y su cronología** merecen tabla aparte: no basta con marcar dónde, porque la duración es
+el diagnóstico.
+
+| Cuánto dura el charco | Qué está diciendo | Dónde se ataca |
+| --- | --- | --- |
+| Menos de 2 horas | La intensidad superó a la infiltración; el suelo tragó al bajar el ritmo | Cobertura y rugosidad de superficie |
+| De 2 a 24 horas | Sellado superficial o suela compactada poco profunda | Materia orgánica, cobertura, descompactación |
+| De 1 a 3 días | Capa impermeable o depresión sin salida | Camas altas, microrrelieve, drenaje con destino decidido |
+| Más de 3 días, cada temporada | Zona de acumulación real, y posible freático alto | No pelear: asignarle una función |
+
+Y si cavas un hoyo de sesenta centímetros, el perfil entrega su historial: las manchas grises o
+azuladas de <Termino slug="gleyzacion">gleyzación</Termino> registran que ese punto estuvo **saturado y
+sin oxígeno**, y aparecen a la profundidad hasta donde sube la saturación cada temporada. **La
+superficie muestra el estado actual; el perfil, los últimos años.**
+
+## Aporte, tránsito y acumulación
+
+Con las señales en la mano, el terreno se ordena en tres zonas, y esa clasificación gobierna las siete
+lecciones que siguen.
+
+**Zona de aporte.** La parte alta, donde el agua empieza a moverse. El flujo es delgado y el daño por
+metro cuadrado es pequeño… pero es **donde más barato resulta intervenir**: frenar un manto delgado
+cuesta una capa de <Termino slug="cobertura-muerta">cobertura muerta</Termino>, y frenar esa misma agua
+abajo, ya concentrada, cuesta una obra.
+
+**Zona de tránsito.** Donde las líneas de flujo convergen y el agua lleva volumen y velocidad. Es la
+parte más peligrosa del terreno y la más subestimada, porque en seco parece igual que el resto: **ahí
+no va nada que no puedas permitirte perder** —ni almácigos, ni plantines en bolsa, ni el compost, ni un
+tablero, ni la bomba—.
+
+**Zona de acumulación.** Donde el agua llega y se queda.
+La <Termino slug="zona-de-acumulacion">zona de acumulación</Termino> tiene una paradoja que hay que decir
+entera: es **la parte más fértil del terreno**, porque ahí se depositó durante años el material fino
+que bajó de arriba, y a la vez **la peor drenada**, por ese mismo material fino. No se pelea: se
+aprovecha con lo que tolera pie mojado, con almacenamiento,
+con <Termino slug="camellon">camellones</Termino> y canal o con un reservorio.
+
+<Dato titulo="La regla que ordena todo el módulo">
+**A cada zona se le asigna un trabajo distinto.** Quien invierte el orden —el vivero en el tránsito, la
+obra en la acumulación, el suelo desnudo en el aporte— no tiene un problema de agua: tiene un problema
+de asignación, y lo paga cada temporada.
+</Dato>
+
+## Dos números que conviene estimar
+
+**El primero es cuánta agua cae de verdad.** Un milímetro de lluvia es **un litro por metro cuadrado**:
+esa es toda la conversión y no depende de nada. A esa altura de agua repartida sobre una superficie se
+la llama <Termino slug="lamina-de-lluvia">lámina de lluvia</Termino>.
+
+<Formula explicacion="La cuenta que convierte «llovió fuerte» en un número discutible.">
+litros = milímetros de lluvia × metros cuadrados de superficie
+</Formula>
+
+Sobre los 3.666 m² de Rizoma, una lluvia de 60 mm deja **219.960 litros**: unos 220 metros cúbicos, del
+orden de mil cien turriles de doscientos litros. Ese número, hecho una sola vez, cambia la conversación
+entera.
+
+**El segundo es la proporción entre tu superficie y la que te manda agua**, y se estima caminando el
+perímetro y mirando hacia afuera. Si la cuenca de aporte es tres veces tu parcela, **estás manejando
+cuatro veces la lluvia que te cayó encima**. No todo lo que cae afuera llega, y esa fracción es
+el <Termino slug="coeficiente-de-escorrentia">coeficiente de escorrentía</Termino>, altísimo en cemento y
+chapa, mucho menor en tierra con pasto.
+
+Hay un tercer dato que no es un número sino un cronómetro:
+el <Termino slug="tiempo-de-concentracion">tiempo de concentración</Termino>, **cuánto tarda el agua en
+llegar al punto bajo desde que empieza a llover y cuánto sigue llegando después de que paró**. Si el
+charco se forma a los cinco minutos, el agua es tuya. Si aparece cuarenta minutos después de que dejó
+de llover y sigue creciendo, **esa agua viene de lejos**: no se resuelve dentro de tu alambrado.
+
+<Advertencia titulo="Hasta dónde llega la estimación casera">
+Todo lo anterior sirve para decidir dónde no construir y qué observar. **No sirve para dimensionar una
+obra hidráulica seria**: el diseño formal de un canal, un reservorio grande o una alcantarilla se hace
+con estadística de lluvias —series de muchos años, intensidades por duración y periodos de retorno—.
+
+Si tu decisión mueve tierra en serio o descarga fuera de tu propiedad, consulta al servicio nacional de
+meteorología e hidrología, al municipio y a la gobernación, y a la universidad pública o a una
+institución de investigación agrícola del departamento. **Este curso no te va a dar un número de norma,
+un plazo ni un costo, porque quien te los dé sin fuente te los está inventando.**
+</Advertencia>
+
+## El mapa del agua
+
+El entregable de esta lección es un papel. Se
+llama <Termino slug="mapa-del-agua">mapa del agua</Termino>, de él cuelgan todas las decisiones de suelo,
+riego y obra de los próximos diez años, y no es un plano técnico sino
+un <Termino slug="croquis">croquis</Termino> a mano, sin escala exacta, con estas capas siempre:
+
+- **El perímetro**, con norte marcado y con lo que hay pegado por fuera: calle, camino, vecinos, canal.
+- **Las entradas**, con flecha y con su causa al lado —«portón, viene de la calle»—, y **las salidas**,
+  con la misma honestidad: a dónde va lo que se va.
+- **Las líneas de flujo** observadas, dibujadas donde se vieron y no donde uno cree que deberían ir.
+- **Las zonas de acumulación** con su duración —«2 días», «todo enero»— y **las marcas de agua
+  máxima** con la altura en centímetros.
+- **Las cotas**, si conseguiste levantarlas con
+  <Termino slug="nivel-de-manguera">nivel de manguera</Termino>: precisión de centímetros, de sobra
+  para un terreno llano.
+- **Y la fecha y la lluvia de cada observación.** Sin eso el mapa no se puede comparar consigo mismo.
+
+La segunda mitad no se dibuja, se fotografía: se eligen entre cinco y
+diez <Termino slug="punto-fotografico-fijo">puntos fotográficos fijos</Termino>, marcados con estaca, desde
+donde se toma **siempre la misma foto con el mismo encuadre**, tras cada lluvia grande y una vez en
+plena seca.
+
+<Analogia>
+Son **pruebas de regresión**: mismo encuadre, mismo momento del ciclo, misma aserción. No detectan el
+estado de hoy sino **el cambio respecto de la última vez**, que es lo que el ojo no percibe cuando
+ocurre a razón de un poco por año. Y el mapa es **documentación viva versionada**: cada aguacero es un
+commit, y cuando el de la tercera temporada contradiga al de la primera, no taches nada —**anota los
+dos y pregúntate qué cambió**—.
+</Analogia>
+
+De aquí sale la única regla de calendario de esta lección, la misma del módulo 7: **no se construye
+nada permanente antes de haber visto una temporada de lluvias completa**. Esperar cuesta unos meses;
+una obra en la zona de tránsito cuesta cada año, para siempre.
+
+<Advertencia titulo="Cuatro errores que se pagan durante años">
+**Leer el terreno en la seca y creerle**, y su gemelo, **confundir «no se ve agua» con «no pasa
+agua»**: un terreno por el que pasaron miles de litros puede verse impecable dos días después. **Y
+rellenar la zona de acumulación**, con lo que el agua reaparece en el siguiente punto más bajo. **Y
+tratar el cerco, la pared y el camino como si fueran neutrales**: una pared sin paso de agua es una
+represa, un camino elevado es un dique, una huella de llanta profunda es un canal.
+
+**Y drenar sin decidir el destino.** Sacar agua de un punto siempre es meterla en otro, y si ese otro
+es el vecino has convertido un problema técnico en un conflicto entre personas. El marco legal de
+descargas y servidumbres de agua varía y **hay que consultarlo con la autoridad competente antes**, no
+después de la primera inundación ajena.
+</Advertencia>
+
+<ContextoBolivia>
+**El sur de Santa Cruz de la Sierra tiene dos lluvias distintas, y las dos hay que caminarlas.** La
+primera es el chubasco de temporada: corto, brutal, de altísima intensidad. El curso ya anotó que aquí
+una lluvia de temporada puede descargar del orden de 40 a 80 milímetros por hora, muy por encima de la
+infiltración de un suelo normal, así que **el exceso escurre aunque el suelo esté seco por debajo**. La
+segunda es la del <Termino slug="surazo">surazo</Termino>: aire frío del sur, viento fuerte, noches de
+unos 10 °C y muchas veces precipitación floja pero persistente durante días. Esa casi no dibuja nada,
+pero **satura el perfil poco a poco** y es la que revela el anegamiento verdadero. Quien solo camina la
+primera tiene medio mapa.
+
+**Las arcillas expansivas 2:1 de esta zona añaden un comportamiento que no sale en los manuales
+generales.** Una <Termino slug="arcilla-expansiva">arcilla expansiva</Termino> admite agua entre sus
+láminas y aumenta de volumen; al secarse se retrae y abre grietas anchas. En la práctica, **el mismo
+suelo se comporta de dos maneras distintas dentro del mismo aguacero**: en los primeros minutos las
+grietas se tragan el agua como si fuera arena y, cuando la arcilla se hincha, se cierran y la
+superficie pasa a comportarse casi como cemento. Por eso una parcela puede encharcarse entera en la
+tercera lluvia seguida sin haberse encharcado nunca antes, y **medir infiltración con el suelo
+agrietado da un número que no describe la situación de riesgo**.
+
+**El entorno periurbano cambia el problema más que la geología.** En barrios como Zanja Honda o
+Prados del Sur, buena parte de la cuenca de aporte real es **calle de tierra, cuneta, techo de chapa
+y patio cementado**: casi todo lo que les cae, sale. Además el nivel de las calles sube con cada
+relleno y cada capa de ripio, de modo que lotes que hace quince años estaban por encima del camino hoy
+están por debajo y reciben; y **el drenaje del barrio muchas veces es informal**, hecho de zanjas
+abiertas por los propios vecinos. Nada de eso aparece en un mapa. Y el nombre del barrio suele ser el
+primer dato: donde alguien puso «zanja», «bajío» o «curichi», hubo agua.
+
+**Dos condiciones locales más, y las dos cambian decisiones.** El dengue es endémico en Santa Cruz y el
+agua estancada que dura más de una semana es criadero, así que el mapa de zonas de acumulación es
+también información de salud: la recorrida de lluvia y la revisión de criaderos **son la misma
+caminata**. Y los cortes de energía son frecuentes, así que una solución que dependa de una bomba para
+no inundarse falla el día que más llueve: **lo que funciona por gravedad sigue funcionando sin luz**.
+
+**Sobre datos locales, la regla del curso no tiene excepciones.** No existe aquí una cifra de lluvia, un
+periodo de retorno, una norma de drenaje ni un plazo de trámite que este texto pueda darte sin
+inventarlo. Lo que sí existe son el servicio nacional de meteorología e hidrología, el municipio, la
+gobernación, la universidad pública y las instituciones de investigación agrícola —y, sobre todo,
+**vecinos que llevan treinta años viendo por dónde entra el agua a esta manzana**. Esa última fuente es
+gratis, está a cincuenta metros y casi nadie la consulta.
+</ContextoBolivia>
+
+<AplicarRizoma>
+**Rizoma del Sur son 3.666 m² en 12 lotes contiguos, y el primer ejercicio del módulo consiste en
+dibujar el terreno dos veces.** Primero el mapa del agua ignorando las líneas de los lotes: solo
+entradas, salidas, líneas de flujo y zonas de acumulación. Después, encima, la división en doce. La
+comparación es el hallazgo: **las fronteras que gobiernan el sitio no son las del título de
+propiedad**. Habrá lotes partidos en dos por una divisoria invisible y grupos de tres que en realidad
+son una sola unidad hidráulica, y todo lo posterior se decide con el primer mapa, no con el segundo.
+
+**El perímetro se recorre entero antes que el interior**, y produce una lista corta: cuál de los cuatro
+lados es el alto y cuál el bajo; por qué punto exacto entra el agua de la calle; si algún techo vecino
+tiene canaleta apuntando al terreno; y qué hay inmediatamente aguas abajo del punto de salida, porque
+**eso es de otra persona y define hasta dónde llega tu derecho a mandar agua**.
+
+**La decisión de bioseguridad del plátano se toma con el mapa de flujo en la mano, no con el plano de
+lotes.** El curso ya estableció que el plátano es clonal, que su enfermedad de suelo más grave persiste
+años, no se cura, y viaja con el suelo pegado al material y a las botas. **El agua que corre entre
+lotes es exactamente ese vehículo**, así que la regla se escribe hoy y no cuesta un peso: **el plátano
+va aguas abajo de todo lo demás, nunca aguas arriba del vivero**, y la circulación de personas y
+herramientas sigue la misma dirección que el agua.
+
+**El vivero es lo más vulnerable del sitio y lo que peor tolera la zona de tránsito**: bolsas que se
+vuelcan, sustrato que se lava, plantines que se entierran bajo el limo. Ubicarlo alto y con salida
+propia cuesta cero en papel y una mudanza después. Lo mismo vale para el compost y para cualquier
+tablero, bomba o batería solar: **la altura a la que se montan sale de las marcas de agua máxima**.
+
+**Los doce lotes son una ventaja de medición que casi ningún proyecto tiene.**
+Permiten <Termino slug="linea-base">línea de base</Termino> y <Termino slug="testigo">testigo</Termino> de
+verdad: dejar uno o dos sin intervenir mientras se prueba cobertura o camellones en otros, y comparar
+con el mismo clima y el mismo suelo. **Los puntos fotográficos fijos se clavan ahora**: uno por cada
+entrada de agua, uno por cada zona de acumulación y uno en el punto de salida.
+
+**El número de los 220 metros cúbicos por lluvia de 60 mm hay que ponerlo en la pared.** Con esa
+cantidad cayendo varias veces por temporada, la pregunta deja de ser cómo sacarla y pasa a ser cuánta
+se puede retener para agosto. **Rizoma no tiene un problema de exceso de agua y otro de falta de agua:
+tiene uno solo, que le sobra en enero y le falta en agosto, y los dos se atienden en el mismo mapa.**
+
+**El encuadre comunitario convierte la recorrida en la actividad más replicable del curso**: no
+requiere herramienta, ni dinero, ni saber leer un plano, y un vecino con veinte metros cuadrados de
+patio la hace en diez minutos con el mismo protocolo. Rizoma puede convocar una **recorrida abierta
+tras el primer aguacero grande de la temporada** y enseñar a leer las señales en sitio: un taller de
+costo cero.
+
+**Y lo que Rizoma todavía no sabe conviene escribirlo también**: si hay un paleocauce cruzando los
+lotes, dónde termina yendo el agua del barrio, qué altura alcanzó el agua en el peor año de la década.
+Las tres se contestan igual de barato —cavando un hoyo, caminando aguas abajo y **preguntando a los
+vecinos mayores**—, y esa conversación es adquisición de datos, no cortesía.
+</AplicarRizoma>
+
+## Lo que sigue
+
+Ya está el marco: la parcela es una cuenca anidada, con una divisoria arriba y un punto de salida
+abajo; el agua tiene cinco destinos y ninguno se borra, solo cambia de casilla; en el llano corre igual
+porque le sobra con treinta centímetros en cien metros; la lluvia es la única prueba de carga y sus
+huellas caducan en dos días; y el entregable es un mapa fechado.
+
+Falta la factura. Cuando esa lámina de agua se mueve **no se mueve sola: se lleva suelo**, y siempre la
+capa de arriba, la de la materia orgánica y los nutrientes. La lección siguiente, **cómo se pierde un
+suelo**, explica el mecanismo desde el principio —el impacto de la gota, el sellado de la superficie,
+el arranque y el transporte, la erosión por viento en la seca— y por qué ocurre aquí aunque el terreno
+parezca plano y aunque nadie vea nunca una cárcava.

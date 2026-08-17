@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "prueba-del-medidor",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sospechás que tu casa pierde agua y querés comprobarlo con el medidor. ¿Qué es correcto sobre cómo se hace y por qué se hace de noche?",
+      "opciones": [
+        "Hay que cerrar todos los grifos y también los aparatos que consumen solos —lavarropas, calefón, riego—, porque si uno de ellos abre una válvula en mitad de la prueba te da un consumo que no es fuga.",
+        "De noche es el mejor momento porque nadie usa agua y porque, con el barrio dormido, la presión sube: la fuga pierde más y el número sale más claro.",
+        "Se anota la lectura completa con los dígitos rojos de los litros y se le saca una foto, que trae fecha y hora, y después se repite la prueba tres noches para que una mala lectura no se confunda con una fuga.",
+        "Si mirás el medidor diez minutos con todo cerrado y no ves moverse nada, ya podés descartar la fuga y buscar el problema en otro lado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la trampa más común, porque parece prudente y no lo es. Una fuga chica de diez litros por hora mueve unos ciento sesenta mililitros en diez minutos: eso no alcanza ni para que la rueda de los litros avance un dígito, así que la prueba corta da «todo bien» justo en el caso que más importa detectar, que es la fuga pequeña que nadie ve durante tres años. Por eso el procedimiento pide horas, no minutos: se anota a las diez de la noche, se relee a las seis de la mañana y se divide la diferencia por las ocho horas. La única lectura rápida que sí vale es la contraria: si la aguja testigo se mueve enseguida, hay agua pasando y no hace falta esperar. Que no se mueva no prueba nada; que se mueva prueba mucho."
+    },
+    {
+      "id": "presion-y-caudal",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si mientras buscás la fuga bajás la presión de la red a la mitad, la cantidad de agua que se pierde también baja a la mitad.",
+      "respuesta": false,
+      "explicacion": "Falso, y la diferencia importa cuando estás decidiendo cuánto tiempo podés convivir con la fuga. El caudal por un orificio no es proporcional a la presión sino a su raíz cuadrada: en Q = C · A · √(2 · g · h), la altura h entra bajo la raíz. Bajar la presión a la mitad multiplica la pérdida por la raíz de 0,5, que es 0,71: se pierde alrededor de un 30 % menos, no un 50 %. Bajar la presión ayuda a ganar tiempo mientras conseguís el material o esperás el fin de semana, y de paso alivia las uniones, pero nunca es la solución. La otra mitad de la fórmula es la que asusta y va al revés: el caudal sí es proporcional al área del agujero, o sea al cuadrado de su diámetro, así que una fisura que duplica su tamaño cuadruplica lo que se lleva. Esa asimetría explica por qué una fuga chica ignorada se vuelve cara mucho más rápido de lo que uno espera."
+    },
+    {
+      "id": "leer-la-mancha",
+      "tipo": "opcion_multiple",
+      "enunciado": "Apareció una mancha húmeda en la pared del pasillo. ¿Qué es correcto antes de agarrar el combo?",
+      "opciones": [
+        "La mancha marca por dónde sale el agua, no dónde está el agujero: el agua corre por fuera del caño, baja por la cara de un ladrillo, sigue una junta de mortero y aflora en el punto más bajo o más poroso del camino.",
+        "Hay que descartar la humedad ascendente, que es agua del terreno subiendo por capilaridad desde el cimiento: esa forma una franja horizontal pareja a lo largo del muro, empeora en época de lluvias y aparece donde no pasa ningún caño.",
+        "La costra blanca que acompaña a la mancha es eflorescencia, sales que el agua disuelve, transporta y deja al evaporarse, así que indica agua circulando de forma sostenida y no una mojada de una vez.",
+        "Como la mancha es la evidencia más visible que tenés, lo eficiente es picar ahí mismo y seguir el caño desde el agujero que encuentres."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es exactamente el error que hace cara una fuga: casi todo el destrozo y casi todo el gasto de una fuga oculta se van picando en el lugar equivocado. Picar es la última prueba del método, no la primera, porque es la única que no se puede deshacer. La pregunta correcta frente a una mancha no es «qué caño pasa por acá» sino «qué caño pasa por arriba de acá», y antes de eso hay que haber acorralado el tramo con llaves y medidor. Además, los agujeros casi nunca están en medio de un tubo recto sano: están en una unión, en un cambio de dirección o en un tramo castigado, así que la sospecha se dirige a esos puntos y no al centro de la mancha. Y el moho todavía miente más que la mancha, porque necesita días de humedad seguida: no dice dónde entra el agua sino dónde se queda, y puede estar a metros del agujero."
+    },
+    {
+      "id": "biseccion",
+      "tipo": "opcion_multiple",
+      "enunciado": "Confirmaste con el medidor que se van ciento ochenta litros por noche. ¿Qué es correcto sobre cómo acorralar el tramo?",
+      "opciones": [
+        "Cerrando la llave que aísla la casa entera y dejando el medidor abierto ya partiste el problema en dos sin romper nada: si el medidor sigue girando, la fuga está en la acometida enterrada; si se detiene, está adentro.",
+        "El paso siguiente es cerrar las llaves de escuadra de todos los aparatos, porque un inodoro que pasa agua en silencio es el falso culpable número uno de los caños.",
+        "Cada prueba borra la mitad del territorio, así que ocho tramos se acorralan en tres pruebas y dieciséis en cuatro, y si a la red le faltan puntos de corte se pueden crear cortando el caño y poniendo un tapón de prueba.",
+        "Para avanzar más rápido conviene cerrar de una vez todas las llaves que sospechás y, si el medidor se detiene, ya sabés que el problema estaba entre ellas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta ahorra tiempo el primer día y te lo cobra durante una semana. Si cerrás tres llaves juntas y el medidor se detiene, aprendiste que la fuga está en alguna de las tres, que es casi lo mismo que sabías antes: perdiste la prueba y ahora tenés que rehacerla de a una. La regla es una variable a la vez —cerrás una llave, medís, anotás, la volvés a abrir— y es la misma disciplina que en la depuración de un programa, donde tocar tres cosas a la vez y ver que el fallo desaparece no te dice cuál de las tres era. La segunda regla que acompaña a esta es escribirlo todo con hora, qué estaba cerrado y qué observaste: al tercer día vas a estar convencido de haber probado algo que en realidad no probaste. Y la tercera es avisar a la casa, porque alguien lavándose las manos arruina la medición y, si abren un grifo mientras tenés un caño cortado, te inundan."
+    },
+    {
+      "id": "manometro-y-aire",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a hacer una prueba de estanqueidad sobre un tramo aislado. ¿Qué es correcto?",
+      "opciones": [
+        "Antes de cerrar la alimentación hay que purgar el aire abriendo el punto más alto hasta que salga agua sin escupir, porque una burbuja atrapada se comprime como un resorte y sostiene la aguja durante horas aunque el tramo esté perdiendo.",
+        "Si la presión cae, se detiene en un valor y ahí se queda, ese valor te dice a qué altura está el agujero: el agua deja de salir cuando la columna que le queda encima iguala la presión restante.",
+        "Conviene probar de noche o a la sombra, porque el sol calienta el agua del tramo, la dilata, sube la aguja y puede tapar una fuga pequeña.",
+        "Si no tenés forma de llenar el tramo con agua, un compresor sirve igual y hasta es mejor, porque llena rápido, no moja la obra y detecta el mismo tipo de pérdida."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta puede matar a alguien, y por eso no es una preferencia de método sino una prohibición. Un tramo lleno de aire comprimido es un resorte cargado con muchísima energía almacenada: si un tapón se suelta o el tubo revienta, toda esa energía se libera de golpe y acelera el tapón o los pedazos de PVC como proyectiles, con gente alrededor. Con agua el mismo reventón es un chorro, un susto y un piso mojado, porque el agua es prácticamente incompresible y casi no guarda energía al comprimirse; esa misma incompresibilidad es lo que hace que la prueba con agua sea tan sensible, ya que bastan unos pocos mililitros escapados para que la aguja se desplome. A eso se suman dos límites que valen siempre: no subir la presión por encima de la clase que trae impresa el propio caño, y no dejar un calefón encerrado entre dos llaves cerradas mientras calienta, porque el agua al calentarse se dilata y necesita a dónde ir."
+    },
+    {
+      "id": "galvanizado-picado",
+      "tipo": "verdadero_falso",
+      "enunciado": "En una casa vieja apareció un chorrito en un caño de hierro galvanizado. Ponerle una abrazadera de reparación bien apretada resuelve el problema y se puede cerrar la pared encima.",
+      "respuesta": false,
+      "explicacion": "Falso por dos motivos distintos, y los dos cuestan plata. El primero es el material: en el galvanizado el zinc trabaja como metal de sacrificio y se corroe en lugar del acero, pero una vez consumida esa capa el acero se oxida desde adentro en todo el tramo a la vez, primero estrechando el paso con montículos de óxido —la tuberculización, que es la razón por la que la presión de una casa vieja fue bajando durante años— y después perforando la pared. Esa picadura no es un accidente local sino el estado de un caño que tiene la misma edad en toda su longitud: donde salió un agujero van a salir más, así que parchear ahí es tirar plata y lo que corresponde es planificar el cambio del tramo. El segundo motivo vale incluso para un caño sano: un parche es una medida temporal explícita, no funciona sobre una unión ni sobre una rajadura longitudinal —porque la fisura sigue creciendo por debajo—, y nunca se cierra una pared ni se tapa una zanja sobre un parche, porque el día que ceda vas a tener que volver a abrir todo. Un parche se anota en el mapa de la instalación con su fecha y se deja a la vista."
+    },
+    {
+      "id": "donde-nacen",
+      "tipo": "opcion_multiple",
+      "enunciado": "Una unión que llevaba once años sin problemas empezó a perder, y otra fuga apareció tres meses después de una obra. ¿Qué es correcto sobre dónde y por qué nacen las fugas?",
+      "opciones": [
+        "La unión vieja puede haber muerto por fatiga: cada cierre brusco de una electroválvula de lavarropas o de un monomando manda un golpe de ariete, y aunque cada pico esté lejos de la resistencia del material, miles de repeticiones lo degradan igual.",
+        "La fuga posterior a la obra apunta a una falla diferida: una unión cementada sin desbarbar, con el tubo mojado o presurizada antes del curado casi nunca gotea el primer día, sino a las semanas, así que esa obra es la causa raíz más probable.",
+        "Un tubo enterrado bajo el paso de vehículos con poca tierra encima se ovaliza bajo la carga, y como el PVC fluye lentamente y no se recupera, termina rajando el borde rígido de la campana.",
+        "Las raíces de los árboles perforan los caños sanos buscando el agua que llevan adentro, así que un tubo intacto cerca de un árbol grande va a fallar tarde o temprano."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte la relación de causa y efecto, y eso cambia lo que hay que hacer. Las raíces no perforan un tubo de presión sano: lo que hacen es encontrar una fuga que ya existía —el punto húmedo del suelo las atrae— meterse por esa grieta y agrandarla al engordar. O sea que la raíz es un agravante, no el origen, y si encontrás raíces dentro de un caño la pregunta sigue siendo por qué se abrió esa junta. Importa porque la respuesta correcta no es cortar el árbol y dar el tema por cerrado, sino reparar bien la unión y, si hace falta, desviar el trazado. La lectura general es la misma para toda la tabla de esta lección: los agujeros no aparecen en cualquier lado sino en unos pocos sitios repetidos —uniones roscadas, cementados apurados, tramos aplastados o colgados por una zanja mal compactada, uniones fatigadas por ariete y galvanizado picado—, y saber eso es lo que convierte una búsqueda a ciegas en una lista corta de sospechosos."
+    },
+    {
+      "id": "tu-propia-red",
+      "tipo": "abierta",
+      "enunciado": "Tomá el lugar donde vivís —sirve igual si es alquilado, si no tenés patio o si el agua viene de un pozo y no hay medidor— y escribí tu plan completo para saber si perdés agua y qué harías si perdés. Decí cómo vas a medir estas tres noches y con qué vas a medir si no hay medidor; qué señales vas a buscar y cómo vas a descartar las que engañan; cómo pensás acorralar el tramo con las llaves que realmente existen en tu casa y qué llave te falta; qué repararías vos, qué dejarías en manos de un plomero y qué avisarías por escrito si alquilás; y qué anotás para que dentro de cinco años alguien entienda lo que hiciste.",
+      "respuestaModelo": "Vivo en una casa alquilada de dos ambientes, sin patio, y el agua llega de un pozo con bomba a un tanque en el techo. No hay medidor, así que la prueba estrella la tengo que reemplazar.\n\nLa medición la hago tres noches seguidas. Después de la cena cierro todo y aviso a la casa que nadie toca el agua hasta la mañana, porque alguien lavándose las manos me arruina la prueba. Como no tengo medidor, marco el nivel del tanque con una cinta y le saco una foto, que trae fecha y hora; a las seis de la mañana vuelvo a marcar y fotografío. Sumo una segunda medición que en mi casa es gratis: apunto con hora cada vez que arranca la bomba, porque el presostato la hace arrancar cuando cae la presión, y la presión no cae sola. Si arranca cada media hora con todo cerrado, eso es ciclo corto y significa fuga, antirretorno que deja pasar hacia atrás o colchón de aire perdido; y además me está gastando la bomba, porque el momento de máxima corriente es el arranque. La tercera noche agrego una prueba que separa el tanque de la red: cierro la salida del tanque. Si el nivel igual baja, el problema es del tanque —rebalse porque el flotador no cierra, o retorno por el llenado— y no de las cañerías de la casa. Repito tres noches porque una sola medición no distingue una fuga de un error de lectura.\n\nMientras tanto busco señales, sabiendo cuáles engañan. Recorro las paredes con linterna buscando manchas, y a cada una le pregunto qué caño pasa por arriba, no cuál pasa por la mancha, porque el agua corre por fuera del tubo y aflora abajo. Si veo una franja horizontal pareja a lo largo de todo el muro que empeora cuando llueve, eso es humedad ascendente del cimiento y no es mi fuga; si es local, sigue el trazado de un caño y le da igual la estación, ahí sí sospecho. Si hay costra blanca, es eflorescencia y me dice que hay agua circulando de forma sostenida, no una mojada de una sola vez. El moho lo miro pero no le creo la ubicación, porque marca dónde se queda el agua y no dónde entra. Camino descalzo temprano con el piso frío buscando una zona tibia, que delataría la línea caliente. Y de madrugada, con la casa en silencio, apoyo la punta de un destornillador largo en la cañería y la oreja en el mango, porque el sonido viaja por el metal mucho más lejos que por el aire y un agujero chico a presión hace un siseo agudo constante.\n\nPara acorralar el tramo empiezo por el inventario incómodo: en mi casa la única llave es la general, y el inodoro tiene llave de escuadra pero el lavamanos no. Con eso igual puedo hacer dos cortes útiles. Primero cierro la llave de escuadra del inodoro y repito la prueba del tanque, porque el inodoro es el falso culpable número uno de los caños; si el nivel deja de bajar, la fuga estaba ahí y se resuelve con la prueba del colorante y el cambio del sello. Segundo, cierro la general dejando el tanque abierto para ver si la pérdida está antes o después de esa llave. Lo que no hago es cerrar varias cosas a la vez: una variable por vez, mido, anoto y vuelvo a abrir, o la prueba no vale. Lo que me falta, y lo anoto como pedido, es una llave de corte por sector —una para el baño y otra para la cocina—, que es la mejora más barata que existe y sin la cual estoy depurando a ciegas.\n\nEl reparto del trabajo lo tengo claro. Yo mido, escucho, fotografío y escribo, que no rompe nada ni necesita permiso de nadie. Puedo cambiar el sello del inodoro o un flexible. Lo que no hago solo es picar una pared ni cortar un caño enterrado en una casa que no es mía: eso es del dueño y de un plomero. Como alquilo, el día que lo detecto aviso por escrito, y la redacción decide el resultado: «el nivel del tanque baja doce centímetros en ocho horas con la casa cerrada, tres noches seguidas, la bomba arrancó siete veces entre la una y las cinco, y hay salitre en la pared del pasillo; van las fotos con fecha» obliga a actuar, mientras que «hay una fuga» se posterga. Lo mando por escrito el mismo día para que después no se discuta cuándo empezó ni quién paga esos litros. Cuánto cuesta la reparación no lo supongo: lo pregunto y lo comparo.\n\nY dejo un cuaderno de la instalación dentro de la carpeta de los papeles de la casa: las tres mediciones con hora, un croquis de por dónde van los caños, dónde está la llave general, qué llaves existen y cuáles faltan, y cada arreglo con su fecha. Si alguna vez se abre una pared o una zanja, foto con cinta métrica antes de tapar. Si algo se resuelve con una abrazadera, lo anoto como provisorio con fecha y no dejo que lo tapen con revoque. Es la misma idea que documentar un arreglo en un programa: dentro de cinco años, el que abra esa pared no va a tener mi memoria, va a tener solo lo que yo haya escrito.",
+      "criterios": [
+        "Parte de un lugar concreto y propio, y el plan sigue funcionando si es alquilado, sin patio o sin medidor.",
+        "Define una medición repetida en el tiempo —tres noches— y no se conforma con mirar unos minutos, entendiendo que una fuga chica no se ve en una observación corta.",
+        "Sustituye el medidor por instrumentos reales cuando no lo hay: nivel del tanque marcado y fotografiado, y conteo de arranques de la bomba con hora.",
+        "Aísla el tanque de la red en alguna de las pruebas para separar rebalse o retorno de una fuga en las cañerías.",
+        "Distingue una mancha de fuga de la humedad ascendente por su forma, su relación con la época de lluvias y su coincidencia con el trazado de un caño.",
+        "Entiende que la mancha marca la salida del agua y no el agujero, y que el moho indica dónde se queda el agua, no dónde entra.",
+        "Aplica al menos una técnica de localización propia de la lección —escucha acústica por el metal, piso tibio, eflorescencia, charco que no seca— en el momento correcto del método.",
+        "Hace el inventario honesto de las llaves que existen de verdad en su casa y nombra la que falta, reconociendo la sectorización como mejora barata.",
+        "Descarta los aparatos antes que los caños, mencionando el inodoro como falso culpable habitual.",
+        "Respeta la regla de una variable a la vez y de anotar cada prueba con hora, y avisa a la casa antes de cortar.",
+        "Traza un límite claro entre lo que repara y lo que deriva, sin picar paredes ajenas ni inventar precios ni plazos.",
+        "Deja constancia escrita: aviso al propietario con datos medidos y fotos fechadas si alquila, y un cuaderno de la instalación con croquis, llaves, arreglos y fechas para quien venga después."
+      ],
+      "explicacion": "Lo que se evalúa no es si la persona encuentra la fuga —puede que no tenga ninguna— sino si adoptó el método: medir antes de opinar, repetir la medición, leer cada señal con su mecanismo en vez de creerle a la más visible, dividir el problema en mitades con una variable a la vez, y dejar por escrito lo que hizo. Una respuesta que arranca picando la pared donde está la mancha, o que cierra cinco llaves juntas, o que concluye «no hay fuga» tras mirar diez minutos, no aprobó por más que el resto esté bien redactado. Tampoco se piden tarifas, normas ni plazos de reclamo: si el plan necesita saber cuánto cuesta el metro cúbico o qué hace la cooperativa cuando alguien reporta una pérdida, la respuesta correcta es preguntarlo en la oficina y anotarlo, no suponerlo. Y vale la pena notar lo que el método le da a quien alquila y no puede tocar nada: medir, fotografiar y escribir es exactamente lo que convierte un reclamo postergable en uno que se atiende."
+    }
+  ]
+}

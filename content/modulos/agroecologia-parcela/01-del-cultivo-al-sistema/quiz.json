@@ -1,0 +1,106 @@
+{
+  "preguntas": [
+    {
+      "id": "subsidio-energetico",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué dice el concepto de subsidio energético sobre un cultivo simplificado?",
+      "opciones": [
+        "Al quitar especies quitamos también quien hacía sus funciones, y esas funciones pasan a nuestra cuenta.",
+        "Cuanto más simplificado está un sistema, más subsidio externo necesita para seguir de pie.",
+        "El monocultivo deja de funcionar exactamente cuando falla el subsidio, no antes.",
+        "Un sistema simplificado necesita menos trabajo porque tiene menos elementos que atender."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La última es falsa y es justo el error que la lección desmonta: la simplificación no elimina el trabajo de mantener el sistema en pie, lo mueve de la estructura al operador. Un almácigo bajo malla es lo más simplificado del curso y por eso mismo exige riego dos veces al día, sustrato comprado y vigilancia diaria."
+    },
+    {
+      "id": "concentracion-hospedante",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un bloque de una sola especie facilita la vida a una plaga especializada?",
+      "opciones": [
+        "La densidad de tejido susceptible es máxima y la distancia al siguiente hospedante es mínima.",
+        "No hay olores ni siluetas de otras especies que interfieran con la búsqueda del hospedante.",
+        "La colonización es más probable, la permanencia más larga y la población crece más rápido.",
+        "Porque las plagas prefieren siempre los cultivos que el ser humano ha seleccionado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta no es un mecanismo, es una atribución de intención: la plaga no prefiere nada, resuelve un problema logístico de encontrar comida. El mecanismo real es geométrico y químico —densidad, distancia y ruido de fondo—, y por eso la mezcla de especies lo altera."
+    },
+    {
+      "id": "limite-honesto",
+      "tipo": "verdadero_falso",
+      "enunciado": "Mezclar especies reduce el daño de cualquier plaga, sea especializada o generalista.",
+      "respuesta": false,
+      "explicacion": "Falso, y decirlo es parte de la honestidad del módulo. La concentración de hospedante opera sobre todo con plagas especializadas, las que comen una sola familia botánica. Con un comedor generalista, que se conforma con casi cualquier hoja, mezclar especies ayuda mucho menos o directamente no ayuda: por eso el manejo integrado nunca depende de una sola herramienta."
+    },
+    {
+      "id": "redundancia-real",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué cuenta como redundancia funcional de verdad?",
+      "opciones": [
+        "Que cada función crítica esté cubierta por al menos dos elementos que fallen por motivos distintos.",
+        "Que los elementos que cubren una misma función difieran en familia botánica, profundidad de raíz o estación.",
+        "Que si un elemento se pierde, la función que cumplía siga sostenida por otro.",
+        "Que haya muchas especies distintas en la parcela, sin importar qué función cumple cada una."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La última confunde diversidad con acumulación, que es el error más común del módulo. Cuarenta especies con seis funciones sin cubrir es un sistema más frágil que ocho bien elegidas con cada función cubierta dos veces. Y dos leguminosas de la misma familia, con el mismo enraizamiento y la misma estación, no son redundancia: son la misma apuesta escrita dos veces."
+    },
+    {
+      "id": "fallo-correlacionado",
+      "tipo": "verdadero_falso",
+      "enunciado": "Plantar más matas de plátano de la misma variedad aumenta la resistencia del sistema frente a un hongo de marchitez del suelo, porque hay más individuos.",
+      "respuesta": false,
+      "explicacion": "Falso: todo plátano cultivado es un clon, así que todas las matas comparten exactamente la misma vulnerabilidad. Es fallo correlacionado, no aleatorio, y ante una causa común N+1 vale lo mismo que N=1 —igual que tres réplicas con la misma imagen y el mismo CVE—. Multiplicar réplicas idénticas no es redundancia; diversificar los modos de fallo sí lo es."
+    },
+    {
+      "id": "planificada-vs-asociada",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué relación hay entre diversidad planificada y diversidad asociada?",
+      "opciones": [
+        "La planificada es lo que decides sembrar; la asociada es todo lo que llega solo en respuesta.",
+        "La asociada es mucho más grande y hace la mayor parte del trabajo real, pero no se puede plantar.",
+        "Sobre la asociada solo se actúa indirectamente: se cambia la declaración, no el resultado.",
+        "La asociada siempre es beneficiosa, así que cuanta más llegue, mejor para el sistema."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La última es falsa: junto con depredadores y parasitoides llegan vectores de virus, hospedantes alternos de plagas, roedores y bichos que muerden. El criterio no es maximizar la diversidad asociada sino mantener el daño por debajo del umbral de acción, y la lección de franjas y refugios lo trata de frente."
+    },
+    {
+      "id": "costo-de-la-diversidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se paga de verdad al diversificar una parcela?",
+      "opciones": [
+        "Mucha más mano de obra, porque un policultivo es esencialmente no mecanizable.",
+        "Cosecha repartida en el tiempo, buena para comer y vender poco a poco y mala para entregar volumen.",
+        "Complejidad de manejo que se multiplica, no se suma, con cada especie añadida.",
+        "Más dependencia de insumos comprados que en un monocultivo equivalente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta va justo al revés: bajar la dependencia de insumos comprados es lo que se gana, y es el objetivo declarado del módulo. Lo que se paga se paga en trabajo, en atención y en dificultad de comercialización — por eso la diversidad se dimensiona por la mano de obra y el agua disponibles, no por el entusiasmo."
+    },
+    {
+      "id": "aplicacion-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Estás frente a los 3.666 m² de Rizoma del Sur, en 12 lotes contiguos en Zanja Honda, con el catálogo actual: yautía, culantro, ají dulce, gandul, batata, plátano, ornamentales, árboles de sombra y frutales injertados. Sin dibujar nada todavía y sin proponer asociaciones concretas, haz el trabajo de esta lección: (a) explica con los tres mecanismos por qué sería un error convertir varios lotes en bloques macizos de una sola especie; (b) haz el inventario de funciones del catálogo actual y señala cuáles quedan descubiertas o cubiertas una sola vez; (c) aplica la ficha de admisión a una especie nueva que quisieras meter; y (d) di cómo dimensionarías cuánta diversidad entra el primer año y cómo sabrás dentro de dos años si funcionó.",
+      "respuestaModelo": "(a) Tres mecanismos, no tres opiniones. Concentración de hospedante: un lote macizo de una sola especie ofrece densidad máxima de tejido susceptible, distancia mínima entre hospedantes y ningún ruido químico ni visual que estorbe la búsqueda, así que una plaga especializada coloniza más fácil, se queda más tiempo y crece más rápido. Con honestidad: eso vale para plagas especializadas; contra un generalista la mezcla ayuda poco, y por eso esto no sustituye al manejo integrado del módulo 11. Bajo tierra el mecanismo es peor, porque el inóculo de un hongo de suelo se acumula ciclo tras ciclo y no se va cuando termina la temporada. Ausencia de redundancia funcional: si un lote es una sola especie, esa especie carga con todas las funciones que se cubren y las demás quedan sin cubrir; el día que le pasa algo, se descubre el suelo, se corta el aporte de materia orgánica, se quedan sin néctar los enemigos naturales y se cae el ingreso, todo el mismo mes. Fallo correlacionado: el plátano es el caso extremo del sitio. Es un híbrido triploide estéril y todo plátano es un clon, así que no existe ningún individuo resistente; y su enfermedad de suelo más grave persiste décadas, no tiene cura y entra con el material de siembra y el suelo pegado a él. Un bloque macizo de plátano es una flota entera con la misma imagen: la causa común la tumba de una vez y el terreno no se recupera. La consecuencia de diseño se toma ahora: el plátano no ocupa todos los lotes, no va en bloque macizo, y necesita separación física, control de la circulación de personas y herramientas, y atención a por dónde corre el agua entre lotes. (b) Inventario de funciones. Producir: cubierto de sobra y por muchas vías, incluida la venta de plantas del vivero. Aportar nitrógeno: cubierto por el gandul y prácticamente solo por él, que es un caso de cobertura única en una función crítica. Estructurar el espacio: los árboles de sombra y el plátano dan estructura, y el gandul da estructura provisional y rápida; falta comprobar si hay algo que frene de verdad el surazo por el sur. Mantener raíces vivas todo el año: lo sostienen los perennes, pero entre lotes y en las camas de ciclo corto probablemente hay suelo desnudo en las lluvias fuertes. Cubrir el suelo: cubierta a medias y no por diseño. Alimentar a los enemigos naturales: es la función más débil, porque no hay nada en el catálogo puesto ahí para florecer, y menos aún en plena seca, que es justo el hueco crítico. Producir algo en la estación seca: el gandul trabaja en la seca y el culantro rota rápido, pero conviene verificar mes a mes en lugar de suponerlo. Conclusión: el gandul es la pieza más valiosa del inventario y a la vez el punto único de fallo de la fertilidad, y la función de alimentar enemigos naturales está descubierta. (c) Ficha de admisión de una especie candidata. Qué función cumple, nombrada de la tabla: por ejemplo, floración pequeña y accesible durante la seca para sostener depredadores y parasitoides, que es la fila más floja. Qué le quita a los demás: luz, agua en el peor mes y tiempo de trabajo. Cuánto trabajo pide y en qué meses, en horas reales, y si esos meses ya están saturados. Qué pasa si se muere: si esa función queda descubierta o hay un segundo elemento que la sostenga. Y si se consigue aquí, por semilla o esqueje, sin comprar nada lejos: si no se consigue en la zona, no es un diseño, es un deseo, y además dejaría de ser replicable por un vecino. Si no contesta las cinco, no entra, aunque me la regalen. (d) Dimensionamiento y verificación. Primero escribo dos números antes de decidir nada: cuántas horas por semana hay de verdad —las de la semana normal, no las de la buena— y cuánta agua llega a cada punto en agosto. Ese es el cuello de botella, y con él decido cuántos de los 12 lotes se diversifican el primer año: probablemente pocos y probablemente los más cercanos al agua, dejando el resto para fases posteriores. Es preferible un diseño pequeño y completo a uno grande y a medias, porque el sistema diversificado recompensa cuando la estructura madura y solo madura si alguien la sostiene. Para saber si funcionó: línea de base tomada antes de tocar nada, uno o dos lotes dejados como testigo sin el cambio, y registro escrito. A dos años miro producción total por metro cuadrado y año sumando todo, diferencia entre el mejor y el peor año, jornales por unidad producida, cuánto habría que gastar fuera si no hubiera plata, y qué pasó con el surazo de julio y con la seca. Y me cuido del sesgo de supervivencia: además del rincón que salió precioso, anoto el sector que abandoné en marzo, que es el dato que más enseña. Todo esto se juzga además contra la misión: si la solución no es replicable por un vecino con veinte metros cuadrados y sin plata, es un diseño fallido aunque produzca más.",
+      "criterios": [
+        "Nombra los tres mecanismos por separado y no los mezcla en una queja genérica contra el monocultivo.",
+        "Explica la concentración de hospedante por densidad de tejido susceptible, distancia entre hospedantes e interferencia en la búsqueda.",
+        "Reconoce el límite honesto del mecanismo: opera sobre plagas especializadas, no sobre generalistas.",
+        "Menciona la acumulación de inóculo en el suelo como versión más grave y persistente del mismo mecanismo.",
+        "Explica la ausencia de redundancia funcional como que un solo fallo arrastra todas las funciones a la vez.",
+        "Usa el plátano como caso de fallo correlacionado por clonalidad y saca una consecuencia concreta de diseño (no en bloque macizo, no en todos los lotes, separación y control de circulación).",
+        "Hace un inventario por funciones y no una lista de especies.",
+        "Detecta que el gandul cubre varias funciones críticas y que la fertilidad depende casi solo de él.",
+        "Detecta que alimentar a los enemigos naturales está descubierta, con el agravante del hueco de floración en la seca.",
+        "Aplica las cinco preguntas de la ficha de admisión a una especie concreta, incluida la de si se consigue en la zona.",
+        "Dimensiona la diversidad por horas reales de trabajo y agua disponible en agosto, y fasea por lotes en lugar de diversificarlo todo el primer año.",
+        "Propone medición con línea de base, lote testigo y registro, nombra al menos tres métricas y se cuida del sesgo de supervivencia.",
+        "No entra en asociaciones concretas, dibujo ni zonificación, que son materia de lecciones posteriores.",
+        "Contempla el criterio comunitario: la solución debe ser replicable con material y herramientas que se consiguen aquí."
+      ],
+      "explicacion": "El ejercicio recorre la lección entera en el orden en que se usa en terreno: primero los mecanismos, después el inventario de funciones, después el filtro de admisión y solo al final el dimensionamiento y la medición. Lo que se evalúa no es la cantidad de especies que propongas —eso vendría en las lecciones siguientes— sino que sepas decir qué función cumple cada cosa, cuál está cubierta una sola vez y cuánto trabajo estás comprometiendo. Si tu respuesta acaba en una lista de plantas bonitas sin funciones asignadas y sin un número de horas semanales detrás, has hecho justo lo que la lección advierte: coleccionar en vez de diseñar."
+    }
+  ]
+}

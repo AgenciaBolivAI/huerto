@@ -30,7 +30,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 
-import { extraerIdYouTube, formatearDuracion, urlCanonica } from '../lib/youtube.mjs';
+import { extraerIdYouTube, formatearDuracion, urlCanonica } from '../lib/aula/youtube.mjs';
 
 const RAIZ = path.resolve(import.meta.dirname, '..');
 const DIR_MODULOS = path.join(RAIZ, 'content', 'modulos');

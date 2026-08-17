@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "transmisividad-arquitectura",
+      "tipo": "opcion_multiple",
+      "enunciado": "Dos árboles de la misma altura y con la misma cantidad total de hoja dan sombras muy distintas. ¿Qué afirmaciones sobre la transmisividad del dosel son correctas?",
+      "opciones": [
+        "El coeficiente de extinción depende de la forma y la inclinación de las hojas, no de su cantidad: una copa de hoja pequeña, compuesta e inclinada deja pasar mucha más luz que una de hoja ancha y horizontal con el mismo índice de área foliar.",
+        "La luz se atenúa hacia abajo de forma aproximadamente exponencial con el índice de área foliar acumulado por encima, así que las primeras capas de hoja se llevan la mayor parte.",
+        "La pregunta útil ante una especie candidata no es «¿cuánto crece?» sino «¿qué clase de sombra da?», porque el porte no predice la transmisividad.",
+        "Como la extinción es exponencial, basta con conocer la altura del árbol y el diámetro de su copa para saber cuánta luz llegará al sotobosque."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son el núcleo del mecanismo. La cuarta es incorrecta porque altura y diámetro de copa describen la geometría exterior, no la propiedad óptica: en la fórmula de extinción entran la cantidad de hoja (índice de área foliar) y el coeficiente que depende de la arquitectura del follaje. Dos árboles con el mismo contorno y la misma altura pueden transmitir fracciones de luz muy diferentes; por eso la sombra se mide con el cociente de dos lecturas simultáneas y no se deduce de la silueta."
+    },
+    {
+      "id": "destellos-arranque-frio",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre los destellos de sol en el sotobosque y su aprovechamiento, ¿qué es cierto?",
+      "opciones": [
+        "La hoja no alcanza su ritmo fotosintético máximo de forma instantánea: los estomas están medio cerrados y las enzimas de fijación desactivadas, y llegar a régimen lleva del orden de minutos.",
+        "Una serie de destellos seguidos se aprovecha mejor que destellos aislados de la misma duración total, porque la maquinaria queda «caliente» entre uno y otro.",
+        "Para el piso de abajo conviene más una sombra pareja y moteada, propia de una copa alta y aireada, que la alternancia de bloques de sol duro y sombra densa.",
+        "Como los destellos son breves, su aporte al carbono diario del sotobosque es marginal y se puede ignorar al diseñar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y por eso el mecanismo importa: en el sotobosque los destellos aportan una parte del carbono del día mucho mayor de lo que sugiere el tiempo que duran. Lo que sí penaliza el aprovechamiento es la inducción —el arranque en frío—, y de ahí la conclusión de diseño: no se trata de que llegue «algo» de sol, sino de en qué patrón llega."
+    },
+    {
+      "id": "competencia-radicular",
+      "tipo": "verdadero_falso",
+      "enunciado": "El área de suelo donde las raíces del árbol compiten de verdad con el cultivo coincide aproximadamente con la proyección de su copa, así que sembrar justo fuera del borde de la sombra evita la competencia.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error de dibujo más repetido de los manuales. La zona de competencia radicular suele extenderse bastante más allá del borde de la copa, y además está concentrada en los primeros veinte o treinta centímetros, que es exactamente donde tiene sus raíces el cultivo de abajo: el área de competencia es mayor que el área de sombra y se solapa en la capa que importa. Cuánto más depende de la especie, del suelo y de dónde encuentre agua, y no hay número que se pueda copiar de ningún sitio. El método honesto es abrir una zanja pequeña a distintas distancias del tronco y mirar."
+    },
+    {
+      "id": "poda-aclareo-rebaje",
+      "tipo": "opcion_multiple",
+      "enunciado": "Se quiere dejar pasar más luz bajo un árbol de sombra sin que el problema vuelva peor dentro de dos temporadas. ¿Qué es correcto?",
+      "opciones": [
+        "El corte de aclareo elimina una rama entera en su punto de origen, no deja yemas que rebroten con fuerza y abre luz de forma duradera.",
+        "El corte de rebaje deja un muñón, libera la dominancia apical sobre las yemas de abajo y provoca un penacho de brotes que en una o dos temporadas da más sombra que la rama original.",
+        "Podar es operar un lazo de control con retardo largo, así que conviene hacer ajustes pequeños, cambiar una variable por vez y anotar el cociente de luz antes y después de cada intervención.",
+        "Ante mucha sombra lo eficiente es una poda fuerte de una vez, porque así se corrige el problema en una sola intervención en lugar de arrastrarlo varios años."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta describe precisamente cómo se entra en oscilación: se poda a fondo, al año siguiente sobra luz y se quema el sotobosque, se deja crecer, vuelve la sombra y se vuelve a podar a fondo. Es el comportamiento clásico de corregir fuerte un proceso con retardo largo, agravado aquí porque el rebaje tiene respuesta inversa —primero da más luz y después más sombra que al principio."
+    },
+    {
+      "id": "bombeo-nutrientes",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un árbol de raíz profunda que funciona como bomba de nutrientes alimenta al cultivo de abajo en tiempo real, de modo que se puede reducir la fertilización del sotobosque desde el primer año.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el mismo error que ya apareció con la leguminosa y el nitrógeno. La bomba extrae nutrientes de un volumen de suelo al que los cultivos no llegan y los incorpora a hojas y ramas, pero los devuelve arriba solo cuando esa biomasa cae o se poda: la reinyección es diferida, no simultánea con la demanda. Y tiene una condición de operación que se olvida siempre: si la poda y la hojarasca se retiran del lote, la bomba se convierte en una fuga —el árbol sigue extrayendo y el sistema exporta."
+    },
+    {
+      "id": "callejones-honestidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el cultivo en callejones y su aplicabilidad a una parcela como la de Rizoma del Sur, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Consiste en hileras de una leñosa, casi siempre leguminosa, mantenidas cortas a propósito mediante podas repetidas cuyo material se echa al callejón del cultivo.",
+        "Donde se probó a fondo los resultados fueron mixtos, sobre todo porque la poda repetida consume muchos jornales y la hilera compite con las filas de cultivo que tiene pegadas.",
+        "En una parcela donde el jornal es el recurso escaso tiene más sentido una versión parcial —unas pocas líneas de gandul cuya poda alimenta las camas vecinas— que el sistema completo.",
+        "Es el arreglo agroforestal con mejor historial de resultados del trópico y el que conviene adoptar por defecto en una parcela pequeña."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte el resultado real: el callejonado es el arreglo con la lógica más limpia sobre el papel —fábrica de biomasa y de nitrógeno justo al lado de donde se usa— y a la vez el que peor sobrevivió al contacto con la realidad. Funcionó mejor en ladera, donde la hilera además sujeta el suelo, y donde la mano de obra era abundante. Adoptarlo «por defecto» sin mirar la mano de obra disponible es exactamente el error que esta lección quiere evitar."
+    },
+    {
+      "id": "sucesion-en-el-tiempo",
+      "tipo": "verdadero_falso",
+      "enunciado": "En un sistema agroforestal la densidad de plantación inicial se elige alta a propósito, y por eso el raleo progresivo no es una corrección de un error de diseño sino una operación prevista desde el primer día.",
+      "respuesta": true,
+      "explicacion": "Verdadero. La densidad alta al principio cubre suelo rápido y aprovecha los años en que las copas todavía son pequeñas, y es insostenible más adelante por definición. Por eso el sistema no se diseña como un plano sino como un calendario: cada elemento no permanente entra al registro con su fecha de salida y con un disparador escrito como condición observable —«cuando la copa del frutal alcance al gandul», «cuando el cociente de luz baje de la mitad»—, de modo que otra persona pueda ejecutarlo. Y se ralea antes de que duela: la planta que se quita a tiempo devuelve luz, agua y espacio; la que se quita tarde ya cobró tres años de recursos y dejó a las vecinas deformadas."
+    },
+    {
+      "id": "diseno-agroforestal-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Te encargan diseñar la capa arbórea de dos de los 12 lotes de Rizoma del Sur (unos 600 m² en total), hoy prácticamente sin árboles, con el objetivo de producir yautía y culantro debajo y de que los árboles de sombra que Rizoma vende puedan observarse en el sitio. Explica qué harías, en este orden: (1) qué levantas y mides antes de plantar nada; (2) cómo decides la transmisividad objetivo y con qué referencia la calibras; (3) cómo repartes los estratos y qué va debajo de qué, con las restricciones de cosecha; (4) qué papel le das al gandul y con qué fechas; (5) cómo manejarás la luz año a año con la poda; (6) qué escribes en el registro sobre raleo y salidas; y (7) qué NO puedes afirmar y a quién hay que consultarlo.",
+      "respuestaModelo": "Antes de plantar nada levanto lo que ya existe: recorro los dos lotes y anoto cada leñosa en pie con altura y diámetro de copa, si pierde la hoja y en qué meses, qué clase de sombra da al mediodía y qué crece debajo. A eso le añado la geometría del sol, que a esta latitud, del orden de 18 grados al sur, tiene consecuencias prácticas: el sol de mediodía pasa por el norte la mayor parte del año y en el solsticio de junio no supera unos 49 grados, de modo que la sombra es larga y apunta al sur justo en los meses del surazo, mientras que en diciembre está casi vertical y esa sombra es un charco a los pies del árbol. La huella de sombra no es una mancha fija: se estira, se encoge y bascula. Por eso no la calculo, la dibujo, marcando con cal su contorno al mediodía en cuatro fechas del año. Y abro dos o tres zanjas pequeñas a distintas distancias de los árboles existentes para ver hasta dónde llega la raíz fina, porque la zona de competencia radicular se extiende bastante más allá del borde de la copa y se concentra en los primeros veinte o treinta centímetros, que es donde tienen sus raíces la yautía y el culantro.\n\nLa transmisividad objetivo no la invento: la calibro con lo que el vivero ya sabe. El vivero conoce con qué grado de malla se comporta bien cada especie, así que la pregunta ante cada sitio bajo copa no es «¿hay mucha sombra?» sino «¿esto se parece a la malla con la que el culantro va bien?». Y la contesto con el medidor de luz de un teléfono: una lectura al sol abierto y otra bajo el árbol en el mismo minuto, quedándome con el cociente, porque el valor absoluto no es radiación fotosintéticamente activa. Al elegir especies miro la arquitectura del follaje antes que el porte: la sombra la decide el coeficiente de extinción, y una copa alta y aireada da la sombra moteada que el sotobosque aprovecha, mientras que una copa baja y compacta alterna sol duro con sombra densa, el peor patrón porque castiga la inducción de la hoja.\n\nEl reparto de estratos usa el catálogo: árboles de sombra arriba, plátano en el estrato medio, yautía entre las hileras de plátano, culantro en los huecos de sombra parcial y batata cubriendo suelo en los bordes soleados. Dos restricciones de cosecha mandan sobre el dibujo. La yautía va entre hileras y no en el ruedo de la mata, para no cavar sobre las raíces superficiales del plátano. Y bajo la copa de un árbol de sombra no va nada que se coseche cavando, porque cada cosecha ahí es una labranza en el peor sitio posible: va lo que se corta —culantro, hoja, ornamentales de sombra—. El anillo pegado al tronco no se cultiva.\n\nEl gandul entra como infraestructura provisional, con tres funciones: líneas contra el viento del sur para proteger lo recién plantado durante el surazo, nodriza alrededor de los árboles recién trasplantados, y fábrica de cobertura para las camas vecinas mediante poda repetida —la versión barata del callejonado, porque el sistema completo consumiría más jornales de los que hay—. Cada línea entra al registro con el mes de la primera poda, el mes en que se rebaja para dejar pasar luz y el mes en que se corta a ras. Sin esas tres fechas, en tres años el gandul es el competidor.\n\nEl manejo anual de la luz es poda con criterio. Para abrir luz de forma duradera uso cortes de aclareo, que eliminan la rama entera en su punto de origen; evito los cortes de rebaje, que dejan muñón, liberan la dominancia apical y en una o dos temporadas devuelven un penacho más denso que la rama original. Y ajusto poco cada vez, porque es un lazo de control con retardo largo: una variable por vez y cociente de luz anotado antes y después, con fecha. La poda no se quema ni se saca: hoja y ramilla fina van picadas sobre las camas; la madera gruesa, de relación C:N muy alta, va a caminos o a una pila aparte para no provocar inmovilización de nitrógeno sobre una siembra. Si la biomasa se exporta, el bombeo de nutrientes deja de ser un retorno y se convierte en una fuga.\n\nEn el registro escribo la tabla de sucesión: qué entra con la plantación, qué se mantiene sin fecha de salida (plátano por deshije, árboles y frutales, que se regulan por poda) y qué tiene salida prevista (gandul y batata). Cada salida lleva un disparador observable: «cuando la copa del frutal alcance al gandul», «cuando el cociente de luz bajo el plátano baje de la mitad». Un criterio que se comprueba mirando lo puede ejecutar otra persona, y en un proyecto comunitario esa es la diferencia entre un sistema y una dependencia personal.\n\nY lo que no puedo afirmar: velocidades de crecimiento, diámetros de copa adulta o listas de especies recomendadas, porque dependen del suelo y de la procedencia. Eso se consulta con el INIAF, el Centro de Investigación Agrícola Tropical, la Facultad de Ciencias Agrícolas de la UAGRM y con viveristas de la zona, anotando la fuente. Tampoco ninguna cifra, plazo ni trámite legal: cortar árboles está sujeto a normativa y permisos que cambian con el tiempo, con la categoría del terreno y con la especie, y eso se pregunta a la autoridad forestal competente y al gobierno municipal antes de cortar.",
+      "criterios": [
+        "Empieza por un levantamiento de lo existente —cada leñosa con copa, caducidad, clase de sombra y qué crece debajo— antes de proponer nada.",
+        "Trata la huella de sombra como algo que cambia a lo largo del año y propone dibujarla en varias fechas en lugar de suponerla fija.",
+        "Usa la malla de sombra del vivero como patrón de calibración y mide con el cociente de dos lecturas simultáneas, no con adjetivos.",
+        "Elige especies por arquitectura de follaje —qué clase de sombra dan— y no por porte o velocidad de crecimiento.",
+        "Reparte estratos concretos del catálogo con una función declarada por capa.",
+        "Aplica las dos restricciones de cosecha: yautía entre hileras y no en el ruedo del plátano, y nada de cosecha cavando bajo la copa del árbol.",
+        "Reconoce que la zona de competencia radicular excede el área de sombra y propone comprobarla con zanja en lugar de citar un número.",
+        "Da al gandul funciones concretas y, sobre todo, fechas escritas de poda, rebaje y retirada.",
+        "Distingue corte de aclareo de corte de rebaje y justifica la elección por el rebrote que provoca cada uno.",
+        "Maneja la poda como un lazo de control con retardo: ajustes pequeños y medición antes y después, con registro fechado.",
+        "Devuelve la biomasa de poda al sitio separando por grosor, y explica por qué la madera gruesa no va sobre una siembra.",
+        "Escribe disparadores de raleo como condiciones observables ejecutables por otra persona, y declara qué no se puede afirmar y a qué instituciones se consulta."
+      ],
+      "explicacion": "La respuesta completa recorre la lección entera en el orden en que se toman las decisiones reales: primero se mide lo que hay, después se fija el objetivo de luz con una referencia que ya existe en el vivero, luego se reparten los estratos con sus restricciones de cosecha, se le pone fecha a lo provisional, se define cómo se ajustará la luz con la poda y se escribe el calendario de raleo. Lo que separa una buena respuesta de una lista de buenas intenciones son tres cosas: que la transmisividad se mida en vez de describirse, que la competencia radicular se compruebe con una pala en vez de copiarse de una tabla, y que todo lo que no es permanente lleve fecha de salida y disparador observable. Y la última parte no es un adorno: reconocer qué datos de especie y qué requisitos legales no se pueden inventar es parte del trabajo técnico, no una excusa para no responder."
+    }
+  ]
+}

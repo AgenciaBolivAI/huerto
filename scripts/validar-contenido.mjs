@@ -22,7 +22,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 
-import { extraerIdYouTube } from '../lib/youtube.mjs';
+import { extraerIdYouTube } from '../lib/aula/youtube.mjs';
 
 const RAIZ = path.resolve(import.meta.dirname, '..');
 const DIR_CONTENIDO = path.join(RAIZ, 'content');
@@ -73,6 +73,23 @@ if (fs.existsSync(rutaRegistro)) {
 }
 
 /* ── Glosario ─────────────────────────────────────────────────────────────── */
+
+/* Las categorías agrupan el temario. Un módulo puede no declararla todavía,
+ * pero si la declara tiene que existir: una clave mal escrita lo sacaría del
+ * índice sin que nada fallara. */
+const rutaCategorias = path.join(RAIZ, 'content/categorias.json');
+const clavesCategoria = new Set();
+if (fs.existsSync(rutaCategorias)) {
+  const cat = leerJson(rutaCategorias, 'content/categorias.json');
+  for (const c of cat?.categorias ?? []) {
+    if (!esTexto(c.clave)) error('content/categorias.json', 'una categoría no tiene `clave`');
+    else if (clavesCategoria.has(c.clave))
+      error('content/categorias.json', `clave duplicada: "${c.clave}"`);
+    else clavesCategoria.add(c.clave);
+    if (!esTexto(c.nombre)) error('content/categorias.json', `"${c.clave}" no tiene \`nombre\``);
+    if (!esTexto(c.descripcion)) error('content/categorias.json', `"${c.clave}" no tiene \`descripcion\``);
+  }
+}
 
 const rutaGlosario = path.join(DIR_CONTENIDO, 'glosario.json');
 // `slugsGlosario` incluye sinónimos porque sirve para resolver referencias.
@@ -150,6 +167,27 @@ for (const modulo of modulos.sort()) {
 
   if (!esTexto(datosModulo.titulo)) error(donde, 'falta `titulo`');
   if (!esTexto(datosModulo.resumen)) error(donde, 'falta `resumen`');
+
+  if (datosModulo.categoria !== undefined && !clavesCategoria.has(datosModulo.categoria))
+    error(donde, `\`categoria\` "${datosModulo.categoria}" no existe en content/categorias.json`);
+
+  // La portada del módulo se declara relativa a public/imagenes/ porque suele
+  // ser una foto que ya usa una de sus lecciones: así se reaprovecha sin
+  // duplicar el archivo. Se comprueba que exista y que lleve texto alternativo,
+  // porque una portada rota se ve en el índice del curso, no dentro de una
+  // lección, y es lo primero que mira quien entra.
+  if (datosModulo.portada !== undefined) {
+    if (!esTexto(datosModulo.portada)) {
+      error(donde, '`portada` debe ser una ruta relativa a public/imagenes/');
+    } else {
+      if (datosModulo.portada.startsWith('/') || datosModulo.portada.includes('..'))
+        error(donde, `\`portada\` debe ser relativa a public/imagenes/, sin "/" inicial ni ".."`);
+      else if (!fs.existsSync(path.join(RAIZ, 'public', 'imagenes', datosModulo.portada)))
+        error(donde, `falta la imagen public/imagenes/${datosModulo.portada}`);
+      if (!esTexto(datosModulo.portadaAlt))
+        error(donde, 'hay `portada` pero falta `portadaAlt`: sin alt la portada es invisible para quien no ve');
+    }
+  }
 
   const slugsEnDisco = fs
     .readdirSync(dirModulo)

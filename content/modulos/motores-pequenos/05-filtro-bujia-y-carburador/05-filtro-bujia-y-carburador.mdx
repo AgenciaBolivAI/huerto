@@ -1,0 +1,426 @@
+De cada diez máquinas que llegan sin arrancar o andando mal, la enorme mayoría se va arreglada con
+tres piezas: **el filtro de aire, la bujía y el carburador**. No es mala suerte ni mala fabricación:
+son **las tres únicas piezas del motor que trabajan contra el mundo de afuera**. El pistón, la biela
+y las válvulas viven en un ambiente cerrado, limpio y lubricado. El filtro es lo único que respira el
+polvo del camino; la bujía, lo único que vive **dentro del fuego** aislando decenas de miles de
+voltios; y el carburador, lo único que maneja **un líquido que se evapora y deja residuo**,
+obligándolo a pasar por agujeros de décimas de milímetro.
+
+<Analogia>
+Si trabajas con sistemas, ya conoces esta ley: **lo que se rompe es el borde**. Falla el que recibe
+datos de afuera, el que escribe en disco, el que habla por la red; el núcleo, que solo manipula datos
+ya validados, casi nunca es el problema. Estas tres son la **capa de entrada y salida** del motor.
+
+Y hay un regalo que ninguna otra pieza te hace: **la bujía es el registro de eventos de la máquina**.
+Sale pintada con lo que estuvo pasando ahí dentro. Leerla es leer un log: no te dice qué cambiar, te
+dice **en qué estado venía trabajando el sistema**.
+</Analogia>
+
+## Antes de abrir nada
+
+<Advertencia>
+Aquí se manipula combustible fuera del motor, así que van tres peligros con su mecanismo.
+
+**El carburador desarmado derrama gasolina, y lo que arde es su vapor**, que pesa más que el aire y
+corre por el piso hasta encontrar una chispa lejos de ti. Se trabaja **afuera, a la sombra, motor
+frío**, llave cerrada, bandeja y trapo debajo, sin fumar y sin amoladora funcionando cerca.
+
+**El limpiador de carburador en aerosol es un solvente fuerte.** Disuelve la grasa de la piel y se
+absorbe por ella, y el chorro rebota contra la pieza y **vuelve a los ojos**. Anteojos siempre,
+guantes de nitrilo —el látex se deshace con solventes— y al aire libre. Y **el aire comprimido no se
+apunta jamás a la piel ni a otra persona**: a presión de taller mete aire y suciedad por debajo de la
+piel, y para carburadores sobra con presión baja.
+</Advertencia>
+
+Un cuarto peligro es del ajuste: **con el motor en marcha, un ralentí demasiado alto hace que el
+embrague agarre y la cuchilla gire**. Al regular una desbrozadora, la máquina va firme, con el cabezal
+**al aire y apuntando lejos**, sin nadie alrededor.
+
+## El filtro de aire: cómo retiene el polvo de verdad
+
+Casi todos se imaginan el filtro como un colador con agujeros más chicos que la basura. **Es falso**:
+los poros de una espuma o los huecos entre las fibras de un papel son mucho más grandes que buena
+parte del polvo que atrapan. Retienen por tres vías. La **intercepción**: el aire se curva para
+esquivar una fibra y la partícula, por ancha, la roza y se queda pegada.
+La <Termino slug="impactacion-inercial">impactación inercial</Termino>, la que más pesa con polvo
+grueso: el aire dobla en la esquina, pero **una partícula pesada no**, porque lleva inercia, sigue
+derecho y se clava. Y la **difusión**: lo finísimo rebota al azar contra las moléculas del aire, hace
+zigzag y termina tocando una fibra. De ahí algo que sorprende: **lo más difícil de filtrar es el
+tamaño intermedio**, demasiado liviano para clavarse y demasiado pesado para zigzaguear.
+
+Un segundo efecto explica por qué un filtro medio sucio filtra mejor que uno nuevo: el polvo retenido
+forma una **torta** que es a su vez un filtro más fino, pero que cierra el paso.
+La <Termino slug="restriccion-del-filtro">restricción del filtro</Termino> crece rápido con la carga.
+
+<Formula explicacion="La resistencia que opone un filtro crece más o menos con el cuadrado del caudal de aire y con lo cargado que esté. Léela al revés: un filtro que a ralentí parece aceptable puede estar estrangulando el motor a plena vuelta, que es justo cuando la máquina tiene que trabajar.">
+restricción ≈ k × (caudal de aire)² × suciedad acumulada
+</Formula>
+
+Y como el carburador dosifica combustible **según la depresión que produce el aire**, un filtro
+restringido enriquece la mezcla: humo negro, hollín y pérdida de fuerza. El filtro tiene entonces
+**dos maneras opuestas de matar el motor**: dejar pasar polvo, que raya el cilindro, o no dejar pasar
+aire, que lo ahoga.
+
+### Los tres tipos, y cómo se trata cada uno
+
+El <Termino slug="filtro-de-espuma">filtro de espuma</Termino> es un bloque de poliuretano de poro
+abierto, un laberinto en tres dimensiones. Solo, filtra mal: **el que filtra es el aceite** que lo
+moja, porque cubre las paredes del laberinto con una película pegajosa donde se queda la partícula que
+la toca. Se lava con agua tibia y detergente estrujándolo con las manos —nunca retorciéndolo como un
+trapo—, **se seca por completo a la sombra** y recién ahí se aceita.
+
+El <Termino slug="aceitado-del-filtro">aceitado</Termino> es el paso que casi todos hacen mal, y en
+las dos direcciones. **Poco aceite** deja la espuma seca y el polvo la atraviesa. **Demasiado** llena
+los poros de líquido, dispara la restricción, ahoga el motor y encima la admisión chupa aceite hacia
+el carburador. Lo correcto: unas cucharadas de aceite limpio, amasar hasta que quede **pareja y del
+color del aceite, sin zonas blancas**, y **estrujarla dentro de un trapo hasta que no escurra ni una
+gota**. Si está endurecida o se deshace en migas se cambia.
+
+El <Termino slug="filtro-de-papel">filtro de papel</Termino> es celulosa de fibras finísimas, plegada
+en acordeón para meter mucha superficie en poco espacio. Filtra mejor y tiene una regla dura: **no se
+lava, ni con agua ni con gasolina** —el agua deshace el ligante, la gasolina disuelve la resina—.
+Tampoco se sopla desde afuera, porque eso clava el polvo hacia adentro y **revienta fibras, agrandando
+los poros para siempre**. Se limpia golpeándolo suave de canto contra la palma y, si acaso, con aire a
+muy baja presión **desde el lado limpio hacia afuera**.
+
+El <Termino slug="filtro-de-bano-de-aceite">filtro de baño de aceite</Termino> es el más rústico y el
+mejor donde hay polvo brutal: el aire baja por un tubo, **da un giro de ciento ochenta grados justo
+encima de una cubeta con aceite** y sube por una malla empapada, así que el aire dobla y el polvo se
+hunde. Se mantiene **vaciando el barro del fondo y reponiendo aceite hasta la marca**.
+
+<Dato titulo="La fuga vale más que el filtro">
+Un filtro puede retener el noventa y nueve por ciento del polvo y ser inútil igual: si por un sello
+endurecido o una tapa mal calzada **entra sin filtrar apenas el dos por ciento del aire**, ese dos por
+ciento mete más polvo que todo lo que el filtro deja pasar trabajando bien.
+
+Por eso la comprobación de treinta segundos es mirar **el lado limpio**: se saca el filtro y se pasa un
+papel blanco por el conducto que va al carburador. Si ahí hay tierra, el filtro es inocente y el
+problema es la caja.
+</Dato>
+
+Donde el polvo es constante vale una pieza que casi nadie usa:
+el <Termino slug="prefiltro">prefiltro</Termino>, un calcetín de espuma que se calza **por fuera** del
+cartucho de papel. Atrapa lo grueso, se lava en un balde y multiplica la vida del cartucho, que es el
+caro.
+
+## La bujía: la pieza que además es un instrumento
+
+El **electrodo central** es una varilla que trae la corriente; lo rodea un aislador de cerámica que
+debe hacer dos cosas contradictorias: **aislar decenas de miles de voltios y a la vez conducir calor**
+hacia afuera. El cuerpo metálico roscado se enrosca en la culata y es el camino por donde ese calor se
+va. De él sale doblado el <Termino slug="electrodo-de-masa">electrodo de masa</Termino>, enfrentado al
+central. El circuito se cierra por el propio motor: **la corriente entra por el cable, salta el aire y
+vuelve por la culata**.
+
+### El grado térmico, que es lo que más se confunde
+
+La punta del aislador tiene que estar **caliente pero no demasiado**. Por debajo de unos cuatrocientos
+grados el hollín y el aceite se depositan sin quemarse y la bujía se ensucia hasta fallar. Por encima
+de unos ochocientos y pico se pone incandescente y **enciende la mezcla sola, antes de la chispa**: el
+preencendido que martilla el pistón hasta agujerearlo. La ventana entre ambas es
+la <Termino slug="temperatura-de-autolimpieza">temperatura de autolimpieza</Termino>.
+
+Quedarse dentro de ella es cosa
+del <Termino slug="grado-termico-de-la-bujia">grado térmico</Termino>, que **no tiene nada que ver con
+la fuerza de la chispa**: es **la longitud del camino que el calor recorre** desde la punta del
+aislador hasta el cuerpo metálico. Una bujía **caliente** tiene el aislador largo y delgado, el calor
+tarda en salir y la punta se autolimpia en motores que trabajan suave; una **fría** lo tiene corto y
+grueso, evacúa rápido y aguanta carga continua. Una demasiado caliente en un motor exigido lleva al
+preencendido; una demasiado fría en un motor de ratos cortos queda negra en una semana. **El grado lo
+dice el manual.**
+
+### Separación, rosca y apriete
+
+La <Termino slug="separacion-de-electrodos">separación de electrodos</Termino> es la luz entre ambos.
+Más separación da **un núcleo de llama más grande y más lejos del metal frío**, pero exige más tensión
+para saltar, y si la bobina no la da no hay chispa. Menos separación salta fácil y enciende peor,
+porque los electrodos fríos **apagan la llama recién nacida**. Se mide con galga de alambre y no con
+lámina plana, porque el electrodo usado se ahueca y la lámina apoya en los bordes y miente. Se corrige
+**doblando únicamente el electrodo de masa**: tocar el central raja la cerámica. La rosca, además del
+diámetro, tiene un <Termino slug="alcance-de-rosca">alcance</Termino>: con alcance de más la bujía
+**sobresale dentro de la cámara** y puede tocar el pistón; con alcance de menos la chispa queda en un
+pozo y la rosca libre de la culata se carboniza.
+
+<Advertencia>
+**La rosca de una culata de aluminio se arranca con la fuerza de una mano.** El aluminio es mucho más
+blando que el acero de la bujía, así que en un mal día cede primero, y eso no es cambiar una pieza: es
+taller, con inserto roscado o culata nueva.
+
+Se evita con tres hábitos. **Empezar siempre a mano**, girando primero al revés hasta sentir el clic
+del filete que entra; si cuesta, se saca y se vuelve a empezar, porque una rosca que se resiste está
+cruzándose. **Motor frío o tibio**, porque el aluminio caliente está dilatado y cede más fácil. Y el
+apriete justo: **a mano hasta que asiente y luego la fracción de vuelta que indica el fabricante**.
+Una bujía floja no evacúa su calor, se recalienta y sopla gases; una pasada rompe la culata.
+</Advertencia>
+
+### Leerla: lo que la bujía te está contando
+
+La punta sale pintada por las últimas horas de trabajo, y esa es
+la <Termino slug="lectura-de-bujia">lectura de bujía</Termino>. Con una condición: **se lee después de
+trabajar bajo carga**, no tras cinco minutos de ralentí, porque el ralentí ensucia cualquier bujía
+sana y te haría diagnosticar una avería inexistente.
+
+<Tabla>
+
+| Lo que ves | Qué venía haciendo el motor | Dónde mirar |
+| --- | --- | --- |
+| Gris o marrón claro, seco | Todo bien | Nada; guárdala como patrón de color |
+| Negro seco, aterciopelado | Mezcla rica | Filtro tapado, estárter puesto, tornillo de mezcla |
+| Negro húmedo y aceitoso | Quema aceite | Aros y válvulas, o exceso de aceite en la mezcla de 2T |
+| Mojada de combustible | No encendió: ahogado | Secarla y averiguar por qué se ahogó |
+| Blanca de tiza, vidriada | Mezcla pobre y calor | Aire falso, chiclé tapado. **Peligro de gripado** |
+| Gotitas metálicas fundidas | Preencendido o detonación | Parar ya; grado térmico, carbón, carga |
+| Electrodos redondeados | Cumplió sus horas | Cambiarla |
+| Raya negra en la cerámica | La chispa se fuga por fuera | Capuchón, humedad, aislador rajado |
+
+</Tabla>
+
+Dos filas piden mecanismo. La bujía blanca con el electrodo comido es **la advertencia más valiosa que
+da un motor**: una mezcla pobre no tiene combustible de sobra que se lleve calor al evaporarse, la
+combustión sale más caliente y el pistón se acerca a fundirse. Y
+el <Termino slug="puente-de-carbon">puente de carbón</Termino> —un hilito de hollín que une el
+electrodo con el cuerpo— hace que la corriente prefiera ese camino antes que el aire, así que la
+bujía falla **por ratos y sobre todo en frío**. Sobre todo: **una bujía sucia es un síntoma**.
+
+## El carburador: una ecuación resuelta sin electricidad
+
+Tiene que dosificar combustible en la proporción correcta con el aire que pasa, y mantenerla desde el
+ralentí hasta el máximo, sin sensores. Busca
+la <Termino slug="relacion-estequiometrica">relación estequiométrica</Termino>: para la gasolina, del
+orden de **catorce partes y media de aire por cada parte de combustible, en peso**. Por encima está
+la <Termino slug="mezcla-rica">mezcla rica</Termino>: humea negro, gasta más y ensucia, pero
+**enfría**. Por debajo, la <Termino slug="mezcla-pobre">mezcla pobre</Termino> parece rendidora y
+**quema más caliente**, y por eso funde motores. Ante la duda, **siempre del lado rico**.
+
+### El venturi
+
+El aire que entra pasa por un estrechamiento y, para que quepa el mismo caudal por menos sección,
+tiene que **acelerarse**; y un fluido que se acelera **baja su presión**, porque la energía que gana
+en velocidad la pierde en presión. Ese estrechamiento es
+el <Termino slug="efecto-venturi">venturi</Termino>. Ahí desemboca un tubito que viene de la gasolina,
+y **la atmósfera, que pesa sobre ella, la empuja hacia esa zona de baja presión**.
+
+<Formula explicacion="La depresión del venturi crece con el cuadrado de la velocidad del aire, y el caudal que sale por un agujerito calibrado crece con la raíz cuadrada de la diferencia de presión. Las dos leyes se compensan, y por eso un agujero fijo entrega aproximadamente la proporción correcta a mil vueltas y a diez mil. Esa cancelación es el invento entero.">
+depresión ≈ k × (velocidad del aire)²   →   caudal de combustible ≈ c × √(depresión)
+</Formula>
+
+### Las piezas, y qué falla en cada una
+
+La <Termino slug="cuba-del-carburador">cuba</Termino> es un vasito lleno de combustible debajo del
+venturi, y su función no es almacenar: es **mantener el nivel siempre a la misma altura**, porque todo
+el cálculo supone una distancia fija entre la superficie del líquido y la boca del surtidor. De eso se
+encarga un **flotador** que sube y, arriba, empuja
+la <Termino slug="valvula-de-aguja">válvula de aguja</Termino> contra su asiento: el mismo mecanismo
+del tanque de un baño. Flotador perforado y lleno, **nunca cierra**: rebosa y la mezcla se va a rica.
+Aguja pegada con barniz: no entra nada. Aguja gastada con un surco: gotea despacio, y ese es el motor
+que aparece **con el cilindro lleno** después de días parado.
+
+Los <Termino slug="chicle">chiclés</Termino> son tornillos huecos con un agujero calibrado en décimas
+de milímetro, y ese agujero **es la dosificación**. El **chiclé de alta**, en el surtidor principal,
+manda cuando el motor acelera; a su alrededor suele haber
+un <Termino slug="tubo-emulsionador">tubo emulsionador</Termino>, un tubito perforado que mezcla aire
+con el combustible antes de soltarlo, porque la emulsión se pulveriza mejor.
+
+El <Termino slug="circuito-de-ralenti">circuito de ralentí</Termino> explica el error de diagnóstico
+más común. A ralentí la mariposa está casi cerrada y **por el venturi pasa tan poco aire que no genera
+succión**: el surtidor principal no da nada. Pero justo detrás de la mariposa hay un vacío enorme, y
+ahí desemboca otro paso mucho más fino con su propio chiclé. O sea: **son dos circuitos separados**, y
+un motor que anda acelerado pero no sostiene el ralentí tiene tapado el paso de ralentí, sin que
+limpiar el otro cambie nada. Entre ambos hay **orificios de progresión** que la mariposa va
+descubriendo; tapados, el motor titubea al acelerar.
+
+Arriba viven las dos mariposas, que la gente confunde siempre.
+La <Termino slug="mariposa-de-gases">mariposa de gases</Termino> es el acelerador: **regula cuánto
+aire entra**. El <Termino slug="estrangulador">estrangulador</Termino> —estárter o choke— está antes
+del venturi y hace lo contrario: **le tapa la entrada al aire** para que la depresión suba muchísimo y
+chupe combustible por todos lados a la vez, y solo sirve para arrancar en frío. Cosa distinta es
+la <Termino slug="bomba-de-cebado">bomba de cebado</Termino>, la burbuja transparente que se aprieta
+con el dedo: **no enriquece nada**, solo llena el carburador y le saca el aire.
+
+Por último, los tornillos.
+El <Termino slug="tornillo-de-ralenti">tornillo de ralentí</Termino> es un tope mecánico: **no toca la
+mezcla**, solo impide que la mariposa cierre del todo. Los tornillos
+de <Termino slug="tornillo-de-mezcla">mezcla</Termino> —marcados **L** de baja y **H** de alta en las
+máquinas de dos tiempos— son agujas cónicas: enroscando empobrecen, desenroscando enriquecen.
+
+### Desarme, limpieza y armado
+
+**Uno. Preparar.** Motor frío, afuera, llave cerrada, cuba vaciada por su tornillo de purga. Bandeja o
+plato hondo **blanco** debajo: los chiclés son diminutos y en el pasto no aparecen nunca.
+
+**Dos. Fotografiar antes de tocar**, y sobre todo **la posición de los resortes y varillas del
+regulador de velocidad**, que se enganchan en agujeros distintos. Cambiar de agujero cambia las
+vueltas a las que trabaja el motor, y acertar después sin foto es una tarde perdida.
+
+**Tres. Contar las vueltas de los tornillos de mezcla antes de sacarlos**, enroscando cada uno
+**suavemente** hasta que toca y anotando vueltas y fracciones. Suavemente en serio, porque **apretar
+la aguja cónica contra su asiento lo deforma** y el carburador ya no regula bien nunca más.
+
+**Cuatro. Limpiar los pasos, no los agujeros.** Se rocía limpiador con la cánula por cada conducto
+**hasta ver salir el chorro por donde corresponde**. Regla inviolable: **jamás se pasa alambre, aguja
+ni púa por un chiclé**; el agujero está calibrado, y agrandarlo unas micras arruina la dosificación
+para siempre. Si está obstruido, se remoja y se pasa como mucho una cerda de nylon.
+
+**Cinco. Renovar lo blando.** Juntas, diafragmas y el asiento de la aguja son lo que envejece, y los
+kits son baratos. Al armar, **cada junta en su orden y en su cara**, y los tornillos **en cruz y con
+poca fuerza**: el cuerpo es aluminio delgado, y uno torcido chupa aire.
+
+### El ajuste, con honestidad
+
+Con el motor **caliente** y la máquina firme: primero el tornillo de ralentí, hasta que se sostenga
+parejo y **el embrague no arrastre**; después la **L**, buscando el punto donde acelera de golpe sin
+titubear. La **H** es otra cosa: **una alta demasiado pobre funde el motor en minutos**, y sin
+tacómetro no hay manera de afinarla. Sin instrumento se deja donde estaba o se corrige apenas **hacia
+el lado rico**, que como mucho hace humear; nunca se busca potencia empobreciendo la alta. Y los topes
+de fábrica que limitan esos tornillos **son una protección, no un estorbo**.
+
+## El carburador de membrana, el de la desbrozadora
+
+Una desbrozadora trabaja inclinada, de costado y a veces boca abajo, y una cuba con flotador ahí se
+vuelca. Por eso lleva un <Termino slug="carburador-de-membrana">carburador de membrana</Termino>, que
+**no tiene nivel y no depende de la gravedad**: resuelve lo mismo con dos láminas de goma finísima.
+
+La primera es el <Termino slug="diafragma-de-bombeo">diafragma de bombeo</Termino>. El cárter de un
+dos tiempos sube y baja de presión en cada vuelta, y un conducto —**la toma de pulsos**— lleva esa
+pulsación a un lado de la membrana; del otro, dos valvulitas de lengüeta convierten el vaivén en
+bombeo. **El propio motor se bombea el combustible**, aunque el tanque esté más abajo.
+
+La segunda es el <Termino slug="diafragma-de-regulacion">diafragma de regulación</Termino>, que hace
+de flotador sin serlo: tiene aire atmosférico por fuera y combustible por dentro, y cuando el motor
+consume, la cámara pierde presión, la membrana se hunde, empuja una palanquita y **abre la aguja de
+entrada justo lo necesario**.
+
+Sus averías tienen todas la misma firma: **arranca con cebador y muere enseguida**. Las membranas se
+**endurecen** con la gasolina vieja y el etanol, y una membrana rígida ni bombea ni regula; las
+lengüetas se pegan con barniz; la malla filtro interna se satura. El kit es barato, con una condición:
+**cada membrana va en su lado y en su orden**, y confundirlas es la razón número uno de que tras la
+limpieza el motor esté peor que antes.
+
+## La ruta completa del combustible
+
+Nada de lo anterior sirve si el combustible no llega, y la ruta falla seguido.
+
+**El tapón y su ventilación.** El tanque necesita que entre aire mientras sale combustible, y para eso
+el tapón trae un respiradero diminuto, a veces una membranita de una sola vía. Tapado con polvo se
+hace vacío adentro y el motor **anda unos minutos, se ahoga y revive al rato**. Se limpia soplando
+suave; no se agranda con alambre.
+
+**El filtro de tanque**, ese cabezal de fieltro colgado de la manguera dentro del tanque, se satura de
+a poco y actúa como restricción progresiva: **el motor anda bien suelto y se ahoga apenas pide
+caudal**, que es exactamente el síntoma de un carburador sucio y hace desarmar carburadores sanos todo
+el tiempo. Se pesca con un gancho de alambre y **se cambia, no se lava**.
+
+**La manguera.** Calor, sol y etanol la endurecen y la agrietan, y una rajada no siempre gotea: muchas
+veces **chupa aire**, y ese aire corta la alimentación. La prueba es gratis: con manguera
+transparente, **si ves burbujas corriendo hacia el carburador, hay entrada de aire** aguas arriba. Se
+reemplaza por manguera específica para combustible; **la de suero no sirve**.
+
+**La llave de paso**, que suele llevar su propia malla, y **el fondo del tanque**, donde se juntan
+agua y tierra. Si viste agua no alcanza con vaciar: hay que enjuagar el tanque, cambiar el filtro y
+limpiar la cuba, porque el agua ya viajó por toda la ruta.
+
+<AplicarRizoma>
+Todo esto se hace en un patio, con una mesa y muy poca herramienta. No hace falta taller.
+
+**Arma el banquito antes que la caja de herramientas.** Lo que más sirve es una **bandeja blanca**
+—vale un plato hondo viejo— para que ninguna pieza chica se pierda, frascos rotulados, papel de
+cocina, un imán y buena luz. Trabaja afuera, a la sombra, sobre una mesa firme. La mesa de la cocina
+no: los vapores se quedan en la casa.
+
+**Tu manual de armado lo haces con el celular.** Una foto por cada paso del desarme, desde el mismo
+ángulo, y una extra de los resortes y varillas antes de tocarlos. Cada tanda de tornillos en su frasco
+rotulado, porque los parecidos tienen largos distintos y uno largo en el lugar equivocado agujerea lo
+que hay detrás.
+
+**Consíguete un carburador muerto para practicar**: el de la desbrozadora que nadie arregló, el de la
+bomba que se tiró. Desármalo y ármalo tres veces enteras antes de tocar el de la máquina que tu
+familia usa a diario, y las membranas dejan de dar miedo.
+
+**Empieza hoy por lo que ya tienes en casa.** Saca el filtro de aire de cada máquina y míralo a
+contraluz; lava y aceita la espuma como dice esta lección; revisa el burlete de la tapa y pasa un
+papel blanco por el lado limpio. Es una tarde, y probablemente sea lo que más vida útil le regales a
+esas máquinas este año.
+
+**Guarda una bujía buena en un frasco como patrón de color** y compara contra ella las dudosas.
+Enséñale a alguien más de la casa a mirarla: se aprende en diez minutos. Anota lo que ves cada vez,
+porque tres lecturas negras seguidas en la misma máquina son un problema de mezcla, no mala suerte.
+
+**Haz el inventario del barrio, que es lo que convierte esto en oficio.** Una hoja con las máquinas de
+tu casa y de los vecinos y, para cada una, qué bujía lleva, qué filtro, qué kit de juntas y qué
+manguera: con esa hoja, un solo viaje surte a diez máquinas. Y ofrece el servicio antes de que haga
+falta. Sé honesto con lo que garantizas —el trabajo sí; que no vuelva a pasar no, porque si el
+combustible viejo y el polvo siguen entrando el barniz vuelve— y deja siempre dicho **qué causó** la
+falla, no solo qué pieza tocaste.
+</AplicarRizoma>
+
+<ContextoBolivia>
+La física es la misma en todas partes. Lo que cambia en Zanja Honda es **cuál de las tres piezas te va
+a dar más trabajo, y en qué mes**.
+
+**En la seca, el filtro es el trabajo número uno.** De mayo a septiembre no llueve y cualquier faena
+cerca del suelo levanta una nube: una espuma que en el manual dura veinticinco horas aquí puede estar
+cargada en una jornada larga. Conviene tener **dos espumas en rotación**, una trabajando y otra
+secándose. En la temporada de quemas se suma la ceniza, **más fina que el polvo y capaz de pasar por
+donde el polvo no pasa**, y ahí el prefiltro deja de ser un lujo.
+
+**La humedad ataca la bujía por fuera.** El capuchón y la cerámica juntan una capa de polvo húmedo que
+conduce, y la chispa se fuga por afuera en vez de saltar adentro: antes de condenar una bujía,
+**límpiale la cerámica con un trapo seco y seca el capuchón**. Esa misma humedad ablanda el papel de
+los filtros, que se deforma y deja de sellar.
+
+**El etanol es el enemigo de las gomas.** La gasolina que se vende lleva etanol —el porcentaje lo fija
+la autoridad del sector, no este curso: **pregúntalo en el surtidor**—, y ataca mangueras y membranas
+viejas, además de tomar humedad hasta separarse en fases y dejar agua en el fondo del tanque, que es
+justo de donde chupa el carburador. De ahí tres hábitos: **comprar poco y fresco**, poner manguera y
+kits nuevos en vez de reaprovechar los resecos, y **dejar el carburador vacío** al guardar.
+
+**El surazo llena el taller de gente que ahogó el motor.** Con la noche en unos diez grados el
+combustible evapora peor y el motor pide más estárter; entonces se insiste, se inunda el cilindro y
+la bujía sale chorreando. Si a los tres o cuatro tirones no da señales, **se quita el estárter y se
+jala con el acelerador abierto**. Y el ralentí regulado una mañana de surazo quedará alto al mediodía
+siguiente: **el ajuste fino se hace con la máquina caliente**.
+
+**Cuidado con las máquinas usadas que bajan del altiplano**, porque a tres o cuatro mil metros hay
+menos aire en cada bocanada y muchos carburadores vienen recalibrados para allá; aquí, a poco más de
+quinientos metros, ese ajuste queda **pobre**, y pobre significa caliente y con riesgo de fundir. Y
+como los repuestos tardan, anota el número estampado en el cuerpo del carburador y el código de la
+bujía en una foto del celular: **la mitad de las compras equivocadas nacen de pedir «para una
+desbrozadora»**. En Santa Cruz hay talleres con limpieza por ultrasonido, y el mecánico de motos del
+pueblo sabe más de estos motores de lo que aparenta.
+
+**Y dos cosas del patio.** El solvente y la gasolina sucia **no van al suelo, al arroyo ni al pozo**
+—donde se toma agua de pozo eso vuelve a la familia—, sino a un bidón cerrado que reciba un taller. Y
+el balde del lavado del filtro se vacía el mismo día, porque todo recipiente destapado con agua es
+criadero de mosquito en zona de dengue. Si trabajando con solventes te dan náusea, mareo o dolor de
+cabeza persistente, sal al aire libre y consulta en el centro de salud.
+</ContextoBolivia>
+
+## Lo que hay que llevarse
+
+**Las tres fallan porque son las tres que tocan el mundo de afuera.** El filtro no cuela: retiene por
+inercia, intercepción y difusión, y **su sello importa más que su medio**. La espuma se lava, se seca
+del todo y se aceita **hasta que no escurra**; el papel no se lava ni se sopla desde afuera.
+
+El **grado térmico** de la bujía es la longitud del camino del calor, no la fuerza de la chispa; la
+separación se corrige **doblando solo el electrodo de masa**, y la rosca se empieza a mano y en frío.
+Lo que más vale es leerla: blanca es pobre y caliente —**el aviso previo al gripado**—, negra seca es
+rica, negra aceitosa es aceite pasando.
+
+El carburador dosifica porque el aire acelerado en el venturi baja de presión y la atmósfera empuja el
+combustible hacia esa depresión, y porque **dos leyes cuadráticas se cancelan**. Tiene **circuitos
+separados** de ralentí y de alta; sus agujeros **nunca se tocan con alambre**; su alta jamás se
+empobrece buscando potencia. Y antes de abrirlo, siempre: **tapón, filtro de tanque, manguera y
+llave**.
+
+## Lo que sigue
+
+Con esto, un motor que gira, comprime, tiene chispa y recibe aire y combustible limpios **tiene que
+andar**. Y sin embargo habrá máquinas que anden perfecto y no sirvan: la bomba que gira y no sube
+agua, la desbrozadora que suena bien y no corta, la moto que acelera y no avanza.
+
+En **06-cuando-no-es-el-motor** se mira hacia afuera del motor, que es donde está la falla cuando el
+motor está sano: el embrague centrífugo y la transmisión; la bomba como carga, con cebado, altura de
+aspiración, cavitación y rodete gastado; el cabezal, el eje flexible y la caja de ángulo de la
+desbrozadora, con el rebote de la cuchilla; la moto en su cadena, embrague y frenos; y el generador.
+Y cierra con el juicio que necesita quien vive de esto: **cuándo reparar sale más caro que
+reemplazar**.

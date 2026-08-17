@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "producto-del-primer-ano",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuál es el producto real del primer año de un huerto familiar?",
+      "opciones": [
+        "Los datos del sitio: dónde se para el agua, qué rincón da sombra en julio, cuánto tarda cada cultivo.",
+        "Las fechas de la primera y la última lluvia, y los días en que entró un surazo.",
+        "Un calendario propio que permite planificar el año dos con datos en vez de recuerdos.",
+        "Los kilos cosechados, que son la medida de si el huerto funcionó o no."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los kilos del primer año no miden casi nada: dependen de decisiones tomadas cuando todavía no se conocía el sitio. La comida es un subproducto bienvenido, pero juzgar el año uno por el rendimiento es exactamente la expectativa mal puesta que hace abandonar en el cuarto mes."
+    },
+    {
+      "id": "arranque-en-la-seca",
+      "tipo": "verdadero_falso",
+      "enunciado": "Empezar un huerto en mayo o junio no sirve: hay que esperar a octubre para hacer cualquier cosa.",
+      "respuesta": false,
+      "explicacion": "Falso. Arrancar en la seca sirve, siempre que se entienda que los primeros cuatro meses son obra y no cosecha: camas, material de cobertura, esquejes de batata en un rincón regado, almácigo y un núcleo chico regable a mano. A cambio, en octubre se llega con todo armado y el año arranca al doble de velocidad que el de quien empezó ese mismo octubre."
+    },
+    {
+      "id": "meses-que-deciden",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hacen los meses que deciden el año en el llano cruceño?",
+      "opciones": [
+        "Septiembre es el único mes con el suelo arcilloso lo bastante seco para moverlo y ya cerca de la lluvia.",
+        "Marzo es la siembra grande del año: aflojan las lluvias, el suelo sigue cargado de agua y las plagas ceden.",
+        "Abril es el mes bisagra: lo que se acolche en abril decide cómo se ve el huerto en julio.",
+        "Enero es el mejor mes para sembrar y mover tierra, porque es cuando más llueve y todo crece."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Enero es justo lo contrario: en el pico de lluvia la arcilla no se puede trabajar sin destruir su estructura, las semillas se lavan, las malezas ganan cualquier carrera y los hongos están en su mejor momento. La regla de enero es que si la tierra se pega a la pala, no se toca."
+    },
+    {
+      "id": "que-sale-el-primer-ano",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Con qué se puede contar razonablemente el primer año?",
+      "opciones": [
+        "Batata, porque se planta de esqueje, cubre el suelo y aguanta descuido.",
+        "Gandul, que tolera la seca y produce vaina justo en los meses en que falta todo.",
+        "Culantro de hoja ancha, que tolera sombra y humedad y rebrota tras cada corte.",
+        "El racimo de plátano, que se cosecha antes de cerrar los doce meses."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El plátano da hojas e hijuelos el primer año, pero su primera cosecha llega bastante después de los doce meses. Se planta igual, y por la misma razón que los frutales injertados: necesitan el tiempo. Lo que no se puede es contar con ellos para comer el año uno."
+    },
+    {
+      "id": "superficie-del-ano-dos",
+      "tipo": "verdadero_falso",
+      "enunciado": "La superficie del año dos se calcula sobre la que se siguió regando en el mes más seco del año uno.",
+      "respuesta": true,
+      "explicacion": "Correcto: esa es la única prueba real de capacidad, porque lo que se regó en enero no demuestra nada —en enero riega el cielo—. Ampliar sobre lo que se planificó y no sobre lo que se sostuvo es exactamente cómo se llega al tercer año con cien metros cuadrados de malezas."
+    },
+    {
+      "id": "curva-del-abandono",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se previene la curva del abandono del mes tres al seis?",
+      "opciones": [
+        "Decidiendo por escrito, antes de sembrar, cuál es el núcleo que se riega pase lo que pase.",
+        "Declarando de antemano qué parte es periferia y se puede soltar sin culpa en la semana mala.",
+        "Poniendo el núcleo cerca de la puerta, porque la distancia al paso diario es un dato agronómico.",
+        "Sembrando más superficie al principio, para que sobre cosecha cuando llegue el bajón."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Sembrar más al principio empeora exactamente el problema: el mes cuatro llega con la superficie máxima, la cosecha todavía baja y el trabajo diario ya no entra en el día. La contramedida no es fuerza de voluntad sino degradación elegante: reducir de forma ordenada lo que se ofrece, en vez de caerse entero."
+    },
+    {
+      "id": "capa-del-fallo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el diagnóstico por capas cuando algo falla, ¿qué es correcto?",
+      "opciones": [
+        "Un fallo de capa 0 —no nació— se corrige esta misma semana resembrando.",
+        "Un fallo de capa 2 —creció y no produjo— ya no se arregla en este ciclo, solo se anota para el siguiente.",
+        "El costo real de un fallo incluye los días que la cama queda vacía después, no solo lo que se perdió.",
+        "Como el síntoma es el mismo —no hay comida—, conviene tratar igual la semilla que no nació y la planta que no dio fruto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Comparten el síntoma y no comparten ni una sola causa: tratarlas igual es depurar a ciegas, como revisar la interfaz cuando la excepción viene de la capa de datos. Ubicar la capa descarta de golpe tres cuartas partes de las causas posibles y además dice cuánto tiempo hay para reaccionar."
+    },
+    {
+      "id": "mi-primer-ano",
+      "tipo": "abierta",
+      "enunciado": "Diseñá tu primer año de huerto familiar: en qué mes arrancás y para qué sirven tus primeros cuatro meses, qué ponés y cuándo, cuál es tu núcleo, y qué hacés exactamente el día que una cama no nace.",
+      "respuestaModelo": "Arranco en septiembre, porque quiero sembrar con las primeras lluvias y septiembre es el único mes en que el suelo arcilloso está lo bastante seco para moverlo y ya lo bastante cerca de la lluvia para que valga la pena. Ese primer mes no cosecho nada: elijo el sitio por dos criterios —cerca del agua y en el paso diario—, marco las camas, junto material de cobertura y monto el almácigo. Si no pudiera arrancar en septiembre y me tocara mayo, no dejaría de empezar: asumiría que mis primeros cuatro meses son obra y no cosecha, armaría camas, haría esquejes de batata en un rincón regado y sostendría un núcleo chico regable a mano, para llegar a octubre con todo armado.\n\nEn octubre entra lo que aguanta y lo que se consigue gratis: esquejes de batata, gandul sembrado directo y el plátano, sabiendo que del plátano voy a tener hojas e hijuelos pero no racimo dentro del año. En noviembre trasplanto culantro y ají dulce desde el almácigo y planto yautía, que tarda de nueve a doce meses y por eso se cosecha justo al cierre del año uno. En diciembre riego aunque «ya haya llovido», porque el veranillo agarra al cultivo con la máxima demanda de agua y sin reservas, y acolcho. En enero no toco la tierra mojada —si se pega a la pala, no se toca—, abro desagües y cosecho la hoja rápido antes de que se pudra. En febrero reviso cada semana todo lo que junte agua, por el dengue. Marzo es mi siembra grande del año, que es la ventana que casi nadie aprovecha. Abril es mi mes bisagra: acolcho todo el huerto y reviso el cortaviento del sur, porque lo que acolche en abril decide cómo se ve el huerto en julio, y de abril en adelante entran los surazos. De mayo a agosto reduzco al núcleo, riego dirigido, cosecho gandul, raíces y yautía, y en agosto cierro el cuaderno y planifico el año dos.\n\nMi núcleo lo decido por escrito antes de sembrar: culantro, ají dulce y una cama de batata, junto a la puerta. Lo elijo por lo que más comida da por litro de agua y por minuto de atención, y por cercanía, porque el cantero que se ve al salir se riega y el del fondo del lote no. Todo lo demás —el zapallo, las pruebas de hoja tierna, las filas de ensayo— queda declarado como periferia soltable. Así, cuando llegue la semana mala del mes cuatro, suelto la periferia sin culpa y sin discutir conmigo mismo, porque ya estaba decidido. Eso es degradación elegante: reducir de forma ordenada en vez de caerme entero, que es como mueren casi todos los huertos familiares, de ausencia y no de sed.\n\nEl día que una cama no nace, primero ubico la capa. Si el surco quedó vacío es capa 0: semilla vieja, sembrada muy honda, costra dura, hormiga, o se secó o se lavó. Hago una prueba de germinación con lo que me quedó, siembro más superficial, cubro con paja fina y riego suave. Y sobre todo resiembro dentro de la semana, aunque sea con algo menos ambicioso, porque el costo real de un fallo es lo que se perdió más los días que la cama queda vacía después: un cantero vacío en lluvia se llena de malezas, se compacta y pierde su turno en la sucesión. Si en cambio nació y murió chico es capa 1 y miro drenaje, endurecimiento antes del trasplante y abono demasiado cerca de la raíz. Si creció fuerte y no dio nada es capa 2, y eso ya no lo arreglo en este ciclo: lo anoto para cambiar fecha, especie o abonado el año que viene.\n\nAntes de dar nada por fallo, descarto los falsos fallos: la yautía que tarda semanas en asomar, el gandul que casi no crece los primeros dos meses mientras hace raíz, la batata que tira guía antes de engrosar abajo, la hoja quemada por un surazo que rebrota en diez días. Y si algo me falla tres veces en el mismo lugar, la misma época y la misma especie, no insisto con más esfuerzo: cambio una sola de las tres variables y dejo un testigo, una fila igual sin el cambio, para saber cuál de ellas lo hizo.\n\nTodo esto lo anoto en una hoja por mes con cuatro columnas —fecha, qué hice y dónde, qué pasó, qué haría distinto—, más la fecha de la primera y la última lluvia y los días de surazo. Y el año dos lo amplío solo hasta la superficie que seguí regando en el mes más seco del año uno, no hasta la que había planificado.",
+      "criterios": [
+        "Elige un mes de arranque y explica para qué sirven los primeros cuatro meses en ese caso.",
+        "Reconoce que arrancar en la seca es obra y no cosecha, y qué se gana con ello.",
+        "Sitúa marzo como la siembra grande y abril como el mes bisagra del acolchado.",
+        "Empieza por especies que perdonan y no cuenta con racimo de plátano ni con frutales.",
+        "Trata diciembre con riego pese a la lluvia, por el veranillo, y enero sin tocar la arcilla mojada.",
+        "Incluye la revisión semanal de agua parada por el dengue como parte del calendario.",
+        "Define un núcleo por escrito, por comida por litro y por minuto, y por cercanía a la puerta.",
+        "Declara una periferia soltable y nombra la degradación elegante frente a la curva del abandono.",
+        "Diagnostica el fallo ubicando la capa y actúa distinto según la capa.",
+        "Resiembra dentro de la semana y justifica el costo de la cama vacía.",
+        "Descarta falsos fallos y aplica la regla de las tres veces dejando un testigo.",
+        "Cierra con el cuaderno de cuatro columnas y con la regla de ampliación del año dos."
+      ],
+      "explicacion": "La pregunta obliga a juntar las dos mitades de la lección: el calendario, que es previsión, y el procedimiento de fallo, que es reacción. Un plan sin procedimiento se rompe en el primer mes malo, y un procedimiento sin plan llega tarde a las ventanas que deciden el año. Lo que se evalúa no es la elección de cultivos sino que las decisiones estén ancladas al calendario real del llano y que exista una respuesta escrita de antemano para la semana en que falte tiempo."
+    }
+  ]
+}

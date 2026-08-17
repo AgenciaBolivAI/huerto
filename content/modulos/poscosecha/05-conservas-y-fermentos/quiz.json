@@ -1,0 +1,106 @@
+{
+  "preguntas": [
+    {
+      "id": "barreras-combinadas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué dice el marco de barreras combinadas sobre una conserva húmeda?",
+      "opciones": [
+        "Se ponen varias defensas imperfectas que el microorganismo tendría que atravesar todas a la vez.",
+        "Quitar el oxígeno es una barrera contra casi todo y a la vez la puerta de entrada de Clostridium.",
+        "Cuando quitas una barrera —por ejemplo azúcar— tienes que reforzar otra.",
+        "Basta con que una de las barreras sea suficientemente fuerte; las demás son decorativas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es exactamente la creencia que el marco desmonta. Ninguna barrera casera es perfecta: la acidez no mata esporas, el azúcar no frena a los mohos, hervir no esteriliza y el sellado no impide que crezca un anaerobio. Lo que protege es que fallen todas a la vez sea improbable. Por eso una mermelada baja en azúcar no es la misma con menos calorías: es una mermelada a la que le arrancaste una capa de defensa y no pusiste otra en su lugar."
+    },
+    {
+      "id": "por-que-46",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la línea está exactamente en pH 4,6 y no en otro sitio?",
+      "opciones": [
+        "Porque por debajo de 4,6 la espora de Clostridium botulinum no germina y nunca produce toxina.",
+        "Porque la acidez no mata la espora: la deja encerrada, y eso basta si el pH se mantiene.",
+        "Porque por encima de 4,6 hace falta calor húmedo por encima de 100 °C, y eso exige presión.",
+        "Porque a pH 4,6 el calor de un baño de agua hirviendo ya destruye todas las esporas presentes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta confunde las dos cosas que la lección separa con más cuidado. Hervir a 100 °C no destruye esporas por mucho tiempo que se sostenga: mata células vegetativas. Lo que hace segura una conserva ácida no es que el hervido haya esterilizado, sino que las esporas supervivientes quedan bloqueadas por el pH. Si el pH sube —por dilución, por un vinagre más flojo o por un equilibrio mal medido—, esas esporas siguen ahí y ya nada las detiene."
+    },
+    {
+      "id": "el-catalogo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Como la yautía se hierve mucho rato antes de envasarla, se puede guardar sin problema en frascos sellados con un baño de agua hirviendo.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error más peligroso del módulo. La yautía es una raíz almidonosa poco ácida, de pH del orden de 5 a 6,5, que además sale del suelo donde vive Clostridium botulinum. Hervirla mata a toda su competencia microbiana pero deja las esporas vivas; sellarla crea el ambiente anaerobio que necesitan. El resultado no es una conserva: es un cultivo sin testigos que puede producir toxina sin cambiar olor, sabor ni aspecto. La yautía va curada, seca o fresca, nunca a frasco sin olla a presión y receta validada."
+    },
+    {
+      "id": "azucar-y-pectina",
+      "tipo": "opcion_multiple",
+      "enunciado": "En una mermelada, ¿qué hace el azúcar y qué hace la pectina?",
+      "opciones": [
+        "El azúcar retiene agua por puentes de hidrógeno y baja la actividad de agua a 0,80–0,85.",
+        "A esa actividad de agua no crece ninguna bacteria, pero sí mohos y levaduras osmófilas.",
+        "La pectina gelifica solo si hay pectina, acidez y azúcar a la vez: es una condición triple.",
+        "Si no cuaja, la solución correcta es hervirla más tiempo hasta que espese."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es el reflejo equivocado. Que no cuaje casi nunca es un problema de tiempo: es que falta pectina —fruta pobre o demasiado madura— o falta acidez, y sin acidez las cadenas de pectina siguen cargadas negativamente y se repelen entre sí. Un chorro de jugo de limón resuelve lo que media hora más de fuego no resuelve; y hervir de más degrada la propia pectina, así que la operación empeora al repetirse."
+    },
+    {
+      "id": "ph-de-equilibrio",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el líquido de un frasco de encurtido marca pH 3,2 justo después de envasarlo, el frasco es seguro.",
+      "respuesta": false,
+      "explicacion": "Falso: has medido antes de que el sistema convergiera. El vegetal es un 90 % de agua a pH cercano a 5, y esa agua va a salir hacia el líquido mientras el ácido entra hacia dentro. Lo que gobierna la seguridad es el pH de equilibrio de todo el contenido, días después, y el interior de un trozo grueso puede seguir en pH 5 una semana entera — sin oxígeno, húmedo y sin competencia, que es el nicho exacto de Clostridium. Se corta pequeño, no se diluye el vinagre más de una parte por una, y se vuelve a medir a la semana sobre el producto triturado."
+    },
+    {
+      "id": "sucesion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo funciona la sucesión microbiana de un fermento en salmuera?",
+      "opciones": [
+        "La sal no conserva por sí misma: selecciona, porque las lácticas la toleran mejor que sus competidores.",
+        "Leuconostoc arranca primero y su CO₂ desplaza el aire, volviendo el medio anaerobio sin intervención.",
+        "Después toman el relevo lácticas más tolerantes al ácido y el pH baja hasta 3,4–3,8.",
+        "La fase peligrosa es el final, cuando la acidez ya es alta y el sustrato se ha agotado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte el riesgo. Al final el fermento está protegido por una acidez que él mismo produjo: es su estado más seguro. La ventana peligrosa son las primeras horas, con pH todavía cerca de 6 y oxígeno presente, cuando cualquier otra cosa puede ganar la carrera. Por eso toda la técnica tradicional —salar bien, sumergir todo bajo el líquido, no usar producto dañado— apunta a acortar esa transición, igual que en un despliegue la fase delicada es el cambio, no el régimen estacionario."
+    },
+    {
+      "id": "descarte",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué obliga a descartar un frasco, y qué límite tiene esa inspección?",
+      "opciones": [
+        "Tapa abombada, burbujas en reposo, líquido turbio o baboso, moho visible u olor raro.",
+        "Se descarta sin probar, sin dárselo a los animales y sin echarlo al compost.",
+        "Ninguna de esas señales detecta el botulismo: la toxina puede estar en un frasco impecable.",
+        "Si el frasco tiene la tapa hundida y hace vacío, el contenido es seguro."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta confunde integridad del envase con inocuidad del contenido. La tapa hundida es una suma de verificación excelente —binaria, física, comprobable meses después— pero solo demuestra que el sello aguantó y no entró aire. No dice nada sobre lo que pueda haber crecido dentro precisamente porque no hay aire. Es leer que la compilación pasó y deducir que el programa hace lo correcto. Por eso la prevención se hace en el proceso, con pH y presión, y no mirando el frasco terminado."
+    },
+    {
+      "id": "plan-de-conservas-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Rizoma del Sur quiere abrir un taller comunitario de conservas con el excedente de los 3.666 m². Escribe el plan: qué se puede envasar y qué no, con qué barreras, qué se mide y cuándo, qué equipo se compra en común, cómo cambia el proceso entre la época de lluvias y la seca, y qué reglas de seguridad se escriben en la pared. Justifica cada decisión con el mecanismo, no con la costumbre.",
+      "respuestaModelo": "El plan empieza con un no, y ese no es la parte más valiosa. Ninguno de los productos del catálogo está por debajo de pH 4,6: la yautía y la batata rondan 5 a 6,5, el gandul supera 6, el culantro y las hojas están entre 5,5 y 6,5, el ají dulce cae a caballo de la línea entre 4,6 y 5,3 y el plátano maduro queda justo por encima, entre 4,5 y 5,2, aunque en boca sepa ácido porque el azúcar enmascara el pH. Eso significa que de los 3.666 m² no sale ni un solo producto envasable tal cual con un baño de agua hirviendo. La razón es Clostridium botulinum: vive en el suelo de los lotes, forma endosporas que sobreviven a hervir durante horas, es anaerobio estricto y produce una neurotoxina. Un frasco de vegetal poco ácido hervido y sellado no es una conserva sino un cultivo, porque el hervido eliminó a toda la competencia que habría avisado con mal olor y burbujas, y dejó vivas justo las esporas. Sin olla a presión de envasar con manómetro —que llega a los 121 °C que sí destruyen esporas— y sin una receta validada, la respuesta es fresco, seco, congelado o acidificado hasta cruzar la línea.\n\nCon esa regla, quedan cuatro productos viables y cada uno se apoya en una barrera distinta. La mermelada de plátano maduro va acidificada siempre con jugo de cítrico, porque el plátano está por encima de 4,6, y además necesita pectina prestada de otra fruta —cítrico, guayaba— porque el plátano aporta poca; el azúcar la lleva a unos 65 grados Brix y con ello a una actividad de agua de 0,80 a 0,85, fuera del alcance de cualquier bacteria aunque no de los mohos. El dulce de batata usa la misma barrera osmótica. El ají dulce fermentado en salmuera al 2–5 % genera su propia acidez y termina en pH 3,4 a 3,8 gracias a la sucesión que empieza con Leuconostoc y su CO₂ y sigue con Lactiplantibacillus plantarum. Las vainas tiernas de gandul se encurten con vinagre de acidez declarada, sin diluir más de una parte de agua por una de vinagre. El culantro no va a frasco: va seco o salado en alta proporción.\n\nLo que se mide y cuándo es el corazón del plan. El pH se mide en el producto terminado, frío y equilibrado, no en el líquido recién vertido, y en los encurtidos se repite a la semana sobre el producto triturado, porque el agua del vegetal diluye el ácido y el interior de un trozo grueso es anaerobio y poco ácido durante días. Se apunta claramente por debajo de 4,6 —del orden de 4,0— porque una cocina no es un laboratorio y un error de dos décimas cambia el lado de la línea. La compra comunitaria que más rinde es un medidor de pH con sus patrones de 4,0 y 7,0, con el electrodo guardado húmedo y un cuaderno de calibración, exactamente la disciplina de calibración del módulo 38: es la herramienta que ninguna casa compra sola y de la que depende algo serio.\n\nLa estación cambia el proceso. Entre octubre y abril, con noches de 25 °C, una salmuera corre a toda velocidad, así que conviene el extremo alto del rango de sal y revisar a diario; en la seca y sobre todo durante un surazo la misma salmuera casi se detiene. El depósito enterrado de la lección 3 sirve sin modificación como bodega de fermentación. El agua sale del sistema del módulo 25 y se trata como agua de consumo: si lleva cloro se hierve y se enfría, porque el cloro residual frena precisamente a las bacterias que se quieren. Y todo recipiente va tapado, porque agua descubierta durante días en Santa Cruz es criadero de Aedes. La energía es un límite honesto: una olla a presión de envasar pide calor sostenido, o sea garrafa de gas, no el sistema solar del módulo 26.\n\nEn la pared van tres reglas. Aquí no se cierra ningún frasco sin pH medido y anotado. Un frasco sospechoso se descarta sin probarlo, sin dárselo a los animales y sin echarlo al compost. Y nunca se envasa un producto poco ácido sin equipo y receta validados. A eso se suma que la lista de señales de deterioro —tapa abombada, burbujas, turbidez, moho, olor— no detecta el botulismo, porque la toxina puede estar en un frasco impecable: por eso la prevención vive en el proceso. Cada lote lleva fecha, producto, lote de campo de origen, pH con la fecha de calibración y responsable, y se aparta un frasco testigo sin abrir. Ese cuaderno alimenta la lección de vida útil y el cálculo de merma de la lección 7. Finalmente, el encuadre: no se está montando una fábrica, se está enseñando a guardar sin envenenar a nadie, así que primero se enseña lo que se hace sin comprar nada y lo que exige equipo compartido se hace juntos o no se hace. Y si se piensa vender, se pregunta antes al SENASAG y a la autoridad municipal, no después.",
+      "criterios": [
+        "Afirma explícitamente que ningún producto del catálogo está por debajo de pH 4,6 y da valores aproximados.",
+        "Justifica la línea de 4,6 con la biología de Clostridium botulinum: anaerobio, esporulado y productor de toxina.",
+        "Explica que hervir no destruye esporas y que además elimina a la competencia que habría avisado.",
+        "Nombra los 121 °C bajo presión como el único proceso que destruye esporas, y descarta envasar sin ese equipo.",
+        "Propone productos concretos del catálogo y dice qué barrera sostiene a cada uno.",
+        "Exige acidificar el plátano y menciona que aporta poca pectina.",
+        "Relaciona los 65 grados Brix con una actividad de agua de 0,80–0,85 y con qué queda dentro y fuera.",
+        "Da un rango de sal de 2–5 % para la fermentación y explica que la sal selecciona en vez de conservar.",
+        "Establece que el pH se mide en el producto terminado y equilibrado, y se repite a la semana en encurtidos.",
+        "Fija un margen de trabajo por debajo de 4,6 (del orden de 4,0) y lo justifica por la imprecisión de la medida.",
+        "Adapta el fermento a la estación cruceña —lluvias, seca y surazo— y reutiliza el depósito enterrado.",
+        "Incluye reglas de descarte sin probar y reconoce que esas señales no detectan botulismo.",
+        "Prevé registro por lote, frasco testigo y enlace con las lecciones 6 y 7.",
+        "Remite a SENASAG y a la autoridad competente para la venta, sin inventar requisitos, plazos ni costos."
+      ],
+      "explicacion": "La respuesta se evalúa sobre todo por lo que descarta. Un plan que empieza listando recetas y no dice que ningún producto del catálogo está por debajo de 4,6 ha fallado en lo esencial, por muy detallado que sea el resto. Los dos errores que más se repiten son tratar el hervido como esterilización y medir el pH el día cero en el líquido: los dos producen frascos que parecen correctos y no lo son. Y el criterio comunitario cierra el ejercicio: en un proyecto donde el producto llega a vecinos que no estuvieron en la cocina, la seguridad tiene que ser una condición de entrada escrita en la pared, no el buen juicio de quien esté ese día."
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# Huerto Class
+# Aula Rizoma del Sur
 
 Curso interactivo **De 0 a Experto en Huertos y Viveros**, escrito para
 **Rizoma del Sur** — 2.474 m² de vivero y huerto biológico en Estrellas del Sur,

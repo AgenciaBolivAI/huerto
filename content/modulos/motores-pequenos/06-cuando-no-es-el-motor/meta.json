@@ -1,0 +1,88 @@
+{
+  "titulo": "Cuando el problema no es el motor: la carga que arrastra",
+  "subtitulo": "Un motor entrega par en la punta de un eje y no tiene manera de saber qué hay del otro lado, así que cuando alguien dice «este motor no tiene fuerza» casi siempre está describiendo el conjunto y no el motor. Esta lección mira hacia afuera del cilindro: el embrague centrífugo y la transmisión, la bomba con su cebado, su altura de aspiración, su cavitación y su sello mecánico, la desbrozadora con su cabezal y el rebote de la cuchilla, la moto en su cadena y sus frenos, y el generador, cuya carga es eléctrica y se porta igual. Cierra con el juicio que necesita quien vive del oficio: qué se rectifica, cuándo reparar sale más caro que reemplazar y qué decirle al dueño de la máquina.",
+  "duracionMin": 36,
+  "objetivos": [
+    "Distinguir el par motor del par resistente y explicar por qué la frase «no tiene fuerza» describe al conjunto y no al motor.",
+    "Aplicar la prueba de desacople —girar la carga a mano con el cable de bujía fuera y después arrancar el motor suelto— para decidir en cuál de las dos mitades está la falla.",
+    "Explicar cómo engancha un embrague centrífugo, reconocer el patinaje por su realimentación térmica y comprobar antes de cada trabajo que la herramienta queda quieta en ralentí.",
+    "Diagnosticar una bomba por su mecanismo: cebado, fuga de aire en la succión que no gotea, el techo de aspiración que impone la atmósfera, cavitación, sello mecánico y rodete gastado.",
+    "Elegir hilo o cuchilla en una desbrozadora con criterio, explicando por qué el hilo corto y grueso corta mejor y qué mecanismo produce el rebote de la cuchilla.",
+    "Explicar por qué se alarga una cadena de moto, por qué un aceite de automóvil hace patinar el embrague en baño de aceite y por qué el líquido de frenos se cambia por tiempo.",
+    "Tratar la carga eléctrica de un generador como par resistente, prever el pico de arranque al encender los aparatos y descartar la conexión por enchufe a la instalación de la casa.",
+    "Decidir con números si una máquina se repara, se rectifica o se reemplaza, y comunicar el diagnóstico y el presupuesto por escrito al dueño."
+  ],
+  "prerrequisitos": [
+    "motores-pequenos/04-no-arranca",
+    "motores-pequenos/05-filtro-bujia-y-carburador",
+    "agua-en-la-casa/03-tanque-cisterna-y-bomba"
+  ],
+  "videos": [],
+  "referencias": [
+    {
+      "titulo": "Bomba centrífuga",
+      "fuente": "Wikipedia en español",
+      "url": "https://es.wikipedia.org/wiki/Bomba_centr%C3%ADfuga",
+      "nota": "Desarrolla el funcionamiento del rodete y la conversión de velocidad en presión dentro de la voluta, que es el mecanismo del que salen todas las averías del apartado de la bomba. Sirve además para ver por qué la altura se expresa en metros de columna de agua y no en kilos de presión."
+    },
+    {
+      "titulo": "Cavitación",
+      "fuente": "Wikipedia en español",
+      "url": "https://es.wikipedia.org/wiki/Cavitaci%C3%B3n",
+      "nota": "Explica la formación y el colapso de las burbujas de vapor y el daño que producen al implosionar contra el metal. Útil para entender que el ruido a piedritas no es un capricho de la bomba sino una señal de que la succión está mal planteada, y que la causa nunca está en el motor."
+    },
+    {
+      "titulo": "Embrague centrífugo",
+      "fuente": "Wikipedia en español",
+      "url": "https://es.wikipedia.org/wiki/Embrague_centr%C3%ADfugo",
+      "nota": "Describe las zapatas, los resortes y la campana, y por qué esta solución se impuso en motosierras, desbrozadoras y máquinas pequeñas. Es el respaldo del apartado del embrague, incluida la razón por la que la herramienta debe quedar quieta con el motor en ralentí."
+    },
+    {
+      "titulo": "Acuaplaneo",
+      "fuente": "Wikipedia en español",
+      "url": "https://es.wikipedia.org/wiki/Acuaplaneo",
+      "nota": "Detalla la cuña de agua que levanta el neumático del piso y los factores que la favorecen: profundidad del dibujo, presión de inflado, velocidad y lámina de agua. Se cita para el mecanismo; las cifras de umbral corresponden a ensayos de automóvil y no se trasladan tal cual a una moto en camino de tierra."
+    }
+  ],
+  "terminos": [
+    "par-motor",
+    "par-resistente",
+    "punto-de-operacion",
+    "prueba-de-desacople",
+    "embrague-centrifugo",
+    "velocidad-de-enganche",
+    "patinaje-del-embrague",
+    "chaveta",
+    "eje-flexible",
+    "caja-de-angulo",
+    "bomba-centrifuga",
+    "impulsor",
+    "cebado-de-bomba",
+    "valvula-de-pie",
+    "altura-de-succion",
+    "bomba-sumergible",
+    "cavitacion",
+    "sello-mecanico",
+    "desgaste-abrasivo",
+    "cabezal-de-hilo",
+    "rebote-de-la-cuchilla",
+    "sector-de-corte-seguro",
+    "embrague-en-bano-de-aceite",
+    "modificador-de-friccion",
+    "higroscopico",
+    "perdida-de-frenada-por-calor",
+    "hidroplaneo",
+    "pico-de-arranque",
+    "potencia-nominal",
+    "retroalimentacion-a-la-red",
+    "rectificado",
+    "umbral-de-reparacion",
+    "costo-de-parada",
+    "valor-de-reemplazo",
+    "costo-hundido",
+    "maquina-donante",
+    "presupuesto-por-escrito",
+    "punto-unico-de-falla"
+  ],
+  "practica": true
+}

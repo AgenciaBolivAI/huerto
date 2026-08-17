@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "p1",
+      "tipo": "opcion_multiple",
+      "enunciado": "Aplicaste biol a la cama de culantro que estaba amarilla y a las tres semanas se ve claramente mejor. ¿Qué explicaciones alternativas hay que descartar antes de atribuírselo al biol?",
+      "opciones": [
+        "La regresión a la media: elegiste justamente la cama en su peor momento, y una cama en su peor momento tiende a mejorar sola cuando llueve, baja el calor o la plaga completa su ciclo",
+        "La atención extra: al bloque tratado vas más seguido, lo desmalezas mejor y notas antes la falta de agua, así que el preparado viene acompañado de un tratamiento invisible",
+        "El vehículo de aplicación: si el biol fue diluido en veinte litros de agua y la cama de al lado no recibió nada, el agua sola puede explicar toda la diferencia",
+        "La conservación de masa: como el nitrógeno del bidón no puede superar al que entró con las materias primas, cualquier mejora observada tiene que venir del biol"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son mecanismos reales que producen la sensación de éxito sin que el preparado haya hecho nada, y por eso el diseño del ensayo existe para bloquearlos. La cuarta está mal razonada aunque parta de un principio cierto: el balance de masa de la lección 01 pone un techo a lo que un líquido puede aportar como nutriente, y de ahí no se sigue en absoluto que la mejora observada venga del biol; si acaso se sigue lo contrario, que como fertilizante no puede ser la causa. Un principio físico correcto usado como si fuera una prueba de causalidad es exactamente el tipo de argumento que un ensayo con testigo viene a sustituir."
+    },
+    {
+      "id": "p2",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un ensayo en el que una cama entera recibe bocashi y la cama vecina queda de testigo, midiendo doscientas plantas en cada una, tiene doscientas repeticiones por tratamiento.",
+      "respuesta": false,
+      "explicacion": "Tiene una repetición por tratamiento, no doscientas. El bocashi se aplicó una sola vez de forma independiente —a una cama entera—, así que la unidad experimental es la cama y no la planta: las doscientas plantas comparten suelo, riego, sombra y fecha, y sus resultados no son observaciones independientes. Contarlas como repeticiones es pseudorreplicación, y su efecto es cruel porque infla la confianza en la conclusión sin aportar ni una pizca de información nueva. Medir muchas plantas sí sirve para conocer mejor el promedio de esa cama; lo que no hace es decir nada sobre si la diferencia entre camas viene del tratamiento o del terreno."
+    },
+    {
+      "id": "p3",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a comparar biol contra testigo en plantines de vivero. ¿Qué tiene que recibir el testigo?",
+      "opciones": [
+        "El mismo volumen de agua que lleva la dilución del biol, aplicado el mismo día y a la misma hora",
+        "Exactamente las mismas labores: mismo sustrato, misma fecha de siembra, mismo riego posterior, misma persona haciendo el trabajo",
+        "El mismo paso de la mochila y el mismo tránsito entre las bandejas, porque la caminata, la pisada y la atención son tratamiento si solo ocurren de un lado",
+        "Nada en absoluto, ni siquiera agua, para que la diferencia entre las dos ramas sea lo más grande y visible posible"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El testigo tiene que recibir idénticamente todo lo demás y diferenciarse en una sola cosa: el ingrediente que se está probando. La cuarta opción es la trampa más común de los preparados líquidos y suena razonable —una diferencia grande parece un resultado claro—, pero al quitarle el agua al testigo dejas de comparar biol contra no-biol y pasas a comparar riego contra sequía. La diferencia que salga será grande, real y completamente inútil para decidir si vale la pena fermentar un bidón, porque responde a una pregunta que no hiciste. Cuanto más se parezcan las dos ramas en todo lo que no es el ingrediente, más informativa es la diferencia que quede."
+    },
+    {
+      "id": "p4",
+      "tipo": "verdadero_falso",
+      "enunciado": "Bloquear el ensayo elimina la variabilidad del terreno, y por eso con bloques ya no hace falta sortear qué unidad recibe el tratamiento.",
+      "respuesta": false,
+      "explicacion": "Las dos mitades de la afirmación son falsas y por razones distintas. El bloqueo no elimina la heterogeneidad del terreno: la saca de la comparación, agrupando unidades parecidas y comparando dentro de cada bloque, de modo que el bloque de la parte alta y arenosa se compara consigo mismo y no con el del bajío. Y no sustituye al sorteo, porque hacen cosas complementarias: el bloqueo te protege de las diferencias que conoces y puedes listar —distancia a la llave, sombra, drenaje—, mientras que la aleatorización te protege de las que no conoces, convirtiéndolas en ruido repartido en lugar de dejarlas alineadas con el tratamiento. Elegir a mano qué unidad va tratada dentro de un bloque, o alternarlas con un patrón fijo que puede coincidir con la fila de riego, reabre la puerta a la confusión que el bloqueo acababa de cerrar."
+    },
+    {
+      "id": "p5",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En qué casos NO vale la pena montar un ensayo, según el criterio de asignación de esfuerzo de la lección?",
+      "opciones": [
+        "Cuando la aritmética ya resolvió la pregunta: un preparado que promete aportar nutrientes en cantidad choca con la conservación de masa, y eso se refuta con una cuenta, no con una temporada de trabajo",
+        "Cuando el efecto mínimo relevante que necesitas detectar es menor que lo que tu parcela puede distinguir, porque el resultado saldrá ilegible hagas lo que hagas",
+        "Cuando el mecanismo es obvio y el efecto grande, como aplicar compost en volumen sobre un suelo pobre: ahí conviene monitorear el suelo y gastar el esfuerzo en producir más metros cúbicos",
+        "Cuando el preparado ya está descrito en manuales y talleres de la región, porque entonces su efecto ya ha sido comprobado por otros y repetirlo es duplicar trabajo"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El criterio es ensayar donde la evidencia es débil y el costo alto, y no gastar temporadas demostrando lo obvio ni persiguiendo efectos por debajo de la resolución de tu parcela. La cuarta opción invierte justamente el argumento: que un preparado aparezca en muchos manuales y talleres dice cuánto se repite, no cuánta evidencia lo sostiene, y buena parte de lo que más circula —los inóculos capturados, el biol como bioestimulante— es precisamente lo que tiene evidencia más débil e inconsistente. Además el resultado ajeno puede no trasladarse: un efecto medido en otro suelo, otro clima y otro manejo no es un resultado para tu parcela. La forma honesta de aprovechar lo que ya existe no es dar el ensayo por hecho, sino consultarlo con instituciones locales antes de montarlo."
+    },
+    {
+      "id": "p6",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué tiene que quedar escrito para que el ensayo siga siendo comparable dentro de cinco años y sumable con el de un vecino?",
+      "opciones": [
+        "El croquis con la posición real de cada unidad y su código, que es lo único que permite descubrir años después que el bloque tratado era también el más cercano a la llave de agua",
+        "Los datos crudos, una fila por unidad y por fecha, porque una tabla de filas se puede volver a analizar y un promedio ya no",
+        "Las incidencias, incluidas las unidades perdidas y los ceros, porque un registro donde solo se anota lo que salió bien es peligrosamente convincente y engaña sin contener una sola falsedad",
+        "Solo el promedio final de cada tratamiento y la conclusión, que es lo que de verdad se usa para decidir y evita llenar la hoja de detalles que nadie va a mirar"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Croquis, datos crudos e incidencias son las tres partes que la gente salta y las tres que hacen reanalizable un ensayo, además de la métrica prespecificada y el protocolo de la tanda usada. La cuarta opción describe exactamente el registro que se vuelve inútil: un promedio es un resumen irreversible, no se puede volver a agrupar por bloque, no se puede recalcular excluyendo la parcela que se anegó y no se puede sumar correctamente con el promedio de otro vecino que tenía otro número de unidades. Y guardar solo lo que salió bien es el sesgo de supervivencia entrando por la puerta de servicio: el fracaso registrado es justamente lo que hace creíble al éxito registrado ante alguien que desconfía por experiencia."
+    },
+    {
+      "id": "p7",
+      "tipo": "abierta",
+      "enunciado": "Rizoma del Sur quiere saber si el biol que fabrica sirve de algo en la producción de plantines de culantro del vivero. Diseña el ensayo completo aplicado al sitio real —3.666 m² en doce lotes contiguos, llanura aluvial, llave de agua en un extremo, surazos entre mayo y septiembre, proyecto comunitario y gratuito—: qué se decide antes de empezar, cómo se monta en el terreno, cómo se mide, qué se hace si el resultado es nulo y qué se registra y se comparte. Justifica cada decisión con el mecanismo que la hace necesaria.",
+      "respuestaModelo": "Antes de tocar nada se escribe la pregunta y la métrica. La pregunta no es «¿el biol funciona?» sino «¿me conviene seguir fabricándolo para el vivero?», lo que fija el testigo: no es nada, es la práctica actual —el mismo sustrato y el mismo riego sin biol— más el vehículo de aplicación, es decir, el mismo volumen de agua sola. Sin eso el ensayo compararía riego contra sequía. La métrica se prespecifica en una sola línea, contable y con definición operativa: plantines aptos de trasplante a los treinta días sobre plantines sembrados, definiendo «apto» con una frase que otro pueda aplicar sin llamar a nadie (por ejemplo, altura mínima y número de hojas verdaderas desplegadas). Una sola métrica principal, escrita antes, porque medir siete cosas y contar la que salió a favor no es hacer trampa pero produce el mismo resultado. Y se escribe también el efecto mínimo relevante: si con un 10 % más de plantines aptos igual no vale los jornales de fermentar, filtrar y aplicar, entonces el ensayo solo tiene que distinguir el 25-30 %, que sí es alcanzable.\n\nAntes del primer tratamiento conviene haber hecho el ensayo en blanco: seis bandejas o parcelas iguales, ninguna tratada, medidas con esa misma métrica. La diferencia entre unidades gemelas es el ruido propio de Rizoma, y sin ese número no se puede saber si el ensayo que se va a montar puede detectar algo.\n\nEl montaje aprovecha la ventaja del sitio. No se trata un lote entero contra otro entero: eso da una repetición por tratamiento, es decir, una anécdota con planilla, porque la unidad experimental sería el lote y no el plantín. Se arman bloques pequeños e internamente parecidos —misma mesa de vivero, misma sombra, misma distancia a la llave, misma fecha de siembra, mismo lote de semilla— y dentro de cada bloque va una unidad tratada y una testigo. Cuatro a seis bloques, distribuidos de modo que atraviesen los gradientes conocidos del predio: distancia a la llave de agua, sombra de los árboles y zona que se encharca frente a la que drena. Dentro de cada bloque, cuál unidad recibe biol se sortea con moneda o papelitos, nunca se elige ni se alterna con patrón fijo, porque un patrón fijo puede coincidir con la fila de riego. Se sortea también el orden de aplicación y el de medición. Un solo factor cambia: si a la vez se prueba otro sustrato, el resultado no dirá cuál lo hizo.\n\nLa medición se hace a ciegas y esto se institucionaliza desde la primera vez. Cada unidad lleva un código neutro, el papel con la correspondencia queda guardado, y mide alguien que no armó ni aplicó el biol —un voluntario o un participante del taller—. Se cuenta con instrumento, no con criterio: plantines contados y pesados, no «se ven más sanos». Para lo que exija juicio, foto con encuadre fijo, guardada con el código, barajada y evaluada al final. Antes se comprueba la repetibilidad: si dos personas miden distinto la misma bandeja, esa diferencia marca el piso de lo afirmable.\n\nSe decide de antemano qué se hace con las interferencias. Si entra un surazo y golpea parejo a todos los bloques, el ensayo sigue valiendo pero ahora responde «en una temporada con surazo en junio», y así se escribe. Si golpea desigual —un cerco protegió unos bloques y no otros— el ensayo se declara perdido y se repite, en vez de descartar las unidades que «tuvieron un problema», que es la forma más eficaz de fabricar el resultado esperado. La fecha y duración de cada surazo se anotan en la misma planilla.\n\nSi el resultado es nulo, no se concluye que el biol no sirve hasta pasar tres filtros: si el ensayo podía detectar el efecto plausible; si el biol estaba vivo y bien hecho, porque un preparado guardado meses al sol es materia orgánica muerta y entonces se midió el almacenamiento; y si había otro factor limitante tapando el efecto, porque con un sustrato pobre o compactado ningún bioestimulante se nota. Superados los tres, la conclusión se escribe con cota: «con seis bloques habríamos visto un 25 %; observamos un 3 %; si hay efecto está por debajo del 25 %, y por debajo del 25 % no paga el trabajo». Los jornales liberados van a la pila de compost, que es lo que sí mueve la aguja, y el resultado negativo se publica, porque le ahorra a cada vecino una temporada; con el límite de decirlo como local: no funcionó en este sustrato, con este manejo, esta temporada.\n\nSe registra en una hoja: pregunta, testigo, métrica y efecto mínimo escritos antes, protocolo de la tanda de biol usada con fecha y materias primas, croquis con la posición y el código de cada unidad, fechas de todas las operaciones a los dos lados, datos crudos fila por unidad y fecha, incidencias y unidades perdidas, y la decisión tomada. Texto plano, unidades definidas una vez, copia fuera del predio. Y como Rizoma es un proyecto comunitario, esa hoja se redacta de una página y en lenguaje llano para que veinte patios del barrio corran la misma comparación: veinte repeticiones en suelos y manos distintas detectan lo que 3.666 m² no pueden, y el resultado se devuelve a todos, porque el vecino que entrega datos y no recibe nada de vuelta no los entrega dos veces.",
+      "criterios": [
+        "Define la pregunta como «¿conviene seguir fabricándolo?» y de ahí deriva el testigo, en lugar de comparar contra nada por defecto",
+        "Da al testigo el vehículo de aplicación —el mismo volumen de agua, el mismo día— y explica que sin eso se mide el riego",
+        "Prespecifica una métrica única, contable y con definición operativa, y explica por qué medir muchas variables permite elegir después la favorable",
+        "Escribe el efecto mínimo relevante antes de empezar y lo usa para dimensionar el ensayo",
+        "Propone el ensayo en blanco para conocer la variabilidad propia antes de creer ninguna diferencia",
+        "Rechaza tratar lotes o camas enteras y justifica la unidad experimental correcta, nombrando la pseudorreplicación",
+        "Arma bloques pequeños e internamente parecidos y los orienta atravesando los gradientes reales del sitio: llave de agua, sombra y zona que se encharca",
+        "Sortea la asignación dentro de cada bloque, y también el orden de aplicación y de medición, explicando que la aleatorización cubre los factores no listados",
+        "Organiza la medición a ciegas con códigos neutros, instrumento en vez de criterio y una persona ajena al armado, y menciona la repetibilidad de la medición",
+        "Decide de antemano qué hacer con un surazo según golpee parejo o desigual, y rechaza descartar unidades de forma selectiva",
+        "Ante un resultado nulo comprueba tamaño del ensayo, estado del preparado y factor limitante antes de concluir, y expresa la conclusión como cota con decisión",
+        "Especifica el registro completo —croquis, datos crudos, incidencias— y el uso comunitario de una hoja común con devolución de resultados"
+      ],
+      "explicacion": "La respuesta completa recorre el ciclo entero en el orden en que hay que tomarlo: primero la pregunta y la métrica escritas, después el testigo con su vehículo, después la medida del ruido propio, después el montaje con bloques y sorteo, después la medición a ciegas, después las reglas de interferencia decididas antes de que ocurra nada, y solo al final la interpretación. Los errores típicos son saltarse el testigo con agua —lo que convierte el ensayo en una comparación de riego—, tratar lotes enteros y creer que se tienen cientos de repeticiones, dejar la asignación al criterio de quien monta el ensayo, medir uno mismo lo que uno mismo fabricó, y leer un resultado nulo como prueba de que el preparado no sirve cuando el ensayo nunca tuvo resolución para verlo. La parte comunitaria no es un adorno: en una parcela de 3.666 m² el ruido pone un techo bajo a lo detectable, y la única forma real de bajarlo es que muchas parcelas corran el mismo protocolo."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "preguntas": [
+    {
+      "id": "absorcion-oxigeno",
+      "tipo": "opcion_multiple",
+      "enunciado": "Una planta en una bolsa encharcada muestra hojas amarillas y crecimiento detenido, pese a haber sido fertilizada la semana pasada. ¿Qué explicaciones son fisiológicamente correctas?",
+      "opciones": [
+        "El agua desplazó el aire de los poros y la raíz no tiene oxígeno para producir el ATP que exige la absorción activa de iones.",
+        "Los nutrientes existen en el sustrato, pero la planta no puede incorporarlos porque el transporte selectivo a través de membranas se detuvo.",
+        "El exceso de agua diluyó los nutrientes hasta concentraciones que la planta ya no puede detectar.",
+        "La saturación destruyó la banda de Caspary, y por eso los nutrientes se escapan de la raíz."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "La absorción selectiva de iones atraviesa membranas y consume ATP, y producir ATP requiere oxígeno. Al encharcarse, el agua desplaza el aire de los poros y ese proceso activo se detiene: hay nutrientes disponibles pero la planta no puede incorporarlos, y el síntoma imita a una carencia. La dilución no es el mecanismo, y la banda de Caspary es una estructura de suberina en la pared celular que no se 'destruye' por riego."
+    },
+    {
+      "id": "xilema-floema-vivo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Los conductos del xilema están formados por células muertas y huecas, mientras que los del floema son células vivas.",
+      "respuesta": true,
+      "explicacion": "Correcto, y no es un detalle anecdótico: es lo que permite que cada red funcione con una física distinta. El xilema, al ser un tubo inerte, puede operar a presión negativa (tensión) generada por la evaporación en las hojas. El floema necesita células vivas porque la carga de azúcares en el origen es un proceso activo que consume energía."
+    },
+    {
+      "id": "pelos-radiculares-trasplante",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un plantín arrancado a raíz desnuda sufre más que uno trasplantado con cepellón?",
+      "opciones": [
+        "Porque al arrancarlo se destruyen los pelos radiculares, que concentran la mayor parte de la superficie de absorción.",
+        "Porque queda con toda su superficie foliar transpirando pero con una fracción de su capacidad de absorber agua.",
+        "Porque la raíz gruesa que queda visible es precisamente la que ya no absorbe, solo transporta y ancla.",
+        "Porque el contacto con el aire esteriliza la raíz y elimina los microorganismos que la alimentan."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen el mismo desequilibrio desde ángulos distintos: se pierde la zona activa de absorción —los pelos, que aportan la mayor parte de la superficie de contacto— mientras la demanda de transpiración sigue intacta. La cuarta es falsa: el aire no esteriliza la raíz, y aunque la microbiología del suelo importa, no es la causa del estrés de trasplante."
+    },
+    {
+      "id": "dominancia-apical-pinzado",
+      "tipo": "opcion_multiple",
+      "enunciado": "Pinzas el ápice de una duranta joven para que ramifique y se venda como planta compacta. ¿Qué ocurre realmente?",
+      "opciones": [
+        "Desaparece la fuente de auxina que inhibía las yemas axilares, y varias de ellas se activan.",
+        "El corte estimula la producción de nuevas hormonas de crecimiento que la planta no tenía antes.",
+        "Se libera un bloqueo hormonal preexistente; la planta no gana energía, redistribuye la que ya tenía.",
+        "Las yemas axilares se forman como respuesta al corte, en el punto donde se realizó."
+      ],
+      "correctas": [0, 2],
+      "explicacion": "La yema apical produce auxina que, transportada hacia abajo, mantiene inhibidas a las yemas axilares: es la dominancia apical. Al eliminar el ápice se libera ese bloqueo y las yemas latentes arrancan. Las yemas ya existían antes del corte —estaban en pausa en cada nudo— y la poda no añade energía al sistema, solo redistribuye la disponible entre menos destinos."
+    },
+    {
+      "id": "floema-origen-destino",
+      "tipo": "verdadero_falso",
+      "enunciado": "El floema transporta siempre hacia abajo, de las hojas a las raíces.",
+      "respuesta": false,
+      "explicacion": "Falso. El floema va de origen a destino, y esos papeles se reconfiguran con el tiempo. Una hoja joven que aún no se sostiene sola es un destino y recibe azúcares; semanas después es un origen y los exporta. Un fruto en llenado o un cormo de yautía engordando son destinos, aunque estén arriba o abajo. Manejar la producción consiste en gran medida en controlar qué destinos compiten."
+    },
+    {
+      "id": "banda-caspary-funcion",
+      "tipo": "verdadero_falso",
+      "enunciado": "La banda de Caspary obliga a que el agua y los iones atraviesen al menos una membrana celular antes de llegar al cilindro vascular de la raíz.",
+      "respuesta": true,
+      "explicacion": "Correcto. Al sellar la vía apoplástica —el paso libre entre paredes celulares—, la banda de Caspary fuerza todo el tráfico por la vía simplástica, donde hay transportadores de membrana selectivos. Es el punto de control que permite a la planta decidir qué entra, y la razón de que esa selectividad tenga un coste energético y dependa del oxígeno."
+    },
+    {
+      "id": "totipotencia-vivero",
+      "tipo": "abierta",
+      "enunciado": "Explica qué es la totipotencia vegetal y por qué es, literalmente, el activo productivo de un vivero. Incluye por qué un animal no puede hacer lo mismo.",
+      "respuestaModelo": "La totipotencia es la capacidad de muchas células vegetales vivas de conservar el genoma completo Y la capacidad de volver a expresarlo entero. Una célula ya diferenciada —de un tallo, por ejemplo— puede desdiferenciarse bajo las señales adecuadas y regenerar raíces, hojas y una planta completa.\n\nEn un animal esto no ocurre: sus células se comprometen de forma irreversible con una función durante el desarrollo. Una célula de piel no puede reconstruir un organismo entero.\n\nComercialmente, la totipotencia es lo que permite clonar. De una sola planta madre con las características que el cliente quiere —un porte, un color de flor, un sabor— se pueden obtener cientos de individuos genéticamente idénticos por esquejes, acodos o división. Eso significa producción predecible, uniformidad de lote y multiplicación de un genotipo valioso sin tener que volver a jugársela con la variabilidad de la semilla. Un vivero vende, en el fondo, copias fieles: la totipotencia es lo que hace posible el producto.",
+      "criterios": [
+        "Define totipotencia como conservación del genoma completo más la capacidad de volver a expresarlo entero (no basta con decir 'se puede clonar').",
+        "Menciona la desdiferenciación: una célula ya especializada vuelve atrás y regenera una planta completa.",
+        "Contrasta con el animal, cuyas células se comprometen de forma irreversible.",
+        "Conecta con el negocio: clonación, uniformidad del lote y fidelidad al genotipo que el cliente eligió.",
+        "Idealmente, señala la ventaja frente a la semilla, que introduce variabilidad genética."
+      ],
+      "explicacion": "La totipotencia es el puente entre esta lección y todo el Módulo 9 de propagación vegetativa. Si te quedó clara la idea de que una célula vegetal conserva un camino de vuelta al estado indiferenciado, ya entiendes por qué funcionan los esquejes, los acodos y la división de rizomas."
+    }
+  ]
+}

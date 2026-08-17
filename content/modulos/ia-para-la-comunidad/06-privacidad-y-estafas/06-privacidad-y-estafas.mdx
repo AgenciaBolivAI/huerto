@@ -1,0 +1,403 @@
+Hasta aquí el módulo trató la herramienta como si el único peligro fuera que te mintiera. Es el más
+frecuente, pero no el único. Hay otros dos y viven en el mismo sitio, el teclado, uno en cada
+dirección: **lo que escribes sale de tu teléfono y deja de estar bajo tu control, y lo que te llega
+puede estar fabricado por la misma clase de máquina que tú usas.**
+
+Los dos comparten una propiedad incómoda: **no se notan cuando ocurren**. Un dato entregado no avisa
+nunca, y una estafa bien hecha se descubre cuando el dinero ya se fue. No hay compilador que te
+detenga; solo hay procedimiento, decidido antes, cuando estás tranquilo. Esta lección es corta en
+teoría y larga en reglas: **qué no le escribes, y qué no te crees.**
+
+## Qué pasa de verdad con lo que escribes
+
+La pantalla sugiere una conversación íntima, contenida en tu teléfono. Lo que ocurre es otra cosa:
+**tu texto viaja hasta el centro de datos de una empresa en otro país, se procesa allí y la respuesta
+vuelve.** Para quien programa la comparación es exacta: no es una función local, es una llamada a un
+servicio remoto de un tercero, con registro activado, retención indefinida y unas condiciones de uso
+que nadie leyó. En ese viaje pasan cuatro cosas.
+
+**Queda registrado**, en el historial de tu cuenta y en los registros técnicos del servicio. A cuánto
+tiempo se guarda se le llama <Termino slug="retencion-de-datos">retención de datos</Termino>, y no lo
+decides tú: lo decide la empresa, en una política que puede cambiar.
+
+**Puede leerlo una persona.** Casi todos los servicios se reservan el derecho a que empleados o
+contratistas revisen conversaciones por calidad, abuso u orden legal. **No hay ninguna garantía
+técnica de que no pueda leerse**, y esa es la diferencia que importa cuando decides si escribir el
+nombre de un enfermo.
+
+**Puede usarse para entrenar** versiones futuras, según el producto y la configuración. Varias
+plataformas permiten desactivarlo y conviene buscar esa opción, pero es una casilla en el sitio de
+otro y lo que ya se usó no se desusa.
+
+**Hay una cuenta detrás.** Aunque no escribas tu nombre, la sesión está atada a un correo, un número o
+un dispositivo, y la aplicación tiene los permisos que le diste: cámara, archivos, a veces ubicación.
+Lo «anónimo» de escribirle a una máquina es una sensación, no un hecho.
+
+Y separa dos cosas que se mezclan siempre. El modelo **no guarda nada entre una conversación y otra**:
+mañana, en un chat nuevo, no te conoce. La plataforma **sí guarda** —historial, cuenta, dispositivo y
+a veces una memoria explícita—, así que el riesgo real no es que la máquina le cuente tus cosas al
+vecino, sino lo aburrido y probable: **un registro en un servidor ajeno, sujeto a políticas que
+cambian, a fallas de seguridad y a órdenes legales de otro país.**
+
+<Analogia titulo="Borrar el archivo no lo borra del historial">
+Cualquiera que trabaje con control de versiones sabe qué pasa cuando alguien sube una clave por
+descuido y la borra en el commit siguiente: el archivo desaparece de la vista y el problema no. La
+clave sigue en el historial, en los clones que otros hicieron y en el respaldo de anoche. La única
+respuesta seria no es borrar, es **rotar la clave**, porque se da por comprometida.
+
+Aquí es igual con dos agravantes: el historial es de otro, y un dato personal no se puede rotar.
+Puedes cambiar una contraseña, no el número de tu carnet ni dónde está tu parcela. De ahí la única
+regla que aguanta: **lo que se entrega se da por entregado para siempre**, así que todo se decide
+antes de tocar enviar.
+</Analogia>
+
+## No es un dato: es la suma
+
+El error común no es entregar un dato grave, sino quince inofensivos que juntos dicen más que
+cualquiera de ellos. Eso se llama <Termino slug="reidentificacion">reidentificación</Termino>, y es un
+resultado viejo del trabajo con datos: **conjuntos «anonimizados» vuelven a tener nombre cuando se
+cruzan dos o tres campos**, si la combinación es rara.
+
+Mira lo que sale en una consulta cualquiera sobre el huerto. Que la parcela está al sur de Santa Cruz.
+Que son doce lotes. Que hay yautía, gandul y ají dulce, un catálogo poco frecuente. Que la reunión es
+los sábados. Que quien escribe se llama como se llama y que su hija entra a tal colegio. Ninguna de
+esas frases es un secreto; las cinco juntas describen a una sola familia en Zanja Honda, con dirección
+aproximada, horario en que la casa está vacía y qué hay adentro que valga la pena llevarse.
+
+A la suma de todo lo que has soltado —en la aplicación, en el grupo, en Facebook, en la
+foto— llámale tu <Termino slug="superficie-de-exposicion">superficie de exposición</Termino>. Como en
+seguridad de sistemas, no se cuenta cada puerto abierto por separado sino el total; y crece sola,
+porque nadie borra nada, mientras que reducirla exige un acto deliberado. De ahí sale la práctica que
+ordena esta lección,
+la <Termino slug="minimizacion-de-datos">minimización de datos</Termino>: **entregar lo mínimo que
+hace falta para que la respuesta sirva, y ni un dato más**, igual que no se le dan a un script más
+permisos de los que necesita.
+
+## La lista corta de lo que no se entrega
+
+Un <Termino slug="dato-personal">dato personal</Termino> es cualquiera que permita identificar a una
+persona, solo o cruzado con otros. Dentro de ellos están
+los <Termino slug="dato-sensible">datos sensibles</Termino>: los que, filtrados, exponen a
+discriminación, chantaje, violencia o pérdida de dinero, y que además no se pueden cambiar. Salud,
+menores, dinero, ubicación y documentos caen ahí. Esta es la lista, con la razón de cada línea, porque
+una regla sin razón se olvida el día que estorba.
+
+<Tabla>
+
+| No le escribas ni le subas | Por qué no | En su lugar |
+| --- | --- | --- |
+| Documentos de identidad: número, foto del carnet | Identifica sin ambigüedad, no se puede cambiar y es la pieza que falta para cobrar a tu nombre | Describe el trámite sin el documento: «un formulario pide esto, ¿qué es esta casilla?» |
+| Datos bancarios: cuenta, código de transferencia, foto del comprobante | Es acceso directo al dinero, y el comprobante trae nombre, cuenta y saldo | Pregunta por el concepto; los números se manejan en el banco |
+| Datos de terceros: nombres, teléfonos, listas de socios, capturas de conversaciones | No son tuyos para entregarlos; quien aparece ahí no eligió estar | Sustituye por «un vecino», «una socia»; el caso técnico no cambia |
+| Ubicación exacta: dirección, coordenadas, plano de la parcela, foto de la fachada | Une el dato con un lugar físico donde hay herramientas, cosecha, bomba y personas | Da la zona agroecológica: sur de Santa Cruz, ~529 msnm, arcilla pesada |
+| Salud, propia o ajena: diagnósticos, medicamentos, resultados | Es lo que más daño hace filtrado, y en un pueblo chico circula solo | Pregunta en general y sin nombre; lo serio va a personal de salud |
+| Fotos de menores: cara, uniforme del colegio, nombre, rutina | El menor no puede consentir, y una cara sube a un sistema del que no vuelve | Fotografía manos y plantas, o adultos que dieron permiso |
+| Documentación interna: actas, acuerdos, precios de compra, contratos | Compromete al grupo entero por decisión de uno solo, y contiene datos de todos | Pide el formato del acta en abstracto y escribe tú el contenido |
+| Claves y accesos: contraseñas, códigos que llegan por mensaje, clave del wifi | Un código que llega por mensaje es la llave de la puerta | Ningún código se pega en ningún sitio, jamás, por ningún motivo |
+
+</Tabla>
+
+<Advertencia>
+La línea de los datos de terceros es la que más se salta la gente buena, y sin mala intención. Se pega
+la conversación entera con el vecino para que ayude a redactar la respuesta; se sube la lista de
+asistentes al taller para que la ordene; se cuenta el problema de salud de la suegra.
+
+En los tres casos decides por alguien que no está en la conversación. Lo que hace falta antes
+se llama <Termino slug="consentimiento-informado">consentimiento informado</Termino>: la persona sabe
+qué dato es, a dónde va y para qué, y dice que sí. En un proyecto comunitario eso no es formalismo de
+abogado: **un grupo donde lo que cuentas termina pegado en una aplicación deja de contarte cosas**, y
+ahí se acabó el trabajo comunitario.
+</Advertencia>
+
+## Cómo se pregunta sin entregar el caso
+
+Parece que esto contradice la lección de preguntar bien, que insistía en dar la situación completa, el
+lugar y la fecha. No la contradice, la afina: **el modelo necesita el clima, no tu dirección; la
+especie, no tu apellido; la escala, no tu carnet.** Lo que identifica a una persona o a un predio es,
+además de peligroso, técnicamente inútil.
+
+La versión que entrega el caso dice: soy fulano, vivo en tal calle de Prados del Sur, la parcela
+está a nombre de mi señora con su carnet, y aquí va la foto de mi hijo de ocho años sosteniendo las
+hojas del plátano que se muere. La que resuelve lo mismo sin entregar nada dice: llanura tropical del
+sur de Santa Cruz, ~529 msnm, suelo arcilloso pesado, época de lluvias en curso, un lote de unos
+300 m² con plátano de dos años; hace tres semanas las hojas viejas presentan tal cosa, afecta a diez
+plantas de cuarenta concentradas en la parte baja del lote; qué hipótesis explican esa distribución y
+qué observación separa una de otra.
+
+La segunda es **mejor pregunta**, no solo más segura: la primera gastó la mitad de sus palabras en
+datos inservibles y omitió la distribución del daño, que es lo que orienta el diagnóstico. Retén eso,
+porque es lo que vuelve sostenible la regla: **minimizar datos y preguntar bien empujan en la misma
+dirección.** La técnica son tres movimientos: nombres propios por roles, dirección por zona
+agroecológica, y fuera todo número que no sea técnicamente necesario.
+
+## Antes de subir una foto o una captura
+
+La foto es el punto ciego, porque uno cree que envió una hoja enferma y envió bastante más.
+
+Un archivo de imagen lleva pegados sus <Termino slug="metadato">metadatos</Termino>, que son datos
+sobre el dato: fecha y hora exactas, modelo del teléfono y, si la cámara tiene la ubicación activada,
+**las coordenadas del sitio donde se disparó**, con precisión de metros. Nadie tiene que espiarte para
+saber dónde está tu parcela: se lo mandaste tú. Varias aplicaciones de mensajería recomprimen la
+imagen y borran de paso esos campos, pero eso depende de la aplicación y de cómo la enviaste, y **una
+defensa que depende de un detalle que no controlas no es una defensa**. Lo que sí controlas es la
+cámara: desactiva hoy el guardado de ubicación en las fotos.
+
+Después está lo que salió en el encuadre y nadie miró: el número de la casa al fondo, la placa de la
+moto, el rostro del sobrino, el papel con precios sobre la mesa. La regla cuesta un segundo: **mira el
+fondo antes de enviar, no el motivo.** Y las capturas de pantalla son el descuido más frecuente,
+porque una captura de conversación lleva el número del otro, su foto de perfil, su nombre y la hora en
+que estuvo en línea; si lo que necesitas es el contenido, transcríbelo. **Un texto copiado a mano deja
+fuera todo lo que no hacía falta**, que es exactamente el criterio.
+
+## El otro sentido: por qué la estafa cambió de calidad
+
+Durante veinte años la estafa por mensaje se reconocía por señales baratas: mala ortografía, español
+de otro país, un saludo genérico que no decía tu nombre, una foto robada que aparecía igual en otros
+cien perfiles. Nunca fueron el problema de fondo, pero funcionaban como filtro y una generación entera
+aprendió a usarlas.
+
+**Un modelo generativo borra exactamente esas señales, y las borra por casi cero peso.** Redacta sin
+faltas, imita el tono de una institución, escribe en el español que se habla aquí y sostiene una
+conversación coherente durante días. Lo nuevo no es un truco: es que **el costo de personalizar cayó a
+cero**. Antes, un engaño a la medida de una persona exigía horas de trabajo humano y solo se hacía si
+el botín lo justificaba; hoy la misma máquina fabrica diez mil versiones, cada una con el nombre, el
+oficio y el pueblo de su destinatario.
+
+El nombre viejo del oficio es <Termino slug="ingenieria-social">ingeniería social</Termino>: no se
+ataca el sistema, se ataca a la persona que tiene la llave. Sus tres palancas siguen siendo las
+mismas. **Autoridad**: quien escribe se presenta como banco, policía, institución o proyecto.
+**Urgencia**: hoy vence, quedan dos cupos, si no respondes se pierde. Y **secreto**: no le cuentes a
+nadie, no lo comentes en el grupo. Esa
+combinación, la <Termino slug="urgencia-fabricada">urgencia fabricada</Termino> aliada con el secreto,
+es la más reveladora, porque su único propósito técnico es **impedir que verifiques**. Cualquier
+mensaje que te presione a no comprobar está confesando lo que es.
+
+## La voz dejó de ser prueba
+
+Con unos segundos de audio —una nota de voz reenviada, un saludo en un video de Facebook— se produce
+una <Termino slug="clonacion-de-voz">clonación de voz</Termino> que dice cualquier frase con el
+timbre, el acento y la manera de hablar de esa persona. No hace falta equipo caro ni saber programar.
+
+El guion está diseñado para que tu cuerpo decida antes que tu cabeza. Llama tu hijo, tu hermana o tu
+nieto, llorando, con la señal mala, diciendo que tuvo un accidente o que lo detuvieron, que necesita
+dinero ya y que no llames a nadie. El llanto y la mala señal no son adornos: **tapan las
+imperfecciones de la voz sintética y bloquean el pensamiento**. Después entra otra persona, con voz de
+autoridad, y da las instrucciones de pago. Acepta la frase entera: **reconocer la voz ya no prueba
+nada.** Toda tu vida la voz funcionó como factor de autenticación y ese factor acaba de dejar de
+servir; no hay entrenamiento del oído que lo arregle, lo arregla cambiar de procedimiento.
+
+Con la imagen pasa lo mismo. Un <Termino slug="medio-sintetico">medio sintético</Termino> es cualquier
+foto, audio o video generado o alterado para que parezca una grabación real, y con eso se arman tres
+cosas: **perfiles falsos** con una cara que no aparece en ninguna búsqueda inversa, útiles para el
+engaño amoroso largo, el falso técnico agrónomo o el falso comprador mayorista; **videos de figuras
+conocidas** recomendando una inversión o un fertilizante milagroso; y **videollamadas de pocos
+segundos**, con excusa de mala señal, para que digas «lo vi, era él».
+
+<Advertencia>
+No construyas tu defensa sobre detectar la falsificación mirando. Los trucos que circulan —contar los
+dedos, mirar las orejas, buscar el parpadeo raro— envejecen en meses, y confiar en ellos produce el
+peor resultado posible: te vuelve confiado justo cuando la falsificación mejoró.
+
+Aplica aquí lo que este curso enseñó del riego automático,
+el <Termino slug="fallo-seguro">fallo seguro</Termino>: el sistema debe quedar en el estado que menos
+daño causa **cuando el detector falla**, no cuando funciona. Si tu regla es «si no me convence,
+verifico», ya perdiste, porque la falsificación mejora hasta convencerte. La que aguanta es «verifico
+siempre», aplicada solo a lo que importa: dinero, datos y accesos.
+</Advertencia>
+
+## El mensaje que imita a una institución
+
+La <Termino slug="suplantacion-de-identidad">suplantación de identidad</Termino> es hacerse pasar por
+una entidad de confianza para que le entregues algo: un dato, un código, un pago, un clic. Con
+herramientas generativas el mensaje sale impecable, con el logo correcto, el tono administrativo
+correcto y hasta el nombre de un funcionario.
+
+Quedan pocas señales de forma. **De dónde llega**: un dígito cambiado, un dominio parecido pero no
+igual, una cuenta creada hace tres semanas. **El canal**: una institución seria no resuelve un trámite
+entero por mensaje privado ni pide documentos por ahí. **El enlace**: mira a dónde lleva de verdad, no
+lo que dice el texto azul. Y sobre todo **la petición**: casi siempre es una de cuatro cosas —un pago,
+una foto de tu documento, un código que acaba de llegarte, o que entres a un sitio y pongas tu clave—,
+y ninguna se hace nunca desde un mensaje que llegó solo. Ese criterio es el bueno porque no depende de
+la calidad de la imitación, que va a seguir mejorando: **no juzgues si el mensaje parece auténtico,
+juzga qué te pide.**
+
+## Convocatorias y apoyos que no existen
+
+Aquí llega la versión hecha a la medida de lo que la gente del campo espera de verdad. Un mensaje
+anuncia apoyo a productores, entrega de plantines o semilla, un proyecto de riego, una capacitación
+con certificado o la compra garantizada de la cosecha. Está bien redactado, trae logos, tiene fecha de
+cierre y suena como suena un programa real. Funciona porque **apela a una necesidad legítima** —quien
+trabaja la tierra sí necesita apoyo y sí existen programas reales, así que la esperanza hace el
+trabajo del engaño— y porque **casi nadie sabe cómo se anuncia de verdad un programa público**, de
+modo que no hay con qué comparar.
+
+De ahí tres criterios que valen aunque el mensaje sea perfecto. **Uno: un apoyo real no se cobra por
+inscribirse.** Si hay que pagar un trámite, un «seguro» o una comisión a una cuenta personal, se acabó
+la conversación. **Dos: un programa público existe fuera del mensaje**, con oficina, horario y
+funcionarios, y aparece en más de un lugar; si solo existe en el reenvío, no existe. **Tres: nadie
+legítimo te apura a mandar el carnet hoy**, porque la documentación se entrega en ventanilla o en un
+sistema oficial, no como foto por chat.
+
+No puedo darte nombres de programas, montos ni requisitos, por la misma razón por la que este curso no
+te da números de ley: **no los sé, cambian, y una cifra inventada sería justo el error que estas
+lecciones enseñan a cazar.** Lo sólido es a quién se pregunta: al gobierno municipal por lo local, al
+SENASAG por sanidad vegetal, al INIAF por investigación agropecuaria, al CIAT de Santa Cruz por
+consulta agronómica, y a tu banco por cualquier cosa que huela a dinero. Una llamada a un número que
+sacaste tú de la página oficial —no del mensaje— cierra el asunto en cinco minutos.
+
+## La regla que lo resuelve casi todo: otro canal
+
+Todo lo anterior se reduce a una regla que hay que memorizar palabra por palabra: **verifica siempre
+por un canal distinto del que trajo el mensaje.**
+Esa <Termino slug="verificacion-por-canal-aparte">verificación por canal aparte</Termino> es de
+sistemas, no de desconfianza. Quien te escribió **controla el canal por el que te escribió** —el
+número, el perfil, la cuenta— y controla también lo que responda ahí. Preguntar dentro de ese canal si
+el mensaje es verdadero es preguntarle al atacante si está atacando, y contestará que no, con
+excelente redacción. **Un canal comprometido no puede validarse a sí mismo**, igual que un certificado
+no se valida consigo mismo y que comprobar el respaldo leyéndolo desde el disco que está fallando no
+comprueba nada.
+
+Colgar y llamar tú es la maniobra central, con un detalle que decide todo: **marcas el número que
+tenías guardado de antes, nunca el que viene en el mensaje.** Si no contesta, llamas a otro familiar;
+si es una institución, vas a la oficina. Y el tiempo juega a tu favor: **la prisa es del estafador**,
+porque su ventana de éxito dura lo que dura tu alarma. Media hora de demora no arruina ningún asunto
+legítimo y arruina todos los ilegítimos.
+
+## Una palabra y una regla de dinero
+
+La primera medida barata es una <Termino slug="palabra-de-verificacion">palabra de
+verificación</Termino>: una palabra o pregunta acordada en familia que no esté en ninguna red social y
+no se pueda adivinar — no el nombre del perro, que está en Facebook, sino el apodo del tío en una
+anécdota que solo se contó en la mesa. Se acuerda hoy, en persona, entre quienes se llamarían en una
+emergencia, y cuando llegue la llamada llorando, se pregunta. Una voz clonada imita el timbre; **no
+puede saber lo que nunca se escribió en ninguna parte**. Es un segundo factor de autenticación hecho
+con la memoria de una familia en lugar de con un aparato.
+
+La segunda se escribe en la pared: **ningún pago sale por un mensaje.** Ninguna transferencia, ninguna
+recarga, ningún código, si la orden llegó por mensaje o llamada, hasta que alguien lo confirmó por
+otro canal. En una organización, **todo pago fuera de lo rutinario lo aprueban dos personas hablando
+de viva voz**: separación de funciones de siempre, para que una sola cuenta comprometida no mueva
+plata sola.
+
+<AplicarRizoma>
+Rizoma del Sur es un proyecto comunitario y gratuito, y eso lo vuelve **más** expuesto, no menos.
+Concentramos datos de mucha gente que no vino a entregarlos: quién asiste a los talleres, quién se
+llevó plantines, qué familia pasa necesidad. Somos un nombre reconocible en la zona, que es justo lo
+que un estafador quiere imitar para escribirle a los vecinos. Y funcionamos por confianza, lo único
+que tenemos y lo único que no se repone comprándolo, igual que la reputación de un vivero que vendió
+una variedad equivocada.
+
+Lo primero fue inventariar qué tenemos que sí es confidencial: la lista de socios y asistentes con
+teléfonos; las actas de asamblea, con acuerdos y conflictos por nombre; los precios a los que
+compramos; las fotos de talleres donde salen menores; el plano de los doce lotes con la ubicación de
+la bomba, el tanque y el galpón; y las claves del wifi y de las cuentas. **Nada de esa lista se pega
+en ninguna aplicación de inteligencia artificial**, ni para «que lo ordene» ni para «que redacte el
+acta más bonito»: si hace falta ayuda, pedimos el formato en abstracto y el contenido lo escribimos
+nosotros.
+
+Con la ubicación la decisión fue explícita. Que somos 3.666 m² en doce lotes contiguos en Estrellas
+del Sur, Zanja Honda, se puede decir, y de hecho lo dice este curso, porque sin sitio no hay enseñanza
+aplicada. Lo que no sale de aquí es **el croquis con dónde duerme la bomba, dónde está la caja de
+herramientas y a qué hora no hay nadie**: un plano detallado más un calendario de actividades es, para
+quien quiera llevarse una motobomba, un plan de trabajo terminado. Para consultas técnicas usamos la
+descripción agroecológica —llanura aluvial al sur de Santa Cruz, ~529 msnm, arcillas expansivas,
+lluvias de octubre a abril, surazos—, que además mejora la respuesta. Y en los talleres la regla se
+dice en voz alta: **quien no quiera salir en foto lo dice y no sale**, de los menores no se publica
+cara ni nombre, y documentamos con manos, herramientas y bandejas, que es lo que enseña.
+
+Hacia adentro montamos dos procedimientos cortos. **La regla del dinero**: ninguna compra ni
+transferencia sale porque llegó un mensaje, aunque venga del número del coordinador y con su voz en
+una nota de audio; se confirma por otro canal y la aprueban dos personas. Y **la regla de la
+convocatoria**: cuando llega un anuncio de apoyo o capacitación, nadie lo reenvía; se anota en el
+mismo cuaderno de verificaciones que ya usamos para las respuestas de la máquina —fecha, qué anuncia,
+por dónde llegó, qué pide, cómo se comprobó, veredicto— y una persona llama a la oficina con un número
+que buscó ella. Después se avisa al grupo, exista o no exista: **avisar que algo era falso es tan útil
+como avisar que era verdadero**.
+
+Y algo que es de la misión, no de la técnica: **reenviar es prestar tu nombre.** La gente no cree el
+anuncio por el anuncio, lo cree porque lo mandaste tú. Por eso verificar antes de reenviar no es aquí
+una precaución personal sino cuidado del vecino, y es una tarea que puede hacer alguien sin tierra,
+sin dinero y sin estudios previos: cuesta una llamada y una anotación. Las dos direcciones se enseñan
+en el mismo taller de una tarde, porque son la misma idea vista de los dos lados: **lo que sale no
+vuelve, y lo que entra se comprueba por otro camino.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+Aquí casi todo pasa por WhatsApp, y eso define el riesgo. El teléfono es la única computadora de la
+casa, el grupo del barrio es el medio de comunicación real, y muchas instituciones y comercios
+atienden por ahí. Eso normaliza que un asunto serio llegue por mensaje privado, que es justamente la
+condición que la estafa necesita. La regla del canal aparte no discute la costumbre: pone una
+excepción para tres cosas —dinero, documentos y códigos—, y esas tres salen del chat siempre.
+
+La segunda condición es económica: **los datos móviles se pagan y son caros.** Comprobar cuesta
+megabytes y a veces un viaje, así que mucha gente no verifica no por confiada sino por pobre, y el
+estafador cobra exactamente esa diferencia; lo que funciona es repartir el costo, con una persona del
+grupo que verifica, avisa y lo deja escrito. Hay además un factor que no se suele nombrar: **el
+teléfono es compartido.** Lo usa el hijo para la tarea, la abuela para las llamadas y el vecino cuando
+se quedó sin saldo, así que el historial está a la vista de quien tome el aparato, y la mejor higiene
+no es una configuración complicada sino no escribir ahí lo que no quieres que lea nadie de tu casa.
+
+Sobre la voz clonada, dos particularidades. La familia está partida: hay hijos y hermanos trabajando
+en Santa Cruz, en el interior, en Brasil, en Argentina, en España, y una llamada llorando de madrugada
+desde lejos es plausible por sí sola. Y hay muchísimo audio publicado de todos: las notas de voz se
+reenvían de grupo en grupo y los videos familiares están abiertos en Facebook. **Unos segundos de tu
+voz ya circulan**, así que la defensa no puede ser esconderla; tiene que ser la palabra acordada, y
+hay que acordarla incluyendo a quien está lejos.
+
+En lo agropecuario, las falsas convocatorias aprovechan un vacío real: la información sobre apoyos,
+ferias y requisitos circula desordenada, muchas veces por páginas de Facebook y por reenvíos, y no
+todo el mundo distingue una cuenta institucional de una imitación bien hecha. No te puedo dar la lista
+de programas vigentes ni sus requisitos —cambian y no los verifico—, pero sí el método: buscar la
+institución por su nombre, entrar por su página o ir a su oficina, y preguntar si eso existe. Si el
+anuncio menciona al SENASAG, al INIAF o a la alcaldía, esa entidad tiene ventanilla y teléfono
+propios, y ahí se pregunta.
+
+Y una advertencia final sobre el dinero. Con transferencias y pagos por QR el movimiento es inmediato
+y recuperarlo después es difícil, así que **el minuto siguiente importa más que todo lo demás**: si ya
+se pagó, se llama al banco de inmediato y se hace la denuncia en la policía, preguntando ahí mismo qué
+unidad atiende estos casos y qué hay que llevar. No doy plazos ni artículos de ninguna norma porque no
+los sé y porque inventarlos sería justo el error contra el que este módulo previene. Lo que sí digo
+con seguridad es lo otro: **caer en esto no es ser tonto.** Están diseñadas por profesionales para
+saltarse el pensamiento usando el afecto, y avergonzarse solo sirve para no contarlo — y no contarlo
+es lo que permite que le pase al siguiente. Contar lo que te pasó es la forma más barata de proteger a
+treinta familias.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«No pongo mi nombre, así que es anónimo.»** La sesión está atada a un correo, un número y un
+dispositivo, y quince datos sueltos te reidentifican igual.
+
+**«Borré el chat.»** Borraste tu vista. El registro del servidor y los respaldos no están bajo tu
+mando.
+
+**«Le mandé la conversación con el vecino para que me ayude a contestar.»** Entregaste el teléfono, el
+nombre y las palabras de alguien que no estaba en la decisión.
+
+**«Subí la foto de la planta, nada más.»** Subiste también las coordenadas del disparo y lo que salía
+en el fondo.
+
+**«Era su voz, no había duda.»** La voz dejó de ser prueba. La prueba es la palabra acordada, o colgar
+y llamar tú.
+
+**«Contesté al mismo número para confirmar.»** Le preguntaste al que te escribió si te está mintiendo.
+
+**«Se vencía hoy y no había tiempo de comprobar.»** La prisa era la herramienta: nada legítimo se
+arruina por media hora.
+
+**«Me pidieron el código que me llegó por mensaje.»** Ese código es la llave. Nadie legítimo lo pide.
+
+## Lo que sigue
+
+Ya tienes el módulo casi completo: qué es la máquina por dentro, cómo se le pide, cómo se comprueba lo
+que devuelve, para qué sirve en trámites y textos, dónde están sus límites duros en agricultura, y
+ahora las dos direcciones del flujo — **lo que no se entrega, porque no vuelve, y lo que no se cree,
+porque se verifica por otro camino.**
+
+Falta la lección que le da sentido a todas las anteriores y cierra el curso entero: *Acelera a quien
+sabe: aprender con ella y cierre del curso*. Ahí verás el único uso que sostiene la misión de este
+proyecto, que es aprender: pedirle que te examine en lugar de que te resuelva, explicar con tus
+palabras antes de aceptar una respuesta, reconocer la ilusión de fluidez de leer algo clarísimo y
+creer que ya lo sabes, y cerrar el bucle con la única realimentación que no se puede fingir, que es la
+del huerto. Y se demuestra por qué rinde diez veces más en manos de quien ya sabe agronomía — es
+decir, por qué los veintinueve módulos anteriores son justamente lo que la vuelve útil.

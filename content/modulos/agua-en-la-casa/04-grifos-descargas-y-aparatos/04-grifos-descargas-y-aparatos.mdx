@@ -1,0 +1,477 @@
+La historia se repite en todos los barrios. Alguien se anima a cambiar el grifo del lavaplatos,
+afloja la tuerca de abajo y le sale un chorro a presión en la cara, con la llave general a treinta
+metros. En cinco minutos hay agua en toda la cocina. No falló la mano: falló **el orden de las
+operaciones**. Un aparato de agua es lo único de la casa que puede seguir descargando energía
+después de que decidiste trabajar en él.
+
+Esta lección empieza por dejar el sistema en un estado seguro, sigue aparato por aparato —grifo,
+ducha, inodoro— con su anatomía y su diagnóstico por síntoma, y termina del otro lado, en el
+desagüe: el sifón, el olor y el atasco. La red colectiva y el pozo son la lección 07, la fuga
+escondida en la pared es la 05 y la bomba fue la 03.
+
+## Antes de abrir nada: cortar, despresurizar, vaciar
+
+Un tramo de tubería puede estar en tres estados y solo uno es seguro para abrirlo. **Presurizado**,
+con agua empujando desde el tanque o la red. **Cortado pero lleno**, sin alimentación nueva pero
+con toda el agua adentro y con la presión que le queda. Y **vaciado**, que es cuando por fin no hay
+nada que salga.
+
+Cortar es solo el primer paso, y confundirlo con los tres es la causa de la inundación. Se cierra
+la llave más cercana al aparato; si no la hay, la general. Ojo con un detalle que arruina el plan
+en las casas con tanque elevado: **cerrar la general no vacía el tanque**. Su columna de agua sigue
+apoyada sobre tus tuberías aunque hayas cerrado la entrada de la calle, así que hay que cerrar **la
+salida del tanque**. Y si hay bomba, se apaga su llave térmica: una bomba con presostato no sabe
+que estás trabajando, detecta que cae la presión y arranca.
+
+Despresurizar es abrir el grifo del aparato y dejarlo abierto: sale agua, se vuelve un hilo y se
+corta; ahí la presión llegó a cero. Abriendo además el grifo más bajo de la casa, la gravedad se
+lleva lo que quedaba arriba. Vaciar es el resto: un balde debajo, un trapo alrededor y la certeza
+de que **la llave recién cerrada puede estar pasando un poco**. Antes de desarmar, sacale una foto
+con el celular al orden de las gomas y dejá las piezas en fila sobre un trapo: armar es desarmar al
+revés.
+
+<Analogia titulo="No se toca el sistema con tráfico entrando">
+Cualquiera que haya hecho una migración en producción reconoce la secuencia. Cortar la llave es
+sacar el servicio del balanceador: deja de entrar tráfico nuevo, pero las peticiones en vuelo
+siguen ahí. Despresurizar es esperar el drenado. Vaciar es confirmar que las conexiones cerraron
+antes de tocar el esquema. Quien se salta los dos últimos pasos es quien tira la tabla mientras
+todavía hay escrituras entrando. **Y la llave que gotea después de cerrada es la conexión zombi que
+nadie contó.**
+</Analogia>
+
+## El lado que entra: llave individual, flexible y rosca
+
+Entre la tubería de la pared y el aparato hay tres piezas, y las tres gotean. La primera es la
+llavecita en ángulo que sale de la pared,
+la <Termino slug="llave-de-escuadra">llave de escuadra</Termino>. Su función es una sola y es enorme:
+**cortarle el agua a un aparato sin cortársela a la casa**. Si vas a hacer una sola mejora en tu
+instalación, que sea esta.
+
+La segunda es el <Termino slug="flexible-de-conexion">flexible de conexión</Termino>: una manguera
+corta forrada en malla de acero. La malla no sella, **contiene**: adentro hay una manguera de goma
+que aguanta la presión y la malla impide que se hinche y reviente. Por eso envejece **por dentro,
+donde no se ve**, y se cambia junto con el grifo aunque parezca sano; y si ves la malla oxidada o
+con un bulto, ese flexible no va a gotear cuando falle: revienta entero. Se instala con una curva
+suave, nunca estirado ni retorcido, y se gira sujetándolo de la tuerca, no del cuerpo.
+
+La tercera pieza es la rosca, y acá está el error que hace que la gente apriete hasta rajar las
+cosas. Hay dos familias y sellan en lugares distintos.
+La <Termino slug="rosca-conica">rosca cónica</Termino> se hace más gorda a lo largo del tubo, así que
+al enroscar los filetes se aprietan unos contra otros: **sella en la rosca misma**, y por eso
+lleva <Termino slug="cinta-de-teflon">cinta de teflón</Termino>, que rellena el espacio entre filetes.
+La <Termino slug="rosca-paralela">rosca paralela</Termino> tiene el mismo diámetro en todo su largo y
+nunca se aprieta sola: **sella contra una cara plana con una goma en el medio**, y la rosca solo
+hace de prensa. La tuerca de tu flexible es de esta segunda familia, y ponerle teflón no arregla
+nada, porque la fuga no pasa por los filetes: pasa porque la goma se endureció, se salió o no está.
+La cinta se enrolla con el extremo del tubo apuntando lejos de vos y en el sentido de las agujas
+del reloj, que es el mismo en que vas a enroscar; al revés, la propia acción de roscar la
+desenrolla. Tres o cuatro vueltas, tensa, sin tapar el primer filete.
+
+<Advertencia titulo="Apretar de más es la causa número uno de las roturas de plástico">
+Una rosca cónica de plástico es una cuña: **cada vuelta de más abre la pieza hembra desde
+adentro**. Con la mano no se raja nada; con una llave se raja fácil. Y casi nunca se raja en el
+momento: queda una fisura fina que sella mientras el plástico está tensionado y **revienta a los
+tres días o a los tres meses**, casi siempre de noche y con la casa cerrada. La regla es enroscar a
+mano hasta que ya no gire y después dar entre un cuarto y media vuelta con la llave, ni más. Si a
+los tres cuartos de vuelta todavía gotea, el problema no es apriete —es la cinta, la goma o una
+rosca dañada— y apretar más solo cambia una gotera por una rotura. Peor si es metal enroscado en
+plástico: el metal no cede.
+</Advertencia>
+
+## Anatomía del grifo: lo que hay adentro de la manija
+
+Un grifo es un obturador que aprieta contra un agujero; todo lo demás es carcasa. Lo que cambia
+entre los tres tipos que vas a encontrar es **cómo se hace ese cierre**, y de ahí sale el
+diagnóstico.
+
+El grifo de compresión es el clásico de manija que da varias vueltas. Adentro hay un vástago
+roscado —el <Termino slug="vastago">vástago</Termino> sube y baja al girar la manija— y en su punta
+una goma plana, la <Termino slug="empaquetadura">empaquetadura</Termino>, que apoya contra un aro
+metálico, su <Termino slug="asiento-de-valvula">asiento de válvula</Termino>. Cerrar es aplastar
+goma blanda contra metal duro, y tiene un defecto inevitable: **la goma se aplasta un poco cada vez
+y no vuelve del todo**, así que con los años deja de sellar. No se rompió, se gastó.
+
+El grifo de cartucho cerámico abre con un cuarto de vuelta. Adentro no hay goma que apriete: hay
+**dos discos de cerámica pulidos como espejos**, uno fijo y uno que gira, cada uno con un agujero;
+cuando coinciden pasa el agua. Sellan por lo perfectamente planos que están, no por apretarse, y
+por eso duran muchísimo. Su enemigo es otro: **un grano de arena entre los discos los raya**, y una
+raya en un espejo es un canal por donde el agua pasa para siempre. El monomando lleva esa misma
+idea a un <Termino slug="monomando">cartucho mezclador</Termino> más grande, con tres entradas y
+una salida: al subir la palanca regula el caudal y al girarla la mezcla. No se repara por dentro,
+se reemplaza.
+
+Falta una pieza que explica media docena de goteras mal diagnosticadas. Es el sello alrededor del
+vástago, allí donde el eje sale de la carcasa hacia la manija:
+el <Termino slug="prensaestopas">prensaestopas</Termino>. En los grifos viejos es una tuerca que
+comprime un cordón grafitado; en los modernos son anillos de goma
+—las <Termino slug="junta-torica">juntas tóricas</Termino>— alojados en canales del vástago. Ese sello
+no cierra el agua: impide que se escape **por el eje**.
+
+<Analogia titulo="El cartucho es una unidad reemplazable en campo">
+Un grifo de compresión se depura por dentro: se abre, se mira la goma, se mira el asiento, se
+cambia una pieza de dos bolivianos. Un cartucho cerámico no se depura, se sustituye entero, que es
+la misma decisión de diseño de cualquier equipo pensado para repararse en el campo: se sella el
+módulo y **el diagnóstico se vuelve una pregunta binaria**. La contrapartida es la de siempre:
+perdés reparabilidad barata y quedás atado a que exista el repuesto exacto. Donde la ferretería
+está lejos eso pesa, y es la razón honesta por la que el grifo viejo de empaquetadura sigue siendo
+buena elección: **su repuesto lo hay en todas partes y cuesta monedas.**
+</Analogia>
+
+## Diagnóstico por síntoma y reparación
+
+Casi todo el trabajo consiste en no equivocarse de pieza, y para eso alcanza con observar **dónde
+sale el agua y en qué momento**.
+
+<Tabla>
+
+| Síntoma | Qué pasa adentro | Qué se cambia |
+| --- | --- | --- |
+| **Gotea por el pico, con la llave cerrada** | La goma ya no aplasta contra el asiento, o el asiento está picado | Empaquetadura; si sigue, el asiento o el cartucho |
+| **Gotea por la base de la manija, solo abierto** | El sello del vástago está vencido | Apretar el prensaestopas o cambiar las tóricas |
+| **Gotea por debajo, donde apoya en el mesón** | La goma de base perdió forma o se aflojó la tuerca | Reapretar desde abajo y cambiar la goma de base |
+| **Cuesta girar, rechina o se traba** | Sarro entre los discos, o grasa original ya seca | Limpiar y engrasar con grasa de silicona, o cartucho |
+| **Sale poco solo de este grifo** | Rejilla del aireador tapada con arena o cal | Desenroscar y limpiar el aireador |
+| **Golpetea al cerrar** | Golpe de ariete: la columna frena de golpe | Cerrar despacio; es problema de red, no del grifo |
+
+</Tabla>
+
+Cambiar la empaquetadura es el trabajo más agradecido del oficio. Con el agua cortada y
+despresurizada se saca la tapita decorativa, se quita el tornillo, sale la manija y aparece la
+tuerca grande que sujeta el vástago; se afloja **sujetando el cuerpo del grifo con la otra mano**,
+para que el esfuerzo no se lo lleve la tubería de la pared. Sale el vástago y en su punta está la
+goma: se cambia por una del mismo diámetro y espesor. Si sigue goteando con la goma nueva, el
+culpable es el asiento: pasá la yema del dedo por dentro del agujero y, si en vez de un aro liso
+sentís rugosidad, el metal está picado o rayado por arena y ninguna goma sella contra eso. Se
+rectifica con la herramienta que existe para eso, o se cambia el grifo. Lo que no funciona es
+apretar más fuerte la manija, que destruye la goma nueva y termina de arruinar el asiento.
+
+El <Termino slug="aireador">aireador</Termino> es la reparación más frecuente y la que menos gente
+conoce: la piecita enroscada en la punta del pico, con una rejilla fina adentro, que mete aire al
+chorro para que salga blando y parejo. Como es el punto más fino de la instalación, **es donde se
+queda todo lo que viaja por el agua**: arena, escamas de cal, restos de teflón. Se desenrosca con
+una llave protegida con un trapo, se lava la rejilla y, si está blanca, se deja media hora en
+vinagre, que es ácido suave y disuelve el carbonato sin atacar el metal. Fijate en el orden de las
+piezas antes de sacarlas. Un chorro disparado, que salpica o se abre en abanico, es casi siempre un
+aireador tapado, no falta de presión.
+
+## La ducha, y la que puede matar
+
+La <Termino slug="regadera">regadera</Termino> tiene el mismo problema que el aireador multiplicado
+por cien agujeritos, y como tarda meses en taparse nadie lo nota: uno se acostumbra a que la ducha
+rinde poco. La prueba es directa: sacá la regadera, abrí la llave y mirá cuánta agua sale del
+brazo. Si del brazo sale un chorro grueso y de la regadera un llanto, el problema es la regadera;
+se cepilla y se deja en vinagre, y las de goma se limpian pasando el dedo sobre los pezones. La
+mezcladora es un grifo como cualquier otro, con las mismas tres tecnologías y los mismos síntomas,
+pero **empotrada en la pared**: su gotera no cae al piso, se mete en el muro. Antes de desarmarla,
+comprobá que tenés una llave que aísle ese baño.
+
+Y ahora lo serio. La <Termino slug="ducha-electrica">ducha eléctrica</Termino> calienta el agua
+haciéndola pasar por una resistencia que está **dentro del mismo caudal que te está mojando**. En
+muchos modelos económicos esa resistencia va desnuda, en contacto directo con el agua, y el
+fabricante confía en que el agua conduce poco y en que el aparato está aterrado. Las dos
+condiciones fallan juntas con facilidad: el agua de pozo con sales conduce bastante más que el agua
+destilada, y la jabalina de <Termino slug="puesta-a-tierra">puesta a tierra</Termino> es lo primero
+que falta en una instalación hecha a las apuradas. Cuando el aislamiento falla, la corriente busca
+camino a tierra; si no hay cable verde-amarillo que se lo dé, **el camino disponible sos vos**:
+descalzo, sobre piso mojado y con el cuerpo húmedo, que es la condición de menor resistencia
+eléctrica en que una persona puede estar.
+
+<Formula explicacion="La corriente que consume un aparato es su potencia dividida por la tensión de
+alimentación. Con los datos de la chapita de tu ducha y la tensión de tu casa sale el número que
+decide qué grosor de cable y qué protección necesita ese circuito. La cuenta es física y vale
+siempre; los valores concretos son los de tu aparato y tu instalación, no los que suponga nadie.">
+Corriente (amperios) = Potencia (vatios) ÷ Tensión (voltios)
+</Formula>
+
+Ese número explica por qué no es un electrodoméstico más: un aparato de 5.500 vatios a 220 voltios
+consume 25 amperios, más que el resto de la casa junta, y eso tiene que llegar por cable grueso,
+por circuito propio y con su protección.
+
+<Advertencia titulo="Lo que nunca se hace con una ducha eléctrica">
+**Antes de tocarla, se corta su llave térmica en el tablero y se comprueba que quedó sin tensión.**
+No alcanza con el interruptor de la pared: muchos cortan un cable y dejan el otro vivo dentro del
+aparato. Se avisa a la casa y se deja un papel pegado sobre la llave. Ese corte va **antes** que el
+del agua: sin agua circulando, una resistencia encendida se queda sin refrigeración y se
+recalienta.
+
+**No se toca la ducha ni su cuerpo mientras está encendida**, ni para mover el selector de invierno
+y verano de la carcasa, ni para desprender la cal, ni para acomodar el chorro. Eso se hace con el
+aparato apagado en el tablero, con las manos secas y sin agua corriendo.
+
+**No se usa sin puesta a tierra**, y esa tierra no se hace a la tubería de agua: el PVC no conduce,
+y en una casa que mezcla materiales podrías estar electrificando una cañería metálica. Tiene que
+llegar por el cable verde-amarillo a una jabalina clavada en tierra húmeda. **Tampoco se sustituye
+la tierra por el diferencial ni al revés**: el diferencial compara lo que entra con lo que vuelve y
+corta en milésimas de segundo cuando faltan unos 30 miliamperios, o sea antes de llegar a
+la <Termino slug="corriente-de-no-soltar">corriente de no soltar</Termino> con la que ya no podés
+abrir la mano. Trabajan en pareja, y el diferencial se prueba una vez al mes con su botón: uno que
+no salta en la prueba es uno que no existe.
+
+**No se baja el caudal a un hilo para que salga más caliente**: la resistencia necesita que el agua
+se lleve su calor, y con poco caudal se recalienta, se deforma y termina tocando lo que no debe.
+**Y no se abre la carcasa con el térmico arriba.** Si sentís cosquilleo al tocar la ducha o el
+grifo, esa instalación ya está fugando corriente: **el cosquilleo no es un defecto menor, es el
+aviso**. Se corta el térmico y no se vuelve a usar hasta que lo revise un electricista. Nada de
+esta lección reemplaza a un electricista para la parte eléctrica; acá se explica el mecanismo para
+que sepas qué exigirle.
+</Advertencia>
+
+## El inodoro: dos válvulas y un tanque
+
+Todo el tanque son dos válvulas que trabajan por turnos y nunca a la vez. La primera es
+la <Termino slug="valvula-de-llenado">válvula de llenado</Termino>, que deja entrar agua de la red y
+la corta cuando un flotador sube hasta cierta altura: la
+misma <Termino slug="valvula-de-flotador">válvula de flotador</Termino> del tanque grande, en chiquito.
+La segunda es la <Termino slug="valvula-de-descarga">válvula de descarga</Termino>, el tapón grande
+del fondo, unido a la palanca por una cadenita o a un pulsador por un vástago: al accionar se
+levanta, deja pasar todo el tanque de golpe y después vuelve a caer sobre su asiento por su propio
+peso.
+
+En el medio hay un tubo vertical abierto arriba,
+el <Termino slug="tubo-de-rebose">tubo de rebose</Termino>, que es pieza de seguridad y el mejor
+instrumento de diagnóstico del aparato: si la válvula de llenado no corta, el agua sube hasta su
+borde y se va por él a la taza en vez de desbordar el tanque. Por eso un hilo cayendo por el rebose
+te dice con precisión que el problema es la válvula de llenado o el nivel: o el flotador está
+regulado demasiado alto, o su sello no cierra del todo. El nivel correcto queda un par de
+centímetros por debajo del borde del rebose, y se ajusta doblando la varilla, girando el tornillo o
+subiendo el clip, según el modelo.
+
+<Dato titulo="La fuga silenciosa y la prueba del colorante">
+La <Termino slug="fuga-silenciosa">fuga silenciosa</Termino> es la más cara de la casa justamente
+porque no hace ruido ni deja mancha: el sello de la válvula de descarga se endureció y pasa un
+hilito de agua del tanque a la taza, la válvula de llenado repone en silencio, y el agua se va por
+el desagüe las veinticuatro horas del día. Un inodoro así puede irse en cientos de litros por día.
+
+La <Termino slug="prueba-del-colorante">prueba del colorante</Termino> lo resuelve en media hora y
+no cuesta nada. Sacá la tapa del tanque, echá algo que tiña bien —anilina de repostería, café
+instantáneo cargado, tinta— y revolvé. **No descargues, no uses ese baño y esperá entre veinte y
+treinta minutos.** Si al volver el agua de la taza está teñida, el sello de la descarga está
+pasando y hay que cambiarlo; si sigue transparente, ese inodoro está sano y tu fuga está en otro
+lado. Hacela en todos los inodoros de la casa la misma noche: es la prueba con mejor relación entre
+esfuerzo y plata ahorrada de todo el módulo.
+</Dato>
+
+Hay dos goteras más que se confunden entre sí. Si aparece agua en el piso **solo después de
+descargar** y viene de la unión entre tanque y taza, el culpable es el empaque grande de goma que
+va entre los dos: se vacía el tanque, se aflojan los pernos, se levanta el tanque recto, se cambia
+el empaque y se aprieta de a poco alternando de un lado al otro. Si en cambio el agua aparece **en
+la base de la taza** y huele mal, el sello del piso está vencido.
+
+Reasentar la taza pide método. Se corta el agua, se descarga, se saca con esponja hasta la última
+gota, se desconecta el flexible, se quitan las tuercas de los pernos del piso y **se levanta la
+taza recta hacia arriba, sin hamacarla**. Debajo hay un sello, que según el modelo es un empaque de
+goma o un <Termino slug="anillo-de-cera">anillo de cera</Termino>. Se raspa hasta dejar limpia la
+brida del piso, se revisa que la brida y los pernos no estén partidos, se pone un sello **nuevo**
+—el de cera no se reutiliza jamás, porque su funcionamiento consiste en deformarse una vez y quedar
+así— y se baja la taza recta, apretando con el peso del cuerpo y sin girarla. Las tuercas se
+aprietan alternando y de a poquito: la porcelana no avisa, **se raja de golpe**. Si sellás el
+contorno con silicona, dejá sin sellar un tramo atrás: si el sello del piso vuelve a fallar, querés
+enterarte por una mancha en el piso y no por una viga podrida.
+
+<Advertencia titulo="La loza es frágil y corta como un vidrio">
+Un inodoro pesa entre veinte y treinta kilos: se levanta con la espalda recta y entre dos personas
+si hay escaleras. Nunca hagas palanca con un fierro contra la porcelana para despegar la taza; si
+está pegada, se corta el sello pasando una espátula por debajo. **No te pares nunca sobre la taza
+ni sobre el tanque**: la porcelana falla sin deformarse antes, se parte en filos como vidrio, y los
+cortes al caer sobre un borde roto son graves. Para desechar una taza vieja, anteojos, guantes y
+calzado cerrado.
+</Advertencia>
+
+## El sifón: una barrera de gases hecha solo de agua
+
+De cada aparato sale un tubo que baja y que a poca distancia hace una curva en U. Esa curva es
+el <Termino slug="sifon-sanitario">sifón</Termino>, y no es un capricho de montaje: al terminar de
+usar el aparato **queda agua atrapada en el fondo de la U**, unos cinco centímetros de columna que
+tapan el tubo por completo. Esa agua es
+el <Termino slug="sello-hidraulico">sello hidráulico</Termino>, lo único que separa el aire de tu baño
+del aire de la red de desagüe. Importa porque del otro lado hay materia orgánica descomponiéndose
+sin oxígeno, y eso produce gases: metano, que es inflamable, y sulfuro de hidrógeno, que huele a
+huevo podrido en concentraciones bajas y es tóxico en las altas. El sello los detiene sin
+mecanismo, sin electricidad y sin nada que se rompa. **Su única debilidad es que el agua se va.**
+
+<Analogia titulo="Un sello que caduca si nadie lo renueva">
+El sello del sifón se comporta como un token con tiempo de vida: vale mientras esté fresco, y cada
+uso del aparato lo renueva. Un baño de uso diario nunca tiene problema porque el sello se reescribe
+varias veces por día. Un baño de visitas cerrado dos meses, un lavadero de patio en plena seca o el
+desagüe del piso de una casa vacía **caducan en silencio**: el agua se evapora, el tubo queda
+abierto y la casa empieza a oler a cloaca sin que nadie haya tocado nada. La solución es la de
+cualquier credencial que expira: renovarla por calendario, con un balde de agua al mes en cada
+desagüe que no se usa.
+</Analogia>
+
+El sello se pierde de tres maneras. **Por evaporación**, que es la anterior; si el aparato va a
+estar meses sin uso, una cucharada de aceite encima flota y frena la evaporación mucho tiempo.
+**Por aspiración**, cuando una descarga grande —el inodoro vaciándose entero— arrastra el aire del
+tubo y genera una succión que se chupa el agua de los sifones vecinos;
+ese <Termino slug="sifonaje">sifonaje</Termino> no se arregla en el aparato sino en el tubo de
+ventilación de la red, que es materia de la lección 07, y su señal es inconfundible: huele **justo
+después** de que alguien descargó, y a veces se oye un gorgoteo en el lavamanos. Y **por
+suciedad**, cuando el sifón está tan cargado de pelo y grasa que el agua ya no forma un sello
+continuo.
+
+Vas a encontrar dos formas. El <Termino slug="sifon-botella">sifón de botella</Termino> del
+lavamanos es un vaso que se desenrosca, cómodo de limpiar y donde un anillo caído se recupera. Y el
+de la rejilla del baño o del patio, el <Termino slug="sifon-de-piso">sifón de piso</Termino>: el
+mismo mecanismo debajo de la rejilla, con un vaso interior que casi nadie sabe que se saca. Cuando
+un baño huele y ya revisaste todo, casi siempre es este, porque es el que menos agua recibe.
+
+<Advertencia titulo="Un sifón seco es también una puerta abierta al mosquito">
+En zona de dengue, un sifón de piso sin sello deja de ser un problema de olor: la rejilla seca es
+un paso libre en las dos direcciones, y un sifón con agua estancada y sucia dentro de una casa
+cerrada es además agua quieta donde el mosquito pone huevos. Las dos caras se resuelven con la
+misma rutina: **desagües que no se usan, tapados con un tapón o una bolsa con arena; desagües que
+sí se usan, con agua limpia renovada**. Un sifón activo no es criadero; uno olvidado sí puede
+serlo.
+</Advertencia>
+
+## Desatascar sin destrozar la tubería
+
+Un atasco casi nunca es una cosa que cayó adentro: es una **acumulación**. La grasa entra líquida
+porque el agua estaba caliente, se enfría a los dos metros, se solidifica pegada a la pared del
+tubo y va reduciendo el paso; el pelo y el jabón se enganchan en esa grasa. El sitio es previsible:
+el fondo del sifón, que es el punto bajo, y el primer codo cerrado que venga después.
+
+El <Termino slug="chupon">chupón</Termino> no funciona empujando, funciona **alternando empuje y
+tirón**. La razón es física: el agua no se comprime y transmite entero el golpe que le das,
+mientras que el aire se comprime y se lo traga. De ahí las dos condiciones que deciden si sirve.
+**Tiene que haber agua cubriendo la campana**, para que estés moviendo agua y no aire. Y **hay que
+tapar cualquier otro orificio** —el agujerito de rebose del lavamanos, el desagüe del otro lado de
+una pileta doble— porque si no, la energía se escapa por ahí. Quince o veinte embestidas firmes, y
+en la última un tirón fuerte hacia atrás: muchas veces lo que destraba no es el empujón sino el
+tirón, que desarma la costra desde el otro lado.
+
+Si el chupón no alcanza, viene la <Termino slug="sonda-de-plomero">sonda</Termino>, un fleje de
+acero enrollado en un tambor con manivela. Se introduce girando **siempre en el mismo sentido**,
+porque la punta trabaja perforando y enganchando, no empujando; metida recta sin girar se dobla
+sobre sí misma y se traba. Cuando encuentres resistencia no fuerces de golpe: puede ser el atasco o
+puede ser un codo, y se distinguen porque el codo cede al girar y el atasco se resiste. El paso más
+honesto suele ser el más simple: **abrir el sifón**. Un balde debajo, la tuerca a mano, y la
+mayoría de las veces el problema está ahí adentro, a la vista, y sale con un alambre.
+
+<Advertencia titulo="El ácido y el agua hirviendo destruyen la tubería y a vos">
+**No eches ácido por el desagüe.** El ácido muriático o de batería reacciona con el agua liberando
+calor de golpe, puede hervir y salpicar hacia arriba por el mismo agujero por donde lo echaste,
+ataca las partes metálicas de la instalación y, si no destapa —lo más probable con un tapón de
+grasa—, te deja un tubo lleno de ácido que te va a saltar encima cuando abras el sifón. La soda
+cáustica falla por el otro extremo: se calienta muchísimo al disolverse y quema la piel sin doler
+al principio.
+
+**Y nunca mezcles un destapador ácido con lavandina**: la reacción libera cloro gaseoso, que ataca
+las vías respiratorias, y basta con que quede lavandina del último baldeado en el sifón para que la
+mezcla ocurra sin que la hayas hecho a propósito. Un producto por vez, con mucha agua entre uno y
+otro, con ventilación y con la cara lejos del desagüe.
+
+**El agua hirviendo tampoco es inocente**: el PVC sanitario es de pared delgada y empieza a
+ablandarse bastante por debajo de los cien grados, así que un chorro hirviendo repetido deforma las
+uniones y abre fugas que después no vas a encontrar. Agua caliente de grifo con detergente sí,
+hirviendo no. Contra la grasa lo único que funciona es no mandarla al desagüe: el aceite usado se
+junta en un tarro y los platos se raspan antes de lavarlos. La trampa de grasa es la lección 07.
+</Advertencia>
+
+<AplicarRizoma titulo="Llevarlo a la práctica: tu casa este fin de semana">
+**Hacé el mapa de cortes de tu propia casa, que es una tarde y no cuesta nada.** Recorré cada
+aparato y anotá si tiene llave de escuadra propia y si funciona. Después cerrá y abrí cada llave
+que encuentres, incluida la general y la de salida del tanque: **una llave que nunca se cerró se
+agarrota**, y el momento de descubrirlo no es con un chorro saliendo del mueble de la cocina. Pegá
+una etiqueta a cada una con lo que corta y dejá el mapa dibujado en una hoja pegada dentro de la
+puerta del mueble de la cocina, para que cualquiera de la casa —no solo vos— sepa qué cerrar de
+madrugada.
+
+**Comprá cinco cosas y ya podés arreglar casi todo lo de esta lección**: una llave de pico loro o
+una inglesa mediana, destornilladores plano y estrella, cinta de teflón, un surtido de
+empaquetaduras y juntas tóricas de medidas variadas —se vende por bolsita y cuesta poquísimo— y un
+chupón de goma. Con eso, más balde, trapos y linterna, cubrís casi todas las emergencias. Si podés
+agregar una cosa más, que sea **una llave de escuadra por cada aparato que no la tenga**: es la
+mejora que más problemas futuros evita por menos plata.
+
+**Hacé esta noche la prueba del colorante en todos los inodoros, y mañana medí tu goteo.** Poné una
+botella marcada bajo el grifo que gotea y contá cuánto junta en una hora exacta; multiplicá por 24
+y por 30 y tenés tu número real de litros al mes, que convence mucho más que cualquier cifra que te
+diga un texto. Después cambiá esa empaquetadura y volvé a medir. Sumale una rutina mensual de diez
+minutos —un balde de agua en cada desagüe que no se use, revisar el aireador, apretar el botón de
+prueba del diferencial, mirar con linterna debajo del lavamanos y pasar la mano por los flexibles
+buscando bultos u óxido— y evitás la mayoría de las urgencias, que en plomería son caras porque el
+agua daña todo lo que toca mientras espera.
+
+**Y pensalo como oficio, no solo como arreglo de tu casa.** Alguien que sabe cambiar un cartucho,
+reasentar una taza y destapar un sifón sin romper nada tiene un servicio que en cualquier barrio se
+necesita todas las semanas y que casi nadie ofrece con seriedad. Lo que lo convierte en trabajo
+pagado no es la habilidad sino la confiabilidad: llegar con los repuestos comunes ya en la caja,
+dejar el lugar más limpio de lo que estaba, explicar qué se rompió y por qué, y decir con claridad
+**cuándo el trabajo no es tuyo** —la parte eléctrica de una ducha es de un electricista, y una fuga
+dentro de una pared merece el método de la lección siguiente antes que un combo—. Cobrar por el
+diagnóstico también es legítimo, porque encontrar el problema es la mitad del oficio. Poner precio
+a tu tiempo está en el módulo 31; explicarlo sin que nadie se sienta tonto, en el módulo 19.
+
+**En Rizoma del Sur el punto de lavado de manos es el aparato que más se descuida**, y es
+exactamente este caso: se usa por rachas, en la seca pasa semanas sin recibir agua y el sifón de
+piso de al lado se seca, huele y deja entrar mosquitos. La solución sirve igual para el baño de
+visitas de cualquier casa: está anotada en el calendario de tareas con nombre y apellido de quien
+la hace, porque un mantenimiento que depende de que alguien se acuerde no es un mantenimiento.
+</AplicarRizoma>
+
+<ContextoBolivia titulo="Grifos, duchas y sifones en Zanja Honda">
+**El agua de pozo trae arena, y la arena es el enemigo natural del cartucho cerámico.** Todo lo que
+esta lección explicó sobre discos pulidos que sellan por contacto se cae cuando entre ellos pasa un
+grano de cuarzo, y lo mismo vale para el asiento de la válvula de llenado del inodoro. En una casa
+alimentada por pozo, un filtro de malla lavable a la salida del tanque **paga su costo con el
+primer cartucho que no hay que cambiar**. La otra cara es la cal: buena parte del agua de la zona
+deja depósito blanco, y por eso acá los aireadores y las regaderas se tapan más rápido que en otros
+lados. El vinagre resuelve la cal; la arena no se resuelve, se filtra antes.
+
+**Los cortes de agua y de energía maltratan la instalación más de lo que parece.** Cuando la red o
+la bomba se detienen y vuelven, el agua entra empujando el aire que quedó adentro, arrastrando
+sedimento del fondo de las tuberías y dando golpes de presión. Después de un corte conviene abrir
+primero un grifo de patio, sin aireador, y dejar correr hasta que salga limpia y sin escupir aire.
+Y como muchas casas de la zona trabajan con tanque elevado y poca altura, la presión disponible es
+baja: acá un aireador medio tapado se nota muchísimo más que en una casa con red a presión.
+
+**El surazo es la noche en que la ducha eléctrica se vuelve peligrosa**, y no por el frío en sí.
+Con diez grados y viento del sur todo el mundo la usa al máximo, muchas veces a la vez, y las
+instalaciones improvisadas —cable fino, sin tierra, con el interruptor a mano dentro del baño— se
+ponen a prueba justo cuando más se las carga. Si en tu casa hay ducha eléctrica, la revisión se
+hace **antes de mayo, no en pleno surazo**: circuito propio, cable del grosor que corresponda,
+puesta a tierra real a una jabalina y un diferencial que salte al probarlo. Esa revisión la hace un
+electricista, y es una de las pocas cosas de esta materia donde el consejo honesto es no hacerlo
+vos.
+
+**La humedad alta esconde las fugas chicas y la seca mata los sifones.** Entre octubre y abril una
+mancha en la pared del baño se confunde con la humedad ambiente y con el moho de siempre, así que
+las fugas pequeñas viven meses sin que nadie las note; entre mayo y septiembre, con aire seco y
+calor, un sifón poco usado se evapora en semanas. Las dos cosas piden lo mismo: rutina de
+calendario en vez de reaccionar al síntoma. Y en cualquier estación el agua detenida es asunto de
+dengue, así que el baldeo mensual de los desagües no es orden doméstico: es salud pública en la
+escala de tu casa.
+
+**Los repuestos son el cuello de botella real.** Un cartucho de monomando de marca poco común puede
+no aparecer en ningún lado y convertir un arreglo de veinte minutos en el cambio del grifo entero,
+así que cuando toca comprar conviene **elegir el modelo más común de la ferretería del pueblo**,
+aunque no sea el más lindo: el que tiene repuestos en el mostrador es el que vas a poder arreglar
+en tres años. Llevá siempre la pieza vieja a comprar, y guardá los grifos que reemplaces: son una
+caja gratis de tuercas, tóricas y vástagos. Una aclaración de honestidad para cerrar: acá no vas a
+encontrar precios, marcas ni normas bolivianas inventadas para que suene creíble. Lo que cobra un
+plomero, lo que exige tu cooperativa de agua o tu municipio y qué reglamento aplica a la
+instalación eléctrica de tu baño se pregunta **en la cooperativa, en el municipio y a un
+electricista matriculado**; el mecanismo que explica esta lección es física del agua y de la
+electricidad, y ese sí vale en todas partes.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Quedan cinco ideas. **Cortar no es despresurizar y despresurizar no es vaciar**, y las inundaciones
+domésticas salen casi siempre de confundir esos tres estados. **Cada gotera tiene un lugar exacto
+por donde sale**, y mirar dónde y cuándo sale identifica la pieza sin desarmar nada. **Las roscas
+cónicas sellan en los filetes y llevan teflón; las paralelas sellan contra una goma y no lo
+llevan.** **El inodoro se diagnostica con el tubo de rebose y con la prueba del colorante.** Y **el
+sello del sifón es un token que caduca**: se renueva usando el aparato o echándole un balde de
+agua.
+
+Todo eso comparte una condición cómoda: **la fuga se ve**. Sabés qué aparato es y podés ponerle la
+mano encima. Lo que viene ahora es el caso contrario: la bomba arranca sola de madrugada, el tanque
+amanece más bajo de lo que debería, una mancha sube por una pared y nadie usó nada. La lección
+siguiente, **05, Buscar una fuga que no se ve**, arma el método completo: leer la evidencia —el
+medidor con todo cerrado, el salitre, el moho, el piso tibio, el silbido que se oye pegando la
+oreja a la pared—, seccionar la red con las llaves y partirla por la mitad hasta acorralar el
+tramo, que es la misma bisección con la que se caza un error en un programa, medir con manómetro en
+un tramo aislado, y decidir entre reparar el tubo enterrado o abandonarlo y tender uno nuevo por
+otra ruta.

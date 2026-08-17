@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "sintoma-modo-causa",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es correcto sobre la diferencia entre síntoma, modo de fallo y causa?",
+      "opciones": [
+        "El síntoma es lo que se observa desde fuera —no enciende, va a ratos, huele raro— y solo sirve para decidir dónde mirar.",
+        "El modo de fallo se describe con un verbo físico: el electrolito se evaporó, el estaño se agrietó, un hilo se partió por flexión.",
+        "La causa es lo que permitió ese mecanismo, y si no se toca, la misma avería vuelve aunque la reparación esté bien hecha.",
+        "Una vez identificado el modo de fallo, la causa deja de importar, porque el componente que se puso es nuevo y arranca de cero."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El componente nuevo no arranca de cero: arranca dentro de las mismas condiciones que mataron al anterior. Un electrolítico de repuesto en la misma caja negra al sol se seca en el mismo plazo, y un fusible repuesto sobre un motor que arrastra se va otra vez. Por eso los tres niveles se reparan en sitios distintos: el síntoma dice dónde mirar, el modo de fallo dice qué sustituir y la causa decide si la reparación dura tres años o tres meses."
+    },
+    {
+      "id": "resistencia-de-contacto",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la resistencia de contacto y las uniones que se degradan, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Dos metales que se tocan lo hacen solo en unos pocos puntos microscópicos, así que basta óxido o pérdida de presión para que la resistencia suba.",
+        "El calor generado en la unión crece con el cuadrado de la corriente, y ese calor oxida más y relaja la presión: es realimentación positiva.",
+        "Una unión mala puede dar una lectura aceptable en la posición de ohmios, porque el multímetro la prueba con una corriente diminuta.",
+        "Como el defecto está en un contacto y no en un componente, un borne que calienta puede anotarse y dejarse para la siguiente visita de mantenimiento."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un contacto que calienta no es una tarea pendiente: es una urgencia. El lazo no avanza en línea recta sino como una rampa que se empina sola, de modo que meses de «funciona raro» pueden terminar en una semana, y el punto caliente está dentro de una caja con plástico alrededor. El contacto flojo es una de las causas más comunes de incendio eléctrico que existen, así que las tres señales visibles —plástico amarillento, olor a caliente, marcas negras— se atienden el mismo día."
+    },
+    {
+      "id": "caja-sellada",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para proteger de la humedad un tablero a la intemperie en Santa Cruz, lo mejor que se puede hacer es sellar la caja lo más herméticamente posible.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error más caro del trópico. Una caja cerrada respira: de día el sol la calienta y expulsa aire por las juntas, de noche se enfría y aspira aire cargado de vapor. Sellar sin más no impide que entre humedad, impide que salga, y con los ciclos térmicos la caja acaba siendo una trampa de condensación. Solo hay dos estrategias válidas: sellado real con desecante que alguien reponga, o drenaje y ventilación deliberados —agujeros pequeños en el punto más bajo, con malla fina, y lazo de goteo en cada cable—. Para una instalación rural que nadie va a abrir cada mes, la segunda es casi siempre la correcta, y encima elimina un criadero de mosquito."
+    },
+    {
+      "id": "fallos-intermitentes",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un aparato falla a ratos. ¿Qué lecturas del patrón son correctas?",
+      "opciones": [
+        "Anda bien a mediodía y falla de madrugada: apunta a fuga superficial, la película de humedad, polvo y sales que conduce entre pistas que deberían estar aisladas.",
+        "Funciona en frío y se corta al calentarse, o se corta con un golpecito: apunta a soldadura fría, una unión agrietada que abre al dilatar o al vibrar.",
+        "Anda solo si se sostiene el cable en cierta posición: hay hilos partidos por fatiga, y siempre en el punto donde el cable se dobla, no en mitad del tramo recto.",
+        "Un fallo que va y viene sin patrón claro indica que el circuito integrado se está degradando, así que lo sensato es cambiar la placa completa."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El chip es la pieza más protegida del aparato: encapsulada en resina, quieta, sin tocar el aire y trabajando con corrientes diminutas. Justamente por eso casi nunca produce intermitencias. La intermitencia es la firma de lo mecánico y de lo ambiental —temperatura, vibración, humedad—, y por eso lo primero es preguntar qué cambia cuando el fallo aparece. Cambiar la placa a ciegas sale caro y, si el mecanismo era un cable partido o una caja mojada, el aparato nuevo falla igual."
+    },
+    {
+      "id": "calor-y-vida",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es correcto sobre el calor como modo de fallo?",
+      "opciones": [
+        "Con la regla de los diez grados, treinta grados de más dejan al equipo en torno a la octava parte de la vida que se esperaba de él.",
+        "El sol sobre la caja suele ser la mayor entrada de calor y la más barata de cortar: una sombra o un alero valen más que cualquier repuesto.",
+        "Un ventilador que chilla avisa con semanas de anticipación de una avería mucho más cara que él mismo, porque su rodamiento se secó.",
+        "El calor rompe los componentes de golpe, así que si el equipo siguió funcionando después de un día muy caluroso puede darse por seguro que no quedó daño."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El calor casi nunca rompe de golpe: lo que hace es acelerar el reloj de todo lo demás —oxidación, evaporación del electrolito, envejecimiento de plásticos y aislantes—. El daño es acumulativo e invisible, y por eso «siguió funcionando» no prueba nada: un equipo que pasó tres veranos dentro de una caja negra al sol no se quemó, envejeció ocho veces más rápido, y el día que se muera parecerá una avería repentina que en realidad llevaba años ocurriendo."
+    },
+    {
+      "id": "electroliticos",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre los condensadores electrolíticos, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Son el único componente corriente de la placa con un líquido dentro, y ese líquido se evapora por el sello de goma aunque el aparato casi no se use.",
+        "Al secarse sube su resistencia serie equivalente, lo que hace que se caliente más él solo al pasarle corriente, y más calor lo seca más rápido.",
+        "Tapa abombada, costra alrededor de las patas y un equipo que solo arranca después de un rato encendido son señales del mismo fallo.",
+        "Al sustituirlo conviene elegir uno de 85 °C en lugar de 105 °C, porque los de 105 °C están pensados para hornos industriales y sobran en un tablero."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es al revés: en este clima el de 105 °C es la elección correcta, y esa diferencia de etiqueta es diferencia de años de servicio. La cifra no es la temperatura del horno donde va, es la temperatura a la que el fabricante garantiza su vida nominal, así que el de 105 °C envejece mucho más despacio dentro de la misma caja caliente. Las otras dos condiciones al sustituir son igual de innegociables: respetar la polaridad, porque al revés se destruye y a veces revienta, y no bajar la tensión de trabajo del que se quitó."
+    },
+    {
+      "id": "fusible-forense",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un fusible con el vidrio ennegrecido y salpicado de metal por dentro apunta a un cortocircuito, mientras que uno con el vidrio limpio y el hilo interrumpido en un solo punto apunta a sobrecarga sostenida.",
+      "respuesta": true,
+      "explicacion": "Verdadero, y son cinco segundos de información gratis antes de tirarlo. El ennegrecido cuenta un suceso violento y rapidísimo, con el metal vaporizado: cortocircuito, que además se distingue porque abre al instante y siempre. El limpio cuenta un hilo que se calentó con calma hasta ceder: sobrecarga, que tarda minutos u horas y suele venir de un motor que arrastra, un rodamiento agarrotado o una bomba trabajando en seco o contra una válvula cerrada. Ninguno de los dos casos autoriza a poner un fusible de más amperios: eso no arregla nada, solo mueve el punto de fusión desde una pieza barata hasta un cable dentro de una pared."
+    },
+    {
+      "id": "diagnostico-tablero-bomba",
+      "tipo": "abierta",
+      "enunciado": "Un vecino trae el problema de la bomba de su chaco. El tablerito que la manda vive en una caja plástica atornillada a un poste, a pleno sol, desde hace tres años. Cuenta cuatro cosas: hace meses hay que insistir dos o tres veces hasta que arranca; desde las últimas lluvias arranca bien de mañana pero de tarde no; anteayer se fue el fusible y el que puso aguantó veinte minutos; y al abrir la caja huele a plástico caliente. Sin entrar todavía en el método de diagnóstico —eso viene en la lección siguiente—, escribe lo que esta lección ya te permite decir: qué modos de fallo son compatibles con cada síntoma y por qué, qué causa común los explica juntos, y qué tres decisiones tomarías para que la reparación dure. Distingue explícitamente los tres niveles.",
+      "respuestaModelo": "Lo primero es ordenar lo que contó el vecino separando los tres niveles, porque mezclarlos es exactamente lo que lleva a cambiar la bomba entera sin necesidad.\n\nSíntomas hay cuatro: cuesta dos o tres intentos arrancar; de mañana arranca y de tarde no; el fusible se fue y el repuesto aguantó veinte minutos; huele a plástico caliente al abrir la caja. Ninguno de los cuatro es una avería: son cuatro pantallas de error del mismo aparato.\n\nModos de fallo compatibles, síntoma por síntoma. Que haya que insistir dos o tres veces apunta a contactos: los de un pulsador, un contactor o un relé se pican con el arco que salta al abrir y cerrar, y quedan con una resistencia de contacto alta e irregular. También encaja un arranque que pide más corriente de la debida —rodamiento seco, impulsor rozando, bomba contra una válvula cerrada—, porque entonces el pico de arranque se alarga y cualquier protección queda al límite.\n\nQue funcione de mañana y no de tarde es un fallo intermitente ligado a la temperatura, y eso apunta a soldadura fría —una unión agrietada que abre al dilatar— o a electrolíticos secos en la fuente del tablero, que en frío todavía filtran y calientes ya no. Conviene fijarse en la dirección del patrón, porque es información: si fuera al revés, mal de madrugada y bien a mediodía, la sospecha sería otra, fuga superficial por humedad y suciedad conductora sobre la placa.\n\nQue el fusible se fuera y el repuesto durara veinte minutos descarta casi con seguridad el cortocircuito franco, que abre el fusible al instante y siempre. Veinte minutos es la firma de una sobrecarga sostenida, o de un fusible del tipo equivocado: uno rápido en un circuito con motor se fatiga arranque tras arranque. Antes de tirar el fundido, mirarlo a contraluz: vidrio limpio con el hilo cortado en un punto confirma sobrecarga; vidrio ennegrecido diría cortocircuito y cambiaría toda la hipótesis.\n\nEl olor a plástico caliente es el síntoma más urgente de los cuatro y el que no espera. Señala una unión con resistencia de contacto alta disipando calor: un borne flojo, un terminal mal prensado, o cobre y aluminio juntos con humedad, que forman una pila y se corroen galvánicamente. Se busca a ojo, sin instrumentos: plástico amarillento o marrón alrededor de un terminal y marcas negras en el punto de la unión.\n\nLa causa común que los explica juntos es el emplazamiento. Una caja plástica a pleno sol en un poste durante tres años acumula dos cosas. Calor: por dentro se supera con facilidad la temperatura ambiente, y con la regla de los diez grados treinta grados de más dejan al equipo en torno a la octava parte de la vida esperada, así que electrolíticos secos y soldaduras agrietadas no son mala suerte sino envejecimiento acelerado. Y humedad: esa caja respira, se calienta de día y expulsa aire, se enfría de noche —con un surazo, mucho— y aspira aire cargado de vapor que termina condensando sobre la placa y corroyendo bornes. La vibración de la bomba afloja lo que quedaba. No hubo cuatro averías: hubo un sitio mal elegido produciendo cuatro.\n\nTres decisiones para que la reparación dure. Primera, arreglar el sitio antes que cambiar nada: sombra —un alero, o la cara sur de un muro—, prensacables por abajo, lazo de goteo en cada cable que entre, un par de agujeros de drenaje de dos o tres milímetros en el punto más bajo real y malla fina por dentro. Sin esto, cualquier repuesto entra en las mismas condiciones que mataron al anterior.\n\nSegunda, atender conexiones y alimentación, que es donde está el grueso: reapretar bornes con todo desenergizado, rehacer los terminales sospechosos cortando por detrás del daño y nunca empalmando en el punto donde el cable se dobla, con alivio de tracción; sustituir los electrolíticos por otros de 105 °C respetando polaridad y tensión; y reponer el fusible con el valor original y del tipo retardado si hay motor. Nunca de más amperios: eso mueve el punto de fusión desde una pieza barata hasta un cable dentro de una pared.\n\nTercera, buscar la causa raíz del consumo antes de dar por buena la reparación. Si la bomba arrastra —rodamiento agarrotado, trabajo en seco, válvula cerrada—, el fusible es el mensajero y volverá a irse. Y dejarlo escrito en la bitácora: fecha, síntoma, modo de fallo, causa. Con diez entradas aparecen patrones que ninguna memoria sostiene sola.\n\nDos advertencias que no se negocian: los condensadores grandes guardan carga después de desconectar, así que se comprueba con el multímetro que no hay tensión antes de meter la mano; y todo lo que toque la instalación fija de 220 V se consulta y se ejecuta con un electricista matriculado.",
+      "criterios": [
+        "Separa explícitamente síntoma, modo de fallo y causa, en vez de saltar directo a nombrar piezas.",
+        "Asocia el arranque a varios intentos con contactos picados por arco y con un arranque que pide corriente de más.",
+        "Lee el patrón «de mañana sí, de tarde no» como fallo ligado a la temperatura —soldadura fría o electrolítico seco— y no lo confunde con el patrón de humedad.",
+        "Deduce del retardo de veinte minutos que no hay cortocircuito franco, sino sobrecarga o fusible del tipo equivocado.",
+        "Propone mirar el fusible fundido a contraluz como evidencia gratuita antes de tirarlo.",
+        "Trata el olor a plástico caliente como urgencia de seguridad y lo atribuye a resistencia de contacto, con las señales visibles que lo confirman.",
+        "Identifica el emplazamiento —caja plástica al sol, tres años, vibración— como la causa común de varios modos de fallo a la vez.",
+        "Explica el mecanismo de la caja que respira y la condensación, y no propone «sellar mejor» como solución.",
+        "Usa la regla de los diez grados con un orden de magnitud razonable y sin presentarla como ley exacta.",
+        "Ordena las decisiones poniendo sombra, drenaje, malla y lazo de goteo antes de sustituir componentes.",
+        "Repone el fusible con el valor original y del tipo adecuado, y rechaza explícitamente subirle amperios.",
+        "Cierra con la causa raíz del consumo, el registro en la bitácora y las dos advertencias: carga residual en los condensadores y electricista matriculado para la instalación fija de 220 V."
+      ],
+      "explicacion": "La pregunta no busca que aciertes «la pieza»: busca que ordenes el caso. Los cuatro síntomas que trae el vecino son casi el índice completo de la lección —contactos, temperatura, alimentación y sobrecarga— y todos apuntan hacia la misma causa de fondo, que no está dentro del tablero sino en dónde se colgó. Ese es el salto que separa cambiar piezas de reparar: si la respuesta enumera modos de fallo pero deja la caja en el mismo poste al sol, el vecino vuelve el año que viene con la misma bomba y la misma cara."
+    }
+  ]
+}

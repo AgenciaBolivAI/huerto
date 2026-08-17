@@ -1,0 +1,430 @@
+Hay una franja de terreno en Rizoma del Sur que ya está pagada, que no compite con ninguna cama y
+que hoy no produce nada: **el borde**. Los tres o cuatro metros pegados al alambre, alrededor de los
+12 lotes, ocupados por maleza alta y por el rincón donde se tira lo que sobra.
+
+Un cerco de alambre es **una línea de costo puro**: se paga, se mantiene, se reemplaza y devuelve
+una sola función, marcar dónde termina el terreno. Un cerco vivo bien diseñado ocupa esa misma línea
+y devuelve seis o siete funciones a la vez, y una de ellas —la que a esta lección le importa más— es
+**alimentar de material al vivero que Rizoma ya opera**.
+
+## La pila de funciones, y por qué se estorban entre sí
+
+Un <Termino slug="cerco-vivo">cerco vivo</Termino> puede cumplir siete funciones sobre la misma
+línea: **marcar el límite**, **frenar el viento**, **filtrar polvo y deriva**, **tapar la vista**,
+**estorbar el paso**, **dar refugio** a fauna útil y **producir material de propagación**. Pedirle
+las siete en todo el contorno es la tentación que lleva a poner base de datos, cola y servidor web
+en una máquina: funciona en la demo y revienta cuando la carga crece.
+
+El problema real es que **dos de esas funciones piden geometrías opuestas**: tapar la vista y frenar
+polvo piden masa densa y opaca; frenar el viento pide lo contrario, una barrera que deje pasar aire.
+Un seto macizo es excelente biombo y pésimo rompevientos, por física, no por gusto. De ahí el
+criterio que gobierna todo: **no se especifica un cerco, se especifican tramos**. Cada cara mira a
+un problema distinto —el sur al surazo, la del camino al polvo, el lindero a la privacidad y la
+deriva— y recibe la composición que resuelve su problema dominante.
+
+<Analogia titulo="Un solo enlace físico, varias redes lógicas">
+El perímetro es **un enlace físico único que transporta varios servicios lógicos**. Puedes
+multiplexarlos mientras sus requisitos sean compatibles, pero en cuanto uno pide baja latencia y
+otro satura el ancho de banda hay que segmentar: cada tramo con su configuración.
+
+Y como en toda infraestructura compartida, **el modo de fallo es compartido**: si el cerco cae, caen
+las siete funciones a la vez. Eso obliga a algo que veremos al final: no intervenirlo todo el mismo
+día.
+</Analogia>
+
+## Física de una cortina rompeviento
+
+El viento es un fluido con masa y velocidad. Ante una barrera **maciza** —un muro, una calamina, un
+seto impenetrable— el aire no la atraviesa: sube, se desprende del borde superior y vuelve a bajar
+más adelante. Entre ella y el punto donde el flujo se vuelve a pegar al suelo queda
+una <Termino slug="zona-de-recirculacion">zona de recirculación</Termino>: aire girando sobre sí
+mismo, con ráfagas que cambian de dirección y velocidades que pueden superar al viento libre.
+**Detrás de un muro hay calma muy corta y turbulencia justo después.**
+
+Cuando la barrera es **permeable**, parte del aire la atraviesa. Ese chorro sale frenado por el roce
+con hojas y ramas pero mantiene la dirección, y al mezclarse con el aire que pasó por encima impide
+que se forme la burbuja de recirculación. Resultado: **menos reducción justo detrás, pero una zona
+de calma mucho más larga y estable**.
+
+<Analogia titulo="Bloquear contra limitar el caudal">
+Una barrera maciza es un `DROP` en el cortafuegos: el paquete no pasa, el emisor reintenta y el
+tráfico se vuelve a ráfagas. Una barrera porosa es **un limitador de caudal**: deja pasar, despacio
+y parejo. Ya sabes cuál de las dos deja el sistema más estable aguas abajo.
+</Analogia>
+
+Lo que se compra con esa calma es **fisiología**. La hoja pierde agua a través de una capa de aire
+quieto pegada a su superficie; el viento arranca esa capa y acelera la pérdida al
+mismo <Termino slug="dpv">déficit de presión de vapor</Termino>. Frenarlo engrosa la capa y baja la
+transpiración **sin que la planta cierre estomas**, es decir, sin que deje de fotosintetizar. Se
+suman menos abrasión en hoja tierna y menos desecación del sustrato en los envases del vivero.
+
+## La porosidad óptica y cómo se mide con una foto
+
+La variable de diseño se llama <Termino slug="porosidad-optica">porosidad óptica</Termino>: la
+fracción de huecos que se ve al mirar la barrera a contraluz. No es densidad de plantación ni
+volumen de follaje; es literalmente **cuánto cielo se ve a través del cerco**.
+
+El óptimo general está **del orden del 40 al 50 %**. Por debajo, el cerco se comporta como un muro:
+mucha calma pegada a él, turbulencia detrás, zona protegida corta. Por encima del 60 % frena poco.
+La cifra exacta depende de especie, estación y edad; lo universal es que **el cerco perfectamente
+opaco nunca es el mejor rompevientos**.
+
+<Formula explicacion="Se mide con una foto del cerco a contraluz, con el cielo de fondo, perpendicular a la barrera y a media altura: se convierte a blanco y negro con un umbral y se cuentan los píxeles de cielo. Es un histograma y un umbral: cuatro líneas de código o dos clics en cualquier editor de imágenes.">
+porosidad óptica = área de huecos de la silueta ÷ área total de la silueta
+</Formula>
+
+Medirlo con una foto convierte «el cerco está muy tupido» en **un número que se sigue en el
+tiempo**, se compara entre tramos y decide cuándo podar.
+
+## La distancia protegida se mide en alturas, no en metros
+
+Aquí está el hecho que reordena el diseño: **el alcance de un rompevientos escala con su altura y
+con nada más**: no con su ancho, ni con el número de hileras, ni con lo tupido que esté.
+La <Termino slug="distancia-protegida">distancia protegida</Termino> se expresa en múltiplos de la
+altura de la barrera, que se escribe H.
+
+A <Termino slug="sotavento">sotavento</Termino> —el lado abrigado, hacia el que sopla el viento— la
+reducción máxima aparece a tres o cinco alturas y desde ahí decae hasta desaparecer. La cifra de
+planificación de este curso es **una franja útil del orden de diez veces la altura**, con porosidad
+cercana al 50 %. A barlovento el efecto existe, pero es corto: dos a cinco alturas.
+
+<Formula explicacion="Regla de dimensionamiento del perímetro. Si el ancho a proteger supera diez veces la altura alcanzable, ninguna densidad ni ninguna hilera adicional lo arregla: hace falta otra barrera intermedia o aceptar que el fondo queda desprotegido.">
+franja útil a sotavento ≈ 10 × H     →     H necesaria = ancho a proteger ÷ 10
+</Formula>
+
+Léela al revés. Para proteger cuarenta metros de fondo hace falta un cerco de **cuatro metros**;
+para sesenta, de seis. La pregunta deja de ser «qué planto» y pasa a ser **qué altura puedo sostener
+con las herramientas y los jornales que tengo**.
+
+<Dato>
+Un rompevientos rinde su máximo con el viento perpendicular; si le llega en diagonal, la franja
+protegida se acorta y se desplaza de lado.
+
+Por eso el trazado no se decide mirando el mapa del terreno sino **mirando de dónde viene el viento
+que hace daño**: aquí, el del surazo. Un cerco perfecto orientado al viento equivocado es
+decorativo.
+</Dato>
+
+## Los tres fallos de geometría que arruinan una cortina
+
+**El portillo.** Una abertura —la entrada, el paso de la manguera, un tramo que se secó— no es un
+trozo neutro: es un acelerador. El aire que no puede atravesar el resto converge hacia el hueco y
+sale por él **a más velocidad que el viento libre**. A ese chorro lo llamamos
+aquí <Termino slug="efecto-portillo">efecto de portillo</Termino>, y explica por qué justo detrás de
+la tranquera se muere lo que se plante. La solución no es cerrar el paso sino **traslaparlo**: dos
+tramos solapados con un pasillo entre ellos, para que se entre caminando y el aire no encuentre
+línea recta.
+
+**El borde.** El viento rodea los extremos de la barrera y **acelera en las esquinas**, así que la
+cortina tiene que prolongarse más allá del área que protege. Una cortina corta protege un triángulo,
+no un rectángulo.
+
+**El hueco de abajo.** El más común y el más caro. Con los años la base se queda sin hojas: la
+sombra de la copa mata las ramas bajas, los animales ramonean, la maleza compite. Queda follaje
+arriba y aire libre abajo, y eso forma **una tobera** que acelera el aire justo a la altura del
+culantro y de las bandejas. Un cerco con el pie desnudo puede ser peor que no tener cerco.
+
+<Advertencia>
+El hueco de abajo no se arregla plantando más árboles: se arregla **manteniendo una hilera baja
+viva** y recepando por sectores para forzar brotación desde la base.
+
+Si el diagnóstico llega tarde, la única salida es cortar bajo y perder la protección de ese tramo
+durante dos temporadas: deuda técnica cobrada de golpe.
+</Advertencia>
+
+## Lo que la cortina cuesta de verdad
+
+Un cerco vivo cuesta **superficie**; cuesta **agua y trabajo en el establecimiento**, la partida que
+casi nadie presupuesta y por la que casi todos los cercos se pierden; y cuesta
+una <Termino slug="franja-de-competencia">franja de competencia</Termino>, la banda pegada al cerco
+donde el rendimiento cae porque las raíces beben del mismo perfil y la sombra recorta horas de sol.
+El balance suele ser positivo —se pierde en dos metros y se gana en treinta— pero **depende del
+ancho del lote**. Se mitiga con una zanja de corte de raíces en el borde interior.
+
+## Polvo y deriva: otra función, otra especificación
+
+La cara que da al camino de tierra tiene otro problema. El polvo se deposita sobre las hojas,
+**recorta la luz que llega al cloroplasto**, interfiere con los estomas, favorece a los ácaros y
+ensucia el producto: un manojo de culantro con tierra vale menos. Una barrera vegetal atrapa
+partículas por **impacto**: el aire se desvía al chocar con hojas y ramillas y las partículas, con
+más inercia, siguen recto y se pegan. La captura mejora con hoja pequeña, superficie rugosa y sobre
+todo **estructura densa cerca del suelo**, que es por donde viaja el polvo. Para polvo la
+especificación pide **densidad**, lo contrario que para viento, y el conflicto se resuelve en capas:
+**hilera baja densa para el polvo, hilera alta porosa para el viento**.
+
+Con la <Termino slug="deriva-de-aspersion">deriva de aspersión</Termino> pasa algo parecido: una
+cortina intercepta parte de las gotas de una aplicación vecina, pero **no la elimina** y no frena la
+deriva de vapor. Funciona además en las dos direcciones: si Rizoma aplica algo, el cerco evita que
+llegue al vecino. Las obligaciones de lindero se consultan con la autoridad competente y no se
+inventan aquí.
+
+## Disuasión, privacidad y hábitat, sin venderlo de más
+
+Un cerco espinoso y denso **estorba el paso**, pero no desde el primer año: tarda de tres a cinco
+años en ser barrera real, y mientras tanto la <Termino slug="tranquera">tranquera</Termino> sigue
+siendo la que detiene a la vaca. El diseño honesto es **cerco vivo y alambre conviviendo**. La
+privacidad es el uso más barato: no pide altura calculada, pide masa a la altura de los ojos. Y el
+cerco es la única vegetación de la parcela que **nunca se cosecha entera**, así que es el refugio
+permanente que sobrevive a todas las operaciones: por eso la infraestructura ecológica empieza por
+el borde.
+
+## El cerco como banco de plantas madre
+
+Ahora la función que convierte el perímetro en parte del vivero.
+Un <Termino slug="banco-de-plantas-madre">banco de plantas madre</Termino> necesita cuatro cosas:
+espacio permanente donde nadie vaya a arar, identidad etiquetada, separación entre individuos para
+rastrear cada material, y acceso cómodo para cortar. **El perímetro tiene las cuatro por
+construcción**: no rota, no se voltea y se llega caminando por fuera de las camas.
+
+<Tabla>
+
+| Producto del vivero | Qué aporta el cerco | Qué manejo exige la madre |
+| --- | --- | --- |
+| Ornamentales de esqueje | Brotes semileñosos en cantidad | Recepe o despunte periódico, riego, no dejar florecer |
+| Frutales injertados | Púas de variedad conocida | Identidad certificada, sanidad estricta, brotes vigorosos |
+| Árboles de sombra | Semilla propia | Varios individuos no emparentados, dejarlos fructificar |
+
+</Tabla>
+
+Las reglas del módulo de propagación no cambian por estar en el cerco: identidad primero, sanidad
+segundo, rendimiento tercero, y **dos ejemplares por variedad en puntos distintos**, porque
+una <Termino slug="planta-madre">planta madre</Termino> es un punto único de fallo.
+
+Hay un concepto que aquí se vuelve central: la <Termino slug="topofisis">topofisis</Termino>, el
+hecho de que **el comportamiento del material depende de la posición que ocupaba en la madre**. Los
+brotes de la base conservan carácter juvenil y enraízan mucho mejor que las ramas de la copa; una
+rama lateral horizontal, tomada como esqueje, tiende a seguir creciendo de lado. Para injerto,
+la <Termino slug="pua">púa</Termino> se toma de madera vigorosa, no de una ramita agotada.
+
+## La misma tijera hace el mantenimiento y la cosecha
+
+Aquí está la idea que justifica la lección: la operación que mantiene el cerco a raya —cortarlo— es
+**exactamente** la que produce material de propagación. El <Termino slug="recepe">recepe</Termino>
+—cortar cerca del suelo para forzar rebrote desde la cepa— da brotes rectos, uniformes, vigorosos y
+de carácter juvenil, que es la definición del esqueje ideal; y a la vez devuelve el cerco a su
+altura de diseño y **regenera el follaje bajo**.
+La <Termino slug="juvenilidad">juvenilidad</Termino> recuperada por poda severa no es un truco: es
+la razón fisiológica por la que un cerco manejado es mejor banco de esquejes que un árbol viejo.
+
+<Analogia titulo="Despliegue por lotes, nunca todo el clúster">
+Recepar el cerco entero el mismo día es **reiniciar todos los nodos a la vez**: durante una o dos
+temporadas no hay cortina, ni filtro de polvo, ni pantalla, ni refugio. Justo cuando llega el
+surazo.
+
+Lo correcto es un **despliegue por lotes**: tres sectores, uno por año, en rotación. Siempre hay dos
+tercios en pie cumpliendo funciones y un tercio produciendo material. La capacidad baja un poco; el
+servicio no cae nunca.
+</Analogia>
+
+Como en un despliegue, la **ventana** importa: el recepe se hace al comenzar las lluvias, nunca en
+plena seca, porque un tocón recién cortado sin agua no rebrota, se muere. Hay una variante
+intermedia, el <Termino slug="trasmocho">trasmocho</Termino>: cortar por encima de la altura de
+ramoneo y dejar un tronco permanente que rebrota arriba. Da cosechas repetidas **sin perder la
+estructura ni la altura**, que es lo que necesita el tramo rompevientos.
+
+<Advertencia>
+El cerco convertido en banco de madres hereda el riesgo de todo banco: **lo que entra por la tijera
+se reparte a todo el vivero**.
+
+Muchos patógenos —virus y bacterias sistémicas— viajan en la hoja de la herramienta sin dar síntomas
+durante meses. Si la tijera pasa de una planta enferma a treinta sanas, cada esqueje y cada púa
+lleva el problema, y sale de Rizoma dentro de un plantín entregado a un vecino. Desinfectar entre
+plantas no es opcional aquí, y la <Termino slug="trazabilidad">trazabilidad</Termino> —qué madre,
+qué fecha, qué lote— es lo único que permite retirar el material afectado sin retirarlo todo.
+</Advertencia>
+
+## Composición en hileras, y su precio en metros cuadrados
+
+Un cerco completo tiene **tres estratos**. Una **hilera baja** de medio metro a metro y medio,
+apretada —0,3 a 0,75 m entre plantas—, que resuelve polvo, disuasión y hueco de abajo, y que puede
+ser la colección de madres de ornamentales. Una **hilera media arbustiva** de dos a cuatro metros,
+plantada a uno o dos metros: es el cuerpo del cerco y lo que se recepa en rotación. Y una **hilera
+alta de árboles**, ancha —cuatro a ocho metros entre pies— para que las copas no cierren en un muro
+macizo: fija H y aloja los árboles semilleros. Todo
+al <Termino slug="tresbolillo">tresbolillo</Termino>, cada planta frente al hueco de la vecina, con
+1,5 a 3 m entre hileras.
+
+Ahora el precio. Si los 3.666 m² formaran un rectángulo compacto el perímetro andaría por los 240
+metros; con los 12 lotes más alargados, se acerca a 350.
+
+<Formula explicacion="Superficie que consume el cerco. Es el cálculo que hay que hacer antes de dibujar nada, y el que decide que un cerco de tres hileras no puede rodear la parcela entera.">
+superficie del cerco = perímetro × ancho de franja = 240 m × 4 m = 960 m² ≈ 26 % de la parcela
+</Formula>
+
+**Veintiséis por ciento.** Tres hileras en todo el contorno se comen más de un cuarto de Rizoma del
+Sur; una hilera única de dos metros consume unos 480 m². Ese número no descalifica el cerco vivo:
+**descalifica hacerlo igual en las cuatro caras**.
+
+## Establecimiento, formación y recepe
+
+Un cerco se pierde casi siempre en el mismo sitio: **la primera estación seca**. Se planta en
+lluvias, todo verde; llega mayo, nadie riega esa línea porque no está en el sistema de riego, y en
+septiembre queda la mitad.
+
+Hay tres formas de establecerlo. El <Termino slug="estacon">estacón</Termino> —una estaca gruesa,
+del grosor de un brazo, clavada directamente— es la técnica tradicional del trópico americano y da
+poste vivo inmediato; sólo sirve con especies que enraízan desde madera gruesa y se planta en
+lluvias, con el ápice arriba. **Qué especies disponibles en Santa Cruz responden a estacón hay que
+verificarlo localmente**, con el CIAT, el INIAF o viveros con experiencia. La **siembra directa** es
+la más barata y la más lenta. Y el **plantín propio** da el
+mejor <Termino slug="prendimiento">prendimiento</Termino>: el cerco es también un cliente interno
+del vivero.
+
+Sea cual sea el método, la línea se prepara como cualquier línea de plantación —hoyo o zanja,
+materia orgánica y <Termino slug="cobertura-muerta">cobertura muerta</Termino> gruesa— y el riego de
+establecimiento se presupuesta desde el principio: **dos secas de riego asistido es lo que cuesta un
+cerco que después no pide nada.** Año 0 se planta; año 1 se riega y se repone lo que murió; año 2 o
+3 llega el primer recepe y el primer material aprovechable; entre el año 4 y el 6 se alcanza altura
+de rompevientos real.
+
+La <Termino slug="poda-de-formacion">poda de formación</Termino> ocurre en esos dos primeros años y
+decide si el cerco tendrá base: despuntar temprano las hileras baja y media para romper
+la <Termino slug="dominancia-apical">dominancia apical</Termino> y forzar ramificación cerca del
+suelo. Sin ella se obtiene una fila de paraguas con el tronco pelado. Después el mantenimiento tiene
+dos frentes: **el lateral**, para que la franja no invada el cultivo, y **el de altura**, para
+mantener H dentro de lo que alcanzan las herramientas.
+
+Falta un límite del recepe: **no todas las especies rebrotan de tocón**.
+El <Termino slug="rebrote-de-tocon">rebrote de tocón</Termino> es común en muchas latifoliadas
+tropicales pero no es universal; si no hay dato local, se prueba en tres plantas antes que en
+trescientas. Y los restos de poda son **biomasa producida en el sitio** —cobertura muerta,
+compostera, tutores, leña— que si se quema se pierde entera.
+
+## Qué no plantar nunca en un lindero
+
+Cinco vetos, por mecanismo.
+
+**Lo que hospeda a los problemas del catálogo.**
+Un <Termino slug="hospedante-alterno">hospedante alterno</Termino> es una planta que mantiene viva a
+la plaga o al patógeno cuando el cultivo no está, y un cerco perenne es el sitio perfecto para que
+ocurra los doce meses: solanáceas silvestres junto al ají dulce, parientes de la musácea junto al
+platanal, cualquier especie que alimente al vector de un virus durante la seca. Qué hospeda qué se
+consulta con el CIAT o el INIAF; lo que no se puede es meter una especie sin hacer la pregunta.
+
+**Lo que invade con la raíz.** Las <Termino slug="raiz-trazadora">raíces trazadoras</Termino>
+—superficiales, largas, horizontales— cruzan bajo las camas, chupan el riego, levantan pisos y
+entran en juntas de mampostería y en drenajes. En suelo
+de <Termino slug="arcilla-expansiva">arcillas expansivas</Termino> hay un agravante: un árbol grande
+deseca la arcilla en la seca y acentúa el ciclo de contracción y expansión que agrieta las obras
+cercanas.
+
+**Lo que se escapa.** Especies que rebrotan de rizoma a lo largo del lindero, o con semilla
+abundante llevada por viento o pájaros, terminan colonizando las camas propias y el terreno del
+vecino.
+
+**Lo que no se puede mantener con las herramientas que hay.** Un árbol que a los diez años mide
+quince metros no es un cerco: es una hilera de árboles que ya no se puede podar. Y lo que hace daño
+donde trabaja gente: las espinas van en la cara exterior, y en un proyecto por el que circulan
+vecinos y niños, las especies tóxicas o de látex irritante se piensan dos veces.
+
+**Y lo que no tiene nombre.** Un plantín regalado sin identidad es **una dependencia sin versión**:
+funciona hasta que hay que reproducirla y nadie sabe qué es. En un cerco que además es banco de
+madres, eso es meter material anónimo en el origen de toda la producción.
+
+<ContextoBolivia>
+El diseño del perímetro en Zanja Honda está mandado por dos cosas: el **surazo** y la **estación
+seca**.
+
+El <Termino slug="surazo">surazo</Termino> es una irrupción de aire frío del sur y el sureste, con
+viento fuerte sostenido y noches que pueden bajar a unos 10 °C, sobre todo entre mayo y agosto, en
+plena seca. Eso define la cara prioritaria del cerco —**la sur y la sureste**— y define también que
+la cortina debe estar en pie precisamente esos meses, razón por la cual el recepe de ese tramo se
+hace en octubre y jamás en abril. El daño del surazo es en buena
+medida <Termino slug="frio-advectivo">frío advectivo</Termino>, aire frío transportado, y contra eso
+una cortina sirve porque el daño viaja con el viento. Conviene conocer el matiz: contra
+el <Termino slug="frio-radiativo">frío radiativo</Termino> de una noche despejada y sin viento, una
+barrera puede empeorar las cosas si represa aire frío que escurría por una pendiente. En la llanura
+casi plana del sitio el riesgo es menor, pero si el levantamiento muestra caída, el cerco de la
+parte baja no debe cerrar el paso del aire.
+
+La seca de mayo a septiembre es la que mata los cercos jóvenes, y por eso **la ventana de plantación
+es el comienzo de las lluvias**, con margen para que la planta tenga raíz antes de abril. Hay que
+contar además con el <Termino slug="veranillo">veranillo</Termino>, ese parón de lluvias dentro de
+la temporada húmeda que sorprende a lo recién plantado. Y los caminos de la zona son de tierra, lo
+que convierte el **polvo** en problema de producción y no de estética.
+
+Hay un tema sanitario que aquí no se puede pasar por alto: el **dengue es endémico** y su mosquito
+cría en agua acumulada en recipientes pequeños, incluidos los fitotelmas,
+esas <Termino slug="fitotelma">acumulaciones de agua en axilas de hojas</Termino> y huecos de árbol.
+Un cerco cargado de bromelias o de especies que embalsan agua, pegado a donde la gente trabaja,
+puede volverse criadero. No es razón para renunciar al cerco vivo: es razón para elegir con qué se
+compone la parte cercana a la casa.
+
+Otra realidad local es el fuego: con el <Termino slug="chaqueo">chaqueo</Termino> y las quemas de la
+seca, un cerco verde y con suelo cubierto es un cortafuegos razonable, pero **un cerco seco y
+cargado de material muerto es combustible alineado con el lindero**. Limpiar su pie antes de la seca
+es mantenimiento de seguridad, no jardinería.
+
+Y la regla de honestidad que este curso no rompe: **aquí no hay una lista de especies recomendadas
+con nombre propio**, y no la hay a propósito. Qué especie enraíza de estacón en este suelo, cuál
+rebrota de tocón, cuál hospeda qué plaga y cuál es invasora en el área integrada son preguntas con
+respuesta local: el CIAT de Santa Cruz, el INIAF y los vecinos que llevan décadas mirando qué
+prospera. Lo que esta lección aporta es el **criterio de selección**.
+</ContextoBolivia>
+
+<AplicarRizoma>
+Traducido a los 3.666 m² en 12 lotes, el perímetro deja de ser una línea y pasa a ser **cuatro
+especificaciones distintas**.
+
+**Cara sur y sureste: cortina rompeviento.** El tramo que se lleva la inversión. Tres hileras al
+tresbolillo, con la hilera alta como variable de diseño: con árboles de unos cinco metros, la franja
+útil llega del orden de cincuenta metros hacia adentro. Porosidad objetivo cercana al 50 %,
+comprobada con la foto a contraluz dos veces al año. Aquí no se recepa en bloque nunca: tres
+sectores, uno cada octubre, y los altos por trasmocho para no perder H. Es también el tramo de los
+**árboles semilleros de sombra**, dejados sin podar para que florezcan, con la condición genética
+del módulo de semilla propia: varios individuos no emparentados, porque la semilla de tres clones
+del mismo árbol
+arrastra <Termino slug="depresion-por-consanguinidad">depresión por consanguinidad</Termino> y
+la <Termino slug="polinizacion-abierta">polinización abierta</Termino> entre parientes no arregla
+nada.
+
+**Cara del camino: barrera de polvo y pantalla.** Hilera baja densa —follaje hasta el suelo— más una
+hilera media. Aquí la densidad manda sobre la porosidad, porque la función dominante es capturar
+partículas y tapar la vista. Es el tramo que protege al vivero, lo más sensible al polvo.
+
+**Linderos con vecinos: hilera única de madres.** Donde no hay función física que justifique cuatro
+metros de ancho, el cerco se reduce a una hilera y su justificación pasa a ser productiva: **madres
+de ornamentales de esqueje**. Van aquí y no en el fondo por una razón concreta:
+un <Termino slug="esqueje">esqueje</Termino> es una carrera contra la deshidratación desde que se
+corta, y una madre a doscientos metros de la cama de enraizamiento entrega material ya castigado.
+**La distancia de acarreo es parte de la técnica de propagación**.
+
+**Madres de púa junto a la mesa de injerto.** Las variedades de frutal cuya identidad Rizoma vende
+van en un tramo corto, muy bien identificado, cercano al punto donde se injerta, con dos ejemplares
+por variedad en posiciones distintas, etiqueta permanente y su fila en la planilla.
+El <Termino slug="patron">patrón</Termino> sigue viniendo de semilla y de su propio bloque: son dos
+líneas con manejos distintos que no conviene mezclar. Y donde entra el vehículo hay que romper el
+cerco: ahí aparece el efecto de portillo, y la solución es el traslape.
+
+**El faseado y el registro.** El cerco no se planta entero en una temporada: primero la cara sur,
+que resuelve el daño más caro; después la del camino; al final los linderos productivos. Todo entra
+en el cuaderno del vivero —qué especie, qué fecha, de qué madre, qué sector se recepó y cuántos
+esquejes salieron por metro de cerco—, y ese último dato convierte al perímetro en una línea de
+producción medible, baja el <Termino slug="costo-por-planta">costo por planta</Termino> porque el
+material deja de comprarse, y alimenta el <Termino slug="stock-vendible">stock vendible</Termino>
+con algo que hasta ahora crecía gratis contra el alambre.
+
+**Y el costo declarado, sin adornos:** entre 500 y 1.000 m² bajo el cerco; dos estaciones secas de
+riego asistido; una franja de competencia real hacia adentro; y un pico
+de <Termino slug="jornal">jornales</Termino> concentrado en octubre, cuando coinciden recepe,
+desmalezado y reposición. Si esa cuenta no cabe, se recorta el alcance —menos metros, mejor hechos—
+antes que la calidad del mantenimiento, porque un cerco a medio mantener acaba siendo
+un <Termino slug="cuello-de-botella">cuello de botella</Termino> en vez de una fuente de material.
+</AplicarRizoma>
+
+## Lo que sigue
+
+El perímetro ya está resuelto: una pila de funciones sobre una franja que igual había que pagar, una
+física que se calcula en múltiplos de altura, un costo en metros cuadrados que se declara antes de
+dibujar, y una operación —el recepe por sectores— que hace mantenimiento y cosecha con la misma
+tijera. El borde pasa a ser **el primer proveedor del vivero**.
+
+Falta el interior. El cerco es el refugio permanente del sistema, pero los enemigos naturales no
+vuelan distancias ilimitadas, y si la única vegetación estable está a cuarenta metros, el control
+biológico no llega al centro de la cama.
+
+La siguiente lección, **franjas, bordes y refugios para los enemigos naturales**, entra ahí: qué
+necesitan de verdad depredadores y parasitoides, qué distancias de dispersión tienen y cómo esas
+distancias fijan la separación máxima entre franjas dentro de los 12 lotes, el calendario de
+floración continua con su hueco crítico en la seca, y los riesgos de meter vegetación permanente en
+medio del cultivo.

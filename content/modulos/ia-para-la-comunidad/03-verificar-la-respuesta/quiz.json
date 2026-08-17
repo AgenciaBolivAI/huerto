@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "v1",
+      "tipo": "opcion_multiple",
+      "enunciado": "Le pides a un modelo la fuente de una afirmación y te da autor, institución y año. ¿Qué comprobaciones siguen siendo necesarias antes de dar el dato por verificado?",
+      "opciones": [
+        "Comprobar que el documento existe de verdad, y no solo que el autor y la institución existan por separado.",
+        "Abrir el documento y encontrar dentro la frase concreta que se te atribuyó.",
+        "Comprobar que, aunque exista y diga eso, aplica a tu clima, tu suelo y tu época.",
+        "Preguntarle al mismo modelo si la cita que acaba de dar es correcta y fiarte si confirma."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son los eslabones de la cadena: existencia del conjunto, contenido real y aplicabilidad. La cuarta es incorrecta porque repreguntarle al mismo modelo es una segunda llamada al mismo servicio: dos respuestas del mismo proceso no son redundancia, y como los modelos están ajustados para resultar agradables, tu duda empuja a que reescriba. Una confirmación así es acomodación, no corrección."
+    },
+    {
+      "id": "v2",
+      "tipo": "verdadero_falso",
+      "enunciado": "Encontrar en internet el PDF que el modelo citó demuestra que la afirmación está verificada.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el punto donde se cae casi todo el mundo: encontrar el documento se siente como haber verificado. Que la fuente exista no significa que diga lo que te dijeron que dice. Una de las cuatro formas de fallo de la cita fabricada es exactamente esa —documento real, contenido distinto—, así que el paso que cierra la comprobación es abrir el archivo y buscar la frase."
+    },
+    {
+      "id": "v3",
+      "tipo": "opcion_multiple",
+      "enunciado": "El modelo te dice que apliques un producto a razón de 2 L/ha en Rizoma del Sur. ¿Qué comprobaciones de cifra corresponden?",
+      "opciones": [
+        "Convertir la superficie: 3.666 m² son 0,3666 ha, así que la dosis del sitio entero es 0,73 L y no 2 L.",
+        "Escribir las unidades junto a los números y ver que se cancelan hasta dejar litros, y no litros por hectárea.",
+        "Estimar de antemano el orden de magnitud y desconfiar si el número del modelo se aleja un factor diez o mil.",
+        "Aceptar la dosis si la aritmética interna de la respuesta está bien hecha, porque entonces el número es correcto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son la aritmética, el análisis dimensional y el orden de magnitud. La cuarta es incorrecta porque una cuenta internamente correcta puede estar hecha sobre una premisa equivocada: es el caso de «el vivero necesita tantos litros por día» calculado sobre los 3.666 m² completos cuando lo que consume agua es la superficie ocupada por bandejas y bolsas. Cifra bien calculada sobre premisa equivocada es el fallo más difícil de ver."
+    },
+    {
+      "id": "v4",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué cuenta como triangulación válida de una afirmación importante?",
+      "opciones": [
+        "Contrastar la respuesta con la etiqueta física del envase, que es fuente primaria y manda sobre cualquier otra cosa.",
+        "Contrastar con un documento de la institución competente, comprobando que es la institución del país que crees.",
+        "Contrastar con un viverista con veinte años en la zona o con tu propia libreta del año pasado.",
+        "Encontrar el mismo dato repetido en cinco páginas web y concluir que está confirmado por consenso."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Triangular exige fuentes independientes, es decir, que no dependan una de la otra. La cuarta opción es incorrecta porque es circularidad de fuentes: cinco páginas que copiaron del mismo blog son una sola fuente, y cinco copias de un error son un error, no cinco confirmaciones. Además, como buena parte del entrenamiento del modelo son justamente esas copias, el dato circular es el que más probabilidades tiene de salir repetido con seguridad."
+    },
+    {
+      "id": "v5",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si una respuesta cita un número de norma, un plazo y un requisito de trámite boliviano con detalle y coherencia, ese detalle es una señal razonable de que la información es correcta.",
+      "respuesta": false,
+      "explicacion": "Falso. La normativa es local, cambia con el tiempo y en Bolivia está poco publicada en la web abierta: vive en gacetas, resoluciones, ventanillas y manuales impresos. Donde hay hueco de datos el modelo completa con lo más frecuente de su entrenamiento, que en español es normativa de España, México o Argentina, y el resultado es un procedimiento de otro país con nombres bolivianos encima. El detalle no es evidencia: un número de norma inventado es más peligroso justamente porque es citable."
+    },
+    {
+      "id": "v6",
+      "tipo": "opcion_multiple",
+      "enunciado": "Según el presupuesto de verificación, ¿qué preguntas determinan cuánto esfuerzo merece comprobar una respuesta?",
+      "opciones": [
+        "Qué pasa si está mal y cuánto tardas en enterarte de que lo estaba.",
+        "Si el error es reversible o no, porque lo irreversible sube automáticamente al nivel máximo.",
+        "A quién más afecta, porque una cosa es equivocarte tú y otra repetirle el dato a treinta vecinos.",
+        "Cuánto tiempo tardó el modelo en responder y qué tan larga y detallada fue la respuesta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son costo del error, latencia de detección, reversibilidad y radio de impacto: las mismas preguntas de cualquier evaluación de riesgo de despliegue. La cuarta es incorrecta y además invierte el criterio: la longitud y la fluidez no son señales de calidad, porque el aplomo es una propiedad del formato. Si acaso funcionan al revés, ya que cuanto mejor escrita está una respuesta, menos ganas dan de comprobarla."
+    },
+    {
+      "id": "v7",
+      "tipo": "verdadero_falso",
+      "enunciado": "Que una respuesta contradiga lo que este curso enseñó demuestra que la respuesta está equivocada.",
+      "respuesta": false,
+      "explicacion": "Falso. Contrastar contra el curso es la verificación más barata que existe y funciona como batería de pruebas de regresión, pero una contradicción no es un veredicto: puede haberse equivocado el modelo, puede que el curso simplificara o no cubra tu caso, o pueden estar hablando de contextos distintos sin mentir ninguno. La contradicción es una señal de que ahí hay que ir a mirar de verdad, y cuando el asunto se decide en el campo se decide con parcela testigo."
+    },
+    {
+      "id": "v8",
+      "tipo": "abierta",
+      "enunciado": "Un vecino llega al galpón de Rizoma del Sur con una respuesta impresa de un modelo de lenguaje que contiene tres cosas: una recomendación de producto y dosis para unas manchas en las hojas del plátano, un cálculo del agua diaria que necesita el vivero, y un párrafo que dice qué permiso hace falta para vender plantines citando un número de norma. Aplica el método completo de esta lección: despieza la respuesta, asigna nivel de verificación a cada parte, di cómo se comprueba cada una, con qué fuente y en qué orden, y qué queda anotado por escrito. Explica también qué se le responde al vecino y por qué ese trabajo importa en un proyecto comunitario.",
+      "respuestaModelo": "Lo primero es no tratar la hoja como una unidad. Es un commit con tres cambios dentro, de tres clases distintas, y cada uno se comprueba de otra manera. El despiece se hace subrayando: cada número, cada nombre propio, cada fecha y cada afirmación que empiece por «hay que» o «la norma exige». Lo subrayado es la lista de verificación, y lo demás —la redacción, el orden, el tono— se verifica leyendo y casi siempre está bien. Justamente ahí está la trampa: la forma impecable produce un aval por vecindad sobre las tres afirmaciones que sí importan.\n\nLa recomendación de producto y dosis es nivel 3, sin discusión: no vale como fuente nunca. El costo del error es alto (puede quemar un lote o intoxicar a quien aplica), la detección es lenta, es irreversible —un producto aplicado no se despliega hacia atrás— y afecta a más gente que al vecino. La fuente que manda es la etiqueta del producto, que es el texto legalmente vinculante donde constan el ingrediente activo, los cultivos autorizados, la dosis y el plazo de seguridad; la autoridad de registro en Bolivia es el SENASAG. La respuesta impresa sirve para saber qué preguntar y para entender el vocabulario de la etiqueta, nada más. Y la segunda mitad de la regla es la que salva lotes: si el envase no tiene etiqueta legible, no se aplica nada. Además, antes que el producto habría que revisar si el diagnóstico es correcto, algo que una hoja impresa no puede establecer.\n\nEl cálculo del agua es nivel 2: se rehace a mano antes de actuar. Tres comprobaciones en orden. Aritmética: rehacer la cuenta, sin creerla porque esté bien presentada. Unidades: escribir las unidades junto a los números y comprobar que se cancelan hasta dejar litros; si queda litros por metro cuadrado por hectárea, la fórmula está mal y el número no se discute. Orden de magnitud: estimar el propio a ojo y desconfiar de un factor diez, y sospechar salto de unidad ante un factor mil, que es el error agrícola clásico entre gramos y kilos, mililitros y litros, metros cuadrados y hectáreas. Con los números de Rizoma: 3.666 m² son 0,3666 ha, 1 mm de lluvia son 1 L/m² (una lluvia de 20 mm deja 73.320 litros), y cada lote son 305,5 m². Lo más probable es que el cálculo esté hecho sobre los 3.666 m² completos, cuando lo que consume agua es la superficie ocupada por bandejas y bolsas bajo malla, una fracción pequeña: unidad correcta, aritmética correcta y respuesta a una pregunta que no era la nuestra. Cifra bien calculada sobre premisa equivocada es el fallo más difícil de ver.\n\nEl párrafo del permiso con número de norma es nivel 3 y se marca como no verificado el mismo día, sin excepción. La normativa es local, cambia y está poco publicada en la web abierta, así que el modelo completa con normativa de otros países y le pone nombres bolivianos encima. Un número de norma inventado es especialmente peligroso porque es citable: se copia en una nota, se lleva a una reunión y se repite hasta que alguien queda mal delante de una oficina. Va a la lista de pendientes de ventanilla, y quien vaya lleva la pregunta escrita, sin la hoja impresa, pide el nombre del documento —resolución, reglamento, formulario, número y fecha—, anota quién atendió y qué día, y guarda copia de todo formulario. Solo entonces entra al cuaderno con tinta.\n\nNo vale, en ninguno de los tres casos, repreguntarle al modelo si está seguro, ni consultar a otro modelo: son la segunda llamada al mismo servicio y errores correlacionados. La independencia se consigue cambiando de tipo de fuente, no de instancia. Tampoco vale encontrar el dato repetido en cinco páginas, que puede ser circularidad, ni fiarse de una cifra institucional sin comprobar el país, porque hay SENAMHI en Bolivia y en Perú y un CIAT en Santa Cruz distinto del CIAT internacional de Colombia.\n\nTodo queda en el cuaderno de verificaciones, con fecha, la afirmación tal como salió, de dónde salió, nivel asignado, cómo se comprobó y veredicto, incluidas las veces en que la herramienta se equivocó: si solo se anotan los aciertos aparece el sesgo de supervivencia y el cuaderno deja de ser un mapa útil. Al vecino se le responde con la regla de la pared —ninguna cifra que salga de una máquina entra al cuaderno sin la fuente anotada al lado— y se le explica el mecanismo, no solo el veredicto, para que la próxima vez llegue con la respuesta ya despiezada. Y esto importa por la misión: verificar cuesta tiempo, método y constancia, no capital, así que es un aporte que puede hacer alguien sin tierra, sin dinero y sin estudios previos; quien comprueba bien una cosa y la deja escrita le ahorra el viaje a otras treinta y produce el bien más escaso que tenemos, que es información local confirmada.",
+      "criterios": [
+        "Despieza la hoja en piezas y distingue hechos verificables de forma, nombrando el aval por vecindad que produce una redacción impecable.",
+        "Asigna nivel 3 a la dosis del producto y justifica con costo alto, detección lenta e irreversibilidad.",
+        "Nombra la etiqueta del producto como fuente que manda y al SENASAG como autoridad de registro, y añade la regla de no aplicar nada sin etiqueta legible.",
+        "Asigna nivel 2 al cálculo del agua y enumera las tres comprobaciones: aritmética, unidades y orden de magnitud.",
+        "Usa correctamente los números de Rizoma: 3.666 m² equivalen a 0,3666 ha, 1 mm es 1 L/m², y el lote medio es 305,5 m².",
+        "Detecta el fallo de premisa: el cálculo sobre el terreno completo en lugar de la superficie ocupada por bandejas y bolsas.",
+        "Asigna nivel 3 al párrafo normativo y explica por qué el modelo rellena con normativa de otros países.",
+        "Describe la técnica de ventanilla: pregunta escrita, nombre del documento, quién atendió, qué día y copia del formulario.",
+        "Descarta explícitamente repreguntar al mismo modelo o a otro modelo como forma de verificación, con el argumento de la segunda llamada al mismo servicio o de los errores correlacionados.",
+        "Menciona al menos una trampa de triangulación: circularidad de fuentes u homónimos institucionales como SENAMHI o CIAT.",
+        "Deja constancia escrita en un cuaderno de verificaciones con sus campos, e incluye anotar también los fallos para evitar el sesgo de supervivencia.",
+        "Conecta el trabajo de verificar con la misión comunitaria: cuesta tiempo y método y no capital, y una comprobación bien hecha sirve para todos."
+      ],
+      "explicacion": "El ejercicio recorre la lección entera sobre un caso que ya ocurre en el galpón: despiece, niveles de verificación, fuente primaria por cada tipo de afirmación, cifras rehechas a mano con las conversiones del sitio, la regla dura de normativa y el registro escrito. Si alguna de las tres piezas se resuelve preguntándole otra vez a la máquina, o si la dosis se acepta sin leer la etiqueta física, el método no se aplicó."
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+Quien quiere comer de su patio hace siempre la misma primera pregunta: **cuánta tierra hace falta.**
+Es la pregunta correcta y casi nunca recibe una respuesta honesta. Las cifras que circulan —«con mil
+metros una familia se alimenta», «cien metros por persona», «con veinte metros vives»— salen de
+sitios distintos, miden cosas distintas y ninguna dice cuál. No son mentiras: son respuestas a
+preguntas que no eran la tuya.
+
+Esta lección no da un número para copiar. Da **la aritmética para ver de qué tamaño es el problema**,
+**las razones por las que casi toda cifra publicada engaña** sin que nadie mienta, y **el método para
+calcular la tuya** con datos que puedes medir en tu cocina esta semana.
+
+Y conviene adelantar la conclusión, porque cambia el diseño de todo lo que viene después: **la
+superficie casi nunca es lo que te está limitando.** Quien tiene poco patio cree que su problema es el
+espacio; casi siempre son las horas de sol, el agua de septiembre o los quince minutos diarios.
+
+## La palabra «alimentar» esconde tres cosas distintas
+
+Antes de medir nada hay que separar qué se le está pidiendo al huerto, porque «alimentar a una
+familia» son tres encargos con costos de tierra radicalmente distintos.
+
+**La energía.** Es el bulto de la dieta, lo que llena y sostiene el día de trabajo: arroz, fideo,
+pan, yuca, plátano, aceite y azúcar. Se mide en kilocalorías y es, con diferencia, **la parte más
+cara de producir en metros cuadrados.**
+
+**La proteína.** Carne, huevo, leche, pescado y, del lado vegetal, los granos de leguminosa como el
+gandul. El huerto aporta una parte; el resto sale de animales, que es otro oficio.
+
+**Todo lo demás.** Vitaminas, minerales, fibra, sabor y frescura, que vienen de la verdura, la hoja,
+la fruta y las hierbas. Es la parte que menos pesa en el plato, **la más barata de producir en tierra
+propia** y la que más se pierde entre la chacra y la mesa.
+
+La diferencia es física y está en la planta. Un kilo de hoja verde es más de un noventa por ciento
+agua: te llevas estructura recién hecha con muy poca energía guardada dentro. Un kilo de grano seco
+es reserva concentrada que la planta acumuló durante un ciclo entero. Eso es
+la <Termino slug="densidad-calorica">densidad calórica</Termino>, y su orden de magnitud manda sobre
+todo lo demás: la hoja anda por las doscientas kilocalorías por kilo, la raíz o el tubérculo por las
+mil, el grano seco por las tres mil quinientas y el aceite por las nueve mil.
+
+<Analogia>
+De ahí sale una inversión que decide el diseño entero: **lo barato de comprar es caro de cultivar, y
+lo caro de comprar es barato de cultivar.** Un kilo de arroz cuesta poco y exige mucha tierra; un
+puñado de culantro cuesta bastante por kilo, se echa a perder en dos días y sale de medio metro.
+
+Es el mismo reparto que hay entre **procesar en el borde y procesar por lotes en el centro.** Lo
+sensible a la latencia —lo que se degrada en el traslado, lo que se pide en cantidades pequeñas y
+constantes— se resuelve cerca del usuario. Lo voluminoso, uniforme y capaz de esperar se procesa en
+lote, lejos, donde la escala lo abarata.
+
+**Tu cocina es el borde.** El huerto familiar gana por goleada en lo perecedero y pierde siempre
+contra un camión de arroz. Un huerto diseñado para producir calorías está corriendo un trabajo por
+lotes en un dispositivo del borde.
+</Analogia>
+
+## Dos órdenes de magnitud de distancia
+
+Ahora la cuenta. Es aritmética con números redondos —no es un dato de Bolivia ni una recomendación
+nutricional— y sirve para una sola cosa: **ver de qué tamaño es cada problema.** Cada número de aquí
+hay que reemplazarlo después por el tuyo.
+
+Una familia de cinco personas necesita del orden de **diez mil kilocalorías al día**, unos **3,6
+millones al año**. Si esa energía saliera del cultivo más eficiente que se puede tener en un patio
+tropical —un tubérculo como la batata, alrededor de mil cien kilocalorías por kilo— harían falta
+**tres toneladas y media al año**. A dos kilos por metro cuadrado y dos ciclos anuales, son unos
+ochocientos metros cuadrados **de cama**, sin fallar nunca y comiendo casi solo eso. Con caminos y
+con el rendimiento real de quien empieza, se va **entre mil y tres mil metros cuadrados por familia.**
+
+La misma cuenta para la parte fresca. Si la familia come del huerto unos ciento cincuenta gramos por
+persona y día de hoja, hierba, ají y verdura, son **trescientos kilos al año**; y un metro cuadrado
+de cama bien llevada, sembrada escalonadamente los doce meses del trópico, entrega del orden de cinco
+kilos al año de esa mezcla. Salen **unas decenas de metros cuadrados de cama.**
+
+<Dato titulo="La distancia entre las dos respuestas es lo que hay que retener">
+Cubrir **la verdura fresca** de una familia es un problema de **patio**: decenas de metros. Cubrir
+**sus calorías** es un problema de **parcela**: miles. Entre las dos cifras hay más de un orden de
+magnitud, y por eso «con veinte metros comes» y «hace falta media hectárea» pueden ser ciertas a la
+vez. Casi toda discusión sobre superficie es en realidad una discusión sobre **cuál de las dos
+preguntas se estaba respondiendo.**
+</Dato>
+
+<Tabla>
+
+| Lo que quieres cubrir | Orden de magnitud de cama | Por qué sale así |
+| --- | --- | --- |
+| Hierbas y aromáticas de la cocina | Unos pocos m² | Se cosechan en gramos, casi a diario, y no paran |
+| Hoja y verdura fresca de la familia | Decenas de m² | Mucha agua y poca energía: rinde kilos, no calorías |
+| Una parte real de los almidones | Cientos de m² | Densidad media y cosecha única: ocupa mucho y mucho tiempo |
+| Todas las calorías de la familia | Miles de m² | Cereal y aceite son cultivos de campo, no de patio |
+| Aceite, azúcar y proteína animal | Ya no es un huerto | Otra escala, otro equipo y otro oficio |
+
+</Tabla>
+
+De ahí sale la primera decisión de diseño del módulo, y es una renuncia:
+la <Termino slug="autosuficiencia-calorica">autosuficiencia calórica</Termino> **no es el objetivo de
+un huerto familiar.** No porque esté mal querer producir lo que se come, sino porque el patio no es
+la herramienta. Lo que sí está al alcance es sustituir la parte de la compra que es cara por kilo,
+llega marchita y se repone todas las semanas.
+
+## Por qué casi todas las cifras publicadas engañan
+
+Nadie está mintiendo. Hay siete mecanismos que deforman una cifra de superficie, y conviene
+reconocerlos porque son los mismos que deforman cualquier número heredado.
+
+**No dicen qué significa «alimentar».** Es el error mayor: una cifra de autosuficiencia total y una
+de verdura fresca se diferencian en un factor de veinte o más, y se publican con la misma frase.
+
+**Confunden la cama con el terreno.** El rendimiento se mide sobre
+la <Termino slug="superficie-de-cama">superficie de cama</Termino>, la parte donde hay raíces. Los
+caminos, el compost, el tanque, la sombra del árbol, el borde que no se riega y la casa se comen
+entre un tercio y la mitad del lote: una cifra de cama aplicada al terreno miente por casi el doble.
+
+**Publican rendimiento de estación experimental.** Ese número se obtuvo con riego garantizado,
+fertilización medida, semilla certificada, control sanitario y personal que cosecha en el punto
+exacto. La distancia entre eso y lo que consigue un patio es
+la <Termino slug="brecha-de-rendimiento">brecha de rendimiento</Termino>, y **el primer año suele ser
+la mitad o menos.** No es pesimismo: la habilidad se aprende y la tierra tarda en responder.
+
+<Analogia>
+Es el número del fabricante en la hoja de datos: medido en laboratorio, a temperatura controlada, con
+la carga ideal y sin nada más corriendo. Tu equipo vive en una caja caliente, compartido con otros
+procesos y con una red que se cae.
+
+Nadie que haya puesto algo en producción dimensiona con la cifra del catálogo: **la usa como techo
+teórico y mide la suya.** Con el rendimiento agrícola pasa igual, con el agravante de que tu medición
+tarda una temporada en llegar. Por eso el cuaderno del primer año vale más que cualquier tabla.
+</Analogia>
+
+**Mezclan «por ciclo» con «por año».** Un metro de cama que da dos kilos de lechuga los da **en seis
+semanas**, no en un año. Multiplicar mal cambia la respuesta por cuatro o por seis, y casi ninguna
+fuente aclara cuál usa.
+
+**Vienen de otro clima.** Casi todo el material disponible es de clima templado, donde el invierno
+para el huerto cuatro o cinco meses. Aquí el cambio va en dos direcciones: la cama se ocupa los doce
+meses, lo que **sube** la producción por metro, pero no hay invierno que mate plagas, lo que **sube**
+también la pérdida. Copiar la cifra sin copiar el calendario da un número de ningún sitio real.
+
+**Las publica el que le salió bien.** Nadie escribe sobre el huerto que abandonó en marzo. Ese es
+el <Termino slug="sesgo-de-supervivencia">sesgo de supervivencia</Termino>: el promedio de lo
+publicado es el promedio de los éxitos, y quien lo lee compara su primer intento contra una selección
+de los mejores casos del mundo.
+
+**Usan el promedio del año, y la familia come todas las semanas.** Un huerto puede cerrar el año con
+buen total y dejar la mesa vacía en agosto. Lo que decide si un plan sirve no es la media sino
+el <Termino slug="mes-critico">mes crítico</Termino>, igual que al dimensionar un sistema solar:
+calcular con el promedio funciona once meses y falla justo en el que más falta hacía.
+
+## La unidad que sí sirve: el metro cuadrado-mes
+
+Todo lo anterior se ordena al cambiar de unidad. La tierra no se ocupa en superficie: **se ocupa en
+superficie durante un tiempo.** Un metro cuadrado con una lechuga de seis semanas y otro con una
+yautía de nueve meses no son el mismo recurso, aunque midan igual. La unidad correcta es
+el <Termino slug="metro-cuadrado-mes">metro cuadrado-mes</Termino>: un metro ocupado durante un mes.
+
+<Formula explicacion="El tiempo se cuenta desde que se siembra hasta que la cama queda limpia y lista para lo siguiente, no hasta la primera cosecha.">
+ocupación de un cultivo (m²·mes) = superficie que ocupa × meses que la tiene ocupada
+</Formula>
+
+<Formula explicacion="En el trópico el año da doce meses de ocupación por cada metro de cama. En clima templado ese mismo metro rinde siete u ocho, y esa es media explicación de por qué las cifras extranjeras no encajan aquí.">
+capacidad del huerto al año (m²·mes) = superficie de cama × 12
+</Formula>
+
+Con eso, un plan de siembra deja de ser una lista de deseos y pasa a ser una cuenta que cierra o no
+cierra: **la suma de las ocupaciones no puede pasar de la capacidad.** Y hay una segunda condición
+más dura: además de caber en el total, tienen que **caber en el calendario.**
+
+<Analogia>
+Es la diferencia entre medir un servidor en núcleos y medirlo en núcleos-hora. Los núcleos son la
+capacidad instalada; lo que se reparte entre las tareas son núcleos-hora, y una tarea que ocupa un
+núcleo tres días consume lo mismo que setenta y dos tareas de una hora.
+
+Y como en todo sistema de reservas, **que la suma quepa no garantiza que el plan sea ejecutable.** Si
+todas las tareas exigen el mismo martes, sobra capacidad anual y falta ese día. En el huerto pasa
+idéntico: la mayoría de las siembras quieren octubre.
+</Analogia>
+
+De ahí sale una consecuencia que reordena el catálogo. Un cultivo se evalúa por lo que entrega **por
+metro cuadrado-mes**, no por su rendimiento a secas:
+
+<Formula explicacion="Compara peras con peras. Un cultivo de rendimiento alto pero que ocupa la cama diez meses puede valer menos por metro cuadrado-mes que uno modesto y rápido.">
+valor de un cultivo = kilos entregados ÷ (m² que ocupa × meses que los ocupa)
+</Formula>
+
+Y aparece la distinción que gobierna el huerto familiar. Hay cultivos
+de <Termino slug="cosecha-continua">cosecha continua</Termino> —el culantro que se corta y rebrota,
+el ají que se pica durante meses, la hoja que se saca por fuera— que entregan **poco cada vez y
+muchas veces**, y hay cultivos de cosecha única, que ocupan su sitio meses y entregan de golpe.
+
+Para vender, el segundo puede ser mejor. **Para comer casi siempre gana el primero**, porque una
+cocina consume todos los días y en cantidades pequeñas: la producción tiene que parecerse a la forma
+del consumo. Diez kilos de una sola vez no son diez kilos de comida.
+
+## Lo diario, lo que se guarda y lo que se regala
+
+Eso lleva al reparto que da título a la lección, y que no es una preferencia sino una obligación
+mecánica: **la cosecha llega a saltos y la boca come parejo.** Lo producido tiene cuatro destinos, y
+solo tres son buenos.
+
+**Lo que se come a diario.** Es la parte que justifica el huerto y va lo más cerca posible de la
+cocina: hierbas, hoja, ají, lo que se pica en el momento. Se dimensiona con
+la <Termino slug="tasa-de-consumo">tasa de consumo</Termino> real de la casa —gramos por semana,
+medidos, no recordados— y se siembra escalonado para que nunca esté todo listo el mismo día.
+
+**Lo que se guarda.** Es el amortiguador que impide que el año tenga agujeros, y tiene dos formas. La
+mejor es el <Termino slug="almacen-en-pie">almacén en pie</Termino>: raíces y tubérculos que se
+quedan en la tierra hasta que hacen falta, y frutos que esperan en la planta. No cuesta envase, ni
+frío, ni electricidad, y donde la luz se corta seguido eso no es un detalle. La otra es el guardado
+de verdad —seco, conserva, fermento—, que es un oficio entero y vive en poscosecha.
+
+**Lo que se regala.** Casi todo el mundo lo trata como una gentileza y es **una pieza estructural del
+sistema.** Cualquier huerto que funcione produce picos que exceden lo que la familia come esa semana,
+y el pico es inevitable porque las plantas maduran cuando les toca. **Si no diseñas la salida por
+regalo, el sistema elige la pérdida por ti.**
+
+<Analogia>
+Es un problema de cola y desbordamiento, exactamente el mismo. La producción llega a ráfagas, el
+consumo es de tasa constante y en el medio hace falta un búfer. Lo que decide si el sistema pierde
+datos no es el tamaño del búfer sino que exista **una política de desborde declarada.**
+
+Un huerto sin <Termino slug="politica-de-desborde">política de desborde</Termino> tira comida y su
+dueño concluye que produjo demasiado. No produjo demasiado: **produjo sin plan de salida.**
+</Analogia>
+
+Y regalar tiene una propiedad que lo hace mejor de lo que parece: es
+un <Termino slug="almacenamiento-social">almacenamiento social</Termino>. Los quince kilos que hoy
+sobran y se reparten entre cuatro vecinos vuelven en otra forma y en otro mes, cuando te falte. Sin
+envase, sin frío y sin inversión, y además construye la red que sostiene un huerto cuando su dueño se
+enferma. **Es el almacenamiento más barato que existe.**
+
+El reverso del desborde es el <Termino slug="hueco-de-cosecha">hueco de cosecha</Termino>: la semana
+en que no hay nada listo. Un huerto mal escalonado produce las dos cosas el mismo año, y ambas por
+la misma causa: se sembró todo junto.
+
+<Tabla>
+
+| Destino | Qué lo cubre | Cómo se dimensiona | Qué falla si se ignora |
+| --- | --- | --- | --- |
+| Lo diario | Hierba, hoja, ají, cosecha continua | Tasa de consumo semanal medida | Se sigue comprando igual |
+| Lo que se guarda | Raíz, tubérculo, grano, plátano | Por la longitud del hueco | El año tiene meses vacíos |
+| Lo que se regala | Cualquiera, en su pico | Por lo que sobra del pico | Se pudre y desmoraliza |
+| Lo que se pierde | — | No se dimensiona: se evita | Es la salida por defecto |
+
+</Tabla>
+
+## Lo que de verdad te está limitando
+
+Vuelta a la promesa del principio. En un huerto familiar la superficie rara vez es
+el <Termino slug="cuello-de-botella">cuello de botella</Termino>, y confundirse de limitante lleva a
+ampliar lo que no hacía falta ampliar. Estos son los que de verdad mandan, en orden.
+
+**Las horas de sol.** Es el techo más duro y el que menos se mira: un patio con tres horas de sol
+directo no produce fruto por mucha tierra que tenga, porque la energía que entra no da. Se mide
+gratis mirando el patio cada dos horas de un día despejado. **Si esto falla, ampliar la superficie no
+cambia nada**: lo único que queda es plantar lo que tolera sombra.
+
+**El agua de la seca.** De mayo a septiembre no llueve, y septiembre es el mes duro. Un huerto se
+dimensiona por el agua que se puede acarrear o bombear entonces, no por la que sobra en enero.
+
+**La atención.** Es el limitante que más huertos ha matado. Reclama minutos casi todos los días y dos
+semanas seguidas en las que alguien tiene que estar. La superficie sensata es la que se puede
+recorrer entera cada día sin que dé pereza.
+
+**La profundidad y el drenaje.** En arcilla pesada la raíz no baja y el agua no se va: recorta el
+rendimiento por metro y cambia las especies posibles antes que nada.
+
+**La semilla y los plantines.** Sin flujo constante no hay escalonamiento, y sin él el huerto produce
+a golpes.
+
+<Advertencia>
+Tres errores caros que salen de mirar la superficie en lugar del limitante.
+
+**Ampliar en vez de cerrar.** Se abre el doble de cama cuando el problema era que no había agua ni
+tiempo para la mitad que ya existía: dos veces la maleza, la misma cosecha y el abandono antes de fin
+de año. **Un huerto pequeño bien llevado produce más que uno grande a medias.**
+
+**Sembrar todo el mismo fin de semana.** Causa única de huecos y desbordes: la cosecha se parece a la
+siembra.
+
+**Empezar por las calorías.** Es gastar el recurso más caro —la superficie junto a la cocina— en lo
+que peor rinde por metro cuadrado-mes y más barato se compra.
+</Advertencia>
+
+## Cómo se hace la cuenta, de verdad
+
+Son cinco pasos, y el primero no ocurre en el patio sino en la cocina.
+
+**Uno: mide lo que la familia come.** Dos semanas anotando lo que entra de verdura, hoja y hierbas:
+cuánto, de qué, cuántas veces. De ahí sale la tasa de consumo semanal. Es gratis, no exige agronomía
+y **es el único dato del cálculo que nadie puede publicar por ti.**
+
+**Dos: quédate con lo que tiene sentido producir.** Se descarta lo que se compra barato y aguanta el
+viaje; se queda lo que se compra caro por kilo, llega marchito o se usa en cantidades pequeñas.
+
+**Tres: convierte cada partida a metros cuadrados-mes**, con un rendimiento provisional —marcado como
+provisional— y el tiempo que el cultivo ocupa la cama. Se suma todo.
+
+**Cuatro: compara con lo que tienes, no con lo que mide el lote.** La capacidad real es superficie de
+cama con sol suficiente, por doce, corregida por la brecha del primer año.
+
+**Cinco: corta.** Casi nunca cabe, y ese es el resultado útil. Se recorta primero lo que ocupa muchos
+meses y da poco, después lo que se compra bien.
+
+<Dato titulo="El orden en que se ocupa cada metro cuadrado nuevo">
+Sirve igual para un patio de diez metros que para media hectárea.
+
+**Primero**, hierbas y aromáticas junto a la puerta de la cocina: se cosechan en gramos, se compran
+caras, se pierden rápido y ocupan casi nada.
+
+**Segundo**, hoja y ají de cosecha continua: entregan poco y muchas veces, que es la forma del
+consumo de una casa.
+
+**Tercero**, lo que se almacena solo en la tierra: raíces y tubérculos que tapan los huecos sin
+envase ni frío.
+
+**Cuarto**, perennes y árboles: cuestan una espera de años y luego producen casi sin trabajo anual.
+
+**Y último**, si de verdad sobra superficie, los almidones y granos. Nunca al revés.
+</Dato>
+
+Y una regla de honestidad para todo el módulo: **cada rendimiento que uses la primera vez es prestado
+y hay que devolverlo.** Se anota qué se sembró, cuándo, cuánto ocupó y cuánto entregó, y al segundo
+año esos números sustituyen a los de cualquier tabla, incluida la de arriba.
+
+<AplicarRizoma>
+**Rizoma del Sur sirve aquí como calibrador, y el resultado incomoda.** Son 3.666 m² en doce lotes
+contiguos. Si todo fuera cama —y no lo es: hay caminos, vivero, sombra y obra—, la capacidad rondaría
+los 44.000 metros cuadrados-mes al año. Como la parte fresca de una familia consume unas pocas
+decenas de metros de cama, la parcela entera podría cubrir **la verdura de muchas familias del
+barrio**; pero si se le pidieran las calorías completas de esas mismas familias alcanzaría para **una
+o dos.** El sitio no es pequeño ni grande: es del tamaño justo para la pregunta correcta y ridículo
+para la equivocada.
+
+**El catálogo del sitio se lee distinto con la unidad nueva.** El culantro es el campeón por metro
+cuadrado-mes: ocupa poco, tolera sombra, se corta y rebrota, y entrega en manojos todo el año, que es
+la forma exacta que pide una cocina. El ají dulce se comporta parecido una vez cuajado, porque se
+pica durante meses de la misma planta. La yautía está en el otro extremo: ocupa la cama muchísimos
+meses y entrega de golpe, lo que la hace mala por metro cuadrado-mes y excelente como almacenamiento
+en pie. La batata es el candidato serio para la parte calórica. El gandul tiene una propiedad que
+ninguna tabla recoge: **es un arbusto y puede vivir en el borde**, así que no se descuenta de la cama
+de hortalizas. Y el plátano no sale del presupuesto de camas: es estructura permanente y se paga del
+presupuesto de los perennes.
+
+**El mes crítico del sitio es septiembre y ahí se dimensiona todo.** Cinco meses sin recarga, calor
+en subida y lluvias que aún no llegan: un plan hecho con el promedio del año funciona hasta agosto y
+deja la mesa vacía cuando más caro está todo. La pregunta de diseño no es cuántos metros caben, sino
+**cuántos se pueden regar en septiembre con el agua y las manos que hay**, contando además que los
+cortes de energía dejan la bomba parada sin avisar.
+
+**Las arcillas expansivas 2:1 recortan el rendimiento por metro antes que ninguna otra cosa.** Se
+hinchan mojadas, se agrietan secas y no dejan bajar la raíz, así que cualquier cifra de kilos por
+metro copiada de otro sitio hay que bajarla hasta que el suelo esté trabajado y con cobertura. Por
+eso la cama alta no es aquí un adorno: sube la raíz por encima del nivel que se satura.
+
+**Y la obligación que le toca a Rizoma por ser un proyecto comunitario y gratuito.** No existe una
+tabla de rendimientos de huerto familiar hecha en Zanja Honda, y por eso este curso trabaja con
+órdenes de magnitud. Lo que sí puede hacer el sitio es **medir**: metros de cama, fecha de siembra,
+fecha en que la cama queda libre, kilos cosechados, y publicarlo tal cual, con los fracasos dentro.
+Diez familias midiendo un año producen el dato local que ninguna publicación va a traer, y ese dato
+es de todos y no depende de que Rizoma siga existiendo. **Lo que se entrega no es un número: es el
+cuaderno.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El calendario de Santa Cruz cambia la aritmética de la superficie más que cualquier técnica.** Con
+lluvias de octubre a abril, seca de mayo a septiembre y una media anual cercana a los 25 °C, aquí no
+hay invierno que pare el huerto: la cama puede estar ocupada los doce meses, y por eso un metro
+cuadrado rinde en el llano cruceño bastantes más metros cuadrados-mes que el mismo metro en clima
+templado. Esa es la razón mecánica por la que las cifras de los manuales extranjeros sobran aquí.
+**La contrapartida es que tampoco hay helada que corte el ciclo de las plagas**: lo que se gana en
+meses se paga en presión sanitaria y en pérdida.
+
+**Y los surazos meten una interrupción que ninguna cifra anual recoge.** Aire frío del sur, noches
+cerca de los 10 °C y viento fuerte entre abril y septiembre. No matan el huerto, pero frenan el
+crecimiento varios días y desordenan el escalonamiento, de modo que un plan calculado con ritmos
+constantes abre un hueco de cosecha semanas después. Se planifica con margen en esa ventana.
+
+**La dieta real de la casa cruceña está construida sobre alimentos que el patio no va a sustituir:**
+arroz, fideo, pan, aceite, azúcar, carne. Es la parte energética y sale de cultivos de campo y de la
+ganadería, a una escala que no cabe en un lote urbano. Decirlo claro es lo que permite que el huerto
+familiar sea **un éxito y no una decepción**, porque entonces se lo juzga por lo que sí puede hacer
+—verdura, hoja, hierba, ají, fruta del traspatio—, que es la parte de la compra semanal que más sube
+de precio y peor llega.
+
+**El huerto de traspatio no es una idea que haya que importar aquí.** El patio con plátano, un
+frutal, yuca, hierbas junto a la cocina y ornamentales en el borde es el arreglo doméstico más
+antiguo del trópico, y en Santa Cruz existe en miles de casas sin que nadie lo llame agricultura.
+Este módulo no propone inventarlo: propone **medirlo y ordenarlo**, que es lo único que le falta para
+pasar de extra a parte contable de la comida.
+
+**La tenencia de la tierra decide qué se puede plantar, y en Zanja Honda no es uniforme.** Hay
+vecinos con lote propio, alquilado, prestado o en trámite, y quien no sabe si estará en tres años no
+debería empezar por frutales injertados, que cobran a partir del tercero: le conviene lo anual y lo
+de envase. Las condiciones de tenencia, registro y uso de un predio **hay que consultarlas con la
+autoridad competente o con un abogado local**; este curso no cita normas ni plazos porque un dato
+inventado en material de enseñanza se propaga durante años.
+
+**El agua y la luz de la casa condicionan el huerto más que el suelo, y el dengue lo atraviesa
+todo.** Los cortes de energía son frecuentes y el agua no siempre es continua, justo en la temporada
+en que el huerto depende por completo del riego: se dimensiona por lo que se puede acarrear en la
+peor semana de septiembre. Y cualquier solución en envase —macetas, baldes, bidones cortados, platos
+debajo— cría mosquito si guarda agua limpia estancada; se resuelve con platos secos o con arena,
+envases que drenen y revisión semanal del patio. Las indicaciones sanitarias vigentes las define la
+autoridad de salud y conviene consultarlas en el centro de salud o el municipio.
+
+**Sobre cifras de consumo, nutrición y precios, este curso se declara incompetente a propósito.**
+Cuánto come una familia boliviana o qué cuesta un kilo de tomate esta semana en tu mercado lo
+publican las instituciones de estadística, salud e investigación agrícola del país, y cambia. **Lo
+que sí puedes hacer hoy es ir al mercado con una libreta y anotar precios y kilos durante dos
+semanas.** Ese dato es tuyo, es actual y decide qué merece la pena sembrar.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Esta lección deja tres cosas en la mano. Que «alimentar» son tres encargos distintos y el patio solo
+gana uno con claridad. Que la tierra se cuenta en metros cuadrados-mes, lo que convierte cualquier
+plan en una cuenta que cierra o no cierra. Y que la cosecha llega a saltos mientras la boca come
+parejo, así que lo diario, lo que se guarda y lo que se regala son tres funciones del mismo sistema
+y no tres actitudes.
+
+Falta lo más importante para quien empieza: **con qué se llenan esos metros.** La siguiente lección,
+**Las que perdonan y las que no**, ordena las especies por una variable que ninguna tabla trae y que
+en un primer año pesa más que el rendimiento: **cuánto perdonan.** Cuáles siguen adelante con riego
+irregular, suelo mediocre y dos semanas de descuido, cuáles se pierden enteras a la primera falla, y
+cuáles conviene dejar para el segundo año.

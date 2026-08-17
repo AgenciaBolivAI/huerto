@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" font-family="system-ui, sans-serif">
+  <rect width="800" height="600" fill="#dcebe4"/>
+  <rect y="420" width="800" height="180" fill="#b8d4c3"/>
+  <!-- Árbol de sombra -->
+  <g>
+    <rect x="230" y="300" width="22" height="140" rx="8" fill="#6b4b32"/>
+    <circle cx="240" cy="250" r="95" fill="#2b4324"/>
+    <circle cx="180" cy="290" r="60" fill="#34522a"/>
+    <circle cx="300" cy="290" r="60" fill="#34522a"/>
+  </g>
+  <!-- Palmera -->
+  <g>
+    <path d="M560 440 q10 -120 -10 -170" stroke="#6b4b32" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <g fill="#3f7a52">
+      <path d="M550 270 q-90 -40 -140 -10 q70 30 140 10z"/>
+      <path d="M550 270 q90 -40 140 -10 q-70 30 -140 10z"/>
+      <path d="M550 270 q-60 -80 -110 -90 q40 70 110 90z"/>
+      <path d="M550 270 q60 -80 110 -90 q-40 70 -110 90z"/>
+      <path d="M550 270 q0 -90 20 -120 q20 60 -20 120z"/>
+    </g>
+  </g>
+  <text x="400" y="90" text-anchor="middle" font-size="44" font-weight="700" fill="#23371e">Sombra y palmeras</text>
+  <text x="400" y="135" text-anchor="middle" font-size="22" letter-spacing="2" fill="#2b4324">@rizomaDelSur</text>
+</svg>

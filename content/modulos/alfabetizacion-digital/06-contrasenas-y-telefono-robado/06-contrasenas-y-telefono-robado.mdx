@@ -1,0 +1,403 @@
+Las cinco lecciones anteriores te entregaron una máquina, una manera de buscar, un criterio para creer
+lo que encuentras, unos archivos con su copia y un correo que te representa. Todo eso cuelga de dos
+cosas frágiles: **una tira de caracteres que alguien puede adivinar y un aparato de bolsillo que
+alguien puede llevarse en el mercado en tres segundos.** Primero el mecanismo real de una contraseña,
+para que las reglas dejen de ser supersticiones; después el teléfono. Y encima de las dos, la
+advertencia que ordena el resto: **el día del robo no vas a poder prepararte, solo vas a poder ejecutar
+lo que preparaste.**
+
+## Qué es de verdad una contraseña
+
+Casi todo el mundo cree que el servicio donde se registró anota su contraseña en una lista y la compara
+al entrar. Si fuera así, cualquier empleado podría leerla.
+
+Un servicio bien hecho hace otra cosa: la pasa por
+una <Termino slug="funcion-de-resumen">función de resumen</Termino>, un cálculo que convierte cualquier
+texto en una tira de largo fijo y tiene dos propiedades. El mismo texto da siempre el mismo resultado,
+y **el cálculo no se puede deshacer**: mirando el resultado no hay forma de recuperar el texto que lo
+produjo. Eso es lo que se guarda. Cuando entras, el servicio calcula el resumen de lo que escribiste y
+lo compara con el que archivó.
+
+De ahí sale algo que ves todos los días: **un servicio serio no puede decirte cuál era tu contraseña**,
+solo darte un enlace para poner otra. No es burocracia, es que de verdad no la sabe. Y al revés: el día
+que un sitio te mande por correo tu contraseña tal como la escribiste, acabas de descubrir que la
+guardó en claro.
+
+<Analogia titulo="La huella y el dedo">
+Una función de resumen se parece a una huella dactilar. Del dedo sale siempre la misma huella y dos
+dedos distintos dan huellas distintas, pero **de la huella no se reconstruye el dedo**: es una marca
+que identifica sin contener a la persona.
+
+Quien le robe el archivo al vigilante se lleva marcas, no dedos, y para entrar tendría que fabricar un
+dedo que produzca la misma huella — que es exactamente el trabajo de la sección siguiente.
+</Analogia>
+
+Dos detalles más que decide el sitio, no tú: antes de calcular el resumen se le pega un puñado de
+caracteres al azar, distinto en cada cuenta, para que dos personas con la misma clave no compartan
+resumen; y la función suele estar **hecha lenta a propósito**, para frenar al atacante. Lo único que sí
+controlas —el largo y no repetir— tiene que aguantar solo.
+
+## Por qué la longitud le gana al símbolo raro
+
+Nadie está sentado frente a tu pantalla probando claves: la puerta de cualquier servicio serio corta
+tras unos pocos intentos, así que adivinar en línea no escala.
+
+Lo que ocurre es que **alguien roba la base de datos de un servicio cualquiera** —una tienda, un foro,
+un sitio de anuncios— y se lleva millones de correos con sus resúmenes. Eso es
+una <Termino slug="filtracion-de-datos">filtración de datos</Termino>. Con esa lista en su computadora
+el atacante ya no tiene límite de intentos: calcula el resumen de un candidato, lo compara con los
+millones que tiene y repite, sin que nadie lo vea. Una tarjeta gráfica de videojuegos hace ese cálculo
+**miles de millones de veces por segundo**.
+
+Prueba dos cosas, en este orden.
+Primero, <Termino slug="ataque-de-diccionario">ataque de diccionario</Termino>: las contraseñas que ya
+salieron en filtraciones anteriores, más palabras de varios idiomas, nombres, equipos, fechas y placas.
+Y encima **reglas de transformación** que aplican solas los truquitos que uno cree originales: la a por
+arroba, la o por cero, mayúscula al principio, exclamación al final, el año pegado. Ahí está el golpe:
+`P@ssw0rd2024!` no es compleja, es la palabra `password` más cuatro reglas que el programa aplica en el
+primer segundo. **Las sustituciones son públicas porque las hace todo el mundo.**
+
+Solo cuando el diccionario falla se pasa a la <Termino slug="fuerza-bruta">fuerza bruta</Termino>:
+probar todas las combinaciones, sin ninguna inteligencia. Ahí aparece un número que puedes calcular tú.
+
+<Formula explicacion="Si el alfabeto son las 26 minúsculas, vale 26; si además usas mayúsculas, dígitos y signos, vale unos 95. La longitud es cuántos caracteres tiene la contraseña.">
+combinaciones posibles = (tamaño del alfabeto) ^ (longitud)
+</Formula>
+
+El símbolo raro agranda **la base**; la longitud está en **el exponente**, y un exponente le gana a una
+base siempre. Un signo más multiplica el trabajo del atacante por poco; un carácter más lo multiplica
+por el alfabeto entero.
+
+<Tabla>
+
+| Contraseña | Contra qué choca el atacante | Cuánto tarda |
+| --- | --- | --- |
+| `Perro2024` | Diccionario más año: ya está en la lista | Instantánea |
+| `P@ssw0rd2024!` | La misma palabra con reglas ya programadas | Instantánea |
+| `gT7k#2q`, 7 al azar | 95⁷ ≈ 7 × 10¹³ | Unas dos horas |
+| `gT7k#2qX9!v`, 11 al azar | 95¹¹ ≈ 6 × 10²¹ | Decenas de miles de años |
+| Cuatro palabras al azar de una lista de 8.000 | 8.000⁴ ≈ 4 × 10¹⁵ | Unos días |
+| Cinco palabras al azar de esa lista | 8.000⁵ ≈ 3 × 10¹⁹ | Alrededor de un siglo |
+
+</Tabla>
+
+<Dato>
+Lo que importa es el salto entre la última fila y la segunda: **cinco palabras que puedes recordar
+resisten un siglo, trece caracteres imposibles de teclear caen en el primer segundo.**
+</Dato>
+
+De ahí la herramienta práctica: la <Termino slug="frase-de-paso">frase de paso</Termino>, cuatro o
+cinco palabras **elegidas al azar** y sin relación entre ellas, como `mango-tornillo-neblina-carreta`.
+Lo que hace el trabajo es *al azar*: si eliges tú, saldrá tu barrio, tu perro y tu equipo. Sin
+aparatos: abre un libro cinco veces y toma la primera palabra de cada página. Un dicho o una frase de
+canción **no sirve**: las frases célebres también están en el diccionario.
+
+## El error que lo hunde todo: repetir la clave
+
+Roban la base de datos de un sitio donde te registraste hace seis años, y que probablemente guardaba
+mal las contraseñas. El atacante rompe las débiles y arma una lista de pares: correo y contraseña.
+Después no vuelve a ese sitio: **va a todos los demás**. Un programa prueba tu par en el correo, en el
+banco, en las redes, en decenas de miles de servicios, a velocidad de máquina. Eso es
+el <Termino slug="relleno-de-credenciales">relleno de credenciales</Termino>, hoy la forma más común de
+perder una cuenta.
+
+Fíjate en la parte incómoda: **el fallo no fue tuyo y no ocurrió en tu casa.** Tu contraseña podía ser
+excelente; la rompieron en el servidor de un tercero al que le confiaste la misma llave. Por eso
+repetir es distinto de cualquier otro descuido: **convierte la peor seguridad de la cadena en la
+seguridad de todo lo que tienes.**
+
+<Analogia titulo="La misma llave para la casa, el taller y la moto">
+Mandas hacer una sola llave que abre tu casa, el candado del taller, el cajón de la plata y la moto. El
+problema no aparece mientras la llave está contigo: aparece el día que se la prestas al mecánico o la
+dejas en el mostrador de un negocio descuidado. Ahí no perdiste ese negocio, perdiste todo, y ni te
+enteras, porque la llave sigue en tu bolsillo.
+
+Quien programa conoce la versión con otro nombre: la misma contraseña en el servidor de producción y en
+un proyecto de fin de semana hecho a las apuradas. El de fin de semana es el que va a caer, y se lleva
+producción por delante.
+</Analogia>
+
+Queda la excusa más frecuente: «a mí qué me van a robar, si no tengo nada». Tu cuenta vale porque **tu
+nombre abre puertas que el del atacante no abre**: desde tu WhatsApp le escriben a tu madre pidiendo un
+préstamo urgente.
+
+## Dónde se guardan: el gestor y el cuaderno bajo llave
+
+Si cada cuenta necesita una clave larga y distinta, nadie recuerda cuarenta frases de paso. Hay dos
+soluciones honestas.
+
+La primera es un <Termino slug="gestor-de-contrasenas">gestor de contraseñas</Termino>: un programa que
+guarda tus claves en un archivo cifrado, revuelto con un cálculo que solo deshace
+una <Termino slug="clave-maestra">clave maestra</Termino> que sabes únicamente tú. Genera claves al
+azar de veinte caracteres, y hace algo que casi nadie valora: **solo rellena cuando la dirección del
+sitio coincide exactamente con la que guardó**. Si caíste en una página falsa idéntica a la del banco,
+no rellena nada, y ese silencio es la alarma más confiable que vas a tener. Su riesgo hay que decirlo:
+todo queda tras una sola puerta, y si olvidas la clave maestra no la recupera nadie.
+
+La segunda es un **cuaderno bajo llave**, y no es un consejo de segunda. Para entender por qué hace
+falta el <Termino slug="modelo-de-amenaza">modelo de amenaza</Termino>: la lista honesta de quién
+querría entrar en tus cuentas, con qué medios y con qué motivo. Quien te ataca de verdad es un programa
+automático a miles de kilómetros que no sabe que existes, y ese programa **no puede abrir el cajón de
+tu cocina**. Un cuaderno te protege del atacante que sí tienes, a cambio de no protegerte del que
+probablemente no tienes.
+
+Sus reglas son cuatro. **No sale de casa**, porque en la mochila se pierde con la mochila. **No se le
+saca foto, jamás**: esa foto se sube sola a la nube con el respaldo automático. **No dice para qué es
+cada una**, basta una palabra que tú entiendas. Y **hay una segunda copia** en otro mueble, porque un
+cuaderno único que se moja deja fuera de todo.
+
+<Advertencia>
+Queda el camino que ya usas sin decidirlo: **el navegador o el teléfono guardando las contraseñas.** Es
+mejor que repetir la misma en todo, pero entiende qué compraste: esas claves están atadas a la cuenta
+con la que iniciaste sesión y **se sincronizan**, así que quien entre a esa cuenta las tiene todas, sin
+tocar tu aparato.
+
+De ahí dos condiciones que no son opcionales. Esa cuenta lleva segundo factor, sí o sí. Y el aparato
+lleva bloqueo de pantalla, porque un teléfono desbloqueado en la mano de otro es la lista de
+contraseñas abierta sobre la mesa.
+</Advertencia>
+
+## El segundo factor: algo que sabes y algo que tienes
+
+Una contraseña, por larga que sea, es **algo que sabes**, y lo que se sabe se puede copiar sin que lo
+notes. A cada prueba independiente se le
+llama <Termino slug="factor-de-autenticacion">factor de autenticación</Termino>, y hay tres familias:
+algo que sabes, algo que tienes y algo que eres. La fuerza está en combinar familias distintas: quien
+te robó la clave en una filtración a diez mil kilómetros no tiene tu teléfono en la mano.
+
+<Tabla>
+
+| Segundo factor | Cómo funciona | Qué tan fuerte es |
+| --- | --- | --- |
+| Código por mensaje | Seis dígitos por la red telefónica | El más débil: red que no controlas, atado al número y no a ti |
+| Código de una aplicación | El teléfono y el servicio comparten un secreto y calculan el mismo número cada 30 segundos | Fuerte: se calcula dentro del aparato, sin señal ni datos |
+| Llave física por USB | Un aparatito que firma la entrada y verifica la dirección del sitio | El más fuerte y el único que no se entrega por engaño |
+| Enlace a otro correo | Manda un enlace a una segunda cuenta | Vale lo que valga ese otro correo |
+
+</Tabla>
+
+El código por mensaje es mejor que nada, y si es lo único que ofrece tu banco se activa; pero es el más
+débil por algo concreto que se
+llama <Termino slug="intercambio-de-sim">intercambio de SIM</Termino>: el atacante consigue que tu
+número quede activo en un chip que tiene él, pidiendo un duplicado con datos tuyos sacados de una
+filtración. Desde ese momento tus mensajes llegan a su teléfono y él pide restablecer contraseñas en
+todas partes, mientras tu aparato se queda sin señal. **Ese silencio repentino del chip es la única
+alarma que vas a tener**: si tu línea se cae sin motivo y la del vecino funciona, llama a tu operadora
+desde otro teléfono.
+
+Y ahora lo que más se salta y lo que más rescata. Al activar el segundo factor, el servicio muestra
+ocho o diez <Termino slug="codigos-de-respaldo">códigos de respaldo</Termino>, cada uno utilizable una
+sola vez, para entrar cuando no tienes el aparato. La gente los cierra sin mirar. Piensa qué pasa el
+día del robo: el segundo factor vivía **dentro del teléfono robado**, así que ya no entran ni el ladrón
+ni tú. Se copian en el cuaderno, y ese papel **no está en el teléfono**.
+
+## El correo es la llave maestra
+
+Piensa cómo se recupera cualquier cuenta: pulsas «olvidé mi contraseña» y el servicio manda un enlace a
+tu correo. Es decir, **quien controla tu correo toma por la puerta principal casi todo lo demás**, sin
+romper nada. Eso lo convierte en tu <Termino slug="cuenta-llave">cuenta llave</Termino>: **el correo se
+blinda primero**, aunque sientas que el banco es más importante. El banco cuelga del correo.
+
+Blindarlo son cinco movimientos. Frase de paso larga que **no se repite en ningún otro lugar del
+mundo**. Segundo factor de aplicación, no de mensaje. Códigos de respaldo en papel. Correo y número de
+recuperación actualizados, porque si apuntan a un teléfono que perdiste hace dos años no sirven. Y uno
+que casi nadie conoce, marca típica de una cuenta ya intervenida: **mira si hay reenvíos automáticos o
+reglas de filtrado que no pusiste tú**. Quien entra a un correo ajeno deja una regla que le manda copia
+de todo, y cambiar la contraseña no la borra.
+
+Lo mismo vale para «entrar con Google» o «entrar con Facebook» en decenas de sitios: esos sitios no
+tienen una clave tuya, **tienen una llave que apunta a tu cuenta principal**.
+
+## Preparar el teléfono antes de que pase
+
+Tu teléfono es tu banco, tu correo, tus documentos y la puerta a todas tus cuentas. Prepararlo es una
+hora de trabajo, una sola vez.
+
+**Bloqueo de pantalla con PIN de seis dígitos o más.** El patrón de puntos es el más débil: el dedo
+deja un rastro de grasa que lo dibuja en el vidrio, y desde un metro se ve y se recuerda. La huella y
+la cara son cómodas, pero debajo siempre hay un PIN y ese PIN es la seguridad real. Que el bloqueo
+entre a los treinta segundos: casi todos los robos ocurren con el teléfono desbloqueado.
+
+Ese bloqueo es lo que hace útil
+el <Termino slug="cifrado-del-dispositivo">cifrado del dispositivo</Termino>, que los teléfonos
+modernos traen puesto: el almacenamiento está revuelto y la llave para desrevolverlo se arma con tu
+PIN. Sin PIN el contenido es ilegible aunque saquen la memoria; sin bloqueo, la puerta está abierta.
+
+**El <Termino slug="pin-de-la-sim">PIN de la SIM</Termino>** es otra cosa y casi nadie lo tiene: un
+código que pide el chip cada vez que se enciende en un teléfono. Sin él, el ladrón mete tu chip en
+cualquier aparato viejo y **empieza a recibir tus llamadas y tus códigos de verificación**, aunque tu
+teléfono esté bloqueado. Cuidado: tres intentos equivocados bloquean el chip y hace falta un código de
+desbloqueo largo, que viene en el plástico del chip y que también entrega la operadora.
+
+**Notificaciones sin contenido en la pantalla bloqueada**, porque si no, el código de seis dígitos del
+banco se lee sin desbloquear nada. Y **respaldo al día**: lo que solo existe en el teléfono deja de
+existir cuando el teléfono se va.
+
+**El <Termino slug="imei">IMEI</Termino> anotado en papel.** Es el número de serie del aparato, de
+quince dígitos, distinto de tu número y del chip: identifica al equipo, no a la línea. Se ve marcando
+`*#06#`, sirve para pedir que se bloquee el equipo y para la denuncia, y va anotado **en cualquier
+sitio que no sea el teléfono**.
+
+**«Buscar mi dispositivo» activado y probado** desde la computadora de otra persona: una función que
+nunca probaste no está activada, está supuesta. Y **dos números escritos en un papel en la billetera**,
+porque sin el aparato no puedes llamar a nadie.
+
+## El día del robo: el orden importa y todo se hace desde otro equipo
+
+Ya pasó. Aquí no se improvisa: se ejecuta una lista, y **el orden está pensado por lo que se puede
+perder en cada minuto**. Pide prestada una computadora, porque **nada se hace desde el aparato robado
+ni respondiendo mensajes que lleguen.**
+
+<Tabla>
+
+| Orden | Qué haces | Por qué va ahí |
+| --- | --- | --- |
+| 1 | Entra a tu correo, cambia la clave y cierra la sesión en todos los dispositivos | Abre todo lo demás: si no, cada cambio se deshace desde ahí |
+| 2 | Bloquea el teléfono a distancia, con un mensaje en pantalla | Lo deja inservible sin borrar todavía |
+| 3 | Llama a tu operadora: bloqueo de línea, bloqueo por IMEI y chip nuevo | Mientras el chip funcione, el ladrón recibe tus códigos |
+| 4 | Llama al banco por el número impreso en tu tarjeta | Ahí el daño es irreversible en minutos |
+| 5 | Cambia las claves del resto: redes, tiendas, trabajo | Con el correo asegurado, los enlaces llegan a tus manos |
+| 6 | Reinstala WhatsApp con tu número en el chip nuevo | Registrarlo en otro aparato expulsa al que lo tenía |
+| 7 | Avisa a tus contactos: familia, grupos, socios, clientes | Van a escribirles haciéndose pasar por ti |
+| 8 | Haz la denuncia y guarda una copia | Constancia de que el equipo y la línea dejaron de ser tuyos |
+| 9 | Decide si borras el teléfono a distancia | El borrado corta la localización: es la última carta |
+
+</Tabla>
+
+Cuatro precisiones deciden si la lista funciona. **Cerrar la sesión en todos los dispositivos no es lo
+mismo que cambiar la contraseña**: la sesión abierta en el teléfono sigue viva aunque cambies la clave,
+así que hay que pedir <Termino slug="revocacion-de-sesiones">revocación de sesiones</Termino> aparte.
+El bloqueo y el <Termino slug="borrado-remoto">borrado remoto</Termino> **quedan en cola** si el ladrón
+apagó el aparato: la orden se ejecuta en cuanto se conecte. **La denuncia importa** aunque des el
+equipo por perdido, porque la línea está a tu nombre; pregunta ahí qué unidad atiende estos casos y qué
+documentos llevar, que eso se responde en la oficina y no lo puede decir un curso. Y avisar a los
+contactos **es el paso más importante para los demás**, porque el mensaje que reciben —«se me perdió el
+teléfono, este es mi número nuevo, préstame algo urgente»— funciona por tu nombre.
+
+<Advertencia>
+Hay una segunda estafa que llega justo después del robo: un mensaje que parece del servicio de
+localización de tu teléfono, «tu dispositivo fue encontrado, ingresa aquí». El enlace lleva a una
+página idéntica a la verdadera, escribes tu correo y tu contraseña con la esperanza puesta, y **eso era
+lo que les faltaba**: con esa clave desbloquean el aparato para revenderlo.
+
+No se entra por enlaces que llegan solos, se entra escribiendo tú la dirección. Y no vayas a ninguna
+cita a «recuperar el aparato» con quien te escribió: eso ya no es un asunto de contraseñas, es tu
+integridad física, y se avisa a la policía.
+</Advertencia>
+
+<AplicarRizoma>
+Nada de esta lección necesita un terreno, una planta ni una herramienta: necesita una hora, un cuaderno
+de dos bolivianos y una llave. Si vives en un cuarto alquilado y tu único aparato es un teléfono usado,
+esto es todavía más para ti, porque quien tiene un solo aparato lo pierde todo con él.
+
+Empieza esta noche por lo único que importa: **haz la lista de las tres cuentas que te arruinarían el
+mes si las pierdes.** Para casi todo el mundo son el correo, el banco y el WhatsApp. No hay que
+arreglar la vida entera, hay que blindar tres puertas. Al correo le pones una frase de paso de cinco
+palabras sacadas de un libro abierto al azar, le activas el segundo factor con una aplicación de
+códigos y copias a mano en la primera hoja del cuaderno los códigos de respaldo. Después repites con el
+banco y con el WhatsApp, que tiene su propia verificación en dos pasos con un PIN: eso es lo que impide
+que alguien registre tu número en otro teléfono.
+
+Al aparato le dedicas quince minutos seguidos, con la lista al lado: PIN de seis dígitos, bloqueo
+automático a los treinta segundos, PIN de la SIM activado, notificaciones sin contenido, «buscar mi
+dispositivo» encendido y probado desde la computadora de un vecino, y el IMEI —marca `*#06#`— anotado
+en un papel que va a la billetera junto con dos números escritos a mano.
+
+Si de tu teléfono depende un oficio, hay una capa más: el carpintero con las medidas del ropero
+encargado, la costurera con las fotos de sus modelos, quien vende por Facebook con su lista de
+clientes. Una copia semanal en un pendrive que se queda en el cajón es la diferencia entre un mal día y
+volver a empezar.
+
+Después está lo que solo se hace en familia, y una tarde de domingo alcanza: decidir a quién se llama
+si a alguien le roban el teléfono; qué se hace si llega un mensaje pidiendo dinero desde un número
+nuevo, que es siempre lo mismo, llamar al número viejo antes de mover un peso; y dónde está el cuaderno
+y quién más sabe abrirlo, porque una clave maestra que solo sabe una persona es un problema esperando a
+que esa persona no esté. Si el teléfono se comparte en casa, la cuenta de correo de quien maneja el
+dinero no se queda con la sesión abierta ahí.
+
+Cierra con la prueba que no admite discusión: **desde la computadora de otra persona, sin tu teléfono
+en la mano, intenta entrar a tu correo ahora mismo.** Si no puedes porque el código va al teléfono que
+no tienes, acabas de descubrir hoy, gratis y sin ladrón, lo que te habría pasado el día del robo. Y
+esto se transmite: quien aprendió a poner un PIN a su chip y a copiar diez códigos en un cuaderno puede
+sentarse a enseñárselo a cinco vecinos, sin ser técnico y sin haber terminado la escuela.
+</AplicarRizoma>
+
+<ContextoBolivia>
+La primera condición local es que **el número de teléfono se volvió tu documento de identidad
+digital**: con él te registras en todo, por él llegan los códigos y en él está la aplicación del banco.
+Las líneas se registran a nombre de una persona con su documento, y eso tiene dos caras: es una razón
+de peso para denunciar rápido —no quieres una línea a tu nombre activa en manos de otro— y es lo que
+hace posible que alguien intente sacar un duplicado de tu chip con datos tuyos. Cada operadora tiene su
+procedimiento para el bloqueo por IMEI, el duplicado y el reporte de robo, y eso se pregunta en su
+oficina, no en un mensaje reenviado. No te doy plazos, costos ni artículos de ninguna norma: no los sé
+y cambian.
+
+La segunda es la conexión. Con datos móviles que se pagan por megabyte y cortes de energía frecuentes,
+hay un detalle técnico que juega a tu favor: **la aplicación de códigos de seis dígitos funciona sin
+señal y sin datos**, porque el código se calcula dentro del teléfono con el reloj y no llega por
+ninguna red. Donde el mensaje de texto se demora con la antena saturada, eso no es solo más seguro: es
+más práctico. Y el papel con los códigos de respaldo aguanta cualquier apagón.
+
+La tercera es cómo ocurre el robo aquí. Casi nunca es un ataque informático: es un tirón en la calle,
+un descuido en el mercado, una moto que pasa. El teléfono sale de tu mano **desbloqueado y caliente**,
+y por eso los primeros diez minutos valen más que todo lo demás. Además hay un mercado grande de
+teléfonos de segunda mano: de ahí que el bloqueo por IMEI importe tanto, y de ahí la insistencia en
+sacarte después la clave con el mensaje del «dispositivo encontrado».
+
+La cuarta es social y es la que más daño hace. Casi todo pasa por WhatsApp: los grupos del barrio, los
+pedidos de trabajo, la escuela, los cobros. Cuando roban un teléfono, lo que sigue es un mensaje a toda
+la agenda pidiendo un préstamo urgente, y funciona porque la solidaridad aquí es real y porque nadie
+sospecha de un nombre conocido. Por eso avisar a los contactos no es cortesía: es la parte de la lista
+que protege a otras familias. Y hay que decirlo sin vergüenza, porque **que te roben el teléfono y usen
+tu nombre no dice nada malo de ti**, y callarlo es lo que permite que alguien pierda dinero al día
+siguiente.
+
+Y una condición económica: muchas casas tienen un solo teléfono para varias personas y una computadora
+prestada de vez en cuando. Por eso el cuaderno bajo llave es una respuesta legítima y no un premio de
+consuelo. La seguridad que exige comprar algo no llega a la mayoría; la que se hace con un cuaderno,
+una llave y media hora de conversación, sí.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Mi contraseña es segura porque tiene símbolos.»** La longitud está en el exponente; el símbolo solo
+agranda la base.
+
+**«Uso la misma clave, pero es muy buena.»** La rompen en el servidor de un tercero descuidado, y ese
+día se lleva todo lo que abría esa llave.
+
+**«A mí no tienen nada que robarme.»** Tienen tu nombre, que es lo que hace que tu madre conteste el
+mensaje pidiendo plata.
+
+**«El segundo factor está en el teléfono, así que tranquilo.»** El día que te lo roben no entras ni tú.
+
+**«Ya cambié la contraseña del correo.»** Si no cerraste las sesiones abiertas, la del ladrón sigue
+viva: eso se pide aparte.
+
+**«El chip es solo para llamar.»** Sin PIN de SIM, ese chip en otro teléfono recibe todos tus códigos.
+
+**«Le saqué una foto al cuaderno por si acaso.»** Esa foto se subió sola a la nube.
+
+## Cierre del módulo
+
+Este módulo empezó abriendo el aparato por dentro y siguiendo un mensaje hasta un centro de datos en
+otro país. Después enseñó a buscar sin quedarse con lo primero, a decidir en qué fuente creer, a hacer
+una foto que se entienda y a no perder un archivo, y a moverse en el canal formal del correo y los
+trámites. Esta lección puso la capa que sostiene a las cinco anteriores.
+
+La idea que atraviesa las seis no es sobre tecnología: **en lo digital, lo que no preparaste antes no
+lo vas a poder improvisar después.** El respaldo se hace cuando el archivo todavía existe. La fuente se
+comprueba antes de reenviar. El código de respaldo se guarda el día que activas el segundo factor, no
+el día del robo. Son actos pequeños, casi aburridos, hechos cuando no pasa nada — y esa es la razón por
+la que la gente no los hace, y por la que quien sí los hace parece tener suerte.
+
+Fíjate en lo que nunca hizo falta: dinero, estudios, un aparato caro o ser joven. Hizo falta entender
+el mecanismo y ejecutar una lista. **La alfabetización digital no es aprender botones, que cambian cada
+año: es entender qué hay debajo, que no cambia.**
+
+Y queda lo que le da sentido dentro de este proyecto. Rizoma del Sur es comunitario y gratuito, y solo
+brinda herramientas para que la comunidad progrese por su cuenta. Donde el teléfono es la única
+computadora de la casa, saber usarlo bien decide quién accede a un trabajo, quién completa un trámite
+sin pagarle a un intermediario y quién no pierde los ahorros por un mensaje. Nada de eso exige tierra,
+herramientas ni títulos: exige que alguien se siente una tarde a explicarlo. **Y quien terminó este
+módulo ya puede ser esa persona.**

@@ -1,0 +1,444 @@
+Hasta aquí el programa vivió en papel. Ya sabes descomponer una tarea en pasos sin ambigüedad, escribir
+la decisión con «si» y «si no», repetir con un contador y ejecutar tu propio programa a mano con una
+tabla de traza. Todo eso sigue valiendo: **nada de lo que viene sustituye al papel, lo complementa.**
+
+Ahora toca que una máquina haga el trabajo. Y para que el primer intento no se quede en un ejercicio de
+juguete que se abandona el martes siguiente, **el primer programa de esta lección va a hacer trabajo
+útil desde el primer día**: va a decidir si toca regar, y va a llevar la planilla de grados-día que
+hasta ahora se llenaba a mano. Dos cuentas que el curso ya sabe hacer, que se hacen mal cuando hay
+cansancio, y que la máquina hará idénticas doscientas veces seguidas.
+
+## Lo que hace falta de verdad, y lo que no
+
+Casi todo lo que la gente cree necesario no lo es.
+
+**No hace falta una máquina cara.** El programa que vas a escribir cabe en un mensaje de texto largo, y
+el programa que lo ejecuta —el intérprete— ocupa menos que una sola foto de teléfono. Una computadora
+de hace quince años corre esto sin despeinarse: la máquina lenta no es tu problema.
+
+**No hace falta internet permanente.** Hace falta una vez, para instalar. Después el programa corre sin
+conexión: el trabajo no depende de que haya señal.
+
+**No hace falta saber inglés.** Los nombres que tú eliges —`humedad`, `sector`, `acumulado`— los pones
+en tu idioma. Las palabras que pone el lenguaje son unas quince en total, `if`, `else`, `for`, `open`,
+`print`, y se aprenden usándolas. Los mensajes de error sí vienen en inglés, y de eso trata la lección
+siguiente entera.
+
+**Y no hace falta ser bueno en matemáticas.** Los dos programas de esta lección usan una suma, una
+resta, una división entre dos y una comparación. Lo que sí hace falta es corto: **una pantalla, un
+teclado, un sitio donde guardar el archivo y media hora sin que nadie te interrumpa.**
+
+## Si no tienes computadora
+
+Para mucha gente esta es la pregunta principal, y tiene respuestas concretas.
+
+**Un teléfono con Android es una computadora.** Existen aplicaciones gratuitas que instalan un
+intérprete completo dentro del teléfono, con su editor y su terminal; con ellas se escribe, se guarda y
+se ejecuta lo mismo que en una máquina de escritorio. Teclear código en pantalla es incómodo —los signos
+de puntuación están escondidos en la segunda o tercera capa del teclado— y se vuelve llevadero con un
+teclado barato. Comprueba tú qué aplicaciones hay hoy en la tienda de tu teléfono: los nombres cambian
+y no vale fiarse de una lista escrita hace meses.
+
+**Una computadora prestada, unas horas por semana, alcanza.** Un colegio, un telecentro, la máquina del
+vecino que la usa solo para facturar. La condición no es tenerla siempre: es **poder guardar tu archivo
+y llevártelo**, en un pendrive o enviándotelo a ti mismo por mensaje. El archivo pesa dos kilobytes. Y
+una máquina vieja rescatada de una oficina sobra para esto, sobre todo con un sistema operativo libre y
+liviano encima.
+
+Hay una vía más que aparecerá sola en el módulo de electrónica: **una computadora de placa única**, del
+tamaño de una tarjeta, que además es el aparato que después va a leer los sensores. Empezar programando
+en ella no es un rodeo: es empezar en el destino.
+
+<Dato>
+**No necesitas instalar nada para escribir el código, solo para ejecutarlo.** Puedes redactar el
+programa entero en el editor más simple que tenga la máquina —o en una libreta— y llevarlo después a
+donde haya intérprete.
+</Dato>
+
+## Por qué se empieza con este lenguaje
+
+Hay cientos de lenguajes y todos, sin excepción, saben hacer las tres cosas del inventario cerrado:
+secuencia, decisión y repetición. La elección no va de poder, va de **cuánto estorba el lenguaje
+mientras aprendes.** Vamos a empezar con Python, y conviene que sepas por qué, para que no sea un acto
+de fe.
+
+**Primero: se parece a lo que ya escribiste en papel.** El pseudocódigo de la lección anterior y el
+código de esta se distinguen en poco más que unos dos puntos y unos paréntesis, y cuanto menor sea la
+distancia entre lo que piensas y lo que tecleas, menos errores ajenos a tu razonamiento.
+
+**Segundo: se ejecuta sin paso intermedio.** Hay dos formas de que una máquina ejecute lo que
+escribiste. Un **compilador** traduce el archivo entero a instrucciones de máquina de una sola vez y
+produce otro archivo, el ejecutable, que a partir de ahí corre solo y muy rápido.
+En cambio, un <Termino slug="interprete">intérprete</Termino> no produce ningún ejecutable: lee tu
+archivo y lo va ejecutando, y vuelve a leerlo entero cada vez.
+
+La diferencia práctica es de **latencia de retroalimentación**: con un compilador, entre escribir y ver
+el resultado hay una traducción que tarda; con un intérprete, guardas y ejecutas. Para un programa que
+suma doscientos números la velocidad de ejecución es irrelevante, mientras que **la velocidad del ciclo
+escribir-ver es todo lo que importa cuando estás aprendiendo.**
+
+<Analogia>
+Es el criterio con el que se elige cualquier herramienta: se optimiza el cuello de botella real, no el
+que suena más impresionante. Aquí el cuello de botella es **tu comprensión**, no el procesador.
+
+Y hay un segundo criterio del mismo tipo: **elegir la herramienta que ya vas a necesitar después.** El
+módulo de automatización, el de datos y el de inteligencia artificial hablan este mismo lenguaje.
+Aprenderlo ahora no es un peldaño desechable; es la misma llave para las tres puertas siguientes.
+</Analogia>
+
+**Tercero: la estructura se ve.** En Python, los espacios del margen izquierdo no son decoración: son
+sintaxis. Lo que está corrido hacia la derecha está *dentro* del «si» o del «repetir» que tiene encima.
+Esa <Termino slug="sangria">sangría</Termino> obligatoria fastidia el primer día y salva el resto del
+año, porque **la forma visual del programa no puede mentir sobre su lógica**.
+
+Y cuarto, nada técnico y muy real: es el lenguaje del que más respuestas vas a encontrar escritas en
+español cuando te trabes.
+
+## El ciclo: escribir, guardar, ejecutar, mirar
+
+Todo el trabajo de programar, para siempre, es este bucle de cuatro pasos.
+
+**Escribir.** El código se escribe en un archivo de <Termino slug="texto-plano">texto plano</Termino>:
+caracteres y saltos de línea, sin negritas, sin tamaños, sin márgenes. Un documento de procesador de
+textos *no* es texto plano: por dentro es un paquete comprimido lleno de información de formato, y
+además «corrige» lo que escribes —convierte las comillas rectas en comillas curvas de imprenta—, y esas
+comillas curvas la máquina no las entiende. **Escribir código en un procesador de textos es la primera
+trampa y produce errores incomprensibles.** Usa un editor pensado para código, que además pinta de
+colores las palabras del lenguaje y avisa cuando falta cerrar un paréntesis.
+
+En español importa además la <Termino slug="codificacion-de-caracteres">codificación de
+caracteres</Termino>, es decir, con qué tabla se traducen las letras a números dentro del archivo.
+Guarda siempre en UTF-8, la tabla que incluye la eñe y las tildes; si un archivo guardado con otra
+codificación se abre esperando UTF-8, las tildes salen convertidas en símbolos raros.
+
+**Guardar.** El archivo se llama, por ejemplo, `riego.py`, y la terminación `.py` le dice al sistema qué
+tipo de archivo es. **Nombre corto, en minúsculas, sin espacios y sin tildes:** un espacio obliga a
+escribir comillas cada vez que lo invocas, y una tilde puede fallar según cómo esté configurada la
+máquina.
+
+**Ejecutar.** Aquí aparece la terminal. Una <Termino slug="terminal">terminal</Termino> es una ventana
+donde escribes el nombre de un programa, pulsas enter y la máquina lo ejecuta. Se escribe:
+
+```
+python riego.py
+```
+
+Es decir: «ejecutá el programa llamado python y pasale como dato mi archivo riego.py». En algunas
+máquinas el intérprete se invoca como `python3`; prueba los dos.
+
+Un punto que atasca el primer día: la terminal siempre está *parada* en una carpeta, y busca `riego.py`
+ahí y en ningún otro sitio. Esa dirección —la <Termino slug="ruta-de-archivo">ruta de
+archivo</Termino>— es la cadena de carpetas desde la raíz del disco hasta tu archivo, y para moverte a
+la carpeta donde lo guardaste se usa la orden `cd`. Si no aparece, casi nunca está perdido: estás
+parado en otra carpeta.
+
+**Mirar el resultado.** Aquí está la limitación que hay que interiorizar ya: **un programa no te muestra
+nada que no le hayas pedido que muestre.** Puede calcular perfectamente y no decir ni una palabra. La
+única ventana a lo que pasa dentro es la orden de imprimir, y un programa sin `print` es una caja negra
+que funciona en silencio. El silencio no se puede depurar.
+
+## El primer programa: la regla de riego
+
+Vamos a escribir la regla que el curso ya explicó en el módulo de automatización, en su forma más
+honesta: **el programa no abre ninguna válvula, solo dice qué hacer.** Un humano lee la respuesta y va
+y riega. Eso es un sistema completo, y es el paso previo obligado a automatizar nada. La regla, en
+palabras: riega el sector si la humedad está por debajo del umbral y han pasado al menos seis horas
+desde el último riego, y riega una duración fija.
+
+```python
+# riego.py — decide si toca regar un sector del vivero.
+# Escrito el 15 de agosto de 2026. Entrada: humedad medida y horas desde el último riego.
+# Salida: una recomendación por pantalla. No abre ninguna válvula.
+
+HUMEDAD_MINIMA = 25        # % de humedad: por debajo, el sustrato ya no entrega agua fácil
+HORAS_MINIMAS = 6          # horas mínimas entre dos riegos, para que el agua se redistribuya
+MINUTOS_DE_RIEGO = 12      # duración fija de cada riego en este sector
+
+humedad = 22
+horas_desde_el_ultimo_riego = 8
+
+if humedad < HUMEDAD_MINIMA and horas_desde_el_ultimo_riego >= HORAS_MINIMAS:
+    print("REGAR", MINUTOS_DE_RIEGO, "minutos")
+else:
+    print("NO REGAR")
+```
+
+Línea por línea, porque todo lo que viene después es una variación de esto.
+
+Las tres primeras líneas empiezan con `#`: son <Termino slug="comentario-de-codigo">comentarios</Termino>.
+El intérprete las ignora por completo; están ahí para el humano. Las tres siguientes crean variables
+cuyo valor no cambia durante la ejecución; por costumbre universal se escriben en mayúsculas y se
+declaran juntas al principio, para que **cambiar el umbral sea tocar una línea y no buscarla siete
+veces repartida por el programa.**
+
+Después, dos variables con los datos del día. `if` significa «si»; los dos puntos abren el bloque, y lo
+corrido hacia la derecha es lo que se hace cuando la condición se cumple. `and` es la conjunción que ya
+practicaste en papel: **tienen que cumplirse las dos cosas**, no una. `else` es el «si no». Y un detalle
+que confunde al principio: `=` asigna, `==` compara.
+
+<Advertencia>
+El `and` no es un adorno del castellano, es la diferencia entre regar bien y ahogar plantas.
+
+Si escribieras `if humedad < HUMEDAD_MINIMA or horas_desde_el_ultimo_riego >= HORAS_MINIMAS`, con «o»
+en lugar de «y», el programa regaría cada vez que hubieran pasado seis horas, aunque el sustrato
+estuviera a <Termino slug="capacidad-de-campo">capacidad de campo</Termino>: se cumple una condición y
+con eso le basta.
+
+Y no te lo va a avisar nadie: **el programa correría sin error, imprimiría su recomendación con toda
+seguridad, y estaría equivocado.** Es la familia de fallo silenciosa, y por eso la tabla de traza en
+papel sigue siendo obligatoria antes de creerle a nada.
+</Advertencia>
+
+## Que el programa pregunte
+
+Un programa con los números escritos dentro sirve una vez; para que sirva todos los días tiene que
+preguntar. La orden `input` hace tres cosas: imprime el mensaje, **detiene el programa** hasta que
+alguien escriba algo y pulse enter, y devuelve lo escrito.
+
+```python
+sector = input("¿Qué sector? ")
+humedad = float(input("Humedad medida (%): "))
+horas_desde_el_ultimo_riego = float(input("Horas desde el último riego: "))
+```
+
+Ese `float(...)` que envuelve la lectura es imprescindible y es la primera fuente de errores de todo
+principiante. **`input` siempre devuelve texto, aunque lo que escribas parezca un número.** El texto
+`"22"` y el número `22` son cosas distintas para la máquina: al primero puedes pegarle otro texto
+detrás, al segundo puedes restarle diez. Si intentas comparar el texto `"22"` con el número `25`, el
+intérprete se planta. `float` convierte texto a número con decimales; `int`, a número entero. Aquí paga
+el modelo mental de la primera lección: **el tipo de dato es lo que la máquina cree tener entre manos.**
+
+## Que el programa deje rastro
+
+Lo que se imprime en pantalla se pierde al cerrar la ventana, y el valor de esto a los seis meses no
+está en la decisión de hoy: está en **tener trescientas decisiones anotadas con su fecha**.
+
+```python
+from datetime import date
+
+if humedad < HUMEDAD_MINIMA and horas_desde_el_ultimo_riego >= HORAS_MINIMAS:
+    decision = "REGAR"
+else:
+    decision = "NO REGAR"
+
+print(decision, sector)
+
+with open("riegos.csv", "a", encoding="utf-8") as archivo:
+    archivo.write(f"{date.today()},{sector},{humedad},{decision}\n")
+```
+
+Cuatro cosas nuevas, todas con mecanismo.
+
+**El modo de apertura.** Esa `"a"` significa *append*, añadir: escribe al final de lo que ya había. Si
+pusieras `"w"`, de *write*, el archivo se vacía entero antes de escribir. **Es el error más caro de esta
+lección**, porque no da ningún mensaje: un día abres el archivo y solo está la línea de hoy. Toda la
+serie desapareció y no hay nada que recuperar.
+
+**El `with`.** Abre el archivo y garantiza que se cierra al terminar el bloque, incluso si algo revienta
+en medio. Cerrar importa porque lo que escribes no viaja al disco letra por letra: se acumula en memoria
+y se vuelca cuando toca, así que un archivo mal cerrado puede haber perdido las últimas líneas.
+
+**El formato.** Una línea por registro, campos separados por comas: eso es un <Termino slug="csv">CSV</Termino>.
+Es el formato más aburrido que existe y por eso el correcto: lo abre cualquier hoja de cálculo y seguirá
+siendo legible dentro de diez años.
+
+**El `\n` del final.** El carácter de salto de línea, invisible pero real; sin él, todos los registros
+se pegan en una sola línea kilométrica.
+
+<Analogia>
+Guardar en archivo convierte el programa en un registro de eventos, y hereda sus dos reglas.
+
+La primera: **anexar, nunca reescribir.** El histórico es el activo; el estado actual se recalcula desde
+él, pero al revés no.
+
+La segunda: **una copia que nunca has abierto no es un respaldo.** Al día siguiente, abre `riegos.csv` y
+míralo. Comprobar que existe, que tiene las columnas que creías y que la fecha es la de hoy cuesta diez
+segundos, y es la diferencia entre tener datos y creer que los tienes.
+</Analogia>
+
+## El segundo programa: la planilla de grados-día
+
+El primer programa usó secuencia y decisión. El segundo añade la repetición, y con eso el inventario
+queda completo. Los <Termino slug="grados-dia">grados-día</Termino> se calculan así, un día cada vez, y
+se acumulan:
+
+<Formula explicacion="La media del día menos la temperatura base propia de la especie. Si la media queda por debajo de la base, el aporte del día es cero, no negativo: un día frío no descuenta desarrollo ya ocurrido, solo no suma. Existen refinamientos con un techo superior para el calor extremo; consúltalos con una institución de investigación agrícola antes de aplicarlos.">
+aporte del día = (máxima + mínima) / 2 - temperatura base
+</Formula>
+
+Hacerlo a mano para un ciclo entero son ciento veinte restas y ciento veinte sumas encadenadas donde un
+solo error se arrastra hasta el final: el trabajo que hay que delegar.
+
+```python
+# grados-dia.py — acumula grados-día a partir de un archivo de temperaturas.
+# Entrada: temperaturas.csv con una línea por día -> fecha,maxima,minima
+# Salida: el acumulado día a día por pantalla y el total al final.
+
+BASE = 10.0        # °C — temperatura base. Verificar para cada cultivo, no inventarla.
+META = 900.0       # grados-día hasta la etapa que interesa
+
+acumulado = 0.0
+dias = 0
+
+with open("temperaturas.csv", "r", encoding="utf-8") as archivo:
+    for linea in archivo:
+        fecha, maxima, minima = linea.strip().split(",")
+        media = (float(maxima) + float(minima)) / 2
+        aporte = media - BASE
+        if aporte < 0:
+            aporte = 0
+        acumulado = acumulado + aporte
+        dias = dias + 1
+        print(fecha, round(acumulado, 1))
+
+print("Días leídos:", dias)
+print("Acumulado:", round(acumulado, 1), "de", META)
+if acumulado >= META:
+    print("Meta alcanzada")
+```
+
+El `for linea in archivo` es la repetición: **se ejecuta el bloque una vez por cada línea del archivo**,
+sea de tres líneas o de tres mil. No hay que saber cuántas hay de antemano, y por eso este bucle no
+puede quedarse infinito: se acaba cuando se acaba el archivo. Dentro, `strip()` quita el salto de línea
+invisible del final —sin él, `minima` sería el texto `"18\n"` y la conversión a número fallaría—, y
+`split(",")` parte la línea por las comas en tres pedazos que se reparten de una vez en tres variables.
+
+El `if aporte < 0: aporte = 0` es fisiología, no programación: por debajo de la temperatura base el
+desarrollo se detiene, pero **un día frío no deshace el desarrollo ya acumulado.** Sin esa línea, una
+madrugada de surazo restaría del total y la planilla mentiría.
+
+<Advertencia>
+Dos trampas de este programa que no dan error, o no el que esperas:
+
+**La primera línea de encabezado.** Si el archivo empieza con `fecha,maxima,minima` como título de
+columnas, el programa intentará convertir la palabra «maxima» en número y ahí sí se detendrá. Menos
+evidente: si guardaste el archivo desde una hoja de cálculo configurada en español, **los decimales
+pueden estar escritos con coma en vez de con punto**, y entonces `31,5` se parte como si fueran dos
+campos y todo lo demás se corre.
+
+**El día que faltó.** Si un día no se anotó, el acumulado será menor y nada avisará. Un hueco no es un
+cero y tampoco es una media: es un dato ausente. Que el programa cuente e imprima `dias` es la
+comprobación de que leyó los días que creías.
+</Advertencia>
+
+## Nombrar, comentar y conservar
+
+El código se escribe una vez y se lee muchas. **El primer lector es uno mismo dentro de tres meses**, y
+esa persona no recuerda nada de lo que tú tienes ahora claro.
+
+**Nombrar.** Una variable llamada `x` obliga a leer todo el programa para saber qué guarda; una llamada
+`horas_desde_el_ultimo_riego` no obliga a nada. Los nombres largos se escriben una vez y se leen cien.
+Y en el archivo, `riego.py` en lugar de `Programa riego FINAL (2).py`. El caso más rentable es matar
+los <Termino slug="numero-magico">números mágicos</Termino>: un `25` suelto en medio de una condición
+no dice si es humedad, temperatura o bolivianos, mientras que `HUMEDAD_MINIMA` sí lo dice y además
+concentra el cambio en un solo sitio el día que el umbral suba a 28.
+
+**Comentar.** La regla que separa el comentario útil del ruido: **no expliques lo que la línea hace,
+explica por qué el número es ese.** Escribir `# suma uno a dias` al lado de `dias = dias + 1` es gastar
+tinta. Escribir `HUMEDAD_MINIMA = 25  # medido con la sonda del sector 3, calibrada en marzo` te salva
+dentro de un año, cuando quieras saber si ese 25 fue una medición o una corazonada. Y una cabecera de
+cuatro líneas —qué hace, qué espera de entrada, qué produce, cuándo se escribió— convierte un archivo
+huérfano en una herramienta.
+
+**Conservar versiones fechadas.** La regla dura es corta: **nunca edites la única copia que funciona.**
+Antes de un cambio grande, copia el archivo con la fecha en el nombre —`riego-2026-08-15.py`— y trabaja
+sobre el nuevo. Es control de versiones de pobre y es infinitamente mejor que nada: te deja volver al
+estado que funcionaba cuando el cambio de hoy resulta un desastre, sin depender del deshacer del editor,
+que solo llega hasta que lo cierras. Hay herramientas profesionales para esto y llegarán a su tiempo; el
+hábito de conservar el que funciona hay que adquirirlo hoy.
+
+<AplicarRizoma>
+Estos dos programas no son un ejercicio: son dos tareas que hoy se hacen a mano en el sitio.
+
+**Dónde vive esto.** En Zanja Honda no hay una computadora en el vivero ni tiene por qué haberla. El
+lugar natural de estos programas es el teléfono de quien lleva el registro, y el momento natural es el
+domingo por la tarde con la libreta de campo delante. Durante la semana se mide y se anota en papel a
+pie de bancal —eso no cambia—; el domingo se transcriben las lecturas y el programa hace las cuentas de
+golpe. La transcripción no es tiempo perdido: es la segunda lectura del cuaderno, donde se detectan los
+números imposibles que se anotaron con prisa.
+
+**Los sectores.** Los 3.666 m² están repartidos en doce lotes contiguos, y el vivero, los bancales de
+producción y las áreas de frutales injertados no se riegan igual. El programa debe pedir el sector y
+escribirlo en cada línea del CSV usando **exactamente los mismos nombres que aparecen en el plano**. Si
+en el plano el lote es «L-04» y en el archivo alguien escribe «lote 4», «Lote 4» y «L4» según el día,
+ese registro no se podrá agrupar nunca. Deja la lista de nombres válidos en el comentario de cabecera y
+pégala en la tapa del cuaderno.
+
+**Umbrales distintos por sector, sin duplicar el programa.** Las bolsas del vivero se secan mucho más
+rápido que un bancal de yautía con arcilla debajo. La tentación es copiar `riego.py` a
+`riego-vivero.py` y cambiarle los números; se paga caro, porque desde ahí toda corrección hay que
+hacerla dos veces y un día se hará solo en una. Deja un único programa y saca los umbrales a un
+archivito `umbrales.csv` que el programa lee: es, además, la documentación de la regla de riego del
+sitio, un solo lugar donde mirar qué se decidió para cada lote.
+
+**Grados-día, cultivo por cultivo.** La temperatura base es propia de cada especie, y las del catálogo
+—yautía, culantro, ají dulce, gandul, batata, plátano— no comparten reloj. **No inventes esos valores:**
+anota en el comentario de dónde salió cada uno y consúltalos con una institución de investigación
+agrícola o con productores con experiencia local. Aun con una base provisional señalada como tal, el
+programa ya sirve para lo que más importa: **comparar la misma siembra entre la época de lluvias y la
+seca**, y ver por qué el mismo cultivo sembrado en mayo tarda semanas más que el de octubre.
+
+**Que no dependa de una sola persona.** Rizoma del Sur es un proyecto comunitario y gratuito, y un
+programa que solo sabe correr quien lo escribió es un cuello de botella con forma de persona. Lo evitan
+dos cosas de esta lección: nombres y comentarios tan claros que otro vecino pueda leer el archivo y
+entenderlo, y una copia en más de un teléfono.
+
+**Y el límite honesto.** Ninguno de los dos programas toca una válvula. Imprimen una recomendación que
+una persona lee y ejecuta, y esa persona puede mirar el cielo y desobedecer cuando está por llover. No
+es una versión incompleta: es la versión con el humano dentro del lazo, la que hay que haber operado un
+par de meses **antes** de pensar en que algo se abra solo.
+</AplicarRizoma>
+
+<ContextoBolivia>
+Programar desde Santa Cruz, y desde el campo, tiene condiciones que ningún tutorial extranjero menciona.
+
+**El teléfono es la computadora.** En buena parte de los hogares bolivianos el único aparato con
+pantalla y teclado es un teléfono Android, muchas veces compartido entre varias personas de la casa. Eso
+tiene dos consecuencias: el trabajo hay que poder partirlo en sesiones cortas, y el archivo hay que
+enviarlo a algún lado en cuanto funciona, porque un teléfono que se pierde o se formatea se lleva todo.
+Mandarte el `.py` a ti mismo por mensajería es un respaldo perfectamente digno.
+
+**La energía.** Los cortes de luz y las bajadas de tensión durante las tormentas de la época de lluvias
+son parte del paisaje, y una máquina de escritorio se apaga en seco con lo que no hayas guardado. El
+hábito no es opcional: **guardar cada pocas líneas**, no cada media hora.
+
+**El clima contra los aparatos.** Calor sostenido, humedad alta buena parte del año y polvo de tierra
+seca entre mayo y septiembre. Una máquina encerrada acumula calor y se apaga sola; una laptop en una
+mesa de campo se llena de polvo en los ventiladores. Nada de esto impide programar, pero explica por
+qué la máquina vieja «funciona mal a media tarde» cuando el problema es térmico y no del programa.
+
+**Los datos móviles cuestan.** Instalar el intérprete es la única descarga grande; después el trabajo es
+sin conexión. Conviene hacer esa instalación donde haya wifi. Y cuando busques ayuda, ten presente que
+un video consume decenas de veces más datos que una página de texto.
+
+**El teclado y el idioma.** Los teclados que se consiguen aquí son de distribución en español, lo cual
+está muy bien para escribir prosa y es una fuente de sorpresas al programar: el signo `|`, los corchetes
+y las comillas rectas están en combinaciones distintas según la máquina, y algunas aplicaciones de
+teléfono los esconden. Tómate diez minutos el primer día para localizar los paréntesis, los corchetes,
+los dos puntos, el guion bajo y las comillas. Y **nunca uses tildes ni eñes en nombres de archivos ni de
+variables**, aunque el intérprete moderno lo permita.
+
+**Dónde aprender acompañado.** Universidades públicas, colegios técnicos y centros de formación de
+Santa Cruz suelen tener salas de cómputo y gente dispuesta a prestar una hora de máquina si se pide
+bien. Averigua también si hay grupos locales de software libre o clubes de programación: existen y
+cambian de nombre y de sede con los años. Y no des por sentado ningún requisito ni costo de estos
+espacios sin confirmarlo con ellos: vale la regla de todo el curso, se consulta con quien tiene la
+información, no se supone.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya tienes las tres piezas funcionando en una máquina real —secuencia, decisión y repetición—, con
+entrada por teclado, salida por pantalla y persistencia en archivo. Eso es un programa completo, y los
+dos que escribiste hacen trabajo que hoy se hace a mano.
+
+Ahora la parte que nadie cuenta: **la primera vez que lo ejecutes, no va a funcionar.** Va a faltar un
+paréntesis, va a sobrar un espacio de sangría, vas a comparar un texto con un número o el archivo no va
+a estar donde creías. No es señal de que esto no sea para ti: es lo que le pasa a todo el mundo, todos
+los días, incluida la gente que lleva veinte años haciéndolo.
+
+La diferencia entre quien avanza y quien abandona no es cometer menos errores: es saber leer lo que la
+máquina responde. Eso viene en **04 · Leer un error sin asustarse**: la anatomía del mensaje —archivo,
+línea, tipo y descripción—, por qué la pila de llamadas se lee de abajo hacia arriba, el catálogo de los
+errores de las primeras semanas, y qué hacer en el caso más incómodo, que es cuando el programa corre
+perfecto y el resultado está mal.

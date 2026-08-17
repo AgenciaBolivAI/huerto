@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "p1",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la luz es, en el llano cruceño, el primer recurso que se disputa entre dos plantas vecinas?",
+      "opciones": [
+        "Porque no se almacena: el fotón que no se intercepta se pierde contra el suelo y se convierte en calor, mientras que el agua y los nutrientes sí tienen un depósito en el suelo.",
+        "Porque llega en una sola dirección y se consume en orden: la hoja de arriba filtra antes que la de abajo y esa relación no es recíproca.",
+        "Porque la ventaja se realimenta: quien intercepta más crece más, y creciendo más intercepta todavía más, así que un desfase pequeño de emergencia decide quién gana.",
+        "Porque la luz es el factor limitante de cualquier policultivo en cualquier clima y en cualquier estación del año."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son las razones físicas del orden de prioridad: ausencia de almacenamiento, consumo en orden (competencia asimétrica) y realimentación de la ventaja. La cuarta es falsa y es justo lo que la lección advierte: el orden luz → agua → nutrientes es el de este clima y esta estación. En la seca de Zanja Honda el recurso que se agota primero es el agua, en una zona semiárida también, y en un suelo degradado y ácido puede empezar por el fósforo o el aluminio. Tratar la luz como limitante universal lleva a diseñar mezclas que rinden en lluvias y colapsan en mayo."
+    },
+    {
+      "id": "p2",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la competencia por agua y por nutrientes en una mezcla, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "El nitrato viaja arrastrado por flujo masivo hacia cualquier raíz que esté transpirando, así que se disputa a escala de todo el volumen explorado.",
+        "El fósforo se mueve por difusión y forma una zona de agotamiento de pocos milímetros, así que su competencia es un asunto local entre raíces prácticamente pegadas.",
+        "Quien extiende el alcance de la raíz hacia el fósforo no es la raíz misma sino la micorriza.",
+        "Como el policultivo reparte mejor los recursos, la mezcla consume menos agua total que las mismas especies cultivadas por separado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La movilidad de cada nutriente fija la geometría de la competencia: el nitrato se mueve con el agua y se disputa en todo el volumen; el fósforo apenas se mueve y su disputa ocurre milímetro a milímetro, que es exactamente donde la micorriza cambia las reglas. La cuarta es falsa y es un error caro: más hoja transpirando es más agua saliendo, así que **la mezcla consume más agua, no menos**. El policultivo hace rendir mejor la tierra, no el agua, y quien riega tiene que dimensionar para la suma de las dos especies."
+    },
+    {
+      "id": "p3",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un uso equivalente de la tierra mayor que 1 significa que el cultivo principal produjo más kilos dentro de la mezcla que en monocultivo.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la lectura errónea más común del índice. Casi siempre cada especie rinde MENOS dentro de la mezcla que sola: el ejemplo de la lección es 0,7 + 0,5 = 1,2, donde ninguna de las dos alcanzó su rendimiento en monocultivo. La ventaja está en que la suma de las mermas es menor que la ganancia de superficie: haría falta 1,2 unidades de tierra en monocultivo para igualar lo que dio una unidad en mezcla. Si lo que se necesita es una cantidad concreta de un producto —un pedido comprometido, la comida de la casa—, el uso equivalente es la métrica equivocada y hay que mirar el rendimiento absoluto de esa especie."
+    },
+    {
+      "id": "p4",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué condiciones tiene que cumplir una medición del uso equivalente de la tierra para significar algo?",
+      "opciones": [
+        "El monocultivo de referencia debe estar igual de bien manejado, a su propia densidad óptima y en la misma época, superficie, riego y fertilidad.",
+        "Hay que declarar si el diseño fue aditivo o sustitutivo, porque el aditivo mete más plantas e insumos en el mismo espacio e infla el índice.",
+        "Hay que medir el interior de la parcela o incluir el pasillo en la superficie, para que el efecto de borde no contamine el resultado.",
+        "El índice ya incorpora el costo de la mano de obra y el consumo de agua, así que un valor mayor que 1 garantiza que la mezcla conviene."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son las reglas que hacen honesta la comparación: referencia bien manejada, diseño declarado y borde controlado. La cuarta es falsa: **el índice mide tierra y nada más.** No cuenta jornales, ni agua, ni la dificultad de la cosecha, ni el dinero. Un uso equivalente de 1,3 conseguido con el doble de jornales puede ser un mal negocio, y un índice alto cuyo segundo componente no se vende ni se come es estadística, no producción. Para eso existe la versión en valor, con precios comprobados localmente."
+    },
+    {
+      "id": "p5",
+      "tipo": "verdadero_falso",
+      "enunciado": "La facilitación pesa más cuanto más duro es el ambiente, de modo que una planta nodriza puede convertirse en competidora una vez que la planta protegida ya está establecida.",
+      "respuesta": true,
+      "explicacion": "Verdadero: es la regla del gradiente de estrés, y es la que explica los resultados contradictorios que circulan sobre asociaciones —dos estudios de la misma pareja midieron en dos puntos distintos del mismo gradiente. Su consecuencia de diseño es concreta: **la nodriza tiene fecha de caducidad.** Mientras el ambiente es duro el saldo es positivo; cuando la protegida ya tiene raíz y porte, el mismo vecino pasa a cobrar luz y agua y sigue cobrando aunque ya no preste servicio. Por eso la fecha de la primera poda y la decisión de cuándo se retira tienen que estar escritas antes de plantar la nodriza, no improvisadas después."
+    },
+    {
+      "id": "p6",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es cierto sobre la alelopatía tal como la trata esta lección?",
+      "opciones": [
+        "La mayoría de los aleloquímicos quedan adsorbidos en las arcillas y la materia orgánica y los degrada la microbiología del suelo en días, sobre todo en clima tropical con lluvias que lixivian.",
+        "Es más creíble en sistemas cerrados —envases, sustrato reutilizado, agua recirculante, mesas de vivero— que en terreno abierto, porque ahí no hay dilución.",
+        "Antes de invocarla hay que descartar sombra, competencia por agua, competencia por nitrógeno, daño de raíz, plaga o patógeno compartido y densidad excesiva.",
+        "Es la explicación más probable cuando una tabla popular dice que dos especies «no se llevan bien»."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen la química real y sus límites: degradación y adsorción rápidas, credibilidad en sistemas sin dilución, y la lista de causas visibles que hay que descartar primero. La cuarta es exactamente el antipatrón que la lección denuncia: la alelopatía es el comodín explicativo de las tablas de asociaciones, y casi ninguna afirmación popular supera la quinta condición —que el efecto no se explique mejor por competencia—. Usarla como primera explicación cierra el diagnóstico con una causa invisible, no medible y no accionable, y además tapa un mecanismo distinto que se le parece mucho: la competencia aparente, en la que A perjudica a B porque hospeda al enemigo de B."
+    },
+    {
+      "id": "p7",
+      "tipo": "abierta",
+      "enunciado": "Estás por diseñar una franja de policultivo en dos de los 12 lotes de Rizoma del Sur, en Zanja Honda. Explica, usando los mecanismos de esta lección, cómo decidirías qué recursos se reparten y cuáles se disputan a lo largo del año, qué esperas de la facilitación y qué no, cómo montarías la medición que decide si la mezcla vale la pena, y qué harías con la alelopatía si alguien la menciona. No hace falta que propongas parejas concretas de especies: lo que se evalúa es el razonamiento por mecanismo.",
+      "respuestaModelo": "Empezaría separando los dos sistemas del sitio, porque tienen física distinta. En el vivero las plantas están en envases: no comparten volumen de suelo, así que entre vecinas no hay competencia por agua ni por nutrientes, ni facilitación radicular, ni transferencia de nitrógeno, ni ascenso hidráulico. Lo único que se comparte en una mesa es luz y aire. Un policultivo en sentido estricto es cosa del terreno, así que la franja va en los lotes.\n\nLo primero que fijaría es el recurso limitante por estación, porque en Zanja Honda cambia de identidad dos veces al año. De octubre a abril, con el perfil recargado, el cuello de botella es la luz: ahí una segunda capa de hoja que aproveche el excedente de radiación tiene sentido, porque las hojas superiores pasan buena parte del día por encima de su punto de saturación luminosa —donde la radiación adicional ya no produce azúcar, solo calienta la hoja y le sube el déficit de presión de vapor— y las inferiores caen por debajo de su punto de compensación y acaban desprendiéndose. Una especie de estrato bajo con punto de compensación bajo cobra ese excedente sin quitarle producción a nadie: eso es complementariedad de nicho, y es el mecanismo sólido del sitio. De mayo a septiembre el depósito deja de recargarse y el mismo arreglo se convierte en competencia por agua. Diría explícitamente que meter dos especies en el mismo metro cuadrado no reduce el consumo total de agua, lo aumenta: el policultivo hace rendir mejor la tierra, no el agua. Así que la intensidad de la mezcla debería ser máxima en lluvias y bajar en la seca —cosechando el componente anual antes de mayo, ralando, o asumiendo el costo de riego calculado con el balance hídrico del módulo 25.\n\nCon el reparto de raíz sería honesto y no contaría mucho con él: con arcillas expansivas 2:1 y una profundidad efectiva que hay que comprobar hoyo a hoyo, la mayor parte de la raíz fina de todas las especies va a estar en los primeros veinte o treinta centímetros disputándose los mismos poros. Apoyaría el diseño en la luz y en el tiempo. En el eje temporal buscaría desfasar los picos de demanda, no los calendarios: dos especies cuyos picos de crecimiento rápido caen con seis semanas de diferencia pueden compartir suelo casi sin pelearse. Si usara siembra en relevo comprobaría antes los dos requisitos duros: que la segunda tolere sombra en su fase juvenil y que la cosecha de la primera no la destruya.\n\nDe la facilitación esperaría cosas concretas y modestas. De una leguminosa como el gandul esperaría sobre todo una ausencia: al cubrir del aire buena parte de su nitrógeno deja de disputar el nitrato del suelo. La transferencia real existe, pero llega tarde, cuando el tejido muere; la vía rápida y controlable no es biológica sino mecánica —cortar y dejar el material en superficie como cobertura muerta. Esperaría también amortiguación del microclima, el mecanismo más subestimado del trópico: menos temperatura de hoja, menos déficit de presión de vapor, estomas abiertos más tiempo, freno del viento y menos pérdida de calor por radiación al cielo en una noche despejada de surazo. Del ascenso hidráulico esperaría poco en cantidad. Y aplicaría la regla del gradiente de estrés: la nodriza tiene fecha de caducidad, así que la fecha de la primera poda y la de su retirada quedarían escritas antes de plantarla.\n\nLa medición es lo que decide. Montaría la franja de mezcla y, al lado, dos franjas testigo con cada componente solo, sembradas el mismo día, con la misma agua, el mismo abono y a su densidad propia, y calcularía el uso equivalente de la tierra sumando el rendimiento de cada especie en mezcla dividido entre el de esa especie sola. Declararía el diseño —sustitutivo, bajando la densidad de la primera en proporción a lo que ocupa la segunda, no aditivo, que infla el número— y mediría el interior de cada franja para escapar del efecto de borde. Anotaría lo que el índice no mide: jornales, agua y dificultad de cosecha. Y como buena parte de la producción de Rizoma no son kilos sino plantas vendibles, para el vivero seguiría usando plantas vendibles por metro cuadrado y año con la rotación del espacio, y en terreno compararía por valor con precios comprobados localmente. Repetiría la medición en las dos estaciones, porque el mismo arreglo puede dar más de uno en lluvias y menos de uno en la seca.\n\nSi alguien mencionara alelopatía, no la descartaría de plano pero la pondría al final de la cola. Antes exigiría descartar sombra, competencia por agua, competencia por nitrógeno, daño de raíz, plaga o patógeno compartido y densidad excesiva: seis causas visibles, medibles y corregibles. Recordaría que en suelo tropical la mayoría de los aleloquímicos se adsorben o se degradan en días, que el caso creíble en Rizoma está en el vivero —envases, sustrato reutilizado, agua recirculante— y no en el terreno, y que un residuo fresco y grueso sobre un almácigo puede inhibir por química, por efecto físico y por inmovilización de nitrógeno a la vez. Y no aceptaría ninguna cifra de índices ni de nitrógeno transferido sin saber dónde y cómo se midió: la respuesta no es buscar otra cifra, es montar el testigo y medir aquí.",
+      "criterios": [
+        "Separa el vivero en envases (solo se comparte luz y aire) del terreno, donde funcionan todos los mecanismos.",
+        "Identifica el recurso limitante por estación: luz en lluvias de octubre a abril, agua en la seca de mayo a septiembre.",
+        "Explica el aprovechamiento del excedente de luz con punto de saturación luminosa y punto de compensación.",
+        "Afirma explícitamente que la mezcla aumenta el consumo total de agua y que hay que dimensionar el riego para la suma.",
+        "Trata con honestidad el límite del reparto de profundidad de raíz en las arcillas expansivas y con profundidad efectiva por comprobar.",
+        "Usa el nicho temporal correctamente —lo que no debe solaparse son los picos de demanda, no los calendarios— y menciona los dos requisitos duros de la siembra en relevo.",
+        "Describe la fijación de nitrógeno primero como ausencia de competencia y sitúa la transferencia rápida en el corte y la cobertura muerta, no en la donación biológica.",
+        "Incluye la amortiguación del microclima —temperatura de hoja, déficit de presión de vapor, viento y frío radiativo del surazo— como facilitación real.",
+        "Aplica la regla del gradiente de estrés y programa por escrito la poda o retirada de la nodriza antes de plantarla.",
+        "Monta el testigo en monocultivo de cada componente, calcula el uso equivalente de la tierra, declara diseño sustitutivo y controla el efecto de borde.",
+        "Reconoce lo que el índice no mide (jornales, agua, dinero), adapta la métrica al producto del vivero y repite la medición en las dos estaciones.",
+        "Coloca la alelopatía al final de la cola de diagnóstico, tras descartar las seis causas visibles, y rechaza cifras sin origen verificable."
+      ],
+      "explicacion": "La respuesta completa recorre el mismo camino que la lección —competencia con su orden real, complementariedad en el espacio y en el tiempo, facilitación con magnitudes honestas, uso equivalente de la tierra y alelopatía acotada— pero aterrizado en Zanja Honda: estacionalidad de lluvias y seca, surazo, arcillas expansivas, doce lotes contiguos y un producto que en buena parte son plantas vendibles y no kilos. Lo que se está evaluando no es la elección de especies, que es la lección siguiente, sino la capacidad de decidir por mecanismo y de montar la medición que convierte una creencia en un número propio del sitio."
+    }
+  ]
+}

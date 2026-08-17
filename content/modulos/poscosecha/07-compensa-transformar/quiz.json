@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "rendimiento-en-serie",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un lote de fruto entra con 20 % de descarte en la limpieza y después se seca, perdiendo el 90 % de su peso. ¿Qué afirmaciones sobre el rendimiento son correctas?",
+      "opciones": [
+        "El rendimiento total es 0,80 × 0,10 = 0,08, es decir unos 12,5 kg de entrada por kilo de salida.",
+        "Las dos pérdidas son etapas en serie, así que sus factores se multiplican y nunca se suman.",
+        "El rendimiento se mide una vez con balanza para ese producto y ese proceso, no se hereda de una tabla ajena.",
+        "Como la merma de limpieza es del 20 %, basta con sumarla a la pérdida de secado y descontar el total del peso inicial."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta, y es el error más caro de la lección: sumar 20 % y 90 % da 110 % de pérdida, un resultado que ni siquiera tiene sentido físico. Las etapas de una cadena multiplican sus factores de rendimiento, igual que el factor de rendimiento de un sistema solar encadena temperatura, suciedad, cables y conversión. Quien suma siempre se queda corto en la dirección optimista, y un error de factor dos en el multiplicador de la entrada invalida toda la decisión posterior."
+    },
+    {
+      "id": "materia-prima-costo-cero",
+      "tipo": "verdadero_falso",
+      "enunciado": "Como el producto fresco es propio y ya está cosechado, su costo dentro de la cuenta de la transformación es siempre cero.",
+      "respuesta": false,
+      "explicacion": "Falso, y por partida doble. La materia prima propia se valora a su costo de oportunidad: lo que se deja de hacer con ella. Si ese kilo se podía vender o repartir fresco, meterlo en un frasco cuesta exactamente ese ingreso o ese beneficio perdido. Solo cuando el fresco ya no tiene ningún destino —no hay comprador, no hay quien lo reciba a tiempo y en dos días se pierde— su costo de entrada es realmente cero, y es justo ahí donde transformar gana casi siempre. Ojo con no confundirlo con el costo hundido de haberlo cultivado, que sí es el mismo en todos los escenarios y por eso no entra en la decisión."
+    },
+    {
+      "id": "horas-que-cuentan",
+      "tipo": "opcion_multiple",
+      "enunciado": "Al calcular el margen por hora de una tanda de conserva, ¿qué tiempos hay que incluir en el denominador?",
+      "opciones": [
+        "Ir a comprar el azúcar, los frascos y las tapas.",
+        "Esperar junto al fuego o junto al secador, aunque las manos estén libres.",
+        "Vender o repartir las unidades, porque la transformación termina cuando alguien se lo come o lo paga.",
+        "Solo el tiempo en que efectivamente se está manipulando el producto; lo demás es tiempo muerto y no se contabiliza."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta y es el error de medición más frecuente. Contar solo las horas de manipulación puede dividir el denominador a la mitad y duplicar artificialmente el margen por hora, que es justamente el número con el que se compara transformar contra vender fresco. Esperar es tiempo aunque las manos estén libres: son horas que no se pueden dedicar a otra cosa. Y un frasco cerrado que nadie ha consumido todavía no es un logro, es una tarea encolada que además inmoviliza el capital de trabajo que se fue en el azúcar y en la tapa."
+    },
+    {
+      "id": "cuatro-salidas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Frente a un excedente concreto, ¿qué es cierto sobre las cuatro salidas posibles?",
+      "opciones": [
+        "Repartir el excedente fresco tiene margen en dinero cero, pero también costo cero, y en un proyecto comunitario compite en serio con transformar.",
+        "No cosechar es una decisión legítima cuando esas horas rinden más en otra tarea: la biomasa vuelve al suelo y el tiempo queda libre.",
+        "Vender fresco consume minutos por kilo mientras que transformar consume horas por kilo, así que el valor del producto terminado tiene que ser muy superior, no un poco superior.",
+        "Transformar es siempre preferible a repartir, porque agregar valor a un producto nunca puede ser peor que regalarlo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta. «Agregar valor» solo es valor si el producto terminado llega a alguien y si las horas que costó rendían menos en cualquier otra tarea. Repartir fresco tiene un margen por hora en dinero de cero, pero su costo también es cero —sin insumos, sin riesgo sanitario, casi sin tiempo— y el excedente cumple de inmediato su función, que es alimentar a alguien esta semana. En Rizoma del Sur, si el excedente puede alimentar a alguien hoy, repartirlo gana casi siempre; solo cuando ya no hay quien lo reciba a tiempo se enciende el fuego."
+    },
+    {
+      "id": "escala-minima",
+      "tipo": "verdadero_falso",
+      "enunciado": "El tiempo de montar el puesto, alcanzar temperatura, esterilizar los envases y limpiar al final no depende del tamaño de la tanda, así que en tandas pequeñas domina la cuenta entera del tiempo por kilo.",
+      "respuesta": true,
+      "explicacion": "Verdadero, y es el argumento aritmético —no ideológico— del equipo compartido. El tiempo por kilo es T fijo dividido entre los kilos de la tanda más el tiempo variable por kilo: el primer término cae de forma hiperbólica al crecer la tanda y el segundo no baja nunca. Con tres horas de montaje y desmontaje, una tanda de tres kilos arrastra una hora por kilo antes de tocar el producto; con treinta kilos arrastra seis minutos. De ahí sale la escala mínima de proceso. Una tanda chica no está prohibida: puede ser excelente para aprender o calibrar, pero no puede presentarse como producción y esperar que la cuenta cierre."
+    },
+    {
+      "id": "transformar-como-parche",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En cuáles de estas situaciones transformar está tapando un problema en lugar de resolverlo?",
+      "opciones": [
+        "Todo madura la misma semana porque todo se sembró el mismo día, y cada temporada aparece el mismo muro de frascos.",
+        "Solo se transforma lo golpeado, pasado o fuera de calibre que no se pudo vender fresco.",
+        "Se perdió la mitad por calor de campo, golpes y guardar juntas cosas incompatibles, y a ese deterioro se le llama excedente.",
+        "Un racimo de plátano madura entero y a la vez porque así funciona la planta, y ese pico se repite cada vez."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta no es un parche: es el caso legítimo. Un cultivo que concentra su producción por naturaleza —un racimo climatérico que madura junto, una legumbre que seca toda a la vez— genera un pico real y previsible, y ahí transformar es la respuesta correcta. Las otras tres son problemas de diseño disfrazados: escalonar siembras cuesta un calendario, no insumos; ningún proceso mejora la materia prima, porque el secado detiene a los microorganismos sin matarlos y la acidificación controla lo que hay pero no borra el daño previo; y poner sombra y ventilación cuesta muchísimo menos que montar conservas. La pregunta que separa los casos es siempre la misma: ¿esto vuelve a pasar el año que viene?"
+    },
+    {
+      "id": "costo-hundido",
+      "tipo": "verdadero_falso",
+      "enunciado": "«Después de todo el trabajo que costó sembrarlo, no lo voy a dejar perder» es un argumento válido para decidir transformar un excedente.",
+      "respuesta": false,
+      "explicacion": "Falso. El trabajo de sembrar, regar y cuidar ese cultivo es un costo hundido: ya se gastó, no vuelve y es exactamente el mismo tanto si se transforma como si no, así que no puede inclinar la decisión hacia ningún lado. Es la misma falacia que sostiene un módulo mal diseñado porque «ya llevamos tres meses en esto»: los tres meses están gastados en ambos escenarios, y la comparación real es cuánto cuesta terminarlo frente a cuánto cuesta reescribirlo desde hoy. La única cuenta válida es hacia adelante: de aquí en más, qué cuesta y qué se obtiene por cada hora que todavía no se gastó."
+    },
+    {
+      "id": "decidir-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Es marzo, plena época de lluvias, y en Rizoma del Sur coinciden tres excedentes en la misma semana: unos veinte kilos de ají dulce que ya se pasaron de punto para venta fresca, un racimo grande de plátano que maduró entero, y culantro de sobra en tres camas. Alguien propone dedicar el sábado entero a hacer conservas de todo. Aplica la lección completa: qué medirías antes de decidir, qué decidirías con cada producto y por qué, cómo entra el criterio comunitario, y qué le dirías al grupo sobre lo que se puede hacer en cada casa y lo que solo tiene sentido hacer juntos.",
+      "respuestaModelo": "Lo primero es no decidir por producto entero sino por excedente concreto, y lo segundo es no encender nada antes de medir. Antes del sábado pondría sobre la mesa seis números por cada uno de los tres candidatos: kilos de entrada pesados en fresco, kilos de descarte al limpiar, kilos de salida terminados, unidades obtenidas, horas totales desde comprar insumos hasta terminar de repartir, e insumos comprados. Como todavía no tengo esos números medidos en este proyecto, lo honesto es procesar una tanda pequeña de prueba de un solo producto y cronometrarla, no comprometer el sábado entero a ciegas.\n\nSobre el ají dulce: es no climatérico, así que no va a mejorar y su ventana ya se cerró para venta fresca; su costo de oportunidad es cercano a cero porque no tiene otro destino, y ahí es donde transformar compite contra perderlo. Es el mejor candidato de los tres y además el candidato perfecto para la primera tanda medida en serio: pesar entrada, descarte y salida y cronometrar de principio a fin. Con mucha agua, el rendimiento de secado va a ser duro —del orden de diez u once kilos de entrada por kilo de salida antes de descontar el descarte de pedúnculos y semillas, y esas dos pérdidas se multiplican, no se suman—, así que probablemente el encurtido acidificado tenga mejor cuenta que el secado, sobre todo en marzo, cuando el aire húmedo hace el secado lento e incierto.\n\nSobre el plátano: el racimo entero madurando junto no es un error de planificación, es cómo funciona la planta, y ese pico vuelve cada vez. Es el excedente estructural legítimo, y además un racimo entero es justamente el tamaño de tanda donde el tiempo fijo empieza a repartirse bien, así que supera la escala mínima. Aquí transformar tiene sentido de verdad. Parte de la solución, además, no es de proceso: escalonar las plantaciones reparte los racimos en el calendario y reduce el pico del año que viene.\n\nSobre el culantro: aquí diría que no. Es hoja, con la tasa respiratoria más alta del catálogo, alrededor de un 88-90 % de agua —o sea un kilo de seco por cada siete u ocho de fresco— y buena parte de lo que lo hace valioso, el aroma, es volátil y se va con el proceso. Además el culantro se mueve rápido en la zona porque se cocina fresco, así que su costo de oportunidad es alto: cada kilo secado es un kilo que alguien iba a usar esta semana. La respuesta es cortar temprano, enfriar bien y repartirlo o venderlo en dos días. Y si «sobra culantro en tres camas» se repite todos los meses, no es un excedente: es una señal de que hay que ajustar la siembra, que cuesta un calendario y no insumos.\n\nEl criterio comunitario cambia el orden de la lista. Repartir fresco tiene margen en dinero cero, pero costo cero también: sin insumos, sin riesgo sanitario y casi sin tiempo, y el excedente cumple de inmediato su función, que es alimentar a alguien esta semana. Así que la regla que le propondría al grupo es: si el excedente puede alimentar a alguien hoy, se reparte; solo lo que ya no tiene quien lo reciba a tiempo entra al fuego, y solo si la tanda alcanza la escala mínima. Con eso, el culantro y buena parte del plátano se reparten, y el sábado queda para el ají, que es el único que ya no tiene otra salida.\n\nY diría dos cosas más sobre el reparto de trabajo. Un proceso conviene enseñarlo para que cada casa lo haga sola cuando el tiempo fijo por tanda es bajo, el equipo ya está en cualquier cocina y el riesgo es tolerable: un frasco pequeño de encurtido acidificado consumido en semanas cae ahí. Se hace juntos, con equipo compartido, cuando el tiempo fijo es alto, el equipo cuesta lo que ninguna casa compraría para usarlo cuatro veces al año, o el riesgo sanitario exige control y registro. Y el equipo compartido necesita turnos, alguien responsable de la limpieza y del registro, y una regla de devolución, o se degrada hasta que nadie lo usa. Por último, si algo de lo que salga va a salir del círculo de quien lo hizo, hay requisitos sanitarios de registro, local y etiqueta que se consultan con el SENASAG y con la autoridad municipal antes de comprometerse con nadie: eso se pregunta, no se supone.",
+      "criterios": [
+        "Pide medir antes de decidir: nombra los seis números por tanda (entrada, descarte, salida, unidades, horas, insumos) o al menos entrada, salida y horas.",
+        "Aplica el rendimiento de transformación y reconoce que la merma de limpieza y la pérdida de secado se multiplican, no se suman.",
+        "Valora la materia prima a su costo de oportunidad y distingue el caso del ají —sin otro destino, costo cercano a cero— del culantro, que sí tiene destino inmediato.",
+        "Usa el margen por hora como vara de comparación y cuenta las horas completas, incluidas compra de insumos, espera y entrega.",
+        "Descarta el culantro con un argumento fisiológico y de rendimiento concreto (hoja, mucha agua, aroma volátil, siete u ocho kilos por kilo).",
+        "Identifica el racimo de plátano como pico estructural legítimo y no como error de planificación.",
+        "Detecta el culantro sobrante recurrente como problema de planificación de siembra y propone escalonar en vez de transformar.",
+        "Menciona el efecto de la época de lluvias sobre el secado y sobre el precio del fresco, y lo usa para inclinar hacia encurtido o hacia esperar.",
+        "Incluye repartir fresco como opción con costo cero y la coloca por delante de transformar cuando el excedente todavía puede alimentar a alguien.",
+        "Aplica la escala mínima de proceso: comprueba que la tanda justifica el tiempo fijo de montaje, esterilizado y limpieza.",
+        "Separa qué se enseña para hacer en cada casa (tiempo fijo bajo, equipo de cocina, riesgo tolerable) de qué se hace juntos con equipo compartido, y menciona turnos, limpieza y responsable.",
+        "Remite los requisitos sanitarios y de etiqueta al SENASAG y a la autoridad competente sin inventar plazos, costos ni artículos."
+      ],
+      "explicacion": "La respuesta completa no elige entre transformar y no transformar: separa tres excedentes distintos y le da a cada uno la salida que le corresponde según su costo de oportunidad, su rendimiento y su escala. El ají ya no tiene otro destino y por eso justifica el fuego; el racimo es un pico estructural real; el culantro es una señal de que hay que ajustar la siembra y, mientras tanto, repartirlo. Y el criterio del proyecto ordena todo lo demás: si puede alimentar a alguien esta semana, repartir gana, porque su costo es cero y devuelve el tiempo íntegro."
+    }
+  ]
+}

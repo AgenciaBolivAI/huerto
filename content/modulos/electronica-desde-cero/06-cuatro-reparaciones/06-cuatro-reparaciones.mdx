@@ -1,0 +1,401 @@
+La lección anterior dejó una lista de sospechosos: humedad, calor, vibración, condensadores secos,
+soldaduras cansadas, contactos flojos. Saber qué falla en general no es saber **qué falla en este
+aparato que tengo delante**, y esa distancia es donde se pierde la tarde.
+
+Hay dos maneras. La primera la usa casi todo el mundo: sospechar, cambiar, probar; si no anda,
+sospechar de otra cosa. **Cambiar piezas hasta que funcione** cuesta dinero y tiene un defecto peor:
+cuando por fin anda, nadie sabe por qué. La segunda es un método aburrido que **no exige entender el
+aparato** y localiza la avería en una tarde, casi siempre sin comprar nada. **Reparar es lo que
+sostiene la producción donde el repuesto tarda y cuesta.**
+
+## Tres reglas antes de tocar nada
+
+**Se trabaja desenchufado y comprobado.** Desenchufar no basta: hay que comprobar con el instrumento
+que no hay tensión donde vas a poner los dedos, porque un interruptor puede estar cortando el neutro
+en vez de la fase y dejar el aparato apagado en apariencia y vivo de verdad.
+
+**Los condensadores guardan carga.** Un motor con capacitor o una fuente pueden morder minutos después
+del corte. Se descargan **a través de una resistencia o de un foco incandescente**, nunca
+cortocircuitándolos con un destornillador: el chispazo suelda la punta y revienta el componente.
+
+**Dos aparatos no se abren nunca: el horno microondas y cualquier televisor o monitor de tubo.**
+Guardan miles de voltios en condensadores que siguen cargados semanas después.
+
+<Advertencia titulo="La única medición que se hace con energía">
+Todo se mide sin energía menos una cosa: la tensión. Cuando toque, **una sola mano trabajando y la
+otra en el bolsillo**, para que ningún camino de corriente cruce el pecho; pies secos sobre madera o
+goma, nunca sobre tierra mojada; puntas sujetas por su plástico; y el circuito protegido por
+un <Termino slug="diferencial">diferencial</Termino> que hayas probado ese mes. Si falta algo de eso,
+no se mide: se resuelve primero lo que falta.
+</Advertencia>
+
+## Lo primero siempre es la alimentación
+
+Antes de cualquier método va una pregunta tonta que resuelve una parte enorme de las averías reales:
+**¿le está llegando energía al aparato?** Suena humillante y por eso se salta, y por eso se desarman
+ventiladores cuya extensión estaba cortada.
+
+La cadena tiene más eslabones de los que uno recuerda, y cualquiera rompe el sistema entero:
+el <Termino slug="interruptor-termomagnetico">térmico</Termino> del tablero, que pudo saltar sin que
+nadie lo note; el diferencial, que salta por una causa distinta y más grave; el tomacorriente, con los
+contactos vencidos de tanto entrar y salir; el enchufe; el cable, roto casi siempre donde entra al
+enchufe; el interruptor del aparato; y adentro, muchas veces, un fusible propio que nadie sabe que
+existe. **Siete eslabones antes de llegar a la electrónica**, y se recorren del tablero hacia afuera.
+
+<Dato titulo="El corolario que ahorra vergüenzas">
+Antes de declarar muerto un aparato, pruébalo en otro tomacorriente con una extensión que sepas buena.
+Si ahí funciona, la avería nunca estuvo en el aparato: está en la instalación, y esa es más urgente,
+porque un tomacorriente flojo se calienta. **Dos pruebas de treinta segundos deciden de qué lado está
+el problema**, y ese «de qué lado» es la idea que ordena todo lo que sigue.
+</Dato>
+
+## Partir el sistema por la mitad
+
+Un aparato es una **cadena**: la energía entra por un extremo, atraviesa varias etapas y sale
+convertida en luz, en giro o en agua que sube. Si el resultado no aparece hay una etapa donde se
+corta, y puede haber diez sin que ninguna se vea. Revisarlas todas en orden es la peor estrategia.
+
+La alternativa es la <Termino slug="busqueda-binaria">búsqueda binaria</Termino>: **elegir un punto a
+mitad de la cadena, preguntar de qué lado está el fallo y repetir con la mitad que quedó.** Si a mitad
+de camino la señal todavía es buena, el problema está aguas abajo; si ya está mal, aguas arriba. Una
+sola medición eliminó la mitad de las posibilidades.
+
+<Formula explicacion="Cada corte divide entre dos el terreno donde puede esconderse la avería, así que el número de mediciones crece muy despacio: para duplicar las etapas sospechosas basta una medición más.">
+mediciones ≈ log₂(etapas sospechosas)
+</Formula>
+
+Ocho etapas se acorralan en tres mediciones; dieciséis, en cuatro. Y **no exige entender el
+aparato**: sirve en un equipo desconocido, porque solo pregunta «¿aquí ya está mal?».
+
+<Analogia>
+Es el mismo procedimiento que el módulo de riego usa con una línea enterrada que no da presión al
+final del sector: nadie desentierra los ochenta metros; se abre el registro del medio y se mide ahí, y
+si la presión llega bien, la fuga está más adelante. Y es idéntico a lo que hace un programador con
+«ayer funcionaba y hoy no». Tubería, código y aparato son el mismo problema con distinta carcasa.
+</Analogia>
+
+Un buen punto de corte —un <Termino slug="punto-de-prueba">punto de prueba</Termino>— cumple tres
+condiciones: **es accesible sin desarmar medio aparato, se puede medir con lo que tienes y parte la
+cadena en dos mitades parecidas.** Los bornes de un portalámparas, la salida del interruptor, los
+terminales del capacitor: esos valen. Un punto soldado en el fondo de una placa, aunque esté a la
+mitad exacta, no vale para nada.
+
+En cada punto se hacen las mismas tres preguntas y en este orden. **¿Hay tensión?**, con energía, para
+saber si la etapa anterior entrega algo. **¿Hay continuidad?**, sin energía, para comprobar que lo que
+debe estar cerrado lo está y lo que debe estar abierto también. **¿Aguanta con carga?** — la que casi
+nadie hace, y la que descubre las averías que las otras dos declaran sanas.
+
+## Lo que solo se ve con el aparato trabajando
+
+Un <Termino slug="falso-contacto">falso contacto</Termino> —un tornillo flojo, un cable medio partido,
+un terminal oxidado— tiene una propiedad tramposa: **se comporta como bueno mientras no pase corriente
+de verdad.** El multímetro, al medir tensión, consume una cantidad ridícula de corriente; con eso,
+hasta un contacto colgando de tres hilitos lee los 220 voltios completos y parece perfecto. Enciende
+el aparato y cambia todo, porque el contacto tiene
+una <Termino slug="resistencia-electrica">resistencia</Termino> pequeña pero no nula:
+
+<Formula explicacion="La tensión que llega a la carga es la de la fuente menos lo que se pierde en el contacto malo, y esa pérdida crece con la corriente. Por eso el punto que leía bien en vacío se hunde en cuanto el aparato arranca.">
+V con carga = V en vacío − I × R del contacto
+</Formula>
+
+<Formula explicacion="Y el calor en ese contacto crece con el cuadrado de la corriente. El calor oxida, la oxidación sube la resistencia y la resistencia vuelve a subir el calor: el lazo termina en un terminal derretido.">
+P disipada = I² × R del contacto
+</Formula>
+
+De ahí la <Termino slug="prueba-bajo-carga">prueba bajo carga</Termino>: medir el mismo punto dos
+veces, en vacío y con el aparato trabajando. **Si la tensión se desploma al encender, el problema está
+entre la fuente y ese punto.** Y hay un instrumento gratis que dice lo mismo: **después de un rato de
+trabajo, desenchufa y toca con el dorso de la mano** enchufes, regletas y tornillos. Tibio significa
+flojo; caliente, que va a fallar pronto; negro, que ya falló.
+
+Cuando algo no se puede medir bien queda
+la <Termino slug="prueba-de-sustitucion">prueba de sustitución</Termino>: poner en su lugar una pieza
+que sabes buena, y por eso conviene guardar un foco, una extensión y un capacitor solo para
+diagnosticar. Dos trampas caras. **Si algo mató a la pieza original, va a matar a la de prueba.** Y
+sustituir dos cosas a la vez no enseña nada, igual que cambiar tres líneas de código de golpe: **una
+pieza, una prueba, una anotación.**
+
+## Reparación 1 — Una extensión o un enchufe
+
+Es la más frecuente, la más barata y la que más incendios evita. Síntoma típico: **funciona si se
+mueve el cable.** Eso ya es medio diagnóstico: un aparato no tiene modo de saber que lo estás
+meneando, así que si moverlo cambia algo, el fallo es mecánico. Y está casi siempre en los dos
+centímetros donde el cable entra al enchufe, que es donde se dobla mil veces en el mismo punto: los
+hilos de cobre se parten uno a uno, la sección se reduce, la resistencia sube y el calor hace el
+resto. Es fatiga mecánica, no electricidad.
+
+**Cómo se comprueba.** Desenchufado y con el otro extremo libre, se mide continuidad conductor por
+conductor. Y aquí el paso que casi todos omiten: **con las puntas puestas y el instrumento sonando, se
+flexiona el cable en todo su recorrido**, insistiendo en los extremos. Si el sonido se corta al
+doblar, ese punto es la rotura; un cable puede dar continuidad perfecta quieto y estar partido igual.
+Después, las dos comprobaciones inversas, de seguridad: **no debe haber continuidad entre fase y
+neutro** —eso es un cortocircuito— **ni entre ninguno de los dos y tierra.**
+
+**La reparación.** Se corta el tramo dañado con generosidad, diez o quince centímetros, porque la zona
+fatigada es más larga de lo que se ve. Se pela sin morder los hilos y se arma un enchufe nuevo con
+tres cuidados: cada hilo entero dentro de su tornillo, el tornillo apretado de verdad, y **el
+prensacable mordiendo la funda exterior, nunca los conductores** — eso es lo que evita que vuelva a
+fallar en seis meses. **Los colores no se creen, se comprueban.** Y se verifica en orden: continuidad
+de cada conductor, ausencia de continuidad entre ellos, un tirón firme con la mano, y recién entonces
+energizar con un foco antes de confiarle la bomba.
+
+<Advertencia titulo="La extensión que no aguanta lo que le enchufan">
+Hay una avería que no es rotura sino error de diseño: la extensión larga y fina alimentando un motor.
+No falla del todo; **se calienta y hace que el motor trabaje mal toda su vida**. Se detecta midiendo
+la tensión en el extremo lejano con el motor arrancando, y no se repara: se cambia por cable de
+sección adecuada. Y **enrollada en su carrete disipa mucho peor que desenrollada**.
+</Advertencia>
+
+## Reparación 2 — Una lámpara o una luminaria
+
+El primer corte es gratis y no necesita instrumento: **poner un foco que sepas bueno.** Si enciende,
+el fallo estaba en el foco; si no, está en la luminaria o en su alimentación. El siguiente punto de
+prueba son **los bornes del portalámparas**: con tensión ahí, el problema es el portalámparas, cuyo
+contacto central se aplasta con el uso y deja de tocar la base del foco —se recupera levantándolo con
+cuidado, desenergizado—. Sin tensión ahí hay que subir: interruptor de pared, caja, térmico. **Un
+interruptor gastado se comprueba sin energía, midiendo continuidad en las dos posiciones.**
+
+**Dentro de un foco LED** hay dos partes: una fuente pequeña —el driver— que convierte los 220 voltios
+en lo que los LED necesitan, y una fila de LED conectados **uno detrás de otro**. Eso explica el fallo
+más común: **si un solo LED se abre, se apaga la fila entera**, igual que la guirnalda vieja de
+Navidad. El muerto suele verse como un punto negro, y la reparación es abrir el difusor y **puentearlo
+con una gota de estaño**. Con honestidad: al quedar un LED menos, los demás reciben algo más de
+tensión y el foco durará menos. Es un arreglo legítimo cuando no hay repuesto, no uno definitivo.
+
+<Advertencia titulo="Por qué es peligroso un foco LED abierto">
+Muchos drivers de foco LED **no tienen aislamiento galvánico**: no hay transformador que separe el
+lado de la red del lado de los LED. La consecuencia es contraintuitiva y grave: **la placa de los LED
+puede estar a potencial de red aunque el número que mide el multímetro sea bajo.** Parece baja tensión
+y no lo es. Se manipula desenchufado, y no se enciende nunca con la placa expuesta para «ver si ya
+anda»: se cierra y después se prueba.
+</Advertencia>
+
+**Tubos fluorescentes.** Cuatro sospechosos que se prueban del más barato al más caro: arrancador,
+tubo, portatubos y balasto. Extremos ennegrecidos, tubo gastado; balasto que zumba o huele a quemado,
+terminado, y ahí conviene pasar a LED — pero **hay dos tipos de tubo LED**, uno que trabaja con el
+balasto existente y otro que exige quitarlo y recablear.
+
+## Reparación 3 — Un ventilador
+
+Es el aparato ideal para aprender: motor simple, pocos fallos y repuesto barato.
+
+**El mecanismo.** Un motor de corriente alterna monofásico tiene un problema de nacimiento: la
+corriente que le llega empuja y tira alternativamente, así que **por sí sola no le dice al rotor hacia
+qué lado girar**. La solución de fábrica es un segundo devanado alimentado a través de
+un <Termino slug="capacitor-de-arranque">capacitor</Termino>, que retrasa su corriente respecto a la
+del principal. Con dos empujes desfasados en el tiempo aparece un campo que gira y el rotor lo
+persigue; sin ese desfase no hay giro, solo un campo que vibra en el sitio. De ahí el síntoma más
+reconocible de la electrónica doméstica: **zumba y no arranca, pero si le das un empujón con el dedo
+arranca y sigue girando.** El empujón da a mano la dirección que el capacitor ya no da.
+
+**Cómo se confirma.** Desenchufado y con el capacitor descargado a través de una resistencia, se mide:
+si el multímetro tiene función de capacidad, se compara con el valor impreso en el componente. Uno
+sano lee cerca de su valor nominal; **uno seco lee la mitad, o cero, o nada.** El reemplazo debe
+cumplir tres condiciones: **el mismo valor en microfaradios**, una tensión de trabajo **igual o
+mayor** que la original, y ser un capacitor para motor de alterna —no un electrolítico de continua,
+que puesto ahí revienta.
+
+**Los otros tres sospechosos.** Primero, **los bujes secos**: el eje debe girar suave y largo con la
+mano, y si raspa, el motor pelea contra la fricción, toma más corriente y se calienta; se limpia el
+polvo —en un vivero, tierra fina con humedad— y se aceita con aceite fino, nunca con grasa espesa, que
+atrapa más polvo del que lubrica. Segundo, **la llave de velocidades**, un contacto que se quema con
+el tiempo: un ventilador que anda en alta pero no en baja tiene la llave, no el motor. Y tercero,
+el <Termino slug="protector-termico">protector térmico</Termino>, una lámina bimetálica dentro del
+bobinado que abre el circuito cuando el motor se calienta y **vuelve a cerrar sola al enfriarse**: su
+síntoma es andar veinte minutos, pararse, y arrancar solo media hora después. **Eso no es una avería
+del protector: es el protector avisando de otra cosa** —suciedad, bujes secos o tensión baja—.
+Puentearlo es convertir una avería en un incendio.
+
+Si el bobinado huele a quemado, está oscurecido, o el multímetro encuentra continuidad entre los
+devanados y la carcasa metálica —una <Termino slug="fuga-a-masa">fuga a masa</Termino>—, el motor está
+terminado. **La verificación de lo reparado:** que arranque solo desde parado y en la velocidad más
+baja, que es la condición más exigente; que la corriente medida con
+una <Termino slug="pinza-amperimetrica">pinza amperimétrica</Termino> no supere lo que dice la placa;
+y que a la media hora la carcasa esté tibia y no caliente.
+
+## Reparación 4 — Una bomba de agua
+
+Una bomba parece complicada y no lo es, si se la parte primero en **tres sistemas independientes**,
+porque cada uno falla distinto: el eléctrico —cable, protector, capacitor
+y <Termino slug="presostato">presostato</Termino>—, el mecánico —eje, rodamientos, sello, impulsor— y
+el hidráulico —cebado, aspiración, válvula de pie—. El primer corte lo da el síntoma:
+
+<Tabla>
+
+| Síntoma | Sistema | Primer sospechoso | Qué se mide o se hace |
+| --- | --- | --- | --- |
+| No hace absolutamente nada | Eléctrico | Alimentación, térmico, protector abierto | Tensión en los bornes de la bomba |
+| Zumba y no gira | Eléctrico o mecánico | Capacitor, o eje trabado por sedimento | Capacidad del capacitor; girar el eje a mano |
+| Gira pero no sube agua | Hidráulico | Falta de cebado, entrada de aire, válvula de pie | Llenar y purgar; revisar toda la aspiración |
+| Sube agua con poca fuerza | Hidráulico o mecánico | Filtro sucio o impulsor gastado | Presión de salida contra la de la placa |
+| Arranca y para a los minutos | Eléctrico | Protector térmico actuando por otra causa | Corriente con pinza; temperatura de carcasa |
+| Arranca y para cada pocos segundos | Hidráulico | Tanque sin colchón de aire | Ciclos por minuto; presión de aire del tanque |
+| Hace saltar el diferencial | Eléctrico, grave | Humedad en el bobinado o en la conexión | Resistencia entre bobinado y carcasa |
+
+</Tabla>
+
+**El caso más malentendido es la bomba que gira sin dar agua.** Una bomba centrífuga no puede empujar
+aire: si el cuerpo tiene aire dentro, el impulsor gira en vacío y no pasa nada.
+El <Termino slug="cebado-de-bomba">cebado</Termino> —llenar de agua el cuerpo y la aspiración antes de
+arrancar— no es un ritual, es la condición física para que funcione. Y aquí la sutileza que cuesta
+días: **toda la tubería de aspiración trabaja en depresión**, a menos presión que la atmósfera, así
+que una junta floja en ese tramo **no gotea agua, traga aire**, y no hay nada que ver. La bomba se
+desceba sola y el dueño la revisa mil veces cuando el problema está tres metros atrás. **En el lado de
+impulsión las fugas se ven; en el de aspiración, no.**
+
+**El arranca y para cada pocos segundos** tiene una causa casi única y una reparación casi gratis: el
+tanque hidroneumático perdió su colchón de aire. Sin colchón que se comprima, la presión sube y baja
+de golpe, el presostato conecta y desconecta sin parar, y cada arranque castiga al motor con su pico
+de corriente. Se resuelve reponiendo el aire, no cambiando el presostato.
+
+<Advertencia titulo="La bomba que hace saltar el diferencial no se puentea jamás">
+Las dos protecciones dicen cosas distintas. **Si salta el térmico**, pasa demasiada corriente:
+sobrecarga, motor trabado, tensión baja. **Si salta el diferencial**, hay corriente escapándose por un
+camino que no es el circuito, y en una bomba ese camino suele ser el agua, la humedad en la caja de
+conexiones o el aislamiento del bobinado vencido. No está molestando: anuncia que la carcasa puede
+electrificarse y que alguien va a tocarla descalzo sobre tierra mojada.
+
+Se busca la causa, se seca y se mide resistencia entre bobinado y carcasa, con una salvedad honesta:
+**un multímetro que lee «abierto» no prueba que el aislamiento aguante a 220 voltios**. Si el
+diferencial insiste, la bomba va al taller, y
+la <Termino slug="puesta-a-tierra">puesta a tierra</Termino> se comprueba antes de reconectar.
+</Advertencia>
+
+## Comprobar que quedó bien
+
+Encender es el primero de cuatro pasos, y saltarse los otros tres produce las reparaciones que fallan
+a la semana. **En frío y sin energía:** continuidad donde debe haberla, ausencia donde no, y ninguna
+conexión entre conductores activos y la carcasa. **Primer encendido con la carga más chica posible:**
+un foco antes que una bomba. **Bajo carga:** corriente comparada con la placa y tensión en el punto
+reparado. **A la media hora, con la mano:** desenchufado, tocando conexiones y carcasa. **Ningún punto
+de conexión debe estar más caliente que el resto del aparato.**
+
+## Cuándo no vale la pena reparar
+
+Decir que no también es parte del oficio. Hay
+un <Termino slug="umbral-de-reparacion">umbral de reparación</Termino> que cada quien fija, con una
+regla de sentido común: **si los repuestos se acercan a la mitad de lo que cuesta el equivalente
+nuevo, y encima hay que esperarlos, casi nunca compensa.** Y cuatro casos donde la respuesta es no,
+sin cuentas.
+
+**Cuando el aislamiento está comprometido:** carcasa rajada, forro reseco y agrietado, aparato que
+estuvo sumergido. Puede secarse y volver a andar, y haber perdido aislamiento donde no se ve.
+
+**Cuando la reparación consistiría en quitar una protección:** puentear un térmico, anular un
+protector, cortar la pata de tierra para que el enchufe entre en un tomacorriente viejo. Eso no es
+reparar: es desarmar la seguridad y dejarla desarmada para el que venga después.
+
+**Cuando ya falló tres veces por lo mismo.** A la tercera, la causa no es la pieza sino el ambiente o
+el uso. Un motor que quema su capacitor cada seis meses trabaja demasiado caliente, con tensión baja o
+con el eje duro; cambiar la pieza otra vez es tratar el síntoma.
+
+**Cuando el trabajo no cabe en el calendario.** Una bomba parada en plena temporada de riego no es un
+problema técnico sino de tiempo: se pone la de repuesto y se repara la otra sin prisa.
+
+<Dato titulo="Aunque no se repare, casi nunca se tira entero">
+Un aparato descartado es un almacén de repuestos: de un ventilador muerto salen el capacitor, la
+llave, el cable con su enchufe y las aspas. **Se desarma el mismo día que se declara muerto**, no
+cuando haga falta la pieza —para entonces ya lo tiró alguien—, y se guarda etiquetado con su valor
+escrito. Un cajón de piezas cosechadas es lo que separa reparar en una tarde de esperar tres semanas.
+</Dato>
+
+<AplicarRizoma>
+**El banco de reparación se monta antes de que se rompa nada**, porque el día de la avería nadie
+improvisa un puesto de trabajo. En el galpón: mesa firme, luz de frente, un tomacorriente propio
+protegido por su diferencial, el multímetro con las puntas sanas, y un cartel con el orden del
+diagnóstico —alimentación, partir por la mitad, tres preguntas, sustituir de a una—. Ese cartel es
+para quien repare sin haber leído esta lección.
+
+**La lista de aparatos críticos de Rizoma cabe en media hoja y conviene escribirla ya**: la bomba que
+sube agua al tanque, los ventiladores del galpón y del germinador, las luminarias de la zona de
+repique y las extensiones que cruzan el predio entre lotes. Al lado de cada uno, qué pasa si se para
+hoy y cuánto se aguanta sin él. La bomba es el caso extremo, un punto único de fallo para los 3.666
+metros cuadrados; el tanque elevado da unas horas de margen, y esas horas son el tiempo disponible
+para repararla. **De esa lista sale la caja de repuestos:** anota el valor en microfaradios y la
+tensión del capacitor de la bomba y de cada ventilador —está impreso en el componente— y ten uno de
+cada, más enchufes, portalámparas, prensacables y cable. **La caja se arma con lo que dicen tus
+propias mediciones**, no con lo que había en oferta.
+
+**El clima del sitio decide el calendario de revisiones.** Las extensiones tienen un enemigo
+previsible, el riego: tiradas por el suelo del vivero se mojan, se pisan, se doblan siempre en el
+mismo punto y juntan tierra fina en los contactos, así que ningún empalme con cinta va en zona de
+riego y **todas se revisan con continuidad y flexión al terminar las lluvias**, en abril o mayo. En la
+seca, el polvo fino se mete en bujes y rejillas y aparecen los ventiladores que se paran solos
+—protector térmico actuando por suciedad—, y la contramedida no es reparar sino limpiar antes del
+calor fuerte. Y en las noches de surazo la humedad condensa dentro de los gabinetes fríos: por eso lo
+que está a la intemperie va en caja cerrada y con la entrada de cables hacia abajo.
+
+**Cada reparación se anota, y eso convierte el taller en conocimiento comunitario.** En la bitácora
+del sistema que usa el módulo de energía: fecha, aparato, síntoma exacto, qué se midió, **causa real**
+—no la primera sospecha— y qué repuesto entró. A las treinta entradas aparece el patrón, y el patrón
+es plata: si tres capacitores murieron en el mismo verano, el problema es la ventilación del galpón.
+**Y el paso que da sentido a todo lo anterior:** un día de reparaciones abierto al barrio, con el
+multímetro en la mano de quien trae el aparato y no en la del que sabe. Un vecino que se lleva su
+ventilador andando aprendió una cosa; **uno que midió él mismo el capacitor y vio la lectura en cero
+aprendió un método**, y el método sirve para el próximo aparato.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**En Santa Cruz la red domiciliaria trabaja alrededor de los 220 voltios, a 50 hercios**, y eso
+importa al reparar: cada repuesto que lleve tensión impresa —capacitores, interruptores,
+portalámparas, cable— debe estar declarado para esa tensión o más. Un componente sacado de un equipo
+de 110 voltios puede entrar mecánicamente y no aguantar eléctricamente. Y no en todo el país la
+tensión es la misma: a un aparato traído de otra ciudad **se le mide la red antes de enchufarlo.** Y el vocabulario cambia de barrio en barrio: a la
+extensión se le dice alargador o alargue; a la regleta, zapatilla, triple o multitoma; al interruptor
+termomagnético, llave térmica o breaker; al capacitor, condensador. Cuando pidas un repuesto, lo que
+nunca falla es llevar la pieza vieja en la mano y el valor impreso anotado.
+
+**El bajo voltaje al final de una línea rural produce averías que parecen otra cosa.** Cuando la
+tensión que llega está por debajo de lo que el motor espera, el motor toma más corriente para dar la
+misma potencia, se calienta y termina disparando su protector térmico o quemando el bobinado. El
+diagnóstico es sencillo: **medir la tensión en los bornes del motor justo en el arranque**, no en
+reposo. Si se hunde bastante, el problema está en la línea o en la sección del cable, no en el
+aparato. Cuánto es demasiado y qué puede exigírsele al suministro se consulta con la distribuidora
+local: el curso no inventa esos números.
+
+**Los cortes frecuentes hacen daño no cuando se va la luz, sino cuando vuelve.** Al restablecerse el
+servicio, todos los motores del barrio arrancan a la vez, la tensión se hunde y los equipos que
+estaban en marcha —una bomba con el presostato pidiendo agua— arrancan una y otra vez. Ese ciclo mata
+capacitores y bobinados, y la contramedida es de operación: **desconectar la bomba y los equipos
+grandes durante el corte y reconectarlos a mano unos minutos después de que vuelva.**
+
+**La temporada de lluvias, de octubre a abril, concentra tres cosas a la vez:** humedad que corroe
+contactos, tormentas con picos eléctricos que castigan fuentes y controladores, y bichos que buscan
+refugio seco dentro de las cajas. Encontrar hormigas o cucarachas en un gabinete es habitual y produce
+fallos intermitentes que ninguna medición explica; por eso, en este clima, el método empieza por
+**abrir y mirar** antes de razonar sobre el circuito. Y hay que decirlo porque el sitio está en zona
+de dengue endémico: reparar bombas y riego implica manipular recipientes con agua, y **nada hueco
+queda boca arriba a la intemperie**.
+
+**Sobre repuestos y límites legales, lo honesto es describir el camino y no los precios.** Capacitores
+para motor, portalámparas, prensacables, terminales y cable se consiguen en casas de material
+eléctrico de Santa Cruz, y el rebobinado de motores es un oficio que existe en la ciudad; qué cuesta y
+quién lo hace bien se pregunta localmente. Y dos fronteras que no son opinables: lo que esté aguas
+arriba del medidor es territorio exclusivo de la distribuidora, y tocarlo no es reparar; y las
+instalaciones fijas de una vivienda o un galpón tienen exigencias que fija la autoridad competente,
+así que antes de dar por buena una instalación reparada se consulta con un electricista matriculado.
+**Reparar un aparato es una cosa; certificar una instalación es otra.**
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Mido y llegan los 220 voltios, así que ese tramo está bien.»** Está bien **en vacío**. Un contacto
+colgando de tres hilos da la lectura completa y se hunde en cuanto pase corriente.
+
+**«El protector térmico está fallando porque corta.»** El protector cortando es el protector
+funcionando. Lo que falla es lo que lo calienta, y puentearlo cambia una parada por un incendio.
+
+**«Cambié tres cosas y ahora anda.»** Y no sabes cuál era, así que no aprendiste nada y la próxima vez
+empiezas de cero. Una pieza, una prueba, una anotación.
+
+## Lo que sigue
+
+Con el método de esta lección y el multímetro ya puedes diagnosticar casi todo lo que se rompe en una
+casa o en un vivero: partir por la mitad, medir en vez de suponer y sustituir de a una pieza.
+
+Falta la última parte del oficio: **construir uno propio, entero, que funcione.** La lección de cierre
+arma un probador de continuidad con una pila, un zumbador y dos puntas —el instrumento que más se usa
+en todo lo que acabas de leer— y con él recorre por última vez el módulo: circuito, soldadura, caja y
+documentación para que otro vecino pueda hacerse el suyo.
+
+Siguiente: **07 — Construir algo propio.**

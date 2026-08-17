@@ -1,0 +1,297 @@
+Todo lo anterior era reversible o barato. Esto no.
+
+Una cama alta mal situada son diez años trabajando alrededor de un error. Un pasillo demasiado
+estrecho es una maniobra incómoda repetida varias veces al día durante toda la vida del vivero. Y un
+drenaje que descarga donde no debe es un problema con el vecino que no se arregla moviendo tierra.
+
+Esta lección es donde el diagnóstico de los módulos 5 y 6 se convierte en geometría, y donde
+conviene ir despacio.
+
+<Analogia>
+**El trazado es tu modelo de datos.**
+
+En papel cuesta cambiarlo cinco minutos. Una vez que hay datos encima, cada cambio es una migración.
+
+Y como en cualquier modelo de datos, lo que decide si fue un buen diseño no es lo elegante que se ve
+el diagrama: es **cuánto cuestan las consultas que vas a hacer todos los días**. Llevar una carretilla
+de sustrato desde la pila hasta la zona de propagación es una consulta. Sacar cien bolsas hasta el
+punto de carga es otra. Si el trazado las hace caras, las pagas cada día durante diez años.
+</Analogia>
+
+## La cama alta: sus medidas no son agronómicas
+
+En el Módulo 5 ya dimensionaste la **altura** de una cama: sale de la profundidad a la que aparece la
+saturación, y la regla es que la altura de la cama más la profundidad efectiva que ya tenías debe
+cubrir lo que el cultivo exige.
+
+Las otras dos medidas no salen del suelo. Salen de tu cuerpo y de tu carretilla.
+
+<Diagrama
+  src="ancho-por-alcance.webp"
+  alt="Vista de un extremo de una cama alta con dos personas, una a cada lado, agachadas sobre los pasillos y estirando el brazo hacia el centro de la cama. Los dos brazos se encuentran justo en el eje central, y una cota horizontal marca el ancho total de la cama. Sobre la superficie de la cama, un símbolo de prohibido pisar."
+  pie="El ancho es dos veces lo que alcanza un brazo. Ni un centímetro más, porque el centímetro de más obliga a pisar."
+/>
+
+**El ancho lo fija el alcance.** Del principio de tráfico controlado de la lección anterior sale una
+regla absoluta: **nunca se pisa una cama.** Si la pisas, compactas justo el suelo que acabas de
+construir, y la cama deja de tener sentido.
+
+Por lo tanto tienes que poder llegar al centro desde cualquiera de los dos lados. Eso da un ancho de
+entre **90 y 120 cm** para la mayoría de la gente. Es una medida antropométrica, no agronómica: **mídete
+a ti**, agachado, y decide con ese número.
+
+**El largo lo fija tu paciencia.** Una cama larga aprovecha mejor la superficie porque hay menos
+pasillos transversales, pero te obliga a rodearla entera cada vez que te equivocas de lado. Entre
+**10 y 20 metros** suele ser el punto cómodo.
+
+**El ancho del pasillo lo fija lo que tiene que pasar por él**, y aquí hay que distinguir dos
+jerarquías:
+
+| Tipo de pasillo | Qué pasa por él | Ancho |
+|---|---|---|
+| **Secundario**, entre camas | Una persona con carretilla | 50–60 cm mínimo |
+| **Principal**, de circulación | Carretilla cargada cruzándose, o un vehículo pequeño | 1,5–2 m |
+
+<Advertencia titulo="Antes de decidir el ancho de los pasillos, haz la cuenta">
+La superficie de cultivo no es la superficie del terreno, y la diferencia es grande.
+
+Con camas de 1,0 m y pasillos de 0,6 m, cada módulo ocupa 1,6 m y solo 1,0 m produce: **el 62 % de la
+superficie**. Con pasillos de 1 m, baja al 50 %. Con pasillos de 0,4 m subes al 71 %, pero trabajas
+incómodo todos los días.
+
+Ese porcentaje multiplica directamente tu capacidad de producción, así que conviene calcularlo antes
+y no descubrirlo después. Y ojo con la tentación de apretar: **el pasillo estrecho se paga en tiempo
+todos los días**, y el tiempo es el recurso que más te va a faltar en temporada.
+</Advertencia>
+
+<Diagrama
+  src="pasillos-y-superficie.webp"
+  alt="Dos planos vistos desde arriba del mismo terreno rectangular. En el izquierdo, rotulado pasillos anchos, hay pocas camas separadas por franjas amplias y la superficie de cultivo sombreada es visiblemente menor. En el derecho, rotulado pasillos estrechos, hay más camas muy juntas y la superficie sombreada es claramente mayor, pero una figura humana dibujada en un pasillo aparece con los codos rozando las camas de ambos lados."
+  pie="La misma parcela con dos trazados. Más superficie de cultivo se paga con menos comodidad, y la comodidad se cobra todos los días."
+/>
+
+<Video id="GnXz49iAa90" />
+
+**Sobre el volumen**, que es lo que casi nadie calcula antes: una cama de **1 m × 10 m × 30 cm de
+altura son 3 m³ de material**. Tres metros cúbicos es aproximadamente una volqueta pequeña, **para una
+sola cama**. Multiplica por el número de camas antes de decidir cuántas construyes este año, porque
+ese volumen es el que va a limitar el ritmo, no las ganas.
+
+## El drenaje es una red, y una red necesita salida
+
+<Diagrama
+  src="red-de-drenaje.webp"
+  alt="Plano visto desde arriba de una parcela con camas de cultivo en la parte alta. Entre las camas, canales finos recogen el agua y desembocan en un canal colector de mayor sección que recorre un lateral; ese colector conduce a una zona baja del terreno dibujada como una laguna. Flechas azules indican el sentido del agua desde las camas hasta la zona baja. En el borde del terreno, junto al lindero, un aspa señala que no hay descarga hacia la parcela vecina."
+  pie="El agua que recoges tiene que ir a algún sitio, y ese sitio tienes que decidirlo tú. Si no lo decides, lo decide la gravedad."
+/>
+
+Aquí está el error conceptual que produce los problemas más caros: pensar el drenaje como zanjas
+sueltas en lugar de como una red con un destino.
+
+**El agua que sacas de un sitio aparece en otro.** Si drenas hacia el vecino, tienes un conflicto que
+no se arregla con una pala. Si drenas hacia tu propia zona baja sin haberlo previsto, has concentrado
+el problema en lugar de resolverlo.
+
+La red tiene tres niveles:
+
+1. **Conformación de la superficie.** Antes que cualquier zanja: que el agua no se quede quieta. La
+   propia forma de las camas y su orientación ya hacen la mitad del trabajo.
+2. **Canales de recolección** entre camas o entre bloques, de poca sección.
+3. **Un colector** que lleve el agua a **un punto de descarga decidido**.
+
+Y ese <Termino slug="punto-de-descarga">punto de descarga</Termino> es la pieza que hay que resolver
+primero, no al final. Tienes tres opciones honestas: un desagüe existente si lo hay, un
+almacenamiento propio, o una zona de infiltración dentro de tu terreno. Lo que no es una opción es
+«que salga por donde pueda».
+
+<Dato titulo="Y aquí el bajío deja de ser un problema">
+Llevas tres módulos leyendo que el bajío no se rellena. Esta es la lección donde se entiende para qué.
+
+**El bajío es el punto bajo natural del terreno, y por tanto es el destino natural del agua.** En vez
+de pelear contra eso, la red de drenaje se diseña para llevar el agua allí a propósito, y ese lote
+pasa a tener una función: amortiguar la escorrentía en lluvias y, si lo desarrollas, almacenar agua
+para septiembre.
+
+Es la diferencia entre un terreno con un defecto y un terreno con un sistema. Y el Módulo 24, cuando
+toque riego, va a agradecer mucho que ese almacenamiento exista.
+</Dato>
+
+### La pendiente que hace falta es mínima, pero tiene que existir
+
+En una llanura aluvial las pendientes son diminutas y **el ojo no las ve**. Un canal que parece
+horizontal puede ir en contra.
+
+Basta con muy poco: del orden de **una a cinco milésimas** —uno a cinco centímetros por cada cien
+metros— para que un canal de drenaje funcione. Pero tiene que ser en el sentido correcto y tiene que
+ser continua. Con más pendiente el agua erosiona el canal; con menos, se deposita el sedimento y el
+canal se ciega solo.
+
+Lo cual exige medir. Y por suerte, medir esto es casi gratis.
+
+<Diagrama
+  src="nivel-de-manguera.webp"
+  alt="Dos estacas clavadas en el suelo a cierta distancia, unidas por una manguera transparente llena de agua que descansa en el suelo entre ambas. En cada extremo la manguera se levanta y se sujeta a una estaca; el agua alcanza en los dos extremos exactamente la misma altura respecto a un plano horizontal punteado, aunque el suelo bajo una estaca está más alto que bajo la otra. Una cota vertical mide la diferencia entre el nivel del agua y el suelo en cada estaca."
+  pie="El agua encuentra el mismo nivel en los dos extremos. Restando la altura del suelo en cada estaca sale el desnivel, con precisión de centímetros y sin instrumentos."
+/>
+
+El <Termino slug="nivel-de-manguera">nivel de manguera</Termino> es una manguera transparente llena de
+agua, sin burbujas. El agua se equilibra a la misma altura en los dos extremos, así que dos puntos
+marcados al ras del agua están **exactamente al mismo nivel**, aunque estén separados por decenas de
+metros y no se vean entre sí.
+
+Cuesta lo que cuesta la manguera, no necesita calibración, no se descalibra y da precisión de
+centímetros. Para levantar las cotas de un terreno de 3.666 m² es más que suficiente.
+
+Su primo es el **nivel en A**, un bastidor triangular con una plomada que sirve para trazar curvas de
+nivel caminando. Los dos son tecnología apropiada clásica y los dos resuelven este problema sin
+contratar a nadie.
+
+<Video id="1uphyfHj0BE" />
+
+## El trazado: la decisión que se toma una vez
+
+<Diagrama
+  src="trazado-del-vivero.webp"
+  alt="Plano de un vivero visto desde arriba con las zonas rotuladas y unidas por flechas que marcan el recorrido del material: pila de compost y lecho de lombrices en un extremo, junto a ellos la zona de mezcla de sustrato, después la zona de propagación bajo malla de sombra, a continuación la zona de endurecimiento a pleno sol en la parte más alta, y finalmente la zona de despacho junto al acceso. Un punto de agua aparece en el centro del recorrido y un pasillo principal ancho conecta todas las zonas hasta la entrada."
+  pie="Las zonas se ordenan siguiendo el recorrido del material, no por comodidad de dibujo. Lo pesado debe viajar poco."
+/>
+
+El trazado no es dónde queda bonito cada cosa: es **minimizar el transporte de lo pesado**, porque eso
+es lo que vas a hacer todos los días.
+
+El material recorre siempre la misma secuencia: **compost → mezcla de sustrato → propagación →
+endurecimiento → despacho.** Si las zonas están en ese orden, cada movimiento es corto. Si están
+desordenadas, cada bolsa cruza el terreno dos veces.
+
+Las restricciones de cada zona ya las tienes de los módulos anteriores:
+
+| Zona | Qué exige | De dónde sale |
+|---|---|---|
+| **Compost y lombrices** | Media sombra, agua cerca, acceso para carretilla | Lección 4 |
+| **Propagación** | Sombra, agua, protección de viento | Módulo 6, lección 6 |
+| **Endurecimiento** | Sol pleno, punto alto, nunca un bajío | Módulo 6, lección 5 |
+| **Despacho** | Junto al acceso, pasillo ancho | Esta lección |
+| **Cortina rompevientos** | Borde sur | Módulo 6, lección 5 |
+| **Reserva de agua** | El punto más bajo | Esta lección |
+
+Fíjate en que **el agua es la restricción organizadora**: casi todas las zonas la necesitan, y llevarla
+cuesta. Conviene dibujar primero dónde entra el agua y construir el trazado alrededor de eso.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Primero, la campaña de nivelación. Esta semana, y es gratis.**
+
+Con manguera, estacas y una tarde, levanta las cotas de los 3.666 m². No hace falta precisión
+topográfica: basta con saber, para cada zona del plano, cuántos centímetros está por encima o por
+debajo de las demás. Ese dato no lo tienes y lo necesitas para todo lo que sigue, y en la seca es
+cuando se puede recorrer el terreno cómodamente.
+
+Con las cotas en la mano, dos cosas se resuelven solas: **cuál es el punto más bajo** —tu punto de
+descarga y futura reserva— y **cuál es el más alto** —tu zona de endurecimiento.
+
+**Segundo: no construyas camas en todas partes.** Una cama alta cuesta 3 m³ de material por cada 10
+metros lineales, y ese volumen es el que limita el ritmo. Se justifica en dos casos:
+
+- Donde el hoyo mostró **saturación o profundidad efectiva insuficiente** para lo que va encima.
+- En la **zona intensiva del vivero**, donde el valor por metro cuadrado es alto y el control del
+  sustrato compensa el coste.
+
+En el resto, planta a nivel del suelo. Los frutales, por ejemplo, casi nunca justifican cama: lo que
+necesitan es que el hoyo esté bien situado.
+
+**Tercero: las medidas concretas.** Mide tu alcance agachado y fija el ancho de cama con ese número,
+probablemente entre 90 y 110 cm. Pasillos secundarios de 60 cm; no bajes de ahí porque la carretilla
+cargada no perdona. Y **un pasillo principal de 2 m** desde el acceso hasta el despacho, que es el
+único sitio por donde va a entrar un vehículo.
+
+**Cuarto: el orden de construcción lo decide la caja.** El vivero primero. Es la zona que produce
+durante la seca y vende en el pico que empieza en septiembre; las camas de producción de campo pueden
+esperar a la seca siguiente sin coste. Construir lo que paga primero no es impaciencia, es tesorería.
+
+**Y quinto, la restricción honesta: todavía no has visto llover aquí.** De la lección 1 de este módulo:
+la red de drenaje definitiva depende de datos que solo da una temporada de lluvias.
+
+Lo cual **no significa no hacer nada**. Significa hacer dos cosas distintas:
+
+- **Construir ahora** lo que ya sabes: la conformación de la superficie del vivero, los canales entre
+  camas, el pasillo principal, y la conducción hacia el bajío. Todo eso es cierto con las cotas que
+  acabas de levantar.
+- **Diseñar el sistema para que se pueda extender.** Deja los colectores con capacidad de sobra y no
+  cierres el trazado contra el bajío: en octubre vas a descubrir dos o tres sitios que no habías
+  previsto, y quieres poder conectarlos sin rehacer nada.
+
+**Y un aviso sobre el lindero.** Con doce lotes y vecinos alrededor, comprueba por dónde sale el agua
+de tu terreno **antes** de excavar. Concentrar tu escorrentía hacia una parcela ajena es un problema
+que empieza barato y termina caro, y es mucho más fácil de evitar en el plano que de arreglar
+después.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Lo que vas a construir se inventó aquí, y a una escala que impresiona.**
+
+En los Llanos de Mojos, en el Beni, hay miles de hectáreas de <Termino slug="camellon">camellones</Termino>
+precolombinos: plataformas de cultivo elevadas, separadas por canales, construidas para producir en
+una llanura que se inunda estacionalmente. Es exactamente el problema que tú tienes, resuelto por
+sociedades indígenas hace siglos y a escala de paisaje.
+
+La lógica es la misma que la de tu cama alta: **si el agua sube, sube la superficie de cultivo**. Y el
+canal entre camellones no era solo drenaje: acumulaba sedimento y materia orgánica que se devolvían a
+la plataforma, y almacenaba agua y peces. Ha habido proyectos de recuperación de la técnica en el
+Beni en las últimas décadas.
+
+No es folclore: es la demostración de que el diseño que estás copiando de manuales tropicales tiene
+una versión local con siglos de validación.
+
+**El nivel de manguera y el nivel en A son herramientas de uso corriente aquí**, y forman parte del
+repertorio de tecnología apropiada que se enseña en proyectos rurales de toda la región. Si preguntas
+por «nivel en A» en el campo, mucha gente sabrá qué es. Es una ventaja: no necesitas explicar por qué
+no contratas un topógrafo.
+
+**Para los bordes, usa madera del desmonte y elige bien la especie.** Del desmonte de la lección 2
+tienes madera, y aquí es donde se emplea. En contacto permanente con suelo húmedo, las maderas duras
+locales duran años y las blandas se pudren en una temporada. Reserva lo duro para los bordes y los
+postes.
+
+**Y dimensiona los canales para el chaparrón, no para la media.** Como viste en el Módulo 5, lo que
+desborda un sistema no es el total de lluvia del mes sino la **intensidad** de un evento concreto. En
+Santa Cruz caen tormentas fuertes y concentradas: un canal calculado con la lluvia media anual se
+desborda el primer aguacero de noviembre.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Hago las camas del ancho que quede bien con el terreno.»** El ancho lo fija tu alcance, porque si
+no llegas al centro, pisas; y si pisas, la cama pierde el sentido.
+
+**«Pasillos estrechos para aprovechar más.»** Se gana superficie una vez y se paga en tiempo todos los
+días. Y con carretilla cargada, 40 cm es inviable.
+
+**«Abro zanjas y ya drenará.»** El drenaje es una red con un destino. Sin punto de descarga decidido,
+solo has movido el problema.
+
+**«El terreno es plano, no hace falta medir.»** En una llanura aluvial las pendientes que importan son
+de centímetros y el ojo no las ve. La manguera cuesta poco y da la respuesta.
+
+**«Relleno el bajío y así todo queda parejo.»** El bajío es el destino natural del agua y tu futura
+reserva. Rellenarlo es caro y elimina la solución.
+
+**«Construyo todas las camas ahora.»** Cada 10 metros lineales de cama son 3 m³ de material. El
+volumen manda sobre el entusiasmo.
+
+**«Ya ajustaré el trazado sobre la marcha.»** Los pasillos se vuelven permanentes en cuanto pasa la
+primera carretilla, y a partir de ahí cambiarlos es una migración.
+
+## Lo que sigue
+
+Queda una última lección para cerrar el módulo, y es la que hace que todo lo anterior no se
+deshaga.
+
+Has construido estructura, has corregido química y has fabricado materia orgánica. En clima tropical,
+**todo eso se degrada solo** si el suelo se queda desnudo: la materia orgánica se mineraliza rápido,
+la lluvia sella la superficie y la estructura se pierde.
+
+La lección 7 va de la única solución que se mantiene sola: **suelo siempre cubierto y siempre con
+raíces vivas.** Abonos verdes, cultivos de cobertura, y cómo se encaja una cobertura en un calendario
+que ya está lleno. Incluido el gandul, que a estas alturas lleva cuatro funciones acumuladas y va a
+sumar la quinta.

@@ -4,39 +4,137 @@
 
 @layer base {
   :root {
-    color-scheme: light;
-  }
-
-  .dark {
-    color-scheme: dark;
+    --paper: #f7f2e7;
   }
 
   html {
     scroll-behavior: smooth;
-    /* Compensa la cabecera fija al saltar a un ancla del contenido. */
-    scroll-padding-top: 5.5rem;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   body {
-    @apply bg-crema-100 text-tinta-900 antialiased;
-    @apply dark:bg-tinta-950 dark:text-crema-100;
+    @apply bg-crema text-brand-900 antialiased;
+    /* Textura de papel sutil: grano fino sobre el crema de la marca. */
+    background-image:
+      radial-gradient(1200px 600px at 50% -10%, rgba(44, 90, 60, 0.06), transparent 60%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    background-attachment: fixed, scroll;
   }
 
-  h1,
-  h2,
-  h3,
-  h4 {
+  h1, h2, h3, h4, .font-display {
     @apply font-serif;
-    /* Fraunces es variable: fijamos el eje óptico para que los titulares no se
-       vuelvan demasiado "display" en tamaños medianos. */
-    font-variation-settings: 'SOFT' 0, 'WONK' 0;
+    font-optical-sizing: auto;
   }
 
   ::selection {
+    background: #1f3d2b;
+    color: #faf6ec;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid theme('colors.brand.600');
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  /* Etiqueta superior (eyebrow) — versalitas espaciadas, lenguaje de señalética. */
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-brand;
+  }
+
+  /* Marco de filete doble en oro (motivo del letrero de entrada). */
+  .hairline-frame {
+    position: relative;
+  }
+  .hairline-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0.6rem;
+    border: 1px solid rgba(203, 161, 79, 0.55);
+    box-shadow: 0 0 0 3px transparent, inset 0 0 0 3px rgba(203, 161, 79, 0.16);
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  /* Filete fino inferior con animación de crecimiento (subrayado de sección). */
+  .rule-grow {
+    @apply block h-px w-16 origin-left animate-grow-line bg-oro-400;
+  }
+
+  /* Fondo con patrón de raíces de la marca, muy tenue. */
+  .pattern-roots {
+    background-image: url('/images/brand/patron-marca.jpg');
+    background-size: 520px;
+    background-repeat: repeat;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  /* Degradado de lectura para superponer texto claro sobre foto. */
+  .scrim-bottom {
+    background: linear-gradient(
+      to top,
+      rgba(12, 26, 17, 0.82) 0%,
+      rgba(12, 26, 17, 0.45) 38%,
+      rgba(12, 26, 17, 0.05) 70%,
+      transparent 100%
+    );
+  }
+  .scrim-green {
+    background: linear-gradient(
+      to right,
+      rgba(21, 42, 29, 0.92) 0%,
+      rgba(21, 42, 29, 0.7) 45%,
+      rgba(21, 42, 29, 0.25) 100%
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* ══════════════════════════════════════════════════════════════════════════
+   AULA (/aula)
+   Estilos que llegaron con el curso. Solo `.eyebrow` chocaba con el sitio, así
+   que esa se acota a `.aula`; el resto de nombres son propios y conviven sin
+   tocarse. Las reglas de `body` y `html` del curso NO se traen: el documento lo
+   gobierna el sitio, y el fondo y el color del aula los pone su envoltorio.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+@layer base {
+  /* El modo oscuro del aula no cuelga de <html> sino de su propio contenedor. */
+  .aula.dark {
+    color-scheme: dark;
+  }
+
+  .aula {
+    scroll-padding-top: 5.5rem;
+  }
+
+  .aula ::selection {
     @apply bg-salvia-300 text-tinta-900;
   }
 
-  :focus-visible {
+  .aula :focus-visible {
     @apply outline-none ring-2 ring-bosque-500 ring-offset-2 ring-offset-crema-100;
     @apply dark:ring-salvia-400 dark:ring-offset-tinta-950;
   }
@@ -44,7 +142,7 @@
 
 @layer components {
   /* Etiqueta pequeña en versalitas sobre un titular de sección. */
-  .eyebrow {
+  .aula .eyebrow {
     @apply text-[0.68rem] font-semibold uppercase tracking-marca text-tierra-600;
     @apply dark:text-tierra-300;
   }

@@ -1,0 +1,403 @@
+Seis lecciones para llegar hasta aquí. Sabes qué son la tensión, la corriente y la resistencia, giras
+el selector de un multímetro sabiendo qué le pides, reconoces los componentes que se repiten, lees un
+esquema y lo traduces a cables, y sabes acorralar una avería partiendo el sistema por la mitad.
+
+Falta lo que convierte todo eso en habilidad de las manos: **hacer.** Aquí se construye una
+herramienta que vas a usar la semana que viene y que cuesta casi nada. Después, el método para que el
+segundo proyecto sea más ambicioso sin que te pierdas, y los puentes hacia el módulo 38, cuando entra
+un programa, y el 17, cuando entra el sol.
+
+## Por qué el primer proyecto tiene que ser una herramienta
+
+Casi todos los cursos de electrónica empiezan haciendo parpadear un LED. Al día siguiente el LED
+sigue parpadeando sobre la mesa y tú sigues sin poder arreglar nada. **Lo que se construye primero
+decide qué se puede construir después.**
+
+Un buen primer proyecto **resuelve un problema que ya tuviste**; **cabe en una tarde**, porque si
+necesita tres sábados el segundo sábado no llega nunca; **se prueba sin ambigüedad**, suena o no
+suena; **si sale mal no hace daño**, porque con baja tensión un error cuesta un LED y no una mano; y
+**se repara con lo que ya sabes**. La sexta condición corona a las otras: **multiplica**, porque una
+herramienta hace más fácil todo lo que repares después. El probador cumple las seis.
+
+## Qué pregunta contesta un probador de continuidad
+
+**Continuidad** significa que entre dos puntos existe un camino cerrado de resistencia muy baja: si
+pones tensión en un extremo, la corriente llega al otro. Un cable sano tiene continuidad entre sus
+puntas; el mismo cable partido dentro del forro, no.
+
+De ahí sale el aparato. Un <Termino slug="probador-de-continuidad">probador de continuidad</Termino>
+contesta una única pregunta binaria —¿hay camino entre estos dos puntos?— haciendo circular su propia
+corriente pequeña y avisando con un sonido cuando pasa. No mide, no da un número: dice sí o no. Y ese
+sí o no resuelve la mayor parte del diagnóstico eléctrico de un vivero, porque **la enorme mayoría de
+las averías no son componentes degradados por dentro, sino caminos que se cortan y caminos que
+aparecen donde no debía haberlos**: un conductor partido, un fusible abierto, un empalme suelto, una
+bobina quemada, un cable pelado que toca la carcasa.
+
+<Analogia>
+Un probador de continuidad es un **ping**. Manda lo mínimo por el camino y espera respuesta: si
+contesta, la ruta existe. Igual que el ping, no dice si la ruta es rápida ni si aguanta carga. Su
+valor está en que convierte una sospecha en un dato en dos segundos.
+</Analogia>
+
+Si el multímetro ya trae esa función, ¿para qué construir uno? El propio se presta sin que duela y se
+adapta: puntas largas, cocodrilos, cinco metros de cable. Y sobre todo: **construirlo te enseña el
+circuito completo desde el esquema hasta el cable**, y eso se aprende una sola vez.
+
+## La lista de materiales, pieza por pieza
+
+Antes de tocar nada se escribe la <Termino slug="lista-de-materiales">lista de materiales</Termino>:
+lo que lleva el aparato, con cantidad y característica de cada pieza. Sobre todo, **permite que otra
+persona construya el mismo aparato sin ti al lado**.
+
+<Tabla>
+
+| Pieza | Por qué esa y no otra | De dónde sale si no hay plata |
+| --- | --- | --- |
+| Pila de 3 V (dos AA) | Alcanza para el zumbador, no para dañar a nadie | Juguete o control muertos |
+| Zumbador de continua de 3 a 12 V | Suena con continua directa, sin nada que lo haga oscilar | Microondas, lavarropas |
+| LED y resistencia de 100 a 220 Ω | Repite el aviso donde el ruido tapa el sonido | Placa descartada |
+| Dos puntas rígidas y finas | Rígidas para llegar al fondo de un borne, finas para no puentear | Radios de bicicleta |
+| Un metro de cable flexible | Se va a doblar mil veces; el rígido se endurece y parte | Cable de cualquier aparato |
+| Dos pinzas cocodrilo | Sujetan una punta: un trabajo de dos pasa a ser de uno | De lo más barato que hay |
+| Caja pequeña | Protege el circuito y da de dónde agarrar | Frasco de pastillas, tubo de PVC |
+
+</Tabla>
+
+Dos filas son decisiones y no gustos. **El zumbador tiene que ser de los que suenan con continua sin
+más**, llamados activos: traen su propio oscilador. Los pasivos necesitan una señal que suba y baje
+muchas veces por segundo, y con una pila hacen un clic y se callan; el pasivo es el que usarás en el
+módulo 38. Y **la pila es de 3 V a propósito**: no alcanza para hacerte daño ni casi para arruinar un
+componente, y cuando equivocarse sale barato se prueba más.
+
+<Dato titulo="El cementerio de aparatos es una tienda">
+**Desarmar aparatos muertos es la mejor práctica que hay**: ves cómo lo construyó gente que sabía y
+te armas un depósito de piezas que no cuesta nada. Un cargador quemado tiene el mejor cable flexible
+que existe.
+</Dato>
+
+<Advertencia titulo="Dos aparatos que no se abren nunca">
+**Un horno microondas lleva un condensador de alta tensión que queda cargado después de
+desenchufarlo** y puede matar a quien lo toque días más tarde. **Un televisor de tubo guarda una
+carga parecida.** La regla para quien está aprendiendo es simple: no se abren.
+</Advertencia>
+
+## El circuito: un lazo al que le falta un pedazo
+
+Todo el aparato es un <Termino slug="circuito">circuito</Termino> **en serie**: un camino único que
+sale del positivo de la pila, entra al zumbador, recorre el cable hasta la punta A, y del otro lado
+vuelve por la punta B al negativo. En serie **pasa la misma corriente por todos los elementos, y si
+cualquiera se abre, todo se detiene**. Esa propiedad, que en un aparato normal es un defecto, aquí es
+el principio de funcionamiento: **el probador es un circuito deliberadamente incompleto.** Entre las
+dos puntas falta un pedazo, y ese pedazo lo pone el objeto que estás midiendo: **es la pieza que
+falta.**
+
+<Analogia titulo="El objeto medido es el argumento de la función">
+Es una función a la que le falta un parámetro. El circuito está escrito entero salvo un hueco, y cada
+vez que apoyas las puntas sobre algo le pasas ese algo como argumento. Devuelve un booleano: sonido o
+silencio. Es una aserción evaluada en el mundo real, y su valor depende de que confíes en quien la
+evalúa: por eso hay más abajo una sección dedicada a probar el probador.
+</Analogia>
+
+Dos detalles deciden si funciona a la primera. **La polaridad:** el zumbador y el LED solo trabajan
+en un sentido, porque por dentro llevan un diodo, la válvula de un solo sentido de la tercera
+lección; de ahí un hábito para siempre: **si no suena, antes de declarar muerto el zumbador, invierte
+sus dos cables.** Y **no lleva interruptor:** las puntas lo son, así que separadas
+el <Termino slug="consumo-en-vacio">consumo en vacío</Termino> es cero; guardado con las puntas
+tocando una llave, en cambio, suena toda la noche y amanece con la pila muerta. **Cada decisión de
+diseño trae su propia regla de uso**, y escribirla en la caja es parte del proyecto.
+
+Si le agregas el LED aparece tu primera cuenta real como constructor, porque un LED necesita en serie
+una <Termino slug="resistencia-limitadora">resistencia limitadora</Termino>: una resistencia cuyo
+único trabajo es fijar cuánta corriente circula por un componente que no sabe limitarse solo. Pasada
+cierta tensión un LED conduce muchísimo y **su caída se queda casi clavada** en un valor que depende
+del color, alrededor de 2 V en los rojos. El LED no decide la corriente: la decide lo que esté en
+serie con él, y si no hay nada, lo único que limita es la resistencia interna de la pila. La cuenta
+es la <Termino slug="ley-de-ohm">ley de Ohm</Termino> sobre lo que sobra:
+
+<Formula explicacion="Con pila de 3 V, un LED rojo que se queda 2 V y una corriente deseada de 10 mA (0,01 A) salen 100 ohmios. Con pila de 9 V daría 700 Ω, valor que no se fabrica y obliga a adoptar el comercial más cercano.">
+R = (V_pila − V_LED) / I_deseada        R = (3 − 2) / 0,01 = 100 Ω
+</Formula>
+
+Para decidir hacia qué lado errar se piensa qué pasa en cada dirección: más resistencia es menos
+corriente, o sea un LED más tenue pero vivo. **Ante la duda, hacia arriba.** Saber qué dirección del
+error es la barata separa a quien calcula de quien copia.
+
+## Armarlo en el orden que evita rehacerlo
+
+El orden lo gobierna un principio: **prueba en cada etapa, no al final.** Si armas, sueldas, cierras
+la caja y recién entonces pruebas, cuando no funcione vas a tener seis sospechosos y todo cerrado.
+Probando paso a paso, el sospechoso es siempre uno: lo último que hiciste.
+
+**Uno: al aire, sin soldar.** Retuerce los empalmes con la mano, sujeta la pila con la otra y
+comprueba que suena. Esta versión fea valida el concepto en diez minutos.
+
+**Dos: la <Termino slug="prueba-de-humo">prueba de humo</Termino>**, así llamada por la broma vieja
+de que los componentes andan gracias al humo que llevan dentro. Es la primera vez que un montaje
+recibe energía y consiste en quedarse mirándolo diez segundos: si cambia de color, si huele a
+quemado, si algo se calienta al tocarlo con el dorso del dedo. **En un circuito de 3 V nada debería
+calentarse**; si algo se calienta, hay un camino que no debía existir.
+
+**Tres: la verificación con muestra conocida**, que tiene sección propia enseguida.
+
+**Cuatro: recién ahora, permanente.** Suelda si tienes cautín; si no, un empalme bien retorcido y
+aislado supera a una soldadura fría. Que cada unión quede firme antes de aislarla: **la cinta no
+sujeta, solo aísla.**
+
+**Cinco: el <Termino slug="alivio-de-traccion">alivio de tracción</Termino>**, cualquier disposición
+que hace que un tirón del cable lo reciba la caja y no la unión eléctrica: un nudo por dentro, una
+brida, el cable pasado por dos agujeros. Aquí muere el noventa por ciento de las herramientas
+caseras. **La unión eléctrica nunca debe ser la que aguanta la fuerza mecánica.**
+
+**Seis: la caja, la etiqueta y el papel adentro.** Sobre la caja, qué es, qué pila lleva y de quién
+es. Dentro, la lista de materiales y el esquema a mano: eso convierte un aparato en algo
+reproducible, y reproducible es lo único que le sirve a una comunidad.
+
+## Probar el instrumento antes de creerle
+
+Un instrumento equivocado es peor que ninguno, porque uno actúa sobre lo que dice. Por eso el
+probador se somete a
+una <Termino slug="verificacion-con-muestra-conocida">verificación con muestra conocida</Termino>:
+se contrasta contra dos objetos cuyo resultado ya se sabe.
+
+- **Puntas tocándose: tiene que sonar.** Es el mejor camino posible. Si no suena, el problema está en
+  tu aparato: pila gastada, empalme suelto, zumbador al revés.
+- **Puntas bien separadas: tiene que haber silencio.** Si suena igual, hay contacto entre los dos
+  cables y tu instrumento dice «sí» siempre.
+
+Las dos importan, y la segunda más. **Un probador que siempre suena es la peor avería posible**,
+porque nunca te avisa de que está roto: te va a decir que todos los cables están sanos, incluido el
+partido, y vas a cambiar la bomba entera. Es la familia de fallos silenciosos de la quinta lección,
+aplicada a tu propio instrumento. De ahí la regla, que vale también para el multímetro y la balanza:
+**un instrumento se verifica contra algo conocido antes de usarlo, no cuando ya sospechas de él.**
+Cuando sospechas, ya tomaste decisiones con datos falsos.
+
+<Advertencia titulo="Solamente sobre circuitos desconectados y descargados">
+Esta es la regla dura de la lección y no admite excepción. **Un probador de continuidad se usa
+únicamente sobre aparatos desenchufados y descargados.** Inyecta su propia corriente y supone que es
+la única fuente del circuito; si hay tensión presente, lo que indique no significa nada, y puedes
+crear un cortocircuito con las dos manos ahí mismo. El orden es siempre: **desconectar; verificar la
+ausencia de tensión con el multímetro en voltios —nunca con el probador—; descargar los condensadores
+que corresponda; y recién entonces medir continuidad.**
+</Advertencia>
+
+## Usarlo: la extensión muerta y la bomba que no arranca
+
+**La extensión que no da corriente** se desenchufa de todo y se prueba conductor por conductor, con
+una punta en una pata del enchufe y la otra en el contacto que le corresponde del otro extremo. Si
+los dos suenan, viene el truco que justifica el zumbador: **se dejan las puntas sujetas con
+cocodrilos y se flexiona el cable a lo largo mientras escuchas.** El pitido que se corta al doblar en
+un punto es un <Termino slug="fallo-intermitente">fallo intermitente</Termino> hecho audible, y el
+sonido permite tener las dos manos y los dos ojos en el cable. Se corta casi siempre **en los cinco
+centímetros que siguen al enchufe.**
+
+**La bomba que no arranca** pide la <Termino slug="busqueda-binaria">búsqueda binaria</Termino> de la
+lección anterior, con el probador contestando a lo largo de la cadena —enchufe, cable, interruptor,
+protector térmico, bobina—: si el interruptor no suena con la tecla apretada, murió el interruptor y
+cuesta una fracción del motor. Y la pregunta que casi nadie se hace: **una punta en un extremo de la
+bobina y la otra en la carcasa metálica; ahí no debe sonar nunca.** Continuidad donde no debía
+haberla es una avería tan real como su falta, y es la que electrifica una carcasa.
+
+## Lo que este probador no dice
+
+Saber qué no dice un instrumento es la mitad de saber usarlo. Este aparato **no dice cuatro cosas**:
+
+- **No dice cuánto.** Un cable con tres hilillos vivos de veinte suena igual que uno intacto, y
+  después falla bajo carga. Para eso está la escala de ohmios y, mejor, medir
+  la <Termino slug="caida-de-tension">caída de tensión</Termino> con el aparato funcionando.
+- **No prueba aislamiento.** Que no suene contra la carcasa no garantiza que el aislante aguante la
+  tensión de trabajo. El pitido prueba que está mal; el silencio no prueba que esté bien.
+- **No sirve dentro de una placa con semiconductores.** La placa ofrece caminos en paralelo y todo
+  parece conectado con todo; se mide con la pieza fuera del circuito o con una pata desoldada.
+- **No dice nada útil de un circuito con tensión**, y usarlo ahí es peligroso.
+
+## De aquí a algo más grande sin perderse
+
+El segundo proyecto es donde la gente se pierde: arranca un sistema de riego automático completo y a
+los dos meses tiene una caja con cables y nada que funcione. Cuatro reglas evitan ese final.
+
+**Una novedad por versión.** La versión uno funciona; la dos agrega exactamente una cosa, y si falla,
+la causa es esa cosa: una variable a la vez, la disciplina de la depuración aplicada a la
+construcción. Y **la versión que funciona no se canibaliza**: cuando todo falla necesitas algo que
+todavía ande para comparar.
+
+**Empieza por la <Termino slug="version-minima-util">versión mínima útil</Termino>**, la más pequeña
+que alguien realmente usa esta semana. Un avisador que solo hace ruido cuando el tanque se llena ya
+sirve. Si nadie la usa, no es un proyecto: es un pasatiempo. Y antes de elegir la alimentación,
+**mide el consumo** con el multímetro en miliamperios, porque de ese número salen la pila, el tamaño
+del panel y la autonomía.
+
+**Deja <Termino slug="margen-de-diseno">margen de diseño</Termino>**: nunca hagas trabajar un
+componente al cien por ciento de su especificación. Un relé de 10 amperios no lo es para un motor,
+porque el arranque pide varias veces la corriente nominal. **Con componentes baratos y clima
+caliente, la regla práctica es el doble de lo que la cuenta pide.**
+
+**Escribe mientras construyes.** Después significa nunca, y el proyecto sin papel es
+un <Termino slug="punto-unico-de-falla">punto único de falla</Termino> con forma de persona. Cuida
+también la caja y el cableado: humedad, polvo, sol y hormigas anidando en cualquier hueco tibio matan
+más aparatos en el trópico que cualquier error de diseño.
+
+La escalera que sigue: probador de pilas, que enseña que una pila se mide bajo carga o no se mide;
+lámpara de banco con LED; extensión armada de cero; **avisador de nivel de tanque con dos electrodos
+y el mismo zumbador**; temporizador con relé; y recién después, el microcontrolador. El avisador
+enseña la idea más importante: **es el mismo circuito de hoy**, solo que las puntas son dos alambres
+colgados a la altura de llenado y lo que cierra el lazo es el agua. Construir algo nuevo casi siempre
+es **reconocer que ya construiste el circuito.**
+
+Y el reverso: **no construyas aquello de lo que dependa la salud de alguien**, ni lo que sale más
+barato comprado. Hay además un límite legal y no técnico: **una instalación fija de 220 V no es un
+proyecto de aprendizaje.** Ese trabajo tiene su módulo —el 8— y en Bolivia está sujeto a requisitos
+de la empresa distribuidora, del municipio y al criterio de un electricista habilitado. No inventamos
+aquí normas ni plazos: se consulta con la autoridad competente.
+
+## Los dos puentes: el módulo 38 y el módulo 26
+
+En el módulo 38 este circuito se encuentra con una máquina que decide, y cambian tres cosas. Aparecen
+**dos mundos que no deben tocarse**: el control,
+un <Termino slug="microcontrolador">microcontrolador</Termino> que trabaja a 3,3 o 5 V y entrega
+miliamperios; y la potencia, una bomba de 220 V o una válvula que pide amperios. Entre ambos va un
+relé o un optoacoplador, que hacen
+un <Termino slug="aislamiento-galvanico">aislamiento galvánico</Termino>: dos circuitos que se pasan
+información sin compartir corriente, uno por un campo magnético y el otro por luz. Cruza el dato; no
+cruza la energía.
+
+Segundo, **la bobina devuelve el golpe**. Una <Termino slug="valvula-solenoide">válvula
+solenoide</Termino> es una bobina, y a una bobina a la que se le corta la corriente de golpe le
+aparece un pico de tensión inverso que destruye el transistor que la manejaba. Para eso está el diodo
+de rueda libre del módulo 38, en paralelo con la bobina y al revés, para darle a esa corriente un
+camino por donde apagarse. **Ya entiendes por qué ese diodo está ahí, en lugar de copiarlo del
+esquema como un amuleto.**
+
+Tercero, la conclusión más útil que este módulo le entrega al de automatización:
+el <Termino slug="fallo-seguro">fallo seguro</Termino> **se decide con un cable, no con un
+programa.** Un relé tiene contacto normalmente abierto y normalmente cerrado; si la válvula de riego
+va al normalmente abierto, cuando no hay energía queda cerrada y no se inunda nada. **Un programa no
+se ejecuta cuando no hay energía, y un contacto sí tiene estado.** Y el probador de hoy verifica ese
+tablero antes de energizarlo.
+
+El módulo 26 es lo mismo a otra escala. Todo
+es <Termino slug="corriente-continua">corriente continua</Termino>, así que la polaridad importa en
+cada conexión, y la continua no pasa por cero como la alterna, de modo que
+un <Termino slug="arco-electrico">arco eléctrico</Termino> no se apaga solo: por eso interruptores y
+fusibles allá tienen que ser específicos para continua. El cálculo de
+la <Termino slug="seccion-de-conductor">sección de conductor</Termino> para no perder tensión en un
+tramo largo **es la ley de Ohm** y nada más. Y el probador revisa conectores y el camino del cable
+de <Termino slug="puesta-a-tierra">puesta a tierra</Termino> hasta la jabalina, aunque la continuidad
+no mide la calidad de esa tierra. Última advertencia: **baja tensión no significa siempre
+inofensivo.** Varios paneles en serie llegan a cientos de voltios, y un banco de baterías entrega
+corrientes de cortocircuito capaces de fundir una herramienta.
+
+<AplicarRizoma>
+En Rizoma del Sur este proyecto tiene fecha y forma: **un sábado, ocho probadores, uno por cada
+persona que se anota.** Las piezas salen de la caja del cementerio de aparatos del galpón y lo único
+que se compra son los cocodrilos y algún zumbador de repuesto. Nadie se va del taller con un aparato
+sin verificar contra las dos muestras conocidas y sin etiqueta con su nombre y la fecha; el que no
+verifica el suyo no se lo lleva, porque un instrumento que miente es peor que ninguno.
+
+Los ocho tienen trabajo desde el lunes. En 3.666 m² repartidos en doce lotes contiguos hay pocas
+tomas y muchas extensiones cruzando el terreno, pisadas por la carretilla y mojadas en la lluvia de
+la tarde. La primera tarea es **revisar todas las extensiones, conductor por conductor, y marcar con
+cinta de color las que fallan al flexionarlas**. La segunda es el manojo de cables sin marcar que va
+del tablero al vivero: un cocodrilo en un conductor del lado A contra una referencia común, y del
+lado B se tocan uno por uno hasta que suena. La tercera son las bobinas de las válvulas y los
+térmicos de las bombas, que hoy se reemplazan por sospecha y desde ahora por medición.
+
+La caja del cementerio pasa a tener una regla escrita: **ningún aparato eléctrico se bota sin
+desarmarlo antes**, con las excepciones en la pared en letra grande: microondas y televisores de tubo
+no se abren nunca.
+
+Cada probador lleva número grabado, y en el galpón hay una hoja con cuatro columnas: fecha, qué se
+probó, qué dio, qué se hizo. A los seis meses esa hoja es **el mapa de fallas del sitio**: qué
+extensión se corta siempre, qué lote concentra las averías por humedad, cuántas veces se cambió una
+bomba que tenía el interruptor muerto. Es el registro de bandejas aplicado a los fierros, y alimenta
+el <Termino slug="mantenimiento-preventivo">mantenimiento preventivo</Termino> del módulo 17: lo que
+falla dos veces por la misma causa se atiende antes de la tercera.
+
+El segundo proyecto ya está elegido y es el avisador de nivel del tanque. Lo construye quien terminó
+el primero, y **el que lo construye da el taller siguiente**, con la estructura del módulo 18:
+mostrar, hacer juntos, dejar hacer solo. Y la cuenta que lo justifica es de plata: si de cada tres
+bombas que se declaran muertas dos tenían un cable partido o un interruptor abierto, un probador
+hecho con piezas rescatadas se paga la primera semana. Pero lo que se ahorra de verdad no es el
+repuesto: es el <Termino slug="costo-de-indisponibilidad">costo de indisponibilidad</Termino>, los
+días de riego perdidos sobre bandejas de yautía en pleno septiembre seco, que no se recuperan aunque
+el repuesto llegue después.
+</AplicarRizoma>
+
+<ContextoBolivia>
+Conseguir las piezas en Santa Cruz tiene cuatro fuentes: las ferreterías de barrio para cable, cinta
+y enchufes; las tiendas de electrónica de los mercados grandes del centro para zumbadores, LED,
+resistencias y cocodrilos; los talleres de reparación de electrodomésticos, que venden barato lo que
+a ellos no les sirve; y el reciclaje propio. **No damos precios en este curso a propósito**: cambian,
+varían de un puesto a otro y una cifra escrita hoy engaña dentro de seis meses. Averigua los tuyos y
+anótalos en tu libreta.
+
+El clima de acá es duro con la electrónica casera. Con la humedad de la temporada de lluvias, **el
+cobre desnudo se oxida y una unión oxidada deja de conducir sin verse distinta**; en la seca el polvo
+ensucia los contactos. Y una precisión que se aprende sufriendo: **una caja cerrada a medias es peor
+que una caja abierta**, porque el aire húmedo entra igual, se condensa adentro cuando baja la
+temperatura de noche y ya no sale. Si no vas a sellar de verdad con prensacables y silicona, deja un
+agujero de drenaje abajo y que el agua salga por su peso.
+
+Los cortes de energía le dan a este proyecto una ventaja que conviene nombrar: **el probador anda a
+pila, así que funciona precisamente cuando no hay luz**, que es cuando más falta hace revisar una
+instalación. Todo diagnóstico en un sitio con cortes debería andar con su propia energía.
+
+El <Termino slug="surazo">surazo</Termino> agrega dos cosas. Una es física: cuando la temperatura cae
+de golpe unos veinte grados, todo lo que estaba dilatado se contrae, y ese ciclado térmico termina de
+abrir las soldaduras frías y los empalmes flojos; **es normal que las fallas eléctricas aparezcan
+justo después de un surazo.** La otra es de seguridad: con viento fuerte y lluvia no se trabaja en
+instalaciones, ni siquiera desconectadas.
+
+En Santa Cruz hay institutos técnicos donde se enseña electricidad, y talleres de barrio donde alguien
+lleva treinta años reparando y sabe cosas que no están escritas en ningún lado. **No damos nombres ni
+horarios porque cambian**; si vas a preguntar, lleva el aparato desarmado y una pregunta concreta:
+ese es el pasaporte. Para cualquier trabajo sobre instalaciones fijas de 220 V, sobre la acometida o
+sobre medidores, la consulta va a la empresa distribuidora, al municipio y a un electricista
+habilitado; este curso no reemplaza ninguna de las tres.
+
+Y lo último es de la misión. **Prácticamente no existe documentación de electrónica práctica escrita
+en español y pensada para el trópico boliviano**, con nuestro calor, nuestra humedad y nuestras
+piezas. Cada aparato que construyas y anotes acá, con lo que te falló, es una herramienta que le
+queda a la comunidad. Este curso es gratuito por esa razón: solo brindamos herramientas para
+facilitar el progreso de la comunidad, y eso empieza con la educación.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«No suena, el zumbador vino fallado.»** Invierte sus dos cables antes de decir eso: es polarizado.
+Después mide la pila con el zumbador conectado, porque una pila gastada da buena tensión en vacío y
+se cae en cuanto tiene que entregar corriente.
+
+**«Le puse el LED sin resistencia, total es una pila chiquita.»** El LED se muere igual, y peor: te
+deja aprendida la idea falsa de que el componente decide su propia corriente.
+
+**«Lo probé, anda.»** Probaste que suena. Falta probar que se calla. El instrumento que nunca se
+calla es el que te hace cambiar una bomba sana.
+
+**«Suena, entonces el cable está perfecto.»** Suena, entonces hay camino. Que aguante la corriente de
+trabajo es otra pregunta y otro instrumento.
+
+## Cierre del módulo
+
+Siete lecciones para una sola idea: **en electricidad no se adivina, se mide.** Se empezó por el
+cuerpo y la seguridad; siguió el multímetro, que convierte la sospecha en dato; después los
+componentes; el esquema, que es el plano; los modos de falla, que casi nunca son el chip y casi
+siempre son la humedad, el calor, la vibración y una unión mal hecha; el método de acorralar la
+avería partiendo el sistema por la mitad; y hoy, construir.
+
+Si de todo el módulo hubiera que salvar una sola frase, es esta: **reparar es la habilidad que más
+dinero le ahorra a una comunidad, y se le enseña a otro en una tarde.**
+
+Las dos mitades importan por separado. La primera, porque acá un repuesto cuesta, tarda y a veces no
+llega, y el valor real de una reparación nunca es el precio de la pieza: es la semana de riego que no
+se detuvo y el lote de plantines que no se perdió esperando.
+
+La segunda es la que hace de esto un proyecto comunitario y no un pasatiempo. **El conocimiento para
+diagnosticar cuesta una tarde y se copia infinitas veces sin gastarse**, mientras que la bomba no se
+copia. Ocho personas con un probador en el bolsillo y el hábito de medir antes de comprar cambian la
+economía de un barrio, y ninguna necesitó un título: necesitó una tarde, un zumbador rescatado y
+alguien que estaba un escalón más adelante.
+
+Arma el tuyo, verifícalo con las dos muestras conocidas, úsalo esta semana en la extensión que ya
+sabes que anda mal, anota lo que encontraste, **y el sábado que viene enséñale a alguien a armar el
+suyo.**
+

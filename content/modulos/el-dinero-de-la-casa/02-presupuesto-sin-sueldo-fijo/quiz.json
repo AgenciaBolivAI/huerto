@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "que-es-un-presupuesto",
+      "tipo": "opcion_multiple",
+      "enunciado": "Después de medir treinta días de gasto, te sientas a armar el presupuesto de tu casa. ¿Qué es correcto decir de lo que estás haciendo?",
+      "opciones": [
+        "Estás decidiendo, antes de que la plata llegue, qué trabajo va a hacer cada peso: la lección anterior miraba hacia atrás y produjo un registro, esta mira hacia adelante y produce una asignación.",
+        "El mecanismo real es cambiar el momento en que se decide: en vez de decidir frente al mostrador, cansado y con el hijo al lado, decides el domingo con la cabeza fría y después solo ejecutas.",
+        "Cada peso lleva un nombre antes de entrar y la suma de lo asignado es exactamente lo disponible, así que «lo que sobre» no es una categoría válida.",
+        "Estás haciendo la lista de las cosas que la familia va a dejar de comprar este mes para que la plata alcance."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta y es justamente la idea que hace fracasar la mayoría de los presupuestos: entendido como lista de prohibiciones, el presupuesto es un castigo que uno se impone solo, y nadie sostiene un castigo voluntario más de dos semanas. Lo que hace un presupuesto no es reducir el gasto por fuerza de voluntad —que es un recurso que se agota igual que una batería—, sino usar la voluntad del domingo, que estaba entera, para gobernar el martes, que es cuando se agota. Asignar tampoco es dejar de gastar: «diversión, 100» es una asignación tan legítima como «comida»; lo que no vale es dejar un hueco sin etiqueta, porque lo que sobra sin nombre se gasta solo, en catorce cosas pequeñas que nadie recuerda el lunes."
+    },
+    {
+      "id": "dos-incertidumbres",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vives de jornal, alguna changa y una remesa que llega de vez en cuando. ¿Por qué falla aquí el consejo corriente de «anota tu ingreso mensual y repártelo»?",
+      "opciones": [
+        "Porque no hay un ingreso mensual: hay ingresos, en plural, que llegan a golpes y con dos incertidumbres distintas, cuánto y cuándo.",
+        "Porque la que quiebra casas es la segunda incertidumbre: un ingreso que sabes que llega tarde se planifica, pero uno que no sabes si llega, no.",
+        "Porque el gasto de la casa no es irregular —se come todos los días y el alquiler vence el mismo día—, así que la avería está en que la entrada y la salida no tienen el mismo ritmo.",
+        "Porque con ingreso irregular no se puede saber cuánto cuesta sostener la casa, y sin ese número no hay presupuesto posible."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta y confunde las dos mitades del problema: lo que varía es el ingreso, no el costo de la casa. El piso de gasto se calcula perfectamente aunque el ingreso sea un caos, y de hecho es lo primero que hay que calcular, porque el módulo entero se mide en meses de piso —el colchón, el fondo de emergencia de la lección siguiente y la prueba de capacidad de pago de la lección 05—. Fíjate además en la consecuencia de las tres correctas: como el problema es de ritmo y no de total, una casa puede juntar en el año lo suficiente para vivir y estar quebrada en agosto."
+    },
+    {
+      "id": "dimensionar-el-tanque",
+      "tipo": "verdadero_falso",
+      "enunciado": "El colchón de nivelación se dimensiona multiplicando los meses que duró la peor racha seca por lo que le faltó al ingreso, cada uno de esos meses, para llegar al piso de gasto.",
+      "respuesta": true,
+      "explicacion": "Verdadero, y lo que hay que entender es por qué la alternativa cómoda —promediar lo que entra en el año y compararlo con el gasto promedio— es justamente el error, el mismo que dimensionar mal un tanque de agua o un banco de baterías. El promedio incluye los meses buenos, que son precisamente los que no están ahí cuando hace falta: un tanque calculado con el corte de luz promedio se vacía el día que el corte dura más de lo normal, que es el día en que lo necesitabas. La peor racha seca es el tramo más largo de meses seguidos en que el ingreso quedó por debajo del piso, y la cuenta es la misma que los días de autonomía del módulo de energía solar: cuántos días seguidos sin sol aguanta la batería alimentando una heladera que no entiende de nubes. Y la racha no se inventa: se saca del año pasado y del anterior, mes por mes, donde casi todo el mundo descubre que fue más larga de lo que recordaba y que fue casi la misma todos los años, porque estaba escrita en el calendario del clima y del trabajo de la zona."
+    },
+    {
+      "id": "provision-de-lo-anual",
+      "tipo": "opcion_multiple",
+      "enunciado": "Todos los años, al empezar las clases, la matrícula y los útiles descalabran el mes. ¿Cómo entra eso en el presupuesto?",
+      "opciones": [
+        "Se suma lo que costó el año pasado, se divide entre doce y ese resultado se paga todos los meses como una cuenta más, igual que la luz.",
+        "Es la misma operación que la amortización del módulo de negocio, que reparte el costo de una herramienta entre los años que va a durar, traída a la casa.",
+        "Entra dentro del piso de gasto y no encima de él, porque no es ahorro: es gasto que ya ocurrió y todavía no pagaste.",
+        "Se resuelve guardando el excedente del primer mes bueno que aparezca antes de que empiecen las clases."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta porque deja el gasto escolar a merced de que haya un mes bueno justo antes, que es apostar en vez de planificar; y porque además compite con los otros destinos del excedente. Lo que ordena esta lección es al revés: un gasto anual que no se provisiona no es un imprevisto, es un previsto que no anotaste. Todos los años hay comienzo de clases, todos los años el chico crece, todos los años llueve; lo único que hacen esos gastos es no llegar mensualmente, y como el presupuesto es mensual quedan fuera y aparecen como catástrofes. La provisión los convierte en una cuenta ordinaria, con una condición para que funcione: tiene que vivir en otro sitio que la plata del mes, porque si se queda en la misma billetera, la billetera no sabe que es de la matrícula y se gasta el jueves."
+    },
+    {
+      "id": "caja-del-trabajo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el sábado vendiste 3.000 en la feria, ese día ganaste 3.000 y esa plata está disponible para la casa.",
+      "respuesta": false,
+      "explicacion": "Falso: eso es la venta bruta, no la ganancia, y dentro de ella está la plata que tiene que volver al trabajo —el material del próximo pedido, el combustible, el disco de corte gastado, la mercadería que hay que reponer mañana—. En el módulo de negocio eso tiene nombre, capital de trabajo, y aquí basta la versión corta: gastar la venta bruta es comerse la semilla, y se siente como ganar. La solución es física y aburrida: dos recipientes distintos. La caja del trabajo recibe todo lo que entra por el oficio y paga los gastos del oficio; la billetera de la casa recibe una sola cosa, el sueldo, en su fecha y por su monto. El beneficio secundario es enorme: así puedes contestar la pregunta que antes era imposible, ¿el trabajo da o no da? Si la caja no alcanza a pagar el sueldo, el problema no es que la casa gaste mucho, es que el oficio no rinde. Y esto no es solo para quien vende: las botas del jornalero y el combustible del moto-taxi también son gasto del trabajo."
+    },
+    {
+      "id": "cascada-mes-malo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Llega un mes en que no alcanza para todo. ¿Qué es correcto sobre la cascada de prioridades?",
+      "opciones": [
+        "Se escribe antes, en un mes normal, y se pega en la pared: en el mes malo no se discute, se ejecuta.",
+        "Es la degradación elegante aplicada a una casa: reducir de forma ordenada y anunciada lo que se ofrece, en lugar de fallar entero por el punto más débil.",
+        "Lo que genera el ingreso —herramienta, combustible, pasaje al trabajo— se defiende casi antes que nada, porque es la entrada del tanque.",
+        "Conviene ir ajustando de a poco, semana a semana, para ver si el mes mejora antes de recortar en serio."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta: recortar tarde y poquito vacía el tanque igual, solo que más lento y sin haber ganado nada, mientras que bajar al piso en la primera semana estira la reserva mucho más. Sobre el orden en sí, lo decisivo es cuándo se decide: si lo decides en el mes malo, no decides tú, decide quien más presiona —el que llama, el que grita, el chico que pide—, y lo que queda sin pagar es lo que no tiene quien reclame, que suele ser lo importante. Y ojo con el renglón que más sorprende, el cuarto: vender la herramienta para comer esta semana resuelve siete días y apaga los doce meses siguientes, además de que quien te la compra en tu peor semana la compra barata. Entre tocar el colchón y tocar la herramienta se toca el colchón, que para eso existe. Los dos recortes que nunca se hacen son comer peor y no atender un problema de salud, porque los dos reducen el ingreso futuro."
+    },
+    {
+      "id": "mes-bueno",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cuando llega un mes excepcionalmente bueno, lo sano es reconocer el esfuerzo y subir el nivel de vida de la casa a partir de ahí.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el mecanismo por el que muchas casas trabajan mucho y no acumulan nada: el gasto se estira hasta llenar lo que hay, no queda rastro, y dos meses después la casa está otra vez apretada preguntándose en qué se fue. El mes bueno no es tuyo, es del mes malo: el excedente no es un premio por trabajar bien, es el pago que el mes malo te hace por adelantado, porque el mes malo también trabajó y no cobró. Un ingreso extraordinario no es plata nueva, es plata desplazada en el tiempo. Por eso el mes bueno lleva su propia cascada escrita de antemano —reponer lo que el mes malo sacó del colchón, ponerse al día con las provisiones, subir el colchón hacia el objetivo, lo postergado que aumenta el ingreso o evita un gasto mayor, y una parte para gastar, declarada y con monto—. Y el sueldo de la casa sí puede subir, pero con otra señal: sube cuando el tanque aguantó una racha seca entera, no cuando llegó un mes bueno, porque un mes bueno no es información, es ruido."
+    },
+    {
+      "id": "aplicar-a-tu-casa",
+      "tipo": "abierta",
+      "enunciado": "Aplica la lección a tu propia casa, con tus ingresos reales. Describe de dónde entra la plata y con qué ritmo; explica cómo sacarías tu piso de gasto mensual a partir de lo que mediste en la lección anterior, incluyendo la provisión de lo que no es mensual; estima tu peor racha seca y con ella el tamaño del colchón que necesitas; fija el sueldo de la casa y su fecha; explica cómo separarías la caja del trabajo de la billetera de la casa en tu caso concreto; y escribe la cascada del mes malo y la del mes bueno tal como quedarían pegadas en tu pared. Si tu ingreso no llega al piso ni en los meses buenos, di también qué significa eso y qué se hace con esa información.",
+      "respuestaModelo": "En mi caso entran tres cosas con ritmos distintos: un jornal que se cobra el sábado y solo si hubo trabajo esa semana; changas sueltas, que no tienen calendario y no se pueden prometer; y una remesa que manda un familiar de vez en cuando. Eso es ingreso irregular, y esconde dos incertidumbres que conviene no mezclar: cuánto, que es la cifra, y cuándo, que es la fecha. La segunda es la que quiebra la casa, porque un ingreso que sé que llega tarde se planifica y uno que no sé si llega, no. Parte de mi irregularidad es además estacional y por lo tanto previsible: con las lluvias de octubre a abril y la seca de mayo a septiembre, el trabajo agrícola y buena parte de la construcción se mueven con ese reloj, así que puedo marcar en enero cuáles van a ser mis meses flacos.\n\nEl piso sale del cuaderno de los treinta días. Sumo lo que se repite todos los meses, le sumo lo variable que no se puede quitar y aparte armo la lista de lo que no es mensual: matrícula, útiles y uniformes; ropa y zapatos, que en los chicos no negocian; lo que se gastó el año pasado en salud; la reparación del techo antes de las lluvias; y los compromisos del barrio, que aquí no son superfluos. Esa lista se divide entre doce y el resultado se paga todos los meses como una cuenta más: eso es la provisión, la amortización traída a la casa. No es ahorro, es gasto que ya ocurrió y todavía no pagué, así que va dentro del piso y no encima. Al piso le hago las dos preguntas: ¿aguantaría tres meses seguidos así?, ¿incluye la garrafa, el pasaje al centro de salud, el jabón? Si algo falla lo corrijo, porque un piso demasiado bajo no es disciplina: es una mentira que me voy a creer y que me hará aceptar compromisos que no puedo pagar.\n\nPara el tanque dibujo el año en doce casillas y marco los meses que quedaron por debajo del piso. No lo hago solo: quien hace las compras diarias tiene mejor memoria del gasto que quien trae la plata. Cuento cuántos meses seguidos fueron y multiplico por lo que faltaba cada mes; ese producto es mi colchón de nivelación, que no es ahorro para progresar ni fondo de emergencia, sino el amortiguador que hace que un mes sin trabajo no se note dentro de la casa. Se dimensiona por la peor racha y no por el promedio, igual que un tanque de agua se calcula con el corte de luz más largo. La cifra asusta, así que el primer objetivo no es el total sino un mes de piso, que ya convierte una urgencia en un trámite.\n\nEl sueldo lo fijo igual al piso y lo cobro el lunes, porque cobro semanal y compro al día. Todo lo que entra va primero al tanque y del tanque sale ese monto fijo; lo importante no es el período sino que sea fijo, porque un sueldo «según cómo venga el mes» es lo mismo de antes con otro nombre. Lo subiré cuando el tanque haya aguantado una racha seca entera, no cuando llegue un mes bueno.\n\nPara separar la caja del trabajo uso dos recipientes con su nombre escrito. La caja del trabajo paga las botas, la lima y el machete, o el combustible y la llanta si se trabaja con la moto; la billetera de la casa recibe una sola cosa, el sueldo. Si saco plata de la casa para comprar material, lo anoto como préstamo en un libro de caja, porque lo que no se anota no vuelve nunca. Así puedo responder además si el trabajo da o no da: si la caja no alcanza a pagar el sueldo, el problema no es que la casa gaste mucho, es que el oficio no rinde.\n\nEn la pared van dos hojas. La del mes malo, en orden: comida; el techo; agua y energía; lo que genera el ingreso —herramienta, combustible, pasaje, material del pedido en curso—; la salud que no espera; la escuela; los compromisos con fecha, que se renegocian temprano y no se esconden; y todo lo demás, que es donde se recorta, temprano y hondo. Nunca recorto comida ni una atención de salud, porque las dos reducen mi ingreso futuro, y con dengue endémico la fiebre no se maneja a ojo en la casa. La del mes bueno: reponer lo que el mes malo sacó del colchón, ponerse al día con las provisiones, subir el colchón hacia el objetivo, lo postergado que aumenta el ingreso o evita un gasto mayor, y una parte para gastar, declarada y con monto, porque un plan sin ninguna alegría se abandona. Al pie, una regla: los ingresos extraordinarios no se deciden el mismo día.\n\nSe acuerda entre los adultos de la casa, porque un presupuesto que impone una sola persona lo sabotean todos los demás sin querer. Y si al terminar descubro que mi ingreso no llega al piso ni en los meses buenos, eso no significa que el presupuesto falló: hizo su trabajo más valioso, avisarme hoy con meses por delante en lugar de avisarme el día que ya no había. Eso no se arregla con sobres sino con más ingreso; lo que el presupuesto aporta es la alarma temprana.",
+      "criterios": [
+        "Describe sus ingresos reales con su ritmo y los nombra como ingreso irregular, separando las dos incertidumbres: cuánto y cuándo.",
+        "Distingue la parte estacional y previsible de su irregularidad de la que no lo es, y la asocia al calendario de lluvias y seca de la zona.",
+        "Calcula el piso sumando fijos, variables imprescindibles y provisión mensual de lo anual, y no lo confunde con el mes más barato que tuvo.",
+        "Arma la lista anual concreta —escolar, ropa, salud, reparaciones, compromisos sociales—, la divide entre doce y explica que la provisión es gasto ya ocurrido y no ahorro.",
+        "Aplica al piso las dos preguntas de comprobación y explica por qué un piso demasiado bajo es una mentira peligrosa y no disciplina.",
+        "Estima la peor racha seca con datos de años anteriores y dimensiona el colchón por esa racha, no por el promedio, reconociendo el paralelo con el tanque de agua o los días de autonomía.",
+        "Distingue el colchón de nivelación del fondo de emergencia y fija un primer objetivo alcanzable, como un mes de piso.",
+        "Fija un sueldo de la casa fijo, con fecha y período coherentes con su ritmo de gasto, empezando en el piso, y enuncia la regla para subirlo: una racha seca superada, no un mes bueno.",
+        "Separa la caja del trabajo de la billetera de la casa con ejemplos concretos de su oficio y prevé anotar en un libro de caja los préstamos entre ambos.",
+        "Escribe la cascada del mes malo en un orden defendible, coloca alto lo que genera el ingreso y descarta explícitamente recortar comida y salud, con el mecanismo del daño.",
+        "Escribe la cascada del mes bueno tratando el excedente como llenado del tanque y no como premio, e incluye una parte para gastar declarada y con monto.",
+        "Reconoce que el presupuesto se acuerda con la familia y no se impone, y explica qué significa y qué se hace si el ingreso no llega al piso ni en los meses buenos."
+      ],
+      "explicacion": "El ejercicio comprueba que el sistema completo quedó en pie y en el orden correcto: medir produce el dato, el piso lo convierte en una unidad de medida, la peor racha dimensiona el tanque, el sueldo fijo desacopla el ritmo de la entrada del ritmo de la salida, la separación de cajas evita comerse la semilla, y las dos cascadas trasladan las decisiones difíciles al día tranquilo en que todavía se puede pensar. Una respuesta que solo enumera conceptos sin poner cifras propias no ha hecho el trabajo; una que pone cifras pero olvida la provisión de lo anual va a romperse el primer año, porque es la pieza que casi todo el mundo deja fuera. Y hay dos señales de que la lección se entendió de verdad: tratar el excedente del mes bueno como pago adelantado del mes malo, y aceptar que descubrir que el ingreso no alcanza es un resultado útil del presupuesto y no un fracaso de quien lo hizo."
+    }
+  ]
+}

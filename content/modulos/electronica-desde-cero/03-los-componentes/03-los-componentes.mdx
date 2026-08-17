@@ -1,0 +1,422 @@
+Abres la tapa de un cargador que ya no carga y aparecen cuarenta cosas soldadas sobre una placa verde:
+cilindros con rayitas de colores, latitas de aluminio, un bloque negro con tres patas. Parece un
+idioma que no hablas, y lo normal es volver a poner la tapa.
+
+No hace falta. **De esas cuarenta cosas, treinta y ocho pertenecen a unas diez familias**, y cada
+familia hace siempre lo mismo en todos los aparatos del mundo. No vas a diseñar circuitos: vas a
+**reconocer**, **entender** y **sustituir** sin quemar lo sano. Donde un repuesto tarda semanas, **la
+diferencia entre tirar un equipo y devolverlo al trabajo es casi siempre una sola pieza de las que
+están aquí.**
+
+## Diez familias y se acabó
+
+Hay componentes que **no necesitan alimentación** y nunca entregan más energía de la que reciben: solo
+la frenan, la guardan un rato o la dejan pasar en un sentido. Son
+los <Termino slug="componente-pasivo">componentes pasivos</Termino>: resistencias, condensadores,
+bobinas, transformadores, diodos, fusibles, interruptores. Y hay componentes que **con una señal
+minúscula gobiernan un flujo grande**:
+los <Termino slug="componente-activo">componentes activos</Termino>, transistores y circuitos
+integrados. No crean energía: **deciden** por dónde pasa y cuánta.
+
+<Analogia>
+En una instalación de riego los pasivos son las piezas mudas: el reductor que estrangula el caudal, el
+tanque que guarda presión, la válvula de retención. El activo es la válvula con piloto: un hilito de
+agua, ridículo al lado del caudal principal, empuja un diafragma y abre la tubería gorda. **Un
+esfuerzo diminuto manda sobre un flujo enorme.** En software, un pasivo es una constante y un activo
+es una función con una condición dentro.
+</Analogia>
+
+Y una división física que decide si podrás repararlo: los **de agujero pasante** atraviesan la placa
+con sus patitas y se cambian con un soldador barato; los
+de <Termino slug="montaje-superficial">montaje superficial</Termino> —SMD— son granitos sin patas del
+tamaño de una semilla. **Casi todo lo que falla es de agujero pasante.**
+
+## La placa es un mapa, y viene rotulada
+
+Una <Termino slug="placa-de-circuito-impreso">placa de circuito impreso</Termino> es una lámina
+aislante con caminos de cobre encima: **cableado prefabricado**, y entender eso tira abajo la mitad
+del misterio. Además viene rotulada, con letritas blancas que son el índice del aparato.
+
+<Tabla>
+
+| Letra | Componente | Cómo se ve |
+| --- | --- | --- |
+| R | Resistencia | Cilindro con bandas, o granito con cifras |
+| C | Condensador | Latita de aluminio, pastilla marrón, bloque azul |
+| D, LED | Diodo o LED | Cilindro con una banda; cúpula de plástico |
+| Q, T | Transistor | Bloque negro de tres patas |
+| U, IC | Circuito integrado | Rectángulo negro con muchas patas |
+| F | Fusible | Tubito de vidrio o pieza cerámica |
+| K, RL | Relé | Cubo de plástico que hace clic |
+| L, TR | Bobina o transformador | Carrete de alambre; bloque de chapas |
+| SW, S | Interruptor | Pieza mecánica con actuador |
+
+</Tabla>
+
+Con eso, «C7 está hinchado» se puede decir por teléfono. Y casi toda pieza lleva impreso su valor o su
+número de parte, que en un buscador devuelve la hoja de datos del fabricante.
+
+<Advertencia>
+**El componente quemado casi nunca es la causa. Es el síntoma.**
+
+Una resistencia carbonizada no se carbonizó sola: algo aguas abajo se puso en cortocircuito y le hizo
+pasar diez veces la corriente prevista. Si la cambias y enciendes sin averiguar qué la quemó, **vas a
+quemar la nueva en segundos**. Es una pista, no un diagnóstico.
+</Advertencia>
+
+## La resistencia: el estrechamiento de la tubería
+
+Un <Termino slug="resistor">resistor</Termino> —«resistencia» en el taller— se opone al paso de la
+corriente y convierte en calor lo que frena: es un estrechamiento del caño, con menos caudal y una
+diferencia de presión entre entrada y salida. Sirve para **limitar corriente**, que es lo que impide
+que un LED se suicide; para **repartir tensión** y adaptar la señal de un sensor a lo que un
+microcontrolador puede leer; y para **fijar un nivel en reposo**, porque una entrada digital sin nada
+conectado lee ruido, no cero.
+
+El <Termino slug="codigo-de-colores">código de colores</Termino> existe porque en un cilindro de tres
+milímetros no cabe un número legible, y tiene una nemotecnia honesta: **del 2 al 7 es el arcoíris en
+orden** —rojo 2, naranja 3, amarillo 4, verde 5, azul 6, violeta 7—, con los oscuros a un lado —negro
+0, marrón 1— y los claros al otro —gris 8, blanco 9—. Cuatro bandas se leen **cifra, cifra,
+multiplicador, tolerancia**. Memoriza dos: **marrón, negro, rojo, dorado** es 1 kΩ y **marrón, negro,
+naranja, dorado** es 10 kΩ. En SMD hay cifras: **103** es 10 kΩ y **4R7** es 4,7 ohmios. Y algo que no
+está impreso: **el tamaño físico dice cuánto calor aguanta**, así que sustituir una cerámica grande
+por una minúscula del mismo valor es fabricar un incendio pequeño.
+
+<Dato titulo="No confíes en las bandas: mide">
+Las bandas mienten: se destiñen, el marrón y el rojo se confunden bajo luz amarilla, y una que trabajó
+caliente tiene el cuerpo tostado. El multímetro es el árbitro, con una trampa: **sobre la placa casi
+siempre da menos ohmios de los que tiene**, porque el circuito le queda en paralelo. La lectura útil
+se hace con una patita levantada, y de ahí un criterio fiable: **si mide bastante MÁS de lo marcado,
+está mala; si mide menos, es el circuito de alrededor.**
+</Dato>
+
+**Cómo falla:** se abre y el multímetro marca infinito.
+
+## El condensador: el tanque que amortigua
+
+Un <Termino slug="condensador">condensador</Termino> guarda carga y la devuelve. Dicho como sirve para
+reparar: **se opone a que la tensión cambie de golpe.**
+
+<Analogia>
+Es el tanque elevado, y en dos sentidos. **Es reserva**: la bomba no trabaja todo el tiempo pero el
+grifo tiene agua igual. Y **es la cámara de aire que mata el golpe de ariete**: absorbe el tirón
+cuando un chip pide corriente de golpe; sin él la alimentación se hunde y el aparato se reinicia.
+</Analogia>
+
+Siempre se leen dos números: **la capacidad y la tensión máxima de trabajo.** Las latitas cilíndricas
+de aluminio son los <Termino slug="condensador-electrolitico">condensadores
+electrolíticos</Termino> y lo llevan impreso —«470 µF 25 V 105 °C»—, donde el último número es la
+temperatura que aguantan y sí importa. **Tienen polaridad**: una franja con signos menos marca el
+negativo, y la pata larga es la positiva. Montado al revés hierve y revienta, así que **fotografía
+antes de desoldar**.
+
+<Dato titulo="El campeón absoluto de las averías">
+Si tuvieras que apostar a ciegas a qué componente mató un aparato doméstico, la apuesta correcta es
+**el condensador electrolítico**. La razón es química: por dentro hay un electrolito líquido que **se
+evapora**, y la pieza se seca durante años hasta dejar de trabajar. Síntomas: **tapa abombada** —la
+cruz troquelada, que debería ser plana, se hincha— y **costra marrón** en la base; anda en frío y
+falla en caliente, luces que titilan, equipo que se reinicia solo.
+
+Y una trampa. La <Termino slug="resistencia-serie-equivalente">resistencia serie
+equivalente</Termino> —ESR— sube al secarse, así que la pieza **sigue midiendo la capacidad correcta
+en un medidor barato y ya no sirve**. La tapa abombada y la edad valen más.
+</Dato>
+
+Y un pariente que en el campo importa más que todos juntos:
+el <Termino slug="condensador-de-arranque">condensador de arranque</Termino>, ese cilindro gordo con
+abrazadera al costado de una bomba. Desfasa la corriente de un bobinado auxiliar para que el motor
+sepa hacia qué lado arrancar, y al agotarse **el motor zumba, se calienta, no arranca, y arranca si le
+das un empujón a mano.**
+
+<Advertencia>
+**Un condensador grande sigue cargado después de desenchufar el aparato.** En la fuente de un
+televisor, un microondas o una computadora retienen cientos de voltios durante minutos. El
+procedimiento es fijo: **desenchufar, esperar y medir tensión continua entre sus patas antes de tocar
+nada.** Si hay tensión se descarga con una resistencia de potencia o una lámpara incandescente,
+**nunca cortocircuitando con un destornillador**. El condensador de arranque merece el mismo respeto.
+</Advertencia>
+
+## El diodo: la válvula de retención
+
+Un <Termino slug="diodo">diodo</Termino> deja pasar la corriente en un sentido y la bloquea en el
+otro: es la válvula antirretorno que se pone a la salida de una bomba para que el agua no se vuelva.
+Tiene dos patas y **una banda impresa cerca de un extremo**; la corriente entra por el lado sin banda
+y sale por el de la banda. Es la única marca que hay que aprender.
+
+No es una válvula perfecta: necesita algo de presión para abrirse. Ese peaje es
+la <Termino slug="caida-directa">caída directa</Termino>, unos 0,6 o 0,7 voltios en un diodo de
+silicio. Como es fija y previsible, el multímetro tiene una posición dedicada: **uno sano marca entre
+0,4 y 0,8 en un sentido y nada en el otro.** Esa prueba de dos segundos es la más rentable del oficio.
+
+Aparece en cuatro papeles. **Rectificar**: convertir alterna en continua es dejar pasar solo la mitad
+buena de la onda, y con cuatro diodos se aprovechan las dos; a ese arreglo se lo
+llama <Termino slug="puente-rectificador">puente rectificador</Termino>. **Proteger**: en serie con la
+alimentación, conectar la batería al revés no destruye nada. **Fijar una referencia**: el Zener
+conduce hacia atrás a partir de una tensión exacta.
+
+El cuarto merece detenerse. El <Termino slug="diodo-de-rueda-libre">diodo de rueda libre</Termino> va
+atravesado sobre la bobina de un relé o de una solenoide, con la banda del lado positivo. Una bobina
+es como una masa de agua en movimiento dentro de un caño largo: si cortas el paso de golpe, esa
+inercia produce un golpe de ariete. Aquí ese golpe es un pico de cientos de voltios que **perfora el
+transistor que acaba de apagar la bobina**, y el diodo le da un camino cerrado para que se apague
+solo. Cuesta centavos, y sin él una automatización dura semanas.
+
+**Cómo falla:** casi siempre **en cortocircuito**, conduciendo en los dos sentidos; si es uno del
+puente, el fusible salta y el aparato está muerto. Si se abre, el puente rectifica a medias y el
+equipo anda con zumbido, luz temblorosa y menos fuerza.
+
+## El LED: el diodo que avisa, y que se repara
+
+Un <Termino slug="led">LED</Termino> es un diodo que emite luz al ser atravesado por la corriente, y
+valen todas las reglas del diodo. En la pieza nueva **la pata larga es la positiva** y el cuerpo tiene
+un chaflán plano del lado negativo. La caída depende del color —un rojo cae unos dos voltios, un
+blanco unos tres—, y eso importa al sustituir. Y aquí la regla que quema más LEDs que ninguna otra:
+**un LED no limita su propia corriente.** Conectado directo se lleva toda la corriente que la fuente
+pueda dar hasta destruirse. Por eso lleva siempre una resistencia en serie, y ese es el único cálculo
+de la lección.
+
+<Formula explicacion="La resistencia que va en serie con un LED. Se resta a la tensión de la fuente la caída del LED, porque esa parte se la queda él, y lo que sobra se reparte sobre la resistencia. La corriente va en amperios: 10 miliamperios son 0,010 A.">
+resistencia (Ω) = (tensión de la fuente − caída del LED) ÷ corriente deseada (A)
+</Formula>
+
+Con 12 V y un LED rojo de 2 V a 10 mA: 12 menos 2 son 10, entre 0,010 da 1.000 ohmios, o sea 1 kΩ.
+**Redondear hacia arriba nunca hace daño.**
+
+Como **indicadores** son información gratis: una luz encendida dice que hasta ahí llega alimentación,
+y eso parte el aparato en dos mitades antes de sacar el multímetro. Y como **iluminación** son
+reparables: dentro de una lámpara hay una tira de puntos amarillos —cada punto un LED, y van **en
+serie**— y una plaquita. Si uno se abre **se apaga la fila entera**, y el culpable se delata con un
+puntito negro que se puentea con una gota de estaño. Si la lámpara **parpadea** en vez de apagarse, el
+culpable es el condensador de la plaquita.
+
+## El transistor: la llave que abre otra llave
+
+Un <Termino slug="transistor">transistor</Termino> es el componente que hizo posible todo lo demás, y
+la idea cabe en una frase: **una señal pequeña en una pata gobierna un flujo grande entre las otras
+dos.** Es la válvula con piloto, sin partes móviles: del todo abierta o del todo cerrada, que es lo
+que hay dentro de cualquier control de riego.
+
+Verás dos familias: el **bipolar**, con base, colector y emisor, que se manda con corriente, y el
+**MOSFET**, con puerta, drenador y surtidor, que se manda con tensión. En los dos casos **el número
+impreso encima es el nombre real de la pieza** y con él se busca la hoja de datos, que dice qué pata
+es cuál. Buscarlo es obligatorio: **el orden de las patas no es universal**, y suponerlo es la forma
+más rápida de destruir un componente nuevo. Los que llevan aleta metálica van sujetos a un
+**disipador**, y esa aleta no es una superficie neutra: suele estar conectada por dentro.
+
+**Cómo falla:** los de potencia mueren **en cortocircuito**, a menudo con las tres patas unidas, y al
+morir funden el fusible. Su verdugo es el calor —disipador flojo, sin pasta térmica, tapado de polvo—
+o el pico de una bobina sin su diodo. El pariente mayor, el **circuito integrado**, tiene miles de
+transistores dentro, y de él basta una idea liberadora: **el chip casi nunca es el culpable**, porque
+no tiene química que se seque.
+
+## El relé: el músculo que obedece a un dedo
+
+Un <Termino slug="rele">relé</Termino> es un electroimán que mueve un contacto. Es la pieza más
+honesta de la electrónica: cuando trabaja, **hace clic**.
+
+Su virtud es que **separa dos mundos**. De un lado, un circuito chico y seguro —doce voltios, unos
+miliamperios— que solo activa una bobina; del otro, uno grande y peligroso —220 voltios, varios
+amperios— que alimenta una bomba. Entre ambos **no hay ninguna conexión eléctrica**: solo un campo
+magnético y una lámina que se mueve. Es la frontera de una interfaz bien diseñada.
+
+Se leen dos datos impresos. **La bobina**, con su tensión de trabajo —5 V, 12 V, 24 V continua, 220 V
+alterna—: con menos no pega, con más se quema. Y **los contactos**, con su capacidad del estilo
+«10 A 250 V»: el **común**, el **normalmente abierto** y a veces el **normalmente cerrado**. Cuál uses
+decide qué pasa cuando se corta la luz: si la válvula de riego cuelga del normalmente abierto, **un
+corte la cierra**; si cuelga del cerrado, un corte la abre y el sistema riega hasta que alguien lo
+descubra. Es el fallo seguro, hecho de metal.
+
+<Dato titulo="El clic parte la avería en dos">
+Si el relé hace clic, todo el lado de control funciona: el microcontrolador decidió, el transistor
+obedeció y la bobina se activó. La falla está del lado de la potencia —contactos, cable, carga— y
+acabas de descartar media placa sin destornillador. Si no hace clic, el problema está en la bobina o
+en lo que la manda; la bobina se comprueba en ohmios y debe medir decenas o cientos. Eso es partir el
+sistema por la mitad y preguntar de qué lado está el fallo: el método de la lección seis, aquí gratis
+y con el oído.
+</Dato>
+
+**Cómo falla:** los contactos se pegan o se pican por el arco que salta al abrir bajo carga. Pegados,
+la bomba queda encendida para siempre aunque nadie se lo pida, que es la avería peligrosa de verdad;
+picados, hace clic y no pasa nada.
+
+## El fusible: el componente que se sacrifica
+
+Un <Termino slug="fusible">fusible</Termino> es un hilo calibrado para fundirse antes que el resto. Es
+la única pieza diseñada para morir y, como viste en el módulo de energía solar, **no protege al
+aparato: protege al cable.** Su pariente mecánico es el perno de seguridad de una máquina agrícola,
+que se corta a propósito para que no se parta el eje.
+
+Lleva impreso todo lo necesario para reemplazarlo. **La corriente**, en amperios, que nunca se sube.
+**La tensión**, que nunca se baja. Y **el carácter**: **F** es rápido y **T**
+es <Termino slug="fusible-retardado">retardado</Termino>, o sea que aguanta el pico de arranque de un
+motor pero corta igual ante una falla sostenida. Poner un F donde iba un T funde un fusible en cada
+arranque.
+
+<Advertencia>
+**Nunca se sustituye un fusible por uno de más amperios, y jamás por un alambre, un clavo o una
+moneda.** El fusible no es lo que estaba fallando: **es el mensajero.** Puentearlo deja que la
+corriente que fundió el hilo siga corriendo por un cable que no la aguanta, dentro de una pared, hasta
+que arde algo que ya no cuesta lo que un fusible.
+
+Y hay una lectura forense gratis: **el cadáver cuenta la historia.** Hilo cortado limpio indica
+sobrecarga lenta; vidrio negro o reventado indica cortocircuito violento —y **el corto sigue ahí**.
+</Advertencia>
+
+Existe además el **fusible térmico**, pieza de un solo uso enterrada en los aparatos que calientan y
+en el bobinado de muchos motores: avería frecuente y sin marca visible. Y un fusible **se mide, no se
+mira**: puede estar cortado dentro del casquillo sin que se vea nada.
+
+## El interruptor: mecánica disfrazada de electrónica
+
+Un interruptor es un pedazo de metal que se mueve, y falla como fallan las cosas mecánicas: desgaste,
+suciedad, óxido, un resorte cansado. **El síntoma clásico es la intermitencia**: el aparato anda si
+mueves la perilla. En continuidad y desenergizado, uno sano marca cero ohmios accionado e infinito en
+reposo; uno gastado marca unos ohmios, y esos ohmios son calor futuro. Y dos disfrazados que en una
+instalación de agua son la avería número uno: el **flotador** de un tanque, que se llena de sarro, y
+el **protector térmico** de un motor —anda diez minutos, para, arranca solo al enfriarse—, un patrón
+que es casi un diagnóstico.
+
+## El transformador y la fuente: la puerta de entrada
+
+Un <Termino slug="transformador">transformador</Termino> son dos bobinas sobre un núcleo de chapas de
+hierro: la alterna de la primera induce tensión en la segunda, y la proporción de vueltas decide
+cuánto sube o baja. Como no crea energía, **si la tensión baja la corriente sube en la misma
+proporción**; es el par de engranajes que cambia fuerza por velocidad. **Solo funciona con alterna.**
+Rara vez falla solo: lo que se abre es su fusible térmico interno, porque algo más abajo pedía de más.
+Síntoma: aparato mudo, sin zumbido, primario midiendo infinito.
+
+Casi todo lo moderno ya no usa ese ladrillo sino
+una <Termino slug="fuente-conmutada">fuente conmutada</Termino>: el cargador liviano, el adaptador de
+la controladora. Rectifica los 220 V a más de trescientos voltios de continua, **los trocea con un
+transistor decenas de miles de veces por segundo**, los pasa por un transformador diminuto —diminuto
+porque a esa velocidad hace falta muy poco hierro— y rectifica otra vez. Aguanta un rango de entrada
+muy amplio, bendición donde la red baja, pero está llena de electrolíticos en caliente y **guarda esos
+trescientos voltios después de desenchufarla.** Ese primario es el punto más peligroso: se mide antes
+de tocar.
+
+## Cuál falla, con qué síntoma y cómo se confirma
+
+<Tabla>
+
+| Componente | Cómo falla | Síntoma típico | Confirmación |
+| --- | --- | --- | --- |
+| Condensador electrolítico | Se seca; sube su ESR | Anda en frío, falla en caliente | Tapa abombada o costra |
+| Condensador de arranque | Pierde capacidad | Motor que zumba y arranca empujado | Deformado o con fuga |
+| Fusible | Se abre; hace su trabajo | Aparato muerto, sin ninguna luz | Continuidad, fuera del circuito |
+| Diodo o puente | Cortocircuito | Fusible que salta; zumbido fuerte | Diodo: cero en ambos sentidos |
+| Transistor de potencia | Cortocircuito, por calor | Muerte total y fusible fundido | Diodo, entre las tres patas |
+| Relé | Contactos pegados o picados | Clic sin efecto, o carga siempre viva | Oír el clic; bobina en ohmios |
+| Interruptor | Desgaste y suciedad | Anda a ratos; hay que moverlo | Continuidad en las dos posiciones |
+| Resistencia | Se abre o sube de valor | A veces quemada, a veces nada | Ohmios con una pata levantada |
+| LED | Un punto de la serie se abre | Fila entera apagada, o parpadeo | Punto negro a la vista |
+| Soldadura | Se agrieta por calor y vibración | Intermitencia al golpear la placa | Lupa: anillo brillante |
+
+</Tabla>
+
+La última fila no es un componente y está ahí a propósito: **una soldadura agrietada produce los
+mismos síntomas que media docena de averías caras**, y arreglarla es gratis.
+
+## Sustituir sin romper
+
+Casi nunca conseguirás la pieza idéntica, y casi nunca hace falta. Basta saber en qué dirección se
+puede desviar.
+
+- **Las capacidades se suben, nunca se bajan.** Tensión, vatios, amperios de contacto, temperatura.
+  Un condensador de 25 V se reemplaza por uno de 35 V; al revés, revienta.
+- **El valor se respeta.** En un condensador de filtro se admite subir un poco la capacidad; en uno
+  que fija un tiempo, no.
+- **La polaridad no se negocia**, en electrolíticos, diodos y LEDs. Foto antes de desoldar.
+- **El tamaño físico tiene que caber y tiene que disipar.**
+- **Los números de parte se buscan, no se adivinan**, sobre todo el orden de las patas.
+- **Donde el repuesto tarda, la mejor fuente es la basura del barrio**: de una fuente de computadora
+  o un televisor reventado salen gratis diodos, relés, interruptores y resistencias. Solo de los
+  electrolíticos viejos no te fíes.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+En Rizoma del Sur hay hoy unas pocas familias de aparatos eléctricos: la bomba del pozo con su
+tablero, el regulador y el inversor solares, la controladora de riego con sus válvulas solenoides, los
+ventiladores del vivero y la iluminación LED del galpón. **Todo lo que se va a romper en los próximos
+cinco años está en la tabla de esta lección.** No hay una sola pieza exótica en la lista.
+
+La primera tarea es de inventario y se hace una vez, con el celular en la mano y sin alimentación:
+abre cada tablero que se pueda abrir sin romper y **fotografía la placa entera y luego cada componente
+de cerca**, de modo que se lean los números. Después transcribe a un cuaderno, por aparato, lo que
+hará falta el día malo: valor y carácter del fusible, capacidad y tensión de cada condensador grande,
+tensión de bobina y contactos del relé, número de parte del transistor y capacidad del condensador de
+arranque. Ese cuaderno es a los aparatos lo que un archivo de dependencias a un proyecto de software:
+**la lista de lo que hay que poder reemplazar**, escrita antes de necesitarla y no a las seis de la
+tarde con las bandejas pidiendo agua.
+
+Con esa lista, el **botiquín de repuestos** sale corto y barato: fusibles del valor y del carácter
+exactos de la bomba, del inversor y del tablero; un condensador de arranque igual al de la bomba, que
+es la pieza capaz de dejar el vivero sin agua en plena seca; un relé idéntico al de la controladora;
+diodos comunes para hacer de rueda libre; y LEDs indicadores con sus resistencias. Y una decisión que
+se toma ahora: **cada válvula de riego cuelga del contacto normalmente abierto del relé**, sin
+excepción, para que un corte de energía deje el riego cerrado y no un lote inundado toda la noche.
+
+El mantenimiento que más averías previene es contra el calor, que aquí sobra: una vez por trimestre,
+con todo desenergizado, sopla el polvo del inversor, del regulador, de la controladora y de las aletas
+de los disipadores, porque **el polvo es una manta** y bajo una manta un condensador de diez años dura
+tres.
+
+Y la pieza comunitaria, que es el corazón del asunto: **una caja de piezas rescatadas en el galpón,
+con envases rotulados y un cuaderno al lado.** Cualquier vecino que vaya a tirar un aparato lo trae
+antes; alguien lo desarma en una tarde de taller y guarda lo aprovechable. Esa caja convierte «hay que
+esperar el repuesto» en «lo probamos hoy», y lleva una regla en la tapa: **antes de cambiar una pieza
+quemada se anota qué se sospecha que la quemó.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+La red domiciliaria de Santa Cruz es la de 220 V que ya viste en el módulo de albañilería, y es la
+tensión que aparecerá en el primario de casi todo lo que abras. Con dos advertencias: en algunas
+ciudades del país conviven tensiones domiciliarias distintas, así que **no lo supongas, mídelo**; y la
+red boliviana trabaja a 50 hercios, no a 60 como buena parte del continente, lo que importa cuando
+alguien trae un motor de afuera.
+
+El clima local es un acelerador de averías. Hay una regla empírica muy conocida en la industria de los
+condensadores: **por cada diez grados de más, la vida útil se reduce más o menos a la mitad.** Un
+electrolítico pensado para durar años a veinticinco grados vive aquí dentro de un gabinete cerrado, al
+sol, en un galpón que en octubre pasa de treinta y cinco. No es mala suerte que las fuentes fallen más
+que en los manuales: **es aritmética.** Por eso ventilar un gabinete o darle sombra es una reparación
+preventiva, no un detalle estético.
+
+La estación de lluvias añade lo suyo: siete meses de humedad alta con polvo encima forman una capa que
+conduce un poquito, y entre dos pistas de cobre eso son fugas y corrosión verdosa. El ciclo del surazo
+es cruel: entra aire frío, las masas metálicas se enfrían, y al volver el aire caliente y húmedo **el
+agua condensa sobre las placas todavía frías**, como se empaña un vaso sacado de la heladera. Los
+cortes y bajones son el tercer factor y el peor: lo que mata no es la falta de luz sino **el momento
+en que vuelve**, con un pico que castiga fuentes y reguladores.
+
+Sobre repuestos, la única respuesta honesta es que depende del lugar y del momento, y por eso este
+curso no da precios ni plazos que a los seis meses serían mentira. Lo que sí se puede decir es el
+método: **los valores comunes se consiguen en cualquier casa de electrónica; los números de parte
+concretos hay que encargarlos y esperan.** De ahí que la estrategia que rinde aquí sea la contraria a
+la del manual: conocer los equivalentes, tener la caja de rescate, saber medir y preguntar con datos
+—el número de parte, la capacidad, la tensión—. Porque además **en Bolivia reparar nunca dejó de ser
+normal**: hay talleres de electrodomésticos, de bobinado de motores y de electrónica en casi cualquier
+barrio. Este módulo no inventa una práctica: le pone método y vocabulario a algo que la comunidad ya
+hace. Que un vecino diga «el electrolítico de la fuente está hinchado» en vez de «se quemó» es,
+exactamente, la clase de herramienta que este proyecto existe para repartir.
+</ContextoBolivia>
+
+## Lo que hay que llevarse
+
+Por encima del catálogo, tres ideas. **El componente quemado es el síntoma, no la causa**, y cambiarlo
+sin buscar qué lo quemó solo produce otro componente quemado. **Se sube de capacidad, nunca se baja**:
+más voltios, más vatios, más amperios, más grados. Y **la apuesta racional está en lo barato**: el
+electrolítico, el fusible, el relé y la soldadura agrietada explican casi todas las averías; el chip,
+casi ninguna.
+
+## Lo que sigue
+
+Reconocer las piezas es la mitad. La otra mitad es entender **cómo se relacionan entre sí**, y esa
+relación no está en la placa: está en el esquema.
+
+En **04-del-diagrama-al-cable** aprenderás a leer un diagrama como se lee un plano: qué símbolo
+corresponde a cada componente que acabas de conocer, qué es un nodo, por qué dos puntos unidos en el
+papel son el mismo punto aunque en el aparato estén a medio metro, y qué es esa referencia común
+llamada masa. Y sobre todo el paso que casi nadie enseña: **cómo se traduce ese dibujo a cables**, y
+el camino inverso —mirar un aparato y dibujar su esquema—, que permite reparar lo que no vino con
+manual.

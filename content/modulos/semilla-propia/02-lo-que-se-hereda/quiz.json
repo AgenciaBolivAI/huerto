@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "clon-vs-semilla",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un esqueje produce una planta genéticamente idéntica a la madre; una semilla produce una combinación nueva de dos progenitores.",
+      "respuesta": true,
+      "explicacion": "Correcto, y de ahí sale todo el módulo: clonar es copiar un archivo byte a byte, sembrar es combinar dos versiones. Cuánto se parezca la hija a la madre depende de cuánto se parecían entre sí los dos progenitores."
+    },
+    {
+      "id": "autogamas-alogamas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué implica que una especie sea autógama o alógama?",
+      "opciones": [
+        "En una autógama la flor se poliniza a sí misma, así que las hijas salen muy parecidas y guardarlas es fácil.",
+        "En una alógama el polen viaja de una planta a otra, hay más variación y hace falta más cuidado.",
+        "Muchas especies están en medio, como el ají dulce, que se autofecunda pero los insectos lo cruzan.",
+        "En una alógama basta con guardar semilla de la mejor planta del lote."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Justo lo contrario: en una especie que se cruza hay que guardar de muchas plantas —del orden de varias decenas—. Guardar de una o dos produce depresión por consanguinidad, con plantas más débiles y menos productivas en pocos ciclos."
+    },
+    {
+      "id": "hibrido-f1",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué no se guarda semilla de un híbrido F1?",
+      "opciones": [
+        "Se fabrica cruzando dos líneas muy distintas y muy uniformes, y por eso sale vigoroso y parejo.",
+        "Al reproducirse, esa combinación se deshace y la generación siguiente sale desigual y en promedio peor.",
+        "El fallo no se ve al sembrar: se ve meses después, cuando ya no hay margen.",
+        "Porque el fabricante lo prohíbe en el sobre."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es una prohibición, es genética: guardar semilla de un F1 no está prohibido, simplemente no sirve. Lo contrario del híbrido es la polinización abierta, que es la única sobre la que tiene sentido construir un banco comunitario."
+    },
+    {
+      "id": "reconocer-hibrido",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se reconoce un híbrido antes de perder una temporada?",
+      "opciones": [
+        "Mirando el sobre: «F1» o «híbrido» es explícito.",
+        "Desconfiando de lo comercial extremadamente uniforme y vigoroso.",
+        "Guardando semilla y sembrando veinte plantas en un rincón para ver si salen desiguales.",
+        "Observando si la planta madre produce menos que la media."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La madre de un F1 produce más, no menos: ese es precisamente su atractivo. La prueba en pequeño cuesta un rincón y una temporada, y responde con certeza cuando el sobre no lo dice."
+    },
+    {
+      "id": "que-se-hereda",
+      "tipo": "verdadero_falso",
+      "enunciado": "La planta más grande del lote es siempre la mejor candidata para guardar semilla.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error de selección más frecuente. Lo que ves es la suma de lo que la planta traía escrito y de lo que le tocó vivir: puede ser enorme por genética o porque le cayó más agua, más luz o menos competencia. Solo lo primero se hereda, y el ejemplar espectacular aislado suele ser suerte de sitio."
+    },
+    {
+      "id": "comparar-bien",
+      "tipo": "verdadero_falso",
+      "enunciado": "Comparar una planta del borde del bancal con una del centro informa sobre su genética.",
+      "respuesta": false,
+      "explicacion": "Falso: informa del borde. La comparación solo tiene sentido dentro del mismo lote y las mismas condiciones, que es la misma disciplina del ciclo de mejora del módulo de negocio: cambiar una cosa y comparar contra lo comparable."
+    },
+    {
+      "id": "sanidad",
+      "tipo": "verdadero_falso",
+      "enunciado": "En clima tropical, seleccionar por sanidad rinde más a largo plazo que seleccionar por tamaño.",
+      "respuesta": true,
+      "explicacion": "Correcto: el tamaño depende muchísimo del ambiente y avanza despacio, mientras que la resistencia se acumula ciclo a ciclo. Y nadie va a seleccionar contra las enfermedades concretas de tu parcela por ti."
+    },
+    {
+      "id": "herencia-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Explica cómo va a seleccionar Rizoma del Sur: qué descarta, de cuántas plantas guarda y qué caracteres persigue.",
+      "respuestaModelo": "Lo primero es descartar. Leo el sobre antes de sembrar y lo anoto en la libreta: si dice F1 o híbrido, ese lote se produce y se vende pero queda fuera del programa de semilla, porque al reproducirse la combinación se deshace y la generación siguiente sale desigual y peor. Y el fallo no se vería al sembrar sino meses después, cuando ya no hay margen. Cuando pueda elegir, elijo polinización abierta aunque rinda algo menos el primer año.\n\nSi tengo dudas sobre un lote, hago la prueba en pequeño: guardo semilla, siembro veinte plantas en un rincón y las miro. Si salen desiguales, era híbrido. Cuesta un rincón y una temporada y responde con certeza.\n\nEn cuanto a cuántas plantas: depende de si la especie se cruza. El culantro y el ají dulce tienen componente de autofecundación, pero el ají lo cruzan los insectos lo suficiente, así que guardo de muchas plantas —varias decenas— y no de las dos que mejor se veían. Guardar de unas pocas produce depresión por consanguinidad en pocos ciclos: plantas más débiles y menos productivas. Por eso el lote destinado a semilla lo siembro a propósito con espacio suficiente para que haya de dónde elegir.\n\nPara seleccionar, comparo solo dentro del mismo lote y las mismas condiciones. Nunca una planta de borde contra una de centro, porque eso informa del borde y no de la genética. Y desconfío del ejemplar espectacular aislado: lo que busco es la planta buena rodeada de plantas normales tratadas igual, porque esa diferencia sí es probable que venga de dentro.\n\nEl carácter que persigo en primer lugar es la sanidad, no el tamaño. En un clima con presión alta de hongos, si en un lote atacado hay unas pocas plantas que aguantan mejor con el mismo riego, el mismo suelo y la misma exposición, esas son el hallazgo. Guardar su semilla es empezar a construir una población resistente a lo que ataca en mi parcela. Es lento, no se nota en un ciclo y se nota mucho en cinco.\n\nDespués vienen caracteres que responden bien a la genética: color y forma del fruto, momento de floración. El tamaño y el rendimiento bruto los dejo en último lugar porque dependen demasiado del ambiente y avanzan despacio.\n\nY tengo presente que el clima local juega en contra del aislamiento: con insectos activos casi todo el año, la distancia funciona peor aquí que en climas con estaciones marcadas, así que en el ají dulce voy a necesitar barrera o embolsado si quiero guardar de verdad.",
+      "criterios": [
+        "Descarta híbridos F1 leyendo el sobre antes de sembrar.",
+        "Explica por qué la F2 sale desigual y que el fallo se ve tarde.",
+        "Prefiere polinización abierta y lo justifica.",
+        "Propone la prueba en pequeño ante la duda.",
+        "Guarda de muchas plantas y menciona la depresión por consanguinidad.",
+        "Siembra el lote de semilla con espacio para poder elegir.",
+        "Compara solo dentro del mismo lote y las mismas condiciones.",
+        "Desconfía del ejemplar espectacular aislado.",
+        "Prioriza la sanidad como carácter de selección y explica por qué.",
+        "Deja el tamaño en último lugar por su dependencia del ambiente.",
+        "Anticipa que el clima local exige barrera o embolsado en el ají."
+      ],
+      "explicacion": "Esta lección es la que evita el error más caro del módulo, y no es técnico sino de método: seleccionar mirando la planta más grande en vez de la mejor comparada contra sus iguales. La genética decide qué se puede guardar; la disciplina de comparación decide si guardarlo sirve de algo."
+    }
+  ]
+}

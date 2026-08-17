@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "p1",
+      "tipo": "opcion_multiple",
+      "enunciado": "Alguien afirma: «la yautía sale mejor con cobertura». ¿Qué le falta a esa frase para ser un resultado y no una anécdota?",
+      "opciones": [
+        "El origen del material de partida: de qué planta madre o de qué proveedor salieron los cormos de cada lado.",
+        "Las condiciones del periodo: lluvia, surazos, riego y suelo, incluido lo que no se eligió.",
+        "Contra qué se comparó, con qué criterio se midió el resultado y en qué fecha.",
+        "Una foto bonita del bancal bueno, que es la prueba que convence a cualquiera que pase."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son condiciones sin las cuales el resultado no se puede volver a obtener: eso es la reproducibilidad. La cuarta es incorrecta porque una foto suelta no aporta ninguna de esas condiciones; sin punto fijo, sin referencia de escala, sin etiqueta con fecha y lote y sin la foto del testigo, la imagen muestra que un bancal está bonito y no permite atribuir esa diferencia a la cobertura. De hecho la foto sola es peligrosa: parece prueba y solo es ilustración."
+    },
+    {
+      "id": "p2",
+      "tipo": "opcion_multiple",
+      "enunciado": "Pones cincuenta plantas con cobertura en el bancal norte y cincuenta sin cobertura en el bancal sur, todo el mismo día. ¿Qué problemas tiene ese diseño?",
+      "opciones": [
+        "La unidad experimental es el bancal, no la planta: hay una sola repetición por tratamiento, no cincuenta.",
+        "El bancal norte puede diferir del sur en sombra, cercanía al grifo o historia del suelo, y ese factor viaja pegado al tratamiento.",
+        "Se corrige repitiendo el par tres veces en sitios distintos del terreno y alternando de qué lado va la cobertura.",
+        "Con cien plantas medidas en total, el número es suficientemente grande como para que la posición deje de importar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen la pseudorreplicación, la variable de confusión y su remedio. La cuarta es incorrecta y es justamente la trampa: aumentar el número de plantas medidas dentro del mismo bancal no añade ninguna repetición independiente del tratamiento, solo infla la confianza. Medir doscientas plantas en dos bancales sigue siendo comparar un bancal con otro; lo único que reduce el efecto de la posición es repetir el par en sitios distintos y alternar."
+    },
+    {
+      "id": "p3",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si dos personas midiendo la misma planta obtienen resultados que difieren en tres centímetros, una diferencia media de dos centímetros entre el tratamiento y el testigo no puede sostenerse como resultado.",
+      "respuesta": true,
+      "explicacion": "Eso es la repetibilidad de la medición, y marca el suelo de lo que se puede afirmar. Si el propio acto de medir introduce una dispersión mayor que la diferencia que se quiere demostrar, esa diferencia queda enterrada dentro del error de medida por muy limpio que se vea el promedio. La consecuencia práctica no es abandonar: es medir mejor —definir el criterio por escrito, usar siempre el mismo instrumento y la misma persona— o buscar un efecto que se vea por encima del ruido, como contar unidades enteras en lugar de estimar."
+    },
+    {
+      "id": "p4",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cuando en la bitácora se descubre que un dato anotado hace una semana estaba equivocado, lo correcto es tacharlo o borrarlo y escribir el valor bueno en su lugar.",
+      "respuesta": false,
+      "explicacion": "La bitácora se lleva como un registro de solo escritura: no se borra ni se corrige encima de lo viejo, se añade una línea nueva con la fecha de hoy que dice qué se corrige y por qué. Hay dos razones. La primera es que la corrección misma es un dato: saber que el conteo inicial resultó poco fiable es información sobre cómo se mide en ese sitio. La segunda es de confianza: un cuaderno que se puede reescribir hacia atrás no sirve de prueba ante nadie, empezando por su autor dentro de dos años. La ficha sí se corrige a lápiz, porque guarda conclusiones; la bitácora guarda hechos."
+    },
+    {
+      "id": "p5",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué convierte una fotografía de la parcela en un dato utilizable y no en una ilustración?",
+      "opciones": [
+        "Tomarla siempre desde un punto fijo marcado con una estaca, con la misma dirección y altura.",
+        "Incluir en el cuadro un objeto de tamaño conocido que sirva de referencia de escala.",
+        "Apoyar en el bancal un cartón escrito con la fecha, el lote y el tratamiento.",
+        "Confiar en que el teléfono guarda la fecha en el archivo, que es el dato que hace falta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son las que permiten comparar dos imágenes y medir sobre ellas. La cuarta es incorrecta por dos motivos: la fecha del archivo se pierde en cuanto la imagen pasa por una aplicación de mensajería o se copia, y aunque sobreviviera, el teléfono nunca guarda cuál era el lote ni qué tratamiento llevaba. Por eso la información se escribe en un cartón que entra en el cuadro: viaja dentro de los píxeles y sobrevive a cualquier compresión."
+    },
+    {
+      "id": "p6",
+      "tipo": "opcion_multiple",
+      "enunciado": "Terminaste una ficha con el procedimiento para preparar hijuelos de plátano. ¿Cómo compruebas que otra persona puede ejecutarla sin preguntarte nada?",
+      "opciones": [
+        "Se la das a alguien, le pides que la ejecute entera y te quedas mirando sin hablar.",
+        "Anotas literalmente cada pregunta que hace, en el momento, sin contestarla todavía.",
+        "Corriges los huecos que aparecieron y repites la prueba con otra persona distinta.",
+        "La relees tú mismo con calma dos veces, que es más rápido y detecta los mismos huecos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la prueba del silencio, y funciona como una prueba de aceptación con un usuario real. La cuarta opción es incorrecta y explica por qué la prueba es necesaria: al releer tu propia ficha rellenas los huecos automáticamente con lo que ya sabes, así que el conocimiento tácito que se te quedó dentro es exactamente lo que tu relectura no puede detectar. Solo alguien que no sabe lo que tú sabes tropieza con los pasos que faltan."
+    },
+    {
+      "id": "p7",
+      "tipo": "verdadero_falso",
+      "enunciado": "Guardar en la nube el archivo con los datos, y además tener el cuaderno de campo, cumple ya con la regla de respaldo, así que no hace falta comprobar nada más.",
+      "respuesta": false,
+      "explicacion": "Faltan dos cosas. La primera es la verificación: una copia que nunca se abrió no es un respaldo, es una esperanza, y por eso una vez al año se abre la copia lejana y se comprueba que se lee, igual que con el tanque de reserva que nadie vació nunca. La segunda es que el respaldo depende de un formato y de un servicio: si los datos viven dentro de una aplicación que puede desaparecer, la copia desaparece con ella; por eso se usan formatos aburridos —texto plano, tabla separada por comas, fotos comunes— y nombres que empiezan por la fecha en año-mes-día. Y en un proyecto comunitario falta además la copia más importante: la que está en manos de otra persona."
+    },
+    {
+      "id": "p8",
+      "tipo": "abierta",
+      "enunciado": "En Rizoma del Sur vas a probar si la cobertura del suelo mejora el prendimiento y el crecimiento de la yautía. Escribe el plan completo de documentación: cómo diseñas la comparación en los doce lotes, qué anotas y en qué campos, cómo defines y compruebas las medidas, cómo fotografías, cómo llevas la bitácora, cómo lo conviertes en una ficha que un vecino pueda ejecutar y dónde guardas las copias.",
+      "respuestaModelo": "Diseño la comparación como pares y no como un bancal contra otro. En tres lotes distintos monto un par de bancales gemelos —uno con cobertura y otro sin ella— y alterno el lado. La razón es que la unidad experimental es el bancal, no la planta: si pusiera cincuenta plantas con cobertura en un bancal y cincuenta sin ella en otro, tendría una sola repetición por tratamiento y no cincuenta, y estaría cayendo en pseudorreplicación. Alternar y repetir en sitios distintos es lo que evita la variable de confusión, que aquí es concreta: la sombra de los árboles se mueve durante el día, la cercanía al grifo cambia el riego real y las arcillas cambian de comportamiento en pocos metros, así que un solo par mediría la posición tanto como la cobertura. Cambio un único factor y todo lo demás va igual el mismo día: mismo riego, mismo origen de material, misma persona.\n\nEl testigo no es un bancal abandonado, sino lo que ya se hace en la zona: suelo desnudo con el manejo habitual. Si el testigo fuera el abandono, la comparación no contestaría la pregunta que tiene en la cabeza el vecino que va a mirar.\n\nAnoto los siete campos del registro mínimo. Fecha en formato año-mes-día de cada evento. Qué: especie, variedad y sobre todo el origen del material, «cormos de la mata 3 del lote L07, sacados el 12 de octubre», y no «lo que había»; si un lado se planta con material vigoroso y el otro con lo que quedaba en la carretilla, estaría comparando plantas madre y no cobertura. Cuánto: unidades iniciadas contadas una a una. Qué se hizo: el tratamiento con cantidades y unidades —espesor de la cobertura en centímetros, material, fecha de colocación—, y si uso una unidad local anoto la equivalencia, «un balde = el balde azul del galpón lleno hasta el borde». Contra qué: el testigo y qué se le hizo. Condiciones: lluvia medida con el pluviómetro casero, entradas de surazo, riegos, sombra y el hecho de que el suelo es arcilloso y drena mal. Resultado: el número medido con su fecha y su criterio. Y añado quién lo anotó. Cada bancal lleva su código fijo, L01 a L12 más el número de bancal, escrito en el rótulo, en el cartón de las fotos y en el cuaderno.\n\nDefino los criterios antes de medir y no los cambio a mitad de temporada: qué cuenta como prendido —por ejemplo, una hoja nueva completamente desplegada a los veintiún días— y qué cuenta como resultado final. Cuento cosas enteras, «prendieron 43 de 60» y no «como un setenta por ciento», y no escribo decimales que prometan una precisión que no tengo. Compruebo la repetibilidad haciendo que dos personas midan las mismas cinco plantas: si se separan más que la diferencia que espero encontrar, la medida no puede sostener la conclusión. Y anoto los ceros: las plantas muertas, el bancal que se perdió y la causa, porque si solo anoto lo que salió bien caigo en sesgo de supervivencia y el registro engaña sin contener una sola falsedad. Además, en una parcela que se muestra con sus fallas a la vista, el fracaso registrado es lo que hace creíble al éxito registrado.\n\nFotografío desde un punto fijo: una estaca clavada y numerada por par de bancales, con la dirección marcada hacia un punto reconocible, siempre a la misma altura y a la misma hora. En el cuadro entran el listón pintado a rayas de diez centímetros, que es la referencia de escala, y un cartón con fecha, lote y tratamiento, porque el teléfono no guarda ni el lote ni el tratamiento y la fecha del archivo se pierde al reenviar la imagen. Primero la general y después el detalle, y fotografío también los fracasos.\n\nLa bitácora es un cuaderno con bolígrafo que vive en el galpón, en una bolsa cerrada por la humedad y las termitas, y se escribe el mismo día. Es un registro de solo escritura: si descubro que un conteo estaba mal no tacho, escribo una línea nueva fechada que dice qué corrijo, porque la corrección misma es un dato. Separo la observación de la conclusión: «hojas amarillas desde la punta en once de veinte plantas» va en una columna y «le falta nitrógeno» en otra.\n\nAl final convierto todo en una ficha de una hoja: para qué sirve y cuándo no sirve, materiales con cantidades, unidades y sustitutos, los pasos en orden con su criterio de éxito, los puntos de decisión —«si a los quince días no hay brote, hacer esto»—, el resultado en rango con la tasa de fallo real, y quién la escribió y cuándo. La pruebo con la prueba del silencio: se la doy a alguien, la ejecuta entera, yo miro y no hablo, anoto cada pregunta como un hueco, corrijo y vuelvo a probar con otra persona.\n\nY guardo tres copias en dos soportes con una fuera del sitio: el cuaderno, las fotos semanales de sus páginas y una copia en casa de otra persona, en formatos aburridos y con nombres que empiezan por la fecha. Una vez al año abro la copia lejana para comprobar que se lee, porque una copia que nunca se abrió no es un respaldo. Y la que más importa es la que está en manos de otro: Rizoma es un proyecto gratuito y el registro se lleva para poder regalarlo.",
+      "criterios": [
+        "Diseña pares repetidos —al menos tres— en sitios distintos del terreno y alterna el lado del tratamiento, en lugar de un bancal contra otro.",
+        "Nombra que la unidad experimental es el bancal y no la planta (pseudorreplicación) e identifica variables de confusión concretas del sitio: sombra de los árboles, cercanía al grifo, arcillas que cambian en pocos metros.",
+        "Cambia un solo factor y mantiene igual todo lo demás: mismo día, mismo riego, mismo origen de material, misma persona.",
+        "Define el testigo como la práctica habitual de la zona y no como un bancal abandonado.",
+        "Recorre los siete campos del registro mínimo, insiste en el origen del material con un ejemplo concreto y anota las condiciones que no eligió —lluvia medida en el sitio, surazos— con fecha en formato año-mes-día.",
+        "Escribe el criterio de medida antes de medir, con una definición aplicable por otra persona, y no lo cambia a mitad de temporada.",
+        "Cuenta unidades enteras en vez de estimar porcentajes y evita los decimales que fingen precisión.",
+        "Comprueba la repetibilidad entre dos personas y reconoce que el error de medida limita la diferencia que se puede afirmar.",
+        "Anota los ceros, las pérdidas y las causas, citando el sesgo de supervivencia y el valor del fracaso registrado ante quien desconfía.",
+        "Fotografía desde punto fijo numerado, con referencia de escala y cartón con fecha, lote y tratamiento dentro del cuadro, y explica por qué no basta la fecha del teléfono.",
+        "Lleva la bitácora a bolígrafo, el mismo día, como registro de solo escritura, corrigiendo con una línea nueva y separando observación de conclusión.",
+        "Convierte el registro en una ficha con sus seis partes, la valida con la prueba del silencio con dos personas distintas y guarda tres copias en dos soportes con una fuera del sitio, verificando la copia lejana."
+      ],
+      "explicacion": "La pregunta obliga a recorrer la lección entera en el orden en que se usa de verdad: primero el diseño de la comparación, porque un ensayo mal diseñado no se arregla después con ningún número; luego el registro mínimo con sus condiciones y el origen del material, que es el campo que más ensayos invalida; después la medición, donde el criterio escrito y la repetibilidad deciden qué diferencia se puede afirmar; los ceros, que son lo que impide que el cuaderno mienta por omisión; la foto, que solo sirve de prueba con punto fijo, escala y etiqueta; la bitácora de solo escritura, que conserva los hechos; la ficha probada en silencio, que es el único entregable que otra persona puede ejecutar; y las copias, que es lo que hace que el conocimiento deje de depender de un teléfono y de una persona."
+    }
+  ]
+}

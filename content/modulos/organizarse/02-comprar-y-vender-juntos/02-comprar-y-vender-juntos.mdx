@@ -1,0 +1,415 @@
+Dos escenas separadas por cinco meses.
+
+Octubre: alguien necesita sustrato, compra cuatro bolsas en la agropecuaria del barrio y paga lo que
+paga cualquiera que compra cuatro bolsas. Marzo: el mismo huerto tiene veinte kilos de ají dulce
+cosechados esta mañana y los entrega en la tranca al precio que ofrece el que llegó en la camioneta,
+porque el producto no espera y no hay otro comprador a la vista.
+
+Parecen dos problemas distintos y casi siempre se enseñan separados. No lo son: es **el mismo
+problema visto desde los dos lados del mostrador**, con la misma causa y la misma solución. Esta
+lección demuestra primero esa identidad —entenderla cambia la forma de pedir un precio— y después
+baja a la maquinaria, que es lo que casi nunca se escribe.
+
+Dos cosas quedan fuera. **Cuál canal conviene** se resolvió en el módulo trece. Y **cómo se reparte
+el dinero que entra** es la lección cinco: aquí solo se reparte costo.
+
+## La misma máquina vista de los dos lados
+
+Para entender por qué el volumen mueve el precio hay que dejar de mirar el propio bolsillo y mirar
+la estructura de costos **del que está enfrente**.
+
+Quien vende sustrato tiene dos clases de gasto. Una es el producto: cada bolsa le costó algo y ese
+costo se repite bolsa por bolsa. La otra es todo lo que hay que hacer **para que la operación
+ocurra**: atender, cotizar, apartar la mercadería, emitir el comprobante, cobrar, cargar, mandar el
+vehículo, descargar y, si es a crédito, arriesgarse a no cobrar. Ese bloque es tiempo de una persona
+y un viaje de un vehículo, y **es casi el mismo para cuatro bolsas que para cuatrocientas**: es
+un <Termino slug="costo-fijo">costo fijo</Termino>, el concepto del módulo trece aplicado a la
+operación y no a la producción, y tiene la propiedad de repartirse.
+
+Ahí está el mecanismo. El precio más bajo que el vendedor puede aceptar sin perder no es un número:
+es una función del tamaño del pedido.
+
+<Formula explicacion="El piso del vendedor por unidad tiene dos partes: el producto, que se repite en cada unidad, y la parte que le toca a cada unidad del costo de atender la operación. Como el segundo término se divide entre las unidades del pedido, ese piso baja cuando el pedido crece.">
+piso del vendedor por unidad = costo del producto por unidad + (costo de atender el pedido ÷ unidades del pedido)
+</Formula>
+
+De ahí sale la consecuencia que cambia la forma de negociar: **un descuento por volumen no es un
+favor ni una victoria de regateo, es el vendedor devolviendo parte de un ahorro que vos le
+produjiste.** Si podés nombrar ese ahorro —«una sola entrega, un solo cobro, pagado por
+adelantado»—, no estás pidiendo nada: estás proponiendo un intercambio en el que ganan los dos.
+
+Y ahora dese vuelta el mostrador. El que llega en la camioneta a comprar ají tiene la misma
+estructura: el viaje le cuesta lo mismo cargue veinte kilos o doscientos, el trato con cada
+productor le lleva el mismo rato, y por debajo de cierta carga no le sale entrar al camino.
+**Comprar barato y vender bien son la misma ecuación con el signo cambiado.**
+
+<Analogia>
+Es el costo por llamada de un servicio remoto.
+
+Cada petición paga un peaje que no depende de lo que traiga: abrir la conexión, autenticar, viajar
+por la red, serializar. Pedir un registro y pedir quinientos cuesta casi lo mismo, y por eso el
+patrón N+1 es lento aunque cada consulta sea trivial: no pagás el trabajo, **pagás mil peajes.**
+Agrupar no elimina el peaje, lo reparte, y por eso la curva se desploma de uno a cincuenta y ya casi
+no se mueve de quinientos a mil: **el grupo chico captura casi todo el beneficio.**
+
+La segunda mitad casi nadie la recuerda: **el lote demasiado grande empeora las cosas.** Si algo
+falla se cae la tanda entera. El equivalente es literal: comprar un volumen que no se consume antes
+de que el fertilizante se apelmace no es un ahorro, es tirar plata más barata.
+</Analogia>
+
+## Cuatro palancas, no una
+
+«Comprar juntos sale más barato» esconde cuatro mecanismos distintos, y cada uno se diagnostica con
+otra pregunta.
+
+**La primera es el reparto del costo de operación**, la que acaba de describirse. Produce una curva:
+el precio unitario baja rápido y después se aplana. Se diagnostica pidiendo precio para tres
+volúmenes distintos.
+
+**La segunda no es una curva sino un escalón.** Muchos proveedores no venden por debajo de cierta
+cantidad, el envase industrial no se fracciona, o el vehículo no sale por menos de cierta carga. Eso
+es un <Termino slug="lote-minimo">lote mínimo</Termino>, y por debajo de él el precio no es alto:
+**no existe.** No estás pagando caro, estás fuera del canal. Se diagnostica con una sola pregunta
+—«¿cuál es el pedido mínimo?»— y la respuesta suele decidir sola si hace falta juntarse.
+
+**La tercera es el transporte.** El <Termino slug="flete">flete</Termino> se paga **por viaje y no
+por unidad**: vehículo, combustible, chofer y horas cuestan lo mismo vaya lleno o vaya a medias.
+Repartido entre cuatro bolsas es una barbaridad; repartido entre una carga completa desaparece. De
+ahí la regla que evita errores caros: **el precio que hay que comparar no es el de lista sino el
+costo puesto en el patio**, ya con el flete adentro. Un proveedor más barato y más lejos puede
+terminar siendo el caro.
+
+**La cuarta no baja el precio: abre la puerta.** Una tienda o un comedor no compran un lote: compran
+abastecimiento, todas las semanas, en cantidad y calidad parecidas. Una parcela sola produce en
+picos y huecos, y queda estructuralmente fuera de esos canales por buena que sea. Esa capacidad de
+sostener entrega regular es
+la <Termino slug="continuidad-de-oferta">continuidad de oferta</Termino>, y varias parcelas con
+siembras escalonadas la construyen sin que ninguna cambie de tamaño.
+
+<Analogia>
+La cuarta palanca es disponibilidad, no rendimiento.
+
+Nadie elige un servicio por su pico: uno que va rapidísimo tres días al mes y está caído el resto es
+inutilizable, y uno mediocre que responde siempre se contrata sin discusión. **El cliente no compra
+capacidad, compra la promesa de que va a estar.**
+
+Un grupo hace con las parcelas lo que un conjunto de réplicas hace con las máquinas: ninguna está
+disponible siempre, el conjunto sí. Y aparece la degradación elegante: si un miembro falla el pedido
+sale más chico, pero **sale**. Un solo proveedor que falla no entrega menos: no entrega.
+</Analogia>
+
+<Dato titulo="Cómo se pide un precio por volumen sin quemar al proveedor">
+Se pide el precio para la cantidad que usás vos, para diez veces esa cantidad y para cien veces. Se
+pregunta **cuál es el pedido mínimo** y **desde qué volumen entrega en la zona y cuánto cobra el
+flete**. Y si hay diferencia entre pagar al contado y pagar después, porque muchas veces la hay y es
+mayor que el descuento por cantidad.
+
+La advertencia: **no prometas un volumen que todavía no tenés comprometido.** Un grupo que anuncia
+un pedido grande y aparece con la cuarta parte no consigue un mal precio la próxima vez: consigue
+que no le contesten el teléfono.
+
+Y lo de siempre: **cualquier cifra de precios, mínimos o fletes se averigua en el mercado local esta
+semana.** Ningún curso puede darla.
+</Dato>
+
+## Lo que el volumen no arregla
+
+<Formula explicacion="El ahorro que de verdad queda. Al descuento capturado hay que restarle lo que la operación conjunta agrega —flete, envases, producto que se echa a perder— y las horas de coordinación valoradas al precio local de la jornada.">
+ahorro neto = (precio solo − precio conjunto) × cantidad usada − gastos de la operación − horas de coordinación × valor de la hora
+</Formula>
+
+Mirá la primera resta: **cantidad usada, no cantidad comprada.** Lo que se compró de más y se echó a
+perder no ahorró nada. Y en el último término, las horas se valoran
+al <Termino slug="jornal">jornal</Termino> local, porque son horas que no se trabajaron en la
+parcela.
+
+<Advertencia>
+Tres formas de perder plata comprando barato.
+
+**Comprar de más porque el precio invitaba.** La plata sale hoy y el producto se degrada en el
+galpón: fertilizante apelmazado, semilla sin poder germinativo, polietileno quebradizo al sol. **La
+cantidad que hay que comprar es la que se consume antes de que se degrade.**
+
+**Confundir el descuento con la calidad.** Un sustrato barato con semilla de maleza se paga tres
+veces: en la compra, en el desmalezado y en las plantas perdidas. El precio por unidad solo se
+compara **entre cosas iguales**.
+
+**Olvidar el costo de coordinar.** Cuatro llamadas, dos reuniones y tres conversaciones incómodas
+por el sobrante también son costo. **Si el ahorro no lo supera con claridad, la respuesta correcta
+es comprar solo.**
+</Advertencia>
+
+## La maquinaria de una compra conjunta
+
+Casi ninguna compra conjunta fracasa por el precio: fracasan por la administración. Seis piezas, y
+todas se deciden **antes** de la primera llamada al proveedor.
+
+**Uno: alguien consolida, con nombre y apellido.** Juntar en una lista lo que cada miembro quiere
+—producto, cantidad y monto— para presentarse ante el proveedor como un solo comprador es
+la <Termino slug="consolidacion-de-pedido">consolidación de pedido</Termino>. Lleva horas reales y
+**no es un cargo de autoridad**: el que consolida no decide por los demás, ejecuta lo que la lista
+dice. Conviene que rote y que ese trabajo se reconozca; cómo se reconoce es la lección cinco.
+
+**Dos: la lista se cierra en una fecha.** Antes del corte se agrega y se saca lo que sea; después,
+lo que llegue va en el pedido siguiente. Sin fecha de corte el total nunca es un número sino un
+rumor que se mueve mientras se negocia. Es el motivo por el que se congela la rama antes de
+compilar: **algo tiene que quedarse quieto para poder cerrarlo.**
+
+**Tres: quien adelanta la plata está prestando.** Esa persona
+pone <Termino slug="capital-de-trabajo">capital de trabajo</Termino> propio y asume
+el <Termino slug="riesgo-de-contraparte">riesgo de contraparte</Termino>: la posibilidad de que el
+otro no cumpla su parte del trato. Si un miembro después no paga, el que adelantó pierde la plata y
+además pierde al vecino, porque cobrarle a un vecino rompe la relación mucho antes de recuperar el
+dinero.
+
+<Advertencia>
+**La regla del prepago: nadie compromete plata que no tiene en la mano.**
+
+El <Termino slug="prepago">prepago</Termino> es simple: el pedido no se cierra con una lista de
+intenciones, se cierra cuando la plata de cada uno está entregada. Lo que no está pagado no está en
+el pedido, sin excepciones.
+
+Parece rígido y es lo contrario: es lo que permite que el grupo funcione con gente que todavía no se
+conoce bien. **Convierte una intención en un hecho**, y las intenciones en un grupo nuevo tienen una
+tasa de incumplimiento que nadie declara. **Dimensiona el pedido con el número verdadero.** Y
+**elimina la figura del acreedor interno**, el detonante más frecuente de ruptura.
+
+Es un protocolo de compromiso en dos fases: primero cada participante confirma que puede, después se
+paga. **Un sistema serio no escribe nada definitivo hasta que todos confirmaron**, porque tratar la
+intención como confirmación deja el estado a medias cuando uno se cae. Aquí «deshacerlo a mano»
+significa que alguien se quedó con la plata puesta y con el enojo.
+
+Si un miembro no puede pagar por adelantado hay dos salidas legítimas: queda fuera de este pedido, o
+alguien le presta **con un papel firmado, un monto y una fecha**. Un préstamo sin nombre es un
+conflicto con fecha diferida.
+</Advertencia>
+
+**Cuatro: recibir es un acto, no un trámite.** Revisar lo que llega contra lo que se pidió es
+el <Termino slug="control-de-recepcion">control de recepción</Termino>, y se hace con el vehículo
+todavía ahí y con dos personas, nunca con una. Se cuenta y se pesa, se verifica que sea el producto
+cotizado —marca, presentación, granulometría, fecha— y no un parecido, y se revisa humedad, envases
+rotos y contaminación. **El reclamo tiene ventana y se cierra cuando el camión arranca**: una vez
+repartido entre cinco patios ya no se puede probar de dónde salió el problema.
+
+**Cinco: el reparto se hace a la vista.** Mismo día, mismo lugar, cada uno presente o representado,
+todo pesado delante de todos. El precio interno **no es el de lista**: es el costo puesto en el
+patio, o sea el total pagado —producto, flete, envases— dividido entre lo que se repartió. Esto no
+es repartir ingresos, que es la lección cinco: es repartir un costo entre quienes lo generaron.
+
+**Seis: el sobrante se decide antes de que exista.** Siempre sobra algo, porque el envase no se
+fracciona o porque el lote mínimo obliga a redondear hacia arriba. Y es el detonante clásico por un
+motivo simple: **cuando aparece, ya está en el patio de alguien, y esa persona ya tiene una
+opinión.** El sobrante es del grupo y no de quien tiene el galpón; tiene tres destinos posibles
+—reserva común con custodio nombrado, venta interna al costo al primero que lo pida, o saldo a favor
+en el pedido siguiente—; y si se degrada, tiene fecha límite.
+
+## La maquinaria de una venta conjunta
+
+Vender junto es lo mismo con el signo cambiado, más una diferencia que lo complica todo: en la
+compra, lo que llega es de un proveedor y se controla en un punto; en la venta, **lo que sale lo
+produjeron varias manos y el nombre es uno solo.**
+
+**La norma común de calidad es lo primero.** El conjunto escrito de condiciones que un producto debe
+cumplir para entrar al lote común es
+la <Termino slug="norma-de-calidad">norma de calidad</Termino>: especie y variedad, punto de
+cosecha, el <Termino slug="calibrado">calibrado</Termino> o rango de tamaño aceptado, sanidad,
+limpieza, envase y cantidad por bulto. Una norma sin segunda categoría está mal diseñada: lo que no
+pasa **no se tira, se vende como segunda y por separado**, porque si no existe la segunda, la
+segunda se cuela en la primera.
+
+La norma se acuerda **mirando producto, no hablando**: tres ejemplos sobre la mesa —esto entra, esto
+es segunda, esto no sale—. «Sano» o «parejo» significan algo distinto para cada persona; una muestra
+física no. Es la diferencia entre una especificación en prosa y un caso de prueba.
+
+**Y la selección no la hace el dueño del lote.** Todo el mundo califica lo suyo medio escalón más
+arriba, y no por deshonestidad: es un sesgo, uno conoce el trabajo que le costó y lo ve en el fruto.
+Por eso la revisión se cruza: revisa otro miembro, o quien recibe en el acopio.
+
+**El punto de acopio es un lugar y una hora.** Donde converge el producto de todos antes de salir es
+el <Termino slug="punto-de-acopio">punto de acopio</Termino>, y necesita sombra y ventilación —el
+producto cosechado sigue respirando, como explica el módulo veinticinco—, piso limpio, acceso para
+el vehículo, alguien responsable presente y **una hora de corte**: lo que llega después no viaja.
+Ahí se pesa, se revisa contra la norma, se registra por miembro y se marca cada bulto.
+
+**Una sola voz en el precio.** El grupo acuerda antes un precio mínimo por debajo del cual no se
+vende, nombra a una persona para negociar y define qué puede decidir sola. El motivo es mecánico:
+**si dos miembros cotizan al mismo comprador, el comprador compra al que tiene más apuro y ese
+precio pasa a ser el de todos.** No hay mala fe: el comprador hace su trabajo, que es encontrar el
+eslabón más débil. Y quien negocia no debería ser el que esta semana tiene la urgencia de plata más
+grande.
+
+**Quién factura y quién transporta se decide antes y se consulta afuera.** Quien emite el
+comprobante figura como vendedor de todo el lote, y eso genera obligaciones a su nombre que no se
+reparten solas por haberlo acordado entre vecinos. **Qué documentos existen, quién puede emitirlos y
+qué obligaciones deja cada opción hay que consultarlo con un contador o abogado local y con la
+autoridad competente**: este curso no inventa requisitos ni plazos. Del transporte hay que escribir
+lo mismo: quién lleva, quién paga el flete y **de quién es la pérdida si el producto se daña en el
+viaje.**
+
+<Analogia>
+El comprador no mide miembros: mide una sola métrica agregada.
+
+A un cliente no le importa cuál de tus instancias devolvió basura: ve una tasa de error del
+servicio, y con veinte instancias basta que una falle para que esa tasa sea inaceptable. Por eso los
+sistemas serios sacan de rotación la instancia enferma **antes** de que el cliente la note: el
+control de calidad va en el punto de acopio, no en el camión del comprador.
+
+Un lote con producto malo no se descuenta parcialmente: se rechaza entero, se paga menos entero, o
+el comprador no vuelve, y ninguno de esos castigos distingue de quién era la caja. **La confianza se
+construye con muchas entregas y se pierde con una**, y por eso la norma tiene que ser más estricta
+al principio, cuando no hay historial que amortigüe nada.
+</Analogia>
+
+<Advertencia>
+**«Total, se pierde en el montón.»**
+
+Esa frase es el punto exacto donde mueren las ventas conjuntas. Meter producto de segunda en el lote
+de primera es individualmente racional —se cobra precio de primera por algo que valía menos y el
+daño se diluye— y colectivamente catastrófico. Es el polizón de la lección anterior aplicado a la
+calidad: los que seleccionan bien lo notan, concluyen que son los tontos y aflojan su criterio.
+Dicho crudo: **el que mete producto de segunda en el lote común no le roba al comprador, le roba a
+sus vecinos.**
+
+La contramedida es técnica, no moral, y es la <Termino slug="trazabilidad">trazabilidad</Termino>:
+cada bulto marcado con un código del miembro y un registro simple —fecha, miembro, producto,
+cantidad, quién revisó—. Permite que un problema tenga dueño en lugar de convertirse en sospecha
+general, y permite corregir, porque muchas veces el lote malo no es trampa sino un error de manejo
+que se arregla enseñando. Qué pasa si alguien reincide se acuerda por escrito antes, y eso es la
+lección seis.
+</Advertencia>
+
+## Lo que hay que dejar escrito antes de empezar
+
+La prueba de que un grupo está listo no es el entusiasmo de la reunión: es que estas decisiones ya
+tengan respuesta escrita. Cabe en una página.
+
+<Tabla>
+
+| Decisión | Compra conjunta | Venta conjunta | Si no se escribe |
+| --- | --- | --- | --- |
+| Quién ejecuta | Quién consolida y rinde cuentas | Quién recibe y quién negocia | El trabajo cae siempre en el mismo |
+| Cuándo se cierra | Fecha de corte de la lista | Hora de corte del acopio | El total es un rumor y no se negocia |
+| La plata | Prepago íntegro antes de comprar | Precio mínimo acordado de antemano | Acreedor interno o precio hundido |
+| El control | Recepción con dos personas y acta | Norma de calidad con muestra física | El reclamo llega tarde y no se prueba |
+| El transporte | Flete prorrateado, costo en el patio | De quién es la pérdida en ruta | Se discute con el producto dañado |
+| Lo que queda fuera | Destino del sobrante y su fecha | Qué se hace con la segunda categoría | El sobrante se queda donde cayó |
+
+</Tabla>
+
+<AplicarRizoma>
+**Rizoma del Sur tiene los dos lados del mostrador activos al mismo tiempo.** Compra en volumen chico
+—sustrato, tierra cernida, bolsas de polietileno, malla de sombra, tubería y goteros, enmiendas— y
+produce para salir: plantines, yautía, culantro, ají dulce, gandul, batata, plátano, ornamentales y
+frutales injertados. En 3.666 m² ninguno de los dos flujos alcanza solo el volumen que mueve un
+precio: es el diagnóstico de escala de la lección anterior, aplicado al sitio.
+
+**Del lado de la compra hay que separar lo que tiene curva de lo que tiene escalón.** Sustrato,
+bolsas y goteros probablemente tengan curva. Las enmiendas a granel tienen escalón, porque la
+materia orgánica en volumen se mueve en vehículo de carga y **el viaje se contrata por viaje, no por
+metro cúbico**. La tarea concreta es llamar a proveedores de Santa Cruz y anotar, por insumo, precio
+a tres volúmenes, pedido mínimo, entrega en Zanja Honda y diferencia entre contado y crédito. Ese
+cuadro no existe todavía y es el primer entregable real del módulo.
+
+**La regla del prepago tiene aquí una consecuencia que conviene fijar por escrito: Rizoma consolida
+y no financia.** El proyecto es comunitario y gratuito, y si adelanta la plata de los insumos de los
+vecinos se convierte en el acreedor del barrio. El día que uno no pueda pagar —y va a pasar, sin
+mala fe— pierde la plata, pierde al vecino y con él la posibilidad de enseñarle cualquier otra cosa.
+**Un proyecto que existe para facilitar el progreso de la comunidad no puede ser también su
+prestamista.** Armar la lista, llamar y organizar la recepción es el aporte correcto.
+
+**La recepción y el sobrante tienen aquí forma tropical.** Al recibir hay que mirar dos cosas que no
+son obvias: semilla de maleza en el sustrato o la tierra cernida comprada —un lote contaminado no se
+nota al descargar y se paga durante meses en desmalezado— y la humedad de llegada, porque entre
+octubre y abril un fertilizante húmedo se apelmaza y una semilla húmeda pierde poder germinativo
+mientras espera. Y el sobrante vence aunque la etiqueta no lo diga: **se compra lo que se consume
+antes de la próxima época de lluvias, y lo que sobre solo se acepta si hay lugar seco y custodio
+nombrado.**
+
+**Del lado de la venta, el catálogo se parte en dos por su facilidad de normar.** Plantines y
+frutales injertados admiten una norma casi visual: altura, número de hojas verdaderas, cepellón
+entero que no se desarma, injerto prendido y soldado, ausencia de plaga. Eso se acuerda en una tarde
+poniendo tres plantines sobre una mesa, y por eso es el mejor candidato para la primera venta
+conjunta del barrio. El ají dulce y el culantro exigen además hora de corte temprana, sombra en el
+acopio y salida el mismo día.
+
+**La continuidad es la palanca más valiosa aquí y la que nadie usa.** Un comedor no quiere treinta
+kilos de culantro un martes: quiere culantro todas las semanas. Con lluvias de octubre a abril y
+seca de mayo a septiembre, todos siembran y cosechan en la misma ventana, y esa simultaneidad hunde
+el precio justo cuando todos tienen producto. Escalonar las siembras **entre vecinos** no cuesta un
+peso ni requiere figura legal alguna, y es lo que convierte a un grupo de patios en algo con lo que
+un comprador puede contar.
+
+**Sobre la voz única, Rizoma debe ir contra la tentación natural.** Sería fácil que el proyecto
+negociara por todos: tiene el contacto, el manejo de números y la reputación. Y sería el error que
+este módulo enseña a evitar, porque crearía un barrio que no puede vender sin Rizoma. El mandato
+debe rotar entre vecinos, y lo que el proyecto aporta es lo transferible: cómo se pregunta un
+precio, cómo se calcula un piso, cómo se anota lo que se pagó esta semana. **El objetivo es que la
+próxima venta conjunta ocurra sin que nadie de Rizoma esté presente.**
+
+**El arranque de esta semana cabe en una hoja.** Tres vecinos, un solo insumo, la lista cerrada con
+fecha, la plata entregada antes de comprar, dos personas recibiendo, el reparto al costo puesto en
+el patio y el destino del sobrante escrito de antemano. Más un dato que anotar: **cuánto habría
+pagado cada uno comprando solo.** Esa diferencia es el primer número propio del grupo y vale más que
+cualquier discurso sobre las ventajas de organizarse.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**En Santa Cruz la cadena de abastecimiento tiene varios escalones y el precio de un mismo insumo
+cambia mucho entre ellos.** Agropecuarias de barrio, casas comerciales grandes, distribuidores y
+mercados de abasto no son lo mismo, y el escalón al que uno accede depende del volumen que mueve: la
+tesis de esta lección hecha geografía. Cuáles son esos proveedores hoy y desde qué cantidad entregan
+en la zona sur **son datos que solo sirven si se averiguan localmente y en la fecha**.
+
+**Sobre el intermediario conviene hablar sin demonizarlo, porque la caricatura impide entenderlo.**
+El que llega en la camioneta a la tranca presta servicios reales: transporta, paga en el acto, asume
+el riesgo de no vender lo que compró y conoce el mercado de la ciudad. Parte de su margen paga eso, y
+un grupo que quiera reemplazarlo tiene que hacerse cargo de las tres cosas. Lo que un grupo sí
+corrige barato son las asimetrías que no son servicio sino posición: **la de urgencia** —tener dónde
+acopiar y no estar obligado a vender hoy— y **la de información**, que se corrige con tres vecinos
+contándose por teléfono a cuánto les pagaron esta semana.
+
+**El comprobante aparece apenas se sale del trato informal.** Restaurantes, tiendas establecidas,
+supermercados e instituciones suelen necesitar documentación para poder comprar, y ahí la venta
+conjunta choca con una pregunta que no es agronómica: quién emite ese documento y qué obligaciones
+le quedan a esa persona. **Cuáles son los documentos, quién puede emitirlos, qué registros exigen y
+qué obligaciones dejan hay que consultarlo con un contador o abogado local y con la autoridad
+competente**, antes de comprometer una entrega. Este curso no cita requisitos, montos ni plazos
+porque cambian y porque un dato inventado en material de enseñanza se propaga durante años.
+
+**El calendario del oriente condiciona las dos operaciones en el mismo sentido.** Entre octubre y
+abril llueve, los caminos de tierra de zonas como Zanja Honda se complican, el flete se encarece o
+no entra, y al mismo tiempo todos cosechan lo mismo: el precio cae justo cuando el costo de sacar el
+producto sube. Conviene comprar en volumen cuando el camino está firme y saber que **la ventana de
+mejor precio no coincide con la de mayor producción**. El surazo agrega su sorpresa: una noche cerca
+de los diez grados con viento fuerte cambia el punto de cosecha y puede vaciar una entrega
+comprometida, así que ningún compromiso de volumen debería tomarse sin margen.
+
+**El acopio en clima tropical tiene además un detalle sanitario que se pasa por alto.** Producto
+cosechado bajo sol de mediodía, apilado sobre tierra caliente y sin ventilación pierde calidad en
+horas, así que la hora de corte del acopio importa tanto como la de cosecha. Y los envases, baldes y
+cajas del acopio acumulan agua limpia de lluvia, que es donde cría el mosquito que transmite el
+dengue, endémico en la zona: un acopio mal llevado se vuelve un criadero al lado de donde se junta
+la gente. Los criterios sanitarios los define la autoridad de salud y conviene consultarlos con el
+centro de salud o el municipio.
+
+**Y una advertencia sobre el manejo de plata.** Las compras conjuntas se hacen muchas veces en
+efectivo y sin registro, y esa combinación es el origen del segundo conflicto más frecuente después
+del trabajo desigual. La contramedida no es desconfianza: es **dejar rastro de todo**, con recibos
+simples firmados y con la lista y el monto de cada uno a la vista. Quien haya visto fallar una
+asociación en el país reconocerá el patrón: casi nunca falló por falta de ganas, sino porque nadie
+escribió lo que aquí ocupa una página.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Esta lección resolvió el flujo: cosas que entran compradas juntas y cosas que salen vendidas juntas,
+con la maquinaria que hace que eso no termine en pelea. Todo lo anterior se puede hacer sin poseer
+nada en común, y esa es una virtud enorme: son actos reversibles que se prueban una vez y se
+abandonan sin costo si no funcionaron.
+
+La lección siguiente cruza esa frontera: **Herramientas y equipos compartidos**, donde ya no se
+comparte una operación sino un bien que dura años. Primero el cálculo que decide qué conviene
+compartir —caro, indivisible y con uso individual bajo— y qué no debe compartirse nunca. Y después
+el grueso: custodio con nombre, turnos y reservas, revisión del estado en cada entrega, consumibles
+a cargo de quien usa, fondo de mantenimiento que se alimenta por uso y no por año, y la distinción
+entre desgaste normal y mal uso, que es la que decide quién paga.

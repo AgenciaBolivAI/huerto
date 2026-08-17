@@ -1,0 +1,75 @@
+{
+  "titulo": "pH y disponibilidad de nutrientes",
+  "subtitulo": "El pH no alimenta a la planta: decide qué de lo que hay es alcanzable. Fertilizar con el pH equivocado es tirar dinero.",
+  "duracionMin": 34,
+  "portada": "portada.webp",
+  "portadaAlt": "Fila de tubos de ensayo con suspensiones de suelo y agua que han virado a colores distintos tras añadir un indicador de pH, del rojo anaranjado al azul verdoso, junto a un montón de tierra oscura y una varilla de vidrio",
+  "objetivos": [
+    "Explicar por qué la escala de pH es logarítmica y qué implica eso al comparar dos suelos o al calcular una corrección.",
+    "Describir el mecanismo por el que el pH bloquea nutrientes, con el fósforo como caso central: unión a hierro y aluminio en ácido, a calcio en alcalino.",
+    "Identificar la toxicidad por aluminio como el problema dominante por debajo de pH 5,5, y distinguirla de una carencia nutricional.",
+    "Medir el pH correctamente en suspensión 1:2,5 con agua destilada, y reconocer los límites de los medidores de varilla.",
+    "Justificar por qué la dosis de cal depende del poder tampón y no del pH, y por qué exige un análisis completo.",
+    "Asignar los cultivos del catálogo a los lotes según su pH preferido, en lugar de forzar todos los lotes al mismo valor."
+  ],
+  "prerrequisitos": [
+    "ciencia-del-suelo/01-textura-prueba-frasco"
+  ],
+  "videos": [
+    {
+      "titulo": "YaraTips - El pH del Suelo en la disponibilidad de Nutrientes",
+      "canal": "Yara Latinoamérica",
+      "url": "https://www.youtube.com/watch?v=1Yu1Qg0INX8",
+      "idioma": "es",
+      "duracion": "1:56",
+      "porQue": "Dos minutos que resumen exactamente la tesis de la lección: el pH decide qué nutrientes están disponibles. Sirve como cierre visual de la tabla de bloqueos, no como material principal.",
+      "verificado": true
+    },
+    {
+      "titulo": "Cómo MEDIR CORRECTAMENTE EL PH en nuestros suelos e interpretarlo 📱💻",
+      "canal": "Planeta Agronómico",
+      "url": "https://www.youtube.com/watch?v=n8M6AN30OZQ",
+      "idioma": "es",
+      "duracion": "8:14",
+      "porQue": "El procedimiento de medición hecho bien, con la proporción suelo:agua y la calibración del peachímetro. Es el paso donde se falsea el dato sin darse cuenta, y verlo evita repetir el muestreo.",
+      "verificado": true
+    },
+    {
+      "titulo": "Cómo medir el pH y la salinidad del suelo en terreno ✅ Interpretación práctica 🚜",
+      "canal": "Planeta Agronómico",
+      "url": "https://www.youtube.com/watch?v=YnCen78LaNo",
+      "idioma": "es",
+      "duracion": "7:46",
+      "porQue": "Añade la interpretación en campo y la salinidad, que viaja junto al pH cuando se riega con agua de pozo. Complementa el video anterior con la parte de qué hacer con el número una vez que lo tienes.",
+      "verificado": true
+    }
+  ],
+  "referencias": [
+    {
+      "titulo": "Manejo de la acidez y el encalado del suelo",
+      "fuente": "Eloy Molina y Alfredo Alvarado, Universidad de Costa Rica",
+      "url": "https://agro.ucr.ac.cr/cabalceta/af0208/Encalado2.pdf",
+      "nota": "Material universitario de contexto tropical, con el cálculo del requerimiento de cal a partir de acidez intercambiable y CIC. Mucho más aplicable que las fuentes europeas."
+    },
+    {
+      "titulo": "Cómo determinar los requerimientos de cal del suelo",
+      "fuente": "Bioedafología",
+      "url": "https://www.bioedafologia.com/sites/default/files/documentos/pdf/Requerimiento-de-cal.pdf",
+      "nota": "Desarrolla por qué la dosis depende del poder tampón y no solo del pH, con los métodos de cálculo habituales."
+    },
+    {
+      "titulo": "Mitos y realidades de las cales y enmiendas en Colombia",
+      "fuente": "Universidad Nacional de Colombia",
+      "url": "https://repositorio.unal.edu.co/bitstreams/5e867257-c0b6-4e1b-bee3-3bfc5ef7af3b/download",
+      "nota": "Revisión crítica de errores frecuentes con las enmiendas calcáreas en suelos tropicales, incluido el sobreencalado."
+    }
+  ],
+  "terminos": [
+    "ph",
+    "encalado",
+    "aluminio-intercambiable",
+    "poder-tampon",
+    "clorosis-ferrica"
+  ],
+  "practica": true
+}

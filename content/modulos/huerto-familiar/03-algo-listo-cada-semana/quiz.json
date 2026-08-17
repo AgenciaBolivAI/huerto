@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-falla",
+      "tipo": "opcion_multiple",
+      "enunciado": "Una familia cosechó bien todo el verano y aun así siguió comprando verdura todo el año. ¿Por qué?",
+      "opciones": [
+        "Porque la producción llegó concentrada en pocas semanas y no había dónde guardarla.",
+        "Porque la métrica que decide no es el total anual sino en cuántas semanas hay algo cosechable.",
+        "Porque al sembrar todo el mismo día, toda la cosecha de esa siembra cae en la misma ventana.",
+        "Porque la superficie sembrada era demasiado chica para el consumo de la familia."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta confunde el problema. Aquí no faltó producción: hubo tres bolsas de lechuga en una semana y rabanitos de sobra. El fallo es de reparto en el tiempo, no de cantidad, y por eso agrandar la superficie no lo arregla: una parcela el doble de grande sembrada el mismo día produce el doble de montaña y el mismo hueco de julio. Diagnosticar mal esto es caro, porque lleva a pedir más terreno cuando lo que hacía falta era dividir la semilla en tandas."
+    },
+    {
+      "id": "quien-obliga-a-escalonar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es cierto sobre qué especies obligan a escalonar y cuáles no?",
+      "opciones": [
+        "Las de cosecha única lo exigen siempre: toda la producción de esa siembra ocurre en una ventana corta.",
+        "Las de corte y rebrote casi no lo exigen, porque una sola siembra produce hoja durante meses.",
+        "La reserva en pie no lo exige: el órgano espera en la planta hasta el día que se come.",
+        "Las de cosecha repetida por fruto son las que más lo exigen, porque su producción no es plana."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte el razonamiento. Que la producción de una planta de fruto suba, haga meseta y decaiga no es un motivo para escalonar mucho: al contrario, significa que una sola planta ya está repartiendo su entrega a lo largo de semanas o meses, que es justo lo que buscamos. Con una o dos tandas al año alcanza, y la segunda se hace para relevar a la primera cuando entra en decadencia, no para tener producción continua desde cero. Las que no perdonan son las de golpe único, donde una siembra es una cosecha."
+    },
+    {
+      "id": "regla-del-intervalo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si una especie aguanta unas dos semanas en su punto, sembrarla cada cuatro semanas es buena idea, porque así las tandas no se solapan.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error de cálculo más común. La regla es que el intervalo entre siembras no puede ser mayor que la ventana de cosecha: con ventana de dos semanas e intervalo de cuatro, quedan dos semanas con comida y dos semanas de hueco, para siempre. El solape no es un defecto que haya que evitar, es el margen de seguridad que absorbe que una tanda germine mal o que un surazo la atrase. Y la asimetría es clara: el solape se come o se regala, mientras que el hueco se paga en la feria."
+    },
+    {
+      "id": "intervalo-variable",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un intervalo fijo todo el año no produce cosechas parejas en Santa Cruz?",
+      "opciones": [
+        "Porque la planta acumula calor y no días, así que en la época fresca el mismo ciclo se alarga.",
+        "Porque mientras el clima se enfría cada tanda tarda más que la anterior y las cosechas se separan.",
+        "Porque con calor la ventana de cosecha se acorta: la planta se pasa rápido y sube a flor.",
+        "Porque el fotoperiodo cruceño varía tanto entre junio y diciembre que reordena el ciclo entero."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es un traslado indebido de un razonamiento de latitudes altas. A unos 17,8° de latitud sur el día varía aproximadamente entre 11 y 13 horas: es una diferencia real, que afecta a la floración de algunas especies sensibles, pero no es el motor de lo que se está explicando. Lo que deforma las tandas aquí es la temperatura acumulada —que alarga o acorta el ciclo— y el agua. Atribuirlo al fotoperiodo lleva a la conclusión equivocada de que no se puede hacer nada, cuando la corrección es concreta: acortar el intervalo entrando al fresco y alargarlo entrando al calor."
+    },
+    {
+      "id": "superficie",
+      "tipo": "verdadero_falso",
+      "enunciado": "Escalonar las siembras exige más superficie total que sembrar todo de una vez.",
+      "respuesta": false,
+      "explicacion": "Falso. Cinco tandas vivas de una quinta parte del tamaño ocupan lo mismo que una sola siembra cinco veces más grande: lo que cambia no es la superficie sino el perfil de uso, que pasa de un pico seguido de una cama vacía a una fracción ocupada de forma constante. Es dimensionar para la carga sostenida en vez de para el pico. El costo real del escalonamiento está en otro lado y conviene aceptarlo antes de empezar: en el número de veces que hay que salir a sembrar. Ahí, y no en la tierra, es donde los planes se abandonan."
+    },
+    {
+      "id": "sucesion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace que la sucesión de cultivos funcione en vez de crear problemas nuevos?",
+      "opciones": [
+        "Tener el plantín ya producido en almácigo antes de que la cama se libere.",
+        "Hacer el cambio como una sola operación seguida, sin dejar la cama vacía esperando.",
+        "No repetir familia botánica: la sucesión se diseña dentro de la rotación, nunca contra ella.",
+        "Aprovechar que varias cosechas al año extraen lo mismo que una, porque el suelo se recupera entre ciclos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y es la trampa de fertilidad de la alta rotación. Tres cosechas al año extraen tres veces, y en este clima cálido y lluvioso la materia orgánica se consume rápido, así que el suelo no repone solo lo que se llevó cada cosecha en el órgano cortado. Una cama de alta rotación es una cama que exige reposición en cada cambio —compost o estiércol maduro al preparar— y cobertura muerta encima apenas el cultivo levanta. Creer lo contrario produce camas que rinden muy bien dos años y después bajan sin que nadie sepa por qué."
+    },
+    {
+      "id": "calendario-familiar",
+      "tipo": "abierta",
+      "enunciado": "Diseñá el calendario de un huerto familiar en Santa Cruz para que haya algo que cosechar cada semana del año: qué usás como base, qué escalonás y con qué intervalo, cómo corregís ese intervalo según la época, qué hacés el día que se libera una cama y qué anotás.",
+      "respuestaModelo": "Empiezo cambiando la métrica. No voy a medir el huerto en kilos al año sino en semanas del año con algo cosechable, porque una casa con sesenta kilos en tres semanas y ocho meses de nada sigue comprando verdura. El objetivo declarado es no tener huecos.\n\nLa base no la pongo en cultivos que exijan calendario. La armo con las tres clases que reparten solas. Corte y rebrote para la hoja de todos los días: culantro o recao, acelga, cebollín y aromáticas, que de una sola siembra dan durante meses si se cortan las hojas de afuera y no se toca la corona del centro. Cosecha repetida por fruto para la olla: ají dulce, vainita, zapallito, pepino, con una o dos tandas al año y la segunda pensada para relevar a la primera cuando entre en decadencia. Y reserva en pie como despensa: batata o camote, yautía o walusa, yuca, gandul que se seca en la mata y plátano plantado por hijos en fechas escalonadas para que los racimos no vengan todos el mismo mes. Esa base es la que hace que el huerto sobreviva a un mes en que nadie tuvo tiempo, y encima no depende de la heladera, que en esta zona se queda sin luz cada tanto.\n\nSobre eso escalono solo dos o tres especies de cosecha única, que son las que obligan: lechuga, rabanito, alguna raíz. Para cada una necesito dos datos, sus días a cosecha y su ventana de cosecha, y de ahí sale todo. La regla dura es que el intervalo entre siembras no puede ser mayor que la ventana: si el producto aguanta dos semanas en su punto, siembro cada dos o incluso cada semana, y acepto el solape, porque el solape se come y el hueco se paga en la feria. El número de tandas vivas a la vez es los días a cosecha divididos por el intervalo, y eso me dice cuántos pedacitos de cama necesita esa especie. El tamaño de cada tanda no lo decide el sobre sino lo que come la casa en ese intervalo, más un margen por las semillas que no nacen. El sobre entero no se siembra nunca: se guarda seco, oscuro y fresco para las tandas siguientes, comprobando de vez en cuando que todavía germina.\n\nEl intervalo no lo dejo fijo, porque la planta acumula calor y no días. Entrando al fresco y a la seca, en abril y mayo, los ciclos se alargan y las cosechas empiezan a salir más separadas que las siembras, así que acorto el intervalo. Entrando al calor y a las lluvias, en septiembre y octubre, los ciclos se acortan y las tandas se atropellan, así que lo alargo. Además, en el calor la ventana también se acorta, porque la hoja se pasa rápido y sube a flor: en enero, tandas más chicas y más seguidas; en la seca fresca, tandas más grandes y espaciadas, porque el producto espera en la planta.\n\nEl calendario local me impone tres cosas. La siembra que decide el año es la de marzo y abril, cuando todavía llueve, porque es la que se come en julio: el hueco de la seca se decide en las lluvias, y casi nadie la hace porque en marzo el patio está lleno. En el pico de lluvia siembro en cama alta, más separado para que corra el aire y con especies que toleren agua, porque hoja tierna y apretada en enero es damping-off y manchas foliares. Y sin una forma de regar, aunque sea un balde y una regadera, no existen las tandas de junio ni de julio. Cuido además dos eventos: el veranillo, que seca dos o tres semanas en plena lluvia cuando nadie está regando, y el surazo, con el que no trasplanto: espero dos días, porque un plantín recién trasplantado no tiene raíz para aguantar el frío con viento.\n\nEl día que se libera una cama no lo trato como un descanso. Es una sola operación seguida: sacar el resto de cosecha —fuera del lote si venía enfermo, porque eso es inóculo y no abono—, aflojar sin voltear, reponer materia orgánica, sembrar o trasplantar, regar y cubrir. Para eso el plantín tiene que existir antes, producido en almácigo mientras la cama anterior todavía daba cosecha, que es lo que acorta el ciclo que ocupa la cama. Y lo que entra no puede ser de la misma familia botánica que lo que salió: la sucesión se diseña dentro de la rotación, nunca contra ella.\n\nAnoto en una hoja con una fila por tanda: fecha de siembra, especie, número de tanda, dónde quedó, fecha esperada de cosecha y fecha real. La diferencia entre la esperada y la real es el error de mi calendario medido en días, y al cabo de un año tengo lo que ningún sobre trae, que es cuánto tarda esa especie en mi patio y en cada época. Lo sostengo con una costumbre, no con fuerza de voluntad: un día fijo de la semana en que siempre siembro algo, aunque sean seis semillas, y un letrero con la fecha en cada tanda. El primer año no busco la mesa completa: busco tres especies escalonadas, la base que reparte sola y un cuaderno con fechas reales.",
+      "criterios": [
+        "Sustituye la métrica de kilos al año por semanas del año con algo cosechable.",
+        "Construye la base con corte y rebrote, cosecha repetida y reserva en pie, y limita el escalonamiento a unas pocas especies de cosecha única.",
+        "Nombra los dos datos que hacen falta por especie: días a cosecha y ventana de cosecha.",
+        "Aplica la regla de que el intervalo no puede superar la ventana, y acepta el solape antes que el hueco.",
+        "Calcula tandas vivas como días a cosecha dividido por el intervalo, y dimensiona la tanda por el consumo de la casa.",
+        "Corrige el intervalo en las dos direcciones: acortarlo entrando al fresco y alargarlo entrando al calor, con el mecanismo del calor acumulado.",
+        "Menciona que la ventana de cosecha se acorta con el calor por la subida a flor.",
+        "Identifica la siembra de marzo y abril como la que decide si hay comida en la seca.",
+        "Ajusta al sitio: cama alta y más aireación en el pico de lluvia, riego imprescindible en la seca, cuidado con veranillo y surazo.",
+        "Describe el cambio de cama como una operación única del mismo día, con el plantín producido de antemano en almácigo.",
+        "Respeta la rotación: lo que entra no repite familia botánica, y repone materia orgánica en cada cambio.",
+        "Define el plan de siembras con la columna de fecha real y la costumbre del día fijo de siembra."
+      ],
+      "explicacion": "Una respuesta completa tiene que sostener tres cosas a la vez. Primero, que el problema es de reparto en el tiempo y no de cantidad, lo que reordena todas las decisiones siguientes. Segundo, que el trabajo de calendario se concentra en una sola de las cuatro formas de entrega, así que la base del huerto se apoya en las otras tres y solo unas pocas especies se escalonan de verdad: quien intenta escalonar doce cultivos abandona en el segundo mes. Y tercero, que el intervalo es una variable estacional y no una constante, porque el ciclo lo marca el calor acumulado. Lo que cierra el diseño es el registro: sin fechas reales anotadas, el calendario del segundo año es una copia del error del primero."
+    }
+  ]
+}

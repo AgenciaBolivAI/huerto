@@ -1,0 +1,397 @@
+La parcela de la lección anterior ya muestra una diferencia. Dos bancales gemelos, uno con cobertura y
+otro sin ella, y el de la izquierda visiblemente mejor. Quien pasa lo ve sin que nadie se lo explique.
+
+**Y esa diferencia se muere con la temporada.** El vecino que la vio no puede repetirla, porque vio el
+resultado y no vio lo que se hizo. Tú mismo, dentro de catorce meses, no vas a recordar si aquella
+cobertura tenía dos dedos o cuatro. Y a la temporada siguiente el ensayo puede salir al revés —pasa más
+de lo que a nadie le gusta admitir— y sin registro no habrá manera de saber si cambió el clima, la
+variedad, el suelo o la mano que lo hizo.
+
+Esta lección trata de lo único que lo evita: **convertir lo que la parcela produce en algo que otra
+persona pueda ejecutar sin preguntarte nada.** No es burocracia ni prolijidad: es la diferencia entre
+haber tenido suerte una vez y haber aprendido algo.
+
+## Un resultado sin sus condiciones no es un resultado
+
+Empecemos por una frase que suena a conocimiento y no lo es: «la yautía sale mejor con cobertura».
+
+Nadie puede repetir eso. ¿Qué yautía, de qué material de partida? ¿Qué cobertura, de qué espesor, puesta
+cuándo? ¿En qué suelo y con qué riego? ¿Mejor comparada contra qué, medida cómo, en qué año? La frase no
+se puede comprobar y —esto es lo grave— **tampoco se puede desmentir**: no enseña nada, solo pide que le
+crean.
+
+Llamamos <Termino slug="reproducibilidad">reproducibilidad</Termino> a la propiedad de un resultado que
+viene acompañado de todas las condiciones necesarias para volver a obtenerlo. No es una virtud del
+resultado sino del registro que lo rodea. **Un dato sin sus condiciones no es un dato pequeño: es una
+anécdota**, y las anécdotas no se acumulan; diez registros completos sí son una serie de la que se
+aprende.
+
+<Analogia>
+Esto ya lo conoces con otro nombre: **«en mi máquina funciona».**
+
+Un reporte de fallo que dice «se cuelga al guardar» es inservible: falta la versión, el sistema
+operativo, los datos exactos de entrada y los pasos en orden. Sin eso nadie puede reproducirlo, y lo que
+no se puede reproducir no se puede arreglar. **El reporte no describe el problema: es la receta para
+volver a provocarlo.**
+
+Y su fallo más habitual es el mismo que el del registro de campo: **la dependencia no declarada.** Lo que
+hacía funcionar aquello estaba en tu entorno y no en tus instrucciones. Una biblioteca que ya nadie
+recuerda haber instalado; o, en el bancal, un compost que llevabas dos años echando en esa esquina y que
+no anotaste porque «eso ya estaba ahí». **El resultado se anota solo, porque emociona; lo caro son las
+condiciones**, que al escribirlas parecen tan obvias que da vergüenza escribirlas.
+</Analogia>
+
+Una distinción ordena todo lo demás. **Una observación es lo que viste; una conclusión es lo que crees
+que significa.** «Hojas amarillas desde la punta en once de veinte plantas» es lo primero; «le falta
+nitrógeno» es lo segundo. Las dos se anotan, pero **nunca en la misma columna**: dentro de dos años,
+cuando sepas más, querrás reinterpretar lo que viste, y solo podrás hacerlo si está escrito aparte de lo
+que entonces creíste.
+
+## El registro mínimo: siete campos y ni uno más
+
+Un registro que pide cuarenta datos no se llena nunca. El módulo de fichas ya avisó: **seis campos
+siempre completos valen infinitamente más que cuarenta a medias.** El mínimo que hace reproducible un
+resultado son siete, y van escritos en la primera página del cuaderno porque son siempre los mismos.
+
+<Tabla>
+
+| Campo | Qué se escribe | Qué se rompe si falta |
+| --- | --- | --- |
+| **Fecha** | Año-mes-día, de cada evento | Nada se cruza con el clima ni se ordena |
+| **Qué** | Especie, variedad y **origen del material** | Dos orígenes distintos no son comparables |
+| **Cuánto** | Unidades iniciadas, contadas una a una | Sin número inicial no hay porcentaje |
+| **Qué se hizo** | El tratamiento, con cantidades y unidades | «Le eché compost» no se puede repetir |
+| **Contra qué** | El testigo, y qué se hizo con él | Hay un resultado, pero no una diferencia |
+| **Condiciones** | Lluvia, surazos, riego, suelo, sombra | No se sabe si el año explica el resultado |
+| **Resultado** | El número medido, con su fecha y su criterio | Sin fecha no dice cuánto tardó |
+
+</Tabla>
+
+**El origen del material es el campo que más veces invalida un ensayo entero.** Si el bancal con cobertura
+se plantó con hijuelos de una mata vigorosa del fondo y el testigo con lo que quedaba en la carretilla,
+no comparaste cobertura contra nada: comparaste dos materiales distintos, y la cobertura se llevó un
+mérito ajeno. Es la <Termino slug="trazabilidad">trazabilidad</Termino> que el curso ya exige para vender
+una planta con nombre de variedad, aplicada ahora a poder creerte a ti mismo.
+
+**Las condiciones incluyen lo que no elegiste**: el surazo de julio, la lluvia que encharcó medio lote, la
+semana que nadie fue a regar porque hubo un velorio. Eso no es ruido, **es la mitad de la explicación**.
+Un ensayo que salió mal en el año de la seca larga no demuestra que el método sea malo: demuestra que en
+ese año, con esa lluvia, salió mal, y esa frase sí es transmisible. Añade un octavo campo que cuesta cero
+—quién lo anotó— y dentro de un año podrás preguntar en vez de suponer.
+
+<Dato>
+A los campos que rodean al número y le dan sentido se los
+llama <Termino slug="metadato">metadatos</Termino>: datos sobre el dato.
+
+**En el campo son las bolsas de semilla sin rótulo**, y todo el mundo tiene alguna: sabes que es semilla,
+no sabes de qué, ni de qué año, ni de qué planta. No sirve para sembrar con criterio y nadie la tira. **El
+metadato es lo que separa un recurso de un estorbo.**
+</Dato>
+
+## Testigo y tratamiento: lo que hace comparable una comparación
+
+El <Termino slug="testigo">testigo</Termino> es la parte que se deja sin el cambio que se está probando.
+Aquí van las tres trampas que arruinan ensayos bienintencionados.
+
+**La primera: el testigo no es «no hacer nada», es «lo que ya se hace».** Si el vecino riega a manguera
+tres veces por semana y tú comparas tu bancal con goteo contra uno abandonado, la comparación no responde
+a la pregunta que él tiene en la cabeza. El testigo correcto es su práctica actual, porque el ensayo
+existe para contestarle **a él**.
+
+**La segunda trampa es de conteo.** Pones cincuenta plantas con cobertura en el bancal norte y cincuenta
+sin ella en el sur. Parece que tienes cincuenta repeticiones por lado. Tienes una: el tratamiento se
+aplicó una sola vez de forma independiente —a un bancal entero—, así que
+la <Termino slug="unidad-experimental">unidad experimental</Termino> es el bancal y no la planta. Contar
+las plantas como repeticiones se
+llama <Termino slug="pseudorreplicacion">pseudorreplicación</Termino>, y su efecto es cruel: **infla la
+confianza sin aportar información.**
+
+**La tercera es de posición.** El bancal norte está más cerca del grifo, o le da la sombra del mango a
+media tarde. Cualquier factor que cambie a la vez que el tratamiento y pueda explicar el resultado por su
+cuenta es una <Termino slug="variable-de-confusion">variable de confusión</Termino>, y no hay número que
+la arregle después.
+
+<Formula explicacion="Las repeticiones que sostienen una conclusión son las veces que el tratamiento se aplicó de forma independiente, no las plantas medidas. Tres pares de bancales alternados dan tres repeticiones aunque cada bancal tenga cincuenta plantas; un solo par da una, midas las que midas.">
+repeticiones reales = número de unidades independientes que recibieron el tratamiento
+</Formula>
+
+La solución cabe en tres reglas. **Un solo factor por vez**, porque si cambias cobertura y distancia a la
+vez y sale mejor, no sabes cuál lo hizo. **El par se repite tres veces en sitios distintos**, alternando
+cuál va a la izquierda: con-sin, sin-con, con-sin. Y **todo lo demás se hace igual el mismo día**: mismo
+riego, mismo origen de plantines, misma persona.
+
+<Analogia>
+Es un experimento A/B, con los mismos tres errores clásicos.
+
+**El grupo de control tiene que ser la versión actual, no una página en blanco.** **Diez mil peticiones
+del mismo usuario no son diez mil muestras**: son un usuario, igual que cincuenta plantas del mismo
+bancal son una sola repetición. **Y si el grupo A corrió en el servidor nuevo y el B en el viejo, mediste
+el hardware**; el bancal cerca del grifo es el servidor nuevo, y alternar posiciones es repartir al azar
+hecho a mano.
+
+La diferencia está en el costo del error: un despliegue mal diseñado se repite mañana, **un ensayo mal
+diseñado cuesta la temporada entera.**
+</Analogia>
+
+## Medir: unidades, criterio y repetibilidad
+
+Un número mal medido es peor que ningún número, porque parece información. Tres disciplinas lo evitan.
+
+**El criterio se escribe antes de medir.** «Prendió» no significa nada hasta que alguien decide qué es:
+por ejemplo, tener una hoja nueva completamente desplegada a los veintiún días. Esa definición no es
+verdadera ni falsa —es una decisión—, pero **una vez tomada no se cambia a mitad de temporada**, porque
+entonces las dos mitades del ensayo dejan de ser comparables. Lo mismo con «vendible» o «lista para
+cosechar»: cada una necesita una frase que otro pueda aplicar sin tenerte al lado.
+
+**Las unidades se escriben siempre.** «Le puse dos» no es un dato: dos qué, puñados, litros, baldes,
+centímetros de espesor. Cuando la unidad sea local se define una vez y se anota la equivalencia —«un
+balde = el balde azul del galpón, lleno hasta el borde»—, que es poco elegante y perfectamente
+reproducible.
+
+**Y la medición se comprueba contra sí misma.** A eso se lo
+llama <Termino slug="repetibilidad-de-la-medicion">repetibilidad de la medición</Termino>: si dos
+personas miden la misma planta, ¿cuánto se separan los resultados? Ese número marca el suelo de lo que
+puedes afirmar. **Si difieren en tres centímetros midiendo la misma planta, una diferencia de dos
+centímetros entre tratamientos no existe**, por mucho que el promedio la muestre.
+
+De ahí dos consecuencias. **Contar cosas enteras es más fiable que estimar proporciones**: «sobrevivieron
+43 de 60» es un dato duro, «como un setenta por ciento» es una impresión disfrazada de número. Y **los
+decimales son una afirmación sobre la precisión**: escribir 71,67 % cuando contaste 43 de 60 en una sola
+bandeja promete una exactitud que no tienes.
+
+<Advertencia>
+Falta el dato que más cuesta anotar y más informa: **lo que se murió y lo que salió mal.**
+
+La bandeja que germinó bien se anota con orgullo; la que se perdió entera se tira sin escribir una línea,
+porque duele y porque «no salió, no hay nada que anotar». El registro que queda es peligrosamente
+convincente: **todo lo que dice es cierto y aun así engaña**, porque falta la mitad que corregía el
+entusiasmo. Eso es el <Termino slug="sesgo-de-supervivencia">sesgo de supervivencia</Termino>: la forma
+más común de mentirse a uno mismo sin escribir una sola falsedad.
+
+La regla hay que forzarla: **los ceros se anotan.** Bandeja perdida, fecha, unidades y lo que se sepa de
+la causa. Y tiene un doble uso, porque la lección anterior ya decidió dejar las fallas a la vista: **el
+fracaso registrado es lo que hace creíble al éxito registrado.**
+</Advertencia>
+
+## La fotografía que sirve de prueba
+
+Una foto es el registro más barato que existe y el que peor se usa. Cuatro reglas la convierten en dato.
+
+**Punto fijo.** Se clava una estaca donde se para el fotógrafo y se marca hacia dónde apunta; todas las
+fotos de ese bancal salen desde ahí, a la misma altura. Dos fotos tomadas desde el
+mismo <Termino slug="punto-fijo-fotografico">punto fijo fotográfico</Termino> se pueden comparar; dos
+tomadas desde donde uno estaba parado no permiten concluir nada, porque acercarse un metro cambia el
+tamaño aparente más que un mes de crecimiento.
+
+**Referencia de escala.** Una foto no mide. Para que mida hace falta un objeto de tamaño conocido dentro
+del cuadro: un listón pintado a rayas de diez centímetros, una regla, una herramienta siempre la misma.
+Esa <Termino slug="referencia-de-escala">referencia de escala</Termino> cumple el mismo papel que la
+escala gráfica de un plano: viaja con la imagen y sigue siendo verdadera aunque la foto se recorte o se
+imprima.
+
+**Etiqueta dentro del cuadro.** Un cartón escrito con marcador grueso —fecha, lote, tratamiento— apoyado
+en el bancal. El teléfono guarda la fecha en el archivo, pero esa fecha se pierde en cuanto la imagen
+pasa por una aplicación de mensajería, y **nunca guarda cuál era el lote ni qué se le hizo.** El cartón
+sobrevive a todo, porque viaja dentro de los píxeles.
+
+**Y misma hora, mismo encuadre.** La luz de las siete y la de mediodía hacen ver plantas distintas.
+Primero la general del bancal entero y después el detalle: la general es la que sirve de prueba.
+
+<Analogia>
+Dos fotos desde el mismo punto fijo son **un diff**. Dos fotos desde puntos distintos son dos archivos
+sueltos, y no hay herramienta que compare dos archivos sin origen común.
+
+La secuencia mensual desde la misma estaca es un historial de versiones del bancal: **cualquiera lo
+recorre y ve dónde cambió algo sin que el autor se lo cuente.** Y es el argumento más potente delante de
+alguien que no lee y ya escuchó demasiadas promesas: doce imágenes en orden, con su cartón y su fecha,
+no son una promesa.
+</Analogia>
+
+## La bitácora no se corrige: se continúa
+
+Todo esto se escribe en un cuaderno, con bolígrafo, el mismo día. Con bolígrafo y no con lápiz por una
+razón que parece manía y no lo es. La <Termino slug="bitacora-del-sistema">bitácora</Termino> de campo se
+lleva como un <Termino slug="registro-de-solo-escritura">registro de solo escritura</Termino>: **se
+añaden líneas nuevas y no se borra ni se corrige encima de las viejas.** Si el 12 de mayo anotaste que
+sembraste sesenta y el 19 descubres que eran cincuenta y ocho, no se tacha: se escribe una línea nueva
+con fecha del 19 que dice «corrijo: el conteo del 12 fue 58, recontado hoy». **La corrección misma es un
+dato** —dice que el conteo inicial es poco fiable—, y un cuaderno que se puede reescribir hacia atrás es
+un cuaderno del que nadie se fía, empezando por ti dentro de dos años.
+
+**Y el mismo día.** Lo que se anota el domingo siguiente no es un registro: es un recuerdo, y un recuerdo
+se acomoda solo a lo que uno acabó creyendo.
+
+<Analogia>
+Es un registro de solo anexado y funciona por el mismo motivo que un libro contable: **los hechos se
+anexan y los saldos se derivan.** Nadie edita un asiento de hace tres meses para que cuadre el balance;
+se escribe un asiento nuevo de corrección, con su fecha, y la historia queda entera.
+
+De ahí la división entre tus dos papeles: **la bitácora guarda hechos y la ficha guarda conclusiones.** La
+bitácora va a bolígrafo y no se toca; la ficha va a lápiz y se corrige cada temporada, como decía el
+módulo de fichas. Confundirlas produce cuadernos llenos de opiniones viejas y ninguna observación
+recuperable.
+</Analogia>
+
+## La ficha que otro ejecuta sin preguntarte nada
+
+La bitácora es un flujo de hechos, y nadie aprende a hacer algo leyendo un flujo de hechos. El producto
+final del registro es **un procedimiento**: una hoja que alguien se lleva y ejecuta. Tiene seis partes y
+ninguna es opcional.
+
+**Para qué sirve y cuándo no sirve**: el resultado esperado y las condiciones de validez —qué suelo, qué
+época, cuánta agua—. **Decir dónde no funciona es lo que hace confiable el resto**, y es lo que separa una
+ficha de un folleto.
+
+**Materiales, con cantidades, unidades y sustitutos**, porque quien la ejecute no va a tener exactamente
+lo que tú tenías y la ficha se detiene en el primer material que falta.
+
+**Los pasos en orden, cada uno con su criterio de éxito.** No «regar bien», sino qué se ve cuando está
+bien: la descomposición en pasos observables de la primera lección del módulo, escrita.
+
+**Los puntos de decisión.** «Si a los quince días no hay brote, hacer esto». Es lo que distingue un
+procedimiento de una receta y lo que más se pierde en el traspaso: en la cabeza de quien sabe hacerlo ni
+siquiera es una decisión.
+
+**El resultado en rango, y la tasa de fallo real.** No el mejor que tuviste: «de cuatro veces, tres
+salieron entre esto y esto, y una se perdió por esta razón» es más creíble que cualquier promesa.
+
+**Y quién la escribió, cuándo y sobre qué versión**, porque se va a corregir y hay que saber cuál es la
+buena.
+
+<Dato>
+Falta la prueba, y es la única que importa: **la ejecución en silencio.**
+
+Le das la ficha a otra persona, le pides que la ejecute entera, **te quedas mirando y no hablas.** Cada
+vez que levante la vista para preguntar algo, esa pregunta es un hueco en la ficha: se anota literal, en
+el momento, sin contestarla todavía. Al terminar se corrigen los huecos y se vuelve a probar con otra
+persona distinta.
+
+Es una prueba de aceptación con un usuario real y funciona por lo mismo: **descubre el conocimiento
+tácito que se te quedó dentro y que ninguna relectura tuya va a encontrar**, porque al releer tu propia
+ficha rellenas los huecos con lo que ya sabes. Dos rondas convierten un documento razonable en un
+documento ejecutable, y **es el trabajo de una tarde.**
+</Dato>
+
+## Dónde vive la copia
+
+Todo lo anterior desaparece con un teléfono robado en una micro o un cuaderno mojado en el aguacero de
+enero. La regla habitual de respaldos es fácil de recordar: **tres copias, en dos soportes distintos, una
+de ellas fuera del sitio.** El cuaderno de campo, las fotos de sus páginas en el teléfono y una copia en
+casa de otra persona. Papel y digital fallan de maneras distintas —el papel muere de agua, moho y
+termitas pero no necesita batería ni formato; lo digital muere con el aparato pero se copia infinitas
+veces sin costo—, y esa es la razón de combinarlos.
+
+**Formatos aburridos y nombres que ordenen solos**: texto plano, tabla separada por comas, fotos comunes
+—lo que se abre con cualquier cosa dentro de diez años—, con la fecha al principio del nombre,
+`2026-08-15_L04_cobertura.jpg`. Una aplicación bonita que guarde tus datos solo dentro de ella es un
+riesgo, no una comodidad: el día que desaparezca —y desaparecen— se lleva el registro.
+
+**Una copia que nunca se abrió no es un respaldo, es una esperanza.** Una vez al año se abre la copia
+lejana y se comprueba que se lee, igual que con el tanque de reserva que nadie vació nunca.
+
+**Y la copia que más importa es la que está en manos de otra persona.** No por seguridad informática:
+porque un registro que solo existe donde tú lo guardas sigue siendo tuyo, y este proyecto existe para lo
+contrario. **El conocimiento se vuelve de la comunidad cuando hay una copia que no depende de ti.**
+
+<AplicarRizoma>
+**Rizoma del Sur tiene doce lotes contiguos y esa es su ventaja documental**, porque permite repetir el
+mismo par en sitios distintos en lugar de fiarlo todo a una comparación única. **Cada lote lleva un
+código fijo, de L01 a L12, y cada bancal su número**, escrito en el rótulo, en el cartón de las fotos y
+en el cuaderno, y no se cambia nunca. Es lo que permite cruzar tres años de anotaciones; si además
+coincide con los sectores de riego del módulo de agua, el registro automático de humedad y el cuaderno
+hablan el mismo idioma sin traducción.
+
+**Los pares de la parcela demostrativa se repiten tres veces y se alternan**: no un bancal contra otro,
+sino tres pares repartidos por el terreno, con-sin, sin-con, con-sin. Con la sombra de los árboles
+moviéndose a lo largo del día y con arcillas que cambian de comportamiento en pocos metros, un solo par
+mide la posición tanto como el tratamiento. Repetir cuesta espacio y trabajo; no repetir cuesta no poder
+afirmar nada.
+
+**El origen del material se anota siempre, y aquí es crítico**, porque buena parte del catálogo se
+multiplica en el propio sitio: yautía por cormos, plátano por hijuelos, batata por esquejes, culantro por
+semilla propia. «Hijuelos de la mata 3 del lote L07, sacados el 12 de octubre» y «hijuelos de lo que
+sobró» son materiales distintos, y sin ese campo el ensayo compara plantas madre en lugar de
+tratamientos.
+
+**El criterio de medida de cada especie se escribe una vez y se respeta toda la temporada**: qué cuenta
+como prendido en yautía, qué cuenta como cosecha en culantro, cuándo se mide el ají dulce. Se decide en
+el sitio y se puede discutir; lo que no se puede es cambiarlo en marzo y compararlo con lo medido en
+noviembre. **Y los surazos y las lluvias se anotan en la misma bitácora que los trabajos**, porque una
+noche de diez grados en pleno julio es la razón por la que un ensayo salió como salió.
+
+**Los puntos fijos de fotografía son estacas clavadas y numeradas**, una por par de bancales, con la
+dirección marcada hacia un punto reconocible, y un listón pintado a rayas que entra en todas las fotos
+junto al cartón. El cuaderno vive en el galpón, en una bolsa cerrada y con un bolígrafo atado, porque uno
+que hay que ir a buscar a la casa no se llena; una vez por semana se fotografían sus páginas, y eso es el
+respaldo digital sin teclear nada.
+
+**Las bandejas perdidas y los lotes muertos se anotan igual que los buenos**, y sus fotos también se
+guardan: en una parcela que la lección anterior decidió mostrar con sus fallas a la vista, el registro de
+los fracasos es material didáctico y la mejor prueba de que nadie está vendiendo nada.
+
+**Y el producto que se entrega no es el cuaderno: son las fichas.** Una hoja por procedimiento —cómo se
+preparan los hijuelos de plátano, cómo se coloca la cobertura, cómo se siembra una bandeja de culantro—,
+probada con la prueba del silencio por dos personas distintas y regalada en papel a quien la quiera. Ese
+es el entregable: **no las plantas del terreno, sino los procedimientos que cualquiera puede ejecutar en
+el suyo.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El primer detalle es de formato y da más problemas de lo que parece.** Aquí lo natural al escribir a
+mano es la coma decimal —28,5— y la fecha en día/mes; en cuanto los datos pasan a una computadora o
+llegan de fuera, `05/08` deja de significar lo mismo para todos. Por eso el curso usa el formato
+año-mes-día, y conviene fijarlo en la primera página del cuaderno: 2026-08-05 no admite dos lecturas y
+además ordena solo cuando va en el nombre de un archivo.
+
+**El clima local hay que medirlo en el terreno, no leerlo de lejos.** Un pluviómetro casero en un poste,
+leído y vaciado cada mañana, produce en dos años un dato que ninguna estación distante puede dar, porque
+la lluvia en la llanura cruceña cae en manchas y el microclima de un terreno con árboles no es el del
+aeropuerto. La misma bitácora anota los surazos: fecha, noches frías y viento.
+
+**Guardar papel en Santa Cruz es un problema de humedad y de bichos, no de espacio.** El calor húmedo, el
+moho y las termitas se comen un cuaderno olvidado en un galpón: bolsa plástica cerrada, en alto, y las
+fotos semanales de las páginas como seguro barato. **El papel se pierde de maneras que lo digital no, y
+al revés**, que es el motivo de tener las dos formas.
+
+**El teléfono es la herramienta de registro más disponible y la más frágil.** Se pierde, se roba, se moja,
+se vende, se comparte entre varias personas de la casa y se queda sin espacio. Además, las aplicaciones
+de mensajería comprimen las imágenes y lo que conserven depende de la configuración de cada aparato:
+**eso hay que comprobarlo en el teléfono concreto, no suponerlo.** De ahí el cartón con la fecha dentro
+de la foto y la copia que no vive en el teléfono. En el registro va además el nombre botánico junto al
+nombre local que usa la gente —y los dos si varía entre vecinos—, porque varias especies del catálogo
+llegan del Caribe con un nombre y aquí se conocen con otro.
+
+**No todo el registro tiene que ser escrito.** Con lo que este módulo ya dejó claro sobre alfabetización
+real, una nota de voz de treinta segundos grabada al lado del bancal es un registro
+legítimo y muchas veces más rico que dos líneas apuradas; solo necesita las mismas condiciones que el
+papel: decir la fecha y el lote **al principio** del audio y tener una copia fuera del teléfono. Y antes
+de fotografiar a una persona se le pregunta siempre, diciéndole para qué se va a usar la imagen: la
+manera de pedir las fotos importa tanto como las fotos.
+
+**Sobre lo institucional, dos avisos honestos.** En Santa Cruz existen instituciones de investigación
+agropecuaria —el CIAT departamental, el INIAF a nivel nacional— que pueden orientar sobre cómo se
+documenta un ensayo y para las que un registro local de varios años puede tener interés real; conviene ir
+a preguntar qué ofrecen hoy, porque sus programas cambian. Y si algún día un registro propio se usa para
+vender semilla con nombre o para respaldar un trámite, los requisitos los define la autoridad competente
+y hay que consultarlos ahí, no deducirlos de un manual.
+
+**El encuadre final da sentido a todo el trabajo.** Rizoma del Sur es un proyecto gratuito y comunitario,
+así que el registro no se lleva para tener un secreto mejor guardado: se lleva para poder regalarlo. Un
+resultado documentado con sus condiciones se puede entregar a un vecino sin tierra, sin dinero y sin
+estudios previos, y él puede ejecutarlo. **Uno sin documentar solo se puede contar.**
+</ContextoBolivia>
+
+## Lo que sigue
+
+El ciclo del papel queda cerrado: la parcela produce una diferencia, el registro mínimo la hace
+reproducible, el testigo bien puesto la hace comparable, la medición con criterio la hace creíble, la
+foto desde el punto fijo la hace mostrable, la bitácora de solo escritura la conserva y la ficha la hace
+ejecutable por otra persona.
+
+Falta el momento en que esa ficha se pone delante de gente, en vivo y sin que nadie haya leído una línea.
+La lección siguiente trata de la demostración práctica y del taller de una tarde: el material preparado
+en varios estados de avance para que se vea el punto final, las líneas de visión, cómo se narra lo que no
+se ve, la secuencia de **yo lo hago, lo hacemos, lo haces**, cómo se comprueba que entendieron sin
+preguntar «¿se entendió?» y qué se hace cuando la demostración falla delante de todos.
+
+Siguiente: **05 — La demostración práctica y el taller de una tarde.**

@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "contraluz-y-promedio",
+      "tipo": "opcion_multiple",
+      "enunciado": "Fotografías a tu vecina en la puerta de la casa, con el patio soleado detrás de ella. En la pantalla se ve bien, pero la foto sale con la cara casi negra. ¿Qué es correcto decir de lo que pasó y de cómo se arregla?",
+      "opciones": [
+        "El teléfono mide el brillo promedio de todo el cuadro y ajusta para que ese promedio quede a media altura; con medio encuadre lleno de sol, cierra el paso de luz y hunde lo que estaba en sombra.",
+        "Eso es contraluz: la fuente de luz quedó detrás del sujeto, y la regla que lo evita es que la luz vaya detrás de ti y nunca detrás del objeto.",
+        "Se arregla antes, moviéndote tú o moviendo a la persona; el sol pleno del mediodía tampoco sirve, y la mejor luz gratis es la sombra de una pared en día claro o un día nublado entero.",
+        "No hay nada que hacer en el momento: es una limitación de la cámara y se corrige después subiéndole el brillo a la foto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen el mecanismo real: una foto es una tabla de números que describen luz, y para decidir cuánta dejar entrar el teléfono usa una regla razonable y ciega —el promedio de todo el cuadro—, que no sabe cuál de esas cosas te importa. La cuarta es incorrecta por dos motivos. Primero, sí hay algo que hacer en el momento y es lo único que funciona: cambiar de posición, porque la foto a contraluz no se arregla después, se evita antes. Y segundo, subir el brillo a una foto oscura sube también el ruido, ya que el detalle que no se capturó no está ahí para recuperarlo."
+    },
+    {
+      "id": "movida-y-grano",
+      "tipo": "opcion_multiple",
+      "enunciado": "Dentro de un galpón con poca luz sacas dos fotos: una sale borrosa y la otra, después de tocar algo en la aplicación, sale más clara pero llena de puntitos de colores. ¿Qué está ocurriendo?",
+      "opciones": [
+        "Con poca luz el tiempo de exposición se alarga, y todo lo que se mueva durante ese rato —incluida tu mano— se registra recorrido: eso es la trepidación.",
+        "La otra salida del teléfono es amplificar la señal recogida, y como el sensor produce siempre un fondo de señales aleatorias, el amplificador sube las dos por igual: eso es el ruido digital.",
+        "Movida y con grano no son dos problemas distintos, sino las dos maneras que tiene el teléfono de responder a la misma escasez de luz, así que las dos se arreglan con luz o con quietud.",
+        "Son dos averías distintas del aparato: la primera es del estabilizador y la segunda del sensor, y ninguna depende de la escena."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta y es justo el diagnóstico que impide corregir nada, porque manda a cambiar de teléfono en lugar de cambiar la escena. Piénsalo con el balde bajo la lluvia: con lluvia fuerte se llena al instante y lo retiras antes de que nada se mueva; con garúa solo quedan dos opciones malas, dejarlo afuera mucho rato —el viento lo zarandea y el agua se derrama, que es la foto movida— o estirar lo poco que cayó con agua de la canaleta, que trae hojas y tierra, que es el grano. Para quien programa, la misma frase de siempre: no se puede amplificar señal sin amplificar ruido, y ningún procesamiento posterior inventa lo que no se capturó. Por eso el trabajo se hace en la captura: sumar luz, apoyar el aparato, sacar el aire y usar el temporizador."
+    },
+    {
+      "id": "audio-del-video",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a grabar con el teléfono un video corto explicando cómo se cambia una pieza. ¿Qué decisiones protegen lo que de verdad arruina la mayoría de los videos, que es el audio?",
+      "opciones": [
+        "Mantener la distancia al micrófono en uno o dos brazos, porque la intensidad del sonido cae con el cuadrado de la distancia: al triple de distancia llega la novena parte.",
+        "Ponerte de espaldas al viento, meterte detrás de una pared o tapar el micrófono con espuma o tela, porque el viento no es ruido que se mezcla sino aire golpeando directamente la membrana.",
+        "Grabar donde haya cama, cortina o ropa colgada en vez de un galpón vacío de paredes duras, porque el sonido rebota y las copias retrasadas se montan sobre la sílaba siguiente.",
+        "No preocuparse por el ambiente y compensar después subiendo el volumen de la grabación."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta porque subir el volumen sube también lo que estorba. Con la reverberación es literal: el problema no es que se oiga bajo, sino que llegan varias copias retrasadas del mismo sonido montadas sobre la sílaba siguiente, así que a más volumen, más eco y la misma imposibilidad de entender. Con el viento pasa algo parecido: como satura la membrana, la información ya no está en la grabación y no hay volumen que la traiga de vuelta. Y falta lo cuarto, que se decide antes de grabar: decir en los primeros diez segundos qué es esto y para qué sirve, y quedarse por debajo del minuto salvo que sea un procedimiento paso a paso, porque quien lo recibe paga por bajarlo."
+    },
+    {
+      "id": "foto-de-papel-no-es-documento",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si le sacas una foto nítida a un certificado y la mandas, ya entregaste un documento: da igual que sea una foto o un PDF, porque el texto se lee perfectamente.",
+      "respuesta": false,
+      "explicacion": "Falso. Para la computadora esa foto es una nube de puntos de color: no hay ninguna letra ahí adentro, así que no se puede buscar una palabra, ni copiar una frase, ni seleccionar un número. Convertir dibujos de letras en letras de verdad es un trabajo aparte que hace el reconocimiento óptico de caracteres, que traen muchas aplicaciones de escaneo y que funciona bien con texto impreso y derecho, regular con letra manuscrita y mal con papel torcido —otra razón para hacer bien la captura—. Y hay dos diferencias prácticas más. El PDF fija páginas, se ve igual en cualquier aparato, reúne varias páginas en un solo archivo y no se recomprime al reenviarlo, mientras que un trámite con seis fotos sueltas son seis oportunidades de que falte una. Y si mandas la foto por mensajería como foto, la aplicación la recomprime y el texto chico se vuelve ilegible: por eso se envía siempre como «documento» o «archivo»."
+    },
+    {
+      "id": "sincronizar-no-es-respaldar",
+      "tipo": "verdadero_falso",
+      "enunciado": "Tener las fotos subiéndose solas a una cuenta en la nube desde el teléfono equivale a tener un respaldo de esas fotos.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el malentendido que más cosas hace perder. La sincronización mantiene espejadas dos o más copias: lo que cambias en una lo cambia en las otras enseguida. Es comodísima y no es una copia de seguridad, porque un espejo copia con la misma obediencia lo bueno y lo malo: si borras una carpeta por error se borra en todas partes en segundos, si un archivo se corrompe se sube corrompido encima del bueno, y si alguien entra a tu cuenta y borra, borra en todos lados. Un respaldo es otra cosa: una copia congelada en el tiempo, que no cambia cuando cambia el original, guardada aparte, de modo que un error de hoy no puede alcanzarla. Es la diferencia entre un disco espejado, que protege de que se queme un disco, y la copia guardada en otro edificio, que protege de que alguien borre el directorio. A esto se suma el botón de «liberar espacio», que borra del teléfono las fotos que ya están en la nube dejando miniaturas: el día que se cierra la cuenta o no tienes datos, esas miniaturas no se convierten en nada."
+    },
+    {
+      "id": "tres-dos-uno-y-la-prueba",
+      "tipo": "opcion_multiple",
+      "enunciado": "Quieres proteger de verdad los documentos de tu casa y las fotos de la familia. ¿Qué cumple la regla 3-2-1 y la completa?",
+      "opciones": [
+        "Tres copias, en dos soportes distintos —teléfono y pendrive, disco y cuenta en línea—, porque dos copias en el mismo aparato caen juntas cuando se moja, se roba o se corrompe el mismo chip.",
+        "Una de las copias fuera del lugar donde vives, porque el incendio, la inundación y el ladrón no eligen archivos: se llevan la habitación entera.",
+        "Una prueba de restauración una vez al año, abriendo la copia desde otro aparato, porque comprobarla desde el mismo teléfono que la hizo comprueba el teléfono, no la copia.",
+        "Guardar el teléfono y su tarjeta de memoria, que ya son dos copias en dos soportes, y revisar el espacio libre de vez en cuando."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta y es la trampa más común, porque tiene forma de cumplir la regla sin cumplirla: el teléfono y su tarjeta están en el mismo aparato y en el mismo lugar, así que se mojan, se roban, se queman o se pierden juntos. Es la misma idea que en el riego, donde una función crítica se cubre con dos elementos que fallen por causas distintas; dos copias en la misma memoria no son dos apuestas, son la misma apuesta escrita dos veces. Y la prueba de restauración es la que descubre a tiempo las cuatro sorpresas de siempre: el pendrive fallado que guardó archivos de cero bytes, la tarjeta barata que decía 128 GB y tenía 8 y sobreescribió lo viejo sin avisar, el respaldo con dos años sin actualizar y la copia en una cuenta cuya clave no recuerdas. Ninguna se nota mientras todo va bien."
+    },
+    {
+      "id": "caso-en-tu-casa",
+      "tipo": "abierta",
+      "enunciado": "Este sábado tienes tres cosas que hacer con el teléfono, todas en tu casa. (a) La unidad educativa te pide el carnet de tu hija y su certificado de nacimiento «en digital, legible»; ya mandaste una vez una foto y te la rechazaron. (b) Un comprador que vive lejos quiere ver algo que produces o reparas, y quiere un video de menos de un minuto que se entienda. (c) En el teléfono está todo el papelerío de la casa y ninguna copia en ningún otro lado, y sabes que aquí los teléfonos se roban. Escribe qué haces exactamente en cada caso, en qué orden y por qué —nombrando el mecanismo, no solo el consejo—, y qué queda montado para que dentro de seis meses siga funcionando aunque nadie se acuerde de esta lección.",
+      "respuestaModelo": "Empiezo por el orden: los papeles primero, porque el trámite tiene fecha y porque ese mismo trabajo produce lo que después voy a copiar; el video después; y las copias al final, con todo ya hecho.\n\nPara los documentos, «escanear» no significa tener un escáner: significa producir una copia digital legible que me acepten. La foto anterior falló casi seguro por una de tres cosas. La primera es mi propia sombra: si la luz me viene de atrás, mi cabeza y el teléfono proyectan sombra justo sobre el papel; lo resuelvo poniendo la hoja cerca de una ventana con la luz entrando de costado, y sin flash, que produce un brillo blanco en el centro y borra el texto de debajo. La segunda es la foto torcida: al disparar desde un costado el rectángulo sale como un trapecio, y a una oficina eso le da mala espina con razón, porque un documento deformado es difícil de comparar; lo arreglo con el teléfono paralelo al papel y la cámara sobre el centro de la hoja. La tercera es el papel arrugado, que aplano sobre una mesa lisa de color que contraste. Después uso el modo «documento» de la cámara, que no hace magia: detecta los cuatro bordes, endereza la perspectiva por cálculo, recorta el fondo y sube el contraste. Saco frente y dorso aunque el dorso parezca vacío, y guardo cada documento como un solo PDF con las páginas en orden. El PDF importa porque fija páginas, se ve igual en cualquier aparato, reúne varias hojas en un archivo y no se recomprime al reenviarlo; además, la foto de un papel no es un documento —para la computadora es una nube de puntos, sin letras adentro—, y lo que convierte los dibujos de letras en letras es el reconocimiento óptico de caracteres, que funciona bien con texto impreso y derecho y mal con papel torcido. Al mandarlo por mensajería lo envío como «documento» o «archivo», nunca como foto, porque como foto se recomprime y el texto chico se vuelve ilegible. Y antes de gastar el viaje pregunto en la ventanilla en qué formato lo quieren, cuánto puede pesar y si aceptan la copia digital o exigen fotocopia legalizada: eso no me lo invento.\n\nPara el video, la parte visual es rápida: luz detrás de mí y nunca detrás del objeto, porque el teléfono mide el brillo promedio del cuadro y un fondo muy iluminado le hace cerrar el paso de luz; el aparato apoyado y los codos pegados al cuerpo, porque con poca luz el tiempo de exposición se alarga y aparece la trepidación; nada de zoom con los dedos, que recorta y tira píxeles; fondo limpio y un objeto de tamaño conocido al lado como referencia de escala. Lo que decide de verdad es el audio. Hablo a uno o dos brazos del micrófono, porque la intensidad cae con el cuadrado de la distancia y a tres metros llega la novena parte. Si hay viento me pongo de espaldas o detrás de una pared, o le pongo al micrófono un pedacito de espuma o de media de nailon con una liga: el viento no es ruido que se mezcla, es aire golpeando la membrana y saturándola. Grabo donde haya cama, cortina o ropa colgada, no en un galpón de paredes duras, porque ahí el sonido rebota y las copias retrasadas se montan sobre la sílaba siguiente. Y digo en los primeros diez segundos qué es esto y para qué sirve, y me quedo bajo el minuto, porque quien lo recibe paga los megas por bajarlo.\n\nPara las copias, primero acepto la idea que decide todo: sincronizar no es respaldar. Una galería que sube sola las fotos mantiene espejadas dos copias, así que si borro algo por error se borra en todas partes en segundos, y si pierdo la cuenta lo pierdo todo. Un respaldo es una copia congelada en el tiempo, guardada aparte. Aplico la regla 3-2-1: la copia del teléfono; una segunda en un pendrive o en la computadora de un familiar, o en una tarjeta guardada fuera del teléfono; y una tercera fuera de la casa, que es la que todo el mundo saltea —el mismo pendrive dejado donde mi hermana, o una cuenta gratuita subida por wifi para no gastar datos—. Dos copias en el teléfono y en su tarjeta no valen: son el mismo aparato y el mismo lugar, y se pierden juntas. Respaldo lo que no se repone —documentos, fotos de la familia, comprobantes, contactos— y no las aplicaciones ni las películas.\n\nLo que queda montado son cuatro hábitos que no dependen de mi memoria. Una carpeta `documentos` con una subcarpeta por persona. Una convención de nombres fija: fecha ordenable, asunto y versión, `2026-08-16-carnet-maria.pdf`, sin espacios ni tildes y sin «final2», para que el orden alfabético sea el cronológico y cualquiera de la casa entienda qué hay sin abrir nada. La actualización de las copias cada tres meses, atada a algo que ya hago, como el día que pago la luz. Y una vez al año la prueba de restauración: abrir la copia desde el teléfono de otra persona y verificar que un PDF cualquiera se lee, porque comprobarla desde el mismo aparato que la hizo comprueba el aparato y no la copia. Sin eso, el teléfono es un punto único de fallo, y funciona perfecto hasta el día en que no.",
+      "criterios": [
+        "Ordena las tres tareas y justifica el orden, en vez de tratarlas como una lista suelta.",
+        "Diagnostica el rechazo del documento por sus tres causas físicas: la sombra propia, la deformación de perspectiva al disparar desde un costado y el papel arrugado, con la corrección de cada una.",
+        "Indica luz de ventana entrando de costado, sin flash, teléfono paralelo al papel y cámara sobre el centro de la hoja, y frente y dorso siempre.",
+        "Explica qué hace el modo «documento» —detectar bordes, enderezar la perspectiva, recortar el fondo, subir el contraste— y exige un solo PDF con las páginas en orden.",
+        "Argumenta por qué la foto de un papel no es un documento y qué papel juega el reconocimiento óptico de caracteres, y por qué se envía como «documento» y no como foto.",
+        "Remite a la ventanilla o entidad correspondiente para formato, peso y copias exigidas, sin inventar requisitos, plazos ni costos bolivianos.",
+        "En el video, aplica la luz a favor y la estabilidad del aparato nombrando el mecanismo —promedio del cuadro y tiempo de exposición— y descarta el zoom digital.",
+        "Trata el audio como lo que decide el video: distancia de uno o dos brazos con la caída según el cuadrado de la distancia, viento sobre la membrana con su remedio mecánico, y reverberación en paredes duras con superficies blandas.",
+        "Fija la estructura del video: qué es y para qué sirve en los primeros diez segundos, y menos de un minuto, con el argumento de que quien lo recibe paga por bajarlo.",
+        "Distingue sincronización de respaldo con el mecanismo del espejo, que propaga el borrado y la corrupción.",
+        "Aplica la regla 3-2-1 con soportes que fallen por causas distintas, rechaza explícitamente «el teléfono y su tarjeta» como dos copias, y decide qué merece respaldo y qué no.",
+        "Deja montado lo que sobrevive al olvido: carpeta y subcarpetas, convención de nombres con fecha ordenable, actualización periódica atada a un hábito existente y prueba de restauración anual desde otro aparato."
+      ],
+      "explicacion": "El caso junta las tres partes de la lección en una tarde, que es como aparecen de verdad: producir algo que se entienda, entender qué es el archivo que produjiste y conseguir que no desaparezca. Se resuelve bien si cada decisión viene con su mecanismo —por qué el promedio del cuadro oscurece al sujeto, por qué el sonido cae con el cuadrado de la distancia, por qué un espejo propaga el borrado— y no como una lista de consejos sueltos. Y hay dos errores que invalidan la respuesta aunque el resto esté: dar por buena la foto del papel como si fuera un documento, y llamar respaldo a algo que vive entero en un solo aparato o en una sola cuenta. Si además no queda ninguna rutina escrita —nombres, carpetas, periodicidad y prueba— la solución dura lo que dure el entusiasmo del sábado."
+    }
+  ]
+}

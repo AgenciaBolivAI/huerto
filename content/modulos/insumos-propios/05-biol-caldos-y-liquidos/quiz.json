@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "que-resuelve-el-liquido",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un vecino quiere reemplazar el compost por biol porque «el biol es más fácil de repartir». ¿Qué le dirías que resuelve de verdad la forma líquida?",
+      "opciones": [
+        "Resuelve la distribución: reparte cantidades diminutas de manera uniforme sobre superficie o dentro de muchos envases pequeños.",
+        "Resuelve la entrega de organismos vivos y de sustancias que actúan como señal, porque en esos dos casos el peso no importa.",
+        "No resuelve la masa: el 90 % o más del preparado es agua, y el agua no aporta ningún nutriente.",
+        "Resuelve la reposición de materia orgánica del suelo, porque el líquido penetra más hondo que un sólido y llega a más volumen de raíces."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen exactamente lo que hace un vehículo líquido: distribuir bien, transportar inóculo y señal, y no poder mover masa. La cuarta es falsa y es el error central de la lección: un líquido no repone materia orgánica en absoluto. La materia orgánica se mide en toneladas por hectárea y solo la mueve un sólido aplicado en volumen; que el agua penetre no cambia el balance de masa, porque lo que va disuelto sigue siendo unos pocos gramos. Penetrar no es aportar."
+    },
+    {
+      "id": "sello-de-agua",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace realmente el sello de agua de un biodigestor casero de biol?",
+      "opciones": [
+        "Deja salir el gas de la fermentación y evita que la presión deforme o reviente el recipiente.",
+        "Impide que entre aire, porque los microorganismos de la última etapa son anaerobios estrictos y el oxígeno los mata.",
+        "Da una señal visible del estado del proceso: mientras burbujea hay fermentación, y cuando deja de burbujear el proceso se agotó.",
+        "Filtra el preparado a medida que fermenta, de manera que al final el líquido ya sale sin sólidos y puede ir directo a la mochila."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son las funciones reales: alivio de presión, exclusión de oxígeno y telemetría gratuita del proceso. La cuarta es falsa: el sello no filtra nada, está en la tapa y solo maneja gas. El líquido sale con sólidos en suspensión y con lodo en el fondo, y hay que decantarlo y colarlo dos veces antes de usarlo o se tapa la boquilla."
+    },
+    {
+      "id": "te-aireado-riesgo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Preparar té de compost con azúcar y sin aireación es más seguro que hacerlo con bomba de aire, porque al no mover el agua se evita dispersar microorganismos.",
+      "respuesta": false,
+      "explicacion": "Es exactamente al revés, y es el punto sanitario de la lección. El azúcar convierte el tanque en un medio de cultivo, y el agua almacena muy poco oxígeno —del orden de 9 mg/L a 20 °C y unos 7,5 a 30 °C—, así que sin aireación el consumo respiratorio lo agota en horas. En condiciones anaerobias prosperan justamente las bacterias entéricas que pudieran venir con el estiércol del compost. Un té no aireado con azúcar no es más suave: es el escenario que multiplica el riesgo, y por eso no se aplica sobre partes comestibles que se consumen crudas."
+    },
+    {
+      "id": "aritmetica-mochila",
+      "tipo": "opcion_multiple",
+      "enunciado": "Con los rangos de la lección, una mochila de 20 litros con biol al 5 % aplica del orden de una décima a media parte de gramo de nitrógeno sobre 50 a 100 m². ¿Qué conclusiones se siguen correctamente de ese número?",
+      "opciones": [
+        "Como fertilizante es irrelevante: reponer la extracción de una sola cosecha de hoja exigiría cientos de mochilas.",
+        "Su valor defendible está en lo que se multiplica o actúa en dosis diminutas: inóculo, bioestimulación y micronutrientes.",
+        "En envases de vivero la misma dosis deja de ser ruido, porque el volumen de sustrato tocado es dos órdenes de magnitud menor.",
+        "Basta con subir la concentración del preparado a un 25 % para que la dosis de nitrógeno alcance a cubrir la extracción del cultivo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras salen de la aritmética. La cuarta es incorrecta por dos motivos independientes. Primero, por conservación de masa: aunque aplicaras el bidón entero sin diluir, los 30 a 100 gramos de nitrógeno que contiene siguen siendo del mismo orden que lo que se lleva una sola cosecha de una cama; concentrar no crea átomos. Y segundo, una dilución tan alta de un fermentado ácido y salino produce fitotoxicidad en hoja y raíz. Subir la dosis quema antes de nutrir."
+    },
+    {
+      "id": "absorcion-foliar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la aplicación foliar tiene un techo tan bajo, y qué se sigue de ello para la práctica?",
+      "opciones": [
+        "La cutícula es una capa de cutina y ceras cuya función es impedir que el agua salga, y funciona igual de bien impidiendo que entre.",
+        "La absorción solo ocurre mientras hay película líquida sobre la hoja, así que con sol y aire seco la gota se evapora antes de absorberse.",
+        "Elementos como el calcio son prácticamente inmóviles en floema, de modo que solo se benefician los tejidos que se mojaron.",
+        "Como el techo es bajo, conviene compensarlo aplicando la misma dosis varias veces por semana hasta acumular el equivalente a una fertilización."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son los mecanismos reales y de ellas salen las reglas de aplicar temprano o al atardecer y de no esperar corrección de calcio en frutos futuros. La cuarta es incorrecta: repetir aplicaciones no suma hasta una fertilización, porque el límite no es la frecuencia sino el caudal que la cutícula deja pasar y la cantidad de nutriente que cabe en el volumen aplicado. Lo único que se acumula con la repetición es jornal, sales sobre la hoja y riesgo de quemadura."
+    },
+    {
+      "id": "fermentado-en-goteo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si se filtra bien el biol con malla fina, se lo puede inyectar sin problema en el sistema de goteo, porque el filtro retiene lo que taparía los emisores.",
+      "respuesta": false,
+      "explicacion": "Falso, y la razón es que el modo de fallo no es el que el filtro previene. El filtro retiene partículas, pero el fermentado aporta carbono orgánico soluble, nutrientes y microorganismos, y eso hace crecer biopelícula aguas abajo del filtro, dentro de la tubería y en el laberinto del emisor, donde no se puede limpiar. Y la solución habitual —choques de cloro o de ácido— destruye justamente el inóculo que se quiso aplicar. Por eso el fermentado va con mochila o con regadera al pie de la planta, y el goteo se reserva para agua limpia."
+    },
+    {
+      "id": "caldos-lugar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué los caldos minerales ocupan el último peldaño del manejo integrado y nunca se aplican por calendario?",
+      "opciones": [
+        "Son biocidas inespecíficos: el ion cobre desnaturaliza proteínas de cualquier organismo, así que matan también a lo que las otras lecciones cultivan.",
+        "El cobre es un elemento y no se degrada: se fija a la materia orgánica y a las arcillas de los primeros centímetros y se acumula año tras año.",
+        "Aplicar sin objetivo elimina enemigos naturales que estaban trabajando gratis, con lo que el problema vuelve antes y más fuerte.",
+        "Como son de origen mineral y no de síntesis, su efecto sobre la vida del suelo es despreciable y el problema es solo la fitotoxicidad sobre la planta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son las razones técnicas —no ideológicas— por las que van arriba en la escalera. La cuarta invierte la lección: el origen mineral no dice nada sobre la toxicidad, y el cobre acumulado se asocia a daño sobre lombrices, hongos micorrícicos y microbiota en general. Justamente porque no se degrada, su efecto sobre el suelo vivo es más persistente que el de muchos productos de síntesis, no menos."
+    },
+    {
+      "id": "plan-de-liquidos-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Escribe la política de líquidos de Rizoma del Sur: qué fermentados se van a preparar y para qué, dónde se aplican y dónde no según el catálogo de cultivos, cómo se filtran, qué reglas rigen los caldos minerales y qué se registra. Justifica cada decisión con el mecanismo, no con la costumbre.",
+      "respuestaModelo": "La política arranca reconociendo lo que Rizoma no va a pedirle a un líquido. El problema de este sitio es volumen de materia orgánica sobre 3.666 m² en 12 lotes, en una llanura aluvial con arcillas expansivas y un clima que mineraliza rápido: eso se resuelve con toneladas de sólido, no con litros. El orden de la lección 01 se mantiene: compost, lombriz, bocashi y recién después los líquidos. Escribirlo evita el fracaso típico, que es tener cuatro bidones burbujeando y ninguna pila armada.\n\nDicho eso, hay un lugar donde un fermentado sí gana su jornal, y es el vivero. La razón es aritmética y no de delicadeza: una mochila con biol al 5 % aporta del orden de una décima a media parte de gramo de nitrógeno, cifra ridícula repartida sobre cien metros cuadrados de cama, pero significativa si se aplica sobre doscientas bolsas de un litro, porque el volumen de sustrato tocado es cien veces menor. Los tres usos defendibles son inóculo al sustrato al llenar envases, aplicación al pie después del repique y riego foliar suave en plantines en crecimiento. Los tres tienen otra ventaja: hay decenas de plantines iguales al lado, así que el efecto se puede medir con un testigo sin tratar, que es lo que exige la lección 06.\n\nEl preparado es biol en un bidón de 200 litros reusado con sello de agua, no té de compost aireado. La razón es doble. La primera es de misión: un vecino sin plata no tiene bomba de aire ni tomacorriente junto al tanque, y un preparado que exige comprar algo no se puede regalar ni enseñar. La segunda es sanitaria: el té mal aireado es el más riesgoso del módulo, porque el azúcar más el agotamiento del oxígeno disuelto —que en el calor de la llanura llega antes, ya que la solubilidad cae mientras el metabolismo se acelera— convierte el tanque en un cultivo de lo que haya venido con el estiércol. El bidón va a la sombra y cerca del agua, porque cada metro de acarreo es jornal, rotulado, tapado y con mosquitero en la botella del sello: en zona de dengue endémico, todo recipiente que junte agua es un criadero de vector.\n\nLa regla por cultivo se cuelga en la pared y el catálogo la hace fácil. Culantro y ají dulce se comen crudos y la parte comestible es justo la que se rocía: ningún fermentado no higienizado sobre ellos, porque el biol no pasa por fase termófila y no elimina patógenos entéricos, y porque un preparado casero no tiene etiqueta y por tanto no tiene plazo de seguridad conocido; ante lo que no se sabe, se es conservador. Yautía, batata y plátano tienen el órgano comestible enterrado o pelado y cocido, así que el riesgo baja mucho. Ornamentales, árboles de sombra y frutales injertados no se comen: son el terreno libre para probar.\n\nEl filtrado es parte del preparado, no un trámite. Dejar asentar, decantar sin arrastrar el fondo, colar por tela y volver a colar por malla fina, el mismo día de la aplicación, y lavar la mochila apenas se termina, porque un preparado que duerme dentro es una mochila tapada al día siguiente. La estación de filtrado vive junto al vivero y no junto al bidón, para no acarrear líquido sin filtrar por todo el predio. Y el biol no entra al goteo: el problema no son las partículas que el filtro retiene, sino la biopelícula que crece aguas abajo del filtro, en el laberinto del emisor, alimentada por el carbono orgánico soluble que se acaba de inyectar. Además la cura se contradice sola, porque el choque de cloro que salva la línea mata el inóculo. El goteo se reserva para agua limpia.\n\nCon los caldos minerales la política es explícita y restrictiva desde el primer año, porque la deuda es permanente. El cobre no se degrada: se fija a la materia orgánica y a las arcillas de los primeros veinte centímetros, que es exactamente la capa donde trabaja la lombriz y donde este módulo apuesta a construir vida. Por tanto, bordelés solo en frutales injertados y árboles, nunca en camas de hoja, nunca en el vivero y jamás por calendario, con umbral y diagnóstico previos, y con una planilla de cobre por lote —fecha, concentración, litros— que se suma cada año para poder responder dentro de diez cuánto recibió cada lote. Sulfocálcico solo con alguien equipado y en un mes fresco, porque se cocina sobre fuego, desprende sulfuro de hidrógeno, es cáustico y quema el follaje con calor, lo que en Zanja Honda deja una ventana cortísima. Ceniza solo del fogón, nunca quemando biomasa para obtenerla —eso destruye el carbono que el módulo entero acumula— y solo con una idea del pH del lote, porque sube el pH y puede inducir clorosis férrica. Los preparados se guardan en envase opaco y rotulado, fuera de alcance, jamás en botellas de gaseosa, y los envases van con triple lavado.\n\nPor último, el registro: por cada tanda de biol, fecha, materias primas, proporciones, cuándo paró el gas, cuándo se usó, dónde y a qué dilución; por cada aplicación de caldo, fecha, motivo —qué se vio, no qué mes era—, lote, dosis y qué pasó después. Y en lo que toca a vender o distribuir cualquiera de estos preparados, no se inventa nada: se consulta con la autoridad de sanidad agropecuaria e inocuidad alimentaria y lo tributario con un contador local.",
+      "criterios": [
+        "Declara que los líquidos no son la prioridad de Rizoma y justifica el orden compost, lombriz, bocashi, líquidos por el problema de volumen de materia orgánica.",
+        "Usa la aritmética del denominador para explicar por qué el fermentado se aplica en el vivero y no en el lote, con usos concretos sobre plantas que no se comen.",
+        "Elige biol con sello de agua en lugar de té aireado, y justifica la elección tanto por la misión comunitaria como por el riesgo sanitario del azúcar sin aireación.",
+        "Menciona la caída de oxígeno disuelto con la temperatura como razón por la que el manual templado no se aplica aquí.",
+        "Aplica la regla por cultivo usando el catálogo real: nada no higienizado sobre culantro y ají dulce; menor riesgo en yautía, batata y plátano; libre en ornamentales y frutales.",
+        "Justifica la prohibición sobre comestibles crudos con la ausencia de higienización y con la inexistencia de plazo de seguridad declarado en un preparado casero.",
+        "Describe el procedimiento de filtrado en etapas y el mismo día, y la limpieza inmediata del equipo.",
+        "Excluye el fermentado del goteo por obturación biológica aguas abajo del filtro y señala la contradicción del choque de cloro.",
+        "Restringe el bordelés a frutales y árboles, prohíbe el calendario y establece una planilla acumulada de cobre por lote, justificándolo por la no degradabilidad del cobre y la capa de la lombriz.",
+        "Trata el sulfocálcico y la ceniza con sus riesgos propios (H₂S, cáustico, quema con calor; subida de pH, ceniza contaminada, no quemar biomasa).",
+        "Incluye bioseguridad del predio —recipientes tapados o con mosquitero por el dengue, envases opacos y rotulados, nunca botellas de gaseosa— y el registro por tanda y por aplicación.",
+        "No inventa normativa, precios ni plazos: remite a la autoridad competente, a un contador local y a laboratorios o centros de investigación de la zona."
+      ],
+      "explicacion": "Una buena respuesta trata los líquidos como lo que son —un vehículo con carga diminuta— y por tanto reparte el trabajo: sólido para masa, líquido para inóculo y señal, y caldo mineral solo como último recurso con contabilidad de cobre. Lo que distingue una respuesta sólida de una genérica es que cada decisión venga con su mecanismo: el denominador del envase, el oxígeno disuelto, la cutícula, la biopelícula del emisor y la no degradabilidad del cobre."
+    }
+  ]
+}

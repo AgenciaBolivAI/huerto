@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "estados-de-avance",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Para qué sirve llegar con los materiales preparados en varios estados de avance?",
+      "opciones": [
+        "Permite mostrar hoy un resultado que en realidad tarda semanas, sin saltarse la explicación.",
+        "Da el criterio con el que cada persona va a juzgar su propio trabajo dentro de tres semanas en su casa.",
+        "Permite traer también los fallidos, y el criterio perceptual solo se aprende por contraste.",
+        "Sirve sobre todo para que la demostración se vea más profesional y ordenada."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La apariencia no es el punto: la preparación escalonada existe porque casi toda tarea agrícola tiene esperas que no caben en una tarde, y porque sin ver el resultado logrado —y el fallido al lado— nadie puede juzgar después su propio trabajo. Un taller que se ve ordenado y del que la gente se va sin haber visto cómo se ve cuando salió bien no transfirió el criterio."
+    },
+    {
+      "id": "cuantas-personas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Alrededor de una mesa, ¿qué determina cuánta gente puede aprender a la vez de una sola persona?",
+      "opciones": [
+        "El radio útil: un corte o un punto de humedad se distinguen a metro y medio, y a tres metros no.",
+        "La geometría en media luna, porque en círculo cerrado el de enfrente ve el gesto invertido y tapa a los demás.",
+        "El límite humano de supervisión: una persona enseñando observa y corrige a seis u ocho practicando.",
+        "El volumen de voz de quien enseña, que es lo que se puede subir cuando el grupo crece."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Subir la voz no resuelve nada, porque el límite no es acústico sino visual y de supervisión: quien está a tres metros oye perfecto y no ve el corte, y quien practica sin que nadie observe su error lo repite hasta el final. Con grupo mayor la única salida honesta es repetir por tandas o partir en estaciones."
+    },
+    {
+      "id": "se-entendio",
+      "tipo": "verdadero_falso",
+      "enunciado": "Preguntar «¿se entendió?» al final de cada paso es una forma razonable de comprobar que el grupo va siguiendo.",
+      "respuesta": false,
+      "explicacion": "Falso: esa pregunta mide cortesía y ganas de irse, no comprensión. Quien no entendió el tercer paso no está en condiciones de formular una pregunta, y admitirlo delante del grupo tiene un costo social que nadie está obligado a pagar. Lo que sí mide produce una conducta observable: que lo haga, que se lo explique al compañero, que elija entre tres ejemplos, o que prediga qué pasaría si se hiciera de otra manera."
+    },
+    {
+      "id": "fallo-en-publico",
+      "tipo": "opcion_multiple",
+      "enunciado": "La demostración falla delante de todos. ¿Qué corresponde hacer?",
+      "opciones": [
+        "Parar y nombrarlo en voz alta: «esto salió mal, miren cómo se ve».",
+        "Diagnosticar en voz alta con las alternativas, señalando en el material qué indicio decide el diagnóstico.",
+        "Decir qué se decide hacer y cómo se evita la próxima vez.",
+        "Arreglarlo rápido y seguir, para no perder el ritmo de la sesión ni la confianza del grupo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Arreglarlo rápido sin narrarlo regala el momento más valioso de la tarde: el diagnóstico ante lo inesperado es justamente el conocimiento que ninguna demostración transmite cuando todo sale bien. Y la confianza no se protege tapando el fallo, se pierde al taparlo o al fingir que era intencional, porque el grupo casi siempre se da cuenta."
+    },
+    {
+      "id": "ratio-herramienta",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué implica el ratio de manos por herramienta al diseñar un taller?",
+      "opciones": [
+        "Los minutos de práctica por persona salen de la duración del bloque por los juegos de herramientas dividido entre las personas.",
+        "De dos a tres personas por juego funciona, cuatro es el techo y más de cuatro es un taller de mirar.",
+        "Hay que calcularlo antes de anunciar el tope de plazas, y el aviso puede decir el motivo del tope.",
+        "Comprando más herramientas se resuelve el problema de atender a un grupo grande."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Comprar herramientas solo mueve el cuello de botella: quien enseña es el recurso serializado, y da igual cuántas tijeras haya si solo una persona puede decir «ese corte quedó desgarrado». Ampliar herramientas sin ampliar supervisión no elimina el límite; por eso formar ayudantes rinde más que comprar material."
+    },
+    {
+      "id": "treinta-personas",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si a un taller diseñado para ocho personas llegan treinta, lo correcto es dar la sesión completa igual, porque nadie debería quedarse afuera.",
+      "respuesta": false,
+      "explicacion": "Falso: ejecutar el plan de ocho con treinta produce treinta personas que miraron —peor resultado que ocho que aprendieron— y además quema la convocatoria siguiente. Lo correcto es tener decidido de antemano un modo degradado y anunciarlo en los primeros cinco minutos: reducir el alcance a una sola habilidad, partir en estaciones que rotan, reclutar ayudantes entre los que ya sabían, o hacer el taller con el grupo que cabe y agendar el segundo turno con fecha cerrada delante de todos."
+    },
+    {
+      "id": "seguimiento",
+      "tipo": "verdadero_falso",
+      "enunciado": "La métrica que dice si un taller sirvió es cuánta gente asistió.",
+      "respuesta": false,
+      "explicacion": "Falso: la métrica honesta es la tasa de ejecución, qué proporción de asistentes hizo la tarea por su cuenta después, y se mide con el seguimiento a las dos semanas pidiendo una foto en lugar de una opinión. Es siempre menor de lo que uno espera, y una tasa baja es información sobre el diseño del taller —faltó material para llevarse, no se enunció el compromiso, la tarea no era la que esa persona necesitaba— y no sobre la gente."
+    },
+    {
+      "id": "taller-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña completo el primer taller abierto de Rizoma del Sur: qué se enseña, cómo se convoca, cómo se prepara el sitio y los materiales, el guion con tiempos, qué pasa si llega el triple de gente, cómo cierra y cómo se hace el seguimiento.",
+      "respuestaModelo": "Elijo la habilidad primero, y elijo la que menos luce: llenar, sembrar y rotular bolsas de vivero, o esquejes de culantro y de ají dulce. El injerto de frutales convoca más y es peor decisión, porque necesita material caro y semanas hasta ver resultado; la bolsa sembrada necesita sustrato y una semilla, y a los diez días quien se la llevó ve algo verde en su patio, que es lo que la trae al segundo taller. Una sola habilidad, ejecutada completa por cada asistente: si meto cuatro temas salen personas que oyeron hablar de cuatro cosas y no saben hacer ninguna.\n\nLa preparación empieza semanas antes, y es la parte que se olvida. Para un taller de esquejes a principios de septiembre pongo esquejes de la misma especie tres, dos y una semana antes, más un frasco con uno ya enraizado con las raíces a la vista. Y fabrico los fallidos a propósito: uno enterrado al revés, uno sin reducir la hoja, uno cortado con tijera desafilada. Esa caja de fracasos es el material didáctico más valioso que tengo, porque el criterio perceptual se aprende por contraste. En la sesión, el resultado logrado circula antes de que se enseñe el gesto.\n\nLa convocatoria es directa: hablo con la gente o pido a alguien conocido del barrio que hable, y refuerzo con un mensaje de voz reenviable, que además llega a quien no lee con fluidez. El aviso contesta cuatro cosas: qué se va a aprender a hacer, qué se lleva cada uno —cinco esquejes propios en una bolsa y una tarjeta con la secuencia dibujada—, cuánto dura, y que es gratuito y no se vende nada, dicho explícitamente porque la sospecha por defecto es razonable. Anuncio tope de plazas con su motivo: «somos ocho porque hay tres juegos de herramientas». Confirmo la víspera uno por uno. Elijo la hora contra las obligaciones reales de quien viene, porque una hora mal elegida excluye siempre a las mismas personas. Anuncio la fecha alternativa desde el primer aviso: entre octubre y abril una tarde puede desaparecer bajo la lluvia y entre mayo y septiembre puede caer un surazo. Y recomiendo manga larga y repelente, porque el dengue es endémico y el mosquito pica de día, justo en el horario del taller.\n\nEl sitio: mesa bajo el umbráculo a la altura del pecho de quien mira, público en media luna y nunca en círculo, sol a sus espaldas —en la seca, media tarde con el grupo dando la espalda al oeste—, trapo claro para que el esqueje verde no desaparezca contra la tierra. Ocho personas como máximo; la novena ya no aprende, asiste. La lista de materiales la calculo por persona, con un tercio de margen, y la cargo la víspera con un juego de herramientas y un balde de sustrato de repuesto: si alguien se queda sin material pasa a espectador.\n\nEl guion tiene bloques con hora y criterio de paso: llegada, apertura de diez minutos con qué se lleva y las reglas de seguridad, diez circulando los estados de avance y los fallidos, veinte de demostración —primero entera a velocidad real, después lenta y narrada, con el error típico cometido a propósito—, cuarenta de hacerlo juntos parando el grupo entero en cada paso, descanso, cincuenta de ejecución individual en los que yo camino, miro y me callo salvo para prevenir una lesión, quince de comprobación por conducta y veinte de cierre. Como mucho un quinto del tiempo es alguien hablando. En la ejecución individual anoto cada duda y cada error: cada duda es un paso que faltó y cada error un criterio que no enuncié.\n\nSi llegan treinta, la decisión se toma contando cabezas en los primeros cinco minutos y se anuncia en voz alta: reduzco el alcance a una sola cosa, parto en estaciones que rotan cada veinte minutos, y recluto ayudantes entre quienes ya sabían o detectaron el error deliberado. Si nada alcanza, hago el taller con el grupo que cabe y agendo el segundo turno con fecha cerrada delante de todos. Si llegan tres, no cancelo: tres que ejecutan la tarea cuatro veces aprenden más que ocho que la ejecutan una vez.\n\nEl cierre no se recorta nunca: cada persona se va con material vivo en la mano, con un apoyo de memoria que no dependa de leer, habiendo dicho en voz alta qué día va a hacer su parte, y sabiendo cuándo nos volvemos a ver. A las dos semanas mando un mensaje individual pidiendo una foto, no una opinión. Con las fotos diagnostico: si a la mitad se le secaron los esquejes, la sesión no dejó claro el ambiente húmedo; si se pudrieron, el problema es el riego. Ese diagnóstico corrige el guion siguiente y se anota con el mismo formato de fecha, condiciones y resultado que uso para la parcela. Lo que mido no es la asistencia, es esa tasa de ejecución.\n\nY el encuadre, que decide lo demás: no pido documento ni firma, no condiciono el material a nada, y digo al empezar que no se vende nada y que lo que se llevan es suyo. Si preguntan por precios, semilla o permisos, doy el mecanismo general y a quién consultar —la autoridad competente, un contador local, una institución de investigación agrícola del departamento— y no una cifra de memoria, porque en un taller un dato inventado se multiplica por el número de asistentes.",
+      "criterios": [
+        "Elige una sola habilidad ejecutable, de resultado rápido y visible, y justifica por qué no el injerto",
+        "Planifica la preparación escalonada con semanas de antelación, incluida la caja de fallidos fabricados a propósito",
+        "Resuelve la geometría del sitio y muestra el resultado final antes de enseñar el gesto",
+        "Fija el número máximo de asistentes y lo deriva del radio útil y del límite de supervisión",
+        "Usa convocatoria directa y mensaje de voz, dice qué se lleva cada uno, declara la gratuidad y confirma la víspera",
+        "Anuncia fecha alternativa por lluvia o surazo, y menciona la prevención del dengue en el horario del taller",
+        "Calcula la lista de materiales por persona con margen y prevé repuestos de lo crítico y único",
+        "Escribe un guion con bloques, tiempos y criterio de paso, con la mayor parte del tiempo en manos ocupadas",
+        "Incluye la secuencia yo lo hago, lo hacemos, lo haces, con silencio y observación en la pasada individual",
+        "Define de antemano el modo degradado para treinta personas y también qué hacer si llegan tres",
+        "Cierra con material vivo, apoyo de memoria sin texto, compromiso enunciado y fecha, y ejecuta el seguimiento a las dos semanas pidiendo foto",
+        "Mantiene el encuadre comunitario y gratuito y remite a la autoridad competente en lugar de inventar cifras o normativa"
+      ],
+      "explicacion": "La respuesta completa recorre las dos mitades de la lección: la demostración como unidad —estados de avance, líneas de visión, narración, las tres pasadas, comprobación por conducta— y el taller como envoltorio —convocatoria, materiales, guion con tiempos, ratio de herramientas, modo degradado, cierre y seguimiento—. Lo que separa una respuesta buena de una regular es que la segunda se queda en la logística del evento y olvida que la métrica es la tasa de ejecución posterior, no la asistencia."
+    }
+  ]
+}

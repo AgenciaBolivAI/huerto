@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "consumidora-secundaria",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué come realmente una lombriz de lecho y qué consecuencia de diseño tiene?",
+      "opciones": [
+        "Pastorea la película de bacterias y hongos que cubre el material ya descompuesto.",
+        "Es una consumidora secundaria: la pila hace el trabajo pesado y ella refina lo que sale.",
+        "No tiene dientes, así que solo ingiere lo blando y fino, molido en la molleja contra partículas minerales.",
+        "Procesa material fresco directamente, y por eso reemplaza a la pila de compost."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La última es el malentendido central de la lección. Un lecho no sustituye a la pila: la necesita como etapa previa, porque el material fresco no está en el formato que ese aparato digestivo acepta. Peor todavía, el material fresco cargado sobre el lecho se fermenta encima de las lombrices y las acidifica. La pila es el preprocesador y el lecho la pasada de refinado."
+    },
+    {
+      "id": "humedad-y-piel",
+      "tipo": "opcion_multiple",
+      "enunciado": "La respiración cutánea explica el manejo de la humedad. ¿Qué se deduce de ella?",
+      "opciones": [
+        "El oxígeno solo cruza la cutícula si está mojada, así que una lombriz seca se asfixia.",
+        "Un lecho encharcado también asfixia, porque el agua estancada casi no tiene oxígeno disuelto.",
+        "El lecho trabaja más mojado que la pila: alrededor de 70–85 % frente a 50–60 %.",
+        "Como la humedad importa tanto, conviene regar hasta que el lecho drene abundante lixiviado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte el criterio. Un lecho bien manejado apenas gotea: el lixiviado abundante indica que pasaste el punto y que estás creando justamente la condición anaerobia que asfixia a las lombrices, acidifica el material y las hace trepar por las paredes. El agua que drena no es producción, es fuga."
+    },
+    {
+      "id": "carga-como-cola",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué sobrecargar el lecho no es simplemente desperdiciar comida?",
+      "opciones": [
+        "La capa sin digerir engorda, se compacta y su interior se queda sin oxígeno.",
+        "Adentro arranca fermentación anaerobia que produce ácidos orgánicos y amoníaco.",
+        "Esa oxidación libera calor, así que la sobrecarga sube la temperatura del propio lecho.",
+        "El excedente simplemente espera en la superficie hasta que la población lo alcance."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta supone que la cola es inerte, y no lo es: se descompone sola mientras espera. Por eso la sobrecarga produce las dos cosas que matan lombrices —acidez y temperatura— en vez de producir un simple sobrante. Y por eso la regla operativa es capa fina y carga solo cuando la anterior está trabajada, nunca por calendario."
+    },
+    {
+      "id": "surazo-y-carga",
+      "tipo": "verdadero_falso",
+      "enunciado": "Durante un surazo, con noches de unos diez grados, conviene mantener la carga habitual para que las lombrices no pasen hambre.",
+      "respuesta": false,
+      "explicacion": "Falso, y es un error contraintuitivo. El frío no las mata: las enlentece, o sea que baja la tasa de servicio del lecho. Si mantenés la tasa de llegada, estás construyendo la cola sobrecargada justo cuando el sistema tiene menos capacidad, y el daño aparece días después, cuando vuelve el calor y toda esa masa acumulada arranca a fermentar de golpe."
+    },
+    {
+      "id": "techo-de-temperatura",
+      "tipo": "verdadero_falso",
+      "enunciado": "En la llanura cruceña el riesgo térmico principal de un lombricario es el frío nocturno.",
+      "respuesta": false,
+      "explicacion": "Falso: el riesgo es el techo superior. La roja está cómoda entre unos 15 y 25 °C, se estresa por encima de unos 30 y muere cerca de 35, sin poder escapar del cajón. Y el calor llega por dos vías que se suman: el ambiente de septiembre y octubre, y el metabolismo del propio lecho cuando se lo sobrecarga. Casi toda la bibliografía de lombricultura viene de climas donde el problema es el opuesto."
+    },
+    {
+      "id": "acidez-y-empacho",
+      "tipo": "opcion_multiple",
+      "enunciado": "El lecho está ácido y aparecen lombrices hinchadas y arrosariadas. ¿Qué es correcto hacer?",
+      "opciones": [
+        "Parar la carga primero, airear la capa de alimento y agregar material seco y carbonado.",
+        "Espolvorear carbonato de calcio molido, como cáscara de huevo o caliza agrícola.",
+        "Revisar si entró estiércol fresco o mucho material rico en nitrógeno de fermentación rápida.",
+        "Corregir el pH rápido con cal viva o cal hidratada, que son las que más suben el pH."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta mata el lecho: la cal viva y la hidratada son cáusticas y actúan directamente sobre un animal que respira por la piel. La corrección se hace con carbonato molido y en cantidades chicas, y sobre todo quitando la causa, que casi siempre es la sobrecarga. El aspecto arrosariado es el empacho proteico, que comparte causa con la acidez pero es un mecanismo distinto."
+    },
+    {
+      "id": "cosecha-y-capullos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es cierto sobre los métodos de cosecha y sobre lo que se llevan?",
+      "opciones": [
+        "La migración lateral cuesta poco trabajo pero inmoviliza medio lecho durante semanas.",
+        "La pirámide funciona por fototaxia negativa y en la llanura se hace a la sombra y temprano.",
+        "Los capullos no migran: se quedan en el material cosechado y pasan por la criba.",
+        "El cribado es el método más suave para la población porque no la manipula."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El cribado es justamente el más agresivo: golpea lombrices y capullos, y además solo funciona en una ventana estrecha de humedad. Es el más rápido para volumen, no el más suave. Y como los capullos viajan con el humus, la fracción gruesa del cribado —donde se concentran— vuelve siempre al lecho: es inóculo y pie de cría gratis."
+    },
+    {
+      "id": "lombricario-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseñá el lombricario de Rizoma del Sur: dónde va, cómo se construye dado el suelo, cómo lo dimensionás contra la demanda del vivero, cómo lo operás a lo largo del año y qué hacés con el lixiviado.",
+      "respuestaModelo": "Lo primero es aceptar que el lecho no es un accesorio del vivero sino una etapa de proceso con capacidad finita, y que está aguas abajo de la pila de compost y aguas arriba de la mezcla de sustrato. Todo lo demás sale de ahí.\n\nUbicación. El lombricario necesita sombra densa, y en Rizoma del Sur la sombra densa es el recurso más peleado del predio: ya la querían el culantro y la zona de propagación. Eso no se resuelve el día de construir sino en el plano, con las tres demandas puestas sobre el mismo dibujo. La segunda restricción es de flujo: el lecho va entre la pila de compost, que es su proveedor, y la zona de mezcla de sustrato, que es su cliente, porque todo lo que circula entre esos tres puntos es pesado y se mueve en carretilla. Y cerca de una toma de agua, porque en la seca hay que mojarlo seguido.\n\nConstrucción, dado el suelo que hay. En la llanura aluvial de Zanja Honda, con arcilla expansiva 2:1, no hago una fosa en el terreno: un pozo excavado en esa arcilla se inunda en lluvias, se agrieta en la seca y mueve cualquier pared que le apoye encima. El lecho va elevado, sobre base compactada o pilares, con paredes de mampostería y el piso con pendiente leve hacia una salida tapada. Treinta y cinco centímetros de altura útil, porque las epígeas trabajan en los primeros quince a veinticinco y más abajo solo hay volumen muerto que se compacta. Un metro de ancho, que es lo que alcanza el brazo desde los dos lados sin pisar el lecho, y el largo como variable libre. Nada de chapa ni de neumáticos: se calientan. Techo de agua, no solo malla de sombra, porque un aguacero de enero sobre un lecho abierto lo inunda en una tarde; tapa apoyada encima contra los pájaros y la luz; y una manta de cobertura muerta sobre el material, que es donde la lombriz come.\n\nDimensionamiento. Con supuestos declarados: si el vivero llena unos 6.000 envases al año de litro y medio, son 9 m³ de sustrato, y si el humus entra al 20 % de la mezcla hacen falta 1,8 m³ al año. Un lecho de 1 × 4 m que entregue diez centímetros por ciclo da 0,4 m³ por cosecha, y a tres ciclos por año 1,2 m³. Con dos módulos de 1 × 4 m alcanza, y los construyo desde el principio como dos mitades para cosechar por migración lateral sin parar la producción. Lo incómodo de la cuenta es lo de aguas arriba: como el material pierde entre la mitad y dos tercios de volumen al pasar por el lecho, esos 1,8 m³ exigen cuatro o cinco metros cúbicos de compost al año, que ya tenían otro destino. La pila hay que dimensionarla para los dos usos.\n\nArranque y operación anual. Siembro el pie de cría al principio de la seca, hacia mayo o junio, para que la población tenga tres o cuatro meses amables antes de septiembre y octubre, que es cuando un lecho joven se muere. El primer año lo trato como calibración, no como producción, y no comprometo el sustrato del vivero contra un humus que todavía no existe. La carga es siempre en capa fina, repartida, dejando una zona sin alimento como refugio, y nunca por calendario sino cuando la capa anterior ya está trabajada. Bajo la carga en los meses calientes, porque ahí la sobrecarga sube la temperatura interna sobre un ambiente que ya no perdona, y también durante los surazos, porque el frío baja la tasa de servicio. Nunca gallinaza fresca ni ceniza: amoníaco y sales matan a través de la piel. Mido humedad a diez o quince centímetros con la prueba del puño, temperatura en dos puntos y pH cada tanto, y anoto todo en una bitácora, que en dos temporadas me da la capacidad real de mi lecho con mis materiales.\n\nEl lixiviado. No lo trato como producto. Si sale en cantidad es la señal de que el lecho está demasiado mojado, o sea en la condición que produce anaerobiosis, acidez y fuga de lombrices. Además el lecho nunca alcanza temperatura de higienización, así que lo que venga con un estiércol mal compostado sale por ahí: no va sobre partes comestibles. Si lo recojo, es en recipiente tapado y con malla mosquitera, y lo devuelvo al lecho por arriba, porque un balde destapado con líquido orgánico estancado bajo sombra es un criadero de mosquito en zona con dengue endémico.\n\nY lo que hace que esto sea del proyecto: el excedente de lombriz no se vende, se reparte. Medio kilo entregado a un vecino con su material es un sistema que en un año le abastece su huerto sin gastar nada.",
+      "criterios": [
+        "Sitúa el lecho bajo sombra densa, reconoce que compite con culantro y propagación, y lo ubica por flujo entre la pila y la zona de mezcla, cerca del agua.",
+        "Descarta la fosa excavada por la arcilla expansiva y propone lecho elevado con piso en pendiente.",
+        "Fija profundidad útil y ancho con criterio fisiológico y ergonómico, y deja el largo como variable libre.",
+        "Exige techo de agua además de malla, tapa física y manta sobre el material.",
+        "Hace la cuenta de demanda del vivero y llega a un número de lechos, declarando los supuestos.",
+        "Advierte que el lecho le consume compost a la pila y que hay que dimensionar la pila para ambos usos.",
+        "Programa el arranque al principio de la seca y trata el primer año como calibración.",
+        "Define la carga en capa fina, con zona de refugio, sin calendario y reducida en calor y surazos.",
+        "Prohíbe gallinaza fresca y ceniza explicando amoníaco y sales sobre un animal que respira por la piel.",
+        "Propone registro de humedad, temperatura en dos puntos, pH y cosecha en una bitácora del sistema.",
+        "Trata el lixiviado como síntoma, no como producto, y cubre higienización ausente y mosquito.",
+        "Cierra con el reparto del excedente de lombriz como forma de cumplir la misión comunitaria."
+      ],
+      "explicacion": "Fijate en que casi todas las decisiones salen de dos hechos fisiológicos: la lombriz respira por la piel y no soporta pasar de unos 35 °C. De ahí salen la humedad alta, la sombra obligatoria, el techo, la carga en capa fina y la reducción estacional. Cuando el diseño arranca del animal en vez de arrancar de una receta copiada, casi todo lo demás se deduce solo."
+    }
+  ]
+}

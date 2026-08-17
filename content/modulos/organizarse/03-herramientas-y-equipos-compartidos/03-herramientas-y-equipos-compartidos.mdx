@@ -1,0 +1,414 @@
+Una compra conjunta termina. Llega el camión, se reparte el sustrato, cada uno se lleva su parte y
+al día siguiente no queda nada que administrar. Si sale mal, sale mal una sola vez.
+
+Un equipo compartido no termina nunca. El día que cinco vecinos ponen plata para un motocultor no
+completan una operación: **crean un objeto que va a seguir existiendo, gastándose y pidiendo
+decisiones durante años.** Quién lo guarda, quién lo usa el martes, quién le pone aceite, quién paga
+cuando se rompe.
+
+Ahí se rompen los grupos: no en la compra, sino tres meses después, cuando alguien devuelve la
+máquina con un ruido raro y nadie sabe quién la usó antes ni si el ruido ya estaba. Lo que sigue son
+las reglas que evitan eso, y que separan un equipo que dura de una carcasa oxidada bajo una lona con
+cinco dueños que ya no se hablan.
+
+No cubren a nombre de quién queda el bien —esa es la lección cuatro— ni el mantenimiento técnico de
+cada máquina, que vive en los módulos de obra, riego y energía: cubren el **sistema de reglas
+alrededor del objeto.**
+
+## Un activo compartido es estado compartido
+
+<Analogia>
+Una compra conjunta es **una operación sin estado**: entra un pedido, sale un reparto y el sistema
+queda como estaba. Se puede reintentar, y el fallo de una no contamina la siguiente.
+
+Un equipo compartido es **estado mutable con dueños múltiples**, la estructura más difícil de
+mantener correcta que existe. El objeto tiene una versión —limpio o sucio, con aceite o sin aceite,
+con la cuchilla derecha o torcida— y esa versión cambia cada vez que alguien lo toca. No hay copias:
+hay una sola, y quien la tiene la tiene en exclusiva.
+
+De ahí salen, una por una, las reglas de esta lección. Un recurso mutable compartido necesita **un
+responsable declarado** (custodio), **exclusión mutua** (turnos y reservas), **verificación en la
+frontera** (revisión al entregar y al devolver), **un registro de quién lo tocó y cuándo** (bitácora)
+y **presupuesto para su mantenimiento** (fondo). Quien haya sostenido un recurso así en producción
+reconoce la lista entera.
+</Analogia>
+
+Y hay una propiedad que el conocimiento compartido no tiene: **el equipo se gasta al usarlo, y más
+rápido cuanto peor se lo trate.** Compartir un dato no lo desgasta; compartir una máquina reparte su
+vida entre manos con incentivos distintos a los del dueño único, porque **el beneficio del uso es
+individual y el costo del desgaste es común.** Esa asimetría es previsible, no es un defecto moral,
+y es lo que las reglas de más abajo existen para corregir.
+
+## La cuenta que decide qué se comparte
+
+La decisión no se toma por el precio del equipo sino por cuánto se usa. La cuenta correcta es
+el <Termino slug="costo-por-hora-de-uso">costo por hora de uso</Termino>, y casi nadie la hace.
+
+<Formula explicacion="El costo real de una máquina por cada hora que trabaja tiene tres partes: la reposición del equipo repartida entre las horas que va a durar, el mantenimiento previsto repartido entre esas mismas horas, y lo que gasta mientras trabaja. Los precios y las horas se llenan con datos locales: los del proveedor, los del mecánico y los del manual.">
+costo por hora de uso = (precio ÷ horas de vida útil) + (mantenimiento previsto ÷ horas) + consumo por hora
+</Formula>
+
+El primer término es el que decide. La <Termino slug="vida-util">vida útil</Termino> de una máquina
+con motor **no se mide en años sino en horas de trabajo**, y por eso los equipos traen o admiten
+un <Termino slug="horometro">horómetro</Termino>: un contador que solo avanza mientras el motor
+gira. Es la lectura que ordena todo el sistema —el servicio, el fondo, el reparto del gasto—, y sin
+ella hay que inventar un sustituto, que suele ser la jornada anotada a mano.
+
+Con esa cuenta hecha se completa el criterio de la lección uno: compartir tiene sentido cuando el
+bien es **caro**, es **indivisible**, su uso individual es **bajo**, la demanda **no es simultánea**
+y el ahorro supera al costo de coordinarlo. Falta una alternativa que casi siempre se salta.
+
+<Dato titulo="Antes de comprar entre varios: preguntar cuánto cobra el que ya la tiene">
+La opción que un grupo entusiasmado no evalúa es **contratar el servicio**. En casi cualquier zona
+hay alguien que ya tiene el motocultor, el tractor o la fumigadora de motor y trabaja por jornada. Y
+no es peor por ser menos épica: quien presta el servicio **absorbe el mantenimiento, la reposición,
+el repuesto y el riesgo de que la máquina no arranque el día clave**, y encima sabe operarla.
+
+La regla práctica: **se pide el precio del servicio en la zona y se compara con el costo por hora de
+uso calculado arriba.** Si comprar no gana con holgura, no gana. Lo que cobre un servicio en Santa
+Cruz esta temporada hay que preguntarlo en Santa Cruz esta temporada.
+
+Y hay un caso intermedio que funciona muy bien: **el grupo contrata junto el servicio.** Vuelve a
+ser un problema de escala —una sola movilización para cinco parcelas contiguas— sin activo
+compartido que administrar.
+</Dato>
+
+## Lo que no se comparte nunca
+
+La mitad de los conflictos nacen de haber compartido algo que no debía compartirse.
+
+**La herramienta de uso diario se compra, no se comparte.** Pala, azadón, machete, tijera de podar,
+regadera: son baratas, se usan todos los días y su valor está en tenerlas a mano. Compartirlas
+produce el costo de coordinación completo y ningún ahorro.
+
+**Nada que esté en la ruta crítica de una tarea que no puede esperar.** Si el equipo llega tarde y
+con eso se cae tu semana de trasplante, se convirtió en
+un <Termino slug="punto-unico-de-falla">punto único de falla</Termino> para varias parcelas a la
+vez. La pregunta es el <Termino slug="costo-de-indisponibilidad">costo de indisponibilidad</Termino>:
+qué pierdes si el día que lo necesitas no está. Si la respuesta es «una semana» o «el lote», ese bien
+no se comparte aunque sea caro.
+
+<Advertencia>
+Hay tres categorías donde compartir es un daño técnico, no una molestia.
+
+**La herramienta de corte que entra en tejido vivo.** Tijeras de podar, cuchillos de injerto,
+navajas de esqueje. Una herramienta que visita tres parcelas es un vector: mueve virus, bacterias y
+hongos de un lote al siguiente sin que nadie note nada hasta semanas después. Es
+la <Termino slug="bioseguridad">bioseguridad</Termino> del módulo doce, y se resuelve con herramienta
+propia y desinfección entre plantas.
+
+**La pulverizadora que tocó herbicida.** Los residuos quedan en las paredes del tanque, en la
+manguera y sobre todo en empaques y lanza, y **sobreviven al enjuagado normal**. El siguiente
+usuario aplica un fungicida con esa misma mochila sobre plantines y produce
+una <Termino slug="fitotoxicidad">fitotoxicidad</Termino> que aparece días después, sin que nadie
+relacione una cosa con la otra. Si un grupo comparte pulverizadoras, la regla es dura: **un equipo
+dedicado exclusivamente a herbicidas, rotulado, que nunca se usa para otra cosa**, y
+el <Termino slug="triple-lavado">triple lavado</Termino> como mínimo entre aplicaciones del resto.
+
+**El equipo de protección personal.** Respirador, mascarilla, guantes y gafas se ajustan al cuerpo
+de quien los usa, se contaminan con lo aplicado y su filtro tiene una vida que nadie puede auditar
+en cabeza ajena. El <Termino slug="equipo-de-proteccion">equipo de protección</Termino> es individual
+siempre, y es la última partida que un grupo debería intentar ahorrar.
+</Advertencia>
+
+## El custodio: un nombre, no un grupo
+
+Lo que queda después de ese filtro —bomba portátil, motocultor, fumigadora de motor, remolque,
+secadora, herramienta eléctrica de obra— necesita antes que nada
+un <Termino slug="custodio">custodio</Termino>: **una persona con nombre y apellido responsable de
+que el equipo exista, esté donde debe estar y funcione.** No es el dueño; la propiedad es materia de
+la lección cuatro. Es un rol operativo: guarda, lleva la bitácora, hace la revisión de entrega y
+devolución, ejecuta el mantenimiento previsto y avisa cuando el fondo no alcanza.
+
+<Analogia>
+Es el mismo descubrimiento que hizo la industria del software con los servicios sin dueño: **un
+componente del que todos son responsables es un componente del que nadie es responsable.** Nadie
+mira sus alertas, y el día que falla se pierden dos horas averiguando a quién despertar.
+
+La solución no fue crear más procesos: fue poner un nombre, con el inventario de qué mantiene y con
+la carga reconocida en su tiempo en lugar de regalada. Y el corolario se traslada tal cual: **la
+rotación rápida del responsable destruye el contexto.** Quien lleva seis meses con la máquina sabe
+qué ruido es normal; el que la recibió el lunes no, y eso no está escrito en ninguna parte. Se rota
+por períodos largos y con entrega documentada, no cada mes.
+</Analogia>
+
+Dos cosas que casi nunca se escriben y deberían. **La custodia cuesta**: ocupa un espacio techado y
+con llave, obliga a estar disponible para entregar y recibir, y traslada a una casa el riesgo del
+robo. Esa carga se compensa —exención del aporte, una parte del fondo, lo que el grupo decida— y se
+compensa explícitamente, porque un custodio que se siente usado deja de serlo en seis meses. Y **la
+custodia no es propiedad**: el deslizamiento más común es que quien guarda la máquina empiece a
+decidir quién la usa, y por eso el calendario lo fija una regla escrita, no su criterio.
+
+## Turnos y reservas: el calendario es la mitad del sistema
+
+La utilización baja habilita compartir y la demanda simultánea lo destruye. En un clima con ventanas
+estrechas esa simultaneidad es la norma, y el calendario deja de ser un detalle administrativo.
+
+<Analogia>
+Es un planificador de tareas sobre un recurso exclusivo, con todos sus fallos conocidos.
+
+**Atender por orden de llegada** es simple y transparente, pero el que madruga se lleva siempre la
+mejor ventana. **Atender por prioridad** —el que más lo necesita— produce inanición: el mismo
+miembro queda al final temporada tras temporada y termina yéndose. La solución conocida
+es **prioridad rotativa**: quien tuvo el primer turno esta temporada pasa al final de la lista en la
+siguiente, y la lista se publica antes de que empiece la ventana, no durante.
+
+Dos mecanismos más se traducen directos. **Toda reserva tiene un tope de horas**, porque sin límite
+el primero acapara el recurso. Y **la reserva que no se usa se libera**: si a media mañana el que
+reservó no apareció, el turno pasa al siguiente sin discusión. Sin esa regla el equipo pasa media
+temporada reservado y parado.
+</Analogia>
+
+Tres reglas prácticas cierran el calendario. **La reserva se anota, no se conversa**: una hoja en la
+pared, con fecha, nombre y horas previstas, elimina casi todas las discusiones. **Entre dos turnos
+va un espacio muerto** para traslado, limpieza y revisión, igual que un servicio necesita su ventana
+de mantenimiento; encadenarlos garantiza que el segundo reciba la máquina sucia y sin combustible. Y
+**el trabajo se prepara antes de que llegue la máquina**: un equipo parado mientras alguien va a
+buscar algo consume el turno de otro, no solo el propio.
+
+## Entrega y devolución: se verifica en la frontera
+
+Esta es la regla que más grupos salva y la que más se salta por vergüenza. **El equipo cambia de
+manos con una revisión de estado, presentes las dos personas, al entregar y al devolver.** Sin ella
+pasa siempre lo mismo: el tercer usuario descubre el daño, se le atribuye porque es quien la tenía,
+él sabe que no fue, y desde ahí nadie quiere volver a tomar la máquina. **La revisión no existe para
+desconfiar del que usa: existe para protegerlo.**
+
+<Analogia>
+Es validar en el límite del sistema. Un dato que entra sin verificarse arrastra el error hasta que
+alguien lo encuentra tres capas más adentro, y para entonces reconstruir de dónde vino cuesta más
+que el error mismo. También es transferencia de propiedad de un recurso: quien recibe pasa a ser
+responsable, y por eso comprueba **antes** de aceptar.
+
+Y es, sobre todo, la lección del respaldo que nadie restauró: un equipo guardado sin comprobar que
+arranca es un respaldo no verificado. No sabes que no funciona hasta el día exacto en que lo
+necesitas.
+</Analogia>
+
+Lo que se revisa cabe en una hoja colgada junto al equipo y se marca en
+la <Termino slug="bitacora-de-uso">bitácora de uso</Termino>: fecha, quién lo lleva, lectura del
+horómetro al salir y al volver, aceite y combustible, fugas visibles, filtro de aire, cuchillas o
+boquillas, tornillería floja, cables, y **un arranque de prueba delante de los dos**. Cinco minutos.
+
+<Dato titulo="Declarar un fallo tiene que salir barato">
+Esta decisión de diseño decide el destino del equipo, y casi todos la toman mal por instinto. Si
+declarar un problema significa automáticamente pagarlo, **la gente esconde los problemas.** Y un
+fallo escondido no se queda quieto: la fuga pequeña vacía el cárter, el rodamiento que zumba termina
+comiéndose el eje. **Lo que arruina las máquinas compartidas no es el mal uso: es el mal uso
+ocultado.**
+
+La regla que alinea los incentivos hay que escribirla: **quien declara el fallo el mismo día no
+responde por lo que ese fallo cause después; quien lo oculta responde por todo.** Es la lógica del
+informe de incidentes sin culpables: no se persigue al que rompió, se persigue al que no avisó,
+porque lo primero es inevitable y lo segundo es lo caro.
+</Dato>
+
+## Consumibles y fondo: dos bolsillos distintos
+
+Separar estas dos cosas resuelve la mayoría de las peleas por plata.
+
+Un <Termino slug="consumible">consumible</Termino> es lo que el equipo gasta mientras trabaja y se
+repone cada vez: combustible, aceite de mezcla, hilo de desbrozadora, guantes. **Lo paga quien
+usa**, sin contabilidad: se devuelve el tanque como se recibió y se repone lo gastado. Es
+proporcional al uso por definición.
+
+<Advertencia>
+El consumible que más máquinas mata en un grupo es **el combustible del motor de dos tiempos.**
+
+Una desbrozadora o una fumigadora de dos tiempos no tiene depósito de aceite: **el único lubricante
+del cigüeñal y del cilindro es el aceite disuelto en la gasolina**, en la proporción que indica el
+manual. Quien le echa gasolina pura porque «era gasolina» funde el motor en minutos, sin aviso
+previo, y el daño es total.
+
+En un equipo que rota entre varias personas ese error es cuestión de tiempo, y la contramedida es de
+custodia, no de confianza: **el combustible lo prepara y lo entrega el custodio**, en un bidón
+rotulado, y el usuario no reposta de ningún otro. Qué proporción y qué aceite corresponden lo dice
+el manual de esa máquina, no el vecino.
+</Advertencia>
+
+El otro bolsillo es distinto porque el gasto no ocurre cuando se usa, sino después. Cambiar aceite,
+filtro, bujía o correa y afilar cuchillas son
+gastos <Termino slug="mantenimiento-preventivo">preventivos</Termino> que se disparan **por horas
+acumuladas de todos los usuarios juntos**, no por sesión. Cobrárselos a quien tuvo la mala suerte de
+usar la máquina el día que tocaba el servicio es injusto y hace que la gente evite ese turno: para
+eso existe el <Termino slug="fondo-de-mantenimiento">fondo de mantenimiento</Termino>.
+
+**Y el fondo se llena por uso, no por año.** Una cuota anual igual para todos hace que el que usó
+tres jornadas subvencione al que usó treinta, y ese agravio silencioso revienta grupos. Un aporte
+por hora de horómetro hace que el costo siga a la responsabilidad sin que nadie tenga que vigilar a
+nadie.
+
+<Formula explicacion="Lo que aporta al fondo cada hora de uso: la parte del mantenimiento previsto que le toca a esa hora, más la parte de la reposición futura del equipo. Los dos números salen del manual, del mecánico local y del precio de reposición del día; se revisan cada temporada porque los precios cambian.">
+aporte al fondo por hora = (mantenimiento previsto ÷ horas entre servicios) + (precio de reposición ÷ horas de vida útil)
+</Formula>
+
+El segundo sumando es el que casi nadie pone y el que decide si el grupo sobrevive. Un fondo que
+solo cubre reparaciones alcanza hasta el día en que la máquina muere, y ese día el grupo descubre
+que **no tiene con qué reponerla y se disuelve**. Apartar la reposición desde la primera hora es
+la <Termino slug="amortizacion">amortización</Termino> del módulo trece convertida en plata que
+existe de verdad en una caja. Quién guarda esa caja es materia de la lección cinco.
+
+## Desgaste normal, mal uso y quién paga
+
+La frontera más delicada **se define antes, por escrito y con hechos observables**, porque después
+del golpe todo el mundo declara que fue desgaste normal.
+
+El <Termino slug="desgaste-normal">desgaste normal</Termino> es el deterioro esperable de un equipo
+operado según su procedimiento y dentro de las condiciones previstas: el filo que se redondea, la
+correa que se estira, el rodamiento que cumple sus horas. **Lo paga el fondo, siempre y sin
+reproche: es para lo que existe.**
+
+El <Termino slug="mal-uso">mal uso</Termino> es operar fuera de las condiciones escritas, saltarse el
+procedimiento o seguir trabajando con un fallo ya conocido. La diferencia no está en la intención
+—casi nunca hay mala intención— sino en si se cruzó un límite escrito. Cuatro ejemplos con su
+mecanismo, para poder redactar ese límite:
+
+Pasar un motocultor con el suelo demasiado húmedo. La tierra se pega a las cuchillas, la resistencia
+sube y el embrague trabaja al límite; y en un suelo de arcilla expansiva el daño mayor no es a la
+máquina sino al terreno, porque amasar arcilla húmeda destruye
+la <Termino slug="friabilidad">friabilidad</Termino> y crea
+una <Termino slug="suela-de-labor">suela de labor</Termino> que cuesta años deshacer. El límite se
+verifica en el acto con la prueba del rollito del módulo cuatro.
+
+Hacer trabajar una bomba en seco o cerrar de golpe una válvula. Sin agua, el sello mecánico se quema
+en minutos porque el agua es también su refrigerante; y el cierre brusco produce
+un <Termino slug="golpe-de-ariete">golpe de ariete</Termino> capaz de partir un accesorio.
+
+Alimentar una herramienta eléctrica por una extensión larga y delgada. La <Termino
+slug="caida-de-tension">caída de tensión</Termino> deja al motor con menos voltaje del que necesita,
+la corriente sube y el bobinado se quema. Nadie la tocó mal: la mató el cable.
+
+Y devolver herramienta de obra con mortero fraguado encima, contra la regla del mismo día del módulo
+ocho: quitarlo obliga a picar, y picar arruina el filo.
+
+<Tabla>
+
+| Situación | Quién paga | Por qué |
+| --- | --- | --- |
+| Filo gastado, correa estirada, servicio por horas cumplidas | Fondo de mantenimiento | Es desgaste normal: el fondo existe exactamente para esto |
+| Fallo declarado el mismo día por quien lo detectó | Fondo | Declarar tiene que salir barato o la gente esconde los fallos |
+| Motor de dos tiempos fundido por combustible sin aceite | Quien usó, con la reparación | Cruzó un límite escrito y la contramedida estaba disponible |
+| Daño por seguir usando con un fallo ya conocido | Quien usó | La rotura era evitable desde el momento en que se supo |
+| Daño encontrado sin revisión de entrega ni de devolución | Fondo, y se corrige el procedimiento | Sin verificación en la frontera no hay a quién imputarlo |
+| Cultivo de otro miembro dañado por residuo de herbicida | Quien aplicó sin el procedimiento | El daño cayó fuera del equipo y aun así tiene causa y responsable |
+| Robo, incendio o inundación mientras estaba guardado | Según lo acordado por escrito de antemano | Es caso fortuito: si no se escribió antes, no hay respuesta justa después |
+
+</Tabla>
+
+La última fila merece una advertencia honesta. Robo, incendio y desastre se resuelven **antes** y por
+escrito, porque después no hay acuerdo posible: el custodio dirá que hizo lo razonable y los demás
+dirán que no. Si existen seguros que cubran maquinaria en su situación, sus condiciones **hay que
+consultarlas con una entidad financiera o aseguradora local**, no suponerlas.
+
+<AplicarRizoma>
+**Lo primero aquí es una distinción que casi nadie hace: hay equipo fijo y hay equipo móvil, y solo
+el segundo se presta.** La bomba con su tablero, el tanque y el tendido de riego son infraestructura
+del sitio: no se comparten llevándoselos, se comparten dando servicio aquí. Eso elimina el
+transporte y la entrega, pero introduce gente entrando al sitio y un horario del agua, y el custodio
+pasa a ser quien está presente.
+
+**El inventario móvil de un sitio de 3.666 m² en doce lotes tiene pocos candidatos reales.**
+Motocultor, fumigadora de motor, desbrozadora, remolque de acarreo y herramienta eléctrica de obra
+son caros, indivisibles y de uso concentrado. La zaranda para cernir sustrato queda fuera por el otro
+lado: es tan barata de fabricar con malla y madera que construir dos cuesta menos que administrar
+una compartida. **Si el equipo se puede duplicar por poca plata, duplicarlo siempre gana.**
+
+**La demanda simultánea de octubre es el problema central y hay que diseñar contra ella.** Cuando
+entran las lluvias todo el barrio prepara tierra la misma quincena, y ese es justo el momento en que
+un motocultor compartido produce cola y enojo. La respuesta no es más máquina: es prioridad rotativa
+publicada antes de la ventana, turnos con tope de horas y la reserva no usada que se libera. Si la
+lista no está escrita antes de la primera lluvia, la escribirá el que llegue primero.
+
+**Y el fallo que va a ocurrir es previsible y tiene nombre: la máquina no arranca en octubre.** De
+mayo a septiembre el equipo está parado siete meses; la gasolina se degrada, las fracciones ligeras
+se van y quedan gomas que tapan los pasos calibrados del carburador, y el día que todos la necesitan
+no enciende. La contramedida cuesta media hora al mes: **arranque de prueba mensual durante la
+seca**, anotado en la bitácora, con el guardado que indique el manual.
+
+**En pulverización, Rizoma tiene más que perder que nadie y la regla debe ser rígida.** El sitio
+trabaja con manejo integrado y produce plantines, lo más sensible que existe a un residuo de
+herbicida: una fitotoxicidad silenciosa arruina un lote entero de yautia o de ají dulce y aparece
+días después, cuando ya nadie relaciona las cosas. La regla es que **la mochila del vivero no sale y
+no entra ninguna prestada**, y que si el grupo compra una fumigadora de motor va rotulada y
+dedicada. Lo mismo con tijeras y cuchillos de injerto: no salen, no entran.
+
+**El fondo por hora no contradice que el proyecto sea gratuito.** Cobrar por hora de uso no es una
+renta: es lo que cuesta que la máquina siga existiendo el año que viene. Un equipo comunitario sin
+fondo de reposición es chatarra en dos o tres temporadas, y el que pierde no es el vecino con plata
+—ese se compra la suya— sino exactamente aquel para quien el equipo existía. **La gratuidad se
+sostiene con reposición, no con buena voluntad.**
+
+**Pero el aporte no puede ser una barrera de entrada, y eso se resuelve por diseño.** El vecino sin
+tierra y sin plata es precisamente a quien este proyecto se dirige, y una tarifa por hora lo deja
+fuera del sistema que se armó para él. La salida es aceptar que **la moneda del fondo no tiene que
+ser dinero**: horas de mantenimiento, limpieza, custodia o afilado se acreditan a una equivalencia
+acordada de antemano. Esa equivalencia y su tope hay que escribirlos, porque un mecanismo sin límite
+es el agujero por donde el sistema se desangra.
+
+**Y el primer paso concreto no es comprar nada.** Es hacer con dos o tres vecinos el inventario
+escrito de lo que ya está ocioso en los patios —una carretilla que se usa dos veces al año, un
+taladro, una escalera— y montar sobre eso una hoja de préstamo con cuatro columnas: qué, quién lo
+lleva, en qué estado sale y en qué estado vuelve. **El sistema de equipo compartido más barato es el
+que no compró nada**, y sirve para descubrir con riesgo casi nulo si este grupo devuelve las cosas.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**En el oriente boliviano el servicio de maquinaria por jornada o por tarea es una realidad
+extendida, y es la primera opción a comparar.** Contratar a quien ya tiene el motocultor o el tractor
+le traslada el mantenimiento, el repuesto y el riesgo de la máquina parada, y viene con alguien que
+sabe operarla. Cuánto cobra y con qué disponibilidad en la ventana de octubre hay que averiguarlo
+preguntando en la zona esta temporada; no existe un precio de curso.
+
+**Lo que más pesa al elegir una máquina en el país no es el precio: es si hay repuesto y mecánico
+cerca.** Un equipo barato de una marca sin representación en Santa Cruz es un ladrillo caro el día
+que se le rompe una pieza, y en un equipo compartido ese día detiene a cinco parcelas a la vez.
+Antes de decidir conviene preguntar en el taller del barrio qué marcas repara y para cuáles consigue
+repuesto: esa respuesta vale más que cualquier catálogo.
+
+**El almacenamiento del combustible es un asunto de seguridad, no de comodidad.** Guardar bidones de
+gasolina en una vivienda, cerca de fuego o al sol es un riesgo real de incendio, y en un grupo el
+bidón con la mezcla de dos tiempos tiene que estar rotulado para que nadie se equivoque. Las
+condiciones y los permisos para almacenar combustible **hay que consultarlos con la autoridad
+competente y con el municipio**, no deducirlos.
+
+**El robo es un riesgo cotidiano en zonas periurbanas como Zanja Honda y decide dónde se guarda el
+equipo.** Un depósito cerrado, seco y no visible desde la calle no es lujo: es la condición para que
+exista un custodio dispuesto a asumir el rol. Si existen seguros que cubran maquinaria pequeña, sus
+coberturas y requisitos **se consultan con una entidad financiera o aseguradora**, y nada se da por
+cubierto hasta leerlo.
+
+**El suministro eléctrico irregular condiciona la herramienta eléctrica compartida.** Extensiones
+largas y delgadas, tensión baja en horas pico y conexiones improvisadas son la causa más frecuente
+de motores quemados, y el daño se le atribuye al último que la usó aunque la culpa fuera del cable.
+Un solo juego de extensiones de sección adecuada, comprado por el grupo y tratado como parte del
+equipo, evita el problema y la discusión.
+
+**Prestarse cosas entre vecinos ya existe aquí y funciona: lo que falla es la escala.** El préstamo
+de palabra resuelve bien la pala y el balde, y se rompe con la máquina cara, porque a ese valor la
+memoria de cada uno reconstruye una versión distinta de en qué estado estaba. La hoja escrita no se
+introduce porque haya desconfianza: **se introduce para poder prestarle a alguien con quien todavía
+no hay confianza suficiente**, que es lo que un proyecto comunitario necesita para crecer más allá
+de tres amigos.
+
+**Y una advertencia final.** Un equipo comprado entre varios sin ningún papel que diga a nombre de
+quién quedó y qué pasa si alguien se va es un conflicto en espera, y esos conflictos son la razón
+por la que muchos vecinos ya no quieren poner plata en nada conjunto. Qué figuras existen para que
+un bien sea del grupo y no de una persona es lo que viene ahora, con la instrucción de
+siempre: **consultarlo con un abogado o contador local antes de constituir nada.**
+</ContextoBolivia>
+
+## Lo que sigue
+
+El sistema ya está completo del lado operativo: qué conviene compartir y qué no, quién custodia,
+cómo se reserva, cómo se entrega y se devuelve, quién paga los consumibles, cómo se llena el fondo y
+dónde está la frontera entre desgaste y mal uso. Falta la pregunta que aparece la primera vez que la
+plata que se junta es de verdad: **¿de quién es esa máquina?** Si figura a nombre de una persona, el
+grupo depende de que siga siendo honesta y siga estando; si no figura a nombre de nadie, no hay a
+quién reclamar.
+
+La lección siguiente, **Formas de asociarse en Bolivia**, recorre las figuras que existen en el país
+y lo que cada una implica: quién es dueño, quién responde con su patrimonio, cómo se vota, si se
+puede facturar, cuánto papeleo permanente exige y qué tan difícil es deshacerla. Incluye la opción
+que casi siempre es la correcta al principio —el grupo informal con un acuerdo escrito— y termina
+donde termina siempre este curso cuando toca lo legal: en preguntarle a un profesional local antes
+de firmar nada.

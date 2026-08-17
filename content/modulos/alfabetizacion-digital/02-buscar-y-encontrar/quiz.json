@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "mecanismo-del-buscador",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué pasa de verdad cuando apretás enter en un buscador?",
+      "opciones": [
+        "No se recorre internet en ese momento: se consulta un índice de palabras que los rastreadores armaron de antemano saltando de enlace en enlace.",
+        "Como buscar es intersectar listas de palabras, cada palabra de más achica el conjunto y una sola mal elegida lo puede dejar vacío.",
+        "Lo que nadie enlaza no está en el índice: lo que vive dentro de un grupo cerrado, detrás de una contraseña o en una conversación por teléfono no se encuentra buscando.",
+        "Cuanto más completa y educada sea la frase que escribís, más precisa es la coincidencia, porque el buscador lee y entiende oraciones enteras."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la imagen mental que hay que desarmar, y es la que hace escribir mal a casi todo el mundo. Del otro lado no hay nadie leyendo: hay una tabla que dice, para cada palabra, en qué páginas aparece. Escribir «cómo puedo hacer para que el agua de la ducha salga con más fuerza» no le da más información al buscador, le da trece condiciones, nueve de las cuales no filtran nada y varias de las cuales lo empujan hacia páginas escritas en ese mismo tono conversacional. Las otras tres describen el mecanismo real: índice armado antes, consulta que es una intersección, y la consecuencia de que solo entra lo que se alcanza caminando por enlaces."
+    },
+    {
+      "id": "primer-resultado",
+      "tipo": "verdadero_falso",
+      "enunciado": "El primer resultado está primero porque el buscador comprobó que su información es la más confiable.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error más caro de toda la lección. El orden se calcula con señales: si tus palabras están en el título, cuántas páginas enlazan a esa y qué tan enlazadas están esas otras, si la gente que buscó lo mismo hizo clic ahí y se quedó, qué tan rápido carga, qué tan reciente es. Ninguna de esas señales mide si lo que dice la página es cierto, y no la hay porque nadie sabe calcularla. El primero es el mejor posicionado: la mejor apuesta sobre qué va a conformar al mayor número de gente que escribe esas palabras. Muchas veces acierta, y aun así no es un certificado."
+    },
+    {
+      "id": "patrocinados",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es cierto sobre los resultados patrocinados?",
+      "opciones": [
+        "El orden de esa tanda sale de una subasta: quien paga más sube, y nadie revisó si lo que ofrece es bueno, honesto o siquiera quien dice ser.",
+        "Se distinguen por una palabra chiquita —«Anuncio», «Patrocinado»— arriba o al costado del enlace, y suelen ir todos juntos antes de que empiece la lista.",
+        "En trámites, bancos y préstamos no se entra desde la lista: al banco se llega por la dirección escrita a mano o por un marcador que guardaste vos.",
+        "Un resultado patrocinado siempre es una estafa, así que la regla sana es no tocar nunca un anuncio."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta exagera y por exagerar deja de servir: si estás buscando dónde comprar un ventilador, el anuncio de una tienda de ventiladores es exactamente lo que querías, y tratar todo anuncio como fraude no te enseña a mirar el renglón que importa. El problema no es que sea pagado, es qué estás buscando. Cuando lo que buscás no es un producto sino un trámite, tu banco o un préstamo, el que más paga por aparecer arriba es el que más gana con que entres —el intermediario que cobra por gestionar lo que podrías hacer vos, o directamente una página falsa—, y por eso ahí la regla es dura: el orden de arriba no es una recomendación, es una subasta."
+    },
+    {
+      "id": "armar-la-consulta",
+      "tipo": "opcion_multiple",
+      "enunciado": "Se te fue la presión de la ducha. ¿Qué hace bien la consulta?",
+      "opciones": [
+        "Usa las palabras que estarían en la página que sirve —«baja presión», «pérdida de carga», «filtro obstruido»— en vez de las de tu problema.",
+        "Saca lo que aparece en una sola página del mundo, la tuya: tu nombre de archivo, tu número de medidor, tu usuario.",
+        "Usa la primera búsqueda para aprender cómo se llama la cosa y recién la segunda para buscar de verdad, ya con el nombre técnico.",
+        "Mete todas las palabras que se te ocurran sobre lo que te pasa, porque cuanto más contexto le des, mejor entiende el buscador tu situación."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta confunde dos herramientas distintas. A un modelo de lenguaje sí le conviene darle contexto, porque continúa lo que escribiste; a un buscador no, porque filtra un índice que ya existe, y cada palabra agregada achica la intersección hasta vaciarla. Las otras tres son el oficio: escribir las palabras de la respuesta y no las del problema, quitar lo que es únicamente tuyo, y aceptar que la primera búsqueda muchas veces no sirve para encontrar sino para averiguar que a tu «chapa» el manual la llama «cerradura de embutir»."
+    },
+    {
+      "id": "traduccion-y-numeros",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cuando la respuesta aparece en una página en inglés, lo prudente es copiar las medidas y los códigos de la versión traducida por el navegador, que es la que se lee bien.",
+      "respuesta": false,
+      "explicacion": "Falso, y esta es de seguridad. Traducir la página está bien para entender el texto, pero la traducción automática se equivoca justamente en el vocabulario técnico —que es lo que te importaba— y, sobre todo, puede tocar los números: una coma cambiada por un punto convierte 1,5 en 15. Una medida, un torque, una capacidad, un código de repuesto o un valor de fusible se leen del original. Y no es un detalle de prolijidad: un fusible más grande que el que corresponde no protege menos, deja pasar la corriente que iba a incendiar el cable."
+    },
+    {
+      "id": "leer-resultados",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué conviene hacer con la página de resultados y con lo que ya tenés a mano?",
+      "opciones": [
+        "Leer la dirección del sitio antes de entrar: de un vistazo dice si es una tienda, un foro, el fabricante, una institución o una página que junta texto de otras.",
+        "Tratar el fragmento de abajo como lo que es —los pedazos donde cayeron tus palabras, recortados por una máquina— y desconfiar cuando aparecen sueltas y sin relación entre ellas.",
+        "Buscar primero adentro del propio equipo: la lupa de los mensajes, el buscador de los ajustes, la galería por fecha, el mapa para la ferretería.",
+        "Si los primeros cuatro resultados no sirvieron, seguir a la página dos y a la tres hasta que aparezca algo mejor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es esfuerzo tirado. La página dos casi nunca guarda lo bueno: si cuatro resultados fallaron, lo que falló fueron las palabras, no la profundidad de la lista, y lo que corresponde es cambiar la consulta —el nombre técnico, otro idioma, otro tipo de fuente—. Las otras tres son las que ahorran tiempo y datos: la dirección filtra gratis, el fragmento avisa cuando una página tiene tus palabras sin hablar de tu tema, y buscar adentro del teléfono resuelve una cantidad enorme de casos con información que ya es tuya y ya está comprobada."
+    },
+    {
+      "id": "aplicacion-en-tu-casa",
+      "tipo": "abierta",
+      "enunciado": "En tu casa pasan dos cosas al mismo tiempo. La ducha viene saliendo con poca fuerza desde hace dos semanas, y el ventilador de techo hace un ruido nuevo, como un roce, desde que empezó el calor. Te queda poco saldo de datos y esta semana no vas a estar cerca de un wifi. Escribí el plan completo: qué buscás antes de salir a internet, las tres consultas que vas a escribir para cada problema y por qué elegiste esas palabras, cómo vas a leer la lista de resultados sin entrar a todo, qué hacés si el ventilador termina necesitando un repuesto, y qué cosas de todo esto no se resuelven con una búsqueda.",
+      "respuestaModelo": "Lo primero no se hace en internet: se hace adentro del teléfono y adentro de la casa, porque es gratis y porque la mitad de lo que necesito ya existe. Abro la lupa de los mensajes y busco «plomero», «ventilador» y «ferretería»: es muy probable que el número del plomero que vino el año pasado, o el presupuesto que me pasaron, esté escrito ahí por alguien que sí sabía. Después voy a los aparatos. El ventilador tiene una placa de características —arriba del motor, en la tapa, o en la caja si la guardé— con marca, modelo y a veces el año; le saco una foto. Si hay un tanque, una bomba o un calefón metidos en el asunto de la ducha, les fotografío también la etiqueta. Esas fotos van a un álbum «etiquetas», porque el noventa por ciento del tiempo que se pierde buscando un repuesto se va en no saber qué modelo se tiene.\n\nDespués miro lo que un ojo humano ve mejor que cualquier página: ¿la presión bajó en toda la casa o solo en la ducha? ¿Bajó de golpe o de a poco? ¿El ruido del ventilador cambia con la velocidad, aparece solo al arrancar, o suena siempre igual? Eso no es agregar palabrerío a la consulta: es lo que después me deja elegir entre causas distintas.\n\nAhora las consultas, escritas en papel antes de tocar el teléfono, tres por problema y con ángulos distintos.\n\nPara la ducha. Primera, con mis palabras, sirviendo de diccionario: «poca presión ducha casa». Con eso miro qué nombres usa la gente que escribió sobre esto. Segunda, ya con el nombre técnico que aprendí: «baja presión agua ducha filtro obstruido llave de paso», o «pérdida de carga cañería ducha». Fijate que no escribo mi problema, escribo las palabras que estarían en la página que me sirve, que es la regla madre. Tercera, cambio de ángulo: si en casa hay bomba o tanque, busco «bomba presurizadora no arranca» o «tanque bajo presión ducha», y si nada aparece, pruebo con un video, porque para un gesto con las manos el video es el formato correcto —aunque acá lo dejo para cuando tenga wifi, porque un video se come el saldo de la semana—.\n\nPara el ventilador. Primera: «ventilador de techo hace ruido». Segunda, ya con marca y modelo de la foto de la placa y con el nombre técnico que aprendí: «marca modelo ruido rodamiento» o «buje seco ventilador techo». Tercera: en inglés, traduciendo solo tres palabras clave —ceiling fan noise bearing—, o directamente buscando el manual: «marca modelo manual pdf» y «despiece». El manual del fabricante es fuente primaria, es lo que dice quien lo hizo, y me da valores que no me va a dar ningún comentario.\n\nLa lista de resultados la leo sin entrar a todo. Primero miro si arriba dice «Anuncio» y salteo esa tanda. Después leo la dirección de cada resultado, que me dice gratis si eso es una tienda, un foro, el fabricante o una página de relleno. Miro el fragmento: si mis palabras aparecen sueltas y sin relación, esa página tiene mis palabras pero no habla de mi tema. Abro tres o cuatro candidatos en pestañas nuevas para no perder la lista, y adentro de cada página no leo de arriba abajo: uso «buscar en la página» y salto a mi palabra. Si los cuatro fallan, no paso a la página dos: cambio la consulta.\n\nSi el ventilador necesita repuesto, el orden es identidad primero. Fotografío la pieza por los dos lados, busco un código estampado y, si no lo tiene, la mido. Consulta uno: el código entre comillas, porque las comillas exigen el texto literal. Consulta dos: marca + modelo + nombre técnico de la pieza. Consulta tres: las medidas + el nombre de la pieza. Aunque compre en la ferretería del barrio, miro los avisos de venta para aprender cómo se llama comercialmente y poder pedirla sin señas. Para saber si me están cobrando de más, armo un precio de referencia: cuatro o cinco ofertas de exactamente lo mismo, descarto los dos extremos y me quedo con la banda del medio, sabiendo que eso no incluye traerlo hasta acá ni la garantía; el número real me lo dan dos ferreterías del barrio.\n\nY lo que no se resuelve buscando. Si aparece algo de electricidad, el manual manda sobre los valores de seguridad —capacidad del fusible, sección del cable— y esos no se sustituyen por un comentario en un video. Si el asunto toca el medidor, la instalación de la calle o cualquier trámite con una entidad, lo que busco es el canal oficial y las preguntas que voy a llevar hechas, nunca la lista de requisitos, porque cambia y una página vieja bien posicionada me hace perder el viaje: requisitos, costos y plazos se preguntan en la entidad que corresponde. Y para todo lo demás queda la pregunta que esta lección no contesta: encontré la página, ¿por qué le creería?",
+      "criterios": [
+        "Empieza buscando dentro del propio equipo —lupa de los mensajes, galería, contactos— antes de salir a internet.",
+        "Fotografía la placa de características (marca, modelo, número de serie) antes de buscar, y explica que sin el modelo la búsqueda no arranca.",
+        "Observa y anota lo que un ojo ve —si la presión bajó en toda la casa o solo en la ducha, si el ruido cambia con la velocidad— en vez de saltar a una conclusión.",
+        "Escribe tres consultas realmente distintas por problema, no tres versiones de la misma, y las escribe antes de tocar el teléfono.",
+        "Usa la primera consulta como diccionario para aprender el nombre técnico y la segunda ya con ese nombre, más marca y modelo.",
+        "Elige las palabras que estarían en la página que sirve, no las del propio problema, y evita meter lo que es único de su caso.",
+        "La tercera consulta cambia de ángulo de verdad: otro idioma con palabras clave traducidas, u otro tipo de fuente (manual, foro, video, aviso de venta).",
+        "Tiene en cuenta el costo de los datos: texto primero, video para cuando haya wifi, manual descargado y guardado.",
+        "Lee la lista sin entrar a todo: saltea la tanda de anuncios, lee la dirección, interpreta el fragmento y usa «buscar en la página»; y si fallan, cambia la consulta en vez de pasar a la página dos.",
+        "Para el repuesto va por identidad: código entre comillas, luego marca + modelo + nombre técnico, luego medidas, y usa los avisos de venta para aprender el nombre comercial.",
+        "Construye el precio como una banda de varias ofertas de lo mismo sin los extremos, y aclara que el número real se pregunta en el barrio.",
+        "Marca explícitamente lo que no se resuelve buscando: valores de seguridad que manda el manual, y requisitos, costos y plazos de un trámite, que se confirman en la entidad que corresponde."
+      ],
+      "explicacion": "Una buena respuesta no es una lista de trucos: es un orden. Primero lo gratis y ya comprobado —los propios mensajes, la etiqueta del aparato, la observación—, después las tres consultas con ángulos distintos, después la lectura barata de la lista, y solo al final el clic. La parte que separa a quien entendió la lección es doble. Una: entender que la primera búsqueda muchas veces no encuentra nada porque su trabajo real es traducir tu palabra local a la palabra del gremio, y que sin ese paso la segunda consulta nunca iba a intersectar con nada. Y dos: saber dónde se corta la búsqueda. Los valores de seguridad salen del manual y no de un comentario; los requisitos y costos de un trámite salen de la ventanilla y no de una página; y si la página encontrada merece crédito es la pregunta de la lección siguiente, que ninguna técnica de consulta puede contestar."
+    }
+  ]
+}

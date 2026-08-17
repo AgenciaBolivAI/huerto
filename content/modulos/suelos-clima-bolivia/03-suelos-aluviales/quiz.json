@@ -1,0 +1,85 @@
+{
+  "preguntas": [
+    {
+      "id": "horizontes-vs-estratos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué distingue un perfil aluvial de uno residual?",
+      "opciones": [
+        "El residual se formó meteorizando la roca en el sitio, con capas de orden predecible y bordes graduales.",
+        "El aluvial fue traído y depositado: cada crecida dejó una capa según lo que llevaba el agua ese día.",
+        "En el aluvial el orden no es predecible y los bordes son abruptos.",
+        "El aluvial siempre tiene la arena arriba y la arcilla abajo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un borde neto es la firma de una deposición: ese día el río traía otra cosa. Y precisamente porque cada crecida es distinta, no hay orden previsible: la arena puede estar encima o debajo de la arcilla. Leer un perfil residual es verificar una hipótesis; leer uno aluvial es descubrir."
+    },
+    {
+      "id": "grava-en-el-hoyo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Poner una capa de grava en el fondo del hoyo de plantación mejora el drenaje.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error más extendido y más contraintuitivo de la lección. Crea una barrera capilar: los poros finos de la tierra retienen el agua con más fuerza que los poros gruesos de la grava, así que la grava no tira del agua. El resultado es que el agua se queda retenida arriba, justo donde está la raíz, hasta que esa tierra se satura. Has construido un macetero sin agujero. Si un hoyo drena mal, la solución es plantar en montículo o cama alta."
+    },
+    {
+      "id": "nivel-colgado",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un lote es arenoso en superficie, se trabaja bien y da buena impresión. A 40 cm hay arcilla. ¿Qué está pasando?",
+      "opciones": [
+        "El agua baja rápido por la arena y se acumula sobre la arcilla, formando un nivel colgado.",
+        "Hay una zona saturada suspendida muy por encima del nivel freático real, y las raíces que llegan ahí se ahogan.",
+        "Es el caso más traicionero, porque el lote parece bien drenado en superficie y se encharca en profundidad.",
+        "No pasa nada: si la superficie es arenosa, el suelo drena."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es el escenario que justifica por sí solo cavar antes de plantar. En superficie todo parece correcto y a los dos años tienes los frutales muertos. Un lote con nivel colgado a 40 cm es perfectamente utilizable para hortalizas en cama alta e inviable para perennes de raíz profunda."
+    },
+    {
+      "id": "arcilla-sobre-arena",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si debajo de una capa de arcilla hay arena, el agua pasa fácilmente a la arena y el suelo drena bien.",
+      "respuesta": false,
+      "explicacion": "Falso, y sorprende a casi todo el mundo. El agua no pasa a la arena hasta que la arcilla de arriba está casi saturada. Los poros finos de la arcilla retienen el agua con más fuerza que los poros gruesos de la arena, de modo que la arena no tira del agua: la deja arriba. Es la barrera capilar, y es el mismo fenómeno que hace inútil la grava en el fondo del hoyo."
+    },
+    {
+      "id": "raices-campo-clave",
+      "tipo": "opcion_multiple",
+      "enunciado": "De los cinco campos que se anotan por capa, ¿por qué el de las raíces es el más informativo?",
+      "opciones": [
+        "Porque las raíces integran todo lo demás: no les importa la teoría, les importa si pueden crecer.",
+        "Porque donde las raíces se paran, ahí acaba el suelo útil, se llame como se llame esa capa.",
+        "Porque permite determinar la profundidad efectiva real del lote.",
+        "Porque es el campo más fácil de medir con precisión."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es el campo que casi nadie registra y el que más decide. La profundidad efectiva —hasta dónde llegan las raíces sin encontrar impedimento— no aparece en ningún análisis de laboratorio, porque el análisis se hace sobre los primeros 20 cm. Solo lo dice el hoyo."
+    },
+    {
+      "id": "profundidad-frutales",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un lote tiene textura franca, pH correcto, buena CIC, y una discontinuidad a 45 cm que las raíces no cruzan. ¿Qué puedes plantar?",
+      "opciones": [
+        "Hortalizas de hoja y culantro, que se conforman con unos 30 cm.",
+        "Ají dulce o batata, que necesitan 40-50 cm.",
+        "Cítricos, mango o achachairú, porque el suelo es fértil.",
+        "Cualquier cosa: con buena fertilidad la profundidad no importa."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "La fertilidad no compensa la falta de profundidad. Los frutales perennes del catálogo quieren un metro o más, así que ese lote es inviable para ellos por muy buenos que sean sus 45 cm. Es un lote perfectamente bueno para hortalizas. La profundidad efectiva hay que sumarla a la tabla de decisión junto al pH, la textura y la CIC."
+    },
+    {
+      "id": "protocolo-calicatas",
+      "tipo": "abierta",
+      "enunciado": "Describe cómo abordarías la descripción de perfiles en tus doce lotes: qué hoyos harías y a qué profundidad, qué registrarías, y qué decisiones concretas saldrían de los distintos resultados posibles.",
+      "respuestaModelo": "Partiría de los tres hoyos ya previstos en el Módulo 5 —punto bajo, punto alto y punto intermedio—, limpiando una cara con la pala hasta dejarla vertical y describiéndola capa por capa. Veinte minutos por hoyo, una libreta y el móvil para fotografiar con cinta métrica al lado.\n\nPero 60 cm no bastan en los lotes destinados a frutales: con esa profundidad no se puede evaluar si hay sitio para un mango o un achachairú, que quieren un metro. En esos lotes hay que llegar a 100-120 cm, o usar una barrena, que ahorra muchísimo trabajo frente a cavar calicatas y se consigue en laboratorios de suelo o casas de insumos.\n\nDe cada capa registraría cinco campos: profundidad desde y hasta en centímetros, textura al tacto, color, presencia y comportamiento de las raíces, y manchas. El campo de las raíces es el más informativo porque integra todo lo demás: donde se paran, ahí acaba el suelo útil.\n\nLas decisiones según lo que aparezca:\n\nSi la textura es uniforme y las raíces bajan rectas hasta el fondo, el perfil es favorable y el lote sirve para todo, incluidos frutales. Si hay arena arriba, arcilla a 40 cm y manchas grises sobre el límite, hay nivel colgado: nada de frutales, y hortalizas en cama alta. Si hay arcilla arriba y arena a 70 cm, la infiltración será lenta pero el drenaje profundo existe una vez saturada la capa superior: cama alta. Una lente de arena entre dos capas finas indica paleocauce y drenaje irregular, así que conviene muestrear más puntos. Raíces que giran a los 30 cm indican capa compactada o discontinuidad, y hay que descompactar antes de plantar. Y si aparece agua libre antes de los 60 cm, es nivel freático alto: solo plátano, o producción en contenedor.\n\nDos precauciones. Nada de grava en el fondo de los hoyos de plantación, porque crea una barrera capilar que retiene el agua justo en la zona de raíces. Y cuidado con la seguridad: un hoyo de más de un metro en suelo arenoso puede colapsar, así que no hay que meter la cabeza ni los hombros en una calicata profunda de paredes verticales.",
+      "criterios": [
+        "Aprovecha los tres hoyos del Módulo 5 y describe la limpieza de la cara vertical.",
+        "Reconoce que 60 cm no bastan para frutales y propone 100-120 cm o barrena en esos lotes.",
+        "Enumera los cinco campos por capa y destaca el de las raíces como el más informativo.",
+        "Asocia al menos tres secuencias posibles con decisiones concretas, incluido el nivel colgado.",
+        "Prohíbe la grava en el fondo del hoyo de plantación por la barrera capilar.",
+        "Menciona la precaución de seguridad con calicatas profundas en suelo arenoso."
+      ],
+      "explicacion": "Con esta ficha, tus hoyos dejan de ser una inspección vaga y pasan a ser un diagnóstico repetible. Y la profundidad efectiva que obtengas es el dato que ningún laboratorio te va a dar."
+    }
+  ]
+}

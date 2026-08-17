@@ -1,0 +1,86 @@
+{
+  "preguntas": [
+    {
+      "id": "intensidad-vs-volumen",
+      "tipo": "opcion_multiple",
+      "enunciado": "Tu suelo tiene una infiltración de 15 mm/h. Cae una lluvia que descarga 60 mm en una hora. ¿Qué ocurre?",
+      "opciones": [
+        "Entran unos 15 mm y los otros 45 se encharcan y luego escurren.",
+        "El agua que escurre se pierde por completo, y además arrastra suelo.",
+        "Entran los 60 mm, solo que más despacio, porque el suelo estaba seco por debajo.",
+        "No ocurre nada especial: 60 mm es una cantidad normal de lluvia."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "La infiltración es una velocidad, no una capacidad total. Si la intensidad de la lluvia la supera, el exceso no espera a que haya sitio: se acumula en superficie y escurre. Que el suelo esté seco por debajo es irrelevante, porque el cuello de botella está en el ritmo de entrada. Y 60 mm en una hora es perfectamente posible en la temporada de Santa Cruz, que es justo lo que hace de esto un problema real y no teórico."
+    },
+    {
+      "id": "saturar-antes",
+      "tipo": "verdadero_falso",
+      "enunciado": "En la prueba de infiltración con cilindro hay que saturar el suelo antes de tomar la medición que cuenta.",
+      "respuesta": true,
+      "explicacion": "Correcto, y omitirlo es el error que invalida el ensayo. Un suelo seco absorbe la primera carga de agua rapidísimo por las grietas y los poros vacíos, y puede dar un valor diez veces superior al real. Lo que interesa medir es la infiltración en suelo húmedo, que es la condición efectiva durante una temporada de lluvias, y hay que esperar a que el descenso por intervalo se estabilice."
+    },
+    {
+      "id": "suela-de-labor-labranza",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué labrar los primeros 15 cm no resuelve una suela de labor situada a 15–30 cm?",
+      "opciones": [
+        "Porque el caudal lo fija la sección mínima, y esa está justo debajo de donde llega la herramienta.",
+        "Porque cada pasada a la misma profundidad comprime el suelo inmediatamente inferior y estrecha más ese punto.",
+        "Porque la capa compactada solo se puede romper con agua a presión.",
+        "Porque labrar superficialmente sí la resuelve, solo que hay que repetirlo varias temporadas."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Es un cuello de botella en medio de la tubería: ensanchar el tramo que ya era ancho no aumenta el caudal. Y lo perverso es que la propia operación de mantenimiento agrava el problema, porque el peso y el corte de la herramienta comprimen el suelo justo debajo de la profundidad de trabajo. La descompactación tiene que trabajar POR DEBAJO de la capa dura, con el suelo seco, y es una operación puntual, no una labranza más intensa ni repetida."
+    },
+    {
+      "id": "gleyzacion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Unas manchas grises o azuladas a 40 cm de profundidad indican que ese suelo se satura hasta esa profundidad todos los años, aunque hoy esté seco.",
+      "respuesta": true,
+      "explicacion": "Correcto. Esas manchas son gleyzación, y se forman por procesos químicos que solo ocurren en ausencia prolongada de oxígeno. Son el registro histórico de tu drenaje: no describen el estado de hoy, describen lo que pasa cada temporada. Por eso cavar un hoyo en plena seca sigue siendo informativo, y por eso la profundidad a la que aparecen es el dato con el que se decide la altura de la cama."
+    },
+    {
+      "id": "hoyo-vs-metricas",
+      "tipo": "opcion_multiple",
+      "enunciado": "De todos los métodos de diagnóstico de la lección, ¿qué hace que cavar un hoyo de 60 cm sea el más informativo?",
+      "opciones": [
+        "Muestra a la vez profundidad de la capa dura, cambios de textura, historial de saturación y comportamiento real de las raíces.",
+        "Permite ver si las raíces giran y crecen horizontales, que es el diagnóstico definitivo de una barrera física.",
+        "Es el único método que da un número comparable entre puntos y entre fechas.",
+        "Porque sustituye a la prueba de infiltración y a la de percolación."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Las demás pruebas son métricas indirectas que resumen y esconden; el hoyo es el registro completo, sin agregación. Se ven simultáneamente varias cosas que ninguna medición aislada revela. Lo que da un número comparable es el penetrómetro, no el hoyo, y el hoyo no sustituye a las otras pruebas: las complementa. Ninguna medición sustituye a mirar."
+    },
+    {
+      "id": "cama-alta-criterio",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un lote da percolación de 0,8 cm/h y en el hoyo aparecen manchas grises a 25 cm. ¿Qué haces?",
+      "opciones": [
+        "Cama alta de al menos 30 cm, para que la mayor parte de las raíces quede por encima del nivel que se satura.",
+        "Añadir un canal en el pasillo, porque con menos de 1 cm/h el drenaje es muy deficiente.",
+        "Cama plana con riego reducido, porque el suelo ya retiene bastante agua.",
+        "Bajar la cama para aprovechar la humedad, ya que hay agua disponible cerca."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "La cama alta no mejora el drenaje del suelo: sube la zona de raíces por encima del nivel que se satura. Con gleyzación a 25 cm hace falta al menos 30 cm de cama para dejar la mayoría de las raíces fuera del agua. Y con percolación por debajo de 1 cm/h el drenaje es muy deficiente, así que además del elevado hay que sacar el agua superficial con un canal. Aprovechar esa humedad no es una opción: la saturación prolongada asfixia la raíz, que es lo contrario de tener agua disponible."
+    },
+    {
+      "id": "plan-de-campo",
+      "tipo": "abierta",
+      "enunciado": "Diseña el trabajo de campo de esta semana para los doce lotes: qué mediciones haces, en qué orden, y por qué este momento del año es el correcto. Explica también cómo cruzas los resultados con las dos lecciones anteriores para decidir la infraestructura.",
+      "respuestaModelo": "El momento es el correcto por dos razones que coinciden: estamos en la seca, de mayo a septiembre, así que el suelo está seco y accesible —condición que exigen tanto la prueba del frasco como la descompactación mecánica—, y el proyecto todavía no tiene nada construido encima. Las decisiones de drenaje son casi irreversibles una vez que hay camas, riego o frutales plantados.\n\nEl orden:\n\nDía 1, los hoyos. Tres hoyos de 60 cm: en el punto más bajo, en el más alto y uno intermedio. Limpiar una cara vertical con la pala y fotografiarla con cinta métrica. Anotar en cada uno la profundidad a la que aparecen manchas grises o azuladas, los cambios de textura o color, la presencia de placas horizontales, y si hay raíces viejas del monte que giren de lado.\n\nDía 1 en paralelo, la varilla. Recorrer los doce lotes clavando una varilla de acero cada 10 metros y anotando a qué profundidad topa. Media hora y queda el mapa de compactación del terreno completo.\n\nDía 2, infiltración y percolación. Una prueba de la lata por lote —saturando antes— y la prueba del hoyo de 30 cm en los dos o tres lotes que peor pinta tengan.\n\nEl cruce con las lecciones anteriores: la textura de la lección 1 dice cuánto riesgo estructural hay de partida, la densidad aparente y la prueba del terrón de la lección 2 dicen en qué estado está la estructura, y la percolación de esta lección dice qué pasa con el agua que sobra. Combinándolas: franco o franco arenoso con buena estructura y más de 2,5 cm/h va a cama plana y es la mejor tierra; franco con densidad alta se descompacta en seca y se cubre antes de usarlo; franco arcilloso o cualquier lote por debajo de 2,5 cm/h va a cama alta de 30 a 40 cm; arcilloso con menos de 1 cm/h necesita cama de 40 cm y además canal en el pasillo; y un lote donde el hoyo no baje en 24 horas no admite cultivo de suelo ni frutales, solo vivero en contenedor.\n\nDos cosas específicas del sitio: hay que caminar el terreno después de una lluvia para ver si recibe escorrentía de la Ruta 9 o de la urbanización, porque en ese caso la solución es un canal de intercepción en el borde alto y no algo dentro de los lotes. Y en los lotes destinados a frutales perennes —mango, cítricos, achachairú— la descompactación tiene que hacerse antes de plantar, porque después ya no hay forma de llegar a esa profundidad sin destrozar el sistema radicular.",
+      "criterios": [
+        "Justifica el momento por la coincidencia de suelo seco (época seca) y ausencia de infraestructura construida.",
+        "Ordena las mediciones y aprovecha el paralelismo (varilla mientras los hoyos están abiertos).",
+        "Especifica los tres hoyos en cotas distintas del terreno y qué se anota en cada cara.",
+        "Recuerda saturar antes en la prueba de infiltración.",
+        "Cruza las tres lecciones —textura, estructura/densidad y percolación— para decidir cama plana, cama alta o contenedor.",
+        "Menciona la escorrentía externa de la Ruta 9 o la urbanización y el canal de intercepción como solución en el borde alto.",
+        "Señala que en frutales perennes la descompactación debe ser previa a la plantación."
+      ],
+      "explicacion": "Esta es la pregunta que cierra el bloque de física del suelo. Si la respuesta te salió completa, tienes el plan de caracterización y el criterio de decisión de infraestructura sin depender de que nadie te los dicte, y puedes ejecutarlo esta semana."
+    }
+  ]
+}

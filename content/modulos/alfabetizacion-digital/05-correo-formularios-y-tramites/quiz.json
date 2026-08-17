@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "que-es-una-cuenta",
+      "tipo": "opcion_multiple",
+      "enunciado": "Se te cayó el teléfono al agua y quedó muerto. Tenías correo, y ahí estaban las conversaciones con la oficina donde hiciste un trámite. ¿Qué es correcto decir?",
+      "opciones": [
+        "La cuenta no vivía en el aparato: es un renglón en la base de datos de una empresa, así que entrar desde otro teléfono la recupera entera, con los mensajes enviados y recibidos.",
+        "Lo que sí se perdió es lo que solo estaba ahí: las fotos que nunca se respaldaron, las notas y los contactos que no estaban atados a ninguna cuenta.",
+        "El mismo mecanismo funciona en tu contra: quien consiga tu credencial entra a esa cuenta sin necesidad de tocar tu teléfono, desde cualquier lugar.",
+        "Como el correo estaba instalado en ese teléfono, los mensajes se fueron con el aparato y hay que pedirle a la oficina que reenvíe todo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta y es la confusión que más miedo produce. Una aplicación de correo no guarda los mensajes: los muestra. Los mensajes están en el servidor del proveedor, una máquina encendida todo el día en un centro de datos, y por eso ves los mismos correos desde el teléfono, desde una computadora prestada y desde el ciber del pueblo. Lo que desaparece con el aparato es únicamente lo que existía solo ahí y nunca se copió a ningún lado. Y conviene retener la otra cara de la moneda, porque es la que abre la lección siguiente: si la cuenta no depende del aparato, tampoco depende de que el ladrón tenga el aparato — le basta la credencial."
+    },
+    {
+      "id": "direccion-casi-bien",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si escribes mal la dirección de correo del destinatario, siempre te vas a enterar, porque el sistema devuelve un aviso de que no se pudo entregar.",
+      "respuesta": false,
+      "explicacion": "Falso, y esta es la trampa más silenciosa del correo. El rebote solo ocurre cuando el dominio está mal escrito o cuando el buzón no existe en ese servidor. Si te equivocaste en una letra y esa dirección equivocada sí existe —cosa muy probable con nombres comunes—, el mensaje se entrega perfectamente, completo, a un desconocido que ahora tiene tu currículum o la foto de tu documento. Nadie te avisa, porque desde el punto de vista del sistema todo funcionó. Un correo mal tecleado no da error: da silencio, y el silencio se confunde con «todavía no me han contestado». De ahí la regla del cuaderno: escribir tu dirección y las que uses seguido letra por letra, y revisar en voz alta la casilla del destinatario antes de enviar algo que importe."
+    },
+    {
+      "id": "adjuntos-y-limite",
+      "tipo": "opcion_multiple",
+      "enunciado": "Tienes que mandar por correo ocho fotos de un documento y el sistema rechaza el envío por tamaño. ¿Qué es cierto y qué corresponde hacer?",
+      "opciones": [
+        "El archivo no viaja como archivo: el correo es un sistema de texto y la traducción engorda el envío alrededor de un tercio, así que veinte megabytes de archivos salen pesando cerca de veintisiete.",
+        "Las ocho fotos pesan más y se ven peor que un solo PDF de ocho páginas, y muchas oficinas además solo aceptan PDF.",
+        "Si aun así no entra, se sube a la nube y se manda el enlace, pero compartido con la dirección concreta de esa persona y no como «cualquiera con este enlace puede ver».",
+        "Como el límite lo fija tu proveedor, basta con comprobar que la suma de los archivos queda por debajo de esa cifra para que el envío salga."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta justamente por la aritmética de la primera: el envío no pesa lo que pesan tus archivos, pesa cerca de un tercio más, porque antes de salir todo se traduce a texto y se vuelve a armar del otro lado. Ese es el motivo de que el archivo de veinte megabytes que parecía caber holgadamente en un límite de veinticinco sea rechazado sin explicación entendible. La cifra exacta del límite no te la puede dar esta lección —cada servicio pone la suya y la cambia—, así que se busca en el propio correo; lo que sí es general es el orden de magnitud y el recargo de la traducción. Y sobre el enlace: un enlace abierto reenviado a un grupo abre tu documento personal para cualquiera que lo reciba."
+    },
+    {
+      "id": "copia-oculta",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para avisar de una reunión a cuarenta vecinos por correo, lo correcto y más práctico es poner las cuarenta direcciones en la casilla «Para», porque así todos ven quién está convocado.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error que más daño hace sin que nadie lo note. Al poner las cuarenta en «Para» repartes cuarenta direcciones de correo entre cuarenta desconocidos sin permiso de ninguno; una dirección es un dato personal y publicarla no es tuyo para decidirlo. Además, basta que alguien toque «responder a todos» para escribir «gracias» y los cuarenta lo reciben, y si una sola de esas cuentas se ve comprometida más adelante, quien la tenga se lleva la lista entera. La casilla correcta es la copia oculta, que hace exactamente lo mismo pero entrega el mensaje a cada uno sin que vea a los demás: es la diferencia que ya conoces entre un grupo de WhatsApp, donde todos se ven los números, y una difusión, donde cada uno recibe el mensaje como si fuera solo para él. La regla es simple: si la gente de la lista no se conoce entre sí, va en copia oculta."
+    },
+    {
+      "id": "formulario-y-sesion",
+      "tipo": "opcion_multiple",
+      "enunciado": "Estás llenando un formulario largo de una institución. ¿Qué es cierto sobre cómo funciona por dentro?",
+      "opciones": [
+        "Mientras no toques «Enviar» no ha salido nada, y cuando lo toques lo peor que puede pasar es un dato equivocado registrado o un envío rechazado: el sistema está construido para rechazar.",
+        "El servidor no te recuerda de una página a la siguiente, te da una ficha temporal que vence sola, así que veinte minutos buscando el carnet pueden devolverte a la pantalla de entrada con todo en blanco.",
+        "Si la casilla pide un importe, «1.500» puede registrarse como uno con cinco, porque para la mayoría de los sistemas el punto es el separador decimal y no el de miles.",
+        "Si el formulario aceptó lo que escribiste sin marcarte nada en rojo, el dato ya quedó validado y no puede ser rechazado después."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta porque confunde las dos revisiones, que ocurren en lugares distintos. La inmediata, la que te marca en rojo al instante, la hace tu propio navegador ahí mismo, sin consultar con nadie: es el portero de la puerta, que solo mira lo obvio —que el número tenga la cantidad de cifras, que la casilla del correo lleve arroba—. La que decide de verdad la hace el servidor de la institución cuando el envío llega: es el cajero de adentro, que comprueba que ese documento exista, que esa cuenta sea tuya, que ese trámite no esté ya presentado. La primera es comodidad y la segunda es la verdad, así que «pasó la validación, entonces está bien» nunca es cierto, y por eso el error que aparece después de enviar suele exigir corregir en serio."
+    },
+    {
+      "id": "pagina-falsa-y-pago",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a pagar un trámite en línea y quieres asegurarte de que estás en el sitio correcto. ¿Qué criterios sirven de verdad?",
+      "opciones": [
+        "Lo que decide en una dirección es lo que está pegado justo antes de la primera barra: «laentidad.bo/pagos» es la entidad, pero en «laentidad.bo.pagos-rapidos.xyz/tramite» el dominio real es «pagos-rapidos.xyz».",
+        "No llegar por un enlace que te llegó por mensaje ni por un resultado patrocinado del buscador, sino escribiendo la dirección que te dieron en la oficina o yendo a la ventanilla.",
+        "Confirmar la cuenta de destino por un canal distinto del que te la mandó, llamando al número que buscaste tú, y desconfiar de la prisa, que es herramienta del que empuja y no dato del trámite.",
+        "Comprobar que aparece el candado de seguridad en la barra, porque ese candado certifica que la página pertenece a la entidad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta y es un malentendido muy extendido. El candado dice una sola cosa: que lo que escribas viaja cifrado hasta el otro lado. No dice a quién se lo estás mandando. Una página falsa bien montada tiene su candado igual que la buena, además del mismo logo, los mismos colores y el mismo texto, porque copiar la apariencia no cuesta nada. Lo único que no se puede copiar es el dominio, y por eso el criterio bueno es de estructura, no de aspecto. Retén además el orden de importancia: la defensa que aguanta no es mirar bien, es cómo llegas, porque si entraste escribiendo la dirección que te dio la oficina no hay nada que examinar."
+    },
+    {
+      "id": "doble-envio",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si tocas «Enviar» o «Pagar» y la pantalla se queda pensando sin hacer nada, lo correcto es volver a tocarlo hasta que responda.",
+      "respuesta": false,
+      "explicacion": "Falso, y es de los errores más caros de deshacer. Si la pantalla se quedó pensando, la petición ya salió y está viajando: lo que ves es la espera de la respuesta, no que no haya pasado nada. Tocar otra vez manda una segunda petición, y del otro lado eso puede convertirse en dos solicitudes registradas o —lo grave— en dos cobros, porque anular un pago exige otro trámite y a veces semanas. Lo que corresponde es esperar, y si al cabo de un rato no hay respuesta, averiguar si quedó registrado antes de repetir: entrar otra vez y mirar si el trámite aparece como iniciado, buscar en el correo alguna confirmación, o revisar el movimiento en la cuenta y llamar al banco si el corte fue en un pago. Repetir sin comprobar es reiniciar un proceso a la mitad sin saber si escribió."
+    },
+    {
+      "id": "tramite-de-la-casa",
+      "tipo": "abierta",
+      "enunciado": "En tu casa hay que hacer un trámite en línea para alguien de la familia —da igual cuál: una inscripción, una renovación, un reclamo por una factura—. La persona no tiene correo, el teléfono es compartido entre varios, la señal se cae seguido y a media tarde suele irse la luz. Tú eres quien sabe manejar el aparato, así que te toca. Escribe el procedimiento completo, en orden: qué preparas antes de tocar nada, cómo llenas y revisas, qué guardas al terminar, y qué haces exactamente si se corta a mitad. Explica también qué dejas montado en tu casa para que la próxima vez no dependa de que estés tú.",
+      "respuestaModelo": "Lo primero es aceptar que esto no es un momento, es un procedimiento, y que casi todo el trabajo ocurre antes de abrir el formulario.\n\nEmpiezo por lo que esta lección no me puede decir: qué papeles exige ese trámite, cuánto cuesta y cuánto demora. Eso se pregunta en la entidad que lo atiende, en persona o al número que ella misma publique, y se anota punto por punto en el cuaderno. Sospecho de cualquiera que me lo diga de memoria, y no doy por buena una lista sacada de un reenvío. Aprovecho la misma consulta para preguntar si el trámite se puede hacer presencial, porque muchas veces la primera vez sale más rápido y más seguro por ventanilla.\n\nSegundo, la dirección de correo. Si la persona no tiene, le abro una con su nombre y apellido, en minúsculas, sin tildes ni ñ, y escribo en el perfil su nombre completo tal como está en el documento, porque es lo que va a ver quien reciba el mensaje. La dirección queda anotada en el cuaderno letra por letra, porque la vamos a tener que dictar por teléfono y la mitad de los trámites fallidos son una letra dictada mal. Como el teléfono es compartido, esa casilla es suya y no se mezcla con la mía: lo serio de cada quien va en su propia dirección aunque el aparato sea de todos. Y le hago la prueba de cinco minutos: me mando un correo a mí mismo con un asunto de verdad y un adjunto, lo abro desde otro aparato y compruebo que la dirección está bien escrita, que sé adjuntar y que el archivo se abre del otro lado.\n\nTercero, los papeles. Escaneo todo con el teléfono antes de empezar: derecho, plano, sin sombra, legible, en PDF y no como ocho fotos sueltas, reducido de peso y con nombres claros del tipo ci-nombre-apellido.pdf, todo en una carpeta «Documentos». Tengo también a mano los datos que nunca se recuerdan: número de documento, fechas exactas, dirección completa. Si el formulario tiene textos largos, los escribo antes en una nota del teléfono para poder pegarlos.\n\nCon eso listo, elijo el momento: temprano, con el teléfono cargado, con wifi si hay, porque subir archivos es lo que más consume datos y a media tarde se va la luz. Entro al sitio escribiendo la dirección que me dieron en la oficina, nunca por un enlace que llegó por mensaje ni por un resultado patrocinado del buscador, donde se cuelan intermediarios que cobran por algo gratuito.\n\nAl llenar no tengo miedo de romper nada: mientras no toque Enviar no ha salido nada, y el sistema está construido para rechazar. Respeto los campos obligatorios y si me falta un dato cierro, lo consigo y vuelvo, en lugar de inventarlo. Miro el ejemplo gris de cada casilla para el formato de fecha, escribo los montos sin punto de miles porque el punto suele ser el separador decimal, no meto «Bs» en una casilla de número, y escribo el nombre exactamente como está en el documento, letra por letra, aunque me parezca mal escrito. Si el caso no está en una lista desplegable, elijo «otro» y explico en el campo libre. Al subir archivos respeto formato y peso, sabiendo que renombrar una foto a .pdf no la convierte en PDF.\n\nAntes de enviar reviso en voz alta tres cosas: el nombre letra por letra, el número de documento dígito por dígito y la dirección de correo, que es la que más caro sale si está mal, porque entonces la respuesta y el comprobante se van a un buzón ajeno mientras nosotros esperamos. Toco Enviar una sola vez: si la pantalla se queda pensando, la petición ya salió y tocar otra vez puede generar dos registros o dos cobros. Y si hay un pago, confirmo la cuenta de destino por un canal distinto del que la mandó, llamando al número que busqué yo, y no me dejo apurar.\n\nAl terminar guardo el comprobante que ofrezca el sistema y además le hago una captura a la pantalla de confirmación, porque el correo automático puede no llegar o caer en no deseados, la página de «listo» a veces es lo único que existe, y la captura queda con su metadato de fecha y hora. Después, al cuaderno: fecha y hora, número o código del trámite, qué entidad y qué oficina, con qué correo se hizo, qué se presentó y cuándo hay que volver a preguntar.\n\nSi se corta a mitad no vuelvo a empezar a ciegas. Primero averiguo si quedó registrado: entro otra vez y miro si aparece como iniciado o en proceso, busco en el correo alguna confirmación, y si el corte fue en un pago reviso el movimiento en la cuenta o llamo al banco antes de pagar de nuevo.\n\nY lo que dejo montado para que no dependa de mí: la carpeta «Documentos» con todo escaneado y una copia fuera del teléfono; el cuaderno de trámites con una hoja por trámite; la dirección de correo de cada quien anotada; y la costumbre de mirar la carpeta de no deseados cuando se espera respuesta. Así, el día que yo no esté, otro puede seguir el trámite leyendo el cuaderno.",
+      "criterios": [
+        "Trata el trámite como procedimiento en tres tiempos —antes, durante y después— y no como un momento que se resuelve sentándose frente al formulario.",
+        "Empieza preguntando los requisitos en la entidad que atiende el trámite y anotándolos, sin inventar papeles, costos ni plazos, y contempla que la vía presencial puede convenir.",
+        "Abre o identifica una dirección de correo propia de esa persona, con su nombre, y la anota letra por letra; reconoce que el teléfono compartido no obliga a compartir la casilla.",
+        "Reúne y escanea los documentos antes de abrir el formulario: en PDF, legibles, derechos, reducidos de peso y con nombres claros.",
+        "Elige el momento por las condiciones reales —temprano, con batería, con wifi si hay— por los cortes de luz, la señal y el costo de los datos móviles.",
+        "Entra al sitio escribiendo la dirección que dio la oficina y no por un enlace de mensaje ni por un resultado patrocinado del buscador.",
+        "Menciona al menos dos trampas de formato con su mecanismo: formato de fecha según el ejemplo de la casilla, punto como separador decimal, nada de unidades en un campo de número, o el nombre igual al documento.",
+        "Nombra los campos obligatorios y resuelve el dato que falta cerrando y volviendo, en vez de inventarlo.",
+        "Revisa antes de enviar el nombre, el número de documento y sobre todo la dirección de correo, explicando qué pasa si esa última está mal.",
+        "Toca Enviar una sola vez y explica el doble envío: la petición ya salió, y repetir puede producir dos registros o dos cobros.",
+        "Guarda el comprobante y además una captura de la pantalla de confirmación, y anota número de trámite, fecha, entidad, correo usado y cuándo volver a preguntar.",
+        "Ante un corte a mitad, comprueba si quedó registrado —entrar de nuevo, buscar el correo, revisar el movimiento o llamar al banco— antes de repetir nada, y deja montado en la casa algo que sobreviva a su ausencia."
+      ],
+      "explicacion": "El caso mide si la lección se convirtió en procedimiento o quedó en información. Una respuesta buena reparte el trabajo hacia atrás: casi todo lo que evita el desastre ocurre antes de tocar el formulario, y lo que se hace después —comprobante, captura, número y fecha— es lo que permite reclamar. Se resuelve mal si aparece cualquiera de estas tres cosas: inventar qué papeles o cuánto cuesta el trámite en lugar de mandar a preguntar en la entidad; entrar por un enlace o un resultado patrocinado; o, ante el corte, volver a empezar sin averiguar si quedó registrado. Y hay un detalle que separa una respuesta correcta de una que además entendió el módulo: dejar montado en la casa el cuaderno y la carpeta, para que el trámite de la familia no dependa de que una sola persona sepa manejar el teléfono."
+    }
+  ]
+}

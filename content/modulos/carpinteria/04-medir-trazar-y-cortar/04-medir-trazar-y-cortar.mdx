@@ -1,0 +1,434 @@
+Una unión que no cierra casi nunca falló al pegarse: falló al cortarse. Una puerta que roza, un cajón
+que se traba, un marco con rendija —todo eso se decidió antes, cuando alguien puso una raya en un sitio
+y la sierra en otro—. Esta lección es la mitad del oficio: enseña a **poner el corte donde decidiste
+ponerlo**.
+
+Y la buena noticia es la que casi nadie dice: **la precisión no es pulso ni talento, es método**. Quien
+corta recto no tiene mejor vista que tú: tiene un sistema que no deja que los errores se sumen. Damos
+por sabido lo de la lección anterior: herramienta afilada y pieza sujeta.
+
+## La precisión no es pulso, es método
+
+Empecemos por lo que nadie enseña: **ninguna medida es exacta**. Ni la tuya, ni la de un ebanista, ni la
+de una máquina. La pregunta buena no es «¿cómo mido exacto?» sino **cuánto error aguanta esta pieza**, y
+a eso se le llama <Termino slug="tolerancia-de-ajuste">tolerancia</Termino>: perseguir el décimo de
+milímetro en un caballete es tirar tiempo, y aceptar dos milímetros en una espiga la deja floja.
+
+<Tabla>
+
+| Qué estás haciendo | Desvío que ya se nota | Con qué se traza |
+| --- | --- | --- |
+| Caballetes, encofrado, un estante de galpón | 2 a 3 mm | lápiz y huincha |
+| Mueble a la vista, puerta de tablas, mosquitero | menos de 1 mm | lápiz fino y escuadra |
+| Caja y espiga, una tapa que corre en su ranura | 0,2 mm o menos | cuchilla y gramil |
+| Cualquier marco de cuatro lados | manda la escuadra, no la cinta | diagonales |
+
+</Tabla>
+
+La última fila es distinta a propósito: hay trabajos donde solo importa una **relación entre piezas**. Un
+mosquitero puede tener un centímetro de más y funcionar, y con medio centímetro fuera de escuadra deja
+el hueco por donde entra el mosquito.
+
+## Cara y canto: el sistema de referencias
+
+Una tabla no es un ladrillo geométrico: está algo torcida, algo abarquillada, más ancha en una punta que
+en la otra. Por eso **«el ancho de la tabla» no existe**: hay un ancho por cada sitio donde midas y por
+cada lado desde el que midas, y si un día mides desde un borde y al otro desde el opuesto, mediste dos
+cosas distintas por bien que hayas leído la cinta.
+
+La solución tiene siglos y no cuesta nada. Se elige **una cara** —la más plana, la que va a quedar a la
+vista— y se la declara la <Termino slug="cara-de-referencia">cara de referencia</Termino>; después
+**uno de los dos cantos**, que se deja recto y perpendicular a ella y se declara
+el <Termino slug="canto-de-referencia">canto de referencia</Termino>. Desde ese momento **toda medida
+sale de ellos y todo gramil corre contra ellos**.
+
+Y se marcan, porque si no se olvidan: un garabato sobre la cara que termina apuntando al canto elegido,
+y una flecha en el canto que apunta de vuelta a la cara. En una pila de doce piezas, esa marca es lo
+único que impide que la número siete entre al revés.
+
+<Analogia titulo="Una única fuente de la verdad">
+Es un sistema de coordenadas con su origen declarado: la cara es el plano z = 0 y el canto es el eje
+x = 0. Medir desde el canto opuesto es una ruta relativa desde un directorio que no sabes cuál es. No
+importa tanto que la referencia sea perfecta —ninguna lo es— como que **todas las medidas provengan de
+ella**: un origen corrido da una pieza coherente consigo misma, dos orígenes dan una que no cierra.
+</Analogia>
+
+## Por qué el error se acumula
+
+Imagina que cortas ocho estantes del mismo listón, apoyando cada vez la huincha en el corte fresco. Es
+lo natural y es la peor manera: cada corte tiene su error y **esos errores se heredan**, así que el
+octavo arrastra los siete anteriores.
+
+Lo grave es que en carpintería **no se compensan**. Un error que unas veces sobra y otras falta es
+aleatorio, y esos se cancelan. Pero el del carpintero tiene **signo fijo**, porque sus causas son
+constantes: el mismo lápiz que dibuja igual de grueso, la misma costumbre de cortar siempre por el mismo
+lado de la raya. Un error con signo se llama sesgo, y un sesgo no se cancela: se suma.
+
+<Formula explicacion="Con error aleatorio, el desvío final crece con la raíz del número de cortes: ocho cortes con un milímetro cada uno dan unos 2,8 mm. Con error de signo fijo —que es lo normal—, se multiplica: los mismos ocho cortes dan 8 mm.">
+aleatorio: error total ≈ e × √n      ·      sesgado: error total = e × n
+</Formula>
+
+Un milímetro por estante es invisible de a uno; ocho juntos se ven desde la puerta. Ese es
+el <Termino slug="error-acumulado">error acumulado</Termino>, causa número uno de los muebles «como
+chuecos». La defensa ya la viste en el módulo de planos: **medir contra un mismo origen**, que allí se
+llamaba <Termino slug="cotas-acumuladas">cotas acumuladas</Termino>. En el listón, marcas desde la punta
+40, 80, 120, 160 y recién entonces cortas.
+
+<Analogia titulo="Sumar en un bucle contra calcular desde el índice">
+Es `pos += paso` dentro de un bucle contra `pos = inicio + i * paso`. La primera acumula el redondeo de
+cada vuelta; la segunda lo recalcula fresco y el error nunca pasa de uno: **no acumules, referencia**. Y
+un sesgo no se combate repitiendo y promediando, porque repetir lo confirma: se combate **cambiando el
+procedimiento**.
+</Analogia>
+
+## No medir: copiar
+
+La defensa buena es más radical: **el número es el peor sitio donde guardar una medida**. Al medir, la
+pieza se vuelve un número que lees a través de una raya, anotas, vuelves a leer, buscas otra vez en la
+cinta y trazas: seis oportunidades de meter error que existen **solo porque decidiste pasar por el
+número**. Si la pieza está ahí, el número sobra.
+
+A eso se le llama <Termino slug="transferencia-directa">transferencia directa</Termino> —llevar la
+medida con la cosa misma, sin cifras— y tiene tres formas, las tres más precisas que cualquier cinta.
+
+**Marcar contra el hueco real.** Si el estante va dentro de un mueble, no midas el mueble: mete la tabla
+en el hueco, apóyala contra un lado y marca por dónde pasa el otro. No hay error de lectura porque no
+hubo lectura, y desaparece el peor error de todos: medir bien y cortar por el número equivocado.
+
+**Copiar de la primera pieza.** Si necesitas cuatro patas iguales, no necesitas saber cuánto miden:
+necesitas que sean iguales. Corta una y úsala de plantilla, o júntalas con sargentos y córtalas de una
+pasada. En un mueble, **igual importa más que exacto**.
+
+**Poner un tope.** Un <Termino slug="tope-de-longitud">tope de longitud</Termino> es un pedacito de
+madera prensado a la distancia buscada: apoyas la pieza contra él, cortas, entra la siguiente. Si el
+tope está un milímetro corrido, las veinte piezas tienen un milímetro de menos **y siguen siendo iguales
+entre sí**.
+
+<Dato titulo="La regla de la casa">
+**Si la pieza real está disponible, no se mide: se copia.** La huincha es para comprar madera,
+planificar y hacer el primer corte. A partir del segundo, la referencia es la pieza que ya cortaste, el
+hueco donde va a entrar o el tope que pusiste. Esta sola regla mejora más el trabajo que comprar
+herramienta nueva.
+</Dato>
+
+## La huincha, el lápiz y el ancho de la línea
+
+**El gancho de la huincha se mueve, y está bien.** Esa holgura es el grosor de la chapita, para que la
+cinta lea igual enganchando por fuera —el gancho tira— que apoyando contra algo —el gancho empuja—. Lo
+que sí es defecto es un gancho doblado por una caída: miente siempre y en la misma dirección.
+
+**Una sola huincha por proyecto**, además: dos cintas casi nunca coinciden al milímetro, y en cuanto dos
+personas trabajan con dos cintas las piezas dejan de encajar sin que nadie entienda por qué.
+
+**El lápiz tiene ancho, y ese ancho es tu piso de precisión.** Una raya de lápiz de carpintero mide
+cerca de un milímetro: si tu tolerancia es medio milímetro, el instrumento con el que marcas ya se comió
+el presupuesto. Y una raya larga es ambigua: por eso se marca con **una V**, cuyo vértice es un punto
+único, y no con un guión.
+
+Para el trabajo fino se cambia de instrumento. Una <Termino slug="linea-de-cuchilla">línea de
+cuchilla</Termino> no es una marca dibujada encima de la madera: es un corte hecho en la madera. No
+tiene ancho, porque es una discontinuidad. **Secciona las fibras de la superficie**, así que la astilla
+que saltaría cuando llega el formón ya está cortada. Y deja un surco donde la herramienta **se encaja
+sola**, al tacto: una referencia física, que no se equivoca con mala luz.
+
+<Advertencia titulo="La cuchilla corta hacia la mano que sostiene">
+Se traza tirando de la cuchilla contra el canto de una regla, y la fuerza empuja la hoja **hacia afuera
+de la regla**, no hacia adentro. Sujeta la regla bien atrás del recorrido y con los dedos arriba, nunca
+por delante de la punta. Varias pasadas suaves cortan más limpio que una fuerte, y la fuerte es la que
+se desvía. Guarda la cuchilla retraída: muchos cortes de taller ocurren buscando algo en una caja.
+</Advertencia>
+
+## La escuadra que miente, y cómo pillarla
+
+Una escuadra es un ángulo recto fijo más un **talón**, la parte gruesa que se apoya en el canto de
+referencia. Todo lo perpendicular sale de ese ángulo, así que si está mal, está mal todo y de forma
+sistemática. Las baratas vienen mal con frecuencia y las buenas se estropean con una caída.
+
+Y aquí viene una de las ideas más bonitas del oficio: **puedes comprobar tu escuadra sin tener nada más
+preciso que ella**. Se llama <Termino slug="prueba-del-volteo">prueba del volteo</Termino> y funciona
+por simetría. Apoya el talón en un canto recto y traza una línea fina; ahora **da vuelta la escuadra
+como una página**, apóyala en el mismo canto y en el mismo punto, y traza otra vez. Si es recta, las dos
+líneas caen una sobre la otra; si no, se abren en tijera —y lo que se abre es **el doble** de tu error—.
+
+<Dato titulo="La comprobación amplifica el defecto, que es justo lo que quieres">
+Medio grado de error es invisible mirando la escuadra. Con el volteo, sobre una hoja de 25 centímetros,
+ese medio grado abre las dos líneas unos **4 milímetros en la punta**: imposible no verlo. Cuanto más
+larga la hoja, más se abre el abanico, así que haz la prueba con la hoja entera y no cerca del talón.
+</Dato>
+
+No hace falta un patrón mejor para detectar el error, y esa es la parte que sorprende: es lo que hace un
+test de propiedades, que explota una **invariante** —voltear la escuadra tiene que dar la misma línea—
+en vez de comparar contra una respuesta conocida. El nivel de burbuja se verifica igual, girándolo.
+
+Si la tuya falla: devuélvela si acabas de comprarla; o hazte una, porque un triángulo grande de terciado
+comprobado con el volteo sirve para cualquier marco —y para replantear a lo grande está
+la <Termino slug="escuadra-3-4-5">regla del 3-4-5</Termino>, que solo necesita una cinta—; o úsala
+**siempre en la misma orientación**, que convierte el desastre en un sesgo conocido.
+
+## El gramil y la falsa escuadra
+
+Dos herramientas más, las dos para trazar sin números.
+Un <Termino slug="gramil">gramil</Termino> es una varilla con un tope corredizo y una punta en el
+extremo: lo apoyas contra el canto de referencia y arrastras, y sale una línea paralela a ese canto, la
+misma en todas las piezas, y grabada. Lo importante es que **se regula contra la cosa y no contra un
+número**: lo pones sobre el formón para que la caja salga de su ancho exacto.
+
+Una <Termino slug="falsa-escuadra">falsa escuadra</Termino> es el mismo truco para ángulos que no son
+rectos: dos reglillas unidas por un perno con mariposa. La abres contra el ángulo que ya existe —el
+faldón del techo, la pata inclinada del caballete—, la aprietas y la llevas a la pieza. Nunca sabes
+cuántos grados son y nunca te hacen falta.
+
+## El ancho del corte y de qué lado se corta
+
+Una sierra no divide la madera: **se come una franja de madera**. Los dientes van doblados
+alternadamente hacia los lados para que la ranura salga más ancha que la hoja y esta no se agarrote; el
+resultado es un <Termino slug="ancho-de-corte">ancho de corte</Termino> —también le dicen vía— de poco
+más de un milímetro en un serrucho de costilla y de tres y pico en una circular. No lo adivines: **corta
+un recorte y mide la ranura**.
+
+De ahí salen dos consecuencias. La primera: **la línea pertenece a una sola de las dos partes**. Si
+serras «por la raya» te comes media raya de cada lado y la pieza buena queda corta la mitad de la vía.
+Se corta siempre por el <Termino slug="lado-de-desecho">lado de desecho</Termino>, y se **raya el
+desecho con una equis** al trazar: dos segundos que eliminan una familia entera de errores.
+
+La segunda: **la vía se resta del largo total**. Cuatro piezas de 50 centímetros no salen de un listón
+de 2 metros, porque los tres cortes que las separan se comieron cerca de un centímetro. Y ojo con el
+error por uno: para separar n piezas hacen falta n − 1 cortes, igual que una cerca de diez tramos lleva
+once postes.
+
+<Formula explicacion="Largo de listón que hay que comprar: la suma de todas las piezas, más el ancho de corte por cada corte que vas a hacer, más lo que recortes de las puntas para sanearlas.">
+largo necesario = Σ largos + (nº de cortes × ancho de corte) + recortes de punta
+</Formula>
+
+## Serrar recto a mano
+
+Serrar recto es controlar **dos planos a la vez**: el corte sigue la línea sobre la cara —eso lo ves— y
+se mantiene perpendicular a través del espesor —eso no lo ves hasta que la pieza cae en dos—. La
+maniobra que elimina la mitad del problema es **trazar la línea alrededor de la pieza**, en las cuatro
+caras, con la escuadra siempre apoyada en la cara y el canto de referencia.
+
+La segunda idea es que **una sierra se guía a sí misma**: en cuanto abrió tres milímetros de ranura, la
+hoja está encerrada y corregir después es empujar contra las paredes del corte. Por eso **los primeros
+milímetros deciden el corte entero**: se arranca despacio, tirando hacia atrás una o dos veces para
+abrir la muesca.
+
+<Advertencia titulo="Cómo se guía el arranque sin cortarse">
+La hoja se guía con el **nudillo del pulgar** de la mano libre, con el pulgar doblado y el nudillo
+vertical: es hueso duro y superficie ancha, y si la hoja salta resbala contra él en vez de morder. Nunca
+con la yema ni con el pulgar estirado a lo largo de la hoja, y en cuanto la muesca está abierta esa mano
+se retira. La mano que sostiene la pieza va **siempre por detrás del filo**, nunca al frente ni debajo
+de la trayectoria: cuando una hoja salta de su ranura sale hacia adelante. Y la pieza tiene que estar
+sujeta de verdad, porque una pieza que se mueve obliga a agarrarla con la mano, y ahí acaban casi todos
+los cortes de taller.
+</Advertencia>
+
+Después, mecánica del cuerpo. Una sierra **tiene que moverse dentro de un plano** y tu brazo se mueve en
+arcos: si el codo no está en el plano del corte, el corte sale con panza. Párate con hombro, codo y hoja
+alineados, mira **desde arriba y no de lado**, y deja que pese la sierra, porque apretar no acelera y sí
+desvía. Si el corte se fue, **no lo enderezes torciendo**: retrocede y reanuda la muesca donde toca.
+
+Y no es lo mismo cortar a través de las fibras —el <Termino slug="tronzado">tronzado</Termino>, con
+dientes que seccionan como cuchillitos— que cortar a lo largo de ellas
+—el <Termino slug="hendido">hendido</Termino>, con dientes que arrancan viruta como formoncitos—. El
+hendido tiene un peligro propio: la madera está tensionada y la ranura **se cierra sobre la hoja**. Se
+resuelve metiendo una cuña en la parte ya cortada.
+
+## La sierra circular y el listón prensado
+
+A pulso, una sierra circular no corta recto y además es donde ocurren los accidentes serios. Guiada,
+corta mejor que la mayoría de las máquinas de taller: se prensa con dos sargentos un listón bien recto
+sobre la pieza y se hace correr la base de la máquina contra él, a una distancia de la línea igual al
+**desplazamiento** entre el disco y el borde de la base.
+
+El método bueno elimina hasta esa cuenta, y es otra vez transferencia directa. Se hace
+una <Termino slug="guia-de-corte">guía de corte</Termino>: pegas un listón recto sobre una tira ancha de
+terciado delgado y recortas el sobrante **con la misma sierra que la va a usar siempre**. A partir de
+ahí el borde de esa tira **es** por donde pasará el disco: lo apoyas sobre tus marcas y cortas.
+
+<Advertencia titulo="El retroceso: por qué la máquina se te viene encima">
+Casi todo el peligro de una sierra circular es un solo fenómeno. Si la ranura se cierra y **pellizca el
+disco**, los dientes de la parte trasera —que suben— muerden la madera y trepan por ella: la máquina
+sale disparada hacia atrás, hacia quien la sostiene, con el disco girando. Ocurre en un cuarto de
+segundo.
+
+Se previene por el mecanismo, no por el pulso. **Apoya la pieza de modo que el recorte quede libre y no
+se doble sobre el corte**: cortar una tabla apoyada solo en dos caballetes, con el corte en el medio, es
+fabricar el pellizco, porque las dos mitades se vencen hacia adentro. Se corta sobre apoyos
+sacrificables debajo de toda la pieza, o con el recorte libre de caer. **Regula la profundidad** para
+que el disco asome apenas unos milímetros por debajo de la madera: menos diente expuesto es menos diente
+disponible para trepar. Nunca trabes abierta la guarda inferior. Sostén con las dos manos y párate
+**fuera de la línea de retroceso**, a un costado, no detrás de la máquina.
+
+Nunca cortes una pieza sostenida con la mano ni pases la mano por debajo de la tabla. Deja que el disco
+se detenga solo antes de apoyar la máquina, y desenchufa antes de cambiar un disco o de liberar una hoja
+atascada. Anteojos siempre: una astilla a esa velocidad no perdona un ojo.
+</Advertencia>
+
+## El inglete sin ingletadora
+
+Un <Termino slug="inglete">inglete</Termino> es un corte en ángulo para que dos piezas formen esquina
+sin que se vea la testa de ninguna. Es el corte que más se falla, por una razón geométrica: **el error
+aparece doblado**, porque la esquina la forman dos cortes. Si cada uno está medio grado pasado, la
+esquina abre un grado, y un grado se ve como una rendija.
+
+Y hay una trampa peor con los marcos. Los ángulos interiores de un cuadrilátero suman 360 grados, sin
+excepción. Si tus ocho ingletes salen todos a 45 y medio, cada esquina da 91 y las cuatro dan 364: **el
+marco no puede cerrar**, por mucho que lo aprietes. Que todos los cortes sean iguales no salva un marco;
+solo salva las piezas sueltas.
+
+**La esquina de prueba.** Antes de tocar la madera buena, corta dos recortes con tu guía, júntalos y
+comprueba la esquina con la escuadra que validaste con el volteo. Si abre por fuera, el ángulo está
+pasado; si abre por dentro, está corto. Dos minutos y tres pedazos de basura.
+
+**Cortar los dos lados de la esquina dando vuelta la pieza.** Si usas la misma ranura de la guía para
+las dos piezas que se van a encontrar, pero una con la cara arriba y la otra con la cara abajo, los
+ángulos salen complementarios: uno se pasa lo mismo que el otro se queda corto y **la esquina suma 90
+aunque tu guía esté mal**. Si una cara va obligatoriamente afuera, te toca la esquina de prueba.
+
+La caja se fabrica: una <Termino slug="caja-de-ingletes">caja de ingletes</Termino> son dos paredes
+paralelas y un piso, con ranuras aserradas a 45 y a 90 grados de una sola pasada atravesando las dos,
+así quedan alineadas por construcción. Y en un marco los **lados opuestos tienen que medir exactamente
+lo mismo**, o tendrás cuatro ángulos perfectos formando algo que no es un rectángulo.
+
+## Aplanar una cara y escuadrar las cuatro
+
+Con madera recuperada o aserrada en bruto no hay cara plana donde apoyar ni canto recto contra el que
+correr el gramil: hay que **fabricar las referencias**. A eso se le
+llama <Termino slug="escuadrado-de-la-pieza">escuadrar la pieza</Termino>, y tiene cuatro pasos en orden
+obligatorio.
+
+**Uno: aplanar una cara.** No alisarla, aplanarla. Se comprueba con una regla a lo largo, a lo ancho y
+en diagonal, y para el alabeo con
+dos <Termino slug="reglillas-de-alabeo">reglillas de alabeo</Termino>: dos listoncitos rectos e
+idénticos apoyados de canto en los extremos. Miras el borde de la más cercana contra el de la más
+lejana, y si no se ven paralelas la tabla está torcida, **con el desvío multiplicado** por la razón
+entre el largo de las reglillas y el ancho de la tabla. Con cepillo se rebajan los puntos altos: rayonea
+la cara con lápiz y cepilla hasta que el lápiz desaparezca, porque el grafito es tu medida.
+
+**Dos: enderezar un canto y ponerlo a escuadra con esa cara**, comprobando con la escuadra apoyada **en
+la cara ya aprobada**, nunca en la otra. **Tres: el ancho**, regulando el gramil contra el canto de
+referencia y rebajando hasta la línea, con lo que el segundo canto sale paralelo por construcción.
+**Cuatro: el grueso**, igual pero con el gramil desde la cara de referencia.
+
+<Analogia titulo="Un grafo de dependencias sin ciclos">
+El orden no es tradición, es la única topología posible: cada paso **se apoya solo en superficies ya
+declaradas verdaderas** y produce una nueva superficie verdadera. Referenciar el paso tres contra una
+cara que todavía no aprobaste es un ciclo en el grafo de dependencias, y sale algo que compila y está
+mal. Es el arranque de un compilador: empiezas con algo imperfecto —tu regla y tu ojo— y cada etapa se
+construye sobre la anterior ya verificada. La cara de referencia es tu etapa cero.
+</Analogia>
+
+Si no tienes cepillo no te quedas afuera: elige de la pila la tabla más recta en vez de pelear con la
+torcida, compruébala sobre algo que sepas plano —el piso de cerámica de la casa— y resuelve el resto en
+el diseño, porque una tabla algo torcida atornillada contra un travesaño recto se endereza sola.
+
+## Las diagonales
+
+Queda la comprobación más rentable del oficio, y cabe en una frase: **cuatro lados no definen un
+rectángulo**. Un cuadrilátero con los lados opuestos iguales es un paralelogramo, y un paralelogramo se
+deforma libremente: puedes tener las cuatro medidas perfectas y un marco caído en rombo. La rigidez la
+da el triángulo, que es el argumento de la <Termino slug="triangulacion">triangulación</Termino>.
+
+Así que para fijar la figura hay que medir **una diagonal**, y con las dos tienes además la
+comprobación: cuando las dos miden lo mismo, y solo entonces, el marco está a escuadra. Se
+llama <Termino slug="comprobacion-por-diagonales">comprobación por diagonales</Termino>, se tira de
+esquina a esquina siempre con la misma cinta, no cuesta nada y no se puede engañar.
+
+<Formula explicacion="La diferencia entre las dos diagonales es aproximadamente el doble del lado largo por el desplazamiento de la esquina, dividido entre la diagonal. En la práctica: lo que lees es entre 1,4 y 2 veces el error real, o sea que la comprobación amplifica el defecto.">
+diferencia de diagonales ≈ 2 × lado × desplazamiento ÷ diagonal
+</Formula>
+
+Traducido: si difieren en 7 milímetros, la esquina está corrida unos 4, y para corregirlo **empujas a lo
+largo de la diagonal más larga**, porque apretar en ese sentido la acorta y alarga la otra. Hazlo con la
+cola fresca y vuelve a medir **después** de apretar los sargentos, porque los sargentos descuadran
+marcos. Es un `assert` puesto donde el estado todavía es reversible: el mismo marco descubierto al día
+siguiente cuesta la pieza entera.
+
+<Advertencia titulo="Diagonales iguales no bastan por sí solas">
+Si los lados opuestos no son iguales, dos diagonales iguales te dan un trapecio isósceles, no un
+rectángulo: una figura simétrica y torcida que pasa la prueba. El orden correcto es **primero cortar los
+pares de lados iguales contra un tope y después comprobar las diagonales**. Las dos cosas juntas sí
+definen el rectángulo; cada una sola, no.
+</Advertencia>
+
+<AplicarRizoma>
+**Esta semana, antes de cortar nada, comprueba tu escuadra con la prueba del volteo.** Necesitas una
+tabla con un canto recto, cinco minutos y algo que trace fino. Si tu escuadra falla, todo lo que hagas
+con ella va a fallar igual y en la misma dirección. Haz lo mismo con el gancho de la huincha y con el
+nivel que tengas en la casa.
+
+**Adopta las dos marcas de referencia hoy mismo.** Cada tabla que entre a la casa, antes de apoyarla
+contra la pared: eliges cara, eliges canto, garabato y flecha. No cuesta plata ni tiempo, y es lo que
+hace que la pieza siete de una pila de doce no entre al revés. Es la costumbre con mejor relación entre
+esfuerzo y resultado de todo el módulo.
+
+**Fabrica tus tres herramientas de trazado con recortes, en una tarde:** un gramil con un taquito, una
+varilla y un tornillo; una escuadra grande de terciado comprobada con el volteo; y una caja de ingletes
+con tres tablitas. Y deja instalado un tope permanente donde cortas —un listón atornillado al
+caballete—, que convierte «cortar ocho estantes» de una hora de mediciones en diez minutos.
+
+**Practica sobre basura, a propósito y con comprobación.** Junta recortes de palet, traza diez líneas
+alrededor de la pieza y corta las diez. Después revisa cada corte con la escuadra y mira **hacia qué
+lado** te fuiste: si te fuiste siempre para el mismo lado no es mala suerte, es tu postura, y eso se
+arregla moviendo los pies.
+
+**Enséñale a alguien de la casa la comprobación de las diagonales, hoy.** Se explica en dos minutos y
+sirve para todo: el marco del mosquitero, la puerta del gallinero, el estante de la cocina, el portón.
+Que haya dos personas que, al ver un marco armado, agarren la cinta y tiren de esquina a esquina sin que
+nadie se lo pida. Ese es el nivel en el que el conocimiento deja de depender de una sola cabeza.
+
+**En Rizoma del Sur esto vive escrito en la mesa de trabajo**, no en la memoria de quien más sabe: la
+huincha del proyecto colgada de un clavo, la escuadra con la fecha de su última prueba del volteo, la
+guía de corte apoyada en la pared. Y cuando se arman marcos, **las diagonales las mide alguien distinto
+de quien armó**: quien armó ya tiene el ojo hecho a lo que armó y no lo va a ver.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Aquí la pieza que mides en la mañana no es la misma en la tarde.** Con seis meses húmedos y seis
+secos, la madera de Santa Cruz encoge y crece a lo ancho de forma visible: la tabla que trajiste en
+enero es más angosta en agosto. **El ancho medido con número no es un dato estable**, y por eso la
+transferencia directa importa más aquí: marca contra el hueco real y corta el mismo día.
+
+**Casi toda la madera del primer proyecto no viene con cara ni canto**, porque sale de palets, cajones o
+una demolición, así que escuadrar no es opcional: la referencia hay que fabricarla. Y antes del primer
+corte, **revisa clavos**: uno escondido arruina un diente o un disco al instante y puede lanzar un
+fragmento a la cara. Se palpa el canto, se pasa un imán, y lo dudoso se descarta. Anteojos, siempre.
+
+**Planifica el corte para cuando haya luz.** Los cortes de energía son parte del clima aquí, y una
+sierra circular que se apaga en mitad de un corte deja el disco encajado en la ranura. La maniobra es
+una sola: **desenchufa antes de tocar nada**, porque la energía puede volver en cualquier momento y la
+máquina puede haber quedado apoyada sobre el gatillo. Por eso el serrucho de mano no es nostalgia.
+
+**En el mercado conviven medidas nominales en pulgadas con medidas reales en centímetros**, y casi nunca
+coinciden: una pieza no mide lo que dice su nombre, porque el aserrado y el cepillado se comieron unos
+milímetros que varían de aserradero en aserradero. **El nombre de la pieza no es un dato; el dato es la
+pieza medida por ti**, y mejor aún, usada como plantilla.
+
+**Trazar al sol de mediodía es trazar a ciegas.** El sol vertical del verano lava una raya de lápiz
+sobre madera clara hasta hacerla invisible, y el reflejo cansa el ojo justo cuando hace falta verlo
+todo. La línea de cuchilla se lee con cualquier luz porque no es un color: es un surco con su propia
+sombra, y además se palpa. Traza y corta en la sombra o temprano.
+
+**Al comprar herramienta usada, la prueba del volteo se hace en el puesto, antes de pagar.** Una
+escuadra torcida y una huincha con el gancho doblado se ven idénticas a las buenas, y valen menos que
+nada porque introducen un error que no vas a sospechar. Y como un gramil puede no aparecer en la
+ferretería del barrio, fabricarlo no es un ejercicio de entusiasta: es el plan realista.
+
+**Un marco fuera de escuadra, aquí, es un asunto de salud.** El dengue es endémico en la zona y un
+mosquitero solo sirve si el bastidor apoya parejo contra el marco de la ventana: dos milímetros de
+rendija en una esquina son una puerta abierta. La comprobación por diagonales, en una casa de Zanja
+Honda, es carpintería de salud pública.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya tienes el sistema completo: referencias declaradas y marcadas, medidas que no se acumulan porque se
+copian, trazado con cuchilla y gramil, instrumentos que compruebas por simetría en vez de creerles, la
+vía descontada, el desecho rayado y las diagonales como aserción final.
+
+Lo que todavía no sabes es **qué hace que dos de esas piezas sigan juntas dentro de diez años**. La
+lección siguiente, **Uniones: cola, clavo, tornillo y ensamble**, ordena eso por los tres únicos
+mecanismos que existen —geometría que encaja, fricción que aprieta y adhesión que pega—, con la tesis de
+que casi todo lo que se rompe confiaba en uno solo. Y verás por qué el trabajo de esta lección era el
+requisito: una caja y espiga no perdona un corte a un grado, porque no hay cola que rellene lo que la
+sierra se llevó de más.

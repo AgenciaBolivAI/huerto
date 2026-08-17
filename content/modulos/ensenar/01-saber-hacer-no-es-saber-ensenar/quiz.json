@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "tacito-explicito",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es cierto del conocimiento tácito de un practicante competente?",
+      "opciones": [
+        "Se construye por repetición con retroalimentación y queda guardado donde la introspección no llega.",
+        "Incluye discriminaciones perceptuales afinadas, como separar una hoja con ácaros de una con deficiencia.",
+        "Buena parte de él es tácito por descuido: sería explicable, pero nadie ha intentado decirlo en voz alta.",
+        "Por definición no se puede poner en palabras, así que documentarlo es perder el tiempo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta confunde las dos categorías. Hay conocimiento tácito por naturaleza —el gesto, el ojo calibrado— que solo se transfiere practicando al lado de alguien, pero la categoría enorme es la del tácito por descuido, y esa sí se documenta. Dar por inefable todo lo que no has explicado todavía es la excusa que impide empezar."
+    },
+    {
+      "id": "maldicion-senales",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuáles son señales de que la maldición del conocimiento está operando sobre ti?",
+      "opciones": [
+        "Usas «simplemente», «solo tienes que» o «es obvio».",
+        "Te irrita que no lo capten y lo interpretas como falta de atención.",
+        "No puedes decir en qué punto exacto se equivocó el que falló.",
+        "Al terminar, nadie pregunta nada."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta también es una señal de alarma, pero está mal enunciada como la única lectura: el silencio no es prueba de nada por sí solo. Lo que dice la lección es que se lee como éxito y casi nunca lo es, porque quien no entendió el tercer paso no puede formular una pregunta sobre el séptimo — para preguntar hace falta ya un mínimo de mapa. El silencio total mide distancia, no comprensión."
+    },
+    {
+      "id": "agrupamiento",
+      "tipo": "verdadero_falso",
+      "enunciado": "El informe que un experto da de sus propios pasos es una fuente confiable de lo que realmente hace.",
+      "respuesta": false,
+      "explicacion": "Falso, y no por mala fe. La práctica empaqueta en una sola unidad las secuencias que siempre van juntas, para liberar memoria de trabajo; el precio es que el paquete se cierra. Al preguntarle, el experto lee la etiqueta y devuelve tres pasos donde hay catorce. La descomposición hay que obtenerla instrumentando la ejecución: grabar, que alguien observe y anote, o entregar las instrucciones y ver dónde revientan."
+    },
+    {
+      "id": "cuatro-etapas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre las cuatro etapas de la competencia, ¿qué es correcto?",
+      "opciones": [
+        "La incompetencia inconsciente es el estado más peligroso porque no genera ninguna pregunta.",
+        "Llevar a alguien a la incompetencia consciente es parte del trabajo, y se hace con evidencia, no con humillación.",
+        "Quien está en competencia consciente suele explicar mejor que quien está en competencia inconsciente.",
+        "Cuanto mejor ejecuta una persona una tarea, mejor la enseña."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es justo la creencia que la lección desarma. En competencia inconsciente el agrupamiento ya cerró los paquetes y la persona deja de ver los pasos que da, así que el mejor ejecutor suele ser mal descriptor. El vecino que aprendió hace seis meses todavía recuerda dónde estaba la dificultad."
+    },
+    {
+      "id": "criterio-de-exito",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué requisitos cumple un paso bien descompuesto?",
+      "opciones": [
+        "Es una acción física con un verbo que se puede filmar: cortar, mezclar, cubrir, regar.",
+        "Lleva un criterio de éxito perceptible por los sentidos de quien ejecuta, no por los del que enseña.",
+        "Su criterio puede fallar: existe un resultado observable que lo viola, y se describe cómo se ve.",
+        "Está enunciado de forma general para que sirva en cualquier suelo, clima y época."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte la regla. Un paso que sirve en cualquier condición es un paso sin condiciones de borde, y las condiciones de borde son la mitad del contenido: toda receta está condicionada en silencio al suelo, clima, época y material donde se aprendió. Ningún número se transmite sin su rango y sus condiciones."
+    },
+    {
+      "id": "preguntas-contadas",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para calibrar la granularidad de una ficha se le entrega a alguien que no sabe, quien la escribió se sienta a un costado sin hablar, y se cuentan preguntas y errores hasta que bajen a cero.",
+      "respuesta": true,
+      "explicacion": "Correcto: cada pregunta es un paso que falta y cada error es un criterio que falta. Un paso es lo bastante fino cuando quien no sabe puede ejecutarlo sin preguntar nada, y eso se mide, no se estima. Es un ciclo de pruebas de regresión, y la parte difícil es el silencio de quien observa."
+    },
+    {
+      "id": "receta-vs-modelo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se pierde cuando se transfiere la receta y no el modelo mental?",
+      "opciones": [
+        "El porqué, y sin él el paso se vuelve rito que no se adapta y se abandona el día que hay prisa.",
+        "Las condiciones de borde, que el experto no enuncia porque para él son invisibles.",
+        "Los criterios de decisión ante lo inesperado, que ninguna demostración muestra porque en ella no falla nada.",
+        "La rapidez de ejecución, que solo se adquiere copiando el ritmo del que enseña."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La rapidez llega sola con la práctica y no es lo que se pierde en el traspaso. Lo que se pierde es todo lo que permite generalizar: el mecanismo, el rango de validez y las ramas de decisión. Hay incluso una cuarta pérdida silenciosa, lo que el experto nunca hace, porque no forma parte de su secuencia y por eso no lo menciona."
+    },
+    {
+      "id": "aplicar-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Eres la persona que hoy hace bien la mayoría de las tareas de Rizoma del Sur. Explica el procedimiento completo que seguirías para que ese conocimiento deje de depender de ti, desde el inventario hasta la comprobación de que se transfirió.",
+      "respuestaModelo": "Lo primero no es enseñar: es hacer el inventario de lo tácito. Me siento a escribir la lista de tareas que hoy salen bien solo si las hago yo. En estos 3.666 m² esa lista es concreta: el punto del sustrato para llenar bolsas, la elección de la rama de ají dulce que sirve para esqueje, el injerto de los frutales, cuándo un plantín de yautía está listo para salir del umbráculo, el punto del mortero, y cuándo hay que cerrar todo porque el surazo entra esta noche. Esa lista es el factor bus del proyecto.\n\nDespués priorizo, porque desagrupar cuesta caro y no puedo hacerlo con todo a la vez. Multiplico tres cosas: con qué frecuencia hace falta la tarea, cuánto daño causa hacerla mal y cuánta gente sabe hacerla hoy. Llenar y sembrar una bolsa de vivero le gana al injerto de frutales, aunque el injerto luzca más, porque es lo que un vecino va a necesitar en su patio la primera semana.\n\nPara descomponer no confío en mi memoria, porque el agrupamiento ya cerró los paquetes y mi autoinforme devuelve tres pasos donde hay catorce. Instrumento la ejecución: me grabo, o pido que alguien me siga y anote todo lo que hago, incluidas las cosas que nunca diría —mirar el cielo, tocar el sustrato, dar la vuelta a la hoja—, y narro en voz alta mientras trabajo.\n\nCada paso lo escribo como acción física con un verbo que se puede filmar, con su criterio de éxito perceptible por los sentidos de quien ejecuta y no por los míos. No «húmedo», sino «al apretar un puñado se forma un terrón que mantiene la forma, no gotea entre los dedos y se deshace al empujarlo con el pulgar». Añado a cada paso importante su error típico y cómo se ve cuando ya ocurrió, y marco aparte los pasos irreversibles y los que tienen ventana de tiempo, que son los que salen más caros.\n\nCalibro la granularidad con la prueba de las preguntas contadas: entrego la ficha de «llenar, sembrar y rotular una bolsa de vivero» a alguien que nunca lo hizo, me siento a un costado y no hablo. Anoto cada pregunta y cada error, corrijo, y repito con otra persona distinta. Cuando dos personas seguidas la ejecutan sin preguntar nada, la ficha está lista. El formato en que la guardo enlaza con el de las fichas de cultivo del módulo once.\n\nLuego añado lo que la receta no lleva. El porqué de cada paso, porque un paso sin mecanismo es un rito que no se adapta y que se abandona el día que hay prisa. Las condiciones de borde en el encabezado: unos 529 msnm, llanura aluvial con arcillas expansivas, sabana tropical con lluvias de octubre a abril y seca de mayo a septiembre, surazos con noches de alrededor de diez grados. Y los criterios de decisión ante lo inesperado, escritos aparte porque no se ven trabajando: qué hago si llueve el día del trasplante de yautía, si el gandul llegó más leñoso, si germinó la mitad de la bandeja, si el pronóstico anuncia surazo.\n\nPara comprobar que transferí algo no pido que me repitan lo que dije, porque recitar es barato: pido predicciones sobre casos que no enseñé. «¿Qué crees que pasa si haces esto en plena seca?» Si razonan desde el mecanismo, el modelo está dentro. También muestro el fracaso a propósito, con un testigo al lado del tratamiento, porque el criterio perceptual se aprende por contraste, y pido que se lo expliquen a un tercero. Uso la receta rígida solo en dos sitios: al principio, para que consigan un éxito temprano antes de digerir el porqué, y siempre en los pasos irreversibles y de seguridad, donde no se enseña criterio sino regla.\n\nY dejo que enseñe quien está en competencia consciente: el vecino que aprendió a hacer esquejes de culantro el ciclo pasado explica mejor el paso donde se atascó que yo, que ya no lo veo. Todo esto encaja con la misión: Rizoma es gratuito y comunitario, y existe para que la gente pueda hacerlo sin Rizoma. Quien recibe recetas vuelve a preguntar cada vez que algo cambia; quien recibe el modelo resuelve solo. Si alguien pregunta por precios, normativa de semillas o trámites, transfiero el mecanismo general y el nombre de a quién consultar —la autoridad competente, un contador local, una institución de investigación agrícola del departamento—, porque un dato inventado en material de enseñanza se propaga.",
+      "criterios": [
+        "Empieza por el inventario de tareas que hoy dependen de una sola persona.",
+        "Prioriza cruzando frecuencia, daño si se hace mal y cuánta gente lo sabe.",
+        "Rechaza la introspección como fuente y usa grabación, observador o narración en voz alta.",
+        "Escribe pasos como acciones físicas con verbo filmable, y criterios de éxito perceptibles y comprobables en lugar de adjetivos como «húmedo».",
+        "Marca los pasos irreversibles y los que tienen ventana de tiempo.",
+        "Aplica la prueba de las preguntas contadas con dos personas y silencio del que enseña.",
+        "Añade el porqué de cada paso y explica por qué sin él se vuelve rito.",
+        "Escribe las condiciones de borde reales del sitio en el encabezado de la ficha.",
+        "Documenta aparte los criterios de decisión ante lluvia, material distinto, fallo o surazo.",
+        "Comprueba la transferencia pidiendo predicciones sobre casos no enseñados.",
+        "Reserva la receta rígida para el arranque y para los pasos irreversibles y de seguridad.",
+        "Justifica el modelo frente a la receta por la misión gratuita y comunitaria, y no inventa datos."
+      ],
+      "explicacion": "Reúne la lección entera en el orden en que se ejecuta: inventariar, priorizar, instrumentar, descomponer, calibrar, añadir lo que la receta no lleva y comprobar por predicción. La respuesta débil se queda en «explicarlo con paciencia»; la fuerte reconoce que el obstáculo no es la actitud sino que el conocimiento está agrupado y hay que abrirlo con procedimiento."
+    }
+  ]
+}

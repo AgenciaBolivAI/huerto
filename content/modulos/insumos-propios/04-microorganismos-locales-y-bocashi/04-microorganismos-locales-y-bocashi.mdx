@@ -1,0 +1,414 @@
+Las lecciones anteriores fabricaban producto **operando un reactor**: metías materia prima,
+controlabas cuatro variables y esperabas semanas o meses. Esta hace algo distinto: aquí no vas a
+construir el proceso, vas a **ir a buscarlo donde ya está corriendo, copiarlo y escalarlo en tu
+terreno.**
+
+Debajo de la hojarasca de cualquier mancha de monte maduro hay una comunidad microbiana que lleva
+milenios descomponiendo material vegetal en ese clima y esos suelos. Capturar microorganismos locales
+es tomar una muestra de esa comunidad, multiplicarla en un medio barato y usarla como arranque de
+otros procesos. El primero que arranca es el **bocashi**: un abono fermentado que se parece al compost
+lo justo para que casi todo el mundo lo confunda, y que es otra cosa.
+
+La confusión no es académica. **Casi todos los problemas del bocashi vienen de tratarlo como
+compost**, y casi todos los de los microorganismos capturados vienen de creer que uno sabe qué
+capturó.
+
+## Qué se está capturando en realidad
+
+Empecemos por deshacer la palabra. Lo que la literatura latinoamericana llama microorganismos de
+montaña —<Termino slug="microorganismos-de-montana">MM</Termino>, o «microorganismos nativos»— no es
+una especie, ni un producto, ni una fórmula. Es
+un <Termino slug="consorcio-microbiano">consorcio microbiano</Termino> anónimo: cientos o miles de
+poblaciones que conviven en el mantillo del bosque y que recoges juntas sin separarlas.
+
+En un gramo de <Termino slug="mantillo">mantillo</Termino> de un bosque sano hay, en órdenes de
+magnitud, **cientos de millones de bacterias y decenas de metros de hifas de hongos**, además
+de <Termino slug="actinomicetos">actinomicetos</Termino>, levaduras, protozoos y microartrópodos.
+Ese olor a bosque húmedo es literalmente un metabolito microbiano —la geosmina de los
+actinomicetos—, así que cuando lo hueles estás detectando una población concreta con la nariz.
+
+Ahora la parte incómoda. **Tú no capturas esa comunidad. Capturas el subconjunto que crece rápido en
+el medio que le ofreciste, a la temperatura a la que lo dejaste, durante los días que lo dejaste.**
+Eso tiene nombre en microbiología —cultivo de enriquecimiento— y significa que el medio de captura no
+es un detalle logístico: es el filtro que decide el resultado.
+
+<Analogia>
+Capturar con arroz cocido es exactamente **una consulta con un `WHERE` muy estrecho** sobre una base
+de datos enorme que nunca vas a ver entera.
+
+El bosque tiene millones de registros. Tu consulta dice, más o menos: *dame los organismos que
+metabolizan almidón gelatinizado, que toleran 28–32 °C, que crecen en menos de dos semanas y que
+soportan poca competencia*. Lo que vuelve no es una muestra representativa del bosque: es **el
+resultado de tu consulta**, con el sesgo de cómo la escribiste. Cambiar el sustrato lo cambia;
+cambiar el sitio lo cambia más.
+
+Y lo que ninguna variante te da es la fila de metadatos que un desarrollador querría: **no hay
+`SELECT especie` sin laboratorio.** Trabajas con un resultado anónimo, y toda la práctica sensata
+alrededor de los MM consiste en aceptar eso.
+</Analogia>
+
+El sustrato clásico es **arroz cocido sin sal ni aceite**, y las razones son físicas, no folclóricas.
+Al cocerlo, el almidón se **gelatiniza**: los gránulos absorben agua, se hinchan y su estructura
+cristalina se rompe, lo que lo vuelve mucho más accesible a las enzimas microbianas que el grano
+crudo. Además queda con actividad de agua alta, pH cercano al neutro y **prácticamente sin población
+previa**, porque el hervor lo dejó casi limpio: quien llegue primero coloniza sin competencia. Es un
+medio de cultivo casero y funciona por lo mismo que una placa de agar.
+
+Tres decisiones importan. **Dónde**: bajo la hojarasca de un monte maduro y sano, apoyando la caja
+sobre el material ya oscurecido y en descomposición, no sobre el suelo mineral de abajo, que tiene
+otra comunidad. **Cómo**: caja de poca altura, arroz en capa fina, tapada con algo que deje pasar aire
+pero no bichos ni lluvia, y cubierta con la propia hojarasca. **Cuánto**: una o dos semanas, más
+rápido en lluvias que en seca.
+
+Lo que recoges tiene colores, y los colores dicen algo, pero mucho menos de lo que se les atribuye.
+Micelios blancos, cremosos y grisáceos son lo que se busca; verdes, azulados y negros pulverulentos
+indican
+géneros que en un medio de arroz no son inocuos. Y aquí está el límite honesto: **el color permite
+adivinar el género con suerte, nunca la especie, y la toxicidad depende de la cepa.**
+
+<Advertencia titulo="El riesgo real de un medio de arroz y salvado">
+Los sustratos ricos en almidón son el nicho de *Aspergillus* y *Penicillium*, y dentro de
+*Aspergillus* hay especies productoras de **aflatoxinas**, sustancias hepatotóxicas y cancerígenas
+que **no se destruyen con calor y no se ven ni se huelen**.
+
+De ahí tres reglas no negociables. **No metas la nariz en el recipiente**: un manojo de esporas de
+hongos filamentosos inhalado de golpe es un problema respiratorio real, sobre todo si eres alérgico o
+asmático. Trabaja al aire libre, con barbijo y con el material húmedo, que produce menos polvo.
+**Descarta sin dudar** cualquier captura con abundante polvo verde oscuro o negro, o con olor rancio.
+Y **nunca uses estos preparados como alimento de animales**: la ruta de las micotoxinas a la leche y a
+los huevos es conocida.
+</Advertencia>
+
+## La energía, el vehículo y el agua
+
+Una captura son unos cientos de gramos. Para que sirva hay que multiplicarla, y ahí entran los dos
+ingredientes que aparecen en todas las recetas sin que nadie explique qué hacen.
+
+La <Termino slug="melaza">melaza</Termino> **es la fuente de energía.** Es el residuo del refinado de
+la caña, y cerca de la mitad de su peso son azúcares simples de acceso inmediato —sacarosa, glucosa,
+fructosa— más potasio, calcio y azufre. Esos azúcares no requieren ninguna enzima extracelular previa:
+entran directos al metabolismo. Por eso una mezcla con melaza **arranca sin fase de retardo** y ahorra
+a la población el gasto de fabricar enzimas para atacar celulosa.
+
+El <Termino slug="salvado-de-arroz">salvado</Termino> **es el vehículo.** El afrecho de arroz o de
+trigo aporta cuatro cosas: **superficie específica enorme** —partículas finas donde las poblaciones
+forman biopelícula—, carbohidratos algo más lentos que sostienen el proceso cuando el azúcar se acaba,
+**proteína y por tanto nitrógeno**, en torno al 12–15 % en el de arroz, y vitaminas del grupo B,
+fósforo y magnesio, que son cofactores del metabolismo. No es relleno: es el medio de cultivo y el
+soporte donde vive el producto final.
+
+**El agua es lo que más gente arruina.** La de red está clorada, es decir tratada precisamente para
+matar microorganismos: usarla directa es pagar por un desinfectante en un proceso que busca lo
+contrario. Se resuelve dejándola reposar destapada un día, o usando agua de pozo. Y tiene una segunda
+función menos obvia: **la cantidad de agua fija la actividad de agua del medio**, que decide qué
+grupos pueden crecer. Demasiado seco no arranca; demasiado húmedo aparecen las bacterias de la
+putrefacción.
+
+## Multiplicar: en sólido y en líquido
+
+La multiplicación en sólido produce el inóculo que va al bocashi. La proporción habitual ronda **una
+parte de captura por diez de salvado**, con melaza disuelta en el agua, hasta una humedad de
+**30–40 %**. La prueba es la de siempre: aprietas un puñado con fuerza, la bola conserva la forma y no
+escurre agua entre los dedos.
+
+Después viene el paso que define la técnica: **se compacta y se cierra.** El material se pisa dentro
+de un turril, un bidón o una bolsa gruesa para expulsar el aire, y se sella. Al principio hay algo de
+respiración aerobia con el oxígeno atrapado; cuando se agota, el sistema entra
+en <Termino slug="fermentacion">fermentación</Termino> propiamente dicha.
+
+Ahí ocurre el mecanismo más elegante de la lección. Sin oxígeno y con azúcar abundante,
+las <Termino slug="bacterias-acido-lacticas">bacterias ácido-lácticas</Termino> y
+las <Termino slug="levadura">levaduras</Termino> tienen ventaja competitiva y se imponen. Las
+lácticas convierten los azúcares en **ácido láctico** y el pH se desploma desde cerca de 6,5 hasta
+3,5–4. Ese pH, con ácidos orgánicos sin disociar presentes, **es incompatible con el crecimiento de la
+mayoría de las bacterias de la putrefacción y de los patógenos entéricos**. El proceso se protege a sí
+mismo: un producto del metabolismo hizo el ambiente inhabitable para la competencia.
+
+<Dato titulo="Es el mismo mecanismo del chucrut, del yogur y del ensilaje">
+Si suena familiar es porque lo es. **El ensilaje de maíz, el chucrut y el yogur funcionan igual**:
+azúcar, ausencia de oxígeno, bacterias lácticas, caída de pH y conservación por acidez.
+
+La buena noticia: es un proceso robusto, con más de un siglo de estudio en la industria alimentaria y
+con modos de fallo bien conocidos. La mala: **esos modos de fallo se dan todo el tiempo en el campo.**
+Si falta azúcar, si entra aire o si la humedad es excesiva, el pH no baja lo bastante y toman el
+control bacterias del género *Clostridium*, que producen ácido butírico y aminas malolientes.
+
+Por eso el criterio de aceptación no es visual sino **olfativo**: un fermentado sano huele agridulce,
+alcohólico, a pan o a chicha. **El que huele a podrido se descarta, no se corrige.**
+</Dato>
+
+La multiplicación en líquido da volumen aplicable con mochila o con riego, y parte del mismo inóculo
+sólido metido en una bolsa de malla dentro de un turril con agua y melaza. Cambia una cosa crítica:
+**la fermentación produce mucho dióxido de carbono**, y un recipiente rígido bien cerrado se convierte
+en un recipiente a presión. La solución es el **sello de agua**: una manguera que sale de la tapa y
+termina sumergida en una botella con agua. El gas sale burbujeando y el aire no entra: una válvula
+unidireccional hecha con dos pesos de material.
+
+<Advertencia titulo="Dos riesgos de bioseguridad propios de esta lección">
+**La presión.** Un turril de plástico sellado sin salida de gas se deforma y puede reventar, y uno
+metálico es peor. El sello de agua no es un adorno del manual: es el dispositivo de seguridad, y un
+sello sin agua deja de ser válvula.
+
+**El mosquito.** Cualquier recipiente destapado con agua a la intemperie durante veinte días en Santa
+Cruz es un criadero de *Aedes aegypti*, vector del dengue, y la botella del sello entra en esa
+categoría. Se resuelve tapándola alrededor de la manguera o con malla fina, y sobre todo revisando
+cada semana la instalación entera: turriles vacíos boca arriba, baldes, tapas cóncavas. Un sistema de
+fermentados mal ordenado es una docena de criaderos nuevos en el terreno.
+</Advertencia>
+
+El producto sólido, bien fermentado y guardado sellado a la sombra, aguanta meses; el líquido es más
+frágil, sobre todo una vez abierto. En los dos casos hay que **filtrarlo antes de que entre en
+cualquier boquilla**.
+
+## Por qué el bocashi es fermentación y no compostaje
+
+El <Termino slug="bocashi">bocashi</Termino> es el primer destino de ese inóculo y la mejor manera de
+entender qué es fermentar en sólido a escala de parcela. La palabra viene del japonés y significa
+aproximadamente «materia orgánica fermentada». Ahí está toda la información: **no dice compost, dice
+fermentado.**
+
+| | Compost termófilo | Bocashi |
+|---|---|---|
+| **Metabolismo dominante** | Aerobio | Fermentativo, con oxígeno limitado |
+| **Inóculo** | Espontáneo, el que traigan los materiales | **Añadido a propósito** |
+| **Azúcar simple** | No se añade | **Melaza, obligatoria** |
+| **Temperatura** | Meta: 55–65 °C sostenidos | **Techo: por debajo de ~45–50 °C** |
+| **Para qué se voltea** | Reponer oxígeno y reactivar | **Disipar calor** |
+| **Ciclo** | 3–5 meses con maduración | 12–21 días |
+| **Producto** | Materia orgánica estabilizada | Material fermentado, poco estabilizado |
+| **Higieniza** | Sí, si alcanza temperatura en toda la masa | **No** |
+| **Vida útil** | Larga | **Corta** |
+
+La diferencia central está en la fila de la temperatura, y conviene detenerse porque invierte una
+intuición que la lección del compost dejó bien instalada. **En el compost la temperatura es la métrica
+que quieres alta y que confirma que el proceso funciona. En el bocashi es una variable que hay que
+contener.**
+
+El mecanismo es directo. Cuando mezclas gallinaza, salvado, melaza e inóculo y humedeces la masa, le
+das a una población enorme de <Termino slug="mesofilo">microorganismos mesófilos</Termino> todo lo que
+necesitan sin ninguna limitación: nitrógeno disponible, azúcar libre, agua y superficie. La respuesta
+es una explosión metabólica en horas y, como toda oxidación biológica, **libera calor**. Una pila de
+bocashi puede pasar de temperatura ambiente a más de 50 °C en el centro **en un solo día**, mucho más
+rápido que una de compost.
+
+Si la dejas seguir pasan dos cosas malas a la vez. **Matas el inóculo que acabas de fabricar**, porque
+las lácticas, las levaduras y buena parte de los hongos multiplicados son mesófilos y por encima de
+45–50 °C mueren o esporulan. Y quemas como CO₂ la fracción fácilmente degradable, que era el producto:
+acabas con un compost mediocre de tres semanas, demasiado corto para estabilizar y demasiado irregular
+para higienizar.
+
+Por eso se voltea **una o dos veces al día en los primeros días**, cifra que a cualquiera que venga
+del compost le parece una barbaridad. No se voltea para airear: **se voltea para sacar calor.** Por la
+misma razón la pila es baja y extendida —del orden de 40 a 60 cm de alto al principio—, al revés que
+el metro cúbico mínimo del compost: allí querías conservar calor y necesitabas masa, aquí quieres
+disiparlo y necesitas superficie.
+
+<Analogia>
+Un compost es un **proceso por lotes que tiene que correr caliente hasta el final** para que el
+resultado sirva, y su métrica de éxito es la temperatura del núcleo.
+
+Un bocashi es un proceso al que **le pones un limitador de velocidad a propósito**. Podría correr más
+rápido y más caliente, pero si lo dejas se autodestruye: consume su propio recurso y mata a los
+trabajadores. El volteo es el disipador y la geometría de la pila es la superficie de disipación.
+
+Es la diferencia entre un servidor que rinde al máximo para que el batch termine cuanto antes, y uno
+al que limitas el consumo porque lo que importa no es acabar antes sino **que siga vivo y con estado
+al final**.
+</Analogia>
+
+Sobre la receta hay más folclore que en ninguna otra parte del módulo, así que vale más entender los
+papeles que memorizar proporciones. La **base de carbono** —cascarilla de arroz, tamo, aserrín no
+tratado— da esqueleto y porosidad. La **gallinaza o el estiércol** ponen nitrógeno y fósforo. La
+**tierra cernida**, que a mucha gente le parece un absurdo, aporta masa, capacidad tampón, microbiota
+nativa y superficies minerales que adsorben amonio; también explica que el bocashi sea pesado y pobre
+por kilo. El **carbón vegetal molido** aporta porosidad interna y microhábitat. El **salvado**
+acelera, la **melaza** paga la energía y el **inóculo** decide quién trabaja. Y el agua, otra vez al
+30–35 %, con la misma prueba del puño.
+
+El punto final se reconoce sin instrumentos: la pila **baja a temperatura ambiente y ya no rebota al
+voltearla**, y el material queda grisáceo, suelto y con olor suave. Si a las tres semanas sigue
+oliendo a amoníaco o a podrido, algo falló y no se arregla esperando.
+
+## Las cuatro consecuencias de fermentar en vez de compostar
+
+**No es humus estabilizado.** La <Termino slug="humificacion">humificación</Termino> es un proceso
+lento de transformación y protección de compuestos orgánicos, y en dos o tres semanas no ocurre. Lo
+que sale es material **parcialmente transformado, con la fracción fácilmente degradable todavía
+intacta**: en el suelo sigue descomponiéndose, genera un pulso de actividad microbiana y se acaba.
+Esperar que el bocashi
+construya <Termino slug="materia-organica">materia orgánica</Termino> estable en un suelo tropical es
+esperar lo que no hace: para acumular reserva sirven mejor el compost maduro y el humus de lombriz. El
+bocashi da **un empujón corto**, y hay que saber cuál de las dos cosas compras.
+
+**No está higienizado.** Sin fase termófila sostenida en toda la masa, y con volteos que rompen
+cualquier meseta térmica, no hay reducción fiable de patógenos. Si entró gallinaza fresca, hay que
+asumir que puede haber *Salmonella*, *E. coli* y huevos de helmintos. Las semillas de malezas tampoco
+mueren: **el bocashi siembra maleza.** En la práctica: no debe tocar la parte comestible de una
+hortaliza de hoja, conviene un plazo generoso entre aplicación y cosecha en lo que se come crudo, y se
+manipula con guantes.
+
+**Puede quemar plantines.** Se suman tres causas. La **salinidad**: gallinaza y melaza aportan sales
+solubles, y la <Termino slug="conductividad-electrica">conductividad eléctrica</Termino> de un bocashi
+joven puede ser alta, lo que en una bolsa deshidrata la raíz por ósmosis en vez de alimentarla. El
+**amonio y el amoníaco** de la mineralización rápida del nitrógeno. Y los **ácidos orgánicos** de la
+propia fermentación, que a concentración alta
+son <Termino slug="fitotoxicidad">fitotóxicos</Termino> para raíces jóvenes. Por eso nunca va puro
+en un contenedor, sino como fracción pequeña de una mezcla, y por eso
+la <Termino slug="prueba-de-germinacion">prueba de germinación</Termino> que ya conoces aquí es
+más obligatoria que con el compost, no menos.
+
+**La vida útil es corta.** Es material vivo con reservas sin consumir. Guardado húmedo sigue
+fermentando, se compacta y se pudre; guardado seco la población decae pero el material se conserva. Lo
+sensato es **secarlo a la sombra, ensacarlo sin cerrar herméticamente y usarlo en semanas, no en
+meses.**
+
+<Analogia>
+Un compost maduro es un **artefacto compilado**: terminó, es estable, se guarda y se despliega cuando
+quieras.
+
+Un bocashi es **un proceso en ejecución que pausaste bajando temperatura y humedad**. Conserva estado,
+tiene trabajo pendiente en la cola y se degrada guardado: tiene, en la práctica, un **TTL**.
+
+De ahí una regla de operación: **el bocashi se fabrica contra demanda**, calculando hacia atrás desde
+la fecha en que lo vas a aplicar. Fabricar una montaña en marzo para usarla en septiembre es fabricar
+tierra cara.
+</Analogia>
+
+## Los límites honestos
+
+**Sin laboratorio no sabes qué capturaste.** Es la limitación central y no tiene arreglo casero. Los
+productos comerciales
+tipo <Termino slug="microorganismos-eficientes">microorganismos eficientes</Termino> son consorcios
+definidos, con <Termino slug="cepa">cepas</Termino> conocidas; tu captura es anónima y distinta en
+cada tanda. Eso no la invalida —tiene la ventaja de estar adaptada a tu clima—, pero obliga a hablar
+con precisión: puedes decir «capturé la microbiota de este monte», no qué organismos contiene.
+
+**Capturar en un rodal enfermo es sembrar el problema.** Un bosque tiene patógenos vegetales y los
+tiene en la hojarasca. Si eliges el sitio donde hay plantas muriendo, donde el suelo está removido o
+donde se aplicó herbicida, lo que multiplicas es eso. **La elección del sitio es el filtro sanitario
+más importante de la técnica**, y es gratis: monte maduro, sin síntomas visibles, sin manejo reciente,
+lejos de cultivos con problemas. Y ni se te ocurra capturar dentro de tu propia parcela justo después
+de un brote: estarías montando una fábrica del patógeno.
+
+**Lo que un inóculo puede y no puede hacer al llegar al suelo.** Un suelo ya tiene su comunidad, con
+los nichos ocupados y competencia intensa; introducir poblaciones foráneas y esperar que colonicen de
+forma duradera es, en general, poco realista. Lo que sí hace un aporte de MM con su salvado y su
+melaza es **entregar sustrato fácilmente disponible junto con biomasa microbiana**, y eso produce un
+pulso de actividad real. Describirlo así —sustrato más arranque— es más honesto que llamarlo
+colonización, y la diferencia importa cuando alguien lo vende prometiendo lo segundo.
+
+**Y hay un límite legal que no debe inventarse.** Producir estos preparados para el propio terreno es
+una cosa; envasarlos, distribuirlos o venderlos como bioinsumo es otra, y en Bolivia la sanidad
+agropecuaria tiene una autoridad competente, el SENASAG. **No voy a enunciar requisitos, plazos ni
+categorías de registro, porque cambian y porque inventarlos sería peor que callar**: si el proyecto
+llega a dar el preparado fuera de la parcela de forma regular, hay que preguntarlo a la institución.
+
+<AplicarRizoma>
+**Dónde capturar es la decisión más importante y la que menos cuesta.** Los 3.666 m² de Rizoma del Sur
+no tienen monte maduro suficiente para ser buen sitio de captura, así que hay que salir a buscarlo. La
+zona de Zanja Honda y los alrededores de Prados del Sur conservan manchas de monte y franjas
+ribereñas: se busca un rodal con dosel cerrado, hojarasca de varios centímetros y árboles sanos,
+**sin cultivo pegado que haya recibido herbicida** —en el área integrada eso hay que preguntarlo,
+porque la deriva desde un lote vecino no se ve—. Conviene capturar en dos o tres sitios el mismo día,
+en cajas rotuladas, y quedarse con la que salga mejor.
+
+**Cuándo hacerlo.** La captura funciona mejor con humedad ambiental alta y mantillo húmedo, así que la
+ventana natural está dentro de la temporada de lluvias, de octubre a abril, evitando los aguaceros
+fuertes que anegan la caja. En plena seca, de mayo a septiembre, el mantillo está seco y la captura
+sale pobre. Como el inóculo sólido bien guardado dura meses, lo sensato es **capturar y multiplicar en
+lluvias y consumir en seca**, justo lo contrario de improvisar en agosto cuando hace falta.
+
+**El bocashi ocupa un hueco muy concreto del calendario.** Su ciclo de dos a tres semanas lo convierte
+en la única fuente propia de material orgánico con plazo de entrega corto: el compost pide meses y el
+humus de lombriz un lecho maduro. Es la respuesta a una demanda que aparece de golpe —una tanda grande
+de bolsas, una plantación de gandul que se adelantó—, no la fuente base del sustrato del vivero.
+**Base: compost y humus. Refuerzo rápido y puntual: bocashi.**
+
+**Dónde va físicamente.** Hay que voltear dos veces al día los primeros días, así que el sitio se
+elige por comodidad: cerca del punto de trabajo, con **techo obligatorio**, porque un aguacero de
+enero encharca la pila y la manda a anaerobiosis en horas, y sobre piso firme, porque en la llanura
+arcillosa el barro convierte el volteo diario en una tortura. Es un sitio distinto al de la pila de
+compost, que quiere volumen y media sombra, y al lecho de lombrices, que quiere sombra densa:
+conviene decidirlo en el plano.
+
+**Los cultivos del catálogo mandan sobre el uso.** El culantro y las hojas que se comen crudas son
+donde el bocashi no higienizado es más problemático: ahí, o va incorporado al suelo con tiempo de
+sobra antes de sembrar, o se usa compost. Para **yautía, batata, plátano y los frutales injertados**,
+en cambio, incorporarlo antes de plantar es un uso mucho más cómodo. En vivero, la regla es fracción
+pequeña de la mezcla y prueba de germinación antes de llenar el lote entero.
+
+**El registro, desde la primera tanda.** Anota: fecha de captura, sitio exacto y su estado, aspecto
+del micelio a los diez días, olor al abrir, ingredientes del bocashi con las proporciones reales —no
+las de la receta—, temperatura máxima de cada día y fecha en que dejó de rebotar. Con dos temporadas
+de eso tienes el proceso calibrado para tus materiales, y algo que compartir con los vecinos que vale
+más que una receta copiada. En un proyecto comunitario y gratuito, **el cuaderno es tanto producto
+como el abono.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Las materias primas están todas en el área integrada, y por eso la técnica es viable aquí.** La
+cascarilla de arroz y el afrecho salen de los molinos arroceros de la zona; la melaza, de los ingenios
+azucareros del norte cruceño; la gallinaza, de la avicultura regional. No es casualidad que el bocashi
+esté extendido en Santa Cruz: **es una técnica que encaja donde hay caña, arroz y pollo a la vez.**
+Los precios y la disponibilidad hay que comprobarlos localmente y en el momento, porque se mueven con
+la zafra y con la campaña.
+
+**Sobre la melaza, pregunta qué es exactamente lo que te venden.** En los ingenios circulan productos
+distintos —melaza final, jugos, y la <Termino slug="cachaza">cachaza</Termino> del filtrado, que es
+otra cosa— y también melazas formuladas para animales con aditivos. Para fermentar quieres melaza de
+caña sin conservantes, porque un conservante antimicrobiano hace justo lo contrario de lo que
+necesitas. Si no hay respuesta clara, prueba en un balde antes de comprometer un turril.
+
+**El clima de la llanura cambia el manejo respecto a los manuales.** Casi toda la literatura de
+bocashi y de MM viene de Centroamérica y de los valles andinos. Dos ajustes para la sabana tropical.
+Primero: **con temperaturas ambientales altas la pila alcanza el techo térmico antes**, así que
+voltear dos veces al día no es exageración sino necesidad. Segundo: **el surazo mete el sesgo
+contrario**; si cae un frente frío con noches de unos 10 °C en mitad de una tanda, la fermentación se
+frena y el proceso se alarga varios días. El termómetro manda, igual que con el compost.
+
+**Las lluvias intensas de octubre a abril hacen del techo un requisito, no un lujo.** Una pila a la
+intemperie en enero se encharca, pierde el poco oxígeno que le quedaba y pasa a putrefacción con olor
+butírico. En la seca el problema se invierte y hay que regar mientras se voltea. Son los mismos dos
+riesgos estacionales del compost, pero comprimidos en tres semanas en lugar de en cuatro meses, de
+modo que **un descuido de dos días arruina la tanda entera.**
+
+**Una nota sobre el vocabulario.** En Bolivia y en la región se dice indistintamente *bocashi* y
+*bokashi*, y también *microorganismos de montaña*, *MM*, *microorganismos nativos* o *microorganismos
+eficientes de montaña*. No hay nomenclatura estandarizada y bajo el mismo nombre circulan
+procedimientos bastante distintos. Cuando alguien te comparta su receta, pregúntale las tres cosas que
+de verdad la definen: **qué inóculo usó, si lleva azúcar y hasta qué temperatura la dejó llegar.** Con
+esas tres respuestas sabes si te describen un bocashi, un compost o un montón que se pudrió.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Capturé microorganismos benéficos.»** Capturaste los que crecen en arroz. Que sean benéficos es una
+hipótesis, no un dato, y sin laboratorio seguirá siéndolo.
+
+**«Se calentó mucho, señal de que va bien.»** En el compost sí; en el bocashi es la señal de que estás
+matando el inóculo que fabricaste. Voltéalo y extiéndelo.
+
+**«Como lleva microorganismos, es inocuo para las hortalizas de hoja.»** No está higienizado: la
+gallinaza que entró puede seguir llevando patógenos fecales.
+
+**«Preparé bocashi para todo el año.»** Es material vivo con vida útil corta. Fabrícalo contra demanda.
+
+**«Huele mal pero es normal, es fermentado.»** Un fermentado sano huele agridulce y alcohólico. El
+olor a podrido significa putrefacción, y esa tanda se descarta.
+
+**«Sellé bien fuerte el turril del líquido para que no entre aire.»** Y para que no salga el CO₂. Sin
+sello de agua, el recipiente se deforma o revienta.
+
+## Lo que sigue
+
+Con los microorganismos capturados y multiplicados ya tienes el inóculo, y con el bocashi su primer
+producto sólido. Falta todo lo que se aplica en forma líquida, que es donde más confusión hay.
+
+La lección siguiente reúne lo que va en la mochila y lo separa en **dos familias de lógica opuesta**.
+Por un lado los fermentados: el biol en biodigestor con su sello de agua —el mismo dispositivo que
+acabas de montar—, los purines y el té de compost aireado frente al no aireado, con la cuenta honesta
+de cuánto nutriente entrega de verdad una dosis y por qué se los defiende como bioestimulante y no
+como fertilizante. Por otro lado los caldos minerales: bordelés, sulfocálcico y ceniza, con su química
+real, su fitotoxicidad, la acumulación de cobre y el hecho incómodo de que **son biocidas que matan
+justamente lo que estas lecciones se dedicaron a cultivar.** Ahí se decide su lugar exacto dentro del
+manejo integrado: nunca por calendario.

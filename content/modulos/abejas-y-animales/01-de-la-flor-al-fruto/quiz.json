@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "la-flor-como-dispositivo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que retener de la arquitectura de la flor y del grano de polen?",
+      "opciones": [
+        "El óvulo es lo que puede llegar a ser una semilla y el ovario lo que puede llegar a ser el fruto, y están en la misma pieza.",
+        "Hay especies dioicas, con plantas macho y plantas hembra distintas, donde un ejemplar solo no dará fruta jamás.",
+        "El grano de polen no es una célula sexual suelta: es un organismo entero reducido al mínimo, con pared resistente, célula vegetativa y célula generativa.",
+        "El estigma es una superficie pasiva sobre la que el polen simplemente aterriza y espera."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El estigma es cualquier cosa menos pasivo: aporta agua y sustancias que el grano necesita para arrancar y, a la vez, lee la identidad del grano. Si la lectura es compatible el polen se hidrata y germina; si no, se queda ahí seco y muerto. Ese paso es un control activo, no una superficie de aterrizaje."
+    },
+    {
+      "id": "seis-pasos-seis-fallos",
+      "tipo": "opcion_multiple",
+      "enunciado": "El viaje del polen tiene seis pasos. ¿Qué es cierto de ellos?",
+      "opciones": [
+        "La polinización propiamente dicha es solo el paso 3 —la deposición— y los otros cinco son igual de necesarios.",
+        "El polen que cae en un pétalo, en una hoja o en el suelo está perdido: no hay reintento.",
+        "En la doble fecundación una célula espermática forma el embrión y la otra el endospermo, de modo que la despensa no se fabrica hasta confirmar que hay inquilino.",
+        "Una vez que el grano compatible queda depositado sobre el estigma, la fecundación es inmediata."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No es inmediata: entre la deposición y la fecundación está el crecimiento del tubo polínico, que atraviesa el estilo creciendo solo por la punta y tarda de unas horas a varios días según la especie y la temperatura. Ese trayecto es un paso aparte y puede detenerse a medio estilo si la verificación de identidad falla."
+    },
+    {
+      "id": "un-ovulo-un-tubo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Con que un polinizador visite una vez la flor ya está resuelto el fruto, aunque ese fruto vaya a llevar muchas semillas.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la cuenta que casi nadie hace: un óvulo, un tubo. Cada óvulo necesita su propio grano que germine, su propio tubo que llegue y su propia fecundación, así que un fruto con doscientas semillas exigió doscientos viajes exitosos. La polinización es un fenómeno de cantidad, no de presencia, y por eso una sola visita casi nunca alcanza."
+    },
+    {
+      "id": "el-cuaje-es-hormonal",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo decide la planta si sostiene la flor o la suelta, y qué se ve luego en la fruta?",
+      "opciones": [
+        "En cuanto un óvulo queda fecundado, la semilla en formación se vuelve una fábrica de auxinas y giberelinas.",
+        "Esas hormonas impiden que madure la zona de abscisión y convierten al fruto joven en un sumidero al que las hojas mandan azúcares.",
+        "Un fruto deforme —el pepino torcido, el cítrico con una cara hundida— delata fecundación parcial y desigual en el espacio, no falta de riego.",
+        "Cualquier tasa de cuaje por debajo del cien por cien prueba que hubo déficit de polinización."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El cien por cien no es el objetivo ni es posible: existe una caída fisiológica normal por la que la planta ajusta la carga a lo que puede alimentar, porque un fruto es lo más caro que construye. Una tasa de cuaje baja no prueba por sí sola un déficit; solo significa algo comparada con otro número igual, entre variedades, entre años o entre tratamientos."
+    },
+    {
+      "id": "sin-semilla-no-es-sin-polinizacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hay que saber antes de aplicar la regla intuitiva «si no tiene pepitas, no necesita abejas»?",
+      "opciones": [
+        "Es falsa como regla general, y creerla lleva a decisiones caras.",
+        "En la estenospermocarpia la polinización y la fecundación ocurren y el embrión aborta después, así que el evento completo sigue siendo necesario.",
+        "En la partenocarpia estimulativa la flor solo cuaja si recibe estímulo de polen, a veces incluso incompatible, aunque luego no haya fecundación.",
+        "Instalar colmenas junto al platanal de Rizoma subiría algo el rendimiento del racimo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Con el plátano no sube nada: las variedades comestibles son híbridos triploides estériles y partenocárpicos, el fruto se desarrolla sin que haya ocurrido fecundación y ni una colmena ni cien cambian su rendimiento en un gramo. La pregunta correcta nunca es «¿tiene semillas?» sino «¿esta variedad, aquí, cuaja sin polen?», y se responde embolsando flores antes de que abran para ver si cuajan igual."
+    },
+    {
+      "id": "cuarenta-clones-un-genotipo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un bloque de cuarenta frutales injertados idénticos puede comportarse como un solo árbol?",
+      "opciones": [
+        "La copa de cada uno es una púa clonada: hay cuarenta troncos y un solo genotipo.",
+        "Si esa variedad es autoincompatible, para el locus S los cuarenta son el mismo individuo y cada uno rechaza el polen de los otros treinta y nueve.",
+        "Una planta autoincompatible no es estéril: es perfectamente fértil y solo rechaza su propio polen y el de sus clones.",
+        "Plantar más árboles de la misma variedad aumenta la probabilidad de que alguno acabe cuajando."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Plantar más de lo mismo no arregla nada porque el problema no es de cantidad sino de identidad: son réplicas del mismo nodo, hay redundancia de hardware y cero redundancia de identidad, y un quórum que exige dos identidades distintas no se alcanza levantando más instancias. La salida es desplegar otra identidad —una variedad polinizadora— o injertar una rama de esa segunda variedad sobre la misma copa."
+    },
+    {
+      "id": "cinco-condiciones-a-la-vez",
+      "tipo": "verdadero_falso",
+      "enunciado": "Con tener dos variedades genéticamente compatibles plantadas a tres metros una de otra ya está asegurado el cuaje.",
+      "respuesta": false,
+      "explicacion": "Falso: las cinco condiciones son necesarias a la vez. Compatibilidad en el locus S y polen viable propio —hay variedades de polen estéril o triploides que no sirven de padre—, solape de floración en los mismos días y no en el mismo mes, proporción suficiente en la plantación, distancia dentro del alcance del vector y, la que se olvida, un vector real moviendo el polen. Dos variedades perfectas a tres metros, sin ningún insecto volando entre ellas, producen exactamente lo mismo que si no estuvieran: nada."
+    },
+    {
+      "id": "medir-el-deficit-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Los frutales injertados de Rizoma florecen cada año y casi no cargan, y alguien propone comprar colmenas. Diseña el diagnóstico y el plan del primer año: qué averiguas antes de gastar, qué mides y en qué orden, cómo interpretas cada resultado y qué haces con el resto del catálogo.",
+      "respuestaModelo": "Lo primero es no comprar nada. Un cuaje malo tiene varias causas posibles y solo una se arregla con polinizadores; comprar colmenas antes de saber cuál es sería comprar servidores sin haber medido dónde está el cuello de botella.\n\nEmpiezo por la planilla de identidad, que es gratis y puede resolver el caso sola. Por cada especie del bloque anoto cuatro columnas: nombre de la variedad, patrón sobre el que va, si es autofértil o no, y qué variedad la poliniza. Si las cuatro respuestas son «no sabemos», eso ya es el hallazgo. Sin trazabilidad la pregunta de compatibilidad no tiene respuesta posible, porque la variedad no se ve en una hoja, y entonces lo que toca no es leer sino ir a preguntar: al vivero o al productor que vendió el material, a las universidades y centros de investigación agrícola del departamento, a la autoridad agropecuaria competente y a los productores mayores de la zona, que llevan décadas mirando cargar esos mismos árboles y saben en qué mes lo hacen. Cualquier cifra que no venga de una de esas fuentes la trato como no verificada, y en particular no doy por buena la compatibilidad varietal copiada de manuales escritos en otros climas y con otro material.\n\nEn paralelo levanto el calendario de floración, porque aquí no se puede copiar. Sin invierno, muchas especies florecen más de una vez al año y responden más al pulso de la lluvia que a la temperatura, así que el solape entre dos variedades puede ser distinto cada año; se levanta anotando fechas de plena flor durante dos o tres años. En la misma libreta van los confusores, que si no se anotan estropean la medición: estrés hídrico, calor en los días previos —el polen es de los tejidos más sensibles al calor, y la temperatura nocturna alta hace más daño que la diurna—, cualquier surazo que caiga en floración, aplicaciones de insecticida y la tendencia de muchos frutales a alternar años de mucha y poca carga. Si el cuaje sale mal y nadie anotó las fechas del surazo, la conclusión será la equivocada.\n\nDespués los tres niveles de medición, en orden creciente de costo. Nivel 1, tasa de cuaje: treinta flores recién abiertas marcadas con cinta en cada uno de tres árboles frutales y en tres bloques de ají dulce, con la fecha anotada, contando cuántas siguen siendo fruto a los quince días y en cosecha. Es frutos a los X días dividido entre flores marcadas, y solo significa algo comparado con otro número igual. Aquí está la trampa: el objetivo no es el cien por cien, porque la caída fisiológica normal existe y ningún árbol sostiene todas sus flores; un cuaje bajo no prueba por sí solo que haya déficit.\n\nNivel 2, conteo de visitas: diez minutos por bloque, dos veces por semana, siempre a la misma hora y anotando el clima. Con la advertencia que evita conclusiones falsas: una visita no es una polinización. Hay visitantes que toman néctar sin rozar nunca las anteras y hasta quienes perforan la base de la flor para robarlo sin entrar.\n\nNivel 3, la prueba que decide: polinización manual comparativa. Sobre el mismo árbol, el mismo día y en ramas comparables monto tres tratamientos. Libre, que no se toca y es el testigo. Suplementado, aplicando a mano polen compatible sobre el estigma en el momento de receptividad. Y aislado, con flores embolsadas antes de abrir, que dice qué parte del cuaje sale de autopolinización sola. El déficit es cuaje suplementado menos cuaje libre. Si sube claramente, el polen era el cuello de botella; si sube poco o nada, el techo está en el agua, la nutrición, el calor o la capacidad del propio árbol, y las colmenas no habrían cambiado nada. Ese resultado negativo vale tanto como el positivo: es dinero no gastado.\n\nEl procedimiento no requiere equipo. Flores recién abiertas de la variedad donante recogidas temprano en la mañana, dejadas en un recipiente seco a la sombra sobre un papel hasta que las anteras suelten el polen, y aplicación con pincel fino o tocando la antera directamente contra el estigma. Se etiqueta la rama y se anota fecha, hora, temperatura y quién lo hizo. El pincel se limpia entre tratamientos: si arrastra polen a las flores del testigo, se pierde el control y con él el experimento entero.\n\nCon el resto del catálogo hago el reparto que la tabla ya indica, y decirlo ahorra trabajo. En plátano, yautía y batata no hay nada que hacer: partenocárpico el primero, multiplicados por cormo y por esqueje los otros dos. El ají dulce es dependencia media, se autopoliniza mucho pero la visita mejora el cuaje. Y está la dependencia que nadie anota: culantro, gandul y árboles de sombra no dependen de nadie para lo que se vende, pero sí para la semilla propia, así que el banco comunitario del módulo 13 tiene una dependencia de polinizadores que hay que escribir en el plan, junto a la advertencia inversa de aquella lección —el mismo insecto que llena esas umbelas es el que cruza variedades—, y se resuelve como allí se dijo: por lote y por temporada.\n\nSi el problema resulta ser de identidad, la solución en 3.666 m² no cuesta superficie. La distancia está regalada: con doce lotes contiguos, dos puntos cualesquiera están dentro del alcance de trabajo de casi cualquier insecto. Injerto una rama de una segunda variedad sobre el mismo árbol —técnica del módulo 9 aplicada a un problema del módulo 30—, con solape de floración garantizado por estar en el mismo tronco, la marco de forma permanente para que nadie la pode por error y la anoto en el croquis.\n\nY al vecino que compra un injertado le digo la verdad completa, porque venderle un árbol que va a necesitar pareja sin avisarle es venderle un fracaso con cuatro o seis años de latencia. Le entrego una púa de la segunda variedad, que cuesta cero, y planto una polinizadora en el perímetro, que da servicio también a sus árboles.",
+      "criterios": [
+        "Se niega a comprar colmenas antes de medir, y lo justifica como identificar el cuello de botella.",
+        "Levanta la planilla de identidad: variedad, patrón, autofertilidad y variedad polinizadora.",
+        "Reconoce que sin trazabilidad la pregunta de compatibilidad no tiene respuesta posible.",
+        "Nombra fuentes reales a las que preguntar y trata como no verificado todo lo demás.",
+        "Levanta el calendario de floración anotando fechas varios años, sin copiarlo de un manual.",
+        "Registra los confusores, incluidos el surazo en floración y el calor nocturno sobre el polen.",
+        "Aplica el nivel 1 con flores marcadas y admite que el objetivo no es el cien por cien.",
+        "Cuenta visitas a hora fija advirtiendo que una visita no es una polinización.",
+        "Monta la polinización manual comparativa con testigo, suplementado y aislado, y limpia el pincel.",
+        "Interpreta el resultado negativo como información válida: dinero no gastado.",
+        "Reparte el catálogo: nada en plátano, yautía y batata, y semilla propia como dependencia oculta del módulo 13.",
+        "Propone injertar la segunda variedad en la misma copa y avisar al comprador del frutal."
+      ],
+      "explicacion": "La lección entera existe para sustituir una opinión por una medición. El déficit de polinización se supone constantemente y casi nunca se comprueba, y la comprobación no cuesta dinero: cuesta cinta, un pincel, una libreta y disciplina para anotar. Una respuesta completa demuestra que entendió las dos mitades: la biológica —identidad, solape, vector— y la metodológica —eliminar artificialmente la restricción sospechosa y mirar si sube el rendimiento."
+    }
+  ]
+}

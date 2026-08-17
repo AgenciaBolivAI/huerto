@@ -1,0 +1,107 @@
+{
+  "preguntas": [
+    {
+      "id": "p1",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué no se puede decidir si algo es verdad simplemente leyéndolo con atención?",
+      "opciones": [
+        "Un texto bien escrito y un texto cierto se parecen mucho: leer con cuidado mide claridad y coherencia, no si el hecho ocurrió.",
+        "El sesgo de confirmación hace que lo que encaja con lo que ya pensabas apenas se revise, mientras que lo que te contradice se examina con lupa.",
+        "El efecto de verdad ilusoria hace que una afirmación oída varias veces suene más creíble, porque la cabeza confunde familiaridad con verdad.",
+        "Si un texto tiene faltas de ortografía o la página se ve pobre, ya se puede descartar sin llegar a leerlo."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras son las razones por las que el juicio se hace sobre el origen y no sobre el texto: la calidad de la redacción no correlaciona con la verdad, y dos mecanismos propios —lo que ya creías y lo que ya oíste— empujan en contra. La cuarta es incorrecta y es el reflejo inverso que también hace daño: la ortografía y el diseño miden escolaridad y presupuesto, no honestidad. Un técnico con cuarenta años de campo puede escribir con faltas y tener razón, y un sitio de estafa puede pagar un diseñador profesional. Lo que sí es señal es que no haya ningún nombre que responda, ni fecha, ni forma de contactar a nadie."
+    },
+    {
+      "id": "p2",
+      "tipo": "opcion_multiple",
+      "enunciado": "Encuentras una página que explica cuánto fertilizante hay que aplicar, y resulta que la publica una empresa que vende fertilizante. ¿Qué corresponde pensar?",
+      "opciones": [
+        "Toda página le cuesta dinero a alguien, así que preguntar «¿de qué vive esto?» predice hacia dónde se va a inclinar el contenido.",
+        "El interés no dice si mienten: dice qué afirmaciones conviene comprobar primero, que son justamente las que le convienen a quien paga.",
+        "La composición química que la empresa está obligada a declarar es fiable; la cantidad que recomienda usar es lo que hay que contrastar.",
+        "Como es una fuente interesada, queda descartada por completo y hay que buscar una fuente neutral que hable de ese producto."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras son el criterio completo: se identifica de qué vive la fuente, se usa el interés como predictor de la dirección del error y se separa lo que el interesado está obligado a declarar de lo que le conviene decir. La cuarta es incorrecta y es un error caro, porque descarta justo a quien más sabe: el manual del fabricante es la mejor fuente que existe sobre su propio motor, y la etiqueta del envase es la única fuente válida sobre la dosis de un producto, además de ser el texto legalmente vinculante. Tener interés describe una posición, no un carácter; la respuesta correcta no es descartar la fuente sino comprobar más duro lo que le conviene."
+    },
+    {
+      "id": "p3",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si encuentras el mismo dato repetido en cuarenta páginas distintas, el dato está confirmado.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error de conteo más común que existe: la circularidad de fuentes. Cuarenta páginas idénticas suelen ser una sola fuente copiada cuarenta veces, y ninguna de las treinta y nueve copias comprobó nada. Cinco copias de un error son un error, no cinco confirmaciones: el número de coincidencias mide difusión, no veracidad. La comprobación práctica es copiar una frase textual entre comillas y buscarla: si sale siempre con las mismas palabras, hay una sola fuente. Y si nadie llega al origen, la afirmación no queda confirmada ni desmentida, queda sin verificar, que es un tercer estado en el que hay que saber quedarse."
+    },
+    {
+      "id": "p4",
+      "tipo": "opcion_multiple",
+      "enunciado": "En el grupo del barrio alguien pega una captura de pantalla y una foto de un camión volcado, diciendo que pasó ayer en la zona. ¿Qué es correcto?",
+      "opciones": [
+        "Una captura se fabrica escribiéndose a uno mismo y cambiándole el nombre a un contacto: no hace falta editar nada para inventarla.",
+        "La descontextualización usa material auténtico con el marco cambiado, así que ninguna herramienta de detección la encuentra: no hubo manipulación técnica.",
+        "En la búsqueda inversa de imagen lo que decide es la aparición más vieja de esa foto, no cuántas veces aparece.",
+        "Si la búsqueda inversa no encuentra la foto en ningún otro lado, queda probado que la foto es reciente y de aquí."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras describen el mecanismo: una captura es una imagen de un texto y no tiene ningún vínculo con su origen; la mentira más barata no edita nada sino que le cambia el pie a una foto real; y la búsqueda inversa sirve porque encuentra apariciones anteriores, que es lo que mata la afirmación «ayer en la zona». La cuarta es incorrecta y confunde no encontrar con no existir: la búsqueda inversa compara contra imágenes ya indexadas, y hay muchísimo material que nunca se indexó, sobre todo lo que circula dentro de WhatsApp. No encontrarla deja la foto sin verificar, que no es lo mismo que verificada."
+    },
+    {
+      "id": "p5",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cuando WhatsApp marca un mensaje con la etiqueta de reenviado varias veces, esa etiqueta significa que el mensaje es falso.",
+      "respuesta": false,
+      "explicacion": "Falso. La etiqueta no es un veredicto sobre el contenido: significa que el mensaje pasó por muchas manos y que **nadie de la cadena lo escribió**, así que no hay ningún autor a quien preguntarle de dónde salió. Es información sobre el origen, no sobre la verdad, y ahí está justamente su valor: un mensaje sin autor, sin fecha y sin manera de remontarlo llegó sin origen, y sin origen no se actúa. Puede ser cierto —hay cadenas que repiten cosas verdaderas—, pero mientras no se pueda comprobar queda como no verificado, y la regla por defecto es no reenviarlo, que no le hace daño a nadie."
+    },
+    {
+      "id": "p6",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un titular dice: «Un estudio demuestra que tomar X reduce el riesgo de diabetes». ¿Qué corresponde preguntar antes de creerlo o pasarlo?",
+      "opciones": [
+        "Comparado con qué: sin un grupo que no recibió el cambio, «ocho de cada diez mejoraron» no significa nada, porque casi todo mejora solo con el tiempo.",
+        "Si es causa o solo van juntos: que dos cosas suban a la vez —el dengue y los mangos en época de lluvia— no prueba que una cause la otra.",
+        "Cuánta distancia hay entre lo que se midió y lo que se afirma: ahí vive casi todo el engaño, y verla no exige saber ciencia.",
+        "Si el trabajo pasó revisión por pares, porque en ese caso sus conclusiones ya se pueden dar por ciertas y aplicar."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras son el núcleo del método: el grupo de comparación —el mismo testigo que el curso usa en el vivero—, la diferencia entre correlación y causa, y la distancia entre lo medido y lo afirmado, que es donde se rompe casi todo titular. La cuarta es incorrecta porque convierte un filtro mínimo en un certificado: la revisión por pares significa que otros especialistas leyeron el trabajo y pudieron rechazarlo, y eso deja fuera bastante basura, pero se cuelan errores todo el tiempo. Además, aunque el estudio sea impecable, sigue abierto si se midió en ratones o en personas, con cuántas y en qué condiciones, y si esas condiciones se parecen en algo a las tuyas."
+    },
+    {
+      "id": "p7",
+      "tipo": "abierta",
+      "enunciado": "Abre tu teléfono y elige un mensaje real que te hayan reenviado en la última semana —una cadena, una captura, una foto o un enlace—, o el último que reenviaste tú. Describe qué es y de qué grupo llegó. Después explica, paso a paso y con lo que tienes a mano, qué harías para decidir si le crees: qué buscas primero, qué le preguntas al origen, cuánto de tus megas estás dispuesto a gastar y qué haces si no llegas a ninguna parte. Termina explicando qué cambiaría en tu procedimiento si ese mensaje fuera sobre salud, sobre un trámite o sobre plata, y cómo se lo dirías a la persona que te lo mandó sin pelearte con ella.",
+      "respuestaModelo": "Elijo un mensaje que llegó al grupo de la familia el martes: una captura de pantalla de un texto sin autor, con letra grande, que dice que a partir del lunes hay que hacer un trámite nuevo para no perder un beneficio, con una fecha límite y la frase «pásalo a todos tus contactos, es urgente». Abajo, una foto de una fila de gente en una oficina.\n\nLo primero que hago es no reenviarlo, que es gratis y me deja tiempo. Después lo despiezo con las cinco preguntas. **Quién lo escribió originalmente:** no hay ningún nombre, ni institución, ni número de documento, ni oficina que se pueda identificar; solo un texto dentro de una imagen. Ya con eso sé que no tengo a quién preguntarle. **De cuándo es:** tampoco hay fecha, y ese es un dato en sí mismo, porque una cadena sin fecha vuelve a circular cada dos años como si fuera de hoy; el «a partir del lunes» no sirve, porque no dice de qué lunes de qué año habla. **Qué me hizo sentir:** apuro y un poco de miedo a perder algo, que es exactamente la carga emocional que hace que una cadena se propague; ese apuro es la señal de parar. **Quién gana si circula:** no lo sé, pero la instrucción de difundir está escrita adentro, y un texto verdadero informa mientras que una cadena pide que la pases. **Qué pasa si es falso y lo mandé:** en mi grupo hay gente que trabaja por día, y un viaje a la ciudad les cuesta pasaje y una jornada perdida.\n\nDespués reviso las dos piezas por separado, porque son dos afirmaciones distintas. La captura es una imagen de un texto: se fabrica escribiéndose a uno mismo, se edita en un minuto porque es letra negra sobre fondo blanco, y aunque fuera auténtica está recortada y no sé quién la escribió ni qué se dijo antes. O sea que como prueba no vale nada. La foto la paso por búsqueda inversa: mantengo el dedo apretado sobre ella, elijo buscar la imagen y miro **la aparición más vieja**, no cuántas veces sale. Si aparece en páginas de hace cuatro años, la foto no es de la fila de ayer y el mensaje ya perdió lo poco que traía.\n\nCon los megas soy concreto: la búsqueda inversa y una consulta corta las hago en el momento porque son baratas; todo lo demás lo anoto en una nota del teléfono que se llama «pendientes de comprobar», con la fecha, y lo reviso el día que tengo wifi. Ahí busco el nombre de la institución que debería estar detrás y entro a su página **por su propio nombre**, no por ningún enlace del mensaje, y miro si publicó algo parecido y desde cuándo existe esa página. Si no encuentro nada, no concluyo que sea falso ni que sea cierto: queda **sin verificar**, y mucho de lo boliviano no está en la web abierta, así que la fuente real puede ser una oficina o una persona, no una página.\n\nComo el mensaje es de trámite, el procedimiento cambia y sube de exigencia. No repito ninguna fecha, ningún requisito ni ningún costo, porque una cifra inventada es citable y termina en un mostrador con alguien de mi familia quedando mal. Lo que hago es al revés: escribo la pregunta en un papel, y quien vaya a la ciudad esta semana la lleva y pide el **nombre del documento** donde dice eso, anota quién lo atendió y qué día. Si el mensaje hubiera sido de salud, lo cortaría en el acto: los remedios de cadena viven de que casi todo mejora solo, y el peligro grande no es el remedio sino el tiempo que se pierde probándolo; ante fiebre que no baja, deshidratación, un bebé o alguien mayor, la respuesta es el centro de salud y no el grupo. Y si fuera de plata, ninguna tasa, ninguna cuota y ningún precio que salga de una pantalla ajena: eso se pregunta en la entidad y se pide el total a pagar por escrito.\n\nPara contestarle a mi tía no escribo «eso es mentira», porque delante de veinte personas la obligo a defenderse y consigo lo contrario. Le mando el resultado de la búsqueda inversa, que se ve solo, con una línea corta: «mirá, la foto es de 2019». Y si el que había reenviado la cadena hubiera sido yo, lo corrijo en el mismo grupo donde la mandé, con una línea sin adornos, porque ese minuto de vergüenza es lo que hace que la próxima vez me crean. En casa, además, dejo la costumbre puesta: **el que manda algo, manda de dónde salió**, y lo que resultó falso lo anoto en tres renglones, porque estas cadenas vuelven.",
+      "criterios": [
+        "Elige un mensaje real y concreto, propio, y dice de qué grupo llegó en vez de responder en general.",
+        "No lo reenvía mientras lo está evaluando, y nombra que no reenviar no le hace daño a nadie.",
+        "Aplica las cinco preguntas: quién lo escribió originalmente, de cuándo es, qué le hizo sentir, quién gana si circula y qué pasa si es falso.",
+        "Detecta al menos tres piezas de cadena —falta de autor, falta de fecha, urgencia, instrucción de difundir, carga emocional, amenaza o recompensa, detalle preciso no comprobable—.",
+        "Explica por qué la captura no prueba nada: se fabrica sin editar, se edita fácil por ser texto plano, y aunque sea auténtica está recortada.",
+        "Propone la búsqueda inversa de imagen y dice que lo que decide es la aparición más vieja, no la más repetida.",
+        "Reconoce que no encontrar la fuente no significa ni falso ni cierto, sino sin verificar, y que la fuente puede ser una persona o una oficina.",
+        "Tiene en cuenta el costo real de datos móviles: qué comprueba en el momento y qué deja anotado para el día que haya wifi.",
+        "Entra a la institución buscándola por su nombre, y no por el enlace que venía dentro del mensaje.",
+        "Trata trámite, salud y dinero con exigencia distinta, y en los tres manda a la oficina, al centro de salud o a la entidad en vez de repetir una cifra.",
+        "En salud nombra el mecanismo de que casi todo mejora solo y que el daño mayor suele ser el tiempo perdido antes de consultar.",
+        "Corrige a quien se lo mandó mandando el origen y no el veredicto, y contempla corregirse a sí mismo en el mismo grupo si ya lo había reenviado."
+      ],
+      "explicacion": "La pregunta se evalúa por el procedimiento, no por el veredicto: una buena respuesta puede terminar en «no pude comprobarlo» y estar completa, porque quedarse en el estado de no verificado es una de las capacidades que enseña la lección. Lo que sí tiene que aparecer es el orden —parar, despiezar, buscar el origen, comprobar la imagen, decidir cuánto esfuerzo merece— y el reconocimiento de que el costo del error no lo paga solo quien reenvía. La parte de salud, trámite y dinero es la que separa una respuesta correcta de una excelente: ahí no se trata de verificar mejor sino de saber que la fuente no es una pantalla, y decirlo con esas palabras."
+    }
+  ]
+}

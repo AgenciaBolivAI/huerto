@@ -1,0 +1,437 @@
+Todo lo que este curso enseñó hasta aquí cabe dentro de una parcela y de un solo par de manos:
+preparar la tierra, propagar, montar un vivero, tender un riego, leer una planta enferma, guardar la
+semilla propia. Diecinueve módulos de capacidad individual, y son ciertos.
+
+Este módulo trata de la parte que no. No de lo que sale **mejor** entre varios —casi todo sale mejor
+entre varios, y eso no es un argumento—, sino de **lo que no se resuelve trabajando más**, porque el
+obstáculo no está en la cantidad de trabajo disponible. Y trata de lo contrario, que casi nunca se
+cuenta cuando alguien propone organizarse: **un grupo cuesta.** Cuesta tiempo, atención y velocidad
+de decisión, y es la razón por la que tantas asociaciones nacen con entusiasmo y se apagan en dos
+años.
+
+Aquí no se explica cómo se compra junto, cómo se vende, cómo se decide ni qué figura legal conviene:
+eso son las cinco lecciones siguientes. Se hace una sola cosa, la que casi nunca se hace antes de la
+primera reunión: **diagnosticar qué clase de problema se tiene.**
+
+## Trabajar más no siempre sirve
+
+Hay dos clases de problema en una parcela y separarlas es lo primero.
+
+Los de la primera **ceden ante el esfuerzo.** Si el semillero germina mal hay una causa
+—temperatura, humedad, profundidad, semilla vieja— y un procedimiento que la corrige. Todo lo
+anterior del curso es de esta clase.
+
+Los de la segunda **no ceden por mucho que se empuje**, porque el límite no está en el esfuerzo:
+está en el tamaño del pedido, en la divisibilidad de una máquina, en la varianza de un mal año, en
+lo que decide el vecino del otro lado del cerco o en la posición desde la que se negocia.
+
+<Analogia>
+Es la diferencia entre un problema de recursos y uno de arquitectura. Un servicio lento porque el
+proceso no da abasto se arregla con más máquina. Uno lento porque toda petición pasa por un candado
+global **no mejora con más máquina**: puedes poner el triple de servidores y medir el mismo tiempo
+de respuesta, porque el límite nunca fue la capacidad sino cómo está armado el sistema.
+
+Trabajar más horas en la parcela es escalar hacia arriba. **El error caro no es elegir mal la
+solución: es no haber hecho el diagnóstico.**
+</Analogia>
+
+Los problemas de la segunda clase se agrupan en seis familias, y cada una exige ser varios **por una
+razón distinta**, que decide cuánta gente hace falta y qué acuerdo hace falta.
+
+## Escala: el precio depende de cuánto pides
+
+La primera familia es la más fácil de comprobar y la más subestimada: **una misma cosa vale distinto
+según cuánto se pida.** No por generosidad del que vende ni por habilidad para regatear, sino por
+una razón mecánica.
+
+Toda operación comercial tiene un costo que existe por el hecho de ocurrir y casi no depende de su
+tamaño: alguien atiende el pedido, lo prepara y cobra; alguien carga y transporta. Ese trabajo es
+casi el mismo para dos bolsas de sustrato que para doscientas, y el viaje del camión cuesta lo mismo
+vaya lleno o a medias. Es un <Termino slug="costo-fijo">costo fijo</Termino> aplicado a la
+**operación de compra**, y tiene la propiedad que define a esta familia: se reparte.
+
+<Formula explicacion="Solo la primera parte baja al pedir más, y por eso el precio unitario cae mucho al principio y luego se aplana.">
+costo por unidad = (costo fijo de la operación ÷ unidades del pedido) + costo propio de cada unidad
+</Formula>
+
+De ahí sale lo que casi nadie usa:
+la <Termino slug="economia-de-escala">economía de escala</Termino> **no es lineal.** Pasar de
+comprar solo a comprar entre cinco vecinos captura la mayor parte del ahorro posible; pasar de
+veinte a cuarenta añade una fracción pequeña. **El grupo pequeño ya se lleva casi todo el
+beneficio.**
+
+Hay un segundo mecanismo, más brutal: **el lote mínimo.** Muchos proveedores no venden por debajo de
+cierta cantidad, o el flete no sale a menos de cierto volumen. Ahí no hay curva sino umbral, y por
+debajo de él **el precio no es alto: esa opción no existe.** Por eso un productor pequeño compra al
+detalle, al triple, no por descuido sino porque el canal mayorista no le abre la puerta.
+
+<Dato titulo="El diagnóstico de escala se hace en una tarde y es gratis">
+Al proveedor se le pide el precio para la cantidad que usas tú, para diez veces esa cantidad y para
+cien veces, y se le pregunta **cuál es el pedido mínimo** y desde qué volumen entrega en la zona.
+
+Si el precio no se mueve, aquí no hay problema de escala. Si se mueve mucho, o aparece un mínimo que
+tú solo no alcanzas, ya sabes qué problema tienes y de qué tamaño. **Antes de convocar a nadie, se
+mide.**
+</Dato>
+
+Al vender ocurre lo mismo del otro lado del mostrador, porque quien compra también tiene su costo
+fijo por operación: **comprar barato y vender bien son el mismo problema.**
+
+## Indivisibilidad: lo que no se vende en pedazos
+
+La segunda familia se parece a la primera y no es la misma; confundirlas lleva a comprar cosas que
+no había que comprar.
+
+Hay bienes que **vienen en un tamaño mínimo que excede lo que una parcela necesita**: un motocultor,
+una fumigadora de motor, una zaranda, un remolque. No existe el treinta por ciento de un motocultor,
+y una vez comprado la inversión ya se hizo aunque se use tres días al año. Eso es
+la <Termino slug="indivisibilidad">indivisibilidad</Termino>, y su consecuencia es
+la <Termino slug="capacidad-ociosa">capacidad ociosa</Termino>: la parte del tiempo en que el equipo
+existe, se deprecia y no produce nada.
+
+La cuenta que resuelve esta familia no es «cuánto cuesta» sino **cuántos días al año se usa.** Un
+equipo que trabaja doscientos días se paga solo; uno que trabaja cuatro tiene un costo por jornada
+disparatado con el mismo precio de compra. La <Termino slug="amortizacion">amortización</Termino> se
+calcula aquí **por uso y no por año.**
+
+<Analogia>
+Es comprar un servidor dedicado para una tarea que corre una vez al mes: la carga no llena su unidad
+mínima de compra, y ver el procesador al cuatro por ciento significa que **pagas el cien por ciento
+de una capacidad de la que consumes una astilla.** La solución no es comprar menos servidor, que no
+existe: es compartir uno entre varias cargas.
+
+Y ahí aparece lo que decide si la idea funciona: si todas quieren correr el mismo martes a las tres,
+se hace cola y el que espera concluye que compartir no sirve. **La utilización baja habilita
+compartir; la demanda simultánea lo destruye.**
+</Analogia>
+
+El diagnóstico tiene tres condiciones y necesita las tres: el bien es **caro** para lo que puede
+pagar una parcela, es **indivisible**, y su uso individual es **bajo y no simultáneo.** Si falla la
+tercera —todos necesitan el motocultor la semana en que entran las lluvias— compartir no es una
+solución sino una fuente de conflicto. Y **la herramienta de uso diario no entra aquí**: una pala es
+barata y su indisponibilidad te para la semana.
+
+## Riesgo: repartir lo que no se puede evitar
+
+La tercera familia no ahorra plata: **cambia la forma de la incertidumbre.** Una bomba que se quema,
+una enfermedad que te deja un mes sin trabajar, un lote que se pierde. Eventos poco probables en un
+año cualquiera y devastadores cuando ocurren: para una parcela sola, cada uno es una apuesta de todo
+o nada.
+
+Cuando varios ponen en común la cobertura no baja la probabilidad de que ocurra: baja la
+**varianza** de lo que cada uno tiene que soportar. Si diez familias sostienen un fondo para reponer
+una bomba, la reposición deja de ser una catástrofe ocasional y pasa a ser un gasto pequeño y
+previsible. Eso es la <Termino slug="mutualizacion-del-riesgo">mutualización del riesgo</Termino>,
+lo mismo que hace un seguro pero sin empresa en el medio.
+
+<Advertencia>
+**La mutualización solo funciona si los riesgos son independientes.**
+
+Que la bomba de un vecino se queme no hace más probable que se queme la tuya: ese riesgo ocurre
+disperso en el tiempo, y cuando le toca a uno los otros nueve están sanos y pueden cubrirlo.
+
+Un <Termino slug="riesgo-correlacionado">riesgo correlacionado</Termino> es otra cosa: un surazo que
+tumba la floración, una granizada, un derrumbe del precio en la misma semana. **Esos eventos les
+ocurren a todos los vecinos a la vez**, porque todos están bajo el mismo cielo y venden en el mismo
+mercado, y el día que hace falta el fondo no alcanza para ninguno. Es el error de tener las tres
+réplicas en el mismo bastidor: **la misma causa apaga las copias y el original al mismo tiempo.**
+
+Contra eso valen otras respuestas —diversificar especies y fechas, buscar compradores fuera de la
+misma plaza—, y existen seguros agrícolas formales cuya disponibilidad **hay que consultar con una
+entidad financiera o con la autoridad competente.**
+</Advertencia>
+
+Hecha esa distinción, queda claro cuál es el riesgo que un grupo de vecinos cubre mejor que nadie:
+**el de la persona.** Una enfermedad, un viaje forzado, un duelo. Dos semanas sin regar en plena
+seca y el vivero entero se pierde. La cobertura no cuesta dinero sino un acuerdo: que alguien
+conozca tu parcela lo suficiente para sostenerla dos semanas. Es **el mayor retorno por unidad de
+esfuerzo de todo el módulo.**
+
+## Externalidades: lo que decide tu vecino dentro de tu parcela
+
+La cuarta familia es la que más gente descubre tarde, y la que hace que a veces asociarse no sea una
+opción sino la única técnica disponible.
+
+Una <Termino slug="externalidad">externalidad</Termino> es el efecto que la decisión de uno produce
+sobre otro **sin pasar por ningún acuerdo, ningún precio y ningún permiso.** No hay mala intención
+ni contrato roto, y muchas veces no hay conciencia de que ocurrió: el efecto cruzó el cerco.
+
+En un barrio de parcelas contiguas hay más de las que parece. El polen del vecino que dejó florecer
+una variedad de la misma especie arruina la semilla que estabas seleccionando. Un foco de plaga que
+nadie trata al lado reinfecta el tuyo cada quince días. El que fumiga con producto de amplio
+espectro mata los <Termino slug="enemigo-natural">enemigos naturales</Termino> que sostenían tu
+control. El que levanta el nivel de su terreno en una llanura plana manda el agua a la parcela de
+abajo. El que deja llantas con agua acumulada cría el mosquito que transmite el dengue a la manzana.
+
+<Analogia>
+Es **estado compartido mutable sin ningún mecanismo de exclusión.** Cada proceso corre creyendo que
+está solo: lee, calcula, escribe. Ninguno hace nada incorrecto según su propio código y el resultado
+global es basura, porque **nadie declaró nunca que ese estado era compartido** y nadie puso una
+sección crítica alrededor.
+
+El fallo tiene la misma forma: no hay excepción, no hay aviso, no hay a quién culpar, y el daño
+aparece más tarde y en otro sitio. Es lo que le pasa a quien siembra su semilla guardada y le salen
+tres plantas distintas. Y la solución es la misma: **el candado no se implementa dentro de un
+proceso.** El protocolo lo acuerdan todos los que tocan ese estado, o no existe. **La coordinación
+no es aquí un accesorio: es la única implementación posible.**
+</Analogia>
+
+De ahí sale la idea más importante de la lección: **el problema tiene un radio, y el título de
+propiedad no lo respeta.** El radio de vuelo de un insecto, la distancia que viaja el polen, la
+pendiente por la que corre el agua. Ninguno coincide con el cerco. **La unidad de manejo correcta no
+es la parcela sino el radio del problema.**
+
+Un caso se comporta distinto. Un <Termino slug="recurso-de-uso-comun">recurso de uso común</Termino>
+es algo de lo que es difícil excluir a alguien y que **se agota con el uso**: el agua del acuífero
+del que todos bombean, el caudal de un canal, el camino que se deteriora con el paso de todos. Aquí
+ni siquiera hay daño de uno hacia otro: **cada bomba nueva es racional para su dueño y el nivel baja
+para el conjunto.**
+
+Y esto cambia el orden de prioridades: **coordinar externalidades no exige comprar nada, poseer nada
+en común ni constituir ninguna figura legal.** Exige acordar con los vecinos qué hace cada uno
+dentro de su propia parcela: la forma más barata de organización que existe.
+
+## Conocimiento: se paga una vez y sirve muchas veces
+
+La quinta familia es la más rara, porque el recurso que se comparte **no se gasta al compartirlo.**
+Averiguar algo cuesta caro y se paga una sola vez —una temporada perdida, un lote muerto—; copiarlo
+no cuesta casi nada, y **el que lo transmite sigue teniéndolo entero.**
+
+Pero hay un problema más profundo, y es el que de verdad exige ser varios: **una parcela sola no
+puede saber si algo funcionó.** Probaste algo nuevo, salió bien, y no tienes forma de distinguir si
+fue por lo que hiciste o porque este año llovió a tiempo. Tu experimento tiene un solo sujeto y
+ninguna referencia contra la que medir.
+
+<Analogia>
+Es una prueba A/B con un solo usuario: cambias algo, el número sube, declaras la victoria. Con un
+solo usuario no puedes separar el efecto del ruido de fondo, y el ruido de fondo en agricultura es
+enorme: lluvia, temperatura, el suelo de ese rincón, el lote de semilla, la mano que sembró.
+
+Diez parcelas probando lo mismo, cada una con su <Termino slug="testigo">testigo</Termino> al lado,
+generan en un año lo que a una sola le tomaría diez, y generan **variación controlada**, que es lo
+único que permite saber si el resultado viaja.
+</Analogia>
+
+Esta familia tiene además una virtud práctica: **es la que menos confianza requiere.** Compartir lo
+aprendido no expone dinero ni obliga a nadie a nada; se puede hacer con gente con la que no
+compartirías una cuenta bancaria. Cuando un grupo no sabe por dónde empezar, empezar por aquí casi
+nunca es un error.
+
+## Poder de negociación: quién puede levantarse de la mesa
+
+La sexta familia no es de costos ni de técnica: es de **la posición desde la que se negocia**, y
+explica por qué el mismo producto, con la misma calidad, se paga distinto según quién lo lleve.
+
+El precio rara vez es un número fijo. Casi siempre hay un rango entre lo mínimo que el vendedor
+acepta y lo máximo que el comprador pagaría, y dentro de ese rango **lo decide quién puede irse sin
+cerrar el trato.** Eso es el <Termino slug="poder-de-negociacion">poder de negociación</Termino>, y
+no depende del carácter: depende de cuál es tu alternativa si esa venta no ocurre.
+
+Un productor solo en la tranca, un día de cosecha, con producto perecedero y una deuda que vence,
+tiene una alternativa pésima. El intermediario que llegó en la camioneta compra a veinte
+productores, tiene diecinueve alternativas más y **no le urge nada**; además sabe a cuánto se está
+pagando en la ciudad y el productor no. Tres asimetrías apiladas —de alternativas, de urgencia y de
+información—, y ninguna se corrige trabajando mejor la parcela.
+
+Un grupo cambia las tres: las alternativas, porque quien negocia por veinte puede decir que no; la
+urgencia, si hay dónde acopiar y fondo para esperar; y la información de la manera más barata que
+existe, porque **basta con que tres vecinos se cuenten a cuánto les pagaron esta semana.**
+
+<Dato titulo="Hasta dónde llega esto, dicho con honestidad">
+Juntar a cinco vecinos **no cambia el precio del mercado**: lo que cambia es **cuánto de ese precio
+te llega a ti.** Y si tu producto llega en mal estado o desparejo, la unión no lo mejora. Por eso
+este módulo no promete precios: cualquier cifra concreta se averigua en el mercado local.
+</Dato>
+
+## Lo que nadie cuenta: un grupo cuesta
+
+Hasta aquí todo empuja hacia juntarse. Falta la otra mitad, y sin ella las decisiones salen mal.
+**Coordinar cuesta, y ese costo no crece al mismo ritmo que el grupo.** El número de relaciones que
+hay que mantener no crece como el número de miembros: crece como el número de pares posibles.
+
+<Formula explicacion="Con tres miembros hay tres pares; con seis, quince; con doce, sesenta y seis. El trabajo de mantener acuerdos y confianza crece con esta cifra y no con el número de personas.">
+pares de un grupo = n × (n − 1) ÷ 2
+</Formula>
+
+Por eso un grupo de tres vecinos que funciona de maravilla se vuelve pesado al llegar a diez sin que
+nadie haya cambiado de actitud: **cambió la aritmética, no la gente.** Eso es
+el <Termino slug="costo-de-coordinacion">costo de coordinación</Termino>, y se paga en cuatro
+monedas.
+
+**Tiempo.** Las reuniones son horas que no se trabajan. En una parcela pequeña el recurso escaso no
+es la tierra: es la atención de quien la trabaja, y el grupo compite por ella.
+
+**Latencia.** Lo que una persona decide en diez segundos, un grupo lo decide en dos semanas. No es
+una molestia sino un fallo funcional, porque muchas decisiones agrícolas tienen ventana: el surazo
+entra esta noche, el foco de plaga se duplica en cuatro días, la lluvia abre una ventana de
+trasplante de treinta y seis horas. **Una decisión que llega tarde es una decisión que no se tomó**,
+y de ahí sale algo que desarrolla la lección cinco: hay decisiones que no se pueden colectivizar.
+
+**El que no aporta.** Tarde o temprano aparece un <Termino slug="polizon">polizón</Termino>: alguien
+que recibe el beneficio y no pone la parte que le toca. No es un defecto moral individual sino una
+estructura que lo hace previsible, porque **el beneficio es común y visible y el esfuerzo es propio
+y solo lo ve uno mismo.** El daño real es de segundo orden: los que sí aportan lo ven, concluyen que
+son tontos y bajan su aporte. **Un polizón tolerado no resta uno: resta a todos los demás.**
+
+**Reputación acoplada.** Si el grupo vende junto, el lote malo de un miembro daña el nombre de todos
+y el cliente no distingue de quién era. Es un servidor compartido donde un solo remitente abusivo
+mete la dirección entera en una lista negra.
+
+<Analogia>
+Todo junto es la decisión de partir un sistema que funciona en muchos servicios independientes.
+Sobre el papel es obviamente mejor: cada parte escala sola y un fallo no tumba el conjunto. Mucha
+gente lo hizo y volvió atrás, porque **la comunicación entre partes no es gratis**: aparecen red,
+serialización y fallos parciales que antes no existían. La regla que se aprendió a golpes es la que
+ordena este módulo: **separar se justifica cuando el costo del acoplamiento que ya estás pagando
+supera el costo de coordinar.**
+</Analogia>
+
+## La regla que decide
+
+Con las seis familias por un lado y el costo de coordinación por el otro, la regla sale sola y es la
+tesis del módulo: **asociarse se justifica cuando el problema conjunto es mayor que el sobrecosto de
+coordinarse.** No cuando la gente es buena, no porque la unión haga la fuerza: es una comparación
+entre dos cantidades, y las dos se estiman antes de convocar a nadie.
+
+**El grupo mínimo que resuelve el problema es el grupo correcto.** Cada familia tiene un tamaño
+natural: el lote mínimo del proveedor, el radio del polen, la manzana por la que se mueve la plaga,
+los que bombean del mismo acuífero. Sumar miembros más allá **agrega costo de coordinación sin
+agregar capacidad.**
+
+**Se empieza por el problema más chico y más reversible**: un acto conjunto concreto, no una
+organización. Si tres vecinos no logran completar una sola compra conjunta, ningún estatuto lo va a
+arreglar.
+
+**Se sube la escalera de compromiso un peldaño a la vez**: compartir información; coordinar lo que
+cada uno hace en su propia parcela; comprar o vender juntos una vez; compartir un bien duradero;
+constituir una figura legal. Cada peldaño multiplica el costo de coordinación y hace más difícil
+deshacer. **Se sube solo cuando el de abajo ya funcionó.**
+
+<Tabla>
+
+| Problema | Por qué exige ser varios | Grupo mínimo | Lo que NO arregla |
+| --- | --- | --- | --- |
+| Insumos caros en cantidad chica | Escala: costo fijo y lote mínimo | Los que juntan el pedido mínimo | No mejora lo que produces |
+| Motocultor, zaranda, remolque | Indivisibilidad y ociosidad alta | Los que caben en el calendario | No sirve si todos lo usan la misma semana |
+| Bomba quemada, un mes sin trabajar | Riesgo individual que se reparte | Los que aguanten un evento | No cubre surazo ni caída de precio |
+| Semilla cruzada, plaga del lote vecino | Externalidad: cruza el cerco | Los que están dentro del radio | No sustituye tu propio manejo |
+| El nivel del pozo baja para todos | Recurso de uso común que se agota | Los que bombean del mismo acuífero | Coordinar no crea agua |
+| No saber si algo funciona aquí | Conocimiento: un ensayo sin testigo | Tres o cuatro parcelas con un protocolo | Sin registro no hay dato |
+| El comprador pone el precio en la tranca | Asimetría de alternativas y urgencia | Los que ese comprador necesita | No cambia el precio del mercado |
+
+</Tabla>
+
+<Advertencia>
+Tres errores de diagnóstico que este módulo existe para evitar.
+
+**Asociarse para un problema que no es de estas familias.** Si el semillero germina mal, el problema
+es técnico y se arregla en el módulo cinco, no en una asamblea. La pregunta previa es siempre **¿por
+qué exactamente hace falta ser varios para esto?**
+
+**Usar el grupo para tapar lo que no funciona solo.** Una parcela mal llevada más otras dos son tres
+parcelas mal llevadas y ahora con reuniones: la organización **multiplica lo que ya hay.**
+
+**Empezar por arriba de la escalera.** Buscar estatutos y personalidad jurídica antes de completar
+un solo acto conjunto paga el costo de coordinación completo antes de cobrar ningún beneficio.
+**La figura legal se elige cuando ya hay algo que proteger**, y cómo se elige es la lección cuatro.
+</Advertencia>
+
+<AplicarRizoma>
+**Rizoma del Sur es, él mismo, el primer caso de estudio del módulo.** Son 3.666 m² repartidos en
+doce lotes contiguos: no una parcela grande, sino doce parcelas que se comportan como una porque
+alguien decidió coordinarlas. Un solo tanque, un solo tendido de riego, una sola compra de sustrato,
+un solo calendario. **El proyecto ya vive dentro de la tesis que enseña.**
+
+**La escala se diagnostica aquí con dos llamadas y ninguna reunión.** Lo que el vivero consume en
+cantidad —sustrato, bolsas, mallas, tubería— se compra hoy en el volumen de un vivero chico. La
+tarea es preguntar a los proveedores de Santa Cruz el precio a tres volúmenes distintos y cuál es el
+pedido mínimo para que entreguen en la zona. **Ninguna cifra de este curso sustituye esa llamada:
+los precios se averiguan en Santa Cruz y esta semana.**
+
+**La indivisibilidad tiene aquí un candidato claro y un peligro claro.** Un motocultor o una zaranda
+para cernir sustrato son caros, no se venden en pedazos y en 3.666 m² se usarían pocos días al año.
+Pero falla la tercera condición: en el trópico de sabana **todo el mundo prepara tierra en la misma
+ventana**, cuando entran las lluvias de octubre. Hay indivisibilidad **con un problema de calendario
+encima**, y el segundo se resuelve antes que el primero.
+
+**El riesgo se separa en dos montones que no se mezclan nunca.** El surazo que deja el termómetro
+cerca de diez grados no le pasa a Rizoma: le pasa a Zanja Honda entera, y ningún fondo vecinal lo
+cubre. En cambio, que se queme la bomba o que la persona que sostiene el riego se enferme dos
+semanas en plena seca **sí es riesgo individual**, y que dos personas del barrio conozcan ese riego
+es la medida de continuidad más barata que puede tomarse.
+
+**Las externalidades son, en este sitio, la familia con más retorno inmediato.** Prados del Sur
+es un barrio de lotes contiguos y el radio de casi todos los problemas es mayor que el cerco. El
+aislamiento de la semilla de ají dulce y de culantro depende de qué deje florecer el vecino, no de
+lo cuidadoso que sea Rizoma. Si alguien fumiga con producto de amplio espectro, los enemigos
+naturales que sostienen el manejo integrado del módulo doce mueren aquí también. En una llanura
+aluvial plana, con arcillas expansivas que drenan mal, **el que levanta su nivel o tapa un desagüe
+decide adónde va el agua de los demás.** Y los criaderos de mosquito de un patio abandonado son un
+problema de dengue de la manzana entera. **Nada de esto se arregla dentro del cerco.**
+
+**Con el pozo no hay culpables**: todos los que bombean sacan del mismo cuerpo de agua subterránea y
+el nivel baja para el conjunto. Rizoma no puede decidir nada sobre el agua de nadie; lo único útil
+al principio es **medir su propio consumo y compartir el dato**, porque eso convierte una discusión
+de opiniones en una conversación sobre números. Las condiciones de perforación, uso y registro de
+pozos hay que consultarlas con la autoridad competente.
+
+**Y el arranque, que es lo único que hay que hacer esta semana.** No una asociación, no un estatuto:
+**un solo acto conjunto, chico y reversible.** Tres vecinos, una compra de sustrato o de bolsas
+pedida junta al volumen que sí mueve el precio, con el pago resuelto antes de que llegue el camión,
+y una página escrita con lo acordado. Rizoma es comunitario y gratuito y no debe volverse el centro
+del que todos dependen: **el objetivo es que los vecinos puedan hacerlo sin Rizoma.** Si el acto se
+completa, existe un grupo; si no, ninguna figura legal lo habría salvado.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La organización para el trabajo no es una idea importada en Bolivia: es una de las instituciones
+más antiguas y vivas del país.** El trabajo recíproco entre familias —el ayni, la minka, la faena
+comunal, con nombres y formas distintas según la región— resuelve lo que esta lección describe:
+tareas que exceden a una familia y se hacen por turnos entre varias, con la devolución del trabajo
+como forma de pago. A nadie hay que explicarle aquí que juntarse funciona; lo que suele faltar no es
+voluntad sino **el diagnóstico de para qué.**
+
+**En Santa Cruz esas tradiciones conviven con otras muy distintas.** El área integrada recibe
+migración del altiplano y de los valles, colonias con maquinaria y capital, y zonas periurbanas como
+Zanja Honda donde el vecino puede tener un lote propio, uno alquilado, uno prestado o ninguno. **No
+se puede suponer que todos tienen la misma relación con la tierra ni el mismo horizonte de
+permanencia**: quien no sabe si estará aquí en tres años no va a comprometerse en un bien duradero.
+
+**Existen en el país figuras asociativas de varios tipos** —cooperativas, asociaciones de
+productores, organizaciones económicas campesinas y otras—, cada una con reglas propias de
+propiedad, responsabilidad, votación, contabilidad y trámite permanente. Cuáles son exactamente y
+qué obligaciones dejan después **son cosas que hay que consultar con un abogado o un contador local
+y con la autoridad competente.** Este curso no cita números de ley, plazos ni montos: cambian, y un
+dato inventado en material de enseñanza se propaga durante años.
+
+**El calendario del oriente concentra la demanda.** Con lluvias de octubre a abril y seca de mayo a
+septiembre, la preparación de tierra, la siembra y la cosecha caen en ventanas estrechas y **le caen
+a todo el mundo a la vez.** Y el surazo, la granizada, la inundación y la caída del precio cuando
+toda la zona cosecha junta son riesgos correlacionados por definición.
+
+**Hay un ámbito donde coordinar deja de ser económico y pasa a ser de salud pública: el dengue.** El
+mosquito que lo transmite cría en agua acumulada limpia y se mueve por la manzana sin mirar cercos:
+una casa impecable rodeada de patios con llantas y baldes sigue teniendo dengue. Es la externalidad
+más nítida del barrio, porque **el resultado de coordinar se nota en semanas y no requiere plata.**
+Las campañas sanitarias las define la autoridad de salud, y conviene consultarlas con el municipio o
+el centro de salud de la zona.
+
+**Y una advertencia que aquí tiene nombre y apellido.** Casi cualquier vecino ha visto una
+asociación que empezó bien y terminó mal, y esa memoria es un obstáculo para volver a intentarlo.
+Vale la pena leerla como la lee este módulo: **esas asociaciones no fracasaron por un defecto de la
+gente, sino por defectos de diseño previsibles y enumerables** —nadie escribió cómo se decide, nadie
+llevó cuentas, el que fundó se volvió dueño, el que no aportaba siguió cobrando, nadie definió cómo
+se sale—. La desconfianza de quien ya lo vio fallar no es un problema de actitud: es información.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Esta lección no resolvió nada: clasificó. Ahora se puede mirar la propia situación y decir con
+precisión qué familia de problema se tiene, cuántos vecinos hacen falta y cuánto costaría
+coordinarlos.
+
+La lección siguiente, **Comprar juntos, vender juntos**, toma la familia de escala —la más común y
+la que da resultado más rápido— y la baja a máquina: por qué el volumen mueve el precio en las dos
+direcciones y por qué es el mismo mecanismo, y después la mecánica de una compra y de una venta
+conjunta. Quién consolida el pedido, quién adelanta la plata, por qué existe la regla del prepago, y
+por qué un solo lote malo arruina el nombre de todos.

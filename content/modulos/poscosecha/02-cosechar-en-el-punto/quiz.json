@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "dos-madureces",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué separa la madurez fisiológica de la madurez comercial?",
+      "opciones": [
+        "La fisiológica es un hecho biológico: el órgano terminó de construirse y su semilla, si la tiene, ya es viable.",
+        "La comercial depende del uso que se le va a dar, no de la planta; por eso el mismo cultivo tiene varias.",
+        "Pueden ordenarse de tres maneras: la comercial antes, igual o después de la fisiológica.",
+        "Coinciden siempre, y por eso basta con esperar a que la planta termine para cosechar bien."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La incorrecta es la cuarta: esperar a que la planta termine arruina el culantro, cuyo punto comercial está mucho antes de que la roseta suba la vara floral, y arruina el gandul de grano verde. Solo en el grupo del medio —ají dulce a color pleno, batata, yautía— las dos madureces coinciden aproximadamente."
+    },
+    {
+      "id": "climaterico",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un ají dulce cortado verde terminará madurando fuera de la planta si se le da tiempo suficiente, igual que el plátano.",
+      "respuesta": false,
+      "explicacion": "Falso. El plátano es climatérico: dispara por sí solo el pico de etileno y respiración que convierte almidón en azúcar y ablanda la pulpa, sin estar unido a la planta. El ají dulce no lo es: no tiene ese interruptor. Se ablandará y se arrugará porque sigue respirando y transpirando, pero no madura. De ahí la regla dura: la calidad máxima de un no climatérico es la que tenía en el momento del corte, y a partir de ahí solo puede bajar."
+    },
+    {
+      "id": "indice-de-cosecha",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué obligaciones trae usar un índice de cosecha, entendido como métrica de monitoreo?",
+      "opciones": [
+        "Recordar que es un proxy: el día que deje de correlacionar te mentirá con total confianza.",
+        "Calibrarlo contra la realidad cortando una muestra, abriéndola y anotando qué aspecto tenía por fuera.",
+        "Registrarlo, porque un punto de corte que vive solo en la cabeza de una persona no existe como conocimiento del proyecto.",
+        "Preferir siempre el índice instrumental, porque el refractómetro y el penetrómetro eliminan la subjetividad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa por orden de prioridades: los instrumentos cuestan dinero y no son imprescindibles para empezar. El índice más valioso suele ser el que cruza dos fuentes gratis —calendario más aspecto visual— verificado una vez por temporada con una cata destructiva. Comprar un refractómetro antes de tener la libreta de fechas es resolver el problema equivocado."
+    },
+    {
+      "id": "por-organo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué índice corresponde a cada órgano del catálogo de Rizoma del Sur?",
+      "opciones": [
+        "Culantro: tamaño de hoja y ausencia de vara floral, cosechando hojas externas y dejando el centro de la roseta intacto.",
+        "Plátano: grado de llenado —cuánta arista le queda al dedo— combinado con la cinta de color puesta al aparecer la inflorescencia.",
+        "Batata y yautía: calendario, amarilleo del follaje y sobre todo la cata, que informa del tamaño y de si la piel está hecha.",
+        "Gandul seco: cosecharlo todo de una vez al final del ciclo, cuando la mata entera ha perdido el verde."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es errónea y además cara. El gandul es dehiscente: pasado el punto, la vaina se abre sola por su línea de sutura y el grano cae al suelo. Como las vainas no maduran juntas, esperar a la última garantiza perder las primeras. Se cosecha en pasadas sucesivas. En un cultivo que dehisce, llegar tarde no da peor calidad: da cero producto."
+    },
+    {
+      "id": "hora-y-calor",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la hora del corte y el calor de campo, ¿qué es correcto?",
+      "opciones": [
+        "De madrugada el tejido está en su máximo contenido de agua porque la transpiración cayó y la raíz siguió absorbiendo.",
+        "El calor con el que sale el producto hay que retirarlo después, y esa energía se estima como masa por 3,9 por el salto de temperatura.",
+        "Cortar hoja empapada de rocío mete agua libre en el envase, que es el medio donde los hongos germinan y se mueven entre unidades.",
+        "Por eso la regla sin excepciones es cosechar lo más temprano posible, siempre."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta ignora el rocío, que invierte la regla. El óptimo no es «lo más temprano posible» sino en cuanto el rocío se retira y antes de que apriete el sol. En época de lluvias esa ventana puede no llegar a abrirse, y entonces la decisión honesta es posponer la cosecha de hoja o cosechar mojado asumiendo que ese producto no se guarda: se entrega el mismo día."
+    },
+    {
+      "id": "dano-latente",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si al terminar la mañana de cosecha ninguna unidad del cajón muestra manchas ni golpes visibles, se puede dar por hecho que el manejo fue cuidadoso.",
+      "respuesta": false,
+      "explicacion": "Falso, y este es el concepto central de la lección. El daño mecánico latente es una lesión que ya ocurrió y todavía no se ve: el golpe rompe células bajo una piel intacta, su contenido se mezcla, las enzimas se encuentran con sus sustratos y con el oxígeno, y la oxidación que produce los pigmentos pardos tarda horas o días en hacerse visible. La unidad golpeada se ve idéntica el día de la cosecha, nadie la descarta, viaja, y la mancha aparece en manos de quien la recibe. Por eso el manejo no se juzga por lo que se ve al terminar, sino contando transferencias, alturas de caída y llenado de envase."
+    },
+    {
+      "id": "higiene-y-cloro",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es cierto sobre la higiene del agua y los envases en campo?",
+      "opciones": [
+        "La carga microbiana inicial es un techo: ningún proceso posterior mejora lo que salió del campo, solo evita que empeore.",
+        "El agua de lavado es el mayor riesgo estructural porque es lo único que toca todas las unidades del día.",
+        "El cloro del agua de lavado está para que el agua no reparta contaminación entre unidades, no para desinfectar el producto.",
+        "Basta con hacer triple lavado a un envase que contuvo agroquímicos para poder usarlo como envase de cosecha."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y peligrosa: el envase de plaguicida se perfora y se descarta, jamás se reutiliza, y el triple lavado es parte de ese procedimiento de descarte, no una habilitación para uso alimentario. Tampoco valen los sacos de fertilizante. Y sobre las dosis de cloro, la lección es explícita: dependen del cloro libre, del tiempo de contacto, del pH y de la carga orgánica, y hay que consultarlas con el SENASAG o con una institución local de investigación en vez de copiar una receta de internet."
+    },
+    {
+      "id": "manana-de-cosecha-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Es sábado de entrega en Rizoma del Sur. Hay que cosechar culantro, ají dulce, batata y un racimo de plátano para repartir entre los vecinos, y llovió fuerte el jueves. Diseña la mañana completa: qué decides antes de tocar nada, en qué orden cortas, con qué herramienta y técnica en cada cultivo, qué haces con el producto en el puesto de acondicionamiento y qué anotas. Justifica cada decisión con el mecanismo, y di explícitamente qué NO harías y por qué.",
+      "respuestaModelo": "Antes de tocar nada, dos decisiones. La primera es sobre la batata: llovió el jueves, y sacar raíz con el suelo empapado significa que la arcilla se pega en una costra que después obliga a lavar con fuerza, justo lo peor para una piel que en el momento de la cosecha se desprende en tiras al frotarla con el pulgar. El punto correcto es suelo húmedo pero desmoronable, así que la decisión honesta es catar una planta representativa —no la mejor, no la del borde— y, si el suelo todavía embarra, posponer la batata a la semana siguiente. Eso no es pereza: es índice. La segunda decisión es el rocío. Con el suelo mojado y la mañana húmeda, cortar culantro empapado mete agua libre en el envase, que es el medio donde los hongos germinan y se mueven entre unidades, y las esporas del suelo viajan en las salpicaduras. Se espera a que el rocío se retire; si no se retira, se corta igual pero con la etiqueta mental de que ese producto no se guarda, se entrega hoy.\n\nEl orden lo dicta la fisiología, no la comodidad. Primero el culantro, que es hoja con enorme superficie y la tasa respiratoria más alta del grupo, y que además se pierde más rápido. Después el ají dulce. Al final el plátano y, si se hace, la batata: es lo que tolera esperar y además obliga a mover tierra, y la regla de circulación del módulo de sanidad manda ir siempre de lo limpio a lo sucio. Todo dentro de la ventana que va desde que se retira el rocío hasta que el sol empieza a pegar, que en Prados del Sur es corta: a las nueve ya hay condiciones que en otros climas se consideran de mediodía. Esa ventana obliga a tener los cajones lavados, el puesto armado y la gente avisada la noche anterior.\n\nTécnica por cultivo. El culantro se corta con cuchillo afilado a ras de la base de las hojas externas, dejando el centro de la roseta intacto, porque ahí está el meristemo que da la tanda siguiente; se descartan las plantas que ya levantaron la vara floral. El ají dulce se corta con tijera dejando un trozo de pedúnculo, nunca tirando: cuando la zona de abscisión no está activa, tirar arranca tejido y abre la piel en el hombro, que es por donde entra la podredumbre. Se decide por escrito el estado: lo que va a entrega inmediata a color pleno, lo que tiene que aguantar dos días en verde maduro, porque al ser no climatérico no hay segunda oportunidad. El racimo de plátano se corta entre dos personas: corte parcial del pseudotallo para que la planta se doble despacio, la segunda persona recibe el racimo sobre el hombro acolchado, y el racimo no toca el suelo ni se apoya sobre los dedos; después se deja escurrir con el corte hacia abajo y separado, porque el látex mancha permanentemente la cáscara que toca. Se corta más verde de lo que se querría porque el destino —una entrega vecinal, sin frío— lo va a tener horas a temperatura ambiente. La batata, si se saca, se levanta con horquilla clavada lejos del centro de la mata; nunca se arranca.\n\nEn el puesto —mesa a la sombra, lejos del compost y de donde entran animales, con agua y jabón al lado— el acondicionamiento va en orden. Descarte primero: lo podrido y lo herido sale antes que nada, porque una unidad podrida no es una unidad perdida sino un foco que emite etileno y micelio a sus vecinas durante horas; se aleja y se composta. Selección después: la piel raspada y la mancha incipiente van al lote de consumo inmediato, nunca al que se guarda, porque lo que se guarda tiene que ser lo mejor y no el sobrante. Lavado solo donde compensa, con agua que se cambia y enjuague final de calidad potable, y siempre cerrado con oreo a la sombra antes de envasar; con la humedad de estos días conviene cepillar en seco más que lavar. Y calibrado al final, con una tabla de agujeros o un palo marcado, sabiendo que lo que importa no es la precisión sino que «grande» signifique lo mismo dentro de tres semanas y con otra persona clasificando.\n\nSe anota: fecha, cultivo y cama de origen en cada cajón, más kilos cortados y kilos que salieron clasificados, que dan el rendimiento comercial. Sin ese dato cada problema es un incidente aislado; con él, tres incidentes son un patrón.\n\nQué no haría: no llenaría los cajones por encima del borde, porque al apilar el fondo del de arriba aplasta la capa de abajo; no usaría sacos de fertilizante ni ningún envase que haya tenido agroquímicos; no apoyaría producto en el suelo; no dejaría el tanque de lavado con agua al terminar, porque en zona con dengue endémico eso es criadero, así que los cajones se guardan boca abajo; y no entregaría lo dudoso «para no desperdiciar», porque quien recibe recuerda la unidad podrida y no las otras nueve.",
+      "criterios": [
+        "Decide sobre la batata usando la humedad del suelo como parte del índice y propone una cata antes de sacar.",
+        "Contempla el rocío como excepción a «cosechar temprano» y define qué pasa con el producto si se corta mojado.",
+        "Ordena la mañana por tasa respiratoria y por la regla de ir de lo limpio a lo sucio, no por comodidad.",
+        "Reconoce que la ventana matinal en Santa Cruz es corta y que eso obliga a preparar todo la noche anterior.",
+        "Cosecha el culantro por hojas externas dejando el meristemo de la roseta, y descarta las plantas con vara floral.",
+        "Corta el ají dulce con tijera dejando pedúnculo y justifica la decisión de color por ser no climatérico.",
+        "Describe la cosecha del racimo entre dos personas, con hombro acolchado, y justifica cortar más verde por un destino sin frío.",
+        "Levanta la batata con horquilla en lugar de arrancarla y menciona la fragilidad de la piel.",
+        "Ejecuta el acondicionamiento en el orden correcto: descarte, selección, lavado con oreo y calibrado.",
+        "Explica por qué lo dudoso va a consumo inmediato y no al lote que se guarda.",
+        "Anota trazabilidad por cama y calcula el rendimiento comercial como kilos clasificados sobre kilos cortados.",
+        "Nombra al menos tres prácticas que no haría: envase de agroquímicos, llenado por encima del borde o dejar agua estancada, que en zona con dengue es criadero."
+      ],
+      "explicacion": "La respuesta buena no es la que recita las cuatro operaciones del acondicionamiento, sino la que encadena decisión con mecanismo: la lluvia del jueves cambia el índice de la batata, el rocío invierte la regla de la hora, el orden de los cultivos sale de la tasa respiratoria y de la circulación sanitaria, y el punto de corte del plátano se decide hacia atrás desde un destino que no tiene frío. Lo que separa una respuesta correcta de una excelente es la sección de lo que NO se hace: casi toda la pérdida evitable de una mañana de cosecha viene de tres gestos —tirar en vez de cortar, llenar por encima del borde y dejar producto al sol— y de un envase equivocado."
+    }
+  ]
+}

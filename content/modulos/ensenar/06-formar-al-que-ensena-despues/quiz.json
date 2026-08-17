@@ -1,0 +1,124 @@
+{
+  "preguntas": [
+    {
+      "id": "robustez-minimo",
+      "tipo": "opcion_multiple",
+      "enunciado": "La tabla de robustez lista cada tarea crítica y cuánta gente puede ejecutarla y además explicarla sin ayuda. ¿Qué es correcto sobre cómo se lee y se usa?",
+      "opciones": [
+        "El número del proyecto es el más bajo de todas las filas, no el promedio: un uno en cualquier fila condena al conjunto.",
+        "Se escribe mientras todo funciona, porque hacerla después de la caída es imposible: el que sabía es justamente el que no está.",
+        "El orden de trabajo sale de cruzar frecuencia de uso con daño de hacerlo mal, no del prestigio de la tarea.",
+        "Si el promedio de personas por tarea es alto, el proyecto ya es robusto aunque alguna tarea la sepa una sola persona."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es la incorrecta y es el error más común: promediar esconde exactamente lo que hay que ver. La robustez se comporta como una cadena, se corta por el eslabón débil; tres tareas con cinco personas cada una no compensan una sola tarea que sabe una sola persona, porque el día que esa persona falta lo que se detiene es esa tarea y no el promedio. Por eso el número del proyecto es el mínimo, y por eso la fila que da uno y se usa cada semana es la primera que hay que atacar."
+    },
+    {
+      "id": "a-quien-elegir",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué predice de verdad que alguien va a enseñar bien una práctica del huerto?",
+      "opciones": [
+        "Que aprendió hace poco y todavía recuerda dónde se atascó, porque tiene los pasos frescos y separados.",
+        "Que puede decir «no sé» en público, porque quien no admite un vacío lo rellena inventando y lo inventado se propaga con el prestigio de quien lo dijo.",
+        "Que va a seguir viviendo en la zona, porque formar a alguien que se va en seis meses es tirar el trabajo.",
+        "Que tiene la mejor parcela del barrio, porque quien mejor ejecuta es también quien mejor explica."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta invierte el hallazgo central del módulo. Producir bien y explicar bien son habilidades distintas, y el experto tiene los pasos agrupados en paquetes cerrados que ya no puede abrir: cuando le preguntan cómo lo hace, informa de buena fe tres pasos donde hay catorce. La mejor parcela indica competencia práctica y no dice nada sobre la capacidad de descomponerla; el vecino que aprendió hace ocho meses suele explicar mejor porque acaba de pasar por la dificultad."
+    },
+    {
+      "id": "cesion-gradual",
+      "tipo": "opcion_multiple",
+      "enunciado": "Durante la etapa de «conduce con respaldo», el aprendiz lleva la sesión entera y el formador está presente. ¿Qué corresponde hacer?",
+      "opciones": [
+        "Sentarse atrás, en silencio, e intervenir solo si el aprendiz lo pide.",
+        "Anotar lo que haga falta corregir y conversarlo después, no delante del grupo.",
+        "Interrumpir de inmediato si aparece un riesgo físico para alguien, que es la única excepción.",
+        "Completar y matizar sobre la marcha lo que el aprendiz explique de forma incompleta, para que el grupo no se lleve una versión pobre."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el modo de fallo más frecuente de esta etapa, y lo comete el formador, no el aprendiz. Cada «una cosita nomás» le dice al grupo que la persona que está al frente no es la referencia, y el efecto acumulado es que el aprendiz nunca llega a conducir de verdad: la organización cree que tiene dos personas capacitadas y tiene una y media. Una versión algo más pobre en una sesión es un precio pequeño comparado con no formar nunca a nadie; lo incompleto se corrige después, en la conversación posterior y en la carpeta."
+    },
+    {
+      "id": "carpeta-prueba",
+      "tipo": "verdadero_falso",
+      "enunciado": "La carpeta del facilitador se da por terminada cuando quien la escribió considera que ya está completa y bien redactada.",
+      "respuesta": false,
+      "explicacion": "Falso. La carpeta se valida como se valida una ficha: se le entrega a alguien que estuvo en dos sesiones, se le pide que prepare la siguiente sin preguntar nada, y cada pregunta que igual tuvo que hacer marca una hoja que falta. Quien la escribió es la peor persona para juzgarla, porque la maldición del conocimiento le impide ver los huecos: para él ese paso no existe. Y la carpeta se entrega además para que la modifiquen; una que vuelve idéntica un año después es señal de que no se usó."
+    },
+    {
+      "id": "deriva",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un facilitador que formaste ya formó a otro, y ese tercero enseña la misma práctica a su manera. ¿Qué es correcto sobre la deriva de contenido?",
+      "opciones": [
+        "No es mala fe: cada persona recorta lo que no entendió del todo, agrega lo que a ella le funcionó y suaviza lo que le parece exagerado.",
+        "Hay que separar la adaptación local, que es justamente lo que se buscaba, de la pérdida del porqué, que convierte el paso en rito.",
+        "Se detecta yendo a una sesión de la tercera generación como un participante más y escuchando, no preguntando si se está siguiendo la carpeta.",
+        "Cualquier diferencia respecto de la carpeta original es deriva y hay que corregirla para mantener la calidad."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta confunde adaptación con degradación. Que alguien cambie el material, el calendario o la forma de explicarlo según su comunidad es el objetivo del módulo, no un defecto; una técnica afinada en un sitio tiene condiciones de borde y debe adaptarse cuando cambian. Lo que sí es problema es que se caiga el mecanismo y quede el gesto: sin el porqué, el paso se abandona el día que hay prisa o se aplica donde no corresponde. Y perseguir toda diferencia además destruye la relación con la única gente que te trae información del terreno."
+    },
+    {
+      "id": "sin-autoridad",
+      "tipo": "verdadero_falso",
+      "enunciado": "En un proyecto comunitario y gratuito, exigir un formulario de autorización antes de que alguien dé una sesión con el material del proyecto es una forma razonable de sostener la calidad.",
+      "respuesta": false,
+      "explicacion": "Falso. No hay autoridad sobre nadie: nadie cobra de ti, nadie te reporta y nadie puede ser despedido, así que el trámite no impide nada — solo agrega fricción. El resultado predecible es que la gente enseñe igual pero sin avisarte, que es la peor opción posible, porque ahí sí pierdes toda la información sobre lo que se está enseñando. Lo que funciona es un núcleo invariante corto, ir a escuchar sesiones de la tercera generación y la revisión entre pares; y lo único que de verdad controlas es a qué le prestas tu nombre, tus materiales y tu invitación."
+    },
+    {
+      "id": "reciprocidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es correcto sobre lo que se le devuelve a quien enseña gratis?",
+      "opciones": [
+        "Enseñar nunca debe costarle dinero del bolsillo: cubrir transporte y refrigerio no es pagar un sueldo, es no cobrarle por su trabajo voluntario.",
+        "El reconocimiento público es moneda real y cuesta cero, y su forma más concreta es que la comunidad sepa que a esa persona se le pregunta directamente.",
+        "Pagar por taller convierte la reciprocidad en transacción, y cuando el pago se acaba se acaba la actividad, aunque antes se hiciera sin pago.",
+        "Como el proyecto es gratuito, lo coherente es que quien enseña asuma sus propios costos: si no puede, es que no tenía verdadera vocación."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta suena a coherencia y es un filtro por bolsillo: deja enseñando solo a quien puede permitirse perder días de trabajo, que es exactamente lo contrario de un proyecto que existe para que la comunidad progrese. Enseñar cuesta el día que no se trabajó la parcela, el pasaje, el crédito del teléfono y el desgaste de las herramientas; un sistema que ignora ese costo dura hasta que la persona hace la cuenta y se retira sin explicar por qué. La salida no es un tarifario sino que nadie pierda ingresos por enseñar, y si el proyecto no puede cubrir el traslado, la sesión se hace donde nadie tenga que viajar."
+    },
+    {
+      "id": "plan-de-sucesion-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Rizoma del Sur lleva dos años funcionando y todo lo que se enseña pasa por una sola persona: convoca, prepara, demuestra, contesta las preguntas difíciles y decide qué se hace cuando anuncian surazo. Escribe el plan de sucesión completo para los próximos dos años: cómo se hace el diagnóstico y qué se prioriza, a quién se elige y con qué criterios, cómo se cede la sesión por etapas, qué se entrega y dónde se guarda, cómo se sostiene la calidad sin autoridad, qué se le devuelve a quien enseñe y cómo se llega a una red en lugar de un relevo. Di también qué se hace el día que alguien de la red te contradice con un resultado propio, y dónde está el límite de lo que puedes afirmar por escrito.",
+      "respuestaModelo": "El diagnóstico va primero y es una hoja incómoda: una fila por tarea crítica —llenar y sembrar bolsas de vivero, hacer esquejes de ají dulce y de culantro, sacar hijuelos de yautía, injertar frutales, voltear la pila de compost, operar el riego en plena seca, cerrar el vivero cuando entra un surazo, conducir un taller, llevar el registro de la parcela demostrativa— y en cada fila los nombres de quienes pueden hacerla solos y además explicarla. La robustez del proyecto es el mínimo de esa columna, no el promedio, y hoy con seguridad da uno en casi todas las filas y con el mismo nombre. La prioridad sale de cruzar frecuencia con daño: se empieza por las bolsas y los esquejes de culantro y ají dulce, que se hacen cada semana y son lo primero que un vecino necesita en su patio, y se atiende sin demora el riego durante la seca, porque ahí una semana sin nadie que sepa no se recupera con buena voluntad. El injerto de frutales, más vistoso y de ventana corta, va después.\n\nA los candidatos no se los recluta preguntando quién quiere enseñar, porque esa pregunta la contesta el que disfruta hablar delante de gente: se los identifica observando quién, en el último taller, se dio vuelta a explicarle al de al lado sin que nadie se lo pidiera. Se eligen tres y no uno, para no reproducir el punto único de fallo un nivel más abajo, y se eligen distintos entre sí a propósito: alguien de Prados del Sur y alguien de más lejos, alguna mujer que maneje el huerto de su casa —que en esta zona suele ser quien realmente lo sostiene, y a quien hay que facilitarle horario y lugar— y alguien joven. Los criterios son permanencia, paciencia observable, credibilidad ante los suyos, capacidad de decir «no sé» y haber fallado y seguido; no la calidad de su parcela, porque el que mejor ejecuta tiene los pasos agrupados y ya no los ve. Antes de invitar se pregunta qué meses tiene libres, sabiendo que en siembra y cosecha nadie tiene una tarde.\n\nEl traspaso es coenseñanza con cesión gradual, en cinco etapas con condición de salida: observa como participante y sale cuando puede contar la sesión entera en orden; asiste preparando materiales, estaciones y tiempos, que es la mitad invisible del oficio; coenseña quince o veinte minutos con guion propio, sin ser corregido delante de la gente salvo por seguridad; conduce con respaldo mientras el formador se sienta atrás y se calla, que es la etapa donde el formador es el que falla; y conduce solo, con conversación al día siguiente sobre qué información faltaba en el momento de decidir. Eso exige sesiones chicas y frecuentes: de octubre a abril hay material vivo que mostrar, y en la seca hay más tiempo para corregir carpetas y hacer la revisión entre pares.\n\nSe entrega la carpeta del facilitador: fichas con pasos observables y criterio de éxito, guion con tiempos, materiales por persona, las diez preguntas que siempre hacen con su respuesta escrita, la lista de lo que sale mal, los avisos de seguridad, los datos de la parcela y la fecha con el nombre de quien la revisó. Se guarda en papel en el sitio, en copia digital y en copia completa en la casa de cada facilitador, porque una carpeta que solo existe en Rizoma reproduce el problema que vino a resolver, y se entrega para que la modifiquen, con un punto donde las mejoras vuelven al tronco común.\n\nLa calidad se sostiene sin mandar a nadie: un núcleo invariante de media hoja —enseñanza gratuita, lo que no se sabe se dice, no se vende nada en la sesión, nada con riesgo sin protección, las fallas se muestran y toda ficha lleva sus condiciones de borde—; la medición de la deriva yendo a escuchar sesiones de la tercera generación, distinguiendo la adaptación local de la pérdida del porqué; y la revisión entre pares. Solo el daño físico y la venta encubierta exigen actuar, y lo único que se controla es a qué se le presta el nombre, el material y la invitación.\n\nLa reciprocidad se diseña explícita: semilla del banco comunitario y material de propagación de yautía, gandul o culantro, plantines del vivero, acceso a la carretilla y el tanque, una faena colectiva en su terreno, y el reconocimiento de que a esa persona se le pregunta directamente. El transporte y el refrigerio los cubre el proyecto, y si no alcanza la sesión se hace donde nadie deba viajar. Se llega a red y no a relevo cuando hay núcleo común, encuentro periódico y especialización repartida, y la prueba es que dos facilitadores resuelvan algo juntos sin que yo me entere; la métrica pasa a ser cuántos enseñan sin mí y cuántos de ellos ya formaron a otro.\n\nEl día que alguien me contradice con un resultado propio, lo que corresponde es decirlo en público —«esto lo estaba explicando mal y él lo hace mejor, así queda en la carpeta»—, porque defenderse enseña que superarme tiene consecuencias y me deja sin mi mejor fuente de información. Y el límite: precios, normativa de semillas, permisos, plazos y obligaciones tributarias no se afirman por escrito ni se deducen por analogía; se consultan con la autoridad competente, con un contador local o con una institución de investigación agrícola del departamento. En material que va a circular sin mí, un vacío admitido vale infinitamente más que una cifra inventada.",
+      "criterios": [
+        "Empieza por el diagnóstico: tabla de tareas críticas con nombres, leyendo el mínimo y no el promedio.",
+        "Prioriza por frecuencia y daño, no por prestigio, y nombra tareas reales del sitio (bolsas, esquejes, riego en la seca, surazo).",
+        "Elige tres candidatos y no uno, y justifica por qué el mejor productor no es automáticamente el mejor candidato.",
+        "Usa criterios de selección correctos: permanencia, paciencia observable, credibilidad ante los suyos, decir «no sé», haber fallado; y evita elegir por afinidad o por poder local.",
+        "Describe la cesión gradual en etapas con condición de salida, e identifica que la etapa de respaldo falla por culpa del formador que no se calla.",
+        "Enumera el contenido de la carpeta —incluidas las preguntas frecuentes, lo que sale mal y la fecha de revisión— y la guarda en copias repartidas, una por casa.",
+        "Menciona la prueba de aceptación de la carpeta: preparar una sesión sin preguntar nada, y cada pregunta es una hoja que falta.",
+        "Sostiene la calidad con núcleo invariante corto, medición de la deriva yendo a escuchar y revisión entre pares, sin inventar mecanismos de control o trámite.",
+        "Distingue adaptación local legítima de pérdida del porqué, y limita la intervención al daño físico y a la venta encubierta.",
+        "Diseña la reciprocidad en especie y afirma que enseñar no debe costar dinero del bolsillo de quien enseña.",
+        "Explica cómo se pasa de estrella a red —núcleo común, encuentro periódico, especialización repartida— y da la métrica: cuántos enseñan sin ti y cuántos ya formaron a otro.",
+        "Responde bien al ser superado —reconocerlo en público y actualizar la carpeta— y marca el límite de honestidad: precios, normativa y trámites se consultan con la autoridad competente, un contador local o una institución de investigación agrícola."
+      ],
+      "explicacion": "La respuesta completa recorre el ciclo entero de la sucesión —diagnosticar, elegir, ceder, entregar, sostener, devolver y tejer red— y lo aplica al sitio real en lugar de quedarse en generalidades. Las dos partes que más se olvidan son las que más deciden si el plan funciona: que la carpeta viva en copias repartidas por varias casas y no en el sitio, y que la calidad se sostenga con evidencia y pares en vez de con permisos que nadie está obligado a pedir. El cierre sobre la honestidad no es un añadido moral: material que circula sin su autor propaga cualquier cifra inventada con el prestigio del proyecto detrás."
+    }
+  ]
+}

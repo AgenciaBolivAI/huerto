@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "p1",
+      "tipo": "opcion_multiple",
+      "enunciado": "Tenés un huerto de cincuenta metros cuadrados en plena seca y querés saber cuántos baldes de veinte litros hay que acarrear por día. ¿Qué razonamientos son correctos?",
+      "opciones": [
+        "Un milímetro de lámina es un litro por metro cuadrado, así que cinco milímetros sobre cincuenta metros cuadrados son doscientos cincuenta litros, unos doce o trece baldes diarios",
+        "La cifra baja mucho si solo se moja la superficie ocupada por las plantas: si ocupan el cuarenta por ciento, hay que mojar veinte metros cuadrados y no cincuenta",
+        "El número real de tu patio se mide con una lata recta a cielo abierto y un cuaderno de baldes, y ese registro vale más que cualquier promedio publicado",
+        "Como el consumo se estima en milímetros por día, el cálculo hay que hacerlo sobre la superficie total del terreno, incluidos pasillos y suelo desnudo, porque el clima demanda igual en todos lados"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son la aritmética completa de la lección: la equivalencia milímetro-litro, la superficie mojada como variable de decisión y la medición propia como fuente de verdad. La cuarta confunde la demanda potencial del clima con el agua que vos tenés que acarrear: es cierto que el sol pega igual en todo el terreno, pero el suelo desnudo de un pasillo solo evapora —no produce nada— y mojarlo es puro desperdicio. La superficie que cuenta para el balde es la que tiene raíces debajo, y por eso reducir el área mojada es el ajuste más barato que existe: no cambia la cosecha y puede partir el acarreo por la mitad."
+    },
+    {
+      "id": "p2",
+      "tipo": "verdadero_falso",
+      "enunciado": "Regar dos litros por metro cuadrado todos los días equivale, al cabo de una semana, a haber regado catorce litros por metro cuadrado de una sola vez.",
+      "respuesta": false,
+      "explicacion": "En litros salidos de la canilla sí suman lo mismo, pero en agua puesta a disposición de la planta no se parecen en nada. Dos litros por metro cuadrado son dos milímetros, que mojan unos dos centímetros de suelo, y esos dos centímetros están secos a media mañana por evaporación: se regó la evaporación, no la planta. Catorce litros de una vez mojan del orden de catorce centímetros de perfil, donde el agua queda protegida del sol y disponible durante días. Y hay un efecto acumulativo peor: la raíz crece donde encuentra agua, así que la regada diaria y superficial construye un sistema radicular somero, con un depósito minúsculo y totalmente dependiente de que vos riegues sin fallar un solo día."
+    },
+    {
+      "id": "p3",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué mecanismos el acolchado reduce el agua que hay que acarrear?",
+      "opciones": [
+        "Intercepta la radiación solar antes de que llegue al suelo, y sin esa energía no hay evaporación por caliente que esté el aire",
+        "Interrumpe la continuidad de los poros finos y detiene el ascenso capilar, que es el bombeo por el que un suelo desnudo se seca también en profundidad",
+        "Impide que la gota golpee la tierra y forme la costra superficial que sella los poros, con lo que la infiltración se mantiene alta",
+        "Cierra los estomas de las hojas y así reduce la transpiración del cultivo, que es la mayor de las salidas de agua"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los tres primeros son mecanismos físicos reales que actúan sobre las pérdidas del suelo: energía, capilaridad e infiltración; a ellos se suman el aire quieto saturado entre las briznas y la supresión de malezas. La cuarta es falsa y confunde dos cosas distintas: el acolchado está sobre el suelo y no toca la hoja, y los estomas los abre y cierra la planta según su propio balance hídrico y su necesidad de fotosíntesis. Además, la transpiración no es una pérdida que convenga cortar: es consumo útil, va acompañada de crecimiento y de transporte de nutrientes. Lo que el acolchado elimina es la evaporación desde el suelo, que es pérdida pura porque nunca pasó por la planta."
+    },
+    {
+      "id": "p4",
+      "tipo": "verdadero_falso",
+      "enunciado": "Que las hojas grandes del huerto estén marchitas a las dos de la tarde, con sol fuerte, es la señal de que hay que regar de inmediato.",
+      "respuesta": false,
+      "explicacion": "Es el error de lectura más común del huerto familiar y produce riego de más todos los días. A media tarde la planta pierde agua por los estomas más rápido de lo que la raíz puede reponerla aunque el suelo esté húmedo, así que se afloja para cerrar la canilla y al bajar el sol se recupera sola: es una respuesta normal, no un diagnóstico. La señal de sed real es estar marchita a las siete de la mañana, con el suelo fresco y sin haber pasado el calor, porque significa que ni con toda la noche por delante consiguió reponerse. Y antes de cualquier marchitez ya hay señales más finas: verde apagado o azulado, hoja enrollada y crecimiento frenado. La decisión, de todos modos, no se toma mirando la planta sino cavando cinco o diez centímetros y apretando un puñado de tierra."
+    },
+    {
+      "id": "p5",
+      "tipo": "opcion_multiple",
+      "enunciado": "Se acerca la seca y hay que decidir en qué gastar el esfuerzo. ¿Qué medidas rinden más frente a lo que cuestan, según el orden de la lección?",
+      "opciones": [
+        "Achicar el área regada: veinte metros cuadrados bien regados y acolchados dan más comida que sesenta mal atendidos, y la demanda baja en proporción directa",
+        "Tapar todo el suelo con cascarilla, pasto seco u hojas, que corta evaporación, costra y malezas con material del propio patio",
+        "Cambiar la lista de siembra hacia especies que aguantan —batata, yuca, gandul, ají dulce acolchado— y dejar las hojas para poca superficie y bajo sombra",
+        "Comprar un tanque grande, porque almacenar agua de las lluvias es lo que permite cubrir los cinco meses de seca sin depender de bajar la demanda"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son gratis o casi y actúan sobre la demanda, que es el lado de la balanza que uno controla sin plata. La cuarta suena a solución definitiva y no lo es: la aritmética la desmiente. Cincuenta metros cuadrados a cinco milímetros diarios durante ciento cincuenta días necesitan unos treinta y siete mil litros, de modo que un turril de doscientos litros es menos de un día y un tanque de mil son cuatro días. Almacenar es valioso —tapa un veranillo, cubre un corte de agua—, pero compra días, no compra la estación: la seca se gana bajando la demanda. Y todo lo almacenado va con tapa firme, porque un recipiente destapado con agua limpia en Santa Cruz es criadero de Aedes aegypti antes que reserva de riego."
+    },
+    {
+      "id": "p6",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué afirmaciones sobre la olla de riego enterrada son correctas?",
+      "opciones": [
+        "El agua atraviesa la pared porosa a la velocidad a la que el suelo de afuera la reclama, así que el caudal cae solo cuando la tierra está húmeda",
+        "Es un sistema pasivo sin temporizador, sensor ni válvula, y por eso sigue funcionando igual cuando se corta la luz",
+        "Casi no hay pérdida por evaporación, porque el agua entrega directamente en la zona de raíces y nunca queda expuesta en la superficie",
+        "Como entrega de forma continua, sustituye al acolchado y hace innecesario tapar el suelo alrededor de la planta"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen exactamente por qué la vasija de barro sin vidriar es la mejor relación entre resultado y costo que existe sin bomba ni presión: es un sistema por demanda, con contrapresión, imposible de desbordar e imposible de dejar seco por un temporizador mal puesto. La cuarta es falsa y mezcla dos problemas distintos. La olla resuelve la entrega —que el agua llegue abajo sin escurrirse ni evaporarse—, pero no resuelve las pérdidas del suelo que la rodea: ese suelo, si queda desnudo, sigue evaporando, sigue bombeando agua desde abajo por ascenso capilar, sigue formando costra y sigue dejando nacer malezas. Las dos medidas son complementarias, y de hecho la olla rinde bastante más bajo acolchado."
+    },
+    {
+      "id": "p7",
+      "tipo": "verdadero_falso",
+      "enunciado": "El agua del último enjuague de la ropa se puede juntar en un turril y usarla durante la semana para regar la lechuga y el culantro.",
+      "respuesta": false,
+      "explicacion": "Hay dos errores graves en una sola frase. El primero es almacenarla: el agua gris trae materia orgánica, se pudre en horas, empieza a oler y, en un recipiente destapado, se convierte en criadero de mosquitos en una zona con dengue endémico; se usa el mismo día y no se guarda. El segundo es el destino: se aplica al suelo y nunca sobre hojas que se comen crudas, así que la lechuga y el culantro son justamente los peores candidatos, mientras que frutales, plátano y ornamentales son los adecuados. A eso se suman las reglas de origen: nada con lejía, cloro ni desinfectantes, y nada que haya tocado carne cruda, pañales o el baño, que eso ya no es agua gris. Y para cualquier reúso mayor que un balde doméstico hay que consultar al municipio y a la autoridad sanitaria, que son quienes definen qué corresponde."
+    },
+    {
+      "id": "p8",
+      "tipo": "abierta",
+      "enunciado": "Una familia del barrio tiene sesenta metros cuadrados de patio sobre arcilla expansiva, canilla con cortes frecuentes, un techo de treinta metros cuadrados, un turril de doscientos litros y ninguna herramienta más que balde, azadón y machete. Estamos en abril y en un mes empieza la seca. Diseñá su plan de agua completo: cuánta necesitan, qué se decide antes de empezar, cómo se riega, cómo se pierde menos y qué se hace cuando el agua escasea. Justificá cada decisión con el mecanismo que la hace necesaria, y decí explícitamente qué NO les vas a prometer.",
+      "respuestaModelo": "Lo primero es poner un número, porque «bastante» no permite decidir nada. Un milímetro sobre un metro cuadrado es un litro, así que la cuenta es superficie mojada por lámina. Si en la seca una cama bien cubierta de hojas pide cuatro a seis milímetros diarios, sesenta metros cuadrados enteros serían del orden de trescientos litros por día: quince baldes, todos los días, cinco meses. Eso no lo sostiene nadie, y decirlo de entrada es parte del plan.\n\nAntes de tocar la tierra hay mediciones que cuestan cero: una lata recta a cielo abierto como pluviómetro —dos centímetros adentro son veinte milímetros, veinte litros por metro cuadrado— y la calibración de la regadera con una botella de dos litros. Sin eso, «le eché una regada» es una sensación. Y una tercera se hace una sola vez: regar una cantidad medida sobre un pedazo conocido, esperar una hora y cavar con el machete hasta ver dónde termina lo mojado; así saben cuántos baldes cuesta llegar a la raíz en su suelo.\n\nLa decisión estructural es achicar. En la seca no se riega el patio: se riega una parte. Veinte metros cuadrados bien atendidos rinden más comida que sesenta mal atendidos, y el resto se tapa con acolchado hasta las lluvias. Sobre esos veinte, además, solo se moja la superficie con raíces debajo, no los pasillos.\n\nEl segundo movimiento es el acolchado, que en arcilla expansiva vale doble. Cinco a diez centímetros de cascarilla de arroz, pasto seco u hojas, dejando un palmo libre alrededor del tallo y sin enterrar el material, porque el leñoso incorporado se lleva el nitrógeno. Funciona por cuatro vías: intercepta la radiación que aporta la energía para evaporar; corta la mecha del ascenso capilar, que es lo que seca un suelo desnudo también en profundidad; deja aire quieto y saturado que frena el gradiente; y evita la costra superficial que sella los poros cuando la gota golpea la arcilla desnuda. Además impide que el suelo se agriete, y aquí la grieta es un desagüe: el agua de riego se va por ahí sin mojar la zona de raíces y uno cree que regó.\n\nLa forma de regar cambia por completo: hondo y espaciado. Quince o veinte milímetros cada tres o cuatro días en vez de dos diarios, porque dos milímetros mojan dos centímetros que se secan a media mañana y, peor, entrenan a la raíz a quedarse arriba, dejando a la planta dependiente de que nadie falle un día, justo lo que no pueden garantizar con cortes de agua. En suelo agrietado se riega en pulsos: un tercio, esperar diez o quince minutos a que el suelo se hinche y cierre, y el resto. Temprano, al pie y no sobre las hojas, porque mojar el follaje al anochecer lo deja húmedo doce horas, que es lo que los hongos necesitan.\n\nCuándo regar se decide con la prueba del puñado: apartar el acolchado, cavar cinco o diez centímetros y apretar. Polvo, hay que regar; terrón que se sostiene y mancha la mano, está en su punto; brilla o chorrea, regar sería daño. Siempre en el mismo sitio y a la misma profundidad. Y no confundir el marchitamiento de las dos de la tarde, que es normal, con la marchitez de las siete de la mañana, que sí es sed.\n\nCon herramientas mínimas, la entrega mejora con alcorques —anillo de tierra alrededor de las plantas grandes para que el agua infiltre en vez de correrse—, botellas goteadoras para plantas separadas y, sobre todo, ollas de barro sin vidriar enterradas hasta el cuello y tapadas, que entregan a la velocidad a la que el suelo reclama y no se evaporan. Son pasivas: con la luz cortada funcionan igual, que es exactamente lo que ese patio necesita. El agua gris de lavar verduras y del último enjuague va al frutal y al plátano, el mismo día, al suelo, nunca sobre hojas que se comen crudas y sin almacenarla.\n\nEl techo aporta: treinta metros cuadrados por veinte milímetros son unos seiscientos litros, y conviene usar abril para llegar con el turril lleno. Pero hay que decir la verdad aritmética: doscientos litros son menos de un día de riego del patio entero, así que el turril tapa un veranillo o un corte de agua y no cubre la seca. Va tapado con tapa firme, igual que baldes, tinas y llantas, porque el Aedes cría en agua limpia estancada en recipientes.\n\nEl trazado se ordena por sed: las de mayor consumo cerca de la canilla y del agua gris, las que aguantan —batata, yuca, gandul, ají dulce acolchado— lejos, y las hojas en poca superficie y bajo una ramada de palos con hojas de palma, porque una lechuga con déficit no sale chica, sale amarga y espigada. Y si el agua escasea se raciona por etapa: prendimiento, floración y llenado son intocables; fuera de esas ventanas un déficit moderado cuesta poco.\n\nLo que no se les promete: ninguna cifra de litros exacta para su patio, porque eso lo dice su lata y su cuaderno; ningún dato de tarifas u horarios de la cooperativa de agua, que hay que preguntar allí; ninguna autorización para reusar agua de la casa, que la define la autoridad sanitaria y el municipio; y nada sobre la calidad del agua de un pozo, que se analiza en un laboratorio de suelos y aguas.",
+      "criterios": [
+        "Pone un número usando la equivalencia milímetro-litro y lo enfrenta al acarreo real en baldes por día",
+        "Propone medir en el propio patio con pluviómetro de lata, calibración de la regadera y el pozo cavado para ver el frente húmedo",
+        "Decide achicar el área regada y mojar solo la superficie con raíces, no el terreno entero",
+        "Justifica el acolchado con al menos tres de sus cuatro mecanismos, nombrando el ascenso capilar y la costra superficial",
+        "Vincula el acolchado con las grietas de la arcilla expansiva y explica por qué la grieta se traga el agua de riego",
+        "Sustituye la regada diaria por riego hondo y espaciado y explica el efecto sobre la profundidad de la raíz",
+        "Incluye el riego en pulsos para que el agua entre en suelo seco o costrado en vez de escurrirse",
+        "Usa la prueba del puñado para decidir y distingue el marchitamiento de mediodía de la sed de la mañana",
+        "Elige métodos de entrega sin sistema —alcorque, botella, olla de barro— y los justifica como pasivos frente a los cortes de energía",
+        "Aplica las reglas del agua gris: mismo día, al suelo, nunca sobre hojas que se comen crudas y sin almacenar",
+        "Calcula la captación del techo y admite explícitamente que almacenar compra días y no la estación, con los recipientes tapados por el dengue",
+        "Agrupa por sed y raciona por período crítico de riego, y declara con honestidad qué no puede prometer y a qué autoridad o institución hay que consultar"
+      ],
+      "explicacion": "La respuesta completa recorre el problema en el orden en que hay que resolverlo: primero el número, después la medición propia, después las decisiones que bajan la demanda —área, acolchado, especies, sombra, agrupación—, después la forma de entregar lo que queda, y solo al final el almacenamiento, que es la parte cara y la que menos rinde. Los errores típicos son empezar por comprar tanque o manguera, prometer que el turril cubre la seca, mantener la regada diaria «para que no sufran», mojar toda la superficie por parejo, y confundir el marchitamiento de mediodía con sed. El caso además fuerza dos decisiones específicas del contexto: sobre arcilla expansiva el acolchado deja de ser una mejora y pasa a ser lo que hace viable la seca, y con cortes de energía frecuentes cualquier esquema que dependa de bombear pierde justo los días que no se pueden perder. Y el cierre honesto es parte del ejercicio: se explica el mecanismo y se remite a la cooperativa, al municipio, a la autoridad sanitaria y a un laboratorio o institución agrícola para todo lo que este curso no puede afirmar sin inventarlo."
+    }
+  ]
+}

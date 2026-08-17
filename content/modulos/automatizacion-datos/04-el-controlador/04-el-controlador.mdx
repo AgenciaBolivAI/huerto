@@ -1,0 +1,241 @@
+Esta es la lección más técnica del curso y la que menos hay que explicar a alguien que programa. Así que
+en vez de explicar qué es un microcontrolador, va a tratar de lo que realmente decide si el montaje
+sobrevive: **la diferencia entre un circuito que funciona en la mesa y uno que sigue funcionando ocho
+meses después, mojado, caliente y solo.**
+
+## Qué hace falta de verdad
+
+<Diagrama
+  src="no-hace-falta-una-computadora.webp"
+  alt="Dos paneles lado a lado. Panel izquierdo, marcado con una tilde verde en la esquina: un único chip pequeño dibujado liso y compacto en el centro, del que salen cinco líneas finas y cortas, cada una terminada en un icono diminuto: una onda, una pequeña rejilla cuadrada, una válvula, un reloj y un candado. Debajo, una franja de rótulo que dice LO JUSTO Y NADA MÁS. Panel derecho, marcado con una cruz roja en la esquina: una placa mucho mayor abarrotada de conectores y puertos, con una tarjeta de memoria asomando por un borde dibujada partida por una línea roja quebrada. Debajo, una franja que dice MÁS PIEZAS, MÁS QUE SE ROMPE. Arriba, NO HACE FALTA UNA COMPUTADORA."
+  pie="Leer dos sensores, mover una válvula, saber la hora y no olvidar la configuración. Eso es todo."
+/>
+
+Un controlador de riego necesita exactamente esto:
+
+**Leer una tensión analógica**, para el sensor capacitivo. Basta un conversor de diez bits.
+
+**Leer un bus digital sencillo**, para el sensor de temperatura y humedad.
+
+**Accionar una salida de potencia**, para la válvula.
+
+**Saber qué hora es**, para la ventana horaria y la base por reloj.
+
+**Y no olvidar la configuración al apagarse.**
+
+Eso es todo. **No hace falta un ordenador completo**, y elegirlo tiene un costo que se paga después.
+
+<Dato>
+La comparación honesta entre las dos familias:
+
+Un <Termino slug="microcontrolador">microcontrolador</Termino> —el chip pequeño, sin sistema
+operativo— arranca en milisegundos, consume muy poco, tolera cortes de energía sin corromper nada porque no hay sistema de archivos que corromper, y
+**hace exactamente una cosa para siempre.** Su firmware es difícil de actualizar en campo y no sirve
+para tareas complejas.
+
+**Un ordenador de placa** —con sistema operativo y tarjeta de memoria— es cómodo de programar, admite
+cualquier lenguaje y sirve para hacer de servidor. **Y tiene un problema serio en este uso: la tarjeta
+de memoria se corrompe con los cortes de energía**, que aquí son frecuentes, y su consumo es un orden de
+magnitud mayor.
+
+**La combinación correcta, si hacen falta las dos cosas, es usar ambos y separar responsabilidades**: el
+microcontrolador riega, el ordenador registra y muestra. **Si el ordenador se cae, el riego sigue.**
+
+Eso es exactamente lo que decía la lección anterior sobre no poner la decisión en el camino crítico de
+nada que pueda fallar.
+</Dato>
+
+## Conectar la válvula sin quemar nada
+
+<Diagrama
+  src="entre-el-chip-y-la-bobina.webp"
+  alt="Una cadena horizontal que cruza la imagen: en el extremo izquierdo un chip pequeño, después una línea fina en verde salvia, después una caja de esquinas redondeadas en el centro dibujada como una barrera con un hueco, después una línea terracota mucho más gruesa, y en el extremo derecho una bobina enrollada alrededor de un cilindro. Debajo de la línea gruesa hay un bloque de fuente de alimentación aparte que sube a conectarse a ella con su propia línea, claramente sin tocar el chip. Un símbolo de diodo pequeño está dibujado en paralelo con la bobina. Tres franjas de rótulo con líneas de llamada finas: una a la línea fina de la izquierda dice POCA CORRIENTE; otra a la caja barrera del centro dice AQUÍ VA EL AISLAMIENTO; y otra al diodo dice Y ESTE DIODO NO ES OPCIONAL. Arriba, ENTRE EL CHIP Y LA BOBINA."
+  pie="La válvula tiene su propia fuente y comparte solo la masa. El diodo protege lo que hay antes de él."
+/>
+
+La salida de un microcontrolador entrega unos pocos miliamperios a baja tensión. **Una bobina de válvula
+necesita bastante más.** Entre uno y otra hace falta una etapa de potencia, y hay tres opciones.
+
+**Un relé**: un contacto mecánico accionado por su propia bobina. Aísla completamente el circuito de
+control del de potencia, sirve para cualquier tensión y es lo más tolerante a errores. A cambio hace
+ruido, tiene un número finito de maniobras y es lento —irrelevante aquí, donde se conmuta unas pocas
+veces al día.
+
+**Un transistor MOSFET**: silencioso, sin desgaste y de conmutación rápida. **No aísla**, así que un
+fallo en el lado de potencia puede alcanzar al controlador.
+
+**Y un optoacoplador más transistor**: aislamiento óptico sin partes móviles. Es la solución más limpia
+y la que más se parece a lo que hace un módulo de relé decente.
+
+<Advertencia>
+Tres errores concretos que destruyen montajes, y que conviene escribir explícitamente porque no dan
+síntomas hasta que algo se rompe:
+
+**Alimentar la válvula desde el propio controlador.** La bobina consume mucho más de lo que puede dar
+un regulador de placa; el resultado es que la tensión de alimentación cae al abrir la válvula y **el
+controlador se reinicia justo en el momento crítico.** La válvula tiene su propia fuente y comparte
+únicamente la referencia de masa.
+
+**Omitir el diodo de rueda libre.** Ya salió en la primera lección y merece repetirse porque es el fallo
+más común: al cortar la corriente, el campo magnético de la bobina colapsa y genera un pico de tensión
+inverso que destruye el transistor o pega los contactos del relé.
+
+**Y no proteger las entradas.** Un cable largo hasta un sensor enterrado es una antena que capta ruido,
+y en tormenta puede captar bastante más que ruido. Una resistencia en serie y un condensador de filtro
+cuestan céntimos.
+
+Y un cuarto, más de instalación que de circuito: **la masa común mal hecha.** Si el controlador y la
+fuente de potencia no comparten una referencia sólida, las lecturas analógicas se vuelven erráticas de
+formas que parecen fallos de sensor y no lo son.
+</Advertencia>
+
+## Que siga funcionando cuando nadie mira
+
+<Diagrama
+  src="que-siga-vivo-sin-ti.webp"
+  alt="Cinco baldosas cuadradas de esquinas redondeadas dispuestas en una fila horizontal, repartidas por igual. La primera contiene un collar de perro con una pequeña chapa en forma de hueso colgando. La segunda, un símbolo de válvula cerrada con una flecha hacia abajo al lado. La tercera, una esfera de reloj con una pila pequeña adosada a un costado. La cuarta, una caja fuerte pequeña con candado. La quinta, unas marcas cortas de recuento. Cinco franjas de rótulo, una bajo cada baldosa, que dicen de izquierda a derecha: SE REINICIA SOLO; ARRANCA CERRADO; SABE QUÉ HORA ES; NO OLVIDA AL APAGARSE; CUENTA LO QUE PASA. Arriba, QUE SIGA VIVO SIN TI."
+  pie="Cinco decisiones que no se ven en el código y que deciden si el montaje llega vivo a la próxima temporada."
+/>
+
+Aquí está la parte que separa un prototipo de una instalación, y es toda ella criterio de ingeniería
+aplicado a un contexto sin supervisión:
+
+**<Termino slug="perro-guardian">Perro guardián</Termino>.** Un temporizador independiente que
+reinicia el controlador si el programa deja de avisar de que sigue vivo. Es la única defensa real contra un bloqueo, y **la mayoría de los
+microcontroladores lo traen incorporado y desactivado.**
+
+**Estado seguro al arrancar.** Al energizarse, lo primero que hace el programa es cerrar todas las
+salidas. Si no, el estado indeterminado de los pines durante el arranque puede abrir una válvula
+durante un instante —o durante mucho más si el arranque falla a medias.
+
+**Reloj de tiempo real con pila.** Sin él, tras un corte de energía el controlador no sabe qué hora es,
+y una ventana horaria basada en «horas desde que arranqué» riega a deshora después de cada apagón.
+
+**Configuración en memoria no volátil.** Umbrales, duraciones y horarios sobreviven al corte. Pero
+conviene grabar solo cuando cambian: **la memoria de un microcontrolador tiene un número limitado de
+ciclos de escritura**, y un programa que guarda el estado en cada vuelta del bucle la agota en semanas.
+
+**Y contadores de eventos.** Cuántas veces se ha abierto la válvula, cuántas lecturas inválidas ha
+habido, cuántos reinicios. Son tres números que ocupan nada y **contestan casi cualquier pregunta
+cuando algo va mal.**
+
+<Analogia>
+Es la diferencia entre **un servicio que corre en tu portátil y uno que corre en producción sin nadie
+de guardia.**
+
+El código puede ser idéntico. Lo que cambia es todo lo que rodea al código: reinicio automático,
+estado persistente, arranque en un estado conocido, y suficiente instrumentación para diagnosticar sin
+poder acceder a la máquina.
+
+**Aquí «sin poder acceder» es literal**: el controlador está en un poste, a la intemperie, y llegar
+hasta él cuesta tiempo. Todo lo que puedas contestar sin caminar hasta allí, contéstalo desde el
+diseño.
+</Analogia>
+
+## La caja, que es la mitad del trabajo
+
+<Diagrama
+  src="la-caja-es-la-mitad-del-trabajo.webp"
+  alt="Una caja rectangular cerrada dibujada en sección, montada en un poste, con la línea de junta visible alrededor de la tapa. Dos prensaestopas apuntan hacia abajo desde la cara inferior de la caja. Un cable sube desde el suelo, baja formando una U clara por debajo de la caja y vuelve a subir hasta un prensaestopas, con una gota de agua cayendo del punto más bajo de la U. En la parte alta de la caja hay dibujado un pequeño disco de respiradero. Arriba a la derecha, un símbolo de sol tachado con una cruz roja, y una visera dibujada dando sombra a la caja. Cuatro franjas de rótulo con líneas de llamada: una a la junta dice CIERRE CON JUNTA; otra a los prensaestopas dice ENTRADAS HACIA ABAJO; otra al cable en U dice LAZO PARA QUE GOTEE; y otra al respiradero dice RESPIRADERO CONTRA EL VAHO. Arriba, LA CAJA ES LA MITAD DEL TRABAJO."
+  pie="En clima tropical, un montaje electrónico falla casi siempre por causas físicas y no lógicas."
+/>
+
+Un montaje electrónico a la intemperie tropical falla casi siempre por causas físicas, no lógicas:
+
+**Caja estanca de verdad**, con junta, y con **los prensaestopas hacia abajo.** El agua no entra por la
+tapa: entra por los pasos de cable mal orientados.
+
+**Un lazo de goteo en cada cable** antes de entrar en la caja: el cable baja, hace una U y sube al
+prensaestopas. El agua que corre por el cable cae en el punto bajo de la U en vez de entrar.
+
+**Nada de empalmes dentro de la caja mojada.** Las uniones se hacen con conectores estancos o
+directamente no se hacen.
+
+**Ventilación controlada.** Una caja completamente sellada al sol condensa por dentro al enfriarse de
+noche. Existen respiraderos con membrana que dejan pasar vapor y no agua líquida, y son baratos.
+
+**Y protección mecánica del cable.** Conducto o manguera enterrada: en un entorno tropical, los
+roedores y las hormigas muerden cables, y buscar una avería intermitente en 3.666 m² cuesta más que el
+conducto.
+
+<Dato>
+Sobre la alimentación, una decisión que conviene tomar temprano: **este sistema es un candidato ideal
+para alimentación solar autónoma.**
+
+El consumo es minúsculo —un microcontrolador dormido y una válvula unos minutos al día—, no depende de
+la red, y el módulo de energía solar del curso cubre exactamente cómo dimensionarlo. **Una válvula
+biestable convierte el consumo del actuador en casi cero**, porque solo necesita un pulso.
+
+Y hay un detalle importante que enlaza con la lección de captación: **si el sistema es solar y el agua
+viene por gravedad del tanque elevado, el riego funciona sin red eléctrica en absoluto.** Eso no es una
+comodidad: es lo que hace que el vivero siga regando durante un corte prolongado, que en la zona
+ocurre.
+</Dato>
+
+<AplicarRizoma>
+**El controlador de Rizoma es un microcontrolador, no un ordenador de placa**, porque los cortes de
+energía son frecuentes en la zona y una tarjeta de memoria corrupta es un fallo silencioso y molesto.
+El microcontrolador arranca en milisegundos, consume poco y no tiene sistema de archivos que corromper.
+
+**Si más adelante hace falta registrar o mostrar datos, se añade un segundo dispositivo y se separan
+responsabilidades**: el microcontrolador riega, el otro registra y muestra. Si el segundo se cae, el
+riego sigue. Es la misma regla de la lección anterior: la decisión no depende de nada que pueda fallar.
+
+**La etapa de potencia lleva aislamiento** —módulo de relé u optoacoplador con transistor—, y no un
+MOSFET desnudo, porque el aislamiento evita que un fallo del lado de potencia alcance al controlador.
+
+**La válvula tiene su propia fuente y comparte solo la masa.** Alimentarla desde el regulador de la
+placa hace que la tensión caiga al abrir y el controlador se reinicie justo en el momento crítico.
+
+**Diodo de rueda libre siempre, entradas protegidas con resistencia y condensador, y masa común bien
+hecha.** Ese último punto produce lecturas analógicas erráticas que parecen fallos de sensor y no lo
+son.
+
+**Perro guardián activado, salidas cerradas al arrancar, reloj de tiempo real con pila, y configuración
+en memoria no volátil escrita solo cuando cambia.** Sin reloj con pila, la ventana horaria se
+desordena tras cada apagón; escribiendo la configuración en cada vuelta del bucle, la memoria se agota
+en semanas.
+
+**Tres contadores mínimos: aperturas de válvula, lecturas inválidas y reinicios.** Ocupan nada y
+contestan casi cualquier pregunta cuando algo va mal sin tener que caminar hasta el poste.
+
+**La caja es la mitad del trabajo**: estanca con junta, prensaestopas hacia abajo, lazo de goteo en cada
+cable, sin empalmes dentro, respiradero de membrana para evitar la condensación y cable protegido en
+conducto o manguera enterrada.
+
+**Y la alimentación es solar desde el diseño**, aprovechando el módulo de energía del curso. Con
+válvula biestable el consumo del actuador es casi cero, y como el agua llega por gravedad desde el
+tanque elevado, **el riego funciona sin red eléctrica en absoluto**, que es exactamente lo que hace
+falta durante un corte prolongado.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Las placas y componentes básicos se consiguen en Santa Cruz**, aunque la disponibilidad de modelos
+concretos varía. Conviene comprar repuesto de todo lo que sea crítico —controlador, módulo de relé,
+fuente— porque una avería en temporada de lluvias no admite esperar a un pedido.
+
+**La calidad de las fuentes de alimentación baratas es el punto débil más frecuente** de estos montajes.
+Una fuente que entrega menos corriente de la que promete provoca reinicios al abrir la válvula, y el
+síntoma parece un problema de software. Sobredimensionar la fuente es barato y ahorra días de
+diagnóstico equivocado.
+
+**Las tormentas eléctricas de la temporada de lluvias son un riesgo real** para electrónica conectada a
+cables largos. Protecciones contra sobretensión en la alimentación, cables lo más cortos posible y
+puesta a tierra según lo del módulo de construcción. En tormenta fuerte, desconectar es una medida
+legítima.
+
+**El calor dentro de una caja al sol supera con holgura la temperatura ambiente.** Caja en sombra
+siempre, y si no hay sombra natural, una visera. Es un detalle trivial que alarga años la vida del
+equipo.
+
+**Y conviene tener presente la alternativa hidráulica una vez más**: un temporizador de riego mecánico
+o a pilas, sin firmware ni conectividad, resuelve la capa base del sistema y no se cuelga. Si el
+objetivo es simplemente no tener que estar presente a una hora fija, **esa puede ser toda la
+automatización que el vivero necesita durante el primer año.**
+</ContextoBolivia>
+
+## Lo que sigue
+
+Con el sistema construido y funcionando, aparece el subproducto que puede acabar valiendo más que el
+riego automático en sí: **los datos.** Qué registrar, cada cuánto, dónde guardarlo y —la pregunta que
+casi nadie se hace— **qué hacer después con ello.** Es la lección siguiente.

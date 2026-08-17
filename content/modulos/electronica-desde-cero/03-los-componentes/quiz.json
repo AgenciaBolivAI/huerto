@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "electrolitico-seco",
+      "tipo": "opcion_multiple",
+      "enunciado": "Traen al taller una fuente que funciona bien en frío y, después de veinte minutos, hace que el equipo se reinicie solo. ¿Qué afirmaciones sobre el condensador electrolítico son correctas?",
+      "opciones": [
+        "Se seca porque el electrolito líquido de su interior se evapora, y el calor acelera el proceso.",
+        "Una tapa abombada o una costra marrón en la base bastan para condenarlo, sin ninguna otra medida.",
+        "Puede dar la capacidad impresa en un medidor barato y aun así no servir, porque lo que subió es su resistencia serie equivalente.",
+        "Si el medidor de capacidad devuelve el valor impreso en la carcasa, el condensador queda descartado como culpable."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa, y es la trampa que más veces hace perder una tarde. Un medidor de capacidad barato dice cuánta carga guarda la pieza, pero no mide su ESR, que es la resistencia parásita que tiene por dentro y que sube a medida que el electrolito se evapora. Un condensador con la capacidad correcta y la ESR por las nubes ya no puede absorber los tirones de corriente: la alimentación se hunde un instante y el equipo se reinicia. Por eso «lo medí y estaba bien» no cierra el caso, mientras que la tapa abombada, la costra y la edad sí bastan para cambiarlo. Y encaja con el síntoma del enunciado: anda en frío y falla en caliente."
+    },
+    {
+      "id": "sustituir-sin-romper",
+      "tipo": "opcion_multiple",
+      "enunciado": "No conseguiste las piezas idénticas para reparar el tablero de la bomba. ¿Qué sustituciones son aceptables?",
+      "opciones": [
+        "Un condensador de 470 µF y 25 V por uno de 470 µF y 35 V.",
+        "Un fusible de 2 A tipo T por otro de 2 A tipo T de otra marca, con la misma tensión.",
+        "Una resistencia de 1 kΩ de cuerpo pequeño por otra de 1 kΩ con cuerpo cerámico más grande.",
+        "Un fusible de 2 A tipo T por uno de 3 A tipo F, porque así deja de saltar en cada arranque."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta viola las dos reglas a la vez. Subir de 2 A a 3 A significa que el hilo ya no se funde a la corriente para la que está calculado el cable: el fusible deja de proteger la instalación y la corriente sigue corriendo por un conductor que no la aguanta, dentro de una pared. Y cambiar T por F es al revés de lo que hace falta: la T es retardada precisamente para aguantar el pico corto de arranque de un motor sin cortar, mientras que la F es rápida y saltará todavía más. Además, si el fusible salta en cada arranque, el fusible no es el problema: es el mensajero, y lo que hay que buscar es qué pide esa corriente. Las tres primeras suben capacidad o la dejan igual, que es siempre seguro."
+    },
+    {
+      "id": "fusible-a-quien-protege",
+      "tipo": "verdadero_falso",
+      "enunciado": "El fusible está puesto para proteger el aparato; por lo tanto, si el equipo se quemó igual, es que el fusible falló en su trabajo.",
+      "respuesta": false,
+      "explicacion": "Falso. El fusible protege al cable y a la instalación, no al aparato: su trabajo es fundirse antes de que la corriente prenda fuego a un conductor dentro de una pared. Que la electrónica del equipo muera igual es lo normal, porque el semiconductor se destruye en microsegundos y el hilo del fusible tarda mucho más en calentarse. Es el mismo papel del perno de seguridad de una máquina agrícola, que se corta a propósito para que no se parta el eje. Y su cadáver además informa: hilo cortado limpio y vidrio transparente apunta a sobrecarga lenta; vidrio negro o reventado apunta a cortocircuito violento, y en ese caso el corto sigue ahí."
+    },
+    {
+      "id": "diodo-papeles-y-fallo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el diodo, su marca y su comprobación, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "La banda impresa cerca de un extremo marca el lado por el que sale la corriente.",
+        "En la posición de diodo, uno sano marca entre 0,4 y 0,8 en un sentido y nada en el otro.",
+        "Atravesado sobre la bobina de un relé o de una válvula solenoide, protege al transistor que acaba de apagarla.",
+        "Un diodo en cortocircuito se reconoce porque deja de conducir en los dos sentidos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte los dos modos de fallo. En cortocircuito, que es como muere casi siempre, el diodo conduce en ambos sentidos y el multímetro marca cerca de cero en las dos direcciones: deja de ser válvula y pasa a ser un cable. Lo que describe la opción —no conducir en ninguno de los dos sentidos— es el diodo abierto, el otro fallo posible, mucho menos frecuente; en un puente rectificador se nota porque el equipo sigue funcionando, pero con zumbido, luz temblorosa y menos fuerza. La confusión importa porque el diodo en corto hace saltar el fusible y deja el aparato muerto, mientras que el abierto lo deja cojeando."
+    },
+    {
+      "id": "condensador-cargado",
+      "tipo": "verdadero_falso",
+      "enunciado": "Desenchufar una fuente conmutada deja sus condensadores descargados, así que se puede meter la mano dentro en cuanto se saca el enchufe.",
+      "respuesta": false,
+      "explicacion": "Falso, y es de las creencias que más daño hacen. Desenchufar solo quita el suministro: el condensador grande del primario de una fuente conmutada, de un televisor o de un microondas guarda más de trescientos voltios de continua durante minutos, y no le importa que el cable esté fuera del tomacorriente. El procedimiento correcto es desenchufar, esperar y medir tensión continua entre las patas de ese condensador antes de tocar nada; si hay tensión, se descarga a través de una resistencia de potencia o de una lámpara incandescente, nunca cortocircuitando con un destornillador, porque eso vaporiza metal y puede reventar la pieza. El condensador de arranque de una bomba merece el mismo respeto."
+    },
+    {
+      "id": "rele-diagnostico-y-fallo-seguro",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el relé de una controladora de riego, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Si hace clic, el lado de control funcionó y la falla está aguas abajo: contactos, cable o carga.",
+        "La válvula debe colgar del contacto normalmente abierto para que un corte de energía la deje cerrada.",
+        "Unos contactos pegados dejan la bomba encendida aunque nadie se lo pida, y esa es la avería peligrosa de verdad.",
+        "Como el relé aísla los dos lados, mientras el circuito de control esté apagado se puede tocar el lado de 220 V sin riesgo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta confunde aislamiento con seguridad. Es cierto que entre la bobina y los contactos no hay conexión eléctrica —solo un campo magnético y una lámina que se mueve—, y por eso el lado de baja tensión es seguro de manipular. Pero eso no dice nada sobre el otro lado: los contactos siguen conectados a la red, y apagar el microcontrolador no corta los 220 V que llegan al común del relé. El aislamiento protege al circuito de control y a quien lo toca, no al lado de potencia. Para trabajar ahí hay que cortar la alimentación aguas arriba y comprobar ausencia de tensión con el multímetro."
+    },
+    {
+      "id": "diagnostico-valvula-lote-4",
+      "tipo": "abierta",
+      "enunciado": "En Rizoma del Sur la controladora de riego no abre la válvula del lote 4; las otras tres funcionan. Describe cómo lo abordarías desde cero: qué haces antes de abrir nada, cómo partes el problema en dos, qué componentes sospechas y en qué orden los compruebas, qué mides exactamente en cada paso, y qué anotas al terminar. Menciona también qué repuestos tendrías que tener guardados de antemano para que esa avería no deje el lote sin agua.",
+      "respuestaModelo": "Lo primero no es electrónica, es orden de trabajo. Antes de abrir el tablero corto la alimentación aguas arriba y aplico el procedimiento vivo–muerto–vivo: compruebo el multímetro en un punto que sé que tiene tensión, mido el punto donde voy a trabajar y confirmo que está a cero, y vuelvo a comprobar el instrumento por si se estropeó en el intento. Si el tablero se alimenta con una fuente conmutada, mido además la tensión continua entre las patas del condensador grande de su primario, porque desenchufar no descarga nada y ahí puede haber más de trescientos voltios durante minutos. Antes de desconectar un solo cable, fotografío el tablero entero y luego cada zona de cerca: es gratis y evita el error clásico de montar un electrolítico o un diodo al revés al volver a armar.\n\nEl segundo paso es partir el sistema por la mitad, y el relé regala esa partición sin destornillador. Reenergizo con la tapa puesta, mando abrir el lote 4 y escucho. Si el relé hace clic, todo el lado de control está sano —el microcontrolador decidió, el transistor obedeció y la bobina se activó— y el problema está aguas abajo. Si no hace clic, la falla está en la bobina del relé o en lo que la manda, y acabo de descartar media instalación. Que las otras tres válvulas funcionen ya me dice algo valioso: la fuente, la masa común y el programa están bien, así que el fallo es del canal 4, no del sistema.\n\nCon clic, sigo aguas abajo y desenergizado. Compruebo en continuidad los contactos del relé entre el común y el normalmente abierto con el relé accionado: unos contactos picados por el arco dan cero cuando deberían, o resistencia cuando deberían dar cero. Sigo por el cable hasta la válvula, midiendo continuidad en cada tramo y prestando atención a los empalmes enterrados o al aire, que en siete meses de lluvia se corroen. Y mido la bobina de la solenoide en ohmios: infinito significa bobinado abierto y válvula para reemplazar; un valor razonable significa que el problema puede ser mecánico —suciedad o sarro trabando el émbolo— y no eléctrico.\n\nSin clic, voy hacia atrás. Mido la bobina del relé en ohmios, desenergizado: debe dar decenas o cientos; infinito es bobina abierta. Compruebo el transistor que la gobierna en la posición de diodo: si las tres patas se conducen entre sí, murió en cortocircuito. Miro el diodo de rueda libre que va atravesado sobre la bobina, que en la posición de diodo debe conducir en un sentido y no en el otro; si está en corto, además de no dejar trabajar a la bobina puede haberse llevado al transistor por delante. Y compruebo el fusible del canal si lo hay, siempre con un extremo suelto para que la placa no ofrezca un camino paralelo que engañe.\n\nEncuentre lo que encuentre, la regla es la misma: el componente quemado es el síntoma, no la causa. Si el transistor está en corto, antes de poner otro me pregunto qué lo mató, y las dos respuestas probables son calor —disipador flojo, sin pasta térmica, tapado de polvo— o el pico de la bobina por falta de diodo de rueda libre. Si cambio el transistor sin resolver eso, quemo el nuevo en el siguiente riego. Reviso también si hay soldaduras agrietadas alrededor: una unión rota da los mismos síntomas que media docena de averías caras y se arregla gratis.\n\nAl terminar anoto en el cuaderno del tablero la fecha, el síntoma exacto, qué medí, qué encontré, qué cambié y qué sospecho que lo causó. Si dentro de un mes vuelve a fallar el mismo canal, esa anotación es lo único que hará evidente que el problema no era la pieza.\n\nY los repuestos que deberían estar guardados de antemano son pocos y baratos: un relé idéntico al de la controladora, con la misma tensión de bobina y la misma capacidad de contactos; fusibles del valor y del carácter exactos; diodos comunes para hacer de rueda libre; el transistor de potencia con su número de parte anotado; y un LED indicador con su resistencia. Cuesta poco y evita que el lote 4 pase la seca esperando un encargo.",
+      "criterios": [
+        "Corta la alimentación y aplica el procedimiento vivo – muerto – vivo antes de abrir el tablero.",
+        "Comprueba la carga residual del condensador grande del primario antes de tocar nada.",
+        "Fotografía la placa y los cables antes de desconectar o desoldar, por la polaridad y el orden.",
+        "Usa el clic del relé para partir el sistema en dos y decidir de qué lado está la falla.",
+        "Aprovecha que las otras válvulas funcionan para descartar fuente, masa común y programa.",
+        "Del lado de potencia comprueba contactos del relé, cable y bobina de la solenoide, en ohmios y en continuidad.",
+        "Del lado de control comprueba bobina del relé en ohmios, transistor en la posición de diodo y diodo de rueda libre.",
+        "Mide el fusible fuera de circuito o con un extremo suelto, no sobre la placa.",
+        "Afirma que el componente quemado es el síntoma y busca la causa antes de sustituir.",
+        "Nombra calor y pico de bobina sin diodo como los dos verdugos típicos del transistor de potencia.",
+        "Menciona la soldadura agrietada como sospechosa gratuita de una intermitencia.",
+        "Anota síntoma, medidas, pieza cambiada y causa sospechada, y lista los repuestos que hay que tener guardados."
+      ],
+      "explicacion": "Lo que se evalúa no es acertar la pieza rota sino el método: seguridad primero, después una partición del sistema que descarte la mitad con una sola observación, después medidas concretas en cada rama y, siempre, la pregunta de qué mató a la pieza que murió. El clic del relé es aquí el atajo más rentable de toda la lección porque separa control de potencia sin abrir nada, y es exactamente la búsqueda binaria que se formaliza en la lección seis. La parte de los repuestos importa tanto como el diagnóstico: donde una pieza tarda semanas en llegar, saber qué falló no sirve de nada si no hay con qué reemplazarla."
+    }
+  ]
+}

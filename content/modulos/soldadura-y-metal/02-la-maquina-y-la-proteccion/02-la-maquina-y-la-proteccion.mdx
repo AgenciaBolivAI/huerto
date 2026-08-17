@@ -1,0 +1,513 @@
+La lección anterior terminó en el arco: un cortocircuito que en vez de apagarse se sostiene. Esa es la
+física. Esta lección es todo lo que hay **entre esa física y tu cuerpo**: la máquina, el electrodo, la
+instalación de la casa que tiene que aguantarlo, y la barrera que impide que la radiación, el humo y la
+corriente terminen en vos.
+
+**El arco no sabe que estás ahí.** Emite ultravioleta con la misma indiferencia hacia el acero y hacia
+tu córnea, vaporiza metal sin preguntar quién respira encima y tira gotas a más de mil grados que caen
+donde caigan. En carpintería un descuido cuesta una tabla; acá tres segundos sin careta cuestan una
+noche entera de dolor, y un tambor viejo puede costar la vida. **La protección no es un capítulo aparte
+del oficio: es parte del oficio**, igual que el amperaje.
+
+<Advertencia titulo="Acá no hay precios, marcas ni artículos de ley">
+No vas a encontrar un precio, una marca ni un número de norma boliviana: cambian por ciudad, por año y
+por ferretería, y quien te los invente te hace daño. Los números que valen están impresos en dos sitios
+que vas a tener en la mano: **la chapa de la máquina y la caja del electrodo**. Y todo lo que toque la
+instalación de tu casa —qué sección tiene el cable de la pared, qué llave térmica corresponde— se
+consulta **con un electricista que vea tu tablero**.
+</Advertencia>
+
+## La máquina fabrica corriente, no calor
+
+Una soldadora de arco hace una sola cosa: **toma la electricidad de la pared y la convierte en mucha
+corriente a poca tensión**. La red da 220 voltios y pocos amperios; el arco necesita entre 20 y 30
+voltios con decenas o cientos de amperios. Y como el arco casi no estorba al paso de la corriente, con
+220 voltios directos esa corriente se dispararía hasta volatilizar el electrodo: **la máquina existe
+para limitar, no para empujar.**
+
+<Analogia titulo="Un limitador de peticiones, no una fuente de tensión">
+Tu tomacorriente mantiene 220 voltios pase lo que pase y deja que cada aparato tome la corriente que
+quiera. La soldadora es lo contrario, una <Termino slug="fuente-de-corriente-constante">fuente de
+corriente constante</Termino>: fija los amperios que elegiste con la perilla y deja que la tensión se
+acomode a lo que el arco pida en cada instante. Es un limitador de peticiones por segundo en un
+servidor: no importa cuánto tarde cada consulta, importa que nunca pasen más de tantas. Por eso, si
+separás un poco el electrodo, la tensión sube pero **los amperios casi no se mueven**. Con una fuente
+de tensión constante, el menor temblor de tu mano cambiaría la corriente de golpe y no habría manera
+humana de soldar.
+</Analogia>
+
+Con el electrodo despegado, sin arco todavía, los bornes tienen una <Termino
+slug="tension-en-vacio-de-soldadura">tensión en vacío</Termino> **de 50 a 90 voltios**, necesaria para
+forzar al aire a ionizarse. Retené ese número: esa es la tensión que tenés en la mano cuando agarrás el
+portaelectrodo con la máquina encendida.
+
+## Transformador o inversora
+
+La <Termino slug="maquina-de-soldar-por-transformador">máquina de transformador</Termino> es la
+antigua, la que se levanta entre dos. Adentro tiene un <Termino
+slug="transformador">transformador</Termino> de hierro y cobre: muchas vueltas de alambre fino a la
+entrada, pocas de alambre grueso a la salida. Como no crea energía, al bajar la tensión en esa
+proporción **sube la corriente en la misma proporción**. Tolera polvo y golpes y se rebobina en
+cualquier ciudad; lo pagás en peso, en consumo y en un arco difícil de sostener a bajo amperaje.
+
+La <Termino slug="maquina-inversora">inversora</Termino> llega al mismo resultado por otro camino:
+rectifica la corriente de la red, la trocea con transistores decenas de miles de veces por segundo,
+alimenta con esos pulsos un transformador **diminuto** y rectifica otra vez a la salida. El truco es la
+frecuencia: el hierro que necesita un transformador es inversamente proporcional a la frecuencia con
+que trabaja, así que pasar de 50 hercios a decenas de miles reemplaza veinte kilos de núcleo por
+doscientos gramos. Es la misma idea por la que procesar por streaming necesita muchísima menos memoria
+que acumular y descargar por tandas: **lotes chicos y continuos piden un buffer chico.** Su debilidad
+es honesta: es **electrónica de potencia viviendo en un galpón**, y le hacen daño el polvo conductor de
+la amoladora, la humedad y los saltos de tensión de la red.
+
+<Tabla>
+
+| | Transformador | Inversora |
+| --- | --- | --- |
+| Peso | Decenas de kilos | Pocos kilos |
+| Salida | Alterna, a veces continua | Continua, estable |
+| Consumo de la red | Alto | Bastante menor |
+| Polvo y golpes | Los tolera | Los sufre |
+| Se repara en el barrio | Casi siempre | Rara vez |
+| Arco a bajo amperaje | Cuesta | Suave |
+| Sensible a la tensión de red | Poco | Mucho |
+
+</Tabla>
+
+## El ciclo de trabajo y el anillo de la corriente
+
+En la chapa, junto al amperaje máximo, hay un porcentaje: es el <Termino slug="ciclo-de-trabajo">ciclo
+de trabajo</Termino>, **el porcentaje de un lapso de diez minutos que la máquina puede soldar seguido a
+ese amperaje sin pasarse de temperatura**. No es una recomendación: es un ensayo térmico.
+
+<Dato titulo="Cómo se lee «160 A al 35 %»">
+A 160 amperios podés soldar **tres minutos y medio de cada diez**; los seis y medio restantes la
+máquina queda encendida y ventilando, sin soldar. El ciclo sube rápido al bajar el amperaje, porque el
+calor crece con el cuadrado de la corriente: la misma máquina puede dar 100 % a 80 amperios. Y hay
+letra chica que en el llano importa: **el ensayo se hace a una temperatura ambiente de referencia**,
+más baja que la de un galpón de calamina a mediodía, así que a 38 grados el ciclo real es menor que el
+impreso. Cuando te pasás salta el <Termino slug="protector-termico">protector térmico</Termino> y la
+máquina se niega a soldar hasta enfriarse: eso no es una falla, es el aparato haciendo su trabajo.
+Ayudalo con las rejillas libres, y **no la apagues apenas terminás el cordón**, porque el ventilador es
+lo que le saca el calor acumulado.
+</Dato>
+
+El equipo no es «la máquina y el electrodo»: es un **anillo cerrado**. La corriente sale, recorre el
+cable, entra al <Termino slug="portaelectrodo">portaelectrodo</Termino>, pasa por el electrodo, salta
+el arco, entra en la pieza, la recorre hasta la <Termino slug="pinza-de-masa">pinza de
+masa</Termino> y vuelve por el segundo cable. Si en cualquier punto hay un mal contacto, **la corriente
+no desaparece: se calienta ahí**.
+
+<Formula explicacion="El efecto Joule, la ley que gobierna todo el equipo. Al doblar la corriente el calor se cuadruplica: por eso el ciclo de trabajo cae tan rápido con el amperaje, por eso un cable escaso cocina su propio aislante, y por eso una pinza mal apoyada se pone al rojo mientras el cable, con mucha más sección, ni se entibia.">
+calor generado = corriente² × resistencia × tiempo
+</Formula>
+
+Ese <Termino slug="efecto-joule">efecto Joule</Termino> explica casi todo lo que se le achaca a «la
+máquina que anda mal». La pinza mordida sobre pintura, óxido o galvanizado apoya en unos pocos puntos
+microscópicos: es una <Termino slug="resistencia-de-contacto">resistencia de contacto</Termino> alta, y
+se realimenta, porque calienta, oxida más, afloja el resorte y calienta más. Los síntomas son
+inconfundibles: arco que se apaga solo, cordón irregular sin haber cambiado nada, pinza tibia. **Una
+pinza caliente es un diagnóstico, no una molestia.** De ahí las reglas: va **sobre metal desnudo y
+lijado, lo más cerca posible del punto que vas a soldar**, y nunca de modo que el retorno pase por
+rodamientos, el cable de tierra de la casa o electrónica, porque la corriente elige el camino más fácil
+y lo arruina de paso; en un vehículo se suelda con la batería desconectada.
+
+Los cables cierran el anillo, y por eso llevan hilos finísimos, aislante flexible y <Termino
+slug="seccion-de-conductor">sección</Termino> sobrada para cien o doscientos amperios. Un empalme
+retorcido y envuelto en cinta es el mal contacto de arriba, puesto donde no lo ves, y un rollo apretado
+no disipa el calor que él mismo genera: **desenrollá los dos cables antes de soldar**. El
+portaelectrodo, por su parte, tiene una función crítica —**aislar tu mano**—, así que con el mango
+rajado o la mordaza floja se cambia, no se envuelve con cinta.
+
+## Lo que la máquina le pide a tu casa
+
+El arco consume los amperios que elegiste por la tensión del arco: 120 amperios por 25 voltios son unos
+**3.000 vatios**, y como la máquina no es perfecta, de la pared sale bastante más —del orden de quince
+a veinticinco amperios de entrada mientras dura el cordón—, más de lo que espera un tomacorriente
+doméstico. Por eso el dato que importa no es el amperaje de salida que anuncia la caja, sino los dos
+que trae la chapa: la **corriente de entrada máxima** y la **corriente de entrada efectiva**, que ya
+tiene en cuenta el ciclo de trabajo. Esa segunda es la que usa un electricista para decidir si tu
+instalación aguanta o si hay que tirar una línea propia desde el tablero.
+
+<Advertencia titulo="Si la térmica salta, el problema no es la térmica">
+El <Termino slug="interruptor-termomagnetico">interruptor termomagnético</Termino> no protege la
+máquina: **protege el cable que está dentro de la pared**, el único elemento que nadie puede ver ni
+revisar. Tiene una lámina bimetálica que se curva con el calor acumulado —lenta, para sobrecargas— y un
+electroimán que actúa en milésimas —rápido, para cortocircuitos—. Por eso una soldadora rara vez lo
+hace saltar al primer cordón: lo hace saltar a los cinco minutos, cuando el bimetal integró todo ese
+calor. Cambiar esa llave por una de más amperios «para que no moleste» es la maniobra más peligrosa que
+se hace en una casa: deja el cable de la pared cocinándose sin vigilancia, y el incendio empieza dentro
+del muro, donde no llega ningún extintor. Si salta, se llama a un electricista.
+</Advertencia>
+
+Casi nadie suelda al lado del tablero: casi todos tiran un alargue hasta el patio, y ahí aparece
+la <Termino slug="caida-de-tension">caída de tensión</Termino>. El cable tiene resistencia, la
+corriente deja parte de la tensión en el camino, y esa parte se convierte en calor dentro del cable.
+
+<Formula explicacion="El 2 está porque la corriente va y vuelve: cuentan los dos conductores. El 0,0175 es la resistividad del cobre en ohmios por milímetro cuadrado y por metro. Ejemplo: 30 metros de alargue de 1,5 mm² llevando 25 amperios pierden 2 × 30 × 25 × 0,0175 ÷ 1,5 = 17,5 voltios, y disipan más de 400 vatios de calor dentro del cable. Con 2,5 mm² la pérdida baja a 10,5 voltios y unos 260 vatios.">
+caída = 2 × longitud × corriente × 0,0175 ÷ sección
+</Formula>
+
+Cuatrocientos vatios es un calefactor chico funcionando dentro de tu alargue. Tendido en el piso ese
+calor se va al aire; **enrollado en su carretel no tiene a dónde irse**, el aislante se ablanda, las
+vueltas se pegan y el rollo termina en cortocircuito o en fuego. **El alargue se desenrolla entero
+antes de conectar la máquina**, aunque solo necesites cinco metros. Y con la tensión de entrada baja la
+inversora toma **más** corriente para dar los mismos vatios, lo que aumenta la caída y baja más la
+tensión, mientras la de transformador entrega un arco pobre con el electrodo pegándose: **si peleás con
+un arco que no prende y la máquina está sana, mirá el alargue antes que tu pulso.**
+
+Con generador, la máquina consume a golpes, así que uno que en potencia parece justo se queda corto, y
+muchas inversoras exigen regulación de tensión estable —conectarlas a un generador chico es la manera
+más común de matar una placa, y eso lo dice el manual de tu equipo—. La regla que no se negocia es
+otra: un motor a combustión produce <Termino slug="monoxido-de-carbono">monóxido de
+carbono</Termino>, un gas sin olor ni color que reemplaza al oxígeno en la sangre y mata sin avisar; el
+generador va **afuera**, nunca en un cuarto ni junto a una ventana por donde entre el escape.
+
+Y los cortes traen un riesgo poco pensado: si la luz se va en mitad de un cordón, el electrodo puede
+quedar pegado a la pieza con el portaelectrodo colgando, y cuando la energía vuelve —sola, cuando nadie
+mira— eso es un cortocircuito con la máquina alimentándolo. Apenas se corta la luz **se apaga la llave
+de la máquina y se saca el electrodo de la pinza**; y en todo momento el portaelectrodo descansa en un
+gancho aislado, nunca sobre la pieza ni sobre el banco metálico.
+
+## El electrodo: el número, el diámetro y la humedad
+
+La <Termino slug="clasificacion-del-electrodo">clasificación</Termino> más difundida viene de una norma
+estadounidense y arrastra unidades raras, como el «tubo de media pulgada» de plomería. En el 6013: la
+**E** dice electrodo para arco manual; el **60** es la resistencia mínima del metal depositado en miles
+de libras por pulgada cuadrada —60.000 son unos 42 kilos por milímetro cuadrado, y un 70 son unos 49—;
+el **1**, que sirve en todas las posiciones; y el último **3**, leído junto al anterior, identifica el
+revestimiento y con qué corriente trabaja.
+
+<Tabla>
+
+| Electrodo | Revestimiento | Para qué es bueno | Su límite |
+| --- | --- | --- | --- |
+| **6013** | Rutilo | Arco fácil, escoria que salta sola, cordón prolijo, perdona metal imperfecto | Penetra poco; no es de estructura exigente |
+| **6011** | Celulósico | Penetra hondo y atraviesa óxido y pintura; anda bien en alterna | Cordón feo, mucha salpicadura, arco ruidoso |
+| **7018** | Básico, bajo hidrógeno | Metal más resistente y tenaz: estructura, piezas gruesas, uniones muy sujetadas | Pide continua y arco corto; se arruina con la humedad |
+
+</Tabla>
+
+El diámetro del alambre no es una preferencia: es la variable que ordena a las demás. Uno más grueso
+admite más corriente, deposita más metal y **mete más calor**, y en chapa fina ese calor de más
+agujerea. La cadena va siempre en el mismo orden: **espesor de la pieza → diámetro del electrodo →
+rango de amperaje**.
+
+<Formula explicacion="Punto de partida solamente. La caja de tu electrodo trae el rango del fabricante para cada diámetro, y ese manda sobre cualquier regla general. El ajuste fino se hace mirando el cordón, y eso es materia de la lección 04.">
+amperaje de arranque ≈ 30 a 40 × diámetro del electrodo en milímetros
+</Formula>
+
+<Tabla>
+
+| Diámetro | Amperaje orientativo | Espesor típico de pieza |
+| --- | --- | --- |
+| 1,6 mm | 40 – 60 A | Chapa de 1 a 2 mm |
+| 2,0 mm | 50 – 80 A | 1,5 a 3 mm |
+| 2,5 mm | 70 – 110 A | 3 a 5 mm |
+| 3,25 mm | 100 – 150 A | 5 a 8 mm |
+| 4,0 mm | 140 – 200 A | 8 mm y más |
+
+</Tabla>
+
+Resumen práctico: **el electrodo no debería ser más grueso que la chapa que estás soldando**, y con
+2,5 y 3,25 se resuelve casi todo lo que aparece en una casa.
+
+Acá entra el clima. El revestimiento es <Termino slug="higroscopico">higroscópico</Termino>: intercambia
+vapor de agua con el aire hasta igualarse con él, así que **una caja abierta en el piso de un galpón se
+humedece sola**, sin que nadie la moje y sin manera de verlo por fuera. El daño visible es arco que
+chisporrotea, electrodo que se pega al arrancar y burbujas en el cordón. El que **no se ve el día que
+soldás** es peor: en el arco el agua se rompe en sus átomos y el hidrógeno —diminuto— se disuelve en el
+baño fundido; al enfriarse, el acero deja de poder contenerlo, migra hacia los puntos más tensionados y
+empuja desde adentro. Es la <Termino slug="fisuracion-por-hidrogeno">fisuración por
+hidrógeno</Termino>: una rajadura que aparece **horas o días después**, en una soldadura que quedó
+impecable. Por eso al 7018 se lo llama de bajo hidrógeno, y por eso mismo **un 7018 mojado es peor que
+un 6013 mojado**: su razón de existir era justamente esa.
+
+<Dato titulo="Guardar electrodos donde el aire es húmedo todo el año">
+Envase cerrado, no la caja de cartón abierta: un tarro con tapa a rosca, con sílica gel o un puñado de
+arroz en una media, y **arriba de una repisa, nunca en el piso ni contra un muro exterior**, que son
+los dos sitios donde la humedad condensa. Sacá para el día lo que vas a usar y devolvé lo que sobró. La
+industria seca los electrodos básicos en hornos con temperatura controlada; una cocina no es eso y
+puede arruinar el revestimiento. Señal de campo: **el electrodo cuyo revestimiento se descascara o se
+abre al doblarlo suave ya no sirve**, y una caja de 7018 que pasó semanas abierta en época de lluvias
+es sospechosa para cualquier trabajo que cargue peso.
+</Dato>
+
+Queda una conexión con la máquina. La <Termino slug="polaridad-de-soldadura">polaridad</Termino> es qué
+borne va al portaelectrodo y cuál a la masa: en continua, con el electrodo al positivo se concentra más
+calor en él y se penetra más —lo que pide el 7018—; invertido, se calienta más la pieza y penetra
+menos. El 6013 anda bien en alterna y en las dos polaridades. Por ahora basta saber que **cambiar de
+electrodo puede exigir cambiar dos cables de lugar, y que la caja lo dice**.
+
+## Los ojos, y el filtro que sí sirve
+
+El arco emite en todo el espectro: infrarrojo, que calienta; luz visible, que encandila; y <Termino
+slug="radiacion-ultravioleta">radiación ultravioleta</Termino>, que es la que hace el daño real, en
+cantidades enormes comparadas con el sol del mediodía y viajando en línea recta a la velocidad de la
+luz. **No hay tiempo de reacción posible.**
+
+En el ojo, la córnea absorbe casi todo ese ultravioleta y sus células superficiales mueren. Eso es
+la <Termino slug="queratitis-del-arco">queratitis del arco</Termino>, y lo más peligroso es que **no
+duele mientras ocurre**: el dolor llega entre seis y doce horas después, ya de noche, con la sensación
+exacta de arena adentro y lagrimeo que no para. Suele curar solo en uno o dos días, pero es una lesión
+de verdad, las exposiciones se acumulan a lo largo de los años y el ultravioleta también favorece
+cataratas. Si te pasa: oscuridad, compresas frías, **no frotarse nunca** —frotar arrastra la superficie
+dañada— y nada de gotas por consejo de un vecino; si duele mucho, si hay algo clavado o si a las 48
+horas no mejora, **se va al centro de salud**. La falta de dolor inmediato es lo que engaña: es un
+sistema sin telemetría en tiempo real, que reporta el error medio día después, cuando ya nadie lo
+relaciona con lo que hizo. Por eso **no se mira un arco sin filtro ni un segundo, ni de lejos, ni «para
+ver si prendió»**.
+
+El vidrio de una careta no es un vidrio oscuro: es un filtro que **bloquea el ultravioleta y el
+infrarrojo por completo** y además atenúa la luz visible lo justo para que veas el baño fundido. Esa
+atenuación se mide en un <Termino slug="numero-de-sombra">número de sombra</Termino>, escala en la que
+cada punto más deja pasar bastante menos luz; con una máquina chica lo habitual está entre 10 y 12, y
+el valor exacto lo da la tabla del fabricante de tu careta. Demasiado claro daña, y demasiado oscuro
+tampoco es «más seguro»: si no ves el baño, terminás levantando la careta para mirar.
+
+De ahí por qué unos lentes de sol o un vidrio ahumado son **peor que nada**. El filtro de careta frena
+el ultravioleta por su composición, no por ser oscuro; un lente común atenúa la luz visible, y al bajar
+el brillo tu ojo hace lo natural: **abre la pupila y deja de parpadear**, porque desaparecen las dos
+señales que le decían que había demasiada luz. Entra entonces más radiación en total y llega más
+adentro que si no llevaras nada, porque sin ellos habrías apartado la vista en una décima de segundo.
+
+La <Termino slug="careta-fotosensible">careta fotosensible</Termino> lleva un filtro de cristal líquido
+que se oscurece en microsegundos cuando unos sensores detectan el destello, y resuelve el problema de
+bajarla de un cabezazo con las manos ocupadas. El detalle que conviene tener claro: **las capas que
+frenan ultravioleta e infrarrojo son pasivas y están siempre puestas**, funcione o no la electrónica;
+si la pila muere no te quemás los ojos, pero recibís el fogonazo de luz visible entero y quedás
+encandilado con metal caliente alrededor. Se comprueba en cinco segundos apuntándola a una lámpara y
+pasando la mano frente a los sensores, que a menudo quedan tapados por la pieza o por tu propia mano. Y
+**debajo de la careta van lentes de seguridad comunes**, porque el golpe en el ojo más frecuente de un
+taller metálico no ocurre soldando: ocurre al picar escoria con la careta levantada.
+
+El mismo ultravioleta quema la piel más rápido que el sol, y el enrojecimiento aparece horas después.
+Las zonas clásicas son las que uno olvida: **el cuello por el escote de la remera, las muñecas en el
+hueco entre el guante y la manga, las orejas**. De ahí la ropa correcta: mangas largas hasta el guante,
+cuello cerrado, guantes de puño largo y gorra de algodón bajo la careta. Además **rebota** en una pared
+blanca o una chapa clara, así que quien está de espaldas a tres metros también recibe. Ese es el riesgo
+que más gente lastima en un patio: el que mira —el chico curioso, la vecina que vino a preguntar, el
+que sostiene la pieza—. **Nadie sin careta se queda mirando**, se arma una separación opaca donde pasa
+gente y **se avisa en voz alta antes de cada encendido**.
+
+## Lo que se respira
+
+El arco vaporiza metal; ese vapor se enfría de golpe y condensa en partículas **ultrafinas**, mucho más
+chicas que el polvo que uno ve. Son los <Termino slug="humos-metalicos">humos metálicos</Termino>, y su
+tamaño es exactamente el problema, porque atraviesan nariz y garganta sin quedarse y llegan al fondo
+del pulmón: **un pañuelo o un barbijo de tela no filtra nada de eso**. Lo que contienen depende del
+metal y del revestimiento: óxidos de hierro, que con años se depositan en el pulmón; manganeso, que en
+exposiciones altas y repetidas afecta al sistema nervioso; fluoruros irritantes de los revestimientos
+básicos. Y el arco **fabrica gases donde no había**: su ultravioleta convierte oxígeno del aire en
+ozono, que irrita las vías respiratorias, y el calor produce óxidos de nitrógeno.
+
+<Advertencia titulo="El zinc del galvanizado y la fiebre que llega de noche">
+Soldar sobre galvanizado sin sacar el zinc produce un humo blanco denso y dulzón que causa la <Termino
+slug="fiebre-del-zinc">fiebre de los humos metálicos</Termino>: sabor metálico, tos seca, escalofríos,
+dolor muscular y fiebre que aparecen **entre cuatro y doce horas después**, ya en casa, con toda la
+pinta de una gripe repentina. Suele pasar sola en uno o dos días, y esa es la trampa: como pasa, se
+normaliza. No es inofensiva ni es un rito de iniciación. La regla es doble: **amolar el zinc de la zona
+antes de encender el arco**, y ventilación máxima, jamás un cuarto cerrado. Peor y menos conocido: hay
+piezas con recubrimientos que no son zinc —cadmiadas, cromadas, con pinturas viejas— cuyos humos son
+mucho más tóxicos y pueden causar daño pulmonar grave; si no sabés qué recubrimiento tiene una pieza,
+no la sueldes hasta haberlo quitado en la zona de trabajo. Y si hay síntomas respiratorios que empeoran
+o dificultad para respirar, **se va al centro de salud y se cuenta qué se estuvo soldando**.
+</Advertencia>
+
+La ventilación es el control que funciona, y tiene una geometría concreta: **la columna de humo sube
+recta desde el arco**, así que soldar con la cabeza encima, bajo la careta, es respirar justo el
+penacho. Dos medidas cambian todo: la cabeza al costado de esa columna, y aire que **cruce** el puesto
+llevándose el humo lejos de tu cara. Lo que no se hace es poner un ventilador soplando de frente contra
+el arco: se lleva el gas que protege el baño y llena el cordón de poros. Un barbijo de partículas que
+selle en la cara ayuda, pero **no filtra gases**, no sustituye a ventilar y con barba no sella.
+
+<Advertencia titulo="Nunca cerca de solventes: el arco fabrica un veneno">
+El ultravioleta del arco descompone los vapores de solventes clorados —desengrasantes fuertes, ciertos
+limpiadores de piezas— y produce <Termino slug="fosgeno">fosgeno</Termino>, un gas de toxicidad extrema
+que huele apenas a pasto cortado y cuyo daño pulmonar aparece horas más tarde. **No se suelda cerca de
+donde se desengrasó una pieza, ni con trapos de solvente en el lugar, ni en un cuarto donde se limpió
+con esos productos.** La pieza lavada con solvente se seca al aire libre y se ventila el lugar antes de
+encender. Con la misma lógica, nada de soldar cerca de pinturas, aerosoles, garrafas ni bidones.
+</Advertencia>
+
+## La ropa que se derrite y las chispas que viajan
+
+La salpicadura es metal líquido a más de mil quinientos grados, y a una fibra sintética no le hace un
+agujero: **la funde**. Una remera de poliéster se derrite formando un plástico caliente que se pega a
+la piel y sigue quemando después, convirtiendo una quemadura chica en una grave y difícil de tratar.
+Por eso la ropa de soldar es de **algodón grueso**, o cuero en delantal y mangas, y la sintética
+—incluida la interior— no entra al puesto. El resto son reglas de geometría: nada de puños vueltos ni
+bolsillos abiertos hacia arriba, donde una gota se queda; **el pantalón por fuera de la bota, nunca
+metido dentro**, porque metido convierte la caña en un embudo directo al pie; sin ropa impregnada de
+aceite; guantes de cuero de puño largo y calzado cerrado. Y una que parece tonta y salva vidas: **nada
+de encendedor ni fósforos en el bolsillo mientras soldás**.
+
+Las chispas viajan **varios metros**, más si soldás en alto, y siguen calientes al aterrizar. El
+mecanismo del incendio no es el que uno imagina: rara vez hay una llama que sale del arco. Lo que hay
+es una gota que cae en aserrín, pasto seco, una bolsa, un trapo o la espuma de un colchón viejo, y ahí
+**arde lentamente sin llama** durante largos minutos. Cuando finalmente prende, el que soldaba ya
+guardó todo y se fue.
+
+<Dato titulo="La guardia de fuego">
+Antes: se despeja el área en un radio amplio —incluido el piso, debajo del banco y **el otro lado de la
+pared**, porque el calor viaja también por conducción a través del metal—, se tapa lo que no se puede
+mover con chapa o manta no inflamable, y se tiene a mano balde de agua, arena o extintor **sabiendo
+usarlo**. Durante: se mira dónde están cayendo las chispas, no solo el cordón. Después viene
+la <Termino slug="guardia-de-fuego">guardia de fuego</Termino>: **quedarse en el lugar revisando la
+zona al menos media hora larga después del último cordón**, tocando y mirando, incluido el otro lado de
+la pared. Ese rato de aparente pérdida de tiempo es el que evita el incendio que empieza cuando ya no
+hay nadie. Y si hay que apagar algo con la máquina conectada, primero se corta la energía: el agua
+sobre un equipo energizado agrega un accidente al otro.
+</Dato>
+
+## Lo que nunca se suelda: el tambor que estuvo vacío
+
+Esta es la prohibición absoluta de la lección, la que no tiene versión matizada. **No se suelda —ni se
+corta— ningún recipiente que haya contenido combustible, aceite, solvente, alcohol o producto químico
+desconocido.** Ni tambores, ni bidones, ni tanques de moto, ni garrafas, ni «ese que está vacío hace
+años y lo lavamos con agua».
+
+El mecanismo rompe la falsa lógica de «vacío = seguro». Una mezcla de vapor y aire solo explota dentro
+de una franja, el <Termino slug="rango-de-inflamabilidad">rango de inflamabilidad</Termino>: con muy
+poco vapor no arranca, y con demasiado tampoco, porque falta oxígeno para quemarlo. Un tambor **lleno**
+tiene arriba una mezcla tan rica que está por encima de la franja; un tambor **vacío**, con una
+película de residuo evaporándose despacio dentro de doscientos litros de aire, cae justo en el medio
+del rango explosivo. Por eso es cierto lo que parece al revés: **el recipiente vacío es más peligroso
+que el lleno**. Y el residuo no se va con agua y detergente: queda embebido en el óxido, en las
+costuras y bajo la pintura interior, y el calor lo evapora otra vez. Cuando eso enciende, el tambor se
+convierte en un proyectil de decenas de kilos. Si necesitás un tambor cortado, conseguí uno que nunca
+tuvo combustible.
+
+Al mismo cajón van otras dos reglas. **Nada bajo presión**: tanque de compresor, extintor, termotanque,
+cañería con presión adentro. Y **nada cerrado sin respiradero**: si soldás un tubo o una caja sellada,
+el aire de adentro se calienta, se expande y sale por el único punto blando, que es el cordón todavía
+líquido, reventándolo hacia afuera con metal fundido. Un agujerito de respiro resuelve el problema.
+
+## El choque eléctrico cuando hay sudor y humedad alta
+
+Al principio quedó pendiente un número: los 50 a 90 voltios en vacío que hay en los bornes con la
+máquina encendida. Con manos secas, piel entera y ropa seca, la <Termino
+slug="resistencia-del-cuerpo">resistencia del cuerpo</Termino> es de decenas de miles de ohmios y esa
+tensión da un susto. Pero soldar produce sudor, y esta zona tiene humedad alta buena parte del año: con
+las manos mojadas, la ropa empapada, arrodillado en tierra húmeda o apoyado con el antebrazo sobre la
+misma pieza, esa resistencia **cae a valores muchísimo menores**. Primero aparece la <Termino
+slug="tetanizacion">tetanización</Termino>, que cierra la mano sobre lo que estás agarrando e impide
+soltarlo; y con corriente suficiente cruzando el pecho, la <Termino
+slug="fibrilacion-ventricular">fibrilación ventricular</Termino>, que es el mecanismo por el que mata
+la electricidad.
+
+Las reglas salen todas de ahí. **Guantes secos y ropa seca**: unos guantes empapados de sudor conducen,
+así que se tienen dos pares y se rotan. **Aislarte del piso y de la pieza** con una tabla seca, una
+plancha de goma o un pallet; jamás parado en agua, sobre barro ni descalzo. **No cargar el cable sobre
+el hombro ni el portaelectrodo bajo el brazo**, que es lo que pone el circuito atravesando el pecho. Y
+una que es puro sentido de circuito: mientras se pueda, **una sola mano en contacto con el trabajo**,
+para que no haya camino de mano a mano.
+
+Del lado del equipo: la carcasa va conectada a tierra por la tercera pata del enchufe, que **no se
+corta jamás**, porque una falla interna puede poner la tensión de la red en el chasis. Los cables se
+revisan mirándolos: aislante rajado cerca del portaelectrodo, cobre asomando, cinta vieja y dura. Y lo
+que nunca se hace es **abrir una inversora para «ver qué tiene»**, aunque esté desenchufada, porque
+adentro hay condensadores que guardan carga peligrosa un buen rato. Por último, soldar dentro de un
+espacio metálico cerrado —un tanque, una caja, un pozo— combina todos los riesgos de esta lección a la
+vez: no es trabajo de principiante.
+
+<AplicarRizoma titulo="Llevarlo a la práctica: tu patio, tu tablero y la careta antes que la máquina">
+**Comprá la protección antes que la máquina, aunque suene al revés.** Con una máquina prestada y careta
+propia se aprende; con máquina propia y sin careta no se debería encender nada. El orden razonable es
+careta con el número de sombra correcto, guantes de cuero de puño largo, lentes de seguridad para picar
+escoria, ropa de algodón grueso y calzado cerrado; recién después, la máquina. Si la careta que
+conseguís es fotosensible, probala en el mostrador: apuntala a una lámpara fuerte y pasá la mano; si no
+oscurece, no la lleves.
+
+**Antes de comprar máquina, andá a mirar tu tablero con un electricista.** Llevale dos datos leídos de
+la chapa del equipo que estás mirando: la corriente de entrada máxima y la efectiva. Con eso él te dice
+si tu instalación aguanta, si conviene una línea propia hasta el patio o si esa máquina es demasiado
+para tu casa. Es media hora de consulta que puede ahorrarte un aparato inservible o un incendio dentro
+de una pared. Y anotá dónde está la llave general de tu casa, y que lo sepa alguien más, por la misma
+razón por la que toda la familia tiene que saber dónde se corta el agua.
+
+**Armá el puesto en el patio, no en el cuarto.** Al aire libre, con el viento de costado, piso sin nada
+que arda y despejado en un radio amplio; una mesa o dos caballetes, un gancho aislado donde el
+portaelectrodo descanse siempre, un tarro cerrado para los electrodos, y cerca un balde de agua y otro
+de arena. Si alquilás y el patio es compartido, la separación opaca no es un lujo: es lo que evita que
+la vecina que colgaba ropa termine con los ojos quemados esa noche. Y si no tenés patio, la conclusión
+honesta es que **ese no es lugar para soldar**: se busca el patio de un familiar o el taller de alguien
+del barrio antes que forzar un cuarto cerrado.
+
+**Hacé tu ritual de encendido y repetilo siempre igual, como una lista de verificación de vuelo.**
+Alargue desenrollado del todo. Máquina lejos de la salpicadura, rejillas libres. Pinza de masa sobre
+metal limpio y cerca del punto a soldar. Área despejada y aviso en voz alta a quien esté cerca. Careta
+probada. Guantes secos, mangas abajo, pantalón por fuera de la bota, bolsillo sin encendedor. Al
+terminar: máquina apagada, electrodo fuera de la pinza, portaelectrodo en su gancho y **media hora de
+guardia mirando dónde cayeron las chispas**. Escribí esa lista en un cartón y colgala en el puesto: una
+lista colgada le gana a la memoria de cualquiera.
+
+**Empezá barato, practicá en recortes y conocé tu límite.** Dos diámetros, 2,5 y 3,25, y un solo tipo
+para aprender, el 6013, sobre recortes de ángulo o platina de una obra o de un chatarrero, no sobre la
+reja de tu casa; con un cuaderno de cuatro columnas —espesor, diámetro, amperios y cómo salió— que en
+dos semanas vale más que cualquier tabla de esta lección, porque está calibrado con tu máquina y tu
+mano. Y la conversación honesta con vos mismo: una máquina chica con 6013 arregla una reja, un portón,
+un carrito, una parrilla, un mueble metálico, pero una estructura que va a cargar peso sobre gente, una
+pieza de dirección o suspensión de un vehículo, un gancho de izaje o cualquier cosa presurizada **no**
+son de este nivel, ni con el mejor electrodo. Saber dónde está tu límite es parte del oficio, no una
+falta de él.
+</AplicarRizoma>
+
+<ContextoBolivia titulo="Humedad, surazos, cortes de luz y una ferretería que vende de todo">
+**La humedad del llano es el enemigo silencioso del electrodo.** Con humedad relativa alta buena parte
+del año, y con lluvias de octubre a abril, una caja de cartón abierta sobre el piso de un galpón
+absorbe agua en días. Nadie lo ve y nadie lo mide, y el resultado aparece como un arco que
+chisporrotea, un revestimiento que se descascara y, en el peor caso, una fisura que se abre al día
+siguiente en una soldadura que quedaba linda. Acá el tarro con tapa no es manía, y conviene no comprar
+de a mucho: más vale una caja chica que se consume que una grande que se humedece.
+
+**El surazo cambia dos cosas a la vez.** Cuando entra el aire frío del sur, la pieza queda mucho más
+fría y el viento se pone fuerte: el metal frío enfría el baño más rápido, lo que favorece justamente
+las fisuras que el hidrógeno estaba esperando, y el viento se lleva el gas que protege el baño y llena
+el cordón de poros. Buscá reparo y dejá que la pieza tome temperatura ambiente. El calor de la seca
+hace lo contrario: entre mayo y septiembre un galpón de calamina al mediodía es un horno, la máquina
+corta por térmico antes de lo que promete la chapa, transpirás más —y el sudor es exactamente lo que
+baja la resistencia de tu cuerpo— y la deshidratación te vuelve descuidado. **Soldar temprano o al
+atardecer no es comodidad: es una decisión técnica y de seguridad.**
+
+**Los cortes de energía obligan a una costumbre.** Donde la luz se va seguido hay que asumir que se va
+a ir en mitad de un cordón: apagar la llave de la máquina y sacar el electrodo de la pinza apenas se
+corta, para que el retorno no encuentre un electrodo pegado a la pieza con el equipo alimentándolo.
+Cuando la tensión del barrio baja en horas pico, la inversora tira más corriente por la línea y la de
+transformador entrega un arco pobre: si la luz de la casa titila, ese no es el momento de soldar algo
+que importe. Y si hay tormenta eléctrica se desenchufa, porque las inversoras mueren por sobretensión
+mucho más seguido que por uso. Con generador, dos advertencias: conectar una inversora a uno chico o
+sin regulación estable es la forma más rápida y más cara de romperla —y esa regla la pone el manual de
+tu equipo, no esta lección—; y el generador funciona **afuera**, lejos de puertas y ventanas, porque el
+monóxido de carbono no huele, no se ve y mata gente dormida todos los años.
+
+**La ferretería del barrio vende de todo y no es un taller de soldadura.** Vas a encontrar electrodos
+sueltos en un frasco al sol, caretas con vidrio de origen incierto, alargues finos vendidos como si
+fueran industriales y máquinas sin manual. Las defensas son las de siempre en este curso: leer lo que
+está impreso, desconfiar del alargue que se siente liviano para su largo y no aceptar una careta cuyo
+filtro no diga qué protección tiene. Y como los repuestos tardan y cuestan, el vidrio de sacrificio, un
+par de guantes extra y un portaelectrodo de reserva se compran cuando hay, no cuando hacen falta un
+domingo.
+
+**El caso trabajado.** En Rizoma del Sur, el vivero comunitario de 3.666 m² repartidos en doce lotes de
+Zanja Honda, la soldadura entra por estructura: bastidores, soportes de tanque, portones, carretillas.
+Las dos lecciones que dejó no son agrícolas. La primera: con la pinza de masa mordiendo un tubo
+pintado, la corriente se buscó camino por donde pudo y el cordón salió irregular hasta que se lijó un
+cuadradito de metal desnudo para la pinza. La segunda, más cara: los electrodos guardados en su caja de
+cartón sobre el piso durante una temporada de lluvias quedaron inservibles para trabajo estructural.
+**Todo esto vale igual en una casa alquilada**: cambia la escala, no el mecanismo. Y por honestidad,
+qué exige la normativa boliviana para una instalación que alimente un equipo así, o qué corresponde
+declarar si vas a soldar por encargo, **no se deduce de esta lección**: se pregunta a un electricista
+matriculado y en el municipio.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya tenés el equipo entendido y la protección puesta con su porqué, que es lo que hace que se mantenga
+puesta cuando nadie mira. Falta la mitad del oficio que decide el resultado más que la mano. La lección
+03, **Preparar la pieza: limpieza, ajuste, sujeción y deformación**, explica por qué el óxido, la
+pintura, la grasa, la humedad y el zinc arruinan la fusión y hasta dónde hay que limpiar; los tipos de
+junta, la separación de raíz y el bisel, y por qué una pieza gruesa sin biselar queda pegada por fuera
+y hueca por dentro; cómo escuadrar y sujetar el metal con prensas y plantillas improvisadas; y la
+contracción que tuerce un marco entero, con la contra-deformación, el orden de los cordones y la
+soldadura salteada. Todo eso ocurre **antes** de encender el arco.

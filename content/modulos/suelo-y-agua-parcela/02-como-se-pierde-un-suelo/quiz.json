@@ -1,0 +1,107 @@
+{
+  "preguntas": [
+    {
+      "id": "dos-operaciones",
+      "tipo": "opcion_multiple",
+      "enunciado": "Perder suelo no es un fenómeno sino dos operaciones encadenadas: primero desprender la partícula y después transportarla. ¿Qué afirmaciones sobre ese par son correctas?",
+      "opciones": [
+        "Si falta cualquiera de los dos pasos no hay pérdida, de modo que el proceso se puede cortar por cualquiera de los dos extremos.",
+        "Bajo lluvia fuerte sobre suelo desnudo el sistema suele estar limitado por el transporte: sobra material suelto y falta agua corriendo que se lo lleve.",
+        "Sobre una superficie ya sellada el sistema está limitado por el desprendimiento: sobra capacidad de arrastre y falta material disponible.",
+        "El desprendimiento necesita pendiente, porque una partícula solo se separa de su agregado cuando el agua ya está corriendo por encima de ella."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras describen la lógica de una tubería de dos etapas, cuyo caudal lo fija la etapa más lenta: con transporte limitante sirve frenar y acortar el recorrido del agua, y con desprendimiento limitante sirve tapar el suelo. La cuarta es falsa y es justamente el error que hace creer que en la llanura no hay erosión: desprender es física vertical. La gota golpea, revienta el agregado y lanza partículas sin que nada tenga que correr, y la disgregación por humedecimiento revienta el terrón desde dentro por el aire atrapado y comprimido con solo mojarlo rápido. Por eso aproximadamente la mitad del daño ocurre sin que nada se mueva de sitio, y por eso una parcela sin pendiente medible pierde suelo igual."
+    },
+    {
+      "id": "energia-de-la-lluvia",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la energía que una lluvia entrega al suelo y sobre cómo se mide el riesgo, ¿qué es cierto?",
+      "opciones": [
+        "La energía sube muchísimo con el tamaño de gota, porque la masa crece con el cubo del diámetro y además la gota grande alcanza mayor velocidad de caída.",
+        "Dos lluvias con los mismos milímetros en el pluviómetro pueden diferir en un orden de magnitud en daño, según con qué intensidad y con qué tamaño de gota caigan.",
+        "La erosividad describe a la lluvia y la erodibilidad al suelo; la primera no se negocia y la segunda solo se mueve a base de años de materia orgánica y estabilidad de agregados.",
+        "Por eso el acumulado mensual del pluviómetro es el mejor indicador disponible del daño erosivo de ese mes."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es la incorrecta, y es un error frecuente porque el acumulado es el dato que todo el mundo tiene a mano. El acumulado suma volumen y no dice nada de cómo llegó: una llovizna de gota fina cayendo a dos metros por segundo y una tormenta convectiva de gota grande cayendo a nueve pueden dejar los mismos milímetros y desprender cantidades completamente distintas. El dato que gobierna el daño es la intensidad —milímetros por hora— junto con el tamaño de gota, y esa es también la razón de que las cifras de manuales de clima templado subestimen lo que hace un aguacero cruceño. Los registros de intensidad se consultan en el servicio meteorológico nacional, y cualquier valor local de erosividad o erodibilidad hay que pedirlo a una institución de investigación agrícola del departamento en vez de deducirlo de tablas importadas."
+    },
+    {
+      "id": "el-sello-superficial",
+      "tipo": "opcion_multiple",
+      "enunciado": "El sellado superficial es la pieza central de la lección. ¿Qué afirmaciones lo describen bien?",
+      "opciones": [
+        "Se forma en minutos con las partículas finas desprendidas que tapan los poros de la superficie, mide de décimas de milímetro a unos pocos milímetros y puede reducir la entrada de agua uno o dos órdenes de magnitud.",
+        "Se comporta como una resistencia en serie: aunque debajo haya un metro de suelo con galerías de lombriz y raíces viejas, el caudal de entrada lo fija esa capa delgada y no el resto del perfil.",
+        "Al secarse endurece y se convierte en costra, cuyo segundo efecto es mecánico y silencioso: la plántula germina y no logra atravesarla, y el fallo se atribuye luego a la semilla.",
+        "Como está hecho con material de la propia superficie, romperlo con la azada o el rastrillo después de cada tormenta resuelve el problema de forma duradera."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es la incorrecta. Romper la costra es un remedio puntual y a veces necesario —sobre todo para rescatar una siembra directa que quedó atrapada debajo—, pero no toca la causa: si el suelo sigue desnudo, la siguiente tormenta vuelve a formar el sello en minutos, y cada pasada de herramienta además desestabiliza más agregados y deja material suelto listo para desprenderse. La palanca real es que la gota nunca golpee la tierra directamente, es decir, la cobertura: entre suelo desnudo y suelo bien tapado la pérdida cambia en dos órdenes de magnitud, y no de forma lineal, porque el primer treinta por ciento de cobertura compra la mayor parte de la reducción. La buena noticia del mecanismo es que el punto donde se decide todo está en la superficie, al alcance de la mano, y taparlo cuesta muy poco."
+    },
+    {
+      "id": "erosion-en-llano",
+      "tipo": "verdadero_falso",
+      "enunciado": "En un terreno como el de Zanja Honda, sin pendiente apreciable a simple vista, la capa fértil no puede perderse por erosión, porque el agua no tiene hacia dónde bajar.",
+      "respuesta": false,
+      "explicacion": "Es falso por cuatro razones independientes. Primera: el impacto de la gota y la formación del sello no dependen de la pendiente, así que buena parte del daño ocurre sin que nada se desplace. Segunda: plano a ojo no es plano; bastan una a cinco milésimas —uno a cinco centímetros por cada cien metros— para que el agua corra, y el ojo no distingue el cero por ciento del medio por ciento, pero el agua sí. Tercera: para llevarse arcilla, limo y materia orgánica no hace falta velocidad, porque esas partículas viajan en suspensión en una lámina de dos centímetros que camina más despacio que una persona; lo que se queda es lo grueso, que es lo que menos falta hace. Y cuarta, la que cambia la conversación: lo que no sale de la parcela también se pierde. En llano el suelo se va de la cama al paso y de lo que se cultiva a lo que se pisa, de manera que el balance del predio puede dar casi cero mientras todas las camas han perdido su capa fértil."
+    },
+    {
+      "id": "lo-que-se-lleva",
+      "tipo": "opcion_multiple",
+      "enunciado": "La erosión no se lleva una muestra representativa del suelo. ¿Qué afirmaciones sobre esa selectividad y sobre la magnitud de la pérdida son correctas?",
+      "opciones": [
+        "Se va preferentemente lo fino —arcilla y limo—, que es donde reside la capacidad de retener nutrientes y agua, y en superficie queda concentrado lo grueso con ese aspecto lavado y áspero.",
+        "Se va la materia orgánica, que es lo más ligero del perfil y lo primero que flota, y se va desde arriba, de la capa vegetal, donde está casi toda la vida del suelo.",
+        "El sedimento que sale suele ser entre dos y cinco veces más rico que el suelo que lo soltó, relación que se conoce como razón de enriquecimiento.",
+        "Como la llanura chaco-beniana recibe el sedimento que la cordillera pierde, esa pérdida se repone sola en unas pocas temporadas y la cuenta se equilibra."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es la incorrecta y es una trampa cómoda, porque parte de un hecho verdadero. Sí es cierto que la llanura chaco-beniana se renueva con lo que baja de la cordillera, pero esa renovación ocurre a escala de río y de siglo, por desborde fluvial, y no repone la capa fértil de una cama de culantro esta temporada; además, un aluvión que traiga suelo nuevo es justamente el evento del que hay que protegerse. La comparación honesta es la otra: con una densidad aparente de 1,3 t/m³, un solo milímetro de suelo sobre los 3.666 m² de Rizoma son unas 4,8 toneladas —casi un camión pequeño— y un milímetro no se ve ni se nota de un año para otro, mientras que formar suelo nuevo lleva del orden de siglos por centímetro. Ese contraste es el sentido de la tasa de pérdida tolerable: la cuenta no es cuánto se perdió, sino cuánto se perdió frente a cuánto se forma."
+    },
+    {
+      "id": "clavos-en-arcilla-expansiva",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un clavo de erosión se dejó a ras del suelo en octubre y en julio sobresale varios milímetros. En un suelo con arcillas expansivas 2:1 como el de la zona, esa lectura demuestra que se perdió ese espesor de suelo.",
+      "respuesta": false,
+      "explicacion": "Es falso, y este es el error que más fácilmente convierte una medición barata en un dato inventado. Las arcillas expansivas 2:1 hinchan al mojarse y se contraen al secarse, y ese movimiento vertical puede ser del mismo orden de magnitud que la erosión que se quiere medir: entre octubre, con el suelo húmedo e hinchado, y julio, en plena seca y contraído, el terreno baja sin que se haya ido un solo gramo. Es el suelo respirando, no suelo perdido. Las tres correcciones no cuestan nada: medir siempre en la misma época del año y con humedad parecida, anclar la varilla más profunda de lo que alcanza el movimiento estacional, y no concluir nada con un solo año, porque la señal de erosión aparece como tendencia a lo largo de varios. Mientras tanto sirven indicadores que no dependen de la cota, como la altura de los pedestales de erosión, las marcas de nivel en postes y cimientos, y el barro decantado en un frasco llenado siempre en el mismo punto de descarga."
+    },
+    {
+      "id": "recorrido-de-diagnostico",
+      "tipo": "abierta",
+      "enunciado": "Es la mañana siguiente a la primera tormenta fuerte de octubre en Rizoma del Sur. Tienes una hora, los doce lotes por delante y ninguna herramienta más que una libreta, un frasco y una regla. Explica qué vas a buscar, por qué precisamente ese día, qué mecanismo hay detrás de cada señal que anotes, qué mediciones baratas dejarías montadas para los próximos años, y qué cosas no podrías afirmar con honestidad a partir de lo observado.",
+      "respuestaModelo": "Ese día se elige porque concentra las tres condiciones que más desprenden y porque el terreno acaba de contar lo que hace. El suelo llega de cinco meses de seca en su mínimo de humedad, la cobertura se consumió, la superficie está desnuda y encima cae una tormenta convectiva de gota grande. Un terrón seco reventado desde dentro por el aire atrapado y comprimido, más setenta mil impactos por cada milímetro de lluvia y por cada metro cuadrado, dejan la superficie sellada en minutos. La primera tormenta de octubre hace más daño que muchas de febrero, cuando el suelo ya está húmedo y hay cultivo tapando, así que caminar esa mañana no es una inspección cualquiera: es leer el peor día del año mientras las huellas están frescas.\n\nEl recorrido anota cinco cosas. Dónde quedó agua estancada y cuántos días dura, porque el agua que no entró señala superficie sellada y, donde hay dengue endémico, un charco que dura varios días es además un criadero. Dónde hay abanicos de barro fino, que salieron de un sitio más cercano de lo que uno cree y marcan el final de un recorrido de escorrentía. En qué pasos se abrieron hilos del ancho de un dedo, que es erosión en surcos y aparece en pasos y roderas; conviene fotografiarlos antes de tocarlos, porque borrarlos con la azada no resuelve nada y elimina la evidencia. Qué paredes tienen banda de barro salpicado abajo, que es la medida más directa de la erosión por salpicadura y es literalmente suelo propio pegado a la pared. Y de qué color salió el agua por el punto de descarga: clara significa poco transporte y marrón significa que el suelo va dentro.\n\nHay señales que miden sin instrumentos. Un pedestal de erosión —una columnita coronada por una piedra, una raíz o un plástico— tiene una altura que es directamente el espesor que bajó todo lo demás; lo mismo dicen las líneas de color en postes y cimientos y el cuello de un frutal que salió del vivero a ras de suelo. Bajo el plátano y los árboles de sombra hay que mirar con cuidado, porque el agua que se junta en una hoja grande y cae desde tres o cuatro metros llega en gotas más gruesas que las de la lluvia: con el suelo barrido, la salpicadura bajo un dosel alto puede ser peor que a cielo abierto, y lo que protege no es la copa sino la hojarasca. También hay que mirar la línea de goteo del borde de la malla del vivero, donde se concentra en una franja estrecha todo lo que cae del techo, y las camas de yautía y batata, donde la cresta se está yendo al paso.\n\nLas mediciones que dejaría montadas son tres y todas cuestan casi nada. Un frasco llenado siempre en el mismo punto de descarga y en la misma fase de la tormenta, dejado reposar un día, midiendo con la regla el barro depositado: es una serie comparable año tras año. La prueba del terrón en un vaso, con un terrón de cama tapada y otro de paso pelado, fotografiada cada año en la misma fecha, que muestra la estabilidad de agregados y sirve además para explicárselo a cualquier vecino en dos minutos. Y clavos de erosión, uno por lote, con su posición anotada, sabiendo que en estas arcillas expansivas hay que leerlos siempre en la misma época y con humedad parecida, anclarlos más profundo que el movimiento estacional y no concluir nada con un solo año.\n\nLo que no se puede afirmar es tan importante como lo que se observa. No se puede convertir el recorrido en toneladas por hectárea: el modelo clásico de seis factores se ajustó frente a una parcela patrón de otro país, con veintidós metros de largo y nueve por ciento de pendiente, y aplicarlo con tablas importadas produce una cifra con aspecto científico y sin respaldo; además está pensado para estimar lo que sale de una parcela en ladera, no el sellado, la costra ni la redistribución interna, que es casi todo el daño aquí. Tampoco se puede dar un valor local de erosividad o erodibilidad, que hay que pedir a una institución de investigación agrícola del departamento. Ni atribuir a la erosión un desnivel medido entre dos estaciones distintas, que puede ser el suelo hinchando y contrayéndose. Ni concluir de una sola tormenta: un recorrido es la línea de base, y la señal aparece como tendencia de varios años. Y una parte del diagnóstico no termina dentro del predio, porque el agua y el polvo no reconocen linderos y lo que entra del camino o del lote vecino es problema propio aunque no sea decisión propia.",
+      "criterios": [
+        "Justifica la fecha explicando que septiembre y octubre juntan suelo seco al máximo, superficie desnuda y lluvia intensa, y que por eso la primera tormenta hace más daño que muchas de plena temporada",
+        "Menciona el agua estancada y su duración, y relaciona el suelo sellado con la formación de criaderos de mosquito en una zona con dengue endémico",
+        "Busca abanicos de sedimento fino y los interpreta como el final de un recorrido de escorrentía originado cerca",
+        "Registra los hilos y surcos en pasos y roderas y advierte que hay que fotografiarlos antes de borrarlos, porque pasar la azada elimina la evidencia sin resolver la causa",
+        "Usa la banda de barro salpicado en paredes como prueba directa de la erosión por salpicadura, y el color del agua en el punto de descarga como indicador de transporte de suelo",
+        "Interpreta pedestales de erosión, marcas de nivel en postes o cimientos y el cuello de un frutal como medidas del espesor perdido",
+        "Señala puntos específicos del sitio: bajo el plátano y los árboles de sombra, la línea de goteo del borde de la malla del vivero y las camas de yautía o batata",
+        "Explica que bajo un dosel alto con el suelo barrido la salpicadura puede ser peor que a cielo abierto, porque la gota se junta en la hoja y cae más gruesa desde varios metros",
+        "Propone mediciones baratas y repetibles: frasco de sedimento en el mismo punto, prueba del terrón en un vaso y clavos de erosión con su posición anotada",
+        "Advierte que en arcillas expansivas el clavo hay que leerlo en la misma época y con humedad parecida, anclado profundo, y que la señal es una tendencia de varios años",
+        "Se niega a estimar toneladas por hectárea con modelos o tablas importadas y remite los valores locales de erosividad o erodibilidad a una institución de investigación agrícola",
+        "Reconoce que el diagnóstico no termina en el lindero, porque el agua y el polvo entran desde el camino y desde los lotes vecinos"
+      ],
+      "explicacion": "Esta pregunta comprueba si la lección se convirtió en capacidad de observación. La erosión de llanura es invisible como proceso pero deja rastros visibles como resultado, y todos ellos son gratuitos: no hacen falta instrumentos, hace falta ir el día correcto y saber qué significa cada señal. Una buena respuesta encadena señal y mecanismo en vez de listar síntomas, porque el objetivo no es hacer un inventario sino decidir dónde actuar. Y una respuesta excelente incluye lo que no se puede afirmar, que es la parte que más se salta: la tentación de convertir un paseo en una cifra de toneladas por hectárea usando un modelo ajustado en otra parcela patrón produce un número con apariencia de dato y sin ningún respaldo, y confundir el suelo hinchando y contrayéndose con suelo perdido arruina la única serie larga que la parcela va a tener."
+    }
+  ]
+}

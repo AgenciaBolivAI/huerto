@@ -1,0 +1,40 @@
+{
+  "titulo": "Qué es y qué no es: predice la siguiente palabra, y por eso inventa",
+  "subtitulo": "Un modelo de lenguaje solo calcula qué pieza de texto viene después y sortea una de la lista. En ninguna parte de ese proceso hay un paso que compare lo escrito con el mundo, y el tono seguro se entrenó aparte, midiendo preferencia humana y no verdad. De ahí sale todo: inventar no es una falla que alguien vaya a arreglar, es el mismo mecanismo funcionando bien.",
+  "duracionMin": 30,
+  "objetivos": [
+    "Describir el mecanismo completo sin código: entrenamiento sobre texto, tokenización, predicción de la pieza siguiente, muestreo, ventana de contexto y ajuste posterior por preferencia humana.",
+    "Explicar por qué el corpus no guarda el texto original y por qué no hay una raya interna que separe lo que el modelo recuerda de lo que rellena.",
+    "Deducir del muestreo por qué la misma pregunta da respuestas distintas, y usar esa repetición como prueba barata de si había material sólido detrás.",
+    "Distinguir lo que el modelo hace sobre un texto que se le pegó en la ventana de lo que afirma sobre el mundo de memoria, y asignar a cada caso un nivel de confianza distinto.",
+    "Argumentar por qué la seguridad del tono no tiene ninguna relación con la verdad del contenido, remontándola a la fase de preferencia humana.",
+    "Justificar por qué inventar es comportamiento normal del sistema, se puede reducir y no se elimina, y por qué el modelo tampoco puede declarar honestamente cuánto está seguro.",
+    "Desmontar seis confusiones frecuentes contrastando mecanismos: buscador, base de datos, calculadora, oráculo, conciencia y alguien que sabe lo que sabe.",
+    "Aplicar en Rizoma del Sur una política de tres columnas que separe lo que se delega, lo que se comprueba y lo que la máquina no decide nunca."
+  ],
+  "prerrequisitos": [
+    "ia-aplicada/01-que-puede-y-que-no",
+    "programar-desde-cero/01-que-es-un-programa"
+  ],
+  "videos": [],
+  "referencias": [],
+  "terminos": [
+    "modelo-de-lenguaje",
+    "generacion-autorregresiva",
+    "corpus-de-entrenamiento",
+    "fecha-de-corte",
+    "token",
+    "muestreo",
+    "ventana-de-contexto",
+    "ajuste-por-preferencia-humana",
+    "adulacion-del-modelo",
+    "calibracion-de-confianza",
+    "antropomorfizacion",
+    "alucinacion",
+    "etiqueta-del-producto",
+    "testigo",
+    "epoca-de-lluvias",
+    "surazo"
+  ],
+  "practica": true
+}

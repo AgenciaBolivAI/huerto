@@ -1,0 +1,355 @@
+Hasta aquí has aprendido a leer planos que alguien dibujó. Ahora cambia el lado de la mesa, y con un
+detalle que en el área rural boliviana es lo normal y no la excepción: **la propiedad no tiene
+ningún plano**. Ni del terreno, ni de lo construido. El primero que exista lo vas a dibujar tú.
+
+Eso no es un problema, es una ventaja. Un plano heredado hay que creérselo; uno que mediste tú
+sabes exactamente en qué es preciso y en qué es aproximado. Pero para dibujarlo primero hay que
+salir con una cinta y volver con datos — y esta lección es sobre cómo se toman esos datos para que
+después se pueda dibujar de verdad, y no solo *casi*.
+
+## El equipo: lo que hace falta y lo que no
+
+Lo indispensable cabe en una bolsa y cuesta poco:
+
+- **Cinta larga**, de 30 o 50 metros, de fibra de vidrio. La de metal se enrolla mal y se corta.
+- **Flexómetro** de 5 metros para lo corto.
+- **Estacas** y un martillo o mazo, con cinta de color para verlas de lejos.
+- **Jalones** —cualquier varilla recta y visible sirve— para marcar alineaciones a distancia.
+- **Cuaderno de tapa dura y lápiz.** Lápiz, no bolígrafo: en el campo llueve.
+- **Manguera transparente** para los niveles.
+- **La brújula del teléfono** para el norte, y la cámara.
+
+Y una segunda persona. Casi toda la técnica que sigue supone dos manos en cada extremo de la cinta;
+solo se puede medir bien en solitario si tienes dónde enganchar la punta.
+
+<Dato titulo="Lo que no hace falta, aunque exista">
+Un distanciómetro láser es cómodo y no caro, pero al aire libre y a pleno sol pierde el punto a
+distancias grandes, así que no reemplaza la cinta: la complementa en interiores y en tramos cortos.
+
+Un GPS de teléfono da coordenadas con un error de varios metros. Sirve para ubicar la propiedad en
+el mundo y no sirve para nada de lo que vas a hacer hoy. Y una estación total o un dron con
+fotogrametría resuelven todo esto en una mañana, pero cuestan lo que cuestan y siguen necesitando
+que alguien sepa qué se está midiendo — que es justo lo que estás aprendiendo.
+</Dato>
+
+## Regla uno: primero el dibujo, después las medidas
+
+<Diagrama
+  src="croquis-primero.webp"
+  alt="Dos páginas de cuaderno comparadas. En la izquierda, el croquis está dibujado diminuto en una esquina y las cifras se amontonan encima de las líneas y se salen del papel, ilegibles, con una gran cruz roja; el pie dice SIN SITIO PARA LAS COTAS. En la derecha, el mismo croquis está dibujado grande y suelto ocupando la página, con márgenes amplios donde las cifras entran cómodas, y un visto verde; el pie dice GRANDE Y SUELTO. Arriba, el título PRIMERO EL DIBUJO, DESPUÉS LAS MEDIDAS."
+  pie="El croquis no se dibuja a escala: se dibuja con sitio. Su única obligación es que las medidas quepan legibles."
+/>
+
+El <Termino slug="croquis">croquis</Termino> de campo es un dibujo a mano alzada, **deliberadamente
+no a escala**, cuya única función es sostener las medidas que vas a ir anotando. Y de esa función
+salen sus dos reglas:
+
+**Se dibuja completo antes de medir nada.** Recorres el terreno, entiendes la forma, y la dibujas
+entera. Si empiezas a medir mientras dibujas, el croquis va creciendo hacia donde te lleva el
+recorrido y acaba saliéndose de la hoja por un lado.
+
+**Se dibuja grande y suelto.** Ocupando la página, con márgenes generosos. Un croquis apretado obliga
+a escribir las cifras encima de las líneas, y una cifra que no se puede leer al día siguiente no es
+un dato: es una vuelta al terreno.
+
+Que no esté a escala no es un defecto, es lo correcto. Un tramo de veinte metros y otro de tres
+pueden dibujarse casi iguales si eso hace que las cotas quepan. **La cota manda sobre el dibujo** —
+la regla de la lección anterior aplicada al revés, y aquí en su forma más literal: el croquis es
+*solo* un soporte de cotas.
+
+## Cuatro lados no fijan una forma
+
+<Diagrama
+  src="triangulacion.webp"
+  alt="Dos paneles. En el izquierdo, un cuadrilátero dibujado dos veces con los mismos cuatro lados: uno recto y otro superpuesto, inclinado y aplastado, con una flecha curva de doble punta entre ambos mostrando que la figura se deforma libremente; lleva una cruz roja y el pie SOLO LOS LADOS, SE DEFORMA. En el derecho, el mismo cuadrilátero con una diagonal en terracota que lo parte en dos triángulos y lo deja rígido, con un visto verde y el pie CON LA DIAGONAL, QUEDA FIJA. Arriba, el título CUATRO LADOS NO FIJAN UNA FORMA."
+  pie="La figura de la izquierda y la de la derecha tienen exactamente los mismos cuatro lados. Con solo esos cuatro números, el terreno es irreconstruible."
+/>
+
+Aquí está el corazón geométrico de la lección, y es una de esas cosas que parecen obvias una vez
+dichas y que casi nadie tiene presentes.
+
+Si mides los cuatro lados de un terreno cuadrangular y te vuelves a casa con esos cuatro números,
+**no puedes dibujarlo**. No porque falte precisión: porque falta información. Un cuadrilátero con
+lados fijos sigue pudiendo deformarse — se aplasta como un marco de cuadro sin travesaño, y hay
+infinitas figuras distintas con esos mismos cuatro lados.
+
+**El triángulo es el único polígono rígido.** Con tres lados dados, la figura es una y solo una.
+De ahí la técnica entera del levantamiento por cinta, que se
+llama <Termino slug="triangulacion">triangulación</Termino>: **descomponer la figura en triángulos y medir
+todos los lados de cada triángulo.** En un cuadrilátero eso significa los cuatro lados **más una
+diagonal**; en una figura de cinco lados, los cinco lados más dos diagonales.
+
+<Analogia>
+Es un sistema de restricciones. Los cuatro lados son cuatro ecuaciones para una figura que tiene más
+grados de libertad que eso: el sistema está subdeterminado y admite infinitas soluciones. La
+diagonal es la ecuación que faltaba, y con ella la solución es única.
+
+Y como todo sistema de este tipo, agradece estar **sobredeterminado**: si mides las dos diagonales
+en vez de una, tienes una restricción de más — redundante si todo salió bien, y delatora si algo
+salió mal. Es el mismo patrón que la suma de las parciales contra el total, y el mismo que las dos
+diagonales del replanteo.
+</Analogia>
+
+<Video id="jQYHxLJNQMU" />
+
+<Dato titulo="Por qué distancias y no ángulos">
+Podrías preguntarte por qué no se miden simplemente los ángulos, que resolverían el problema igual.
+La razón es puramente práctica y ya apareció en el replanteo: **en el campo, con herramientas
+sencillas, una distancia se mide bien y un ángulo se mide mal.** Un error de un grado es
+imperceptible al ojo y se convierte en medio metro a treinta metros de distancia.
+
+Por eso todo el oficio de campo con cinta está construido sobre distancias: la escuadra se saca con
+la <Termino slug="escuadra-3-4-5">regla del 3-4-5</Termino> —tres unidades en un lado, cuatro en el
+otro, cinco en la diagonal y el ángulo es recto— y la forma se fija con triángulos. Nunca con un
+transportador.
+</Dato>
+
+## Ubicar un punto suelto: dos distancias
+
+<Diagrama
+  src="ubicar-un-punto.webp"
+  alt="Un terreno cuadrangular visto desde arriba con dos esquinas marcadas por cuadraditos oscuros rotulados ESQUINA CONOCIDA. Dentro del terreno hay un árbol dibujado como una copa redonda. Desde cada esquina sale una línea recta de medición hasta el tronco y un arco de circunferencia en terracota centrado en esa esquina; los dos arcos se cortan exactamente en el tronco, marcado con un anillo. Fuera del terreno se ve desvaído el otro cruce de los arcos, tachado y rotulado LA OTRA SOLUCIÓN, DESCARTADA. Arriba, el título DOS DISTANCIAS FIJAN UN PUNTO."
+  pie="Es el mismo principio del triángulo: un punto con dos distancias conocidas a dos puntos conocidos forma un triángulo, y por tanto queda fijo."
+/>
+
+Cuando hay que ubicar algo suelto dentro del terreno —un árbol grande, un poste, la boca de un pozo,
+la esquina de una construcción existente— la técnica es la misma idea reducida al mínimo:
+
+**Se mide su distancia a dos puntos ya conocidos.** Dos esquinas del terreno, por ejemplo. Con eso,
+el punto queda fijado: al dibujar en el papel se trazan dos arcos con el compás, uno desde cada
+punto conocido, y **se cortan justo donde estaba el árbol**.
+
+Hay un matiz bonito: dos circunferencias se cortan en **dos** puntos, así que en rigor hay dos
+soluciones. En la práctica se descarta a ojo —una cae fuera del terreno, o del lado contrario del
+muro— y por eso conviene anotar en el croquis de qué lado estaba. Cuando el punto importa mucho, se
+mide una tercera distancia y desaparece la ambigüedad.
+
+## Bordes irregulares: línea base y ordenadas
+
+<Diagrama
+  src="ordenadas.webp"
+  alt="Vista desde arriba. Un borde natural ondulado cruza el cuadro horizontalmente, rotulado BORDE IRREGULAR. Debajo, una cinta métrica perfectamente recta va de una estaca a otra, rotulada LÍNEA BASE RECTA. A intervalos regulares suben desde la cinta líneas perpendiculares cortas de distinta longitud, cada una terminando sobre la curva, con escuadras que marcan el ángulo recto; están rotuladas ORDENADAS PERPENDICULARES. Arriba, el título LÍNEA BASE Y ORDENADAS."
+  pie="Cualquier borde curvo se convierte en una lista de números: la distancia a lo largo, y la distancia hacia afuera."
+/>
+
+Los terrenos reales tienen bordes que no son rectas: una acequia, un cerco viejo que serpentea, la
+orilla de un bajío. Triangular eso sería absurdo. La técnica correcta son
+las <Termino slug="ordenadas">ordenadas</Termino>:
+
+1. Se tiende una **línea base recta** entre dos estacas, paralela y cercana al borde irregular.
+2. Cada tantos metros a lo largo de esa línea, se mide una **perpendicular** hasta el borde.
+3. Se anotan los pares: distancia a lo largo, distancia hacia afuera.
+
+Eso convierte una curva en una tabla de coordenadas locales, que en el papel se reconstruye punto a
+punto y se une a mano alzada. Cuanto más quebrado el borde, más juntas las ordenadas; en un tramo
+casi recto, cada cinco metros basta.
+
+La perpendicular se levanta con el 3-4-5, o simplemente **buscando la distancia mínima**: te mueves
+con la cinta hasta que el número deja de bajar, y ahí estás perpendicular. Es un truco de campo
+rápido y sorprendentemente bueno.
+
+## El cierre: la comprobación que delata
+
+<Diagrama
+  src="error-de-cierre.webp"
+  alt="Un terreno de cinco lados recorrido como una poligonal, con estacas en cada vértice y flechas que indican el sentido de la vuelta desde un PUNTO DE PARTIDA. Al terminar el recorrido, el último tramo no llega a la estaca inicial y queda un hueco pequeño pero visible, dibujado en terracota con una flecha de doble punta y un anillo, rotulado NO CIERRA. Abajo, la línea SI EL HUECO ES GRANDE, HAY UNA MEDIDA MAL TOMADA. Arriba, el título EL ERROR DE CIERRE."
+  pie="Recorrer el perímetro entero y volver al punto de partida es gratis, y es lo único que detecta un número mal anotado."
+/>
+
+Cuando el levantamiento se hace recorriendo el perímetro tramo a tramo, hay una comprobación
+obligatoria: **al terminar la vuelta tienes que llegar al punto del que saliste.** Si al dibujar el
+polígono con tus medidas la figura no cierra y queda un hueco, eso es
+el <Termino slug="error-de-cierre">error de cierre</Termino>.
+
+Un hueco pequeño es normal: son las imprecisiones de la cinta acumuladas, y se reparte proporcional
+entre los tramos sin más drama. Como orden de magnitud, en un levantamiento con cinta y cuidado,
+**un error de cierre por debajo de uno en quinientos** —veinte centímetros en cien metros de
+perímetro— es un trabajo aceptable para dibujar el plano de un vivero.
+
+Un hueco grande es otra cosa: **no es imprecisión, es un error.** Un número mal anotado, un tramo
+medido sobre terreno inclinado en lugar de en horizontal, una cinta que se enganchó en un pasto.
+Repartirlo sería esconder el problema. Lo que corresponde es volver y remedir — que es barato el
+mismo día y carísimo tres semanas después.
+
+<Advertencia>
+**Las distancias se miden en horizontal, no siguiendo el suelo.** Si el terreno tiene un desnivel y
+apoyas la cinta encima, estás midiendo la hipotenusa y anotando lo que crees que es la base: siempre
+de más.
+
+En el llano cruceño los desniveles son suaves y el efecto suele ser pequeño, pero en cualquier
+pendiente notable la cinta se tiende horizontal —a la altura que haga falta— y se baja el punto a
+plomo. Es la diferencia entre medir el terreno y medir su superficie.
+</Advertencia>
+
+## Alturas: dónde va a correr el agua
+
+La geometría en planta es la mitad del levantamiento. La otra mitad son las alturas relativas, y en
+llanura aluvial son **la mitad que decide**.
+
+La herramienta es la de siempre: el <Termino slug="nivel-de-manguera">nivel de manguera</Termino>,
+que transfiere un nivel exacto entre dos puntos cualesquiera sin más física que un tubo con agua. Se
+elige un punto de referencia permanente —el mismo criterio que
+la <Termino slug="cota-de-referencia">cota de referencia</Termino> de la obra— y se anotan las alturas
+de los demás puntos contra él: más alto, más bajo, cuánto.
+
+Lo que buscas no es un modelo topográfico fino. Son tres cosas:
+
+- **Dónde está lo alto y dónde lo bajo**, para saber hacia dónde escurre el agua de lluvia.
+- **Cuánto desnivel hay entre el punto donde vas a construir y el punto adonde tiene que llegar un
+  desagüe**, porque eso decide si hay pendiente suficiente o hay que levantar el piso.
+- **Hasta dónde llegó el agua el peor día**, que no se mide con manguera sino con memoria y con la
+  marca de barro en un tronco.
+
+## Lo que no es geometría y manda igual
+
+<Diagrama
+  src="que-mas-anotar.webp"
+  alt="Croquis a mano alzada de un terreno rural visto desde arriba, con seis iconos rotulados alrededor: una copa de árbol para ÁRBOL GRANDE, un círculo con ondas para PUNTO DE AGUA, una línea discontinua con un camión para POR DÓNDE ENTRA EL CAMIÓN, una mancha irregular para AQUÍ SE ENCHARCA, un círculo con flecha para NORTE, y una línea de postes con un cable para CABLE AÉREO. Arriba, el título LO QUE NO ES GEOMETRÍA Y MANDA IGUAL."
+  pie="Esta información no está en ningún registro y solo la tienes tú, por haber estado ahí. Si no se anota el mismo día, se pierde."
+/>
+
+Un levantamiento que solo trae distancias es un levantamiento a medias. Lo que hay que anotar además,
+y que ningún plano municipal va a tener nunca:
+
+- **Los árboles grandes**, con su tronco ubicado y una idea de la copa. Dan sombra, que puede ser un
+  recurso o un estorbo, y quitarlos cuesta.
+- **El punto de agua**: pozo, tanque, toma. Con su profundidad si se sabe.
+- **Por dónde entra un vehículo**, y hasta dónde puede llegar. Un galpón al que no llega el camión de
+  materiales es un galpón caro.
+- **Dónde se encharca cuando llueve fuerte.** El dato más valioso de la lista y el único que no se
+  puede medir en un día seco.
+- **El norte**, con la brújula del teléfono, dibujado en el croquis.
+- **Cables aéreos, linderos y construcciones vecinas**, incluidas las que están del otro lado del
+  alambrado y proyectan sombra o vierten agua hacia ti.
+
+### Fotos: la copia de seguridad del croquis
+
+Fotografía cada esquina, cada elemento anotado y el croquis entero, el mismo día. Las fotos no
+sustituyen a las medidas —una foto no tiene escala— pero salvan la interpretación: cuando dentro de
+dos semanas no entiendas qué quisiste decir con un garabato, la foto de ese rincón te lo va a
+recordar.
+
+Y una costumbre que vale oro: al fotografiar una esquina, **da un paso atrás y saca también una foto
+apuntando al resto del terreno**, para que después sepas desde dónde estabas mirando.
+
+## Reglas del cuaderno de campo
+
+Cierro con las que se aprenden por las malas:
+
+**No se borra nunca.** Si un número estaba mal, se tacha con una raya y se escribe al lado el nuevo.
+Un número tachado dice *aquí hubo una duda*, y esa información vale. Un número borrado no dice nada.
+
+**Cada medida lleva su unidad**, al menos la primera vez, y si algo se midió en pasos o a ojo se
+escribe **aprox** al lado sin vergüenza. Una estimación marcada como estimación es un dato útil; una
+estimación disfrazada de medición es una trampa.
+
+**El croquis se fecha y se firma**, aunque seas el único que va a mirarlo. Y se anota quién sostenía
+el otro extremo de la cinta.
+
+**No se pasa a limpio en el terreno.** Se pasa a limpio en la mesa, con calma, y el croquis sucio
+original **se guarda**. Es el dato crudo; el plano es un producto derivado, y siempre puede haber
+que volver a la fuente.
+
+<Analogia>
+El croquis es tu log en bruto y el plano es la vista agregada. Nadie borra los logs porque ya generó
+el informe.
+
+Y como todo dato crudo, lo que hay que preservar es su fidelidad, no su prolijidad. Un croquis feo,
+sucio, con tachones fechados, es infinitamente más fiable que uno bonito redibujado de memoria en la
+camioneta de vuelta.
+</Analogia>
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**El levantamiento de Rizoma tiene una particularidad que lo simplifica: son doce lotes contiguos**,
+que en principio son rectángulos regulares con medidas de escritura. Eso te da un punto de partida
+—las medidas registrales— pero **no te exime de medir**, porque lo que está en el papel de la
+escritura y lo que está alambrado en el terreno no siempre coinciden, y lo que manda para construir
+es lo segundo.
+
+**Plan de trabajo para una jornada de dos personas:**
+
+Primero recorre entero y dibuja el croquis del conjunto, grande, en una hoja A3 sobre tapa dura, sin
+medir nada todavía. Después mide el perímetro exterior completo con cotas acumuladas desde una
+esquina, cerrando la vuelta para tener el error de cierre. Después las líneas de división entre
+lotes, que es donde más vale la pena comprobar contra la escritura. Y **las diagonales de cada
+sector**: sin ellas los rectángulos son marcos flojos y el dibujo no va a cerrar.
+
+**Ubica por triangulación, no a ojo:** el pozo o punto de agua, los árboles grandes que dan sombra,
+los postes de entrada, y las esquinas de lo que ya esté construido. Dos distancias a dos esquinas
+conocidas por cada elemento.
+
+**Y dedica un rato solo a las alturas**, con la manguera. Necesitas saber qué parte del terreno es la
+más alta —ahí va el galpón y ahí va todo lo que no puede mojarse— y cuánto desnivel hay hasta donde
+tendría que ir un desagüe. En llanura aluvial esa diferencia se mide en centímetros y decide el
+proyecto entero.
+
+**Marca en el croquis las zonas que se encharcan.** Si estás levantando en la seca, esa información
+no está a la vista y tienes que ponerla de memoria — y si hay dudas, esperar a la primera lluvia
+fuerte y volver a mirar. Ninguna otra fuente la tiene.
+
+**Aprovecha tu oficio en lo aburrido:** pasa las medidas del cuaderno a una planilla el mismo día,
+con una columna para el valor y otra para la observación. Los cierres y las sumas se comprueban solos,
+y a los seis meses vas a tener la respuesta a cualquier pregunta sin volver a salir con la cinta.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Muchas propiedades rurales no tienen plano y algunas tampoco tienen mensura reciente.** Lo que
+suele existir es la escritura con medidas y colindancias, y el registro en las oficinas
+correspondientes. Es un punto de partida legal, no un plano de obra: para construir necesitas el
+terreno como está hoy, con el alambrado donde está.
+
+**Si el objetivo llega a ser un trámite o una transferencia**, el levantamiento con validez legal lo
+firma un profesional habilitado y se hace con equipo topográfico. Lo que estás aprendiendo aquí es el
+levantamiento **para proyectar y construir**, que es otra cosa y es la que necesitas primero. De los
+planos que exige un trámite se ocupa la última lección de este módulo.
+
+**Vocabulario de campo:** la cinta es **cinta** o **huincha**; el jalón es **jalón** o **baliza**; la
+estaca es **estaca**; el croquis es **croquis**; medir el terreno es **hacer el levantamiento**; y el
+límite con el vecino es el **lindero** o la **colindancia**.
+
+**Sobre el momento del año:** levantar en plena seca es más cómodo —el pasto está bajo y se camina
+mejor— pero se pierde la información de dónde se acumula el agua. Si puedes, camina el terreno una
+vez en pleno aguacero de enero, aunque sea sin cinta y solo con el teléfono, y fotografía dónde se
+queda el agua. Esa media hora vale más que un día entero de mediciones.
+
+**Y un detalle práctico del llano:** el pasto alto y las hormigas. Antes de tender cincuenta metros
+de cinta conviene abrir la línea con machete, porque una cinta apoyada sobre pasto tupido no está
+recta ni tensa, y una medición con la cinta combada da siempre de más.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Medí los cuatro lados, ya está.»** Cuatro lados admiten infinitas figuras. Sin diagonales el
+terreno no se puede dibujar.
+
+**«Voy midiendo mientras dibujo.»** El croquis se dibuja entero primero, grande y suelto. Si no,
+acaba saliéndose de la hoja justo por donde faltaba anotar.
+
+**«Apoyo la cinta en el suelo y sigo la pendiente.»** Eso mide la hipotenusa. Las distancias van en
+horizontal.
+
+**«El número me quedó feo, lo borro.»** Se tacha y se escribe al lado. Un tachón fechado es
+información; un borrón es una laguna.
+
+**«No cerró por veinte centímetros en cien metros, lo dejo así.»** Eso sí se reparte. Lo que no se
+reparte es un hueco grande: ahí hay una medida mal tomada y hay que volver.
+
+**«El árbol lo ubico a ojo, está más o menos ahí.»** Dos distancias a dos esquinas conocidas y queda
+fijo. Cuesta dos minutos.
+
+**«Paso el croquis a limpio y tiro el sucio.»** El sucio es el dato crudo. El limpio es un producto
+derivado y puede tener errores de transcripción.
+
+**«El norte lo pongo después, de memoria.»** La brújula está en el teléfono y estás ahí. Después la
+memoria gira el terreno noventa grados sin avisar.
+
+## Lo que sigue
+
+Vuelves del terreno con un cuaderno lleno de números, un croquis feo y unas cuantas fotos. Eso es la
+materia prima.
+
+La lección siguiente es la transformación: **cómo se convierte ese cuaderno en un plano a escala** —
+con compás y arcos, exactamente como en el diagrama de las dos distancias— y cómo se dibujan después
+la planta y las fundaciones de tu propia obra, de forma que sirvan para replantear y para computar.

@@ -1,0 +1,427 @@
+La lección anterior contestó cuánta agua hay debajo y por cuánto tiempo va a salir. Queda la otra mitad
+de la pregunta, la que arruina parcelas enteras sin que nadie vea el día en que empezó: **qué trae esa
+agua disuelta adentro**.
+
+Este es el único proceso de todo el módulo que **avanza justamente cuando haces bien tu trabajo**. La
+erosión llega cuando descuidas la cobertura; el encharcamiento, cuando no drenas. La salinización avanza
+cada vez que riegas, porque cada riego trae su carga de sal y el agua que se va no se la lleva. Y no
+avisa: cuando la planta habla, el suelo lleva años acumulando.
+
+## Un envase se tira; el terreno no
+
+El módulo 25 ya trató la calidad del agua y esta lección no lo repite. Da por sabido aquello: que el agua
+es una solución con cosas disueltas, que
+la <Termino slug="conductividad-electrica">conductividad eléctrica</Termino> mide cuánta sal lleva y que
+hay que dejar una <Termino slug="fraccion-de-lavado">fracción de lavado</Termino> para que el envase no
+se cargue.
+
+Lo que cambia aquí es el sujeto. **En un vivero, el sustrato salinizado se tira**: se vacían las bolsas y
+en una semana el problema no existe, porque la unidad de manejo tiene cinco litros. A escala de parcela
+no hay a dónde tirar nada: la unidad de manejo son los primeros cincuenta centímetros de tus 3.666 metros
+cuadrados, pesa miles de toneladas y **es lo único que no se puede comprar de nuevo**.
+
+## La cuenta que casi nadie hace
+
+Con cada riego entra agua **y entra sal**. Esa agua se va por dos caminos y ninguno se lleva sal: se
+evapora o la transpira la planta, y en los dos casos **sale vapor puro**. Solo hay una salida capaz de
+arrastrar sal, el agua líquida que atraviesa la zona de raíces y baja; si no existe, la resta es siempre
+positiva y la sal sube sin techo.
+
+<Formula explicacion="La conversión de conductividad a sal disuelta es una regla de bolsillo usada en todo el mundo: 1 dS/m equivale a unos 640 miligramos de sal por litro. La lámina en milímetros es lo mismo que litros por metro cuadrado, así que el resultado sale directo en gramos por metro cuadrado.">
+sal aportada (g/m² al año) = lámina de riego (mm al año) × CE del agua (dS/m) × 0,64
+</Formula>
+
+Con números de aquí. La seca dura unos cinco meses y un consumo de 4 milímetros por día pide del orden
+de 600 milímetros de riego. Con un agua de pozo de conductividad 1,0 —que nadie llamaría salada— salen
+384 gramos por metro cuadrado y por año: sobre los 3.666 metros cuadrados de Rizoma, **una tonelada y
+media de sal descargada sobre el terreno cada año**. Con conductividad 2,0 son tres toneladas.
+
+<Analogia titulo="Es una fuga de memoria, no un error">
+Un proceso pide memoria y no la libera. No hay excepción, no hay traza, los tests pasan y el servicio
+responde igual el primer día que el décimo. Y una madrugada se cae, sin haber hecho nada distinto.
+
+El riego con agua salina es eso: cada riego reserva y no libera. **El sistema no falla cuando la reserva
+llega, falla cuando se acaba el margen.** Y un fallo así no se diagnostica mirando el síntoma sino
+**instrumentando el balance**, ni se resuelve sin garantizar la vía de salida.
+</Analogia>
+
+## Tres problemas distintos en el mismo balde
+
+Aquí está el error que hace fracasar la mitad de las correcciones: **«agua mala» no es una categoría**.
+Un mismo análisis puede traer tres problemas que se miden distinto, dañan distinto y se corrigen con
+obras opuestas, y confundirlos hace que la solución de uno agrave el otro.
+
+<Tabla>
+
+| Problema | Qué manda | A quién daña | Con qué se mide | Cómo se corrige |
+| --- | --- | --- | --- | --- |
+| Salinidad | todas las sales sumadas | a la planta: le cuesta absorber agua | conductividad eléctrica | lavar, si hay drenaje |
+| Sodicidad | el sodio frente al calcio y el magnesio | al suelo: le deshace la estructura | RAS en el agua, PSI en el suelo | reponer calcio y después lavar |
+| Toxicidad de iones | cloruro, sodio y boro por separado | al tejido de la hoja | análisis con cada ion aparte | cambiar de fuente o de método de riego |
+
+</Tabla>
+
+La <Termino slug="salinizacion">salinización</Termino> es la acumulación de sales solubles en la zona de
+raíces hasta hacer caer el rendimiento. La que trae el riego se
+llama <Termino slug="salinizacion-secundaria">salinización secundaria</Termino> y es la de esta lección;
+la primaria viene del subsuelo y estaba ahí antes que nadie.
+
+El tercer problema, la <Termino slug="toxicidad-ionica-especifica">toxicidad iónica específica</Termino>,
+no depende de la sal total sino de un ion concreto que se acumula en el tejido: cloruro, sodio y sobre
+todo boro, que tiene **una ventana estrechísima entre lo que hace falta y lo que envenena** y que además
+no se lava bien. Un agua puede tener conductividad baja y aun así ser inservible por boro, y ese dato
+solo aparece si lo pides.
+
+## Salinidad: sed con los pies en el agua
+
+La raíz no bombea agua: el agua entra sola porque adentro hay más cosas disueltas que afuera. Cada sal
+que se agrega al agua del suelo **reduce esa diferencia**, y la planta gasta energía en compensarla. El
+módulo 25 lo llamó <Termino slug="presion-osmotica">presión osmótica</Termino>; el resultado en el
+terreno tiene otro
+nombre, <Termino slug="sequia-fisiologica">sequía fisiológica</Termino>, que es marchitarse con el suelo
+mojado.
+
+De ahí sale el peor bucle de manejo que existe. **El síntoma es idéntico al de falta de agua**, así que
+se riega más; y regar más trae más sal, que empeora justo lo que se quería arreglar. Muchísimas parcelas
+se salinizan por exceso de cuidado.
+
+<Dato titulo="La forma de la curva: umbral y pendiente">
+La salinidad no daña de forma gradual desde cero: cada cultivo aguanta hasta
+un <Termino slug="umbral-de-salinidad">umbral de salinidad</Termino> **sin perder nada de rendimiento**,
+y a partir de ahí pierde en línea recta.
+
+<Formula explicacion="Los dos valores de la recta, el umbral y la pendiente, cambian con cada especie y hasta con la variedad. Se consultan con el CIAT, con el INIAF o con el laboratorio que haga el análisis: este curso no los inventa.">
+pérdida de rendimiento (%) = pendiente (% por dS/m) × (CE del suelo − umbral del cultivo)
+</Formula>
+
+Dos consecuencias. Que no pase nada durante años **no significa que no esté subiendo**: significa que
+sigues por debajo del umbral, y el día que lo cruzas la caída empieza de golpe. Y como el umbral cambia
+por especie, la misma agua riega sin problema unos cultivos y arruina otros en el mismo terreno.
+</Dato>
+
+Una regla vale para casi todas las especies: **la etapa más sensible es la germinación y el plantín
+recién nacido**. El árbol adulto tiene raíces profundas que buscan agua menos salada; el plantín vive en
+los tres centímetros donde la sal se concentra.
+
+## Sodicidad: el sodio no mata la planta, deshace el suelo
+
+Este es el problema serio en un terreno como el nuestro, y el que casi nunca se mide. Las láminas de
+arcilla tienen carga negativa, y el módulo 5 ya lo vio al hablar de
+la <Termino slug="cic">capacidad de intercambio catiónico</Termino>: esas cargas se compensan
+con <Termino slug="cation">cationes</Termino> pegados alrededor. Cuál sea el catión pegado **decide si el
+suelo se mantiene armado o se deshace en barro**.
+
+<Analogia titulo="Un remache de dos cabezas contra un tapón de una">
+El calcio y el magnesio tienen carga doble. Un solo ion puede neutralizar una carga de una lámina **y
+otra de la lámina vecina al mismo tiempo**: es un remache que atraviesa dos chapas y las mantiene unidas.
+Muchos remaches así producen grumos estables, y entre grumo y grumo quedan los huecos grandes por donde
+entran el agua y el aire.
+
+El sodio tiene carga simple: neutraliza una carga y no une nada, como un tapón que llena el agujero sin
+sujetar la chapa de al lado. Y encima llega envuelto en una capa de moléculas de agua mucho más gruesa
+que la del calcio, así que **además de no unir, separa**.
+
+Cuando ocupa suficientes posiciones, las láminas dejan de atraerse y empiezan a repelerse: los grumos se
+sueltan y esa lechada rellena los huecos grandes. Es una estructura a la que le quitaste los remaches y
+le pusiste separadores.
+</Analogia>
+
+Los dos estados tienen nombre: cuando las partículas se juntan en grumos
+hay <Termino slug="floculacion">floculación</Termino>, y cuando se sueltan
+hay <Termino slug="dispersion-de-arcillas">dispersión de arcillas</Termino>. Tener tanto sodio en las
+posiciones de intercambio como para que eso ocurra
+es <Termino slug="sodicidad">sodicidad</Termino>. Un suelo disperso, seco, forma costra sellada, y mojado
+se vuelve pasta impermeable: la infiltración se derrumba, y con ella todo lo que enseñaron las lecciones
+3, 4 y 5. Las arcillas expansivas 2:1 empeoran el asunto, porque **mucha superficie con carga son
+muchísimas posiciones donde el sodio puede instalarse**: en un suelo arenoso apenas hay estructura que
+deshacer, y en uno pesado la misma agua hace un desastre.
+
+En el agua, el sodio se juzga con
+la <Termino slug="relacion-de-adsorcion-de-sodio">relación de adsorción de sodio</Termino>, que el
+laboratorio llama RAS: no importa cuánto sodio hay en absoluto, sino **cuánto hay comparado con el calcio
+y el magnesio** que compiten por las mismas posiciones.
+
+<Formula explicacion="Las concentraciones van en miliequivalentes por litro, tal como las entrega el laboratorio. La raíz cuadrada recoge que el calcio y el magnesio, por tener carga doble, ganan posiciones con una fuerza que no crece en proporción directa a su concentración.">
+RAS = sodio ÷ raíz cuadrada de ((calcio + magnesio) ÷ 2)
+</Formula>
+
+En el suelo, lo equivalente es
+el <Termino slug="porcentaje-de-sodio-intercambiable">porcentaje de sodio intercambiable</Termino>, el
+PSI: qué proporción de las posiciones está ocupada por sodio. Y hay un tercer número que casi nadie pide:
+si el agua trae muchos carbonatos y bicarbonatos, estos precipitan el calcio como caliza y lo sacan de
+juego, así que **el sodio gana posiciones sin que haya subido el sodio**. Eso lo resume
+el <Termino slug="carbonato-de-sodio-residual">carbonato de sodio residual</Termino>, la resta entre
+carbonatos más bicarbonatos y calcio más magnesio.
+
+<Tabla>
+
+| Tipo de suelo | Sales totales | Sodio | Cómo se comporta | Qué pide |
+| --- | --- | --- | --- | --- |
+| Salino | altas | bajo | infiltra bien, la planta pasa sed, costra blanca | lavar, si hay drenaje |
+| Sódico | bajas | alto | no infiltra, se sella, pH alto, manchas oscuras | calcio primero, lavar después |
+| Salino-sódico | altas | alto | parece salino y se vuelve sódico al lavarlo | calcio y lavado juntos |
+
+</Tabla>
+
+Los cortes de laboratorio —del orden de 4 dS/m en el extracto para llamarlo salino y de 15 % de sodio
+intercambiable para llamarlo sódico— son una convención de clasificación, no un umbral biológico:
+**muchos cultivos pierden rendimiento bastante antes**, y quien interpreta el número contra tu suelo es
+el laboratorio, no una tabla de otro clima.
+
+## La trampa: en un suelo sódico, la lluvia lo empeora
+
+Las sales disueltas, además de estorbar a la planta, **mantienen la arcilla floculada**: una solución con
+bastante sal aplasta la capa de agua que rodea a las partículas y las deja acercarse hasta pegarse. Es
+la <Termino slug="concentracion-de-electrolitos">concentración de electrolitos</Termino>, y funciona
+independientemente de qué sales sean.
+
+De ahí sale la trampa. Un suelo con mucho sodio pero también mucha sal total **se comporta como si
+estuviera sano**: infiltra, se labra, no da señales. El día que llega agua sin sales —la primera lluvia
+fuerte de octubre, o un lavado hecho con agua de lluvia captada— la concentración de electrolitos se
+desploma, el sodio queda sin contrapeso y **el suelo se dispersa entero de golpe**.
+
+<Analogia titulo="Dos errores que se estaban compensando">
+Cualquiera que haya mantenido un sistema viejo conoce esto. Un componente hace algo mal y otro, por
+casualidad, corrige el efecto; en conjunto anda. Alguien arregla uno de los dos —el que se veía— y todo
+se cae, y encima parece culpa del arreglo.
+
+El suelo salino-sódico es idéntico: la salinidad estaba tapando la sodicidad. **Lavar sin reponer calcio
+es arreglar el error visible y destapar el grave.** Por eso el análisis se pide con sodio, calcio y
+magnesio separados: sin esos tres números no se sabe cuál de los dos errores estás mirando.
+</Analogia>
+
+<Advertencia>
+**No hagas un lavado a fondo de un suelo sospechoso de sodio sin haber medido antes sodio, calcio y
+magnesio.** Un lavado bien hecho sobre un suelo salino-sódico lo convierte en sódico puro, y el sódico es
+muchísimo más caro de recuperar: el salino tiene sales que se van con agua, el sódico tiene la estructura
+destruida y hay que reconstruirla catión por catión.
+
+El mismo aviso vale para la primera lluvia, que no controlas: si tu suelo tiene sodio alto, **la época de
+lluvias es el momento de riesgo y no de alivio**.
+</Advertencia>
+
+## Dónde se junta la sal: en el borde del frente mojado
+
+La sal no se reparte pareja: viaja con el agua y se queda **donde el agua se detiene y se evapora**, así
+que su mapa es el mapa de tu riego. Al entrar al suelo, el agua avanza un límite entre lo mojado y lo
+seco —el <Termino slug="frente-de-humedecimiento">frente de humedecimiento</Termino>— y **la sal se
+acumula justo ahí**, empujada al borde por el agua que llega detrás. De eso salen tres situaciones.
+
+**Con goteo**, la sal forma un anillo en el perímetro del bulbo mojado. El sistema anda bien durante
+meses; después llega una lluvia pequeña, de las que no alcanzan a lavar nada, y **empuja ese anillo hacia
+adentro, dentro de la zona de raíces**. El daño aparece de golpe con la primera lluvia, que es cuando
+nadie lo espera.
+
+**Con surcos y camellones**, los dos frentes suben desde los lados y se encuentran en el centro del lomo,
+que además es lo que más se evapora: la sal se concentra exactamente donde la costumbre manda sembrar. La
+corrección es gratis: **sembrar en el hombro del camellón y no en la corona**.
+
+**Con freático alto** el mecanismo se invierte y es el peor. Si el nivel queda cerca, el agua sube
+por <Termino slug="ascenso-capilar">ascenso capilar</Termino> hasta la superficie, se evapora y deja la
+sal arriba: el terreno se saliniza **sin que nadie riegue**, y mientras el freático siga cerca no hay
+lavado que sirva porque lo que bajas vuelve a subir. Por eso el drenaje de la lección 5 no es una mejora
+del cultivo, es la condición para que exista cualquier corrección.
+
+## Cómo se mide, y qué dice cada número
+
+**El medidor de bolsillo** da conductividad y nada más. Cuesta poco, se usa cada semana y sirve para
+vigilar tendencias. Necesita calibrarse con solución patrón porque deriva, y hay que ver si compensa
+temperatura: la conductividad sube con el calor, así que comparar mediodía con amanecer sin corregir es
+comparar dos cosas distintas.
+
+**El análisis de laboratorio** da lo que el medidor no puede ver y decide qué problema tienes. De agua se
+pide conductividad, pH, calcio, magnesio, sodio, potasio, cloruro, sulfato, carbonatos, bicarbonatos,
+boro y RAS calculado. De suelo se pide <Termino slug="analisis-de-suelo">análisis</Termino> con
+conductividad del <Termino slug="extracto-de-saturacion">extracto de saturación</Termino>, pH, cationes
+intercambiables, capacidad de intercambio y PSI.
+
+<Dato titulo="El extracto casero, y el error de compararlo con una tabla">
+Se puede medir la sal del suelo en casa. Se seca una muestra a la sombra, se desmenuza, se mezcla una
+parte de suelo con cinco de agua de lluvia, se agita, se deja reposar media hora y se mide la
+conductividad del líquido claro. Eso es un <Termino slug="extracto-1-5">extracto 1:5</Termino>.
+
+**Ese número no se compara con las tablas de salinidad**, y ahí se equivoca casi todo el mundo: las
+tablas están hechas sobre el extracto de saturación, que lleva mucha menos agua, así que tu 1:5 sale
+varias veces más bajo, y el factor de conversión depende de la textura.
+
+Lo que sí vale es **compararte contigo mismo**: mismo procedimiento, misma relación de agua, misma
+profundidad, mismo mes. Una serie de cinco años detecta una tendencia mucho antes de que ninguna planta
+la muestre, y cuesta casi nada.
+</Dato>
+
+Hay un dato que no es de sales y conviene pedir al menos una vez, sobre todo si el agua se bebe:
+**nitratos**. Vienen de corrales, pozos ciegos y fertilizantes que entraron por la zona de captura del
+pozo de la lección 6, y el agua con nitratos altos es peligrosa para lactantes. Los límites los fija la
+autoridad de salud: es consulta médica, no agronómica.
+
+## Las señales que se ven sin instrumento
+
+El instrumento confirma; los ojos avisan antes y gratis, y leerlos da años de ventaja.
+
+<Tabla>
+
+| Señal | Dónde mirar | Qué está diciendo |
+| --- | --- | --- |
+| Costra o polvo blanco al secarse | corona de camellones, borde del bulbo | sales acumuladas: salinidad |
+| Manchas oscuras, brillantes, aceitosas | zonas bajas, suelo desnudo | materia orgánica dispersa: sodicidad |
+| Germinación en parches, adultos sanos | almácigos y siembras directas | la sal está en los primeros centímetros |
+| Bordes de hoja quemados, las viejas primero | cultivo establecido | toxicidad de cloruro o sodio |
+| Un sitio que infiltraba y ahora encharca | donde llega el riego, no la lluvia | estructura destruida: sodio, no pisadas |
+| Malezas nuevas que antes no estaban | bordes de las zonas afectadas | especies tolerantes ganando terreno |
+
+</Tabla>
+
+<Dato titulo="La prueba del terrón, que cuesta cero">
+Se toman dos terrones secos del mismo tamaño, uno del sitio sospechoso y otro de un sitio sano, y se
+dejan caer en dos vasos con agua de lluvia sin tocarlos ni agitarlos.
+
+El terrón sano se moja, suelta burbujas y se desarma en grumos que quedan en el fondo, dejando el agua
+más o menos clara. **El terrón disperso suelta una nube lechosa que enturbia el vaso entero y no se
+asienta ni en horas**, y esa nube es arcilla suelta: el mismo material que en el terreno rellena poros y
+sella la superficie.
+
+No sustituye a un análisis. Sirve para decidir que hay que mandar una muestra al laboratorio.
+</Dato>
+
+## Corregir: lavar solo funciona si el agua se va
+
+**La sal solo sale disuelta en agua líquida que atraviese la zona de raíces y baje.** No se evapora, no
+se descompone, no la consumen los microbios. De ahí la frase que resume media lección: **lavar sin
+drenaje no es lavar, es mover la sal cuarenta centímetros y esperar a que vuelva a subir**. Todo lo de la
+lección 5 —camas altas, drenes, punto de descarga decidido— resulta ser la infraestructura sin la cual
+corregir la salinidad es imposible. Cuánto sobrante hay que aplicar lo da
+el <Termino slug="requerimiento-de-lavado">requerimiento de lavado</Termino>.
+
+<Formula explicacion="CEa es la conductividad del agua de riego y CEe el máximo que tolera el cultivo en el extracto del suelo. Da la fracción del agua aplicada que tiene que atravesar la zona de raíces y salir por debajo, además de la que consume el cultivo. Crece muy rápido con agua salina, y ese consumo extra es un costo que hay que sumar al cálculo de riego del módulo 25.">
+requerimiento de lavado = CEa ÷ (5 × CEe − CEa)
+</Formula>
+
+Dos detalles cambian mucho el resultado en suelo arcilloso. **Lavar en tandas y no de una vez**: inundar
+un vertisol agrietado manda el agua por las grietas sin tocar el interior de los terrones, que es donde
+está la sal —el flujo preferencial de la lección 5, aquí en contra—, mientras que láminas pequeñas y
+repetidas sacan mucha más sal con mucha menos agua. Y **lavar antes de sembrar**, porque el lavado
+arrastra también nitrógeno.
+
+La corrección del sodio es otra cosa y con otro orden. No se trata de sacar sal sino de **cambiar el
+catión pegado a la arcilla**: hay que ofrecer tanto calcio que desplace al sodio, y recién entonces lavar
+el sodio ya suelto. La fuente clásica es el <Termino slug="yeso-agricola">yeso agrícola</Termino>,
+sulfato de calcio, porque aporta calcio soluble sin subir el pH. La dosis **no se inventa ni se copia**:
+sale de una cuenta que hace el laboratorio con tu capacidad de intercambio y tu PSI. La secuencia es
+siempre **medir, aportar calcio, lavar, drenar, volver a medir**. La materia orgánica ayuda en las dos
+direcciones y es lo único de la lista que ya sabes producir: pega agregados, amortigua la dispersión y,
+al mejorar la porosidad, hace posible el lavado.
+
+## Manejo: lo que se decide sin gastar
+
+**Separar fuentes por calidad.** El agua de lluvia captada es casi destilada y va a lo que no perdona:
+almácigos, propagación, plantines. La de pozo va a lo establecido y de raíz profunda.
+
+**Tapar el suelo.** La cobertura corta la evaporación, y como el ascenso capilar es el motor que sube la
+sal, **menos evaporación es literalmente menos sal arriba**.
+
+**No asperjar con agua salina.** El aspersor moja la hoja, la gota se evapora concentrando sal sobre el
+tejido y este **absorbe sodio y cloruro directamente por la hoja**, un daño que el goteo no produce.
+
+**Regar completo y espaciado en vez de poquito y seguido**: el riego corto aporta sal en cada aplicación
+y nunca produce drenaje, o sea nunca lava.
+
+**Y no meter sodio por la puerta de atrás.** El <Termino slug="agua-gris">agua gris</Termino> parece un
+recurso gratis y es una fuente concentrada de sodio, porque **buena parte de los detergentes son sales de
+sodio**. Si se usa, se rota el sitio y jamás se aplica en almácigos.
+
+<ContextoBolivia>
+**En el sur de Santa Cruz la salinización es un riesgo real y silencioso, y las condiciones que la
+favorecen están todas juntas aquí.** Cinco meses sin lluvia útil obligan a regar; la demanda evaporativa
+de la sabana tropical es alta, así que se aplica mucha lámina y casi toda se va como vapor dejando la
+sal; los suelos son pesados y drenan mal; y buena parte del riego sale de agua subterránea cuya calidad
+cambia de un pozo a otro y empeora al final de la seca.
+
+**Las arcillas expansivas 2:1 de la lección 5 hacen que aquí el sodio pese más que en otros suelos**, y
+un agua con RAS moderado que en un suelo arenoso pasaría desapercibida, en un vertisol arruina la
+infiltración en pocas temporadas. Esa es la razón técnica por la que aquí hay que insistir en el análisis
+completo y no solo en el medidor de bolsillo.
+
+**El ciclo de las estaciones agrega su propio efecto.** Durante la seca se riega y la sal se concentra
+arriba; con las lluvias entra agua sin sales que la lava hacia abajo, y ese lavado natural es la razón
+por la que muchos terrenos aguantan años sin síntomas. El problema es que **solo existe si el agua se
+infiltra y se va**: en un suelo pesado y sin drenaje la lluvia no lava, y en uno con sodio dispersa.
+
+**Los cortes de energía entran por un lado inesperado.** Cuando la bomba falla en plena seca y el riego
+se interrumpe unos días, el suelo se seca, el agua sube por capilaridad y la sal se concentra justo donde
+están las raíces jóvenes. Un riego irregular saliniza más que uno regular con la misma agua, así que
+bombear cuando hay energía y guardar en tanque, que en el módulo 26 era autonomía, aquí también es manejo
+de salinidad.
+
+**Dónde se analiza.** En Santa Cruz existen laboratorios de análisis de agua y suelos en universidades y
+en centros de servicios agropecuarios, y hay instituciones de investigación agrícola —el CIAT
+departamental y el INIAF— que son la referencia correcta para umbrales de tolerancia por cultivo y para
+interpretar un resultado. **Este curso no te va a dar precios, plazos ni requisitos de esos servicios,
+porque inventarlos sería peor que callar**; lo que sí se afirma es qué pedir: análisis completo con
+cationes y aniones separados.
+
+**Y hay un asunto de vecindad.** El agua de lavado que sale de tu parcela lleva las sales que sacaste de
+tu suelo y va a parar a algún lado: una zanja, un bajío, el terreno de aguas abajo o el mismo acuífero
+del que bombean todos. Igual que con el rebose de la lección 4, **el destino de esa descarga afecta a
+terceros** y se consulta antes con los vecinos y con la autoridad competente.
+</ContextoBolivia>
+
+<AplicarRizoma>
+**En Rizoma del Sur esta lección se ejecuta hoy con un solo gesto: un análisis completo de cada fuente,
+antes de instalar nada más.** Muestras separadas del pozo, del agua de lluvia captada de techos y de la
+red si existe. La de lluvia saldrá casi sin sales y sirve de testigo interno; la de pozo decide el riego
+de la seca entero. El pedido se escribe completo: conductividad, pH, calcio, magnesio, sodio, potasio,
+cloruro, sulfato, carbonatos, bicarbonatos, boro y RAS. Con solo la conductividad no se diseña nada,
+porque no distingue el problema barato del caro.
+
+**La segunda muestra se toma al final de la seca, no en enero**, porque la calidad del pozo empeora
+cuando el nivel está bajo y ese es justo el mes en que se riega a fondo. Y **el suelo se muestrea antes
+del riego intensivo**, porque ese dato no se recupera después: conductividad del extracto, pH, cationes
+intercambiables y capacidad de intercambio en tres puntos —aporte, tránsito y acumulación, según el mapa
+del agua de la lección 1— es la única forma de saber dentro de diez años si el riego salinizó el terreno
+o si ya venía así.
+
+**La jerarquía de agua del vivero se vuelve regla escrita y pegada en la pared.** Lluvia captada para
+almácigos, bandejas de culantro y ají dulce, propagación y todo lo que esté germinando. Pozo para
+plátano, yautía, gandul, batata, frutales injertados establecidos y árboles de sombra, con raíz profunda
+y sistema hecho. La consecuencia es concreta: **la captación de techos deja de ser un complemento y pasa
+a ser la fuente crítica del vivero**, y su volumen se dimensiona por la demanda de almácigos.
+
+**El drenaje de la lección 5 cambia de categoría y pasa a ser infraestructura de salinidad.** Las camas
+altas, los drenes y el punto de descarga decidido dejan de ser solo defensa contra el ahogamiento: son
+**la única vía por la que la sal puede irse de los 3.666 metros cuadrados**. Un cantero sin salida de
+agua es un envase gigante que no se puede vaciar, y por eso cada zona de cultivo de los doce lotes
+necesita saber por dónde sale su agua de lavado, decidido en el plano.
+
+**Las medidas de coste cero se aplican desde la primera temporada, sin esperar ningún resultado**:
+cobertura permanente sobre todo suelo desnudo, siembra en el hombro de los camellones, goteo antes que
+aspersión donde se riegue con pozo, riegos completos y espaciados, y agua gris fuera del vivero. **La
+vigilancia son cinco minutos al mes en la misma planilla del pozo**: conductividad del agua de riego,
+extracto 1:5 de los mismos tres puntos con idéntico procedimiento, y una recorrida de ojo buscando costra
+blanca en las coronas y sitios que antes infiltraban.
+
+**Y hay una obra comunitaria evidente.** Nadie en el barrio sabe qué trae su agua de pozo, y cada familia
+que riega está haciendo la misma cuenta invisible de la tonelada y media al año sin saberlo. Rizoma puede
+**medir la conductividad del pozo de quien lo pida, anotarla en una lista común con la fecha, enseñar el
+extracto 1:5 y la prueba del terrón en un taller de una tarde y publicar los resultados del barrio**. No
+obliga a nadie a nada y convierte un daño invisible en un número compartido, que es la única forma de que
+un vecino decida a tiempo.
+</AplicarRizoma>
+
+## Lo que sigue
+
+El agua de riego trae sal, el agua que se va como vapor no se la lleva, y de esa asimetría sale un daño
+que avanza mientras todo parece ir bien. Son tres problemas y no uno: la salinidad estorba a la planta,
+la sodicidad deshace el suelo y ciertos iones queman tejido. El sodio pesa especialmente aquí porque las
+arcillas 2:1 le dan dónde instalarse, y su trampa es que la salinidad lo disimula hasta que llega agua
+limpia y el suelo se dispersa entero. Y la corrección tiene un requisito no negociable: **el agua tiene
+que poder irse**, lo que convierte al drenaje en la infraestructura de la que depende todo lo demás.
+
+Fíjate en lo que tienen en común las herramientas de detección de esta lección. El extracto 1:5 no sirve
+comparado con una tabla, sirve comparado con el tuyo del año pasado, y el nivel estático de agosto solo
+significa algo al lado del de agosto anterior. **Ninguna de estas mediciones tiene sentido aislada: todas
+son series**, y una serie que no se anota no existe.
+
+La lección final del módulo, **el registro de suelo**, monta esa pieza: qué se mide, cada cuánto, con qué
+procedimiento fijo para que las mediciones sean comparables, cómo se toma una muestra que represente algo
+de verdad, y por qué ese cuaderno aburrido termina siendo el activo más valioso de la parcela. Es lo que
+convierte diez años de trabajo en diez años de evidencia.

@@ -1,0 +1,93 @@
+{
+  "preguntas": [
+    {
+      "id": "q1",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace falta de verdad para escribir y ejecutar el primer programa de esta lección?",
+      "opciones": [
+        "Una pantalla, un teclado y un sitio donde guardar el archivo, aunque sea un teléfono Android con una aplicación que traiga intérprete.",
+        "Una conexión a internet una sola vez, para instalar el intérprete; después el programa corre sin conexión.",
+        "Un editor que guarde texto plano en UTF-8, no un procesador de textos que convierta las comillas rectas en comillas curvas.",
+        "Una computadora reciente con procesador rápido, porque un intérprete necesita mucha potencia para ejecutar cálculos día a día."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa. El programa ocupa menos de dos mil caracteres y el intérprete unas decenas de megabytes: una máquina de hace quince años lo corre sin despeinarse, y los doscientos números de la planilla de grados-día se suman en menos de lo que tarda la pantalla en refrescarse. La velocidad de ejecución es irrelevante aquí; lo que importa es la velocidad del ciclo escribir-ver, y eso lo da el intérprete, no el procesador. Las otras tres sí son requisitos reales: un teléfono con la aplicación adecuada es una computadora completa para esto, la conexión hace falta solo para instalar, y el texto plano en UTF-8 evita que las comillas curvas de un procesador de textos rompan el código con errores incomprensibles."
+    },
+    {
+      "id": "q2",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la diferencia entre un compilador y un intérprete, y por qué se empieza con un lenguaje interpretado:",
+      "opciones": [
+        "Un compilador traduce el archivo entero a instrucciones de máquina de una vez y produce un ejecutable que a partir de ahí corre solo.",
+        "Un intérprete no produce ningún ejecutable: lee el archivo y lo va ejecutando, y vuelve a leerlo entero cada vez que se corre el programa.",
+        "Con un intérprete el ciclo escribir-guardar-ejecutar-mirar es inmediato, y esa latencia de retroalimentación baja es lo que más rinde mientras se aprende.",
+        "Un lenguaje interpretado no puede hacer decisiones ni repeticiones complejas, y por eso solo sirve para programas de aprendizaje."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y confunde la forma de ejecutarse con la capacidad del lenguaje. Todos los lenguajes, compilados o interpretados, saben hacer las tres piezas del inventario cerrado: secuencia, decisión y repetición. La elección no va de poder sino de cuánto estorba el lenguaje mientras aprendes, y por eso se optimiza el cuello de botella real —tu comprensión— y no la velocidad del procesador. Se añade un segundo criterio práctico: es el mismo lenguaje que hablan los módulos de automatización, datos e inteligencia artificial, así que aprenderlo no es un peldaño desechable."
+    },
+    {
+      "id": "q3",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si en la regla de riego se cambia `and` por `or`, el intérprete avisará con un mensaje de error porque la condición quedó mal escrita.",
+      "respuesta": false,
+      "explicacion": "Falso, y es justamente por eso que es peligroso. `or` es sintaxis perfectamente válida: el programa arrancaría, correría entero, imprimiría su recomendación con toda seguridad y estaría equivocado, regando cada vez que hubieran pasado seis horas aunque el sustrato estuviera a capacidad de campo. Es la familia de fallo silenciosa, la que no habla. Contra ella no sirve esperar un mensaje: sirve la tabla de traza en papel de la lección anterior, ejecutar el programa a mano fila por fila antes de creerle nada."
+    },
+    {
+      "id": "q4",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre guardar los resultados en un archivo con `open(\"riegos.csv\", \"a\", encoding=\"utf-8\")`:",
+      "opciones": [
+        "El modo \"a\" añade al final de lo que ya había; el modo \"w\" vacía el archivo entero antes de escribir y borra el histórico sin avisar.",
+        "El bloque `with` garantiza que el archivo se cierra al terminar, y eso importa porque lo escrito se acumula en memoria y se vuelca cuando toca.",
+        "El salto de línea `\\n` al final de cada escritura es lo que impide que todos los registros se peguen en una sola línea kilométrica.",
+        "Si se olvida `encoding=\"utf-8\"` el programa se detiene con un error, así que no hace falta acordarse de ponerlo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa: la codificación mal elegida no suele detener nada, simplemente escribe o lee las tildes y las eñes como símbolos raros, y el desperfecto aparece semanas después al abrir el archivo en otra máquina. Es un fallo silencioso más. Las otras tres son mecanismos reales y el primero es el error más caro de la lección: `\"w\"` no da ningún mensaje, un día abres el archivo y solo está la línea de hoy, con toda la serie perdida y nada que recuperar. La regla del registro de eventos es anexar, nunca reescribir."
+    },
+    {
+      "id": "q5",
+      "tipo": "verdadero_falso",
+      "enunciado": "En el programa de grados-día, la línea `if aporte < 0: aporte = 0` es una decisión de programación que podría omitirse sin cambiar el resultado.",
+      "respuesta": false,
+      "explicacion": "Falso: esa línea es fisiología, no programación. Por debajo de la temperatura base el desarrollo se detiene, pero un día frío no deshace el desarrollo ya acumulado. Sin esa línea, una madrugada de surazo produciría un aporte negativo que restaría del total y la planilla mentiría, mostrando que el cultivo retrocedió cuando lo único que pasó es que ese día no avanzó. Y el error tampoco daría ningún mensaje: el programa correría perfecto y el resultado sería falso."
+    },
+    {
+      "id": "q6",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre nombrar, comentar y conservar el código:",
+      "opciones": [
+        "Sacar los umbrales a constantes en mayúsculas al principio concentra el cambio en un solo sitio el día que el número tenga que cambiar.",
+        "El comentario que vale no explica lo que la línea hace, explica por qué el número es ese: de dónde salió, cuándo se midió, con qué instrumento.",
+        "Antes de un cambio grande se copia el archivo con la fecha en el nombre y se trabaja sobre la copia, porque nunca se edita la única copia que funciona.",
+        "Los nombres de variable cortos como `x` o `h` son preferibles porque hacen el programa más rápido y más fácil de teclear."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa por dos motivos. La longitud del nombre no afecta en nada a la velocidad del programa —el nombre desaparece al ejecutarse—, y el ahorro de tecleo es ridículo comparado con el costo de leer: un nombre se escribe una vez y se lee cien. Una variable llamada `x` obliga a recorrer el programa entero para saber qué guarda, mientras que `horas_desde_el_ultimo_riego` no obliga a nada. Es el mismo argumento que mata los números mágicos: el primer lector del código es uno mismo dentro de tres meses, y esa persona no recuerda nada."
+    },
+    {
+      "id": "q7",
+      "tipo": "abierta",
+      "enunciado": "Diseña, para Rizoma del Sur, el paso completo del papel a la máquina: qué máquina se va a usar realmente y por qué, qué dos programas se escriben primero y qué entrada y qué salida tiene cada uno, cómo se nombran sectores y archivos, qué se comenta y qué se conserva, y qué límite honesto tienen estos programas frente a los sensores del módulo 38. Incluye qué números NO puedes inventar y a quién hay que consultarlos.",
+      "respuestaModelo": "La máquina real es el teléfono Android de quien lleva el registro, con una aplicación gratuita que traiga intérprete, editor y terminal; alternativamente, una máquina prestada unas horas por semana o un equipo viejo con sistema libre. En Zanja Honda no hace falta una computadora en el vivero: el trabajo de campo sigue siendo cuaderno y lápiz a pie de bancal durante la semana, y el domingo por la tarde, con la libreta delante, se transcriben las lecturas y el programa hace las cuentas. La transcripción no es tiempo perdido: es la segunda lectura del cuaderno, donde se detectan los números imposibles anotados con prisa. La única descarga grande es la instalación del intérprete, que conviene hacer donde haya wifi; después todo corre sin conexión, lo que importa porque el trabajo no puede depender de la señal ni del saldo.\n\nEl primer programa es la regla de riego. Entrada: el sector, la humedad medida y las horas transcurridas desde el último riego, pedidas por teclado con `input` y convertidas a número con `float`, porque `input` siempre devuelve texto y comparar el texto \"22\" con el número 25 detiene el intérprete. Salida doble: la recomendación impresa en pantalla —REGAR doce minutos o NO REGAR— y una línea anexada a `riegos.csv` con fecha, sector, humedad y decisión. Los tres umbrales van arriba, en constantes en mayúsculas, y como las bolsas del vivero se secan mucho más rápido que un bancal de yautía con arcilla debajo, la tentación de copiar el archivo a `riego-vivero.py` y cambiarle los números hay que resistirla: se hace un único programa que lee sus umbrales de un `umbrales.csv`, que además queda como la documentación de la regla de riego del sitio, un solo lugar donde mirar qué se decidió para cada lote.\n\nEl segundo programa es la planilla de grados-día. Entrada: un `temperaturas.csv` con una línea por día, fecha, máxima y mínima. Recorre el archivo con un bucle que se ejecuta una vez por línea, calcula la media, le resta la temperatura base, fuerza a cero el aporte negativo —porque un día frío no deshace el desarrollo ya acumulado— y acumula. Salida: el acumulado día a día y el total al final, además del número de días leídos, que no es adorno sino la comprobación de que leyó los días que creías; un día no anotado hace el acumulado menor y nada avisa, porque un hueco no es un cero.\n\nNombres: los sectores se escriben exactamente igual que en el plano —si allí es «L-04», nunca «lote 4», «Lote 4» ni «L4»—, porque de lo contrario el registro no se podrá agrupar jamás; la lista de nombres válidos va en el comentario de cabecera y pegada en la tapa del cuaderno. Los archivos, en minúsculas, sin espacios y sin tildes ni eñes, aunque el intérprete moderno las acepte, porque en cuanto el archivo pase por otra máquina puede dejar de encontrarse. Los comentarios no explican lo que hace la línea sino por qué el número es ese: de dónde salió la humedad mínima, con qué sonda se midió y cuándo se calibró. Y antes de cada cambio grande, una copia con la fecha en el nombre, porque nunca se edita la única copia que funciona.\n\nLo que no puedo inventar: la temperatura base de cada especie del catálogo —yautía, culantro, ají dulce, gandul, batata, plátano no comparten reloj— ni el acumulado que marca cada etapa. Eso se consulta con una institución de investigación agrícola o con productores con experiencia local, y mientras tanto se corre con una base provisional dejada explícitamente señalada como tal en el comentario. Aun así el programa ya sirve para lo que más importa: comparar la misma siembra entre la época de lluvias y la seca. Tampoco invento requisitos ni costos de las salas de cómputo de universidades o centros de formación: se confirman preguntando directamente.\n\nEl límite honesto: ninguno de los dos programas toca una válvula. Imprimen una recomendación que una persona lee y ejecuta, y esa persona puede mirar el cielo y desobedecer cuando está por llover. No es una versión incompleta, es la versión con el humano dentro del lazo, y hay que haberla operado un par de meses antes de pensar en que algo se abra solo. Cuando lleguen los sensores del módulo 38, la regla ya estará escrita, probada y con su historial de decisiones en el CSV. Y para que no dependa de una sola persona —Rizoma del Sur es un proyecto comunitario y gratuito—, el código se escribe con nombres y comentarios que otro vecino pueda leer, y existe copiado en más de un teléfono.",
+      "criterios": [
+        "Elige una máquina realmente disponible (teléfono Android con intérprete, máquina prestada o equipo viejo) y justifica que basta.",
+        "Sitúa el trabajo en el flujo real del sitio: cuaderno en el campo durante la semana, transcripción y ejecución un día fijo.",
+        "Describe la entrada del programa de riego por teclado y menciona la conversión de texto a número con `float`.",
+        "Describe la salida doble: recomendación por pantalla y línea anexada a un CSV con fecha, sector, humedad y decisión.",
+        "Saca los umbrales a constantes o a un archivo de umbrales y rechaza duplicar el programa por sector.",
+        "Describe el programa de grados-día leyendo un archivo con un bucle por líneas y acumulando el aporte diario.",
+        "Incluye el recorte a cero del aporte negativo y lo justifica fisiológicamente, no como capricho de programación.",
+        "Exige nombres de sector idénticos a los del plano y explica que si no, el registro no se puede agrupar.",
+        "Impone nombres de archivo en minúsculas, sin espacios ni tildes ni eñes.",
+        "Define qué comentar: el porqué del número, su origen y su fecha, no lo que hace la línea.",
+        "Incluye copias fechadas antes de cada cambio grande y la regla de no editar la única copia que funciona.",
+        "Declara explícitamente que la temperatura base y el acumulado por etapa no se inventan y nombra a quién consultarlos.",
+        "Establece el límite honesto: el programa recomienda, la persona ejecuta, y ninguna válvula se abre sola todavía.",
+        "Prevé que el conocimiento y el archivo no dependan de una sola persona ni de un solo teléfono."
+      ],
+      "explicacion": "La respuesta completa encadena las tres capas de la lección: la máquina que existe de verdad, los dos programas con su entrada y su salida —incluida la persistencia en archivo, que es lo que convierte un cálculo en un histórico—, y los hábitos que hacen que el código siga siendo legible dentro de tres meses. Las dos exigencias que separan una buena respuesta de una aceptable son la honestidad con los números que no se pueden inventar, sobre todo la temperatura base de cada cultivo, y el límite explícito frente al módulo 38: aquí el programa recomienda y la persona decide, y esa es la versión que hay que haber operado antes de automatizar nada."
+    }
+  ]
+}

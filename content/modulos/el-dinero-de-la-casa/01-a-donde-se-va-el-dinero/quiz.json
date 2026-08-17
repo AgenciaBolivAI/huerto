@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-la-memoria-subestima",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la cifra que alguien recuerda de su gasto mensual queda casi siempre por debajo de la real?",
+      "opciones": [
+        "Porque el recuerdo se graba por lo llamativo, y veinte compras iguales se colapsan en una sola escena genérica en vez de quedar como veinte hechos separados.",
+        "Porque el efectivo no deja registro en ningún lado, y la parte del gasto que se paga así es justamente la más grande en la mayoría de las casas de la zona.",
+        "Porque cada mes trae una excepción distinta que se descarta por rara, de modo que las excepciones quedan afuera del promedio todos los meses.",
+        "Porque la gente miente sobre lo que gasta cuando siente vergüenza de en qué lo gastó."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la incorrecta, y confundirla arruina el método entero. Nadie necesita mentir para que el número salga mal: las tres primeras describen fallas del recuerdo que operan solas, en una persona perfectamente honesta que está sola en su casa. La vergüenza sí aparece más adelante, pero en otro punto del proceso —cuando alguien anota con miedo a ser juzgado deja de anotar lo que le incomoda—, y por eso la lección insiste en el encuadre de «este mes no se decide nada». Tratar el problema como un problema de honestidad lleva a buscar culpables en vez de instrumentar el registro, que es lo único que lo resuelve. Y lo decisivo es que las tres fallas verdaderas empujan en la misma dirección: ninguna hace recordar de más, así que la diferencia no es un error al azar que se compense, sino una subestimación sistemática."
+    },
+    {
+      "id": "clasificar-por-palanca",
+      "tipo": "opcion_multiple",
+      "enunciado": "En una casa se anotan estos gastos del mes. ¿Cuáles están bien clasificados según el criterio de la lección?",
+      "opciones": [
+        "La cuota del colegio es un gasto fijo, porque llega con fecha lo hayas usado o no y solo cambia cambiando un acuerdo.",
+        "La factura de la luz es un fijo de monto variable: la obligación no se elige, pero el número cambia, y se toca por el lado del consumo y no del acuerdo.",
+        "El refresco de media mañana es gasto hormiga: chico, muy frecuente, en efectivo, y tan barato por vez que no se registra como «un gasto».",
+        "La ropa que se compró este mes es un gasto fijo, porque hay que vestirse sí o sí."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta está mal, y el error es de criterio, no de detalle: se clasifica por la palanca con la que se cambia el gasto, no por si es necesario. Vestirse es necesario, pero comprar ropa este mes se decidió este mes —monto y momento dependen de lo que hagas—, así que es un gasto variable. Si se lo mete entre los fijos, deja de estar sobre la mesa cuando llegue el momento de decidir, que es exactamente para lo que sirve la clasificación. Y conviene notar además que la ropa suele aparecer dos veces: una parte se compra a lo largo del año como gasto variable y otra se concentra en el arranque escolar, donde entra como gasto ocasional y hay que mensualizarla."
+    },
+    {
+      "id": "anotar-a-la-noche",
+      "tipo": "verdadero_falso",
+      "enunciado": "Anotar todos los gastos del día por la noche, con calma y sentado, es una forma válida de llevar el registro de treinta días.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la falla que más registros arruina. A la noche ya actuaron los dos mecanismos que la lección explica: lo chico se colapsó en un recuerdo genérico y lo frecuente perdió el conteo. Vas a acordarte de la compra grande, que ya sabías, y vas a perder las seis chicas, que son las que no sabías: es decir, vas a producir el mismo número que habrías estimado sin anotar nada. Un registro que reproduce la estimación no midió nada, aunque haya costado treinta días de trabajo. La regla es física para que sea difícil de saltear: la mano que se guarda el vuelto es la que anota. Si igual se te escapa algo y lo agregás de noche, ponele una crucecita al lado; al final del mes vas a saber qué parte de tu registro es dato y qué parte es memoria."
+    },
+    {
+      "id": "aritmetica-de-la-frecuencia",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un gasto de 5 Bs por día (cifras inventadas para la cuenta) contra un gasto de 150 Bs una sola vez en el año. ¿Qué conclusiones son correctas?",
+      "opciones": [
+        "El gasto diario suma unos 150 Bs al mes y unos 1.825 Bs al año, más de doce veces lo que el gasto ocasional.",
+        "El gasto ocasional se discutió en la casa y el diario no se discutió nunca, porque nunca apareció junto en ninguna parte.",
+        "El precio de un hábito no es lo que cuesta una vez, sino lo que cuesta una vez multiplicado por su frecuencia.",
+        "Como el gasto diario pesa más al año, lo primero que hay que hacer al terminar los treinta días es eliminarlo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta por dos razones distintas y las dos importan. Primero, esta lección no decide qué recortar: produce el dato, y punto; la decisión con método es la lección 02, porque la decisión tomada en caliente el día que uno ve la suma dura más o menos una semana, ya que nació del susto y no de un procedimiento. Segundo, clasificar un gasto como hormiga no lo condena: el refresco frío a mediodía después de cinco horas al sol no es un vicio. La clase de un gasto dice con qué palanca se toca, no si está bien o mal, y quién decide qué se queda es el dueño de la casa, con el número delante. Lo que sí cambia la multiplicación es que ahora la comparación correcta —el total anual contra algo que uno quería y «no alcanzaba»— existe y se puede hacer."
+    },
+    {
+      "id": "gastos-ocasionales",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre los gastos que no caben en treinta días —matrícula, ropa, salud, repuestos, cumpleaños—, ¿qué es correcto?",
+      "opciones": [
+        "Casi ninguno es imprevisible: son previsibles y no previstos, y lo único realmente incierto es la fecha exacta y el monto exacto.",
+        "Se recuperan con el calendario del año hacia atrás, recorriendo los doce meses y preguntando qué pasó en cada uno que costó plata y no fue del día a día.",
+        "Un gasto anual no cuesta cero los otros once meses: cuesta una doceava parte todos los meses, y a esa operación se la llama mensualización.",
+        "Una vez calculada la mensualización, se la suma directamente al total de los treinta días para obtener el gasto real del mes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta y sumar así mezcla dos cosas que hacen falta por separado. El total de los treinta días es una medición: lo que efectivamente salió en ese período. La mensualización de los ocasionales es una estimación construida sobre el recuerdo del año, con montos aproximados. Fundirlas produce una cifra híbrida que ya no sirve ni para comprobar contra lo que entró en el mes ni para calcular el hueco del registro, que es la resta entre lo que salió de verdad y lo anotado. Por eso la lección pide anotarla al costado, en su propia línea: son dos cifras distintas y las dos se necesitan enteras. Cómo se combinan —provisionando mes a mes lo anual— es trabajo de la lección 02."
+    },
+    {
+      "id": "hueco-del-registro",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si al cerrar el mes la suma de lo anotado es menor que la plata que efectivamente salió, el registro falló y conviene descartarlo y volver a empezar.",
+      "respuesta": false,
+      "explicacion": "Falso: esa diferencia es el hueco del registro y es información de primera calidad, no un fracaso. Se calcula haciendo lo que entró menos lo que quedó para obtener lo que salió de verdad, y restándole lo anotado. Mide cuánto se te escapa del registro, y casi todo lo que contiene es gasto hormiga, que es justamente lo que la lección quería hacer visible. No se borra ni se reparte entre las otras categorías: se anota como una línea con su propio nombre, y baja solo el segundo mes sin que hagas nada especial. El caso que sí debería preocupar es el contrario: un hueco de cero es sospechoso, porque casi siempre significa que alguien cuadró el número a mano en vez de aceptar lo que decía el papel."
+    },
+    {
+      "id": "medir-cambia-lo-medido",
+      "tipo": "verdadero_falso",
+      "enunciado": "Como anotar cada gasto hace que uno gaste algo menos, la línea base que se obtiene el primer mes queda un poco por debajo del gasto habitual de esa casa.",
+      "respuesta": true,
+      "explicacion": "Verdadero, y hay que saberlo para no confundirse después. Anotar convierte una compra automática en una decisión consciente, y una parte del gasto chico no sobrevive a ser mirada de frente: es el efecto del observador, y la medición no es una foto neutral sino una foto con el fotógrafo adentro. La conclusión no es corregir el número con una cuenta ni inflarlo a propósito, porque eso volvería a meter una estimación donde hay un dato. Alcanza con dos cosas: saber que tu línea base real está un poco por encima de la que medís, y no desconcertarte si un mes en que dejás de anotar rebota hacia arriba. El efecto, además, es la primera buena noticia del método: parte del beneficio aparece antes de haber tomado ninguna decisión."
+    },
+    {
+      "id": "montar-la-medicion-en-tu-casa",
+      "tipo": "abierta",
+      "enunciado": "Diseñá la medición de treinta días para tu propia casa, tal como es hoy. Escribí: cómo vas a separar la plata de la casa de la plata del trabajo con lo que tenés a mano; qué instrumento elegís y por qué ese y no otro, considerando tu fricción real; cómo vas a plantear el tema con las otras personas que gastan en tu casa; qué gastos ocasionales aparecen en tu calendario del año hacia atrás y cuánto dan mensualizados; y qué vas a hacer —y qué no vas a hacer— el día que cierres la cuenta.",
+      "respuestaModelo": "Lo primero que voy a hacer, hoy mismo, es escribir en un papelito cuánto creo que gasta mi casa por mes, doblarlo y guardarlo, porque la distancia entre ese número y el real es lo que me va a decir cuánto corregir mis estimaciones de aquí en adelante. Después escribo en la primera hoja del cuaderno dos fechas: la de hoy y la de dentro de treinta días. Esa segunda fecha es el único compromiso que estoy tomando; no prometo ahorrar ni portarme bien.\n\nLa separación entre las dos billeteras la resuelvo con dos sobres de papel, CASA y TRABAJO, porque trabajo por mi cuenta y cobro casi todo en efectivo. La mercadería, el combustible y el pasaje al cliente salen del sobre del trabajo y nada más sale de ahí; la comida de la semana sale del de la casa. Si esta semana el trabajo tiene que prestarle a la casa, le presto, pero lo anoto como préstamo en las dos hojas, porque si no vuelvo al problema de siempre: en un mes malo no voy a poder saber si gastó de más la casa o pagó de menos el trabajo. Además, en el cuaderno cada línea lleva una letra al costado, C o T, que es el campo que permite atribuir cada movimiento a su origen. Sin ese campo tengo un saldo; con él tengo un dato.\n\nEl instrumento que elijo es un cuaderno chico en el bolsillo, y no la planilla de la computadora, aunque sé usarla perfectamente. La razón es la fricción: la planilla está lejos del momento de gastar, así que la terminaría llenando de memoria a la noche, y un registro hecho de memoria produce el mismo número que la estimación y entonces no mide nada. El cuaderno se abre y se escribe, funciona sin batería y sin señal, y me deja cumplir la regla que decide si esto sale bien o mal: la mano que se guarda el vuelto es la que anota. De cada gasto anoto cinco cosas y ni una más: cuánto, qué en dos palabras, cuándo, quién y de qué billetera. Si me acuerdo a la noche de algo que no anoté, lo pongo igual con una crucecita, así al final sé qué parte de mi registro es dato y qué parte es memoria. El domingo, diez minutos: paso todo a una hoja de tres columnas —fijo, variable, hormiga— y la dejo pegada en la puerta de la heladera. Ese rato semanal también me rescata lo que me olvidé, porque el domingo todavía me acuerdo y el mes que viene no. Y lo que pagué por transferencia o desde el teléfono no lo reescribo: ese historial ya lo escribió otro y no se olvida de nada; cómo verlo y qué muestra lo voy a preguntar en mi banco, no lo doy por supuesto.\n\nCon las otras personas de la casa el encuadre importa más que la planilla. Si medir se percibe como control, nadie anota lo que le da vergüenza, y el gasto escondido no entra como cero sino como error, así que tendría un número y encima confianza en un número falso. Voy a decir tres frases antes de repartir cuadernos: este mes no vamos a decidir nada, solo vamos a mirar; nadie tiene que justificar nada de lo que anota; al final del mes lo miramos juntos. A los chicos les doy su propio cuaderno para lo del recreo, con palotes si hace falta. Si el tema se pusiera pesado, mido solo mi parte y guardo el papel: un dato parcial y honesto es un punto de partida legítimo, un total inventado para que cierre no lo es.\n\nEl calendario del año hacia atrás lo hago una tarde, con los doce meses escritos en una hoja y la misma pregunta doce veces. En mi caso aparecen la matrícula y los útiles del arranque escolar, los zapatos y el uniforme, una consulta con remedios y los días que no trabajé por eso, dos reparaciones de la moto, la garrafa que se rajó, tres cumpleaños, un velorio y la cuota del barrio. Los sumo con montos aproximados, que aproximado alcanza, y divido entre doce: eso es la mensualización, y significa que ese conjunto me cuesta esa cifra todos los meses aunque no la pague ninguno. Casi nada de eso era imprevisible: eran previsibles y no previstos, y lo único incierto era la fecha y el monto exactos. Esa cifra va anotada al costado, en su propia línea, y no la sumo al total de los treinta días.\n\nEl día del cierre sumo por clase, sumo el total de la casa, dejo aparte la columna del trabajo, comparo el total con lo que entró contando también lo que saqué de un ahorro o me prestaron, y saco el papel doblado. Si lo anotado suma menos que lo que salió de verdad, esa diferencia es el hueco del registro y la anoto como una línea con su nombre, porque mide la calidad de mi registro y casi todo lo que contiene es gasto hormiga. Y lo que no voy a hacer ese día: no recorto nada, no prometo cambios y no armo el presupuesto. La decisión tomada en caliente dura una semana porque nació del susto; la que dura es la que se toma con el número frío y con un método, y ese método es la lección siguiente.",
+      "criterios": [
+        "Separa explícitamente la plata de la casa de la plata del trabajo con un medio concreto y disponible (dos sobres, dos bolsillos, o una letra C/T al costado de cada anotación).",
+        "Justifica esa separación por su consecuencia: sin ella no se puede saber, en un mes malo, si el problema fue el gasto de la casa o el pago del trabajo.",
+        "Elige un instrumento y argumenta la elección por la fricción real de su vida, no por cuál es el instrumento «correcto» en abstracto.",
+        "Enuncia la regla de anotar en el momento y explica el mecanismo: a la noche lo chico ya se colapsó y el registro reproduce la estimación.",
+        "Lista los cinco campos del registro —cuánto, qué, cuándo, quién y de qué billetera— y no agrega campos extra que bajen la probabilidad de llenarlo.",
+        "Prevé una rutina de consolidación semanal y un lugar visible donde queda la hoja.",
+        "Plantea el encuadre con las demás personas de la casa con frases concretas, y justifica por qué el gasto escondido entra al registro como error y no como cero.",
+        "Contempla el caso de una casa donde el tema es conflictivo, y opta por medir la propia parte antes que por inventar un total.",
+        "Reconstruye gastos ocasionales propios y concretos con el calendario del año hacia atrás, incluyendo al menos escuela o ropa, salud, reparaciones y gasto social.",
+        "Aplica la mensualización dividiendo el total anual entre doce, y aclara que esa cifra va aparte y no se suma al total de los treinta días.",
+        "Describe el cierre completo: totales por clase, comparación con lo que entró, cálculo del hueco del registro y contraste con la estimación guardada al principio.",
+        "Declara explícitamente qué no se hace al cerrar —no recortar, no prometer, no presupuestar— y lo justifica con la duración de una decisión tomada en caliente."
+      ],
+      "explicacion": "Lo que separa una buena respuesta de una lista de buenas intenciones es que cada elección tenga detrás el mecanismo que la sostiene. Elegir cuaderno en vez de planilla no es una preferencia estética: es reconocer que la planilla está lejos del momento de gastar y termina llenándose de memoria. Decir las tres frases de encuadre no es cortesía: es evitar que el miedo convierta el gasto escondido en un error del dato. Anotar el hueco en vez de repartirlo no es prolijidad: es tener una medida de cuánto se te escapa. Y la parte más difícil de aceptar suele ser la última: terminar el mes con un total feo y no hacer nada con él. Quien recorta el mismo día que ve la suma está tomando una decisión nacida del susto, que dura una semana; el valor de estos treinta días está justamente en llegar a la lección 02 con un dato frío y completo en vez de con una promesa."
+    }
+  ]
+}

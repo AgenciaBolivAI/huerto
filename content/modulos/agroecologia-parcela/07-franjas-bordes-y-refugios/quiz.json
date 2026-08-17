@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "flor-accesible",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué no sirve cualquier flor para alimentar a un parasitoide adulto?",
+      "opciones": [
+        "Muchas avispitas útiles miden uno o dos milímetros y su aparato bucal es de fracciones de milímetro.",
+        "Una corola tubular larga guarda el néctar al fondo de un tubo al que físicamente no llegan.",
+        "Lo que decide no es la especie de la planta sino la accesibilidad del néctar, y eso se comprueba con lupa.",
+        "Las flores grandes y vistosas de las ornamentales son las que más enemigos naturales atraen."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es justo lo contrario de lo que dice el mecanismo, y es el error más caro que puede cometer un vivero: la flor grande y tubular alimenta abejas grandes, mariposas y picaflores, no parasitoides. Para una avispita de dos milímetros esa flor es una caja fuerte. El criterio de diseño es flor pequeña, plana y con el néctar expuesto —umbelas, cabezuelas, flores de cuatro pétalos—, y por eso el catálogo ornamental de un vivero puede estar lleno de flores y no alimentar a nadie útil."
+    },
+    {
+      "id": "sinovigenia",
+      "tipo": "verdadero_falso",
+      "enunciado": "Como los parasitoides ya nacen con todos sus huevos hechos, darles néctar mejora poco su capacidad de control.",
+      "respuesta": false,
+      "explicacion": "Falso, y este es el mecanismo que convierte la franja florida en infraestructura y no en adorno. Muchos parasitoides son sinovigénicos: fabrican los huevos durante su vida adulta y necesitan azúcar y proteína para hacerlos, igual que un proceso que asigna memoria bajo demanda en vez de reservarla al arrancar. Una hembra sin acceso a néctar vive días en vez de semanas y pone una fracción de los huevos que podría poner. Si el pool está vacío no falla con un error visible: simplemente rinde al mínimo."
+    },
+    {
+      "id": "presa-alternativa",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué papel cumple la presa alternativa en una franja y qué riesgo trae?",
+      "opciones": [
+        "Sostiene a los depredadores cuando el cultivo está limpio, para que no se vayan ni bajen a cero.",
+        "Son herbívoros que viven en las plantas de la franja y no atacan a los cultivos, como los pulgones de gramíneas.",
+        "La misma planta puede alojar un hospedante alterno de una plaga tuya o el reservorio de un virus.",
+        "Al haber presa siempre disponible, los depredadores dejan de atacar al cultivo y la plaga sube."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte el sentido del mecanismo: la presa alternativa no distrae a los depredadores del cultivo, los mantiene ahí y en número. Es exactamente el tráfico de mantenimiento que se manda a un servicio para que el autoescalado no baje a cero, porque la plaga se reproduce en días y no espera a que la población de enemigos vuelva a arrancar en frío. Lo que sí es cierto —y por eso está entre las correctas— es que la misma planta que aloja herbívoros puede alojar un problema."
+    },
+    {
+      "id": "separacion-franjas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a decidir cada cuánto poner una franja dentro de un bloque de cultivo. ¿Qué es correcto?",
+      "opciones": [
+        "La distancia de dispersión es lo que puede recorrer el bicho; el alcance efectivo es hasta dónde se nota el efecto.",
+        "La separación máxima entre franjas es aproximadamente el doble del alcance efectivo, porque cada franja sirve hacia los dos lados.",
+        "Cuanto más juntas se ponen las franjas, mayor es la fracción de superficie que se deja de cultivar.",
+        "Los alcances publicados en la bibliografía se pueden usar directamente como número de diseño para tu parcela."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la que hay que rechazar sin rodeos: los órdenes de magnitud —metros para lo que camina, decenas para el que vuela mal, cientos para el que vuela bien— orientan, pero el número exacto depende de la especie, del viento y de lo que haya en medio, y casi toda la investigación publicada se hizo en climas templados con otras especies. Lo que sí se transfiere es la forma de la relación: hay decaimiento con la distancia. Tu número se mide muestreando a varias distancias desde la franja en tu propio terreno."
+    },
+    {
+      "id": "hueco-de-la-seca",
+      "tipo": "verdadero_falso",
+      "enunciado": "Como aquí no hay invierno, el calendario de floración de una franja no tiene un hueco crítico que planificar.",
+      "respuesta": false,
+      "explicacion": "Falso, y confundirse en esto es la consecuencia típica de leer bibliografía de clima templado. El hueco existe, solo que no es de frío sino de agua: la seca de mayo a septiembre, que además coincide con la mayor mortalidad por desecación y termina justo cuando arranca la época de lluvias con su explosión de plagas. De ahí la regla que gobierna el calendario: la población que enfrenta el brote de octubre es la que sobrevivió agosto, así que el mes crítico de la infraestructura no es el mes con plaga sino el anterior. Y de ahí la consecuencia presupuestaria: una parte de la franja hay que regarla."
+    },
+    {
+      "id": "corte-alterno",
+      "tipo": "opcion_multiple",
+      "enunciado": "Toca cortar la franja porque se ha cerrado y ya no florece. ¿Cómo se hace sin apagarla?",
+      "opciones": [
+        "Se divide en mitades o tercios y se corta uno cada vez, dejando tiempo entre cortes.",
+        "El trozo cortado se recoloniza desde el trozo intacto de al lado, que hay que dejar en pie a propósito.",
+        "Se corta alto, dejando tallos en pie, porque muchos artrópodos pasan el día dentro de ellos.",
+        "Se corta todo el mismo día para que la franja rebrote pareja y vuelva a florecer a la vez."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es el error clásico, y su gravedad es la misma que la de reiniciar todas las réplicas a la vez en producción: el sistema no se cae en ese momento, se cae dos semanas después, cuando llega la carga y no hay quien la atienda. El corte es el mayor evento de mortalidad que tú controlas, y escalonarlo no cuesta nada. La misma lógica se aplica a la cosecha y a la limpieza de camas."
+    },
+    {
+      "id": "riesgos-honestos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué riesgos reales trae la infraestructura ecológica y cómo se manejan?",
+      "opciones": [
+        "Puede funcionar como puente verde: por eso no se meten en la franja especies de la misma familia que los cultivos.",
+        "La cobertura densa con semilla aloja roedores y, detrás de ellos, serpientes: no se pega al galpón ni al depósito de semilla.",
+        "Un plato de agua sin vaciar es criadero del mosquito del dengue: se vacía dos veces por semana o se usa gravilla húmeda.",
+        "El efecto de las franjas sobre el rendimiento del cultivo está bien demostrado y se nota desde el primer año."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta exagera lo que dice la evidencia, y venderla así destruye la credibilidad del resto. Los estudios muestran un efecto consistente sobre la abundancia de enemigos naturales, pero un efecto muy variable —y en bastantes casos no detectable— sobre el daño y el rendimiento. Eso no es motivo para no hacerlo: es motivo para no presentarlo como sustituto del manejo integrado y para justificarlo por lo que realmente lo justifica en un sitio pequeño, que es que cuesta casi nada y que la misma superficie entrega además cobertura, semilla y freno del viento."
+    },
+    {
+      "id": "aplicacion-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Tienes los 3.666 m² de Rizoma del Sur en 12 lotes contiguos en Zanja Honda, con yautía, culantro, ají dulce, gandul, batata, plátano, ornamentales, árboles de sombra y frutales injertados, y un vivero bajo malla. Diseña la infraestructura ecológica: (a) qué le vas a dar de comer y dónde, con el papel concreto del gandul y del culantro; (b) cómo decides la separación entre franjas y qué haces con un lote donde la distancia sale demasiado grande; (c) cómo resuelves el hueco de la estación seca sin romper el presupuesto de agua; (d) qué riesgos declaras por escrito y qué haces con cada uno; y (e) cómo vas a saber en dos años si funcionó.",
+      "respuestaModelo": "(a) Alimento y sitio. Lo primero no es plantar: es dejar de barrer. Doce lotes contiguos dan once líneas divisorias interiores más todo el contorno, cientos de metros de tierra que ya está fuera de producción y que hoy se limpia; la decisión es cuál de esa vegetación se deja florecer, y cuesta cero. El criterio no es la especie sino la accesibilidad del néctar —flor pequeña, plana, tipo umbela o cabezuela—, porque las avispitas miden uno o dos milímetros y no entran en una corola tubular. El gandul es la pieza clave: su ficha dice que muchas variedades tradicionales son de día corto y florecen cuando los días se acortan, es decir en plena seca, justo en el hueco crítico. Hay que confirmarlo un año con la fecha anotada, porque el hemisferio y la variedad cambian el calendario; si se confirma, las líneas de gandul pasan a ser la principal fuente de néctar del mes que decide el brote de octubre. Su contrapartida honesta: los perforadores de vaina son orugas, y hay que vigilar si el gandul actúa como puente hacia otros cultivos. El culantro pone tres funciones en el mismo metro cuadrado: unas pocas plantas se dejan florecer a pleno sol para semilla propia, y esas flores son de la familia de la zanahoria, exactamente lo que come una avispita, así que banco de semilla y franja floral pueden ser la misma superficie. De las ornamentales solo sirven las de flor pequeña y abierta, y las que acumulan agua en las axilas no van cerca del área de trabajo. La hojarasca bajo los árboles de sombra es el refugio más barato del sitio, y la decisión es no barrer. (b) Separación. La distancia de dispersión es lo que el bicho puede recorrer; el alcance efectivo es hasta dónde se nota el efecto, y solo se conoce midiendo. Con ese número, la separación máxima es el doble del alcance, porque cada franja sirve hacia los dos lados; y la fracción de superficie perdida es el ancho dividido entre el ancho más la separación, así que cobertura y producción se pagan una a la otra. Sobre el plano mido, en cada lote, la distancia máxima desde su punto más interior hasta la vegetación permanente más cercana. Si sale demasiado grande tengo cuatro salidas con su precio: otra franja —cuesta superficie—, una isla —cubre peor, un punto reparte menos que una línea—, cobertura viva entre hileras —compite por agua en la seca— o no hacer nada y aceptar por escrito que ese lote dependerá del manejo integrado. Y cuido la continuidad: una franja cortada cada cinco metros no es una franja para lo que camina, es una sucesión de islas. (c) El hueco de la seca. Aquí no hay invierno: el hueco es de agua, de mayo a septiembre, y la población que enfrenta el brote de octubre es la que sobrevivió agosto, así que el mes crítico no es el que tiene plaga sino el anterior. La consecuencia es presupuestaria: un núcleo pequeño y definido de franja se riega en la seca y entra en el cálculo de agua como una línea con nombre, no como sobrante —probablemente un segmento corto por cada dos lotes, cerca de una salida existente—. Si no cabe, reduzco el núcleo hasta que quepa en vez de confiar en que llueva. Y el calendario no lo copio: lo levanto recorriendo la parcela cada quince días hasta tener doce filas con los huecos marcados. (d) Riesgos declarados por escrito. Puente verde: nada de la misma familia botánica que mis cultivos dentro de la franja, y pregunto a la autoridad agropecuaria competente y a los centros de investigación del departamento qué plantas locales son reservorio de virus, porque ese dato no lo tengo. Dengue: nada con lámina de agua libre, gravilla húmeda en vez de plato, ojo con las axilas de las ornamentales, y las medidas de control vectorial se consultan con la autoridad sanitaria local. Roedores y serpientes: la franja no se pega al galpón ni al depósito de semilla, banda segada de medio metro alrededor de las construcciones, caminos despejados, botas, y decidido de antemano a dónde se acude ante una mordedura, que se consulta con el servicio de salud. Fuego: el núcleo regado se mantiene verde y se conversa con el vecino antes de agosto. Y declaro la tensión del vivero: la franja no entra bajo la malla, porque su bioseguridad exige aislamiento; ahí dentro el control será manual o por introducción. (e) Verificación. Línea de base antes de tocar nada y un lote sin franja como testigo. Muestreo de golpeo sobre bandeja clara, mismo número de plantas, misma hora, cuatro veces al año, a cuatro distancias crecientes desde la franja: la curva de abundancia frente a distancia me da mi alcance efectivo, con el que vuelvo a la fórmula de separación. Trampas cromáticas solo puntuales, porque matan lo que capturan. Como métrica de función, conteo de pulgones vivos y momias sobre veinte brotes de ají dulce. Controlo confusores muestreando en dos direcciones y anotando fecha, hora, viento y quién contó. Y me cuido del sesgo de supervivencia: además de la foto del día lleno de flores, anoto el mes en que la franja estuvo seca y pelada. Con expectativas honestas: veré cambios en abundancia mucho antes que en daño, y quizá nunca una señal limpia de rendimiento a esta escala. Lo hago igual porque cuesta casi nada.",
+      "criterios": [
+        "Parte de los bordes que ya existen entre los 12 lotes en vez de plantar franjas nuevas desde cero.",
+        "Usa el criterio funcional de la flor —pequeña, plana, néctar accesible— y no una lista de especies importada.",
+        "Identifica la floración de día corto del gandul como cobertura del hueco de la seca y exige confirmarla con observación fechada.",
+        "Aprovecha el culantro florecido a pleno sol como franja floral y banco de semilla en la misma superficie.",
+        "Distingue distancia de dispersión de alcance efectivo y fija la separación con el segundo, no con una cifra copiada.",
+        "Aplica la separación igual al doble del alcance y reconoce la superficie que eso cuesta.",
+        "Ofrece salidas distintas para un lote demasiado ancho —franja extra, isla, cobertura viva o no hacer nada por escrito— con su precio.",
+        "Explica que la población de octubre es la que sobrevivió agosto y lo convierte en un núcleo regado dimensionado dentro del presupuesto de agua.",
+        "Propone levantar el calendario de floración con recorridos quincenales en lugar de copiarlo.",
+        "Declara el riesgo de puente verde y remite el dato de plantas reservorio a la autoridad competente en vez de inventarlo.",
+        "Trata dengue, roedores y serpientes como condiciones de diseño, y remite control vectorial y atención médica a las autoridades locales.",
+        "Plantea medición con testigo, línea de base, muestreo por distancias y tasa de parasitismo, con expectativas honestas sobre el rendimiento."
+      ],
+      "explicacion": "El ejercicio recorre la lección en el orden en que se usa en terreno: primero el recurso, después la geometría, después el calendario, después los riesgos y solo al final la medición. Lo que se evalúa no es cuántas plantas nombres —el curso no puede darte una lista local sin inventarla— sino que sepas decir qué recurso das, a qué distancia lo pones y por qué, en qué mes falla y cuánto te cuesta sostenerlo. Si tu respuesta acaba en una franja de flores bonita sin un número de separación detrás, sin un núcleo regado en agosto y sin un plan de conteo, has hecho lo que la lección advierte: decorar el borde en vez de dimensionar una infraestructura."
+    }
+  ]
+}

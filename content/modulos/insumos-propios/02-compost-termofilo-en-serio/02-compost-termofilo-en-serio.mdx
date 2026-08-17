@@ -1,0 +1,383 @@
+La lección anterior puso el compostaje aerobio termófilo a la cabeza de las cuatro familias de
+preparados por dos razones que ninguna otra cumple: **es el único que procesa volumen y el único que
+higieniza**. También es el que más gente dice hacer y menos hace bien.
+
+El Módulo 7 ya entregó el reactor y sus cuatro perillas —C/N, humedad, oxígeno y tamaño de
+partícula—, la curva de temperatura y el mínimo de un metro cúbico. Nada de eso se repite aquí. Esta
+lección es **el catálogo de fallos**, más lo que el Módulo 7 no cubrió: el calendario de la pila en
+Santa Cruz, el cribado y el almacenamiento, y las pruebas que deciden si un lote sale a producción.
+
+## El fallo silencioso: un compost malo se parece mucho a uno bueno
+
+La raíz del problema es de diseño del sistema, no de agronomía: **el compostaje no tira excepción**.
+Una pila que nunca pasó de 35 °C termina, meses después, en un material oscuro y de olor tolerable,
+indistinguible a tres metros de uno bien hecho. La diferencia aparece **tres semanas después de
+llenar cuatrocientas bolsas**, cuando media bandeja está amarilla y en el resto brota una alfombra
+de malezas que sembraste tú.
+
+<Analogia>
+Es el patrón de la **corrupción silenciosa de datos**: el disco no avisa, devuelve bytes, y los
+bytes parecen datos. Un montón sin registro de temperatura es exactamente **un respaldo que nunca se
+restauró**.
+
+De ahí la frase que resume la lección: **el compostaje necesita telemetría y pruebas de aceptación,
+porque no tiene mensajes de error.** La telemetría es un termómetro de varilla larga y un cuaderno;
+las pruebas de aceptación son las cuatro del final.
+</Analogia>
+
+El costo del fallo es asimétrico: un compost mediocre en suelo abierto es trabajo perdido, pero **el
+mismo material en una bolsa de vivero es un lote entero perdido**, porque en dos litros la raíz no
+tiene a dónde escapar.
+
+## Fallo 1: la pila chica pierde por geometría, no por técnica
+
+Una pila **genera calor en proporción a su volumen** y **lo pierde en proporción a su superficie**.
+
+<Formula explicacion="Para un cubo de lado L la superficie es 6L² y el volumen L³. El cociente es 6 dividido entre el lado: cuanto más chica la pila, más superficie por unidad de masa que genera el calor.">
+relación superficie/volumen de un cubo = 6 ÷ lado
+</Formula>
+
+Un cubo de 1 m tiene 6 m² por metro cúbico; uno de 0,5 m tiene 12; uno de 2 m tiene 3. **Reducir el
+lado a la mitad duplica la pérdida específica**: por eso una pila pequeña puede estar perfectamente
+mezclada y no calentar nunca. Manda la <Termino slug="relacion-superficie-volumen">relación
+superficie/volumen</Termino>, no la receta.
+
+Hay un segundo efecto. Los primeros quince o veinte centímetros **nunca alcanzan temperatura**: son
+una cáscara fría alrededor del reactor. En un cubo de un metro, descontada esa corteza, el núcleo
+mide 0,6 × 0,6 × 0,6, o sea **poco más de una quinta parte del material**. En una pila alargada de
+1,5 m de alto, 2 de base y 4 de largo el núcleo pasa de la mitad. **La misma corteza, repartida
+sobre más masa, pesa mucho menos**, y esa es la razón real de compostar en camellones y no en cubos.
+
+<Advertencia titulo="El surazo le pega a la pila chica y no a la grande">
+La masa térmica de una pila es sobre todo agua, pero eso juega a tu favor **solo si hay bastante
+masa**. Con un <Termino slug="surazo">surazo</Termino> —noche de unos 10 °C con viento fuerte del
+sur— una pila de un metro cúbico se cae de la franja termófila en una noche y no vuelve a subir,
+mientras que apenas mueve el núcleo de una de diez metros cúbicos. Consecuencias: **junta las pilas
+chicas en una sola**, **corta el viento del sur** y **no voltees el día que anuncian surazo**.
+</Advertencia>
+
+## Fallo 2: dos fallos de humedad opuestos, uno en cada estación
+
+El rango es 50–60 % y eso ya lo sabías. Lo que cambia todo es que **en Santa Cruz el error va en un
+sentido en la seca y en el contrario en las lluvias**.
+
+**En la seca la pila se muere de sed y el síntoma se confunde con «ya terminó».** Por debajo del
+40 % de humedad la actividad cae bruscamente y por debajo del 30 % se detiene: los microorganismos
+no viven en el material sino en **la película de agua que rodea cada partícula**, y sin película no
+hay difusión de nutrientes hacia la célula ni de desechos hacia afuera. Quien no midió concluye que
+la pila está lista; no lo está, está detenida, y se reactiva dentro de la bolsa. Regar desde arriba
+**casi no funciona**, porque el material muy seco se vuelve hidrofóbico y el agua abre canales
+preferenciales y sale por la base. La única forma de rehidratar es **regar mientras se voltea,
+mojando cada palada al aire**.
+
+**En las lluvias el fallo es el opuesto y es peor, porque destruye el proceso en vez de pausarlo.**
+Al llenar los poros, el agua desplaza el aire, y ahí la física es implacable: **el oxígeno difunde
+en agua unas diez mil veces más lento que en aire**. El consumo microbiano agota en horas lo
+disuelto y la pila vira a anaerobia, con ácidos orgánicos, sulfuro de hidrógeno y compuestos
+fitotóxicos.
+
+Por eso **humedad y oxígeno no son variables independientes**: agua y aire se disputan el mismo
+espacio poroso. Lo que hay que conservar es la <Termino slug="porosidad-de-aireacion">porosidad de
+aireación</Termino>, y con menos de un 10–15 % la pila va a anaerobiosis aunque la humedad se vea
+correcta en la planilla.
+
+## Fallo 3: la C/N que se estimó a ojo y nunca se calculó
+
+«Una parte de gallinaza por seis de material picado» es un punto de partida razonable. El fallo
+empieza cuando esa regla de volumen se toma por un cálculo, y tiene dos agujeros.
+
+El primero: **la relación C/N es una proporción entre masas secas y tú estás midiendo volúmenes
+húmedos**. Una carretilla de <Termino slug="gallinaza">gallinaza</Termino> fresca puede pesar tres o
+cuatro veces lo que pesa el mismo volumen de material leñoso. Convertir volumen en masa exige la
+densidad aparente de cada material: **llena un balde de volumen conocido, pésalo, resta la tara y
+divide.**
+
+<Formula explicacion="Se suman los carbonos aportados por cada material y se dividen entre la suma de los nitrógenos. Mi es la masa seca de cada material, no su volumen ni su peso húmedo.">
+C/N de la mezcla = Σ (Mi × %C de i) ÷ Σ (Mi × %N de i)
+</Formula>
+
+El segundo explica por qué a veces la cuenta da bien y la pila no arranca: **no todo el carbono está
+disponible**. La celulosa se ataca rápido; la lignina que la envuelve, no. Un aserrín fresco y un
+chip de rama vieja pueden tener la misma C/N en el papel y comportarse distinto durante meses: es
+**ancho de banda nominal frente a rendimiento real**. La cuenta se hace **para no equivocarse por un
+factor de tres, no para acertar al decimal**, y el termómetro manda sobre la planilla.
+
+## Fallo 4: la granulometría tiene un óptimo y se pasa por abajo
+
+Cuanto más fino el material, más superficie de ataque por kilo; y a la vez, más se apelmaza bajo su
+propio peso, más sube la densidad aparente y menos poro queda para el aire. **Los dos efectos van en
+direcciones opuestas, así que hay un óptimo**, y en pilas volteadas cae entre uno y cinco
+centímetros. Triturar hasta polvo no acelera nada: fabrica un bloque anaerobio.
+
+De ahí una distinción que la gente confunde. Un material puede ser **fuente de carbono**, **fuente
+de nitrógeno** o un <Termino slug="agente-estructurante">agente estructurante</Termino>: la fracción
+gruesa cuyo trabajo no es alimentar a nadie sino **sostener el esqueleto poroso**. Las ramas picadas
+hacen las dos cosas; la <Termino slug="cascarilla-de-arroz">cascarilla de arroz</Termino> aporta
+estructura y carbono muy lento; un pasto verde finamente picado no aporta estructura y es el que más
+apelmaza.
+
+## Fallo 5: voltear por calendario en vez de por curva
+
+«Se voltea cada siete días» convierte una **respuesta a una señal** en tarea de agenda. El volteo no
+es mantenimiento: cuesta trabajo, abre la pila y **saca calor**.
+
+Hay tres razones para voltear. **Que la temperatura baje claramente desde la meseta**, señal de que
+se agotó el oxígeno o el material accesible en esa posición. **Que suba por encima de unos
+65–70 °C**, porque más arriba la comunidad termófila se inhibe y cerca de 75 °C el proceso biológico
+se apaga. Y **que la sonda o la nariz detecten anaerobiosis** en alguna zona. Voltear en plena
+meseta es tirar el calor que costó tres días producir.
+
+Y **una sola lectura en el centro es una mentira cómoda**: el termómetro se clava en cuatro o cinco
+puntos y a dos profundidades, y se anota **el rango, no el promedio**. Un promedio de 55 °C con
+puntos de 68 y de 38 describe dos pilas dentro del mismo montón, y la de 38 arruina el lote.
+
+<Dato titulo="El rebote térmico como prueba de fin de fase">
+Después de cada volteo la temperatura vuelve a subir, y cuánto sube es un dato: es el <Termino
+slug="rebote-termico">rebote térmico</Termino>, tu prueba de humo gratuita.
+
+Un rebote fuerte —vuelve a la meseta en 24 horas— dice que queda sustrato fácil y que lo que
+limitaba era el oxígeno. Uno débil —cinco o diez grados y se estanca— dice que el material accesible
+se agota. **Sin rebote apreciable tras un volteo bien hecho, la fase termófila terminó.** Contesta
+lo que a ojo es imposible: si la pila está fría porque terminó o porque se ahogó.
+</Dato>
+
+## Fallo 6: el nitrógeno que se escapa por el aire
+
+Es **la pérdida más cara y la más invisible**: quien acarrea gallinaza paga el flete de un nitrógeno
+que después deja ir.
+
+En agua, el nitrógeno amoniacal se reparte entre **amonio (NH₄⁺)**, que es un ion y lo retienen las
+cargas del material, y **amoníaco (NH₃)**, que es gas y se va. El equilibrio se desplaza hacia el
+gas con el pH alto y con la temperatura alta, así que **el mismo pH libera mucho más amoníaco
+a 60 °C que a 25 °C**. Y ahí está la trampa: **una pila termófila crea ella misma las dos
+condiciones**, porque los ácidos orgánicos iniciales se consumen y el propio amoníaco alcaliniza el
+medio, de modo que el pH sube a 8 o 9 justo cuando la temperatura está en su máximo. **Lo que
+quieres —el calor— acelera la pérdida de lo que quieres conservar.**
+
+Esa es la <Termino slug="volatilizacion-de-amoniaco">volatilización de amoníaco</Termino>, y las
+cifras publicadas para pilas con estiércol van de una quinta parte a la mitad o más del nitrógeno
+inicial. Cuatro palancas baratas: **arrancar en 25–30 de C/N y no por debajo**, porque la mezcla muy
+rica ventila el excedente; **cubrir con una manta de carbono fino** de unos diez centímetros, que
+actúa de filtro biológico donde el amoníaco vuelve a disolverse; **no voltear de más durante la
+primera semana**, que es el pico, y si la nariz avisa, añadir carbono estructurante y volver a
+tapar; y **no echar cal ni ceniza**, porque suben el pH y empujan el equilibrio hacia el gas.
+
+**El olor a amoníaco no es señal de que la pila trabaja fuerte: es la alarma de una fuga**, y además
+el aviso de un riesgo laboral, porque en espacio cerrado irrita ojos y vías respiratorias.
+
+## Fallo 7: la higienización que nunca llegó a los bordes
+
+La <Termino slug="higienizacion">higienización</Termino> es la mitad del valor de este proceso —mata
+semillas de malezas y baja la carga de patógenos— pero ocurre **solo donde hubo temperatura y tiempo
+a la vez**, y la corteza nunca los tiene.
+
+De ahí la única regla de volteo que importa para la sanidad: **el volteo es transporte de masa**, y
+su función sanitaria es llevar lo de afuera hacia adentro. La técnica es rehacer la pila al lado,
+**tomando primero la capa externa y depositándola en el centro del montón nuevo**, y repetirlo
+varias veces. El criterio operativo más citado internacionalmente exige **55 °C o más durante quince
+días, con un mínimo de cinco volteos** en ese período; viene de la normativa estadounidense para
+biosólidos y es una referencia técnica útil, **no una norma boliviana**. Si el compost va a
+entregarse o a usarse sobre producto de consumo fresco, los requisitos se consultan con la autoridad
+sanitaria agropecuaria competente —SENASAG—.
+
+<Advertencia titulo="Higienizar no es esterilizar, y menos mal">
+Creer que la pila esteriliza es el primer malentendido. **No lo hace ni debe hacerlo:** reduce la
+carga de patógenos en varios órdenes de magnitud. Lo que quieres es un material higienizado y
+**recolonizado durante la maduración por mesófilos**.
+
+El segundo es creer que higienizado lo es para siempre: basta la misma pala que movió gallinaza
+fresca y después el compost terminado. La contramedida es de flujo y es la bioseguridad del Módulo
+11: **un lado sucio y un lado limpio, con herramientas que no cruzan**. Es <Termino
+slug="contaminacion-cruzada">contaminación cruzada</Termino>, y no se arregla lavando al final.
+</Advertencia>
+
+## Fallo 8: la maduración saltada, que es el fallo más caro
+
+Dos palabras que se usan como sinónimas y no lo son. La <Termino
+slug="estabilidad-del-compost">estabilidad</Termino> mide **cuánta actividad biológica le queda**:
+cuánto oxígeno consume y cuánto calor genera por su cuenta. La <Termino
+slug="maduracion-del-compost">maduración</Termino> mide **si el material puede estar en contacto con
+una raíz**, y depende de la ausencia de compuestos fitotóxicos. Un compost puede ser estable y aún
+tener amoníaco y ácidos suficientes para frenar una germinación.
+
+Los tres daños de un compost inmaduro en contenedor son acumulativos. **Sigue respirando**, y en dos
+litros ese consumo de oxígeno compite con la raíz. **Inmoviliza nitrógeno**, porque el carbono lábil
+que le queda manda a los microbios a buscar nitrógeno donde lo haya, y en una bolsa lo que hay es el
+de la planta: es la <Termino slug="inmovilizacion">inmovilización</Termino> del Módulo 5 encerrada
+en un volumen del que nadie escapa. Y **libera fitotóxicos** —ácidos orgánicos de cadena corta,
+amoníaco, fenoles— que en suelo abierto se diluyen y en una bolsa se quedan.
+
+<Advertencia titulo="La maduración no se acelera y no se salta">
+Terminada la fase termófila hacen falta **de cuatro a ocho semanas más como mínimo**. La pila está
+fría y no pasa nada visible, y por eso todo el mundo la recorta. No se alimenta con material nuevo
+—eso reinicia el reloj—, se mantiene la humedad algo más baja y no hace falta voltear: es el único
+tramo en el que **no hacer nada es la operación correcta**. Añadir material fresco «para que no se
+desperdicie» es reabrir un ticket cerrado el día antes de la entrega.
+</Advertencia>
+
+## El calendario de la pila en Santa Cruz: techo, cobertura y plazo de entrega
+
+El compost es un elemento de **plazo de entrega largo**: entre armado, fase activa, maduración y
+cribado pasan cuatro a seis meses. La secuencia que encaja con el año cruceño es armar **al
+principio de la seca**, cuando el desmonte y las podas dejan material y todavía queda agua en los
+tanques; la fase activa cae en pleno invierno seco, cuando la lluvia no ahoga la pila y el único
+trabajo es regar; la maduración, al final de la seca; y **el cribado y el guardado, antes de las
+lluvias de octubre**, para que el material esté listo cuando arranca la siembra. Armar en enero es
+pelear contra el agua todo el tiempo; armar en septiembre es llegar tarde.
+
+De ahí una conclusión que suena contradictoria y no lo es: **en Santa Cruz la pila necesita techo y
+riego a la vez.** El techo no es para que no se moje: es para que **el agua que entra la decidas
+tú**. A la intemperie recibe cien milímetros en una semana de enero y ninguno en agosto: en ambos
+casos perdiste el control de la variable.
+
+El techo es simple: **cubierta arriba y los cuatro costados abiertos**, con voladizo contra la
+lluvia oblicua y altura para trabajar con horquilla. Lo que **no** se hace nunca es envolver la pila
+en plástico ni cerrar los laterales: eso corta la convección y la convierte en una olla. La
+cobertura sobre el material es otra cosa: una capa respirable —paja, cascarilla, hojas secas— reduce
+la evaporación, amortigua el golpe térmico del surazo y atrapa amoníaco, mientras que **un plástico
+apoyado directamente sobre la pila hace lo contrario**, porque condensa en la cara inferior y crea
+una capa anaerobia pegajosa justo arriba.
+
+La base también se decide. Con arcillas expansivas el agua no infiltra rápido, así que la pila no va
+nunca en el punto bajo del terreno: va sobre una plataforma elevada, con material grueso abajo que
+hace de drenaje y de entrada de aire. Y una precaución que aquí no es opcional: **todo recipiente
+que junte líquido de drenaje se tapa o se vacía**, porque el agua estancada a la sombra es criadero
+de mosquito y el dengue es endémico. Vale para el balde de <Termino
+slug="lixiviado">lixiviado</Termino> y para los tambores y llantas que siempre aparecen alrededor de
+una compostera.
+
+## Cribado y almacenamiento: donde se pierde un lote ya ganado
+
+El <Termino slug="cribado">cribado</Termino> se hace con una zaranda —marco de madera con malla,
+inclinada unos 45 grados— contra la que se lanza el material con pala. Con **malla de un
+centímetro** sale producto para enmendar suelo; con **cinco a ocho milímetros**, un componente para
+mezclas de <Termino slug="sustrato">sustrato</Termino> de bolsa. Lo que no pasa la malla **no es
+basura**: es la fracción lignificada más el agente estructurante, y la mejor inoculación posible
+para la pila siguiente.
+
+El cribado tiene su ventana de humedad: demasiado húmedo embarra la malla y la ciega; demasiado seco
+genera **polvo**, y ese polvo es un riesgo real, porque el compost contiene esporas de hongos —entre
+ellos *Aspergillus fumigatus*— que causan problemas respiratorios serios, sobre todo a personas con
+asma o con las defensas bajas. **Se criba con barbijo y a favor del viento.**
+
+Guardar mal deshace el trabajo. Tres reglas: **bajo techo y a la sombra**; **con humedad moderada**,
+en torno al 40 %, porque seco pierde la población viva y empapado revierte a anaerobio; y **sin
+compactar en volúmenes grandes y cerrados**. El error típico es guardarlo húmedo en bolsas plásticas
+selladas y apiladas: en dos semanas el interior es anaerobio y el material vuelve a ser fitotóxico.
+
+<Dato titulo="La etiqueta del lote: metadatos del commit">
+Cada pila es un <Termino slug="lote">lote</Termino> y se etiqueta: fecha de armado, materiales,
+temperatura máxima, días por encima de 55 °C, volteos, fin de maduración, resultado de las pruebas y
+destino autorizado. Eso hace el lote <Termino slug="trazabilidad">trazable</Termino>: el día que
+unos plantines salen mal, la etiqueta dice en un minuto si el compost es sospechoso, y **un vecino
+puede repetir tu receta porque está escrita**.
+</Dato>
+
+## Las cuatro pruebas antes de sacar el lote a producción
+
+**La prueba de germinación manda.** Se prepara un extracto acuoso —una parte de compost por diez de
+agua de lluvia, agitado y filtrado—, se moja con él el papel de un plato, se ponen diez semillas de
+germinación rápida —berro, lechuga, rabanito— y se repite con agua sola como testigo. A las 48 o 72
+horas se cuenta cuántas germinaron y **se mide la longitud de la raicilla**. El <Termino
+slug="indice-de-germinacion">índice de germinación</Termino> es el porcentaje de germinación
+respecto al testigo multiplicado por el porcentaje de longitud de raíz respecto al testigo: por
+encima de 80 se considera libre de fitotoxicidad, entre 50 y 80 conviene más maduración, y por
+debajo de 50 el material no se acerca a una bolsa. Usa tres platos por tratamiento, no uno.
+
+**El ensayo de autocalentamiento mide la estabilidad.** Se llena un recipiente aislante —un termo de
+boca ancha, una caja de plumavit— con compost a media humedad, se clava un termómetro en el centro y
+se anota la temperatura máxima durante cuatro o cinco días. Lo que se lee es **cuánto sube por
+encima del ambiente**: menos de unos 10 °C indica material terminado; de 10 a 20 °C, maduro pero
+todavía activo; más de 20 °C, queda fase activa por delante. Es el <Termino
+slug="ensayo-de-autocalentamiento">ensayo de autocalentamiento</Termino>, y como las escalas
+publicadas difieren entre fuentes, lo sensato es **calibrar la tuya** con un material que sabes que
+funciona.
+
+**El olor es un diagnóstico gratuito.** A tierra de bosque húmeda: correcto, y ese aroma lo producen
+actinomicetos. A amoníaco: nitrógeno escapándose. A podrido o a huevo: anaerobiosis. A vinagre:
+ácidos orgánicos de material inmaduro. La versión con más señal es **meter un puñado húmedo en una
+bolsa cerrada, dejarla un día a la sombra y abrirla junto a la nariz**.
+
+**El bioensayo de malezas comprueba la higienización.** Extiende dos o tres litros en una bandeja
+plana, mantenla húmeda y a la luz dos o tres semanas y **cuenta las plántulas que emergen**, con una
+bandeja de referencia al lado. Si salen malezas, la pila no alcanzó temperatura en todo su volumen:
+el material sirve para suelo abierto, donde ya hay banco de semillas, y no para bandejas de
+almácigo.
+
+Y el límite honesto: **estas pruebas no lo dicen todo**. No dan el contenido de nutrientes, no
+detectan metales pesados y no cuentan patógenos. Para eso el análisis de laboratorio es la única
+respuesta, y en Santa Cruz hay instituciones de investigación agrícola y universidades —CIAT, UAGRM—
+a las que se puede consultar. Lo que corresponde es preguntar, no suponer.
+
+<AplicarRizoma>
+**Dimensiona antes de armar.** Los 3.666 m² en doce lotes y un vivero en producción no se abastecen
+con una pila. Antes de tocar una pala escribe dos números: cuántos metros cúbicos vas a necesitar el
+año que viene —reposición de materia orgánica en los lotes más la fracción de compost de las mezclas
+de bolsa— y cuántos metros cúbicos de material tienes. Y aplica la corrección que casi nadie aplica:
+**el material pierde del orden de la mitad de su volumen durante el proceso**. Mídelo en el primer
+lote marcando la altura inicial con dos estacas.
+
+**Una pila grande, no cuatro chicas.** Un solo camellón de metro y medio de alto, dos de base y tres
+o cuatro de largo se voltea, se mide y se etiqueta de una vez; cuatro cubos dispersos son cuatro
+procesos que nadie va a registrar y que no van a calentar. Ubícalo **cerca del punto de agua** —vas
+a regar en la seca—, con acceso de carretilla desde los lotes y desde donde descarga la gallinaza, y
+nunca en el punto bajo del terreno.
+
+**Encadena el calendario con el resto del sitio.** Armado al principio de la seca; fase activa en
+invierno, con el riego de la pila contado dentro del consumo de agosto, que ya es tu mes crítico;
+maduración al final de la seca; cribado y guardado antes de octubre. Y una nota que se olvida: **la
+zaranda y los sacos hay que tenerlos antes**.
+
+**Dos umbrales de calidad, no uno.** El compost que va a enmendar los lotes de yautía, batata o
+gandul puede pasar con un índice de germinación intermedio y algo de maleza, porque el suelo abierto
+diluye y ya tiene su banco de semillas. **El que va a bolsas de vivero y a bandejas de almácigo
+tiene que pasar las cuatro pruebas sin excepción**, y sobre todo la de malezas: desmalezar bandejas
+a mano es el trabajo más ingrato que existe, y se lo fabricarías a quien venga a ayudar.
+
+**Y registra desde el primer lote.** Fecha, materiales, densidad medida con balde, temperaturas por
+punto, volteos, rebotes y resultados. En dos temporadas tendrás la receta calibrada para tu
+gallinaza y tu material picado, un dato que no existe en ningún libro. Como el proyecto es
+comunitario, **esa planilla es el producto exportable**: la receta escrita, con sus fallos anotados,
+es lo que un vecino puede copiar sin repetir tus tres primeros errores.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La ventaja de la gallinaza viene con una responsabilidad.** Santa Cruz concentra buena parte de la
+avicultura del país, así que el activador de nitrógeno más potente está a pocos kilómetros y sale
+barato. También es el que más eleva el riesgo sanitario del proceso: el estiércol de aves puede
+traer patógenos entéricos, y ese es el argumento para exigir que la pila alcance temperatura **en
+todo su volumen** y no solo en el centro.
+
+**Pregunta siempre qué cama trae.** La gallinaza local suele venir mezclada con cascarilla de arroz
+o viruta en proporciones que varían de una granja a otra y de un lote a otro. Eso cambia la relación
+C/N de lo que estás llevando por un factor grande, y es la causa más frecuente de que la misma
+receta funcione en abril y falle en julio. Si el proveedor no lo sabe, tu balde de veinte litros y
+una balanza lo resuelven: pesa cada carga y anótalo.
+
+**Cuidado con los manuales escritos para el altiplano y los valles.** Es el filtro por piso
+ecológico del Módulo 6, aplicado al compost. Un manual de Cochabamba o de La Paz se preocupa de
+conservar calor y de abrigar la pila, y a menudo recomienda cubrirla con plástico. En la llanura el
+problema dominante no es conservar calor sino **manejar el agua en los dos sentidos**: exceso siete
+meses, déficit cinco. Esa recomendación, trasladada tal cual a un enero cruceño, produce exactamente
+la pila anaerobia que este módulo intenta evitar.
+
+**La estacionalidad de la materia prima manda tanto como la del clima.** Las podas y el desmonte
+concentran material leñoso en pocos meses, así que un sistema que dependa de tener todos los
+materiales el mismo día no funciona: **acopia el carbono seco bajo techo**, que se conserva meses, y
+arma la pila el día que llega el nitrógeno, porque el carbono es almacenable y el nitrógeno fresco
+no. Y una última prudencia: si el compost se entrega, se intercambia o se vende, cualquier
+afirmación sobre su inocuidad o su condición de higienizado deja de ser técnica y pasa a ser materia
+regulada; los requisitos se consultan con SENASAG y los análisis con un laboratorio. Lo que sí
+puedes afirmar con orgullo es **lo que está anotado en tu planilla**.
+</ContextoBolivia>
+
+## Lo que sigue
+
+El compost termófilo resuelve el volumen y la higienización, y eso es la mitad del problema. La otra
+mitad es el material fino y estable que necesitan las bolsas y las bandejas del vivero, y ahí el
+compostaje no llega.
+
+La lección siguiente pasa de la lombriz como demostración pedagógica a la lombricultura como sistema
+de abastecimiento: por qué la lombriz epigea necesita material predigerido, cómo se dosifica la
+carga de alimentación, el techo de temperatura que en la llanura es el riesgo real y no el frío, la
+cosecha, y por qué el líquido que sale por abajo es una fuga del lecho y no un producto.

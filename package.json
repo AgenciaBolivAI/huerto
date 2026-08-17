@@ -1,8 +1,8 @@
 {
-  "name": "huerto-class",
+  "name": "rizomadelsur",
   "version": "0.1.0",
   "private": true,
-  "description": "Curso local e interactivo: De 0 a Experto en Huertos y Viveros — Rizoma del Sur, Santa Cruz de la Sierra, Bolivia",
+  "description": "Aula de Rizoma del Sur: curso abierto y comunitario de huertos y viveros — Zanja Honda, Santa Cruz de la Sierra, Bolivia",
   "scripts": {
     "dev": "next dev",
     "build": "npm run validar && next build",
@@ -12,13 +12,15 @@
     "verificar-videos": "node scripts/verificar-videos.mjs",
     "verificar-videos:fix": "node scripts/verificar-videos.mjs --fix",
     "optimizar-imagenes": "node scripts/optimizar-imagenes.mjs",
-    "auditar-imagenes": "node scripts/auditar-imagenes.mjs"
+    "auditar-imagenes": "node scripts/auditar-imagenes.mjs",
+    "limpiar-glosario": "node scripts/limpiar-glosario.mjs"
   },
   "_comentario_overrides": "next@14.2.35 fija internamente postcss 8.4.31, que arrastra 3 avisos de seguridad. El fallo es de tiempo de compilación y solo explotable procesando CSS de terceros —aquí todo el CSS es propio—, pero se corrige igualmente forzando la versión parcheada en todo el árbol. La alternativa era saltar a Next 16, un cambio mayor.",
   "overrides": {
     "postcss": "$postcss"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.12.4",
     "@supabase/supabase-js": "^2.109.0",
     "github-slugger": "^2.0.0",
     "next": "14.2.35",

@@ -1,0 +1,421 @@
+Hasta aquí el curso ha respondido preguntas de **elemento**: cómo germina una semilla, cómo enraíza un
+esqueje, cuánta agua pide una cama, qué hacer cuando aparece un bicho. Cada módulo tomó una pieza y la
+explicó por dentro.
+
+Este módulo cambia la pregunta, y la cambia para todo lo que viene después. Ya no es *qué planto*, sino
+**qué sistema armo para que lo que planto se sostenga sin que yo tenga que empujarlo todos los días**.
+
+Es el salto que separa escribir una función de diseñar un servicio. La función se juzga por si devuelve
+el valor correcto; el servicio, por qué pasa cuando falla una dependencia y cuánto cuesta operarlo un
+martes cualquiera. Una parcela es lo segundo, y la hemos estado tratando como lo primero.
+
+## Un huerto es un ecosistema al que le faltan partes
+
+Un bosque de la llanura cruceña no se riega, no se abona, no se desmaleza y no se fumiga, y lleva ahí
+siglos. Un cultivo abandonado tres meses desaparece. La diferencia no es mágica ni moral: es
+estructural, y entenderla es el contenido entero de esta lección.
+
+Lo que tenemos en una parcela es un <Termino slug="agroecosistema">agroecosistema</Termino>: un
+ecosistema al que le quitamos deliberadamente la mayor parte de sus especies y de sus conexiones para
+que el flujo de energía y de materia salga por donde nos interesa —en forma de cosecha— en vez de
+quedarse dando vueltas dentro. **Es una simplificación intencional.** No es un error: es el motivo por
+el que existe la agricultura.
+
+Pero esa simplificación tiene una factura exacta. El bosque recicla sus propios nutrientes, se cubre
+solo, se defiende solo y se regula la temperatura solo; cuando quitamos las especies que hacían eso,
+esas funciones no desaparecen: **pasan a nuestra cuenta**, en forma de fertilizante, de riego, de mano
+de obra y de combustible.
+
+A esa cuenta la agroecología la llama <Termino slug="subsidio-energetico">subsidio energético</Termino>,
+y es la magnitud que de verdad separa un sistema de otro. **Cuanto más simplificado está un sistema,
+más subsidio necesita para seguir de pie.** Un almácigo bajo malla está simplificado al extremo, y por
+eso exige riego dos veces al día, sustrato comprado y vigilancia: no es frágil por descuido, es que le
+quitamos todo y estamos pagando la diferencia nosotros.
+
+<Analogia>
+Un servicio con una sola instancia, sin caché, sin réplicas y sin colas es **más simple de razonar y
+más rápido de escribir**. Y exactamente por eso **necesita que alguien esté mirándolo**: la simplicidad
+no eliminó el trabajo de mantener el sistema en pie, lo movió de la arquitectura a la persona de
+guardia.
+
+Esa es la ecuación de la parcela, con las mismas unidades: **lo que no hace la estructura lo hace el
+operador**. Todo el módulo trata de mover trabajo de la segunda columna a la primera.
+</Analogia>
+
+## Por qué el monocultivo es frágil por mecanismo
+
+Aquí conviene ser desagradablemente preciso, porque este es el punto donde la agroecología resbala
+hacia el eslogan. **El <Termino slug="monocultivo">monocultivo</Termino> no es frágil porque sea
+antinatural, ni porque le falte armonía.** Es frágil por tres mecanismos concretos que se pueden
+nombrar, medir y —esto es lo importante— corregir por separado.
+
+### Uno: concentración de hospedante
+
+Una plaga o un patógeno especializado tiene que resolver un problema logístico antes de comer:
+**encontrar una planta que le sirva**. Ese problema depende de dos cosas: cuánto tejido comestible hay
+por metro cuadrado, y qué distancia hay entre una planta comestible y la siguiente.
+
+En un bloque de una sola especie las dos variables juegan en contra a la vez: la densidad de tejido
+susceptible es máxima, la distancia entre hospedantes es mínima, y además **no hay nada que estorbe la
+búsqueda** —ni olores de otras especies que confundan el rastreo químico, ni siluetas que rompan el
+patrón visual, ni plantas no comestibles donde el insecto aterrice, no encuentre nada y se vaya—. La
+colonización es más probable, la permanencia más larga y la población crece más rápido, porque cada
+individuo que nace tiene su siguiente comida a diez centímetros.
+
+Esto es la <Termino slug="concentracion-de-hospedante">concentración de hospedante</Termino>, y tiene
+un límite honesto: **funciona sobre todo con plagas especializadas**, las que comen una sola familia
+botánica. Con un comedor generalista, que se conforma con casi cualquier hoja, mezclar especies ayuda
+mucho menos o directamente no ayuda. Cualquier folleto que prometa que la diversidad resuelve todas
+las plagas está exagerando, y el módulo de sanidad ya explicó por qué
+el <Termino slug="manejo-integrado">manejo integrado</Termino> nunca depende de una sola herramienta.
+
+El mismo mecanismo opera bajo tierra y ahí es más grave, porque lo que se acumula en el suelo no se va
+volando cuando termina la temporada. Un hongo de suelo que ataca a una familia botánica **construye
+inóculo** cada ciclo que le vuelves a poner su hospedante encima, y esa reserva puede durar años. Por
+eso el eje temporal —qué siembras después de qué— es una lección entera de este módulo.
+
+### Dos: ausencia de redundancia funcional
+
+Un sistema agrícola necesita que se cumplan varias funciones a la vez, las quiera uno o no: alguien
+tiene que cubrir el suelo, alguien tiene que aportar nitrógeno, alguien tiene que dar sombra en
+octubre, alguien tiene que alimentar con néctar y polen a los adultos de
+los <Termino slug="enemigo-natural">enemigos naturales</Termino>, alguien tiene que mantener raíces
+vivas y alguien tiene que producir algo comestible o vendible en agosto. A esas funciones se las
+llama <Termino slug="servicio-ecosistemico">servicios ecosistémicos</Termino> cuando las hace el
+sistema en vez de hacerlas uno.
+
+En un monocultivo, **una sola especie es responsable de todas las funciones que se cubren, y las demás
+simplemente no se cubren**. No hay reparto ni respaldo: si esa especie está mal, están mal todas sus
+funciones el mismo mes.
+
+La corrección se llama <Termino slug="redundancia-funcional">redundancia funcional</Termino>: que cada
+función crítica esté cubierta por **al menos dos elementos que fallen por motivos distintos**. Y ese
+matiz final es todo el asunto. Dos leguminosas de la misma familia, con el mismo enraizamiento y la
+misma estación, no son redundancia: son la misma apuesta escrita dos veces.
+
+### Tres: fallo correlacionado, o un solo punto de fallo
+
+El tercer mecanismo es el más traicionero porque es invisible mientras no pasa nada. En un bloque
+uniforme, **todas las plantas comparten la misma vulnerabilidad exacta**, y muchas veces literalmente
+el mismo genoma. Lo que tumba a una tumba a todas, a la vez, el mismo día.
+
+El curso ya tiene el ejemplo perfecto: **el plátano**. Es un híbrido triploide estéril, así que solo se
+propaga vegetativamente y todo plátano del mundo es un clon. Su ficha lo dice con todas las letras: hay
+hongos de suelo que provocan marchitez, que persisten décadas en el terreno, para los que no existe
+cura, y que entran con el material de siembra y el suelo pegado a él. En un bloque clonal no hay ningún
+individuo que resista, ninguna barrera que frene el avance y ninguna posibilidad de recuperación. **No
+es un riesgo alto: es un riesgo sin plan B.**
+
+Y el fallo correlacionado no es solo biológico. Un <Termino slug="surazo">surazo</Termino> fuerte en
+julio golpea igual a todo lo que tenga la misma sensibilidad al frío; una sequía, a todo lo que enraíce
+a la misma profundidad; y un precio que se cae, a todo lo que se venda al mismo comprador el mismo mes.
+**La diversidad no es solo botánica: es diversidad de modos de fallo.**
+
+<Analogia>
+Es la diferencia entre **fallo aleatorio y fallo correlacionado** en una flota de servidores.
+
+Tres réplicas idénticas te protegen de que a una se le queme el disco, y de nada más: comparten la
+misma imagen, la misma versión de la librería con el CVE, la misma región y el mismo certificado que
+caduca a la misma hora. Cuando aparece la causa común, **N+1 vale exactamente lo mismo que N=1**, y la
+redundancia que creías tener era un número en un panel.
+
+Un bloque clonal de plátano es una flota con la misma imagen, y la respuesta de ingeniería es la misma:
+no basta con multiplicar las réplicas, **hay que diversificar los modos de fallo** — otra familia
+botánica, otra profundidad de raíz, otra fecha de cosecha.
+</Analogia>
+
+## Lo que el monocultivo sí hace bien
+
+Si se cuenta solo la mitad mala, el lector con criterio deja de creer el resto: **el monocultivo no es
+una estupidez histórica**, es una optimización racional que optimiza cosas reales.
+
+**Uniformidad.** Todo se siembra el mismo día, se riega igual y se cosecha el mismo día: un solo
+protocolo, una sola curva de aprendizaje, un solo calendario.
+
+**Mecanización.** Una máquina necesita que el mundo sea repetitivo, y casi todo lo que abarata la
+agricultura a gran escala solo funciona sobre un patrón uniforme.
+
+**Escala comercial.** Diez toneladas de una cosa se venden con una llamada; cien kilos de veinte cosas
+distintas exigen veinte compradores.
+
+**Y simplicidad de decisión.** En un bloque uniforme hay una sola pregunta al día. En
+un <Termino slug="policultivo">policultivo</Termino> hay quince, y todas pequeñas.
+
+<Dato>
+La forma honesta de decirlo es esta: **el monocultivo cambió resiliencia por rendimiento y por
+simplicidad operativa, y paga la diferencia con subsidio externo.** Fertilizante que reemplaza el
+reciclaje que ya no ocurre, plaguicida que reemplaza a los enemigos naturales que ya no viven ahí,
+riego que reemplaza el microclima que ya no existe.
+
+Mientras ese subsidio esté disponible y barato, el intercambio le sale bien. **El problema no es que no
+funcione: es que deja de funcionar exactamente cuando falla el subsidio**, y esa es la situación de
+casi cualquier vecino sin capital de este barrio.
+
+Por eso este módulo no es una postura ideológica: es la arquitectura que corresponde cuando el
+presupuesto de insumos externos es cercano a cero y el terreno es pequeño.
+</Dato>
+
+<ContextoBolivia>
+**El paisaje agrícola de esta zona es el argumento vivo de la lección.** Buena parte del área integrada
+de Santa Cruz funciona con grandes superficies mecanizadas de pocos cultivos, y ese modelo tiene una
+lógica coherente: superficie plana, escala, maquinaria, contratos de venta y un paquete de insumos.
+**Nada de eso escala hacia abajo.** Un vecino con veinte metros cuadrados y sin capital no puede copiar
+una versión reducida, porque lo que lo sostiene es justo lo que él no tiene: la máquina, el insumo
+comprado y el volumen que interesa a un comprador grande.
+
+**Y lo contrario también existe aquí, y es más antiguo.** El huerto de traspatio y el chaco
+diversificado de la agricultura familiar boliviana llevan generaciones haciendo lo que este módulo
+explicará con nombres técnicos: mezclar especies, aprovechar la sombra de un árbol para lo que no
+aguanta el sol pleno, tener algo saliendo casi todo el año y no depender de una sola cosa. **No estamos
+importando una moda: le estamos poniendo mecanismo a algo que la gente mayor del barrio ya sabe hacer.**
+Preguntarles es investigación, no cortesía.
+
+**Cuidado con la bibliografía.** Casi todo lo escrito sobre asociaciones, rotaciones y diseño de
+huertos viene de climas templados con invierno marcado, donde las estaciones, las plagas y las familias
+botánicas son otras. Aquí no hay invierno que corte los ciclos: hay lluvias de octubre a abril, seca de
+mayo a septiembre y <Termino slug="surazo">surazos</Termino> puntuales que meten noches frías y viento
+fuerte en medio de todo. Una tabla de asociaciones de un libro europeo no es información sobre Zanja
+Honda.
+
+**Sobre datos locales, la regla del curso se aplica sin excepción.** No hay cifra de rendimientos,
+precios o plagas de tu zona que este texto pueda darte sin inventarla. Lo que sí existe son
+instituciones a las que preguntar —la autoridad agropecuaria competente, las universidades y centros de
+investigación agrícola del departamento, los técnicos municipales— y vecinos que llevan décadas
+observando el mismo suelo. **Preguntar es gratis; copiar un número inventado sale carísimo.**
+</ContextoBolivia>
+
+## Diversidad planificada y diversidad asociada
+
+Esta distinción es la herramienta conceptual más útil del módulo, y se entiende de una vez.
+
+La <Termino slug="diversidad-planificada">diversidad planificada</Termino> es **lo que tú decides poner
+ahí**: las especies que siembras, dónde, cuántas y cuándo. Es corta, es tuya, cabe en una lista y es la
+única parte del sistema sobre la que tienes control directo.
+
+La <Termino slug="diversidad-asociada">diversidad asociada</Termino> es **todo lo que llega solo en
+respuesta a lo que pusiste**: los insectos que se instalan, los depredadores y parasitoides que vienen
+detrás de ellos, las aves, las lombrices, los hongos del suelo y
+sus <Termino slug="micorriza">micorrizas</Termino>, las bacterias de la rizosfera y las plantas
+espontáneas. Es enormemente más grande que la planificada, **es la que hace la mayor parte del trabajo
+real**, y no se puede plantar.
+
+La relación entre las dos es la clave: **la planificada es la palanca, la asociada es el resultado**. No
+se decide tener depredadores; se decide tener flores pequeñas abiertas en la época correcta, y los
+depredadores vienen o no vienen. **Todo lo que puedas tocar está en la lista corta; todo lo que quieras
+conseguir está en la larga.**
+
+<Analogia>
+Es la diferencia entre **estado declarado y estado real** de un sistema declarativo.
+
+Tú escribes el manifiesto: tres réplicas, esta imagen, este límite de memoria. Lo que efectivamente
+ocurre —qué nodo recibe qué, qué se reprograma cuando algo cae— no lo escribes tú: lo produce el
+sistema convergiendo hacia lo declarado, dentro de las condiciones que haya.
+
+Diseñar una parcela es escribir el manifiesto. **La diversidad asociada es el estado que converge.** Y
+como en cualquier sistema declarativo, el error de principiante es intentar controlar imperativamente
+el resultado en vez de corregir la declaración: si no vienen los enemigos naturales, el arreglo no es
+comprarlos todos los meses, es preguntarse qué falta en la declaración —flores, refugio, presa
+alternativa, agua— para que se queden solos.
+</Analogia>
+
+Y como en todo sistema abierto, **no toda la diversidad asociada es bienvenida**: junto con los aliados
+llegan vectores de virus, hospedantes alternos de plagas, roedores y bichos que muerden. La lección de
+franjas y refugios lo mira de frente, y el módulo de sanidad ya dio el criterio: no se busca cero, se
+busca quedar por debajo del <Termino slug="umbral-de-accion">umbral de acción</Termino>.
+
+## Cada elemento se gana su lugar por su función
+
+Este es **el criterio que gobierna las siete lecciones siguientes**, y conviene escribirlo tal cual:
+
+**Un elemento entra en la parcela porque cumple una función que hace falta, no porque sea natural, no
+porque sea bonito, no porque salga en un folleto y no porque alguien lo regaló.**
+
+La unidad de diseño no es la especie: es el <Termino slug="grupo-funcional">grupo funcional</Termino>,
+el conjunto de especies intercambiables porque hacen el mismo trabajo. Se diseña por funciones y
+después se rellena cada función con lo que uno tenga a mano y aguante el clima.
+
+| Función que el sistema necesita | Qué resuelve realmente | Riesgo si nadie la cubre |
+| --- | --- | --- |
+| **Producir** lo que se come o se vende | La razón de existir de la parcela | El sistema es un jardín, no un huerto |
+| **Cubrir el suelo** | Impacto de lluvia, evaporación, temperatura, malezas | Erosión, costra, suelo caliente y muerto |
+| **Aportar nitrógeno** | Entrada de fertilidad sin comprarla | Dependencia total del fertilizante externo |
+| **Estructurar el espacio** | Sombra, freno del viento, microclima | Cultivos quemados en octubre y tumbados en julio |
+| **Alimentar a los enemigos naturales** | Néctar, polen, presa alternativa, refugio | Control biológico imposible: hay que aplicar siempre |
+| **Mantener raíces vivas todo el año** | Biología del suelo, exudados, micorrizas | Suelo que se apaga en cada barbecho |
+| **Producir algo en la estación seca** | Flujo de caja y de comida en el peor mes | Cinco meses de gasto sin ingreso |
+
+Con la tabla delante, el diseño deja de ser una lista de deseos y se vuelve un problema de cobertura:
+**¿qué filas están cubiertas, cuáles no y cuáles lo están una sola vez?** Una fila cubierta una sola
+vez es un punto único de fallo, exactamente igual que en la arquitectura de un servicio.
+
+<Dato titulo="La ficha de admisión de un elemento">
+Antes de meter una especie en el plan tiene que contestar cinco preguntas. Si no las contesta todas, no
+entra —por muy buena prensa que tenga:
+
+**Qué función cumple**, nombrada de la tabla de arriba. "Es muy bueno" no es una respuesta.
+
+**Qué le quita a los demás**: luz, agua, espacio de raíz, tiempo de trabajo. Todo elemento cobra algo.
+
+**Cuánto trabajo pide al año**, en horas reales y en qué meses. Lo que pide trabajo justo en el mes ya
+saturado es un problema, no una ayuda.
+
+**Qué pasa si se muere**: si esa función queda descubierta o hay otro elemento que la sostenga.
+
+**Y si se puede conseguir aquí**: semilla, esqueje o plantín accesible en la zona. Un diseño que
+depende de material que no se consigue no es un diseño, es un deseo.
+</Dato>
+
+<Advertencia titulo="Diseñar no es coleccionar">
+El error más común de quien se entusiasma con la agroecología es **confundir diversidad con acumulación
+de especies**. Se vuelve del vivero con cuarenta plantas distintas, se meten todas, y el resultado es
+un zoológico: mucha etiqueta, ninguna función cubierta dos veces y una carga de manejo insostenible.
+
+Cuarenta especies con seis funciones sin cubrir es un sistema **más frágil** que ocho especies bien
+elegidas con cada función cubierta dos veces. El número de especies no es la métrica. **La cobertura de
+funciones y la variedad de modos de fallo sí lo son.**
+
+Corolario incómodo: si una especie no contesta la ficha de admisión, **no se planta**, aunque ya la
+tengas en la mano y aunque fuera gratis. Un regalo que hay que regar cinco meses al año no es gratis.
+</Advertencia>
+
+## El costo honesto de la diversidad
+
+La diversidad no es gratis. Quien te la vende como pura ganancia te está vendiendo algo, y este curso
+no vende nada. Esto es lo que se paga:
+
+**Complejidad de manejo, y crece rápido.** Cada especie trae su calendario, su plaga, su punto de
+cosecha y su ficha. Las decisiones no se suman, se combinan.
+
+<Formula explicacion="Cada especie multiplica —no suma— los estados que hay que llevar en la planilla.">
+carga de manejo ≈ especies × etapas de cada una × sectores donde están
+</Formula>
+
+**Mano de obra, y casi toda manual.** Este es el costo grande y el que más se calla: **un policultivo
+es esencialmente no mecanizable**. Nada de lo que abarata la agricultura por escala sirve cuando las
+plantas son distintas y no se cosechan el mismo día. Todo se hace planta por planta, y eso se mide
+en <Termino slug="jornal">jornales</Termino>.
+
+**Cosecha difícil y repartida.** No hay un día de cosecha: hay doscientos días de cosecha pequeña.
+Buenísimo para comer y vender poco a poco, pésimo para entregar volumen a un comprador.
+
+**Riego y sanidad que no se pueden aplicar en bloque.** No se riega igual una arácea que un arbusto
+leñoso: la uniformidad que se perdió era la que permitía tratar todo de una pasada.
+
+**Conocimiento.** Ocho especies son ocho fichas, ocho errores de principiante y ocho temporadas hasta
+tenerles el pulso.
+
+| Se gana | Se paga |
+| --- | --- |
+| Menos plaga especializada por dilución del hospedante | Más decisiones distintas cada semana |
+| Funciones cubiertas por el sistema en vez de compradas | Mucha más mano de obra, casi toda manual |
+| Fallos no correlacionados: no se cae todo el mismo día | Cosecha repartida y difícil de vender en volumen |
+| Comida e ingreso repartidos en el año | Nada mecanizable; sin economía de escala |
+| Suelo cubierto y biológicamente activo | Curva de aprendizaje multiplicada por especie |
+
+<Dato titulo="La regla de dimensionamiento">
+De esa tabla sale la regla más práctica de la lección: **la diversidad se dimensiona por la mano de
+obra y el agua disponibles, no por el entusiasmo.**
+
+Antes de decidir cuántas especies entran, hay que contestar cuántas horas por semana hay de verdad —no
+las de la semana buena, las de la normal— y cuánta agua se puede llevar a cada punto en la seca. **Ese
+número es el <Termino slug="cuello-de-botella">cuello de botella</Termino> del diseño**, y lo que se
+planifique por encima de él no se va a mantener: se abandona a mitad del segundo año, que es justo
+cuando una parcela diversificada empieza a recompensar.
+
+Es preferible **un diseño pequeño y completo que uno grande y a medias**, porque el sistema
+diversificado rinde cuando la estructura ya está madura, y solo madura si alguien la sostiene.
+</Dato>
+
+## Cómo se sabe si el sistema está funcionando
+
+Un sistema que no se mide no se está diseñando: se está decorando. Y la métrica no es el número de
+especies ni lo bonito que se ve.
+
+**Producción total por metro cuadrado y por año**, sumando todo lo que sale del mismo espacio. Comparar
+el rendimiento de una sola especie contra el de un policultivo es tramposo: el policultivo casi siempre
+produce menos *de cada cosa* y más *en total*. La métrica formal que decide esto se explica en la
+lección siguiente.
+
+**Estabilidad entre años.** No el mejor año: la diferencia entre el mejor y el peor. Un sistema que da
+mucho un año y nada al siguiente es peor que uno que da razonable siempre, sobre todo si de eso se come.
+
+**Jornales por unidad producida**, la métrica que más gente ignora y la que decide si el diseño
+sobrevive al segundo año. Y **dependencia de insumos comprados**: cuánto habría que gastar fuera si
+este mes no hubiera plata. Bajar ese número es el objetivo declarado del módulo entero.
+
+**Y comportamiento ante un evento.** Qué pasó con el surazo de julio, con la seca larga, con la lluvia
+de tres días. Un sistema bien diseñado no evita el golpe: **se degrada de forma elegante**, pierde una
+parte y sigue funcionando con el resto.
+
+Medir esto exige lo que ya sabemos hacer del resto del curso. Hace falta
+una <Termino slug="linea-base">línea de base</Termino> tomada antes de tocar nada, hace falta
+un <Termino slug="testigo">testigo</Termino> sin el cambio que se prueba y hace falta un registro
+escrito. Y hay que cuidarse mucho
+del <Termino slug="sesgo-de-supervivencia">sesgo de supervivencia</Termino>, que aquí tiene una cara
+muy concreta: se fotografía el rincón que salió precioso y no se anota el sector que se abandonó en
+marzo. **Ese sector abandonado es el dato que más enseña.**
+
+<AplicarRizoma>
+**Rizoma del Sur tiene 3.666 m² en 12 lotes contiguos, y esa geometría es un regalo de diseño.** Doce
+unidades separadas permiten justo lo que la lección pide: no apostar todo a una configuración, probar
+con testigo y tener modos de fallo distintos en sitios distintos. Un solo lote uniforme obligaría a
+acertar a la primera; doce permiten equivocarse en uno y aprender para los otros once. **Trátalos como
+doce ramas, no como un despliegue único a producción.**
+
+**Y el catálogo actual ya cubre, sin haberlo diseñado, casi todas las funciones de la tabla.** El
+trabajo no es salir a comprar especies nuevas: es nombrar qué función cumple cada cosa que ya está y
+descubrir cuáles quedan cubiertas una sola vez.
+
+**El gandul es infraestructura, no producto.** Su propia ficha lo dice: fija nitrógeno con rizobios,
+rompe la capa dura con raíz pivotante, para el viento, da sombra provisional, se come y trabaja en la
+seca. Es el elemento que más filas de la tabla cubre a la vez y el más barato de multiplicar: **en el
+inventario de funciones de Rizoma es la pieza más valiosa y la que casi nadie valora.**
+
+**El plátano es el punto único de fallo del sitio**, y hay que llamarlo por su nombre desde la primera
+lección. Es clonal, no hay individuo resistente, y su enfermedad de suelo más grave no se cura ni se
+trata: entra con el material y con el suelo pegado a él, y deja el terreno inutilizable. La conclusión
+de diseño se toma ahora, no cuando ya esté plantado: **el plátano no puede ser un bloque macizo, no
+puede ocupar todos los lotes, y necesita separación física, control de la circulación de personas y
+herramientas, y atención a por dónde corre el agua entre lotes**. Su bioseguridad es una decisión de
+plano, y la lección de planificación del módulo la va a recoger.
+
+**El culantro invierte la lógica de la sombra.** Su ficha señala una rareza aprovechable: cuanto peor
+es el sitio en luz, mejor sale la planta. Eso convierte a la sombra —que en un monocultivo es un
+estorbo— en **espacio productivo**: el suelo bajo el dosel de Rizoma no es superficie perdida sino un
+piso más del sistema, y la yautía juega en un registro parecido. Cómo se combinan exactamente esos
+pisos es materia de las lecciones 2 y 5; **hoy solo se decide que existen y que se van a usar**.
+
+**Las funciones hoy descubiertas o cubiertas una sola vez** son la primera hoja de la libreta: quién
+alimenta a los enemigos naturales cuando no hay nada florecido en plena seca; quién cubre el suelo
+desnudo entre lotes en las lluvias fuertes; quién frena de verdad el surazo por el sur; y quién produce
+algo en agosto. Ninguna se contesta comprando nada: se contestan con especies que ya se consiguen aquí.
+
+**El vivero le da a Rizoma una ventaja que casi ningún proyecto tiene**: los elementos del diseño se
+propagan en casa. Los ornamentales, los árboles de sombra y los frutales injertados son, además de
+producto, **material de estructura**. El cerco vivo y las franjas no hay que comprarlos: hay que
+propagarlos.
+
+**Y la restricción de mano de obra manda sobre todo lo anterior.** Antes de dibujar nada hay que
+escribir cuántas horas reales por semana hay y cuánta agua llega a cada punto en agosto. **Con eso se
+decide cuántos de los 12 lotes se diversifican el primer año** —probablemente pocos, probablemente los
+más cercanos al agua— y cuáles esperan.
+
+**Y el encuadre comunitario cambia un criterio técnico de verdad.** Rizoma no diseña para Rizoma:
+diseña para que un vecino con veinte metros cuadrados, sin plata y sin estudios previos, pueda copiar
+el patrón. Eso obliga a que cada solución sea **replicable con material que se consigue aquí y con
+herramientas que la gente tiene**. Un diseño que solo funciona con insumo comprado es, en este
+proyecto, un diseño fallido aunque produzca más — porque no se puede regalar.
+</AplicarRizoma>
+
+## Lo que sigue
+
+Ya está el marco: por qué la simplificación cuesta subsidio, cuáles son los tres mecanismos de la
+fragilidad, qué parte de la diversidad se decide y qué parte se invita, cuál es el criterio de admisión
+de un elemento y qué se paga por la diversidad.
+
+Falta lo de abajo. Cuando dos plantas comparten el mismo metro cuadrado pasan cosas físicas y
+fisiológicas muy concretas: **compiten por luz, agua y nutrientes en un orden de prioridad que no es el
+que la gente supone; se reparten el espacio en altura y en profundidad de raíz; se reparten el tiempo; y
+a veces una le facilita la vida a la otra**. La lección siguiente, **cómo funciona de verdad un
+policultivo**, desarma esas interacciones una por una y termina con la métrica que decide si una
+mezcla concreta vale la pena o si sale mejor sembrar cada cosa por separado.

@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-rinde-distinto",
+      "tipo": "opcion_multiple",
+      "enunciado": "Dos vecinos escriben la misma consulta sobre las hojas bajas amarillas de sus plátanos y reciben respuestas casi idénticas. Uno gana media tarde y el otro hace una compra innecesaria. ¿Qué explica la diferencia?",
+      "opciones": [
+        "Quien sabe carga la petición con el estado real del lote —que es el bajío, que se encharcó tres días en enero, que el suelo es arcilla expansiva, que hace seis semanas pasó un surazo, que las hojas de arriba están sanas—, y como el modelo solo continúa el texto que recibe, la calidad de ese texto pone el techo de la respuesta.",
+        "Quien sabe descarta media respuesta apenas la lee, sin haber verificado nada todavía: su conocimiento funciona como un filtro de costo cero que corre en tiempo de lectura.",
+        "Quien sabe dispone de más preguntas posibles, porque no se puede preguntar por lo que no se sabe que existe y la herramienta no avisa de las preguntas que no le hiciste.",
+        "Quien sabe redacta la consulta con mejor ortografía y en frases más ordenadas, y el modelo responde mejor cuando el texto de entrada está bien escrito."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son los tres puntos de la lección: contexto que solo aporta la persona, filtro gratuito en la lectura y repertorio de preguntas. La cuarta es incorrecta y además contradice el planteo: la lección dice expresamente que la diferencia no está ni en la máquina ni en cómo escribieron. Lo que falta en «se me ponen amarillas las hojas» no es prosa, es información —el bajío, el encharcamiento, el surazo—; un texto pulido pero vacío de estado real recibe igual la respuesta promedio del mundo, calibrada para otro clima y otro calendario."
+    },
+    {
+      "id": "rendir-menos-que-nada",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para quien todavía no sabe del tema, lo peor que puede pasarle con una respuesta plausible es quedarse con el error que esa respuesta contenía.",
+      "respuesta": false,
+      "explicacion": "Falso, y ese es el cuarto efecto, el más traicionero: la herramienta puede rendir menos que nada. Una duda sin respuesta es incómoda, y esa incomodidad era justamente lo que empujaba a preguntarle al vecino que lleva veinte años sembrando, a abrir el módulo o a ir a mirar la planta de cerca. Una respuesta plausible apaga la incomodidad sin resolver el problema, así que el costo no es el error: es la búsqueda que ya no ocurrió. El error al menos podría detectarse; la búsqueda cancelada no deja rastro."
+    },
+    {
+      "id": "por-que-se-siente-que-uno-sabe",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué leer una explicación clara deja la sensación de haber aprendido el tema, aunque dos semanas después no quede casi nada?",
+      "opciones": [
+        "Porque reconocer y recuperar son operaciones distintas: leer entrena confirmar que algo te resulta familiar cuando lo tienes delante, no producirlo desde adentro cuando no lo tienes.",
+        "Porque el cerebro usa la fluidez de la lectura como indicador barato de comprensión, un atajo que funcionaba cuando los textos eran escasos y desparejos y hoy ya no.",
+        "Porque el ajuste posterior por preferencia humana premió lo que a las personas les parece claro y bien escrito, así que las respuestas están optimizadas justo para la variable que dispara la ilusión.",
+        "Porque una explicación clara demuestra que quien la escribió entendió el tema a fondo, y esa comprensión se transmite al lector mientras la lee."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son el mecanismo de la ilusión de fluidez: reconocer contra recuperar, la fluidez usada como atajo de medición y un texto optimizado precisamente en esa variable. La cuarta es incorrecta por dos motivos encadenados. Primero, la claridad es una propiedad del texto y no una medida de tu conocimiento: tu evaluación interna está midiendo el reconocimiento mientras crees que mide la recuperación. Segundo, detrás de la respuesta no hay nadie que haya entendido nada; es un sistema que predice la siguiente pieza de texto. Nada se transmite: un manual denso deja sensación de no haber entendido del todo, que es incómoda y honesta, y una respuesta de máquina deja la sensación contraria, que no está correlacionada con nada."
+    },
+    {
+      "id": "pedir-nota",
+      "tipo": "verdadero_falso",
+      "enunciado": "Escribir tu explicación con tus palabras y mandársela al modelo preguntando «¿está bien?» es una buena forma de comprobar si entendiste.",
+      "respuesta": false,
+      "explicacion": "Falso. El ajuste por preferencia humana premió las respuestas que la gente valoró bien, y a la gente le gusta que le den la razón, así que lo más probable es que empiece con «sí, muy bien planteado» y siga con matices menores. Eso no es evaluación, es cortesía estadística. Para sacar algo útil hay que no darle la opción de aprobar: que enumere qué información de la lección no aparece en tu texto, o que escriba la objeción más fuerte que un agrónomo le haría. Fíjate en el verbo: señalar lo que falta, no puntuar. Y aun así es un revisor de borradores, nunca un examinador con autoridad; el examen de verdad lo toma el lote."
+    },
+    {
+      "id": "que-te-examine",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué formas de usar la herramienta producen aprendizaje en vez de sensación de aprendizaje?",
+      "opciones": [
+        "Darle el texto de la lección que acabas de leer y pedirle que te pregunte de a una, que espere tu respuesta y que no te la adelante.",
+        "Escribir tu predicción antes de leer la explicación, porque fallar y después leer deja una marca que la lectura directa no deja: el error abre el hueco donde la información encaja.",
+        "Pasarle la lista de módulos que hiciste y pedirle diez preguntas mezcladas de temas viejos, en intervalos crecientes, justo cuando están por olvidarse.",
+        "Pedirle un resumen claro y ordenado de la lección para releerlo un par de veces antes de dormir, que es lo que fija el contenido."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son práctica de recuperación, predicción previa y repaso espaciado con temas intercalados; que estén mezclados es lo importante, porque obliga a decidir primero de qué se trata el problema, que es exactamente lo que hay que hacer en el huerto. La cuarta es incorrecta y es la trampa más común: releer se siente productivo y rinde poco, porque entrena reconocimiento. Además pide un texto todavía más claro y ordenado, es decir, aumenta a propósito la variable que dispara la ilusión de fluidez. Recordar con esfuerzo consolida mucho más que releer cinco veces, aunque releer se sienta mejor durante la sesión."
+    },
+    {
+      "id": "dificultad-deseable",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una tarde de estudio con la máquina en la que todo se entendió, nada costó y no hubo tropiezos es señal de que la sesión rindió bien.",
+      "respuesta": false,
+      "explicacion": "Falso, y es contraintuitivo: dentro de ciertos límites, el esfuerzo que se siente incómodo produce más aprendizaje que el que se siente cómodo. Recuperar de memoria, intercalar temas, espaciar y auto-explicarse rinden peor durante la sesión y muchísimo mejor un mes después; releer, subrayar y mirar cómo alguien lo hace se sienten productivos y rinden poco. Por eso una tarde fluida es sospechosa por definición: la sensación de facilidad está midiendo la calidad del texto, no lo que quedó en tu cabeza. Lo que se lee y no se recupera nunca se pierde rápido, siguiendo la curva del olvido, y lo único que sobrevive intacto es la sensación de que uno sabe del tema."
+    },
+    {
+      "id": "andamio-y-bucle",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre retirar el andamio y sobre qué corrige de verdad, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "La regla operativa es no usarla en la parte que estás aprendiendo y sí en la que ya dominas o en la que no vas a aprender nunca: si estás aprendiendo a calcular el agua de un riego, haces la cuenta a mano y la máquina la revisa, no al revés.",
+        "La prueba del apagón —una vez por semana, apagar el teléfono y hacer la tarea sin ella— sirve porque el resultado es observable y no exige honestidad heroica: lo que sale sin ayuda es lo que sabes, lo demás todavía es del andamio.",
+        "El modelo tuvo un bucle de realimentación en su entrenamiento, pero con texto y con preferencias de personas sobre textos, no con el mundo: ninguna planta ha corregido jamás a un modelo.",
+        "Como el bucle del huerto tarda semanas o una campaña entera, conviene apoyarse mientras tanto en el bucle rápido de la conversación, que corrige el rumbo hasta que llegue el resultado del lote."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son la regla del andamiaje, la prueba que la verifica y la razón por la que un modelo puede sonar experto y estar sistemáticamente equivocado sobre un lugar concreto. La cuarta es incorrecta y confunde velocidad con corrección: la conversación no toca la realidad, así que no corrige nada; devuelve más texto. La latencia es un defecto operativo del bucle verdadero, no un motivo para reemplazarlo por uno falso, y el peligro que la lección señala es exactamente ese, que un bucle rápido y falso compita en atención con uno lento y verdadero. La latencia se maneja con registro —la bitácora es el cable que conecta la acción con su resultado—, y el sesgo de cerrar mal, con parcela testigo y la predicción anotada antes."
+    },
+    {
+      "id": "rutina-de-estudio-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Ocho vecinos de Prados del Sur terminan el curso y quieren seguir estudiando juntos, sin profesor, con un solo teléfono compartido y datos que se pagan. Diseña la rutina de estudio del grupo aplicando esta lección completa: qué papel se le asigna a la herramienta y cuál no, cómo se comprueba lo que de verdad se sabe, qué se registra y cómo se cierra el bucle en el sitio (3.666 m² en 12 lotes contiguos, arcillas expansivas, surazos, catálogo con yautía, ají dulce, plátano y frutales injertados). Explica el mecanismo detrás de cada decisión, no solo la rutina, y di qué haría el grupo distinto con el plátano —del que hay literatura mundial— y con la yautía en un suelo arcilloso de Zanja Honda.",
+      "respuestaModelo": "El punto de partida es incómodo: el grupo está, por ahora, del lado que menos rinde de la brecha. La herramienta le da mucho a quien ya sabe por tres razones —le carga el estado real del lote, filtra la respuesta gratis al leerla y tiene un repertorio largo de preguntas posibles— y a quien no, texto ordenado. De ahí la decisión de fondo: lo que hay que repartir no es acceso, que ya lo tienen, sino criterio.\n\nEl papel de la herramienta se invierte: no debe dar la respuesta, debe hacer producirla. Cuatro usos. Que tome examen, pasándole un módulo ya visto y pidiéndole que pregunte de a una, espere y no adelante nada; eso es práctica de recuperación, y traer la información desde la memoria consolida mucho más que releer. Que haga predecir antes de explicar: cada uno escribe qué cree que pasa —por qué el surazo daña sin helada— y recién después lee, porque el error abre el hueco donde la información encaja. Que audite la autoexplicación escrita con palabras propias, pidiendo qué falta y cuál es la objeción más fuerte de un agrónomo, nunca una nota: si se le pregunta «¿está bien?», aprueba, porque el ajuste por preferencia humana premia darle la razón, y eso es cortesía estadística, no evaluación. Y que devuelva casos con sus datos y se calle, para que el grupo decida y después pida objeciones: decidir sobre un caso se parece a lo que harán en el terreno; leer una conclusión, no.\n\nA eso se suma repaso espaciado: diez preguntas mezcladas de módulos viejos, en intervalos crecientes. Mezcladas es lo importante, porque obligan a decidir primero de qué se trata el problema, que es lo que exige el huerto. Y una regla de calibración: si la sesión se sintió fácil, sospechar. La dificultad deseable dice que recuperar, intercalar y auto-explicarse rinden peor durante la sesión y mucho mejor un mes después; releer y subrayar, al revés.\n\nLa frontera del andamiaje cabe en una línea y se respeta: no usarla en la parte que se está aprendiendo, sí en la que ya se domina o en la que no se va a aprender nunca. Si están aprendiendo a calcular el agua de un riego, la cuenta se hace a mano y la máquina la revisa; traducir una ficha en inglés se delega sin culpa. Para saber dónde está parado cada uno, la prueba del apagón: una jornada semanal sin consultar nada —mezcla de sustrato de memoria, riego decidido mirando el suelo, plantas leídas antes de buscar explicación—. Lo que no salga ese día es la lista de estudio de la semana siguiente.\n\nLas condiciones materiales mandan sobre el método: un teléfono compartido y datos que se pagan obligan a un estudio pobre en tecnología y caro en esfuerzo. Preguntas escritas en papel, explicaciones en voz alta, predicciones anotadas antes de actuar, y una hora de conexión usada solo para lo que exige estar conectado.\n\nEl bucle se cierra en el sitio, no en la pantalla: el huerto es la única fuente que no es complaciente, no valora el esfuerzo ni da la razón por cortesía. Tiene dos defectos y los dos se manejan. La latencia —contesta en semanas o en una campaña— hace que un bucle rápido y falso compita en atención con uno lento y verdadero. Y la memoria: cinco meses después nadie recuerda qué dosis se usó. Por eso el registro es obligatorio, en seis columnas: fecha, lote, qué se hizo, qué se esperaba que pasara escrito antes, qué pasó de verdad y de dónde salió la idea. Esa última columna calibra la herramienta para Zanja Honda: dentro de un año se puede contar cuántas de las ideas que dijo el chat resultaron ciertas aquí. Y cerrar mal el bucle es peor que no cerrarlo —se aplicó algo, llovió, mejoró, y quedó grabado que funciona: coincidencia con nombre—, así que todo ensayo lleva parcela testigo, un pedazo en las mismas condiciones donde no se hace nada. Uno de los 12 lotes queda como lote de aprendizaje: ahí entra primero, y en ningún otro lado, todo lo que salga de una conversación con una máquina.\n\nCon el plátano y con la yautía se procede distinto, y la regla es sencilla: cuanto más local es el nombre, menos sirve la máquina y más sirve el vecino. Del plátano hay literatura mundial y las respuestas serán decentes, aunque igual se verifiquen y se prueben primero en el lote de aprendizaje. De la yautía en arcilla expansiva de Zanja Honda, con surazos, casi no hay texto en el mundo, así que lo que salga será relleno verosímil: ahí el orden se invierte —primero quien la siembra hace veinte años, después la bitácora del sitio y la máquina al final, solo para ordenar por escrito lo ya decidido—. En normativa, precios o requisitos de trámite no se le cree nada: eso se confirma con la autoridad competente, un contador local o una institución de investigación agrícola.\n\nY el paso que multiplica todo: una vez al mes alguien explica a los demás un tema que estudió, sin el teléfono en la mano, y los otros preguntan hasta el primer «no sé». Ese «no sé» no es un fracaso: marca el borde del conocimiento del grupo y fija el tema del mes siguiente. Enseñar no es lo que se hace después de aprender, es parte de aprender.",
+      "criterios": [
+        "Parte del diagnóstico de la brecha —contexto real, filtro al leer, repertorio de preguntas— y concluye que lo que se reparte es criterio y no acceso.",
+        "Asigna a la herramienta el papel de examinadora: preguntas de a una sin adelantar respuesta, predicción escrita antes de leer, autoexplicación auditada y casos en vez de conclusiones.",
+        "Prohíbe pedirle nota y exige en su lugar qué falta y la objeción más fuerte, explicando la cortesía estadística que produce el ajuste por preferencia humana.",
+        "Incluye repaso espaciado con preguntas mezcladas de módulos viejos y justifica por qué mezcladas: obligan a identificar primero de qué se trata el problema.",
+        "Invoca la dificultad deseable para desconfiar de una sesión fluida y para preferir el esfuerzo que rinde a un mes antes que releer o subrayar.",
+        "Aplica la regla del andamiaje con un ejemplo concreto: no usarla en lo que se está aprendiendo, sí en lo ya dominado o en lo que no se va a aprender nunca.",
+        "Programa la prueba del apagón como jornada semanal sin consultar y usa lo que no salió como lista de estudio de la semana siguiente.",
+        "Adapta el método a las condiciones materiales —un teléfono compartido, datos que se pagan, señal que falla— con papel, voz alta y una hora de conexión para lo que solo se puede hacer conectado.",
+        "Define el registro de seis columnas con la predicción anotada antes y con la columna de origen de la idea, y explica que esa columna calibra la herramienta para Zanja Honda.",
+        "Trata los dos defectos del bucle del huerto, latencia y memoria, y exige parcela testigo y anotación previa porque un bucle mal cerrado enseña cosas falsas.",
+        "Reserva un lote de aprendizaje de los 12 para todo lo que salga de una conversación y todavía no esté confirmado por el sitio.",
+        "Diferencia el plátano de la yautía por cuánto texto existe en el mundo e invierte el orden de consulta para lo local: primero el vecino, después la bitácora, la máquina al final."
+      ],
+      "explicacion": "El ejercicio obliga a convertir la lección entera en una rutina que un grupo real puede sostener sin dinero y sin conexión permanente. Si la respuesta deja a la herramienta explicando en vez de preguntando, si acepta que el grupo le pida una nota, si no aparece la predicción escrita antes ni el testigo, o si trata igual al plátano que a la yautía, el mecanismo no se entendió: quedó la receta y se perdió el criterio, que es exactamente lo contrario de lo que la lección busca."
+    }
+  ]
+}

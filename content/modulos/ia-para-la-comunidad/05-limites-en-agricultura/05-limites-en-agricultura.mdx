@@ -1,0 +1,401 @@
+Un vecino cruza el portón con el teléfono por delante. En la pantalla hay una foto de una hoja
+amarilla con manchas pardas y, debajo, el nombre de una enfermedad en letras grandes, un porcentaje
+con dos decimales y una recomendación: aplicar tal producto cada siete días. La foto la sacó esta
+mañana, el diagnóstico se lo dio la aplicación en dos segundos, y viene a preguntar dónde se compra
+el producto, no si el diagnóstico es correcto.
+
+Hasta aquí, equivocarse costaba tiempo. Una carta mal redactada se reescribe; un requisito inventado
+cuesta un viaje perdido, y eso duele pero se recupera. **Desde esta lección, equivocarse cuesta
+plantas muertas, plata que nadie tiene de sobra y, si hay un producto de por medio, riesgo para quien
+lo aplica.** El bucle de la agricultura es lento y no tiene deshacer: entre la decisión y su
+consecuencia pasan semanas, y cuando la consecuencia llega, el ciclo ya se perdió.
+
+Dos cosas se rompen aquí, con causas distintas. La primera: **el consejo agrícola que sale escrito
+llega calibrado para otro lugar, otro hemisferio y otro calendario**, y en agronomía un consejo
+correcto aplicado en el mes equivocado hace el daño de uno falso. La segunda: **una imagen no
+contiene la información que hace falta para diagnosticar**, y eso no se arregla con una cámara mejor
+ni con un modelo más grande, porque el problema no está en la máquina sino en lo que cabe en una
+foto. Todo esto se mira desde el lugar del vecino que no tiene vivero, ni lupa, ni cuaderno, ni plata
+para un análisis: el módulo 39 trata lo mismo desde la operación del vivero y diagnosticar de verdad
+es el módulo 11.
+
+## El consejo llega calibrado, pero para otro sitio
+
+La lección 02 dejó dicho que una petición vaga no produce una respuesta vaga: produce **una respuesta
+precisa sobre otro lugar**. En agricultura hay que ir más allá, porque esa deriva no se elimina del
+todo ni con la mejor petición del mundo: aunque le digas dónde estás, con qué lluvias y con qué
+suelo, el material del que la máquina saca sus continuaciones sigue escrito por gente de otro clima.
+Tu petición corrige la superficie, el fondo no cambia.
+
+A ese desequilibrio lo vamos a
+llamar <Termino slug="sesgo-geografico-del-corpus">sesgo geográfico del corpus</Termino>, y no es una
+opinión sobre la máquina sino aritmética de quién escribe agricultura, en qué idioma y desde qué
+latitud. El material de huerta en español viene sobre todo de España y de México; el técnico en
+inglés, de Estados Unidos y del norte de Europa. Todos comparten cuatro estaciones, un invierno frío
+que parte el año en dos, y una agricultura con insumos comprados y laboratorio a mano. Zanja Honda no
+comparte ninguna de las tres.
+
+<Analogia titulo="El servidor con la zona horaria por defecto">
+Ya sufriste esto: un servidor levantado en UTC porque nadie configuró la zona. No tira ningún error;
+los registros se escriben, los trabajos programados corren, los informes salen. Simplemente **todo
+está corrido seis horas**, y lo descubres semanas después.
+
+El modelo tiene el equivalente agronómico: un hemisferio y un calendario heredados del promedio de su
+material. **No los declara y no da error.** Solo se nota que la respuesta estaba corrida cuando el
+almácigo no germinó o cuando la lluvia se llevó lo recién plantado. La falla no está en un dato
+equivocado: está en un supuesto que nadie escribió.
+</Analogia>
+
+<Tabla>
+
+| Lo que dice la respuesta por defecto | Qué supone | Qué pasa aquí de verdad |
+| --- | --- | --- |
+| «Sembrar en primavera» | Cuatro estaciones y un invierno que hay que esperar | El año lo parte el agua: lluvias de octubre a abril, seca de mayo a septiembre |
+| «Esperar la última helada» | Que el límite del calendario es el frío | No hiela; el frío llega en surazos de dos o tres días, dentro de la seca |
+| «Regar menos en invierno» | Invierno frío y húmedo, con poca demanda | La seca es la época de mayor demanda evaporativa: cuando más falta hace regar |
+| «Aplicar al inicio de la brotación» | Una plaga que se reinicia cada año con el frío | Sin invierno que corte, hay generaciones encadenadas todo el año |
+| «Mejorar el suelo con laboreo profundo» | Suelos que se estructuran al removerlos | Arcillas que se hinchan y se rajan: removerlas mojadas destruye la estructura |
+| «Hacer primero un análisis de suelo» | Laboratorio accesible y pagable | Puede no haberlo cerca, y menos gratis, para un vecino sin ingresos |
+
+</Tabla>
+
+**El calendario invertido es lo más obvio y lo menos peligroso**, porque salta a la vista. Lo grave es
+que **la variable que organiza el año no es la misma**: en clima templado decide la temperatura, aquí
+decide el agua, y un consejo pensado para un calendario térmico traducido palabra por palabra a uno
+hídrico no queda desfasado, queda **sin sentido**, porque optimiza la variable equivocada. Igual con
+el largo del día, que a esta latitud varía poco más de dos horas entre solsticios mientras en Berlín
+va de unas siete y media a más de dieciséis. Y el frío de aquí no es una estación sino un evento:
+un <Termino slug="surazo">surazo</Termino> son dos o tres días de mínimas cercanas a 10 °C con viento
+fuerte, en plena seca, así que «proteger durante el invierno» puede ser correcto sobre el frío y
+**completamente inútil sobre su forma**, que es lo único que sirve para prepararse.
+
+**Y no hay invierno que corte el ciclo de las plagas.** En clima templado el frío impone un reinicio
+anual —insectos que mueren o entran en latencia, hospedero que desaparece, inóculo que se reduce— y
+el calendario de control del norte se apoya en él. Aquí no lo hay, así que las generaciones se
+encadenan y la presión se acumula. **Es la diferencia entre el servicio que se reinicia cada noche y
+el que corre dos años seguidos:** el primero perdona la fuga de memoria, el segundo se cae por esa
+misma fuga de siempre. Por eso lo que sirve no es un calendario de aplicaciones sino
+el <Termino slug="manejo-integrado">manejo integrado</Termino> con monitoreo continuo
+y <Termino slug="umbral-de-accion">umbrales de acción</Termino>, que es el módulo 11.
+
+Falta el supuesto que deja fuera al lector de este curso: **la respuesta promedio supone dinero.**
+Supone una tienda donde se compra la marca que nombra, un laboratorio y un vivero que vende la
+variedad recomendada. «Primero haz un análisis de suelo» no es falso: es inaplicable, y una respuesta
+inaplicable se ve igual de bien que una aplicable.
+
+## Los nombres locales: el punto donde más se rompe
+
+Aquí ocurre el fallo más silencioso, porque la respuesta llega perfectamente coherente y habla de
+otra planta. Un <Termino slug="nombre-vernaculo">nombre vernáculo</Termino> —el nombre con el que se
+llama a una planta en un lugar— no es una etiqueta única: la misma planta cambia de nombre cada
+trescientos kilómetros y el mismo nombre designa plantas distintas en países distintos. Para la
+máquina ese nombre es un pedazo de texto que arrastra el vecindario estadístico en el que apareció,
+así que si «malanga» apareció mil veces nombrando una especie y quinientas nombrando otra, la
+continuación más probable sale del montón grande, no del que a ti te sirve.
+
+<Tabla>
+
+| Nombre de aquí | Qué es de verdad | Con qué lo confunde y qué rompe |
+| --- | --- | --- |
+| Yautía | *Xanthosoma sagittifolium* | Con *Colocasia esculenta*, que sí tolera el encharcamiento: te da el riego invertido |
+| Culantro | *Eryngium foetidum*, roseta perenne | Con *Coriandrum sativum*, de ciclo cortísimo: te habla de resiembras cada tres semanas |
+| Plátano | Género *Musa* | Con *Platanus*, el árbol de alameda: te da la poda del árbol equivocado |
+| Gandul | *Cajanus cajan* | Con la palabra «holgazán», y con la literatura de la India y su calendario de monzón |
+| Ají dulce | *Capsicum chinense* | Con los picantes de su misma especie, y con lo que se llama ají en otros países |
+
+</Tabla>
+
+La yautía muestra el costo real: la colocasia se cultiva tradicionalmente en terrenos inundados y la
+yautía no, así que un riego tomado de la especie equivocada no se nota el primer día, se nota en la
+cosecha con el cormo podrido, en una llanura donde el agua ya tarda en drenar por su cuenta. La
+corrección es barata y es una sola: **escribe el nombre local y, al lado, el nombre
+científico.** Un <Termino slug="nombre-cientifico">nombre científico</Termino> es un binomio en latín
+—género y especie— que designa una sola cosa en todo el mundo, y es el único identificador estable
+que existe para una planta; el módulo 10 trae el de cada cultivo del catálogo. Si no lo sabes,
+describe: hoja en punta de flecha, mata baja sin tallo, arbusto leñoso de varios metros.
+
+<Advertencia titulo="Ni el nombre científico te da la variedad">
+El binomio identifica la especie, y ahí termina lo que se puede saber a distancia. Qué variedad
+tienes en la mano no está en la foto, no está en el nombre común y no lo deduce ningún modelo: solo
+se sabe por la <Termino slug="trazabilidad">trazabilidad</Termino>, de qué planta madre salió el
+esqueje y qué decía el rótulo. Importa porque muchísimo consejo agronómico es específico de variedad
+—cuánto tarda, cuánto resiste, si se va a flor con el calor—, y **una respuesta que hable de «la
+variedad recomendada» habla de un catálogo comercial de otro país al que aquí no se accede.**
+</Advertencia>
+
+## Por qué una foto no es un diagnóstico
+
+Empecemos por el hecho biológico, que es anterior a cualquier máquina. **Una planta tiene un
+vocabulario muy corto para expresar que algo va mal:** puede amarillear, marchitarse, manchar,
+necrosarse, quedarse chica o deformar el brote nuevo. Se acabó. Y las causas posibles son decenas:
+falta de un nutriente, exceso de otro, raíz podrida por agua de más, raíz seca por agua de menos, un
+hongo, un insecto chupador, sal en el agua, deriva de un producto del vecino, compactación, un golpe
+de frío, un trasplante mal hecho.
+
+Muchas causas, pocos síntomas. A eso lo vamos a
+llamar <Termino slug="convergencia-de-sintomas">convergencia de síntomas</Termino>, y tiene una
+consecuencia lógica: **si muchas entradas distintas producen la misma salida, la salida no permite
+recuperar la entrada.** No es que sea difícil: la información no está ahí. Cualquier sistema que
+reciba solo el síntoma y devuelva una causa está rellenando el resto con lo más frecuente de su
+material, y lo más frecuente de su material es lo más frecuente en otro lugar del mundo.
+
+<Analogia titulo="El síntoma es un hash, y la foto es una captura de pantalla">
+Una función de resumen toma cualquier entrada y devuelve una cadena corta; miles de entradas
+distintas caen en la misma salida, y por eso **nadie intenta invertir un hash**: se generan
+candidatos y se comprueba cuál produce ese mismo resumen. «Hoja amarilla con manchas pardas» es el
+hash, y a él colapsan un montón de historias distintas.
+
+Ahora el otro lado. Alguien te manda la captura de un mensaje de error y pregunta qué falla, sin
+registros, sin métricas, sin qué se desplegó anoche, sin si le pasa a uno o a todos. Nadie con
+experiencia contesta eso, y no por prudencia: **porque la captura es el síntoma del último eslabón**,
+y lo primero que preguntas es siempre igual —a cuántos les pasa, desde cuándo y qué cambió antes—. La
+foto de la hoja es esa captura y las tres preguntas son idénticas, con una diferencia que juega en tu
+contra: en producción reviertes el despliegue y vuelve el estado anterior; **aquí no hay revertir.**
+Armar la lista de candidatos es trabajo de texto y la máquina lo hace bien; comprobarlos es trabajo
+de terreno y no lo hace nadie más que tú.
+</Analogia>
+
+Sobre esa imposibilidad de fondo se apila otra, de la propia imagen: una foto es la proyección plana
+de la parte aérea de un individuo, en un instante, con la luz que hubiera. Lo que un diagnóstico
+necesita y la foto no tiene son seis cosas.
+
+<Tabla>
+
+| Lo que hace falta | Por qué no está en la foto | Cómo se consigue gratis |
+| --- | --- | --- |
+| La raíz | Está bajo tierra; ahí empieza la mitad de los problemas | Sacar una enferma y una sana y mirarlas |
+| El suelo | No se ve el drenaje ni dónde se estanca el agua | Cavar un hoyo, llenarlo de agua, medir cuánto tarda |
+| El riego | Cuánto, cada cuánto y con qué agua no deja marca | Meter el dedo hasta el nudillo; anotar días |
+| La historia de manejo | Lo de hace tres semanas no está en la imagen de hoy | Preguntar, y escribirlo con fecha |
+| La distribución en el lote | El encuadre muestra una planta, no cuántas de cuántas | Contar y dibujar el mapa del terreno |
+| La línea de tiempo | Una foto es un instante; el diagnóstico está en la velocidad | Clavar una estaca y volver a los siete días |
+
+</Tabla>
+
+Dos de las seis merecen nombre propio, porque son las que un vecino sin nada levanta en media hora.
+La primera es el denominador: **no es lo mismo tres plantas afectadas de cuarenta que treinta y ocho
+de cuarenta.** A la proporción de plantas afectadas se le
+llama <Termino slug="incidencia">incidencia</Termino>, y a cuánto daño tiene cada una,
+su <Termino slug="severidad">severidad</Termino>. Cuentan historias opuestas: incidencia baja con
+severidad alta apunta a algo que se mueve planta por planta; incidencia alta con severidad pareja, a
+algo que les pasó a todas a la vez, que casi siempre es manejo, agua o ambiente.
+
+La segunda es la geometría: una sola planta en el medio, un foco que se agranda, una fila entera, un
+gradiente desde un borde o justo las que están bajo el árbol. Cada figura señala una clase de causa
+distinta, y **la figura solo aparece si se mira el conjunto**, que es lo contrario de fotografiar una
+hoja. Conviene saber además por qué la aplicación contesta con tanto aplomo: un clasificador reparte
+puntaje entre las opciones de un catálogo cerrado y devuelve la mayor, así que **siempre hay un
+primer puesto** aunque lo que le mostraste no esté en el catálogo.
+
+<Advertencia titulo="El costo de equivocarse no es simétrico">
+Actuar sobre un diagnóstico falso no cuesta lo mismo que no actuar. Aplicar un producto que no
+corresponde cuesta el dinero del producto, que en un proyecto sin presupuesto sale de otro lado;
+puede producir <Termino slug="fitotoxicidad">fitotoxicidad</Termino>, que es daño a la planta por
+exceso de una sustancia; mata a los <Termino slug="enemigo-natural">enemigos naturales</Termino> que
+estaban conteniendo otra plaga que aún no viste; expone a quien lo aplica, casi siempre sin equipo de
+protección; y —lo más caro— **borra la evidencia**, porque ya no podrás saber si el problema se
+detuvo solo, si se detuvo por lo que hiciste o si nunca fue eso.
+
+Esperar una semana mirando cuesta una semana. En la enorme mayoría de los casos, la decisión correcta
+ante un diagnóstico que salió de una foto es **no hacer nada todavía y salir a buscar los datos que
+faltan.** No hacer nada es una acción legítima, y aquí suele ser la mejor.
+</Advertencia>
+
+## Qué hacer en su lugar, sin equipo y sin dinero
+
+Nada de lo que sigue cuesta plata: manos, un palo, una botella, un papel y paciencia.
+
+**Las cuatro preguntas, en este orden.** Dónde está el síntoma en la planta —hojas viejas de abajo u
+hojas nuevas de arriba, que es la pista que separa un problema
+de <Termino slug="nutriente-movil">nutriente móvil</Termino> de uno que no lo es—. A cuántas de
+cuántas. Desde cuándo y a qué velocidad avanza. Y qué cambió antes: qué se regó, qué se aplicó, qué
+se trasplantó, qué llovió, qué hizo el vecino en su lote. Esa cuarta resuelve sola una parte enorme
+de los casos y no exige saber nada de agronomía.
+
+**Sacar una planta.** Es la acción gratuita con más información por minuto que existe, y casi nadie
+la hace por miedo a perderla. Se saca una enferma y una sana del mismo lote, se les lava la raíz y se
+comparan lado a lado: raíz blanca y ramificada contra raíz parda, blanda y con olor. Eso ya partió el
+universo de causas en dos mitades, y ninguna aplicación puede dártelo desde arriba.
+
+**El mapa en el reverso de un sobre, la estaca y la fecha.** Se dibuja el lote y se marcan con cruz
+las afectadas: si las cruces salen agrupadas, en fila, todas del lado del camino o salpicadas al
+azar, **el dibujo te dice la clase de causa antes de que sepas su nombre.** Después se clava una
+estaca junto a una planta afectada con la fecha escrita y se vuelve a los siete días, porque un
+diagnóstico se apoya en una película y no en una fotografía. Y cuando se decida hacer algo, se hace
+en la mitad y **se deja la otra mitad sin tocar**: eso es
+el <Termino slug="testigo">testigo</Termino>, sin el cual cualquier mejora se atribuye a lo que
+hiciste, y las plantas mejoran solas más seguido de lo que uno cree.
+
+**La hipótesis doble y la observación que las separa.** En vez de buscar «qué tiene», se escriben dos
+candidatos —«le falta agua en la raíz» y «le sobra agua y la raíz se pudrió»— y se busca lo único que
+los distingue, que aquí es mirar la raíz y el suelo a veinte centímetros. A trabajar con dos o tres
+candidatos en paralelo se le
+llama <Termino slug="diagnostico-diferencial">diagnóstico diferencial</Termino>, y a lo que hay que
+ir a mirar para descartar uno,
+la <Termino slug="observacion-discriminante">observación discriminante</Termino>. Ahí está el uso que
+de verdad vale: **no le pidas el diagnóstico, pídele la lista de causas posibles y, para cada par,
+qué tendrías que observar para descartar una.** Eso es trabajo de texto, que es donde la máquina es
+fuerte, y devuelve tareas que puedes hacer esta tarde. Sirve igual para que redacte la descripción
+ordenada del caso y llevársela a un técnico, o para traducirte una etiqueta en portugués.
+
+<Dato titulo="La pregunta que cambia la respuesta">
+«Mis plantas tienen hojas amarillas, ¿qué enfermedad es y qué le aplico?» produce un nombre de
+enfermedad y un producto, y las dos cosas pueden ser inventadas.
+
+«Tengo cuarenta plantas de ají dulce, *Capsicum chinense*, en el sur de Santa Cruz de la Sierra,
+Bolivia, 529 msnm, sabana tropical, hoy en plena seca. Tres de las cuarenta tienen las hojas de abajo
+amarillas desde hace cinco días, las de arriba verdes, están todas juntas en un rincón donde el agua
+tarda en drenar, riego a mano cada dos días y no apliqué nada. No tengo laboratorio, ni dinero, ni
+lupa. Dame las cinco causas más probables ordenadas y, para cada una, qué tendría que observar mañana
+temprano para descartarla. No me recomiendes ningún producto» produce **una lista de tareas para
+mañana.** No cambió el modelo: cambió qué se le pidió.
+</Dato>
+
+**Y a quién se le pregunta cuando la cosa importa.** El vecino que lleva treinta años sembrando en
+este suelo sabe cosas que no están escritas en ninguna parte del mundo, y el que vende en la feria
+sabe qué se está muriendo este año. Para lo sanitario y fitosanitario, el SENASAG; para semillas e
+investigación agrícola, el INIAF; para identificar una nativa del oriente, el herbario del Museo de
+Historia Natural Noel Kempff Mercado, en Santa Cruz. **Cualquier dosis, plazo de seguridad o cultivo
+autorizado se lee en la <Termino slug="etiqueta-del-producto">etiqueta del producto</Termino>, que es
+el texto legalmente vinculante y manda por encima de cualquier respuesta de cualquier máquina.**
+
+## El vecino que llega con un diagnóstico en la mano
+
+Lo primero es lo que no se hace: **no se le dice que la aplicación miente.** El vecino hizo algo
+razonable —tenía un problema y buscó ayuda con lo que tenía— y si la conversación empieza
+humillándolo se pierde a la persona y se la deja donde estaba, creyéndole igual pero ahora incómoda
+con el proyecto. Esto es comunitario: lo que se enseña es el criterio, no quién sabe más.
+
+Lo que sí se hace es preguntar cuatro cosas, tranquilo. **¿Cuántas plantas de cuántas? ¿Desde cuándo,
+y va más rápido o se frenó? ¿Qué hiciste en los quince días anteriores? ¿Sacaste una para verle la
+raíz?** Ninguna contradice a la aplicación, y las cuatro juntas dejan a la vista, sin decirlo, que el
+diagnóstico se dio sin ninguna de las cosas que hacían falta. La persona lo descubre sola, y eso es
+lo único que se queda.
+
+Después va la frase que evita el daño irreversible: **antes de comprar nada y antes de aplicar nada,
+vamos a mirar.** Si siguen las dudas, se lleva la descripción escrita a alguien que sepa, y ahí sí la
+aplicación ayudó: dio un nombre por dónde empezar. **Un diagnóstico de aplicación es una hipótesis, y
+una hipótesis es un buen comienzo; lo que no es, nunca, es una orden de compra.** Y una regla de
+grupo, que es donde se propaga el daño: cuando ese diagnóstico se reenvía, en dos reenvíos pierde el
+origen y a la semana ya es «lo que hay este año en la zona», dicho por alguien que nunca vio la
+planta. Todo lo que salga de una máquina y se comparta va rotulado: **esto lo dijo la aplicación, no
+está comprobado.**
+
+<AplicarRizoma>
+**La primera decisión en Rizoma del Sur es de umbral, no de tecnología: ninguna respuesta de una
+máquina toca una planta antes de pasar por el terreno.** Con 3.666 metros cuadrados en doce lotes
+contiguos hay una ventaja que conviene usar a propósito: casi todo lo que se cultiva está repetido en
+más de un lote, así que siempre hay contra qué comparar. Lo que se decida hacer se hace en un lote y
+se deja otro comparable sin tocar; es la única forma de que dentro de seis meses haya un resultado en
+vez de una sensación, y no cuesta un peso.
+
+**El cuaderno del portón es la pieza que falta y la más barata.** Colgado con piolín, y cada vez que
+alguien nota algo raro escribe seis renglones: fecha, lote, qué planta, qué síntoma y dónde en la
+planta, cuántas de cuántas, y qué se hizo en ese lote las dos semanas anteriores. Ese último renglón
+resuelve el caso solo más veces de lo que parece, y con el cuaderno se puede contestar la única
+pregunta que nadie contesta sin registro: **¿esto está avanzando o se detuvo?**
+
+**Al bloque de la petición hay que agregarle la tabla de nombres.** La lección 02 dejó armado
+`peticiones.md` con el bloque fijo del sitio —Zanja Honda, 529 msnm, lluvias de octubre a abril y
+seca de mayo a septiembre, surazos, arcillas expansivas, doce lotes—. Debajo va ahora el catálogo con
+su binomio: yautía *Xanthosoma sagittifolium*, culantro *Eryngium foetidum*, ají dulce *Capsicum
+chinense*, gandul *Cajanus cajan*, batata *Ipomoea batatas*, plátano del género *Musa*. Se escribe
+una vez, se pega siempre, y desaparece la familia entera de errores de identidad.
+
+**Una regla dura para el vivero, porque afecta a terceros.** Ninguna planta sale de Rizoma del Sur
+con una identificación que provenga de una aplicación: el nombre del rótulo sale de la trazabilidad
+—de qué planta madre, de qué semilla, con qué rótulo entró— o se entrega sin nombre de variedad. Es
+un proyecto comunitario y gratuito, y precisamente por eso su palabra tiene que valer: **entregar mal
+identificado le arruina un ciclo entero a alguien que no tenía margen**, y le cuesta al proyecto lo
+único que no puede reponer, que es la confianza del barrio.
+
+**Y la parte que sostiene la misión: esto se enseña en una tarde bajo el umbráculo, sin computadora.**
+Alguien lleva una planta con un problema, se hacen las cuatro preguntas en voz alta, se saca la
+planta y se mira la raíz delante de todos, se cuenta cuántas de cuántas y se dibuja el mapa en papel
+de estraza. Después —y solo después— se le muestra a la aplicación la misma foto y se lee su
+respuesta en voz alta. Cuando el grupo ya vio la raíz podrida, la seguridad de la pantalla se lee
+sola como lo que es. **Ese orden es todo el taller: primero la planta, después la pantalla.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Aquí el hueco de información no es un accidente, es estructural.** Lo que se sabe de agricultura en
+el oriente boliviano está sobre todo en manuales impresos, boletines institucionales, la memoria de
+los productores y páginas que nunca se digitalizaron bien. Un modelo que aprendió del texto de
+internet no puede haber aprendido lo que no se escribió en internet. **No es que sepa menos de
+Bolivia por descuido: es que la Bolivia productiva publica poco en el medio del que se alimenta.** De
+ahí sale algo que a este proyecto le conviene entender: el conocimiento de este sitio no está en
+ninguna máquina del mundo, y el cuaderno del portón es el único lugar donde existe.
+
+**El calendario boliviano no se parece al que trae calibrado de fábrica.** El año lo organizan las
+lluvias de octubre a abril y la seca de mayo a septiembre; en medio de las lluvias
+aparecen <Termino slug="veranillo">veranillos</Termino>, parones secos de dos o tres semanas que
+agarran al cultivo en plena demanda y sin reservas; y en la seca aparecen los surazos. Ninguna de las
+tres está en el centro del material del que sale la respuesta, y las tres deciden qué se siembra y
+cuándo. El veranillo es el que más se parece a un problema conocido: **es la carga pico que llega
+justo cuando el sistema está más comprometido**, y ningún manual escrito para un clima con lluvia
+repartida todo el año lo va a mencionar.
+
+**El vocabulario de nombres es más grande de lo que ninguna lista puede cubrir.** A los cultivos del
+catálogo hay que sumar los del monte y de la calle: tajibo, toborochi, motacú, cuchi, walusa, joco.
+Aparecen poquísimo en el texto del mundo y se solapan entre especies según quién hable. La regla no
+cambia: nombre local más binomio, o nombre local más descripción física. Y cuando la identidad de una
+nativa importe de verdad, la consulta va al herbario del oriente boliviano, en Santa Cruz, que es la
+fuente de verdad de la identificación botánica de esta región.
+
+**Con productos fitosanitarios, la máquina no opina.** Qué producto está registrado en Bolivia, para
+qué cultivo está autorizado, en qué dosis y con qué plazo de seguridad depende del registro nacional
+que lleva el SENASAG y de lo que diga la etiqueta del envase. No se lo preguntes a un modelo, y si te
+lo contesta, no lo uses: puede darte con aplomo un nombre comercial de otro país, una dosis de otro
+cultivo o una molécula que aquí no está autorizada. **La etiqueta manda siempre por encima de
+cualquier texto generado**, y para lo que no está en ella están el INIAF y los técnicos locales.
+
+**Y una cosa buena, para no cerrar solo con advertencias.** Estas herramientas sí abren puertas que
+en el barrio estaban cerradas: leer una etiqueta en portugués o en inglés, entender qué quiso decir
+el técnico con una palabra que nadie se animó a preguntar, escribir la carta que pide una visita
+técnica, preparar las preguntas antes de ir a la ventanilla. Todo eso es trabajo sobre texto, se
+comprueba leyéndolo y le cambia la vida a alguien que no terminó el colegio. Hay además una asimetría
+que conviene mirar de frente: para una familia que siembra para comer y vender un excedente chico, un
+ciclo perdido es comida que no hubo, así que **cuanto menos margen hay, más caro sale creerle a una
+pantalla.** La verificación no es un lujo de quien tiene tiempo: es la protección de quien no tiene
+margen. Y por eso el trato es simple: **la máquina para ordenar las palabras, el terreno para decidir
+los hechos, y las instituciones para lo normativo.**
+</ContextoBolivia>
+
+## Errores comunes
+
+**«La aplicación dijo que es tal enfermedad con 94 % de seguridad.»** Ese número es cómo repartió el
+puntaje entre las opciones de su catálogo, no la probabilidad de haber acertado.
+
+**«Le mandé una foto mejor y me dio otra respuesta.»** No mejoró el diagnóstico: cambió el reparto
+del puntaje. Lo que falta no es resolución, es raíz, suelo, tiempo y cuántas de cuántas.
+
+**«Le puse el nombre en español, que es lo que hablo.»** El nombre local arrastra el vecindario
+estadístico del país donde más se escribió. Nombre local más binomio, siempre.
+
+**«Me dio la dosis exacta, con dos decimales.»** La precisión de un número no dice nada de su origen.
+Dosis, plazo de seguridad y cultivo autorizado se leen en la etiqueta del producto.
+
+**«Total, aplico y si no era, no pasa nada.»** Pasa: gastaste, pudiste dañar la planta, mataste
+enemigos naturales, te expusiste y borraste la evidencia. Ya no vas a poder saber qué era.
+
+**«Entonces la máquina no sirve para nada del huerto.»** Sirve mucho, en otro puesto: proponer causas
+posibles, decir qué ir a mirar para descartar cada una y ordenar tu descripción para el técnico.
+Proponer hipótesis es su trabajo; comprobarlas es el tuyo.
+
+## Lo que sigue
+
+Queda establecida la frontera: el consejo agrícola llega con la calibración de otro clima y otro
+calendario, los nombres locales lo desvían hacia otra planta, y una imagen no contiene la raíz, el
+suelo, el riego, la historia de manejo, la distribución en el lote ni la línea de tiempo, que es todo
+lo que decide un diagnóstico. A cambio queda el método barato: cuatro preguntas, sacar una planta,
+contar cuántas de cuántas, dibujar el mapa, clavar la estaca con la fecha y dejar testigo.
+
+La lección siguiente, **Privacidad y estafas: lo que no le escribes y lo que no te crees**, cambia de
+eje: hasta aquí el riesgo era creerle demasiado, y a partir de ahí va en los dos sentidos. Hacia
+afuera, qué pasa de verdad con lo que escribes, por qué deja de estar bajo tu control y lo que no
+conviene entregar nunca: documentos de identidad, datos bancarios, datos de terceros, la ubicación
+exacta de la casa o la parcela, información de salud, fotos de menores y papeles internos de la
+organización. Hacia adentro, cómo se reconoce una estafa hecha con estas mismas herramientas —voz
+clonada de un familiar, perfiles falsos, mensajes que imitan a una institución, falsas convocatorias
+de apoyo agrícola— y la regla que las desarma todas: **verificar siempre por un canal distinto del
+que trajo el mensaje.**

@@ -1,0 +1,74 @@
+{
+  "titulo": "Por qué fallan las cosas",
+  "subtitulo": "El chip casi nunca es el culpable. Falla lo que está expuesto al ambiente, lo que se mueve, lo que se calienta y lo que conduce toda la corriente: contactos, cables, soldaduras y alimentación. Esta lección explica el mecanismo físico de cada modo de fallo, por qué casi todos tienen la misma forma de lazo que se realimenta, y por qué en el llano cruceño corren mucho más rápido.",
+  "duracionMin": 32,
+  "objetivos": [
+    "Separar síntoma, modo de fallo y causa, y saber qué se repara en cada uno de los tres niveles.",
+    "Ordenar la búsqueda de una avería empezando por lo expuesto, lo que se mueve y lo que se calienta.",
+    "Explicar la resistencia de contacto y el lazo de realimentación que convierte un borne flojo en un incendio.",
+    "Entender por qué una unión mala puede medir bien en ohmios y comprobarla con caída de tensión bajo carga.",
+    "Describir cómo entra la humedad en una caja cerrada y elegir entre sellado con desecante o drenaje deliberado.",
+    "Estimar con la regla de los diez grados cuánta vida le quita el calor a un equipo mal ubicado.",
+    "Reconocer a simple vista un electrolítico agotado, una soldadura fría y un cable fatigado por flexión.",
+    "Averiguar por qué se fue un fusible antes de reponerlo, distinguiendo cortocircuito, sobrecarga y corriente de arranque."
+  ],
+  "prerrequisitos": [
+    "electronica-desde-cero/02-multimetro-y-herramientas",
+    "electronica-desde-cero/04-del-diagrama-al-cable",
+    "energia-solar/07-cables-protecciones-y-tierra"
+  ],
+  "videos": [],
+  "referencias": [
+    {
+      "titulo": "The Restart Project",
+      "fuente": "The Restart Project (organización comunitaria de reparación, Reino Unido)",
+      "url": "https://therestartproject.org/",
+      "nota": "Movimiento de encuentros de reparación de barrio. Interesa por dos cosas: sus materiales para organizar una jornada de reparación con vecinos, y los datos que publican sobre qué se avería de verdad en los aparatos que la gente lleva, que confirman la idea de esta lección. Está en inglés."
+    },
+    {
+      "titulo": "Repair Café — red internacional de talleres abiertos de reparación",
+      "fuente": "Repair Café International Foundation",
+      "url": "https://www.repaircafe.org/",
+      "nota": "Guías organizativas para montar un espacio donde la gente lleva lo que se le rompió y lo repara acompañada, en vez de tirarlo. Sirve como modelo directo para el taller comunitario que se propone en esta lección. Principalmente en inglés."
+    },
+    {
+      "titulo": "iFixit — guías de reparación y despiece",
+      "fuente": "iFixit",
+      "url": "https://www.ifixit.com/",
+      "nota": "Miles de guías con fotografía paso a paso de cómo se abre y se repara un aparato, buena parte de ellas traducidas al español por la propia comunidad. Antes de forzar una carcasa desconocida conviene buscar si ya está documentada ahí."
+    },
+    {
+      "titulo": "Condensador electrolítico",
+      "fuente": "Wikipedia en español",
+      "url": "https://es.wikipedia.org/wiki/Condensador_electrol%C3%ADtico",
+      "nota": "Explica la construcción interna —láminas de aluminio, papel empapado en electrolito, sello de goma— que hace de este componente el único de la placa con fecha de caducidad, y por qué el calor la adelanta. Útil para quien quiera el detalle químico detrás del abombamiento."
+    }
+  ],
+  "terminos": [
+    "modo-de-fallo",
+    "causa-raiz",
+    "resistencia-de-contacto",
+    "caida-de-tension",
+    "corrosion-galvanica",
+    "punto-de-rocio",
+    "lazo-de-goteo",
+    "fuga-superficial",
+    "corriente-continua",
+    "recubrimiento-conforme",
+    "regla-de-los-diez-grados",
+    "secado-del-electrolito",
+    "resistencia-serie-equivalente",
+    "soldadura-fria",
+    "fallo-intermitente",
+    "fatiga-por-flexion",
+    "alivio-de-traccion",
+    "pico-de-arranque",
+    "bitacora-del-sistema",
+    "linea-base",
+    "fallo-seguro",
+    "clima-tropical-sabana",
+    "humedad-relativa",
+    "inercia-termica"
+  ],
+  "practica": true
+}

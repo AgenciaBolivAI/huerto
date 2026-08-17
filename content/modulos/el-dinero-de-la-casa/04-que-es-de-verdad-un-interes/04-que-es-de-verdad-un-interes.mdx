@@ -1,0 +1,441 @@
+Las tres lecciones anteriores trabajaron con plata que ya era tuya: medirla, repartirla, guardarla.
+Esta trata de plata que no es tuya y del precio que tiene usarla un rato. Es la lección más aritmética
+del módulo y la más rentable, porque casi todo el daño que la deuda hace en una casa no lo hace la mala
+suerte: lo hace **una cuenta que nadie sacó**.
+
+Aquí no se decide nada. No vamos a decir si conviene pedir prestado —eso es la lección siguiente— ni
+qué mirar en el papel que se firma. Vamos a **calcular**, que es el paso que falta antes de poder
+decidir. Al terminar tendrías que poder agarrar un cuaderno, la calculadora del teléfono y cualquier
+oferta que te hagan, y sacar el único número que sirve para compararla con otra.
+
+<Advertencia titulo="Los números de esta lección son inventados">
+Todas las cifras que siguen son **inventadas para poder hacer la cuenta**. No son tasas de mercado ni
+representan lo que cobra ninguna entidad boliviana ni ningún comerciante. Un 2% mensual aparece aquí
+porque multiplicar por 0,02 es fácil, no porque sea lo que te van a cobrar.
+
+**Las cifras de verdad se las pides tú a cada entidad**, por escrito y antes de firmar. Lo que esta
+lección te da es el método para procesarlas cuando las tengas. Y no importa la moneda ni el tamaño: la
+aritmética **escala**. Si tu caso es diez veces más grande, multiplica cada número por diez.
+</Advertencia>
+
+## El precio del tiempo
+
+Un <Termino slug="interes">interés</Termino> es el precio de usar plata ajena durante un tiempo. No es
+un castigo ni un impuesto: es un **alquiler**. Igual que alquilas una casa y pagas por mes mientras la
+ocupas, alquilas plata y pagas por período mientras la tienes; cuando la devuelves, deja de correr. De
+ahí salen las tres cantidades que definen cualquier operación:
+
+**El <Termino slug="capital-prestado">capital</Termino>**, que es cuánta plata te dieron. Solo el
+monto, sin nada añadido. También se le dice monto, principal o «lo que debo».
+
+**La <Termino slug="tasa-de-interes">tasa de interés</Termino>**, que es qué porcentaje del capital se
+cobra **por cada período**. Un porcentaje solo, sin período, es un número que no significa nada.
+
+**El plazo**, que es cuántos períodos dura la cosa. Doce meses, veinticuatro quincenas, tres años.
+
+Si te falta cualquiera de las tres, no tienes una oferta: tienes una frase. Y **no se contesta a una
+frase**. Se contesta a tres números.
+
+<Analogia titulo="Alquilar un servidor por horas">
+Quien haya pagado infraestructura en la nube conoce este modelo exacto: no compras la máquina, pagas
+por hora encendida. El precio unitario es la tasa, las horas son el plazo y el tamaño de la instancia
+es el capital. La sorpresa de fin de mes casi nunca viene de que el precio por hora fuera alto: viene
+de **dejar la instancia encendida más tiempo del previsto**. Con la deuda pasa igual, y ya vamos a ver
+por qué el instinto empuja en la dirección equivocada.
+</Analogia>
+
+## Una tasa sin período no es un número
+
+Esta es la confusión más explotada que existe en materia de dinero, y no hace falta mala intención
+para que funcione: basta con no decir una palabra. **2% mensual y 2% anual no se parecen en nada.** El
+primero, aplicado doce veces, no es un 2%: es más de un 26%. Trece veces más caro el uno que el otro,
+escrito exactamente igual, y la diferencia está en una palabra que a veces se calla.
+
+Por eso, cuando alguien te diga un porcentaje, la pregunta no es «¿es mucho?». La pregunta es cuál es
+el <Termino slug="periodo-de-la-tasa">período de la tasa</Termino>: **¿por período de cuánto?** Por
+día, por semana, por quincena, por mes, por año. Sin esa palabra el número no se puede usar, y quien
+no la dice cuando se la pides te está diciendo otra cosa.
+
+Ahora bien: para pasar de un período a otro, **multiplicar y dividir no siempre alcanza**. Depende de
+si el interés se acumula sobre sí mismo, que es lo que se
+llama <Termino slug="capitalizacion">capitalización</Termino>: cada vez que termina un período, el
+interés generado se suma al capital y **el período siguiente cobra sobre el total nuevo**, interés
+incluido. Si eso ocurre, la conversión es una potencia, no una multiplicación.
+
+<Formula explicacion="Para llevar una tasa de un período corto a uno largo cuando el interés capitaliza: se eleva (1 + tasa) a la cantidad de períodos cortos que caben en el largo, y se resta 1. Con 2% mensual: 1,02 elevado a 12 da 1,2682, menos 1 es 0,2682, o sea 26,82% al año.">
+tasa del período largo = (1 + tasa del período corto) ^ (número de períodos) − 1
+</Formula>
+
+De ahí salen dos nombres que aparecen en todos lados. Se
+llama <Termino slug="tasa-nominal-anual">tasa nominal anual</Termino> a la que sale de multiplicar la
+del período corto por la cantidad de períodos: 2% mensual × 12 = 24% nominal anual. Es una convención
+de escritura, cómoda para publicar, y **está por debajo de lo que realmente cuesta** cuando hay
+capitalización. Se llama <Termino slug="tasa-efectiva-anual">tasa efectiva anual</Termino> a la que sí
+la incorpora: 26,82% en el mismo caso. La efectiva es la verdad; la nominal es la etiqueta.
+
+Y al revés el atajo falla igual: una tasa efectiva anual del 24% **no equivale a un 2% mensual**, sino
+a poco más de 1,80% mensual, porque ese 1,80% repetido doce veces sobre sí mismo ya llega al 24%.
+Dividir entre doce da un número más alto que el correcto.
+
+<Dato titulo="La regla del 72, para calcular de cabeza">
+Hay un atajo viejo para dimensionar una tasa sin calculadora, y se llama
+la <Termino slug="regla-del-72">regla del 72</Termino>: **divide 72 entre la tasa del período, y el
+resultado es cuántos períodos tarda esa plata en duplicarse.** Con un 2% mensual: 72 ÷ 2 = 36 meses, y
+es casi exacto —la cuenta fina da 2,04 veces el capital—. Tres años para deber el doble.
+
+Aplícala a un período corto y se ve por qué son peligrosos: un 5% por quincena son 72 ÷ 5 ≈ 14
+quincenas, poco más de medio año para deber el doble. Ese mismo 5% quincenal, con sus 24 quincenas al
+año, da 120% si nadie capitaliza y **222,5% efectivo anual si capitaliza**. El número chiquito del
+período corto es lo que lo hace sonar razonable.
+</Dato>
+
+## Simple y compuesto
+
+Con los tres números en la mano hay todavía dos formas distintas de calcular, y la diferencia es grande.
+
+El <Termino slug="interes-simple">interés simple</Termino> cobra siempre sobre el capital original: el
+interés que se genera no genera interés a su vez, se aparta y espera. Mil al 2% mensual son 20 cada
+mes, siempre 20, y en doce meses son 240. Devuelves 1.240.
+
+El <Termino slug="interes-compuesto">interés compuesto</Termino> cobra sobre el saldo, y el saldo
+incluye el interés anterior. Mes uno: 20, saldo 1.020. Mes dos: 2% de 1.020, que son 20,40, saldo
+1.040,40. Mes tres: 20,81, saldo 1.061,21. Cada mes el interés es un poquito mayor **porque la base
+creció**. A los doce meses el saldo es 1.268,24, o sea 268,24 de interés contra los 240 del simple.
+
+<Formula explicacion="Interés simple: el interés total es el capital por la tasa por el número de períodos, y crece en línea recta. Interés compuesto: el saldo es el capital multiplicado por (1 + tasa) tantas veces como períodos, y crece cada vez más rápido.">
+simple: interés = capital × tasa × períodos      ·      compuesto: saldo = capital × (1 + tasa) ^ períodos
+</Formula>
+
+Veintiocho de diferencia en un año no impresiona a nadie. La trampa está en que **la brecha no crece
+en línea recta: se abre**. A los tres años el simple lleva 720 de interés y el compuesto 1.040. A los
+cinco, el simple lleva 1.200 y el compuesto 2.281. El simple suma; el compuesto multiplica.
+
+<Analogia titulo="El acumulador que se lee a sí mismo">
+Programando, la diferencia es literalmente una línea. Interés simple es `total = total + capital * i`
+dentro del bucle: en cada vuelta se suma **una constante**, porque el término de la derecha nunca
+cambia. Interés compuesto es `saldo = saldo * (1 + i)`: la variable aparece a los dos lados, **la
+salida de una vuelta es la entrada de la siguiente**, y eso es un lazo de realimentación positiva.
+
+Un lazo así no crece rápido al principio; crece **cada vez más rápido**, que es otra cosa. Por eso la
+intuición falla siempre igual: proyectamos la línea recta de los primeros meses y nos quedamos cortos.
+Y es **el mismo lazo en las dos direcciones**: cuando ahorras trabaja para ti y cuando debes trabaja
+contra ti, sin que nada en la aritmética distinga una cosa de la otra.
+</Analogia>
+
+## La tabla que hay que saber armar
+
+Casi ningún préstamo de una casa funciona como los ejemplos anteriores, con el capital quieto y todo
+pagado al final. Funciona con **cuotas fijas**: pagas el mismo monto todos los meses hasta que la
+deuda se acaba. A ese esquema se le
+llama <Termino slug="amortizacion-de-deuda">amortización</Termino> de la deuda, y ojo con la
+ambigüedad: en el módulo de negocio «amortización» era repartir el costo de una máquina entre los años
+que dura. Aquí es **ir devolviendo el capital de una deuda**. Misma palabra, dos oficios.
+
+Lo que hay que entender es que **cada cuota hace dos cosas a la vez**, en proporciones que cambian mes
+a mes: una parte paga el interés que se generó ese mes y el resto baja la deuda. Lo que queda debiendo
+después de cada pago es el <Termino slug="saldo-deudor">saldo deudor</Termino>.
+
+Y esto es lo primero que casi nadie tiene claro: **el interés no se cobra sobre lo que pediste, se
+cobra sobre lo que todavía debes**. Como el saldo baja cada mes, el interés de cada mes es menor que
+el del anterior; y como la cuota es fija, si el interés baja, **la parte que devuelve capital sube**.
+La cuota es constante por fuera y por dentro se va reacomodando sola.
+
+La herramienta que muestra todo eso se
+llama <Termino slug="tabla-de-amortizacion">tabla de amortización</Termino> y se arma con una
+calculadora. Vamos con 1.000 de capital, 2% mensual y 6 cuotas —números inventados—, y una cuota fija
+de 178,53 que enseguida explicamos de dónde sale.
+
+<Tabla>
+
+| Nº | Saldo al empezar | Cuota | Interés (2% del saldo) | Capital devuelto | Saldo al terminar |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 1.000,00 | 178,53 | 20,00 | 158,53 | 841,47 |
+| 2 | 841,47 | 178,53 | 16,83 | 161,70 | 679,77 |
+| 3 | 679,77 | 178,53 | 13,60 | 164,93 | 514,84 |
+| 4 | 514,84 | 178,53 | 10,30 | 168,23 | 346,61 |
+| 5 | 346,61 | 178,53 | 6,93 | 171,60 | 175,01 |
+| 6 | 175,01 | 178,51 | 3,50 | 175,01 | 0,00 |
+| **Total** | | **1.071,16** | **71,16** | **1.000,00** | |
+
+</Tabla>
+
+Lee una fila entera y ya sabes hacerlas todas. Fila 3: debes 679,77 al empezar el mes; el interés es el
+2% de eso, 13,60; pagas 178,53, de los cuales 13,60 se van en interés y los otros 164,93 bajan la
+deuda; al terminar debes 514,84, que es el saldo con el que arranca la fila 4. **La salida de cada fila
+es la entrada de la siguiente.** Es un bucle de seis vueltas que se corre a mano.
+
+Fíjate en dos detalles. La columna de interés baja mes a mes (20,00 → 16,83 → 13,60 → …) porque baja el
+saldo, y la de capital sube en compensación (158,53 → 161,70 → 164,93 → …). Y la última cuota es 178,51
+en vez de 178,53: **por redondeo de centavos** siempre se ajusta un poco para que el saldo cierre en
+cero. Eso es normal y sale también en las tablas de las entidades.
+
+<Dato titulo="De dónde sale la cuota, con y sin fórmula">
+La cuota fija es el monto que hace que el saldo llegue **exactamente a cero** en la última fila. Hay
+dos maneras de encontrarlo y las dos son legítimas.
+
+**Sin fórmula, probando.** Corre la tabla con un número cualquiera. Si al final sobra saldo, la cuota
+era muy baja: súbela. Si el saldo se pasa de cero, era muy alta: bájala. Repite partiendo la diferencia
+por la mitad y en cinco o seis intentos caes en el centavo. Es lento e infalible, y quien programe
+reconocerá una búsqueda por bisección hecha a mano.
+
+**Con fórmula**, si prefieres el atajo:
+
+<Formula explicacion="Cuota fija de un préstamo amortizado. Con capital 1.000, tasa mensual 0,02 y 6 cuotas: (1 + 0,02) elevado a 6 da 1,126162; 1 dividido entre eso da 0,887971; 1 menos eso da 0,112029; 1.000 × 0,02 da 20; y 20 ÷ 0,112029 da 178,53.">
+cuota = capital × tasa ÷ (1 − 1 ÷ (1 + tasa) ^ número de cuotas)
+</Formula>
+
+Lo importante es que **la fórmula no es el conocimiento**: el conocimiento es la tabla. Si te dan una
+cuota ya calculada, verifícala corriendo la tabla, y si no cierra en cero es que hay algo dentro de esa
+cuota que no te contaron.
+</Dato>
+
+## Por qué las primeras cuotas son casi todo interés
+
+En la tabla de arriba el efecto se nota poco: en la primera cuota el interés son 20 de 178,53, un 11%.
+Con seis cuotas la deuda baja rápido y el interés no alcanza a acumularse. **El fenómeno del que todo
+el mundo habla aparece con plazos largos**, y ahí es brutal.
+
+Mismo capital de 1.000, misma tasa inventada del 2% mensual, pero **60 cuotas**. La cuota baja a 28,77.
+La primera tiene 20,00 de interés y 8,77 de capital: **el 70% de lo que pagas ese mes no toca la
+deuda**. La razón es mecánica, sin ninguna maldad detrás: el primer mes debiste los 1.000 completos y
+el interés se calculó sobre 1.000, pero la cuota está dimensionada para durar cinco años y por eso es
+chica frente a ese interés.
+
+De ahí sale el dato que más incomoda de esta lección. **A mitad del plazo no has pagado la mitad de la
+deuda.** Después de 30 cuotas de las 60 llevas pagados 863,10 y todavía debes 644,22 de los 1.000
+originales: devolviste 355,78 de capital, apenas un 36%, y los otros 507,32 fueron interés. La deuda
+parece no moverse durante años y no es una impresión: es la tabla.
+
+<Advertencia titulo="La consecuencia práctica de esto">
+Si en algún momento tienes plata extra y **la aplicas a bajar el capital**, no estás pagando cuotas por
+adelantado: estás borrando todo el interés futuro que esa porción de capital iba a generar hasta el
+final del plazo. Cuanto antes lo hagas, más borras, porque el interés se cobra sobre el saldo y el
+saldo es lo que estás bajando.
+
+En la práctica **eso no siempre te lo permiten sin costo**. La pregunta exacta —«¿qué pasa si pago
+antes, y cuánto me cuesta?»— es de la última lección del módulo, pero la aritmética de por qué conviene
+es esta.
+</Advertencia>
+
+## Sobre el saldo o sobre lo que pediste
+
+Ahora una trampa que cabe entera en una preposición. Los 71,16 de interés de nuestra tabla salieron de
+cobrar el 2% **sobre el saldo**, que iba bajando. Hay otra forma, y se usa: cobrar el 2% **sobre el
+capital original**, los 1.000, todos los meses del plazo, sin importar cuánto hayas devuelto ya. A eso
+se le dice <Termino slug="tasa-plana">tasa plana</Termino>.
+
+La cuenta es tentadoramente simple y por eso convence: 1.000 ÷ 6 = 166,67 de capital por mes, más 20
+de interés fijo, cuota de 186,67. Total a devolver: 1.120.
+
+Compara. **La misma tasa anunciada —2% mensual— produce 71,16 de interés por un lado y 120 por el
+otro**, casi un 70% más caro con la misma frase en la boca de quien lo ofrece, porque en el mes seis ya
+solo debías 175 y te cobraron como si debieras 1.000. La tasa sobre saldo que produciría esa cuota de
+186,67 es algo más de **3,3% mensual**: ese es el número real, y el 2% era la etiqueta.
+
+<Advertencia titulo="La pregunta que desarma esto">
+No hace falta discutir de teoría. Con dos preguntas queda resuelto: **«¿el interés se calcula sobre el
+saldo o sobre el monto original?»** y, mejor todavía, **«dame el plan de pagos completo, cuota por
+cuota, con el saldo que queda después de cada una»**.
+
+Si el interés de cada fila es el mismo número repetido, es tasa plana; si baja mes a mes, es sobre
+saldo. **Se ve a simple vista en la segunda fila.** Y quien no te puede entregar ese plan por escrito
+no te está diciendo cuánto cuesta lo que te vende.
+</Advertencia>
+
+## Lo único comparable: el total a devolver
+
+Hasta aquí trabajamos con préstamos limpios, donde solo existe el interés. En la vida real hay más
+cosas colgadas y todas son plata que sale de tu casa: comisiones de apertura o desembolso, gastos
+administrativos, seguros, costos de trámite, a veces un avalúo. **Eso lo tienes que preguntar tú,
+entidad por entidad.**
+
+La suma de todo eso, incluido el interés, es
+el <Termino slug="costo-total-del-credito">costo total del crédito</Termino>, y es el **único** número
+que permite comparar dos ofertas. No la tasa, que se puede escribir de tres maneras distintas. No la
+cuota, que ya veremos por qué miente. El total.
+
+<Formula explicacion="El total a devolver con todo incluido: la suma de todas las cuotas más cualquier cargo que se pague al inicio, al final o aparte. Es el único número que se puede poner al lado del de otra oferta y comparar directamente.">
+total a devolver = (cuota × número de cuotas) + comisiones + seguros + gastos + cualquier otro cargo
+</Formula>
+
+Falta un ingrediente que no entra en el total pero hay que preguntar igual: qué pasa si te atrasas. El
+recargo por pago tardío se
+llama <Termino slug="interes-moratorio">interés moratorio</Termino> y se suma **encima** del interés
+normal, muchas veces por día de atraso, a veces con cargos fijos de cobranza, y en algunos contratos
+con una cláusula que vuelve exigible toda la deuda de golpe. No lo supongas: **pregúntalo antes de
+firmar**, igual que preguntas la tasa.
+
+## Comparar por cuota es una trampa
+
+Aquí está el error más caro que comete la gente honesta, y funciona porque la cuota es lo único que se
+siente en el cuerpo cada mes. Mismo capital, misma tasa inventada del 2% mensual, y solo cambia el
+plazo:
+
+<Tabla>
+
+| Plazo | Cuota | Total a devolver | Interés total |
+| --- | --- | --- | --- |
+| 6 cuotas | 178,53 | 1.071,16 | 71,16 |
+| 12 cuotas | 94,56 | 1.134,72 | 134,72 |
+| 24 cuotas | 52,87 | 1.268,88 | 268,88 |
+| 60 cuotas | 28,77 | 1.726,20 | 726,20 |
+
+</Tabla>
+
+De 6 a 60 cuotas, **la cuota cae a la sexta parte y el interés se multiplica por diez**. Nadie hizo
+trampa: es el alquiler de la analogía del principio, y estás alquilando la misma plata diez veces más
+tiempo.
+
+Por eso, cuando alguien te pregunta «¿cuánto quieres pagar por mes?» en vez de «¿cuánto necesitas?»,
+la conversación cambió de tema sin avisarte. La cuota siempre se puede bajar. **Siempre.** Basta con
+estirar el plazo, y el precio de estirarlo va todo entero al total, donde no lo estás mirando.
+
+<Analogia titulo="Cuota y total son latencia y volumen">
+Es la diferencia entre el consumo por mes y el costo total de propiedad, y quien haya elegido un plan
+de infraestructura por la mensualidad ya cayó en esta una vez. Un servicio a mitad de precio mensual,
+contratado por el triple de tiempo, cuesta un 50% más en total, y la planilla mensual —que es lo que
+uno mira— dice que fue una excelente decisión.
+
+La cuota mide **cuánto duele por mes**. El total mide **cuánto cuesta**. Optimizar la primera empeora
+la segunda casi siempre. La cuota importa, pero para otra pregunta: si puedes pagarla sin romper el
+presupuesto, y esa comprobación es la lección siguiente.
+</Analogia>
+
+Con esto ya se pueden comparar dos ofertas inventadas, para el mismo capital de 1.000:
+
+<Tabla>
+
+| | Oferta A | Oferta B |
+| --- | --- | --- |
+| Tasa mensual | 2,5% | 1,8% |
+| Plazo | 12 cuotas | 24 cuotas |
+| Cuota que te dicen | 97,49 | 51,68 |
+| Seguro por cuota | — | 3,00 |
+| **Cuota que pagas** | **97,49** | **54,68** |
+| Comisión al desembolso | — | 25,00 |
+| **Total a devolver** | **1.169,88** | **1.337,32** |
+
+</Tabla>
+
+La oferta B tiene **la tasa más baja y la cuota casi a la mitad**, y es la que cualquiera elegiría en
+el mostrador. Y cuesta **167,44 más**. Ninguno de los dos vendedores mintió: uno dijo la tasa y el otro
+dijo la cuota, y las dos son ciertas. Solo que ninguna de las dos es el precio.
+
+## El «sin interés» que sí tiene interés
+
+La misma cuenta resuelve la compra en cuotas, que es la forma de deuda más común en una casa y la que
+menos se reconoce como deuda: una heladera, un celular, una motosierra, un juego de muebles. «Doce
+cuotas sin interés» suena a regalo, y a veces lo es. Para saberlo hay una sola pregunta.
+
+**«¿Cuánto me cuesta si pago todo hoy, en efectivo?»** Se pregunta **antes** de decir que quieres
+pagar en cuotas, porque después el precio de contado deja de estar disponible.
+
+Ejemplo inventado. Precio en la etiqueta: 1.440. Doce cuotas de 120, «sin interés». Preguntas el
+contado y te dicen 1.200. Ahí está: **240 de diferencia sobre 1.200, un 20% más caro por pagar en un
+año.** El interés no desapareció; está metido en el precio de lista, que es donde no se ve.
+
+Y esos 240 son peor de lo que parecen, porque **no debes 1.200 durante los doce meses**: vas pagando y
+el saldo baja. Corrida por la tabla, la operación tiene
+una <Termino slug="tasa-implicita">tasa implícita</Termino> de casi **2,92% mensual**, que capitalizada
+pasa del **41% efectivo anual**. «Sin interés» describe la aritmética que te enseñaron a hacer, no la
+que se está haciendo.
+
+<Dato titulo="Cuándo el «sin interés» sí es verdad">
+No siempre hay trampa, y la prueba es limpia. **Si el precio de contado es el mismo que la suma de las
+cuotas, el financiamiento es realmente gratis para ti** —porque el vendedor lo absorbe como costo de
+venta, o porque prefiere vender hoy—. Eso existe y hay que aprovecharlo cuando aparece.
+
+La regla cabe en una línea: **suma las cuotas, incluidas la inicial y cualquier cargo, y compara ese
+número con el precio de contado.** Si son iguales, es gratis; si el de cuotas es mayor, la diferencia
+es lo que estás pagando por el tiempo. Y cuidado con dos detalles que se escapan siempre: **la cuota
+inicial cuenta** —aunque no la llamen cuota— y **el seguro obligatorio del producto, si lo hay,
+también**. Todo lo que sale de tu bolsillo va en la suma.
+</Dato>
+
+<AplicarRizoma>
+**Todo lo de esta lección se hace con un cuaderno, un lápiz y la calculadora del teléfono.** No hace
+falta computadora, ni internet, ni una aplicación, y el papel funciona cuando se corta la luz.
+
+**Practica primero con una deuda que ya tengas, no con una que estés por tomar.** El celular en cuotas,
+el mueble, la moto, lo que sea que estés pagando ahora mismo. Busca el papel, saca capital, tasa y
+plazo, y arma la tabla. Vas a descubrir dos cosas: que sabes hacerlo, y cuánto interés llevas pagado
+sin haberlo mirado nunca. Es la mejor manera de aprender esto, porque no hay ninguna decisión en juego
+y por lo tanto no hay nervios.
+
+**Hazte una hoja de comparación y úsala siempre igual.** Una página, una columna por oferta, y las
+filas siempre las mismas: capital que recibo, tasa y su período, cantidad de cuotas, monto de la
+cuota, seguros por cuota, comisiones al inicio, otros cargos, **total a devolver**. La última fila en
+grande. Que la decisión la tome esa fila y no la conversación.
+
+**Aprende de memoria las cuatro preguntas y dilas en voz alta**, en la ferretería o en el mostrador:
+¿por período de cuánto es esa tasa? ¿El interés se calcula sobre el saldo o sobre el monto original?
+¿Cuánto es el total a devolver con absolutamente todo incluido? ¿Cuánto me cuesta si me atraso un mes?
+Preguntar no es desconfiar ni es de mal educado: es lo que hace cualquiera que va a poner plata.
+
+**Pide el plan de pagos por escrito y guárdalo con los papeles de la casa.** Después, cada vez que
+pagues, anota fecha y monto en el mismo cuaderno, y cada tanto compara el saldo real con el de tu
+tabla. Si no coinciden, tienes una pregunta concreta y una hoja con la que hacerla: discutir con un
+papel es otra cosa que discutir de memoria.
+
+**Enséñaselo a alguien más de la casa esta misma semana.** Si puedes armar la tabla explicándola en voz
+alta, la entendiste; si te trabas, vuelve a la fila 3. Y hay una razón práctica además de la
+pedagógica: quien negocia la compra no siempre es quien lleva las cuentas, y un método que vive en una
+sola cabeza no sirve el día que esa cabeza no está.
+
+**Si tienes computadora, la misma tabla en una hoja de cálculo se arma en cinco minutos** y te deja
+probar plazos al instante. Pero ármala a mano al menos una vez: la planilla te da el número, el papel
+te da el mecanismo.
+
+**Y en un proyecto compartido como Rizoma del Sur, la cuenta es la misma.** Si el grupo alguna vez
+financia una bomba, una motoguadaña o un rollo de malla en cuotas, quien firme no decide solo: se arma
+la tabla, se pone el total a devolver en el acta y se compara contra pagarlo al contado o contra
+esperar. Lo que cambia entre una casa y un grupo no es la aritmética: es que aquí el número tiene que
+estar escrito donde todos lo vean.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Las cifras reales se las pides a cada entidad, y las entidades son de tipos distintos.** Bancos,
+cooperativas de ahorro y crédito, entidades financieras de vivienda, instituciones de desarrollo
+financiero, casas comerciales que venden en cuotas y prestamistas particulares. Sus condiciones cambian
+con el tiempo, así que ninguna cifra publicada en un curso te sirve: **la que vale es la que te dan a
+ti, por escrito, con tu monto y tu plazo, el día que preguntas.**
+
+**El sistema financiero boliviano tiene una autoridad estatal que lo supervisa**, y ahí es donde se
+comprueba si una entidad está autorizada a captar dinero y prestar. No te fíes de un nombre que suena
+oficial ni de un local con vidrios polarizados: pregunta en cualquier entidad regulada cómo se hace esa
+consulta y hazla. Las señales de que algo no es lo que dice ser son de la última lección del módulo.
+
+**Pide siempre el plan de pagos completo antes de firmar, no el resumen.** Las entidades reguladas lo
+producen; una que se niegue te está diciendo algo.
+
+**Cuidado con pedir en una moneda distinta a la de tus ingresos.** Si cobras en bolivianos y tu deuda
+está en otra moneda, tu cuota depende de un tipo de cambio que tú no controlas: si esa moneda se
+encarece, tu cuota sube sin que nadie haya tocado la tasa ni el plazo. Es un riesgo que se suma al
+interés y no aparece en ninguna tabla de amortización. Pregunta siempre en qué moneda queda la deuda.
+
+**Aquí el ingreso llega a golpes y la cuota es un cronómetro que no se detiene.** En Zanja Honda y en
+toda la zona, el jornal, la changa, la venta y la cosecha se concentran; entre mayo y septiembre hay
+menos movimiento, y un surazo o un mes de lluvia pueden cortar el trabajo una semana. **La cuota no
+sabe que llovió.** Por eso lo que se compara contra una cuota no es lo que entra en un mes bueno, sino
+el piso estable del que hablaba la lección del presupuesto —y esa comprobación es la lección siguiente.
+
+**Las tasas de período corto son las más frecuentes fuera del sistema regulado y las que peor se
+leen.** Un porcentaje por semana o por quincena suena a nada precisamente porque el período es chico.
+Conviértelo antes de opinar: eleva (1 + tasa) a la cantidad de períodos que hay en un año y resta 1.
+La estructura de ese tipo de préstamo y qué hacer con él son la lección siguiente.
+
+**Y con los cortes de luz y la conectividad irregular, no dependas de una aplicación para esto.** La
+tabla en el cuaderno funciona siempre y queda como constancia de lo que te dijeron.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya sabes calcular: que una tasa sin período no es un número, que el interés se cobra sobre el saldo y
+no sobre lo que pediste, que la cuota siempre se puede bajar estirando el plazo y que lo único
+comparable entre dos ofertas es el total a devolver con todo incluido.
+
+Lo que la aritmética no contesta es **si conviene endeudarse**. Eso no lo decide la tasa: lo deciden
+qué compras con esa plata, cuánto dura, y si la cuota cabe en el piso estable de tu casa y no en el mes
+bueno. La lección siguiente, **Deuda que levanta y deuda que hunde**, convierte estos números en
+decisión: qué deuda te empuja hacia adelante, cuál te hunde, qué significa poner en garantía la
+herramienta con la que ganas la vida, y qué hacer el día que no puedes pagar.

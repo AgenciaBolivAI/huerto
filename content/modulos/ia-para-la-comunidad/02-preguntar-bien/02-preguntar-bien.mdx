@@ -1,0 +1,389 @@
+La lección anterior desarmó la máquina y dejó a la vista un mecanismo de una sola pieza: dado un
+texto, el modelo calcula qué fragmento es el más probable a continuación, lo escribe, y vuelve a
+empezar con el texto ya un poco más largo. De ahí salía la consecuencia incómoda —que inventar con
+tono seguro es comportamiento normal del sistema y no una falla que alguien vaya a arreglar—, y sale
+también esta otra: **si la respuesta es la continuación más probable de lo que escribiste, entonces
+lo que escribes no es una consulta que se envía a ninguna parte; es el principio de la propia
+respuesta.**
+
+Por eso preguntar bien no es cortesía ni un truco de moda. Es la mitad del resultado, y es la mitad
+que está enteramente bajo tu control. La otra mitad, comprobar si lo que te contestó es cierto, es la
+lección siguiente. Esta trata de lo que ocurre **antes de que el modelo escriba la primera palabra.**
+
+## Tu texto no es una consulta: es el principio de la respuesta
+
+Traes un hábito de quince años que aquí juega en contra. En un buscador tu texto es una **llave**: el
+índice ya contiene los documentos y el motor devuelve los que coinciden, y escribir poco funciona
+mejor porque cada palabra de más achica la intersección hasta dejarla vacía.
+
+Con un modelo de lenguaje pasa exactamente lo contrario, y no por convención sino por el mecanismo.
+El modelo **no busca tu texto: lo continúa.** Todo lo que escribiste queda como condición del
+cálculo, así que cambiar tres palabras no es afinar una búsqueda: es cambiar el estado desde el cual
+arranca la escritura. Dos preguntas con la misma intención y distinta redacción devuelven respuestas
+sacadas de regiones distintas del espacio de textos plausibles.
+
+De ahí sale la primera regla operativa, la que más gente incumple: **lo que no escribes no queda sin
+especificar; queda rellenado con un valor por defecto que no elegiste y que no ves.** El modelo no
+puede «no suponer». Si no dices de qué mes hablas, la continuación más probable trae un mes; si no
+dices cuánto terreno, trae un tamaño; si no dices si hay electricidad, la trae supuesta.
+
+Al texto que le escribes —la pregunta, la instrucción, el pedido, con todo lo que va adentro— lo
+vamos a llamar la <Termino slug="peticion">petición</Termino>. En inglés se le dice *prompt*, y vas a
+ver esa palabra en todas partes.
+
+<Analogia titulo="Configuración por defecto, no consulta">
+Piénsalo como un archivo de configuración con doscientas claves del que tú escribes cuatro. Las otras
+ciento noventa y seis no quedan vacías: toman el valor por defecto. En un programa tuyo esos defaults
+los eligió alguien y están documentados; aquí los calculó el promedio de todo el texto disponible,
+nadie los escribió a propósito y no hay ningún archivo donde ir a leerlos. **Cada campo que no llenas
+es una decisión que tomó otro por ti.**
+</Analogia>
+
+## La respuesta por defecto es el promedio de internet, y el promedio no vive aquí
+
+Cuando la petición es vaga, la continuación más probable es la más genérica: la que sirve para el
+mayor número de situaciones porque no se compromete con ninguna. Eso tiene un nombre útil,
+la <Termino slug="respuesta-promedio">respuesta promedio</Termino>, y una propiedad que hay que
+entender bien: **no es una respuesta equivocada, es una respuesta correcta para otro.**
+
+¿Para quién exactamente? Para el centro de masa del texto que existe sobre el tema. Y el texto sobre
+huertos que hay en el mundo está escrito abrumadoramente en el hemisferio norte, en clima templado,
+con cuatro estaciones marcadas, con la helada de invierno como límite del calendario, con acceso a
+insumos comprados y a laboratorio, y para superficies o muy chicas o muy grandes y mecanizadas. Ese
+promedio siembra en marzo, cosecha en septiembre, teme la helada tardía y no sabe qué es
+un <Termino slug="surazo">surazo</Termino>.
+
+Ninguna de esas condiciones se parece a Zanja Honda, con
+una <Termino slug="epoca-de-lluvias">época de lluvias</Termino> de octubre a abril que decide el
+calendario entero, 529 msnm de sabana tropical y arcillas que se hinchan y se rajan. La respuesta
+promedio llega bien escrita, ordenada y segura de sí, calibrada para un lugar que no es el tuyo. **La
+petición vaga no produce una respuesta vaga: produce una respuesta precisa sobre otro sitio.**
+
+## Las seis piezas de una petición útil
+
+Una petición que sirve lleva seis cosas. No hace falta que sea larga ni bonita; hace falta que estén.
+
+<Tabla>
+
+| Pieza | Qué es | Qué pasa si falta |
+| --- | --- | --- |
+| Situación real y completa | Qué tienes, qué pasó, desde cuándo, qué ya probaste | Contesta sobre un caso inventado |
+| Lugar y fecha | Dónde estás, a qué altura, en qué clima, qué día es hoy | Te habla del hemisferio norte |
+| Restricciones duras | Lo que no hay y no va a haber: dinero, luz, agua, tiempo, herramienta | Te propone lo que no puedes hacer |
+| Formato de salida | Tabla, lista de pasos, carta de 300 palabras, con estas columnas | Devuelve un muro de prosa |
+| Ejemplos | Uno o dos de cómo se ve una respuesta buena, o una mala | Acierta el tema y falla el tono |
+| Criterio de buena respuesta | Para qué la vas a usar y cómo vas a juzgarla | No sabe qué optimizar |
+
+</Tabla>
+
+**La situación real y completa.** Aquí está el ochenta por ciento de la mejora, y cuesta cero. «Se me
+están poniendo amarillas las plantas» admite cuarenta causas; «cuarenta plantines de ají dulce en
+bolsa, bajo media sombra, regados a mano todos los días desde hace tres semanas; las hojas de abajo
+amarillean desde hace cinco días y las de arriba siguen verdes; llovió fuerte el martes y el agua
+tardó en drenar» admite tres o cuatro y las ordena. Escribe lo que verías si lo miraras, no tu
+conclusión.
+
+**El lugar y la fecha.** El modelo no tiene reloj ni sabe dónde estás: si no lo dices, usa un «ahora»
+difuso heredado de su entrenamiento y un lugar que es el promedio del texto. Escribe siempre sur de
+Santa Cruz de la Sierra, Bolivia, unos 529 metros sobre el nivel del mar, sabana tropical con lluvias
+de octubre a abril y seca de mayo a septiembre, y la fecha de hoy. Cinco líneas que se copian y pegan
+en cada petición y corrigen de golpe el error más caro de todos.
+
+**Las restricciones duras.** Una <Termino slug="restriccion-dura">restricción dura</Termino> es la que
+no se puede relajar por más buena que sea la idea: no hay electricidad en el lote, no hay dinero para
+insumos, no hay laboratorio de suelos, el trabajo lo hacen dos personas los sábados. Si no las
+escribes, la respuesta te va a proponer un análisis de suelo y un fertilizante de marca; no estará
+mal, será inaplicable, que para ti es peor, porque **una respuesta inaplicable se ve igual de bien
+que una aplicable.**
+
+**El formato de salida.** Pedir la forma de la respuesta es el ajuste más barato que existe. Una tabla
+con estas tres columnas. Una lista de no más de ocho pasos, cada uno empezando con un verbo. Un
+párrafo de 150 palabras para un cartel que va a leer gente que no terminó la escuela. Sin
+introducción y sin despedida. El <Termino slug="formato-de-salida">formato de salida</Termino> no es
+estética: obliga a la respuesta a tener casillas, y las casillas revelan los huecos que la prosa
+corrida disimula.
+
+**Los ejemplos.** Es la palanca más fuerte y la que casi nadie usa. Pegar un ejemplo de cómo se ve una
+respuesta buena transmite en diez líneas lo que no transmiten tres párrafos de adjetivos, y funciona
+por el mismo mecanismo que todo lo demás: **el ejemplo es texto que queda en la condición del
+cálculo, y la continuación imita la forma de lo que tiene cerca.** A ese ejemplo pegado dentro de la
+petición se le llama <Termino slug="ejemplo-guia">ejemplo guía</Termino>.
+
+**El criterio de qué sería una buena respuesta.** Decirle para qué la vas a usar y cómo la vas a
+juzgar es darle un <Termino slug="criterio-de-aceptacion">criterio de aceptación</Termino>, igual que
+no aceptarías una tarea sin él. «Una respuesta buena me deja saber qué hacer mañana temprano con lo
+que ya tengo» y «una respuesta buena la puede leer en voz alta un vecino en una reunión sin explicar
+ninguna palabra» producen respuestas distintas a la misma pregunta.
+
+## Pedir supuestos y alternativas, no una respuesta única
+
+Hay una segunda familia de mejoras que no cambia lo que preguntas sino **la forma de la respuesta que
+pides**, y rinde más que casi cualquier reformulación.
+
+Lo primero es exigir los supuestos. Un <Termino slug="supuesto-explicito">supuesto explícito</Termino>
+es una de esas ciento noventa y seis claves rellenadas en silencio, pero escrita donde puedas verla.
+«Antes de la respuesta, listá los supuestos que estás usando sobre mi clima, mi suelo, mi riego y mis
+recursos» convierte lo invisible en revisable, y ahí está el truco: **puedes no saber nada de
+agronomía y aun así detectar que el supuesto es falso**, porque los supuestos hablan de tu sitio, y
+de tu sitio sabes tú. Si dice «asumo riego disponible a diario» y tú riegas dos veces por semana, ya
+sabes que todo lo que sigue está mal.
+
+Lo segundo es pedir alternativas en vez de una recomendación. Una respuesta única llega vestida de
+decisión tomada; tres opciones con sus costos y sus condiciones de fracaso te obligan a ver los ejes
+sobre los que se decide, y dejan la decisión donde tiene que estar, en quien carga con las
+consecuencias.
+
+Lo tercero es preguntar por el fracaso: «¿qué es lo que más probablemente falle de este plan?», «¿qué
+tendría que ser cierto para que esto fuera una mala idea?», «¿qué información me falta y no te di?».
+Son peticiones que empujan el texto hacia la región de las objeciones en vez de la de las
+recomendaciones, que es donde el modelo cae por defecto.
+
+Y lo cuarto, que es la bisagra con la lección siguiente: pedir que marque lo que no puede saber. «Poné
+[VERIFICAR] al lado de cada dato que dependa de una norma, un precio, un plazo o una fecha.» Eso no
+comprueba nada —el modelo no sabe lo que no sabe, y esa marca también puede estar mal puesta—, pero
+te deja hecha la lista de los puntos donde ir a mirar.
+
+## Iterar sobre lo que salió mal, no reformular a ciegas
+
+La escena típica: la respuesta no sirve, se borra todo, se escribe la pregunta otra vez con otras
+palabras, sale otra respuesta que tampoco sirve. Eso es cambiar diez variables a la vez, y ya sabes
+por qué no funciona: cuando el resultado cambia, no tienes forma de saber qué lo cambió.
+
+La alternativa es la <Termino slug="iteracion-dirigida">iteración dirigida</Termino>: diagnosticar
+primero **qué clase de falla** tuvo la respuesta, y corregir esa pieza y solo esa. Las fallas se
+repiten y se reconocen.
+
+<Tabla>
+
+| Lo que salió mal | Lo que falta casi siempre |
+| --- | --- |
+| Es genérica, sirve para cualquiera | Situación, lugar, escala |
+| Propone cosas que no puedo hacer | Restricciones duras |
+| Un muro de texto que no puedo usar | Formato de salida |
+| Tema correcto, tono equivocado | Ejemplo guía |
+| Demasiado larga o demasiado corta | Límite explícito de extensión |
+| Trae leyes, precios o plazos inventados | Nada: es el mecanismo, y se resuelve verificando |
+
+</Tabla>
+
+Fíjate en la última fila, porque es la trampa del optimista: **hay fallas que no se arreglan
+preguntando mejor.** Que invente una cifra con seguridad no es un defecto de tu petición; es lo que
+el sistema hace por construcción. Una petición mejor reduce las ocasiones, no el fenómeno.
+
+Corregir vence a reescribir. «Esto no me sirve porque el lote no tiene electricidad: rehacelo con
+riego manual y decime cuántos baldes son» conserva lo que sí funcionaba y cambia una sola cosa, y el
+contexto que te costó escribir sigue puesto.
+
+Hay un caso en que corregir deja de funcionar: cuando la conversación se contaminó. Si el modelo
+afirmó algo falso hace seis mensajes, ese texto sigue adentro condicionando todo lo que escribe
+después, y ahora lo trata como establecido. Cuando insista en volver al mismo lugar equivocado, **no
+lo discutas: abre una conversación nueva y plantea el problema desde cero, con la petición ya
+mejorada.**
+
+<Analogia titulo="Caché envenenada">
+Tienes un estado que se ensució, y a un estado sucio no se lo parchea mensaje por mensaje: se
+reinicia el proceso. Cada intercambio queda en la condición del cálculo —buenos y malos por igual—,
+así que una afirmación falsa temprana se comporta como una entrada envenenada en la caché: todo lo
+que se sirve después sale coherente con ella. **Discutirle a un modelo que se equivocó es depurar
+sobre estado corrupto.** Y guarda en un archivo de texto las peticiones que funcionaron: son
+consultas reutilizables, y es lo único de todo esto que se acumula.
+</Analogia>
+
+## Trampa uno: la pregunta que ya trae adentro la respuesta
+
+Esta es la trampa cara, la que produce daño en vez de solo perder tiempo.
+
+Una <Termino slug="pregunta-cargada">pregunta cargada</Termino> es la que lleva la respuesta deseada
+dentro del enunciado. «¿Verdad que conviene regar todos los días?» «Estoy pensando poner quinientas
+plantas de yautía en el lote de abajo, ¿es buena idea?» Ninguna suena tramposa, las dos están
+cargadas, y las dos van a recibir un sí razonado, elocuente y tranquilizador.
+
+El mecanismo tiene dos capas. La primera es estadística: en el texto humano, una afirmación seguida de
+una pregunta retórica se continúa casi siempre con acuerdo, porque así escribe la gente, y la
+continuación más probable de «¿verdad que…?» es «sí». La segunda es el ajuste posterior por
+preferencia humana de la lección anterior: se premiaron las respuestas que a la gente le gustaban, y
+a la gente le gusta que le den la razón. **El acuerdo está reforzado por partida doble.** A esa
+tendencia la llamamos <Termino slug="complacencia-del-modelo">complacencia del modelo</Termino>, y no
+es una opinión suya: no tiene opiniones, tiene continuaciones.
+
+Hay una versión numérica más silenciosa, el <Termino slug="anclaje">anclaje</Termino>: cualquier cifra
+que menciones se vuelve el centro de gravedad de la respuesta. Si escribes «pensaba poner unas
+quinientas plantas», lo que vuelve orbita alrededor de quinientas aunque lo sensato fuera ochenta. El
+número que pones en la petición no se evalúa: se hereda.
+
+<Analogia titulo="El revisor que aprueba todo">
+Ya conociste a este compañero: el que pone «se ve bien» en cada revisión de código sin abrirla. Su
+aprobación no contiene información, porque aprobaría igual cualquier cosa; el problema no es que se
+equivoque, es que **su sí y su no no se distinguen**. Un vecino con experiencia que te dice que sí,
+tiene algo en juego: su reputación, su tiempo, el disgusto de discutir contigo. El modelo no tiene
+nada de eso —ni intereses, ni memoria de mañana, ni vergüenza—, así que su acuerdo no cuesta nada, y
+lo que no cuesta nada no vale como evidencia.
+</Analogia>
+
+La prueba para detectar una pregunta cargada es de una línea: **¿podría contestarse «no»
+cómodamente?** Si la negativa sonaría descortés o rara, la pregunta ya trae la respuesta. Convertirla
+es fácil: en vez de «¿es buena idea poner quinientas plantas?», «¿qué determina cuántas plantas caben
+y se pueden atender en 300 m² con dos personas trabajando los sábados?».
+
+Dos contramedidas más. Guarda tu preferencia para el final o no la digas, y pide explícitamente el
+argumento en contra. Y haz la prueba del espejo: en una conversación nueva, plantea la posición
+contraria a la tuya con la misma seguridad y mira si te la defiende con el mismo entusiasmo. **Si te
+da la razón en las dos direcciones, no te estaba informando en ninguna.**
+
+<Advertencia>
+El daño de la pregunta cargada no termina en ti. Con un texto convincente en pantalla que dice lo que
+ya querías hacer, es fácil llevarlo a la reunión como respaldo externo, y ahí tu opinión personal
+entra lavada: suena a consulta técnica y es tu propia idea con mejor redacción. **Nunca presentes
+ante otros la respuesta de un modelo como argumento de autoridad, y menos si la pregunta la
+escribiste tú esperando ese sí.**
+</Advertencia>
+
+## Trampa dos: la petición sin lugar, sin unidades y sin escala
+
+La segunda trampa no produce falsedades: produce verdades de otro sitio, y en agricultura es la que
+más plantas mata.
+
+Sin lugar y sin fecha, el calendario se invierte. «Sembrar en primavera» no significa nada si no dice
+de qué hemisferio hablamos; «esperar a que pase la última helada» es un consejo excelente e inútil en
+Zanja Honda, donde no hiela pero sí baja a diez grados con viento en una noche de surazo; «regar
+menos en invierno» describe un invierno frío y húmedo, no una seca de mayo a septiembre con
+alta <Termino slug="evapotranspiracion">evapotranspiración</Termino>. Consejo correcto, aplicado al
+revés.
+
+Sin unidades, el error se multiplica o se divide: pulgadas de lluvia en vez de milímetros, galones en
+vez de litros, libras por acre en vez de kilos por hectárea, Fahrenheit en vez de Celsius. Y sin
+escala el desastre es de otro orden: una dosis pensada por hectárea aplicada por planta, o una receta
+de compostaje de balcón trasladada a doce lotes. **Exige siempre la unidad en la que vas a trabajar
+de verdad**, con su referencia dicha: no «tanto por hectárea», sino «tantos gramos por cada mochila
+de veinte litros, y con eso cuántas plantas cubro». Y rehaz la conversión a mano antes de tocar nada:
+convertir es aritmética de escuela y la puedes verificar tú, aunque de agronomía no sepas nada.
+
+<Dato titulo="Las unidades no perdonan">
+En 1999 la NASA perdió la sonda Mars Climate Orbiter porque un equipo entregó datos de empuje en
+unidades del sistema inglés y el otro los recibió como si fueran métricos. Nadie escribió una fórmula
+mal y todos los números eran correctos, cada uno en su unidad. Si eso ocurre entre dos equipos de
+ingenieros que comparten proyecto e idioma, ocurre con mucha más facilidad entre tú y un texto
+escrito por un sistema que no sabe en qué país estás.
+</Dato>
+
+<AplicarRizoma>
+En Rizoma del Sur la primera decisión sobre esto no fue técnica sino de organización: **la petición
+buena se escribe una vez y se comparte**, porque nadie tiene que redescubrir por su cuenta que hay
+que decir dónde está el terreno. En la carpeta del proyecto hay un archivo `peticiones.md` que
+empieza con un bloque fijo —el que todos pegan al principio de cualquier consulta— y sigue con las
+peticiones que ya demostraron servir, cada una con su fecha y para qué se usó.
+
+El bloque fijo dice lo mismo siempre y es el que corrige el error del hemisferio: sur de Santa Cruz
+de la Sierra, Bolivia, comunidad Prados del Sur, Zanja Honda; unos 529 metros sobre el nivel del
+mar; sabana tropical con lluvias de octubre a abril y seca de mayo a septiembre; surazos en invierno
+con mínimas cercanas a diez grados y viento fuerte; llanura aluvial con arcillas expansivas que se
+hinchan mojadas y se rajan secas; 3.666 metros cuadrados en doce lotes contiguos; cultivos de yautía,
+culantro, ají dulce, gandul, batata, plátano, ornamentales y frutales injertados. Debajo va la fecha
+del día, escrita a mano, porque en agosto y en enero la misma pregunta tiene respuestas opuestas.
+
+El segundo bloque, también fijo, son las restricciones duras, y es el que evita que lleguen
+propuestas de otro mundo: proyecto comunitario y gratuito, sin presupuesto para insumos comprados; el
+trabajo lo hacen vecinos en las horas que pueden; no hay laboratorio de análisis de suelo ni certeza
+de poder pagarlo; se prefiere siempre lo que se hace
+con <Termino slug="sustrato">sustrato</Termino> y materiales que ya están en el sitio; y cualquier
+propuesta tiene que poder explicársela un vecino a otro sin diccionario. Ese último punto se agregó
+después de la tercera respuesta impecable que nadie del grupo podía repetir en voz alta.
+
+La regla de las alternativas está escrita como norma del taller: **al modelo no se le pide qué hacer,
+se le piden opciones y supuestos.** Toda consulta que vaya a terminar en una decisión sobre los lotes
+pide tres caminos con sus condiciones de fracaso y la lista de supuestos sobre clima, suelo, riego y
+recursos. Los supuestos se leen en la reunión, en voz alta, y se tachan los que no son ciertos aquí;
+con eso solo, la mitad de las respuestas se cae antes de discutir el fondo.
+
+Hay además una regla de honestidad sobre quién pregunta. Cuando alguien llega con una decisión ya
+tomada —arrancar el gandul del lote cinco, cambiar el marco de plantación—, la consulta no la escribe
+esa persona: la escribe otra, en forma neutra, o la escribe él pero pidiendo los argumentos en
+contra. Es la revisión de a dos del módulo de programación aplicada a la pregunta en vez de al
+código, y responde a algo comprobado en el propio vivero: **la máquina le dio la razón a todo el
+mundo que se la fue a buscar.**
+
+Y una decisión de método que ata esto con el resto del curso: ninguna respuesta que proponga un
+cambio agronómico entra directo a los doce lotes. Entra a un <Termino slug="testigo">testigo</Termino>
+—una franja comparable donde no se cambia nada— y se anota qué se hizo, qué se esperaba y qué pasó.
+El modelo puede darte una hipótesis bien redactada en veinte segundos; lo único que puede decirte si
+es cierta **aquí** es el propio terreno, con el tiempo que tarde. Una buena petición sirve para
+llegar antes a la hipótesis correcta, no para saltarse la prueba.
+</AplicarRizoma>
+
+<ContextoBolivia>
+La primera consecuencia práctica en Bolivia es de calendario, y no es menor: casi todo el material de
+huerta que circula en español viene de España o de México, es decir del hemisferio norte y de climas
+templados o mediterráneos, de modo que el calendario del norte es la respuesta por defecto en
+español. Si preguntas cuándo sembrar sin decir dónde estás, la continuación más probable te va a
+hablar de sembrar al final del invierno y cosechar antes del otoño. Aquí la temporada la parte el
+agua, no la temperatura: **el año se organiza alrededor de las lluvias de octubre a abril y la seca
+de mayo a septiembre**, y eso hay que ponerlo en la petición todas las veces.
+
+La segunda es de nombres. La misma planta cambia de nombre cada trescientos kilómetros, y los de aquí
+son minoría en el texto del mundo: yautía, gandul, ají dulce, camote o batata, walusa, joco. Un
+modelo puede confundirlos con otras especies de nombre parecido y contestarte con toda seguridad
+sobre una planta distinta. La costumbre que ahorra disgustos es escribir el nombre local y al lado,
+entre paréntesis, el nombre científico si lo tienes o una descripción física corta. Ese detalle tiene
+su propia lección más adelante en este módulo.
+
+La tercera es de unidades. Aquí se trabaja en metros, litros y grados Celsius, y buena parte del
+material que alimentó al modelo está en pies, galones y Fahrenheit. Se suma un vocabulario local que
+puede manejar mal —la tarea, el quintal, la arroba, la carga— y cuya equivalencia además varía según
+la región y el producto. No des por buena ninguna conversión que venga en la respuesta:
+**conviértela tú**, y si la unidad es una medida local de mercado, pregúntale a quien compra y vende
+aquí, no a la máquina.
+
+La cuarta es la más dura: **con normativa, trámites, impuestos, requisitos fitosanitarios, permisos,
+precios o plazos, ninguna técnica de pregunta arregla nada.** Puedes escribir la mejor petición del
+mundo y vas a recibir un texto verosímil sobre reglas bolivianas que puede estar equivocado entero, o
+desactualizado, o ser de otro país. Lo que sí sirve es pedirle que te explique **cómo funciona en
+general** un trámite de ese tipo y qué preguntas conviene llevar hechas a la ventanilla; el contenido
+concreto se confirma siempre en la institución que corresponde, con la alcaldía, con un contador
+local o con una institución de investigación agrícola.
+
+La quinta es económica. La conexión se paga por megabyte y no siempre está, así que la petición larga
+conviene escribirla sin conexión en el archivo de texto del celular y mandarla cuando hay señal. Esa
+limitación empuja hacia el hábito correcto: **quien escribe la petición antes de tener a la máquina
+delante pregunta mejor**, porque piensa el problema en vez de improvisar.
+
+Y la última, que es de la misión. En un proyecto que existe para que la comunidad aprenda, la
+petición bien escrita es un bien común y no un talento personal: escribirla una vez, guardarla y
+pasarla es el mismo gesto que prestar una herramienta. El vecino que nunca usó esto se sienta con un
+archivo que ya trae el lugar, el clima, el suelo y las restricciones, y en su primer intento obtiene
+lo que a otro le costó veinte. **Lo que se comparte aquí no es la respuesta, que puede estar mal: es
+la forma de preguntar, que sí se puede verificar y mejorar entre todos.**
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Escribí poco para no confundirlo.»** Al revés: lo que no escribes lo rellena con el promedio del
+mundo, y ese promedio vive en otro hemisferio.
+
+**«Le pregunté si mi idea era buena.»** Le pediste permiso y te lo dio. Pregunta qué determina la
+respuesta, no si tienes razón.
+
+**«No sirvió, así que lo escribí de nuevo con otras palabras.»** Cambiaste diez variables a la vez.
+Diagnostica primero qué falló —contexto, restricción, formato, tono— y corrige esa.
+
+**«Me dio un número, así que lo usé.»** Puede haber salido de tu propia petición, por anclaje, y
+volver disfrazado de cálculo.
+
+**«Le pedí que decidiera por mí.»** Las consecuencias las vas a vivir tú. Pídele opciones, supuestos
+y objeciones; la decisión no se delega.
+
+## Lo que sigue
+
+Ya tienes la mitad del resultado: una petición con situación, lugar, fecha, restricciones, formato,
+ejemplo y criterio; el hábito de pedir supuestos y alternativas en vez de una sentencia; y las dos
+trampas identificadas.
+
+Falta la otra mitad, la que casi nadie hace. Una petición excelente sube muchísimo la calidad media
+de lo que recibes, pero **no puede garantizar que una sola frase concreta sea cierta**, porque el
+mecanismo que produce texto plausible es el mismo produzca verdad o produzca invento. La siguiente
+lección, *Verificar lo que te contesta: la otra mitad, y la que casi nadie hace*, es el método:
+separar lo comprobable de lo que no lo es, exigir fuentes y confirmar que existen de verdad, rehacer
+las cifras a mano, contrastar contra lo que este curso ya enseñó, y calibrar cuánto esfuerzo de
+comprobación merece cada respuesta según lo que cuesta equivocarse. Incluye a quién se le pregunta de
+verdad en Bolivia cuando el tema es normativo, tributario o fitosanitario, y la regla que no admite
+excepción: **una ley, un plazo, un requisito o un precio que salga de un modelo no se da nunca por
+bueno.**

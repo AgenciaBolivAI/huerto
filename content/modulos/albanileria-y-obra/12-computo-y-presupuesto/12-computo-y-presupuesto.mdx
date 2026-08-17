@@ -1,0 +1,267 @@
+Una obra se paga dos veces: una en la casa de materiales, y otra —invisible en cualquier
+presupuesto mal hecho— en los viajes de «falta uno más», las compras de apuro al precio que sea y
+los días de albañil parado esperando material. El **cómputo métrico** existe para pagar solo la
+primera: es, sencillamente, **contar antes de comprar.**
+
+Y para ti tiene una ventaja de origen: es estimación de proyecto, un oficio que ya practicas. Con
+una diferencia a favor: **el hormigón no tiene scope creep.** Un muro de doce metros consume lo que
+consume, la física no cambia de opinión a mitad de sprint, y el error de estimación viene casi
+siempre de no haber contado — no de que el problema creciera.
+
+## La cadena: del plano al boliviano
+
+<Diagrama
+  src="cadena-del-computo.webp"
+  alt="Cadena horizontal de cuatro etapas unidas por flechas terracota: un plano a medio desenrollar, rotulado plano; una cinta métrica junto a un cubo transparente y una pila de cuadrados, rotulados cantidades; una bolsa de cemento con una pila de ladrillos y dos barras de acero, rotulados materiales; y una etiqueta de precio en blanco con una pila de monedas, rotulada precio."
+  pie="Cuatro pasos y ningún atajo: lo que no pasa por las cuatro etapas no es un presupuesto, es una expresión de deseo."
+/>
+
+El <Termino slug="computo-metrico">cómputo métrico</Termino> recorre siempre la misma cadena:
+
+1. **El plano** dice qué se construye y con qué dimensiones.
+2. **Las cantidades de obra**: cada elemento medido en su unidad natural — el hormigón en **m³**,
+   los muros y revoques en **m²**, las tuberías y cercos en **metros lineales**, las puertas en
+   **piezas**.
+3. **Los materiales**: las cantidades de obra convertidas a lo que se compra — bolsas, ladrillos,
+   barras, hojas de chapa — mediante los rendimientos.
+4. **El precio**: materiales por precio unitario, más flete, más los márgenes que veremos.
+
+La disciplina está en no saltarse eslabones: quien va «del plano al precio» de memoria está
+adivinando con decimales.
+
+<Dato titulo="El eslabón cero">
+Fíjate en que toda la cadena arranca en un plano, y en que la calidad del presupuesto **no puede ser
+mejor que la del plano del que sale**. Si al computar aparece una partida que no puedes leer de
+ninguna lámina, el problema no es de cómputo: es que falta dibujo.
+
+De eso trata el **módulo 21**, que es el complemento natural de este: leer un plano, acotarlo,
+levantarlo del terreno y dibujarlo de forma que cada partida de esta cadena se lea directamente de él
+—largo de zanjas, volumen de zapatas, superficie de muro menos huecos, faldón de cubierta— en vez de
+estimarse a ojo.
+</Dato>
+
+### Las partidas: dividir para contar
+
+La obra se descompone en <Termino slug="partida">partidas</Termino> — unidades de trabajo homogéneas
+que se computan y se cotizan por separado: *excavación de zanjas*, *hormigón de cimientos*, *muro de
+ladrillo*, *revoque*, *cubierta de calamina*, *instalación de agua*. Cada partida con su unidad, su
+cantidad y su precio.
+
+Es exactamente descomponer un proyecto en tareas estimables, con la misma regla de oro: **si una
+partida es demasiado grande para estimarla con confianza, se parte.** «Galpón» no es una partida;
+«hormigón de zapatas del galpón, en m³», sí.
+
+<Video id="TyiYcpMNkHA" />
+
+## El rendimiento: cuánto consume una unidad de obra
+
+<Diagrama
+  src="rendimiento-m2.webp"
+  alt="Un muro de ladrillo con un metro cuadrado vaciado, marcado por un recuadro discontinuo, del que salen líneas hacia sus ingredientes dispuestos aparte: un grupo contable de ladrillos en filas, un cajón de madera con mortero y una cuchara, y un balde de agua."
+  pie="Un metro cuadrado de muro es una receta: tantos ladrillos, tanto mortero. Saber la receta de cada partida es saber computar."
+/>
+
+El <Termino slug="rendimiento">rendimiento</Termino> es el puente entre la cantidad de obra y la
+lista de compras: **cuánto material consume una unidad de cada partida.** Los órdenes de magnitud
+que ordenan la cabeza:
+
+| Partida | Consume, por unidad |
+|---|---|
+| 1 m² de muro de ladrillo de 6 huecos | **~15-17 ladrillos** + ~0,02 m³ de mortero |
+| 1 m³ de hormigón 1:2:3 | **~7 bolsas de cemento** + ~0,5 m³ de arena + ~0,75 m³ de grava |
+| 1 m² de revoque de 1,5 cm | ~0,015 m³ de mortero |
+| 1 m³ de mortero 1:4 | ~9 bolsas de cemento + ~1 m³ de arena |
+
+Dos avisos sobre esta tabla. Primero: **son órdenes de magnitud para planificar**, no constantes
+universales — el ladrillo local varía de tamaño, la junta varía de gordura, y por eso los manuales
+bolivianos de precios unitarios publican sus propias tablas. Segundo, y más interesante: **tu
+rendimiento real lo vas a medir tú** — en cuanto termines el primer muro sabrás exactamente cuántos
+ladrillos consumió tu metro cuadrado, con tu ladrillo y tu albañil. Ese número vale más que
+cualquier tabla, y es tuyo.
+
+<Video id="eAnU3JIxkYs" />
+
+Fíjate además en que la tabla reutiliza lo que ya sabes: las dosificaciones son las de la lección de
+dosificación, y el volumen de una zapata o una platea se calcula con el largo × ancho × espesor del
+plano que ya sabes leer. **El cómputo no introduce técnica nueva: introduce contabilidad sobre la
+técnica que ya tienes.**
+
+## Desperdicio e imprevistos: el margen no es pesimismo
+
+<Diagrama
+  src="compra-justa.webp"
+  alt="Dos paneles. En el izquierdo, rotulado compra justa, un muro casi terminado al que le faltan unos pocos ladrillos en una esquina superior, con la cuchara abandonada sobre el muro, el palet vacío y un camión alejándose por el camino levantando polvo: hay que hacer otro viaje. En el derecho, rotulado con margen, el mismo muro terminado y a su pie una pequeña pila sobrante de media docena de ladrillos con un par de mitades rotas al lado."
+  pie="El sobrante pequeño de la derecha parece un desperdicio. El viaje extra de la izquierda —flete, tiempo y albañil parado— cuesta diez veces más."
+/>
+
+Entre lo que la cuenta dice y lo que la obra consume hay dos brechas, y las dos se presupuestan:
+
+**El desperdicio** es físico y por material: ladrillos que llegan rotos o se rompen al cortar
+(**5-10 %**), recortes de chapa y madera, mortero que se seca en el balde, puntas de barra. Se suma
+partida por partida.
+
+**Los imprevistos** son otra cosa: lo que no está en el plano porque todavía no se sabe. La roca
+donde no debía, la corrección del error del martes, el accesorio que nadie contó. Se cubren con un
+**10-15 % sobre el total**, y aquí conviene decirlo con todas las letras: **ese porcentaje no es
+pesimismo, es estadística.** Ninguna obra del mundo termina exactamente en su cómputo; presupuestar
+sin margen no es optimismo, es decidir de antemano que la sorpresa te agarre sin plata.
+
+<Analogia titulo="El margen es el buffer de la estimación">
+Es la misma disciplina de estimar software: la estimación puntual siempre es una distribución
+disfrazada, y el margen es reconocer la varianza en vez de negarla. Con una diferencia que juega a
+tu favor: en obra, la varianza física es **acotada y medible** — el muro no va a duplicar sus metros
+cuadrados a mitad de obra porque a alguien se le ocurrió una feature.
+
+Y la regla operativa es la misma que con el diámetro de tubería y la sección de cable, por tercera
+vez: **el sobrante pequeño no cuesta casi nada; el faltante pequeño cuesta un viaje, un día y un
+precio de apuro.** La asimetría decide: se redondea siempre hacia arriba.
+</Analogia>
+
+## Precios reales: cotizar, fletar, y cuándo comprar
+
+**Cotizar en dos o tres casas** antes de cada compra grande no es desconfianza: los precios de
+materiales varían entre proveedores y en el tiempo — el cemento en particular fluctúa. Y la cifra
+que importa no es la de la pizarra sino el <Termino slug="puesto-en-obra">puesto en obra</Termino>:
+**precio más flete hasta tu terreno.** Un árido baratísimo a cuarenta kilómetros no es barato; el
+flete es una partida con nombre propio en tu planilla, no un redondeo.
+
+<Diagrama
+  src="por-etapas.webp"
+  alt="Dos paneles. En el izquierdo, rotulado todo de una vez, un montón caótico de materiales comprados al inicio se degrada a la intemperie: bolsas de cemento endurecidas y oscurecidas abajo, barras de acero manchadas de óxido sobre la tierra, maleza creciendo entre la madera y lluvia cayendo encima. En el derecho, rotulado por etapas, una línea de tiempo con tres hitos —cimiento, muro, techo— y un pequeño camión entregando en cada hito solo el material que esa fase consume."
+  pie="El material comprado antes de tiempo no espera: se degrada. La compra sigue a la obra, no al entusiasmo."
+/>
+
+De ahí la política de compras, que sale de lo que ya sabes de cada material:
+
+- **El cemento se compra por etapas**, poco antes de usarlo: en este clima húmedo una bolsa
+  almacenada pierde condición en pocos meses — la lección de materiales ya lo dijo: cemento con
+  grumos duros no se usa.
+- **El acero aguanta**, con oxidación superficial que no lo inutiliza — pero sobre tarimas y bajo
+  techo, como todo en el almacén.
+- **Áridos y ladrillo no caducan**: se compran cuando el precio o el flete convengan, si hay dónde
+  acopiarlos como manda la lección de dosificación.
+- **Y lo que define seguridad o precisión** —protecciones eléctricas, válvulas, la cinta— se compra
+  bueno una vez, sin esperar ofertas: ya sabes en qué renglones lo barato sale caro.
+
+## La planilla: tu primera base de datos del vivero
+
+La forma final del presupuesto es una tabla sencilla, y conviene respetar su estructura clásica
+porque es la que todo el gremio entiende:
+
+| Nº | Partida | Unidad | Cantidad | Precio unitario | Subtotal |
+|---|---|---|---|---|---|
+| 1 | Excavación de zanjas | m³ | … | … | … |
+| 2 | Hormigón de cimientos | m³ | … | … | … |
+| 3 | Muro de ladrillo 6H | m² | … | … | … |
+| … | … | … | … | … | … |
+|  | **Subtotal** |  |  |  | … |
+|  | **Imprevistos (10-15 %)** |  |  |  | … |
+|  | **TOTAL** |  |  |  | … |
+
+Y aquí el consejo que convierte esta lección en inversión: **añade una columna más — «Real» — y
+llénala mientras la obra avanza.** Guarda cada factura, anota cada compra contra su partida, y al
+terminar tendrás dos números por fila: lo que estimaste y lo que fue.
+
+<Analogia titulo="Estimado contra real: calibración, no contabilidad">
+<Diagrama
+  src="estimado-vs-real.webp"
+  alt="Cuatro pares de barras horizontales, cada par junto a un pequeño icono de obra: zapata, muro, cercha y puerta. En cada par, la barra verde del estimado y debajo la barra terracota del real, ligeramente más larga en tres de los cuatro casos e igual en uno. A la derecha, llaves que abarcan la diferencia de cada par y flechas curvas que la devuelven hacia el inicio del gráfico, alimentando la siguiente estimación."
+  pie="La diferencia entre las dos barras no es un reproche: es el dato que calibra tu próxima estimación."
+/>
+
+La columna «Real» no está ahí para llorar sobre ella: está ahí porque **la razón real/estimado es tu
+factor de calibración personal**, el mismo que un equipo maduro aplica a sus estimaciones. Si tu
+primera obra salió 1,18 veces el cómputo, tu segunda estimación se multiplica por tu factor — y
+convergerá, porque el estimador que se mide mejora.
+
+Y esa planilla con estimado, real y fechas es, míralo bien, **la primera base de datos del negocio**:
+el antecedente directo de los costos por plantín del módulo de monetización y otro de los registros
+que el Módulo 38 va a querer en digital. Empezó siendo un presupuesto; termina siendo el primer
+dataset del vivero.
+</Analogia>
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Computa el depósito de herramientas antes que el galpón.** Es la misma pedagogía del techo: la
+obra chica es el ensayo del método completo — partidas, rendimientos, planilla, columna real — a una
+escala donde equivocarse cuesta poco. Y te regala lo más valioso: **tus rendimientos reales**, con
+tu ladrillo, tu arena y tu albañil, antes de comprometer la plata del galpón.
+
+**Para el galpón de 8 × 12, computa por fases y compra por fases**, en el mismo orden de la obra:
+movimiento de tierras y hormigones primero (cemento fresco, áridos acopiados con la ventana de obra
+en mente), ladrillo con su 5-10 % de rotura para la fase de muros, la cubierta completa de una vez
+—chapa, cumbrera, tornillería y canaletas juntas, porque el flete de la chapa es uno solo—, y las
+instalaciones al final con sus listas propias de las lecciones anteriores.
+
+**Tres reglas de planilla que te ahorran dinero real:** el flete como partida visible en cada
+compra gruesa; una fila de «menudencias» por fase —alambre, clavos, discos de corte, teflón— que
+nunca aparecen en el plano y siempre aparecen en la caja; y la cotización guardada con fecha,
+porque el precio de hoy documenta el imprevisto de mañana.
+
+**Y la versión digital, que es tu cancha:** la planilla nace en una hoja de cálculo con una pestaña
+por fase, una fila por partida y la columna real al lado de la estimada. Sin software nuevo, sin
+app: una hoja bien estructurada que dentro de dos módulos vas a estar consultando para calcular el
+costo real por plantín, y que el Módulo 38 heredará como semilla de los registros del vivero.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Los precios unitarios de referencia existen y son públicos:** en Bolivia circulan revistas y guías
+de precios unitarios de construcción que las empresas usan para licitar, con rendimientos y precios
+actualizados por ciudad. Para una obra propia no hacen falta, pero hojear una te calibra: verás que
+tu cómputo artesanal y el profesional tienen la misma estructura de partidas.
+
+**El cemento fluctúa y a veces escasea** — hay temporadas de sobredemanda en que el precio sube y
+las casas racionan. La defensa es la del texto: comprar por etapas pero **con la fase asegurada**
+antes de empezarla; una fase de hormigonado no se arranca con la mitad de las bolsas.
+
+**El regateo es parte del precio en compras grandes**: pedir «precio por cantidad» en ladrillo,
+áridos y chapa es lo esperado, y el descuento real suele estar en el flete incluido más que en la
+pizarra. Compara siempre puesto en obra.
+
+**La factura importa si el vivero va a ser formal:** comprar con factura a nombre del negocio
+construye el historial de costos que el módulo de monetización necesitará, y el crédito fiscal
+correspondiente. Es una decisión que conviene tomar antes de la primera compra grande, no después.
+
+**Y el vocabulario:** el cómputo métrico es **cómputo** o **cómputos**; la partida, **ítem**; el
+precio unitario, **precio unitario** o **P.U.**; la planilla, **planilla** o **presupuesto**; y el
+puesto en obra, **puesto en obra** — pídelo así, literalmente, al cotizar.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Del plano al precio, de memoria.»** Sin pasar por cantidades y rendimientos no es un presupuesto:
+es una expresión de deseo con decimales.
+
+**«Galpón: tanto.»** Eso no es una partida. Si no puedes estimarla con confianza, pártela.
+
+**«Uso los rendimientos de la tabla tal cual.»** Son órdenes de magnitud. El rendimiento que vale es
+el que midas en tu primera obra, con tu ladrillo y tu albañil.
+
+**«Compro justo, que sobrar es desperdiciar.»** El sobrante pequeño no cuesta casi nada; el faltante
+cuesta flete, día perdido y precio de apuro. Se redondea hacia arriba.
+
+**«El margen de imprevistos es ser pesimista.»** Es estadística: ninguna obra termina en su cómputo
+exacto. Sin margen, la sorpresa te agarra sin plata.
+
+**«El precio es el de la pizarra.»** El precio es puesto en obra. Un material barato lejos no es
+barato.
+
+**«Compro todo al inicio y me olvido.»** El cemento pierde condición en meses y el acero se mancha a
+la intemperie. La compra sigue a la obra.
+
+**«Las menudencias no se presupuestan.»** Alambre, clavos, teflón y discos aparecen en todas las
+cajas y en ningún plano. Fila propia por fase.
+
+**«Guardar facturas es burocracia.»** Es tu columna «Real», tu factor de calibración y el primer
+dataset del negocio.
+
+## Lo que sigue
+
+Queda la última pieza, y no es de material sino de personas: la lección que cierra el módulo entra
+en **la mano de obra y las reglas del juego** — cuándo conviene contratar y cuándo hacer uno mismo,
+cómo se contrata a un albañil o un contratista en Santa Cruz y qué se acuerda por escrito, cómo se
+supervisa sin saber más que el maestro (con los tres momentos de cada lección como lista de
+control), qué obligaciones básicas trae dar trabajo, y qué permisos y trámites pide construir en tu
+zona — lo suficiente para no llevarse sorpresas, dicho con la honestidad de que la norma cambia y se
+verifica en la fuente.

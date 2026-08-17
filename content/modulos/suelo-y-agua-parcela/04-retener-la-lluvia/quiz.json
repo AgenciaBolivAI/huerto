@@ -1,0 +1,107 @@
+{
+  "preguntas": [
+    {
+      "id": "donde-se-retiene",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un vecino te muestra orgulloso una zanja llena de agua tres días después de la lluvia y te dice que ahí está reteniendo el agua de su parcela. ¿Qué afirmaciones describen correctamente lo que está pasando?",
+      "opciones": [
+        "El agua en superficie no es el objetivo sino un estado de tránsito: toda obra de tierra existe para darle tiempo al agua de pasar de arriba a adentro, y una obra que retiene arriba sin conseguir meterla adentro no está reteniendo, está encharcando",
+        "El agua que sigue visible a los tres días está expuesta al sol, se evapora, ninguna raíz puede tomarla mientras siga ahí y, si dura, asfixia lo que tenga debajo",
+        "El agua que sirve es la que ocupa los huecos entre partículas del suelo, donde no se ve nada: protegida del sol, disponible para las raíces durante semanas y alimentando lo que hay más abajo",
+        "Como el agua sigue visible en la zanja, el sistema está funcionando: cuanto más tiempo permanezca el agua acumulada, más cantidad terminará entrando en el suelo"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor y es exactamente la confusión que la lección viene a deshacer. Que el agua siga ahí a los tres días no prueba que esté entrando: prueba que no entra. La velocidad de entrada la fija la infiltración básica del suelo del fondo, que es una propiedad del material y no cambia porque le pongas más agua encima ni porque la dejes más tiempo; lo único que crece con la permanencia es la evaporación, la asfixia de lo que haya debajo y el riesgo sanitario, porque el mosquito vector del dengue cría en agua estancada y con calor completa su ciclo en cosa de una semana. El criterio correcto es el inverso al que aplica el vecino: una zanja bien dimensionada se juzga por lo rápido que queda vacía, con 24 horas como objetivo razonable y 48 como máximo tolerable. Una zanja que a las 48 horas sigue con agua no tiene un problema de mantenimiento: tiene un problema de área de fondo."
+    },
+    {
+      "id": "cavar-hondo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si una zanja de infiltración se queda corta de capacidad, la forma correcta de agrandarla en un suelo arcilloso es cavarla más profunda.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la conclusión más contraintuitiva de la lección. Hay que separar dos cuentas distintas. El volumen decide si el agua cabe; el área de fondo decide si el agua se va. Como la profundidad del agua en milímetros es el volumen en litros dividido por el área de fondo en metros cuadrados, y el tiempo de vaciado es esa profundidad dividida por la infiltración básica, cavar hondo no aumenta en absoluto la velocidad de entrada —el fondo sigue siendo el mismo—, solo apila más agua sobre la misma boca. El ejemplo de la lección lo muestra con números: 6.000 litros en una zanja de 20 m por 60 cm y medio metro de hondo dan 12 m² de fondo, 500 mm de agua y, con una infiltración básica de 4 mm/h, 125 horas de vaciado, más de cinco días. Los mismos 6.000 litros en una zanja de 40 m por metro y medio y solo 10 cm de profundidad dan 60 m² de fondo, 100 mm de agua y 25 horas: cinco veces más rápido con el mismo volumen, el mismo suelo y la misma lluvia. En arcilla hay además un motivo extra: cuanto más se baja, peor suele ser el material y menos infiltra todavía. La regla es cavar ancho y bajo, no hondo."
+    },
+    {
+      "id": "prueba-del-hoyo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a medir la infiltración básica de tu terreno con la prueba del hoyo para dimensionar una obra. ¿Qué es correcto sobre cómo se hace y cómo se interpreta?",
+      "opciones": [
+        "El hoyo se llena y se deja vaciar entero un día antes sin medir nada: esa primera carga sirve para mojar el suelo de alrededor, porque medir en suelo seco da un número altísimo y falso",
+        "En arcillas expansivas el valor que se usa para diseñar es el medido con el suelo mojado, porque es el peor y es la situación que existe cuando el sistema tiene que funcionar: en la tercera lluvia seguida",
+        "El número que sale es más alto que la infiltración vertical real de una superficie ancha, porque en el hoyo el agua también sale de costado por las paredes: sirve para decidir diseños, no para publicar un dato",
+        "Basta con un hoyo bien hecho en el centro del terreno, porque la infiltración básica es una propiedad del tipo de suelo y no varía dentro de una misma parcela"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor. La infiltración básica varía muchísimo dentro de una misma parcela, y la lección 1 del módulo ya dio el motivo: en una llanura aluvial conviven diques naturales arenosos, bajíos arcillosos y paleocauces de arena enterrada, y dos puntos a veinte metros pueden dar resultados de órdenes de magnitud distintos. Por eso se hacen tres hoyos como mínimo, ubicados donde el mapa del agua señale zonas distintas —aporte, tránsito y acumulación—, y por eso no se promedian los resultados: se diseña cada zona con su propio número, porque promediar un paleocauce con un bajío produce una cifra que no describe a ninguno de los dos. Hay un cuarto punto que la pregunta no recoge y conviene retener: la infiltración básica no es fija en el tiempo, es una propiedad que se puede mejorar con materia orgánica, raíces y vida del suelo, así que repetir la prueba en el mismo punto cada dos años, con la misma humedad anotada al lado, es una de las series más valiosas del registro de suelo a largo plazo."
+    },
+    {
+      "id": "aliviadero",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una zanja de infiltración bien dimensionada para la lluvia de diseño no necesita aliviadero, porque el agua nunca va a superar su capacidad.",
+      "respuesta": false,
+      "explicacion": "Falso. Toda zanja rebosa alguna vez, porque la lámina de diseño es una decisión sobre qué evento manejar, no una garantía de que no vaya a caer uno mayor; en esta zona la lluvia llega concentrada, del orden de 40 a 80 milímetros por hora, y lo que desborda un sistema no es el total del mes sino un aguacero de una tarde. La pregunta no es si rebosará, sino por dónde. Sin aliviadero, la zanja rebasa por su punto más débil —que es justamente el que no elegiste—, el agua sale concentrada, se lleva el bordo entero y convierte una obra de conservación en el origen de una cárcava. Un aliviadero es un punto del bordo deliberadamente más bajo que el resto, ancho, protegido con piedra o con pasto y colocado donde tú decidiste. Es el mismo razonamiento del manejo de excepciones en programación: ningún sistema serio asume que la entrada nunca excederá lo previsto, se decide dónde se atrapa la excepción y qué pasa después. Y como aquí los cortes de luz llegan junto con las tormentas, vale el criterio de fallo seguro del módulo de automatización: cuando falle, que falle por donde tú dijiste, por gravedad, sin depender de que haya energía ni de que alguien esté mirando. Además, a dónde descarga ese rebose es una decisión que afecta a terceros y se consulta con la autoridad competente antes de cavar."
+    },
+    {
+      "id": "retener-sin-ahogar",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el equilibrio entre retener e inundar en suelo pesado y con el calor de la sabana tropical, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Las raíces respiran y toman el oxígeno del aire de los poros; cuando el agua los llena, ese aire desaparece, y como el oxígeno se difunde en agua unas diez mil veces más lento que en aire, prácticamente deja de llegar",
+        "Con calor el problema se agrava por dos vías a la vez: el agua caliente disuelve menos oxígeno que la fría, y la respiración de raíces y microorganismos es más rápida, así que hay menos entrada y más consumo",
+        "Sin oxígeno la raíz deja de absorber agua, porque absorber cuesta energía y la energía viene de respirar; por eso la planta se marchita con los pies en el agua y el síntoma se confunde con falta de riego",
+        "Como el error de retener de más y el de retener de menos cuestan lo mismo, conviene dimensionar la obra al máximo desde el principio para no quedarse corto"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor y falla en la premisa: los dos errores no son simétricos, y esa asimetría es justamente lo que decide el criterio de diseño. Retener de menos es una degradación gradual —se pierde agua que podía guardarse, hay que regar más, el suelo se seca antes—, se nota, se mide y se corrige el año siguiente ampliando la obra. Retener de más es una caída completa: el cultivo se asfixia en tres días, el frutal injertado se pierde entero, la pared se raja si el agua concentrada quedó junto a una fundación en arcilla expansiva, y aparece un criadero de mosquito a cincuenta metros de donde duerme gente. No avisa gradualmente y no se arregla rellenando la zanja después. Con costos de fallo tan distintos, el criterio es el de cualquier sistema cuyo fallo sea catastrófico: empezar corto, medir y crecer. Y la variable que hay que controlar no es cuánta agua retienes sino cuántas horas se queda quieta: como orden de magnitud, la mayoría de las hortalizas empieza a sufrir con uno a tres días de saturación continua, y con calor, menos. Las tolerancias exactas por especie y variedad se verifican con el CIAT, el INIAF o con productores de la zona, no se copian de un manual de otro clima."
+    },
+    {
+      "id": "cuanta-autonomia",
+      "tipo": "opcion_multiple",
+      "enunciado": "Alguien propone dimensionar la retención de Rizoma para no tener que regar durante la estación seca. ¿Qué afirmaciones son correctas sobre lo que la retención compra de verdad?",
+      "opciones": [
+        "El primer medio metro de suelo de los 3.666 m² almacena del orden de 330 metros cúbicos de agua útil, más que la lluvia de 60 milímetros, y equivale a unos mil seiscientos turriles que ya están ahí sin costar nada",
+        "Ese perfil lleno cubre alrededor de una séptima parte de la seca, y guardar los cinco meses completos exigiría del orden de 2.200 metros cúbicos: un tanque del tamaño de una casa",
+        "Lo que la retención sí compra son los hombros de la temporada, menos riego en los huecos secos entre tormentas de enero, menos erosión, recarga de lo que hay debajo y un pico más suave para el vecino de aguas abajo",
+        "Como el suelo arcilloso guarda mucha agua útil por metro, con una obra de retención suficientemente grande sí se puede cubrir la seca entera sin regar"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor y es la fantasía que esta lección desmonta con aritmética, porque descubrirla a mitad de camino sale caro. La cuenta honesta: con 90 milímetros de agua útil en el primer medio metro y un consumo de 4 milímetros por día —valor que hay que verificar con la demanda climática real de la zona y que este curso no inventa—, el perfil lleno alcanza para unos 22 días, mientras que la seca dura del orden de 150 días y pide unos 600 milímetros. Ninguna obra de tierra cambia eso, porque el límite no está en la obra sino en cuánto cabe en el suelo, y la alternativa de guardarlo en tanque son once mil turriles. Lo importante es que reconocer el límite no invalida la técnica: la retención no compite con el riego de agosto, compite con la erosión, con el riego de enero y con el pico que le llega al vecino. Y hay una conclusión de inversión que se deduce de la primera opción: como el agua útil sube con materia orgánica, estructura y raíces, cualquier plata puesta en mejorar el suelo compite muy bien con cualquier plata puesta en tanques."
+    },
+    {
+      "id": "disenar-la-retencion",
+      "tipo": "abierta",
+      "enunciado": "Elegí un terreno real que conozcas —tu patio, el lote de un familiar, la parcela donde trabajás, un espacio comunitario del barrio— y diseñá para él un plan de retención de lluvia de punta a punta. Contá qué medís antes de mover tierra y cómo, qué cuentas hacés con esos números, qué forma le das a la obra y por qué, dónde decidís NO poner nada, cómo comprobás después si funcionó, y qué esperás realmente conseguir. Adaptalo a tu suelo, a tus herramientas y a tu presupuesto, y señalá también dónde termina lo que podés resolver por tu cuenta.",
+      "respuestaModelo": "Tomo el terreno de mi tía: unos 400 metros cuadrados, la casa al fondo y un patio de tierra que se encharca cada aguacero. La calle está más alta que el lote, así que entra agua por el portón.\n\nEste año no cavo nada. Primero el mapa, porque sin saber por dónde entra y sale el agua cualquier zanja queda en el sitio equivocado. Camino el terreno a los veinte minutos de que pare la primera tormenta fuerte, que es cuando el agua todavía se mueve, y marco con estacas por dónde entra desde la calle, por dónde sale, dónde se junta y cuántas horas dura cada charco, anotando la fecha y qué lluvia fue. Ya sé algo sin medir: mi cuenca de aporte es el lote más el tramo de calle que descarga por el portón, así que manejo más agua de la que me cayó encima.\n\nDespués mido la velocidad de entrada, que es el número que gobierna todo. Cavo tres hoyos de treinta por treinta, con las paredes rascadas para quitar el alisado de la pala, en tres sitios que el mapa muestre distintos. Los lleno y los dejo vaciarse enteros sin medir, solo para mojar el suelo de alrededor. Al día siguiente los relleno hasta una marca, clavo una regla y anoto la altura cada media hora hasta que las bajadas se repitan iguales. Esa bajada estable, en milímetros por hora, es mi infiltración básica, y no promedio los tres: cada zona se diseña con el suyo. Sé además que medirlo en agosto con el suelo agrietado daría un número enorme y mentiroso: el que vale es el del suelo mojado, porque es el que existe en la tercera lluvia seguida.\n\nCon eso hago dos cuentas. La primera, el volumen: mido a pasos los metros cuadrados que drenan hacia la obra, elijo una lámina de diseño de un evento fuerte y no de la lluvia media, y uso un coeficiente de escorrentía alto porque el patio está pisoteado y sellado. La segunda decide la forma: la profundidad del agua es el volumen dividido por el área de fondo, y el tiempo de vaciado es esa profundidad dividida por la infiltración básica. Le impongo 24 horas y despejo el área de fondo que necesito. Con arcilla eso da una zanja ancha y de diez o quince centímetros, no una zanja honda. Es la forma que funciona: el volumen decide si el agua cabe, el área de fondo decide si el agua se va.\n\nLa zanja va a nivel exacto, trazada con nivel de manguera y no a ojo, porque con esta pendiente unos centímetros de error invierten el sentido del flujo. La tierra sale del lado de abajo formando el bordo, y ahí planto algo permanente para que no se deshaga. El aliviadero lo decido en el papel antes de cavar: un tramo del bordo más bajo, ancho, con piedra, apuntando a donde yo elijo. Sin eso rebosa por el punto más débil y abre una cárcava, y tiene que funcionar por gravedad, porque acá la luz se corta justo cuando llueve.\n\nDónde no pongo nada: pegado a la pared de la casa ni al cerco, porque el suelo es arcilla expansiva y mojarlo de un lado de la fundación y no del otro la hincha desigual y raja la obra. Tampoco cerca del pozo ni de la cámara séptica, ni donde el freático suba en temporada, ni en el paso de la carretilla.\n\nAdemás de la zanja hago lo que no cuesta nada y rinde en toda la superficie: tapar el suelo desnudo, dejar los terrones sin desmenuzar antes de las lluvias, surcos cortos y ciegos atravesados al sentido en que corre el agua, huellas orientadas al través, y una media luna en cada frutal con el bordo lejos del tronco, porque acumular agua contra el cuello de un injerto es la forma más rápida de perderlo.\n\nLa comprobación dura dos minutos: a las 48 horas de cada lluvia voy a ver si la zanja está vacía. Si sigue con agua no es falta de mantenimiento, es falta de área de fondo, y la ensancho antes de la lluvia siguiente. Eso además es control de dengue, porque el agua quieta más de una semana cría mosquito, así que revisar la zanja y revisar criaderos son la misma caminata. Y saco una foto desde un punto fijo marcado con estaca.\n\nLo que espero no es dejar de regar en la seca: eso no lo compra ninguna obra a esta escala, porque el suelo lleno cubre apenas unas semanas de los cinco meses. Espero que el patio deje de encharcarse tres días, ganar unas semanas por cada lado de la temporada, no regar en los huecos secos de enero y mandarle al vecino de abajo el agua repartida en horas en vez de toda junta.\n\nY sé dónde termina lo mío. No voy a inventar cuánta lluvia cae ni cada cuánto: las series de intensidad se piden al servicio nacional de meteorología, y los criterios agronómicos al CIAT o al INIAF. Si la obra creciera, descargara fuera del lote o tocara un cauce, afecta a terceros y se consulta antes con el municipio o con la autoridad competente. Y lo que toque la fundación de la casa lo mira quien firme la obra.",
+      "criterios": [
+        "Empieza observando y mapeando antes de mover tierra, e identifica la cuenca de aporte externa además de la superficie propia",
+        "Mide la infiltración básica con la prueba del hoyo en varios sitios distintos, saturando el suelo el día anterior y sin promediar zonas diferentes",
+        "Reconoce que en arcilla expansiva el valor de diseño es el del suelo mojado, y explica por qué el del suelo agrietado engaña",
+        "Calcula el volumen de diseño con área de captación, lámina de un evento fuerte —no la media— y coeficiente de escorrentía",
+        "Aplica la cuenta del tiempo de vaciado y deduce el área de fondo a partir de un plazo impuesto, en vez de elegir la forma por intuición",
+        "Concluye una obra ancha y poco profunda para suelo pesado, y explica que el área de fondo decide el vaciado mientras el volumen solo decide si el agua cabe",
+        "Traza a nivel con instrumento, no a ojo, y coloca el bordo del lado de abajo",
+        "Incluye un aliviadero decidido antes de cavar, con su punto de descarga elegido, y lo justifica como fallo seguro",
+        "Enumera dónde no poner agua concentrada: fundaciones y paredes en arcilla expansiva, pozos y cámaras sépticas, freático alto, zonas de tránsito",
+        "Añade medidas de coste cero que actúan en toda la superficie —cobertura, microrrelieve, surcos ciegos, medias lunas— y no depende solo de la obra excavada",
+        "Define una comprobación posterior concreta con plazo, ligada al tiempo de vaciado, y la conecta con el control de criaderos de mosquito",
+        "Expone expectativas honestas sobre la autonomía real que se gana y remite a las instituciones competentes lo que excede su alcance, sin inventar datos, normativa ni plazos"
+      ],
+      "explicacion": "Lo que se evalúa es el orden de las decisiones, no la cantidad de tierra movida: primero observar, después medir, después calcular, después dar forma, y solo entonces cavar. Tres señales delatan que la lección no se aplicó. La primera es empezar por la obra: quien describe la zanja antes de haber medido la infiltración está eligiendo la forma por intuición, y en suelo pesado la intuición dice «hondo», que es justo lo contrario de lo que funciona. La segunda es omitir el tiempo de vaciado, que es la cuenta que separa una obra de conservación de un criadero: sin ella no hay manera de saber si el diseño es correcto, y el error no se ve hasta que el agua lleva cinco días parada. La tercera es prometer autonomía de estación seca, que es aritméticamente imposible a esta escala y arruina la credibilidad de todo lo demás. También se valora que la respuesta esté anclada en un terreno concreto —su suelo, su pendiente, su cerco, sus herramientas, su plata— y no en un ejemplo genérico, y que aparezcan los dos límites duros: nada de agua concentrada junto a fundaciones en arcilla expansiva, y todo lo que descargue fuera de la propiedad o toque cauces se consulta con la autoridad competente. Una respuesta que invente cifras de lluvia local, normativa, plazos de trámite o valores de infiltración sin haberlos medido está mal aunque el resto del razonamiento sea impecable."
+    }
+  ]
+}

@@ -1,0 +1,370 @@
+Las tres lecciones anteriores fueron sobre la máquina: qué hace por dentro, cómo se le pide y cómo
+se comprueba lo que contesta. Esta es la primera sobre el trabajo. Y el trabajo que la comunidad
+necesita hoy, no el año que viene, cabe en tres verbos: **redactar, traducir y entender un papel que
+alguien te exige.**
+
+No son usos menores. En Zanja Honda hay gente que sabe exactamente qué quiere pedirle al municipio y
+no lo pide, porque no sabe cómo se empieza una nota. Hay reuniones cuyos acuerdos se pierden porque
+nadie los escribió. Hay un manual de bomba de agua que vino en inglés y lleva dos años en un cajón. Y
+hay trámites que se abandonan a la mitad no porque sean imposibles, sino porque el formulario usa
+doce palabras que nadie explicó nunca. **La barrera casi nunca es la falta de capacidad: es la falta
+de acceso al formato.** Y bajar esa barrera es exactamente lo que un modelo de lenguaje hace bien.
+
+Hace bien dos de las tres, en realidad. Redactar y traducir son terreno sólido; el trámite es terreno
+minado, y esta lección le dedica la parte más cuidadosa porque es donde el error se paga con un viaje
+perdido a la ciudad o una firma puesta en algo que no se entendió.
+
+Antes de nada, la frase que ordena todo lo que sigue: **la máquina produce el borrador; la persona es
+la autora.** No es una fórmula bonita: describe quién pone qué. El que firma pone los hechos, decide
+qué se pide y responde por cada afirmación delante de quien lo lea; la máquina pone la forma. Un
+texto que sale con el nombre de una persona o de una organización es de esa persona o de esa
+organización, se haya tecleado con los diez dedos o con dos frases de instrucción.
+
+## Dos trabajos distintos que se piden en la misma caja de texto
+
+Aquí está la distinción de la que depende todo el resto de la lección, y casi nadie la hace porque
+la interfaz no la muestra: **en la misma caja de texto se pueden pedir dos cosas radicalmente
+distintas, con riesgos que no se parecen en nada.**
+
+La primera es **transformar un material que uno le entregó**: ordenar unas notas, pasar un párrafo a
+lenguaje llano, traducir un texto pegado, darle forma de carta a unos hechos que uno escribió. La
+materia prima está en la ventana de contexto porque uno la puso ahí; el modelo no tiene que recordar
+nada, tiene que reorganizar lo que ve. La segunda es **producir contenido desde lo que quedó en sus
+números**: cuál es el requisito de tal trámite, qué dice tal norma, cuánto cuesta, qué plazo hay. No
+hay material entregado; hay un aparato completando la continuación más probable de una pregunta, sin
+ningún paso que compare lo escrito contra el mundo.
+
+El riesgo de las dos no es parecido, y tampoco el costo de comprobarlas. En la primera, **la verdad
+de referencia la tenés vos**: sabés qué se dijo en la reunión y tenés el manual en la mano. Verificar
+es leer y comparar, cuesta cinco minutos y no hace falta salir de la casa. En la segunda, la verdad
+de referencia está en una oficina, en un contador o en una institución, y verificar cuesta un viaje.
+De ahí la regla práctica: **cuanto más material propio le entregues, más se parece esto a una
+herramienta y menos a una apuesta.**
+
+<Analogia titulo="Función pura contra caché que nadie invalidó">
+Transformar un texto que le pegaste es una función pura: entra un valor, sale otro, y podés
+inspeccionar los dos. Si algo salió mal, se ve poniéndolos lado a lado. No hay estado escondido.
+
+Pedirle un requisito de memoria es leer de una caché que se llenó hace rato, que nadie invalidó
+nunca, que no guarda la fecha de cada entrada, y que **cuando le pedís una clave que no tiene, en
+lugar de devolverte un fallo te devuelve un valor con el formato correcto.** Una caché honesta
+contesta «no está»; esta contesta un número de resolución con la forma perfecta.
+
+Y no hay compilador que te avise. En software, un nombre de función inventado revienta al compilar y
+perdiste diez segundos. Acá revienta en una ventanilla, a cuarenta minutos de tu casa, después de
+hacer cola.
+</Analogia>
+
+## Redactar: los hechos los pones tú, la forma la pone ella
+
+El fallo número uno al pedir un documento no es que el modelo escriba mal. Escribe bien. El fallo es
+que **cuando le falta un dato, no deja el hueco: lo rellena.** Si le pedís «escribime una carta al
+municipio pidiendo apoyo para el vivero comunitario» y no le diste nada más, va a devolver una carta
+impecable con un nombre de programa municipal que no existe, una cantidad de familias beneficiadas
+que nadie contó y, si tiene un mal día, un número de norma. No lo hace por descuido: **está
+continuando el texto de la forma más probable, y en una carta de solicitud lo más probable después
+de «beneficiando a» es un número.**
+
+A eso conviene ponerle nombre propio, porque no es lo mismo que
+una <Termino slug="alucinacion">alucinación</Termino> espontánea: es
+un <Termino slug="relleno-de-coherencia">relleno de coherencia</Termino> que **provoca el propio
+autor** al pedir un documento completo sin entregar los hechos. El disparador fuiste vos, y la
+defensa también es tuya. Son dos.
+
+La primera: **entregá todos los datos duros por escrito antes de pedir el borrador.** A quién va
+dirigida, quién firma, qué se pide en una sola frase, por qué, qué hay hoy, qué se ofrece a cambio,
+cómo te contactan. Escribilos en crudo, mal, sin ortografía, en el orden que salgan: esa es la parte
+que solo podés hacer vos y la que tiene todo el valor. La segunda: **pedile explícitamente que,
+cuando le falte algo, escriba una marca visible en lugar de inventarlo.** Un `[FECHA DE LA REUNIÓN]`,
+un `[N.º DE CARNET]`, un `[CANTIDAD DE FAMILIAS]`. Eso es
+un <Termino slug="hueco-declarado">hueco declarado</Termino>, y es la diferencia entre un nulo que
+grita y un valor por defecto que nadie eligió y que se va a producción sin que nadie lo note.
+
+La revisión, después, es mecánica y se hace siempre igual: **leé el borrador marcando cada
+afirmación de hecho —cada nombre, cada número, cada fecha, cada promesa— y comprobá que la pusiste
+vos.** Lo que no puedas rastrear hasta algo que escribiste, se borra. No se investiga, no se suaviza:
+se borra. Un párrafo menos nunca hundió una solicitud; un dato falso, sí. Y una segunda pasada, más
+incómoda: **¿podés defender cada frase delante de la persona que la va a leer?** Si la carta dice que
+la organización se compromete a mantener el área durante dos años y nadie acordó eso en ninguna
+reunión, esa frase la escribió la máquina y te compromete a vos.
+
+<Advertencia>
+El acta de una reunión es un caso aparte, porque no es un texto: es un **registro de hechos** que
+después se usa para decidir, para repartir y a veces para resolver un conflicto. El modelo no estuvo
+ahí. No hay ninguna forma legítima de pedirle «hacé un acta de una reunión sobre riego»: lo que
+devuelva será una reunión inventada con acuerdos inventados, y eso ya no es un borrador sino un
+documento falso con el nombre de gente real adentro.
+
+El único uso válido es al revés: vos escribís las notas crudas durante la reunión —quién estuvo, qué
+se propuso, qué se decidió, quién hace qué y para cuándo— y le pedís que las ordene en el formato
+del acta, **sin agregar nada.** Después se lee en voz alta antes de que la gente se vaya, se corrige
+ahí mismo y recién entonces se firma: quien aprueba un acta son los que estuvieron, no quien la
+tecleó. Y si la organización tiene alguna forma jurídica, qué debe llevar un acta para valer es una
+pregunta legal, que se consulta con quien corresponda y no con la máquina.
+</Advertencia>
+
+Los otros tres textos que la comunidad pide todo el tiempo tienen cada uno su trampa. **El aviso y el
+cartel** fallan por exceso: sin límite, el modelo entrega cuatro líneas elegantes que nadie va a leer
+parado bajo el sol. Se piden con restricciones físicas —doce palabras, una sola idea, legible a ocho
+metros— y se prueban leyéndoselos a alguien que no estuvo en la conversación.
+
+**La ficha de producto o de planta** falla por adorno. Pedile una ficha de un plantín de gandul y va
+a agregar solo virtudes: que mejora el suelo, que resiste todo, que tiene propiedades. Alguna puede
+ser cierta en general y falsa para tu plantín, tu suelo y tu manejo. **La ficha solo dice lo que vos
+viste en tu propio vivero**, y cualquier afirmación sobre salud humana se corta sin discusión, porque
+ahí ya no es cuestión de credibilidad sino de daño.
+
+**La carta a una autoridad** falla por registro: sale floreada, con fórmulas de otro país. Conviene
+pedir dos versiones, una formal y una llana, quedarse con una mezcla y **reescribir a mano el primer
+párrafo y el último**, que son los dos que se leen seguro. Un texto que no suena a nadie no convence
+a nadie, y el promedio de internet no suena a nadie.
+
+## Traducir entre idiomas: dónde es fuerte y dónde no
+
+Traducir es de lo mejor que hace, porque es transformación pura sobre material que le diste. Entre
+castellano, inglés y portugués el resultado es sólido para lo que la comunidad necesita: el manual
+de una bomba, la hoja de datos de un controlador, un correo con un proveedor, un artículo técnico.
+Ahí el ahorro es real y se nota el mismo día.
+
+El problema empieza cuando la lengua tiene poco texto digitalizado. A eso se le
+llama <Termino slug="lengua-de-bajo-recurso">lengua de bajo recurso</Termino>, y no es un juicio
+sobre la lengua: describe cuánto material escrito en ella entró al entrenamiento. La consecuencia es
+mecánica, no cultural. Con poco material, el modelo tiene poco de donde sacar la continuación
+probable, así que **rellena con la forma más parecida que encuentre** —de otra variante, de otra
+región, o directamente inventada— y lo entrega con el mismo tono seguro con el que traduce del
+inglés. Nada en la pantalla te avisa de que cambió de terreno.
+
+En Bolivia esto toca de lleno al quechua, al aimara, al guaraní y a las lenguas chiquitanas. La
+regla, entonces: **en una lengua de bajo recurso el modelo produce un borrador que corrige una
+persona que la habla, nunca una salida final.** Y jamás un cartel público, un aviso de salud o algo
+que se firme: el daño de un texto mal traducido publicado en nombre de la comunidad no es un error
+técnico, es una falta de respeto que se recuerda años.
+
+Hay un truco de comprobación que vale la pena aprender: **traducir de vuelta**. Se toma la
+traducción, se abre una sesión nueva y limpia, se pide el camino inverso y se compara con el
+original. A eso se le llama <Termino slug="retrotraduccion">retrotraducción</Termino>, y caza
+pérdidas gruesas: una negación que desapareció, una condición que se volvió una orden, un párrafo
+que se comió. Pero conviene saber qué **no** caza, porque si no da falsa tranquilidad: no caza el
+error simétrico, el que se conserva en las dos direcciones, ni el registro —una palabra puede ser
+correcta y a la vez sonar despectiva—, ni el detalle que más caro cuesta.
+
+<Dato titulo="Los números y los nombres no pasan por el traductor">
+Cifras, fechas, unidades, nombres de personas y de lugares y códigos son lo primero que se altera en
+una traducción y lo último que se revisa, porque el ojo los lee como si fueran adorno.
+
+La regla mecánica que evita el problema: **traducí el texto, y después copiá los números y los
+nombres a mano desde el original, uno por uno.** No pasan por la traducción; pasan por el
+portapapeles. Una coma decimal que se convierte en punto multiplica o divide por mil, y en una dosis
+o en un presupuesto eso no es un detalle de estilo. Vale también al revés: si le pegás una tabla,
+revisá que no haya reordenado filas ni «corregido» un total que no cuadraba, porque corregir en
+silencio lo que parece un error es una continuación perfectamente probable.
+</Dato>
+
+## Traducir entre registros: lo más útil y lo menos obvio
+
+La otra traducción no cambia de idioma: cambia de nivel. Pasar la jerga de una etiqueta, de un
+contrato o de una lección de este mismo curso a un castellano que se entienda leído en voz alta es
+una <Termino slug="traduccion-de-registro">traducción de registro</Termino>, y es probablemente el
+uso que más rinde por minuto invertido en un proyecto comunitario. Sirve igual para el otro lado:
+subir de registro unas notas propias para una nota oficial.
+
+Y tiene un fallo específico que hay que ver venir. **Al simplificar, el modelo tira lo que parece
+ruido, y en un documento técnico lo que parece ruido es la información.** Los condicionales —«salvo
+que», «siempre que», «únicamente si»—, las excepciones, los plazos, los rangos y las unidades son lo
+que se pierde primero, porque estorban a una frase fluida. El resultado es un texto más claro que
+dice algo distinto del original, y eso es peor que una traducción mala: la mala se nota, y esta se
+lee de maravilla.
+
+De ahí sale la regla que no admite excepción: **la versión llana acompaña al original, no lo
+reemplaza.** Es una vista, no la tabla. Se lee al lado, se enseña al lado, y lo que se firma y lo que
+se cumple es el documento original. Con
+una <Termino slug="etiqueta-del-producto">etiqueta de producto</Termino> esto se vuelve literal:
+podés pedirle que te explique qué significa «periodo de carencia» o qué es
+un <Termino slug="ingrediente-activo">ingrediente activo</Termino>, y esa explicación te sirve. Pero
+**la dosis, el plazo y la restricción se leen en la etiqueta que tenés en la mano**, no en la
+respuesta.
+
+Y de ahí la costumbre que separa el uso bueno del malo: **si el documento está en tus manos,
+pegalo.** Si no lo pegás, no contesta sobre tu etiqueta ni sobre tu formulario, sino sobre uno
+típico, promediado, de otro país y de otro año. Las dos respuestas se ven idénticas en pantalla;
+solo una habla de tu papel.
+
+## Entender un trámite sin creerle una sola línea del contenido
+
+Este es el terreno minado, y hay que entrar con una distinción muy afilada:
+**<Termino slug="estructura-frente-a-contenido">estructura frente a contenido</Termino>.**
+
+La estructura es cómo suelen funcionar las cosas: qué es un formulario y para qué existen sus
+campos, qué significa en general «poder», «certificación», «personería» o «uso de suelo», cómo se
+redacta la nota que acompaña un expediente, qué carpeta preparar para no volver tres veces. Todo eso
+es genérico, se repitió millones de veces en el material y es razonablemente seguro. Además, **si se
+equivoca, lo notás en la ventanilla sin costo grave.**
+
+El contenido normativo es todo lo demás, y ahí la respuesta no vale nada: el nombre y el número de
+la norma, el plazo, el costo, el requisito exacto, la vigencia, la oficina que atiende, el horario,
+qué documento se acepta y cuál no. **Ninguna de esas cosas se da por buena porque la dijo la máquina,
+por más específica y convincente que suene.**
+
+Conviene entender por qué el fallo se concentra justo ahí. Las guías de trámite locales y los
+requisitos vigentes son de los textos con **menos presencia** en cualquier corpus: están poco
+digitalizados, cambian, viven en PDF de sitios que se caen y muchas veces solo existen en una hoja
+pegada en un vidrio. Y a la vez tienen **la forma más regular que existe**: un número de resolución o
+un código de formulario siguen un patrón tan predecible que el modelo lo produce impecable sin nada
+detrás. Máxima <Termino slug="verosimilitud-formal">verosimilitud formal</Termino> con mínima base
+real: la combinación exacta que fabrica el error más caro del módulo.
+
+<Tabla>
+
+| Lo que sí se le puede pedir | Lo que se confirma en la ventanilla |
+| --- | --- |
+| Qué significa una palabra del formulario | Si ese formulario es el vigente |
+| Cómo se redacta la nota que lo acompaña | A quién va dirigida y cómo se presenta |
+| Una lista de preguntas para llevar anotadas | Todas las respuestas a esas preguntas |
+| Ordenar los pasos que vos ya averiguaste | Cuáles son los pasos y en qué orden van |
+| Ensayar la conversación antes de ir | Qué documento aceptan y cuál no |
+| Explicar en llano un párrafo que te dieron | Plazos, costos, horarios y vigencias |
+| Armar la lista de qué llevar en carpeta | Cuántas copias y qué debe ir legalizado |
+
+</Tabla>
+
+Fijate que la columna de la izquierda consiste casi entera en **preparar la visita, no en
+sustituirla**. Pedir una lista de preguntas en vez de una lista de respuestas es el cambio de hábito
+más rentable de esta lección: cuesta lo mismo, y una lista de preguntas no puede ser falsa, solo
+incompleta.
+
+Y del otro lado hay algo que la comunidad puede construir y el modelo nunca va a tener: **lo que
+salió de la ventanilla se anota.** Fecha, oficina, nombre de quien atendió, qué dijo, qué papel
+entregó. Ese archivo tiene más <Termino slug="trazabilidad">trazabilidad</Termino> que cualquier
+respuesta generada, porque tiene fuente, fecha y responsable. Cuando el próximo vecino haga el mismo
+trámite no va a preguntarle a una máquina: va a leer lo que ya se comprobó.
+
+<AplicarRizoma>
+Rizoma del Sur produce, en un año normal, cinco textos que importan de verdad: la nota a la instancia
+municipal que corresponda pidiendo algo concreto y acotado; el acta de la reunión de vecinos; el
+cartel de la entrada del vivero; la ficha de entrega de plantines; y la versión en lenguaje llano de
+las lecciones de este curso para los talleres. Ninguno es largo, y los cinco fallan por las mismas
+dos razones: se escriben con prisa y los revisa una sola persona.
+
+**Regla de la casa, y es la única que hace falta.** Ningún texto sale con el nombre de Rizoma del
+Sur sin que dos personas lo hayan leído en voz alta, y una tiene que ser alguien que no lo escribió.
+Leer en voz alta caza tres cosas de golpe: las frases que no suenan a nadie de aquí, los datos que
+nadie puede sostener y las promesas que la organización no acordó. En un proyecto gratuito, donde el
+único capital es la confianza de los vecinos, esa lectura vale más que cualquier técnica de
+redacción.
+
+**Los 3.666 m² en doce lotes son un dato duro, y los datos duros van escritos antes de pedir el
+borrador.** Esa cifra, la ubicación en Prados del Sur, el catálogo real —yautía, culantro, ají
+dulce, gandul, batata, plátano, ornamentales, árboles de sombra y frutales injertados— y los
+plantines efectivamente entregados el año pasado van en un archivo de texto que se pega al principio
+de cada pedido. Ese archivo es la fuente de la verdad de la organización: sin él, cada carta
+reinventa el proyecto un poco, y en tres cartas Rizoma ya tiene tres superficies distintas circulando
+por el barrio.
+
+**La ficha de entrega de plantines dice solo lo observado en el sitio.** Días desde la siembra hasta
+que la planta salió del vivero, sustrato usado, riego que recibió, mortalidad de la bandeja, qué
+hacer los primeros quince días y a quién preguntar si algo va mal. Nada de propiedades ni de
+beneficios generales, nada sobre salud. Como los plantines se entregan gratis, cualquier adorno es
+puro riesgo: si un vecino planta gandul creyendo lo que decía la ficha y no pasa lo prometido, lo que
+se pierde no es una venta sino la credibilidad del proyecto en esa cuadra. El cartel de la entrada
+tiene el problema opuesto, y ahí la palabra obligatoria es **gratis**: el supuesto por defecto de
+quien pasa por la puerta es que se cobra, y ese supuesto silencioso deja fuera justo a la gente para
+la que existe el proyecto.
+
+**La traducción de registro de las lecciones para el taller se contrasta antes de enseñarla.** Pedir
+una versión de trescientas palabras de la lección de riego para leer en voz alta es un uso excelente,
+pero hay que ponerla al lado de la original y buscar qué condición se perdió. Si la lección dice que
+en <Termino slug="surazo">surazo</Termino> se riega distinto porque la planta baja su demanda, y la
+versión llana quedó en «regar poco en invierno», la simplificación ya cambió el consejo. La versión
+corta es el guion del taller; la lección sigue siendo la referencia, y nada de esto sustituye la
+didáctica del módulo 18 ni estar parado en la parcela.
+
+**Y el archivo que más va a valer con el tiempo no lo escribe la máquina.** Un solo documento
+compartido donde se anota, cada vez que alguien vuelve de una oficina, la fecha, la instancia, el
+nombre de quien atendió, qué dijo y qué papel entregó. Empieza vacío y en dos años es el mapa real
+de cómo se hacen las cosas en esta zona. Un último límite: las actas llevan nombres de vecinos y a
+veces números de documento, así que antes de pegar nada en la caja se sustituyen por «vecino 1»,
+«vecino 2», y los nombres se reponen a mano en la versión final. La lección 06 explica por qué esto
+importa más de lo que parece.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**En Bolivia, la palabra que vale es la de la ventanilla.** No es una queja: es cómo funciona el
+sistema, y saberlo cambia la estrategia. Un requisito puede estar publicado en un lado, aplicarse de
+otra manera en una oficina y haber cambiado el mes pasado sin que se actualice nada en internet —y
+eso, justamente, es material que el modelo no tiene. Por eso lo municipal se pregunta en el Gobierno
+Autónomo Municipal que corresponda a la jurisdicción; lo sanitario y fitosanitario, en el SENASAG; lo
+de semillas e investigación agrícola, en el INIAF; y lo tributario, con un contador local. Esas
+instituciones existen y son las que responden. Este curso no te va a dar el requisito, y hace bien en
+no dártelo.
+
+**El costo del error se mide en viajes, y desde Zanja Honda eso es medio día.** Salir del sur de
+Santa Cruz hasta una oficina, hacer cola, que te falte una fotocopia y volver otro día son dos
+jornadas perdidas y dos pasajes, para alguien que quizá vive de lo que produce esa semana. Contra
+eso la comparación es brutal a favor de preguntar: **una visita para preguntar cuesta una mañana; un
+requisito inventado cuesta la semana.** Esa aritmética es la que convierte la regla de verificación
+en algo práctico y no en un consejo moral.
+
+**Bolivia es un país multilingüe y eso importa más de lo que parece en un módulo de tecnología.** El
+Estado reconoce como oficiales, además del castellano, varias decenas de idiomas indígenas; el número
+exacto y la lista están en el texto constitucional, que conviene mirar antes de citarlo en público en
+lugar de repetir una cifra de memoria. En Santa Cruz conviven hablantes de quechua y aimara llegados
+por migración interna, pueblos guaraní y chiquitano, y colonias menonitas que hablan una lengua
+germánica con casi nada de presencia escrita en internet. Para todas vale lo mismo: el modelo produce
+algo fluido y no confiable. Del otro lado hay dos idiomas donde el ahorro es inmediato: el portugués,
+por la relación con Brasil, y el inglés, en el que llega la documentación de casi cualquier equipo
+que se compre —una bomba, un controlador de riego, un panel solar—, como se ve en los módulos 38
+y 26.
+
+**Hay un caso donde la simplificación no admite juegos: la salud.** El dengue es endémico en la
+zona, y los avisos sobre agua estancada y descacharrado son textos que la comunidad va a querer
+escribir y pegar. La forma se puede pedir; **el contenido sanitario se toma del centro de salud o de
+la autoridad correspondiente**, y la versión corta se muestra al personal de salud antes de
+imprimirla. Un aviso de salud que perdió una condición al simplificarse no es un error de estilo.
+
+**La asimetría que este módulo existe para corregir se ve entera acá.** En una zona donde no todos
+terminaron el colegio, saber redactar una nota decidía quién tramitaba y quién no; esta herramienta
+baja esa barrera de verdad, y para un proyecto que existe para que la comunidad aprenda, eso es
+exactamente el punto. Pero conviene ver la otra cara: **si producir textos se abarata, la confianza
+en los textos se encarece.** Si empiezan a circular por el barrio cartas y avisos escritos por
+máquina con datos inventados, el vecino deja de creerle al papel, y esa desconfianza la pagamos
+todos. Por eso Rizoma firma lo que escribe, revisa antes de mandar y anota de dónde salió cada dato:
+porque el papel de la comunidad tiene que seguir valiendo algo.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Le pedí la carta y quedó preciosa, la mandé igual.»** Preciosa es exactamente el problema. La
+fluidez es lo único que el aparato garantiza; los datos de adentro son tuyos o son inventados, y hay
+que revisar cuál es cuál antes de que salga.
+
+**«Le pedí que me hiciera el acta de la reunión del sábado.»** No estuvo. Lo que devuelve es una
+reunión inventada con nombres reales. Las notas las tomás vos; él las ordena.
+
+**«Me tradujo al quechua y se veía bien.»** Verse bien no es evidencia en una lengua de bajo recurso:
+es justamente lo que produce igual de bien cuando no tiene material. Y la retrotraducción que
+coincide tampoco lo es: no descarta el error simétrico ni un número cambiado.
+
+**«Me explicó el trámite completo con los siete requisitos.»** Con esa forma tan ordenada, casi
+seguro está compuesto. La lista de requisitos sale de la oficina; de la máquina sale la lista de
+preguntas para ir a buscarla.
+
+**«Le pregunté por la etiqueta de un producto.»** ¿Le pegaste la etiqueta? Si no, contestó sobre una
+genérica y no sobre la tuya. Y aunque se la pegues, la dosis se lee en el envase.
+
+**«Total, es un borrador, después alguien lo revisa.»** Ese «alguien» tiene nombre. Si nadie está
+asignado a leerlo en voz alta antes de que salga, la revisión no existe.
+
+## Lo que sigue
+
+Los tres usos de esta lección comparten una virtud: el material lo ponés vos, así que la
+comprobación está al alcance de la mano. Redactás con hechos propios, traducís un texto que tenés
+delante, y del trámite le pedís la estructura mientras confirmás el contenido donde se confirma.
+Mientras la herramienta trabaje sobre algo que vos controlás, el error se ve leyendo.
+
+La lección 05, **los límites duros en agricultura**, entra en el terreno donde eso deja de cumplirse.
+Ahí el consejo no sale de un texto que le pegaste: sale de su material de entrenamiento, calibrado
+para otro clima, otro hemisferio y otro calendario, y aterriza en Zanja Honda con lluvias de octubre
+a abril y surazos en pleno invierno seco. Vamos a ver por qué los nombres locales como yautía, gandul
+o ají dulce lo confunden; por qué una foto de una hoja no contiene lo que hace falta para un
+diagnóstico —raíz, suelo, riego, historia de manejo, distribución del daño y línea de tiempo—; y qué
+contestarle al vecino que llega con un diagnóstico de aplicación en la mano y la decisión ya tomada.

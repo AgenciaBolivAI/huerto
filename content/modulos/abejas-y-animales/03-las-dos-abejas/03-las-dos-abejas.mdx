@@ -1,0 +1,559 @@
+La lección anterior dejó un inventario incómodo: el gremio de polinizadores que Rizoma necesita **ya
+vive en el sitio**, y lo que le falta no se compra. Le falta floración continua, sitio donde nidificar,
+agua y que nadie fumigue a mediodía. Esa es la intervención barata y la de mejor relación entre
+esfuerzo y resultado, y conviene tenerla presente durante toda esta lección.
+
+Y sin embargo, en cuanto alguien dice «polinización» en una reunión, la conversación salta en dos
+minutos a «¿ponemos colmenas?». Esta lección se ocupa de esa pregunta, y lo primero que hace es
+partirla en dos, porque **detrás de la palabra "abeja" hay dos animales tan distintos entre sí como un
+servicio que atiende a todo el barrio y una biblioteca que corre dentro de tu propio proceso.**
+
+Elegir entre las dos no es cuestión de gusto ni de romanticismo nativista. Es **elegir una
+dependencia**, y las dependencias se eligen por su perfil operativo —qué exige para funcionar, cada
+cuánto falla, cómo avisa de que va a fallar y, sobre todo, **quién paga cuando falla**— no por su hoja
+de características. Al final de la lección hay una decisión tomada y argumentada, no un «depende».
+
+## Lo que las dos comparten, y por qué eso importa menos de lo que parece
+
+Las dos son abejas eusociales con cestillas de polen en las patas traseras: parientes cercanas dentro
+de la misma familia. La **eusocialidad** no es «vivir juntas»; es un umbral con tres condiciones
+simultáneas: generaciones que se solapan dentro del mismo nido, cuidado cooperativo de la cría —adultas
+que crían hijas que no son suyas— y división reproductiva del trabajo, es decir, individuos que renuncian
+a reproducirse. Las dos cumplen las tres. Las dos recogen néctar y polen, los almacenan, construyen con
+cera, se comunican químicamente y regulan lo que pasa dentro del nido.
+
+Las dos comparten también el mecanismo genético que hace todo esto posible,
+la <Termino slug="haplodiploidia">haplodiploidía</Termino>: un huevo sin fecundar se desarrolla como
+macho y tiene la mitad de la dotación genética; un huevo fecundado se desarrolla como hembra. La reina,
+que guarda esperma de sus vuelos de apareamiento, **decide el sexo de cada huevo en el momento de
+ponerlo**, abriendo o no la válvula de la espermateca. El sexo no es un sorteo: es una escritura
+condicional.
+
+Ese detalle tiene una consecuencia práctica que reaparece más adelante. En la abeja melífera el sexo
+depende de un locus con muchas variantes: si el individuo es heterocigoto en ese locus es hembra, y si
+por mala suerte hereda dos copias iguales sale macho diploide, que las obreras devoran a las pocas
+horas de nacer. Con poca diversidad genética —colonias emparentadas, apareamientos entre hermanos— esa
+coincidencia se vuelve frecuente y el panal aparece **salpicado de huecos**. Es exactamente
+la <Termino slug="depresion-por-consanguinidad">depresión por consanguinidad</Termino> del módulo 13,
+vista desde el otro lado del reino, y **es una colisión de claves**: cuando el espacio de valores es
+pequeño, dos entradas caen en el mismo casillero y el registro se descarta.
+
+Y hay un hecho histórico que casi nadie tiene presente: **Apis mellifera no es americana.** Es
+africana y euroasiática, y llegó a este continente con la colonización. Todo lo que se polinizaba en
+esta llanura antes de eso lo polinizaban las nativas. La frase «sin abejas no hay comida» es cierta y
+la frase «sin colmenas no hay comida» es falsa, y confundirlas lleva a comprar hardware para resolver
+un problema de hábitat.
+
+<Analogia>
+Las dos abejas resuelven la misma interfaz —recoger néctar y polen, transportarlos, almacenarlos,
+mantener un nido— y por eso se las mete en la misma frase. Pero una es **un servicio de alto caudal
+desplegado fuera de tu red**, que atiende a todo el barrio, escala sola y cuando entra en fallo el
+incidente lo sufren terceros; y la otra es **una biblioteca embebida**, de caudal bajo, que se ejecuta
+dentro de tu parcela y cuyo peor fallo es que deje de funcionar.
+
+Igualar las dos por su interfaz es el error clásico de elegir dependencia leyendo el README y no el
+manual de operaciones.
+</Analogia>
+
+## Apis mellifera: un superorganismo con termostato
+
+Una colmena no es un rebaño de abejas. Es
+un <Termino slug="superorganismo">superorganismo</Termino>: la unidad que come, respira, regula su
+temperatura, se defiende y se reproduce **es la colonia**, y la abeja individual funciona como una
+célula. Ninguna abeja sola sobrevive; una obrera aislada muere en días aunque tenga comida. La
+consecuencia práctica es que **todas las decisiones de manejo se toman sobre la colonia**, no sobre los
+individuos, y que una colonia se puede diagnosticar, igual que se diagnostica un proceso, mirando sus
+métricas agregadas.
+
+Dentro hay tres <Termino slug="casta">castas</Termino>. La reina es la única hembra fértil: sale una
+vez en su vida al <Termino slug="vuelo-nupcial">vuelo nupcial</Termino>, se aparea en el aire con más
+de una decena de machos, guarda ese esperma para años y a partir de ahí solo pone huevos —en plena
+temporada, más de mil al día—. No manda: **es el punto de escritura**, y su presencia se comunica al
+resto por feromonas que circulan de boca en boca con el alimento. Las obreras son hembras estériles
+que van cambiando de oficio con la edad —limpieza, nodriza, cera, guardia y por último pecoreo— en una
+progresión que la colonia puede acelerar o revertir si le faltan operarias de un turno. Los zánganos no
+trabajan, no pican y existen para aparearse; la colonia los expulsa cuando escasea el alimento.
+
+Un dato de arquitectura que decide todo el manejo: **la abeja melífera construye panal reutilizable**.
+Las celdas de cera hexagonales, en placas de doble cara, sirven sucesivamente para cría, para polen y
+para miel, y se usan miles de veces. Además, la larva se alimenta **de forma progresiva**: las nodrizas
+la visitan miles de veces y ajustan la ración. Eso convierte al panal en una estructura de datos
+persistente, ordenada y direccionable: se saca un cuadro, se mira a contraluz y **se lee el estado de
+la colonia de las últimas tres semanas** —cuánto pone la reina, con qué patrón, cuánta reserva hay,
+cuánto espacio libre queda—. Toda la colmena de cuadros móviles, y por tanto toda la apicultura
+moderna, existe porque esa lectura es posible.
+
+<Analogia>
+El nido de cría de Apis se mantiene entre 34 y 35 °C con una precisión de menos de un grado, y lo hace
+sin termostato externo: si hace frío las obreras vibran los músculos de vuelo sin mover las alas para
+generar calor, y si hace calor ventilan en fila y **traen agua para evaporarla dentro**.
+
+Es un lazo de control cerrado con dos actuadores, y como todo lazo de control **tiene un costo de
+operación**. Una colmena a pleno sol en octubre en Santa Cruz gasta una fracción grande de su plantilla
+en acarrear agua y ventilar: son obreras que no están recolectando. La colonia no se cae, pero **entra
+en limitación por temperatura**, exactamente como un procesador que baja la frecuencia para no quemarse.
+La sombra de la tarde no es un detalle estético: es capacidad de cómputo.
+</Analogia>
+
+La reproducción de la colonia se llama <Termino slug="enjambrazon">enjambrazón</Termino>: cuando el
+nido se llena, las obreras crían reinas nuevas y **la reina vieja se va con la mitad de la población**
+en una nube que sale, se posa un rato y busca cavidad. Es un corte en seco: la colonia madre y la hija
+se separan en un instante y ninguna vuelve a depender de la otra. Es un traslado de producción sin
+periodo de convivencia, con toda la fragilidad que eso tiene —y con la ventaja de que **la colonia se
+multiplica sola y rápido**, varias veces al año si las condiciones acompañan.
+
+Su <Termino slug="radio-de-forrajeo">radio de forrajeo</Termino> es de kilómetros, y encima recluta:
+una pecoreadora que encuentra una buena flor vuelve y comunica dirección y distancia a sus compañeras
+con una danza en el panal, de modo que la colonia **satura el recurso en horas**. Cuando entra
+un <Termino slug="flujo-de-nectar">flujo de néctar</Termino> —una floración masiva y breve— la colmena
+sube de peso a ojos vista. Cuando no lo hay, consume reservas y, si el hambre aprieta, **asalta a la
+colmena vecina**: eso es el <Termino slug="pillaje">pillaje</Termino>, y es una de las formas en que un
+apiario mal llevado se destruye a sí mismo.
+
+<Dato titulo="El néctar se convierte en miel por deshidratación y por química">
+El néctar entra en el <Termino slug="buche-melario">buche melario</Termino>, un ensanchamiento del
+esófago que no es el estómago digestivo. Ahí la abeja le añade enzimas propias: una invertasa que parte
+la sacarosa en glucosa y fructosa, y una glucosa-oxidasa que genera peróxido de hidrógeno y ácido
+glucónico, lo que acidifica el producto y le da poder antimicrobiano.
+
+Después viene la parte física: la colonia **evapora agua**, pasando el néctar de boca en boca y
+ventilando, hasta que la miel queda por debajo de un umbral de humedad. Solo entonces la sella con una
+tapa de cera —está <Termino slug="operculado">operculada</Termino>—, y esa tapa es una firma: la
+colonia declara que ese lote ya está estable. Todo esto reaparecerá en la lección 05, cuando se hable
+de cosecha; aquí importa porque **es el mecanismo que la abeja sin aguijón no ejecuta igual**.
+</Dato>
+
+## Las abejas sin aguijón: otra arquitectura entera
+
+Las <Termino slug="abeja-sin-aguijon">abejas sin aguijón</Termino> o meliponas son un grupo enorme:
+más de quinientas especies descritas, la gran mayoría en los trópicos americanos, desde algunas
+diminutas del tamaño de una hormiga hasta especies más grandes que la melífera. Criarlas tiene nombre
+propio, <Termino slug="meliponicultura">meliponicultura</Termino>, y una historia larguísima en el
+continente: no es una moda reciente.
+
+El nombre engaña y hay que decirlo de entrada. El aguijón existe pero está **atrofiado y no puede
+clavar**, así que no inyectan veneno. Eso no las vuelve inofensivas: las especies defensivas muerden,
+se meten en el pelo, en los ojos y en los oídos, se enredan y son capaces de hacer abandonar el sitio a
+una persona por pura molestia. Y hay un grupo —conocido en varias partes como abeja caústica o
+tataira— **cuya secreción mandibular quema la piel** y deja ampollas. «Sin aguijón» describe una
+anatomía, no un temperamento.
+
+<Advertencia titulo="No todas las nativas son buenas vecinas">
+Existe además un género de meliponas ladronas que practican
+la <Termino slug="cleptobiosis">cleptobiosis</Termino>: no recogen polen de flores, **asaltan nidos de
+otras abejas sin aguijón**, los invaden en masa y se llevan las reservas, dejando la colonia muerta.
+Un meliponario mal ubicado o desatendido puede perder colonias enteras por esta vía.
+
+La frase «las abejas nativas son inofensivas y beneficiosas» es la clase de generalización que suena
+bien en un taller y cuesta colonias en el terreno. **La especie concreta importa**, y a eso vuelve una
+sección más abajo.
+</Advertencia>
+
+La arquitectura del nido no se parece en nada a la de la melífera. Anidan en cavidades —huecos de
+árbol, muros, a veces el suelo o nidos de termitas— y lo primero que hacen es **forrar la cavidad**
+con <Termino slug="batumen">batumen</Termino>, una mezcla de resina vegetal, cera y a veces barro que
+sella grietas, impermeabiliza y deja una sola puerta. Esa puerta es
+un <Termino slug="cerumen">tubo de cerumen</Termino> muchas veces característico de la especie,
+vigilado por guardianas y **cerrado cada noche**. Alrededor de la zona de cría construyen
+un <Termino slug="involucro">involucro</Termino> de láminas finas que hace de aislante térmico.
+
+Y aquí está la diferencia decisiva: **la cría y el alimento están en estructuras separadas**. La cría
+va en celdas agrupadas en discos o racimos; el alimento va aparte,
+en <Termino slug="pote-de-alimento">potes</Termino> ovalados del tamaño de una uva o mayores, unos con
+polen fermentado y otros con miel. No hay panal de doble cara donde todo convive, y por eso **no hay
+cuadro que sacar y leer a contraluz**.
+
+La cera tampoco es la misma. Las meliponas la segregan por glándulas del dorso del abdomen —la
+melífera lo hace por la cara ventral— y **nunca la usan pura**: la amasan con resina recogida de las
+plantas, y el resultado es el cerumen, oscuro, blando, pegajoso y con propiedades antimicrobianas
+heredadas de la resina. Es un material excelente para sellar y pésimo para construir estructuras
+rígidas y reutilizables, y **se ablanda con el calor**, lo que explica por qué una caja al sol es una
+sentencia.
+
+<Analogia>
+La melífera alimenta a cada larva progresivamente, miles de visitas, ajustando sobre la marcha. La
+melipona practica el <Termino slug="aprovisionamiento-masivo">aprovisionamiento masivo</Termino>: las
+obreras llenan la celda con toda la comida que esa larva va a consumir en su vida, la reina pone el
+huevo encima, **la celda se sella y no se vuelve a abrir**. Cuando la abeja nace, la celda se destruye.
+
+Es la diferencia entre **un proceso que atiende peticiones y se puede inspeccionar en caliente** y
+**un trabajo por lotes que se lanza con todos sus parámetros y solo se conoce por su resultado**. De
+ahí salen tres consecuencias operativas seguidas: no se puede leer la cría sin destruirla, las celdas
+son de un solo uso —cada ciclo hay que fabricarlas otra vez, con su costo en cera y resina— y **el
+ciclo es lento**: del orden de cuarenta a sesenta días desde el huevo hasta la abeja adulta en muchas
+especies, frente a los veintiún días de una obrera melífera.
+</Analogia>
+
+Ese ciclo lento gobierna todo lo demás. Una colonia de meliponas tiene de unos cientos a unos pocos
+miles de individuos según la especie, crece despacio y **se multiplica, en el mejor de los casos, una
+vez al año**. Su forma de reproducirse tampoco es un enjambre: es
+una <Termino slug="fision-de-colonia">fisión de colonia</Termino>. Las obreras localizan una cavidad
+nueva, la acondicionan y **acarrean material desde el nido madre durante semanas** —cerumen, resina,
+alimento—; cuando está lista, una reina virgen se traslada, se aparea y la hija queda establecida. Es
+una migración gradual con enlace activo entre las dos, no un corte en seco. Elegante, pero **lentísima
+comparada con la enjambrazón**.
+
+<Advertencia titulo="La constante de tiempo es un año, y eso cambia el cálculo de riesgo">
+Si una colonia de meliferas se pierde, se repone en una temporada: se captura un enjambre o se divide
+otra. Si se pierde una colonia de meliponas, **reponerla cuesta un año o más**, y solo se puede si
+alguien tiene otra colonia establecida para dividir.
+
+Todo el manejo se ordena alrededor de ese número. Un error que en apicultura es un contratiempo, en
+meliponicultura es un retroceso de un año, y por eso las precauciones que la lección siguiente
+describe —hormigas, sol, fóridos, humedad— no son manías: son **la protección de un activo que no se
+regenera rápido**.
+</Advertencia>
+
+Sus enemigos son otros, y también son consecuencia de la arquitectura. Como el nido tiene una sola
+puerta pequeña y defendible pero la colonia es chica, **las hormigas son el depredador número uno de un
+meliponario**: entran por cualquier puente físico —una rama, un pasto alto, una cuerda, la propia pata
+del soporte— y arrasan. Y en cuanto un nido se abre o se derrama alimento aparecen
+los <Termino slug="forido">fóridos</Termino>, moscas diminutas que ponen huevos sobre el polen
+almacenado y cuyas larvas lo pudren desde dentro. Una colonia fuerte las expulsa; una colonia débil o
+recién manipulada, no. Súmese el sol directo, que ablanda el cerumen y cocina la cría, y sale el perfil
+de exigencias: **sombra, seco, sin puentes para hormigas y con la menor manipulación posible**.
+
+<Dato titulo="Por qué la miel de melipona fermenta: es actividad de agua, no suciedad">
+La miel de la melífera operculada suele quedar por debajo de aproximadamente un 18 a 20 % de agua. La
+miel de melipona se guarda en potes que **no se sellan igual** y llega a la cosecha con bastante más:
+las cifras que se reportan suelen moverse en un rango del orden del 25 al 35 %, y varían con la especie
+y con la época del año.
+
+Lo que decide si algo fermenta no es la humedad total sino
+la <Termino slug="actividad-de-agua">actividad de agua</Termino>: la fracción de agua **libre**, no
+retenida por los azúcares, que un microorganismo puede usar. Con mucho azúcar disuelto el agua queda
+secuestrada osmóticamente y la actividad baja. Las levaduras osmotolerantes —las que viven en ambientes
+azucarados— arrancan por encima de un umbral que suele situarse alrededor de 0,60 a 0,65. La miel de la
+melífera queda por debajo; la de melipona, frecuentemente por encima.
+
+O sea: **fermentar no es un defecto de esa miel, es su estado por defecto.** En el nido eso no es
+problema —la colonia la consume y la fermentación forma parte de su química, junto con una acidez
+mayor—; fuera del nido, en un frasco cerrado, produce gas, presión y alcohol. Qué se hace con eso
+—cuándo se cosecha, cómo se madura, cómo se conserva y qué se puede y no se puede prometer al
+comprador— es materia de la lección 05, y es una de las razones por las que esa lección existe.
+</Dato>
+
+Un último rasgo, y es el que más le importa a un vivero. El radio de forrajeo de las meliponas es
+mucho más corto que el de la melífera —del orden de cientos de metros hasta cerca de un kilómetro
+según el tamaño del cuerpo—, y varias especies del género Melipona **sí hacen polinización por
+vibración**, ese zumbido que sacude la flor para que suelte el polen encerrado en anteras porosas, que
+la melífera no ejecuta y que varias solanáceas necesitan. La lección 02 lo señaló como un hueco: aquí
+está quién lo cubre.
+
+## Comparación operativa
+
+<Tabla>
+
+| Dimensión | Abeja sin aguijón | Apis mellifera africanizada |
+| --- | --- | --- |
+| Riesgo para quien pasa cerca | No puede clavar; muerde y molesta | Pica, marca y recluta; el riesgo lo corre un tercero |
+| Equipo mínimo para trabajar | Manos limpias y una espátula | Velo, overol, guantes y ahumador |
+| Tamaño de colonia | De cientos a pocos miles | Decenas de miles |
+| Cría | Celdas de un solo uso, selladas y no inspeccionables | Panal reutilizable, legible cuadro por cuadro |
+| Multiplicación | Una fisión al año en el mejor caso | Varias divisiones al año; enjambra sola |
+| Miel | Litros al año, húmeda, fermenta | Decenas de kilos, operculada, estable |
+| Radio de forrajeo | Cientos de metros | Kilómetros |
+| Termorregulación | Pasiva: depende del sitio y del aislamiento | Activa: ventila y evapora agua |
+| Fallo típico | Hormigas, fóridos, sol; se apaga en meses | Enjambrazón, abandono; incidente con personas en segundos |
+
+</Tabla>
+
+La tabla se lee mejor por la última fila. **Los dos sistemas fallan, pero fallan con velocidades y con
+víctimas distintas.** Un meliponario descuidado se degrada durante meses y avisa: menos movimiento en
+la piquera, potes vacíos, hormigas en la pata. Un apiario descuidado puede estar perfecto el martes y
+mandar a alguien al hospital el miércoles, y ese alguien puede ser el vecino que pasaba con la
+motosierra.
+
+## La abeja africanizada, tal como se presenta en el llano
+
+Hay que decir con precisión de qué se habla. En 1957 escaparon en Brasil colonias de abejas de origen
+africano importadas para un programa de mejoramiento. Se cruzaron con las poblaciones europeas ya
+presentes y el híbrido resultante —la <Termino slug="abeja-africanizada">abeja africanizada</Termino>—
+se expandió por el continente en las décadas siguientes, incluyendo la llanura oriental boliviana. Hoy,
+en el llano, **prácticamente toda colonia silvestre y la mayoría de las manejadas son africanizadas**.
+No es una opción del catálogo: es lo que hay.
+
+Es un animal notable. Prospera con calor y humedad, recolecta mucho, resiste enfermedades y parásitos
+que castigan duro a las estirpes europeas y no necesita casi tratamientos. Miles de personas en la
+región trabajan bien con ella. El problema es
+su <Termino slug="defensividad">defensividad</Termino>, y conviene entenderla como mecanismo y no como
+carácter.
+
+Tres parámetros están corridos respecto de una abeja europea: **el umbral de respuesta es más bajo**
+—reacciona a vibraciones, olores o sombras que otra ignoraría—, **el número de individuos que responden
+al mismo estímulo es mucho mayor**, y **el estado de alarma dura más y se extiende más lejos**, con
+persecuciones que pueden prolongarse cientos de metros y una colonia que sigue irritable durante horas.
+El veneno por picadura es el mismo. Lo que cambia es la dosis y la geografía del incidente.
+
+<Analogia>
+El acoplamiento lo hace la <Termino slug="feromona-de-alarma">feromona de alarma</Termino>: al clavar,
+la abeja libera compuestos volátiles que **quedan pegados al objetivo** y que actúan como señal de
+reclutamiento. Cada picadura marca el blanco y llama a más abejas, que al picar vuelven a marcar y a
+llamar.
+
+Es una tormenta de reintentos sin retroceso exponencial. **La entrada del sistema es su propia
+salida**, no hay amortiguación y el objetivo no puede darse de baja: aunque el humano deje de moverse,
+sigue oliendo a diana. Por eso el consejo de «quedarse quieto», que sirve con otras abejas, aquí es
+peligroso, y por eso un incidente no se detiene cuando uno para: se detiene cuando uno se aleja mucho y
+se refugia. El protocolo concreto está en la lección 04.
+</Analogia>
+
+Hay dos emergencias médicas distintas y confundirlas cuesta vidas. Una es la reacción alérgica
+sistémica, que puede desencadenarse **con una sola picadura** en una persona sensibilizada, no depende
+de la cantidad y evoluciona en minutos. La otra es el envenenamiento masivo, que **sí depende de la
+dosis acumulada** —cientos de picaduras— y compromete riñón, músculo y sangre; el umbral es mucho más
+bajo en niños, personas mayores y personas con enfermedades previas. Las cifras que circulan varían
+mucho y no hay que memorizarlas: lo que hay que saber es que **son dos cosas distintas, con dos
+tratamientos distintos**, y ambas se ven en la lección 04 y en el módulo 2.
+
+A esto se suman dos rasgos de comportamiento que agravan el problema fuera del apiario: la abeja
+africanizada **enjambra más** y **abandona la colmena con más facilidad** cuando escasea el alimento o
+la molestan, y ocupa cualquier cavidad disponible. En la práctica, tener colmenas en una zona poblada
+significa también asumir que aparecerán enjambres en el hueco de un muro, en un tanque en desuso o en
+el techo del galpón de herramientas, y que alguien tendrá que ocuparse de eso.
+
+Y una advertencia sobre el muestreo: **la defensividad varía entre colonias y entre días**. Una colmena
+mansa en una visita puede no serlo en la siguiente, con menos flores, más calor o una reina cambiada.
+Haber trabajado tranquilo tres veces seguidas no es evidencia de que el sistema sea seguro; es una
+muestra pequeña de una distribución con cola larga.
+
+## Lo que ninguna caja arregla
+
+Antes de decidir, conviene recordar dos límites que se olvidan justo cuando llega el entusiasmo.
+
+El primero: **una colmena es transporte, no compatibilidad.** La lección 01 mostró que un frutal
+injertado es un <Termino slug="clon">clon</Termino>, y que un bloque entero de la misma variedad
+autoincompatible no cuaja por mucho que lo visiten. Meter abejas ahí es **ampliar el ancho de banda de
+un canal cuyo problema es que el otro extremo rechaza el mensaje**. Si falta la variedad polinizadora
+compatible, primero se planta la variedad; las abejas vienen después.
+
+El segundo: **una colonia es un ser vivo a cargo.** No se apaga, no se pausa en vacaciones y no espera
+a que termine la temporada de trasplantes. Entra en el mismo presupuesto de tiempo y de
+responsabilidad que cualquier animal del sitio, con un responsable nombrado y un plan para cuando esa
+persona no esté. La lección 07 cierra el módulo con esa regla, y vale igual para dos cajas de meliponas
+que para veinte colmenas.
+
+## No se saquea el monte
+
+La forma más rápida de conseguir una colonia de meliponas es también la peor: encontrar un nido en un
+árbol, tumbarlo y llevarse el tronco. Hay que entender por qué es tan destructivo, porque la intuición
+falla.
+
+La tasa de reproducción de una colonia silvestre es **una fisión al año en el mejor de los casos**, y
+solo si tiene alimento, sitio y no la molestan. Al tumbar el árbol se pierden tres cosas a la vez: la
+colonia, que en la mayoría de las extracciones improvisadas muere o queda tan dañada que no prospera;
+la cavidad, que tardó décadas en formarse y que servía para la siguiente; y el árbol, que además
+alimentaba a todo el gremio de la lección 02. **Es minería, no cosecha**: se está extrayendo de un
+recurso cuya velocidad de regeneración es órdenes de magnitud menor que la de extracción, y el
+resultado en las zonas donde se ha hecho de forma sistemática es que ya no queda de dónde sacar.
+
+Hay tres orígenes legítimos, y conviene exigirlos:
+el <Termino slug="rescate-de-nidos">rescate de nidos</Termino> que iban a perderse igual —un árbol ya
+caído, un chaqueo ya decidido, una obra, un muro que se demuele—, hecho con quien sabe hacerlo y en la
+época adecuada; la división de colonias ya establecidas y manejadas, que es como se multiplica un
+meliponario de verdad; y las cajas cebo o nidos trampa, cavidades vacías cebadas con resina que una
+colonia en fisión puede elegir por su cuenta. Comprar es válido **si se pregunta de dónde salió** y la
+respuesta no es «del monte». La demanda es la que crea la extracción: quien compra un nido saqueado
+está pagando por el siguiente.
+
+Dos precauciones más. **No se trasladan colonias entre regiones distantes**: se mueven patógenos y se
+sueltan especies fuera de su rango, con el mismo razonamiento de la cuarentena del módulo 11. Y en
+todo lo que implique extraer, transportar o aprovechar fauna silvestre y árboles, **el marco legal
+existe y no se improvisa**: antes de mover nada hay que consultarlo con la autoridad competente
+—municipal, departamental y forestal según el caso—, porque este curso no puede decir qué exige un
+trámite concreto sin inventárselo, y prefiere decir que hay que preguntar.
+
+## La especie se identifica con quien la conoce, no con una lista
+
+Los nombres comunes de las abejas sin aguijón son un desastre de nomenclatura, y hay que asumirlo. **El
+mismo nombre designa especies distintas en localidades separadas por cincuenta kilómetros, y la misma
+especie tiene tres nombres en un solo municipio.** Una lista de nombres sacada de internet, o de este
+mismo curso, no sirve para decidir qué caja construir ni cuánto esperar de una colonia.
+
+Y la especie sí importa, mucho: fija el tamaño de la cavidad y por tanto de la caja, el temperamento,
+el volumen de miel que da, la resistencia al calor, la temporada de fisión y si es una recolectora
+normal o una ladrona de nidos. Manejar sin saber la especie es **operar sobre una base de datos sin
+conocer su esquema**.
+
+El método correcto es de campo y es sencillo. Se fotografía la entrada del nido, que en muchas especies
+es tan característica como una firma. Se anota dónde estaba, a qué altura, en qué sustrato, en qué
+época se la vio activa. Y con eso se busca a **quien las conoce localmente**: un meliponicultor de la
+zona, una asociación de productores, la carrera de agronomía o biología de una universidad cercana, un
+centro de investigación agrícola o el técnico de extensión que trabaje en el municipio. Si esa persona
+no aparece a la primera, la respuesta correcta es esperar, no adivinar. Y quien enseñe debe decir
+explícitamente qué es lo que sabe y qué es lo que supone, porque el curso puede explicar el mecanismo
+general de la meliponicultura, y **no puede decirte qué abeja está zumbando en tu lote**.
+
+## La decisión, argumentada
+
+Para un proyecto comunitario y gratuito, en una parcela de vecinos, con niños y visitas, y sin nadie
+que hoy tenga experiencia con colmenas, **la respuesta es empezar por abejas sin aguijón**. No es un
+empate ni un «depende del gusto», y estas son las razones ordenadas por peso.
+
+**La primera domina a todas las demás: el riesgo recae sobre terceros que no lo aceptaron.** El niño
+que corre entre las camas, la vecina que pasa por el camino, el señor que desbroza con la máquina. Un
+sistema cuyo peor caso es enviar a otra persona al hospital solo se instala si se pueden garantizar las
+condiciones que lo contienen —distancias, barreras, señalización, equipo, alguien entrenado presente—,
+y hoy el sitio no las garantiza. Con meliponas, el peor caso es una molestia.
+
+**La segunda es que el costo de entrada coincide con lo que el proyecto es.** No hace falta traje, ni
+ahumador, ni extractor, ni comprar cera estampada. Una caja de madera bien hecha, sombra, patas
+protegidas de las hormigas y paciencia. Un proyecto gratuito puede sostener eso; un apiario en regla
+exige una inversión y un compromiso de mantenimiento que hoy competirían con el vivero.
+
+**La tercera es pedagógica, y en este proyecto pesa mucho.** Una caja de meliponas se abre con ocho
+personas alrededor, entre ellas niños, sin equipo y sin humo, y todos ven potes de miel, potes de
+polen, el disco de cría y la entrada de cerumen. Una colmena de africanizadas no se abre así, nunca. El
+módulo 18 defiende que el sitio enseñe: **la melipona es un aula y la africanizada es un área
+restringida.**
+
+**La cuarta es agronómica.** Con un radio de forrajeo corto, una proporción mucho mayor del esfuerzo de
+la colonia cae dentro de la parcela. Una melífera con radio de dos kilómetros barre del orden de mil
+doscientas hectáreas, y los 3.666 m² de Rizoma son unas tres partes de cada diez mil de esa superficie:
+la colmena poliniza el barrio y trae la miel a casa. Una melipona con radio de trescientos metros barre
+unas veintiocho hectáreas y, como además concentra sus viajes cerca del nido, **una fracción mucho más
+alta de sus visitas cae sobre los frutales que se quiere que cuajen**. Y suma la vibración que la
+melífera no hace.
+
+**La quinta es el modo de fallo.** El meliponario se degrada despacio y con señales legibles; da tiempo
+a aprender. La colmena de africanizadas falla rápido y hacia afuera. Para un equipo que está
+aprendiendo, **el sistema correcto es el que falla lento y hacia adentro.**
+
+Y ahora lo honesto, porque una decisión sin sus contras es propaganda. Las meliponas **dan poquísima
+miel**: del orden de un litro o dos al año por colonia en las especies más productivas, a veces mucho
+menos, y esa cifra hay que comprobarla con la especie y el sitio, no darla por buena. **Crecen muy
+despacio**, así que el meliponario no se multiplica solo. **Exigen sombra permanente y vigilancia de
+hormigas**, y una colonia olvidada seis meses se muere en silencio. Y **no existe con ellas el negocio
+apícola**: no hay contratos de polinización ni volúmenes de miel que aguanten un plan de ingresos. Si
+el objetivo fuera vender miel a escala, la respuesta correcta sería la melífera.
+
+Por eso la decisión no cierra la puerta: **la abeja melífera queda pendiente, no descartada.** Entra el
+día que se cumplan a la vez cuatro condiciones —una persona formada y responsable con nombre y
+suplente, un lugar del terreno lo bastante apartado de caminos, casas y animales atados, el equipo
+completo comprado antes de la primera colmena, y el barrio avisado y de acuerdo— y siempre después de
+que las meliponas hayan enseñado al equipo a mirar una colonia. Empezar por la abeja mansa no es
+renunciar a la otra: es **ordenar el aprendizaje de menor a mayor consecuencia**, que es lo mismo que
+se hace al desplegar cualquier cosa que pueda romper algo.
+
+<ContextoBolivia>
+En el llano boliviano no existe la elección «abeja europea o abeja africanizada». La africanización
+llegó desde Brasil décadas atrás y hoy el material genético disponible en Santa Cruz es esencialmente
+africanizado, tanto en las colonias silvestres de los montes y los muros como en la mayoría de los
+apiarios. Cualquier texto de apicultura escrito para climas templados, con colmenas que se revisan sin
+velo y colonias que hay que abrigar para el invierno, **describe otro animal en otro planeta**. Lo que
+sí traduce bien de esa literatura es la biología —castas, ciclos, termorregulación— y lo que no traduce
+en absoluto es el manejo y la seguridad.
+
+La meliponicultura, en cambio, es tradición americana y boliviana de siglos, y sigue viva en la
+Chiquitania, la Amazonía y las zonas guaraníes, con nombres locales para cada abeja y con usos
+medicinales de la miel muy arraigados. Esa continuidad es un activo real para un proyecto comunitario
+—hay a quién preguntar, y a menudo la persona vive cerca— y a la vez es la razón del lío de nombres:
+cada pueblo nombró a sus abejas por su cuenta. En Zanja Honda lo probable es que alguien de más edad en
+el barrio sepa de qué abeja se habla mucho mejor que cualquier página web.
+
+Hay un factor cruceño que ninguna guía extranjera menciona y que puede matar un meliponario en una
+noche: **el control del dengue**. La fumigación espacial contra el mosquito vector se aplica en la
+ciudad y en las zonas periurbanas, típicamente a primera hora o al atardecer, con insecticidas que no
+distinguen entre un mosquito y una abeja, y la deriva alcanza patios y lotes vecinos. Un apiario o un
+meliponario en la mancha urbana necesita saber cuándo pasa la fumigación —eso se pregunta en el
+municipio o en la unidad de salud, no se adivina— para poder cerrar o cubrir las cajas, y ese calendario
+es una entrada más de la bitácora del sitio. Lo mismo vale para las aplicaciones de los vecinos: la
+conversación con el vecino de al lado protege más colonias que cualquier malla.
+
+La estacionalidad manda igual que en todo el curso. Entre octubre y abril hay lluvia, floración y
+crecimiento; entre mayo y septiembre hay seca, y ahí está el hueco de néctar que decide si la colonia
+entra fuerte a la primavera. **El surazo se lleva un capítulo aparte**: cuando el aire frío del sur
+entra y la noche baja hacia los 10 °C con viento, las abejas dejan de volar, y una colonia pequeña con
+la cría destapada la pierde por enfriamiento. Ninguna caja se abre en surazo. Y hacia agosto y
+septiembre llega el humo de las quemas: el <Termino slug="chaqueo">chaqueo</Termino> y las quemas de
+borde reducen el forrajeo, y además **destruyen nidos silvestres a una escala que ninguna extracción
+alcanza**, lo que da bastante fuerza al argumento del rescate frente al saqueo, porque las colonias que
+se rescatan de un desmonte ya decidido estaban condenadas de todos modos.
+
+En cuanto a lo institucional y lo legal, hay que ser explícito. Existen normas sobre fauna silvestre,
+aprovechamiento forestal y sanidad e inocuidad de alimentos, y existen entidades competentes en materia
+agropecuaria, sanitaria y municipal, pero **este curso no va a citar números de ley, plazos ni
+requisitos**, porque cambian y porque inventarlos sería peor que callar. Lo que corresponde es
+preguntar antes de mover un nido, antes de vender el primer frasco y antes de instalar colmenas cerca
+de una vía o de casas: en el municipio, en la instancia agropecuaria departamental, con un contador
+local para lo tributario y con la asociación de apicultores más cercana, que suele ser la fuente más
+rápida y concreta de todas.
+</ContextoBolivia>
+
+<AplicarRizoma>
+**Rizoma del Sur no necesita colmenas para arreglar la polinización, y conviene decirlo en la primera
+reunión.** El déficit de la lección 01 tiene dos causas candidatas y solo una se resuelve con abejas: si
+el bloque de frutales injertados es de una sola variedad autoincompatible, la solución es plantar la
+variedad compatible, y ninguna caja lo suple. La secuencia correcta en los 3.666 m² es medir el cuaje
+con el método de la lección 01, aplicar el trabajo de hábitat de la lección 02 —que cuesta cero— y
+solo entonces decidir si las abejas aportan algo por encima de eso. Las colmenas se justifican como
+**producto, aula y presencia**, no como parche de un error de diseño del catálogo.
+
+**La ubicación del meliponario está bastante determinada por la biología, y por eso puede decidirse ya
+sobre el plano del módulo 21.** Sombra permanente, que en el sitio la dan los árboles de sombra del
+catálogo o, mientras crecen, una malla de sombra: sol de la mañana, nada de sol de las tres de la
+tarde. Fuera de bajío, porque la llanura aluvial encharca entre diciembre y marzo y una caja mojada por
+abajo se pudre. Reparo hacia el sur para el surazo, con las entradas mirando al este o al noreste.
+Y **a resguardo del paso**: no en el camino principal por donde entran las visitas, pero tampoco en el
+rincón que nadie pisa, porque lo que no se ve no se revisa.
+
+**Las patas del soporte son la pieza de ingeniería del asunto, y el suelo de Rizoma las complica.** Las
+arcillas expansivas se hinchan y se retraen con la humedad, así que un poste clavado se mueve y se
+inclina; la base va sobre apoyo firme, con la técnica del módulo 23. Y como las hormigas son el enemigo
+número uno, cada pata termina en un recipiente con agua o aceite, lo que implica **una tarea de
+mantenimiento con nombre y frecuencia**: rellenar los recipientes, y sobre todo cortar los puentes.
+Cualquier rama, cuerda, pasto alto o cobertura muerta que toque la caja anula toda la protección de una
+vez. En un sitio que fomenta la cobertura muerta por todos lados, ese detalle hay que escribirlo.
+
+**El calendario floral del sitio favorece a esta decisión más de lo que parece.** El gandul florece en
+plena seca y aporta néctar en el hueco de mayo a septiembre; el culantro que se deja subir para semilla
+propia da umbelas de néctar accesible; el plátano y las ornamentales aportan pulsos; y los árboles de
+sombra, cuando florezcan, serán el mayor aporte del año. Pero hay que ser honesto con la escala: una
+colonia forrajea muchas hectáreas, así que **la comida real no sale de los 3.666 m² sino del barrio
+entero**, y eso es algo que Rizoma no controla. La consecuencia práctica es que el número de cajas se
+limita por prudencia, no por espacio: **dos para empezar, nunca una** —con una sola no hay comparación
+posible y si se muere no se aprende nada—, y no más de tres o cuatro en el primer año.
+
+**Y el bebedero de la lección 02 pasa a ser obligatorio, no opcional.** Un recipiente ancho y poco
+profundo con piedras o palos que sobresalgan, a la sombra, rellenado siempre —porque una fuente de agua
+que se seca en octubre es peor que no haberla puesto, ya que la colonia ya reorganizó sus viajes en
+torno a ella—. La melífera lo necesitaría todavía más, porque acarrea agua para enfriar el nido, y ese
+es otro costo que la decisión de empezar por meliponas se ahorra.
+
+**El origen de las colonias es una decisión política del proyecto, no un trámite.** Rizoma es un
+proyecto comunitario y gratuito; si consigue sus primeras colonias saqueando nidos, está enseñando a
+todo el barrio que eso se hace. La regla que conviene escribir y colgar en la pared es simple: **solo
+rescate documentado de sitios ya condenados, división de colonias manejadas o cajas cebo**, y de cada
+colonia se registra en la bitácora de dónde vino, quién la trajo, en qué fecha y qué especie se cree que
+es, con la foto de la entrada. Cuando el vivero empiece a dividir sus propias colonias, esa bitácora
+será la prueba de que el meliponario creció sin vaciar el monte, y esa trazabilidad vale exactamente lo
+mismo que la de las plantas madre del módulo 9.
+
+**Antes de comprar la primera caja hay que resolver la identificación, y eso es trabajo de campo del
+equipo.** Recorrer los doce lotes y el entorno buscando entradas de nidos en árboles, postes y muros,
+fotografiarlas, anotar la ubicación y llevar ese material a alguien que sepa. Es una actividad ideal
+para hacer con los vecinos y con niños, cuesta cero y produce el dato que decide el diseño de la caja.
+Puede muy bien ocurrir que en Zanja Honda ya haya colonias silvestres a cincuenta metros y que la
+primera acción correcta no sea traer nada, sino **proteger lo que ya está y dejar de barrer el rincón
+donde vive**.
+
+**Por último, el meliponario entra en el presupuesto de tiempo con un responsable nombrado y un
+suplente**, en la misma lista que el riego y los almácigos, con revisiones espaciadas y una bitácora
+por caja: fecha, actividad en la entrada, hormigas sí o no, estado de los recipientes, notas. Dos cajas
+no son un proyecto grande; son dos organismos vivos que no se apagan cuando llega la temporada de
+trasplantes, y esa es la regla con la que se cierra el módulo.
+</AplicarRizoma>
+
+## Lo que sigue
+
+Ya está tomada la decisión difícil, que era la de biología y riesgo: **abejas sin aguijón primero, la
+melífera pendiente y con condiciones escritas**. Falta convertir esa decisión en madera, ubicación y
+calendario.
+
+La lección siguiente, **la primera colmena: manejo mínimo y seguridad**, se ocupa exactamente de eso:
+las partes de la caja racional de meliponas y de la colmena de cuadros móviles, cómo se puebla una
+colonia sin saquear nada —núcleo, división o enjambre capturado—, dónde y cómo se ubica en el terreno,
+qué calendario de revisiones aguanta las lluvias, la seca y el surazo, qué se mira en cada revisión y,
+sobre todo, **cuándo lo correcto es no abrir**. Y su segunda mitad es la seguridad alrededor: equipo,
+ahumador, distancias, señalización, qué se hace ante un ataque masivo y cómo se distingue una reacción
+normal de una anafilaxia.

@@ -1,0 +1,286 @@
+Hasta aquí el curso ha sido diagnóstico. Sabes qué es un suelo, cómo leerlo, en qué región estás,
+cómo es tu año y qué cultivo va en cada parte del terreno.
+
+Ahora empieza la intervención, y con ella un riesgo nuevo: **casi todo lo que vas a hacer a partir de
+ahora es difícil de deshacer.**
+
+Esta lección no enseña ninguna técnica. Enseña **el orden**, que es lo que decide si las técnicas de
+las seis lecciones siguientes te sirven o te salen caras. Y va primera porque el error de orden no
+se nota el día que lo cometes: se nota una temporada después, cuando ya no hay marcha atrás.
+
+## La secuencia no es una lista, es un grafo de dependencias
+
+<Diagrama
+  src="secuencia-dependencias.webp"
+  alt="Cadena horizontal de ocho cajas unidas por flechas de izquierda a derecha, cada una con su número dentro de un círculo y una palabra debajo: cero amojonar, uno observar, dos desmontar, tres analizar, cuatro descompactar, cinco corregir, seis construir y siete plantar."
+  pie="Los ocho pasos en su orden. Lo que hace que el orden sea obligatorio y no una preferencia está en la tabla de aquí abajo: cada paso consume algo que solo produce uno anterior."
+/>
+
+| # | Paso | Qué necesita del paso anterior |
+|---|---|---|
+| 0 | <Termino slug="amojonar">**Amojonar**</Termino> y levantar el plano | — |
+| 1 | **Observar** y registrar | Coordenadas para anotar dónde pasa cada cosa |
+| 2 | <Termino slug="desmonte">**Desmontar**</Termino> de forma selectiva, sin quemar | Saber qué árboles valen más en pie |
+| 3 | **Hoyos** y análisis de línea de base | Acceso al terreno, y suelo sin alterar químicamente |
+| 4 | **Descompactar**, solo si el hoyo lo justificó | El diagnóstico que dice si hace falta y a qué profundidad |
+| 5 | **Corregir** con enmiendas | El análisis, que dice qué y cuánto |
+| 6 | **Construir**: drenaje, camas, riego, sombra | Suelo ya descompactado y ya corregido |
+| 7 | **Plantar** | Todo lo anterior, y meses de reacción de la cal |
+
+Si lo lees como una lista de tareas, parece que el orden es cuestión de gusto. Leído como grafo, cada
+flecha es una dependencia real: **el paso siguiente consume información o condiciones que solo
+existen si el anterior se hizo antes.**
+
+<Analogia>
+Es una **migración con pasos destructivos**.
+
+Algunas operaciones son reversibles: si aplicas una enmienda de menos, aplicas más el año que viene.
+Otras son destructivas y no tienen rollback: cuando pasas una máquina, mezclas los primeros veinte
+centímetros y ya no puedes volver a medir cómo estaban.
+
+Y hay una categoría peor, que es la que causa los errores caros: operaciones que **destruyen la
+información que necesitabas para decidir la siguiente**. No rompen nada visible. Simplemente
+borran la evidencia.
+
+La regla de cualquier migración así es la misma: **el snapshot va antes**, no después.
+</Analogia>
+
+## El paso 1 es el que más gente se salta
+
+<Diagrama
+  src="informacion-irreversible.webp"
+  alt="Dos paneles del mismo terreno vistos desde arriba. En el izquierdo, rotulado antes, hay manchas de agua estancada de formas irregulares, marcadas con banderines numerados, y zonas de vegetación visiblemente más verde. En el derecho, rotulado después, el terreno aparece limpio y nivelado, uniforme, sin banderines y sin ninguna de las manchas, con un signo de interrogación en el centro."
+  pie="La misma parcela antes y después de mover tierra. La información de la izquierda no se puede recuperar: o se anotó, o se perdió."
+/>
+
+Del Módulo 6 ya sabes leer los indicios gratuitos: dónde se estanca el agua, dónde se seca antes el
+pasto, dónde rebrota distinto, dónde el microrrelieve delata la textura. Esos indicios **son datos**,
+y son datos que **desaparecen en cuanto entra una máquina**.
+
+Concretamente, lo que hay que tener anotado sobre un plano antes de tocar nada:
+
+- **Dónde se estanca el agua**, cuánto tarda en irse y con qué lluvia. Con foto y fecha.
+- **Los altos y los bajos**, aunque sean de veinte centímetros. Se ven con luz rasante, no a mediodía.
+- **Qué vegetación hay dónde**, porque la vegetación espontánea es un análisis de suelo gratis y de
+  baja resolución.
+- **Qué árboles hay y de qué porte**, con su posición, porque decidir cuáles se quedan es la decisión
+  menos reversible de todo el proceso.
+- **Por dónde entra el agua de fuera** y por dónde sale. Un terreno no drena solo hacia dentro.
+
+<Advertencia titulo="La línea de base solo se puede tomar una vez">
+Esto ya salió en el Módulo 5 al hablar del análisis de suelo, y aquí se generaliza a todo:
+**cualquier medición del estado inicial tiene exactamente una oportunidad.**
+
+No es una cuestión de rigor académico. Es que dentro de tres años vas a querer saber si lo que
+hiciste funcionó, y sin <Termino slug="linea-base">línea de base</Termino> no hay forma de saberlo:
+tendrás un número actual y ninguna referencia contra la que compararlo. Todas las decisiones de inversión posteriores —cuánta materia
+orgánica hace falta, si el encalado sirvió, si el drenaje bastó— se apoyan en esa comparación.
+
+Y es la parte más barata del proyecto entero. Un análisis de suelo, unas fotos con fecha y un
+cuaderno.
+</Advertencia>
+
+## Las dos ventanas no se solapan, y eso reordena el proyecto
+
+Aquí está el problema estructural que casi nadie plantea, y que sale directamente del calendario del
+Módulo 6.
+
+<Diagrama
+  src="dos-ventanas.webp"
+  alt="Línea de tiempo horizontal con los doce meses del año rotulados de enero a diciembre. Sobre ella, dos bandas de distinto color que no se solapan: una banda azul rotulada ventana de diagnóstico que cubre de octubre a abril, y una banda ocre rotulada ventana de obra que cubre de mayo a septiembre. Entre las dos bandas, dos flechas curvas indican que el diagnóstico de una temporada alimenta la obra de la siguiente."
+  pie="Se diagnostica mojado y se construye seco. Las dos cosas nunca pueden ocurrir el mismo mes."
+/>
+
+**El diagnóstico de agua solo se puede hacer en lluvias.** Dónde se encharca, cuánto tarda en
+infiltrar, qué bajío se convierte en laguna, hasta dónde llega el agua que entra del vecino: nada de
+eso se ve en agosto. En agosto el terreno está seco y todo parece igual.
+
+**La obra solo se puede hacer en la seca.** Descompactar con suelo húmedo lo compacta más. Construir
+camas con barro es imposible. Abrir zanjas con el suelo saturado es peligroso y se derrumban.
+La <Termino slug="ventana-de-obra">ventana de obra</Termino> va de mayo a septiembre y se cierra en
+octubre.
+
+Las dos ventanas son complementarias y disjuntas. La consecuencia es incómoda pero clarificadora:
+
+**Preparar un terreno de 3.666 m² bien hecho no es un proyecto de una temporada. Es un ciclo de al
+menos dos.** La temporada de lluvias produce el diagnóstico que la seca siguiente convierte en obra.
+Quien intenta hacerlo todo en una sola seca está construyendo con el diagnóstico que no tiene.
+
+<Dato titulo="Lo cual no significa quedarse quieto un año">
+La lectura correcta no es «espera a tener datos perfectos». Es **separar lo que ya sabes de lo que
+todavía no**.
+
+Hay decisiones que ya están tomadas con lo que sabes hoy: qué árboles se quedan, dónde va la cortina
+del sur, dónde va el vivero, qué análisis pedir. Esas se ejecutan esta seca.
+
+Y hay decisiones que dependen de ver una temporada de lluvias: la red de drenaje definitiva, la cota
+exacta de las camas en las zonas dudosas, qué bajío es recuperable y cuál no. Esas se dejan
+explícitamente para la seca siguiente, **y eso es una decisión, no una postergación.**
+
+La diferencia entre las dos listas es que la segunda exige que este verano lleves un registro.
+</Dato>
+
+## Los cuatro errores de orden, y qué cuesta cada uno
+
+### Comprar enmiendas antes del análisis
+
+El más común y el más caro en dinero directo. Cal, dolomita, roca fosfórica, sacos de guano: sale
+carísimo y una parte suele no hacer falta. Peor: **encalar un suelo que no lo necesitaba es difícil
+de revertir**, porque subir el pH es fácil y bajarlo es lento y caro.
+
+El coste de un análisis de suelo es una fracción de lo que cuesta un solo camión de enmienda
+equivocada.
+
+### Construir la cama alta sobre una capa compacta sin romper
+
+<Diagrama
+  src="cama-sobre-capa-compacta.webp"
+  alt="Dos paneles con el corte de una cama alta. En el izquierdo, rotulado orden equivocado, la cama se levanta sobre una capa compacta oscura intacta: las raíces bajan por la cama, chocan con la capa y se desvían de lado, y por encima de la capa hay una lámina de agua azul retenida dentro de la cama. En el derecho, rotulado orden correcto, la capa compacta aparece rota y atravesada por grietas verticales, las raíces continúan hacia abajo y el agua sigue hacia el subsuelo."
+  pie="La misma cama, la misma inversión. La diferencia es lo que había debajo cuando se construyó."
+/>
+
+Este es el que duele, porque el trabajo está bien hecho y el resultado es malo igualmente. Una cama
+alta construida encima de una suela de labor intacta te da los treinta centímetros de la cama y **ni
+uno más**: las raíces llegan a la capa y se paran, y el agua que baja se queda retenida ahí mismo,
+así que la cama se encharca por dentro.
+
+Además la cama es lo que **impide** volver a descompactar: la máquina ya no puede entrar sin
+destruirla.
+
+<Analogia>
+Es construir encima de un bug conocido en lugar de arreglarlo.
+
+Funciona lo justo para que parezca que va bien, cuesta lo mismo que hacerlo bien, y a partir de ese
+momento la capa que lo hace fallar queda **inaccesible**.
+</Analogia>
+
+### Quemar antes de analizar
+
+Se ve en la lección siguiente en detalle, pero el problema de orden es este: **el fuego cambia la
+química del suelo que ibas a medir.** La ceniza aporta potasio y calcio y sube el pH de forma
+apreciable en los primeros centímetros. Si analizas después de quemar, el informe te describe un
+suelo transitorio que no es ni el que tenías ni el que vas a tener.
+
+Cortar no cambia la química. Quemar sí. Ese es el corte exacto: puedes desmontar antes de analizar,
+pero no puedes quemar antes de analizar.
+
+### Plantar recién encalado
+
+La cal no actúa el día que la echas: necesita estar incorporada y húmeda, y tarda **como mínimo dos
+o tres meses** en reaccionar de verdad. Si aplicas y plantas la semana siguiente, el cultivo entra
+en un suelo que todavía tiene el pH viejo y, según el material y la dosis, con concentraciones de
+calcio recién liberado poco favorables para una raíz nueva.
+
+Eso convierte el encalado en el paso con más **plazo de entrega** de toda la secuencia, y por tanto
+en el que hay que planificar primero aunque se ejecute a media lista.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Estamos a finales de julio. Las lluvias entran en octubre. Tienes unas diez semanas.**
+
+No caben las siete lecciones de este módulo en diez semanas, y forzarlo es cómo se cometen los
+cuatro errores de arriba. Lo que sí cabe es esto, y en este orden:
+
+**Semanas 1–2 — Lo que no cuesta casi nada y lo condiciona todo.**
+Amojonar y levantar un plano sencillo de los 3.666 m² con los doce lotes, los accesos y los árboles
+existentes con su porte. No hace falta topografía: cinta, estacas y un croquis a escala sirven. Como
+eres desarrollador, lo natural aquí es un plano vectorial que puedas versionar, y una capa por
+temporada; ese plano va a ser la clave de unión de todos los datos del terreno durante años.
+
+Y decidir, sobre ese plano, las cinco cosas que ya sabes del Módulo 6: qué árboles se quedan, dónde
+va la cortina del sur, dónde va la zona de endurecimiento en alto, dónde va el vivero y qué lote es
+el bajío.
+
+**Semanas 2–3 — Los hoyos y la muestra.**
+Los hoyos de 60 cm de la lección 3 del Módulo 5, uno por zona homogénea del plano, fotografiados y
+descritos. La muestra compuesta del Módulo 5, lección 8, al laboratorio. **Antes de quemar nada y
+antes de que entre ninguna máquina.** Esto tiene prioridad sobre cualquier otra tarea de la lista
+porque es lo único de todo el módulo que no se puede repetir.
+
+**Semanas 3–6 — Desmonte selectivo, sin fuego.**
+Con el plano decidido y la muestra ya tomada. La biomasa se queda en el terreno: es la lección
+siguiente.
+
+**Semanas 5–8 — Descompactar solo donde el hoyo lo pidió, y encalar si el análisis lo pidió.**
+El análisis debería estar de vuelta para entonces. Si hay que encalar, ahora es el último momento
+para que reaccione antes de las lluvias. Y si hay que contratar maquinaria, ojo con el calendario:
+estos son los meses de la campaña de invierno, cuando la maquinaria y la mano de obra están más
+demandadas y más caras en el área integrada.
+
+**Semanas 8–10 — Construir lo mínimo que tiene que estar antes de la lluvia.**
+Drenaje de las zonas que ya sabes que se encharcan, camas del vivero, riego. El vivero es lo que
+tiene que estar operativo primero, porque produce durante la seca y vende en el pico que empieza en
+septiembre.
+
+**Y a partir de octubre, la tarea de la temporada de lluvias: registrar.**
+No es tiempo muerto. Es la ventana de diagnóstico, y es la que hace que la seca de 2027 empiece con
+datos en lugar de con suposiciones. Concretamente: después de cada lluvia fuerte, foto con fecha de
+dónde queda agua y cuánto tarda en irse; anotar qué zonas se secan primero; y marcar en el plano
+cualquier encharcamiento que no hubieras previsto.
+
+Eso es, literalmente, recolección de telemetría en producción. Y es la mitad del proyecto que casi
+nadie hace.
+
+**Lo que NO conviene hacer esta seca:** pasar un rotovator a todo el terreno «para dejarlo
+parejito», rellenar el bajío, comprar enmiendas antes de que llegue el análisis, y plantar los
+frutales definitivos en zonas cuyo drenaje todavía no has visto en lluvias. Los tres primeros son
+dinero perdido; el cuarto son años perdidos.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Amojonar tiene aquí un peso que no tiene en otros sitios.** Con doce lotes contiguos, los mojones
+y los linderos no son solo referencia técnica: son la base de cualquier trámite y de cualquier
+conversación con vecinos. Antes de mover tierra en los bordes conviene tener los límites claros y,
+si es posible, acordados con los colindantes. Un lindero discutido después de haber construido es
+mucho más caro que antes.
+
+**El análisis de suelo se hace en Santa Cruz y sale relativamente barato.** Como se vio en el Módulo
+5, aquí hay laboratorios que hacen el análisis completo. Los plazos son de días o pocas semanas,
+así que si la muestra sale a principios de agosto el informe llega con tiempo para encalar antes de
+octubre. Si la muestra sale en septiembre, ya no.
+
+**La maquinaria compite con la campaña de invierno.** En el área integrada la siembra de invierno se
+concentra entre mayo y julio, y eso es exactamente cuando tú querrías contratar un tractor para
+subsolar. Buscar la ventana entre campañas, o negociar con antelación, cambia el precio de forma
+apreciable. Es un dato de logística, no de agronomía, pero mueve más dinero que muchas decisiones
+técnicas.
+
+**Y el hábito local que hay que resistir es el fuego.** El chaqueo está tan asentado que la pregunta
+no suele ser si quemar, sino cuándo. Además de lo que le hace a tu línea de base, tiene restricciones
+legales que cambian por temporada y por departamento —y en los años de incendios grandes se declaran
+prohibiciones y pausas ambientales—, así que quemar no es solo una decisión agronómica discutible:
+puede ser directamente ilegal en la fecha en que lo estabas pensando. La lección siguiente trata qué
+hacer con la biomasa en lugar de quemarla, que resulta ser bastante mejor negocio.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Primero limpio todo y luego decido.»** Limpiar todo borra el plano de información y elimina
+árboles que tardan años en reponerse. El desmonte es selectivo y va después de decidir, no antes.
+
+**«El análisis lo hago cuando ya esté preparado el terreno.»** Entonces no es una línea de base: es
+la medición de un suelo ya alterado, sin nada contra lo que compararla.
+
+**«Ya que entra la máquina, que pase por todo.»** Descompactar donde no hacía falta destruye
+estructura que estaba bien y cuesta lo mismo que hacerlo donde sí.
+
+**«Relleno el bajío y así todo el terreno es igual.»** Caro, poco efectivo, y elimina el único lote
+con vocación de reserva de agua.
+
+**«Echo cal y planto.»** La cal necesita dos o tres meses. Plantar antes es pagar la enmienda y no
+recibirla.
+
+**«Esto lo dejo listo esta seca.»** Un terreno se prepara en un ciclo de al menos dos temporadas,
+porque el diagnóstico y la obra ocurren en estaciones distintas.
+
+## Lo que sigue
+
+El primer paso irreversible de verdad es el desmonte, y es donde está la decisión que más valor
+destruye o conserva: **qué hacer con toda la biomasa.**
+
+La lección siguiente va de eso. Adelanto la conclusión porque condiciona lo que hagas en las próximas
+semanas: **quemar es tirar la mayor parte de lo que esa biomasa vale.** El nitrógeno se va por el
+aire casi entero, el carbono también, y lo que queda en la ceniza es una fracción pequeña de lo que
+tenías. Ese material, picado y devuelto al suelo, es la enmienda orgánica más barata a la que vas a
+tener acceso nunca, y ya está dentro del terreno.

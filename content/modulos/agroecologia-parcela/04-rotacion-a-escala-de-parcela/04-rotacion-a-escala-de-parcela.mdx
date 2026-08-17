@@ -1,0 +1,409 @@
+Una cama de la que acabas de cosechar no vuelve al estado en que estaba antes de sembrarla. Sale con
+menos de unos nutrientes, con la población de un hongo multiplicada por todo lo que le convino, con las
+semillas de las malezas que sobrevivieron a tu manera de trabajar y con residuo encima descomponiéndose.
+**El suelo no es un almacén sin estado: es un proceso de larga vida que guarda todo lo que le pasó**, y
+volver a sembrar lo mismo encima es reiniciar el mismo proceso sobre el mismo estado sucio.
+
+La lección anterior trabajó el eje del espacio: quién va al lado de quién en el mismo momento. Esta toma
+la misma cama y hace la otra pregunta, la del tiempo: **qué viene después, por qué, y cuánto tiene que
+pasar antes de repetir**. Eso es la <Termino slug="rotacion-de-cultivos">rotación de cultivos</Termino>,
+y no es una costumbre heredada: son seis mecanismos que se pueden nombrar, dimensionar y comprobar por
+separado.
+
+## La cama tiene memoria
+
+Un cultivo modifica el suelo en el que crece, y esa modificación **sobrevive a la cosecha**: acumula
+organismos que comen esa planta y no otras, vacía el bolsillo de nutrientes que el órgano cosechado se
+llevó, selecciona una flora de malezas concreta y deja una capa compactada o aflojada según por dónde
+exploró la raíz y por dónde pisaste. Repetir el mismo cultivo es **volver a aplicar la misma presión
+sobre las mismas variables, en la misma dirección, ciclo tras ciclo**, y nada las devuelve al centro. Es
+el monocultivo visto en el eje del tiempo, y es tan frágil por mecanismo como el del eje del espacio.
+
+<Analogia>
+Es un servicio de larga vida que nunca se reinicia y acumula estado en disco: sesiones huérfanas,
+temporales que nadie borra, una tabla de log que crece sin rotar. Cada despliegue funciona un poco peor
+que el anterior y nadie sabe por qué, porque **el problema no está en el código que se desplegó sino en
+el estado que dejó el anterior**. La rotación **no elimina ese estado: lo hace conocido y lo empuja en la
+dirección contraria a la que lo llevó el ocupante anterior.**
+</Analogia>
+
+## Mecanismo 1: dejar al patógeno sin hospedante
+
+Un patógeno de suelo especializado —un hongo de marchitez, un nematodo formador de nudos— no vive del
+suelo: **vive de una gama concreta de plantas**, su hospedante. Lo que queda entre cultivo y cultivo
+es <Termino slug="inoculo">inóculo</Termino>: la reserva de propágulos capaces de iniciar una infección
+cuando aparezca una raíz que les sirva.
+
+Ese inóculo aguanta la espera porque muchos de estos organismos fabrican
+una <Termino slug="estructura-de-resistencia">estructura de resistencia</Termino>: una forma
+deshidratada, de pared gruesa, con el metabolismo casi detenido y sin necesidad de comer, que puede
+persistir meses, años o —en los casos peores documentados del mundo— décadas.
+
+<Formula explicacion="Cada ciclo con el hospedante presente multiplica la población por un factor mayor que uno; cada ciclo sin él la multiplica por un factor menor que uno. La rotación no destruye nada: cambia el signo del exponente y deja que el tiempo trabaje.">
+inóculo final = inóculo inicial × (factor de multiplicación) ^ ciclos con hospedante × (factor de supervivencia) ^ ciclos sin hospedante
+</Formula>
+
+De ahí sale la definición operativa del capítulo.
+Llamamos <Termino slug="periodo-sin-hospedante">período sin hospedante</Termino> al tiempo que la parcela
+pasa sin ninguna planta que ese organismo pueda usar, y **es la única variable de la rotación que actúa
+directamente sobre el problema**.
+
+<Dato titulo="La vida media manda sobre el calendario">
+**La longitud de la rotación no la eliges tú: la elige el organismo más persistente que quieras
+controlar.** Si sus estructuras de resistencia caen a la mitad cada dos años, un descanso de una
+temporada no hace nada apreciable, y devolver el hospedante antes de tiempo reinicia la multiplicación
+desde un valor todavía alto.
+
+El descenso exponencial significa además dos cosas: **los primeros ciclos bajan mucho y los últimos casi
+nada**, así que hay rendimientos decrecientes; y **nunca llega a cero**, así que el objetivo no es
+limpiar el suelo sino quedar por debajo del nivel que produce daño —la lógica
+del <Termino slug="umbral-de-accion">umbral de acción</Termino> del módulo de sanidad. Cuántos ciclos
+hacen falta aquí es un dato local que este curso no va a inventar: se consulta y se comprueba midiendo.
+</Dato>
+
+<Advertencia titulo="Tres casos donde la rotación no rompe nada">
+**Uno: los organismos polífagos.** La <Termino slug="polifagia">polifagia</Termino> es comer de muchas
+familias distintas, y hay hongos de suelo y nematodos que atacan casi todo lo que tenga raíz: contra
+ellos ninguna rotación crea período sin hospedante, y las palancas son drenaje, materia orgánica,
+material sano y, en su caso, la <Termino slug="solarizacion">solarización</Termino>.
+
+**Dos: los de persistencia larguísima.** Cuando la estructura de resistencia dura décadas no existe
+rotación practicable: ninguna parcela de 3.666 m² deja de producir quince años. El caso está en el
+catálogo: **el hongo de suelo que provoca la marchitez del plátano no se maneja por rotación.** Decir lo
+contrario es venderle esperanza a quien va a perder el lote.
+
+**Tres: el hospedante que sigue ahí sin que lo veas.** Si una maleza del lote es de la misma familia, o
+si un resto de cosecha rebrota —un trozo de <Termino slug="cormo">cormo</Termino> olvidado, una guía de
+batata, un tocón de ají—, el período nunca empezó. Es purgar la caché dejando viva una réplica que la
+repuebla. **El período sin hospedante se limpia o no existe.**
+</Advertencia>
+
+Hay un cuarto caso que anula el trabajo de años: **traer el inóculo de vuelta con el material de
+siembra**. Una rotación impecable queda invalidada por un cormo comprado en el mercado que llega con lo
+que la parcela acababa de perder. La rotación y
+la <Termino slug="trazabilidad">trazabilidad</Termino> del material son la misma política vista desde dos
+lados.
+
+## Mecanismo 2: plagas especializadas y la escala del vuelo
+
+Con los insectos la rotación también funciona, pero **su dominio de validez depende de una variable que
+casi nadie declara: la movilidad.** Para un organismo que pasa una fase en el suelo y se mueve poco
+—larvas, pupas, un gorgojo que camina—, cambiar el cultivo de esa cama significa emerger rodeado de
+comida que no le sirve, y eso sí es una ruptura real. Para un adulto alado que recorre cientos de metros
+buscando por olor y por silueta, **rotar de una cama a la de al lado no es rotar: es mover el objetivo
+tres metros dentro de su radio de búsqueda**.
+
+<Analogia>
+Es la diferencia entre defenderse de un proceso que solo ataca el puerto donde ya estaba y de uno que
+escanea el rango entero: cambiar de puerto detiene al primero y no le cuesta nada al segundo. **Una
+medida de aislamiento sirve si la distancia que impone es grande comparada con el alcance del atacante.**
+</Analogia>
+
+De ahí la separación que conviene grabar: **la rotación es una herramienta de suelo antes que una
+herramienta contra plagas aéreas.** Contra lo que vuela están la dilución, la barrera y los enemigos
+naturales; contra lo que espera abajo, es la mejor herramienta gratuita que existe.
+
+## Mecanismo 3: extractores y restauradores
+
+Aquí el mecanismo es aritmética de balance de masa, y se pasa por alto porque no produce ningún síntoma
+hasta que es tarde. Todo lo que sale de la parcela como cosecha se llevó dentro los nutrientes que la
+planta había acumulado en el órgano que cortaste.
+Eso es la <Termino slug="extraccion-por-cosecha">extracción por cosecha</Termino>, y **su composición
+depende del órgano, no de la especie**: una hoja se lleva sobre todo nitrógeno, porque casi toda su
+maquinaria fotosintética es proteína; un órgano de reserva lleno de almidón se lleva mucho potasio, el
+catión que gobierna el transporte de azúcares; un fruto, proporciones intermedias con bastante fósforo.
+
+<Formula explicacion="La fertilidad de una cama es una cuenta corriente, no un depósito. Si las salidas superan a las entradas ciclo tras ciclo, el saldo baja aunque el cultivo se vea bien durante años, porque el suelo va gastando reservas.">
+balance del nutriente = entradas (fijación + abono + residuo aportado) − salidas (órgano cosechado + percolación + erosión)
+</Formula>
+
+Un cultivo **extractor** deja ese balance negativo: se lleva mucho y devuelve poco residuo. Un
+**restaurador** lo empuja hacia arriba, y hay que ser preciso con cómo. Una leguminosa aporta nitrógeno
+nuevo por fijación con sus <Termino slug="rizobios">rizobios</Termino>, pero **si la cosechas por grano
+te llevas buena parte de ese nitrógeno en el grano**: el aporte neto grande aparece cuando el tejido se
+corta y se queda, que es la lógica del <Termino slug="abono-verde">abono verde</Termino>. Una gramínea no
+aporta nitrógeno, pero aporta la otra mitad: **volumen de residuo con carbono**.
+
+Por eso el turno restaurador honesto casi nunca es una especie sola: leguminosa por el nitrógeno y
+gramínea por la biomasa, cortadas antes de que semillen y dejadas encima
+como <Termino slug="cobertura-muerta">cobertura muerta</Termino>.
+
+## Mecanismo 4: alternar la arquitectura de la raíz
+
+Cada especie explora el suelo con una geometría distinta, y esa geometría es una herramienta de
+ingeniería del perfil que se usa poquísimo. Una raíz pivotante potente atraviesa capas duras
+aprovechando grietas, y al morir y descomponerse deja un canal vertical estable con las paredes ricas en
+materia orgánica: eso es un <Termino slug="bioporo">bioporo</Termino>, infraestructura que hereda el
+cultivo siguiente. Es la <Termino slug="biodescompactacion">biodescompactación</Termino> del módulo 7
+vista como pieza de una secuencia: **el turno que rompe
+la <Termino slug="suela-de-labor">suela de labor</Termino> es el que le prepara el terreno al que viene
+detrás.**
+
+Hay un segundo servicio, muy valioso en este clima.
+Un <Termino slug="cultivo-captador">cultivo captador</Termino> se siembra para interceptar nutrientes
+móviles que si no se perderían: el nitrato mineralizado tras una cosecha viaja con el agua y se va
+por <Termino slug="percolacion">percolación</Termino> con las primeras lluvias, y una raíz densa ocupando
+ese suelo lo captura y lo devuelve al ciclo al descomponerse. **Es la diferencia entre un búfer que
+retiene y un suelo desnudo que descarga al río.**
+
+La advertencia de la lección 2 aplica igual: **la mayor parte de la raíz fina de casi cualquier especie
+vive en los primeros veinte o treinta centímetros**, y menos todavía se reparte donde
+la <Termino slug="profundidad-efectiva">profundidad efectiva</Termino> es corta. El beneficio grande está
+en los canales que quedan, no en un reparto limpio de horizontes.
+
+## Mecanismo 5: la maleza que se sincroniza con tu calendario
+
+Una maleza no prospera porque sea agresiva: prospera porque **su ciclo encaja con el tuyo**. Si siembras
+siempre en la misma fecha, escardas en el mismo momento y cosechas el mismo mes, aplicas el mismo patrón
+de disturbio año tras año, y ese patrón selecciona a las especies que germinan y semillan en los huecos
+que tu manejo deja libres.
+
+Lo que se acumula debajo es
+el <Termino slug="banco-de-semillas-del-suelo">banco de semillas del suelo</Termino>: la reserva de
+semillas viables enterradas, con latencias escalonadas, que germinan por tandas cuando la labranza las
+sube a la luz. Una sola planta que llega a semillar deposita ahí trabajo para varios años, y por eso la
+regla del módulo 7 —cortar la cobertura antes de que semille— es también una regla de rotación.
+
+Cambiar de cultivo cambia el patrón —otras fechas, otra sombra, otra labor— y **la maleza que estaba
+sincronizada deja de estarlo**. Un turno de cobertura que cierra el dosel temprano añade además la única
+presión que no depende de tu tiempo: es la manera más barata de bajar la factura
+de <Termino slug="jornal">jornales</Termino> de desmalezado, y actúa con retraso, lo que exige constancia
+y registro.
+
+## Mecanismo 6: el residuo es la interfaz entre un cultivo y el siguiente
+
+Lo que queda encima y dentro de la cama al terminar un ciclo es **la condición inicial del siguiente**,
+con tres efectos en direcciones distintas.
+
+**Efecto de la relación carbono-nitrógeno.** Un residuo
+con <Termino slug="relacion-c-n">relación C/N</Termino> alta —tallos secos, paja, rastrojo endurecido—
+provoca <Termino slug="inmovilizacion">inmovilización</Termino>: los descomponedores toman prestado el
+nitrógeno disponible para digerir tanto carbono, y durante semanas la siembra siguiente compite con
+ellos. Un residuo verde y tierno hace lo contrario. **La misma biomasa alimenta o roba según cuándo se
+cortó.**
+
+**Efecto químico específico.** La <Termino slug="autotoxicidad">autotoxicidad</Termino> —compuestos
+liberados por los residuos de una especie que inhiben a esa misma especie replantada encima— es el caso
+mejor documentado de química entre plantas y un argumento de fondo de la rotación.
+
+**Y efecto sanitario, el que más daño hace por descuido.** Un residuo enfermo dejado sobre la cama **es
+inóculo, no es abono**: sostiene al patógeno vivo justo donde intentabas dejarlo sin comida. Dejarlo
+encima, sacarlo del lote o compostarlo con un proceso que alcance temperatura se decide mirando si ese
+cultivo salió sano.
+
+## Qué familia sigue a cuál, y por qué
+
+Con los seis mecanismos encima, las reglas de precedencia dejan de ser una lista que memorizar. La
+primera y más importante: **la unidad de la rotación es la familia botánica, no la especie.**
+Una <Termino slug="familia-botanica">familia botánica</Termino> agrupa géneros emparentados que comparten
+química, anatomía y —lo que importa aquí— **buena parte de sus patógenos y plagas especializadas**,
+porque esos organismos reconocen al hospedante por señales que se conservan dentro de la familia. Pasar
+de tomate a ají dulce no es rotar: es la misma familia con otro nombre comercial, y el hongo de suelo no
+lee etiquetas.
+
+La segunda unidad útil es el **órgano cosechado**, porque determina qué se extrae y **qué operación sufre
+el suelo el día de la cosecha**: sacar un órgano de reserva subterráneo es una labranza con horquilla,
+cortar hoja no toca el suelo.
+
+De ahí salen cinco reglas con mecanismo detrás. **No repitas familia hasta agotar el período sin
+hospedante que exige el peor problema de esa familia en tu suelo**, que manda sobre todo lo demás.
+**Después de un extractor fuerte, un restaurador**, y detrás de una leguminosa cortada en verde va lo que
+más nitrógeno pide. **Alterna arquitectura de raíz y agresividad de cosecha.** **Detrás de un cultivo
+sucio de malezas, un turno que cierre dosel rápido.** **Y antes de una siembra de semilla fina, nada de
+residuo grosero fresco**, que es inmovilización, efecto físico y humedad permanente al ras —la receta
+del <Termino slug="damping-off">damping-off</Termino>.
+
+| Familia del catálogo | Especie | Órgano cosechado | Papel en la rotación |
+| --- | --- | --- | --- |
+| Aráceas | Yautía | Cormo subterráneo | Extractora, ciclo muy largo, cosecha por excavación |
+| Apiáceas o umbelíferas | Culantro | Hoja | Ciclo corto, extrae sobre todo nitrógeno, no toca el suelo |
+| Solanáceas | Ají dulce | Fruto | La familia con el historial sanitario de suelo más pesado |
+| Convolvuláceas | Batata | Raíz engrosada | Cubre el suelo, cosecha por excavación, no quiere suelo rico |
+| Fabáceas o leguminosas | Gandul, abonos verdes | Nada, o grano | Restauradora: fija nitrógeno y rompe capas duras |
+| Poáceas o gramíneas | Sorgo o maíz de cobertura | Nada | Restauradora: biomasa con carbono y raíz densa |
+| Musáceas | Plátano | Racimo | Perenne: no entra en la rotación |
+
+## Cuánto dura el ciclo y cuántos sectores hacen falta
+
+La rotación se implementa dividiendo el terreno rotable
+en <Termino slug="sector-de-rotacion">sectores de rotación</Termino>: unidades que reciben un turno
+completo y avanzan juntas. El número de sectores no se elige por gusto.
+
+<Formula explicacion="Si una familia ocupa un sector durante un turno y hacen falta tres turnos sin ella antes de volver, hacen falta cuatro sectores. El número de sectores es lo que compra el tiempo de ausencia.">
+número mínimo de sectores = turnos de ausencia exigidos + 1
+</Formula>
+
+Dos precisiones evitan el error común. **La unidad no es el año: es el turno**, porque los ciclos del
+catálogo no duran lo mismo —una arácea de nueve a doce meses ocupa el sector una temporada entera y el
+culantro cabe varias veces en ese período—. Y **varios ciclos seguidos de la misma familia dentro de su
+propio turno siguen siendo un solo turno**, pero concentran inóculo: quedarse en la misma cama todo el
+año es monocultivo a escala fina disfrazado de intensidad.
+
+Y está el costo. **Más sectores significa menos superficie por cultivo cada año**: con cuatro sectores
+cada familia dispone de la cuarta parte del terreno rotable, y uno de esos turnos no produce nada
+vendible si es el restaurador. Ahí es donde la rotación se abandona: no por ignorancia, por caja.
+
+<Advertencia titulo="La salida falsa y la verdadera">
+La salida falsa es acortar el ciclo. Volver a la misma familia un turno antes devuelve el hospedante
+cuando la reserva de inóculo todavía está alta, y eso no es «un poco peor»: es reiniciar la
+multiplicación. **Media rotación no da medio beneficio; en el mecanismo 1 no da casi ninguno.**
+
+La verdadera es reducir el número de familias que se cultivan en terreno. Con poca superficie, **tres
+cultivos bien rotados baten a seis mal rotados**, y el sitio que no alcanza para rotar bien un cultivo
+delicado es el sitio donde ese cultivo no debería estar. La otra salida es moverlo al envase, con
+sustrato de origen conocido: ahí el problema pasa a ser de sustrato y
+de <Termino slug="bioseguridad">bioseguridad</Termino>, que son otros módulos.
+</Advertencia>
+
+La asignación oportunista —«pongo esto donde haya sitio»— parece flexible y produce siempre lo mismo:
+repetir familia sin darse cuenta, porque nadie recuerda qué hubo en la cama tres del lote siete.
+**Sectores numerados, con límites reconocibles en el terreno, y un turno declarado.** La flexibilidad se
+ejerce eligiendo qué especie de la familia asignada entra, no saltándose el turno.
+
+## El registro que hace la rotación auditable
+
+Sin registro no hay rotación: hay intención. Y no es un detalle administrativo, porque **la regla se
+formula sobre un historial y no sobre el estado presente**: mirando una cama hoy no puedes saber si
+cumple, solo puedes saberlo mirando lo que hubo antes.
+
+<Analogia>
+Es un historial de migraciones. El estado actual de la base no dice qué migraciones se aplicaron ni en
+qué orden; para eso existe una tabla que las anota, y sin ella nadie puede decir si una corrió dos veces.
+
+La planilla de rotación es esa tabla, y la comprobación tiene forma de consulta: **traer los últimos
+cuatro turnos del sector tres y verificar que ninguna familia aparece dos veces.** Que la respuesta se
+obtenga en un minuto, con un cuaderno, es lo que separa una rotación real de otra que solo existe en la
+cabeza de quien la diseñó y muere el día que esa persona se va.
+</Analogia>
+
+El registro mínimo es una ficha por sector con una fila por turno, y sus columnas son: **fechas de
+entrada y salida**; **especie**; **familia botánica**, que es la que hace auditable el registro y la que
+casi todo el mundo omite; **origen del material de siembra**, con lote y procedencia, para reconstruir
+hacia atrás un problema que aparezca dentro de dos años; **operación de suelo**; **qué se hizo con el
+residuo**; **incidencias sanitarias**; y **cosecha y jornales**.
+
+Esa columna de incidencias es la que convierte la rotación en un sistema adaptativo: mirar el historial
+de un sector, encontrarlo marcado tres turnos seguidos con marchitez y alargarle en consecuencia la
+ausencia de esa familia. Sin ella, la rotación es un calendario rígido que no aprende.
+
+En papel es suficiente, y preferible a una aplicación que nadie llenará con las manos sucias. La única
+disciplina extra es el respaldo: una foto de la ficha al cerrar cada turno, porque un registro en papel
+sin copia es un <Termino slug="testigo">testigo</Termino> que se pierde con una gotera. Quien ya lleve
+la <Termino slug="bitacora-del-sistema">bitácora del sistema</Termino> del módulo 38 tiene el hábito
+montado.
+
+<ContextoBolivia>
+**El clima de la llanura cruceña hace la rotación más necesaria, no menos.** En los climas templados de
+donde vienen casi todos los manuales, el invierno impone un descanso obligatorio y muchas poblaciones de
+plagas y patógenos caen solas cada año sin que nadie haga nada. **Aquí no existe esa pausa.** Con
+temperatura alta casi todo el año hay una sucesión continua de generaciones, y la única interrupción
+disponible es la que introduzca el diseño: copiar la duración de una rotación europea es copiar una
+constante calibrada para un sistema que se reinicia solo.
+
+**El calendario local ordena la rotación en dos bloques, no en cuatro estaciones.** Las lluvias de
+octubre a abril son la ventana de crecimiento; la seca de mayo a septiembre es el hueco, cortado por
+los <Termino slug="surazo">surazos</Termino>. De ahí dos consecuencias. **El turno restaurador encaja
+naturalmente con las lluvias**, porque un abono verde necesita agua para producir la biomasa que
+justifica el turno. Y la seca sin riego es un período sin hospedante casi gratuito para algunos
+organismos, siempre que el lote quede realmente limpio: si el cultivo anterior rebrota con las primeras
+lluvias, ese descanso no ocurrió.
+
+**La descomposición aquí es mucho más rápida que en los manuales templados.** Con calor y humedad el
+residuo se mineraliza en meses en vez de años, y eso corta en dos direcciones: la inmovilización de un
+residuo grosero dura menos, pero la cobertura desaparece antes y hay que reponerla cada temporada, tal
+como estableció el módulo 7. El turno restaurador no es un lujo ocasional: en este clima es anual.
+
+**La rotación tradicional del oriente existe y es de otra escala.** La agricultura de barbecho de las
+comunidades —abrir un chaco, cultivarlo unos años y dejarlo descansar mientras el monte vuelve— es una
+rotación cuyo turno restaurador lo hace la vegetación espontánea durante años, y es la prueba de campo
+más contundente del mecanismo 3. Lo que no se puede es escalarla hacia abajo: **en 3.666 m² no hay
+superficie para dejar descansar nada varios años**, y el descanso largo hay que sustituirlo por un turno
+corto e intenso de abono verde. En los valles y en el altiplano hay además sistemas de rotación por
+sectores con descanso, gestionados colectivamente: sectores, turnos y una regla que todos respetan es
+exactamente el esquema de esta lección.
+
+**En el área integrada la rotación es práctica corriente**, con secuencias que alternan grano de verano
+con cultivos de invierno por razones sanitarias y económicas antes que ecológicas. Esa experiencia deja
+una lección aplicable a cualquier escala: **la presión para repetir el cultivo más rentable es la fuerza
+que rompe las rotaciones en todas partes.**
+
+**Y una nota de honestidad sobre las cifras.** Cuántos ciclos sin solanáceas hacen falta en este suelo,
+cuánto persiste aquí un nematodo concreto o qué cobertura suprime mejor a qué organismo son preguntas de
+respuesta local que este curso no va a inventar. Existen instituciones a las que consultarlas —el INIAF,
+el Centro de Investigación Agrícola Tropical en Santa Cruz, la Facultad de Ciencias Agrícolas de la
+UAGRM— y laboratorios de diagnóstico en la región. Lo que sí puede hacer una parcela pequeña es su propio
+registro: cinco años de doce lotes con incidencias anotadas valen más para Zanja Honda que cualquier
+número copiado.
+</ContextoBolivia>
+
+<AplicarRizoma>
+**Lo primero es admitir el reparto real del terreno.** De los 3.666 m² en 12 lotes, buena parte está o va
+a estar ocupada por cosas que **no rotan**: el plátano, los frutales injertados, los árboles de sombra,
+el cerco vivo y la infraestructura del vivero. El primer ejercicio no es diseñar una rotación bonita: es
+dibujar en el plano qué superficie es realmente rotable y aceptar ese número, que es menor de lo que
+parece.
+
+**Sobre esa superficie, la rotación que corresponde al catálogo es de cinco turnos**, uno por familia
+real más el restaurador: aráceas con yautía, solanáceas con ají dulce, convolvuláceas con batata,
+apiáceas con culantro, y un turno de leguminosa más gramínea que se corta y se queda. Cinco sectores dan
+cuatro turnos de ausencia a cada familia. Si la superficie no alcanza para cinco sectores manejables, la
+respuesta no es acortar el ciclo: es **sacar una familia del terreno**, empezando por la que peor
+historial sanitario tenga aquí.
+
+**El orden dentro del ciclo no es arbitrario.** El turno restaurador va justo antes de la yautía, la más
+exigente y la de ciclo más largo, para que cobre el nitrógeno cuando está disponible y encuentre el
+perfil abierto por la raíz pivotante del gandul. Detrás de la yautía —cosecha por excavación, suelo
+removido y pisoteado— va el ají dulce, que agradece suelo mullido y se cosecha sin tocarlo. Detrás del
+ají va el culantro, de cosecha de hoja, que da un descanso mecánico al perfil. Y la batata va antes del
+restaurador porque su cosecha es la segunda excavación del ciclo. **Cada uno de esos «porque» es
+comprobable; si no lo fuera, el orden sería decoración.**
+
+**Cuatro detalles del catálogo que rompen la rotación si se ignoran.** Uno: las aráceas ornamentales del
+vivero son la misma familia que la yautía, así que un bloque
+de <Termino slug="banco-de-plantas-madre">plantas madre</Termino> de filodendros o anturios plantado en
+terreno cuenta como turno de aráceas; es el error más fácil de cometer, porque el catálogo comercial y el
+botánico no se parecen. Dos: el culantro es la especie de
+mayor <Termino slug="rotacion-del-espacio">rotación del espacio</Termino> y la tentación es escalonar
+siembras en la misma cama todo el año; se puede, dentro de su turno, pero es un solo turno y las apiáceas
+son sensibles a nematodos. Tres: la batata rebrota de cualquier trozo de raíz o guía enterrado, así que
+**su turno solo termina cuando el lote está realmente limpio**. Y cuatro: el ají dulce no va donde hubo
+otra solanácea el turno anterior aunque el nombre comercial sea distinto —tomate, berenjena, papa.
+
+**Con los perennes hay que decir la verdad: no rotan, y el mecanismo 1 no está disponible para ellos.**
+Lo que se hace en su lugar son cinco cosas. **Rota el sotobosque, no el árbol**: bajo el plátano y bajo
+los frutales el estrato bajo sí alterna entre culantro, cobertura y descanso, y lo que no entra nunca ahí
+es un cultivo de cosecha por excavación. **Diversidad en el espacio en lugar del tiempo**, con el plátano
+repartido en bloques discontinuos en vez de un macizo único. **Todo el peso de la prevención se mueve al
+control de entrada** —material de origen conocido, cuarentena, control de herramientas, de calzado y del
+agua que escurre entre lotes—, porque cuando no puedes quitar el hospedante lo único que queda es no
+dejar entrar al patógeno. **Rotación de ciclo largo**, con la unidad puesta en la vida útil de la
+plantación: cuando un bloque de plátano decline y se levante, lo que sigue no es plátano sino un turno
+restaurador largo y después otra familia. Y **no replantar en el mismo hoyo**, ni un frutal ni una mata,
+porque ahí se junta lo peor de dos mundos —inóculo acumulado y autotoxicidad.
+
+**La ficha por sector es un producto de Rizoma, no un papel interno.** Una ficha por sector con su
+historial de turnos y su columna de familia botánica, colgada donde se trabaja y fotografiada al cerrar
+cada turno, es lo que permite contestar en un minuto si el sector tres puede recibir ají este año. Y
+—siendo este un proyecto comunitario y gratuito— es **la parte más fácil de regalar**: un vecino con
+veinte metros cuadrados no puede copiar una instalación, pero sí una tabla de cinco columnas y la regla
+de no repetir familia.
+
+**Y una advertencia propia del sitio.** El terreno manda también aquí:
+con <Termino slug="arcilla-expansiva">arcillas expansivas</Termino> y encharcamiento en las partes bajas,
+un sector que se encharca no debería recibir en lluvias a las especies que mueren con la raíz en agua
+—el gandul y el ají dulce están en esa lista—, y eso puede obligar a desincronizar los turnos entre
+sectores. Es legítimo; lo que no lo es, es resolverlo repitiendo familia. Se anota el desvío en la ficha
+con su motivo.
+</AplicarRizoma>
+
+## Lo que sigue
+
+Ya están los dos ejes del diseño: el espacio quedó en las lecciones 2 y 3, y el tiempo —qué viene después
+de qué, cuánto dura la ausencia, cuántos sectores hacen falta y cómo se audita— queda aquí. Pero esta
+lección terminó chocando contra el límite honesto del catálogo: **buena parte de lo que Rizoma produce es
+perenne y no rota**, y esa parte no es un residuo del diseño, es su estructura.
+
+La siguiente lección, **05-el-arbol-como-estructura**, se ocupa de eso: estratificación vertical, calidad
+de la sombra moteada, amortiguación de la temperatura y del viento del surazo, bombeo de nutrientes desde
+horizontes profundos y la poda como perilla de control de la luz, con los arreglos agroforestales
+aplicados a gandul, plátano y el sotobosque de yautía y culantro.

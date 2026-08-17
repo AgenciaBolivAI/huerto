@@ -1,0 +1,472 @@
+Hiciste la pila y llegó a temperatura. Armaste el lecho y cosechaste humus. Capturaste microorganismos,
+fermentaste bocashi y llenaste un bidón. Queda la pregunta que el módulo no puede esquivar sin volverse
+un catálogo de recetas: **¿alguno de estos preparados está haciendo algo en tu parcela?**
+
+Casi todo el que los fabrica dirá que sí, y casi todos serán sinceros. El problema no es la mentira: es
+que **"yo lo vi funcionar" es una afirmación sobre lo que percibiste, no sobre el preparado**. Esta
+lección enseña a convertir una impresión en un dato que aguante, con lo que cabe en una parcela y en una
+planilla. No hay estadística más allá de restar promedios: hay disciplina de diseño, que es donde de
+verdad se gana o se pierde.
+
+## Por qué "yo lo vi funcionar" casi nunca es un dato
+
+Cuatro mecanismos fabrican la sensación de éxito sin que el preparado haya hecho nada, y operan a la vez.
+
+**El primero es cuándo decidiste aplicar.** Nadie aplica biol a la cama espléndida: se aplica a la
+amarilla, a la que preocupa. Y una cama en su peor momento tiende a mejorar sola, porque llovió, porque
+bajó el calor, porque la plaga completó su ciclo. A ese retorno hacia el promedio se lo llama <Termino
+slug="regresion-a-la-media">regresión a la media</Termino>, y es la máquina más eficiente que existe
+para adjudicarle méritos a lo que se aplicó justo antes.
+
+**El segundo es que nunca aplicas solo el preparado.** Vas más seguido a mirar el bloque tratado, lo
+desmalezas mejor, notas antes la falta de agua. **La atención es un tratamiento**, y va pegada al
+preparado como una sombra.
+
+**El tercero es el <Termino slug="sesgo-de-confirmacion">sesgo de confirmación</Termino>**: cuando
+esperas un resultado, el ojo lo encuentra. "Se ve más verde" no es una medición, es una interpretación,
+y la hace alguien que ya sabe qué balde regó ahí. **Y el cuarto es el trabajo invertido**: quien acarreó
+estiércol seis sábados tiene un costo hundido, y admitir que no sirvió cuesta bastante más.
+
+<Analogia>
+Es exactamente **"reinicié el servidor y se arregló"**. El servicio venía degradándose, alguien
+reinició, el servicio mejoró, y adjudicárselo al reinicio se apoya solo en el orden temporal.
+
+Hay una pista de que la conclusión es floja: **nadie miró el gráfico de la semana anterior**, donde se
+vería que el servicio hace ese pico y baja solo todos los martes. La línea base es lo que convierte una
+observación en evidencia, y en la parcela se llama <Termino slug="testigo">testigo</Termino>.
+
+El agrónomo aficionado y el que depura en producción cometen el mismo error: **cambian varias cosas a la
+vez, no registran el estado previo y adjudican la mejora al último cambio**.
+</Analogia>
+
+## La métrica se escribe antes de empezar
+
+La primera decisión no es qué aplicar: es **qué número vas a mirar y cuándo**, escrito antes de aplicar
+nada. Una <Termino slug="metrica-prespecificada">métrica prespecificada</Termino> se fija por escrito
+antes de ver los datos, y su valor no es burocrático: es lo único que impide que después elijas, entre
+las diez cosas que observaste, la que salió a favor.
+
+Ese es el fallo silencioso de casi todos los ensayos caseros. Mediste altura, color, número de hojas,
+peso, días a cosecha, plantas perdidas y tamaño de fruto. Con siete variables y un efecto nulo, **la
+probabilidad de que alguna salga favorable por puro azar es alta**, y es la que contarás en la reunión.
+No hiciste trampa: elegiste después.
+
+Una métrica utilizable tiene tres propiedades. **Se cuenta o se pesa, no se aprecia**: kilos por cama,
+plantines aptos de trasplante a los treinta días, plantas muertas sobre plantas puestas, hojas con
+lesión sobre hojas revisadas. **Tiene una definición operativa que otro aplica sin llamarte**: "vendible"
+es una frase concreta, decidida antes y no retocada a mitad de temporada. Y sobre todo **es la que
+decide**: si el resultado no va a cambiar lo que haces el año que viene, no vale medirlo.
+
+<Analogia>
+Prespecificar la métrica es **escribir el test antes que el código**. Si escribes el `assert` después de
+ver la salida, el test pasa siempre y no comprueba nada: describe lo que ocurrió. Un criterio de éxito
+redactado después de la cosecha hace eso mismo, **documenta el resultado y lo llama predicción**.
+
+Y hay una versión peor, la de *"el benchmark que elegimos es el que ganamos"*: correr veinte pruebas y
+publicar la que favorece tu rama. En la parcela ese cajón se llama "esa cama no la conté porque tuvo un
+problema".
+</Analogia>
+
+## El testigo: contra qué se compara
+
+El testigo es la unidad que no recibe el preparado, y **hay tres posibles, cada uno respondiendo a una
+pregunta distinta**. Contra **nada** responde "¿aporta algo?". Contra **la práctica actual** responde
+"¿me conviene cambiar?". Contra **el insumo comprado equivalente**, "¿me conviene fabricarlo?". La
+segunda es casi siempre la pregunta real, y la primera es la que casi todos ensayan.
+
+Hay una trampa específica de los líquidos. Un biol se aplica diluido: veinte litros de agua con uno de
+fermentado. Si el testigo no recibe nada, comparas *agua más fermentado* contra *nada*, y en plena seca
+cruceña **el agua sola explica la diferencia entera**. El líquido que transporta el producto es
+el <Termino slug="vehiculo-de-aplicacion">vehículo de aplicación</Termino>, y hay que dárselo también al
+testigo.
+
+<Advertencia titulo="El testigo recibe todo menos el ingrediente">
+Mismo volumen de agua, el mismo día y a la misma hora. Mismo desmalezado, misma cobertura, mismo riego,
+mismo origen de plantines, misma fecha, misma persona. Si el preparado va con mochila, por el testigo
+también pasa la mochila —con agua— y también se camina entre sus plantas: **la caminata, la pisada y la
+atención son tratamiento** si solo ocurren de un lado.
+
+Un caso concreto: comparar bocashi contra nada no dice si el inóculo sirve, porque el bocashi además
+aporta materia orgánica y nutrientes. Si la pregunta es sobre los microorganismos, el testigo correcto
+es **la misma cantidad del mismo material sin inocular**, y montarlo así en una finca es difícil. Cuando
+no puedas armar el testigo que aísla el mecanismo, dilo: **tu ensayo responde "el paquete completo
+sirve", no "el microorganismo sirve"**, y son afirmaciones muy distintas al recomendarle algo a alguien.
+</Advertencia>
+
+## La variabilidad del terreno, y cómo medirla antes de creer nada
+
+Dos camas contiguas sin ningún tratamiento **no rinden lo mismo**. Nunca. Cambia la textura en pocos
+metros, hubo un montón de basura vieja hace diez años, la sombra del árbol cae en una y no en la otra,
+la manguera llega con más presión al primer bancal. En una llanura aluvial esa variación puede ser
+enorme, y es el ruido de fondo contra el que compite cualquier efecto.
+
+De ahí la maniobra más barata de la lección y la que casi nadie hace: **el <Termino
+slug="ensayo-en-blanco">ensayo en blanco</Termino>**. Antes de probar nada, divide una superficie en
+seis parcelas, **no trates ninguna**, y mide la métrica en las seis exactamente como piensas medirla
+después. La diferencia entre esas seis parcelas idénticas es tu ruido, y fija el piso de lo que puedes
+afirmar.
+
+<Analogia>
+Es medir la varianza del entorno antes de comparar dos versiones. Si corres el mismo *commit* diez veces
+en la misma máquina y los tiempos van de 4,2 a 5,1 segundos, **una mejora de 200 milisegundos no
+existe**: está por debajo del ruido de tu banco de pruebas.
+
+En la parcela el banco de pruebas es el suelo y el ruido es la heterogeneidad. **El ensayo en blanco es
+correr la línea base contra sí misma**, y su resultado suele ser incómodo: descubres que dos camas
+gemelas difieren un 25 %, y ya sabes que el ensayo que ibas a montar no habría detectado el 10 % que
+esperabas.
+</Analogia>
+
+Contra ese ruido hay una sola defensa: **repetir**. Y aquí aparece el error de conteo del módulo 18, que
+es letal. Si aplicas el preparado a una cama entera y dejas otra de testigo, tienes **una** repetición
+por lado, midas veinte plantas o doscientas: el tratamiento se aplicó una sola vez de forma
+independiente, así que la <Termino slug="unidad-experimental">unidad experimental</Termino> es la cama,
+no la planta. Contar las plantas como repeticiones
+es <Termino slug="pseudorreplicacion">pseudorreplicación</Termino> e **infla la confianza sin aportar
+información**. Un ensayo con dos camas es una anécdota con planilla.
+
+## Bloques: usar la desigualdad del terreno en vez de sufrirla
+
+Repetir cuatro veces en un terreno con gradiente no basta, porque el gradiente puede repartirse mal. Lo
+resuelve el <Termino slug="bloqueo-experimental">bloqueo</Termino>: agrupar las unidades en conjuntos
+pequeños e **internamente parecidos** —misma distancia a la llave, misma sombra, mismo suelo, misma
+fecha— y meter **una unidad de cada tratamiento dentro de cada bloque**. La comparación se hace dentro
+del bloque, donde las condiciones son casi iguales, y después se promedian las diferencias. El bloqueo
+no elimina la heterogeneidad: **la saca de la comparación**. Si el bloque 1 está en la parte alta y
+arenosa y el bloque 4 en el bajío, no importa: cada uno se compara consigo mismo.
+
+<Analogia>
+Es comparar dos versiones **en la misma máquina y en la misma ventana horaria**, en vez de una en el
+servidor nuevo y otra en el viejo. El error clásico de banco de pruebas —la rama A corrió en la máquina
+rápida— es literalmente **el bloque tratado que es también el más cercano a la llave de agua**.
+
+No hay análisis posterior que lo arregle, porque el efecto del tratamiento y el del riego están sumados
+en el mismo número y no existe forma aritmética de separarlos. Eso es
+una <Termino slug="variable-de-confusion">variable de confusión</Termino>, y es la causa número uno de
+conclusiones entusiastas y falsas.
+</Analogia>
+
+Tres reglas prácticas. **Bloques compactos**: cuanto más pequeño y junto, más parecidas son sus
+unidades. **Bloques cruzados al gradiente**: si el terreno se inclina o se seca de norte a sur, los
+bloques atraviesan esa dirección en vez de seguirla. Y **un factor por vez**: si cambias bocashi y
+densidad de siembra a la vez y sale mejor, no sabes cuál lo hizo.
+
+## Aleatorizar: la defensa contra lo que no sabes que existe
+
+Dentro de cada bloque, **cuál unidad recibe el tratamiento se sortea**: una moneda, papelitos en una
+gorra, la función aleatoria de la planilla. No se elige, no se pone "la de la izquierda siempre" y no se
+alterna con un patrón fijo, porque un patrón fijo puede coincidir con un patrón del terreno —la fila de
+riego, la sombra de los postes— y meterte la confusión otra vez por la ventana.
+
+El mecanismo de la <Termino slug="aleatorizacion">aleatorización</Termino> merece entenderse, porque no
+es superstición. El bloqueo te protege de las diferencias que **conoces y puedes listar**; la
+aleatorización, de las que no: convierte cualquier diferencia sistemática que no anticipaste en ruido
+repartido entre los grupos, en lugar de dejarla alineada con el tratamiento. **Es lo único que trabaja
+contra los factores que ni siquiera sabes nombrar.**
+
+Y no se aleatoriza solo la posición: también **el orden de aplicación**, **el orden de medición** y, si
+hay varias personas, **quién mide qué**. Si siempre mides primero el tratado y a las dos horas el
+testigo, mediste también el calor del mediodía.
+
+## Cuántas unidades hacen falta, sin estadística
+
+La precisión con la que conoces un promedio mejora con la raíz cuadrada del número de repeticiones.
+
+<Formula explicacion="La incertidumbre del promedio baja con la raíz de n, no con n. Para tener la mitad de error necesitas cuatro veces más unidades, y para la décima parte, cien veces más. Esto es lo que fija el techo de lo que una parcela chica puede detectar.">
+error del promedio ≈ variabilidad entre unidades ÷ √(número de repeticiones)
+</Formula>
+
+Dale la vuelta y sale la única cuenta que importa: **cuanto más ruidoso el terreno y más pequeño el
+efecto que buscas, más repeticiones necesitas, y muy rápido**.
+
+<Dato titulo="Lo que una parcela chica puede y no puede detectar">
+Con cuatro a seis bloques bien hechos, un ensayo de finca detecta con comodidad **efectos grandes**: del
+orden del 30 al 50 % de diferencia. Es la escala de lo que hace un compost aplicado en volumen sobre un
+suelo pobre, y por eso esos efectos se ven a simple vista. **Efectos del orden del 5 o el 10 % son
+inalcanzables** en una parcela chica en una sola temporada: necesitarían decenas de repeticiones.
+
+De ahí una decisión que se toma **antes** de montar nada: escribe cuál es el <Termino
+slug="efecto-minimo-relevante">efecto mínimo relevante</Termino>, la diferencia más pequeña que
+**cambiaría tu decisión**. Si con un 8 % más de rendimiento igual no vas a seguir haciendo el preparado
+porque no paga los jornales, tu ensayo solo necesita distinguir el 25 %, y eso sí es alcanzable. Si
+necesitas ver un 5 %, **el ensayo no es viable en tu parcela y montarlo gasta una temporada para obtener
+un resultado ilegible.**
+
+La salida honesta cuando el efecto buscado es pequeño no es más planilla: es **más parcelas**. Diez
+vecinos haciendo la misma comparación con el mismo protocolo son diez repeticiones, y repartidas por
+suelos y manos distintas. Ese es, literalmente, el poder estadístico de una comunidad organizada.
+</Dato>
+
+## Medir a ciegas, porque el que aplicó quiere que funcione
+
+El que fabricó el biol tiene una hipótesis y unas ganas, y ninguna se apaga sola al momento de medir.
+Por eso **el sesgo entra por la medición más que por la aplicación**.
+
+La <Termino slug="medicion-a-ciegas">medición a ciegas</Termino> es medir sin saber qué tratamiento
+recibió lo que mides, y se consigue con tres maniobras baratas. **Codificar las unidades**: cada parcela
+lleva una etiqueta neutra —A3, B1, C2— y la correspondencia vive en un papel guardado que no se mira
+hasta terminar de medir. **Medir con instrumento y no con criterio**: una balanza no tiene expectativas,
+un conteo de frutos tampoco; "se ve más sana" sí. Y **que mida otra persona**, idealmente alguien que no
+participó en el armado. Para lo que sí requiere juicio —color, vigor, síntomas— sirve la foto con
+encuadre fijo: se fotografía cada parcela igual, se guardan las imágenes con el código, **se barajan** y
+se evalúan todas juntas al final.
+
+La <Termino slug="repetibilidad-de-la-medicion">repetibilidad de la medición</Termino> marca el piso de
+lo afirmable: si dos personas difieren en tres centímetros midiendo la misma planta, **una diferencia de
+dos centímetros entre tratamientos no existe**, por mucho que el promedio la muestre.
+
+<Analogia>
+Es el *benchmark* ejecutado por el autor de la optimización. Nadie duda de su honestidad: se duda del
+procedimiento. El autor decide cuándo la máquina está "en condiciones", qué corrida fue "rara" y cuándo
+parar de medir, y esas microdecisiones tienen dirección. Por eso las revisiones serias **anonimizan las
+ramas antes de evaluar los resultados**. En la parcela el equivalente es un papelito doblado con la
+clave de los códigos: cuesta cero y es la mayor mejora de calidad que puedes meterle a un ensayo.
+</Analogia>
+
+## Lo que la parcela real te va a hacer igual
+
+Un ensayo de campo transcurre dentro del mundo, y el mundo interfiere. Conviene decidir de antemano qué
+se hace en cada caso, porque decidirlo después es elegir el resultado.
+
+**El evento que golpea a todos por igual no invalida el ensayo: le cambia el alcance.** Si un surazo
+entra en junio y pega en las diez parcelas, el ensayo sigue valiendo, pero ahora responde "en una
+temporada con surazo en junio". Se anota y se dice así.
+
+**El evento que golpea desigual sí lo arruina.** Si el anegamiento tomó tres parcelas y dos eran del
+tratado, no hay forma de separar el efecto: lo correcto es **declararlo perdido y repetirlo**, no
+descartar "las camas que tuvieron un problema", porque descartar selectivamente es la forma más eficaz
+de fabricar el resultado que esperabas. **Y una temporada es una muestra de tamaño uno en clima**: un
+preparado que "funcionó" una temporada tiene, en el mejor de los casos, una observación.
+
+## "No detecté diferencia" no es "no hay diferencia"
+
+Un ensayo con dos camas y un terreno ruidoso **no podía detectar nada**; que no encuentre diferencia no
+significa que el preparado no sirva, sino que el instrumento no tenía resolución. Confundirlo es tan
+malo como el entusiasmo: se descarta un preparado bueno con la misma ligereza con que se adopta uno
+inútil.
+
+Lo que convierte un resultado negativo en información es haber calculado antes qué podías ver. Entonces
+puedes decir la frase completa, la única honesta: **"con seis bloques habría visto una diferencia del
+25 %; observé un 3 %; si hay un efecto está por debajo del 25 %, y por debajo del 25 % no me paga el
+trabajo"**. Eso ya no es un resultado inconcluso: **es una decisión fundamentada**.
+
+<Analogia>
+"No hay errores en el log" no es "no hay errores". Puede que no estuvieras registrando ese nivel, que el
+disco se llenara, que el error ocurra en una ruta sin instrumentar. **La ausencia de señal en un
+instrumento que no mide esa señal no informa de nada.**
+
+Es la misma distinción que entre "los tests pasan" y "el código es correcto": los tests que pasan solo
+dicen que **esos** tests no lo atraparon. La cobertura de un ensayo agrícola es su tamaño y su diseño;
+sin eso, un resultado nulo es un test vacío que pasa.
+</Analogia>
+
+## Cuando la diferencia es real pero no paga
+
+Suponte lo contrario: la diferencia existe y la mediste bien. Falta la segunda pregunta, económica, que
+casi nadie hace después de festejar. **Una diferencia real puede ser demasiado pequeña para pagar el
+trabajo que cuesta.**
+
+<Formula explicacion="Compara lo que el efecto vale con lo que cuesta producirlo, en la superficie real que vas a tratar. Si el resultado es negativo, el preparado funciona y aun así no conviene: son dos afirmaciones compatibles y hay que decir las dos.">
+valor del efecto = diferencia por m² × superficie tratada × precio o valor de uso
+costo del efecto = jornales × tarifa + acarreo + insumos + espacio ocupado
+</Formula>
+
+Y hay un tercer término que decide más que los otros dos: el <Termino
+slug="costo-de-oportunidad">costo de oportunidad</Termino> de esas mismas horas. La comparación
+verdadera nunca es "preparado contra nada", es **"preparado contra el mejor uso alternativo de esos
+jornales"**: arreglar el gotero que pierde, poner cobertura, hacer una pila más grande y mejor operada,
+enseñarle a un vecino. Un preparado que mejora un 12 % puede perder limpiamente contra tapar el suelo,
+que no cuesta jornales todas las semanas.
+
+Un caso aparte: **los efectos que no caben en una temporada**. La materia orgánica de un suelo tropical
+sube despacio y su beneficio aparece en años; medir eso con el rendimiento de una campaña es usar un
+instrumento sin resolución. La salida no es creer sin medir, sino **cambiar la métrica por una intermedia
+y más sensible**: materia orgánica en el <Termino slug="analisis-de-suelo">análisis de suelo</Termino>,
+agua retenida, velocidad de <Termino slug="infiltracion">infiltración</Termino>, profundidad de raíz.
+Son medibles, cambian antes que el rendimiento y se siguen año a año.
+
+## Los preparados del módulo, ordenados por fuerza de evidencia
+
+No todos merecen el mismo esfuerzo de comprobación. **Ensaya donde la evidencia es débil y el costo
+alto; no gastes una temporada demostrando lo obvio.**
+
+| Preparado | Mecanismo | Fuerza de la evidencia | ¿Vale ensayarlo? |
+| --- | --- | --- | --- |
+| **Compost termófilo en volumen** | Aporta masa de materia orgánica | Muy fuerte, efecto grande en suelo pobre | Poco: mide el suelo, no lo pongas a prueba |
+| **Humus de lombriz en sustrato** | Estructura y retención del sustrato | Fuerte, depende de la mezcla | Sí, como formulación de mezcla |
+| **Bocashi como aporte** | Materia orgánica en ciclo corto | Media, muy variable con la receta | Sí, contra compost a igual masa |
+| **Inóculo como microbiología** | Organismos que se establezcan | Débil e inconsistente | Sí, y es donde más falta hace |
+| **Biol como bioestimulante** | Señales y micronutrientes | Débil, muy dependiente del contexto | Sí: candidato número uno |
+| **Biol como fertilizante** | — | Refutado por balance de masa | No: es aritmética, no ensayo |
+| **Caldo mineral como fungicida** | Biocida de mecanismo conocido | Fuerte en eficacia | No sobre si mata; sí sobre si hacía falta |
+
+Dos criterios explican la tabla entera. **La plausibilidad del mecanismo**: si un preparado promete
+aportar nutrientes en cantidad y la lección 01 ya demostró con conservación de masa que no puede, no
+hace falta ensayo, hace falta la cuenta. Y **el tamaño esperado del efecto frente a lo que puedes
+detectar**: aportar toneladas de materia orgánica da un efecto grande y visible; una señal en partes por
+millón da uno pequeño y variable, y **ese es justo el caso donde la impresión personal falla más y el
+ensayo vale más**.
+
+## Qué hacer cuando el ensayo dice que no aporta nada
+
+Antes de tirar el preparado, tres comprobaciones ordenan la conclusión. **¿El ensayo podía ver algo?** Si
+el efecto detectable era del 40 % y el plausible del 15 %, el resultado no dice nada del preparado: dice
+que el ensayo fue chico. **¿El preparado estaba vivo y bien hecho?** Un inóculo guardado tres meses al
+sol es materia orgánica muerta, y si comparaste un producto degradado contra nada, mediste tu
+almacenamiento.
+
+**¿Y había otro <Termino slug="factor-limitante">factor limitante</Termino> tapando el efecto?** Es
+la <Termino slug="ley-del-minimo">ley del mínimo</Termino> aplicada al ensayo: con el suelo compactado y
+la raíz sin bajar, ningún bioestimulante se nota, igual que optimizar la consulta no acelera nada
+cuando el <Termino slug="cuello-de-botella">cuello de botella</Termino> es el disco. La conclusión
+correcta es "no aporta **en estas condiciones**", y se repite cuando el limitante esté resuelto.
+
+Superadas las tres, queda aceptarlo, y ahí la dificultad ya no es técnica. Soltar un preparado que
+defendiste en un taller cuesta, y hay una manera de que cueste menos: **el resultado negativo tiene valor
+comunitario propio**. Publicar "lo probamos dos temporadas con seis bloques y no encontramos diferencia
+por encima del 25 %" le ahorra a cada vecino una temporada de trabajo. Con dos límites: **un resultado
+local es local** —"no funcionó en este suelo, con este manejo, esta temporada", no "no sirve"— y **la
+mano de obra liberada tiene que ir a algo**, casi siempre a la pila de compost, que es lo que sí mueve
+la aguja.
+
+## El registro que sirve dentro de cinco años
+
+Un ensayo sin registro es una conversación. Lo que lo convierte en conocimiento acumulable cabe en una
+hoja y se llena mientras se hace, no después.
+
+Va la **pregunta** en una frase y el **testigo** elegido. La **métrica prespecificada** con su definición
+operativa y el efecto mínimo relevante, escritos antes de aplicar. El **protocolo**: qué tanda se usó,
+con fecha y materias primas, dosis, dilución, equipo y horario. El <Termino
+slug="croquis">croquis</Termino> con la posición real de cada unidad y su código, que es la parte que
+todos saltan y la única que permite descubrir cinco años después que el bloque tratado era el de la
+llave. Las **fechas de todas las operaciones**, a los dos lados. Los <Termino slug="datos-crudos">datos
+crudos</Termino>, **una fila por unidad y por fecha, nunca solo el promedio**, porque un promedio no se
+puede reanalizar y una tabla de filas sí. Las **incidencias**, incluidas las unidades perdidas: los
+ceros que no se anotan son el <Termino slug="sesgo-de-supervivencia">sesgo de supervivencia</Termino>
+entrando por la puerta de servicio. Y al final **el resultado y la decisión tomada**.
+
+Tres reglas de forma que el módulo 39 justificará: **texto plano o planilla simple**, no un formato que
+dependa de un programa que en cinco años no abra; **códigos y unidades estables**, definidos una vez —"un
+balde = el balde azul lleno hasta el borde"—; y **una copia fuera del predio**, porque el cuaderno único
+es un respaldo no verificado. Más la regla de fondo: **la hoja tiene que ser la misma para todos**. Si
+diez familias usan el mismo formato, sus resultados se suman; si cada una inventa el suyo, se pierden.
+
+<ContextoBolivia>
+**El calendario manda sobre el diseño del ensayo mucho más que en clima templado.** En la llanura
+cruceña las lluvias van de octubre a abril y la seca de mayo a septiembre, y son dos mundos distintos
+para cualquier preparado: en la seca el agua es el limitante y cualquier líquido aplicado mejora algo,
+con lo que un ensayo sin testigo regado exagera; en lluvias hay agua de sobra y aparecen la lixiviación
+y los hongos, y el mismo preparado puede dar el resultado contrario. **Un ensayo hecho en julio no
+responde a la pregunta de enero**, y decir en qué estación se hizo no es un detalle del acta: es parte
+del resultado. Un preparado que se quiere adoptar todo el año necesita, como mínimo, una ronda por
+estación.
+
+**Los surazos son el confusor cruceño por excelencia.** Una irrupción de aire frío del sur baja la
+temperatura nocturna a valores de un dígito y trae viento fuerte durante dos o tres días, con efecto
+inmediato sobre un cultivo tierno. Como llega sin aviso y en cualquier momento de la seca, es el evento
+que más ensayos parte por la mitad en esta región. Bastan dos precauciones: **anotar la fecha y duración
+de cada surazo en la misma planilla del ensayo**, y verificar si golpeó parejo a todos los bloques o si
+el reparo de un cerco protegió a unos y no a otros. En el segundo caso el ensayo está perdido, y decirlo
+a tiempo vale más que salvarlo con explicaciones.
+
+**La heterogeneidad del suelo aluvial obliga a bloquear en serio.** La llanura del área integrada se
+construyó por sedimentación de cauces que cambiaron de sitio, así que en pocos metros aparecen una lente
+arenosa y una franja arcillosa, y las arcillas expansivas 2:1 se agrietan y se cierran de forma distinta
+según esa textura. **Es la razón por la que aquí el ensayo en blanco no es opcional**: conocer el número
+propio de variabilidad separa un programa de ensayos serio de una colección de impresiones.
+
+**Y hay una vía institucional que conviene usar y que este texto no puede sustituir.** En el departamento
+existen universidades con carreras agronómicas, centros de investigación agrícola y laboratorios de
+suelos a los que se puede consultar servicios y costos, y programas que ya han ensayado bioinsumos en
+condiciones locales. **Lo honesto es preguntar antes de ensayar**: puede que la pregunta ya tenga
+respuesta local y una llamada ahorre dos temporadas. Este curso no puede darte cifras de rendimiento,
+protocolos oficiales ni requisitos de trámite sin inventarlos; para eso están esas instituciones y, si
+alguna vez se piensa en vender o distribuir un preparado envasado, la autoridad de sanidad agropecuaria
+competente y un contador local.
+</ContextoBolivia>
+
+<AplicarRizoma>
+**Rizoma tiene una ventaja experimental que casi ninguna finca chica tiene: doce lotes contiguos.** Doce
+unidades separadas administrativamente pero juntas en el terreno son el material natural para bloquear.
+La forma de aprovecharlo es no tratar lotes enteros —eso da una repetición por tratamiento, la anécdota
+con planilla— sino **partir cada lote en parcelas de ensayo y tratar un bloque por lote**, con el sorteo
+dentro de cada bloque. Cuatro lotes bloqueados dan cuatro repeticiones reales con muy poco trabajo extra
+respecto de tratar dos lotes enteros mal.
+
+**El gradiente conocido del sitio ya dice cómo orientar los bloques.** En estos 3.666 m² hay al menos
+tres variaciones sistemáticas: la distancia a la llave de agua, la sombra de los árboles existentes y la
+parte que se encharca en lluvias frente a la que drena. Los bloques se arman **atravesando** esas
+direcciones, no siguiéndolas. Y el bloque del punto bajo se anota como tal: si en enero se anega, ya
+está decidido de antemano cuál se descarta y por qué.
+
+**El primer ensayo del proyecto no debería ser un tratamiento, sino el ensayo en blanco.** Seis parcelas
+iguales, ningún tratamiento, la misma métrica que se piensa usar después —kilos de culantro por parcela,
+o plantines aptos de trasplante a los treinta días— y medir. Esa diferencia entre parcelas gemelas **es
+el activo experimental más valioso que Rizoma puede tener en su primer año**, porque a partir de ella
+cada ensayo futuro se dimensiona en vez de improvisarse. Cuesta una temporada de mediciones y ningún
+insumo.
+
+**El catálogo indica dónde poner los ensayos.** El culantro y el ají dulce son de ciclo corto, alta
+densidad y cosecha repetida: dan resultado en semanas y permiten varias rondas por año. Los plantines
+del vivero son todavía mejores para probar sustratos y bioestimulantes, porque son **cientos de unidades
+casi idénticas sembradas el mismo día**, y esa uniformidad es lo que baja el ruido. En cambio el plátano,
+la yautía y los frutales injertados tienen ciclos largos y mucha variabilidad entre plantas: **ahí un
+ensayo honesto es de años**, y hay que decirlo antes de empezar.
+
+**Con lo que el módulo ya decidió, la lista de ensayos que valen la pena es corta.** Primero, **biol
+contra su propio vehículo** —la misma agua, el mismo día— en plantines de vivero, donde el bioestimulante
+tiene más posibilidad de mostrarse y la unidad experimental es barata. Segundo, **bocashi contra compost
+a igual masa aplicada**, que responde la pregunta económica real: si el bocashi de tres semanas rinde
+como el compost de cuatro meses, cambia toda la planificación de mano de obra. Tercero,
+**microorganismos capturados contra el mismo sustrato sin inocular**, sabiendo de antemano que ese
+testigo es difícil de armar bien. Lo que **no** hace falta ensayar es si el compost aplicado en volumen
+mejora un suelo pobre: eso se monitorea con análisis de suelo periódicos.
+
+**La medición a ciegas es factible aquí y hay que institucionalizarla desde la primera vez.** Las
+parcelas se etiquetan con códigos neutros, el papel con la clave queda guardado, y **mide alguien que no
+armó el preparado**: un voluntario, un vecino, un participante del taller. En un proyecto donde el mismo
+grupo fabrica, aplica y evalúa, esto no es desconfianza: es la única forma de que el resultado le sirva a
+quien no estuvo ahí, y enseñar a medir a ciegas es enseñar el método entero.
+
+**El encuadre comunitario es lo que le da su verdadero poder estadístico al proyecto, y es la idea que
+más conviene retener.** Rizoma solo no puede detectar efectos pequeños: la parcela es chica y el ruido,
+alto. Pero **veinte patios del barrio haciendo la misma comparación de dos camas, con la misma hoja de
+una página y la misma métrica, sí pueden**, y con una diversidad de suelos y manos que hace el resultado
+mucho más útil que veinte camas del mismo terreno. Eso convierte la tarea principal de Rizoma en una de
+diseño y acompañamiento: **redactar la hoja de ensayo en lenguaje llano, enseñar a llenarla en un taller
+de una tarde, pasar a recoger los datos y devolver el resultado a todos**. Devolverlo es lo que sostiene
+el sistema: el vecino que entrega datos y nunca recibe nada de vuelta no los entrega dos veces.
+
+**Y el compromiso de publicar los resultados negativos hay que asumirlo antes de tener alguno.** Es fácil
+prometerlo en abstracto y difícil cumplirlo cuando el preparado que no funcionó es el que se enseñó en
+tres talleres. Se sostiene habiéndolo dicho desde el principio: aquí se prueba, y a veces sale que no. En
+un proyecto gratuito que existe para dar herramientas, **decirle a la comunidad qué no vale la pena es
+tan valioso como enseñarle a fabricar algo, y bastante más raro.**
+</AplicarRizoma>
+
+## Cierre del módulo
+
+El módulo empezó corrigiendo un error de categoría —no estás fabricando fertilizante, estás alimentando
+y repoblando al intermediario que alimenta a la planta— y termina en el mismo sitio por otro camino:
+**casi todo lo que se cree de estos preparados se cree sin haberlo comprobado, y comprobarlo es más
+barato de lo que parece.**
+
+Vistas desde aquí, las cinco lecciones anteriores son una escala de certeza. El compost termófilo
+descansa sobre mecanismos sólidos y efectos grandes: la duda no es si funciona, sino si tu pila llegó a
+temperatura. La lombriz entrega un producto físico verificable. El bocashi es un atajo con costos
+declarados. Los líquidos son la zona donde la aritmética de masa ya puso un techo. Y el caldo mineral
+funciona demasiado bien, que es precisamente su problema.
+
+**El hilo que atraviesa las seis lecciones es la disciplina de no creerse el propio entusiasmo.** Es la
+misma en la pila —temperatura medida, no supuesta—, en el lecho —humus cosechado, no lixiviado
+rebautizado—, en el bidón —balance de masa, no folleto— y en el ensayo —testigo, bloque, sorteo y
+código—. Es la misma que el curso pide en el riego, en la semilla y en la instalación solar: **medir lo
+que se afirma, escribir lo que se mide y anotar también lo que salió mal.**
+
+Y el cierre honesto es este. Un preparado que funciona sin que se pueda demostrar sigue funcionando; lo
+que no puede hacer es viajar. **No se puede enseñar, ni defender ante quien desconfía por experiencia,
+ni acumular a lo largo de los años, ni sumar con lo que averiguó el vecino.** Para un proyecto que existe
+para poner herramientas en manos de la comunidad, esa incapacidad de viajar es la diferencia entre tener
+una finca que anda bien y dejar algo que otros puedan usar. Por eso un módulo sobre fabricar insumos
+termina enseñando a dudar de ellos: **el producto final no es el compost, es el método**, y el método se
+comparte gratis y no se agota.

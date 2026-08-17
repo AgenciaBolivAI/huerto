@@ -1,0 +1,402 @@
+Ya sabes hacer arrancar lo que no arranca. Y entonces llega el día que descoloca a todo el mundo: el
+motor arranca a la primera, sube de vueltas parejo, suena sano — y **la máquina no sirve igual**. La
+bomba gira y el agua no llega al tanque. La desbrozadora ruge y el pasto sigue de pie. El generador
+aguanta las luces y se ahoga cuando entra la heladera.
+
+Y siempre se dice la misma frase: **«este motor no tiene fuerza»**. Casi nunca es cierto. Un motor de
+combustión es un aparato tonto y honesto: entrega par en la punta de un eje y **no tiene manera de saber
+qué hay del otro lado**. Todo lo que viene después —embrague, transmisión, rodete, cuchilla, cadena,
+alternador— es **la carga**, con sus propias averías y su propia física. Esta lección es esa otra mitad.
+
+## Par motor contra par resistente: qué significa «no tiene fuerza»
+
+Un motor gira a las vueltas que le corresponden porque hay un empate.
+El <Termino slug="par-motor">par motor</Termino> es el esfuerzo de giro que puede dar a cada régimen;
+el <Termino slug="par-resistente">par resistente</Termino> es el que la carga le exige para seguir
+moviéndose. La velocidad se estabiliza donde las dos curvas se cruzan, y a ese cruce se le llama
+el <Termino slug="punto-de-operacion">punto de operación</Termino>.
+
+<Formula explicacion="La potencia mecánica es el par multiplicado por la velocidad de giro. De aquí sale todo: si la carga exige más par y el motor no lo tiene, lo único que puede ceder son las vueltas.">
+P = M × ω
+</Formula>
+
+Esa fórmula explica la queja, porque **nadie percibe el par: se percibe la caída de vueltas**. Cuando la
+carga pide más par del que el motor entrega, el motor no se para de golpe: baja de revoluciones buscando
+un régimen donde tenga más par, y si ni ahí alcanza, se cala. El dueño registra «se apaga cuando entro
+al pasto tupido» y traduce «no tiene fuerza», que es un juicio **sobre el conjunto**.
+
+<Analogia titulo="Perfilar antes de optimizar">
+Quien haya peleado con un sistema lento reconoce el error: el proceso tarda, se supone que falta CPU, se
+compra una máquina más grande y sigue tardando **porque estaba esperando el disco**. La regla es la
+misma acá: **medir dónde está el cuello de botella antes de tocar nada.** Subirle el ralentí y cambiarle
+la bujía a un motor para resolver una bomba con el rodete comido es ese mismo error.
+</Analogia>
+
+## La prueba que ordena todo: separar el motor de la carga
+
+La <Termino slug="prueba-de-desacople">prueba de desacople</Termino> hace que **el motor y la carga se
+declaren por separado**, porque un síntoma compartido no dice nada y dos síntomas separados dicen casi
+todo.
+
+Con el motor apagado y el cable de bujía desconectado —siempre, porque un motor puede arrancar de un
+tirón de la carga—, **gira la carga con la mano**: el eje de la bomba, la cuchilla, la rueda trasera en
+punto muerto. Tiene que girar **parejo**, sin puntos duros, sin juego lateral y sin ruido de arena.
+Después **arranca el motor sin carga** y escúchalo subir de vueltas libre.
+
+<Tabla>
+
+| Motor solo | Con la carga | Dónde está el problema |
+| --- | --- | --- |
+| Sube de vueltas parejo | Cae de vueltas o se cala | **En la carga**: pide más par del que corresponde |
+| Sube de vueltas parejo | Suben las vueltas y nada se mueve | **Entre los dos**: embrague, chaveta, correa, eje partido |
+| No sube ni suelto | Igual de mal | **En el motor**: vuelve a las lecciones 04 y 05 |
+| Sube pero le falta arriba | Empeora con carga | **En el motor**: compresión o mezcla al límite |
+
+</Tabla>
+
+La fila que más se confunde es la segunda: **si el motor acelera libre y contento mientras la máquina no
+hace nada, el motor no está trabajando** — la energía se pierde en el medio, no en la carga.
+
+## El embrague centrífugo: la pieza que separa las dos mitades
+
+Entre el motor y casi todas estas máquinas hay
+un <Termino slug="embrague-centrifugo">embrague centrífugo</Termino>. Sobre el eje del cigüeñal van dos
+o tres zapatas con forro de fricción, sujetas hacia adentro por resortes; alrededor, sin tocarlas, una
+campana de acero unida a la carga. En ralentí los resortes ganan y **la campana está quieta aunque el
+motor gire**: por eso arrancas una desbrozadora sin que la cuchilla se mueva. Al acelerar aparece la
+fuerza centrífuga, que crece con el **cuadrado** de las vueltas, y pasada
+la <Termino slug="velocidad-de-enganche">velocidad de enganche</Termino> vence a los resortes: la carga
+arranca progresivamente, patinando un segundo mientras toma velocidad.
+
+Ese segundo es también la falla. El <Termino slug="patinaje-del-embrague">patinaje</Termino> convierte
+en calor toda la diferencia entre lo que gira el motor y lo que gira la campana. Uno que patina un
+segundo por arranque dura décadas; uno que patina siempre —forro gastado, campana vidriada, aceite ahí
+dentro— se calienta, se endurece y patina más: **una realimentación positiva que termina con la campana
+azul de temperatura**. El síntoma: el motor sube de vueltas, la herramienta gira despacio y huele a
+quemado.
+
+<Advertencia>
+La falla inversa es peligrosa. Si un **resorte se rompe o se cansa**, o si alguien subió el ralentí para
+que «no se apague», las zapatas enganchan **en ralentí**: la cuchilla o la cadena giran con el motor en
+marcha lenta, cuando tú crees que están quietas. Prueba obligatoria antes de trabajar: **motor en
+ralentí, la herramienta completamente detenida.** Si se mueve aunque sea despacio, la máquina no sale a
+trabajar. Y para tocar cualquier cosa después del embrague: motor apagado y **cable de bujía fuera**.
+</Advertencia>
+
+Después del embrague viene la transmisión, donde fallan tres cosas baratas.
+La <Termino slug="chaveta">chaveta</Termino> —la cuñita de metal blando que impide que la polea o el
+rodete giren libres sobre el eje— está hecha para cortarse antes de que se rompa algo caro, así que si
+el motor gira y la carga no, **es lo primero que se mira**. Dentro del tubo de la desbrozadora va
+un <Termino slug="eje-flexible">eje flexible</Termino>, un alma de acero trenzado que **necesita
+grasa**: se saca una vez al año, se limpia y se engrasa, y si sale retorcido o con hebras rotas, se
+cambia. Y en la punta hay una <Termino slug="caja-de-angulo">caja de ángulo</Termino> con dos engranajes
+cónicos que doblan el giro noventa grados, con un tapón lateral para grasa que **casi nadie usa nunca**,
+hasta que muele los dientes y hay que comprarla entera.
+
+## La bomba: la carga que más engaña
+
+Una <Termino slug="bomba-centrifuga">bomba centrífuga</Termino> no empuja el agua: **la lanza**. Un
+disco con paletas, el <Termino slug="impulsor">rodete</Termino>, gira dentro de una carcasa en espiral; el
+agua entra por el centro, sale despedida al borde a gran velocidad, y la carcasa, que se va ensanchando,
+**frena esa velocidad y la convierte en presión**. Como todo depende de la velocidad, la altura que da
+va con el cuadrado de las vueltas: al 70 % del régimen da **la mitad**.
+
+De ahí sale también el cebado. El aire pesa unas ochocientas veces menos que el agua, así que el mismo
+rodete girando en aire produce una presión ridícula: **una bomba centrífuga llena de aire no aspira
+nada**. Por eso existe el <Termino slug="cebado-de-bomba">cebado</Termino> —llenar de agua carcasa y tubo de
+succión antes de arrancar— y la <Termino slug="valvula-de-pie">válvula de pie</Termino>, la valvulita
+con canasta del fondo que deja entrar agua y no la deja volver. **La bomba que hay que cebar cada vez
+tiene la válvula de pie sucia, trancada o rajada, o entra aire por la succión.** Y ojo: **una fuga en la
+succión no gotea**, porque ahí adentro hay menos presión que afuera; la rosca floja que no moja nada
+está chupando aire mientras uno busca el problema en el motor.
+
+<Formula explicacion="Cuánto puede subir por aspiración una bomba de superficie: lo que empuja la atmósfera del lugar, menos lo que se pierde en fricción por el tubo, menos lo que el agua caliente evapora por su cuenta. La bomba no tira del agua; la atmósfera la empuja.">
+Altura máxima = presión atmosférica − pérdidas − presión de vapor
+</Formula>
+
+A nivel del mar la atmósfera equivale a **10,3 metros de columna de agua**; en Zanja Honda, a unos 529
+metros, son **unos 9,7**. Réstale la fricción del tubo y los codos, réstale el agua a treinta y tantos
+grados que quiere evaporarse sola, y deja margen:
+la <Termino slug="altura-de-succion">altura de aspiración</Termino> práctica de cualquier bomba de
+superficie **ronda los seis o siete metros, y no hay marca ni potencia que lo cambie**. Es un límite de
+la atmósfera, no de la bomba. Si el agua está más abajo, la solución no es una bomba más grande: es
+bajar la bomba o poner una <Termino slug="bomba-sumergible">bomba sumergible</Termino>.
+
+Estirar ese límite trae la <Termino slug="cavitacion">cavitación</Termino>, que suena a bomba moliendo
+piedritas: la presión a la entrada del rodete cae tanto que el agua **hierve a temperatura ambiente**, y
+medio giro después, ya en la zona de presión alta, esas burbujas colapsan contra el metal con
+microchorros que le arrancan material. La bomba pierde caudal, vibra y **se come el rodete por dentro** —
+y la causa está siempre en la succión: tubo delgado, canasta tapada o nivel que bajó.
+
+El otro asesino es el <Termino slug="sello-mecanico">sello mecánico</Termino>: dos anillos de caras
+pulidas como espejo, uno girando con el eje y otro fijo, apretados por un resorte. Lo que los separa es
+**una película de agua de micras** que los lubrica y enfría, así que el sello **se destruye en segundos
+si la bomba gira en seco**. Cuando se va, el agua sale por el agujerito de drenaje entre bomba y motor,
+y si nadie lo mira se mete al rodamiento y después al bobinado o al cárter. Queda además
+el <Termino slug="desgaste-abrasivo">desgaste abrasivo</Termino>: la arena finísima del pozo adelgaza el
+rodete, crece la luz contra la carcasa y **el agua recircula adentro en vez de salir**; todo suena igual
+y el caudal cae durante meses.
+
+<Dato titulo="La bomba tapada no hace más fuerza: hace menos">
+Contra toda intuición, si estrangulas la salida de una bomba **centrífuga** el motor trabaja **menos**:
+hay menos caudal que acelerar. Suena aliviado y el agua no llega. Con una bomba **de desplazamiento
+positivo** —la de membrana o de pistón de una fumigadora— pasa lo contrario y es peligroso: obligada a
+mover un volumen fijo por vuelta, si cierras la salida la presión sube hasta que revienta la manguera o
+se cala el motor. Por eso esas bombas llevan **válvula de alivio**, y no es opcional.
+</Dato>
+
+El cálculo de alturas, diámetros y pérdidas de una instalación completa está en **el módulo 35**; aquí
+basta el juicio: **antes de condenar el motor de una bomba, mira succión, cebado, canasta, sello y
+rodete**, en ese orden.
+
+## La desbrozadora: el hilo, la cuchilla y el rebote
+
+El <Termino slug="cabezal-de-hilo">cabezal de hilo</Termino> no corta por filo: corta por velocidad. La
+punta del nailon pasa **de los cien metros por segundo**, del orden de cuatrocientos kilómetros por
+hora, y rompe la fibra por impacto antes de que la planta alcance a doblarse. Eso explica el
+mantenimiento: **el hilo corto y grueso corta mejor que el largo y fino**, porque el largo roba par
+—más radio, más resistencia del aire— y hace caer las vueltas por debajo del umbral donde el nailon deja
+de cortar y empieza a machacar. Si la máquina «no corta», antes de tocar el carburador **acorta el hilo
+a lo que marca la cuchillita del protector**. También falla por bobinado cruzado, y por trabajarlo hasta
+el final del carrete, que lo calienta y **suelda las vueltas entre sí**.
+
+<Advertencia>
+Todo lo que la máquina toca sale disparado. Una piedrita de cinco gramos a cien metros por segundo lleva
+la energía de un balín de aire comprimido potente: rompe un vidrio, revienta un ojo y llega mucho más
+lejos de lo que nadie supone. No se negocia: **anteojos de seguridad y careta**, protección auditiva,
+pantalón largo y grueso, botas cerradas, y **nadie a menos de quince metros**, incluidos los que miran.
+El protector plástico no es un adorno: es lo que decide en qué dirección salen las cosas.
+</Advertencia>
+
+La cuchilla de acero corta lo que el hilo no puede —tallos leñosos, brotes de árbol— pero trae un
+mecanismo propio: el <Termino slug="rebote-de-la-cuchilla">rebote de la cuchilla</Termino>. Un disco
+girando guarda mucha energía. Si un diente muerde algo que **no puede cortar** —un tronco grueso, una
+piedra, un alambre— el disco se frena de golpe contra ese punto y esa energía tiene que ir a alguna
+parte: como la máquina no está anclada a nada, **la lanza entera, de lado, hacia el operador**, con una
+fuerza que ningún brazo detiene.
+
+El rebote depende de **qué parte del disco tocó**. Mirando el disco desde arriba, con el giro antihorario
+que es el habitual —compruébalo en tu máquina—, el sector entre las 12 y las 3 lanza la máquina hacia
+atrás y hacia ti: es la zona prohibida. El corte se hace con el sector opuesto, aproximadamente **entre
+las 8 y las 11**, donde la reacción la empuja **hacia afuera del corte**. Eso es
+el <Termino slug="sector-de-corte-seguro">sector de corte seguro</Termino>, y barrer siempre de derecha
+a izquierda es usarlo sin pensarlo.
+
+Contra el rebote solo hay una defensa seria, y es un conjunto: **manillar de doble asa** —el de
+bicicleta, no el de lazo—, que da dos agarres separados y una barrera entre la máquina y tus piernas,
+más **arnés de doble hombro bien ajustado**, que reparte el peso y limita el recorrido si te sorprende.
+La regla para grabarse: **si tu desbrozadora tiene manillar de lazo y no tienes arnés, no le pongas
+cuchilla.** Con hilo hace el mismo trabajo en pasto y no te va a partir una pierna. Y acá el peor enemigo
+no es la piedra: es el **alambre de púa escondido en el pastizal**.
+
+## La moto: cadena, embrague, frenos y neumáticos
+
+La **cadena** no se estira: **se alarga porque se desgastan los pasadores y los bujes por dentro**, y al
+crecer el paso deja de encajar en el fondo de los dientes, así que se come la corona y el piñón. Por eso
+se cambian los tres juntos. La tensión se mide por la holgura del tramo de abajo, con un detalle que
+casi nadie hace: **medir en varias posiciones de la rueda y ajustar en el punto más tenso**, porque una
+cadena gastada tiene puntos duros. Floja salta el diente; demasiado tensa castiga el rodamiento de
+salida de la caja y se tensa todavía más cuando la suspensión comprime. Se lubrica tibia y por dentro de
+los eslabones.
+
+El <Termino slug="embrague-en-bano-de-aceite">embrague en baño de aceite</Termino> de casi toda moto
+pequeña es una pila de discos de fricción y discos de acero apretados por resortes, **sumergida en el
+mismo aceite del motor**. Eso arruina embragues todos los días: los aceites modernos de automóvil llevan
+un <Termino slug="modificador-de-friccion">modificador de fricción</Termino>, un aditivo que vuelve las
+superficies más resbalosas para ahorrar combustible. En un auto, cuyo embrague va seco y aparte, no pasa
+nada; en una moto se mete justo entre los discos y **el embrague patina**: sube de vueltas y no acelera.
+Por eso el aceite de moto lleva la certificación **JASO MA**.
+
+El líquido de **frenos** es <Termino slug="higroscopico">higroscópico</Termino>: absorbe humedad del
+aire, y el agua disuelta baja muchísimo la temperatura a la que hierve. Un freno exigido en una bajada
+larga calienta la pinza, el líquido con agua **hierve**, y el vapor **sí se comprime** aunque el líquido
+no: la maneta se va al manillar y no frena. Eso es
+la <Termino slug="perdida-de-frenada-por-calor">pérdida de frenada por calor</Termino>, y por eso el
+líquido se cambia por tiempo —del orden de cada dos años— aunque el nivel esté bien.
+
+Un dibujo profundo en los **neumáticos** no agarra más en seco: existe para **evacuar el agua** de
+debajo de la goma, para que el caucho toque el piso. Gastado el dibujo, se forma una cuña líquida y la
+rueda **flota**: eso es el <Termino slug="hidroplaneo">hidroplaneo</Termino>, y llega sin aviso. Con
+presión baja el flanco flexiona, se calienta y la moto entra perezosa en curva.
+
+## El generador: la carga es eléctrica y se porta igual
+
+Un generador es un motor conocido con un alternador colgado del cigüeñal, y todo lo anterior se aplica
+sin cambiar una coma: **una carga eléctrica produce un par resistente mecánico.** Sacar corriente cuesta
+esfuerzo de giro, y por eso el motor «se sienta» cuando entra un consumo grande. De ahí que la
+frecuencia dependa de las vueltas:
+
+<Formula explicacion="Frecuencia de la corriente que sale, a partir de las vueltas del motor y los pares de polos del alternador. Con dos polos hacen falta 3.000 vueltas por minuto para dar los 50 hercios de la red boliviana; si el motor cae de vueltas, cae la frecuencia.">
+f = (rpm × pares de polos) / 60
+</Formula>
+
+Un generador sano mantiene esas vueltas casi clavadas: si la carga sube, el regulador abre gas. Cuando
+ves **las luces bajar y el motor gruñir cada vez que arranca la bomba**, no estás viendo una falla:
+estás viendo el <Termino slug="pico-de-arranque">pico de arranque</Termino>, la demanda de tres a siete
+veces la potencia de marcha que un motor eléctrico exige durante una fracción de segundo para vencer su
+inercia. Por eso un generador se elige por el pico y no por
+la <Termino slug="potencia-nominal">potencia nominal</Termino> de la etiqueta, y por eso las cosas se
+encienden **de a una y de la más grande a la más chica**. Medirlo de verdad es el **módulo 27**.
+
+<Advertencia>
+Nunca conectes un generador a la instalación de la casa por un enchufe, aunque «funcione». Eso
+produce <Termino slug="retroalimentacion-a-la-red">retroalimentación a la red</Termino>: tu generador
+alimenta la instalación, la instalación alimenta la línea de la calle a través del transformador, y esa
+línea que todos creen muerta **puede matar a quien la esté reparando**. Además, cuando vuelve la energía
+sin transferencia, tu generador se destruye. Lo que corresponde es una llave de transferencia instalada
+por alguien habilitado, o extensiones directas a los aparatos. Y lo de siempre: **generador afuera**,
+lejos de puertas y ventanas.
+</Advertencia>
+
+## Qué se arregla, qué se rectifica y qué se reemplaza
+
+Acá el oficio deja de ser mecánica y pasa a ser juicio. Se arregla casi siempre lo que sale barato y
+devuelve la máquina entera: carburador, filtro, bujía, arranque de cuerda, mangueras, sello mecánico,
+rodete, embrague, cadena, cables.
+
+Después está lo que se <Termino slug="rectificado">rectifica</Termino>: llevar una pieza gastada a un
+taller que con máquina le devuelve una superficie exacta —el cilindro rayado que se agranda a una medida
+mayor y recibe un pistón de **sobremedida**, la culata alabeada que se cepilla plana—. Tiene sentido
+cuando **la pieza cara es la que se salva**, pero en motores pequeños hay que mirarlo dos veces: muchos
+cilindros modernos llevan un recubrimiento duro sobre el aluminio, **y ese cilindro no se rectifica**, se
+cambia. Si lo roto es un soporte partido, quizá la respuesta sea soldarlo, y eso es **el módulo 34**.
+
+Y está lo que no vale la pena. Cada taller y cada casa terminan fijándose
+un <Termino slug="umbral-de-reparacion">umbral de reparación</Termino>, y conviene que sea un número
+puesto por adelantado y no una corazonada del momento. La cuenta honesta es una división:
+
+<Formula explicacion="Costo total de dejarla andando —repuestos, mano de obra y los días que la máquina va a estar parada— dividido por lo que cuesta una equivalente que funcione. Es una guía para pensar, no una ley: por encima de un medio conviene parar y discutirlo.">
+Umbral = (repuestos + mano de obra + costo de parada) / valor de reemplazo
+</Formula>
+
+Las dos piezas que la gente olvida son las que más pesan: el <Termino slug="costo-de-parada">costo de
+parada</Termino> —si la bomba da agua a tres familias, cada semana esperando un repuesto cuesta plata y
+acarreo— y el <Termino slug="valor-de-reemplazo">valor de reemplazo</Termino> real, que no es el precio
+de la máquina nueva más cara sino el de **una equivalente que funcione**, usada incluida. Con esos dos
+números: **si arreglarla pasa de la mitad de lo que cuesta reemplazarla, se piensa; si pasa del setenta
+por ciento y encima hay que esperar repuestos, se reemplaza.**
+
+Dos matices. **Una máquina con repuestos disponibles vale más que una mejor sin repuestos**: un motor de
+marca conocida, con placa legible y piezas que se consiguen, merece repararse más allá del umbral. Y
+el <Termino slug="costo-hundido">costo hundido</Termino>: lo que ya gastaste **no es razón para gastar
+más** — la trampa clásica son tres arreglos chicos encadenados que suman más que la máquina. Queda una
+salida intermedia que en un barrio vale oro:
+la <Termino slug="maquina-donante">máquina donante</Termino>. Dos bombas muertas por cosas distintas
+hacen una viva, y una desbrozadora fundida guarda un embrague, un cabezal y una caja de ángulo que valen
+más que ella entera.
+
+Y falta lo que más cuesta aprender: **qué decirle al dueño.** Entregar
+un <Termino slug="presupuesto-por-escrito">presupuesto por escrito</Termino> con tres cifras separadas
+—repuestos, trabajo y plazo— antes de tocar nada, porque un número dicho al aire siempre se recuerda más
+bajo. Decir en voz alta la frase que nadie dice: «esto **no conviene** arreglarlo, y te explico por qué»,
+con la cuenta delante. Decir **«no sé» y «esto no lo hago»** cuando algo te excede, y mandarlo al
+servicio técnico o a un mecánico de la zona, porque el daño de meter mano donde uno no sabe lo paga el
+dueño y lo paga tu nombre. Y cobrar el diagnóstico, o al menos **nombrarlo**.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+Nada de esto necesita un vivero, ni un taller, ni un patio propio: necesita las máquinas que ya hay en
+tu casa y en tu cuadra, y la disciplina de mirar afuera del motor antes de abrirlo.
+
+**Convierte la prueba de desacople en un hábito de dos minutos.** Cada vez que alguien traiga algo que
+«no tiene fuerza», antes de sacar una herramienta: cable de bujía fuera, girar la carga con la mano
+sintiendo puntos duros y juego, arrancar el motor sin carga y escucharlo libre. Con eso ya sabes en cuál
+de las dos mitades estás, y esa sola decisión te ahorra la mayoría de los desarmes inútiles.
+
+**Levanta la ficha de la bomba de tu casa antes de que falle.** Mide con una cuerda y una piedra cuántos
+metros hay desde la bomba hasta el agua **en la seca**: si pasa de seis o siete, ninguna bomba de
+superficie te va a servir ahí y te ahorraste una compra. Revisa la válvula de pie, fíjate si gotea el
+agujerito entre bomba y motor, y aprende cómo suena tu bomba sana para reconocer la cavitación. Y la
+regla que lo sostiene todo: **esa bomba no gira ni un segundo en seco.** Con el mismo criterio, un tarro
+de grasa y hazte cargo de lo que nadie engrasa: eje flexible, caja de ángulo, rodamientos, cables.
+
+**Pon las dos reglas de corte en tu casa y no las negocies.** Una: en ralentí la herramienta tiene que
+estar quieta; si se mueve, la máquina no sale a trabajar. Dos: manillar de lazo sin arnés, entonces hilo
+y nunca cuchilla. Y antes de desbrozar un terreno que no conoces, **camínalo primero** y marca con
+estacas lo que hay escondido: alambre, tocones, piedras, tapas de pozo.
+
+**Arma una libreta por máquina y un rincón de donantes.** En la libreta, marca y número de placa
+fotografiados, qué se le hizo y cuánto costó: cuando llegue la decisión vas a tener números en vez de
+opiniones. En el rincón, las carcasas rotuladas de lo que se murió. Y practica el presupuesto por
+escrito con la primera máquina de un vecino: tres cifras, media hoja, antes de tocar.
+</AplicarRizoma>
+
+<ContextoBolivia>
+El mecanismo es universal; lo que cambia en Zanja Honda y en el sur cruceño es **qué carga falla
+primero**.
+
+**La seca mueve el suelo debajo de la bomba.** Entre mayo y septiembre baja el nivel del pozo, y una
+bomba que cebaba perfecto en marzo deja de agarrar agua en agosto sin que nadie la haya tocado: creció
+la altura de aspiración y el límite de la atmósfera sigue siendo el mismo. Antes de comprar bomba nueva,
+**mide el nivel en la peor época**. En muchas casas esa bomba es
+un <Termino slug="punto-unico-de-falla">punto único de falla</Termino>: si se para, nadie tiene agua,
+así que conviene tener guardados el sello y la válvula de pie. Y como el agua de pozo de acá trae arena
+—la que come rodetes y raya sellos—, la canasta va colgada bien por encima del fondo, nunca apoyada.
+
+**Las lluvias de octubre a abril fabrican el accidente de la cuchilla.** El pasto llega a la cintura en
+semanas, la desbrozadora no da abasto con hilo, y ahí es cuando alguien le monta un disco a una máquina
+de manillar de lazo, sin arnés y con el protector sacado. Con el pastizal alto no se ve el alambre de
+púa de un cerco viejo ni el tocón: es exactamente el escenario del rebote. Si el trabajo pide cuchilla
+de verdad, pide también la máquina y el equipo correctos, o se contrata a quien los tenga.
+
+**El surazo cambia al operador, no a la máquina.** Con la noche a diez grados y viento se trabaja con
+ropa gruesa, las manos se entumecen y el cansancio llega antes: se sujeta peor y se reacciona más lento,
+así que se acortan los turnos. La humedad alta, en cambio, trabaja de noche: oxida cadenas, pudre cables
+de freno y mete agua en el líquido de frenos, de modo que el calendario por tiempo vale doble acá.
+
+**Los cortes de energía ponen el generador en el patio**, y con él las dos fallas de esta lección: la
+bomba que lo hace gruñir con su pico de arranque —enciéndela primero y después lo demás— y la tentación
+de puentear un enchufe hacia la instalación de la casa, que puede matar a quien esté reparando la línea.
+Eso se resuelve con una llave de transferencia puesta por alguien habilitado, y consultarlo con la
+distribuidora eléctrica de la zona no cuesta nada.
+
+**Y la economía manda en la decisión final.** Con repuestos que tardan semanas y llegan caros, el costo
+de parada pesa más que en cualquier manual, y la máquina de marca conocida con piezas que se consiguen
+en Santa Cruz vale más que la barata sin nombre. Fotografía la placa de cada motor, y cuando la
+reparación pase de tu capacidad, el servicio técnico o el mecánico del barrio son la respuesta correcta.
+Dos cosas del patio que no cambian: el **aceite quemado va en bidón cerrado** a un lugar que lo reciba,
+jamás al suelo ni al arroyo; y cualquier balde o llanta destapada que junte agua de lluvia es criadero
+de mosquito en zona de dengue.
+</ContextoBolivia>
+
+## Lo que hay que llevarse
+
+**El motor no sabe qué arrastra.** Entrega par en un eje; la carga decide si eso alcanza. «No tiene
+fuerza» es una observación sobre el conjunto.
+
+**Separar las dos mitades es gratis y decide casi todo**: cable de bujía fuera, girar la carga a mano,
+arrancar el motor suelto y escuchar. Si el motor acelera contento y la máquina no hace nada, el problema
+está entre los dos —embrague, chaveta, eje—, no en el motor.
+
+**Cuatro mecanismos resuelven la mayoría de los casos:** una bomba centrífuga con aire adentro no aspira
+y la atmósfera solo empuja seis o siete metros; una fuga en la succión no gotea; el sello mecánico muere
+en segundos girando en seco; y un embrague que patina se calienta y patina más.
+
+**Y una regla de seguridad sin excepción:** en ralentí la herramienta de corte tiene que estar quieta, y
+una cuchilla que muerde lo que no puede cortar lanza la máquina hacia ti.
+
+## Cierre del módulo
+
+Este módulo empezó con fuego adentro de un cilindro y termina con una cuenta en media hoja de papel.
+Primero **entender**: cómo la energía química se vuelve giro, y la tesis que ordenó todo —aire,
+combustible, chispa y compresión, en el momento justo—. Después **distinguir** los dos ciclos y la
+lubricación. Después **prevenir**, con un calendario contado en horas de trabajo y no en meses. Después
+**diagnosticar** con cinco preguntas en orden, en vez de cambiar piezas a ver si se acierta. Después
+**reparar** las tres que fallan siempre. Y ahora **mirar afuera del motor**, que es donde está la falla
+cuando el motor está sano.
+
+La idea que atraviesa las seis lecciones no es mecánica: es de método. **Casi todas las máquinas que se
+botan en el barrio estaban sanas en un noventa y cinco por ciento, y nadie sabía qué preguntarle al
+cinco restante.** No se botan por falta de repuestos ni de herramientas caras: se botan porque nadie
+tenía un modelo mental de lo que pasa adentro, y sin modelo lo único que queda es probar al azar. Un
+motor no es magia ni suerte: es una secuencia de causas que se pueden nombrar, y todo lo que hicimos acá
+fue darles nombre y ponerlas en orden.
+
+Por eso este módulo está dentro de un proyecto comunitario y gratuito, y no dentro de un curso de
+vivero. Quien entiende un motor pequeño tiene **un oficio**: repara la bomba de tres familias, mantiene
+la moto con la que otro trabaja, revisa el generador que hace falta cuando se corta la luz, y cobra por
+hacerlo. Es un oficio que se empieza con una llave de bujía y un motor muerto que nadie quiere, y que en
+una zona donde los repuestos tardan **le devuelve a la comunidad cada máquina que hubiera terminado
+oxidándose en el patio**. Esa es toda la apuesta: **una herramienta más en las manos de alguien, y una
+cosa menos que hay que salir a comprar.**

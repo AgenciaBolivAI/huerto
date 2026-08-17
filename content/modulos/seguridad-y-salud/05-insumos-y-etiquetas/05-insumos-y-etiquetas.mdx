@@ -1,0 +1,405 @@
+Las cuatro lecciones anteriores trataron peligros que se ven venir: el filo que corta, el sol que
+pega, el mosquito que zumba, la víbora que se mueve. Esta trata del que **entra caminando, dentro de
+un envase**, y no duele al entrar. Por eso es el único capítulo del módulo donde **la protección
+tiene que ser un procedimiento y no un reflejo**.
+
+Insumo no es "el veneno": es **cualquier cosa que entra a la parcela en un envase y termina tocando
+la planta, el suelo, el agua o a vos**. El fungicida comprado y el caldo bordelés casero, la cal y
+la lavandina, el combustible de la bomba, el biol del bidón, el extracto de ají que colaste el
+domingo. Todos comparten un mismo conjunto de reglas, y esta lección enseña ese conjunto, no una
+lista de productos.
+
+## Lo que hace tóxica a una cosa es la dosis, no el origen
+
+El error que arruina la seguridad de una parcela no es usar productos peligrosos: es creer que
+existen productos inofensivos. La toxicología se apoya en
+una <Termino slug="relacion-dosis-respuesta">relación entre dosis y respuesta</Termino>: para casi
+cualquier sustancia hay una cantidad sin efecto detectable, una con efecto y una que mata, y **lo
+que las separa no es el nombre ni la procedencia, sino cuánto entró al cuerpo por kilo de peso**. El
+agua tiene dosis letal; la nicotina de una hoja de tabaco la tiene muy baja. Ese número tiene
+nombre: la <Termino slug="dl50">DL50</Termino> es la cantidad —miligramos por kilo de peso corporal—
+que mata a la mitad de una población de animales de ensayo, y **cuanto más chico, más tóxico**. Mide
+**toxicidad aguda**, la de una sola exposición grande, y no dice nada de las exposiciones pequeñas
+repetidas durante quince años.
+
+Esa segunda mitad es la que hace daño en el campo y no aparece en ninguna estadística.
+La <Termino slug="intoxicacion-cronica">intoxicación crónica</Termino> es el efecto de dosis chicas
+y sostenidas: la aplicación quincenal durante veinte años, el trapo con que se limpia la boquilla,
+la ropa lavada con la de los chicos. No hay episodio que señalar: hay un daño que aparece tarde y se
+atribuye a otra cosa.
+
+<Analogia>
+Es exactamente **un memory leak**. Una corrida no muestra nada: la memoria sube unos kilobytes y
+nadie la mira; no falla en la demo, falla a los cuatro meses de uptime.
+
+Un accidente agudo es un crash con stack trace; la exposición crónica **no tiene stack trace**, y
+por eso se concluye que no existe. Contra un leak no sirve mirar de a ratos, sirve **instrumentar**:
+usar la protección siempre y no cuando se siente peligro, y anotar cada aplicación aunque no pase
+nada.
+</Analogia>
+
+De ahí la regla que ordena la lección: **la palabra "natural" no es una propiedad farmacológica.** La
+rotenona sale de una raíz y es un veneno metabólico; el sulfuro de hidrógeno del caldo sulfocálcico
+se fabrica hirviendo azufre y cal, dos minerales, y es un gas que mata. Lo que decide el riesgo es
+**qué molécula es, cuánta entra y por dónde**.
+
+## Las cuatro puertas por donde entra
+
+El riesgo empieza cuando el tóxico cruza la frontera del cuerpo. Los cuatro cruces posibles se
+llaman <Termino slug="via-de-exposicion">vías de exposición</Termino> y son **la superficie de
+ataque**: cada uno se cierra distinto, y por eso el equipo de protección no es un uniforme sino un
+conjunto de piezas, una por puerta.
+
+La <Termino slug="exposicion-dermica">vía dérmica</Termino> **es la principal y la que menos se
+respeta**, porque no se siente. La piel de un adulto son unos dos metros cuadrados permeables, y no
+de manera uniforme: la palma callosa absorbe poco, y la frente, el cuero cabelludo y la ingle mucho
+más. En un aplicador la exposición se concentra en **manos y antebrazos**, y en muslos y espalda,
+donde chorrea la mochila. Con un agravante tropical: **el calor y el sudor aumentan la
+absorción**, y la ropa mojada sostiene el producto contra la piel durante horas.
+
+La vía **inhalatoria** es la más rápida, porque el pulmón está hecho justamente para pasar
+sustancias a la sangre sin filtro. La gota gruesa cae, pero
+el <Termino slug="polvo-respirable">polvo respirable</Termino> —partículas de pocas micras, lo que
+se levanta al abrir una bolsa de polvo mojable o al mover cal— llega al fondo del pulmón y se queda,
+y los gases entran sin barrera alguna: dióxido de carbono en un bidón en fermentación, sulfuro de
+hidrógeno en un caldo, cloro al mezclar lavandina con un ácido.
+
+La vía **oral** parece la de los descuidados y es la de todo el mundo: **comer o fumar con las manos
+sucias**, y sobre todo **destapar la boquilla soplando**. Y la **ocular** es la menos frecuente y la
+más grave por evento, porque el ojo absorbe rápido y se daña de forma irreversible con álcalis. Vale
+el error clásico de quien asegura un sistema: **se blinda el puerto espectacular —beber el producto—
+y queda abierto el que se usa todos los días, el antebrazo mojado durante tres horas.**
+
+## La etiqueta es documentación, no publicidad
+
+Un producto comprado trae algo que ningún preparado casero tiene:
+una <Termino slug="etiqueta-del-producto">etiqueta</Termino>, texto obligatorio y vinculante. No es
+el folleto del frente sino la letra chica, y **se lee entera antes de comprar**.
+
+Lo primero es separar el **nombre comercial** del <Termino slug="ingrediente-activo">ingrediente
+activo</Termino>. El comercial es un alias: dos marcas pueden ser el mismo producto y una marca
+puede cambiar de contenido entre campañas. El activo, con su concentración, es **el nombre real de
+lo que estás aplicando**, y el único dato con el que podés comparar o saber si repetís la misma
+molécula creyendo que alternás. Después viene
+la <Termino slug="formulacion-del-producto">formulación</Termino>, la forma física del activo: un
+concentrado líquido lleva **disolventes que ayudan al activo a atravesar la piel**, y un polvo
+mojable genera nube respirable al abrirse. Por eso el momento de mayor exposición **no es la
+aplicación: es la mezcla y la carga**.
+
+Luego, los cuatro datos que gobiernan la decisión y que la tabla detalla: cultivos autorizados,
+dosis con su unidad exacta, **plazo de <Termino slug="plazo-de-seguridad">seguridad</Termino>** —los
+días entre la última aplicación y la cosecha— y **período
+de <Termino slug="plazo-de-reingreso">reingreso</Termino>**, las horas durante las cuales nadie
+entra sin protección al sector tratado. Ese último es el que más afecta a terceros: el aplicador se
+cuidó, y el que entra dos horas después a cortar hoja no sabe nada.
+
+Y el bloque de peligro: la mayoría de las etiquetas de la región llevan **franjas de color** en la
+base, de la roja a la verde, de mayor a menor peligro agudo.
+Esa <Termino slug="banda-toxicologica">banda toxicológica</Termino> tiene dos trampas: **clasifica
+toxicidad aguda para personas**, así que un producto de banda verde puede ser devastador para
+abejas; y los esquemas se revisan y varían entre países. **Manda lo impreso en tu envase, no el
+color que recordás.**
+
+<Tabla>
+
+| Línea de la etiqueta | Qué es en realidad | Qué decisión cambia |
+| --- | --- | --- |
+| Nombre comercial | Un alias de marketing | Ninguna: no sirve para nada técnico |
+| Ingrediente activo y % | El nombre real y cuánto hay | Comparar, alternar de verdad, informarse |
+| Formulación | Forma física y disolventes | Qué protección exige; si hay polvo o vapor |
+| Cultivos autorizados | Dónde fue evaluado | Si podés usarlo en ese cultivo |
+| Dosis y unidad | El rango válido del parámetro | Cuánto va en la mochila |
+| Plazo de seguridad | Espera obligatoria hasta cosechar | Cuándo ese lote vuelve a ser cosechable |
+| Período de reingreso | Horas sin entrar al sector | A quién avisar y qué señalizar |
+| Banda de color y palabra | Toxicidad aguda para personas | Nivel de protección; si entra al predio |
+| Primeros auxilios | Instrucciones para el personal de salud | Qué se hace y qué NO ante una exposición |
+| Lote y vencimiento | Trazabilidad y validez | Si se usa o se descarta |
+
+</Tabla>
+
+<Analogia>
+La etiqueta es **el contrato de una API**. El nombre comercial es un alias exportado; el ingrediente
+activo, el símbolo real al que apunta. La dosis es el rango válido del parámetro, y pasarle el doble
+produce comportamiento indefinido, que en una planta se
+llama <Termino slug="fitotoxicidad">fitotoxicidad</Termino> y en una persona, intoxicación. El plazo
+de seguridad es **un timeout obligatorio antes de leer el resultado**, y los primeros auxilios, un
+manejador de errores documentado: por eso **si alguien se intoxica, el envase va con esa persona al
+centro de salud**.
+</Analogia>
+
+<Advertencia titulo="Lo que la etiqueta NO te dice, y no por descuido">
+La etiqueta es la mejor fuente que vas a tener y **no es completa**. No dice qué pasa con
+exposiciones chicas repetidas durante décadas, ni qué ocurre si mezclás su contenido con otro
+producto en la misma mochila, ni nada sobre tu caso si estás embarazada, tomás medicación o tenés
+una enfermedad de base: **eso se pregunta en el centro de salud.** Tampoco es opinable, y ahí está
+su virtud: **si un vecino, un video o un modelo de inteligencia artificial dicen algo distinto de la
+etiqueta, gana la etiqueta.** Un envase sin etiqueta legible no es un insumo barato: es **un insumo
+sin documentación, y no entra al predio.**
+</Advertencia>
+
+## La cuenta que hay que saber hacer
+
+<Formula explicacion="Si la dosis viene por litro de agua, multiplicás por lo que carga tu mochila. Si viene por superficie, primero necesitás saber cuántos litros gasta tu equipo en esa superficie, y eso se mide una vez, con agua limpia, caminando y pulverizando de verdad.">
+producto por mochila = dosis de la etiqueta (mL o g por litro) × litros que carga la mochila
+</Formula>
+
+Ahí ocurre la mayoría de las sobredosis, porque **se calcula a ojo y se redondea hacia arriba**.
+Pasarse quema el cultivo, deja más residuo del que supone el plazo de seguridad y acelera la
+resistencia. Se mide con un recipiente graduado que **vive con los insumos y no vuelve a la cocina**.
+
+Y una división que la lección 06 retomará entera: **la dosis que importa es la que entró dividida
+por el peso del cuerpo que la recibió.** La misma salpicadura repartida entre los 70 kilos de un
+adulto o entre los 20 de un chico de seis años **es tres veces y media mayor en el chico**, y aun
+así es optimista: un niño respira más aire por kilo y detoxifica peor. De ahí la regla que no admite
+matices: **ningún menor participa de la mezcla, la carga, la aplicación ni la limpieza del equipo, ni
+está en el sector hasta que se cumpla el reingreso.**
+
+## El equipo de protección, pieza por pieza
+
+El <Termino slug="equipo-de-proteccion">equipo de protección</Termino> falla casi siempre por lo
+mismo: se usa como símbolo. Alguien se pone guantes de tela y una mascarilla de papel, se siente
+protegido y trabaja tres horas con más confianza que si estuviera desnudo. **Un equipo que no
+corresponde al peligro es peor que nada**, porque cambia el comportamiento sin cambiar la
+exposición.
+
+**Los guantes** van de nitrilo o neopreno. Los de tela, cuero o lana son **lo contrario de un
+guante**: absorben el líquido y lo sostienen contra la piel durante horas, en cámara húmeda y
+caliente. Y hay una regla de drenaje que es pura física: **con los brazos abajo, el puño va por
+fuera de la manga**, y **con los brazos levantados**, por dentro, o el líquido corre hasta la axila.
+
+**La vía respiratoria** concentra el malentendido más caro del campo. Un barbijo de tela o de papel
+es un **filtro mecánico**: retiene gotas grandes y polvo grueso, y **no retiene vapores ni gases**,
+que lo atraviesan como si no existiera. Contra vapor hace falta
+un <Termino slug="respirador-con-filtro">respirador con filtro</Termino> de carbón activado, que
+funciona por adsorción. De ahí tres cosas que se ignoran siempre: **el filtro se agota** aunque se
+vea limpio, y se cambia por horas de uso; **se sigue agotando guardado** al aire, así que vive en
+bolsa cerrada; y **tiene que sellar contra la cara**, porque con barba no sella y un respirador que
+no sella no filtra.
+
+**Y la ropa después de aplicar.** La <Termino slug="ropa-contaminada">ropa contaminada</Termino> es
+la vía por la que un producto llega a gente que nunca lo tocó: se saca antes de entrar a la casa y
+se lava **aparte de la ropa de la familia**. La ducha al terminar no es higiene: es **retirar
+producto de la piel antes de que se absorba**.
+
+<Tabla>
+
+| Pieza | Contra qué peligro | Cuándo deja de servir |
+| --- | --- | --- |
+| Guante de nitrilo | Absorción por manos y antebrazos | Pinchado, o de tela o cuero |
+| Careta o gafas cerradas | Salpicadura al mezclar, deriva | Lentes de sol o gafas abiertas al costado |
+| Respirador con filtro | Vapores, gases y polvo respirable | Filtro vencido, guardado al aire, barba |
+| Barbijo simple | Solo polvo grueso y gotas grandes | Frente a cualquier vapor: no sirve |
+| Manga larga y pantalón | Depósito sobre torso y piernas | Empapado: es un depósito contra la piel |
+| Bota con el pantalón por fuera | Chorreo hacia el pie | Por dentro: embudo hacia la bota |
+| Delantal impermeable | El momento de mayor concentración | Si se usa al aplicar y no al mezclar |
+| Lavado y ropa aparte | Exposición secundaria de la familia | Lavado con la ropa de los chicos |
+
+</Tabla>
+
+<Advertencia titulo="El equipo y el calor pelean entre sí, y la solución no es sacarse el equipo">
+Un traje cerrado a las dos de la tarde impide evaporar el sudor, y sin evaporación no hay
+enfriamiento: el mismo equipo que te protege de un tóxico **te empuja hacia un golpe de calor**, que
+es un riesgo inmediato y no diferido. La salida es **mover la aplicación de horario**, con turnos
+cortos y nadie aplicando solo. **Lo que no es una salida es quitarse el equipo.**
+
+Y hay otra alternativa que casi nunca se considera: **si no tenés el equipo que ese producto exige,
+la decisión correcta no es aplicar con menos protección; es no aplicar ese producto.** Aplicar sin
+protección no es valentía ni pobreza: es elegir el peldaño más alto de la escalera del módulo 11 sin
+poder pagar su costo.
+</Advertencia>
+
+## Guardar es separar
+
+El almacenamiento no es orden: es **contención**. El módulo 23 definirá el mueble —bajo llave,
+ventilado, a la sombra, con bandeja de retención—; aquí interesa la lógica de fondo: **el diseño
+asume que el accidente va a ocurrir y limita hasta dónde llega.** Un envase gotea; la pregunta no es
+cómo evitarlo, es qué hay debajo. Es contener el blast radius: la bandeja es el sandbox, la llave es
+el control de acceso contra los dos usuarios que no evalúan riesgo —los chicos y la visita que "solo
+agarraba prestado"— y el inventario de la puerta es el manifiesto de dependencias, donde **lo que
+entró primero se usa primero**.
+
+Las separaciones son cuatro: **insumos aparte de alimento, semilla y agua**; **insumos aparte del
+equipo de protección**, porque encerrar guantes y respirador con vapores los contamina y entonces te
+ponés el tóxico en la cara; **incompatibles aparte entre sí**; y **combustibles aparte de todo**.
+
+La <Termino slug="incompatibilidad-quimica">incompatibilidad química</Termino> es que dos productos
+inocuos por separado reaccionen al juntarse, y hay tres casos en cualquier parcela. **Lavandina más
+un ácido** —vinagre, muriático, un limpiador de baño— libera cloro gaseoso; **lavandina más
+amoníaco** o más orina libera cloraminas; y **cal viva más agua** no es una mezcla sino una reacción
+que libera calor de golpe y salpica pasta cáustica.
+La <Termino slug="cal-viva">cal viva</Termino> se apaga agregándola al agua y nunca al revés, con
+careta y a distancia; el producto sigue siendo fuertemente alcalino y da
+la <Termino slug="quemadura-quimica">quemadura química</Termino> más traicionera del campo, que no
+duele al principio y aparece horas después.
+
+<Advertencia titulo="La botella de gaseosa mata gente todos los años y es la regla más fácil de cumplir">
+**Todo insumo vive en su envase original, con su etiqueta, siempre.** Pasarlo a una botella de
+gaseosa o a un frasco de mermelada
+—<Termino slug="trasvase-de-envase">trasvasar</Termino>— es la causa de intoxicación rural más
+repetida y evitable que existe, y la víctima suele ser un chico o una visita.
+
+El envase original **es el tipo de dato y la etiqueta son sus metadatos**. Al trasvasar borrás el
+tipo y el sistema pierde la capacidad de validar nada: cualquiera asume el tipo que sugiere la forma
+del envase, y una botella conocida con un líquido de color amable **es una invitación a beberla**.
+La contraparte vale igual: **un envase de insumo vacío no vuelve a usarse
+jamás**, va con triple <Termino slug="triple-lavado">lavado</Termino> —tres enjuagues cuya agua se
+vierte dentro de la mochila, nunca al suelo— y perforado.
+</Advertencia>
+
+## Lo que pasa después de aplicar
+
+**El sobrante y el enjuague.** La manera de no tener
+un <Termino slug="sobrante-de-aplicacion">sobrante</Termino> es medir la superficie y preparar lo
+justo; si igual queda, se aplica diluido en el mismo cultivo autorizado, y **nunca al arroyo, al
+canal ni cerca del pozo**, porque lo que llega al agua no se diluye hacia la nada: baja por
+la <Termino slug="escorrentia">escorrentía</Termino> hasta donde alguien saca agua, o se filtra
+como <Termino slug="lixiviado">lixiviado</Termino> hacia
+el <Termino slug="nivel-freatico">agua subterránea</Termino> de los pozos del barrio. La mochila se
+lava el mismo día en un punto fijo lejos del pozo y de la casa, con esa agua tratada igual.
+
+**El aviso y el registro.** El reingreso obliga a que alguien se entere, con cartel y aviso hablado:
+en un predio comunitario **esto es la mitad del riesgo**, porque el que se intoxica casi nunca es el
+que aplicó. Se anota fecha, producto, ingrediente activo, lote, dosis real, superficie, qué motivó
+la aplicación —qué se vio, no qué mes era—, quién aplicó y **la fecha en que ese cultivo vuelve a
+ser cosechable**. Sin ese último dato escrito, el plazo de seguridad es una intención.
+
+## Lo casero también es un insumo, y tiene menos información
+
+Un preparado hecho en casa **no es un insumo más suave: es un insumo del que sabés menos**.
+Un <Termino slug="preparado-sin-etiqueta">preparado sin etiqueta</Termino> no tiene activo
+declarado, concentración medida, plazo de seguridad, instrucciones de primeros auxilios ni lote, y
+eso **no significa que el riesgo sea cero: significa que es desconocido**. Peor que la falta de
+datos es la falta de constancia: dos tandas con la misma receta dan concentraciones distintas.
+
+<Analogia>
+Un preparado casero es **software propio sin README, sin tests y sin versionado**. No es
+necesariamente malo —mucho código interno supera a la librería que reemplazó— pero sabés menos de él
+que del paquete que instaló el gestor de dependencias: sin versión no reproducís el resultado, sin
+tests no sabés qué hace en un caso nuevo y sin documentación **quien lo use dentro de dos años no va
+a saber qué contiene ese bidón**.
+
+La respuesta es **escribir el README y desplegar primero en un entorno chico**: rotular con fecha y
+proporciones, probar en pocas plantas antes de aplicar en todo, y anotar qué pasó.
+</Analogia>
+
+Cinco preparados de este curso, con el riesgo que la costumbre esconde. **El extracto de tabaco**:
+la nicotina es un tóxico agudo potente que **se absorbe muy bien por la piel**, así que manipular un
+macerado concentrado sin guantes es una vía de intoxicación real. **Los extractos de ají y ajo**: el
+activo del ají es la capsaicina, **la misma molécula del gas pimienta**, y un concentrado colado en
+ambiente cerrado es un irritante respiratorio y ocular severo. El
+caldo <Termino slug="caldo-sulfocalcico">sulfocálcico</Termino> es el más peligroso de preparar de
+todo el curso: se cocina sobre fuego, desprende sulfuro de hidrógeno —un gas tóxico que además
+**anestesia el olfato**, de modo que dejar de olerlo es señal de peligro y no de que se acabó— y el
+líquido caliente es cáustico; nunca se mezcla con ácidos. El
+caldo <Termino slug="caldo-bordeles">bordelés</Termino> y todo lo que lleve cobre suma un riesgo
+acumulativo, porque el cobre no se degrada y se queda en los primeros centímetros del suelo. **Los
+fermentados en bidón** producen dióxido de carbono y compuestos azufrados en espacio cerrado: se
+abren afuera, girando la cara, y **nunca se mete la cabeza en un tanque ni se entra a un pozo donde
+algo fermenta**, porque un gas más denso que el aire se acumula abajo y desplaza el oxígeno sin
+avisar.
+
+<Advertencia titulo="Ante una exposición: la etiqueta va con la persona, y hay dos cosas que no se hacen">
+El detalle de primeros auxilios es la lección 06, pero dos reglas pertenecen a esta porque
+contradicen la costumbre. **No se induce el vómito por iniciativa propia**: puede empeorar mucho el
+cuadro, porque con un corrosivo el producto vuelve a quemar el esófago al subir y con líquidos
+livianos como los combustibles hay riesgo de que pasen al pulmón. Se sigue la etiqueta y se busca
+atención médica de inmediato. Y **la leche no es un antídoto**: es el remedio popular más extendido
+de la región, no neutraliza nada y con productos liposolubles puede facilitar la absorción.
+
+Lo que sí se hace siempre: **sacar a la persona del lugar, quitarle la ropa contaminada, lavar la
+piel con abundante agua y jabón, lavar el ojo con agua corriente durante muchos minutos, y llevar el
+envase o una foto de la etiqueta al centro de salud.**
+</Advertencia>
+
+<ContextoBolivia>
+**En el área <Termino slug="area-integrada">integrada</Termino> cruceña todo esto se compra con una
+facilidad que engaña.** Cualquier agropecuaria de barrio vende sulfato de cobre, cal, azufre y
+fitosanitarios de todas las bandas, y la disponibilidad no dice nada sobre la conveniencia. Existe
+además la venta fraccionada e informal —producto medido en un vaso y entregado en una botella de
+gaseosa, sin etiqueta ni factura—, la versión comercial exacta del error que esta lección prohíbe. **Comprá siempre envase cerrado, con etiqueta legible y con factura.**
+
+**El clima local pelea contra el equipo de protección durante siete meses al año.** Con la humedad y
+el calor de octubre a abril, un traje cerrado al mediodía es un golpe de calor esperando, y la
+respuesta es el horario temprano y los turnos cortos. En la seca, el viento levanta polvo y aumenta
+la <Termino slug="deriva-de-aplicacion">deriva</Termino>, y con
+un <Termino slug="surazo">surazo</Termino> el frío hace que la ropa mojada de producto se quede
+puesta más tiempo. Y en lluvias hay que resistir la tentación de aplicar cada semana porque "el agua
+se lo lleva": si la lluvia es el argumento, la respuesta correcta estaba más abajo en la escalera
+del módulo 11.
+
+**El dengue vuelve a entrar por la puerta de los insumos, y el agua del barrio es de todos.** Baldes
+de mezcla, tambores para llenar la mochila y envases vacíos a la intemperie son **agua quieta**, es
+decir criaderos, en zona endémica: **nada que junte agua queda destapado**, y los envases vacíos van
+con triple lavado, perforados y bajo techo —preguntá a tu proveedor por el punto de acopio vigente—.
+En Zanja Honda hay pozos someros y zanjas que se llenan en cada aguacero, así que el punto de lavado
+va lejos del pozo, del canal y de la casa, drenando sobre suelo con cobertura vegetal.
+
+**Y lo sanitario y lo legal se consultan donde corresponde.** Una intoxicación, una exposición
+laboral, una duda sobre embarazo y aplicación o sobre la calidad del agua de consumo **son asunto
+del centro de salud del barrio**; el análisis de suelo, de un laboratorio o una institución de
+investigación agrícola del departamento. En Bolivia el registro de los fitosanitarios lo lleva el
+SENASAG, y vender o repartir empaquetado un bioinsumo —que no es lo mismo que prepararlo para uso
+propio— entra en el ámbito de esa autoridad de sanidad agropecuaria e inocuidad alimentaria; lo
+tributario, con un contador local. **Este curso no inventa listas, números de norma, plazos de
+trámite ni precios.**
+</ContextoBolivia>
+
+<AplicarRizoma>
+**Empecemos por el inventario honesto, porque la gente cree que no tiene insumos hasta que los
+cuenta.** En los 3.666 m² en 12 lotes conviven, hoy o pronto: biol y otros fermentados en bidón,
+caldo bordelés para los frutales injertados, cal de obra y de encalado, lavandina para herramienta y
+mesada de repique, combustible y aceite para la bomba y la motoguadaña, y fertilizante soluble.
+**Son nueve o diez insumos y todos caen bajo estas reglas.** Rizoma no es un proyecto "libre de
+químicos": es uno que maneja químicos, y por eso necesita el procedimiento escrito.
+
+**El armario y su geografía.** Sobre el mueble que definirá el módulo 23, esta lección agrega la
+separación interna. **Estante alto**: productos comprados con etiqueta, por vencimiento. **Estante
+bajo**:
+cal, cobre, azufre y demás material a granel, que es lo pesado y no debe caer sobre nada. **Nunca
+dentro**: semilla, alimento, agua, el equipo de protección ni el combustible. **Fuera, colgados en
+la pared**: guantes, careta y respirador con su filtro en bolsa cerrada, junto al inventario y la
+bitácora.
+
+**La regla por cultivo se decide una vez y se cuelga en la pared, porque el catálogo la hace fácil.**
+Culantro y ají dulce se comen crudos y la parte comestible es la que se rocía: producto comprado
+solo si la etiqueta lo autoriza en ese cultivo, con el plazo de seguridad anotado en el calendario
+de cosecha, y **ningún fermentado no higienizado sobre ellos**. Yautía, batata y plátano tienen el
+órgano comestible enterrado o pelado y cocido: el margen es mayor. Ornamentales, árboles de sombra y
+frutales injertados no se comen, **y ahí va el bordelés si va a algún lado**, con umbral y planilla
+de cobre por lote. El <Termino slug="vivero">vivero</Termino> queda fuera de todo caldo mineral.
+
+**El orden de compra cuando el dinero entra por partes, que es siempre.** Primero **guantes de
+nitrilo y gafas cerradas**, lo más barato y lo que cubre las dos vías que más se usan; después
+**botas de goma y delantal impermeable** para mezclar, y después **el jarro medidor graduado**. Y
+**antes de todo eso, gratis: el horario, el cartel de reingreso, el punto de lavado lejos del pozo y
+la bitácora.** El equipo es de la parcela y no de una persona: se guarda limpio y se revisa, porque
+un guante pinchado no protege.
+
+**El encuadre comunitario obliga a un límite explícito en lo que se enseña.** Rizoma trabaja con
+vecinos y con chicos alrededor, y un taller de una tarde no puede terminar con veinte personas
+cocinando sulfocálcico en sus patios. La regla defendible: **la etiqueta, el guante, el horario y la
+botella de gaseosa se enseñan a todo el mundo, siempre; biol y compost también; sulfocálcico y
+bordelés no se enseñan como receta suelta, sino dentro de una sesión con protección, umbral y
+registro, y sin menores en el sector.** Y una frase que vale la charla entera: **"casero no quiere
+decir inofensivo; quiere decir que no sabés qué le pusiste".**
+
+**Por último, una persona responsable y una suplente, con nombre**, porque el módulo 17 mostrará
+qué le pasa a una tarea que es "del grupo". Es dueña del armario, el inventario, la bitácora y los
+vencimientos, y hace la caminata de auditoría de diez minutos: **¿hay algún envase sin
+etiqueta? ¿hay algo trasvasado a una botella de gaseosa? ¿hay agua parada en algún recipiente? ¿el
+filtro del respirador está en su bolsa? ¿la bitácora tiene la fecha de cosecha habilitada de lo
+último aplicado?** Si las cinco tienen buena respuesta, el sistema funciona.
+</AplicarRizoma>
+
+## Lo que sigue
+
+Esta lección asumió en cada párrafo que hay adónde ir cuando algo sale mal, y no dijo cuál es.
+"Llevá la etiqueta al centro de salud" y "lavá el ojo con agua corriente muchos minutos" no sirven
+si no hay agua preparada, si nadie sabe a qué número llamar o si el que llama no sabe qué decir.
+
+Eso cierra el módulo. La lección 06 arma **el botiquín real de una parcela**: qué contiene
+—empezando por agua limpia abundante, el insumo de primeros auxilios más usado y el que siempre
+falta—, qué no debe contener aunque venga en las cajas hechas, y dónde vive. Después, **a quién se
+llama y cómo se explica una emergencia**. Y por último, **las precauciones cuando trabajan niños o
+personas mayores**, que es donde la dosis por kilo de peso deja de ser un cálculo y se vuelve una
+lista de tareas que unos pueden hacer y otras no.

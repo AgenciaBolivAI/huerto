@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "tres-mecanismos",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un estante largo se descolgó de la pared. Estaba sujeto solamente con cuatro clavos puestos desde arriba, atravesando la tabla de abajo hacia el listón. ¿Qué afirmaciones explican correctamente la falla?",
+      "opciones": [
+        "El clavo agarra por fricción, y esa fricción se afloja con los años porque la madera encoge alrededor del vástago en cada estación seca",
+        "La carga tendía a sacar los clavos en línea recta, que es justamente la dirección en la que un clavo resiste menos",
+        "Faltaba geometría: una ranura o un soporte por debajo habría llevado el peso por apoyo directo en vez de dejárselo a las fijaciones",
+        "Los clavos fallaron porque trabajaban a cizalla, que es el esfuerzo que peor resiste un clavo"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen el mismo fallo desde ángulos distintos: fricción que se degrada, carga aplicada en la dirección de extracción y ausencia de geometría que respalde. La cuarta es falsa y además invierte el hecho central de la lección: el clavo resiste MUY BIEN a cizalla —para fallar de costado la madera tiene que aplastarse contra él o el clavo doblarse— y muy mal a extracción. En este estante los clavos no trabajaban a cizalla sino a extracción, que es su punto débil, y por eso salieron enteros y sin doblarse."
+    },
+    {
+      "id": "cola-en-la-testa",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un marco de cuadro pegado a tope, testa contra testa, se abre solo a las pocas semanas. ¿Por qué?",
+      "opciones": [
+        "La testa absorbe el adhesivo por capilaridad y se lo lleva adentro, así que la línea de cola queda hambrienta",
+        "Lo que se pega en la testa son las puntas de las fibras, que se arrancan de su propia madera con muy poca fuerza",
+        "Una unión pegada testa contra testa tiene del orden de una quinta parte de la resistencia de la misma unión en fibra larga",
+        "La cola vinílica nunca alcanza la resistencia necesaria para un marco, por buena que sea la junta"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son el mecanismo completo: la testa chupa, lo pegado son puntas de fibra que se desgarran, y de ahí sale la pérdida de resistencia. La cuarta es incorrecta porque culpa al producto en vez de a la geometría de la fibra: esa misma cola vinílica, aplicada fibra larga contra fibra larga, da una junta más fuerte que la madera misma. El problema no es qué cola usaste sino contra qué cara la usaste, y por eso la solución es un tarugo, una espiga o un refuerzo, no un adhesivo más caro."
+    },
+    {
+      "id": "pretaladro-dos-diametros",
+      "tipo": "opcion_multiple",
+      "enunciado": "Atornillás dos tablas y, por más que apretás, queda una luz visible entre ellas. Hiciste un solo agujero, del ancho del núcleo del tornillo, atravesando las dos piezas. ¿Qué es cierto?",
+      "opciones": [
+        "La rosca mordió también en la pieza de arriba, así que las dos avanzan a la misma velocidad y la separación nunca se cierra",
+        "La pieza de arriba necesitaba un agujero de paso del ancho total del tornillo, filetes incluidos, para que la rosca pase sin agarrarse",
+        "Un tornillo aprieta porque arrastra una pieza contra la otra, y solo puede arrastrarla si no muerde arriba",
+        "El problema se resuelve apretando más fuerte con un atornillador de mayor torque"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son el razonamiento del pretaladro de dos diámetros: si la rosca muerde arriba, el tornillo cuelga las dos piezas juntas con la luz que ya tenían. La cuarta es falsa y además peligrosa para la pieza: apretar más no cierra nada, porque el problema es cinemático y no de fuerza, y lo único que se consigue es barrer la rosca del agujero —momento en el que ya no hay recuperación y hay que ir a un tornillo más grueso o tapar y empezar de nuevo."
+    },
+    {
+      "id": "veta-cruzada-tapa",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para que una tapa de mesa de madera maciza quede bien firme conviene encolarla y atornillarla rígidamente a los travesaños en toda su longitud.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error que más mesas raja. La tapa se mueve mucho a lo ancho —una tapa de 60 cm se mueve cerca de un centímetro entre febrero y agosto— mientras que el travesaño, medido a lo largo de su propia fibra, se mueve décimas de milímetro. Si están unidos rígidamente en toda la longitud, esa diferencia tiene que aparecer en algún lado, y aparece rompiendo el eslabón más débil: la línea de cola, o directamente la tapa, que se raja por el medio. La solución es fijar de modo que la tapa pueda correr: agujeros ovalados con arandela, botones o tacos corredizos, y fijar en el centro liberando los extremos."
+    },
+    {
+      "id": "espuma-poliuretano",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cuando la cola de poliuretano hace espuma y esta rebosa por la junta, esa espuma rellena los huecos y refuerza la unión.",
+      "respuesta": false,
+      "explicacion": "Falso, y es una trampa visual clásica. El poliuretano cura reaccionando con la humedad de la madera y del aire, y al hacerlo libera gas: la espuma que sale es prácticamente aire y no tiene resistencia estructural alguna. Ver espuma rebosando no indica que la junta esté llena, indica que hubo reacción. Por eso el poliuretano necesita tanto apriete como la vinílica o más, porque si no la propia espuma empuja y separa las piezas mientras cura. El adhesivo que sí rellena huecos con resistencia real es el epoxi."
+    },
+    {
+      "id": "apriete-y-tiempos",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el apriete y los tiempos de una junta encolada, ¿qué es correcto?",
+      "opciones": [
+        "El apriete tiene una sola función: poner las superficies en contacto en toda su extensión mientras el adhesivo endurece",
+        "Si las piezas no apoyan bien, ninguna fuerza de apriete lo arregla, porque al soltar la madera vuelve a su forma y se lleva la junta",
+        "El tiempo de apriete no es el curado total: al soltar los apretadores la junta se sostiene sola pero todavía no se le puede poner carga",
+        "Apretar muy fuerte compensa una junta mal cortada porque obliga a las dos caras a tocarse"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen para qué sirve el apriete y por qué hay dos relojes distintos. La cuarta es exactamente lo que el apriete NO puede hacer: forzar una junta mal cortada la deforma elásticamente mientras está en la prensa, pero al soltar la madera recupera su forma y arranca la línea de cola. Además, un apriete excesivo puede dejar la línea de cola demasiado hambrienta. La junta se resuelve en el corte; el apretador solo mantiene el contacto mientras la cola endurece."
+    },
+    {
+      "id": "clavo-que-raja",
+      "tipo": "opcion_multiple",
+      "enunciado": "Estás clavando cerca de la punta de una tabla de madera dura y seca, y se raja. ¿Qué remedios atacan el mecanismo real?",
+      "opciones": [
+        "Achatar la punta del clavo con dos golpes de martillo, para que corte las fibras en vez de separarlas",
+        "Pretaladrar con una broca del orden de tres cuartas partes del diámetro del clavo",
+        "Escalonar los clavos para que no caigan todos sobre la misma línea de fibra",
+        "Usar un clavo más grueso, para que reparta mejor el esfuerzo dentro de la madera"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras atacan el efecto cuña, que es el mecanismo: el clavo aparta las fibras de costado y la madera es muy débil separándose a lo largo de la fibra. La cuarta empeora el problema en vez de resolverlo: un clavo más grueso es una cuña más grande y desplaza más fibra, así que raja más, no menos. La madera dura y seca y la cercanía a la punta de la tabla ya son las tres condiciones que más favorecen la rajadura; sumarles diámetro es agravarlas."
+    },
+    {
+      "id": "aplicar-a-tu-casa",
+      "tipo": "abierta",
+      "enunciado": "Elegí un mueble o un armado concreto de tu casa que se haya roto, se bambolee o esté por hacerse, y analizalo con las herramientas de esta lección. Decí qué esfuerzo recibe la unión y desde dónde, cuál de los tres mecanismos —geometría, fricción, adhesión— estaba trabajando solo, y cómo lo vas a reconstruir para que trabajen por lo menos dos. Justificá la unión que elegís, el pretaladro o el apriete que hace falta, y si hay veta cruzada en juego, cómo la vas a resolver. Escribí para alguien que va a hacer el trabajo con serrucho, formón, martillo y taladro, sin máquinas grandes.",
+      "respuestaModelo": "Tomo la mesa de la cocina, que se bambolea de lado y tiene la tapa rajada por el medio. Son dos problemas distintos con dos mecanismos distintos, y conviene separarlos antes de tocar nada.\n\nEl bamboleo primero. Las patas están unidas a los travesaños con una unión a tope: la testa del travesaño apoyada contra la cara de la pata, con cola y dos tornillos por lado. El esfuerzo que recibe esa junta no es tracción ni compresión, es momento: cuando alguien se apoya en el borde de la mesa, la fuerza actúa al final de una palanca larga, y el esfuerzo en la junta es la fuerza multiplicada por la distancia hasta la junta. Por eso una mesa se afloja aunque nadie la haya golpeado nunca. De los tres mecanismos, ahí trabajaba prácticamente uno solo: la adhesión, y encima en su peor caso, porque la cara del travesaño que apoya es testa y la testa pega del orden de una quinta parte de lo que pega la fibra larga. Los dos tornillos aportaban algo de fricción y geometría, pero eran tornillos de yeso, finos y de acero frágil, que aguantan mal el esfuerzo cortante. No hay geometría en ningún lado: nada impide que la junta gire.\n\nLa reconstruyo con caja y espiga, que es la unión que usa los tres mecanismos a la vez. En cada extremo de travesaño saco una espiga de aproximadamente un tercio del espesor de la pieza y abro la caja correspondiente en la pata con broca y formón. Las caras de la espiga me dan fibra larga contra fibra larga, que es el mejor caso de la cola; los hombros que rodean la espiga topan contra la pata y son los que absorben el momento, que es lo que estaba rompiendo la mesa; y el ancho de la espiga impide que la junta gire. Lo que decide la calidad no es que la punta de la espiga llegue al fondo de la caja, sino que los hombros apoyen parejos, así que el corte de los hombros es donde pongo el cuidado. Si el resultado tiene que aguantar mucho, la atravieso con una clavija de madera, y entonces la junta ya no depende de la cola en absoluto.\n\nAntes de encolar hago el armado en seco: monto la mesa entera sin una gota de cola, con los apretadores puestos, y compruebo que todo cierre, que las diagonales del bastidor den iguales y que tenga cada herramienta a mano. El encolado es una operación con plazo —una vez que la cola toca la madera el reloj corre y no se puede pausar—, y descubrir en ese momento que falta un apretador es descubrirlo tarde. Como no tengo apretadores de verdad, uso una vuelta de cuerda alrededor del bastidor con un palo que giro para torcerla, que aprieta con muchísima fuerza y se dosifica contando vueltas, y pongo tacos de sacrificio entre la cuerda y la madera para que no hunda la fibra. Uso cola vinílica común porque la mesa está bajo techo, encolo en la parte más seca del día, y no le pongo carga hasta el día siguiente: acá la vinílica cura perdiendo agua y en la época de lluvia tarda bastante más que en agosto.\n\nSi una junta vieja está solo floja y no la quiero rehacer entera, la desarmo y raspo la cola vieja hasta llegar a madera con un formón, porque la cola no pega sobre cola vieja: la película endurecida es una superficie que no absorbe nada. Inyectar cola en una junta floja sin desarmarla falla siempre.\n\nAhora la tapa rajada, que es de veta cruzada. Está encolada y atornillada rígidamente a los travesaños en toda su longitud. La tapa se mueve mucho a lo ancho —cerca de un centímetro entre febrero y agosto— mientras que el travesaño, medido a lo largo de su propia fibra, se mueve décimas de milímetro. Esa diferencia tiene que aparecer en algún lado, y apareció rajando la tapa por el medio. No fue mala suerte ni mala madera: fue una restricción de diseño que no se respetó.\n\nAsí que la libero. Suelto la tapa, encolo la rajadura de canto, que es fibra larga contra fibra larga y pega perfecto, y la vuelvo a montar sin cola contra los travesaños. La sujeto con agujeros ovalados: agujero alargado en el sentido en que la tapa se mueve, tornillo con arandela, de modo que la arandela sujeta hacia abajo y el vástago se desliza dentro del óvalo. Fijo en el centro y libero los extremos. Los tornillos llevan pretaladro de dos diámetros —agujero de paso en la pieza de arriba y agujero guía en la de abajo— más avellanado, porque sin avellanar la cabeza actúa como cuña en madera dura y raja el canto.\n\nY si el bastidor todavía se mueve de costado, le agrego una escuadra de terciado atornillada en cada rincón por debajo. Un rectángulo con cuatro juntas que giran no es una estructura, es un mecanismo que se vuelve rombo con un empujón; un triángulo no puede deformarse sin que cambie el largo de un lado. La escuadra convierte flexión en las juntas, lo que peor aguantan, en tracción y compresión a lo largo de las piezas. Todo con serrucho, formón, martillo y taladro.",
+      "criterios": [
+        "Elige un caso concreto y propio (mueble, repisa, marco, mosquitero, armado de la casa) en vez de responder en abstracto",
+        "Nombra el esfuerzo que recibe la unión —tracción, compresión, cizalla o momento— y de dónde viene la carga",
+        "Reconoce el momento como carga por distancia y explica por qué una palanca larga rompe juntas que sostendrían el mismo peso apoyado encima",
+        "Identifica explícitamente cuál de los tres mecanismos estaba trabajando solo en la unión que falló",
+        "Propone una unión concreta que sume al menos dos mecanismos y justifica la elección por el esfuerzo, no por costumbre",
+        "Aplica correctamente la regla de la testa: no le pide fuerza y fabrica área de fibra larga donde no la había",
+        "Especifica el pretaladro de dos diámetros —agujero de paso arriba, agujero guía abajo— y el avellanado cuando use tornillos",
+        "Menciona el armado en seco antes de encolar, entendiendo que el encolado es una operación con plazo",
+        "Resuelve el apriete con medios disponibles (cuerda y palo, cuñas opuestas, varilla roscada) y usa tacos de sacrificio",
+        "Detecta si hay veta cruzada en juego y la resuelve con agujero ovalado, botón corredizo o panel flotante en vez de fijar rígido",
+        "Tiene en cuenta el clima local: curado más lento en época húmeda, no encolar con surazo, fijaciones galvanizadas o inoxidables si se moja",
+        "Se mantiene dentro de herramienta de mano y taladro, sin suponer máquinas grandes ni compras caras"
+      ],
+      "explicacion": "La pregunta comprueba que el alumno pueda recorrer la cadena entera —esfuerzo, mecanismo que falta, unión que lo repara, ejecución— sobre un objeto real suyo, que es lo que convierte la lección en oficio. Lo que se evalúa no es que elija la unión más fuerte del catálogo, sino que la elección esté justificada por el esfuerzo que recibe la junta, y que no se olvide de las dos restricciones que anulan cualquier buen ensamble si se las desobedece: el pretaladro de dos diámetros, sin el cual la junta no cierra por más que se apriete, y la veta cruzada, que raja la pieza meses después aunque la unión esté perfecta."
+    }
+  ]
+}

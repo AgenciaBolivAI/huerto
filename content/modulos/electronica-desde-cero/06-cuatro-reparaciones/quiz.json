@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "punto-de-prueba",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a partir por la mitad un aparato que no conoces. ¿Qué hace bueno a un punto de prueba?",
+      "opciones": [
+        "Que sea accesible sin desarmar medio aparato.",
+        "Que se pueda medir con el instrumento que realmente tienes.",
+        "Que parta la cadena en dos mitades de tamaño parecido.",
+        "Que esté en la mitad eléctrica exacta del circuito, aunque haya que desoldar la placa para llegar a él."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La mitad exacta no vale nada si cuesta una hora de desarme y el riesgo de romper algo por el camino. La búsqueda binaria es una estrategia de economía: cada corte tiene que costar poco para que salga a cuenta hacer varios. Un punto un poco descentrado pero accesible —los bornes del portalámparas, la salida del interruptor, los terminales del capacitor, la regleta de entrada— gana siempre contra un punto ideal enterrado. Y si en un aparato no hay ningún punto accesible, eso ya es información: la búsqueda binaria se hace entonces entre aparatos, sustituyendo bloques enteros, no dentro de la placa."
+    },
+    {
+      "id": "lectura-en-vacio",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el multímetro lee los 220 voltios completos en un borne, ese tramo del cableado está en buen estado.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error más caro de la lección. El voltímetro consume una corriente ridícula, así que un contacto que cuelga de tres hilitos de cobre le entrega la tensión completa y parece perfecto. El contacto tiene resistencia, pero mientras no pase corriente esa resistencia no se nota: la caída es corriente por resistencia, y con corriente casi nula la caída es casi nula. Enciende el aparato y la tensión se desploma en ese punto, mientras el contacto disipa un calor que crece con el cuadrado de la corriente. Por eso hay tres preguntas y no dos: hay tensión, hay continuidad, y aguanta con carga."
+    },
+    {
+      "id": "ventilador-zumba",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un ventilador zumba, no arranca solo, pero si le das un empujón con el dedo se pone a girar y sigue. ¿Qué es correcto?",
+      "opciones": [
+        "El capacitor perdió capacidad y ya no genera el desfase que hace girar el campo magnético.",
+        "Se confirma midiendo la capacidad, desenchufado y con el capacitor descargado, y comparándola con el valor impreso en su cuerpo.",
+        "El reemplazo debe tener el mismo valor en microfaradios y una tensión de trabajo igual o mayor que el original.",
+        "Sirve cualquier capacitor del mismo valor, incluido un electrolítico sacado de una fuente vieja."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un electrolítico está hecho para corriente continua y una sola polaridad; puesto en un motor de alterna se invierte cien veces por segundo, se calienta y revienta, a veces de forma violenta. El repuesto tiene que ser un capacitor para motor de corriente alterna. Sobre la tensión, la regla es asimétrica y conviene recordarla: igual o mayor está bien —sobra margen—, menor no, aunque el valor en microfaradios coincida. Y el mecanismo detrás del síntoma es la clave: la corriente alterna sola empuja y tira sin decirle al rotor hacia qué lado ir, y el capacitor existe para retrasar la corriente del devanado auxiliar y fabricar esa dirección. El dedo hace a mano lo que el capacitor ya no hace."
+    },
+    {
+      "id": "protector-termico",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un ventilador que trabaja veinte minutos, se para solo y vuelve a arrancar media hora después tiene el protector térmico averiado.",
+      "respuesta": false,
+      "explicacion": "Falso: ese comportamiento es exactamente el protector funcionando bien. Es una lámina bimetálica que abre el circuito cuando el bobinado se calienta demasiado y cierra sola al enfriarse, y el ciclo de parar y volver a arrancar es su firma. Lo que hay que buscar es la causa del calor: polvo en el bobinado y en las rejillas, bujes secos que hacen que el motor pelee contra la fricción, aspas trabadas, o tensión de red baja, que obliga al motor a tomar más corriente para dar la misma potencia. Puentear el protector hace desaparecer el síntoma y convierte una parada molesta en un incendio, porque ya nada corta cuando el bobinado pasa de su temperatura límite."
+    },
+    {
+      "id": "bomba-sin-agua",
+      "tipo": "opcion_multiple",
+      "enunciado": "La bomba gira con normalidad y no sube agua. ¿Qué afirmaciones son correctas?",
+      "opciones": [
+        "Una bomba centrífuga no puede empujar aire: si el cuerpo tiene aire dentro, el impulsor gira en vacío.",
+        "Toda la tubería de aspiración trabaja en depresión, así que una junta floja en ese tramo traga aire sin gotear agua.",
+        "Una válvula de pie que ya no retiene deja que la columna se vacíe y la bomba amanece descebada.",
+        "Como el motor gira bien, el problema está descartado en el lado hidráulico y hay que revisar el capacitor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Que el motor gire es justamente lo que descarta el sistema eléctrico y señala el hidráulico. La trampa de este caso es que la fuga no se ve: en el lado de impulsión el agua sale y moja, pero el lado de aspiración está a menos presión que la atmósfera, así que por una unión mal sellada no sale agua, entra aire. El dueño revisa la bomba una y otra vez mientras el problema está tres metros atrás, en una junta o en una válvula de pie. La regla operativa es cebar de verdad —llenar cuerpo y aspiración— y, si se desceba sola, revisar toda la línea de aspiración antes que la bomba."
+    },
+    {
+      "id": "cuando-no-reparar",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿En cuáles de estos casos la respuesta correcta es no reparar, sin hacer cuentas de costo?",
+      "opciones": [
+        "Cuando el aislamiento está comprometido: carcasa rajada, forro reseco y agrietado, aparato que estuvo sumergido.",
+        "Cuando la reparación consistiría en anular una protección —puentear un térmico, cortar la pata de tierra del enchufe—.",
+        "Cuando ya falló tres veces por lo mismo, porque a la tercera la causa está en el ambiente o en el uso, no en la pieza.",
+        "Cuando el aparato tiene muchos años, porque un equipo viejo ya no vale la pena."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La edad por sí sola no dice nada: un ventilador de veinte años con bobinado sano y bujes engrasables suele ser mejor que uno nuevo de plástico, y en un taller comunitario los aparatos viejos son precisamente los reparables, porque están hechos con tornillos y no con clips soldados. Los tres primeros casos sí son cierres definitivos, y los dos primeros lo son por seguridad: un aislamiento perdido no se ve y la avería aparece en la mano de la próxima persona; una reparación que quita una protección deja la trampa armada para quien venga después y no sepa. El tercero es distinto: no es que no se pueda, es que arreglar la pieza otra vez sería tratar el síntoma en vez de la causa."
+    },
+    {
+      "id": "diagnostico-bomba-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Un jueves de enero, en plena temporada de lluvias y con el vivero lleno de plantines, la bomba que llena el tanque elevado de Rizoma deja de dar agua. Describe el diagnóstico completo, desde antes de tocar la bomba hasta la comprobación final: qué compruebas en cada paso, qué decide cada medición, qué harías distinto si el diferencial estuviera saltando, y en qué punto declararías que no vale la pena repararla.",
+      "respuestaModelo": "Lo primero no es una medición sino una decisión de calendario. El tanque elevado da unas horas de autonomía y esas horas son todo el tiempo de reparación disponible; si hay bomba de repuesto, se pone y se repara la averiada sin prisa, porque un vivero lleno de plantines en enero no aguanta un día de improvisación. Con eso resuelto, empieza el diagnóstico.\n\nAntes de tocar la bomba se comprueba la alimentación, que es donde está una parte enorme de las averías reales. Se mira el tablero: si el térmico saltó, algo pidió demasiada corriente; si saltó el diferencial, hay corriente escapándose del circuito y el caso cambia por completo. Se sigue por el tomacorriente o la caja de conexión, el cable y su enchufe —revisado con continuidad y con flexión, porque un cable puede medir bien quieto y estar partido—, el interruptor y cualquier fusible propio. La comprobación que cierra este bloque es medir tensión en los bornes de la bomba, y medirla dos veces: en reposo y en el instante del arranque. Si en reposo hay 220 voltios y al arrancar se hunde mucho, el problema no está en la bomba sino en la línea o en la sección del cable, cosa muy posible al final de una línea rural; ese motor se calentará y disparará su protector aunque esté sano.\n\nSi la alimentación llega bien, se parte el sistema en tres: eléctrico, mecánico e hidráulico, y el síntoma decide en cuál buscar. Aquí el síntoma es preciso: hay que distinguir si la bomba no hace nada, si zumba sin girar, o si gira normalmente y no sube agua.\n\nSi no hace nada con tensión presente en sus bornes, el sospechoso es el protector térmico abierto —y entonces la pregunta real es qué la calentó— o el bobinado cortado. Si zumba y no gira, hay dos causas: el capacitor, que se mide desenchufado y descargado a través de una resistencia y se compara con el valor impreso en su cuerpo, o el eje trabado por sedimento, que se comprueba girándolo a mano. El reemplazo del capacitor debe tener el mismo valor en microfaradios, tensión igual o mayor, y ser de motor de alterna.\n\nSi gira bien y no sube agua, el sistema eléctrico queda descartado y todo el trabajo está en el hidráulico. Se ceba de verdad —llenar cuerpo y tubería de aspiración, purgar— y se arranca. Si da agua y a las horas vuelve a fallar, se desceba sola, y entonces la búsqueda no está en la bomba sino en la línea de aspiración, que trabaja en depresión: una junta floja ahí no gotea, traga aire, y no hay nada que ver. Se revisan uniones, la válvula de pie y el filtro. Si sube agua pero con poca fuerza, el sospechoso es el filtro sucio o el impulsor gastado, y se compara la presión de salida con la de la placa. Si arranca y para cada pocos segundos, casi siempre el tanque hidroneumático perdió su colchón de aire: se repone aire, no se cambia el presostato.\n\nEl caso del diferencial se trata aparte y con otra actitud. Un diferencial que salta no dice que haya demasiada corriente, dice que hay corriente escapándose por un camino que no es el circuito, y en una bomba ese camino suele ser el agua: humedad en la caja de conexiones, entrada de cables mal orientada, aislamiento del bobinado vencido. En enero, con lluvia, es lo más probable. Nunca se puentea ni se sustituye por uno mayor. Se desconecta, se seca, se revisa la caja y se mide resistencia entre bobinado y carcasa, con la salvedad honesta de que un multímetro que lee abierto no prueba que el aislamiento aguante 220 voltios, porque mide con una tensión mínima. Antes de reconectar nada se comprueba la puesta a tierra, porque el escenario que hay que evitar es alguien tocando la carcasa descalzo sobre tierra mojada.\n\nLa comprobación final tiene cuatro pasos y ninguno se salta. En frío y sin energía: continuidad donde debe haberla, ausencia donde no, y ninguna conexión entre conductores activos y la carcasa. Primer encendido corto y vigilado. Bajo carga: corriente con pinza amperimétrica comparada con la placa, y presión de salida. Y a la media hora, desenchufado, tocar con el dorso de la mano bornes, caja y carcasa: ningún punto de conexión debe estar más caliente que el resto.\n\nDeclararía que no vale la pena repararla en cuatro situaciones: si el diferencial sigue saltando después de secar y limpiar, porque el aislamiento está vencido y eso no se arregla en el sitio; si el bobinado huele a quemado o está oscurecido; si la reparación posible consistiría en anular una protección; y si ya es la tercera vez que falla por lo mismo, porque entonces la causa es la instalación o el uso y cambiar la pieza otra vez es tratar el síntoma. En todos esos casos la bomba va al taller de rebobinado o se retira, se monta la de repuesto, y el aparato retirado se desarma el mismo día para cosechar capacitor, cable y enchufe. Y todo el proceso se anota en la bitácora con la causa real, no con la primera sospecha.",
+      "criterios": [
+        "Decide primero el tema de tiempo: autonomía del tanque, bomba de repuesto y reparación sin prisa.",
+        "Comprueba la alimentación completa antes de abrir la bomba, incluyendo el estado del térmico y del diferencial.",
+        "Mide la tensión en los bornes de la bomba dos veces: en reposo y en el arranque, y sabe qué significa que se hunda.",
+        "Separa explícitamente los tres sistemas —eléctrico, mecánico e hidráulico— y usa el síntoma para elegir en cuál buscar.",
+        "Trata el zumbido sin giro midiendo capacidad del capacitor con el componente descargado, y girando el eje a mano.",
+        "Enuncia las tres condiciones del capacitor de reemplazo: mismo valor, tensión igual o mayor, y de motor de alterna.",
+        "Explica por qué una bomba que gira sin dar agua es un problema hidráulico y qué hace el cebado.",
+        "Reconoce que la tubería de aspiración trabaja en depresión y que sus fugas entran aire en vez de gotear.",
+        "Distingue el arranque y parada cada pocos segundos como tanque sin colchón de aire, no como presostato averiado.",
+        "Da al diferencial que salta el tratamiento de fuga y no de sobrecarga, sin puentearlo ni sustituirlo por uno mayor.",
+        "Incluye la comprobación en cuatro pasos, con la prueba de temperatura al cabo de media hora.",
+        "Fija criterios de no reparación: aislamiento vencido, bobinado quemado, anular una protección, tercera falla por lo mismo."
+      ],
+      "explicacion": "La respuesta buena no es la que acierta la avería —no hay datos para saberla— sino la que impone un orden que llega hasta ella con pocas mediciones y sin gastar. Tres cosas separan una respuesta completa de una parcial. La primera es empezar por la alimentación y por el calendario en vez de por la bomba. La segunda es partir en tres sistemas y dejar que el síntoma elija, que es la búsqueda binaria aplicada a un equipo con partes muy distintas. Y la tercera es tratar el diferencial como lo que es: no un estorbo que interrumpe el riego, sino el aviso de que la carcasa puede electrificarse en un sitio donde se trabaja descalzo sobre tierra mojada."
+    }
+  ]
+}

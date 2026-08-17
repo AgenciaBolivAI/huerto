@@ -1,0 +1,555 @@
+Hasta aquí todo fue preparación. Entender el metal, montar la máquina y limpiar y sujetar la pieza son
+tres cuartas partes del oficio, pero ninguna de las tres une nada. Lo que une es esto: **un charco de metal
+líquido del tamaño de una lenteja grande que vas arrastrando a lo largo de la junta**, y que detrás de tu
+mano se enfría y se convierte en una sola pieza con las dos que había.
+
+Esta lección enseña a manejar ese charco. Y enseña algo que casi nadie dice y vale todavía más: **un cordón
+terminado es un informe escrito**. Al enfriarse, el metal deja grabado en la superficie cuánta corriente
+había, a qué distancia estaba el electrodo, con qué ángulo apuntaste y a qué velocidad ibas. Aprender a
+soldar es, en buena parte, aprender a leer ese informe y corregir la variable que lo escribió mal.
+
+## Encender el arco y despegar el electrodo pegado
+
+El arco no está ahí esperando: hay que fabricarlo. Con el electrodo en el aire, entre su punta y la pieza
+hay aire, y **el aire es aislante**: la máquina tiene tensión en los bornes pero no circula nada. Para
+arrancar hay que tocar la pieza —cerrar el circuito— y volver a separarse enseguida.
+
+Lo que pasa en ese instante explica todo lo demás. Al tocar, toda la corriente de la máquina pasa por un
+punto de contacto minúsculo; ese punto se calienta al blanco en milésimas de segundo y **evapora un poco de
+metal**. Ese vapor metálico está ionizado, o sea que conduce, y cuando separas la punta dos o tres
+milímetros la corriente sigue pasando por él. El arco **se sostiene sobre el vapor de su propio metal**, y
+por eso hay que separarse rápido: si tardas, no hay vapor todavía; si te vas lejos, se enfría y se apaga.
+
+A ese gesto se le llama <Termino slug="cebado-del-arco">cebado del arco</Termino> y tiene dos formas. La de
+rascar, como quien enciende un fósforo, arrastrando la punta unos centímetros y levantando: es la más fácil
+y la que conviene aprender primero. La de picotear, tocando en el sitio y levantando en seco, es más
+precisa y hace falta con los electrodos de bajo hidrógeno, que se pegan con ganas.
+
+Y se pegan. El <Termino slug="electrodo-pegado">electrodo pegado</Termino> es la primera frustración de
+todos: no levantaste a tiempo, la punta se soldó a la pieza y ahora la máquina está en cortocircuito franco,
+entregando toda la corriente que puede a través de una barra que se pone roja en segundos, con el
+revestimiento cayéndose a pedazos y el transformador calentándose hacia el corte térmico.
+
+<Advertencia titulo="Cómo se despega, y qué no hay que hacer nunca">
+Primero, **mueve el portaelectrodo de lado a lado**, como una palanca: la unión pegada es delgadísima y
+cede al doblarla, no al tirar. Si en dos segundos no sale, **abre la pinza y suelta el electrodo**: el
+circuito queda abierto, deja de calentarse todo y recién entonces lo despegas con el guante o con un golpe
+de costado.
+
+Nunca tires del cable para arrancarlo, nunca lo agarres con la mano desnuda —queda al rojo aunque no se le
+note el color— y nunca levantes la careta con el arco todavía prendido. Y las colillas gastadas van a un
+tarro metálico, no al piso: llegan a los cientos de grados, ruedan hasta donde no miras y prenden lo que
+encuentren.
+</Advertencia>
+
+Hay una regla más, que parece manía y no lo es: **el arco se ceba dentro de la junta, sobre la zona que se
+va a fundir, o sobre un recorte de chatarra; nunca en cualquier parte de la pieza buena**. Un cebado suelto
+funde un punto sin ninguna protección, ese punto se enfría de golpe contra la masa fría que tiene alrededor
+y queda **duro, frágil y con un pocito**. Es una entalla, y a las entallas les gusta ser el sitio por donde
+la pieza se rompe meses después. En estructura seria esas marcas se prohíben; en tu portón, son el punto
+débil que tú mismo pusiste.
+
+## Las cuatro variables que mandan
+
+Todo lo que ocurre en un cordón sale de cuatro perillas: **cuánta corriente pones, a qué distancia mantienes
+la punta, con qué ángulo apuntas y a qué velocidad avanzas**. No hay una quinta. Cuando algo sale mal, el
+diagnóstico consiste en decidir cuál de las cuatro estaba fuera de sitio.
+
+Las cuatro se resumen en una sola magnitud física: **cuánto calor le metes a cada milímetro de junta**. Eso
+tiene nombre y cuenta, y explica por qué subir el amperaje y bajar la velocidad producen a veces el mismo
+desastre.
+
+<Formula explicacion="Calor aportado por milímetro de cordón, en kilojulios por milímetro. I es la corriente en amperios, V la tensión del arco (entre 20 y 28 voltios en electrodo revestido) y v la velocidad de avance en milímetros por minuto. Con 110 amperios, 24 voltios y 150 mm por minuto da algo más de 1 kJ/mm, que es un valor corriente en chapa de 4 a 6 milímetros.">
+calor aportado (kJ/mm) = I × V × 60 ÷ (v × 1000)
+</Formula>
+
+Léela dos veces, porque de ahí sale medio oficio. **La corriente está arriba y la velocidad abajo**: ir
+lento a 90 amperios puede meter más calor que ir rápido a 130. Poco calor por milímetro deja el metal base
+sin fundir y el cordón apoyado encima; mucho calor quema los bordes, deforma la pieza y ablanda una franja
+ancha a los costados.
+
+<Analogia titulo="Cuatro parámetros acoplados y una sola salida">
+Es exactamente el problema de ajustar un sistema con parámetros acoplados: cambiar el amperaje cambia el
+efecto del ángulo, y cambiar la velocidad cambia el efecto del amperaje. Por eso la regla del banco de
+pruebas es la misma que la del taller: **una variable a la vez, todo lo demás fijo, y anotas el resultado**.
+Quien toca tres perillas juntas y le sale bien no aprendió nada, porque no sabe cuál de las tres lo
+arregló, y la próxima vez vuelve a empezar de cero.
+</Analogia>
+
+## El amperaje: el calor que entra, no el número del dial
+
+El amperaje manda cuánto metal se funde por segundo. Un punto de partida razonable es **entre 30 y 40
+amperios por cada milímetro de diámetro del electrodo**: unos 75 a 100 para uno de 2,5 milímetros, unos 100
+a 130 para uno de 3,25. Y una regla de selección todavía más útil: **el diámetro del electrodo no debe pasar
+el espesor de la chapa más fina** que estás uniendo, porque si no la agujereas antes de fundir la otra.
+
+Con **poco amperaje** el arco cuesta encender, se apaga solo, chasquea de forma irregular, y el cordón sale
+alto, angosto y abombado, como una gota de silicona apoyada encima. La escoria no se despega: hay que
+picarla a golpes. Y debajo de ese cordón bonito puede no haber unión ninguna.
+
+Con **mucho amperaje** el electrodo se pone rojo hacia la mitad y el revestimiento se abre o se cae, salta
+mucho más material, el arco suena violento, el cordón queda muy plano y ancho, y en los bordes aparece un
+surco comido. En chapa fina, directamente se hace un agujero.
+
+<Dato titulo="El dial no es lo que llega">
+Entre el número de la máquina y el arco hay pérdidas que nadie ve. Una **pinza de masa apoyada sobre óxido,
+pintura o una superficie chica** hace resistencia y roba corriente; un **cable de extensión largo y delgado**
+produce caída de tensión y llega menos; una red con la tensión baja a las siete de la tarde también entrega
+menos. El síntoma es el mismo en los tres casos: sueldas con el dial en 120 y el cordón se comporta como si
+fueran 80.
+
+De ahí la regla del oficio: **la referencia es el charco, no el dial**. El número solo sirve para volver
+mañana al mismo punto de partida, y solo si nada más cambió. Y antes de subir amperaje, revisa la masa: que
+esté limpia, bien apretada y **lo más cerca posible de la junta**, porque además la corriente de retorno
+busca el camino más corto y si le toca pasar por un rodamiento o una bisagra, los pica por dentro.
+</Dato>
+
+## La longitud de arco: el error más común de todos
+
+La <Termino slug="longitud-de-arco">longitud de arco</Termino> es la distancia entre la punta del electrodo y
+el charco. La regla es simple de decir y difícil de hacer: **igual al diámetro del alambre del electrodo**,
+o sea unos tres milímetros con uno de 3,25.
+
+Difícil porque **el electrodo se consume mientras trabajas**. Tienes que bajar la mano continuamente, a la
+misma velocidad a la que se acorta la varilla, mientras además avanzas a lo largo de la junta. Son dos
+movimientos simultáneos en direcciones distintas, y ese es el verdadero contenido motriz del oficio: no es
+pulso, es **mantener una distancia constante bajando la mano sin dejar de avanzar**.
+
+Un **arco largo** es el defecto rey del principiante, porque uno se aleja instintivamente de lo que quema.
+Al alargarse sube la tensión, el arco se ensancha como una linterna que se aleja del suelo y el calor deja
+de estar concentrado. Peor todavía: **la campana de gas del revestimiento deja de tapar el charco** y entra
+aire, con su nitrógeno y su humedad. Resultado: salpicadura por todas partes, poros, bordes comidos y poca
+penetración. Se oye clarísimo, con un soplido hueco y grave en vez del crepitar.
+
+Un **arco demasiado corto** te deja pegado, apaga el arco a cada rato y hace un cordón abultado con escoria
+metida adentro.
+
+## Los dos ángulos, y la escoria que se adelanta
+
+Hay dos ángulos y conviene no confundirlos. El <Termino slug="angulo-de-trabajo">ángulo de trabajo</Termino>
+es cómo repartes el arco entre las dos piezas mirando la junta de frente: a tope y en plana, el electrodo va
+perpendicular; en una unión en T, va a unos 45 grados, en la bisectriz del rincón. Si lo inclinas de más
+hacia la chapa horizontal, funde esa y deja la vertical con un surco comido arriba y sin fusión abajo. Es la
+causa número uno de las uniones en T que se abren.
+
+El <Termino slug="angulo-de-avance">ángulo de avance</Termino> es la inclinación en el sentido de la marcha,
+y aquí hay una decisión con consecuencias. **Arrastrando** —el electrodo inclinado 10 o 15 grados hacia
+atrás, apuntando al cordón que ya hiciste— la fuerza del arco empuja el charco hacia atrás, deja el metal
+base al desnudo delante y **penetra más**; además la escoria queda barrida hacia atrás, donde debe estar.
+**Empujando**, con el electrodo inclinado hacia adelante, el arco monta el charco sobre metal frío: penetra
+menos y ensucia más. Con electrodo revestido, la regla práctica es **arrastrar casi siempre**.
+
+Y hay una cosa que hay que aprender a mirar desde el primer día: **la escoria nunca puede adelantarse al
+arco**. La escoria es un vidrio fundido y liviano que flota sobre el charco; si vas muy lento, si empujas en
+lugar de arrastrar o si el arco está largo, ese vidrio se derrama hacia adelante, se enfría sobre el metal
+base y **el arco siguiente suelda encima de ella**. Queda enterrada dentro del cordón, y eso ya no se ve ni
+se arregla: hay que amolar y rehacer.
+
+## La velocidad: el charco manda, no el reloj
+
+La <Termino slug="velocidad-de-avance">velocidad de avance</Termino> es la única de las cuatro que no tiene
+número en ninguna máquina, y se regula mirando. **Lo que se mira no es el arco: es el borde de atrás del
+charco**, donde el metal pasa de líquido brillante a sólido con ondas. Si ese borde se te acerca, vas
+demasiado lento; si se aleja y el cordón se afina, vas demasiado rápido.
+
+Yendo **muy rápido** el cordón sale angosto y alto, con las ondas estiradas en punta de flecha, sin fundir
+bien los bordes y con poca penetración. Yendo **muy lento** entra demasiado calor, el cordón se hace ancho y
+gordo, la pieza se deforma, la escoria se adelanta y en chapa fina te comes un agujero.
+
+<Dato titulo="Dos maneras de medirte sin instrumentos">
+La primera: **cuánto cordón te dio un electrodo**. Con uno de 3,25 milímetros y 35 centímetros de largo, un
+cordón recto suele salir de 25 a 30 centímetros. Si el tuyo dio 45, ibas volando; si dio 15, ibas a paso de
+tortuga o haciendo vaivén. Calíbralo una vez sobre un recorte y ya tienes tu regla.
+
+La segunda: **el ancho del cordón**. Un cordón recto sano mide entre dos y tres veces el diámetro del
+electrodo. Más ancho que eso significa lento, caliente o con oscilación de más.
+</Dato>
+
+## Lo que se ve, se oye y se huele
+
+Soldar es el único oficio donde tienes **telemetría en tiempo real y gratis**, y la mayoría la ignora. El
+sonido de un arco bien regulado es un **crepitar parejo y continuo**, como tocino friéndose: pareja la
+frecuencia, parejo el volumen. Cualquier desviación de ese sonido es un dato antes de que se vea nada.
+
+Por eso vale una advertencia práctica: si sueldas con música fuerte en los auriculares o con un motor
+rugiendo al lado, **estás renunciando a la mitad de la información**. Y el olfato también sirve: un olor
+punzante como de tormenta es ozono, que aparece cuando el arco está largo y suelta más ultravioleta; un humo
+blanco denso, dulzón, que deja gusto metálico, es **zinc de un galvanizado**, y ahí no se corrige la
+técnica: se para, se ventila y se vuelve a lo que ya viste en la lección de la protección.
+
+<Tabla>
+
+| Lo que ves u oyes | Qué variable está mal | Qué hacer |
+| --- | --- | --- |
+| Soplido hueco y grave, salpicadura por todos lados | arco largo | bajar la mano, acercarse al charco |
+| Chasquido irregular, se apaga, se pega | amperaje bajo o arco muy corto | subir corriente, revisar la masa |
+| El electrodo se pone rojo a media varilla | amperaje alto | bajar corriente o usar diámetro mayor |
+| Cordón alto, angosto y abombado, escoria dura de sacar | amperaje bajo o velocidad lenta | subir corriente, avanzar más |
+| Cordón ancho y plano con surco en los bordes | amperaje alto o velocidad alta | bajar corriente, pausar en los bordes |
+| La escoria corre delante del charco | vas lento o estás empujando | acelerar, inclinar hacia atrás |
+| Agujeritos en la superficie al picar | entró aire o humedad | acortar arco, secar, tapar el viento |
+| La escoria salta sola en tiras enteras | todo bien | anotar el amperaje y no tocar nada |
+
+</Tabla>
+
+Esa última fila no es un chiste: **la escoria que se desprende sola, curvándose y saltando en lascas, es la
+mejor señal de que los cuatro parámetros están donde deben**. Cuando hay que romperla a martillazos, algo
+estaba mal aunque el cordón se vea lindo.
+
+## Cordón recto, vaivén y el reinicio sobre el cráter
+
+El cordón recto —avanzar en línea sin mover la mano de lado— es el que hay que dominar primero. Mete menos
+calor, deforma menos la pieza, enfría más rápido y es el que se usa cuando hay varias pasadas.
+
+El <Termino slug="cordon-oscilado">cordón oscilado</Termino>, o de vaivén, es mover el electrodo de lado a
+lado mientras avanzas, para cubrir una junta más ancha en una sola pasada. Tiene dos reglas. La primera:
+**el ancho no debe pasar de dos veces y media o tres el diámetro del electrodo**; más ancho es demasiado
+calor, un charco que no puedes sostener y escoria atrapada. La segunda: **hay que hacer una pausa breve en
+cada extremo del recorrido**, porque el borde es justamente donde el metal falta y donde aparece el surco
+comido si no le das tiempo de rellenarse.
+
+Y falta la maniobra que casi nadie enseña: qué hacer cuando se acaba el electrodo en mitad del cordón. Al
+apagarse el arco queda un **cráter**, una depresión al final del cordón donde faltó metal, porque el charco
+se contrajo al solidificar y nadie lo rellenó. El <Termino slug="crater-del-cordon">cráter</Termino> es el
+punto más peligroso del cordón: es un hueco, concentra tensiones y ahí nacen las fisuras en estrella.
+
+El reinicio correcto tiene cuatro pasos. **Uno: picar y cepillar la escoria del cráter**, sin excepción.
+**Dos: cebar un centímetro o centímetro y medio por delante del cráter**, sobre la junta todavía sin soldar.
+**Tres: llevar el arco hacia atrás hasta el fondo del cráter y quedarse ahí un instante** para rellenarlo.
+**Cuatro: seguir hacia adelante** a la velocidad normal. La lógica es que el arco recién cebado está frío y
+funde mal durante el primer segundo: ese primer segundo defectuoso queda dentro de la zona que después vas a
+volver a fundir, y no en la unión final.
+
+Al terminar el cordón de verdad, tampoco se corta en seco: se retrocede un poco sobre el propio cordón, se
+espera medio segundo y **se aleja el electrodo de costado**, no hacia arriba, para dejar el cráter lleno.
+
+## Picar la escoria y soldar en varias pasadas
+
+La escoria no es basura: mientras el cordón está caliente, esa costra **lo tapa del aire y lo hace enfriar
+más despacio**, que es justo lo que le conviene. Su problema empieza después: es un **vidrio de silicatos,
+aislante, y no se funde con el arco siguiente**. Si dejas escoria entre dos pasadas, la pasada siguiente la
+sella adentro y te queda un hueco relleno de vidrio en medio del metal.
+
+Por eso la regla es absoluta: **entre pasada y pasada se pica y se cepilla, siempre, hasta ver metal
+brillante**. Martillo de escoria para lo grueso, cepillo de alambre para el resto, y atención a los rincones
+y a los pies del cordón, que es donde se esconde.
+
+<Advertencia titulo="Picar escoria es el segundo accidente ocular del taller">
+Después del destello del arco, lo que más ojos daña aquí es una lasca de escoria caliente. Salta con fuerza,
+sale **hacia arriba y hacia el que pica**, y va a doscientos y pico de grados: si entra en un ojo, no es una
+molestia, es una quemadura. **Anteojos de seguridad siempre, también con la careta levantada**, y nunca
+picar apuntando hacia otra persona ni con alguien enfrente.
+
+Y hay una trampa peor. **Una pieza recién soldada parece fría y está a trescientos grados**: el acero no
+cambia de color a esa temperatura. Todos los años alguien agarra con la mano la chapa que acaba de soldar.
+Reglas: se manipula con pinza o guante, se marca con tiza la pieza caliente cuando hay gente alrededor, y no
+se prueba con el dedo, se prueba acercando unas gotas de agua y viendo si chirrían.
+</Advertencia>
+
+La <Termino slug="soldadura-multipasada">soldadura en varias pasadas</Termino> es la respuesta a las juntas
+que no caben en un cordón. En chapa de más de unos seis milímetros, o en una unión biselada, no se resuelve
+subiendo el amperaje a lo bestia: se hace una **pasada de raíz** al fondo, con electrodo más fino y menos
+corriente, y encima **pasadas de relleno** que traslapan cada una entre un tercio y la mitad de la anterior.
+La <Termino slug="pasada-de-raiz">pasada de raíz</Termino> es la que decide la resistencia de todo, porque es
+la que llega al fondo del bisel.
+
+<Analogia titulo="Tres pasadas chicas contra un commit gigante">
+Un cordón enorme de una sola vez es un cambio de tres mil líneas: nadie puede revisarlo, no se sabe dónde
+está el error y si algo falla hay que rehacerlo entero. Tres pasadas chicas se inspeccionan una por una, se
+limpian una por una y cada una se corrige antes de que la siguiente la tape. Encima hay un regalo: **cada
+pasada recalienta la anterior y le afina el grano**, o sea que el propio proceso repara parte del daño que
+hizo el paso previo.
+</Analogia>
+
+## Leer el metal: los defectos que dejan hueco
+
+Estos cuatro tienen algo en común: **queda un vacío donde debía haber metal**, y por eso son los que de
+verdad rompen piezas.
+
+La <Termino slug="porosidad-en-el-cordon">porosidad</Termino> son agujeritos redondos, en la superficie o
+enterrados. El mecanismo es de manual: **el metal líquido disuelve muchísimo gas y el sólido casi nada**,
+así que al solidificar el gas tiene que salir; si el frente de solidificación avanza más rápido que la
+burbuja, la burbuja queda encerrada. El gas viene de la humedad —del electrodo, de la pieza, del aire—, de
+pintura, grasa, óxido o zinc que se queman, de un arco largo que deja entrar aire, o de una corriente de
+aire que barre la protección. Se corrige acortando el arco, secando y limpiando, y **tapando el viento**.
+
+La <Termino slug="falta-de-fusion">falta de fusión</Termino> es el defecto más traicionero que existe: el
+metal de aporte se apoyó sobre el metal base **sin llegar a fundirlo**, como cera de vela sobre una mesa. Por
+fuera puede verse un cordón impecable, y no hay unión. Ocurre por poco amperaje, por arco largo que dispersa
+el calor, por apuntar el arco al charco en vez de a la pared fría que hay que fundir, por vaivén demasiado
+ancho o por escoria sin limpiar. La corrección: **el arco apunta al borde de ataque, al metal frío**, con
+más corriente y arco corto.
+
+La <Termino slug="falta-de-penetracion">falta de penetración</Termino> es no llegar al fondo de la junta. La
+diferencia con la anterior importa: aquí no es que no fundiera lo que tocaba, es que **el arco nunca llegó
+hasta abajo**. Causas: amperaje bajo, electrodo demasiado grueso para el bisel, junta sin separación de
+raíz, velocidad alta o electrodo empujando. Se corrige en la preparación —bisel y separación, que ya viste—
+y en la raíz, con electrodo fino, arco corto y arrastre. La <Termino slug="penetracion">penetración</Termino>
+es, justamente, cuánto se hundió la fusión dentro del metal base, y es lo único que hace que dos piezas sean
+una.
+
+La <Termino slug="inclusion-de-escoria">inclusión de escoria</Termino> es aquel vidrio que se adelantó, o el
+que dejaste sin picar. En la superficie se ve como una línea oscura hundida al costado del cordón; adentro
+no se ve. Se evita arrastrando, limpiando entre pasadas y haciendo cordones más planos, porque un cordón muy
+abombado deja **rincones profundos en el pie** donde la escoria se mete y ya no sale.
+
+## Leer el metal: forma, salpicadura y fisuras
+
+El <Termino slug="socavado">socavado</Termino> es un surco fundido en el metal base, al costado del cordón,
+que quedó sin rellenar. Aparece con amperaje alto, arco largo, velocidad alta, ángulo mal repartido o vaivén
+sin pausa en los bordes: el arco funde el borde y no queda metal ni tiempo para devolverlo ahí. Importa
+porque es una entalla, y las entallas hacen <Termino slug="concentracion-de-tensiones">concentración de
+tensiones</Termino>: la carga que estaba repartida se amontona en el fondo del surco, con valores muchas
+veces mayores que en el resto. Bajo cargas repetidas, ahí arranca la grieta. Se corrige bajando corriente,
+pausando en los bordes y, si es profundo, amolando y rellenando con electrodo más fino.
+
+El <Termino slug="exceso-de-refuerzo">exceso de refuerzo</Termino> es el cordón demasiado alto y abombado, y
+va contra la intuición de todo el mundo: **más metal encima no es más resistencia**. La unión no se rompe
+por el centro del cordón sino por el pie, donde el cordón se encuentra con la chapa, y cuanto más brusco es
+ese encuentro más se concentra la tensión. Un cordón gordo y con pie abrupto es más débil que uno bajo y con
+transición suave. Se corrige yendo más rápido, y en una pieza importante, amolando el pie hasta suavizarlo.
+
+La <Termino slug="salpicadura">salpicadura</Termino> —las bolitas pegadas alrededor— casi nunca compromete la
+resistencia, pero es una firma: dice **arco largo, amperaje alto, electrodo húmedo o problema de polaridad**.
+Además ensucia el trabajo y, en este clima, cada bolita mal pegada es un sitio donde la pintura no agarra y
+el óxido empieza.
+
+Vale la pena nombrar un fantasma. El <Termino slug="soplo-magnetico">soplo magnético</Termino> es el arco que
+se desvía solo hacia un costado, como soplado, y aparece en corriente continua cuando el campo magnético de
+la propia corriente se concentra: típicamente al llegar al final de la pieza o cerca de la pinza de masa. Se
+combate cambiando la masa de sitio, poniendo dos puntos de masa, soldando hacia un punteo o acortando el
+arco. En una máquina de alterna prácticamente no ocurre.
+
+Quedan las fisuras, que son otra categoría porque no son un defecto de mano sino de metalurgia.
+La <Termino slug="fisuracion-en-caliente">fisuración en caliente</Termino> aparece mientras el cordón
+todavía está solidificando: entre los granos que ya se formaron queda una película líquida sucia —azufre
+y fósforo, que solidifican los últimos— y la contracción la abre. Se ve como una raya fina justo en el
+centro del cordón. Favorecen su aparición un cordón **más profundo que ancho**, un cráter sin llenar, una
+pieza muy trabada que no puede contraerse y un acero de chatarra con impurezas altas.
+
+<Analogia titulo="La fisura en frío es el fallo que aparece después del despliegue">
+La <Termino slug="fisuracion-en-frio">fisuración en frío</Termino> es lo más parecido a un fallo diferido que
+tiene este oficio: **todo salió bien, la pieza pasó la inspección, y a las veinte horas está rajada**.
+Necesita tres condiciones a la vez, como un fallo de concurrencia necesita que tres cosas coincidan.
+
+**Hidrógeno**, que entró como humedad del electrodo o de la pieza, se disolvió en el metal líquido y se queda
+migrando adentro. **Una microestructura dura**, que se forma cuando un acero con carbono se enfría demasiado
+rápido, cosa que pasa sola cuando el cordón es chico y la pieza es gruesa y fría, porque la masa se lleva el
+calor de golpe. **Y tensión**, la que trae la pieza por su propia contracción o porque está trabada.
+
+Quita cualquiera de las tres y no ocurre: electrodos secos, precalentar la pieza gruesa, dejarla enfriar
+despacio y tapada, no trabarla toda antes de soldar. Y por eso una regla que suena rara: **una reparación
+que va a cargar peso no se prueba el mismo día**. Se deja pasar la noche y se revisa al día siguiente antes
+de confiar en ella.
+</Analogia>
+
+<Advertencia titulo="Nunca enfríes un cordón con agua para apurar">
+Es la costumbre que más piezas ha roto. Echar agua sobre una soldadura caliente hace tres cosas malas a la
+vez: **endurece la zona de golpe**, que es fabricar a mano la microestructura frágil de la fisura en frío;
+suma tensiones por contracción brusca; y mete vapor y agua justo en la zona por donde entra el hidrógeno.
+Encima hay riesgo inmediato: el agua sobre metal al rojo revienta y lanza gotas hirviendo y escoria.
+
+Lo mismo vale para soldar sobre un contrapiso mojado o mal secado: la humedad atrapada en el hormigón se
+convierte en vapor bajo el metal caliente y puede saltar un pedazo de piso. Se suelda sobre una chapa,
+ladrillos o tierra seca, nunca sobre cemento fresco ni mojado.
+</Advertencia>
+
+## Las posiciones, y por qué se aprende en plana
+
+Un charco de acero líquido **pesa**. Lo que lo sostiene en su sitio son dos fuerzas chicas: la tensión
+superficial del propio metal y el empuje del arco. En la posición plana no hay pelea, porque la gravedad
+aplasta el charco contra la junta y colabora. Las <Termino slug="posiciones-de-soldadura">posiciones de
+soldadura</Termino> se ordenan justamente por cuánto empeora esa pelea: plana, horizontal, vertical y sobre
+cabeza.
+
+En vertical y sobre cabeza, la gravedad quiere sacar el metal de la junta, y las dos fuerzas que lo retienen
+**solo ganan si el charco es chico**. De ahí sale toda la técnica: se baja la corriente un diez o quince por
+ciento, se usan cordones angostos, se hace vaivén con pausa en los bordes para dar tiempo a que el centro
+solidifique, y se sube en lugar de bajar cuando la unión tiene que aguantar, porque el vertical descendente
+va rápido pero penetra poco y sirve solo en chapa fina.
+
+La razón pedagógica es más simple de lo que parece: **cada posición agrega una variable nueva encima de las
+cuatro que todavía no dominas**. En plana puedes concentrarte en amperaje, distancia, ángulo y velocidad sin
+pelear con nada más. Quien intenta vertical en la semana uno no aprende vertical: aprende a hacer mal las
+cuatro cosas básicas y a echarle la culpa a la posición.
+
+Y hay una regla que separa al que sabe del que se hace el héroe: **la mejor posición es la que puedes
+elegir**. Antes de soldar sobre cabeza, pregúntate si puedes girar la pieza, desmontarla, apoyarla de otro
+modo o soldarla en el piso y después montarla. Casi siempre se puede, y girar una pieza cuesta dos minutos.
+
+<Advertencia titulo="Sobre cabeza cae metal, y cae adentro de la ropa">
+En vertical y sobre cabeza, las gotas de metal y la escoria caliente caen hacia ti. Buscan **el cuello de la
+camisa, la vuelta de la manga, el borde del guante, la caña del zapato y el conducto del oído**, y una gota
+de acero a mil grados dentro de la oreja es una lesión seria y un movimiento reflejo que puede hacerte
+soltar el portaelectrodo encendido.
+
+Cuello cerrado, gorra o pañuelo bajo la careta, mangas por fuera del guante y nunca por dentro, pantalón por
+fuera de la bota. Ropa de algodón grueso: **las telas sintéticas se derriten y se pegan a la piel**, y
+entonces la quemadura deja de ser un punto y pasa a ser una superficie.
+</Advertencia>
+
+## Probar tu propia soldadura sin laboratorio
+
+Aquí está la idea más importante de la lección: **un cordón bonito no es un cordón bueno**. La superficie
+solo cuenta lo que pasó arriba; la falta de fusión y la falta de penetración son invisibles desde afuera y
+son las que rompen las piezas. No tienes rayos X ni ultrasonido, pero tienes algo que en muchos casos vale
+igual: **puedes romper a propósito**.
+
+El <Termino slug="ensayo-de-doblado">ensayo de doblado</Termino> es el más rápido. Sueldas dos recortes de
+chapa a tope, cortas una tira de unos tres centímetros de ancho que cruce el cordón, la pones en la prensa
+con el cordón en el medio y la doblas a martillazos hasta plegarla. **Si el metal base se dobla y el cordón
+no abre, la unión es buena. Si abre por la soldadura, era más débil que la chapa.** Y donde abre te dice qué
+falló: burbujas en la fractura es porosidad, una cara lisa y gris pegada a la pared del bisel es falta de
+fusión, una línea de vidrio oscuro es escoria enterrada.
+
+El <Termino slug="ensayo-de-rotura-por-entalla">ensayo de rotura por entalla</Termino> es el mejor de todos
+para mirar por dentro. Con la amoladora haces dos cortes poco profundos a los costados del cordón, uno
+enfrente del otro, para obligar a la fractura a pasar por donde tú quieres; después rompes la pieza de un
+golpe. **La cara de la fractura es la radiografía del pobre**: fibra gris pareja significa metal sano; poros
+redondos, escoria brillante, una zona lisa donde no hubo fusión o una raíz sin tocar aparecen a simple
+vista. En una unión en T se hace igual, martillando la chapa vertical hasta plegarla sobre la horizontal y
+mirando la raíz del filete.
+
+Y hay un tercer método, que revela la penetración con exactitud sorprendente: cortas la pieza en sentido
+transversal al cordón, lijas la cara del corte cada vez más fino y **le pasas unas gotas de ácido muriático
+del que se vende para limpiar pisos, diluido**. El ácido ataca de forma distinta el metal fundido, la franja
+recalentada y el metal base, y dibuja el contorno exacto de la fusión: ves con tus ojos hasta dónde llegó.
+
+<Advertencia titulo="Si haces el ataque con ácido, hazlo bien">
+Al aire libre o con mucha ventilación, con guantes y anteojos, y con la piel cubierta. **El ácido se echa
+siempre sobre el agua, nunca el agua sobre el ácido**, porque la mezcla calienta y salpica. **Jamás cerca de
+lavandina o cloro**: juntos liberan un gas que daña el pulmón y ha matado gente limpiando baños. Neutraliza
+después con bicarbonato y agua abundante, y guarda el frasco rotulado y lejos de los niños.
+
+En los ensayos de rotura, además: la pieza sujeta en la prensa, anteojos puestos, martillo de bola y no de
+uña —las de uña saltan esquirlas—, nadie parado en la dirección del golpe, y cuidado con los bordes que
+quedan filosos como una hoja.
+</Advertencia>
+
+## La progresión sobre recortes
+
+Nadie aprende esto soldando lo que necesita. Se aprende sobre basura, en un orden que va agregando una
+dificultad por vez, y con la probeta rota en la mano al final de cada etapa.
+
+**Primero, cordones sobre una plancha sola**, sin unir nada: veinte o treinta cordones rectos, hasta que
+salgan del mismo ancho, con las ondas parejas y **la escoria saltando sola**. **Segundo, cordón al lado de
+cordón**, traslapando la mitad, hasta cubrir la plancha: eso enseña a manejar el calor acumulado y el
+traslape. **Tercero, junta a tope en plana** con su separación de raíz, y romperla. **Cuarto, unión en T**, y
+romperla también. **Recién quinto, vertical ascendente.** Cambiar de etapa antes de que la anterior salga
+tres veces seguidas es perder tiempo, no ganarlo.
+
+<Analogia titulo="Cada probeta es un caso de prueba, y romperla es el assert">
+Un cordón que no se rompió a propósito no está verificado: está sin probar. Las probetas son casos de prueba,
+la rotura es la aserción, y hacer defectos **a propósito** —soldar una probeta con el amperaje deliberadamente
+bajo, otra con arco largo, otra sin limpiar— es construirte una batería de fallos conocidos, para reconocer
+después el síntoma en un trabajo real. La caja de probetas colgadas, cada una con su amperaje escrito con
+marcador, es tu documentación; el cuaderno donde anotas diámetro, corriente, posición y resultado es tu
+historial. Sin registro no hay aprendizaje: hay repetición.
+</Analogia>
+
+<AplicarRizoma>
+**Antes de tocar nada de tu casa, quema diez electrodos sobre chatarra.** Esta semana consigue recortes en
+una tornería, un taller mecánico o una obra del barrio —los regalan— y haz cordones rectos sobre una plancha
+sola, sin unir nada. El objetivo de la primera tarde no es unir: es que el ancho salga parejo y que la
+escoria salte sola. Cuando eso ocurre tres cordones seguidos, anota el amperaje en el cuaderno y en la propia
+plancha con marcador.
+
+**Ármate el cuaderno del taller y la caja de probetas.** Una hoja por sesión, con cuatro columnas: diámetro
+del electrodo, amperaje, posición y qué pasó. Y un clavo en la pared del que cuelgas las probetas rotas con
+su número escrito. En seis meses vas a tener algo que no se compra: **una biblioteca física de tus propios
+errores**, donde puedes comparar el cordón de hoy con el de marzo en vez de fiarte de la memoria.
+
+**Practica los defectos a propósito, uno por sesión.** Una probeta con el amperaje demasiado bajo, otra con
+arco largo deliberado, otra soldando sobre una chapa sucia sin limpiar, otra yendo lento hasta que la escoria
+se adelante. Después las rompes y miras las caras de fractura. Media hora de esto enseña más que diez horas
+de intentar que salga bonito, porque **el diagnóstico se aprende viendo la enfermedad, no viendo la salud**.
+
+**Elige bien tu primer trabajo real de la casa.** No la reja de la calle, que se ve desde la vereda y te va a
+poner nervioso; tampoco nada que sostenga peso sobre alguien. Un caballete, un soporte para el tanque de
+basura, un marco para el mosquitero de la ventana, una pata que se rompió en una mesa. Cosas donde un cordón
+mediocre cuesta rehacerlo y nada más.
+
+**Antes de encender, mira alrededor y avisa.** Las chispas vuelan varios metros y buscan lo que ni miramos:
+la garrafa, el bidón de gasolina de la motosierra, la ropa tendida, el pasto seco, la cortina, el techo de
+palma. Se retira, se moja o se tapa con una chapa, se tiene un balde de agua al lado y **se vuelve a mirar
+la zona media hora después de apagar**, porque una chispa puede arder en silencio un buen rato. Y cuando
+alguien de la casa entra al patio, la frase es «¡arco!» y todos miran para otro lado: el destello quema los
+ojos de quien pasa, no solo los del que suelda.
+
+**Si le enseñas a alguien de la casa, empieza por picar escoria con anteojos puestos.** Es la tarea que
+comparte todo el mundo, es donde saltan las lascas calientes y es la que se hace sin careta. Que sea la
+primera regla que aprenda tu hijo, tu hermano o el vecino que vino a ayudar: **anteojos antes de agarrar el
+martillo**, y nunca picar con alguien enfrente.
+
+**En Rizoma del Sur esto está escrito en la pared del galpón, no en la cabeza del que más sabe.** La tabla de
+amperajes que funcionaron para cada diámetro y espesor, con la fecha; la caja de probetas rotas colgada al
+lado; y una regla que no se negocia: **toda pieza que vaya a cargar peso sobre una persona se prueba
+rompiendo una probeta hecha el mismo día, con el mismo electrodo y el mismo amperaje**. La probeta cuesta
+diez minutos; el que se cae de un andamio, no tiene precio de reposición.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Aquí el enemigo número uno del cordón es la humedad, y llega antes que tú al electrodo.** Con humedad alta
+buena parte del año, una caja abierta en el estante absorbe agua en días, y esa agua entra al baño de fusión
+como hidrógeno: porosidad hoy y fisuras retardadas mañana. Compra poco y seguido en vez de mucho de una vez,
+guarda los electrodos en un tarro con tapa hermética junto con algo que absorba humedad, y **si un electrodo
+chisporrotea raro y salpica desde el primer segundo, sospecha de la humedad antes que de tu mano**. Ojo con
+un detalle honesto: el horno de la cocina de una casa no alcanza la temperatura que necesitan los de bajo
+hidrógeno para recuperarse de verdad; solo los seca por encima. Por eso, para trabajo general de casa en esta
+zona, el electrodo tolerante a la humedad es la respuesta realista, y el de bajo hidrógeno se reserva para lo
+que de verdad lo pide, comprado fresco y usado el mismo día.
+
+**El surazo te arruina cordones y no te vas a dar cuenta.** Ese viento fuerte del sur barre la campana de gas
+que protege el charco y mete aire: cordón poroso con todos los parámetros correctos. Y hay una versión
+doméstica peor, porque es la que uno mismo se fabrica: **el ventilador de pie apuntando al soldador**. Alivia
+el calor, no sirve de nada contra los humos —que suben delante de tu cara— y sopla justo donde no debe. La
+solución es un biombo de chapa o una pared de cartón grueso a barlovento, y ventilar sacando el aire de la
+zona, no soplándolo sobre la junta.
+
+**Los cortes de energía son parte del trabajo, no una excepción.** Un corte a mitad de cordón deja un cráter
+frío y sin llenar, exactamente el sitio donde nacen las fisuras. Cuando vuelva la luz, el arranque es el
+mismo de siempre: **picar el cráter, cebar por delante, volver hacia atrás y rellenar**. Y una precaución
+eléctrica: deja el interruptor de la máquina en apagado mientras no hay energía, porque puede volver de golpe
+con el portaelectrodo apoyado en cualquier parte y el electrodo puesto.
+
+**La extensión larga miente sobre el amperaje.** En casas donde el único tomacorriente que aguanta está a
+treinta metros, la caída de tensión hace que el arco se comporte como si tuviera mucha menos corriente de la
+que marca el dial: cordones abombados, escoria pegada y falta de fusión con la máquina «bien puesta». Antes
+de subir el número, **acorta y engrosa el cable, y limpia el punto donde muerde la pinza de masa**. Con las
+manos sudadas y humedad alta, además, el riesgo eléctrico sube: guantes secos, no soldar arrodillado sobre
+piso mojado ni con la ropa transpirada apoyada en el metal.
+
+**Casi todo lo que vas a soldar aquí es de origen desconocido, y eso cambia el riesgo.** Los recortes de
+fierro de construcción, los ejes, los resortes y las barras que aparecen en un taller pueden tener bastante
+carbono: se templan solos al enfriarse y fisuran en frío días después sin que nadie los toque. La regla
+honesta es: **prueba con una probeta del mismo material antes de confiar**, precalienta la pieza gruesa,
+déjala enfriar tapada y despacio, y para cualquier cosa que vaya a sostener personas o carga sobre personas,
+consulta con un soldador con experiencia o con un profesional en lugar de improvisar.
+
+**Y aquí la chispa es un asunto estacional.** De mayo a septiembre el pasto está seco y el fuego corre; en
+techos de palma o con maderas viejas alrededor, una salpicadura basta. Suelda en piso de tierra despejado o
+sobre chapa, moja el entorno antes de empezar, aleja garrafas y bidones —y recuerda la regla que no tiene
+excepciones: **nunca se suelda un recipiente que tuvo combustible, ni siquiera vacío y lavado**—, y revisa la
+zona media hora después.
+
+**Por último, el galvanizado está en todas partes en esta zona**, porque calaminas, postes y tubos vienen con
+él. El zinc no solo enferma: también hierve antes de que funda el acero y **fabrica porosidad**. Si el cordón
+te sale lleno de agujeritos sobre un tubo o una calamina, no es tu técnica: es el recubrimiento, que hay que
+amolar unos centímetros a cada lado de la junta antes de encender, siempre con la protección respiratoria y
+la ventilación que ya viste en la lección de la máquina.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya tienes el arco en la mano: sabes encenderlo sin marcar la pieza, despegar el electrodo sin quemar la
+máquina, gobernar las cuatro variables mirando el charco en vez del dial, reiniciar sobre el cráter, limpiar
+entre pasadas, reconocer nueve defectos por su mecanismo y comprobar tu propio trabajo rompiéndolo a
+propósito. Con eso puedes unir metal y saber si lo uniste de verdad.
+
+Lo que todavía no sabes es **cómo llegar de un perfil de seis metros a una estructura que aguante**. La
+lección siguiente, **Cortar, doblar y perforar: del perfil a una estructura que aguante**, se ocupa de darle
+forma al metal antes y después del arco: cortar con amoladora sin que el disco reviente ni la máquina retroceda,
+perforar sin que la chapa fina enganche y gire, doblar sin fisurar, unir sin arco cuando todavía no hay
+máquina, y armar un conjunto con triangulación, tracción y compresión, apoyándose en lo que el módulo de
+albañilería ya enseñó sobre cargas. Ahí vas a entender por qué esta lección venía antes: **de nada sirve un
+cordón perfecto puesto donde la estructura no lo necesitaba**.

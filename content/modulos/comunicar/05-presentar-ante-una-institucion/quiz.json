@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "tres-restricciones",
+      "tipo": "opcion_multiple",
+      "enunciado": "Antes de que nadie evalúe si tu idea es buena, tres restricciones ya deciden buena parte de la suerte del pedido. ¿Cuáles de estas afirmaciones describen bien ese mecanismo?",
+      "opciones": [
+        "La plata está repartida de antemano en partidas con destino declarado, así que «no hay presupuesto» suele significar «no hay en ese cajón, este año»",
+        "Si la idea beneficia a suficiente gente y está bien explicada, quien decide puede mover plata de una partida a otra: para eso está la autoridad",
+        "Cada oficina está facultada para actuar sobre un conjunto acotado de asuntos, y firmar fuera de esa competencia le puede costar el puesto a quien firma",
+        "Casi toda institución define en algún momento del año en qué va a gastar el año siguiente, y pedir dentro de esa ventana no es lo mismo que pedir contra plata ya comprometida"
+      ],
+      "correctas": [0, 2, 3],
+      "explicacion": "Las tres correctas son el presupuesto por partidas, la competencia institucional y el ciclo presupuestario. La segunda opción es el distractor y es justo la creencia que hace perder más tiempo: presupone que la calidad del argumento vence a la estructura. No la vence. La partida no es una preferencia de quien decide, es un destino ya asignado, y moverla —cuando se puede— es un procedimiento propio, no un favor que se concede en una reunión. Por eso el trabajo útil no es hacer la idea más conmovedora, sino averiguar en qué partida entraría, si es competencia de esa oficina y cuándo se define el gasto. Esas tres respuestas se preguntan en la ventanilla; ningún curso las puede dar."
+    },
+    {
+      "id": "quien-decide",
+      "tipo": "opcion_multiple",
+      "enunciado": "Dentro de una oficina hay tres funciones distintas. ¿Qué es correcto sobre ellas?",
+      "opciones": [
+        "Conviene preguntarle a quien recibe los papeles qué le parece tu idea, porque es la persona que mejor conoce esa oficina por dentro",
+        "Quien recibe papeles no evalúa: registra y encamina, y en cambio sabe mejor que nadie qué formato piden, quién revisa y en cuánto tiempo",
+        "En muchos casos la decisión se toma leyendo el informe técnico y no tu documento, porque quien firma no es especialista en tu tema y confía en su técnico",
+        "Averiguar el cargo que tiene que firmar es la primera tarea de la gestión, y se hace con una pregunta directa en la ventanilla"
+      ],
+      "correctas": [1, 2, 3],
+      "explicacion": "La primera opción es el distractor y confunde dos cosas verdaderas. Es cierto que quien recibe papeles conoce la oficina por dentro, pero lo que conoce es el circuito —formato, plazos, quién revisa—, no el criterio con el que se aprueba, que no es su función. Preguntarle «¿qué le parece?» consume la visita y devuelve una opinión amable sin valor, mientras que preguntarle «¿quién lo revisa y cuándo puedo volver?» devuelve exactamente lo que uno necesita. El error simétrico también existe y es peor: saltarse la ventanilla para buscar al director en el pasillo deja mal parada a la única persona que podía empujar el papel por dentro y no genera ningún registro."
+    },
+    {
+      "id": "pedir-plata",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cuando un grupo necesita resolver algo, lo más eficiente es pedir plata, porque con plata se resuelve todo lo demás.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error más caro de la lección. La plata es lo que más le cuesta a una institución conceder: exige partida disponible, papeleo, rendición posterior y competir con todo lo demás que se pide ese año. En el otro extremo, un permiso o una firma no cuestan nada en plata, y un espacio o un material que ya está en depósito cuestan muy poco. La regla es pedir lo más barato que te destrabe: muchísimos grupos piden dinero cuando lo que en realidad los frena es una autorización que habrían obtenido, o el préstamo de una máquina por medio día. La pregunta correcta no es «cuánto necesitamos», sino «qué es exactamente lo que nos impide hacerlo nosotros», y muchas veces la respuesta no cuesta un peso."
+    },
+    {
+      "id": "beneficiarios-contraparte",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el conteo de beneficiarios y el aporte de contraparte, ¿qué es correcto?",
+      "opciones": [
+        "Hay que decir de dónde salió el número: cuántas personas, en cuántas casas y cómo se contaron, con la lista anexa",
+        "Conviene redondear el número de beneficiarios hacia arriba, porque un pedido que alcanza a más gente pesa más y nadie va a ir a verificarlo",
+        "El aporte de contraparte convierte el pedido de un gasto en una multiplicación, que es lo que quien decide necesita poder mostrar",
+        "Solo se promete la contraparte que el grupo va a poder sostener, porque incumplirla le cierra la puerta al próximo vecino que presente algo parecido"
+      ],
+      "correctas": [0, 2, 3],
+      "explicacion": "La segunda opción es el distractor y es una trampa cara. La institución sí sabe aproximadamente cuánta gente vive en esa zona, y el número inflado no se descubre el primer día sino más adelante, cuando ya construiste una relación: en ese momento deja de creerte todo lo demás, incluida la parte que era verdad. Un conteo real casa por casa, con la lista firmada, cuesta un sábado y es exactamente lo que separa un pedido de una queja. Lo mismo vale para la contraparte: prometer «la comunidad aportará la mano de obra» no lo firma nadie y no lo cumple nadie, mientras que «cuatro vecinos, un sábado» es verificable y sostenible."
+    },
+    {
+      "id": "riesgo-precedente",
+      "tipo": "opcion_multiple",
+      "enunciado": "Te contestan: «si les doy a ustedes, mañana vienen todos». ¿Qué respuestas atacan el mecanismo real de esa objeción?",
+      "opciones": [
+        "Insistir en que su caso es único e irrepetible, para que quede claro que nadie más va a poder invocarlo",
+        "Proponer el criterio por el cual se lo darían, uno que se pueda aplicar a cualquiera que esté en la misma situación",
+        "Ofrecerlo como prueba acotada, con fecha de fin y un informe al terminar, es decir como una decisión reversible",
+        "Entender que quien firma no está calculando lo que cuesta tu caso, sino lo que cuesta multiplicado por toda la gente que lo va a citar después"
+      ],
+      "correctas": [1, 2, 3],
+      "explicacion": "La primera opción es el distractor y es lo que casi todo el mundo hace: argumentar que su caso es especial. No funciona, porque quien firma sabe que la excepción de hoy es el antecedente de mañana y que él va a tener que explicar por qué a unos sí y a otros no. Lo que necesita no es que tu caso sea único, sino una respuesta defendible cuando venga el siguiente. Las dos maneras de dársela son convertir tu caso en regla —diciendo vos mismo el criterio, aunque eso signifique que otros también lo van a recibir— o acotar el compromiso en el tiempo y ofrecer un informe al terminar. Las dos le quitan riesgo personal a quien firma, que es de lo que se trata."
+    },
+    {
+      "id": "constancia",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si en la ventanilla te dicen «déjelo nomás» y no te entregan sello, firma ni número, el trámite igual queda presentado y se puede consultar más adelante.",
+      "respuesta": false,
+      "explicacion": "Falso, y en sentido literal. Sin constancia de recepción no hay forma de consultar por dónde va tu documento ni de demostrar que lo presentaste: para el circuito administrativo, ese papel no existe. Pedir que te firmen o sellen la copia no es desconfianza ni molestia, es el requisito mínimo para que exista algo que seguir, y a quien recibe también le conviene que quede registrado. Con la constancia hay que anotar tres cosas más antes de salir del edificio: quién revisa el documento, cuándo se puede volver a preguntar sin ser inoportuno y con qué dato se consulta. Muchas oficinas le asignan un registro interno para seguirle la pista, y cómo se llama y cómo se consulta se pregunta ahí, no se supone."
+    },
+    {
+      "id": "aplicar-a-tu-caso",
+      "tipo": "abierta",
+      "enunciado": "Elegí un pedido real que hoy le harías a una institución: puede ser algo de tu cuadra (un foco, una zanja que se tapa, que entre el carro basurero), algo de tu trabajo (permiso para un cartel, un espacio en una feria) o algo de tu familia (usar el patio del colegio los sábados para enseñar un oficio). Si no se te ocurre ninguno, usá este: en tu cuadra la zanja se tapa cada lluvia y durante dos o tres días el agua cubre el paso. Escribí el plan completo: cómo averiguás quién decide, qué preguntás en la primera visita, cuáles son las cinco piezas de tu pedido, qué contiene la hoja de una página, qué contestás a las tres objeciones previsibles y cómo hacés el seguimiento. Nada de requisitos, montos ni plazos inventados.",
+      "respuestaModelo": "Lo primero no es escribir: es averiguar dónde cae el pedido. Antes de nada hay que confirmar a qué jurisdicción pertenece la dirección —en la zona sur de Santa Cruz los límites no son evidentes desde la calle y hay gente que gestiona meses en una oficina que nunca tuvo competencia sobre su terreno— y si en el barrio la puerta de entrada normal es la junta vecinal o la organización territorial de base. Si conviene o se exige que el pedido salga con respaldo de la dirigencia, eso se pregunta en la oficina y en la propia junta; no se supone.\n\nLa primera visita no es para pedir, es para averiguar cómo se pide, y conviene decirlo así al llegar. Se va con las preguntas escritas: si esto lo ve esta oficina o es de otra, si existe formulario o se presenta como nota, qué tiene que llevar sí o sí para que no me lo devuelvan, quién lo revisa y quién firma, cuándo se define el presupuesto para este tipo de cosas, cómo consulto por dónde va, y qué es lo que más se les cae de estos pedidos. Esa última pregunta es la que más devuelve. La visita evita el requisito de forma, que es el rebote sin que nadie haya leído el contenido por una copia o un dato faltante, y de paso permite averiguar el cargo que tiene que firmar, que es lo primero que hay que saber.\n\nCon eso ya se arman las cinco piezas. El problema en un párrafo, ubicado y comprobable: en tal calle, cuando llueve, el agua cubre el paso durante dos o tres días y las casas de esa cuadra quedan sin salida. La prueba de que está bien escrito es que quien decide pueda repetírselo a su jefe en una frase, de memoria. Los beneficiarios contados de verdad, casa por casa, con la lista firmada anexa: tantas personas en tantas casas, con tantos chicos en edad escolar. Nada de redondear hacia arriba: el número inflado se descubre tarde y arrastra consigo la credibilidad de todo lo demás.\n\nLa tercera pieza es la más decisiva: qué se pide exactamente, en una sola línea que se conteste con sí o con no. Y aquí se aplica la regla central: pedir lo más barato que destrabe. Antes de pedir plata hay que preguntarse si lo que falta es en realidad un permiso, un material que ya está en depósito, el préstamo de una máquina por medio día o simplemente una firma. La plata es lo más caro de conceder —partida, papeleo, rendición y competencia con todo lo demás—, mientras que un permiso no cuesta nada en plata. La cuarta pieza es el aporte de contraparte, escrito con honestidad: si son cuatro vecinos que pueden dar un sábado, se pone un sábado y cuatro vecinos, no «la comunidad aportará la mano de obra». Y la quinta es el medio de verificación decidido antes: fotos con fecha del antes y el después, la lista firmada de quienes trabajaron, un conteo repetido a los tres meses. Eso le entrega a quien firma la respuesta a la pregunta que le van a hacer después.\n\nLa hoja de una página cabe entera en una carilla: quién soy y a quién represento, con un solo nombre y un solo teléfono; el problema; el pedido en una línea destacada; a cuántos beneficia; qué ponemos nosotros; cómo se verifica; la fecha. Firmas, fotos y cotizaciones van engrapadas detrás, porque quien aprueba lee la hoja y quien revisa a fondo entra a los anexos. Se llevan tres copias: una queda, una vuelve sellada y una es para el técnico.\n\nA la reunión van dos personas, una habla y la otra anota, decidido antes de salir de casa. Los primeros sesenta segundos dicen todo, y después hay que callarse. No se convierte el pedido en un reclamo, no se compara con otro barrio y no se amenaza en la primera reunión: eso convierte un asunto técnico en uno político y quita al único aliado interno. A «no hay presupuesto» se contesta preguntando en qué partida podría entrar y cuándo se define, y si existe una versión sin plata. A «no es competencia nuestra» se contesta preguntando de quién es y si pueden derivarlo. A «si les doy a ustedes vienen todos» se contesta proponiendo el criterio por el cual se da, aplicable a cualquiera, o acotando el pedido como prueba con fecha de fin e informe.\n\nY después viene lo que casi nadie hace. No salir del edificio sin constancia de recepción, ni sin saber quién revisa, cuándo se puede volver y con qué dato se consulta. Una carpeta propia con una hoja adelante donde se anota cada contacto. Volver exactamente el día que dijeron, consultar por el número y nunca en tono de reclamo. Si es no, preguntar por qué, porque eso dice si el problema era la forma, la partida, la competencia o el fondo. Y si es sí, volver después con las fotos y la lista aunque nadie las pida: eso construye el historial de cumplimiento que hace que la segunda vez cueste la mitad.",
+      "criterios": [
+        "Empieza por confirmar la jurisdicción y la oficina competente antes de escribir nada, y menciona la junta vecinal u organización territorial de base como posible puerta de entrada, remitiendo a preguntarlo",
+        "Plantea la primera visita como reconocimiento y no como pedido, con las preguntas concretas escritas de antemano",
+        "Nombra el requisito de forma y el riesgo de que el pedido rebote sin que nadie lea su contenido",
+        "Distingue quien recibe papeles, quien informa con el informe técnico y quien decide, y dice cómo averiguar el cargo que firma",
+        "Redacta el problema en un párrafo ubicado y comprobable, y aplica la prueba de poder repetirlo en una frase de memoria",
+        "Cuenta la población beneficiaria casa por casa con lista anexa y rechaza explícitamente inflar o redondear el número",
+        "Aplica la regla de pedir lo más barato que destrabe, evaluando si hace falta plata o si alcanza con un permiso, un material, una máquina prestada o una firma",
+        "Escribe un aporte de contraparte concreto y sostenible, y explica por qué incumplirlo perjudica al próximo vecino",
+        "Define el medio de verificación antes de ejecutar, con pruebas simples y baratas",
+        "Describe la hoja de una página con sus campos, un solo contacto y los anexos separados detrás",
+        "Prepara respuestas a las tres objeciones: partida y versión sin plata, derivación, y criterio o prueba acotada frente al riesgo de precedente",
+        "Cierra con el seguimiento: constancia de recepción, carpeta propia, cadencia pactada, preguntar el porqué del no e informar el resultado, sin inventar requisitos, montos ni plazos"
+      ],
+      "explicacion": "Una buena respuesta no se reconoce por el entusiasmo sino por el orden: averiguar antes de escribir, pedir lo más barato que destrabe y planificar el seguimiento desde el primer día. Los tres errores típicos son pedir plata cuando alcanzaba con un permiso, meter varios pedidos en un mismo papel y entregar el documento para desaparecer seis meses. Hay un cuarto error que invalida la respuesta aunque el resto esté bien: afirmar un requisito, un monto, un plazo o el nombre de un programa como si se supieran. Nada de eso puede salir de este curso, y la respuesta correcta siempre remite a preguntarlo en la ventanilla que corresponde o a consultarlo con la autoridad competente."
+    }
+  ]
+}

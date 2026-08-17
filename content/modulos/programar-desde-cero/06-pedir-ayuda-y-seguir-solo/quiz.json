@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "pregunta-contestable",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué partes tiene una pregunta que alguien puede contestar?",
+      "opciones": [
+        "Qué esperabas que pasara, dicho en concreto y con número.",
+        "Qué hiciste: el código mínimo, los datos y el comando exacto.",
+        "Qué pasó: el mensaje completo copiado literal, o el resultado equivocado al lado del correcto.",
+        "Cuánto tiempo llevas trabado y qué urgencia tiene."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El tiempo que llevas trabado no aporta ninguna información sobre el fallo: no cambia nada de lo que el otro puede deducir, y la urgencia es tuya, no suya. La cuarta parte real es qué ya probaste y qué te dijo cada intento, porque eso descarta caminos. Y hay una quinta que casi nadie escribe y vale más que todas: cuál crees tú que es la causa, porque permite que corrijan tu modelo mental y no solo tu síntoma."
+    },
+    {
+      "id": "caso-minimo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué condiciones tiene que cumplir un caso mínimo reproducible?",
+      "opciones": [
+        "Se ejecuta tal cual, sin que el otro tenga que completar nada.",
+        "Trae sus datos adentro, inventados y cortos, en vez de depender de tu planilla real.",
+        "Falla siempre, no una de cada cinco veces.",
+        "Conserva la estructura del programa original para que se entienda el contexto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Conservar la estructura es justo lo contrario de lo que se busca: el caso mínimo se construye borrando todo lo que no es necesario para que el fallo aparezca, y si pasa de veinte o treinta líneas hay que seguir recortando. El contexto que importa se escribe aparte, en tres líneas de lenguaje, versión y sistema."
+    },
+    {
+      "id": "efecto-lateral",
+      "tipo": "verdadero_falso",
+      "enunciado": "Construir el caso mínimo vale la pena aunque nunca llegues a mandar la pregunta.",
+      "respuesta": true,
+      "explicacion": "Correcto: la mitad de las veces el problema se resuelve durante el recorte. Recortar obliga a decidir, línea por línea, si esa línea es necesaria para que el fallo aparezca, y cada una de esas decisiones es una hipótesis sobre la causa. Es el mismo mecanismo que la depuración por explicación: poner en fila lo que en la cabeza estaba en un bulto."
+    },
+    {
+      "id": "juzgar-respuesta",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué señales indican que una respuesta encontrada no conviene aplicar tal cual?",
+      "opciones": [
+        "Propone desactivar la comprobación que da el aviso o envolver todo en un capturador de errores vacío.",
+        "No explica qué causaba el problema, solo dice qué escribir.",
+        "Es de hace años y menciona una versión anterior del lenguaje.",
+        "Está escrita en inglés y no en español."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Que esté en inglés no dice nada de su calidad: casi toda la ayuda de programación del mundo está en inglés, y el mensaje de error conviene buscarlo tal cual y no traducido. Las otras tres sí son señales: apagar el aviso convierte un fallo que hablaba en un fallo silencioso, una respuesta sin causa es una apuesta, y mismo mensaje no significa misma causa."
+    },
+    {
+      "id": "regla-dura",
+      "tipo": "verdadero_falso",
+      "enunciado": "No pegar código que no puedes explicar línea por línea es una regla de orgullo profesional, no una necesidad práctica.",
+      "respuesta": false,
+      "explicacion": "Falso: es operativa. El código que no entiendes lo vas a tener que depurar el día que falle —y va a fallar, porque el dato cambia—, no puedes juzgar si hace lo que pediste ni si hace además otra cosa, y el fallo no llega cuando estás tranquilo sino a las tres de la mañana de un surazo, con la bomba encendida."
+    },
+    {
+      "id": "apropiacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se apropia un código que no escribiste?",
+      "opciones": [
+        "Leyéndolo línea por línea y marcando las que no puedes decir con tus palabras.",
+        "Trazándolo en papel con un dato real y comparando el resultado con lo que se supone que hace.",
+        "Probándolo con casos límite: cero, vacío, negativo, el dato que nunca llegó.",
+        "Ejecutándolo con tus datos reales y comprobando que el resultado se parece a lo esperado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Que funcione con tus datos reales no prueba nada: el código generado suele estar afinado precisamente para el caso feliz, y el fallo aparece en los bordes. Falta además el cuarto paso, el que casi nadie hace: reescribirlo de memoria con tus nombres de variable. Si no te sale, no lo entendiste."
+    },
+    {
+      "id": "seguir-solo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un proyecto propio pequeño y terminado enseña más que cinco proyectos ambiciosos empezados.",
+      "respuesta": true,
+      "explicacion": "Correcto, porque el último diez por ciento es donde vive todo lo que nadie cuenta: la bandeja sin número, la fila vacía a mitad de la planilla, el que escribe «sí» con acento. Terminado tiene definición exigente: corre sin su autor al lado, otra persona lo usa sin que se lo expliquen y tiene tres líneas escritas de para qué sirve, cómo se corre y qué hacer si falla."
+    },
+    {
+      "id": "cierre-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña para Rizoma del Sur el protocolo completo de pedir ayuda y de seguir aprendiendo: cómo se formula una pregunta, cómo se juzga una respuesta, qué regla rige el código que entra al controlador de riego y qué hábitos sostienen el aprendizaje cuando el curso se acabe.",
+      "respuestaModelo": "El protocolo empieza antes de preguntar. Cuando alguien se traba, primero agota el método de la lección anterior: reproduce el fallo, cambia una cosa a la vez, parte el programa por la mitad e imprime el estado. Si a los cuarenta minutos sigue trabado, pasa a preparar la pregunta, y prepararla es un trabajo con reglas.\n\nLa pregunta tiene cuatro partes obligatorias: qué esperaba, dicho en concreto y con número; qué hizo, con el código y el comando; qué pasó, con el mensaje completo copiado literal, nunca como foto de la pantalla; y qué ya probó, con lo que le dijo cada intento. A eso se le suma el contexto mínimo —lenguaje, versión, sistema— y una quinta parte que en el vivero es obligatoria porque es la que enseña: cuál cree él que es la causa, aunque se equivoque, porque así el que responde puede corregir el modelo mental y no solo el síntoma.\n\nEl código se pega siempre como caso mínimo reproducible. Se hace una copia fechada, jamás se mutila el original, y se borra por bisección hasta que quitar cualquier cosa haga desaparecer el fallo. El resultado se ejecuta tal cual, trae tres filas de datos inventados adentro en vez de la planilla real, no depende de rutas ni sensores de una máquina concreta y falla siempre. Antes de mandarlo se revisa que no lleve claves ni datos de personas: toda clave se reemplaza por CLAVE_AQUI, porque lo que se pega en internet queda indexado para siempre. Y la mitad de las veces el problema se resuelve durante el recorte, así que el trabajo no se pierde aunque la pregunta no se mande.\n\nAntes de preguntar se busca, y se busca bien: la consulta es la parte genérica del mensaje, no la ruta ni el nombre de la variable propia, que es exactamente lo que hace que la búsqueda no encuentre nada. Se busca en inglés, tal cual, y se usa el traductor o el modelo para entender la respuesta, no para resolver.\n\nLa respuesta encontrada se juzga con cuatro criterios: fecha y versión, porque una respuesta puede ser correcta y estar obsoleta; que describa una causa parecida a la tuya, porque mismo mensaje no significa misma causa; que explique por qué funciona el arreglo; y que arregle la causa en vez de apagar el aviso —desactivar la comprobación o envolver todo en un capturador vacío convierte un fallo que hablaba en un fallo silencioso—. Se aplica con copia fechada previa, una respuesta a la vez, probada primero sobre el caso mínimo, y con un comentario que diga qué hace, de dónde salió y cuándo. Si se preguntó en un lugar público, se vuelve y se escribe qué era.\n\nLa regla dura del taller está escrita en la pared: nadie carga en el controlador de riego una línea que no pueda explicar en voz alta. Aquí el código mueve agua sobre 3.666 m² en doce lotes, y un bucle mal escrito deja la bomba abierta toda la noche sobre las bandejas de yautía o corta el riego en pleno septiembre seco. No es una regla moral: el código que no se entiende no se puede depurar, no se puede juzgar y falla en el peor momento, a las tres de la mañana de un surazo. El mecanismo para hacerla cumplir es la revisión de a dos: antes de que un programa pase a la máquina, su autor se lo explica línea por línea a otra persona, aunque sepa menos; no se busca que el segundo detecte el error, sino que el primero se escuche.\n\nEl código ajeno o generado se apropia en cuatro pasos: leerlo y nombrar cada línea, marcando las que no se pueden decir con palabras propias; trazarlo en papel con un dato real del vivero; probarlo con casos límite —cero, vacío, negativo, el dato que no llegó porque el sensor estaba desconectado—; y reescribirlo de memoria con nombres propios. Se piden trozos de cinco líneas, no programas enteros, y se pide explicación en vez de solución: la causa de un error sin la corrección, tres entradas que rompan la función, o dónde mirar. El uso más rentable es al revés del habitual: uno escribe y la máquina critica.\n\nEl vivero mantiene un archivo errores.md con fecha, síntoma, causa real y arreglo, anotado el mismo día aunque la causa sea «no sé»: a los seis meses es el mejor manual que hay, porque son nuestros errores con nuestros datos. Y hay tres proyectos pequeños y terminables: la planilla de grados-día, el conteo de germinación por bandeja y el aviso de surazo. Terminado significa que corre sin su autor, que otro lo usa sin explicación y que tiene un LEEME de tres líneas.\n\nPara sostener el aprendizaje: media hora tres veces por semana antes que seis horas un sábado al mes, leer código ajeno y el propio de hace tres meses, y enseñar —el que termina el módulo da el taller del siguiente—. Para los valores agronómicos ningún foro sirve: cada cuánto regar o con qué umbral avisar de un surazo sale de la libreta propia, de los viveristas vecinos y de instituciones locales, y hay que verificarlo aquí. Y lo que se resuelva se escribe en español y se deja donde otro lo encuentre: el código que no puedes explicar no lo puedes enseñar, y lo que no se puede enseñar no se puede regalar.",
+      "criterios": [
+        "Exige agotar primero el método propio de depuración antes de preguntar, con un límite de tiempo razonable.",
+        "Enumera las cuatro partes de la pregunta contestable y añade la causa que uno supone.",
+        "Exige el mensaje de error como texto literal y completo, nunca como foto de pantalla.",
+        "Describe la construcción del caso mínimo reproducible por recorte, sobre copia fechada y con sus cuatro condiciones.",
+        "Incluye la limpieza de claves y datos personales antes de pegar algo en un lugar público.",
+        "Distingue la parte genérica del mensaje de error de la parte propia a la hora de buscar.",
+        "Aplica los criterios de juicio de una respuesta —fecha y versión, misma causa y no solo mismo síntoma, no apagar el aviso— y su protocolo: copia previa, una a la vez, prueba sobre el caso mínimo y comentario con origen y fecha.",
+        "Enuncia la regla dura sobre el controlador de riego y la justifica con el riesgo concreto del sitio, no con moral.",
+        "Describe el mecanismo de cumplimiento —revisión de a dos o explicación en voz alta— y para qué sirve de verdad.",
+        "Detalla los cuatro pasos de apropiación del código ajeno, incluido reescribirlo, y la regla de pedir trozos pequeños y explicación en vez de solución.",
+        "Define los hábitos de continuidad: proyectos pequeños y terminados con criterio explícito de terminado, bitácora de errores, lectura de código ajeno y enseñar a otro.",
+        "Reconoce que los valores agronómicos no se sacan de foros sino de registro propio, vecinos e instituciones locales, y que hay que verificarlos aquí."
+      ],
+      "explicacion": "La respuesta completa recorre el arco entero de la lección y lo aterriza en el sitio: la pregunta como caso de prueba que otro puede ejecutar, el caso mínimo como herramienta doble —comunicar y depurar—, el juicio de la respuesta, la regla dura con su mecanismo de cumplimiento y los hábitos que sostienen el aprendizaje. Lo que separa una buena respuesta de una genérica es que justifique la regla por el riesgo real —agua sobre bandejas, surazo de madrugada— y que distinga lo que la ayuda global puede resolver de lo que solo se sabe midiendo aquí."
+    }
+  ]
+}

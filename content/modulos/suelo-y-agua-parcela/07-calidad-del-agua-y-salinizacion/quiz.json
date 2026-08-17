@@ -1,0 +1,124 @@
+{
+  "preguntas": [
+    {
+      "id": "balance-de-sales",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un vecino riega desde hace cuatro años con agua de pozo que él describe como «buena, se toma sin problema», y su cultivo empezó a rendir menos sin que cambiara nada del manejo. ¿Qué afirmaciones describen correctamente lo que puede estar pasando?",
+      "opciones": [
+        "Cada riego mete sal y las dos salidas más grandes del agua —la evaporación desde la superficie y la transpiración de la planta— no se llevan nada de sal, porque lo que sale es vapor puro; la única salida que arrastra sal es el agua líquida que atraviesa la zona de raíces y baja",
+        "Con una lámina de riego del orden de 600 milímetros al año y un agua de conductividad 1,0, la cuenta da unos 384 gramos de sal por metro cuadrado cada año, que sobre una superficie como la de Rizoma es del orden de una tonelada y media anual",
+        "El daño no es proporcional al tiempo desde el principio: cada cultivo aguanta hasta un umbral sin perder nada de rendimiento y a partir de ahí cae en línea recta, así que cuatro años sin síntomas no prueban que la sal no estuviera subiendo",
+        "Como el agua es potable y se bebe sin notar sabor salado, se puede descartar la salinización y hay que buscar la causa en plagas, en el clima o en el agotamiento de nutrientes"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor y es exactamente el razonamiento que hace que este problema se descubra tarde. La potabilidad de un agua y su aptitud para regar durante años son dos preguntas distintas: el paladar humano no detecta sal por debajo de concentraciones bastante altas, y el problema del riego no es la concentración de un vaso sino la acumulación de miles de vasos sobre la misma tierra. La cuenta lo deja claro: un agua que nadie llamaría salada descarga toneladas de sal al año sobre una parcela pequeña, y como el vapor que sale no se lleva ni un gramo, todo lo que entra se queda salvo lo que percole. Además, descartar la salinidad por el sabor lleva a una segunda equivocación aún peor, porque el síntoma de una planta con exceso de sal —marchitez, crecimiento lento— es idéntico al de la falta de agua, y la reacción natural es regar más, lo que aporta más sal y acelera el problema. La forma correcta de descartar la hipótesis no es probar el agua, es medir su conductividad y pedir un análisis completo."
+    },
+    {
+      "id": "tres-problemas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Llega el análisis del agua de un pozo. ¿Qué afirmaciones son correctas sobre cómo se lee ese papel?",
+      "opciones": [
+        "La conductividad mide todas las sales sumadas y habla del problema osmótico, o sea de cuánto le cuesta a la planta absorber agua; no dice nada sobre qué le va a pasar a la estructura del suelo",
+        "El sodio hay que juzgarlo comparado con el calcio y el magnesio, porque compiten por las mismas posiciones de la arcilla, y eso es lo que resume el RAS: no importa cuánto sodio hay en términos absolutos",
+        "Un agua puede tener conductividad baja y aun así ser inservible por toxicidad de un ion concreto, señaladamente el boro, que tiene una ventana muy estrecha entre lo necesario y lo tóxico y además no se lava con facilidad",
+        "Con la conductividad alcanza para decidir: si está en un rango aceptable, el agua sirve para regar y el resto de los datos del análisis son detalle de laboratorio"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor y es la razón por la que mucha gente compra un medidor de bolsillo y cree que ya midió la calidad del agua. La conductividad es un solo número que suma todas las sales sin distinguir cuáles son, y las tres amenazas que puede traer una misma agua se comportan de manera independiente: la salinidad daña a la planta, la sodicidad daña al suelo y la toxicidad iónica daña un tejido concreto. Un agua puede tener conductividad tranquilizadora y un RAS que en pocas temporadas arruine la infiltración de un suelo arcilloso, o un contenido de boro que queme el cultivo. Peor todavía: confundir los dos primeros hace que la corrección de uno agrave al otro, porque lavar un suelo salino es lo correcto y lavar un suelo con sodio sin reponer calcio antes lo convierte en un suelo sódico puro. Por eso el análisis se pide completo, con cationes y aniones separados —calcio, magnesio, sodio, potasio, cloruro, sulfato, carbonatos, bicarbonatos y boro— y el medidor de bolsillo se reserva para lo que sí hace bien, que es vigilar tendencias entre análisis."
+    },
+    {
+      "id": "lluvia-en-suelo-sodico",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si un suelo tiene sodio alto, la llegada de la temporada de lluvias es una buena noticia, porque el agua de lluvia no trae sales y va a lavar el problema.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la trampa más contraintuitiva de la lección. Las sales disueltas hacen dos cosas a la vez: estorban a la planta, que es el efecto conocido, y mantienen la arcilla floculada, que es el que nadie ve. Una solución con bastante sal aplasta la capa de agua que rodea a las partículas y las deja acercarse lo suficiente para pegarse en grumos; ese efecto es la concentración de electrolitos y funciona independientemente de qué sales sean, sodio incluido. La consecuencia es que un suelo salino-sódico —mucho sodio y mucha sal total— se comporta como si estuviera sano: infiltra, se labra y no da ninguna señal. El día que llega agua sin sales, sea la primera lluvia fuerte de octubre o un lavado hecho con agua de lluvia captada, la concentración de electrolitos se desploma, el sodio queda sin contrapeso y el suelo se dispersa entero de golpe. La salinidad estaba tapando la sodicidad, igual que en un sistema viejo dos errores que se compensan lo mantienen en pie hasta que alguien arregla el que se veía. Por eso, en un suelo con sodio alto, la época de lluvias es el momento de riesgo y no de alivio, y el sellado superficial llega mucho más fuerte que antes. Y por eso jamás se hace un lavado a fondo sin haber medido antes sodio, calcio y magnesio por separado."
+    },
+    {
+      "id": "sodio-y-estructura",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre por qué el sodio destruye la estructura de un suelo y por qué eso pesa más en un terreno como el de Rizoma, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "El calcio y el magnesio tienen carga doble, así que un solo ion puede neutralizar una carga de una lámina de arcilla y otra de la lámina vecina al mismo tiempo, funcionando como un remache que mantiene unidas dos chapas",
+        "El sodio tiene carga simple y solo neutraliza una carga sin unir nada, y además llega envuelto en una capa de moléculas de agua mucho más gruesa que la del calcio, así que además de no unir, separa",
+        "Las arcillas expansivas 2:1 del sitio tienen mucha superficie con carga y mucha capacidad de intercambio, o sea muchísimas posiciones donde el sodio puede instalarse, de modo que un agua con RAS moderado hace aquí un daño que en un suelo arenoso pasaría desapercibido",
+        "El daño del sodio es un envenenamiento de la planta, así que se detecta observando el cultivo antes de que la estructura del suelo se vea afectada"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor y confunde dos problemas que la lección separa a propósito. El sodio puede ser tóxico para algunas especies, pero ese es el problema de toxicidad iónica y es otro asunto; el daño característico de la sodicidad no lo sufre la planta sino el suelo, y ocurre aunque el cultivo no muestre nada raro. Cuando el sodio ocupa suficientes posiciones de intercambio, las láminas de arcilla dejan de atraerse, se repelen, los grumos se sueltan y esa lechada de partículas rellena los huecos grandes por donde entraban el agua y el aire. Seco, ese suelo forma una costra sellada; mojado, se vuelve una pasta impermeable. La señal temprana no está en la hoja: está en que un sitio que antes infiltraba ahora encharca, en las manchas oscuras y aceitosas de materia orgánica dispersa, y en un terrón que al caer en un vaso de agua suelta una nube lechosa que no se asienta ni en horas. Buscar el aviso en el cultivo es esperar el síntoma de segunda ronda, cuando la infiltración ya se derrumbó y con ella todo lo que costó construir en las lecciones de cobertura, curvas y retención."
+    },
+    {
+      "id": "donde-se-junta",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre dónde se acumula la sal dentro de una parcela y qué decisiones prácticas salen de eso, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "La sal viaja con el agua y se queda donde el agua se detiene y se evapora, así que se acumula en el borde del frente de humedecimiento: con goteo forma un anillo en el perímetro del bulbo mojado",
+        "En surcos y camellones los dos frentes suben desde los lados y se encuentran en el centro del lomo, que además es lo que más se evapora, así que la sal se concentra justo donde la costumbre manda sembrar y conviene sembrar en el hombro",
+        "Con el freático cerca de la superficie el mecanismo se invierte: el agua sube por ascenso capilar, se evapora arriba y deja la sal en superficie, de modo que el terreno se saliniza sin que nadie riegue",
+        "Una lluvia pequeña siempre ayuda en un sistema de goteo, porque aporta agua sin sales y por poca que sea siempre diluye lo acumulado"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor y describe uno de los daños más desconcertantes del riego localizado. Una lluvia pequeña no alcanza a lavar nada: lo que hace es mover el agua unos centímetros hacia adentro y hacia abajo, y con ella empuja el anillo de sal que se había acumulado en el perímetro del bulbo justo hacia dentro de la zona de raíces. El sistema anduvo bien durante meses y el daño aparece de golpe con las primeras lluvias, que es precisamente cuando nadie lo está esperando y cuando todo el mundo atribuye los síntomas a otra cosa. Para lavar de verdad hace falta una lámina suficiente para atravesar la zona de raíces y salir por debajo, y eso exige que el agua tenga por dónde irse. En el caso del freático alto la conclusión es todavía más dura: mientras el nivel siga cerca, no hay lavado que sirva, porque lo que se empuja hacia abajo vuelve a subir por capilaridad; ahí el drenaje de la lección 5 no es una mejora del cultivo sino la condición previa para que exista cualquier corrección posible."
+    },
+    {
+      "id": "extracto-casero",
+      "tipo": "verdadero_falso",
+      "enunciado": "El extracto casero 1:5 —una parte de suelo seco en cinco de agua de lluvia— da un número de conductividad que se puede comparar directamente con las tablas de salinidad para saber si un suelo es salino.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error más común de quien empieza a medir por su cuenta. Las tablas de salinidad de suelo están construidas sobre el extracto de saturación, que lleva mucha menos agua que un 1:5, así que la misma muestra da un número varias veces más bajo cuando se diluye más. El factor de conversión entre los dos existe pero depende de la textura del suelo y no es una constante que se pueda citar de memoria, de modo que aplicar una tabla de extracto de saturación a un número de extracto 1:5 produce una falsa tranquilidad sistemática. Eso no invalida la prueba casera: la vuelve valiosa para otra cosa. El 1:5 sirve para compararte contigo mismo, con el mismo procedimiento, la misma relación de agua, la misma profundidad de muestreo y el mismo mes del año, anotado siempre. Una serie de varios años detecta una tendencia de salinización mucho antes de que ninguna planta la muestre y cuesta prácticamente nada. Es la misma lógica que gobierna el nivel estático de un pozo, que solo significa algo comparado con el del mismo mes del año anterior: ninguna de estas mediciones tiene sentido aislada, todas son series, y una serie que no se anota no existe."
+    },
+    {
+      "id": "orden-de-la-correccion",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un análisis confirma que un sector de la parcela tiene sales altas y además sodio alto. ¿Qué afirmaciones describen correctamente cómo se corrige?",
+      "opciones": [
+        "Primero hay que asegurar que el agua tenga por dónde irse, porque la sal solo sale disuelta en agua líquida que atraviese la zona de raíces y baje: lavar sin drenaje es mover la sal unos centímetros y esperar a que vuelva a subir",
+        "Con sodio alto no se empieza lavando: primero hay que ofrecer calcio suficiente para que desplace al sodio de las posiciones de intercambio, y recién después lavar el sodio ya suelto, con la secuencia medir, aportar calcio, lavar, drenar y volver a medir",
+        "En un suelo arcilloso conviene lavar en tandas de láminas pequeñas y repetidas en vez de inundar de una vez, porque el agua de una inundación se va por las grietas sin tocar el interior de los terrones, que es donde está la sal",
+        "La dosis de yeso se puede estimar con una regla general por metro cuadrado, ya que el yeso es un producto barato y un exceso no hace daño"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor. La cantidad de calcio necesaria depende de dos cosas propias de cada suelo y de cada punto: cuántas posiciones de intercambio hay en total, que es la capacidad de intercambio catiónico, y qué proporción de esas posiciones está ocupada hoy por sodio, que es el PSI. Sin esos dos números no hay forma de calcular cuánto calcio hace falta para desplazar al sodio, y la cuenta la hace el laboratorio a partir del análisis, no una regla copiada. Equivocarse por arriba es tirar plata en un insumo que se aplica por toneladas en superficies grandes; equivocarse por abajo es hacer todo el trabajo y no corregir nada, con el agravante de que el lavado posterior habrá bajado la salinidad sin resolver la sodicidad, que es exactamente la combinación que deja el suelo peor que al principio. La misma disciplina vale para el requerimiento de lavado: se calcula con la conductividad del agua y la que tolera el cultivo, y ese sobreconsumo de agua es un costo real que hay que sumar al cálculo de riego. Y conviene retener lo que sí es gratis y siempre suma: la materia orgánica pega agregados, amortigua la dispersión y, al mejorar la porosidad, es lo que hace posible que el lavado funcione."
+    },
+    {
+      "id": "plan-de-salinidad",
+      "tipo": "abierta",
+      "enunciado": "Elegí un terreno real que conozcas y que se riegue o se vaya a regar —tu patio, la parcela de un familiar, un huerto comunitario del barrio— y armá para él un plan completo frente a la salinización. Contá qué medís y en qué momento del año, qué le pedís exactamente a un laboratorio y por qué, qué señales vas a mirar sin instrumentos, qué decisiones de manejo tomás desde el primer día sin gastar nada, qué harías si el análisis viniera con sodio alto, y dónde termina lo que podés resolver por tu cuenta. Adaptalo a tu suelo, a tu fuente de agua y a tu presupuesto real.",
+      "respuestaModelo": "Tomo el lote de mi hermano: unos 600 metros cuadrados, suelo pesado que se agrieta en la seca y se hace barro en la lluvia, y un pozo con bomba que es la única fuente entre mayo y septiembre. Hay techo de calamina que hoy tira el agua de lluvia a la calle.\n\nAntes de medir, entender qué mido. Cada riego entra con sal adentro; después el agua se va evaporada o transpirada y el vapor sale limpio, así que la única salida que se lleva sal es la que baja atravesando las raíces. Lo que voy a instalar es un balance, no un termómetro.\n\nMediciones. Un medidor de conductividad de bolsillo con su solución patrón, calibrado antes de usarlo, para el pozo y para la lluvia captada. Después dos análisis completos de agua al laboratorio: uno al empezar y otro al final de la seca, porque con el nivel del pozo bajo las sales se concentran y ese es justo el mes en que más se riega; el de febrero daría el mejor número del año y una decisión optimista. Le pido por escrito conductividad, pH, calcio, magnesio, sodio, potasio, cloruro, sulfato, carbonatos, bicarbonatos, boro y el RAS calculado. Todo eso y no solo la conductividad, porque la conductividad suma todas las sales sin distinguir cuáles: habla del problema osmótico de la planta y no dice nada del daño estructural que hace el sodio, y hay aguas de conductividad baja inservibles por boro. Si el agua se bebe, pido nitratos una vez.\n\nDel suelo tomo muestras antes de que empiece el riego intensivo, porque ese dato no se recupera nunca más: conductividad del extracto de saturación, pH, cationes intercambiables, capacidad de intercambio y PSI, en tres puntos distintos según por dónde entra y se acumula el agua. Esa es mi línea de base. Después, cada mes, un extracto casero 1:5 de esos mismos tres puntos: suelo seco a la sombra, desmenuzado, una parte en cinco de agua de lluvia, agitar, media hora de reposo y medir el líquido claro. Sé que ese número no se compara con ninguna tabla, porque las tablas están hechas sobre extracto de saturación y llevan mucha menos agua; sirve para compararme conmigo mismo, mismo procedimiento, misma profundidad y mismo mes, anotado con fecha.\n\nSeñales gratis, en la misma recorrida. Costra o polvo blanco al secarse en la corona de los camellones y en el borde de donde moja el riego. Manchas oscuras y aceitosas en las partes bajas, que serían materia orgánica dispersa por sodio. Germinación en parches con las adultas sanas, que dice que la sal está en los primeros centímetros. Bordes de hoja quemados empezando por las viejas. Y la más importante en suelo pesado: un sitio que antes infiltraba y ahora encharca donde llega el riego y no donde llega la lluvia. Si sospecho, hago la prueba del terrón con dos terrones secos en dos vasos de agua de lluvia; si el del sitio malo suelta una nube lechosa que no se asienta, mando muestra al laboratorio en vez de seguir suponiendo.\n\nManejo desde el primer día, sin gastar. Conectar la calamina a un tanque tapado, porque la lluvia es casi destilada y va a lo que no perdona: almácigos, germinación y plantines, la etapa más sensible de cualquier especie; el pozo, a lo establecido y de raíz profunda. Cobertura permanente sobre todo suelo desnudo, porque menos evaporación es menos ascenso capilar y por lo tanto menos sal arriba. Sembrar en el hombro del camellón y no en la corona, que es donde se juntan los dos frentes. Goteo antes que aspersión con agua de pozo, porque el aspersor moja la hoja, la gota se evapora y el tejido absorbe sodio y cloruro directamente. Riegos completos y espaciados en vez de cortos y diarios, porque el riego corto aporta sal cada vez y nunca produce drenaje. Y nada de agua de lavado con detergente, que son sales de sodio.\n\nSi el análisis viniera con sodio alto, cambio el orden y no lavo primero: lavar un suelo salino-sódico sin reponer calcio lo convierte en sódico puro, mucho más caro de recuperar porque hay que reconstruir la estructura catión por catión. La secuencia sería asegurar primero que el agua tenga por dónde salir, con camas altas y drenes con destino decidido; aportar calcio en la dosis que calcule el laboratorio con mi capacidad de intercambio y mi PSI; lavar en tandas de láminas pequeñas y repetidas, porque inundar un suelo agrietado manda el agua por las grietas sin tocar el interior de los terrones, que es donde está la sal; lavar antes de sembrar; y volver a medir. Y sabría que la primera lluvia fuerte de octubre es riesgo y no alivio.\n\nDónde termina lo mío. No invento umbrales de tolerancia por cultivo ni dosis de yeso: eso lo consulto con el CIAT, con el INIAF o con el laboratorio. No invento precios ni plazos de esos servicios. El nitrato en agua de beber es consulta médica y de la autoridad de salud. Y el agua de lavado que sale del lote lleva mis sales a algún lado —una zanja, el terreno de abajo o el mismo acuífero del que bombea el barrio—, así que a dónde descarga lo hablo antes con los vecinos y con la autoridad competente.",
+      "criterios": [
+        "Plantea el problema como un balance —lo que entra con el riego frente a la única salida que arrastra sal— y no como una propiedad fija del agua",
+        "Mide la conductividad de cada fuente por separado y programa al menos un análisis al final de la seca, explicando por qué esa fecha da el dato que manda",
+        "Enumera qué se le pide a un laboratorio con cationes y aniones separados, y justifica por qué la conductividad sola no alcanza",
+        "Toma una línea de base de suelo antes del riego intensivo y reconoce que ese dato no se recupera después",
+        "Usa el extracto casero 1:5 con procedimiento fijo y explícitamente para compararse consigo mismo, no contra una tabla de extracto de saturación",
+        "Lista señales de campo que no cuestan nada y distingue las de salinidad de las de sodicidad, incluida la prueba del terrón o el encharcamiento nuevo donde llega el riego",
+        "Separa fuentes por calidad, reservando el agua de lluvia para germinación y almácigos por ser la etapa más sensible",
+        "Aplica medidas de coste cero con su mecanismo: cobertura para cortar la evaporación y el ascenso capilar, siembra en el hombro del camellón, goteo antes que aspersión, riegos completos y espaciados",
+        "Ante sodio alto invierte el orden y repone calcio antes de lavar, remitiendo la dosis al cálculo del laboratorio con capacidad de intercambio y PSI",
+        "Reconoce el drenaje como condición previa de cualquier corrección y menciona el lavado en tandas en suelo arcilloso por el flujo preferencial de las grietas",
+        "Identifica la primera lluvia como momento de riesgo en suelo con sodio, o el empuje del anillo de sal hacia las raíces en riego por goteo",
+        "Delimita con honestidad lo que remite a CIAT, INIAF, laboratorio, autoridad de salud o autoridad del agua, sin inventar cifras, dosis, normativa ni precios, e incluye el destino del agua de lavado como decisión que afecta a terceros"
+      ],
+      "explicacion": "Lo que se evalúa no es la cantidad de técnicas mencionadas sino el orden de las decisiones y la separación de los tres problemas. Cuatro señales delatan que la lección no se aplicó. La primera es tratar la calidad del agua como un solo número: quien mide solo conductividad puede pasar años tranquilo mientras el sodio destruye la estructura, porque la conductividad no habla de sodio. La segunda es lavar como primera reacción; en un suelo con sodio, lavar sin reponer calcio antes destapa el problema grave y deja el terreno peor, y en cualquier suelo sin drenaje el lavado solo desplaza la sal unos centímetros hacia abajo para que el ascenso capilar la devuelva. La tercera es comparar un extracto casero con una tabla de extracto de saturación y concluir que no pasa nada, que es una falsa tranquilidad sistemática. La cuarta es no tomar línea de base antes de empezar a regar, porque sin ella, dentro de diez años, no habrá forma de distinguir un suelo que ya venía salino de uno que se salinizó por el manejo. También se valora que la respuesta esté anclada en un terreno concreto —su suelo, su fuente, su presupuesto— y que aparezcan los dos límites duros: nada de dosis, umbrales ni cifras inventadas, que se consultan con el CIAT, el INIAF o el laboratorio, y el destino del agua de lavado, que sale de la propiedad y por tanto se conversa antes con los vecinos y con la autoridad competente."
+    }
+  ]
+}

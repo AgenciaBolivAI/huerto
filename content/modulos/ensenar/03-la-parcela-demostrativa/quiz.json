@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "que-demuestra",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué puede demostrar realmente una parcela demostrativa?",
+      "opciones": [
+        "Que aquí funciona: en este suelo, con este clima y con esta mano, que es la objeción que ningún manual contesta.",
+        "Cuánta diferencia hace, que es lo que decide si al vecino le compensa el trabajo extra.",
+        "Qué aspecto tiene una cosa bien hecha, que es un criterio visual imposible de transmitir en prosa.",
+        "El mecanismo por el que funciona: viéndola, el visitante deduce que la cobertura frena la evaporación y evita el sellado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El mecanismo no se ve. Nadie deduce mirando dos camas que la cobertura funciona porque intercepta el impacto de la gota y frena la evaporación: eso hay que contarlo. La parcela produce la convicción; el mecanismo se explica y el registro produce la receta."
+    },
+    {
+      "id": "suelo-representativo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Conviene montar la parcela demostrativa en el mejor pedazo del terreno, para que luzca y anime a la gente.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error que más credibilidad cuesta. Una parcela sobre el mejor suelo, con riego privilegiado y atención diaria, es el entorno de pruebas con datos de juguete: enseña lo que pasa en condiciones que el visitante no va a tener nunca. Gana lo representativo; la visibilidad se arregla con un sendero y un cartel, que es mucho más barato que arreglar la credibilidad después."
+    },
+    {
+      "id": "comparacion-pareada",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué caracteriza a una comparación pareada bien montada?",
+      "opciones": [
+        "Dos parcelas contiguas, iguales en suelo, fecha, variedad, riego y mano, que se distinguen en un solo factor.",
+        "Una de las dos no recibe el cambio y funciona como testigo: sin él no hay con qué comparar.",
+        "Está bien diseñada si alguien que no sabe nada, que no lee y que pasa solo, señala la mejor sin dudar.",
+        "Conviene juntar compost, cobertura y marco apretado en la parcela tratada, porque así la diferencia se ve mucho más."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Juntar tres cambios produce una diferencia espectacular y no enseña nada accionable: el vecino que solo puede hacer uno de los tres no sabe cuál. Es una variable de confusión, el equivalente de meter dos cambios en el mismo despliegue. Se puede demostrar el paquete completo, pero entonces hay que decirlo en voz alta y no atribuir el resultado a ninguna de sus partes."
+    },
+    {
+      "id": "arruinar-comparacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué defensas protegen la validez de la comparación?",
+      "opciones": [
+        "Juzgar y medir en el centro de cada parcela, dejando una hilera de sacrificio alrededor, por el efecto de borde.",
+        "Repetir el mismo par dos o tres veces en sitios distintos, en lugar de fiarse de uno solo.",
+        "Alternar de qué lado va el tratamiento en cada par, para no confundir el factor con la posición.",
+        "Colocar los dos miembros del par uno cuesta arriba del otro, para que el agua les llegue por igual."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es justo al revés: los dos miembros de un par deben quedar a la misma altura respecto de la pendiente, uno junto al otro a lo largo de la curva de nivel. En una llanura aluvial casi plana, unos centímetros de microrrelieve deciden dónde se encharca en febrero, y el encharcamiento borra cualquier otro efecto."
+    },
+    {
+      "id": "distancias-de-siembra",
+      "tipo": "verdadero_falso",
+      "enunciado": "La comparación de dos distancias de siembra se lee sola: basta mirar qué plantas están más grandes.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la única de las tres comparaciones básicas que no cumple el criterio de la lección. El ojo premia la planta grande, y la planta individual siempre es mayor en el marco ancho; pero la cosecha por metro cuadrado es plantas por metro cuadrado multiplicado por cosecha por planta, y al apretar el marco un factor sube y el otro baja. Se monta igual, pero exige cosechar y pesar la cama entera delante de la gente y anotar el peso en el rótulo."
+    },
+    {
+      "id": "rotulos-y-calendario",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace que una parcela siga enseñando sola durante todo el año?",
+      "opciones": [
+        "Dos marcas fijas repetidas en todos los pares, con el dibujo antes que la palabra y la fecha siempre.",
+        "Rótulos de lápiz sobre madera clara, porque el grafito es carbono y no se degrada con la luz, mientras la tinta de los marcadores sí.",
+        "Siembras escalonadas y comparaciones lentas de fondo, para que siempre haya un par en pleno contraste.",
+        "Un cartel amplio en cada par que explique el mecanismo en tres o cuatro renglones, para quien no pudo venir a la sesión."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El rótulo nombra, no explica: la explicación es oral. Si el cartel necesita tres renglones, lo que falló es el diseño de la comparación, porque la diferencia no era lo bastante clara. Y un texto largo deja fuera precisamente a quien lee despacio o no lee, que es el lector para el que se diseña la parcela."
+    },
+    {
+      "id": "fallas-y-costo",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué las fallas se dejan a la vista y por qué el factor demostrado debe ser gratuito?",
+      "opciones": [
+        "Una parcela donde nada falla se parece a un escaparate de vendedor, y quien ya vio proyectos irse no la cree.",
+        "Si solo conservas lo que salió bien, tu propio conocimiento se degrada por sesgo de supervivencia: las fallas marcan hasta dónde aguanta el método.",
+        "Si la diferencia la hace un insumo comprado, lo que demuestras es que el dinero funciona, y el vecino sin plata queda fuera.",
+        "Una planta enferma conviene dejarla en pie indefinidamente, porque es el mejor material didáctico que vas a tener."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La regla de bioseguridad gana siempre a la pedagógica: ninguna planta enferma se deja en pie si es fuente de inóculo, porque la parcela está dentro de tu terreno y a pocos metros del vivero. Una falla exhibida está rotulada, fechada y acotada, y se retira cuando ya no enseña nada; si no, la parcela se vuelve un cementerio y deja de distinguirse del abandono."
+    },
+    {
+      "id": "disenar-la-parcela-de-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña la parcela demostrativa de Rizoma del Sur: qué comparación montas primero y por qué, en qué lote y con qué orientación, cuántos pares y cómo los distribuyes, qué especies del catálogo entran en cada reloj, cómo rotulas, cómo calendarizas el año contra las dos estaciones, cómo dimensionas el tamaño y qué haces con las fallas. Justifica cada decisión con el mecanismo, no con la costumbre.",
+      "respuestaModelo": "La primera comparación es con y sin cobertura muerta, por tres razones que se acumulan. Es la más visible: en agosto, con tres meses sin lluvia sobre la llanura de Zanja Honda, la cama descubierta estará agrietada y caliente mientras la cubierta conserva tierra fresca a dos centímetros, y esa diferencia se comprueba hundiendo un dedo, sin instrumentos y sin creerle nada a nadie. Es la más barata, porque el material sale del propio desmonte y del rastrojo del sitio, lo que la vuelve reproducible por un vecino sin dinero: si el factor demostrado costara plata, lo demostrado sería que el dinero funciona. Y encaja con el calendario: luce justamente en la estación seca, cuando el resto de la parcela tiene poco que mostrar.\n\nLa ubicación resuelve una pelea. De los doce lotes contiguos de los 3.666 m², el más visible desde el acceso suele ser también el más trabajado y el más cercano al agua; montar ahí la demostración la invalida, porque si el suelo es el mejor de los doce el resultado no aplica ni al resto del terreno ni al del vecino. Elijo un lote de suelo corriente y compenso la visibilidad con un sendero marcado y un cartel en la entrada, que cuesta mucho menos que recuperar la credibilidad. Anoto en el croquis en qué lote está cada par, porque en suelos aluviales la variación entre lotes es dato, no burocracia.\n\nLa orientación es la decisión técnica que más gente se salta. Los dos miembros de cada par van uno junto al otro a lo largo de la curva de nivel, a la misma cota. El terreno es casi plano, pero en llanura aluvial unos centímetros de microrrelieve deciden dónde se junta el agua en febrero; si un miembro queda más bajo, en lluvias estaría comparando cobertura contra encharcamiento sin saberlo. Si hay un bajío evidente, la parcela no se pone ahí, o se pone a propósito y se rotula como demostración de drenaje.\n\nMonto tres pares en tres lotes distintos, no uno solo, porque un par único puede engañar por azar —un hormiguero viejo, una mancha compacta, el sitio donde estuvo la pila de rastrojo— y tres repeticiones dicen si el efecto es real. Alterno el lado del tratamiento: izquierda, derecha, izquierda. Si lo pusiera siempre del mismo lado y ese lado recibiera la sombra de la linde desde las tres de la tarde, habría confundido el factor con la posición. Cada parcela lleva una hilera de sacrificio alrededor y se juzga por el centro, por el efecto de borde, y el testigo no se pega al pasillo por donde entra la gente, porque un testigo pisado ya no es un testigo.\n\nEn especies uso los dos relojes. Rápido y visible: culantro, que rota rápido, se corta y vuelve, y cuya tolerancia a la sombra permite montar de paso un segundo par de pleno sol contra sombra parcial sin tierra nueva; y batata, que tapa el suelo y da material de propagación a quien se va, con la disciplina sanitaria correspondiente. Lento y valioso: gandul en el borde, que trabaja en la seca y hace de cortaviento, y dos frutales injertados plantados hoy en dos hoyos hechos de maneras distintas —uno cuidado, otro apurado— rotulados desde el primer día: esa es la demostración que otra persona dará dentro de tres años y hoy cuesta una tarde. Regla que manda sobre todo: solo entra lo que puedo entregar como material, porque enseñar una especie que el visitante no puede conseguir genera deseo sin salida.\n\nRotulación con dos marcas fijas repetidas en los tres pares: pajas tendidas dibujadas para el tratamiento, tierra pelada para el testigo, la fecha grande y el nombre en el registro de la zona, camote y no batata. Lápiz sobre madera clara, porque el grafito es carbono y no se degrada con la luz, mientras la tinta de los marcadores se decolora con la ultravioleta. Y tres copias de la identidad: rótulo en el terreno, croquis acotado junto a las herramientas y foto del croquis fuera del sitio, porque el primer surazo tumba alguno.\n\nCalendario: de mayo a septiembre manda el par de cobertura; de octubre a abril, el compost y el crecimiento, con siembras escalonadas de culantro cada pocas semanas para que siempre haya algo en pleno contraste. El tamaño lo fijo cronometrando una jornada real de mantenimiento y dividiendo los minutos disponibles de mi peor semana entre los minutos por metro cuadrado y semana: si la cuenta da tres pares y quería ocho, monto tres, porque una parcela abandonada demuestra que el método no se sostiene. Escribo por adelantado el orden de abandono, con el factor diferenciador y el riego mínimo como intocables. Y desde el primer día reservo un rincón de fallas rotuladas y fechadas —el almácigo que no germinó, la cama anegada en febrero, con un «no sé por qué» escrito tal cual cuando no lo sé—, retirando lo que ya no enseña y sacando de inmediato cualquier planta que sea fuente de inóculo, porque el vivero está a pocos metros.",
+      "criterios": [
+        "Elige la comparación de cobertura como primera y la justifica por visibilidad, costo cero y encaje con la estación seca.",
+        "Aplica la regla de que el factor demostrado debe ser gratuito y reproducible por alguien sin dinero.",
+        "Resuelve la pelea entre visibilidad y representatividad eligiendo suelo corriente y compensando con sendero y cartel.",
+        "Orienta los pares a lo largo de la curva de nivel, a la misma cota, y explica el microrrelieve y el encharcamiento de febrero.",
+        "Monta al menos tres pares repetidos en lotes distintos en lugar de uno solo, y dice por qué.",
+        "Alterna la posición del tratamiento entre pares para no confundir el factor con el sitio.",
+        "Prevé el efecto de borde: hilera de sacrificio, medición en el centro y testigo alejado del pasillo.",
+        "Combina especies de resultado rápido con especies lentas del catálogo real y explica el papel de cada una.",
+        "Exige que solo entren especies de las que se pueda entregar material, con la disciplina sanitaria correspondiente.",
+        "Diseña la rotulación con dos marcas fijas, dibujo antes que palabra, fecha, vocabulario local y material resistente a la intemperie.",
+        "Prevé la redundancia de la identidad de la parcela: rótulo, croquis y copia fuera del terreno.",
+        "Dimensiona por los minutos de la peor semana y fija por escrito el orden de abandono y el tratamiento de las fallas, incluida la excepción de bioseguridad."
+      ],
+      "explicacion": "La respuesta completa encadena las decisiones en el orden en que se toman en el terreno: qué se demuestra, dónde, con cuántas repeticiones, con qué especies, cómo se rotula, cómo se calendariza, cuánto se puede sostener y qué se hace cuando algo falla. Lo que separa un buen diseño de uno malo no es la lista de tareas sino los porqués: la contigüidad y la cota controlan la variación del suelo, la repetición controla el azar, la alternancia de lado controla la posición, el borde se descarta al medir, y el costo cero es lo que hace que la demostración no se confunda con un anuncio."
+    }
+  ]
+}

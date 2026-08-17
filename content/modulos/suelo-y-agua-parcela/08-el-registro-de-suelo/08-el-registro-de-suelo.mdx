@@ -1,0 +1,448 @@
+Este módulo empezó caminando el terreno bajo la lluvia y termina con un cuaderno. No es un anticlímax:
+es la única lección cuyo producto sigue trabajando cuando ya no estés. Todo lo que se decidió en las
+siete lecciones anteriores —tapar el suelo, trazar curvas, cavar zanjas, subir las camas, repartir el
+pozo, vigilar las sales— comparte un problema incómodo: **su efecto no se puede ver**. No porque sea
+pequeño, sino porque es lento.
+
+Un suelo que mejora lo hace a un ritmo que el ojo no distingue de no cambiar nada. Uno que se degrada,
+también. Entre esas dos trayectorias, que a diez años terminan en sitios opuestos, **no hay diferencia
+perceptible en una temporada**: quien no mide no está eligiendo entre las dos, está esperando a ver cuál
+le tocó. La afirmación central de la lección es corta y conviene tomarla en serio: **un huerto sin
+registro no tiene resultados, tiene recuerdos**. Y los recuerdos no se restan.
+
+## El suelo cambia más despacio de lo que la memoria conserva
+
+Llamamos <Termino slug="registro-de-suelo">registro de suelo</Termino> al conjunto ordenado de
+observaciones, medidas y fechas que permite comparar el mismo terreno consigo mismo a lo largo de años.
+No es un análisis de laboratorio, ni una libreta de gastos, ni un álbum de fotos: **es una serie**, y su
+valor no está en ningún dato suelto sino en la distancia entre dos datos separados por el tiempo.
+
+Cada cosa que se mide tiene su
+propio <Termino slug="tiempo-de-respuesta-del-indicador">tiempo de respuesta</Termino>: cuánto tarda en
+reflejar un cambio de manejo. La cobertura responde en días; la costra y la velocidad de entrada del
+agua, en una temporada; las lombrices y la resistencia de los terrones al agua, en uno a tres años; la
+compactación tarda años en formarse y más en irse. Y la materia orgánica —el indicador que todo el mundo
+quiere ver subir— se mueve en **décimas de punto porcentual por año en el mejor de los casos**, así que
+la diferencia entre un manejo bueno y uno malo recién se separa del ruido a los cinco o diez años.
+
+<Analogia>
+Es una regresión de rendimiento de tres milisegundos por versión. Nadie la nota: cada release está
+dentro del margen y el equipo jura que todo va igual. Diez versiones después la página tarda medio
+segundo más y **no hay forma de saber cuál la rompió**, porque nadie guardó la serie. Con el suelo pasa
+lo mismo, con dos agravantes: el intervalo entre «releases» es una temporada entera, y no existe la
+opción de volver a la versión anterior.
+</Analogia>
+
+## Tu memoria no es un instrumento: es un ajuste automático
+
+Hay una razón concreta por la que no basta con haber estado ahí. Se
+llama <Termino slug="linea-de-base-cambiante">línea de base cambiante</Termino>: **cada persona toma
+como normal el estado que encontró al llegar**, y ese punto de referencia se desplaza en silencio con
+cada generación. El abuelo recuerda tierra negra hasta el codo; el hijo, una capa oscura de un palmo; el
+nieto llama tierra buena a cuatro dedos de color café, y ninguno miente. La memoria no guarda estados
+absolutos: guarda comparaciones con lo último que vio. Y ese desplazamiento ocurre también dentro de la
+misma cabeza en tres años, en la dirección peligrosa: **el deterioro lento se siente como normalidad y
+la mejora lenta se siente como que no pasó nada**, así que la gente abandona lo que estaba funcionando.
+
+<Analogia>
+En operación de sistemas la regla es conocida: **no se puede depurar lo que no se instrumentó**. Un
+servicio sin telemetría no tiene fallos, tiene misterios, y la métrica que hace falta es siempre la que
+nadie registró. El corolario agrícola es idéntico: la medición que va a decidir algo dentro de diez años
+**hay que tomarla hoy, cuando todavía parece que no sirve para nada**.
+</Analogia>
+
+## Antes de medir: qué decisión va a cambiar con este número
+
+Aquí mueren casi todos los registros de suelo. Alguien se entusiasma, compra un cuaderno, llena cuatro
+meses de datos preciosos y lo abandona. No falló la disciplina: faltaba el motivo.
+
+La regla que el curso ya estableció para los datos de riego vale igual aquí: **cada cosa que se mide
+lleva escrita al lado la decisión que va a cambiar según el resultado**. Si no hay decisión, no se mide.
+La cobertura decide si se sigue trayendo material; el espesor de la capa oscura, si un lote entra en
+descanso; la velocidad de entrada del agua, si la zanja se amplía; el nivel del pozo, si se recorta el
+riego; la conductividad del agua, si hace falta lavar. Y una precaución que vale oro:
+la <Termino slug="metrica-prespecificada">métrica prespecificada</Termino> —escribir qué se va a medir,
+cómo exactamente y con qué frecuencia **antes** de aplicar nada y de ver ningún dato—, porque con ocho
+variables anotadas y sin regla previa siempre habrá una que salió a favor, y esa será la que se cuente.
+
+<Dato titulo="Cómo se reconoce un registro vivo">
+No por su prolijidad. Un registro está vivo cuando **alguien discutió una decisión mirándolo**: dos
+personas frente a la libreta, en desacuerdo, resolviendo con la serie en vez de con la intuición. Si eso
+no ocurrió nunca, lo que hay es un pasatiempo caro con aspecto de método.
+</Dato>
+
+## Tres capas: lo que se anota, lo que se mide y lo que se paga
+
+Un registro que funciona tiene tres capas de costo y frecuencia muy distintos, y confundirlas es el
+error de diseño más común.
+
+**Capa uno: la bitácora de manejo.** Gratis, continua, y anota **eventos**, no medidas: lluvia en
+milímetros, labores, material orgánico aportado con su cantidad, siembras y cosechas por unidad, riegos,
+encharcamientos con su duración, la quema del vecino, el camión que entró en marzo. Se lleva
+como <Termino slug="registro-de-solo-escritura">registro de solo escritura</Termino>: se añaden líneas y
+nunca se borra ni se corrige encima; un error se enmienda con una entrada nueva y fechada.
+
+**Capa dos: los indicadores de campo.** Medidas propias, con herramientas de la casa, una o dos veces al
+año; cuestan tiempo, no dinero. **Capa tres: el laboratorio.** Cada tres a cinco años, cuesta plata, y
+da los números que no se obtienen de otra forma: materia orgánica, nutrientes, acidez, sales.
+
+<Analogia>
+Son exactamente logs, métricas y auditoría. Las métricas dicen **que** algo cambió; los logs, **por
+qué**; y la auditoría cara confirma lo que las métricas insinúan. Un panel sin logs es un escalón que
+nadie sabe explicar, y así queda un análisis cuya materia orgánica subió sin que nadie anotara los
+treinta metros cúbicos de material que se echaron ese año.
+</Analogia>
+
+La prioridad es contraintuitiva: **la capa uno sostiene a las otras dos**. Si solo se puede hacer una
+cosa, se hace la bitácora, con pluviómetro y fotos. Un análisis de laboratorio sin bitácora es un número
+huérfano; una bitácora sin análisis sigue siendo utilizable.
+
+## El punto y la ventana: no moverse y no cambiar de mes
+
+Dos medidas separadas por diez años solo se pueden restar si se tomaron **en el mismo sitio, a la misma
+profundidad y del mismo modo**. Eso obliga a una pieza de infraestructura que no cuesta nada:
+el <Termino slug="punto-de-muestreo-permanente">punto de muestreo permanente</Termino>, un lugar marcado
+con estaca, **con código propio que nunca se reutiliza** —R-01, R-02…—, localizado por escrito con dos
+distancias a referencias que no se van a mover, fotografiado, y con la profundidad fijada de antemano:
+de cero a veinte centímetros, y cuando se pueda otra de veinte a cuarenta. La estaca se pierde; **la
+descripción escrita y las dos distancias, no**.
+
+Dónde se ponen los puntos lo decide el mapa del agua de la lección 1, no las líneas de los lotes. Se
+agrupa el terreno en <Termino slug="unidad-de-manejo">unidades de manejo</Termino> parecidas entre sí
+—la parte alta arenosa, el bajío, la franja del paleocauce— y **no se mezclan nunca en la misma
+muestra**: el promedio de un dique natural y un bajío describe un suelo que no existe en ninguna parte
+del terreno. Dentro de cada unidad se toma una <Termino slug="muestra-compuesta">muestra
+compuesta</Termino>, mezclando del orden de quince a veinte piquetes en zigzag, que es lo que hace que
+el dato represente la unidad y no un lunar.
+
+La segunda mitad es el calendario. Casi todo lo que se mide en campo depende del agua que el suelo tenga
+ese día: resistencia a la penetración, densidad aparente, infiltración, lombrices y hasta el color
+cambian muchísimo entre húmedo y seco. Con <Termino slug="arcilla-expansiva">arcillas
+expansivas</Termino> es extremo —el mismo punto agrietado en octubre e hinchado en marzo **son dos
+suelos distintos**, y esa diferencia supera diez años de mejora—. De ahí sale
+la <Termino slug="ventana-de-medicion">ventana de medición</Termino>: una fecha fija, la misma quincena
+todos los años, y una condición de humedad escrita del tipo «dos a cuatro días después de una lluvia que
+haya mojado veinte centímetros». Se anota siempre
+como <Termino slug="metadato">metadato</Termino> la lluvia de los siete días previos: ese dato permite
+descartar una lectura rara sin descartar el año entero.
+
+<Dato titulo="Comparabilidad gana a exactitud">
+**Un método mediocre aplicado siempre igual mide el cambio mejor que un método excelente aplicado de dos
+maneras distintas.** Esa propiedad se llama <Termino slug="comparabilidad">comparabilidad</Termino> y
+gobierna todo el registro: si secas la muestra al sol en vez de en estufa, tu densidad aparente estará
+algo desviada, pero desviada **igual todos los años**, y la diferencia entre 2026 y 2036 sigue siendo
+verdadera. Es la disciplina del banco de pruebas: misma máquina, misma carga, misma hora. Cambiar de
+procedimiento para «mejorar» **destruye la serie anterior**.
+</Dato>
+
+## Lo que se puede medir sin gastar un peso
+
+Estas son las medidas de la capa dos. Ninguna necesita comprar nada que no esté en una casa.
+
+**Espesor de la capa oscura.** Corte limpio con pala recta y se mide el grosor de
+la <Termino slug="capa-vegetal">capa vegetal</Termino> en tres sitios del mismo hoyo, anotando los tres
+valores y no el promedio, con foto y
+una <Termino slug="referencia-de-escala">referencia de escala</Termino> que sea siempre la misma regla.
+
+**Densidad aparente.** Una lata de volumen conocido enterrada al ras, enrasada, secada siempre del mismo
+modo y pesada. Por debajo de 1,3 g/cm³ el suelo está bien estructurado; por encima de 1,7 g/cm³ muchas
+raíces ya no pasan.
+
+<Formula explicacion="La medida de compactación más barata que existe: el volumen es el de la lata y la masa, la del suelo ya seco.">
+densidad aparente (g/cm³) = masa de suelo seco (g) ÷ volumen de la lata (cm³)
+</Formula>
+
+**Resistencia con varilla.** El <Termino slug="penetrometro-de-varilla">penetrómetro de
+varilla</Termino> es un alambre de seis milímetros con la punta redondeada y marcas cada cinco
+centímetros: se empuja con una mano hasta que se traba y se anota la profundidad. Solo vale comparado
+con la misma humedad, y delata la <Termino slug="suela-de-labor">suela de labor</Termino>.
+
+**Velocidad de entrada del agua.** La <Termino slug="prueba-del-hoyo">prueba del hoyo</Termino> de la
+lección 4, con su protocolo exacto: saturar el día anterior, mismo diámetro, mismos tiempos.
+
+**Estabilidad de los terrones.** Un terrón seco del tamaño de una nuez en un vaso con agua: se observa
+la <Termino slug="disgregacion-por-humedecimiento">disgregación por humedecimiento</Termino> al minuto y
+a los diez, puntuando de 0 a 3 con una escala escrita de antemano. Mide
+la <Termino slug="estabilidad-de-agregados">estabilidad de agregados</Termino>, biología del suelo hecha
+visible.
+
+**Lombrices.** El <Termino slug="conteo-de-lombrices">conteo de lombrices</Termino> saca un bloque de
+veinte centímetros de lado, lo desmenuza sobre un plástico y cuenta; siempre el mismo mes y con humedad
+parecida, porque en plena seca no aparece ninguna aunque el suelo esté sano.
+
+**Cobertura y pérdida de altura.** El <Termino slug="transecto-de-puntos">transecto de
+puntos</Termino> de la lección 3 —cien puntos sobre una cuerda marcada, y el porcentaje sale de dividir
+los cubiertos entre los observados— y los <Termino slug="clavo-de-erosion">clavos de erosión</Termino>
+de la lección 2, leídos siempre en la misma época, sabiendo que en arcilla expansiva parte del
+movimiento es el suelo respirando.
+
+**Agua.** Un <Termino slug="pluviometro">pluviómetro</Termino> —basta un recipiente de paredes rectas y
+una regla, a cielo abierto y siempre en el mismo sitio— leído tras cada lluvia;
+el <Termino slug="nivel-estatico">nivel estático</Termino> del pozo el mismo día de cada mes; y la
+conductividad eléctrica si hay medidor prestado, que es la vigilancia de la salinización.
+
+**Y dos que integran todo lo demás:** las fotos
+desde <Termino slug="punto-fijo-fotografico">punto fijo fotográfico</Termino>, con el mismo encuadre y
+la misma referencia de escala, y **el rendimiento por unidad de manejo en kilos por metro cuadrado**,
+ruidoso pero el único indicador que paga las cuentas.
+
+<Tabla>
+
+| Qué se mide | Cada cuánto | Qué decisión dispara |
+| --- | --- | --- |
+| Lluvia y eventos | Continuo | Da contexto a todos los demás datos |
+| Cobertura del suelo | 2 veces al año | Traer más material o ampliar superficie |
+| Fotos de punto fijo | 2 a 4 veces al año | Comparación visual y enseñanza |
+| Estabilidad de terrones | 1 vez al año | Seguir o corregir el manejo orgánico |
+| Lombrices | 1 vez al año | Confirmar biología; alerta si cae |
+| Infiltración | 1 vez al año | Ampliar zanjas, romper costra |
+| Resistencia con varilla | 1 vez al año | Detectar suela de labor y tránsito |
+| Espesor de capa oscura | Cada 2 años | Poner un lote en descanso |
+| Densidad aparente | Cada 2 a 3 años | Cambiar el paso de maquinaria |
+| Nivel del pozo | Mensual, mismo día | Recortar riego, revisar el reparto |
+| Análisis de laboratorio | Cada 3 a 5 años | Enmiendas, sales, plan de fertilidad |
+
+</Tabla>
+
+## El laboratorio, y el frasco que vale por diez años
+
+Cuando se paga un <Termino slug="analisis-de-suelo">análisis de suelo</Termino> hay que pedir algo que
+casi nadie pide: **el nombre del método de cada determinación**, anotado junto al resultado. La materia
+orgánica no se determina de una sola manera, ni el fósforo se extrae con la misma solución en todos los
+laboratorios, y **dos métodos distintos dan números distintos para el mismo suelo**. Ahí aparece el
+enemigo silencioso de las series largas: la <Termino slug="deriva-de-metodo">deriva de método</Termino>,
+el salto que produce cambiar de laboratorio, de método, de instrumento o de persona, y que es
+**indistinguible de un cambio real del suelo**. Un registro de doce años puede quedar partido en dos
+mitades incomparables por una decisión administrativa que nadie anotó.
+
+La defensa es un frasco. Cada vez que se manda una muestra se seca a la sombra una porción, se tamiza y
+se guardan trescientos o cuatrocientos gramos cerrados y rotulados con código de punto, profundidad y
+fecha: es la <Termino slug="muestra-de-archivo">muestra de archivo</Termino>. Diez años después, la
+muestra nueva **se manda junto con la vieja, en el mismo lote y al mismo laboratorio**: cualquier
+desviación de método afecta a las dos por igual y **la diferencia que quede es real**.
+
+<Analogia>
+Es guardar el binario antiguo para volver a correr el benchmark en la máquina de hoy, en vez de comparar
+contra un número medido en una máquina que ya no existe. Cuesta un frasco y un estante seco, y es
+probablemente **la costumbre con mejor relación entre esfuerzo y valor de toda esta lección**.
+</Analogia>
+
+Con honestidad sobre sus límites: **las medidas biológicas no sobreviven al frasco** —respiración,
+biomasa microbiana y nitratos cambian apenas la muestra se seca—, mientras que textura, materia
+orgánica, acidez, sales y la mayoría de los nutrientes aguantan bien secos y a la sombra. Y **precios,
+plazos, laboratorios disponibles y métodos ofrecidos se preguntan a la universidad pública, a las
+instituciones de investigación agrícola y a los propios laboratorios**, nunca a un texto general.
+
+## El ruido es más grande que la señal
+
+Aquí está el motivo por el que tanta gente concluye mal con datos verdaderos.
+La <Termino slug="variabilidad-espacial">variabilidad espacial</Termino> del suelo es enorme: dos
+muestras tomadas a cinco metros una de otra pueden diferir **más que diez años de cambio real** en el
+mismo sitio. Por eso existen los puntos permanentes, las muestras compuestas y la estratificación por
+unidad de manejo; sin eso, la serie mide dónde se paró la persona, no cómo evoluciona el suelo.
+
+Después está el clima como <Termino slug="variable-de-confusion">variable de confusión</Termino>: un año
+de lluvias bien repartidas mejora todo a la vez sin que nadie haya hecho nada. Y su pariente,
+la <Termino slug="regresion-a-la-media">regresión a la media</Termino>: si se prueba una enmienda justo
+en el lote que peor se veía, parte de la mejora habría ocurrido igual. También aparece
+la <Termino slug="pseudorreplicacion">pseudorreplicación</Termino>: veinte medidas dentro de un mismo
+lote tratado no son veinte repeticiones, son una.
+
+Y por último, el límite del propio instrumento, baratísimo de conocer:
+la <Termino slug="repetibilidad-de-la-medicion">repetibilidad de la medición</Termino>. Una vez al año,
+dos personas miden el mismo hoyo el mismo día sin verse los números. Si difieren dos centímetros en el
+espesor de la capa oscura, **el registro no puede afirmar nunca un cambio de un centímetro**: ese
+número es el piso de todo lo que la serie tiene derecho a decir.
+
+<Dato titulo="La regla de los tres puntos">
+Dos medidas son una diferencia; **tres son una tendencia**. Con dos años no se concluye nada, y quien lo
+hace estará explicando con teorías el ruido de su propia medición. Hay además una verificación gratuita:
+**la textura no cambia**. Si un punto pasa de franco arcilloso a franco arenoso, no mejoró el suelo —la
+muestra se tomó en otro sitio, se confundió el rótulo o se mezclaron unidades—.
+</Dato>
+
+## El testigo, y el experimento más viejo del barrio
+
+Compararte contigo mismo en el tiempo tiene un defecto: no separa lo que hiciste de lo que hizo el
+clima. La solución es el <Termino slug="testigo">testigo</Termino>: una franja o un lote que se deja sin
+la práctica que se está probando, medido con el mismo protocolo el mismo día. Cuesta lo que produzca esa
+superficie y **es lo único que convierte «mejoró» en «lo mejoramos»**.
+
+Y hay un testigo gratis que lleva décadas corriendo:
+el <Termino slug="contraste-de-alambrado">contraste de alambrado</Termino>. A los dos lados de un cerco
+hay el mismo suelo, el mismo clima y la misma lluvia, con manejos distintos durante veinte o treinta
+años. Se cava un hoyo de cada lado el mismo día, se mide igual y se fotografía el corte con la
+referencia de escala. Es el argumento más persuasivo que existe para enseñar, porque **no hay nada que
+creer**. Se pide permiso antes de cavar del otro lado, obviamente.
+
+## Cómo se guarda y cómo se lee
+
+Primero papel. Cuaderno de tapa dura, escrito **a lápiz** porque la tinta corre cuando se moja, con la
+fecha en cada página y sin borrar jamás. En la primera hoja va el protocolo entero en una página: qué se
+mide, dónde, cuándo, cómo y quién. Un registro cuyo procedimiento vive solo en una cabeza se termina el
+día que esa persona no puede ir.
+
+Después, copia digital, y el formato correcto es el más
+aburrido: <Termino slug="csv">CSV</Termino> o texto plano, una fila por punto, fecha y variable, con
+columnas de valor, unidad, método y quién midió. Eso lo abre cualquier programa dentro de veinte años,
+mientras que la aplicación de moda de este año puede no existir. **Un hueco no es un cero**:
+un <Termino slug="dato-faltante">dato faltante</Termino> se marca como faltante, porque el cero es una
+medida y el hueco es la ausencia de medida. Y hace falta <Termino slug="respaldo">respaldo</Termino> de
+verdad —tres copias, dos soportes, una fuera del sitio, que en un proyecto comunitario es sencillamente
+**la casa de otra persona**—, que es <Termino slug="sucesion-del-conocimiento">sucesión del
+conocimiento</Termino> aplicada a datos.
+
+Leer la serie tiene cuatro reglas. Se compara **el mismo mes con el mismo mes**, nunca marzo contra
+agosto. Se dibuja a mano en papel cuadriculado con los años en el eje horizontal, porque el ojo detecta
+una tendencia mucho antes en un gráfico que en una tabla. Se lee **junto a la bitácora de eventos**,
+para atribuir cada escalón a algo que ocurrió. Y un cambio menor que tu repetibilidad no es un cambio:
+es tu pulso. Queda una obligación de honestidad: **a veces la serie dice que lo que hiciste no
+funcionó**, y ese es exactamente el motivo por el que vale la pena llevarla.
+
+## El activo que nadie te puede copiar
+
+Con dinero se compra casi todo lo que aparece en este curso: herramienta, semilla, malla, una bomba,
+incluso un terreno. **Con dinero no se compran diez años de serie.** No se acelera, no se terceriza, no
+se importa y no se recupera si se interrumpió: es el único activo del proyecto que solo se fabrica
+dejando pasar el tiempo con disciplina. Es el clásico problema de que nueve personas no hacen un bebé en
+un mes: hay trabajos que no paralelizan, y aquí la entrada que no se puede comprimir es el calendario.
+**Por eso el momento óptimo para empezar fue hace diez años, y el segundo mejor es esta semana.**
+
+De ahí salen cuatro consecuencias. El registro convierte una opinión
+en <Termino slug="evidencia-local">evidencia local</Termino>, la prueba más creíble que existe para el
+vecino que decide sobre su propio patio. Convierte el terreno en
+una <Termino slug="parcela-demostrativa">parcela demostrativa</Termino> con números, y eso cambia la
+conversación con instituciones y compradores, que dejan de recibir un relato. **Te protege de venderte
+humo a ti mismo**, la forma más cara de equivocarse en agricultura porque se paga durante años sin
+notarlo. Y es herencia: quien continúe la parcela dentro de veinte años **empieza con información en vez
+de empezar de cero**, que es lo más parecido a acumular capital que tiene un proyecto sin plata.
+
+<Advertencia titulo="Los siete errores que arruinan un registro de suelo">
+**Empezar midiendo todo**, con veinte variables que se abandonan en cuatro meses, en vez de cinco que
+sobreviven diez años. **Cambiar de método o de laboratorio para mejorar**, sin muestra de archivo, y
+partir la serie en dos. **Mover el punto de muestreo** unos metros porque ahí estorbaba. **Medir en
+cualquier fecha**, con el suelo agrietado un año y hinchado el siguiente. **Guardar promedios y tirar
+los datos crudos**, con lo que ya no se puede reanalizar excluyendo el año que se anegó. **Concluir con
+dos puntos**, que siempre forman una línea. Y **no anotar los eventos**, que es quedarse con las
+métricas y borrar los logs: el número sube o baja y no hay manera de saber por qué.
+</Advertencia>
+
+<ContextoBolivia>
+**La primera advertencia local recorre todo el módulo: las arcillas expansivas 2:1.** En un suelo que se
+hincha y se agrieta, la fecha de medición no es un detalle de organización, es parte de la definición
+del dato. Densidad aparente medida en septiembre con el perfil agrietado, infiltración medida mientras
+las grietas todavía se tragan el agua, clavos de erosión leídos en épocas distintas: los tres dan
+números que no describen nada y que además **parecen creíbles**. La corrección es gratis: fijar la
+ventana —la misma quincena todos los años— y anotar siempre la lluvia de los siete días previos.
+
+**El segundo ajuste es de interpretación y contradice a los manuales de clima templado.** El curso ya
+estableció que en clima tropical la materia orgánica se comporta como un flujo y no como un stock: se
+mineraliza mucho más rápido que en un suelo frío, de modo que hace falta un aporte constante solo para
+mantenerla. La consecuencia al leer el registro es grande: **una materia orgánica que se mantiene plana
+durante diez años en Santa Cruz no es un fracaso, es una victoria**, porque la trayectoria por defecto
+de un suelo tropical trabajado va hacia abajo. Quien juzgue ese resultado con una tabla europea
+concluirá que no sirvió de nada y abandonará justo lo que estaba funcionando.
+
+**El tercero es el calendario de dos estaciones.** Con lluvias de octubre a abril y seca de mayo a
+septiembre, comparar una medida de febrero con otra de agosto es medir la estación, no el manejo. Lo
+razonable es una ronda principal al final de las lluvias, con el perfil hinchado y las lombrices
+activas, y una ronda ligera en plena seca limitada a cobertura, fotos y nivel de pozo. Los surazos
+añaden un evento anotable: aire frío del sur, viento fuerte y noches de unos 10 °C que **queman cultivos
+sensibles y desnudan superficies**, y que explican bajones de rendimiento que sin bitácora se atribuyen
+al suelo.
+
+**El cuarto es sobre las fuentes de datos, y aquí la regla del curso no tiene excepciones.** Los
+registros de lluvia y clima se piden al servicio nacional de meteorología e hidrología; los análisis de
+suelo y los métodos disponibles, a la universidad pública y a las instituciones de investigación
+agrícola del departamento; cualquier requisito, permiso o trámite, a la autoridad competente. **Este
+texto no te va a dar precios, plazos, nombres de laboratorio ni cifras locales, porque quien te los dé
+sin fuente te los está inventando.** Y en lluvia convectiva la estación oficial a ocho kilómetros puede
+marcar la mitad o el doble que tu patio en la misma tormenta: **el pluviómetro propio no compite con la
+estación, la complementa**.
+
+**El quinto junta infraestructura, salud y memoria.** Con cortes de energía frecuentes, el papel es el
+soporte primario y lo digital es la copia, no al revés. Como el dengue es endémico, el registro de dónde
+queda agua estancada y cuántos días dura **es a la vez información de suelo y de salud**, y sale de la
+misma caminata. Y los vecinos mayores guardan la única línea de base de treinta años que existe en la
+zona, que se pierde a razón de una persona por vez: esa conversación se escribe **con fecha, nombre y la
+palabra «testimonio» al lado**, para no confundirla nunca con una medición.
+</ContextoBolivia>
+
+<AplicarRizoma>
+**Rizoma del Sur son 3.666 m² en 12 lotes contiguos, y esa geometría define el diseño del registro casi
+por sí sola.** Los puntos permanentes no se reparten por lote sino por unidad de manejo del mapa del
+agua de la lección 1: la parte alta y mejor drenada, la zona de acumulación, la franja de arena
+enterrada si aparece, y el sector del vivero. Con cuatro a seis puntos codificados R-01 a R-06, cada uno
+con estaca, dos distancias medidas a referencias fijas, foto y descripción escrita, el sitio queda
+instrumentado para siempre. **El código no se reutiliza aunque el punto desaparezca.**
+
+**La línea de base se toma ahora, y solo se puede tomar una vez.** Cualquier cama alta, zanja, aporte de
+materia orgánica o pasada de maquinaria borra el «antes» para siempre. Si en un lote se van a construir
+camas altas esta temporada, **la muestra y las fotos se toman antes de que entre la primera pala**, y el
+análisis del año cero se hace antes de la primera enmienda. Con doce lotes hay margen para lo que casi
+ningún proyecto puede permitirse: **dejar uno completo, o una franja de tres metros en varios, como
+testigo sin intervención**, medido con el mismo protocolo el mismo día. Cuesta lo que produzca esa
+superficie, y es lo único que en 2036 permitirá separar el efecto del manejo del efecto de la década.
+
+**El calendario cabe en dos fechas y una regla.** Ronda principal en la misma quincena de marzo, al
+final de las lluvias: capa oscura, prueba del hoyo, terrón en el vaso, lombrices, varilla, cobertura y
+fotos de los puntos fijos. Ronda ligera en agosto: cobertura, fotos y nivel del pozo. La regla es de
+disparo: **cada lluvia grande activa la recorrida** de las lecciones 1 y 2 —charcos y su duración,
+abanicos de barro, color del agua en el punto de salida—, que alimenta la bitácora. Laboratorio, año
+cero y después cada cuatro o cinco años, **con muestra de archivo en frasco rotulado en cada campaña**,
+que es lo que hará comparables los análisis de 2026 y 2036 aunque cambie el laboratorio.
+
+**Los cultivos del catálogo aportan indicadores propios sin medición extra.** El plátano es clonal y su
+bloque va aguas abajo de todo, así que su registro de suelo es también su registro de bioseguridad:
+fecha y origen de cada entrada de material, quién entró y con qué botas. Yautía y culantro viven bajo
+sombra y con cobertura permanente, de modo que son la mejor demostración del contraste entre suelo
+tapado y desnudo dentro del propio sitio. Y **el sustrato del vivero no es suelo: lleva su propio
+cuaderno**, porque mezclarlos arruina las dos series.
+
+**La operación se organiza con dos personas y una hoja.** Dos responsables que rotan, para que el
+procedimiento exista en más de una cabeza; el protocolo de una página clavado en el galpón; el cuaderno
+siempre en el mismo lugar; foto de cada página llena a una carpeta compartida; y una copia en la casa de
+otra persona del grupo. Una vez al año, la prueba de repetibilidad: dos personas miden el mismo hoyo sin
+verse los números, y esa diferencia se escribe como el margen de todo el registro.
+
+**Y aquí el registro deja de ser tarea interna y se vuelve la actividad más replicable del proyecto.**
+Un «día de medición» abierto, una vez al año, es un taller de costo cero donde se enseña todo el módulo
+con las manos: el vaso con el terrón, el hoyo, la cuerda de la cobertura, el bloque de lombrices; cada
+vecino se va con la hoja de una página adaptada a su patio y con su pluviómetro hecho de un frasco. Con
+una condición final, que es la misión del proyecto llevada a los datos: **este registro no vale nada si
+es secreto**. Rizoma no puede prometer porcentajes de mejora que no haya medido —sería exactamente el
+humo del que el registro protege—, pero sí publicar su serie tal como sale, con sus años malos
+incluidos. **Un vecino que ve diez años de datos honestos de la misma tierra que él pisa aprende más que
+con cualquier curso.**
+</AplicarRizoma>
+
+## Cierre del módulo
+
+El módulo empezó con una corrección de encuadre: **una parcela no es un recipiente, es un tramo de
+tubería**. Entra agua por un lado, sale por otro, y lo único que se decide es lo que pasa en el medio.
+De ahí salió todo lo demás: el agua tiene cinco destinos y ninguno se borra, solo cambia de casilla, así
+que «drenar» nunca es una respuesta completa sin decir **hacia dónde**; y en la llanura corre igual,
+porque treinta centímetros en cien metros le sobran.
+
+Después vino la factura. Esa agua **se lleva la capa de arriba**, que es la fértil, y lo hace por
+salpicadura y sellado antes que por cárcavas, así que la erosión de llanura es invisible como proceso
+aunque sea enorme como resultado; contra eso, tres defensas en un orden que casi todos invierten:
+**primero cobertura, después barreras vivas y solo al final obra**. Luego el agua pasó de amenaza a
+recurso: retener no es dejarla quieta encima —eso es encharcar y criar mosquitos— sino **meterla dentro
+del perfil**, el depósito más grande que la parcela va a tener y que ya está pagado; y cuando el
+problema es el exceso, la solución de fondo no es bajar el agua sino **subir el cultivo**. Bajo tierra,
+el pozo no fabrica agua: abre una puerta y hunde un embudo que no respeta alambrados, así que media
+solución es organizativa; y esa misma agua trae sales que hacen daño sin avisar.
+
+Esta última lección solo hizo una cosa con todo lo anterior: **ponerle fecha**. Un punto con estaca, una
+ventana del calendario, cinco indicadores baratos, un frasco de archivo y una bitácora que nunca se
+borra convierten en algo mirable lo que es demasiado lento para la memoria. Si hay que quedarse con una
+sola idea: **el suelo y el agua de una parcela no son un estado, son una trayectoria**, y la única
+manera de saber en cuál de las dos posibles estás es haber medido lo mismo, en el mismo sitio, el mismo
+mes, durante años. Es la parte más barata de este curso y la única que no se puede comprar hecha.
+
+Y el corolario que le da sentido en Rizoma del Sur: **una serie de diez años, publicada, con sus años
+malos incluidos, es una herramienta comunitaria más potente que cualquier consejo**. El vecino que
+empieza con veinte metros cuadrados no necesita que le prometan nada; necesita ver qué le pasó de verdad
+a una tierra igual a la suya, a cincuenta metros de su casa, desde que alguien clavó una estaca y anotó
+una fecha.

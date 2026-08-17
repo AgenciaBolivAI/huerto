@@ -1,0 +1,31 @@
+{
+  "titulo": "Por reloj, por umbral o por clima",
+  "subtitulo": "Tres formas de decidir cuándo y cuánto regar, y cada una falla de una manera distinta. La elección entre ellas importa más que la calidad del sensor, y la respuesta correcta no es elegir una sino apilar las tres para que el sistema degrade con elegancia.",
+  "duracionMin": 28,
+  "portada": "portada.webp",
+  "portadaAlt": "Un temporizador de riego mecánico sencillo enroscado en un grifo a la cabeza de una línea de goteo en un vivero tropical con luz de primera hora de la mañana, con la manguera saliendo hacia hileras de plantines en bolsas de vivero, rocío en las hojas y sin nadie",
+  "objetivos": [
+    "Reconocer qué hace bien y qué hace mal el riego por reloj.",
+    "Aceptar el reloj como punto de partida correcto antes de instrumentar.",
+    "Implementar histéresis con dos umbrales para evitar la oscilación.",
+    "Añadir tiempo mínimo entre riegos y duración fija en vez de riego hasta condición.",
+    "Entender el riego por evapotranspiración y qué exige a cambio.",
+    "Apilar reloj, umbral y corrección estacional para degradar con elegancia.",
+    "Imponer límites duros: duración máxima, riegos máximos y ventana horaria.",
+    "Mantener la decisión local y fuera del camino de la conectividad."
+  ],
+  "prerrequisitos": [
+    "automatizacion-datos/02-que-mide-de-verdad-un-sensor",
+    "agua-y-riego/01-el-balance-hidrico"
+  ],
+  "videos": [],
+  "referencias": [],
+  "terminos": [
+    "histeresis",
+    "coeficiente-de-cultivo",
+    "evapotranspiracion",
+    "fallo-seguro",
+    "valvula-solenoide"
+  ],
+  "practica": true
+}

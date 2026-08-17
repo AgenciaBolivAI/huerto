@@ -1,0 +1,519 @@
+<title>Prompts de Semilla Propia</title>
+<style>
+  :root{
+    --paper:#FBFAF6; --surface:#F5F1E7; --surface-2:#F0EBDD;
+    --ink:#22301F; --ink-soft:#5C6B57; --ink-faint:#8A9483;
+    --green:#2F5233; --terra:#B5613C; --rule:#DFDACB; --rule-soft:#E8E3D6;
+    --code-bg:#F3F0E4; --ok:#3F6B45;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#141810; --surface:#1D231A; --surface-2:#232A1F;
+      --ink:#E9EAE1; --ink-soft:#A6AF9D; --ink-faint:#7C8574;
+      --green:#8FB27C; --terra:#D98A5F; --rule:#2E3629; --rule-soft:#252C21;
+      --code-bg:#1A2017; --ok:#8FB27C;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#141810; --surface:#1D231A; --surface-2:#232A1F;
+    --ink:#E9EAE1; --ink-soft:#A6AF9D; --ink-faint:#7C8574;
+    --green:#8FB27C; --terra:#D98A5F; --rule:#2E3629; --rule-soft:#252C21;
+    --code-bg:#1A2017; --ok:#8FB27C;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:16px; line-height:1.6;
+    margin:0; padding:0;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:56px 24px 96px}
+  .mono{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace}
+
+  .eyebrow{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink-faint);margin:0 0 14px;
+  }
+  h1{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:clamp(24px,4.2vw,34px);line-height:1.15;letter-spacing:-.01em;
+    font-weight:700;margin:0 0 16px;text-wrap:balance;
+  }
+  h2{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;
+    color:var(--green);margin:0 0 20px;padding-bottom:10px;
+    border-bottom:1px solid var(--rule);
+  }
+  h3{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:15px;font-weight:700;letter-spacing:-.005em;margin:0 0 6px;
+  }
+  p{margin:0 0 14px;max-width:68ch}
+  a{color:var(--green)}
+  strong{font-weight:650}
+  .lede{font-size:17.5px;color:var(--ink-soft);max-width:64ch;margin-bottom:28px}
+
+  section{margin-top:52px}
+  .stack{display:flex;flex-direction:column;gap:14px}
+  .stack-lg{display:flex;flex-direction:column;gap:28px}
+
+  /* ---- meta strip ---- */
+  .meta{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:8px;
+  }
+  .meta div{background:var(--surface);padding:12px 14px}
+  .meta dt{
+    font-family:ui-monospace,Menlo,Consolas,monospace;
+    font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-faint);margin:0 0 4px;
+  }
+  .meta dd{margin:0;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+
+  /* ---- failure callouts ---- */
+  .fail{
+    border-left:3px solid var(--terra);
+    background:var(--surface);padding:14px 18px;
+  }
+  .fail h3{color:var(--terra)}
+  .fail p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+  .fail p + p{margin-top:8px}
+  .fix{color:var(--ink);font-weight:600}
+
+  .good{border-left:3px solid var(--ok);background:var(--surface);padding:14px 18px}
+  .good h3{color:var(--ok)}
+  .good p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+
+  /* ---- image spec card ---- */
+  .card{border:1px solid var(--rule);background:var(--surface)}
+  .card-head{
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;
+    padding:13px 16px;border-bottom:1px solid var(--rule);background:var(--surface-2);
+  }
+  .fname{
+    font-family:ui-monospace,Menlo,Consolas,monospace;
+    font-size:14px;font-weight:700;color:var(--ink);
+  }
+  .chip{
+    font-family:ui-monospace,Menlo,Consolas,monospace;
+    font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+    padding:3px 8px;border:1px solid var(--rule);color:var(--ink-soft);
+    background:var(--paper);
+  }
+  .chip-redo{border-color:var(--terra);color:var(--terra)}
+  .card-note{
+    padding:11px 16px;font-size:13.5px;color:var(--ink-soft);
+    border-bottom:1px solid var(--rule-soft);
+  }
+  .card-note b{color:var(--ink)}
+
+  .prompt-wrap{position:relative}
+  pre{
+    margin:0;padding:16px;background:var(--code-bg);
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:12.5px;line-height:1.65;color:var(--ink);
+    white-space:pre-wrap;word-wrap:break-word;overflow-x:auto;
+    max-height:none;
+  }
+  .copy{
+    position:absolute;top:10px;right:10px;
+    font-family:ui-monospace,Menlo,Consolas,monospace;
+    font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+    padding:5px 10px;cursor:pointer;
+    background:var(--paper);color:var(--ink-soft);
+    border:1px solid var(--rule);
+  }
+  .copy:hover{color:var(--green);border-color:var(--green)}
+  .copy:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+  .copy.done{color:var(--ok);border-color:var(--ok)}
+
+  .lesson-head{
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;
+    margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid var(--ink);
+  }
+  .lesson-head .n{
+    font-family:ui-monospace,Menlo,Consolas,monospace;
+    font-size:12px;letter-spacing:.14em;color:var(--ink-faint);text-transform:uppercase;
+  }
+  .lesson-head .t{font-size:19px;font-weight:700;letter-spacing:-.01em}
+
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  .tbl-wrap{overflow-x:auto;border:1px solid var(--rule)}
+  th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--rule-soft)}
+  th{
+    font-family:ui-monospace,Menlo,Consolas,monospace;
+    font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-faint);background:var(--surface-2);
+  }
+  td.num{font-variant-numeric:tabular-nums;font-family:ui-monospace,Menlo,Consolas,monospace}
+  tr:last-child td{border-bottom:none}
+
+  ol,ul{max-width:68ch;padding-left:22px;margin:0 0 14px}
+  li{margin-bottom:7px}
+  hr{border:none;border-top:1px solid var(--rule);margin:0}
+  .foot{margin-top:64px;padding-top:20px;border-top:1px solid var(--rule);
+    font-size:13px;color:var(--ink-faint);max-width:68ch}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+
+  <p class="eyebrow">Huerto Class · Producción de imágenes</p>
+  <h1>Prompts de Semilla Propia</h1>
+  <p class="lede">
+    Los 14 prompts que faltan para cerrar las imágenes del módulo 18, listos para pegar en
+    nano banana pro. Escritos ya corregidos contra los tres fallos que arruinaron
+    4 de las 15 imágenes de la última tanda.
+  </p>
+
+  <div class="meta">
+    <div><dt>Modelo</dt><dd>nano banana pro</dd></div>
+    <div><dt>Portadas</dt><dd>21:9 · 1584×672</dd></div>
+    <div><dt>Diagramas</dt><dd>16:9 · 1376×768</dd></div>
+    <div><dt>En este documento</dt><dd>14 imágenes</dd></div>
+  </div>
+
+  <section>
+    <h2>Antes de generar: los tres fallos</h2>
+    <p>
+      Los acentos españoles salen bien siempre — de 26 imágenes con rótulo, ninguna falló
+      un acento. Lo que falla es otra cosa, y las tres son evitables desde el prompt.
+      Los prompts de abajo ya llevan la corrección; esto es para cuando escribas los tuyos.
+    </p>
+
+    <div class="stack">
+      <div class="fail">
+        <h3>1 · El andamiaje en inglés se imprime</h3>
+        <p>
+          Escribir <span class="mono">STAGE ONE:</span> o <span class="mono">PANEL TWO:</span>
+          para estructurar la descripción hace que el modelo los renderice literalmente encima
+          de los rótulos españoles. Arruinó dos diagramas seguidos.
+        </p>
+        <p class="fix">
+          Solución: describe las viñetas como «the first panel», «the second panel» en
+          minúscula, y añade «Do not write any English words anywhere in the image».
+          Reserva las MAYÚSCULAS solo para el texto español que sí debe aparecer.
+        </p>
+      </div>
+
+      <div class="fail">
+        <h3>2 · Prohibir la duplicación no la evita</h3>
+        <p>
+          Pedir «cada rótulo aparece exactamente una vez» no funcionó: repitió los tres
+          rótulos arriba y abajo de cada viñeta.
+        </p>
+        <p class="fix">
+          Solución: di dónde va cada rótulo en lugar de prohibir que se repita —
+          «each caption sits directly beneath its own panel and appears nowhere else».
+        </p>
+      </div>
+
+      <div class="fail">
+        <h3>3 · Las fotos de campo salen ambientadas en el sur de Asia</h3>
+        <p>
+          Al pedir una escena genérica de aventado devolvió una aldea india con sari, bindi y
+          casas de adobe. Para un curso boliviano eso desinforma sobre el contexto.
+        </p>
+        <p class="fix">
+          Solución: fija el entorno — llanura cruceña, vegetación tropical, techo de calamina —
+          y encuadra manos y herramienta sin rostros. Sin cara no hay que acertar a nadie.
+        </p>
+      </div>
+
+      <div class="good">
+        <h3>Revisión antes de dar una por buena</h3>
+        <p>
+          Mírala entera antes de guardarla: ¿hay alguna palabra en inglés? ¿algún rótulo
+          repetido? ¿los acentos correctos? ¿el dibujo dice lo que dice el rótulo?
+          De 15 imágenes fallaron 4, y ninguna se detectaba sin mirarla.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dónde va cada archivo</h2>
+    <p>
+      Guarda cada imagen con el nombre exacto de su ficha, en formato <span class="mono">.webp</span>,
+      dentro de la carpeta que indica cada tarjeta bajo
+      <span class="mono">public/imagenes/18-semilla-propia/</span>.
+      Si tu salida es PNG me la puedes dejar tal cual y yo la convierto —
+      lo importante es el nombre.
+    </p>
+    <p>
+      No hace falta que escribas el <span class="mono">alt</span> ni el pie: cuando me pases
+      las imágenes las reviso una a una, escribo el texto alternativo y el pie, las coloco en
+      el MDX y las registro en <span class="mono">content/imagenes.json</span> con su prompt.
+    </p>
+  </section>
+
+  <section>
+    <div class="lesson-head">
+      <span class="n">Lección 04</span>
+      <span class="t">Cosechar y limpiar</span>
+    </div>
+    <p>
+      Las cuatro que fallaron. La quinta de esta lección
+      (<span class="mono">dos-madureces.webp</span>) ya está hecha y colocada.
+    </p>
+
+    <div class="stack-lg">
+
+      <div class="card">
+        <div class="card-head">
+          <span class="fname">portada.webp</span>
+          <span class="chip">21:9</span>
+          <span class="chip chip-redo">Rehacer</span>
+        </div>
+        <div class="card-note">
+          Falló por <b>ambientación</b>: salió una aldea india. Ahora fija Santa Cruz y
+          recorta los rostros.
+        </div>
+        <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph of seed winnowing in the Bolivian lowlands near Santa Cruz. Weathered brown hands pour a stream of small dry coriander seed from a shallow basin held high into a wider basin below; a breeze carries the pale papery chaff sideways out of the falling stream as a drifting cloud, while the heavier round seed drops straight down in a dense column. The setting is a rural Santa Cruz yard: the edge of a corrugated metal roof, broad tropical leaves and banana foliage behind, packed bare earth underfoot. Compose on the hands, the two basins and the falling seed only — crop above the wrists and below the shoulders so no face and no clothing is visible. Strong warm low side light from the right backlights the flying chaff so it glows against a dark shaded background. Earthy ochre, straw and deep green tones, slight motion blur in the falling seed, real and unstyled. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <span class="fname">fruto-carnoso.webp</span>
+          <span class="chip">16:9</span>
+          <span class="chip chip-redo">Rehacer</span>
+        </div>
+        <div class="card-note">
+          Falló porque imprimió <b>STAGE ONE … STAGE FOUR</b> en inglés sobre los rótulos.
+        </div>
+        <div class="prompt-wrap"><button class="copy">Copiar</button><pre>Clean educational process diagram, flat vector textbook style, warm cream background (#F5F1E7). Four illustrated panels in a single row, connected left to right by thin deep green arrows. The first panel shows a ripe pepper fruit cut open with seeds visible embedded in pulp. The second shows a bowl of seed and pulp with a hand rubbing it against a round mesh sieve, water droplets falling. The third shows a tall glass jar of water drawn in cross-section, with several thin flat seeds floating at the surface line and a dense cluster of plump seeds resting on the bottom; a terracotta arrow points up and away from the floating seeds, and a deep green arrow points to the cluster at the bottom. The fourth shows clean seed spread in a single thin layer on a flat mesh drying screen.
+
+TEXT RULES: Render the Spanish text character for character exactly as written, including every accent. Do not write any English words anywhere in the image. Each caption sits directly beneath its own panel and appears nowhere else in the image; do not repeat any caption above its panel. The heading appears once at the top: FRUTO CARNOSO, HAY QUE LAVAR. The four captions, left to right beneath their panels: ABRIR Y EXTRAER, LAVAR CONTRA EL COLADOR, LO QUE FLOTA SE TIRA, ESCURRIR EN CAPA FINA. One additional short label sits inside the third panel beside the cluster at the bottom of the jar: LA BUENA SE VA AL FONDO.
+
+Deep forest green (#2F5233) type and linework, terracotta (#B5613C) only for the discarded floating seed and its arrow, muted sage green fills, cream background.</pre></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <span class="fname">fruto-seco.webp</span>
+          <span class="chip">16:9</span>
+          <span class="chip chip-redo">Rehacer</span>
+        </div>
+        <div class="card-note">
+          Mismo fallo que el anterior: <b>STAGE ONE … STAGE FOUR</b> impreso en inglés.
+        </div>
+        <div class="prompt-wrap"><button class="copy">Copiar</button><pre>Clean educational process diagram, flat vector textbook style, warm cream background (#F5F1E7). Four illustrated panels in a single row, connected left to right by thin deep green arrows. The first panel shows a coriander plant with straw-coloured dry stems and round seed umbels being cut at the base with hand shears. The second shows those cut plants hanging upside down in the shade under a simple roof line, with a cloth spread on the ground beneath catching a few fallen seeds. The third shows two hands rubbing a bundle of dry umbels together over an open bowl, seed and broken husk falling into it. The fourth shows seed being poured from one bowl into another in front of a small electric fan whose airflow is drawn as light stroke lines: the light chaff blows sideways in terracotta while the round seed falls straight down in sage green.
+
+TEXT RULES: Render the Spanish text character for character exactly as written, including every accent. Do not write any English words anywhere in the image. Each caption sits directly beneath its own panel and appears nowhere else in the image; do not repeat any caption above its panel. The heading appears once at the top: FRUTO SECO, HAY QUE TRILLAR Y AVENTAR. The four captions, left to right beneath their panels: CORTAR ALGO ANTES, TERMINAR DE SECAR BAJO TECHO, TRILLAR, AVENTAR. One additional short label sits inside the fourth panel beside the blowing chaff: LA BROZA VUELA.
+
+Deep forest green (#2F5233) type and linework, terracotta (#B5613C) only for the chaff, muted sage green fills, cream background.</pre></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <span class="fname">tres-errores-de-prisa.webp</span>
+          <span class="chip">16:9</span>
+          <span class="chip chip-redo">Rehacer</span>
+        </div>
+        <div class="card-note">
+          Falló por <b>rótulos duplicados</b> arriba y abajo de cada viñeta. Ahora se fija
+          la posición en vez de prohibir la repetición.
+        </div>
+        <div class="prompt-wrap"><button class="copy">Copiar</button><pre>Clean educational warning diagram, flat vector textbook style, warm cream background (#F5F1E7). Three equal panels in a row divided by thin vertical rules. Each panel shows one mistake, with a bold terracotta X placed over the lower part of its illustration. The first panel shows a hand harvesting dry seed heads from a plant covered in visible dew droplets, with a small rain cloud above. The second shows a clear plastic bag stuffed full of packed damp plant material, bulging and knotted at the top, with wavy heat lines rising from it and small mould spots showing through. The third shows two identical unlabelled glass jars of clean seed standing side by side, indistinguishable from one another, with a blank paper tag lying unused beside them and a question mark above each jar.
+
+TEXT RULES: Render the Spanish text character for character exactly as written, including every accent. Do not write any English words anywhere in the image. Each panel has exactly one caption, and that caption sits directly ABOVE its illustration; the area beneath each illustration stays empty of text. Do not repeat any caption anywhere. The heading appears once at the very top: TRES ERRORES QUE CUESTAN EL LOTE. The three captions, left to right above their panels: COSECHAR CON HUMEDAD, AMONTONAR EN PLÁSTICO, NO ETIQUETAR EN EL ACTO.
+
+Deep forest green (#2F5233) type and linework, terracotta (#B5613C) only for the three X marks, muted sage green fills, cream background.</pre></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="lesson-head">
+      <span class="n">Lección 06</span>
+      <span class="t">Comprobar que germina</span>
+    </div>
+    <p>Las cinco. Ninguna generada todavía.</p>
+
+    <div class="stack-lg">
+
+      <div class="card">
+        <div class="card-head"><span class="fname">portada.webp</span><span class="chip">21:9</span></div>
+        <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial macro photograph of a germination test on a damp white paper towel, unrolled and lying open on a plain plate. Small round seeds are spread evenly across the damp paper with clear space between them, and most have split open to push out a short white radicle; two or three sit inert and unsprouted among them. The paper is visibly damp with a soft sheen but not flooded. Very shallow depth of field, focus on one sprouted seed near the centre with its pale root curling across the paper texture. Soft diffuse indoor daylight from the left, cool white and pale green tones against the warm neutral paper. Clinical, quiet and precise. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="fname">respaldo-no-verificado.webp</span><span class="chip">16:9</span></div>
+        <div class="card-note">La analogía de la lección: un frasco sin prueba es una copia de seguridad que nadie restauró.</div>
+        <div class="prompt-wrap"><button class="copy">Copiar</button><pre>Clean educational comparison diagram, flat vector textbook style, warm cream background (#F5F1E7). Two panels divided by a thin vertical rule. The left panel shows a sealed glass jar of seed with a neat paper tag tied to its neck; a large terracotta question mark floats above the jar, and the jar's contents are drawn as flat featureless grey-green shapes with no detail, suggesting an unknown. The right panel shows an identical jar, but its tag carries a clearly drawn percentage box, and beside the jar sits a small open plate with a damp paper towel and several sprouted seeds showing short white radicles; the jar's contents here are drawn as detailed plump seeds. A deep green check mark sits below the right jar.
+
+TEXT RULES: Render the Spanish text character for character exactly as written, including every accent. Do not write any English words anywhere in the image. Each caption sits directly beneath its own panel and appears nowhere else in the image. The heading appears once at the top: UN FRASCO SIN PRUEBA ES UN RESPALDO SIN VERIFICAR. The left caption: CREES QUE TIENES SEMILLA. The right caption: SABES QUE TIENES SEMILLA. One short label on the right jar's tag area: PROBADO Y CON FECHA.
+
+Deep forest green (#2F5233) type and linework, terracotta (#B5613C) only for the question mark, muted sage green fills, cream background.</pre></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="fname">la-prueba-paso-a-paso.webp</span><span class="chip">16:9</span></div>
+        <div class="prompt-wrap"><button class="copy">Copiar</button><pre>Clean educational step sequence diagram, flat vector textbook style, warm cream background (#F5F1E7). Five illustrated stages in a single row, each above a number in a small filled deep green circle, connected left to right by thin deep green arrows. The first stage shows a hand shaking a jar of seed and taking a blind handful without looking, with a small counted group of seeds beside it. The second shows a cloth being wrung out over a bowl, with a few drops falling, indicating damp but not soaking. The third shows seeds laid out evenly spaced apart on the flat damp cloth. The fourth shows that cloth rolled up and placed inside a container whose lid is clearly left ajar, with a small airflow arrow entering the gap. The fifth shows a hand counting sprouted seeds on the unrolled cloth, where sprouted ones show a short white radicle and a few unsprouted ones are merely swollen.
+
+TEXT RULES: Render the Spanish text character for character exactly as written, including every accent. Do not write any English words anywhere in the image. Each caption sits directly beneath its own numbered stage and appears nowhere else in the image. The heading appears once at the top: LA PRUEBA, PASO A PASO. The five captions, left to right: CINCUENTA AL AZAR, PAÑO HÚMEDO Y ESCURRIDO, SEPARADAS ENTRE SÍ, SIN CERRAR DEL TODO, CONTAR LAS QUE SACAN RAÍZ.
+
+Deep forest green (#2F5233) type and linework, terracotta (#B5613C) only for the unsprouted swollen seeds in the fifth stage, muted sage green fills, cream background.</pre></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="fname">porcentaje-y-vigor.webp</span><span class="chip">16:9</span></div>
+        <div class="card-note">El punto del <b>Dato</b>: dos lotes con el mismo 80 % que no valen lo mismo.</div>
+        <div class="prompt-wrap"><button class="copy">Copiar</button><pre>Clean educational chart diagram, flat vector textbook style, warm cream background (#F5F1E7). A single set of axes with days running along the horizontal axis and a rising percentage on the vertical axis. Two cumulative germination curves are drawn on the same axes and both finish at exactly the same height near the top, joined there by a small horizontal bracket to stress that the endpoint is identical. The first curve, in deep green, rises very steeply in the first few days and then flattens early. The second curve, in terracotta, rises slowly and only reaches the same height at the far right of the axis. Below the axis sit two small seedling illustrations: beneath the steep curve a sturdy well-formed seedling, and beneath the slow curve a thin spindly one.
+
+TEXT RULES: Render the Spanish text character for character exactly as written, including every accent. Do not write any English words anywhere in the image. Each label appears exactly once and sits beside the curve or seedling it describes, never repeated elsewhere. The heading appears once at the top: EL MISMO 80 % NO VALE LO MISMO. The label on the deep green curve: GERMINA PRONTO, LOTE SANO. The label on the terracotta curve: TARDA EL DOBLE, LOTE VIEJO. The bracket label at the shared endpoint: MISMO PORCENTAJE. The horizontal axis label: DÍAS.
+
+Deep forest green (#2F5233) type and linework, terracotta (#B5613C) only for the slow curve and its seedling, muted sage green fills, cream background.</pre></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="fname">que-hacer-con-el-numero.webp</span><span class="chip">16:9</span></div>
+        <div class="prompt-wrap"><button class="copy">Copiar</button><pre>Clean educational scale diagram, flat vector textbook style, warm cream background (#F5F1E7). One long horizontal bar spans almost the full width of the canvas, divided into four unequal segments by vertical dividers, with a percentage scale ruled beneath it running from 0 at the far left to 100 at the far right. Reading from the right: the widest right-hand segment is deep green, the next is muted sage, the next is a pale warm tone, and the narrow left-hand segment is terracotta. Above each segment sits a small icon: a full seed tray over the green segment, a seed tray with a few gaps over the sage, a seed tray half empty over the pale one, and a discarded jar tipped on its side over the terracotta. Tick marks fall on the dividers at 80 and 50.
+
+TEXT RULES: Render the Spanish text character for character exactly as written, including every accent. Do not write any English words anywhere in the image. Each caption sits directly beneath its own segment, inside the scale area, and appears nowhere else in the image. The heading appears once at the top: EL NÚMERO ES UN PARÁMETRO DE SIEMBRA, NO UN APROBADO. The four captions, from the right-hand segment leftwards: SIEMBRA NORMAL, SEMBRAR MÁS PARA LO MISMO, USAR Y RENOVAR YA, DESCARTAR Y ANOTAR POR QUÉ.
+
+Deep forest green (#2F5233) type and linework, terracotta (#B5613C) only for the leftmost segment, muted sage green fills, cream background.</pre></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="lesson-head">
+      <span class="n">Lección 07</span>
+      <span class="t">El banco comunitario</span>
+    </div>
+    <p>Las cinco. Ninguna generada todavía. Cierra el módulo.</p>
+
+    <div class="stack-lg">
+
+      <div class="card">
+        <div class="card-head"><span class="fname">portada.webp</span><span class="chip">21:9</span></div>
+        <div class="card-note">
+          Foto con gente: <b>fija Santa Cruz y recorta los rostros</b>, o repite el fallo de la aldea india.
+        </div>
+        <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph of a community seed exchange in the Bolivian lowlands near Santa Cruz. Four different pairs of hands meet over a weathered wooden table: one pair pours a handful of pale dry seed into another's cupped palms, while other hands rest beside small labelled glass jars and folded paper packets arranged along the table. A simple school notebook lies open at the edge of the frame with handwritten columns. The setting reads as rural Santa Cruz: broad tropical leaves and a corrugated metal roof edge softly out of focus behind. Crop tightly so only hands, forearms and the table are visible — no faces anywhere in the frame. Warm afternoon light from the left, earthy brown, cream and deep green tones, real and unstyled. No readable text, no numbers, no logos, no brand marks anywhere.</pre></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="fname">copias-repartidas.webp</span><span class="chip">16:9</span></div>
+        <div class="prompt-wrap"><button class="copy">Copiar</button><pre>Clean educational comparison diagram, flat vector textbook style, warm cream background (#F5F1E7). Two panels divided by a thin vertical rule. The left panel shows a single large storehouse building at the centre with five small houses arranged in a ring around it, each house joined to the storehouse by a line so every line passes through that one building; a bold terracotta X is drawn over the storehouse and the lines radiating from it are tinted terracotta. The right panel shows the same five small houses with no central building at all: each house holds a small jar of seed drawn inside it, and the houses are joined to one another directly by a mesh of deep green lines so that removing any single house leaves the rest still connected.
+
+TEXT RULES: Render the Spanish text character for character exactly as written, including every accent. Do not write any English words anywhere in the image. Each caption sits directly beneath its own panel and appears nowhere else in the image. The heading appears once at the top: UN ALMACÉN ÚNICO ES UN PUNTO DE FALLO. The left caption: SI SE PIERDE ESE, SE PIERDE TODO. The right caption: CADA CASA GUARDA UNA COPIA COMPLETA.
+
+Deep forest green (#2F5233) type and linework, terracotta (#B5613C) only for the failed central storehouse and its lines, muted sage green fills, cream background.</pre></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="fname">cuatro-decisiones.webp</span><span class="chip">16:9</span></div>
+        <div class="prompt-wrap"><button class="copy">Copiar</button><pre>Clean educational reference diagram, flat vector textbook style, warm cream background (#F5F1E7). Four equal quadrants arranged in a two-by-two grid, separated by thin deep green rules, each quadrant holding one simple illustration in its upper area. The top-left quadrant shows a jar of seed passing a small checklist card with three ticked lines. The top-right shows three small houses each holding an identical jar, drawn side by side. The bottom-left shows a small hand giving one modest handful of seed and, beside it, a returning hand giving back two clearly larger handfuls. The bottom-right shows two figures drawn as simple rounded shapes facing each other across a small open notebook, with no faces or features.
+
+TEXT RULES: Render the Spanish text character for character exactly as written, including every accent. Do not write any English words anywhere in the image. Each quadrant has exactly one caption, placed in the lower part of its own quadrant, appearing nowhere else in the image. The heading appears once at the top: LAS CUATRO DECISIONES, POR ESCRITO Y ANTES DEL PRIMER FRASCO. The four captions by quadrant — top-left: QUÉ SE GUARDA. Top-right: QUIÉN LO GUARDA. Bottom-left: CÓMO SE PRESTA. Bottom-right: QUÉ PASA SI NO SE DEVUELVE.
+
+Deep forest green (#2F5233) type and linework, terracotta (#B5613C) as a sparing accent only, muted sage green fills, cream background.</pre></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="fname">se-devuelve-el-doble.webp</span><span class="chip">16:9</span></div>
+        <div class="prompt-wrap"><button class="copy">Copiar</button><pre>Clean educational cycle diagram, flat vector textbook style, warm cream background (#F5F1E7). Four illustrations arranged around a large clockwise circular arrow drawn in deep green, one at each quarter point. At the top, a hand receiving one small handful of seed. At the right, that seed sown in a planted bed with young plants in rows. At the bottom, a mature plant bearing dry seed heads being harvested. At the left, two hands returning two handfuls, drawn visibly larger than the single handful at the top, into a jar. The circular arrow thickens slightly as it travels from the left position back up to the top, and beside the jar at the left a small upward step chart of three rising bars indicates the stock growing each turn.
+
+TEXT RULES: Render the Spanish text character for character exactly as written, including every accent. Do not write any English words anywhere in the image. Each caption sits just outside the circle next to its own illustration and appears nowhere else in the image. The heading appears once at the top: SE LLEVA UN PUÑADO Y SE DEVUELVE EL DOBLE. The four captions, clockwise from the top: TE LLEVAS UN PUÑADO, LO SIEMBRAS, COSECHAS TU SEMILLA, DEVUELVES EL DOBLE. One short label beside the rising bars: ASÍ CRECE EL BANCO.
+
+Deep forest green (#2F5233) type and linework, terracotta (#B5613C) only for the returning double handful, muted sage green fills, cream background.</pre></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="fname">tres-formas-de-morir.webp</span><span class="chip">16:9</span></div>
+        <div class="card-note">Mismo formato de tres viñetas que falló por duplicar rótulos — el prompt fija la posición.</div>
+        <div class="prompt-wrap"><button class="copy">Copiar</button><pre>Clean educational warning diagram, flat vector textbook style, warm cream background (#F5F1E7). Three equal panels in a row divided by thin vertical rules, each showing one way a seed bank dies, with a bold terracotta X over the lower part of its illustration. The first panel shows one large figure drawn as a simple faceless rounded shape holding every jar in its arms while four smaller empty-handed figures stand apart from it. The second shows a shelf of neatly labelled jars where the seeds inside are drawn as shrivelled grey specks and small cobwebs hang between the jars. The third shows a tall stack of stamped forms and a rubber stamp in the foreground, with a small figure walking away from it toward the edge of the panel.
+
+TEXT RULES: Render the Spanish text character for character exactly as written, including every accent. Do not write any English words anywhere in the image. Each panel has exactly one caption, and that caption sits directly ABOVE its illustration; the area beneath each illustration stays empty of text. Do not repeat any caption anywhere. The heading appears once at the very top: TRES FORMAS DE QUE UN BANCO MUERA. The three captions, left to right above their panels: SE VUELVE EL BANCO DE UNO SOLO, SE LLENA DE SEMILLA VIEJA, SE CONVIERTE EN UN TRÁMITE.
+
+Deep forest green (#2F5233) type and linework, terracotta (#B5613C) only for the three X marks, muted sage green fills, cream background.</pre></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>El bloque de estilo, para escribir más</h2>
+    <p>
+      Todos los diagramas del curso comparten el mismo cierre. Si escribes prompts nuevos,
+      pega esto al final y cambia solo la descripción del dibujo y los rótulos.
+    </p>
+    <div class="card">
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>Clean educational diagram, flat vector textbook style, warm cream background (#F5F1E7).
+
+[aquí la descripción del dibujo, en minúscula: "the first panel shows…", "the second panel shows…"]
+
+TEXT RULES: Render the Spanish text character for character exactly as written, including every accent. Do not write any English words anywhere in the image. Each caption sits directly beneath its own panel and appears nowhere else in the image; do not repeat any caption. The heading appears once at the top: [TÍTULO EN MAYÚSCULAS]. The captions, left to right: [RÓTULO UNO], [RÓTULO DOS], [RÓTULO TRES].
+
+Deep forest green (#2F5233) type and linework, terracotta (#B5613C) only for [lo que está mal o lo que se descarta], muted sage green fills, cream background.</pre></div>
+    </div>
+    <p style="margin-top:18px">
+      Para las fotos de portada el cierre es otro: <span class="mono">WIDE LANDSCAPE
+      composition, subject fills the entire frame edge to edge, no borders, no letterboxing,
+      full bleed</span> al principio, y
+      <span class="mono">No text, no numbers, no logos, no brand marks anywhere</span> al final.
+      Si sale gente, añade el sitio y recorta las caras.
+    </p>
+  </section>
+
+  <section>
+    <h2>Lo que queda después de esto</h2>
+    <p>
+      Este documento cubre el módulo 18 entero. El resto del curso está muy por detrás,
+      y conviene verlo con el número delante:
+    </p>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Estado</th><th>Lecciones</th><th>Imágenes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Con sus imágenes hechas</td><td class="num">124</td><td class="num">—</td></tr>
+          <tr><td>En este documento (M18)</td><td class="num">3</td><td class="num">14</td></tr>
+          <tr><td>Sin ninguna imagen, en 21 módulos</td><td class="num">133</td><td class="num">≈ 665</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:18px">
+      Los prompts buenos salen de haber leído la lección — por eso este documento cubre solo
+      lo que he leído entero. Dime el siguiente módulo y te preparo su tanda igual que esta;
+      con el texto delante son unos veinte minutos por módulo.
+    </p>
+    <p>
+      Y cuando me devuelvas las imágenes generadas: las reviso una a una contra los tres
+      fallos, escribo alt y pie, las coloco en el MDX, las registro con su prompt y paso
+      <span class="mono">npm run validar</span>.
+    </p>
+  </section>
+
+  <p class="foot">
+    Huerto Class · Rizoma del Sur — Los prompts de las 728 imágenes ya publicadas están en
+    <span class="mono">content/imagenes.json</span>, y los de las descartadas, con el motivo
+    de cada fallo, en la clave <span class="mono">_descartadas</span> del mismo archivo.
+    <br><br>
+    Made by BolivAI
+  </p>
+
+</div>
+
+<script>
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var pre = btn.parentElement.querySelector('pre');
+      navigator.clipboard.writeText(pre.textContent).then(function(){
+        var old = btn.textContent;
+        btn.textContent = 'Copiado';
+        btn.classList.add('done');
+        setTimeout(function(){ btn.textContent = old; btn.classList.remove('done'); }, 1600);
+      });
+    });
+  });
+</script>

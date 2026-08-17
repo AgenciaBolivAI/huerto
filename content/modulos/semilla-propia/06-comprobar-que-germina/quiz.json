@@ -1,0 +1,89 @@
+{
+  "preguntas": [
+    {
+      "id": "por-que-importa",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué cuesta sembrar sin conocer el poder germinativo?",
+      "opciones": [
+        "Si germina el 40 % y siembras como si fuera el 90 %, media cama queda vacía.",
+        "El hueco no se descubre al sembrar sino dos semanas después, con la ventana de siembra perdida.",
+        "La cuenta de cuánta semilla sembrar no se puede hacer sin ese número.",
+        "Nada relevante: el exceso de siembra siempre compensa el fallo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Sembrar de más a ciegas desperdicia semilla y obliga a ralear, y sigue sin decirte cuánto poner. La cuenta de la ficha de culantro —plantas necesarias entre poder germinativo por supervivencia del repique— necesita ese dato: sin él no es una cuenta, es un deseo."
+    },
+    {
+      "id": "muestra-al-azar",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para la prueba conviene elegir a mano las semillas más grandes y sanas del frasco.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la forma más común de falsear la prueba sin querer: eligiendo las mejores mides esas y no el frasco. Se agita el frasco y se toma un puñado sin mirar. Cincuenta semillas es cómodo porque cada una vale dos puntos porcentuales."
+    },
+    {
+      "id": "montaje",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se monta la prueba correctamente?",
+      "opciones": [
+        "Papel húmedo pero escurrido, no chorreando, con las semillas separadas entre sí.",
+        "En un recipiente sin cerrar del todo, porque la semilla necesita aire.",
+        "A temperatura ambiente y a la sombra, revisando cada dos días para que no se seque.",
+        "En recipiente bien cerrado para conservar toda la humedad posible."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un recipiente cerrado del todo ahoga la semilla y enmohece el papel, y eso produce un falso negativo: parece muerta cuando solo le faltó aire. En clima húmedo este error es especialmente fácil de cometer."
+    },
+    {
+      "id": "vigor",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un lote que germina al 80 % en cuatro días y otro que germina al 80 % en doce días con plántulas raquíticas están en el mismo estado.",
+      "respuesta": false,
+      "explicacion": "Falso: el porcentaje es el mismo pero el vigor no. El segundo lote está viejo y se comportará mal en campo. Por eso se anotan dos números —cuántas germinaron y en cuántos días lo hizo la mayoría—: el segundo avisa de que un frasco se está cayendo antes de que el porcentaje se desplome."
+    },
+    {
+      "id": "que-hacer-con-el-numero",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se traduce el resultado en decisiones?",
+      "opciones": [
+        "Por encima del 80 %, siembra normal sin corrección.",
+        "Entre 50 y 80 %, usable pero sembrando más para obtener lo mismo.",
+        "Cerca de cero, se descarta el frasco y se anota por qué, porque ese porqué es información.",
+        "Por debajo del 80 % el lote debe destruirse siempre."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El número no es un aprobado o un suspenso sino un parámetro de siembra. Y si un lote guardado dos años cayó a cero, eso enseña algo sobre tu almacenamiento que vale para todos los demás frascos."
+    },
+    {
+      "id": "dos-enganos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuáles son las dos formas de engañarse con esta prueba?",
+      "opciones": [
+        "Probar solo cuando sospechas, con lo que fallan justo los frascos que dabas por buenos.",
+        "Confundir «no germinó» con «está muerta» sin comprobar si la especie tiene latencia.",
+        "Hacerla por calendario en vez de por corazonada.",
+        "Anotar el resultado en la etiqueta del frasco."
+      ],
+      "correctas": [0, 1],
+      "explicacion": "Las dos últimas son precisamente lo correcto. La prueba se hace al guardar y una vez al año, y el resultado va escrito en la etiqueta con su fecha. Y descartar semilla viva por no conocer su latencia es un error caro: no aplica al culantro ni al ají, pero sí a los árboles nativos, donde la latencia es la norma."
+    },
+    {
+      "id": "prueba-en-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Define el protocolo de prueba de germinación de Rizoma del Sur y cómo se adapta para el banco comunitario.",
+      "respuestaModelo": "Cada frasco se prueba dos veces: al guardarlo y una vez al año.\n\nLa primera, al envasar, da el número de partida y valida el trabajo de secado. Si un lote recién cosechado ya germina mal, el problema estuvo en la cosecha o en el secado y no en el almacenamiento, y conviene saberlo cuando todavía puedo corregir el procedimiento.\n\nLa segunda, anual, mide la degradación. Comparar el mismo frasco consigo mismo un año después es lo que me dice si mi sistema de guardado funciona en este clima. Es el ciclo de anotar, comparar y corregir del módulo de negocio aplicado al banco.\n\nTomo cincuenta semillas agitando el frasco, nunca elegidas a mano, porque elegir las mejores mide esas y no el lote. Papel húmedo pero escurrido, semillas separadas, recipiente entreabierto porque necesitan aire, a temperatura ambiente y a la sombra, revisando cada dos días.\n\nVigilo el moho, que aquí es el riesgo principal: con la humedad ambiente alta, un papel demasiado mojado o un recipiente cerrado del todo enmohece antes de que germine nada y me da un falso negativo.\n\nAnoto dos números: el porcentaje y en cuántos días germinó la mayoría. El segundo es el que avisa de que un frasco se está cayendo antes de que el porcentaje se desplome.\n\nEl resultado entra directo en la cuenta de siembra de la ficha de culantro: plantas necesarias dividido entre poder germinativo por supervivencia del repique. Sin ese dato sembraría a ojo.\n\nEl culantro lo pruebo con especial atención por ser de vida corta: es el candidato natural a caer primero, y su resultado dispara la resiembra anual de renovación.\n\nEscribo el resultado y la fecha en la etiqueta del frasco. En un banco comunitario un frasco sin fecha de prueba es peor que un hueco, porque alguien se lo lleva creyendo que sirve.\n\nY para el banco adopto la versión de bandeja: sembrar cincuenta semillas en el mismo sustrato del vivero y contar las que emergen. Da un número algo más bajo porque incluye la mortalidad de emergencia, pero se parece más a lo que va a pasar en el bancal y no exige explicar nada nuevo a quien ya sabe sembrar. La del papel la reservo para diagnosticar; la de bandeja es la que se enseña cuando hay veinte personas delante.",
+      "criterios": [
+        "Prueba al guardar y una vez al año.",
+        "Explica qué diagnostica cada una de las dos pruebas.",
+        "Toma la muestra al azar agitando el frasco.",
+        "Monta con papel escurrido y recipiente entreabierto.",
+        "Anticipa el moho como riesgo local y falso negativo.",
+        "Registra porcentaje y días hasta germinación de la mayoría.",
+        "Usa el resultado en la cuenta de siembra de la ficha.",
+        "Vigila el culantro por su vida corta y dispara la renovación.",
+        "Escribe resultado y fecha en la etiqueta.",
+        "Adopta la versión de bandeja para el banco comunitario y justifica por qué."
+      ],
+      "explicacion": "La lección aporta la idea de verificar el respaldo en vez de confiar en él, y además introduce una distinción que el módulo comunitario va a usar mucho: el procedimiento más preciso no siempre es el que se enseña, porque el que se adopta es el que la gente puede hacer con lo que ya tiene."
+    }
+  ]
+}

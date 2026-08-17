@@ -1,0 +1,215 @@
+Ya sabes de qué plantas quieres guardar. Falta el problema que arruina el trabajo sin que te enteres:
+**el polen de otra planta llegó antes que tú.**
+
+Y esta es la parte traicionera. Una planta cruzada **no se ve cruzada**. El fruto de este año sale
+normal, la semilla sale normal, y la sorpresa aparece en la generación siguiente, cuando ya invertiste
+una temporada.
+
+## Por qué no se nota
+
+Conviene entender exactamente dónde ocurre el daño, porque es contraintuitivo.
+
+Cuando un polen ajeno fecunda una flor, **el fruto que se forma sigue siendo de la planta madre**: su
+tamaño, su color y su sabor los decide el tejido materno. Lo que cambia es **el embrión que hay dentro
+de la semilla**, que ya lleva la mitad del padre extraño.
+
+Así que ese año no ves nada. Lo ves cuando siembras esa semilla.
+
+<Diagrama
+  src="cruce-invisible.webp"
+  alt="Tres viñetas arriba y una ancha abajo. En la primera, una flecha terracota trae un grano de polen desde fuera hasta una flor abierta, rotulada LLEGA POLEN AJENO. En la segunda, el fruto que se forma se ve completamente normal y una lupa amplía una semilla de su interior dibujada mitad verde y mitad terracota, rotulada LA SEMILLA LLEVA MEDIO PADRE EXTRAÑO; debajo, EL FRUTO SALE NORMAL. En la tercera, una mano sostiene ese fruto de aspecto corriente. Una flecha ancha rotulada LA TEMPORADA SIGUIENTE baja a la viñeta inferior, donde esa semilla sembrada da tres plantas visiblemente distintas entre sí, dos de ellas en terracota, bajo el rótulo AQUÍ APARECE."
+  pie="El daño ya está hecho en la segunda viñeta, pero no hay nada que mirar hasta la cuarta. Por eso el aislamiento se decide antes y no se comprueba después."
+/>
+
+<Analogia>
+Es exactamente **una escritura sucia de otra transacción.**
+
+Tu proceso lee y escribe creyendo que está solo. Otro proceso mete un valor en medio. Nada falla en el
+momento —no hay error, no hay aviso— y el estado inconsistente aparece mucho después, cuando alguien
+lee el dato y no cuadra.
+
+De ahí que la solución se llame igual en los dos sitios: **aislamiento.** Y de ahí también la lección
+operativa: **el aislamiento se decide antes, no se comprueba después.** Cuando puedes comprobarlo, ya
+es tarde.
+</Analogia>
+
+## Las cuatro herramientas
+
+Solo hay cuatro formas de impedir que llegue polen ajeno, y se combinan.
+
+**Distancia.** Alejar las plantas de las que quieres guardar de cualquier pariente que pueda cruzarlas.
+Es la más simple y la que peor funciona en una parcela pequeña, porque las distancias que se
+recomiendan para producir semilla comercial son de cientos de metros y a veces kilómetros. **En 3.666 m²
+no caben.**
+
+**Barrera.** Poner algo físico en medio: una malla fina sobre las plantas madre, una jaula sencilla, o
+incluso una franja alta de otro cultivo que estorbe el paso de los insectos. Es lo que sí cabe en una
+parcela pequeña.
+
+**Embolsado.** Cubrir la flor **antes de que abra** con una bolsa de papel o de tela fina, dejarla
+autofecundarse dentro y marcarla. Es la técnica más precisa y la única que da certeza real. Solo
+funciona en especies que se autofecundan, porque en una alógama la flor embolsada no recibe polen de
+nadie y no cuaja.
+
+**Y tiempo.** Sembrar de forma que las dos variedades no florezcan a la vez. Es elegante y gratis, y
+exige conocer bien el ciclo de cada una —justo lo que la ficha de cultivo debería decirte.
+
+<Diagrama
+  src="cuatro-herramientas.webp"
+  alt="Cuatro paneles iguales en fila. DISTANCIA: dos plantas separadas por una flecha de medida larga que cruza el hueco entre ellas. BARRERA: dos plantas juntas con una malla fina vertical entre medias y un insecto que rebota contra ella. EMBOLSADO: una planta con una bolsa de papel atada sobre su extremo florido y una cinta de marcar en el tallo. TIEMPO: una tira de calendario con dos periodos de floración dibujados como bloques separados, uno verde y otro terracota, sin solaparse. Arriba, LAS CUATRO FORMAS DE IMPEDIR EL POLEN AJENO."
+  pie="Se combinan, no se eligen. En una parcela pequeña la primera casi nunca alcanza sola, y por eso las otras tres existen."
+/>
+
+<Dato>
+Cuál usar depende de una sola pregunta: **¿quién mueve el polen en esta especie?**
+
+**Si lo mueve el viento**, la distancia es lo único que sirve y hay que asumir que necesitas mucha, o
+una barrera muy tupida. El maíz es el caso típico.
+
+**Si lo mueven insectos**, la barrera y el embolsado funcionan bien, porque un insecto no atraviesa una
+malla. La distancia funciona peor de lo que la gente cree: una abeja recorre kilómetros sin
+despeinarse.
+
+**Y si la especie se autofecunda casi siempre**, con poco basta: separación moderada, o embolsar unas
+pocas flores si quieres certeza.
+
+La consecuencia práctica es que **no hay una distancia universal**. Cualquier número que leas está
+escrito para una especie, un vector y un grado de pureza concretos.
+</Dato>
+
+<Diagrama
+  src="quien-mueve-el-polen.webp"
+  alt="Árbol de decisión. De un nodo rotulado ¿QUIÉN LO MUEVE? salen tres ramas. La primera lleva a un icono de viento con puntos de polen, rotulada EL VIENTO, y desemboca en una caja con una flecha de medida larga y un seto tupido: MUCHA DISTANCIA O BARRERA MUY TUPIDA. La segunda lleva a una abeja cargada de polen, rotulada LOS INSECTOS, y desemboca en una caja con una malla y una flor embolsada: BARRERA Y EMBOLSADO. La tercera lleva a una flor cerrada cuya flecha sale de su propia antera y vuelve a ella, rotulada SE AUTOFECUNDA, y desemboca en una caja con una flecha de medida corta: CON POCO BASTA. Arriba, QUIÉN MUEVE EL POLEN DECIDE LA HERRAMIENTA."
+  pie="No hay una distancia universal porque no hay un vector universal. Cualquier número que leas está escrito para una especie concreta."
+/>
+
+## La regla que sí cabe en una parcela pequeña
+
+Aquí está la decisión que resuelve el problema sin infraestructura, y conviene decirla sin rodeos:
+
+**Una variedad por especie y por temporada, para semilla.**
+
+Puedes cultivar tres ajíes distintos si quieres. Pero **guarda semilla de uno solo**, y el año siguiente
+del otro si te interesa. Deja de haber cruce posible dentro de tu parcela porque no hay con quién
+cruzarse.
+
+Es una restricción real y hay que aceptarla: **guardar semilla limita lo que puedes tener en flor al
+mismo tiempo.** A cambio, elimina el problema entero sin mallas ni bolsas.
+
+<Advertencia>
+Y el factor que casi nadie contempla: **el vecino.**
+
+Tu aislamiento no termina en tu alambrado. Si a cincuenta metros hay un ají picante en flor, tu ají
+dulce está expuesto por mucho que tú tengas una sola variedad.
+
+Tres cosas prácticas:
+
+**Mira alrededor antes de decidir el lote de semilla.** Literalmente: camina el perímetro y fíjate en
+qué hay en flor.
+
+**Y habla.** En una zona donde todos siembran, un acuerdo de «este año yo guardo ají y tú no lo siembras
+cerca del lindero» cuesta una conversación. Esto es exactamente lo que hace posible un banco comunitario
+y lo que un productor aislado no puede conseguir.
+
+**Si no puedes controlarlo, embolsa.** Es la única técnica que no depende de lo que hagan los demás.
+
+Con doce lotes contiguos, esto es a la vez más fácil dentro —tienes espacio para separar— y más
+delicado fuera, porque el perímetro con vecinos es largo.
+</Advertencia>
+
+## Embolsar, paso a paso
+
+Es la técnica que da certeza, cuesta poco y casi nadie hace. Merece el detalle.
+
+**Elige la planta y márcala.** Cinta de color en el tallo, y anotada en la libreta con su número de
+lote.
+
+**Localiza botones florales todavía cerrados.** Este es el punto crítico: si la flor ya abrió, puede
+estar fecundada y el embolsado no sirve de nada.
+
+**Cubre con bolsa de papel o tela fina**, nunca de plástico: el plástico condensa, sube la temperatura
+y pudre la flor. Ata sin estrangular el tallo.
+
+**Espera a que cuaje el fruto** y entonces retira la bolsa, dejando la cinta puesta. A partir de ahí ese
+fruto ya está fecundado y nada puede cambiarlo.
+
+**Y cosecha solo los frutos marcados.** Este es el paso donde se pierde todo el trabajo si alguien
+recoge el lote entero sin mirar las cintas.
+
+<Diagrama
+  src="embolsar-paso-a-paso.webp"
+  alt="Cinco pasos numerados en fila. 1, MARCA LA PLANTA: una cinta terracota se ata al tallo. 2, BOTÓN TODAVÍA CERRADO: un botón floral cerrado junto a una flor ya abierta tachada con una cruz terracota. 3, BOLSA DE PAPEL: una bolsa cubre el botón y se ata sin apretar al tallo. 4, RETIRA AL CUAJAR: la bolsa se levanta y deja ver un fruto pequeño ya cuajado, con la cinta todavía puesta. 5, COSECHA SOLO LO MARCADO: una cesta con dos frutos que llevan cinta, y un fruto sin marcar que se queda fuera. Arriba, EMBOLSAR, PASO A PASO."
+  pie="El paso 2 es el que decide si sirve de algo: sobre una flor ya abierta, la bolsa solo tapa un cruce que quizá ya ocurrió."
+/>
+
+<Dato>
+Cuánto embolsar: **menos de lo que parece.**
+
+Un solo fruto de ají puede dar decenas o cientos de semillas. Para una parcela familiar, embolsar
+**cinco o seis flores en cinco o seis plantas distintas** produce más semilla de la que vas a sembrar,
+y mantiene suficiente diversidad para no caer en la depresión por consanguinidad de la lección
+anterior.
+
+Repartir en varias plantas importa más que la cantidad total: **seis frutos de seis plantas valen mucho
+más que veinte frutos de una.**
+</Dato>
+
+<AplicarRizoma>
+**La regla base en Rizoma es una variedad por especie y temporada para semilla**, y es la que resuelve
+el problema sin comprar nada. Se puede producir y vender más de una variedad; lo que se restringe es de
+cuál se guarda.
+
+**El culantro es fácil y va primero.** Con una sola variedad en flor y sin parientes cercanos, basta
+con separación moderada dentro de la parcela.
+
+**El ají dulce exige embolsado, y no es opcional.** Es *Capsicum chinense*, se autofecunda bastante
+—así que la bolsa funciona— pero los insectos lo cruzan lo suficiente como para arruinar el lote. Y el
+daño es el peor posible del catálogo: como decía su ficha, **la picantez viaja en la semilla, no en el
+fruto de este año.** Un cruce con un picante no se detecta hasta que el cliente muerde el fruto de la
+generación siguiente, y para entonces el material ya se vendió.
+
+**Protocolo concreto para el ají:** marcar seis plantas con cinta, embolsar cinco o seis botones
+todavía cerrados en cada una con bolsa de papel, retirar la bolsa al cuajar dejando la cinta, y
+cosechar solo lo marcado. Eso da mucha más semilla de la necesaria y reparte el origen genético.
+
+**Antes de decidir el lote de semilla se camina el perímetro** y se mira qué hay en flor en los lotes
+vecinos. Con doce lotes contiguos hay espacio de sobra para separar dentro, pero el perímetro con
+vecinos es largo y ahí no se manda.
+
+**Y se habla con los vecinos.** Un acuerdo de «este año guardo ají, no lo siembres cerca del lindero»
+cuesta una conversación y vale más que cualquier malla. Es exactamente la clase de coordinación que
+justifica el banco comunitario y que un productor solo no puede conseguir — y encaja con la misión del
+proyecto: la comunidad organizada consigue cosas que la suma de individuos no.
+
+**Todo lo embolsado se anota en la libreta**: planta, fecha, número de flores y lote. Sin ese registro,
+en cosecha nadie sabe qué cinta significa qué.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El clima juega en contra del aislamiento por distancia.** Con actividad de insectos prácticamente
+todo el año y sin un invierno que corte la floración, aquí no existe la ventana natural de aislamiento
+que sí tienen los climas con estaciones marcadas. La barrera y el embolsado ganan peso justamente por
+eso.
+
+**Y el aislamiento por tiempo funciona peor de lo esperado**, porque muchas especies florecen de forma
+escalonada y prolongada en lugar de concentrarse en unas semanas. Escalonar siembras separa menos de lo
+que uno calcula sobre el papel.
+
+**Las abejas nativas sin aguijón son polinizadoras muy activas en la zona** y trabajan a distancias
+largas. Es una buena noticia para la producción de fruta —y el módulo de abejas insiste en ello— pero
+significa que para guardar semilla pura hay que contar con ellas, no ignorarlas.
+
+**El material de embolsado se consigue barato**: bolsas de papel de panadería o tela de tul de
+mercería sirven perfectamente. Lo que no sirve es el plástico, que en este clima condensa y pudre la
+flor en un par de días.
+
+**Y sobre el entorno: en una zona de agricultura activa hay que asumir que siempre habrá algo en flor
+alrededor.** La estrategia realista no es aislar del mundo, sino embolsar lo que de verdad importa y
+aceptar que el resto del lote es para producción, no para semilla.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Con la semilla ya fecundada por quien debía, queda recogerla. Y cambia mucho según dónde viva:
+**fruto carnoso o fruto seco** piden procedimientos distintos, y el error de cosechar antes de tiempo
+es el más común de todos.

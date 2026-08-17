@@ -1,0 +1,427 @@
+Hay una frase que dice todo el mundo y que nadie escucha bien: **«no sé en qué se me va la plata»**.
+Fijate en la forma: la plata *se va*, sola, como si tuviera voluntad propia. Nadie dice «la gasté yo,
+en esto, en esto y en esto». Eso no es descuido del idioma: es la confesión más exacta de que **el
+dato no está**, y sobre una impresión no se puede decidir nada.
+
+Por eso el módulo no empieza con consejos sobre qué recortar, sino con una medición. Esta lección
+separa la plata de la casa de la plata del trabajo, explica **por qué la memoria se equivoca siempre
+para el mismo lado** y enseña a medir treinta días de verdad. Al final vas a tener un número, y
+todavía no vamos a decidir nada con él.
+
+## Dos billeteras que parecen una
+
+La plata de la casa sostiene a las personas que viven ahí: comida, techo, luz, agua, transporte,
+escuela, remedios, ropa. Existe haya o no haya trabajo este mes, porque comer no depende de que
+hubiera changa. La plata del trabajo compra la mercadería, la madera, el combustible, y **vuelve
+después, aumentada**, si el trabajo salió bien. Esa segunda billetera ya la trabajó el módulo de
+negocio, con el <Termino slug="flujo-de-caja">flujo de caja</Termino> y
+el <Termino slug="capital-de-trabajo">capital de trabajo</Termino>. Este módulo va de la primera.
+
+El problema es que **físicamente son los mismos billetes, en el mismo bolsillo**, y al mezclarse pasan
+tres cosas, ninguna evidente. **El trabajo parece más rentable de lo que es**, porque la casa le
+prestó sin que nadie lo anotara: el combustible, el almuerzo afuera, el desgaste de la moto. **La casa
+parece más cara de lo que es**, porque adentro de su total hay compras que fueron de trabajo. Y la
+peor: **en un mes malo no se puede saber cuál de los dos falló.**
+
+<Analogia>
+Es una variable global escrita por dos procesos, sin ningún campo que diga quién escribió. El programa
+no se cae: devuelve un número perfectamente formado, y por eso engaña. Pero si ningún movimiento se
+puede atribuir a su origen, ese número no responde a ninguna pregunta útil.
+
+**No se puede depurar lo que no se puede atribuir**, y la solución no es un cálculo más listo: es
+agregarle un campo al registro. Una letra al lado de cada anotación —«C» de casa, «T» de trabajo— es
+ese campo, y es toda la diferencia entre un saldo y un dato.
+</Analogia>
+
+Aunque cobres sueldo tenés una <Termino slug="caja-del-trabajo">caja del trabajo</Termino>: el pasaje
+diario, el almuerzo afuera, la ropa que solo usás ahí. Es costo de trabajar, no gasto de vivir, y
+mezclarlo esconde cuánto te cuesta el empleo que tenés.
+
+## Por qué la memoria siempre falla para el mismo lado
+
+Quien estima su gasto mensual no está mintiendo: está recordando. Y el recuerdo falla por mecanismos
+que se pueden nombrar.
+
+**La memoria guarda lo llamativo, no lo frecuente.** La compra número veintitrés de pan del mes no
+tiene nada que la distinga de las otras veintidós; la rueda que se pinchó, sí. Y lo repetido además
+**se colapsa en un solo recuerdo**: veinte compras iguales quedan como una escena genérica, «yo compro
+pan». Uno recupera la escena y no el conteo, y por eso dice «a veces» de algo que fue todos los días.
+
+**El efectivo no deja rastro.** Un billete sale de la mano y no queda anotado en ningún lado del
+mundo; una transferencia la anota el banco te guste o no. La consecuencia es dura: **la parte del
+gasto que peor se recuerda es exactamente la que se paga en efectivo**, y acá esa es la parte grande.
+
+**Recordamos un mes típico que no existe.** Siempre pasó algo: se rompió el ventilador, alguien se
+enfermó. Cada uno se descarta como excepción, y como cada mes trae una distinta, **las excepciones se
+descartan todos los meses** y nunca entran en el promedio.
+
+**Cada compra se compara contra el bolsillo, no contra el total**, que no está en ninguna parte. Y
+**lo que gastan los demás no se ve**: cada uno tiene un pedazo y nadie tiene la suma.
+
+Acá está lo aprovechable: **todos fallan en la misma dirección.** Ninguno hace recordar de más. Por
+eso la distancia entre lo que uno cree que gasta y lo que gasta no es un error al azar que se compense
+solo, sino una <Termino slug="subestimacion-del-gasto">subestimación sistemática</Termino>.
+
+<Analogia>
+Todo el que optimizó código a ojo perdió un día acelerando una función que no importaba, mientras el
+tiempo se iba en una consulta que ni había mirado. De ahí la regla más vieja del oficio: **medir
+primero, optimizar después**, porque el cuello de botella nunca está donde uno cree.
+
+Estimar el gasto de memoria es perfilar a ojo, con un agravante: **devuelve siempre un total más chico
+que el verdadero**. Un instrumento descalibrado en una sola dirección es la peor clase de instrumento,
+porque parece que funciona.
+</Analogia>
+
+<Dato titulo="La prueba de los dos minutos">
+Antes de seguir leyendo: escribí en un papel cuánto creés que gasta tu casa por mes. Doblalo y
+guardalo. Dentro de treinta días vas a tener el número real.
+
+**La distancia entre los dos es lo más valioso que produce esta lección**, porque te dice cuánto
+corregir tus propias estimaciones de aquí en adelante.
+</Dato>
+
+## Treinta días de dato, no de opinión
+
+El producto de esta lección tiene nombre: una <Termino slug="linea-base-de-gasto">línea base de
+gasto</Termino>, el registro completo de lo que salió de la casa durante treinta días seguidos,
+anotado en el momento, clasificado y sumado. No es un promedio ni un objetivo: es lo que pasó.
+
+**¿Por qué treinta días y no una semana?** Casi toda obligación fija cae una sola vez al mes, las
+semanas de una casa no se parecen entre sí y multiplicar por cuatro amplifica por cuatro cualquier
+rareza. **¿Y por qué no tres meses?** Porque nadie los hace: **un registro incompleto de noventa días
+vale menos que uno completo de treinta.** Y son treinta días seguidos empezando hoy, no un mes del
+calendario: esperar al día primero es la excusa más común para no empezar nunca.
+
+<Advertencia titulo="La regla que decide si esto funciona o no">
+Se anota **en el momento del gasto**, no a la noche.
+
+Si esperás al final del día, lo chico ya se colapsó: vas a recordar la compra grande y vas a perder
+las seis chicas, que son las que no sabés. **Un registro hecho de memoria a la noche produce el mismo
+número que la estimación, y entonces no midió nada.** La regla de bolsillo, literal: **la mano que se
+guarda el vuelto es la que anota.**
+</Advertencia>
+
+De cada gasto se anotan cinco cosas y ni una más: **cuánto** salió, **qué** fue —dos palabras, no un
+informe—, **cuándo**, **quién** lo gastó y **de qué billetera**, casa o trabajo. A eso lo llamamos
+el <Termino slug="registro-de-gastos">registro de gastos</Termino>, y su virtud es ser corto: cada
+campo extra baja la probabilidad de que alguien lo llene el día que está cansado.
+
+<Advertencia titulo="Anotar sin juzgar, y el motivo es técnico">
+Escribir un comentario al lado —«otra vez», «esto no hacía falta»— arruina el instrumento, y no por
+una razón de ánimo: **cuando anotar duele, se deja de anotar**, y lo primero que se pierde es lo que
+más avergüenza, que suele ser lo más revelador.
+
+Por eso la consigna del mes se dice en voz alta: **este mes no se decide nada.**
+</Advertencia>
+
+<Dato titulo="Medir cambia lo medido">
+Al empezar a anotar vas a gastar menos sin proponértelo, porque anotar convierte una compra automática
+en una decisión consciente. A eso se lo llama <Termino slug="efecto-del-observador">efecto del
+observador</Termino>.
+
+Es bueno para tu bolsillo y un problema para tu dato: **tu primer mes medido ya es más barato que los
+anteriores.** No lo infles a propósito; alcanza con saber que tu línea base real está un poco por
+encima. No es una foto neutral: es una foto con el fotógrafo adentro.
+</Dato>
+
+## Con qué se anota
+
+No hay un instrumento correcto: hay fricciones distintas, y la fricción decide todo, porque compite
+contra el cansancio de las siete de la tarde.
+
+<Tabla>
+
+| Instrumento | Por qué funciona | Dónde falla |
+| --- | --- | --- |
+| Cuaderno chico en el bolsillo | Se abre y se escribe; sin batería y sin señal | Hay que llevarlo siempre; se moja, se pierde |
+| Nota del teléfono | Ya está en la mano; se escribe de parado | Se pierde con el teléfono; usar una sola nota, fijada arriba |
+| Sobres de papel por rubro | Mide sin escribir: lo que falta en el sobre se gastó | No sirve para lo que se paga por transferencia |
+| Frascos, monedas o palotes | Funciona sin escribir bien; lo entienden los chicos | Grano grueso: dice cuánto, no en qué |
+| Historial del banco o la aplicación | Lo escribe otro por vos y no se olvida de nada | Solo ve lo que no fue en efectivo, que acá es lo chico |
+| Planilla en la computadora | Suma y clasifica sola | Lejos del momento de gastar: se llena de memoria |
+
+</Tabla>
+
+De ahí la única recomendación firme: **el instrumento que vas a usar de verdad le gana al instrumento
+correcto.** Lo que mejor funciona es combinar dos: uno para el momento y uno para la suma semanal. Ese
+repaso del domingo sirve además de red: lo que te olvidaste, el domingo todavía te acordás; el mes que
+viene, no.
+
+## Las tres clases de gasto
+
+Clasificar no sirve para que quede ordenado. Sirve para saber **por qué palanca se toca cada cosa**,
+porque cada clase se cambia con una palanca distinta y usar la equivocada es la forma más común de
+esforzarse sin resultado.
+
+Un <Termino slug="gasto-fijo">gasto fijo</Termino> llega solo, con fecha, lo hayas usado o no, y para
+cambiarlo hay que cambiar un acuerdo: mudarse, renegociar, dar de baja. Alquiler, cuota del colegio,
+internet, plan del teléfono, cuota de un crédito. Su rasgo útil es que **no requiere ninguna decisión
+diaria**. Y hay una subclase que confunde a todo el mundo: **fijos en la obligación, variables en el
+monto**, como la luz y el agua. Van con los fijos, pero se anota el rango y se tocan por el lado del
+consumo, no del acuerdo.
+
+Un <Termino slug="gasto-variable">gasto variable</Termino> se decide cada vez: monto y frecuencia
+dependen de lo que hagas. La feria, el transporte, la garrafa, la ropa, los materiales. Suele ser la
+clase más grande de una casa y la que más responde a decisiones, porque cada compra vuelve a ponerse
+en juego.
+
+Y está el <Termino slug="gasto-hormiga">gasto hormiga</Termino>: chico, muy frecuente, casi siempre en
+efectivo, y cada uno por separado tan barato que **no cruza el umbral en que la cabeza lo registra
+como «un gasto»**. El refresco de media mañana, el pan de la tarde, la recarga del celular, las
+galletas de los chicos, el mototaxi de dos cuadras porque llovía. La definición operativa es la más
+honesta: **si al final del día no podés reconstruir en qué se te fue el vuelto, ahí estaba.**
+
+Su invisibilidad tiene mecanismo: al comprar se compara el precio contra lo que hay en el bolsillo, y
+**el precio individual gana siempre esa comparación**; la comparación que lo haría perder —cuánto suma
+en un año— no está disponible al decidir. Por eso no se corrige con fuerza de voluntad, sino haciendo
+visible la suma.
+
+<Advertencia titulo="Hormiga no quiere decir inútil">
+Clasificar no es condenar. El refresco frío a mediodía después de cinco horas al sol no es un vicio, y
+el pan de la tarde con los chicos puede ser lo mejor del día. La clase de un gasto dice **con qué
+palanca se toca**, no si está bien o mal, y quién decide qué se queda es el dueño de la casa.
+</Advertencia>
+
+## La multiplicación: de lo diario a lo anual
+
+Acá está la aritmética que hace visible lo invisible, y es una sola cuenta.
+
+<Formula explicacion="El costo real de un hábito no es lo que cuesta una vez, sino lo que cuesta una vez multiplicado por cuántas veces se repite. La frecuencia pesa tanto como el precio, y casi nadie la mira.">
+lo que cuesta por vez × veces por mes = gasto del mes → × 12 = gasto del año
+</Formula>
+
+<Dato titulo="Los números que siguen son inventados">
+Todos los montos de esta sección están inventados para poder hacer la cuenta a la vista. **No son
+precios de nada ni de ningún lugar.** Lo que hay que llevarse es la operación; los números los ponés
+vos con lo que anotaste.
+</Dato>
+
+Tomemos un gasto de 5 Bs por día. Parece nada. Pero 5 × 30 son **150 Bs al mes**, y 5 × 365 son
+**1.825 Bs al año**. Comparalo con un gasto de 150 Bs **una sola vez** en el año: ese sí lo pensaste y
+a lo mejor lo postergaste dos meses. Y sin embargo **el de 5 Bs pesó más de doce veces lo que el de
+150**, sin que nadie lo discutiera, porque nunca apareció junto.
+
+<Tabla>
+
+| Cuánto por vez | Veces por semana | Al mes, aprox. | Al año, aprox. |
+| --- | --- | --- | --- |
+| 3 | 7 | 90 | 1.100 |
+| 5 | 5 | 108 | 1.300 |
+| 10 | 3 | 130 | 1.560 |
+| 20 | 2 | 173 | 2.080 |
+| 50 | 1 | 217 | 2.600 |
+
+</Tabla>
+
+Mirá la primera fila: tres pesos, la moneda que uno entrega sin mirar, pasa de mil al año. Y ahora la
+última, que sí se siente como una compra: llega a dos mil seiscientos, **poco más del doble, siendo
+diecisiete veces más cara por vez**. Esa desproporción la puso la frecuencia. De ahí la frase que hay
+que retener: **el precio no es el número que pagás, es el número multiplicado por la frecuencia.**
+
+<Analogia titulo="La canilla que gotea">
+Nadie repara una gota. Una gota no es agua, es una molestia. Poné un balde debajo antes de dormir y a
+la mañana hay agua para lavar: la gota no cambió de tamaño, cambió que ahora la estás viendo junta.
+**Todo el método de esta lección es poner el balde**, y el balde es la multiplicación.
+
+Es la misma figura que una fuga de unos pocos bytes por petición, invisible en mil peticiones y capaz
+de tumbar el proceso a los tres días: el problema nunca fue el tamaño, sino el tamaño por la
+frecuencia por el tiempo.
+</Analogia>
+
+Hay una operación más: **traducí el total anual a algo que querías y «no alcanzaba»**. «No me alcanza
+para X» pasa a ser «elegí Y en vez de X sin darme cuenta», que es incómodo y por eso sirve.
+
+## Los gastos que no caben en treinta días
+
+Acá está el agujero más grande del método: treinta días no ven nada de lo que ocurre una o dos veces
+al año. Son los <Termino slug="gasto-ocasional">gastos ocasionales</Termino>, la causa número uno de
+que un presupuesto bien hecho reviente en marzo.
+
+**Escuela**: matrícula, útiles, uniformes y zapatos, cuotas de curso, todo apretado en pocas semanas
+del arranque escolar. **Ropa y calzado**: se compran cuando ya no dan más, que siempre es mal momento.
+**Salud**: consulta, remedios, dentista, lentes, y la parte que casi nadie cuenta, **los días que no
+se trabajó**, que en una casa que vive de jornal suelen costar más que la consulta. **Reparaciones y
+repuestos**: la moto, la bomba, el celular, el techo. **Documentos y trámites**: cada uno cuesta plata
+y además un día sin trabajar; cuáles, cuánto y en qué plazos se pregunta en la oficina que
+corresponda, nunca con lo que contó un vecino. **Reposición de lo que se rompe**: la olla, el colchón,
+el foco; nadie lo llama gasto, se lo llama mala suerte, y ocurre todos los años.
+
+Y uno que merece nombre propio: cumpleaños, bautizos, funerales, prestes, la colaboración cuando a
+alguien se le quemó algo, la cuota del barrio. A eso lo
+llamamos <Termino slug="gasto-social">gasto social</Termino>, porque lo que se compra ahí no es un
+objeto sino pertenencia, y la pertenencia es lo que sostiene a una familia el día que se enferma
+alguien.
+
+La frase que ordena la lista: **casi ninguno de estos gastos es imprevisible. Son previsibles y no
+previstos, que no es lo mismo.** El colegio empieza todos los años y la moto necesita repuestos todos
+los años; lo único imprevisible es la fecha y el monto exactos.
+
+**El método para recuperarlos se llama el calendario del año hacia atrás.** Escribí los doce meses en
+una hoja y preguntá por cada uno: «¿qué pasó en este mes que costó plata y no fue del día a día?».
+Estos se recuerdan bien, por la misma razón por la que los chicos se olvidan: fueron grandes y
+llamativos. Anotá montos aproximados; aproximado alcanza.
+
+<Formula explicacion="Un gasto que ocurre una vez al año no cuesta cero los otros once meses: cuesta una doceava parte todos los meses, aunque no se pague en ninguno de ellos. Reconocer eso es lo que separa un imprevisto de un descuido.">
+suma de los gastos ocasionales del año ÷ 12 = lo que cuestan por mes
+</Formula>
+
+A esa operación se la llama <Termino slug="mensualizacion">mensualización</Termino>, y es la pieza que
+la lección 02 va a usar para que la matrícula deje de ser una emergencia. Por ahora anotala al costado
+y **no la sumes todavía al total de los treinta días**: son dos cifras distintas y hacen falta las
+dos.
+
+## Quién gasta qué
+
+En una casa donde la plata pasa por más de una mano, cada persona tiene un pedazo del registro y
+**nadie tiene la suma**. El resultado no es un total aproximado: es uno sistemáticamente más chico. Y
+no hace falta que nadie esconda nada: **la suma no existe porque nadie la hizo.** Dos adultos que
+traen plata suponen cada uno que el otro cubre el resto; los chicos del recreo gastan todos los días,
+en efectivo y sin dejar huella.
+
+Cómo se plantea sin que termine en pelea: **el encuadre importa más que la planilla**, y tiene
+mecanismo. Si medir se percibe como control o como juicio, la gente no anota lo que le da vergüenza, y
+**el gasto escondido no entra al registro como cero, entra como error**. Un registro con miedo adentro
+es peor que ninguno, porque produce un número y encima confianza en ese número.
+
+Tres frases dichas al empezar hacen casi todo el trabajo: **«este mes no vamos a decidir nada, solo
+vamos a mirar»**, **«nadie tiene que justificar nada»** y **«al final del mes lo miramos juntos»**.
+Después, cada uno con su papelito y una sola persona consolidando el domingo. Con los chicos, que
+anoten ellos, con palotes o dibujos si todavía no escriben.
+
+<Advertencia titulo="Si en tu casa este tema termina mal">
+Hay casas donde una sola persona maneja la plata y las demás no saben ni cuánto entra. Resolver eso no
+es asunto de esta lección, pero sí lo son dos cosas.
+
+**Anotar lo tuyo no requiere permiso de nadie**: podés medir tu parte sin anunciarlo. Y un dato
+parcial y honesto es un punto de partida legítimo; un total inventado para que cierre, no.
+</Advertencia>
+
+## Cerrar los treinta días
+
+El último día se hace la cuenta, y son cinco pasos. **Uno: sumar por clase** —fijos, variables y
+hormiga—, y aparte, sin mezclar, la columna del trabajo. **Dos: sumar el total de la casa. Tres:
+anotar al costado la mensualización de los ocasionales. Cuatro: comparar el total con lo que entró**,
+contando como entrada lo que sacaste de un ahorro o lo que te prestaron, y como que *quedó* lo que
+guardaste aparte. **Cinco: sacar el papel doblado** y comparar tu estimación con la realidad.
+
+Casi siempre va a pasar algo que conviene esperar: **lo anotado suma menos que lo que efectivamente
+salió.** Esa diferencia tiene nombre —el <Termino slug="hueco-del-registro">hueco del
+registro</Termino>— y no es un error de aritmética.
+
+<Formula explicacion="El hueco no se borra ni se reparte entre las otras categorías: se anota como una línea con su propio nombre. Mide la calidad de tu registro, y casi todo lo que contiene es gasto hormiga.">
+lo que entró − lo que quedó = lo que salió de verdad; lo que salió − lo anotado = el hueco
+</Formula>
+
+El hueco es información de primera calidad: uno grande dice que se te escapa mucho de lo chico, y baja
+solo el segundo mes. Un hueco cero es sospechoso: casi siempre significa que alguien cuadró el número
+a mano.
+
+Y ahora lo que **no** se hace hoy: no se recorta nada, no se prometen cambios, no se arma el
+presupuesto. La decisión tomada en caliente dura una semana, porque nació del susto y no de un método.
+
+<AplicarRizoma titulo="Tu casa, tu cuaderno, estos treinta días">
+**Hoy, antes de que se te enfríe.** Escribí en un papelito cuánto creés que gastás por mes, doblalo y
+guardalo. Después conseguí el instrumento: un cuaderno chico, la parte de atrás de uno viejo, o una
+nota en el teléfono llamada GASTOS, fijada arriba de todo. En la primera página escribí dos fechas, la
+de hoy y la de dentro de treinta días. **Esa segunda fecha es el único compromiso que estás tomando**:
+no prometas ahorrar ni portarte bien, prometé llegar a esa fecha con el cuaderno lleno.
+
+**El primer gasto de hoy se anota hoy**, parado en la vereda, antes de seguir caminando. Si te acordás
+a la noche de algo que no anotaste, ponelo igual con una crucecita: al final vas a saber cuánta parte
+de tu registro es dato y cuánta es memoria.
+
+**Separá la caja del trabajo desde el primer día**, aunque sea con una letra. Si trabajás por tu
+cuenta —changa, taller, costura, comida, moto, venta— conseguí dos sobres y escribiles CASA y TRABAJO:
+**el sobre del trabajo no paga el pan, y el de la casa no paga la mercadería.** Si esta semana el
+trabajo tiene que prestarle a la casa, prestale, pero anotalo como préstamo en las dos hojas.
+
+**El domingo, diez minutos**: una hoja con tres columnas y pasás la semana; ponela donde se vea, en la
+puerta de la heladera. Reservá también **una tarde para el calendario hacia atrás** con alguien que
+viva con vos: la matrícula, las botas, el diente, la rueda, el velorio, la garrafa que se rajó. Sumá y
+dividí entre doce: ese número es probablemente el dato más útil del módulo.
+
+**Antes de repartir cuadernos, la conversación de encuadre** con las tres frases; si en tu casa el
+tema es delicado, empezá midiendo solo lo tuyo. Y si no te llevás bien con la escritura, cambia el
+soporte, no el método: frascos con etiquetas dibujadas y un palote por gasto, los tickets en una caja
+de zapatos, o un audio al teléfono transcrito con ayuda una vez por semana. **El método no es
+escribir: es no olvidar.**
+
+**Y si compartís gastos con vecinos, la misma regla resuelve el enredo.** En un espacio comunitario
+como Rizoma del Sur, donde varias familias comparten herramientas, agua y a veces compras, la plata
+del grupo y la de cada casa se mezclan sin que nadie lo decida: **una plata, un dueño, un papel.** Y
+si dos casas miden el mismo mes y después comparan rubros —no montos—, cada una descubre gastos que
+ni se le habían ocurrido.
+</AplicarRizoma>
+
+<ContextoBolivia titulo="Ingreso irregular, efectivo y el año de Santa Cruz">
+**Acá el ingreso no llega una vez al mes, y eso rompe el supuesto del que están hechos casi todos los
+consejos que circulan.** La plata llega a golpes: el <Termino slug="jornal">jornal</Termino> pagado el
+sábado, la <Termino slug="changa">changa</Termino> que salió el martes, la temporada que concentra
+todo en pocas semanas, la <Termino slug="remesa">remesa</Termino> que manda un familiar de afuera. La
+consecuencia: **los treinta días que midas van a caer sobre una racha buena o sobre una mala.** No
+esperes un mes representativo, porque no existe; **anotá al costado qué clase de mes fue** —cuánto
+entró, de dónde y si fue más o menos de lo habitual—. Ese apunte vale tanto como la suma.
+
+**El efectivo manda, y el efectivo no deja rastro.** La feria, el mototaxi, el micro, el puesto de la
+esquina. **La parte peor registrada del gasto es acá la parte más grande**, y por eso anotar en el
+momento no es un lujo de gente ordenada: es la única manera de que el dato exista. Lo que sí pasa por
+transferencia o por pago con el teléfono ya está escrito por otro; qué muestra ese historial y cómo
+verlo se pregunta en tu banco o cooperativa.
+
+**Y la feria merece un truco propio**, porque son muchos montos chicos sin boleta: **no anotes cada
+compra, anotá cuánto llevaste y cuánto volviste.** La resta es el gasto de feria, un dato verdadero
+aunque tenga menos detalle.
+
+**El clima mueve el gasto de un mes a otro, y por eso treinta días no describen doce meses.** En
+la <Termino slug="epoca-de-lluvias">época de lluvias</Termino>, de octubre a abril, se encarece el
+transporte, se pierden días de trabajo y sube el gasto en salud: el dengue es endémico acá, y una casa
+con dengue paga consulta, remedios, mosquitero y sobre todo jornadas no trabajadas. Con
+los <Termino slug="surazo">surazos</Termino>, entre abril y septiembre, aparecen frazadas y ropa de
+abrigo; en el calor sube la luz por el ventilador, y quien saca agua de pozo la paga en electricidad
+para la bomba. **Anotá siempre en qué meses mediste.**
+
+**Los cortes de energía son un gasto disfrazado**: velas, pilas, la comida de la heladera que se echó
+a perder y, en el peor caso, el equipo quemado cuando volvió la luz. Lo mismo con los repuestos, que
+acá tardan y cuestan: cuando se para la moto o la bomba, el costo real no es solo la pieza sino **los
+días sin la herramienta que produce el ingreso**.
+
+**El gasto social no es opcional acá.** Un consejo importado diría «recortá eso primero», y sería un
+mal consejo: **lo que sostiene a una familia cuando se enferma alguien es exactamente esa red.**
+Corresponde anotarlo, mensualizarlo y decidir con el número delante.
+
+**Quien cobra en relación de dependencia tiene un calendario distinto de quien trabaja por su
+cuenta**, con pagos extraordinarios en ciertas épocas; las condiciones exactas se consultan con el
+empleador o con un contador, este curso no las inventa. Al medir, no confundas un ingreso
+extraordinario con uno normal: **un mes con un pago extra no describe tu año.** Y como los precios se
+mueven, la medición se repite cada tanto: **anotá la fecha, siempre.**
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Ya sé más o menos en qué se me va.»** Quien más seguro está de su estimación suele tener el hueco
+más grande, porque nunca la contrastó con nada.
+
+**«Voy a anotar solo lo importante.»** Lo importante ya lo sabés: el alquiler no se te olvida. Lo que
+no sabés es lo chico, y es justo lo que ese criterio descarta.
+
+**«Empiezo el mes que viene, el día primero.»** Treinta días seguidos empezando hoy dan el mismo dato
+y tienen una ventaja: existen. Y su primo hermano, **«este mes fue raro, no cuenta»**: todos los meses
+son raros, cada uno de una manera distinta, y un año entero de meses raros es un año normal.
+
+**«Me dio un total feo, mejor lo dejo.»** El total feo es el producto de la lección, no su fracaso.
+
+## Lo que sigue
+
+Al final de estos treinta días vas a tener algo que la mayoría de las casas no tiene: tres totales por
+clase, una cifra de gastos ocasionales mensualizada, un hueco medido, un apunte de qué clase de mes
+fue y la distancia entre lo que creías y lo que es. Es la materia prima de las cinco lecciones que
+vienen.
+
+La siguiente, **El presupuesto de una casa que no cobra fijo**, define qué es de verdad un
+presupuesto —**asignarle un trabajo a cada peso antes de que llegue**, no una lista de
+prohibiciones— y explica por qué el pensado para un sueldo mensual fracasa acá. Lo reemplaza con la
+analogía del tanque: una entrada irregular alimentando una salida constante obliga a dimensionar el
+depósito por la peor racha seca, no por el promedio. Con el dato de esta lección vas a sacar tu piso
+de gasto mensual, pagarte un monto fijo desde un ingreso variable, separar las dos billeteras,
+provisionar mes a mes lo anual, ordenar las prioridades del mes malo y tratar el excedente del mes
+bueno como llenado del tanque y no como premio.

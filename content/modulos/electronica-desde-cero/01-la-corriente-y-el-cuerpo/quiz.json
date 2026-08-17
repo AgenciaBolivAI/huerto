@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "lazo-cerrado",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre cómo se electrocuta realmente una persona, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "La corriente solo circula por un lazo cerrado, así que hace falta tocar un punto con tensión y a la vez algo por donde la corriente pueda volver: suelo mojado, un caño metálico, la otra mano en otro cable.",
+        "Un cable con 220 voltios y otro completamente muerto son idénticos a la vista y al tacto, y por eso hay que medir en lugar de suponer.",
+        "Cortar el cable de vuelta deja el aparato tan muerto como cortar el de ida, porque lo que importa no es un cable en particular sino el lazo entero.",
+        "El cuerpo humano absorbe electricidad al contacto, así que tocar un solo punto con tensión ya produce una descarga grave aunque no exista ningún camino de retorno."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son la misma idea vista desde tres lados: sin lazo cerrado no pasa corriente, y como el lazo es invisible hay que medirlo. La cuarta es falsa y describe una física que no existe: el cuerpo no absorbe ni almacena electricidad, la conduce, y para conducir necesita entrada y salida. Es la razón por la que un pájaro se para sobre un cable de alta tensión sin pasarle nada. Ojo con la conclusión práctica, sin embargo: eso no autoriza a tocar nada con una sola mano confiando en estar aislado. En un vivero, con el piso húmedo, caños de riego, estructuras metálicas y calaminas por todas partes, garantizar que no exista camino de vuelta es casi imposible, y lo que se hace es lo contrario: cortar la tensión y comprobarlo."
+    },
+    {
+      "id": "voltaje-o-corriente",
+      "tipo": "verdadero_falso",
+      "enunciado": "Lo que lesiona al cuerpo humano es el voltaje: a más voltios, más daño, y por eso las cifras verdaderamente peligrosas se cuentan en cientos de voltios.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la confusión que más accidentes causa. Lo que lesiona es la corriente que atraviesa el cuerpo; el voltaje solo importa porque es lo que la empuja. Las cifras peligrosas están en el rango de los miliamperios, no de los cientos de amperios ni de los voltios: entre «se siente un hormigueo» y «riesgo de fibrilación» hay unas pocas decenas de miliamperios, el consumo de una lamparita LED. La prueba está en la ley de Ohm aplicada al mismo enchufe de 220 V: con la piel seca y unos 100.000 Ω pasan unos 2 mA, un susto; con la piel mojada y unos 1.000 Ω pasan unos 220 mA, muy por encima del rango que hace fibrilar. Mismo voltaje, mismo cuerpo, dos desenlaces distintos. El voltaje no cambió: cambió la resistencia, y por eso cambió la corriente."
+    },
+    {
+      "id": "umbrales",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre los umbrales aproximados de corriente a través del cuerpo, ¿qué es correcto?",
+      "opciones": [
+        "Alrededor de 1 mA la corriente apenas se percibe como un hormigueo: es el umbral de percepción.",
+        "Entre unos 10 y 20 mA los músculos se contraen de forma sostenida y la persona ya no puede soltar el conductor.",
+        "Por encima de unos 50 mA aparece el riesgo de fibrilación ventricular, que es el mecanismo por el que una descarga mata.",
+        "Como los umbrales están tabulados, cualquier valor por debajo de 30 mA puede declararse seguro sin más consideraciones."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son los órdenes de magnitud que hay que llevar en la cabeza, y lo importante es lo apretados que están: de sentir apenas nada a no poder soltar hay un factor diez. La cuarta es falsa y es peligrosa por cómo suena de razonable. Esos números no son un reglamento: dependen de cuánto dura el contacto, del camino que toma la corriente dentro del cuerpo, del tamaño y estado de la persona, y de si la corriente es alterna o continua. Ningún valor se declara seguro. De hecho, el diferencial del tablero corta alrededor de los 30 mA precisamente porque esa cifra ya está en el borde del rango que puede hacer fibrilar un corazón: no es un margen cómodo, es el límite."
+    },
+    {
+      "id": "no-soltar",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una descarga de la red siempre lanza a la persona lejos del cable, así que el contacto dura una fracción de segundo y se corta solo.",
+      "respuesta": false,
+      "explicacion": "Falso, y esta creencia viene del cine. Con corriente alterna ocurre a menudo lo contrario: la tetanización. Los cincuenta cambios de sentido por segundo de la red son cincuenta pulsos por segundo inyectados en el sistema de señales del cuerpo, el músculo no alcanza a relajarse entre pulso y pulso y se queda contraído. Y como los músculos que cierran la mano son más fuertes que los que la abren, la mano agarra con más fuerza justamente el cable que la está electrocutando: eso es la corriente de no soltar, y empieza alrededor de los 10 a 20 mA en un adulto. A veces la persona sí sale despedida, pero el accidente grave es casi siempre el otro: el que no termina hasta que alguien corta la fuente. Por eso el primer paso frente a un electrocutado no es tirar de él, es cortar."
+    },
+    {
+      "id": "piel-mojada",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la humedad es un factor decisivo cuando se trabaja con electricidad en un vivero?",
+      "opciones": [
+        "Casi toda la resistencia del cuerpo está en la piel: por dentro somos agua con sales disueltas, que conduce bien.",
+        "Con las manos secas, limpias y con callo puede haber decenas de miles de ohmios, y con las manos mojadas o sudadas el valor cae a mil ohmios o menos.",
+        "Con 220 voltios, esa diferencia convierte unos 2 mA en unos 220 mA, es decir un susto en una corriente muy por encima del rango que hace fibrilar.",
+        "El agua de lluvia es prácticamente destilada y no conduce, así que trabajar bajo la lluvia no cambia el riesgo mientras el agua esté limpia."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son la cadena completa: la piel es el aislante, el agua lo anula y la ley de Ohm hace el resto. La cuarta es falsa por dos motivos independientes. Primero, el agua de lluvia deja de ser pura en el instante en que toca polvo, tierra, sudor o una superficie: arrastra sales y conduce. Segundo, y más importante, aunque el agua fuese pura daría igual, porque lo que hace el agua no es conducir por sí misma sino mojar la capa córnea de la piel, meterse en cada grieta y en cada callo agrietado y poner al conductor en contacto directo con el tejido húmedo de abajo. Y al mismo tiempo vuelve conductor el piso, que es el camino de vuelta. De octubre a abril, en el llano, la resistencia del cuerpo está en su valor más bajo del año."
+    },
+    {
+      "id": "doce-voltios",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la batería de 12 voltios del sistema solar, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Normalmente no electrocuta: 12 V entre manos mojadas dan unos 12 mA, que se sienten y molestan pero están lejos del rango de fibrilación.",
+        "Entrega cientos de amperios si se unen sus bornes con un metal, de modo que una llave apoyada de puente se pone al rojo en segundos y una argolla suelda el metal a la carne.",
+        "Desprende hidrógeno al cargarse, que es explosivo, y contiene ácido: sus riesgos reales son la quemadura, la ceguera y el incendio, no la electrocución.",
+        "Como no electrocuta, es el punto de la instalación donde menos precauciones hacen falta, y por eso es el sitio ideal para que alguien sin experiencia practique sin quitarse anillos ni reloj."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras dicen lo mismo desde ángulos distintos: la baja tensión cambia el tipo de riesgo, no lo elimina. La cuarta es falsa y describe exactamente cómo ocurren los accidentes de banco de baterías: la gente se relaja porque sabe que no la va a electrocutar y se lastima con lo otro. Sin tensión que empuje a través de la piel no hay descarga, pero por un metal pasa todo, y una argolla de casamiento haciendo puente entre bornes no se puede sacar ni cortar a tiempo. Se sacan anillos, reloj y pulseras antes de meter las manos, se usa una sola herramienta a la vez y se recuerda que en continua un arco eléctrico no se apaga solo, porque la corriente nunca pasa por cero."
+    },
+    {
+      "id": "antes-de-tocar",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre las tres reglas que se ejecutan, en orden, antes de abrir un aparato, ¿qué es correcto?",
+      "opciones": [
+        "Desconectar de verdad significa sacar el enchufe de la pared, no apagar el aparato: el interruptor de un equipo corta un cable y deja media máquina con tensión adentro.",
+        "Verificar la ausencia de tensión se hace en el punto exacto donde van a ir los dedos, y antes se prueba el instrumento en algo que sí tiene tensión, porque un probador con la pila gastada dice «no hay tensión» en todas partes.",
+        "Hay que desconfiar de los condensadores, que almacenan carga como un pequeño tanque a presión y siguen cargados después de desenchufar si la resistencia que debía descargarlos se rompió.",
+        "Si hubo un corte de luz en el barrio, la instalación está sin tensión y las tres reglas pueden abreviarse mientras dure el corte."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son la secuencia completa: desconectar, verificar y desconfiar de lo que guarda carga. La cuarta es falsa y en una zona con cortes frecuentes es una de las formas más comunes de electrocutarse. La ausencia de tensión por un corte no es una desconexión: es una casualidad que termina sin avisar. La luz vuelve cuando vuelve, y encuentra las manos adentro del aparato. Un corte se trata exactamente igual que una instalación con tensión: se desenchufa, se baja la llave, se avisa a todos y se verifica en el punto. Y de paso, los picos que llegan al restablecerse el servicio son los que queman fuentes y cargadores, así que muchas de las reparaciones de este módulo nacen justamente ahí."
+    },
+    {
+      "id": "cortar-antes-de-tocar",
+      "tipo": "abierta",
+      "enunciado": "Son las tres de la tarde de un enero lluvioso en Rizoma del Sur. Llegas al galpón y encuentras a un vecino tirado junto a la bomba, inmóvil, con la mano todavía apoyada en la carcasa metálica; el piso está mojado. Explica qué haces, en qué orden y por qué cada paso está donde está. Después explica qué debería haberse preparado antes —en la parcela y en el grupo— para que esos primeros segundos no dependan de la suerte.",
+      "respuestaModelo": "Lo primero es lo contra natura: no lo toco. Si sigue en contacto con la bomba, sigue siendo parte del circuito, y con el piso mojado mi propia resistencia está en su valor más bajo del año. Agarrarlo me convierte en el siguiente eslabón del lazo, y así es como el accidente de uno se vuelve el accidente de dos, sin nadie que pueda ayudar a ninguno. Todo lo que sigue está ordenado por esa única idea: primero se corta la fuente, después se toca a la persona.\n\nSegundo, corto la corriente por el camino más rápido que tenga a mano. Si la bomba está enchufada, saco el enchufe tirando del cuerpo del enchufe y nunca del cable, y me acerco sin pisar el charco. Si está cableada fija, bajo su llave en el tablero; y si no estoy seguro de cuál es la suya, bajo la general sin pensarlo. Dejar la parcela entera sin corriente no cuesta nada comparado con perder diez segundos leyendo rótulos. Justamente por eso importa que el tablero esté rotulado y que llegar hasta él no obligue a mover cosas.\n\nTercero, y solo si no hay forma de cortar en pocos segundos, lo separo con un aislante seco: un palo de escoba de madera bien seca, una tabla, una silla de plástico. Nada metálico y nada mojado, yo parado sobre algo seco y usando una sola mano. Es la última opción y no la primera, porque en un piso mojado, rodeado de caños de riego y estructuras metálicas, el aislamiento es mucho menos confiable de lo que parece.\n\nHay un caso en el que no hago nada de esto: si lo que hay es un cable de la red caído. Ahí no me acerco ni con palo, porque la electricidad salta por el aire y el terreno alrededor del cable queda electrificado en círculos. Alejo a todo el mundo y llamo a la distribuidora y a los bomberos.\n\nCortada la fuente, recién ahí lo toco. Pido ayuda de inmediato —grito, llamo, mando a alguien— y no lo dejo solo. Miro si respira. Si no respira hace falta reanimación cardiopulmonar, y aquí soy honesto conmigo mismo: eso se aprende practicando con un instructor, no leyendo un párrafo. Si hice el curso, lo aplico; si no lo hice, pido por teléfono que me guíen mientras llega la ayuda. La fibrilación ventricular, que es el corazón moviéndose en desorden sin llegar a bombear, no se corrige sola ni cortando la corriente, y por eso el tiempo es lo único que juega en contra.\n\nY aunque se levante y diga que está bien, va igual a un centro de salud. Una descarga que atravesó el tórax puede dejar el corazón con un ritmo alterado que se manifiesta horas después, y la quemadura engaña: en la piel se ven dos marcas pequeñas, de entrada y de salida, pero el daño real va por dentro, a lo largo del camino que tomó la corriente. La historia que termina mal es siempre la misma: se levantó, dijo que estaba bien y volvió a trabajar.\n\nSobre lo que debería estar preparado de antes, casi nada de ello es un aparato y casi todo es barato. El tablero rotulado con cinta de papel y marcador indeleble, de modo que un vecino que nunca vino pueda cortar la corriente de la bomba en menos de diez segundos: esa es la prueba de que quedó bien rotulado. Una linterna colgada de un clavo al lado del tablero, porque los cortes de luz hacen que la emergencia y la oscuridad lleguen juntas. Los teléfonos del centro de salud, de la distribuidora y de emergencias anotados en letra grande y verificados antes, no ese día. Un palo de escoba seco y una tarima de madera guardados cerca. Y el camino al tablero despejado siempre.\n\nEn el grupo, la preparación es repartir la capacidad para que no dependa de una sola persona, que puede ser justamente la que está en el piso. Que sepan cortar la corriente tres personas, no una. Que al menos dos hayan hecho un curso presencial de primeros auxilios y lo repitan cada par de años, porque la reanimación se olvida. Que la regla de una mano y la prohibición de reparar con las botas mojadas de venir del riego se enseñen el primer día a quien venga a ayudar, igual que se enseña dónde está el baño. Y que el botón de prueba del diferencial se apriete cada mes, porque los 30 mA que vigila ya están en el borde del rango que hace fibrilar un corazón; si en la instalación no hay diferencial, ponerlo es la primera compra y es trabajo de electricista.\n\nQueda la causa de fondo de este accidente en particular, que no hay que dejar pasar. Una carcasa metálica con tensión significa que adentro hay un aislamiento roto y que probablemente no hay puesta a tierra, o que la tercera pata del enchufe fue cortada o anulada con un adaptador. Después de la emergencia, esa bomba no se vuelve a enchufar hasta que se revise, y la tercera pata no se corta ni se anula nunca: es el cable que manda la fuga a tierra en lugar de mandarla a la mano de la próxima persona.",
+      "criterios": [
+        "No toca a la persona mientras siga en contacto con la fuente, y explica que se convertiría en el siguiente eslabón del lazo.",
+        "Corta la fuente primero: desenchufa, baja la llave del circuito o baja la general si tiene dudas.",
+        "Justifica bajar la general ante la duda, porque parar la parcela cuesta menos que perder segundos identificando la llave.",
+        "Recurre a separar con aislante seco solo como última opción, parado sobre algo seco, con una mano y sin nada metálico ni mojado.",
+        "Distingue el caso del cable de la red caído: no se acerca ni con palo, aleja a todos y llama a la distribuidora y a los bomberos.",
+        "Pide ayuda de inmediato y no deja sola a la persona.",
+        "Reconoce que la reanimación cardiopulmonar se aprende presencialmente y no por lectura, y menciona la fibrilación ventricular.",
+        "Deriva a un centro de salud aunque la persona camine y hable, por el ritmo cardíaco alterado horas después y por el daño interno que la piel no muestra.",
+        "Prepara el tablero rotulado con la prueba de los diez segundos, linterna al lado y teléfonos verificados de antemano.",
+        "Reparte la capacidad en el grupo: tres personas que sepan cortar y al menos dos con curso presencial de primeros auxilios repetido periódicamente.",
+        "Menciona el diferencial, su prueba mensual y los 30 mA situados en el borde del rango de fibrilación.",
+        "Identifica que una carcasa metálica con tensión implica aislamiento roto y falta de puesta a tierra, y no reconecta la bomba hasta revisarla."
+      ],
+      "explicacion": "Fíjate en que el orden no es negociable y en que la parte difícil es la primera: el instinto empuja a agarrar a la persona, y ese instinto es el que produce el segundo accidente. Todo el resto de la respuesta se deduce de la misma idea que abre la lección —la corriente necesita un lazo cerrado—, aplicada primero al vecino que está en el piso y después a quien va a socorrerlo. Fíjate también en la segunda mitad: casi todo lo que salva una vida en este escenario no cuesta prácticamente nada —un tablero rotulado, una linterna en un clavo, un palo de escoba seco, tres personas que sepan cortar— y hay que hacerlo un día cualquiera, tranquilo, porque el día del accidente ya no hay tiempo de organizar nada."
+    }
+  ]
+}

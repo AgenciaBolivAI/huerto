@@ -1,0 +1,107 @@
+{
+  "preguntas": [
+    {
+      "id": "que-hace-la-arcilla-2-1",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué explica que un suelo dominado por arcillas 2:1 se agriete en la seca y se selle en la temporada de lluvias?",
+      "opciones": [
+        "El agua entra entre las láminas del mineral y las separa, de modo que el suelo aumenta de volumen al humedecerse y lo pierde al secarse",
+        "La unión entre láminas es un puente flojo de cationes, no un enlace fuerte como el de una arcilla 1:1, así que el agua puede meterse en medio",
+        "Al hincharse, las grietas se cierran por dentro y la permeabilidad del suelo cae, de manera que su capacidad de dejar pasar agua depende del agua que ya tiene dentro",
+        "El suelo tiene tanta arcilla en porcentaje que cualquier arcilla en esa proporción produciría el mismo agrietamiento y el mismo sellado"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras describen el mismo mecanismo mineral desde ángulos distintos: la separación de láminas por entrada de agua, el puente flojo de cationes que la permite y la consecuencia hidráulica de que la permeabilidad sea función del agua ya presente. La cuarta es el error de fondo de la lección: lo que decide el comportamiento no es cuánta arcilla hay sino de qué tipo son las láminas. Una caolinita —arcilla 1:1— tiene los naipes cosidos por un enlace fuerte, el agua no entra entre ellos y el suelo no cambia de volumen por mucha arcilla que contenga. Un suelo caolinítico con el mismo porcentaje de arcilla no se agrieta ni se hincha igual, y por eso los criterios importados de otro sitio con «suelo arcilloso» no se pueden trasladar sin saber qué mineral manda."
+    },
+    {
+      "id": "cuando-se-mide",
+      "tipo": "verdadero_falso",
+      "enunciado": "En una arcilla expansiva conviene medir la infiltración al final de la seca, cuando el terreno está agrietado, porque así se mide la capacidad máxima real del suelo para tragar agua.",
+      "respuesta": false,
+      "explicacion": "Falso, y es uno de los errores más caros del módulo. Con el suelo agrietado el agua no infiltra: se cae por las grietas por flujo preferencial, atravesando el perfil por unos pocos conductos grandes sin mojar la masa de tierra que hay entre ellos. Una prueba hecha ese día puede dar un valor decenas de veces superior al que ese mismo punto tendrá en enero, y no es ruido de medición: es medir otro estado del sistema. El valor que sirve para diseñar drenaje es el del suelo hinchado, en plena temporada y tras varios días seguidos de agua, cuando las láminas ya absorbieron agua y las grietas se cerraron por dentro. Es el momento más incómodo del año para andar con una pala y el único que describe el riesgo real."
+    },
+    {
+      "id": "por-que-no-se-va-el-agua",
+      "tipo": "opcion_multiple",
+      "enunciado": "Según la ley de Darcy, ¿por qué el agua se queda encima de este suelo aunque se le abra una salida?",
+      "opciones": [
+        "Porque la conductividad hidráulica saturada de una arcilla hinchada es órdenes de magnitud menor que la intensidad de la lluvia que cae encima",
+        "Porque el caudal que atraviesa el suelo es el producto de la conductividad, la sección y el gradiente, y aquí el factor que falla es la conductividad del material",
+        "Porque un chubasco de temporada puede descargar del orden de 40 a 80 mm/h y el suelo hinchado admite menos de 3 mm/h, así que escurre casi todo lo que recibe",
+        "Porque el gradiente hidráulico es demasiado pequeño, y basta con cavar la zanja más honda para aumentar el desnivel y forzar la salida del agua"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras son la misma explicación en distintos niveles: la conductividad es el factor limitante, es el término de Darcy que falla, y la comparación numérica entre lo que cae y lo que el suelo admite lo hace evidente. La cuarta es la intuición de plomería que la lección desmonta. En la analogía eléctrica, la conductividad es el inverso de la resistividad y el gradiente es la tensión: si tu problema es una resistividad diez mil veces mayor de lo normal, subir la tensión no te salva. Puedes aumentar el desnivel cuanto quieras que el caudal a través de la arcilla seguirá siendo casi cero, igual que nadie intenta pasar cien amperios por un aislante subiendo el voltaje. Al suelo no le falta salida, le falta velocidad para llegar a ninguna salida."
+    },
+    {
+      "id": "dos-hoyos",
+      "tipo": "opcion_multiple",
+      "enunciado": "Se cavan dos hoyos en el mismo punto tras varios días de lluvia, uno de 40 cm y otro de 90 cm. El somero se llena de agua y el profundo queda seco. ¿Qué se puede concluir y qué corresponde hacer?",
+      "opciones": [
+        "Hay un freático colgado: el agua está atrapada sobre una capa mucho menos permeable y no tiene nada que ver con el agua profunda del subsuelo",
+        "La corrección pasa por subir la zona de raíces por encima de esa lámina saturada y por sacar el agua que corre en superficie",
+        "La capa lenta puede ser la arcilla hinchada, un estrato natural más pesado o una suela de labor fabricada por la propia herramienta",
+        "El nivel freático de la zona está alto, así que la única salida es cultivo tolerante, lecho muy elevado o producción en contenedor"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras describen el diagnóstico de freático colgado y su tratamiento. La cuarta corresponde al otro resultado posible de la misma prueba, y por eso es un distractor plausible: si el nivel freático real estuviera alto se habrían llenado los dos hoyos hasta una altura parecida, no solo el somero. Que el hoyo profundo esté seco es precisamente la prueba de que el agua no viene de abajo sino que está detenida sobre una capa lenta a poca profundidad. Confundir los dos casos lleva a gastar en obra grande donde bastaba con levantar la cama, o al revés, a construir camas donde el problema es un freático regional que ninguna obra pequeña resuelve."
+    },
+    {
+      "id": "hoyo-relleno",
+      "tipo": "verdadero_falso",
+      "enunciado": "En una arcilla pesada, cavar un hoyo grande para el frutal y rellenarlo con compost, arena y tierra buena mejora el drenaje en torno a la planta y le da un mejor arranque.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error más caro del sitio precisamente porque se parece a una buena práctica. Lo construido no es un hoyo: es un recipiente de paredes impermeables con material poroso dentro. El agua del entorno entra porque encuentra menos resistencia que en la arcilla circundante y, una vez dentro, no tiene por dónde salir, porque salir exige atravesar la misma arcilla. Es el efecto maceta, y funciona como una cola sin consumidor: agrandar el hoyo es agrandar la cola. Su firma es inconfundible y engañosa: el árbol crece espléndido el primer año y se muere en la segunda o tercera temporada de lluvias, cuando ya costó dos años. La corrección es gratuita: el frutal va sobre montículo o camellón con el cuello por encima del terreno, y si hay que cavar, el hoyo se hace ancho y poco profundo y se rellena con la tierra del sitio mejorada, no con un material distinto que fabrique un escalón de permeabilidad."
+    },
+    {
+      "id": "que-drenes-funcionan",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué en suelo pesado la herramienta principal es el dren a cielo abierto y no el drenaje enterrado por tubería?",
+      "opciones": [
+        "Porque el dren abierto no drena el perfil: recoge lo que ya está corriendo por encima, que aquí es casi toda el agua sobrante",
+        "Porque en las ecuaciones clásicas de espaciamiento la separación entre drenes crece aproximadamente con la raíz cuadrada de la conductividad, así que dividir K por cien acerca los drenes unas diez veces",
+        "Porque el dren abierto se inspecciona a simple vista, se limpia con pala y tolera el movimiento anual de una arcilla expansiva, mientras que una obra rígida se fisura",
+        "Porque la tubería enterrada, si se instala con suficiente pendiente y a bastante profundidad, extrae el agua del interior de la arcilla con la misma eficacia que en un suelo franco"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras cubren las tres razones: qué agua maneja realmente cada dren, la aritmética de espaciamiento que dispara el costo en arcilla, y la robustez frente al movimiento del suelo y frente al mantenimiento. La cuarta es falsa y repite el error de fondo: ningún dren puede extraer agua más rápido de lo que la arcilla se la entrega, y esa entrega la fija la conductividad del material, no la pendiente ni la profundidad del tubo. Por eso el drenaje enterrado, que en un suelo franco iría con los tubos separados decenas de metros, en arcilla hinchada exigiría separaciones de pocos metros para funcionar, y el costo por superficie se vuelve inviable."
+    },
+    {
+      "id": "plan-de-drenaje",
+      "tipo": "abierta",
+      "enunciado": "Un vecino de Prados del Sur tiene un patio de unos 300 m² donde, cada temporada de lluvias, se le forma una lámina de agua que dura días junto al fondo del terreno. Ya perdió dos frutales injertados que había plantado en hoyos rellenos de compost, y este año quiere cavar «una zanja bien honda hasta que llegue a tierra que trague». Explícale qué está pasando en su suelo, qué debe medir antes de cavar nada, qué obras tienen sentido y cuáles no, y qué le dirías sobre a dónde va el agua que saque.",
+      "respuestaModelo": "Lo primero es nombrar el mecanismo, porque de él salen todas las decisiones. El suelo de la zona está dominado por arcillas 2:1: minerales en forma de lámina cuya unión entre naipes no es un enlace fuerte sino un puente flojo de cationes. El agua entra entre las láminas y las separa, así que el suelo aumenta de volumen al humedecerse y lo pierde al secarse. Eso explica las dos caras del año: en agosto el terreno se abre en grietas de desecación, y en enero, con las láminas ya hinchadas, esas grietas se cierran por dentro y el suelo se comporta casi como un pavimento. No son dos problemas sino el mismo mineral, y su permeabilidad no es fija: depende del agua que ya tiene dentro.\n\nDe ahí se deduce por qué la lámina de agua dura días. La ley de Darcy dice que el caudal que atraviesa un suelo es el producto de la conductividad del material, la sección y el gradiente. En una arcilla hinchada la conductividad es órdenes de magnitud menor que la intensidad de la lluvia: un chubasco descarga del orden de 40 a 80 milímetros por hora y el suelo admite menos de 3, así que escurre casi todo. Al agua no le falta salida, le falta velocidad para llegar a ninguna salida. Por eso cavar hondo está condenado: es como subir el voltaje para pasar corriente por un aislante.\n\nAntes de mover tierra le pediría dos cosas. La primera es el diagnóstico de dos hoyos, en plena temporada y tras varios días de agua: medido en la seca, con el terreno agrietado, el número sale decenas de veces mayor que el verdadero, porque el agua no infiltra, se cae por las grietas. En el punto que se encharca cava un hoyo de unos 40 cm y otro de al menos 80 a 100 cm, los tapa con una tabla y los mira a las pocas horas y al día siguiente. Si el somero tiene agua y el profundo no, es un freático colgado: el agua está detenida sobre una capa lenta —arcilla hinchada, un estrato más pesado o una suela de labor—. Si los dos se llenan hasta una altura parecida, el nivel freático real está alto y no hay obra pequeña que valga. La segunda es mirar de dónde le llega el agua: en un terreno periurbano buena parte de la cuenca de aporte es calle de tierra, cuneta y patio ajeno, que entregan casi todo lo que reciben.\n\nCon eso en la mano, las obras que sirven son de superficie. La de mejor retorno es un dren interceptor en el borde alto, que corta lo que viene de afuera antes de que se reparta por el patio. Dentro del terreno, un dren a cielo abierto con taludes tendidos y pendiente pequeña pero real, que no drena el perfil sino que recoge lo que ya corre por encima. Y para el cultivo, la solución de fondo no es bajar el agua sino subir la planta: camas altas o camellones con canal propio, con la altura leída del propio perfil —la profundidad a la que aparece la gleyzación o la altura que alcanzó el agua en el hoyo somero, más un margen por asentamiento—, con materia orgánica dentro y sin pisarlos nunca.\n\nSobre los frutales hay que ser explícito, porque ya le costaron dos plantas. No murieron de sed ni de plaga: murieron por efecto maceta. El hoyo relleno de compost dentro de la arcilla es un recipiente de paredes impermeables con material poroso dentro; el agua del entorno entra porque encuentra menos resistencia y no puede salir, y agrandar el hoyo es agrandar el problema. De ahora en adelante, frutal sobre montículo o camellón, con el cuello por encima del terreno, hoyo ancho y poco profundo, relleno con la tierra del sitio mejorada. Qué portainjerto tolera mal drenaje en Santa Cruz se pregunta a un vivero serio de la zona, al CIAT o al INIAF.\n\nTambién conviene decirle qué no hacer. Nada de zanja de grava sin una salida real más baja que ella: sin salida es una piscina lineal, y se colmata. Nada de echar arena para aligerar la arcilla, porque por debajo de la proporción en que los granos se tocan y forman esqueleto la arcilla rellena los huecos y sale un material más duro que el original. Y nada de labrar en húmedo, que fabrica una suela de labor bajo la herramienta: el límite se comprueba rodando tierra entre las palmas hasta formar un cilindro del grosor de un fósforo, y si se forma entero sin agrietarse, hoy no se toca.\n\nQueda lo que más conflictos genera: a dónde va el agua. Un dren sin destino no resuelve nada, se lo pasa al vecino. Toda zanja tiene que terminar en un punto de descarga elegido de antemano, y lo que se descargue fuera de la propiedad se consulta antes con la autoridad competente del municipio o la gobernación. Hay además una razón sanitaria: el dengue es endémico en Santa Cruz y el mosquito vector cría en agua estancada, así que un dren sin pendiente no es un drenaje deficiente, es un criadero lineal; todo lo que retenga agua debe vaciarse en pocos días, y las medidas de control se consultan con la autoridad sanitaria local. Y que nada dependa de una bomba: los cortes llegan con las tormentas.",
+      "criterios": [
+        "Identifica el mineral como arcilla 2:1 y explica que el agua entra entre las láminas y las separa, produciendo cambio de volumen",
+        "Conecta el agrietamiento de la seca y el sellado de la temporada como dos caras del mismo mecanismo, no como dos problemas distintos",
+        "Enuncia que la permeabilidad de este suelo depende del agua que ya tiene dentro, y no es una propiedad fija",
+        "Usa la ley de Darcy o su equivalente para explicar que el factor limitante es la conductividad, no la falta de salida ni el desnivel",
+        "Rechaza explícitamente la zanja honda con el argumento de que aumentar el gradiente no compensa una conductividad órdenes de magnitud menor",
+        "Exige medir antes de cavar y especifica el diagnóstico de dos hoyos con las dos profundidades y la interpretación de cada resultado",
+        "Advierte que la medición debe hacerse con el suelo hinchado, en temporada, y explica por qué medir en seco da un número falso",
+        "Menciona la cuenca de aporte externa —calle, cuneta, patio ajeno— y propone un dren interceptor en el borde alto",
+        "Propone drenes de superficie y camas altas o camellones, con la altura leída del perfil (gleyzación o altura del agua en el hoyo somero)",
+        "Explica la muerte de los frutales por efecto maceta y da la regla correcta de plantación sobre montículo con hoyo ancho y poco profundo",
+        "Enumera al menos tres cosas que no funcionan: grava sin salida, arena para aligerar, labrar en húmedo, o depender de una bomba",
+        "Cierra con el destino del agua descargada, remitiendo a la autoridad competente, y menciona el criterio sanitario de agua estancada y dengue"
+      ],
+      "explicacion": "La respuesta completa recorre el camino de la lección en orden: primero el mecanismo mineral, luego la ley que explica por qué el agua no se va, después el diagnóstico que separa freático colgado de nivel freático alto, y solo entonces las obras. El error que se busca detectar es saltar directamente a la obra —cavar más hondo— sin haber medido y sin haber entendido que el cuello de botella es la conductividad del material. También se evalúa la honestidad: no inventar valores de conductividad, alturas de cama por norma, normativa ni plazos, y remitir explícitamente al vivero local, al CIAT o al INIAF para el portainjerto, y a la autoridad competente para la descarga de agua fuera de la propiedad."
+    }
+  ]
+}

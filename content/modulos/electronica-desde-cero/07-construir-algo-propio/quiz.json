@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "buen-primer-proyecto",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué condiciones hacen que un primer proyecto de electrónica sirva de verdad?",
+      "opciones": [
+        "Resuelve un problema que ya tuviste y cabe en una tarde, porque si necesita tres sábados el segundo sábado no llega nunca.",
+        "Se prueba sin ambigüedad —suena o no suena— y trabaja a baja tensión, así que un error cuesta un LED y no una mano.",
+        "Multiplica: es una herramienta, de modo que hace más fácil todo lo que repares después.",
+        "Cuanto más completo sea desde el principio, mejor, porque así no hay que rehacerlo cuando se le quiera agregar algo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Empezar por lo completo es exactamente la forma de no terminar nunca. Un proyecto grande tiene muchas piezas que pueden fallar a la vez, y cuando no funciona hay diez sospechosos en lugar de uno; a los dos meses queda una caja con cables y nada andando. La regla es la contraria: una versión mínima que alguien use esta semana, y después una novedad por versión, para que cuando algo falle la causa sea siempre la última cosa que agregaste."
+    },
+    {
+      "id": "decisiones-de-diseno",
+      "tipo": "opcion_multiple",
+      "enunciado": "En el probador de continuidad, ¿qué decisiones de diseño están tomadas a propósito y por qué?",
+      "opciones": [
+        "El zumbador es activo, es decir que trae su propio oscilador adentro y suena con tensión continua aplicada directa.",
+        "La pila es de 3 V porque no alcanza para hacer daño ni casi para arruinar un componente, y cuando equivocarse sale barato se prueba más.",
+        "No lleva interruptor porque las puntas son el interruptor: separadas dejan el circuito abierto y el consumo en vacío es cero.",
+        "El cable es rígido de una sola hebra, porque conduce mejor que el flexible multifilar y se dobla igual."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El cable rígido es justo lo que no hay que poner. La conducción es prácticamente la misma; lo que cambia es la fatiga: un conductor de una sola hebra gruesa se endurece con cada doblez y termina partiéndose por dentro del forro, que es la avería más común de todas. Unas puntas de prueba se van a doblar mil veces, así que se usa cable flexible de muchos hilos finos, del que sale de cualquier cargador descartado."
+    },
+    {
+      "id": "circuito-incompleto",
+      "tipo": "verdadero_falso",
+      "enunciado": "El probador es un circuito en serie al que le falta un tramo a propósito, y el objeto que se está midiendo es la pieza que lo completa.",
+      "respuesta": true,
+      "explicacion": "Correcto, y entenderlo así explica todo el aparato de una vez. En serie pasa la misma corriente por todos los elementos y basta que uno se abra para que se detenga todo; eso, que en un aparato normal es un defecto, aquí es el principio de funcionamiento. Entre la punta A y la punta B hay un hueco, y cada vez que apoyas las puntas sobre algo le pasas ese algo como argumento a la función: si conduce, el lazo se cierra y suena. El aparato bajo prueba no es externo al circuito, es la pieza que falta."
+    },
+    {
+      "id": "resistencia-del-led",
+      "tipo": "opcion_multiple",
+      "enunciado": "Le agregas un LED rojo al probador, alimentado con la misma pila de 3 V. ¿Qué es correcto?",
+      "opciones": [
+        "Hace falta una resistencia en serie, porque el LED no limita su propia corriente: la fija lo que esté en serie con él.",
+        "La caída de tensión del LED se queda casi clavada en un valor que depende del color, alrededor de 2 V en los rojos.",
+        "Con 10 mA deseados la cuenta da (3 − 2) / 0,01 = 100 ohmios, y si ese valor no se fabrica se adopta el comercial más cercano.",
+        "Ante la duda conviene errar hacia abajo, poniendo menos resistencia, para que el LED se vea bien desde lejos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Errar hacia abajo es errar hacia el lado caro. Menos resistencia es más corriente, y como la tensión del LED está casi clavada, toda la tensión que sobra la absorbe la resistencia: si la achicas, la corriente se dispara y la unión del LED se quema, a veces enseguida y a veces en semanas. Hacia arriba el error solo cuesta brillo: un LED más tenue pero vivo. Saber qué dirección del error es la barata es lo que separa a quien calcula de quien copia un número de internet."
+    },
+    {
+      "id": "probador-que-siempre-suena",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un probador que suena siempre, incluso con las puntas separadas, es una avería menos grave que uno que no suena nunca, porque al menos da señal de vida.",
+      "respuesta": false,
+      "explicacion": "Falso, y es al revés: el que suena siempre es el peor de los dos. El que no suena nunca se delata solo, porque a los diez segundos de trabajar te das cuenta de que algo pasa. El que suena siempre no se delata: te va a decir que todos los cables están sanos, incluido el que está partido, y con ese dato falso vas a cambiar una bomba entera buscando una avería que estaba en la extensión. Es un fallo silencioso, y por eso la verificación contra dos muestras conocidas incluye siempre la prueba del silencio con las puntas separadas, no solo la del pitido con las puntas tocándose."
+    },
+    {
+      "id": "limites-y-seguridad",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es cierto sobre los límites y el uso seguro del probador de continuidad?",
+      "opciones": [
+        "Se usa únicamente sobre aparatos desconectados y descargados: inyecta su propia corriente y supone que es la única fuente del circuito.",
+        "No dice cuánto: un cable con tres hilillos vivos de veinte suena igual que uno intacto y después falla bajo carga.",
+        "No prueba aislamiento: que no suene contra la carcasa no garantiza que el aislante aguante la tensión de trabajo.",
+        "Dentro de una placa con semiconductores es donde mejor trabaja, porque las pistas de cobre le dan caminos limpios."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Dentro de una placa es justamente donde peor trabaja. La placa ofrece caminos en paralelo por todas partes —otras pistas, otros componentes, uniones de semiconductores que conducen un poco en un sentido— y el resultado es que todo parece conectado con todo: el pitido deja de significar algo. Para medir una pieza montada hay que sacarla del circuito o desoldarle una pata, de modo que quede sola frente a las puntas."
+    },
+    {
+      "id": "puentes-a-14-y-17",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué ideas de esta lección se enlazan correctamente con la automatización del módulo 38 y la energía solar del 17?",
+      "opciones": [
+        "Entre el microcontrolador y la potencia va un relé u optoacoplador que hace aislamiento galvánico: cruza el dato, no cruza la energía.",
+        "El diodo de rueda libre en paralelo con una válvula solenoide existe para dar salida al pico de tensión que genera la bobina al cortarle la corriente.",
+        "El fallo seguro se decide con un cable y no con un programa, porque un programa no se ejecuta sin energía y un contacto sí tiene estado.",
+        "En energía solar todo es baja tensión, así que allí no hace falta preocuparse por arcos ni por corrientes de cortocircuito."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Baja tensión no significa inofensivo. Varios paneles conectados en serie llegan a cientos de voltios en continua, y la corriente continua no pasa por cero como la alterna, así que un arco no se apaga solo: por eso los interruptores y fusibles de un sistema solar tienen que ser específicos para continua y no valen los de casa. Y un banco de baterías, aunque sea de 12 V, entrega corrientes de cortocircuito capaces de fundir una llave o un anillo en un instante."
+    },
+    {
+      "id": "taller-del-probador",
+      "tipo": "abierta",
+      "enunciado": "Un vecino del barrio nunca tocó un aparato por dentro y quiere construir su probador de continuidad este sábado, con piezas rescatadas y sin gastar casi nada. Explicá cómo lo guiarías: qué piezas elegirías y por qué esas, en qué orden armarían, cómo comprobarían que el instrumento no miente antes de creerle, qué reglas de uso y de seguridad tendría que aprender de memoria, y cómo pasaría de ahí al siguiente proyecto y al taller donde él le enseñe a otro.",
+      "respuestaModelo": "Antes de tocar nada escribimos juntos la lista de materiales, con cantidad y característica de cada pieza, porque es lo que permite que otro construya el mismo aparato sin nosotros al lado y lo que evita descubrir a media tarde que falta lo único que no había en casa. Cada elección se justifica. Pila de 3 V, dos AA en portapilas: alcanzan para el zumbador y no alcanzan para hacerle daño a nadie ni casi para arruinar un componente por un error de conexión, y cuando equivocarse sale barato se prueba más, que es exactamente lo que necesita alguien que empieza. Zumbador activo de continua, de los que suenan con tensión aplicada directa porque traen su propio oscilador adentro; el pasivo necesita una señal que suba y baje muchas veces por segundo y conectado a una pila hace un clic y se calla, así que si el vecino agarra uno pasivo va a creer que le vendieron algo roto. Cable flexible multifilar, nunca rígido, porque unas puntas se doblan mil veces y el conductor de una sola hebra se endurece y parte por dentro del forro. Dos puntas rígidas y finas: rígidas para llegar al fondo de un borne, finas para no puentear contactos vecinos. Dos cocodrilos, que convierten un trabajo de dos personas en uno de una. Y una caja, que puede ser un frasco de pastillas. Casi todo sale de la caja de aparatos muertos: del microondas quemado, zumbador, cable y portafusibles; de la computadora vieja, resistencias, LED y el parlantito. Con las dos excepciones dichas antes de empezar y en voz alta: microondas y televisores de tubo no se abren nunca, porque llevan condensadores de alta tensión que quedan cargados días después de desenchufarlos.\n\nEl circuito se lo explico como un lazo en serie al que le falta un pedazo a propósito: positivo de la pila, zumbador, cable, punta A, hueco, punta B, negativo. Ese hueco lo completa el objeto que se mide, y si conduce, el lazo se cierra y suena. Si le agregamos LED, hay que calcular la resistencia limitadora, porque el LED no limita su propia corriente: con 3 V de pila, unos 2 V clavados en un LED rojo y 10 mA deseados, salen 100 ohmios, y ante la duda se va hacia arriba, que es el error barato.\n\nEl armado se hace probando en cada etapa y nunca al final, porque así el sospechoso es siempre uno: lo último que hicimos. Primero al aire, con los empalmes retorcidos con la mano, para validar el concepto en diez minutos. Después la prueba de humo: quedarse mirando diez segundos si algo cambia de color, huele a quemado o se calienta, sabiendo que en un circuito de 3 V nada debería calentarse. Después la verificación con muestras conocidas. Recién entonces lo permanente, soldado o con empalme bien retorcido y aislado, con cada unión mecánicamente firme antes de aislarla, porque la cinta no sujeta, solo aísla. Después el alivio de tracción, un nudo por dentro o el cable pasado por dos agujeros, para que un tirón lo reciba la caja y no la unión eléctrica. Y al final la caja, la etiqueta con su nombre y la fecha, y adentro la lista de materiales y el esquema dibujados a mano.\n\nLa verificación es innegociable y son dos pruebas, no una. Puntas tocándose: tiene que sonar; si no suena, el problema está en el aparato —pila gastada, empalme suelto, zumbador al revés, que se descarta invirtiendo sus dos cables porque es polarizado—. Puntas bien separadas: tiene que haber silencio. La segunda importa más, porque un probador que suena siempre es la peor avería posible: nunca avisa de que está roto y te hace cambiar una bomba sana. El que no verifica el suyo no se lo lleva del taller.\n\nDe memoria, tres reglas. Se usa solo sobre aparatos desconectados y descargados, y el orden es desconectar, verificar ausencia de tensión con el multímetro en voltios —nunca con el probador—, descargar lo que corresponda y recién medir. El pitido dice que hay camino, no que el cable aguante la corriente de trabajo. Y guardarlo con las puntas tocando metal lo deja sonando toda la noche y amanece con la pila muerta.\n\nEl lunes ya tiene trabajo: revisar las extensiones conductor por conductor y, si las dos suenan, dejar las puntas con cocodrilos y flexionar el cable a lo largo escuchando, que es un fallo intermitente hecho audible y aparece casi siempre en los cinco centímetros que siguen al enchufe. Después viene el siguiente proyecto, que es el avisador de nivel del tanque: el mismo circuito de hoy, con dos alambres colgados a la altura de llenado y el agua cerrando el lazo, con la nota honesta de que en continua los electrodos se corroen y una boya mecánica dura años. Y el taller siguiente lo da él, con la estructura de mostrar, hacer juntos y dejar hacer solo: no hace falta ser experto, hace falta ir un escalón adelante y haber armado uno con las manos.",
+      "criterios": [
+        "Empieza por escribir la lista de materiales y justifica pieza por pieza, no como trámite sino como condición para que otro lo reproduzca.",
+        "Explica por qué el zumbador tiene que ser activo y qué pasa si se usa uno pasivo con una pila.",
+        "Justifica la pila de 3 V por seguridad y por abaratar el error, y el cable flexible frente al rígido por fatiga.",
+        "Menciona el rescate de piezas de aparatos muertos y advierte que microondas y televisores de tubo no se abren nunca.",
+        "Describe el circuito como lazo en serie deliberadamente incompleto que cierra el objeto medido.",
+        "Calcula la resistencia limitadora del LED con la ley de Ohm y dice hacia qué lado conviene errar.",
+        "Ordena el armado con prueba en cada etapa e incluye la prueba de humo antes de nada permanente.",
+        "Incluye el alivio de tracción y la idea de que la unión eléctrica nunca aguanta la fuerza mecánica.",
+        "Verifica con las dos muestras conocidas y explica por qué la prueba del silencio importa más que la del pitido.",
+        "Enuncia la regla de usarlo solo sobre circuitos desconectados y descargados, con el orden de comprobación de ausencia de tensión.",
+        "Da al menos un uso concreto e inmediato, como la extensión probada flexionándola con cocodrilos y el punto típico de corte junto al enchufe.",
+        "Cierra con el siguiente proyecto reconociendo que es el mismo circuito, y con el vecino dando el taller siguiente."
+      ],
+      "explicacion": "La respuesta buena no es la que enumera piezas, sino la que justifica cada una y ordena el trabajo para que el error salga barato: baja tensión, prueba en cada etapa, verificación contra algo conocido antes de creerle al instrumento y documentación adentro de la caja. Lo que más se olvida es la prueba del silencio con las puntas separadas, que es la única que detecta la avería peligrosa —el probador que siempre suena— y la que evita cambiar una bomba sana. Y lo que convierte el ejercicio en proyecto comunitario y no en pasatiempo es el último tramo: el vecino se lleva un aparato etiquetado, con su esquema dibujado, y el sábado siguiente le enseña a otro."
+    }
+  ]
+}

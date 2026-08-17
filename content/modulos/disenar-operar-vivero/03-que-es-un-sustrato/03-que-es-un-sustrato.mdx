@@ -1,0 +1,278 @@
+Hay una frase que se repite en todo el curso y que hasta ahora no se ha justificado del todo: **la
+tierra del terreno no sirve para llenar envases.**
+
+Apareció en el módulo de semillas, en el de esquejes y en el de división. Siempre como una regla que
+había que aceptar. Esta lección es donde se explica por qué, y la razón resulta ser bastante más
+interesante que «se compacta».
+
+Porque el problema de fondo no es la tierra. **Es el envase.**
+
+## Un sustrato es un medio diseñado
+
+<Diagrama
+  src="cuatro-tareas.webp"
+  alt="Cuatro paneles cuadrados en fila, cada uno con la misma sección de una bolsa de vivero llena de sustrato granular con una plantita, resaltando algo distinto. En el primero, las raíces agarran el sustrato y la planta se mantiene erguida, rotulado SOSTENER LA PLANTA. En el segundo, gotas azul pálido retenidas entre las partículas, rotulado GUARDAR AGUA. En el tercero, huecos de aire blancos entre las partículas con flechas entrando en ellos, rotulado DEJAR ENTRAR AIRE. En el cuarto, puntitos terracota adheridos a la superficie de las partículas cerca de las raíces, rotulado RETENER NUTRIENTES. Arriba, LAS CUATRO TAREAS DE UN SUSTRATO."
+  pie="Cuatro tareas, y dos de ellas —guardar agua y dejar entrar aire— compiten por el mismo espacio."
+/>
+
+Un <Termino slug="sustrato">sustrato</Termino> es el material que va dentro del envase. No tiene por
+qué parecerse a la tierra ni contenerla: es un medio **fabricado a propósito** para hacer cuatro
+cosas.
+
+**Sostener la planta**, para que no se caiga y para que las raíces tengan dónde agarrarse.
+
+**Guardar agua**, en la película que queda adherida a las partículas y en los poros más finos.
+
+**Dejar entrar aire**, porque las raíces respiran. Esto no es un detalle: una raíz sin oxígeno muere
+en horas, y es la causa real de casi todas las plantas «ahogadas» de vivero.
+
+**Retener nutrientes**, para que el fertilizante que aplicas no se vaya con el primer riego.
+
+<Advertencia>
+Las cuatro tareas no son independientes. **Guardar agua y dejar entrar aire compiten directamente por
+el mismo hueco**: el espacio poroso que no tiene agua tiene aire, y viceversa.
+
+Todo el diseño de un sustrato es resolver esa tensión. No existe el sustrato que retenga mucha agua y
+además tenga mucho aire; existe el que reparte bien entre las dos cosas para la etapa concreta en que
+lo vas a usar.
+</Advertencia>
+
+<Analogia>
+Es una decisión de *trade-off* de las de siempre, del mismo tipo que memoria contra disco o latencia
+contra consistencia. No hay una configuración universalmente buena: hay una configuración adecuada
+para una carga concreta.
+
+Un almácigo y un frutal en bolsa de veinte litros son cargas distintas, y por eso llevan sustratos
+distintos. Usar la misma mezcla para todo es como usar la misma configuración de servidor para una
+base de datos y para un servidor de archivos.
+</Analogia>
+
+## La física del envase: la capa mojada del fondo
+
+<Diagrama
+  src="agua-colgante.webp"
+  alt="Dos envases dibujados en sección uno al lado del otro, ambos llenos exactamente del mismo sustrato granular moteado y ambos ya drenados. El de la izquierda es alto y estrecho, como una manga profunda; el de la derecha es bajo y ancho, como una bandeja, con el mismo volumen total. En el fondo de cada uno hay una banda azul pálido de sustrato saturado, y ambas bandas están dibujadas exactamente del mismo grosor, con una pequeña llave de cota terracota al lado de cada una que muestra que los dos grosores son idénticos. En el envase alto la banda azul ocupa solo una fracción pequeña de la altura y casi todo lo de arriba está seco; en el bajo, la misma banda ocupa casi todo el envase y solo deja una capa seca fina arriba. Rotulados ENVASE ALTO, POCA ZONA MOJADA y ENVASE BAJO, CASI TODO MOJADO. Arriba, LA CAPA MOJADA DEL FONDO SIEMPRE MIDE LO MISMO."
+  pie="El mismo sustrato, la misma capa saturada. Lo único que cambia es qué fracción del envase se lleva."
+/>
+
+Este es el concepto central de la lección, y probablemente el más contraintuitivo de todo el módulo.
+
+Cuando riegas un envase y lo dejas drenar, el agua **no se va toda.** Queda una capa saturada en el
+fondo, encharcada, sin aire. Se llama <Termino slug="agua-colgante">agua colgante</Termino>, y existe
+por una razón física que no tiene que ver con el material del envase ni con los agujeros de drenaje.
+
+El agua se sostiene en el sustrato por tensión superficial, la misma fuerza que hace que una gota se
+quede pegada a un vidrio. Esa fuerza tiene un límite: puede sostener una columna de agua de cierta
+altura, y no más. Mientras el peso de la columna sea menor que lo que la tensión aguanta, el agua no
+cae. Cuando lo supera, cae.
+
+**En el suelo abierto esto no se nota**, porque debajo hay más suelo y el agua sigue bajando hasta que
+la tensión y la gravedad se equilibran a metros de profundidad.
+
+**En un envase hay un fondo**, y ahí la columna se corta. El resultado es que en el fondo queda una
+franja permanentemente saturada.
+
+<Dato>
+Y aquí está lo que casi nadie sabe: **el grosor de esa capa saturada no depende del tamaño ni de la
+forma del envase.** Depende únicamente del sustrato: de qué tamaño tienen sus partículas y sus poros.
+
+El mismo sustrato deja la misma capa mojada al fondo de una maceta de veinte centímetros que al fondo
+de una bandeja de cinco. La diferencia es que en la maceta esa capa es una fracción pequeña del
+volumen, y en la bandeja de cinco centímetros **puede ser casi todo.**
+</Dato>
+
+De ahí salen tres consecuencias que explican fracasos que parecían misteriosos:
+
+**Los envases bajos y anchos se encharcan mucho más que los altos y estrechos**, con el mismo sustrato
+y el mismo riego. No es que se riegue peor: es geometría.
+
+**Para envases bajos hace falta un sustrato más grueso**, con partículas mayores, porque partículas
+grandes dejan poros grandes, poros grandes sostienen menos columna de agua, y la capa saturada
+resultante es más delgada. Por eso las bandejas de almácigo llevan mezclas más aireadas que las bolsas
+grandes.
+
+**Poner una capa de grava en el fondo del envase para «mejorar el drenaje» empeora las cosas.** Es un
+consejo que circula por todas partes y es falso: el agua no cruza al material grueso hasta que la capa
+de arriba está saturada, así que la grava no drena nada y encima te roba volumen útil. Lo único que
+consigue es subir la capa mojada.
+
+<Analogia>
+La capa saturada es **latencia fija del sistema**. No la eliminas: viene con el medio que elegiste, y
+lo único que puedes hacer es dimensionar alrededor de ella.
+
+Y la grava al fondo es la optimización que todo el mundo repite porque suena razonable, que nadie ha
+medido nunca, y que en realidad hace el sistema más lento.
+</Analogia>
+
+## Por qué la tierra del terreno falla
+
+<Diagrama
+  src="tierra-no-sirve.webp"
+  alt="Dos paneles con la misma tierra oscura en dos situaciones. A la izquierda, una sección de suelo abierto cuyo perfil sigue bajando más allá del borde inferior del panel, con una planta creciendo y flechas azules que bajan y se reparten libremente por el suelo, con huecos de aire y galerías de lombriz visibles, rotulado EN EL SUELO, EL AGUA SIGUE BAJANDO. A la derecha, marcado con una cruz roja, la misma tierra apretada dentro de una bolsa de vivero negra de fondo plano, dibujada densa y despegada de las paredes, con una planta caída y flechas azules que bajan y se detienen en seco en el fondo plano, donde hay un charco azul, rotulado EN UN ENVASE, EL AGUA SE QUEDA. Arriba, LA TIERRA DEL TERRENO NO SIRVE EN UN ENVASE."
+  pie="La misma tierra que sostiene un bosque mata un plantín, y no porque haya cambiado la tierra."
+/>
+
+Ahora la regla se explica sola, y en cuatro puntos.
+
+**Uno: la capa saturada es enorme.** La tierra, sobre todo la arcillosa de la llanura, tiene
+partículas finísimas y por tanto poros finísimos. Poros finos sostienen columnas de agua altas, así
+que la capa saturada del fondo es gruesa. En una bolsa mediana llena de tierra arcillosa, esa capa
+puede ser buena parte del envase, y ahí abajo las raíces no respiran.
+
+**Dos: se compacta.** En el suelo, la estructura la mantienen las raíces, las lombrices, los hongos y
+los ciclos de humedad. Dentro de un envase no hay nada de eso; hay riego a presión y manipulación. La
+tierra se asienta, los poros grandes desaparecen, y lo que era un sustrato aceptable el primer mes se
+convierte en un ladrillo el tercero.
+
+**Tres: pesa.** Un envase lleno de tierra húmeda pesa el doble o el triple que uno con mezcla ligera.
+Eso se paga en cada movimiento, en cada carga y en cada venta.
+
+**Cuatro: viene con pasajeros.** Hongos del suelo —incluidos los del *damping-off* que viste en el
+módulo de semillas—, nematodos, insectos y, sobre todo, **semillas de maleza**. Cada bolsa llena de
+tierra del terreno es un almácigo de malezas al que además le has puesto riego y fertilizante.
+
+<Advertencia>
+Esto no significa que la tierra sea mala. **En el suelo, esa misma tierra funciona perfectamente**,
+porque el perfil continúa hacia abajo y la estructura la mantiene la vida del suelo.
+
+El error no es usar tierra: es **meterla en un envase**, que es un entorno con condiciones de contorno
+radicalmente distintas. Es exactamente el mismo tipo de error que llevar una configuración que
+funciona en un servidor dedicado a un contenedor con límites de memoria.
+</Advertencia>
+
+## Las propiedades que sí importan
+
+Cuatro números describen un sustrato. No hace falta medirlos en laboratorio, pero sí saber qué son
+para poder razonar sobre una mezcla.
+
+**Porosidad total.** Qué fracción del volumen es hueco. En un buen sustrato de vivero ronda el setenta
+u ochenta por ciento: la mayor parte del envase es espacio vacío, y eso está bien.
+
+**Porosidad de aireación.** Qué fracción del volumen sigue llena de aire **después de regar y drenar**.
+Es el número que decide si la raíz respira. Como regla práctica, quieres al menos un **quince por
+ciento** en la mayoría de las etapas, y más en enraizamiento.
+
+**Agua disponible.** Cuánta agua queda retenida que la planta pueda de verdad absorber. Un sustrato
+puede retener mucha agua y que casi nada sea aprovechable si los poros son tan finos que la planta no
+consigue arrancarla.
+
+Y la <Termino slug="densidad-aparente">densidad aparente</Termino> es el peso por unidad de volumen
+del sustrato ya asentado. Determina cuánto pesa cada envase, y también cuánto sostén da: una mezcla
+demasiado ligera no aguanta de pie una planta alta y se vuelca con el viento.
+
+<Formula explicacion="La porosidad de aireación es lo que queda de hueco después de que el sustrato drene. Es la diferencia entre todo el espacio poroso y el que se ha quedado ocupado por agua retenida.">
+porosidad de aireación = porosidad total − agua retenida tras el drenaje
+</Formula>
+
+Y dos propiedades químicas, que en esta etapa basta con conocer de nombre:
+
+El <Termino slug="ph">pH</Termino> decide qué nutrientes puede absorber la raíz. La mayoría de las
+especies de vivero están cómodas entre 5,5 y 6,5; fuera de ese rango hay nutrientes que están
+presentes en el sustrato pero **químicamente bloqueados**, y la planta muestra síntomas de carencia
+aunque el fertilizante esté ahí.
+
+La **capacidad de intercambio catiónico** es cuántos nutrientes puede el sustrato retener sin que se
+laven. La materia orgánica la aporta; la arena y la perlita, prácticamente nada. Por eso una mezcla
+sin nada orgánico exige fertilizar poco y muy seguido.
+
+## Con qué se hace un sustrato
+
+<Diagrama
+  src="los-componentes.webp"
+  alt="Seis tarjetas cuadradas en dos filas de tres, cada una con el dibujo de un material granular distinto y su franja de pie. Arriba: escamas de cáscara curvas, pálidas y huecas, rotuladas CASCARILLA DE ARROZ; granos redondeados y translúcidos de arena gruesa, rotulados ARENA GRUESA; materia orgánica oscura y desmenuzada con fragmentos pequeños, rotulada COMPOST. Abajo: material fibroso, esponjoso y de color marrón oscuro, rotulado TURBA; hebras gruesas de fibra de coco marrón, rotuladas FIBRA DE COCO; bolitas blancas, pequeñas y ligeras, rotuladas PERLITA. Arriba, CON QUÉ SE HACE UN SUSTRATO."
+  pie="Ningún componente sirve solo. Cada uno aporta una cosa y falla en otra, y por eso se mezclan."
+/>
+
+Los componentes se agrupan por lo que aportan, y ninguno hace las cuatro tareas por sí solo.
+
+**Aportan estructura y aire.** Cascarilla de arroz, arena gruesa y perlita. Partículas grandes, poros
+grandes, capa saturada delgada. La cascarilla es el material clave en Santa Cruz por disponibilidad y
+precio; conviene **quemada o al menos bien seca y curada**, porque fresca puede traer semillas de
+arroz y descomponerse rápido. La arena aporta además peso y sostén, que a veces hace falta. La perlita
+es excelente y cara.
+
+**Aportan retención de agua.** Turba, fibra de coco y compost fino. Absorben mucha agua y la sueltan
+poco a poco.
+
+**Aportan nutrientes y capacidad de retenerlos.** Compost y humus de lombriz. Son los únicos que dan
+vida biológica y capacidad de intercambio, y son también los que hay que dosificar con cuidado: en
+exceso compactan y en almácigo pueden quemar la semilla.
+
+<Dato>
+La **fibra de coco** merece una mención aparte porque tiene una trampa: si no está lavada, viene con
+mucha sal, y esa sal deshidrata las raíces por el mismo mecanismo osmótico que viste en el módulo de
+suelos. Se compra lavada, o se lava con abundante agua antes de usarla.
+
+Y la **turba**, que es el estándar mundial de sustratos, aquí es importada y cara, y además tiene un
+problema de sostenibilidad conocido: se extrae de turberas que tardan milenios en formarse. La fibra
+de coco es el sustituto razonable y, en esta región, mucho más lógico.
+</Dato>
+
+<AplicarRizoma>
+**La mezcla base de Rizoma se construye con lo que hay a treinta kilómetros, no con lo que aparece en
+los manuales.**
+
+El componente estructural es la **cascarilla de arroz**, que en la zona de Santa Cruz es residuo
+abundante de los ingenios arroceros y sale muy barata o incluso gratis si se retira. Bien seca y
+curada, o quemada, aporta el aire que la arcilla local jamás va a dar.
+
+El componente de retención y nutrientes es el **compost propio**. Tienes 3.666 m² generando restos
+vegetales todo el año, y compostarlos convierte un residuo en el insumo más caro de la mezcla. Es
+además la única forma de tener control sobre lo que entra al sustrato.
+
+La **arena gruesa** de río es fácil de conseguir en la zona y aporta peso, que hace falta en los
+envases altos de frutales para que no se vuelquen con el viento del sur.
+
+**Lo que no vas a usar es la tierra del terreno.** La arcilla expansiva de la llanura aluvial es
+justamente el peor caso posible dentro de un envase: partículas finísimas, capa saturada gruesa,
+compactación rápida y peso. Se queda donde está y donde sí funciona, que es en el suelo.
+
+**Un almacén cubierto para el sustrato es parte del vivero, no un extra.** Cascarilla mojada por la
+lluvia se pudre y se apelmaza; compost a la intemperie se lava y pierde nutrientes. La zona de mezcla
+que reservaste en el layout necesita techo, y va cerca de la entrada de vehículos porque es lo más
+pesado que se mueve.
+
+**Y hay una prueba de campo que vale más que cualquier análisis**: llena un envase con tu mezcla,
+riégalo hasta que chorree, déjalo drenar media hora, y después vuélcalo con cuidado y mira el fondo.
+Si la parte baja sale chorreando y compacta, la capa saturada es demasiado gruesa para ese envase y
+hay que subir la proporción de material grueso. Cuesta diez minutos y responde la pregunta que de
+verdad importa.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La cascarilla de arroz es probablemente la mayor ventaja de insumos que tiene un vivero en Santa
+Cruz.**
+
+La región es una de las principales zonas arroceras del país, y los ingenios generan cascarilla como
+residuo en cantidades enormes. Para un viverista eso significa acceso a un material que en otros
+lugares hay que comprar caro, y que resuelve el problema de aireación mejor que casi cualquier
+alternativa.
+
+Conviene saber que se consigue en dos formas. **Cruda**, que es más barata pero puede traer semillas de
+arroz y tarda en estabilizarse. **Quemada o carbonizada**, que sale más cara, no trae semillas, sube
+algo el pH y aporta algo de potasio. Para almácigos, donde una maleza que germina es un problema
+serio, compensa la quemada.
+
+**El compost local tiene un condicionante climático**: con el calor y la humedad de la temporada de
+lluvias, un montón de compost se procesa rápido, pero también se lava con los aguaceros si está a la
+intemperie. Compostera techada y con base drenada.
+
+**La turba y la perlita se consiguen en agropecuarias de Santa Cruz pero son importadas**, con precio
+en consecuencia. Para un vivero pequeño tiene mucho más sentido construir la mezcla sobre cascarilla y
+compost propios y reservar los materiales caros, si acaso, para los almácigos, que usan volúmenes
+pequeños.
+
+**Y una advertencia sobre el material de relleno que se vende como tierra negra**: su composición
+varía enormemente de un proveedor a otro y muchas veces no es más que tierra de desmonte con algo de
+materia orgánica. Si vas a comprarla, exige verla antes, y trátala como un componente más de la
+mezcla, nunca como el sustrato completo.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya sabes qué tiene que hacer un sustrato, por qué el envase cambia las reglas, y qué aporta cada
+componente disponible.
+
+Lo que falta es la parte práctica: **formular mezclas concretas para cada etapa** —almácigo,
+enraizamiento, crecimiento y envase grande—, probarlas sin laboratorio, y decidir qué hacer con la
+esterilización.

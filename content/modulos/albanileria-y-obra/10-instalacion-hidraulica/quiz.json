@@ -1,0 +1,95 @@
+{
+  "preguntas": [
+    {
+      "id": "altura-presion",
+      "tipo": "opcion_multiple",
+      "enunciado": "Tu depósito está elevado a cuatro metros. ¿Qué presión entrega y para qué alcanza?",
+      "opciones": [
+        "Cada metro de columna de agua vale una décima de bar, así que entrega alrededor de 0,4 bar en el suelo.",
+        "Alcanza bien para grifos, mangueras y riego por goteo de baja presión, que es lo que el vivero necesita a diario.",
+        "No alcanza para aspersores de impacto ni para nada que pida 2 bar en su etiqueta.",
+        "La presión depende de cuántos litros tenga el depósito: lleno empuja más que a la mitad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es el error intuitivo clásico: la presión la da la altura de agua sobre el punto, no la cantidad. Un depósito a la mitad entrega casi lo mismo que lleno, porque lo que cambia son unos centímetros de lámina, no los cuatro metros de torre. Por eso el diagrama de los tres chorros: el de abajo sale más fuerte no porque haya más agua, sino porque tiene más columna encima."
+    },
+    {
+      "id": "perdida-carga",
+      "tipo": "opcion_multiple",
+      "enunciado": "Con el depósito a la misma altura, el grifo del fondo del terreno apenas gotea. ¿Qué pasó y cómo se diseña contra eso?",
+      "opciones": [
+        "La presión se gastó en fricción por el camino: eso es la pérdida de carga, y crece con la longitud, la finura del tubo y la velocidad.",
+        "Con 2 o 3 bar de red se disimula; con 0,4 bar de gravedad no hay margen para despilfarrar.",
+        "Se diseña con tubería generosa, recorridos cortos y rectos, y en la duda el diámetro mayor.",
+        "La presión se pierde sola con la distancia, haya tubería buena o mala."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es la ley de Ohm con agua: la pérdida de carga es la caída de tensión en un cable fino, el presupuesto que se consume por el camino y no llega a la carga. Y la solución es la misma regla de la sección de cable, palabra por palabra: un tubo sobrado no molesta nunca; uno justo estrangula el sistema todos los días de su vida."
+    },
+    {
+      "id": "pvc",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre unir y proteger el PVC, ¿qué es correcto?",
+      "opciones": [
+        "La unión con cemento solvente exige el ritual completo: corte a escuadra, lijar el brillo, limpiador, pegamento en ambas caras y un cuarto de giro al insertar.",
+        "La unión no ve presión hasta que cura: mejor de un día para otro.",
+        "El sol tropical vuelve quebradizo el PVC expuesto: va enterrado, a la sombra o pintado.",
+        "El pegamento agarra en segundos, así que se puede presurizar de inmediato."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Agarra rápido y cura lento: son dos cosas distintas, igual que el fraguado y el curado del hormigón. Y las roscas tienen su propia regla: teflón en el sentido de la rosca y apretar hasta sellar, no hasta el infinito — una rosca de PVC reventada por exceso de fuerza es el clásico del domingo por la tarde."
+    },
+    {
+      "id": "valvulas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué válvulas lleva la red y para qué sirve cada una?",
+      "opciones": [
+        "Llave general a la salida del depósito y llave por sector, para poder reparar un ramal con el resto del vivero con agua.",
+        "Flotador en el depósito: la primera automatización, mecánica pura, que cierra aunque la bomba quede encendida por descuido.",
+        "Antirretorno en la impulsión de la bomba y grifo de purga en el punto bajo de la red.",
+        "Con la llave general alcanza: las demás son refinamientos de instalación grande."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es el reparto de los circuitos eléctricos, con agua: dominios de fallo aislados. Una red con una sola llave es una red donde cualquier reparación corta todo — y el vivero no puede quedarse sin agua un día entero porque una te del sector de mesas goteaba. La válvula de sector cuesta poco; el día que la usas, vale el sistema entero."
+    },
+    {
+      "id": "corte-aire",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la manguera nunca queda sumergida en el barril que llena, y qué protege en su lugar?",
+      "opciones": [
+        "Porque cuando la presión de la red cae, un extremo sumergido se convierte en sifón y aspira el líquido sucio hacia la red limpia.",
+        "El corte de aire —descargar siempre por encima del borde— lo impide físicamente: un sifón no puede saltar un espacio de aire.",
+        "Es una protección sin piezas móviles, sin mantenimiento y sin modo de fallo, y por eso es la principal.",
+        "Basta con cuidar que la presión no baje nunca, y el problema desaparece."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La presión va a caer: se para la bomba, se vacía el depósito, se abre un grifo grande, llega el corte de luz de la tormenta. La defensa no puede depender de que no ocurra lo que ocurre todas las semanas. Y en una llanura inundable hay un caso más: el grifo que queda bajo el agua de una crecida es una jeringa conectada a la red — por eso las tomas van altas, y lo que quede bajo cota, que sea tubo continuo sin uniones."
+    },
+    {
+      "id": "ariete",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cerrar una válvula rápido es mejor: menos agua desperdiciada mientras gira.",
+      "respuesta": false,
+      "explicacion": "Falso. El agua en movimiento lleva inercia, y si la paras en seco esa energía se convierte en un pico de presión —el golpe de ariete— que viaja por el tubo con su martilleo característico y descarga en la unión más débil. Las válvulas se cierran despacio. Y la versión de diseño de esta regla llega con el Módulo 38: las electroválvulas del riego automatizado se eligen de cierre lento, porque un relé no sabe tener cuidado."
+    },
+    {
+      "id": "plan-hidraulica",
+      "tipo": "abierta",
+      "enunciado": "Describe la red de agua completa de Rizoma del Sur —de la fuente al último grifo—, con sus válvulas, sus protecciones contra contraflujo, cómo la entierras y cómo la pruebas antes de dar por terminada la obra.",
+      "respuestaModelo": "De la fuente al grifo, en orden. La bomba impulsa desde la fuente hasta el depósito elevado en el punto alto del terreno —el que localicé con el nivel de manguera y confirmé en cimientos—, con su válvula antirretorno en la impulsión para que la columna no se devuelva al apagarla, y el flotador arriba, que corta el llenado al llegar al nivel: mi primera automatización, mecánica pura, sin electricidad ni estado que corromper.\n\nDel depósito baja la llave general y la línea principal: gorda, corta y recta por el pasillo central, porque con 0,4 bar la pérdida de carga es el enemigo — cada codo y cada milímetro de diámetro cuentan, y en la duda va el diámetro mayor, exactamente como la sección de cable. De la principal salen los sectores, cada uno con su llave: el galpón con el grifo del lavadero descargando alto sobre la pileta, la zona de mezcla con su toma en alto sobre los cajones, el sombreadero y las mesas, y las camas donde vivirá el goteo del Módulo 25. En el punto bajo del terreno, el grifo de purga descargando hacia el drenaje del Módulo 7.\n\nLas protecciones contra contraflujo son dos y de naturaleza distinta. La principal es el corte de aire, que no tiene piezas: ningún pico de grifo ni extremo de manguera queda jamás por debajo del nivel del líquido que llena — el grifo sobre el borde de la pileta, la manguera sujeta por encima del barril, nunca dentro. Cuando la presión caiga —y va a caer: corte de bomba, depósito vacío, apagón de tormenta— un extremo sumergido es un sifón aspirando fertilizante o agua de inundación hacia la red limpia, y un sifón no puede saltar aire. La secundaria es mecánica: el antirretorno de la bomba, y el que llevará el inyector de fertirriego cuando llegue — sin versiones provisionales conectadas a pelo. Y en esta llanura, la cota: válvulas, roscas y tomas por encima de la lámina de inundación conocida; lo que quede abajo, tubo continuo sin uniones.\n\nLos materiales según el tramo: PVC con cemento solvente en las líneas fijas —con el ritual completo y sin presión hasta el día siguiente, y nada de PVC al sol: enterrado, a la sombra o pintado—; politubo negro para lo enterrado y el riego, que se curva sin codos y aguanta el sol; teflón en cada rosca, apretando hasta sellar y no más.\n\nEl enterrado aprovecha lo que ya sé del movimiento de tierras: zanja de 30-40 cm —aquí no hay helada de la que huir; se entierra por protección mecánica y por el sol—, cama de arena, el tubo, relleno sin piedras, cinta de advertencia veinte centímetros arriba, y leve pendiente hacia la purga para poder vaciar la red. El ducto eléctrico de reserva comparte campaña de zanjas, no zanja.\n\nY antes de tapar nada, la prueba de integración: la red completa 24 horas con presión y las zanjas abiertas, recorriendo cada unión con la mano seca. Una gota hoy es una fuga localizable; la misma gota con la zanja tapada es arqueología con pico y pala. Las válvulas, todas, se cierran despacio — el golpe de ariete cobra en la unión más débil, y la más débil siempre es la que pegué con prisa.",
+      "criterios": [
+        "Ordena el sistema fuente → bomba → depósito elevado → gravedad → sectores.",
+        "Antirretorno en la impulsión y flotador en el depósito, explicando su valor como automatización mecánica.",
+        "Línea principal gorda, corta y recta, y diámetro mayor en la duda, por la pérdida de carga.",
+        "Llave general, llave por sector y purga en el punto bajo.",
+        "Corte de aire como protección principal y sin piezas, con los escenarios reales de caída de presión.",
+        "Cota de inundación: tomas y uniones arriba, tubo continuo abajo.",
+        "PVC con ritual y curado, politubo para enterrado y sol, teflón sin reventar roscas.",
+        "Zanja con cama de arena, relleno sin piedras, cinta de advertencia y pendiente a la purga.",
+        "Prueba de 24 horas con presión y zanjas abiertas.",
+        "Cierre lento de válvulas por el golpe de ariete."
+      ],
+      "explicacion": "Mira el sistema terminado: se llena solo (flotador), distribuye solo (gravedad), se protege solo (corte de aire, antirretorno) y sobrevive solo a los apagones (la batería de agua). La única intervención humana que queda es encender la bomba — y ésa es precisamente la que el Módulo 38 va a automatizar. Un buen sistema manual no es lo contrario de la automatización: es su requisito."
+    }
+  ]
+}

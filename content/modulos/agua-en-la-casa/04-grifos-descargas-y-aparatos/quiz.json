@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "estado-seguro",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a cambiar el grifo del lavaplatos. La casa se alimenta de un tanque elevado y tiene una bomba con presostato. ¿Qué es correcto antes de aflojar la primera tuerca?",
+      "opciones": [
+        "Cerrar la llave general no basta: la columna del tanque sigue apoyada sobre la tubería, así que hay que cerrar también la salida del tanque.",
+        "Hay que bajar la llave térmica de la bomba, porque el presostato la hace arrancar sola en cuanto detecta que cae la presión.",
+        "Después de cortar se abre el grifo y se espera a que el chorro se vuelva un hilo y se corte: recién ahí la presión llegó a cero.",
+        "Si la llave cerró bien, se puede desconectar el flexible sin balde ni trapo, porque ya no queda agua en la tubería."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta confunde cortar con vaciar, que son dos estados distintos. Aunque la llave cierre perfecto —y una llave vieja rara vez cierra al cien por ciento—, todo el tramo entre esa llave y el aparato sigue lleno, y esa agua baja por gravedad en cuanto abrís la unión. Por eso el balde y el trapo no son exceso de precaución: son parte del procedimiento. Un tramo de tubería tiene tres estados —presurizado, cortado pero lleno, y vaciado— y solo el tercero es seguro para abrirlo."
+    },
+    {
+      "id": "teflon-y-rosca",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un flexible que gotea por su tuerca se arregla enrollándole cinta de teflón a la rosca.",
+      "respuesta": false,
+      "explicacion": "Falso, y el error es de mecanismo. La tuerca de un flexible es rosca paralela: tiene el mismo diámetro en todo su largo, no se aprieta contra sí misma y no sella nunca en los filetes, sino contra una cara plana con una goma en el medio; la rosca solo hace de prensa. El teflón sirve en la rosca cónica, que sí sella entre filetes porque se va haciendo más gorda a lo largo del tubo. En una rosca paralela el teflón no toca el camino por donde pasa la fuga, y encima invita a apretar más para «terminar de sellar», que es como se rajan las piezas de plástico. La fuga está en la goma: endurecida, salida de su alojamiento o directamente ausente."
+    },
+    {
+      "id": "gotera-por-sintoma",
+      "tipo": "opcion_multiple",
+      "enunciado": "En tu casa hay tres goteras: una cae del pico con la llave bien cerrada; otra aparece alrededor de la manija solo cuando el grifo está abierto; la tercera moja el mueble justo donde el grifo apoya en el mesón. ¿Qué es correcto?",
+      "opciones": [
+        "La del pico es la empaquetadura vencida o el asiento picado, que son las dos piezas del cierre.",
+        "La de la manija es el sello del vástago: prensaestopas flojo o juntas tóricas secas, y no tiene nada que ver con el cierre del agua.",
+        "La del mesón es la goma de base o la tuerca de sujeción de abajo, y se resuelve reapretando desde adentro del mueble.",
+        "Las tres son la misma avería y las tres se resuelven apretando más fuerte la manija al cerrar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Apretar más fuerte no arregla ninguna de las tres y empeora la primera: aplasta la goma nueva antes de tiempo y termina de rayar el asiento, que es la superficie contra la que esa goma tiene que sellar. Y sobre las otras dos no puede hacer nada, porque el sello del vástago y la goma de base están en otro punto del camino del agua. Lo que resuelve el diagnóstico es mirar dónde sale el agua y en qué momento sale: con eso se nombra la pieza sin desarmar nada."
+    },
+    {
+      "id": "ducha-electrica",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la ducha eléctrica, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Calienta el agua con una resistencia metida en el mismo caudal que te está mojando, y en muchos modelos económicos esa resistencia va desnuda, en contacto directo con el agua.",
+        "Sin puesta a tierra, una fuga de corriente no tiene camino propio y puede usar el cuerpo de quien se ducha, que además está descalzo y mojado, en la condición de menor resistencia eléctrica posible.",
+        "El selector de invierno y verano de la carcasa se mueve con el aparato apagado en el tablero, con las manos secas y sin agua corriendo.",
+        "Como el agua ya llega por la tubería, la puesta a tierra se puede hacer conectando el cable a la cañería del baño."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es peligrosa por dos razones. El PVC no conduce, así que esa «tierra» simplemente no existe y la persona sigue sin protección creyendo que la tiene; y si algún tramo de la instalación sí es metálico, lo que se consigue es electrificar la cañería y llevar el peligro a otro grifo de la casa. La tierra va por el cable verde-amarillo a una jabalina clavada en tierra húmeda, y trabaja en pareja con el diferencial, que corta cuando faltan unos 30 miliamperios, antes de la corriente de no soltar. La revisión eléctrica de una ducha la hace un electricista: no es un trabajo para aprender improvisando."
+    },
+    {
+      "id": "fuga-silenciosa",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un inodoro que no hace ningún ruido y cuya taza se ve con el agua quieta no puede estar perdiendo agua.",
+      "respuesta": false,
+      "explicacion": "Falso: ese es exactamente el aspecto que tiene una fuga silenciosa. Cuando el sello de la válvula de descarga se endurece y deja pasar un hilito, el agua se va del tanque a la taza y de ahí al desagüe sin ruido y sin dejar mancha, mientras la válvula de llenado repone en silencio; puede irse en cientos de litros por día durante meses. Se comprueba con la prueba del colorante: se echa anilina, café instantáneo cargado o tinta en el tanque, se revuelve, no se descarga ni se usa el baño durante veinte o treinta minutos, y si al volver el agua de la taza está teñida, el sello está pasando. Si sigue transparente, ese inodoro está sano y la fuga está en otro lado."
+    },
+    {
+      "id": "el-sifon-y-el-olor",
+      "tipo": "opcion_multiple",
+      "enunciado": "El baño de tu casa huele a cloaca. ¿Qué es correcto sobre el sifón y su sello?",
+      "opciones": [
+        "El sello son unos centímetros de agua atrapados en la curva del tubo, y es lo único que separa el aire del baño del aire de la red de desagüe.",
+        "Si el baño estuvo cerrado semanas, el olor es agua evaporada del sello, y se arregla echando un balde de agua en cada desagüe.",
+        "Si el olor aparece justo después de que alguien descargó el inodoro, una succión se llevó el sello, y eso se resuelve en la ventilación de la red, no en el aparato.",
+        "Un desagüe de piso que quedó seco es un problema de olor y nada más."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta subestima el problema en zona de dengue. Una rejilla seca es un paso libre en las dos direcciones, así que además del olor deja entrar mosquitos desde la red; y un sifón olvidado, con agua estancada y sucia dentro de una casa cerrada, es agua quieta donde el mosquito puede poner huevos. Las dos caras se resuelven con la misma rutina: los desagües que no se usan se tapan con un tapón o una bolsa con arena, y los que sí se usan reciben agua limpia renovada. Un sifón activo, con agua que se cambia, no es criadero."
+    },
+    {
+      "id": "desatascar",
+      "tipo": "opcion_multiple",
+      "enunciado": "El lavamanos traga lento y ya está por rebalsar. ¿Qué es correcto?",
+      "opciones": [
+        "El chupón trabaja alternando empuje y tirón, y necesita agua cubriendo la campana porque el agua no se comprime y transmite entero el golpe, mientras que el aire se lo traga.",
+        "Hay que tapar el agujerito de rebose del lavamanos, o el desagüe del otro lado de una pileta doble, o la energía se escapa por ahí y no llega al tapón.",
+        "La sonda se introduce girando siempre en el mismo sentido, porque la punta trabaja perforando y enganchando; metida recta sin girar se dobla sobre sí misma y se traba.",
+        "Si nada funciona, un chorro de agua hirviendo junto con destapador ácido termina de disolver el tapón de grasa."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta junta dos malas ideas. El PVC sanitario es de pared delgada y empieza a ablandarse bastante por debajo de los cien grados, así que el agua hirviendo repetida deforma las uniones y abre fugas que después no vas a encontrar. Y el ácido reacciona con el agua liberando calor de golpe, puede hervir y salpicar hacia arriba por el mismo agujero por donde lo echaste; si no destapa —lo más probable con un tapón de grasa— te deja un tubo lleno de ácido que te va a saltar encima cuando abras el sifón, y si quedaba lavandina de un baldeado anterior, la mezcla libera cloro gaseoso. El camino correcto es el aburrido: chupón, sonda y, sobre todo, abrir el sifón con un balde debajo, que es donde está el problema la mayoría de las veces."
+    },
+    {
+      "id": "tu-propia-tarde-de-trabajo",
+      "tipo": "abierta",
+      "enunciado": "Elegí el baño o la cocina del lugar donde vivís —sirve igual si es alquilado y no tenés patio— y escribí el plan completo de una tarde de trabajo. Decí cómo dejás el sistema en estado seguro antes de abrir nada; qué tres cosas vas a diagnosticar (una gotera, el inodoro y un desagüe que huele o traga lento) y cómo vas a comprobar cada una; qué vas a reparar vos y qué le vas a dejar a un electricista o a un plomero; y qué rutina mensual dejás anotada para que el problema no vuelva.",
+      "respuestaModelo": "Lo hago en el baño del departamento que alquilo, que tiene lavamanos, inodoro, ducha eléctrica y una rejilla de piso.\n\nLo primero es el estado seguro, y es el paso que más gente se salta. Recorro el baño buscando llaves de escuadra: el inodoro tiene una y el lavamanos no, así que para el lavamanos voy a tener que cerrar la general. Antes de cerrar nada aviso en la casa. Como el edificio trabaja con tanque en el techo, sé que cerrar la general no me vacía nada: la columna del tanque sigue apoyada sobre la tubería, así que cierro también la salida del tanque; y si hubiera bomba con presostato, bajaría su llave térmica, porque el presostato la hace arrancar sola en cuanto baja la presión. Con eso cortado, abro el grifo del lavamanos y espero: sale agua, se vuelve un hilo y se corta. Ahí la presión llegó a cero. Abro además el grifo más bajo que tengo para que la gravedad se lleve lo que quedó arriba. Y aun así pongo un balde y un trapo debajo antes de aflojar la primera tuerca, porque una llave vieja rara vez cierra al cien por ciento. Antes de desarmar cada cosa le saco una foto con el celular al orden de las gomas y las arandelas, y voy dejando las piezas en fila sobre un trapo en el orden en que salieron.\n\nLa gotera del lavamanos gotea del pico con la llave bien cerrada, así que ya sé que es el cierre: empaquetadura vencida o asiento picado. Saco la tapita de la manija, el tornillo, la manija, y aflojo la tuerca grande sujetando el cuerpo del grifo con la otra mano para que el esfuerzo no se lo lleve el tubo de la pared. Cambio la goma por una del mismo diámetro y espesor. Si con la goma nueva sigue goteando, paso la yema del dedo por dentro del agujero: si en vez de un aro liso siento rugosidad, el asiento está picado y ahí ninguna goma sella; entonces se rectifica o se cambia el grifo, pero lo que no hago es apretar más fuerte la manija, que solo destruye la goma nueva. Aprovecho y desenrosco el aireador con una llave protegida con un trapo, lo lavo y, si está blanco de cal, lo dejo media hora en vinagre, fijándome antes en el orden de las piezas.\n\nEl inodoro lo diagnostico con dos cosas. Miro el tubo de rebose: si veo un hilo cayendo por ahí, el problema es la válvula de llenado o el nivel, y lo bajo hasta un par de centímetros por debajo del borde del rebose doblando la varilla o corriendo el clip. Y hago la prueba del colorante: echo café instantáneo cargado en el tanque, revuelvo, no descargo ni uso el baño durante veinte o treinta minutos, y miro la taza. Si el agua está teñida, el sello de la válvula de descarga está pasando y lo cambio; si sigue transparente, ese inodoro está sano y no toco nada. Si en algún momento apareciera agua en el piso solo después de descargar, sería el empaque entre tanque y taza; si apareciera en la base y con olor, sería el sello del piso, y ahí toca reasentar la taza con un sello nuevo, levantándola recta, raspando la brida y apretando las tuercas alternando y de a poquito, porque la porcelana no avisa y se raja de golpe.\n\nEl desagüe que huele es la rejilla del piso, que se usa poco. Casi seguro es el sello evaporado, así que le echo un balde de agua y espero. Si el olor aparece justo después de que alguien descarga el inodoro, entonces no es evaporación sino succión, y eso no se arregla en la rejilla sino en la ventilación de la red. Si además traga lento, uso el chupón con agua cubriendo la campana, tapando el rebose del lavamanos, alternando empuje y tirón; si no cede, abro el sifón con un balde debajo, que es donde está la suciedad casi siempre. Lo que no hago es echar ácido ni agua hirviendo: el PVC se ablanda bastante por debajo de los cien grados y el ácido me puede saltar encima cuando abra el sifón, además de que con restos de lavandina libera cloro gaseoso.\n\nLo que no toco es la ducha eléctrica. Puedo desarmar la regadera para limpiarla en vinagre, pero siempre con la llave térmica bajada en el tablero y comprobando que quedó sin tensión, no solo con el interruptor de la pared. Si el aparato no tiene puesta a tierra a una jabalina, o si al tocar la ducha o el grifo siento cosquilleo, eso lo llamo tal como es: la instalación está fugando corriente, corto el térmico y llamo a un electricista. Tampoco voy a inventar cuánto cuesta eso: lo pregunto y lo comparo.\n\nY dejo escrita una rutina mensual en una hoja pegada dentro de la puerta del mueble, junto con el mapa de qué llave corta qué: un balde de agua en cada desagüe que no se use, revisar el aireador, apretar el botón de prueba del diferencial, mirar con linterna debajo del lavamanos buscando manchas, y pasar la mano por los flexibles buscando bultos u óxido. Son diez minutos y evitan casi todas las urgencias, que en plomería salen caras porque el agua daña todo lo que toca mientras espera.",
+      "criterios": [
+        "Elige un lugar concreto y propio, y el plan funciona aunque sea una casa alquilada sin patio.",
+        "Separa cortar, despresurizar y vaciar como tres pasos distintos, y no da por vaciada una tubería recién cortada.",
+        "Prevé la columna del tanque elevado y la bomba con presostato, y no se conforma con cerrar la llave general.",
+        "Toma precauciones de reversibilidad —fotos antes de desarmar, piezas en orden sobre un trapo, balde y trapo— antes de abrir nada.",
+        "Diagnostica la gotera por dónde y cuándo sale el agua, y nombra la pieza que corresponde a ese síntoma.",
+        "Sabe qué hacer si la goma nueva no resuelve la gotera, y descarta explícitamente apretar más fuerte la manija.",
+        "Usa el tubo de rebose para juzgar el nivel y la válvula de llenado del inodoro.",
+        "Aplica la prueba del colorante correctamente: teñir, no descargar, esperar veinte o treinta minutos, y leer el resultado en la taza.",
+        "Distingue el sello del sifón perdido por evaporación del perdido por succión, y sabe que el segundo se resuelve en la ventilación de la red, no en el aparato.",
+        "Desatasca con chupón o sonda con las condiciones correctas, o abre el sifón, y rechaza el ácido y el agua hirviendo dando el motivo.",
+        "Traza un límite claro con la parte eléctrica: corta en el tablero, no repara la ducha eléctrica y deriva a un electricista ante falta de tierra o cosquilleo.",
+        "Deja una rutina mensual escrita y un mapa de llaves accesible para el resto de la casa, no solo en su cabeza."
+      ],
+      "explicacion": "Lo que se evalúa no es la destreza con la llave —cambiar una goma lo aprende cualquiera en una tarde— sino el método: dejar el sistema en un estado seguro antes de tocarlo, diagnosticar por evidencia en lugar de desarmar a ciegas, y saber dónde termina el trabajo propio. Una respuesta que repara las tres cosas pero abre el flexible sin despresurizar, o que se anima a la parte eléctrica de la ducha, no aprobó, por bien explicada que esté la reparación. Tampoco se piden precios ni normas: si el plan necesita saber cuánto cuesta algo o qué exige el municipio, la respuesta correcta es preguntarlo, no suponerlo."
+    }
+  ]
+}

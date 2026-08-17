@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "p1-cara-y-canto",
+      "tipo": "opcion_multiple",
+      "enunciado": "El oficio manda elegir una cara y un canto de referencia en cada pieza y medir siempre desde ellos. ¿Qué afirmaciones explican correctamente por qué?",
+      "opciones": [
+        "Porque una tabla real no tiene caras paralelas ni cantos rectos, así que «el ancho de la tabla» no existe: hay un ancho por cada sitio y por cada lado desde el que midas.",
+        "Porque si todas las medidas salen del mismo origen, una referencia algo imperfecta produce una pieza distinta de lo previsto pero coherente consigo misma, mientras que dos orígenes dan una pieza que no cierra.",
+        "Porque el gramil y el talón de la escuadra se apoyan físicamente en esas dos superficies, de modo que apoyarlos en las otras dos traslada al trazo el defecto que tenga la tabla.",
+        "Porque la cara de referencia debe ser siempre la de albura, que al ser más blanda recibe mejor la marca de la cuchilla y del gramil."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son el argumento completo: la tabla es irregular, la referencia única mantiene la coherencia interna de la pieza, y las herramientas de trazado se apoyan de verdad en esas superficies. La cuarta es falsa: la cara de referencia se elige por ser la más plana, la más sana y la que va a quedar a la vista, no por ser albura o duramen. De hecho la albura es la parte menos durable de la tabla, así que elegirla por sistema sería un mal criterio; y la calidad de la marca depende del filo del instrumento y de la referencia contra la que corre, no de la blandura de la madera."
+    },
+    {
+      "id": "p2-error-acumulado",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el error acumulado al cortar ocho estantes iguales midiendo cada uno desde el corte anterior, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "El error del carpintero suele tener signo fijo, porque sus causas son constantes: el mismo lápiz que dibuja igual de grueso, la misma postura y la misma costumbre de cortar siempre por el mismo lado de la raya.",
+        "Un error con signo fijo se multiplica por el número de cortes, mientras que uno realmente aleatorio crecería solo con la raíz del número de cortes.",
+        "Marcar 40, 80, 120 y 160 desde la punta del listón antes de cortar impide que el error de cada corte se herede al siguiente, porque cada marca se referencia contra el mismo origen.",
+        "Basta con repetir cada medición tres veces y quedarse con el promedio: eso cancela tanto el error aleatorio como el sesgo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen el mecanismo y su defensa: causas constantes producen sesgo, el sesgo se suma linealmente y las cotas acumuladas cortan la herencia del error. La cuarta es falsa y es el malentendido central de la lección: promediar solo funciona contra el error aleatorio, que unas veces sobra y otras falta. Un sesgo empuja siempre en la misma dirección, así que repetir la medición lo reproduce idéntico y el promedio lo confirma en vez de eliminarlo. Un sesgo no se combate repitiendo: se combate cambiando el procedimiento —cambiar de origen, de instrumento o de postura—."
+    },
+    {
+      "id": "p3-ancho-de-corte",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el ancho de corte de la sierra —la vía— y de qué lado de la línea se corta, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Se corta siempre por el lado de desecho, dejando la línea entera visible en la pieza que te quedas, y conviene rayar el desecho con una equis en el momento de trazar.",
+        "La vía no se adivina: se corta un recorte y se mide la ranura, porque va de poco más de un milímetro en un serrucho de costilla a tres y pico en una sierra circular.",
+        "Para separar n piezas seguidas de un listón hacen falta n − 1 cortes interiores, y cada uno se come su ancho de material del largo total.",
+        "Si se serra justo por el centro de la raya, el ancho de corte se reparte por igual entre las dos partes y ambas quedan exactamente a la medida trazada."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son el manejo correcto de la vía: la línea pertenece a una sola parte, el ancho es un dato medido y el material hay que comprarlo contando los cortes. La cuarta es falsa, y es justamente lo que produce piezas cortas de forma sistemática: repartir la vía no deja ambas partes a medida, deja a las dos cortas en media vía cada una. Con una circular de tres milímetros eso es milímetro y medio de menos en cada pieza, un error con signo fijo que además se acumula si sigues midiendo desde el corte anterior."
+    },
+    {
+      "id": "p4-diagonales",
+      "tipo": "opcion_multiple",
+      "enunciado": "Estás armando un marco de mosquitero y quieres asegurarte de que queda a escuadra. ¿Qué afirmaciones son correctas?",
+      "opciones": [
+        "Cuatro lados no definen un rectángulo: un cuadrilátero con los lados opuestos iguales es un paralelogramo y puede caerse en rombo con las cuatro medidas perfectas.",
+        "El orden correcto es cortar primero los pares de lados iguales contra un tope y comprobar las diagonales después, porque cada comprobación por separado se deja engañar.",
+        "Si las diagonales difieren, se corrige empujando a lo largo de la diagonal más larga, y hay que volver a medir después de apretar los sargentos, porque los sargentos descuadran marcos.",
+        "Si las dos diagonales miden exactamente lo mismo, el marco es un rectángulo, midan lo que midan los lados."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son el procedimiento completo, incluida la trampa de los sargentos. La cuarta es falsa: dos diagonales iguales sobre lados opuestos desiguales dan un trapecio isósceles, una figura simétrica y torcida que pasa la prueba de las diagonales sin ser un rectángulo. Por eso las dos comprobaciones son complementarias y ninguna basta sola: los lados iguales fijan la forma y las diagonales fijan los ángulos."
+    },
+    {
+      "id": "p5-prueba-del-volteo",
+      "tipo": "verdadero_falso",
+      "enunciado": "Para saber si tu escuadra está realmente a escuadra necesitas compararla contra otra escuadra que sepas mejor que la tuya.",
+      "respuesta": false,
+      "explicacion": "Falso, y esa es una de las ideas más útiles del oficio. La prueba del volteo comprueba la escuadra contra sí misma explotando una invariante: apoyas el talón en un canto recto y trazas una línea, das vuelta la escuadra como una página, la apoyas en el mismo canto y en el mismo punto de partida, y trazas otra vez. Si el ángulo es recto, las dos líneas caen una encima de la otra. Si no, se abren en tijera, y lo que se abre es el doble del error, porque una línea se desvió hacia un lado y la otra hacia el opuesto. Medio grado, invisible a simple vista, abre unos cuatro milímetros en la punta de una hoja de 25 centímetros. No hace falta ningún patrón externo: la comprobación amplifica el defecto por su propia geometría. El nivel de burbuja se verifica igual, girándolo 180 grados sobre el mismo punto."
+    },
+    {
+      "id": "p6-retroceso",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cortar una tabla larga con la sierra circular apoyándola solo sobre dos caballetes, con la línea de corte justo en el medio, es seguro siempre que sujetes la máquina firme con las dos manos.",
+      "respuesta": false,
+      "explicacion": "Falso, y es peligroso. Esa disposición fabrica exactamente la condición del retroceso: a medida que el corte avanza, las dos mitades se vencen hacia adentro y la ranura se cierra sobre el disco. Cuando el disco queda pellizcado, los dientes de la parte trasera —que suben— muerden la madera y trepan por ella, y la máquina sale disparada hacia atrás, hacia quien la sostiene, con el disco girando y en un cuarto de segundo. Ninguna fuerza de brazos gana esa pelea, así que el problema no se resuelve sujetando más fuerte sino quitando la causa: se apoya toda la pieza sobre apoyos sacrificables, o se deja el recorte volando y libre de caer, de modo que el corte nunca se cierre. A eso se suma regular la profundidad para que el disco asome apenas unos milímetros bajo la madera, no trabar nunca la guarda inferior y pararse a un costado, fuera de la línea de retroceso."
+    },
+    {
+      "id": "p7-plan-de-corte-propio",
+      "tipo": "abierta",
+      "enunciado": "Elige un objeto de madera que de verdad necesites en tu casa: un estante para la cocina, un marco de mosquitero para una ventana, una tapa para el tanque de agua, un banquito. Escribe su plan completo de medición, trazado y corte, sin comprar herramienta nueva y contando solo con lo que tienes. Explica: qué tolerancia le corresponde y por qué; cómo declaras y marcas las referencias; en qué puntos exactos sustituyes una medición por una transferencia directa; qué comprobaciones haces, en qué momento y con qué instrumento; cómo descuentas el ancho de corte al calcular el material; y qué medida de seguridad aplicas en cada corte y por qué mecanismo evita el daño.",
+      "respuestaModelo": "Elijo un marco de mosquitero para la ventana del dormitorio, que en zona de dengue es lo que más falta hace. Lo primero es decidir la tolerancia, porque de ahí sale todo lo demás. A este marco le da bastante igual medir un centímetro de más o de menos: lo que no perdona es estar fuera de escuadra, porque el bastidor tiene que apoyar parejo contra el marco de la ventana y dos milímetros de rendija en una esquina son una puerta abierta para el mosquito. O sea que lo mío no es una medida absoluta, es una relación entre piezas, y por eso mi comprobación principal no va a ser la huincha sino las diagonales.\n\nLa madera sale de un palet desarmado, así que no viene con cara ni canto: tengo que fabricarme las referencias. De cada listón elijo la cara más plana y sana —la que va a quedar hacia adentro, a la vista— y la marco con un garabato que termina apuntando al canto que elijo; en ese canto pongo una flecha que apunta de vuelta a la cara. Antes de eso paso el imán y palpo los cantos buscando clavos escondidos, porque uno solo arruina un diente o un disco al instante y puede lanzar un fragmento a la cara; las zonas dudosas las descarto cortando más allá. Anteojos desde el primer corte.\n\nEl canto de referencia lo enderezo y lo pongo a escuadra con la cara ya aprobada, comprobando siempre con la escuadra apoyada en esa cara y nunca en la otra. Solo después regulo el gramil contra el canto de referencia para sacar el ancho, y por último el grueso con el gramil desde la cara. Ese orden no es capricho: cada paso se apoya únicamente en superficies que ya declaré verdaderas.\n\nAntes de trazar nada compruebo mis instrumentos. La escuadra, con la prueba del volteo: una línea, doy vuelta la escuadra como una página, apoyo en el mismo canto y el mismo punto, y trazo otra vez; si se abren en tijera, la escuadra miente y lo que veo es el doble de su error. Compruebo también el gancho de la huincha midiendo una misma distancia enganchando por fuera y apoyando contra algo, para descartar que esté doblado. Y declaro una sola huincha para todo el proyecto, marcada con cinta de color, porque si mi hermano trae otra cinta las piezas dejan de encajar sin que ninguno de los dos entienda por qué.\n\nDonde sustituyo medición por transferencia directa: primero, el largo de los travesaños no lo saco de un número, lo saco del hueco real de la ventana, apoyando el listón contra un lado y marcando por dónde pasa el otro. Segundo, los lados opuestos tienen que ser exactamente iguales, así que no los mido dos veces: corto el primero, lo uso de plantilla del segundo o los prenso juntos con sargentos y los corto de una pasada. Tercero, pongo un tope de longitud en el caballete, un listoncito atornillado a la distancia buscada, y de ahí salen las cuatro piezas sin volver a leer la cinta; si el tope está un milímetro corrido, las cuatro tienen un milímetro de menos y siguen siendo iguales entre sí, que es lo único que necesito. El trazado lo hago con cuchilla contra el canto de una regla, no con lápiz de carpintero: una raya de lápiz mide casi un milímetro y ya se comería mi tolerancia, mientras que la línea de cuchilla no tiene ancho, secciona las fibras y deja un surco donde el filo se encaja solo.\n\nPara el material descuento la vía. Primero corto un recorte y mido la ranura para saber cuánto se come mi serrucho. Si necesito cuatro piezas, los cortes que las separan son tres —n − 1, no n—, y a la suma de los largos le añado tres veces la vía más lo que recorte de las puntas para sanearlas. Trazo la línea alrededor de la pieza, en las cuatro caras, con la escuadra apoyada siempre en cara y canto de referencia, y rayo el desecho con una equis en el momento de trazar, para no tener que decidir de qué lado corto con el serrucho ya en la mano. Corto rozando la línea sin borrarla, dejándola entera en la pieza que me quedo.\n\nSi el marco lleva ingletes, hago primero una esquina de prueba con dos recortes y la compruebo con la escuadra ya validada; y si los listones son simétricos, corto las dos piezas de cada esquina desde la misma ranura de la caja de ingletes pero una con la cara arriba y la otra con la cara abajo, para que los ángulos salgan complementarios y la esquina sume 90 aunque mi caja esté algo mal.\n\nLa seguridad va donde toca. Al serrar, la pieza queda sujeta de verdad al caballete con un sargento, porque una pieza que se mueve obliga a agarrarla con la mano y ahí es donde ocurren los cortes; guío el arranque con el nudillo del pulgar doblado, que es hueso duro y superficie ancha, y retiro esa mano en cuanto la muesca está abierta; la mano que sostiene va siempre por detrás del filo, porque una hoja que salta de su ranura sale hacia adelante. Al trazar con cuchilla sujeto la regla bien atrás del recorrido y con los dedos arriba, nunca por delante de la punta, porque la fuerza empuja la hoja hacia afuera de la regla. Si uso la circular prestada de un vecino, apoyo toda la pieza para que el recorte no se venza y cierre la ranura sobre el disco, regulo la profundidad para que asome apenas unos milímetros, no trabo la guarda y me paro a un costado, fuera de la línea de retroceso.\n\nLa comprobación final es la más barata y la que no se puede engañar: con el marco armado y la cola todavía fresca, tiro la cinta de esquina a esquina en las dos diagonales, siempre desde los mismos puntos. Si difieren, empujo a lo largo de la más larga y vuelvo a medir después de apretar los sargentos, porque los sargentos descuadran marcos. Cuando las dos coinciden, clavo un listón provisorio en diagonal para que el triángulo lo sostenga mientras seca. Detectado ahí, un marco torcido cuesta un empujón; detectado al día siguiente, cuesta la pieza entera.",
+      "criterios": [
+        "Elige un objeto real de su propia casa o taller y no un ejemplo abstracto ni necesariamente relacionado con un vivero.",
+        "Define una tolerancia razonada para ese objeto y distingue si lo que importa es la medida absoluta o la relación entre piezas.",
+        "Declara una cara y un canto de referencia y describe cómo los marca físicamente para no confundirlos después.",
+        "Respeta el orden del escuadrado, apoyando cada paso solo en superficies ya aprobadas.",
+        "Comprueba la escuadra con la prueba del volteo, y comprueba también el gancho de la huincha, antes de trazar.",
+        "Impone una sola huincha para el proyecto o explica cómo evita el problema de dos cintas distintas.",
+        "Identifica al menos dos puntos concretos donde sustituye una medición por transferencia directa: hueco real, copia de la primera pieza o tope de longitud.",
+        "Justifica el instrumento de trazado en función de la tolerancia elegida, mencionando el ancho de la raya de lápiz o la línea de cuchilla.",
+        "Mide el ancho de corte en un recorte en vez de suponerlo, y lo descuenta contando n − 1 cortes para n piezas.",
+        "Corta por el lado de desecho y explica cómo lo señala antes de tener la sierra en la mano.",
+        "Cierra con la comprobación por diagonales en el momento en que todavía es reversible, y menciona el efecto de los sargentos o el listón provisorio.",
+        "Asocia cada medida de seguridad con el mecanismo por el que evita el daño —sujeción de la pieza, mano detrás del filo, dirección de empuje de la cuchilla, pellizco del disco y retroceso—, y no la deja como una lista de recomendaciones sueltas."
+      ],
+      "explicacion": "La pregunta no busca un objeto concreto sino que apliques el método entero a algo tuyo. Lo importante es el orden de razonamiento: primero decides cuánto error aguanta la pieza, y solo entonces eliges instrumento de trazado y comprobaciones, porque una raya de lápiz de un milímetro basta para un caballete y arruina un ensamble fino. Después declaras las referencias, porque sin ellas no hay medida que signifique nada, y a partir de ahí buscas activamente los puntos donde puedes no medir: el hueco real, la primera pieza como plantilla, el tope. Cada uno de esos tres elimina una familia entera de errores en vez de reducirlos. Al final, la comprobación por diagonales es la que más rinde porque está puesta donde el estado todavía es reversible, y la seguridad no es un apartado aparte sino una consecuencia de entender qué hace la herramienta: la cuchilla empuja hacia afuera de la regla, la hoja que salta sale hacia adelante y el disco pellizcado trepa hacia atrás."
+    }
+  ]
+}

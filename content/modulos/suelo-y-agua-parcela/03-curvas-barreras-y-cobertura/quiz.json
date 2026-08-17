@@ -1,0 +1,107 @@
+{
+  "preguntas": [
+    {
+      "id": "orden-de-las-defensas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un vecino consigue prestada una retroexcavadora por un día y quiere aprovecharla para abrir zanjas en toda su parcela, que está desnuda entre campañas. ¿Qué afirmaciones sobre el orden de las tres defensas son correctas?",
+      "opciones": [
+        "La erosión es un problema de energía, y las tres defensas se ordenan por dónde intervienen: impedir que la energía llegue al suelo (cobertura), frenar el agua que ya corre (barreras sobre la curva) y conducir o retener el sobrante (obra de tierra)",
+        "Empezar por la obra de tierra es el orden inverso al que dicta el mecanismo: intenta manejar aguas abajo un problema que la cobertura habría evitado en el metro cuadrado donde cae la gota",
+        "El orden correcto es además el orden de costo creciente: la cobertura suele salir de material que ya está tirado en el terreno, la barrera cuesta dos años de establecimiento y la obra de tierra cuesta jornales o maquinaria",
+        "Como la zanja es la defensa que maneja el mayor volumen de agua, es también la que evita la mayor parte de la pérdida de suelo, y por eso conviene hacerla primero cuando aparece la oportunidad de la maquinaria"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor, y confunde volumen manejado con daño evitado. La zanja recibe mucha agua, cierto, pero la recibe cuando el destrozo ya ocurrió: los agregados ya se rompieron por el impacto de la gota, la costra superficial ya se formó, las partículas finas ya viajan en suspensión y la zanja lo único que puede hacer es decidir dónde termina ese material. La cobertura actúa antes, en el punto donde se gasta la energía, y por eso evita la pérdida en vez de administrarla. Hay además un motivo práctico que la pregunta insinúa: la oportunidad de la maquinaria es lo que dicta la decisión del vecino, no el diagnóstico, y ese es exactamente el mecanismo por el que las parcelas terminan con obras caras encima de un suelo que sigue desnudo. Nada de esto significa que la obra de tierra sobre, es la tercera defensa y tiene su lección propia; significa que una zanja construida sobre suelo descubierto se llena de sedimento en dos temporadas y hay que limpiarla a pala todos los años, mientras que la misma zanja aguas abajo de una superficie cubierta trabaja con agua casi limpia y dura."
+    },
+    {
+      "id": "capa-fina-o-monton",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si tienes poco material para cubrir, rinde más amontonarlo grueso en una parte del terreno que repartirlo en una capa fina pero continua sobre toda la superficie.",
+      "respuesta": false,
+      "explicacion": "Falso, y el motivo está en el mecanismo. La cobertura no protege por tapar, protege por absorber: el material se deforma cuando lo golpea la gota y en esa deformación se disipa la energía cinética. Como el trabajo de la gota se gasta entero en el primer objeto que encuentra, lo único que decide si un metro cuadrado está protegido es si hay algo en el camino de la gota, no cuánto espesor hay debajo. Diez centímetros de paja amontonada disipan la misma gota que un centímetro, mientras que el metro cuadrado descubierto de al lado recibe el impacto completo. Refuerza la conclusión la forma de la curva que relaciona cobertura con pérdida: baja muy deprisa al principio y luego se aplana, de modo que cubrir un tercio del suelo evita alrededor de la mitad de la pérdida y llegar al 70 u 80 % evita la mayor parte. Repartir lleva a toda la superficie a la zona empinada de esa curva; amontonar deja media parcela en el peor punto posible para regalar espesor donde ya no aporta nada. Con dos matices que la lección sí recoge: la capa fina tiene que ser continua de verdad, porque un claro concentra el flujo, y el material muy fino se apelmaza hasta formar una lámina que llega a repeler el agua, así que fino no significa molido."
+    },
+    {
+      "id": "medir-la-cobertura",
+      "tipo": "opcion_multiple",
+      "enunciado": "Quieres saber qué porcentaje de tu suelo está realmente cubierto para decidir si sigues acarreando material o paras. ¿Qué afirmaciones son correctas?",
+      "opciones": [
+        "Se mide con un transecto de puntos: una cuerda de 10 metros con 50 marcas cada 20 centímetros, tendida en diagonal a las hileras; en cada marca se mira verticalmente hacia abajo y se anota si hay material o tierra desnuda, y cada marca vale 2 %",
+        "La cuerda se tiende en diagonal a las hileras a propósito, para que el muestreo cruce tanto la zona cubierta como el pasillo desnudo en vez de medir solo una de las dos",
+        "La meta razonable está en el 70 u 80 % y no en el 100 %: pasar del 80 al 95 % es mucho trabajo para poco resultado, porque la curva ya se aplanó",
+        "Estimar el porcentaje a ojo desde el borde de la parcela es suficiente, porque lo que importa es el orden de magnitud y el ojo entrenado no se equivoca demasiado en superficies grandes"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor. El ojo se equivoca mucho y siempre en el mismo sentido: sobreestima la cobertura, porque al mirar en oblicuo desde el borde la vista pasa rasante y el material próximo esconde la tierra desnuda que hay detrás. Por eso el método exige mirar verticalmente hacia abajo en cada marca, que es la única dirección que coincide con la de la gota. Que el error sea sistemático y no aleatorio es lo grave: no se compensa mirando más veces, empuja siempre al mismo lado, y una parcela que a ojo parece cubierta al 80 % puede estar al 50 %, justo por debajo del umbral donde la protección se decide. El transecto cuesta lo que cuesta una cuerda y quince minutos, da un número comparable entre temporadas y permite parar de acarrear material con un criterio en vez de con una sensación. Anotado con fecha, además, es una de las series que alimentan el registro de suelo a largo plazo del final del módulo."
+    },
+    {
+      "id": "curva-y-espaciamiento",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre qué es una curva de nivel y cómo se decide la separación entre barreras, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Una curva de nivel une puntos de la misma altura y funciona como una línea equipotencial: el flujo va siempre perpendicular a ella, por la línea de máxima pendiente, así que lo que deba frenar el agua se coloca sobre la equipotencial",
+        "Una barrera trazada en otra dirección no frena el agua: la conduce a lo largo de sí misma hasta abrir un socavón en su punto más bajo",
+        "La separación no se decide en metros sino por el desnivel aceptado entre una barrera y la siguiente —el intervalo vertical—, y la distancia por el suelo sale de dividirlo por la pendiente, de modo que con 20 cm de intervalo vertical un terreno del 0,3 % pide barreras cada 66 metros",
+        "Como la curva de nivel es la línea de referencia del trazado, toda parcela necesita al menos tres o cuatro barreras vivas repartidas de forma regular para estar protegida"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor y contradice la cuenta de la tercera. El número de barreras no es una cifra fija ni un signo de parcela bien manejada: sale de dividir el intervalo vertical por la pendiente medida. En una ladera del 2 % con 20 centímetros de intervalo vertical las barreras van cada 10 metros y en una parcela pequeña salen varias; en un terreno del 0,3 %, como buena parte de la llanura cruceña, van cada 66 metros, y eso puede significar una sola barrera o ninguna. Repartir tres o cuatro líneas de forma regular sobre un terreno casi plano no protege más: ocupa superficie, consume trabajo de establecimiento y, si se trazaron a ojo en vez de con instrumento, cada una es una línea con pendiente propia que puede conducir agua en lugar de frenarla. La conclusión de la lección es incómoda pero exacta: no toda parcela necesita curvas de nivel, lo que toda parcela necesita es haber medido. Y donde la cuenta dice que no hacen falta barreras, el esfuerzo entero se va a la cobertura y, después, al microrrelieve y al drenaje."
+    },
+    {
+      "id": "calibracion-por-inversion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un nivel en A recién construido, con las patas cortadas cuidadosamente a la misma medida, ya sirve para trazar: la plomada cae por el centro del travesaño cuando los apoyos están a la misma altura.",
+      "respuesta": false,
+      "explicacion": "Falso. Nadie hace las dos patas exactamente iguales ni clava el travesaño perfectamente centrado, así que el punto por el que cae la plomada cuando el aparato está nivelado hay que encontrarlo, no suponerlo. Se encuentra por inversión: se apoya el aparato en dos puntos cualesquiera y se marca dónde cae la plomada; sin mover los apoyos se levanta, se gira 180 grados y se vuelve a poner con cada pata en el hueco donde estaba la otra, y se marca otra vez. Si las dos marcas coinciden, está calibrado; si no —lo normal—, el punto verdadero de nivel es el punto medio entre ambas, porque al invertir el aparato el defecto cambia de signo pero no de tamaño y el promedio lo cancela. La virtud del método es que no necesita un segundo instrumento con el que comparar, así que funciona donde no hay nada que comprar. Lo que está en juego es la diferencia entre error aleatorio y error sistemático: el aleatorio cambia de signo cada vez y en parte se compensa al encadenar pasos, pero un defecto de construcción empuja siempre al mismo lado, y medio centímetro de más por apoyo son 25 centímetros de deriva a los cincuenta apoyos. La supuesta curva de nivel resultante es entonces una rampa, y una barrera sobre una rampa conduce el agua en vez de frenarla. De ahí la regla general: un instrumento con más resolución pero sin calibrar es peor que uno tosco y calibrado."
+    },
+    {
+      "id": "que-hace-una-barrera",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre qué hace realmente una barrera viva y qué se le exige a la especie que se planta en ella, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "No detiene el agua, la deja pasar despacio: al bajar la velocidad se desploma la capacidad de transporte del flujo y el sedimento se deposita aguas arriba de la barrera",
+        "Ese depósito es el objetivo: temporada tras temporada el suelo se acumula del lado de arriba y el terreno se rebaja del de abajo hasta formar un escalón, una terraza de formación lenta que construye el agua y paga la gravedad",
+        "La especie tiene que tolerar quedar enterrada y rebrotar por encima, porque el proceso consiste justamente en irla enterrando, y conviene que sea macolladora —muchos brotes desde la base— para frenar por rozamiento sin tumbarse",
+        "Una barrera bien hecha debe retener toda el agua que le llega, y si el agua la atraviesa es señal de que la franja es demasiado estrecha o de que la especie elegida no es lo bastante densa"
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "La cuarta es el distractor y es el malentendido que instala la propia palabra «barrera». Si una barrera viva detuviera el agua, esta se acumularía detrás hasta rebasarla por su punto más bajo y saldría concentrada y con toda la energía junta, justo el escenario que abre una cárcava; una barrera que retiene del todo es un dique sin aliviadero. La función es hidráulicamente la contraria: dejar pasar el flujo repartido y lento, aprovechando que la capacidad de transporte cae muy deprisa con la velocidad, para que el sedimento se suelte antes de cruzar. Por eso el criterio que decide el resultado no es el ancho de la franja sino la continuidad: una hilera única y densa hace la mayor parte del trabajo, mientras que una franja ancha con un hueco en la base concentra el flujo en ese hueco y abre el socavón ahí. Cuando hacen falta varias hileras se plantan al tresbolillo, para que cada planta quede frente al hueco de la hilera vecina y no exista un pasillo recto por el que colarse. Conviene recordar el resto de requisitos que la pregunta no lista: permanente, que no se escape convirtiéndose en maleza ni hospede plagas del catálogo, y que dé algo —forraje, cobertura, flor—, porque una barrera que no produce se termina abandonando. Qué especie concreta cumple todo eso en esta arcilla y en este clima es una pregunta con respuesta local: se consulta con el CIAT, con el INIAF o con productores de la zona."
+    },
+    {
+      "id": "plan-para-una-parcela-llana",
+      "tipo": "abierta",
+      "enunciado": "Una familia vecina te pide ayuda con su parcela de media hectárea en Zanja Honda. A ojo es completamente plana. Vienen de quemar el rastrojo cada año, no tienen dinero ni herramientas más allá de palas y un martillo, y la seca empieza en dos meses. Explica qué harías, en qué orden, y justifica cada decisión con el mecanismo. Incluye cómo mides, qué haces si el levantamiento dice que no hacen falta barreras, y cómo hablarías del chaqueo.",
+      "respuestaModelo": "Lo primero es no trazar nada todavía y separar dos trabajos: uno depende de una medición y el otro no depende de nada. La cobertura empieza esta semana; el trazado, cuando haya números.\n\nLa cobertura va primero porque interviene donde se gasta la energía. Cada milímetro de lluvia sobre un metro cuadrado es un kilo de agua cayendo a 8 o 9 metros por segundo, y como la energía va con la velocidad al cuadrado, un chaparrón de 60 milímetros descarga del orden de 2.400 julios sobre cada metro cuadrado desnudo. Ese trabajo rompe agregados, mete las partículas finas en los poros y forma la costra que impide entrar al agua siguiente, y se gasta entero en el primer objeto que la gota encuentra: si encuentra una hoja seca, se gasta en la hoja. Además, una superficie cubierta de restos tiene una rugosidad hidráulica altísima, y como la capacidad de transporte cae muy deprisa al bajar la velocidad, el poco material que se mueva se queda cerca. En una parcela plana eso es casi todo el problema y casi toda la solución.\n\nNo se cubre a ojo: se mide con un transecto de puntos, una cuerda de 10 metros con 50 marcas cada 20 centímetros tendida en diagonal a las hileras, mirando verticalmente hacia abajo en cada marca; cada marca vale 2 %. La meta es el 70 u 80 %, no el 100 %, porque la curva de cobertura contra pérdida baja rápido al principio y luego se aplana: cubrir un tercio ya evita alrededor de la mitad de la pérdida. Con material escaso se reparte en capa fina y continua en vez de amontonar, porque lo que protege es que haya algo en el camino de la gota. Por orden: la superficie desnuda mayor, los pasillos compactados que peor infiltran, bordes y taludes, y los puntos por donde el agua entra y sale. Cuánto material hace falta se calcula, no se copia: se cubre un metro cuadrado como se quiere que quede todo, se pesa y se multiplica por la superficie; el número explica por qué la biomasa hay que producirla en el sitio con abonos verdes, podas y desmalezado. Y hay que decir los costos: en el trópico se mineraliza en meses, da refugio a babosas y roedores —conviene una franja despejada junto a los almácigos—, en la seca es combustible, y el material muy fino se apelmaza hasta repeler el agua.\n\nEl levantamiento es de una tarde y dos personas, con manguera transparente, dos listones marcados a la misma altura desde el pie, estacas y el martillo. Funciona por vasos comunicantes: con los dos extremos abiertos a la atmósfera las superficies libres se igualan, así que cuando el agua queda en la marca en ambos, los pies están al mismo nivel. Hay que purgar el aire —una burbuja falsea la lectura sin dar señal—, leer el menisco con el mismo criterio todo el día, mantener los listones verticales, evitar el sol sobre un solo lado y no tapar nunca un extremo con el dedo. Se levanta una rejilla cada 15 o 20 metros desde una referencia permanente y al terminar se cierra el recorrido por otro camino: esa diferencia es el error de cierre. Con nivel en A hay que calibrarlo antes por inversión, porque el error aleatorio se compensa pero el sistemático no: medio centímetro por apoyo son 25 centímetros de deriva a los cincuenta apoyos, y la supuesta curva sale rampa.\n\nCon la pendiente medida se aplica la cuenta: distancia entre barreras igual a intervalo vertical dividido por pendiente. Con 20 centímetros de intervalo vertical, un 0,3 % las pone a 66 metros, o sea una o ninguna en media hectárea. Si el desnivel total resulta de pocos centímetros, aquí no manda la curva de nivel sino la cobertura, y el resto del esfuerzo va al microrrelieve y al drenaje. Eso no es un fracaso: es el resultado de haber medido, y evita dos años estableciendo barreras que no hacen falta. Si sale una línea justificada, se suaviza el trazado para que no queden recodos cerrados donde el agua converge, y se elige entre nivel exacto o una pendiente mínima controlada, que es lo prudente en arcilla expansiva: un suelo que se sella húmedo no infiltra más por retenerle agua encima, solo encharca más tiempo. Con pendientes de décimas de porcentaje unos centímetros de error invierten el sentido del flujo, así que o se mide o no se traza. Mientras la barrera viva se establece, una barrera muerta de ramas o piedra protege desde el día que se coloca.\n\nSobre el chaqueo no empezaría diciendo que está mal. Se quema porque es rápido, porque deja limpio para sembrar y porque se cree que elimina plagas: resuelve un problema real con el recurso más escaso, que es el tiempo. Lo que pondría en la balanza es lo que cuesta: se pierde la cobertura de toda la temporada y el suelo queda desnudo justo antes de las primeras lluvias fuertes, el peor momento posible. Y ofrecería una prueba en vez de un argumento: dejar sin quemar una franja, medirla con la cuerda y comparar el año siguiente. Si hay disposiciones municipales sobre quemas se consultan con la autoridad competente; y qué especie de barrera funciona en esta arcilla, con el CIAT, el INIAF o con productores de la zona.",
+      "criterios": [
+        "Ordena el trabajo por el mecanismo —cobertura primero, trazado después, obra de tierra al final— y no por la disponibilidad de herramientas u oportunidades",
+        "Justifica la prioridad de la cobertura con la energía de la gota y con el hecho de que ese trabajo se gasta en el primer objeto que encuentra",
+        "Menciona el segundo efecto de la cobertura: la rugosidad hidráulica y la caída de la capacidad de transporte del flujo",
+        "Propone medir la cobertura con transecto de puntos, describiendo cuerda, número de marcas y lectura vertical, y fija la meta en el 70-80 % apoyándose en la forma de la curva",
+        "Prefiere capa fina y continua a montón grueso, con la razón mecánica correcta",
+        "Calcula la biomasa necesaria pesando un metro cuadrado de muestra en vez de copiar una cifra, y reconoce que hay que producirla en el sitio",
+        "Enumera los costos y riesgos reales de la cobertura: mineralización rápida en el trópico, refugio de plagas, combustible en la seca, apelmazamiento del material fino",
+        "Explica el nivel de manguera por vasos comunicantes y cita al menos dos de los cinco errores de lectura (burbuja, menisco, listón inclinado, sol, extremo tapado)",
+        "Incluye el error de cierre como comprobación del levantamiento, o la calibración por inversión si opta por nivel en A, distinguiendo error sistemático de aleatorio",
+        "Aplica la cuenta intervalo vertical dividido por pendiente y acepta explícitamente que en terreno casi plano puede no hacer falta ninguna barrera, sin tratarlo como fracaso",
+        "Advierte que en arcilla expansiva retener todo puede encharcar en vez de infiltrar, y que en llanura un error de pocos centímetros invierte el sentido del flujo",
+        "Aborda el chaqueo por lo que cuesta y no por lo que está mal, propone una comparación medible, y remite normativa y elección de especies a la autoridad competente, al CIAT, al INIAF o a productores locales"
+      ],
+      "explicacion": "La pregunta mide si el alumno sabe ordenar por mecanismo en vez de por costumbre, y sobre todo si tolera el resultado incómodo: que en una parcela llana la respuesta correcta puede ser «aquí no hacen falta barreras». Una respuesta que llene la parcela de curvas de nivel sin haber medido la pendiente ha entendido la técnica pero no el criterio, y una que se salte el levantamiento «porque esto es plano» comete justo el error que la llanura castiga, ya que con pendientes de décimas de porcentaje el ojo no distingue el sentido del flujo y unos centímetros de error de trazado lo invierten. Las dos partes que separan una buena respuesta de una excelente son la honestidad sobre los costos de la cobertura —quien la presenta como gratis y sin inconvenientes no la ha sostenido nunca cinco meses de seca— y el tratamiento del chaqueo, porque el trabajo comunitario se decide ahí: explicar lo que la quema cuesta, ofrecer una prueba comparable y no inventar normativa es lo que hace que la conversación con un vecino termine en un ensayo compartido en vez de en una discusión."
+    }
+  ]
+}

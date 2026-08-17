@@ -1,0 +1,368 @@
+En el barrio hay más motores que automóviles: la bomba que sube el agua del pozo al tanque, la
+desbrozadora que abre el camino cuando la lluvia deja el pasto a la altura de la cintura, la moto que
+hace los mandados, el generador que se enciende cuando se corta la luz, la motosierra prestada.
+Cambia el tamaño y la carrocería, pero **por dentro son la misma máquina**: un motor pequeño de
+combustión interna, de un solo cilindro, que quema gasolina para hacer girar un eje.
+
+Y cuando uno deja de arrancar pasa siempre lo mismo: se tira veinte veces de la cuerda, alguien dice
+«se quemó el motor» y a los seis meses se compra otra. **Casi nunca estaba quemado nada**: había un
+filtro tapado de polvo, una bujía mojada, un agujerito de medio milímetro obstruido por barniz de
+gasolina vieja o un cable de paro haciendo contacto. Botarla o arreglarla no es cuestión de
+herramientas caras: **es saber qué pasa adentro.**
+
+Esta lección es ese adentro, y planta la idea que ordena el módulo entero: **un motor solo necesita
+cuatro cosas —aire, combustible, chispa y compresión— y las necesita en el momento justo. Cualquier
+falla es la ausencia de una de las cuatro.** Diagnosticar no es adivinar: es preguntar cuál falta.
+Aquí no se repara nada todavía: **aquí se aprende a mirar.**
+
+## De la gasolina al empujón: la cadena de energía
+
+Sin dar nada por sabido. La gasolina está hecha de **hidrocarburos**: moléculas de carbono e hidrógeno
+unidas entre sí. Esas uniones, los **enlaces químicos**, guardan energía igual que un resorte
+comprimido la guarda por estar comprimido. Cuando el carbono y el hidrógeno se sueltan de sus
+compañeros y se unen al **oxígeno del aire**, los enlaces nuevos son más «cómodos» y la diferencia
+sobra: sale como calor y luz. Eso es la <Termino slug="combustion">combustión</Termino>. El aparato es
+una <Termino slug="maquina-termica">máquina térmica</Termino> —convierte calor en movimiento— con
+apellido: un <Termino slug="motor-de-combustion-interna">motor de combustión interna</Termino>, porque
+el fuego ocurre **adentro**, empujando directamente la pieza que se mueve.
+
+Primer dato que le da vuelta la cabeza a casi todo el mundo: **el motor come mucho más aire que
+gasolina.** Cada kilo de gasolina necesita unos **quince kilos de aire** para quemarse del todo, y
+como el aire pesa poquísimo, en volumen eso son **unos nueve mil litros de aire por cada litro de
+combustible**. Lo que el motor traga a manos llenas es aire, y adentro va **todo el polvo que ese aire
+traiga** — que es exactamente por qué existe el filtro y por qué un filtro tapado mata motores.
+
+Y del combustible se aprovecha poco: **un litro de gasolina** alcanzaría para **levantar una tonelada
+a tres kilómetros de altura**, y el motor saca **entre la quinta y la cuarta parte**. El resto se va
+como calor, un tercio por el escape y otro tanto por el metal. **No es defecto del motor barato: es lo
+que puede hacer una máquina térmica**, y de ahí salen las aletas y todo lo que en este módulo se
+recalienta.
+
+Falta el eslabón que convierte calor en fuerza: **un gas caliente ocupa más lugar, y si no lo dejan
+crecer, empuja.** Al arder la mezcla en un espacio cerrado la temperatura salta a más de dos mil
+grados y las moléculas golpean las paredes mucho más fuerte: eso es **presión**. Y presión sobre una
+superficie es fuerza:
+
+<Formula explicacion="Fuerza igual a presión por superficie. Con la misma presión, cuanto más ancha la cara sobre la que empuja el gas, más fuerza.">
+F = P × A
+</Formula>
+
+Con números reales: la cara de un pistón de motor de bomba mide unos **siete centímetros de
+diámetro**, unos 38 centímetros cuadrados, y en la combustión la presión anda por las **40
+atmósferas**, o sea unos 40 kilos por centímetro cuadrado. Multiplicando: **una tonelada y media de
+empujón** sobre esa tapita de aluminio, decenas de veces por segundo. Ahí está por qué un motor
+pequeño vibra tanto y afloja sus propios tornillos.
+
+## Del empujón recto al giro: pistón, biela, cigüeñal y volante
+
+El gas empuja **en línea recta** y lo que necesitamos es **giro**; toda la mecánica del motor está
+para hacer esa traducción.
+
+El <Termino slug="piston">pistón</Termino> es un vaso de aluminio invertido que se desliza dentro de
+un tubo. Ese tubo es el <Termino slug="cilindro">cilindro</Termino>, y su pared —a veces una camisa de
+hierro fundido— tiene que ser lisa como un espejo. El pistón no la toca: entre los dos trabajan
+los <Termino slug="aro-de-piston">aros</Termino>, anillos elásticos alojados en ranuras que **hacen el
+sello**, y que no sellan solo por elásticos — **la presión de la combustión se mete por detrás del aro
+y lo aprieta contra la pared**: cuanto más fuerte la explosión, más fuerte sella.
+
+Desde el pistón baja la <Termino slug="biela">biela</Termino>, enganchada arriba con un bulón y abajo
+a un codo del cigüeñal. Y el <Termino slug="ciguenal">cigüeñal</Termino> es el traductor: un eje recto
+que en el medio lleva un codo desplazado del centro, como el pedal de una bicicleta respecto del eje
+del plato. La biela empuja ese codo hacia abajo, el codo no puede bajar en línea recta porque está
+atado a un eje, y lo único que le queda es **dar la vuelta**.
+
+<Analogia titulo="El pedal de la bicicleta y por qué existe el punto muerto">
+Párate sobre el pedal de una bicicleta cuando está **arriba del todo**, en línea con el eje: pesas
+ochenta kilos y no pasa nada. Empuja el mismo pedal **adelante, a media altura**, y arranca sola. No
+cambió tu peso: cambió **el brazo**, la distancia entre donde empujas y el centro de giro, y fuerza
+por brazo cero es giro cero. Al motor le pasa idéntico: con el pistón en lo más alto, **la biela y el
+codo del cigüeñal quedan alineados** y toda la presión del mundo no produce ni un grado de giro. A esa
+posición se la llama, con razón, **punto muerto**.
+</Analogia>
+
+De ahí salen tres palabras que se usan en todo el módulo.
+El <Termino slug="punto-muerto-superior">punto muerto superior</Termino> o **PMS** es la posición más
+alta del pistón; el <Termino slug="punto-muerto-inferior">punto muerto inferior</Termino> o **PMI**,
+la más baja; y la distancia entre ambas es
+la <Termino slug="carrera-del-piston">carrera</Termino>. La superficie del pistón por la carrera da
+la <Termino slug="cilindrada">cilindrada</Termino>: el número de la ficha —163 cc con 6,8 cm de
+diámetro y 4,5 de carrera— y **el tamaño del bocado que traga cada ciclo**.
+
+Queda un problema serio: el gas empuja durante **un solo viaje hacia abajo**, y en los otros tres hay
+que gastar fuerza para comprimir la mezcla y expulsar lo quemado, así que el motor se pararía en seco
+después de cada explosión. La solución es una rueda pesada calzada en la punta del cigüeñal:
+el <Termino slug="volante-de-inercia">volante de inercia</Termino>.
+
+<Analogia titulo="El volante es un búfer">
+Quien haya escrito un programa que consume datos reconoce el problema: **un productor que trabaja a
+ráfagas y un consumidor que necesita caudal parejo.** El pistón produce en pulsos brutales y
+brevísimos; la bomba, la cadena de la moto o el alternador del generador necesitan empuje continuo. La
+solución es la de siempre, **meter un búfer entre los dos**: el volante **guarda energía en su propio
+movimiento** durante la explosión y la devuelve en los tres tiempos siguientes. Con el mismo
+compromiso que en software —**un búfer grande alisa mejor pero responde más lento**—: por eso el
+volante de un generador, que necesita revoluciones clavadas, es pesado, y el de una desbrozadora, que
+sube de vueltas al instante, es liviano.
+</Analogia>
+
+## Los cuatro tiempos y el reloj que los ordena
+
+Ya hay empuje y giro; falta el orden. Ese orden es
+el <Termino slug="ciclo-de-cuatro-tiempos">ciclo de cuatro tiempos</Termino>, y cada tiempo es **medio
+giro del cigüeñal**: un viaje del pistón de un extremo al otro. El ciclo entero son **dos vueltas de
+cigüeñal**, y en esas dos vueltas hay **una sola explosión**.
+
+Las puertas del cilindro son dos tapones metálicos con forma de hongo:
+la <Termino slug="valvula-de-admision">válvula de admisión</Termino>, por donde entra la mezcla, y
+la <Termino slug="valvula-de-escape">válvula de escape</Termino>, por donde salen los gases quemados.
+Un resorte las mantiene **cerradas por defecto**, apretadas contra un asiento mecanizado —y contra ese
+asiento es por donde la de escape suelta su calor—; se abren cuando las empuja
+el <Termino slug="arbol-de-levas">árbol de levas</Termino>, un eje con bultos ovalados.
+
+<Tabla>
+
+| Tiempo | El pistón | Válvulas | Qué pasa de verdad |
+| --- | --- | --- | --- |
+| **1. Admisión** | Baja de PMS a PMI | Admisión abierta | Queda menos presión adentro que afuera y **la atmósfera empuja la mezcla hacia adentro** |
+| **2. Compresión** | Sube de PMI a PMS | Las dos cerradas | La mezcla se aprieta unas ocho veces y se calienta. **Cuesta trabajo**, y lo paga el volante |
+| **3. Trabajo** | Baja de PMS a PMI | Las dos cerradas | La chispa ya saltó y el gas se expande. **Es el único tiempo que entrega energía** |
+| **4. Escape** | Sube de PMI a PMS | Escape abierta | El pistón barre los gases quemados hacia el silenciador |
+
+</Tabla>
+
+Detente en la primera fila, porque corrige un error de intuición que arrastra casi todo el mundo: **el
+pistón no «chupa» nada.** Chupar no existe en física. Lo que hace el pistón al bajar es **agrandar el
+espacio y dejar menos presión adentro que afuera**, y entonces la atmósfera —que pesa poco más de un
+kilo por centímetro cuadrado sobre todo lo que existe— empuja el aire hacia el hueco. **El aire no es
+aspirado: es empujado por el peso del aire de afuera.** Esa sola idea explica por qué un filtro tapado
+ahoga el motor, por qué funciona el carburador y por qué el mismo motor rinde menos en la altura.
+
+Ahora el reloj. Las válvulas abren **una vez cada dos vueltas del cigüeñal**, no una por vuelta, y por
+eso el árbol de levas va engranado en relación dos a uno: una división de frecuencia hecha con dientes
+de engranaje, la misma idea que un divisor de reloj en un circuito digital, y lo que hace que el
+conjunto esté sincronizado y no solo en movimiento.
+
+Falta el tercer actor: la chispa. **La combustión no es instantánea.** La llama tarda del orden de
+**una o dos milésimas de segundo** en recorrer la cámara, y a 3.600 vueltas por minuto el cigüeñal
+gira unos **22 grados por milésima**: si la chispa saltara en el PMS, la presión máxima llegaría con
+el pistón ya bajando. Por eso salta **antes**, dos o tres decenas de grados antes del PMS. Eso es
+el <Termino slug="avance-al-encendido">avance al encendido</Termino>, y en los motores pequeños no se
+regula: **viene fijado por la posición del imán en el volante**, sujeto por una chavetita blanda que,
+si la máquina golpea algo duro, se corta y corre el encendido — una de las razones por las que un
+motor sano de pronto no arranca.
+
+<Advertencia titulo="Arder no es detonar">
+Cuando la mezcla que todavía no alcanzó la llama se comprime y calienta tanto que **se autoenciende
+sola de golpe**, aparece la <Termino slug="detonacion">detonación</Termino>: dos frentes que chocan y
+un pico de presión brutal. Se oye como un **repiqueteo metálico** al exigirle al motor, y rompe
+pistones, quema válvulas y perfora culatas. Causas: motor recalentado, hollín que sube la compresión,
+encendido corrido y combustible inadecuado. De ahí un mito que conviene matar: **el octanaje no mide
+fuerza, mide resistencia a autoencenderse** — no da más potencia, solo aguanta más compresión.
+</Advertencia>
+
+## El recorrido de la máquina: qué es cada pieza
+
+Con el ciclo entendido, la anatomía se ordena sola siguiendo **el camino de cada cosa que el motor
+necesita**. Este es el vocabulario de las cinco lecciones siguientes.
+
+**El camino del aire** empieza en el <Termino slug="filtro-de-aire">filtro de aire</Termino>, esponja
+o cartucho de papel plegado que retiene el polvo, y sigue en
+el <Termino slug="carburador">carburador</Termino>: el aire atraviesa un estrechamiento, se acelera y
+**al acelerarse baja su presión**, así que la atmósfera que pesa sobre la gasolina de la cubeta la
+empuja hacia arriba por un agujerito calibrado y la pulveriza en el chorro. El resultado es
+la <Termino slug="mezcla-aire-combustible">mezcla aire-combustible</Termino>, que entra por la válvula
+de admisión, se quema y sale por la de escape hacia
+el <Termino slug="silenciador">silenciador</Termino>: una caja con tabiques donde los pulsos de gas se
+expanden y se cancelan. Con los años se llena de hollín, y **un silenciador tapado es un motor que no
+puede exhalar**.
+
+**El camino de la chispa** es lo más elegante de la máquina, y no necesita batería. El volante lleva
+**imanes permanentes** empotrados en el borde: es
+un <Termino slug="volante-magnetico">volante magnético</Termino>. Cada vez que esos imanes pasan
+rozando el núcleo de hierro de la <Termino slug="bobina-de-encendido">bobina</Termino>, el campo
+magnético que la atraviesa cambia bruscamente, y **un campo magnético que cambia genera tensión en un
+alambre**. Un interruptor electrónico corta esa corriente en el instante preciso y, en el corte, el
+segundo bobinado —miles de vueltas de alambre finísimo— sube la tensión a **decenas de miles de
+voltios**, suficientes para que el arco salte en
+la <Termino slug="bujia">bujía</Termino>: un tapón roscado con un electrodo central aislado en
+cerámica y otro doblado al costado. **El motor fabrica su propia chispa con el giro.**
+
+**Lo que sella y lo que sostiene** es el resto. La <Termino slug="culata">culata</Termino> es la tapa
+que cierra el cilindro por arriba y contiene la cámara, los asientos de las válvulas y el agujero de
+la bujía; entre ella y el bloque va
+la <Termino slug="junta-de-culata">junta de culata</Termino>, una lámina blanda que se aplasta al
+apretar los tornillos y sella cuarenta atmósferas — cuando se quema, la compresión se escapa. Abajo
+está el <Termino slug="carter">cárter</Termino>, que aloja el cigüeñal y en cuatro tiempos **guarda el
+aceite**. Y para no fundirse, el motor
+usa <Termino slug="refrigeracion-por-aire">refrigeración por aire</Termino>: aletas que multiplican la
+superficie, un ventilador de aspas fundido en el propio volante y una tapa —el deflector— que
+**obliga al aire a pasar entre las aletas**. Quitarla «para que ventile mejor» es de los errores más
+caros que se ven: **sin ella el aire pasa de largo y el motor se recalienta más.**
+
+## Las cuatro condiciones: la tesis del módulo
+
+Lo que hay que llevarse aunque se olvide todo lo demás: **un motor de combustión no tiene misterio,
+tiene cuatro requisitos.** **Aire**, limpio y suficiente, entrando y también saliendo.
+**Combustible**, en la proporción correcta: demasiado poco no arde y demasiado tampoco. **Chispa**,
+con energía para saltar bajo compresión. Y
+**<Termino slug="compresion-del-motor">compresión</Termino>**, la capacidad del cilindro de mantenerse
+sellado mientras el pistón aprieta. Falta la palabra que convierte esa lista en una máquina: **en el
+momento justo**, porque los cuatro pueden estar presentes y el motor no arrancar si llegan
+desordenados.
+
+<Dato titulo="La lista que se usa el resto del módulo">
+Cuando una máquina no arranca no se cambian piezas: **se hacen cinco preguntas en orden**, y cada
+respuesta descarta media máquina.
+
+1. **¿Gira?** Sin giro no hay chispa ni admisión. Aquí se mira el arrancador.
+2. **¿Tiene compresión?** Se siente en la mano al tirar de la cuerda: sin sello no hay motor.
+3. **¿Tiene chispa?** Y chispa *fuerte y en su momento*, no una lucecita cualquiera.
+4. **¿Le llega combustible?** Todo el recorrido, del tanque al agujerito del carburador.
+5. **¿Respira?** Filtro a la entrada, silenciador a la salida.
+
+Esa lista es la lección 04 entera. **Memorízala ahora**: la mayoría de las máquinas que se dan por
+muertas fallan en las preguntas 3, 4 o 5, las tres más baratas de resolver.
+</Dato>
+
+## Par, potencia y revoluciones: tres cosas distintas
+
+Estas tres palabras se usan como sinónimos en la conversación diaria y no lo son.
+Las <Termino slug="revoluciones-por-minuto">revoluciones por minuto</Termino> son lo simple: **cuántas
+vueltas da el eje en un minuto**, abreviado rpm. Una bomba trabaja alrededor de las 3.000, una moto
+pasa de las 8.000, en ralentí cualquiera anda por las 1.500.
+El <Termino slug="par-motor">par</Termino> es **la fuerza de torsión**: fuerza por brazo, medida en
+newton por metro, lo que sube una cuesta con la moto cargada o lo que sigue cortando cuando la
+cuchilla encuentra un tallo grueso. **Par es empuje.**
+La <Termino slug="potencia-mecanica">potencia</Termino> es **trabajo por unidad de tiempo**, y sale de
+multiplicar las dos anteriores:
+
+<Formula explicacion="La potencia en vatios sale del par en newton por metro multiplicado por las revoluciones por minuto y dividido entre 9,55. Un caballo son unos 0,75 kilovatios, así que un motor de 5,5 caballos ronda los 4.100 vatios.">
+Potencia (W) = Par (N·m) × rpm ÷ 9,55
+</Formula>
+
+De esa fórmula sale toda la intuición práctica. **Se puede tener mucho par y poca potencia** si el eje
+gira despacio: una llave larga aprieta con un par enorme y casi no genera potencia porque da una
+vuelta por minuto. Y **poco par con mucha potencia** si el eje vuela: es el caso de la desbrozadora,
+un motorcito de 50 centímetros cúbicos que a diez mil vueltas entrega más potencia que un motor mayor
+girando lento — y por eso necesita una caja reductora en la punta, para **cambiar vueltas por par**
+antes de llegar a la cuchilla. Para quien programa la traducción es directa: **el par es el trabajo de
+atender una petición, las revoluciones son cuántas peticiones por segundo, la potencia es el
+rendimiento total** — y de ahí sale el error de compra más común, el de dimensionar por la cifra de
+pico. **La potencia de la ficha se mide a un régimen concreto y a plena aceleración**, así que un
+motor de «5,5 caballos» no da 5,5 caballos a media aceleración ni girando lento. El **caballo**, de
+paso, no es unidad única: el de vapor son unos 735 vatios y el mecánico 746, así que **un caballo ≈
+0,75 kilovatios**.
+
+Falta una magnitud más: la <Termino slug="relacion-de-compresion">relación de compresión</Termino>,
+cuántas veces se aprieta la mezcla, alrededor de ocho a uno en estos motores. Decide cuánto trabajo se
+saca de cada gramo de combustible —**comprimir antes de quemar es lo que hace eficiente al motor**— y
+es también lo que lo pone al borde de la detonación. Toda la ingeniería del motor vive en ese
+equilibrio.
+
+<AplicarRizoma titulo="En tu casa, en tu taller y en tu barrio">
+**Conseguí un motor y ponele nombre a cada pieza, esta semana.** No hace falta comprarlo ni
+desarmarlo: sirve la bomba del pozo, la desbrozadora del vecino o la moto de tu hermano. Quitale la
+tapa de plástico y buscá con el dedo, sin desmontar nada: el filtro de aire, el carburador debajo, el
+tanque y su manguera, el cable grueso que va a la bujía, las aletas, el silenciador —frío—, la tapa
+del volante. Cinta de papel y un marcador bastan para pegar el nombre de cada pieza donde va, y eso es
+lo que hace que las lecciones siguientes se entiendan en lugar de leerse.
+
+**Después sentí los cuatro tiempos con la mano.** Con el motor frío y **el capuchón de la bujía
+desconectado y apoyado contra el metal del motor** —obligatorio: sin desconectarlo, un tirón puede
+encenderlo con tus manos adentro—, tirá despacio de la cuerda. En un punto de cada dos vueltas **la
+cuerda se pone dura**: eso es la compresión, el pistón apretando el aire contra un cilindro sellado.
+Es la primera prueba de diagnóstico del módulo y ya sabés hacerla; un motor que gira liviano todo el
+recorrido perdió compresión.
+
+**Armá la ficha de cada máquina de la casa y aprendé cómo suena sana.** Una foto de la placa —marca,
+modelo, número de serie— y anotado al lado: si es de dos o de cuatro tiempos, cilindrada, tipo de
+bujía y tipo de filtro. Esa hoja te ahorra el viaje inútil al repuestero y deja que otra persona
+atienda la máquina si vos no estás; en la lección 03 se vuelve la bitácora por horas. Y grabá diez
+segundos del ralentí: el día que aparezca un repiqueteo metálico o un cambio en el tono del escape,
+vas a notarlo enseguida.
+
+<Advertencia titulo="Tres reglas que se cumplen desde hoy, antes de saber reparar nada">
+**Ningún motor se enciende bajo techo, nunca, ni un minuto.** La combustión incompleta produce
+**monóxido de carbono**: un gas sin color, sin olor y sin sabor, que se pega a la sangre unas
+doscientas veces mejor que el oxígeno y la deja incapaz de transportarlo. La persona no se ahoga ni
+tose: le duele la cabeza, le da sueño y se duerme. Así muere gente en su propia casa. **Al aire libre
+siempre, lejos de puertas y ventanas.** Ante dolor de cabeza, náusea o sueño repentino con un motor
+cerca: salir al aire y **ir al centro de salud**.
+
+**El silenciador quema al tacto y prende pasto.** Pasa de los cuatrocientos grados trabajando y sigue
+ardiendo minutos después de apagado: no se apoya la máquina sobre pasto seco al terminar.
+
+**Se carga combustible con el motor apagado y frío.** Lo que arde no es el líquido, es **el vapor**,
+que pesa más que el aire y corre por el suelo buscando una fuente de calor. Un chorrito derramado
+sobre un silenciador caliente se enciende solo. Nada de fuego ni chispas cerca al llenar.
+</Advertencia>
+
+**Y la parte que no es mecánica: esto es un oficio, y en la zona falta.** Contá cuántos motores hay en
+tres cuadras a la redonda y a cuántos kilómetros está el mecánico más cercano: ese número es tu
+mercado. No hace falta taller ni torno — limpiar filtros, cambiar bujías y destapar carburadores
+resuelve la mayoría de las fallas del barrio con una caja de herramientas básica. Empezá por las
+máquinas de tu familia, sin cobrar, hasta que el mecanismo esté en las manos y no solo en la cabeza; y
+**cuando algo exceda lo que sabés, decilo y mandalo al mecánico**, porque el oficio se sostiene sobre
+la confianza más que sobre la habilidad.
+</AplicarRizoma>
+
+<ContextoBolivia titulo="Los motores que de verdad hay en Santa Cruz y en Zanja Honda">
+**El parque de motores del oriente boliviano es bastante uniforme, y eso juega a tu favor.** En bombas
+y generadores domina un mismo diseño de motor horizontal de entre 160 y 400 centímetros cúbicos, con
+el original japonés y una cantidad enorme de copias chinas vendidas bajo muchas marcas; en
+desbrozadoras y motosierras pasa igual, y en motos mandan las de 125 a 150 centímetros cúbicos de
+origen chino e indio. Buena noticia: **las piezas de las copias suelen ser intercambiables entre sí y
+con el original**, así que entender el mecanismo vale más que memorizar marcas.
+
+**El clima de acá ataca al motor por los dos lados del año.** De mayo a septiembre la seca es una
+máquina de matar motores por polvo: recordá la cifra, nueve mil litros de aire por cada litro de
+gasolina, y en esos meses ese aire viene cargado de tierra fina y abrasiva. Lo que no retiene el
+filtro entra al cilindro y **raya la pared por la que corren los aros**, que es de lo que depende la
+compresión, así que un motor que trabaja en camino de tierra puede necesitar limpiar el filtro cada
+pocas jornadas, muy por debajo de lo que dice un manual escrito para otro clima. De octubre a abril el
+problema es el opuesto: con humedad alta, un motor guardado tres meses aparece con óxido en el
+cilindro, agua condensada en el tanque y los contactos sulfatados. Y los surazos agregan mañanas de
+unos diez grados en las que cuesta arrancar, porque la gasolina se evapora peor y la mezcla llega más
+pobre — para eso existe el cebador.
+
+**La altitud de Zanja Honda es una ventaja que conviene entender.** A unos 529 metros sobre el nivel
+del mar la atmósfera empuja casi con toda su fuerza, así que **un motor de fábrica trabaja aquí en las
+condiciones para las que fue calibrado**. En el altiplano no pasa eso: a 3.600 o 4.000 metros hay
+bastante menos aire por bocanada, el carburador sigue soltando la misma gasolina y la mezcla queda
+**rica** — pierde fuerza, humea negro y ensucia la bujía. Por eso una máquina usada comprada en La Paz
+o El Alto puede venir con el carburador modificado para la altura y aquí andar pobre.
+
+**Los cortes de energía convierten al generador en la máquina más peligrosa de la casa.** Cuando se va
+la luz, la tentación es prenderlo en el pasillo, bajo el alero o en el garaje con el portón entornado
+para que no se moje ni se lo roben. Es exactamente la situación que produce muertes por monóxido de
+carbono, y ocurre de noche, con la familia durmiendo. La regla no admite matices: **generador al aire
+libre, lejos de puertas y ventanas, aunque llueva**, con un techito que no encierre. Y como el dengue
+obliga acá a dormir con la casa cerrada o con mosquitero, ese factor local **empeora el riesgo en
+lugar de aliviarlo.** Un detalle más antes de comprar uno: la red boliviana trabaja a **50 hercios**,
+y en un generador de dos polos la frecuencia sale de las vueltas del motor —**3.000 vueltas dan 50
+hercios y 3.600 dan 60**—, así que un grupo hecho para mercados de 60 entrega una frecuencia que **no
+le sienta bien a los aparatos de casa**. Se mira la placa.
+
+**Sobre combustible, precios y trámites, este curso se detiene donde corresponde.** El precio de la
+gasolina en Bolivia, las condiciones de venta y las reglas para llevarla en bidones **dependen de
+decisiones del Estado y cambian**: este material no las enumera ni las inventa, y la consulta va **al
+surtidor y a la autoridad competente**. Lo que no cambia es el mecanismo: la gasolina guardada semanas
+se degrada y deja barnices que tapan los agujeritos del carburador, y acá mucha gente compra por bidón
+porque el surtidor queda lejos. Eso es la lección siguiente.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Quedaron tres ideas, y las tres se usan en las cinco lecciones restantes. **El calor se vuelve
+presión, la presión se vuelve fuerza sobre el pistón, y la biela con el cigüeñal la vuelven giro.**
+**El ciclo son cuatro tiempos en dos vueltas de cigüeñal**, con el árbol de levas dividiendo la
+frecuencia a la mitad y la chispa saltando un poco antes del punto muerto superior porque la llama
+tarda en cruzar la cámara. Y sobre todo: **aire, combustible, chispa y compresión, en el momento
+justo.**
+
+Falta la otra mitad del mundo de los motores pequeños. La desbrozadora y la motosierra **no funcionan
+con este ciclo**: hacen una explosión por vuelta en lugar de una cada dos, no tienen válvulas ni
+cárter con aceite, y por eso hay que mezclarles el aceite en la gasolina. Esa es la lección **02, Dos
+tiempos y cuatro tiempos: el aceite, la mezcla y el gripado**: cómo reconocer cuál de los dos tenés en
+la mano antes de echarle nada, qué hace la película de aceite entre dos metales que se rozan a cientos
+de grados, y qué pasa —hasta el pistón soldado al cilindro— cuando falta. **Es la lección que más
+motores salva del módulo**, porque ese error se comete una sola vez y se paga con la máquina entera.

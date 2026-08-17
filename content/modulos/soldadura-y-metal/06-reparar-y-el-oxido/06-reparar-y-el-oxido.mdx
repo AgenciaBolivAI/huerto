@@ -1,0 +1,538 @@
+La parrilla de fierro que sostenía el tanque de agua se partió por una pata un domingo de enero. El
+tanque lleno quedó sentado en el barro y por suerte no había nadie abajo. El dueño soldó la pata en el
+mismo sitio y volvió a subir el tanque. Se rompió otra vez en abril, unos centímetros más arriba; la
+tercera reparación duró dos meses. **Los tres cordones estaban bien hechos**. Lo que faltó ocurrió antes
+de encender la máquina: **nadie preguntó por qué se había roto**, y una reparación que no contesta esa
+pregunta no arregla la pieza, la programa para romperse otra vez, un poco más allá y un poco antes.
+
+Esta lección son dos mitades. La primera es la decisión previa al arco: leer la rotura, saber qué metal
+tienes en la mano, saber qué no se suelda nunca y saber cuándo conviene reemplazar. La segunda es el
+óxido, que en esta sabana húmeda se lleva más piezas que todas las roturas juntas, y que no es suciedad
+sino una pila eléctrica funcionando sobre tu fierro. La técnica del cordón quedó en la lección 04 y el
+armado en la 05: aquí se dan por sabidos y se aplican sobre lo que hay de verdad en un patio, piezas
+viejas, sucias, de material desconocido y ya partidas.
+
+## El metal no miente: la rotura es el informe
+
+Cuando algo se parte deja dos caras nuevas que nadie tocó nunca. Esa
+superficie <Termino slug="superficie-de-rotura">de rotura</Termino> es un informe escrito por el propio
+material sobre cómo murió. Se lee con una linterna de costado y **antes de limpiar nada**, porque la
+limpieza borra el informe.
+
+**Sobrecarga** es la más fácil de reconocer y la menos frecuente: se le pidió a la pieza, de una sola
+vez, más de lo que podía. Si el material era dúctil se estiró antes de partirse y la cara se ve gris,
+opaca y fibrosa. Su opuesto es la <Termino slug="rotura-fragil">rotura frágil</Termino>, que ocurre
+**sin deformarse nada**: cara plana y brillante con aspecto de azúcar gruesa, las dos mitades encajan
+perfecto y suena a vidrio. Aparece en fundición, en aceros duros, en cordones con hidrógeno y sobre todo
+**con frío**, que es por qué en una madrugada de surazo se rompe lo que aguantó todo el verano.
+
+**Fatiga** es la causa real de la mayoría de las roturas de barrio y la que más se confunde con «era
+malo el fierro». La <Termino slug="fatiga-del-metal">fatiga del metal</Termino> es la rotura por
+repetición: cargas muy por debajo de lo que rompería la pieza de un golpe, aplicadas miles de veces. En
+algún punto —siempre un punto, nunca una zona— cada ciclo deforma un poquito los granos, nace una
+microgrieta y esa grieta **crece un pelo por cada ciclo**. La pieza no avisa: no se dobla, no cruje, y
+un día la parte sana ya no alcanza. Su firma son
+las <Termino slug="marcas-de-playa">marcas de playa</Termino>: líneas curvas concéntricas y finas, como
+las que deja el agua en la arena, que salen todas de un mismo origen y ocupan una zona lisa y bruñida;
+al lado hay otra rugosa, que es lo que se rompió en el último instante. Si ves esas dos texturas juntas
+es fatiga, y **el origen de las curvas es el lugar que hay que rediseñar**.
+
+**Corrosión** actúa sola o de a dos. Sola, se come el espesor hasta que lo que queda no aguanta. De a
+dos es peor: una <Termino slug="picadura-de-oxido">picadura de óxido</Termino> hace de origen para una
+grieta de fatiga y la pieza rompe con la mitad de los ciclos. Un detalle que vale oro: **si el interior
+de la grieta está oscuro y oxidado, llevaba meses abierta**; si está limpio y metálico, se abrió hace
+poco.
+
+**Cordón mal hecho** se reconoce porque la falla siguió el camino de la soldadura y no el del metal: la
+cara de rotura tiene la forma exacta del cordón, plana y brillante donde debía haber fusión, y eso es
+**falta de fusión** o falta de penetración de las de la lección 04. Si hay huecos redondos, fue
+porosidad. Y si la fisura es fina, apareció días después de soldar y corre a lo largo del cordón, es
+la <Termino slug="fisuracion-en-frio">fisuración en frío</Termino> por hidrógeno, la que espera a que
+nadie mire.
+
+<Tabla>
+
+| Causa | Cómo se ve la rotura | Qué la delata | Qué exige la reparación |
+| --- | --- | --- | --- |
+| **Sobrecarga dúctil** | Gris, fibrosa, sección estirada | Hay un evento que la explica | Más sección, o menos carga |
+| **Rotura frágil** | Plana, brillante, granulada | Frío, fundición, acero duro | Cambiar de material o de proceso |
+| **Fatiga** | Zona lisa con marcas de playa más zona rugosa | Nace en un canto, un agujero o un pie de cordón | Quitar el concentrador, no rellenarlo |
+| **Corrosión** | Pared adelgazada, costra, picaduras | Óxido dentro de la grieta | Reponer sección y resolver el agua |
+| **Cordón defectuoso** | Sigue la línea del cordón | Se ve la forma del cordón en la rotura | Ranurar y rehacer, no recargar |
+
+</Tabla>
+
+## Por qué el mismo cordón en el mismo sitio vuelve a romperse
+
+Una pieza no se rompe donde la tensión es alta en promedio: se rompe donde la tensión **se junta**. Un
+cambio brusco de geometría —un canto vivo, un agujero, el pie de un cordón— multiplica la tensión local.
+Es el <Termino slug="concentrador-de-tension">concentrador de tensión</Termino> de la lección 03, y su
+efecto se escribe con un número.
+
+<Formula explicacion="La tensión real en el borde de un detalle es la tensión media de la pieza multiplicada por un factor que solo depende de la forma. Un agujero redondo en una chapa ancha da un factor de 3: donde la chapa tiene 10 unidades de tensión, el borde del agujero tiene 30. La punta de una fisura, cuyo radio es casi cero, da un factor enormísimo, y por eso una grieta crece sola bajo cargas que la pieza entera aguantaría sin problema. La forma vale más que el material.">
+σ en el borde = Kt × σ media de la pieza
+</Formula>
+
+De ahí sale la regla que ordena toda reparación: **si vuelves a soldar la misma unión con la misma forma
+y la misma carga, obtienes el mismo resultado**, porque el concentrador sigue ahí. Y encima queda peor,
+por tres razones que se suman. La soldadura contrae al enfriar y esa contracción se guarda adentro
+como <Termino slug="tension-residual">tensión residual</Termino>, que se suma a la carga de servicio
+antes de que le pongas un solo kilo.
+La <Termino slug="zona-afectada-por-el-calor">zona afectada por el calor</Termino> queda más dura y
+menos dúctil que el metal vecino, o sea más propensa a la grieta. Y el pie del cordón **es en sí mismo
+un concentrador nuevo**, tanto más agudo cuanto más panzón quedó.
+
+<Analogia titulo="Reiniciar el servicio no arregla la fuga de memoria">
+El proceso se cae cada tres días, alguien lo reinicia y vuelve a andar; con el tiempo se cae cada vez
+más seguido. Reiniciar es el equivalente exacto de volver a soldar la misma unión: **restaura el estado,
+no toca la causa**, y encima acumula deuda. La grieta es el stack trace, y el origen de las marcas de
+playa es la línea del fondo, la que hay que mirar.
+
+La solución tiene el mismo nombre en los dos oficios: **repartir la carga**. No optimizar hasta el
+infinito el nodo que se cae, sino abrir otro camino para que deje de recibir todo. En metal se llama
+cartela; en un sistema se llama balanceo. La pregunta después de una rotura no es «cómo lo pego mejor»,
+es «cómo hago para que ese punto reciba menos».
+</Analogia>
+
+Entonces **toda reparación tiene que cambiar algo**: la geometría, el camino de la carga o la sección
+disponible. Si no cambia ninguna de las tres no es una reparación, es una postergación con olor a
+electrodo.
+
+## Triaje: qué metal tienes en la mano
+
+Sobre una pieza vieja nadie te va a decir de qué es. Averiguarlo cuesta dos minutos y evita perder una
+tarde o hacerte daño.
+
+<Dato titulo="Cuatro pruebas de campo que cuestan cero">
+**El imán.** El acero común y la fundición pegan fuerte; el aluminio no pega nada; el inoxidable más
+común en cocinas y pasamanos casi no pega, aunque hay inoxidables que sí. Descarta más de lo que
+confirma.
+
+**La <Termino slug="prueba-de-la-chispa">prueba de la chispa</Termino>.** Apoyas la pieza un segundo en
+la amoladora, en penumbra y con protección ocular. El acero dulce tira chispas largas y amarillas que se
+abren en tenedorcitos; cuanto más carbono, más estrellitas que revientan a lo largo del chorro. La
+fundición tira un chorro **corto, rojizo y apagado**; el inoxidable, chispas anaranjadas y casi rectas.
+
+**La lima y la uña.** La fundición se lima fácil y suelta un **polvo gris que ensucia los dedos**; el
+acero deja viruta enroscada; el aluminio se raya con un cuchillo y pesa un tercio de lo que aparenta.
+
+**El golpe.** Un tubo de acero suena a campana y sigue sonando. La fundición suena **seco y muerto**, un
+«top» sin cola. Una pieza corroída por dentro también suena muerta, y eso ya es otro dato.
+</Dato>
+
+<Tabla>
+
+| Material | Cómo lo reconoces | ¿Con electrodo revestido? | Qué pasa si insistes |
+| --- | --- | --- | --- |
+| Acero dulce | Imán sí, chispa amarilla con tenedores | **Sí, es para lo que sirve** | Nada: es su terreno |
+| Acero duro, resorte, eje | Chispa con muchas estrellas | Solo con precalentamiento y criterio | Se templa al enfriar y fisura |
+| Fundición | Chispa corta rojiza, polvo gris, suena muerta | Con electrodo de níquel; casi siempre no conviene | Se raja al lado del cordón |
+| Chapa fina | Menos de 1,5 mm, se abolla con el dedo | Con electrodo delgado y punteo | Se agujerea y se deforma |
+| Galvanizado | Capa gris con dibujo de escarcha | Sí, **quitando el zinc antes** | Poros, y humos que enferman |
+| Aluminio | Liviano, no imanta, raya blanca | **No, no con este equipo** | Se derrumba de golpe sin avisar |
+| Inoxidable | Imán débil o nulo, chispa naranja corta | Solo con electrodo específico | Cordón sucio y óxido en la junta |
+
+</Tabla>
+
+## Las cuatro trampas: fundición, aluminio, inoxidable y chapa fina
+
+El <Termino slug="hierro-fundido">hierro fundido</Termino> es el que más gente intenta y el que más
+chasco da. Tiene tanto carbono que, al enfriarse rápido junto al cordón, la zona afectada por el calor
+se vuelve vidriosa y durísima y además contrae distinto: se raja **al lado** del cordón, a veces al día
+siguiente. Si aun así hay que intentarlo, todo se hace al revés que con acero. Se usa
+un <Termino slug="electrodo-de-niquel">electrodo de níquel</Termino>, que deposita un metal blando capaz
+de absorber la contracción y que después se puede limar y taladrar; se
+aplica <Termino slug="precalentamiento">precalentamiento</Termino> a la pieza entera, no solo a la
+junta, para que la diferencia entre el charco y el resto sea chica; se sueldan **tramos cortos**
+alternados, dejando enfriar hasta poder apoyar la mano;
+se <Termino slug="martillado-del-cordon">martilla el cordón</Termino> con golpecitos suaves mientras
+está caliente, para estirarlo un poco y aliviar la contracción; y se entierra la pieza en arena seca o
+cal para que **baje de temperatura durante horas, no durante minutos**. Nada de agua, nunca. La
+alternativa honesta es soldadura fuerte con bronce, que moja la fundición sin fundirla, pero pide
+soplete. Y la respuesta más frecuente sigue siendo: en una pieza que sostiene algo, la fundición se
+reemplaza.
+
+El **aluminio** engaña de otra manera. Su óxido superficial funde mucho más caliente que el metal de
+abajo, así que la piel aguanta mientras el interior ya es líquido; y como no se pone rojo antes de
+fundir, no da aviso: pasa de sólido a un agujero. Además conduce el calor tan bien que se lleva el arco
+entero. Con electrodo revestido, en un patio, la respuesta es no: se atornilla, se remacha, o se lleva a
+un taller con TIG.
+
+El **inoxidable** sí se suelda, pero con electrodo de inoxidable —nunca con uno común, que deja un
+cordón que se oxida en semanas— y con poco calor. Su problema propio se
+llama <Termino slug="sensibilizacion-del-inoxidable">sensibilización</Termino>: si se mantiene mucho
+rato en un rango de temperatura intermedio, el cromo que lo protege se combina con el carbono en los
+bordes de grano y deja de proteger, así que **la junta se oxida justo al lado del cordón**. Dos reglas
+gratis: cordones cortos y pieza fría, y **jamás uses en inoxidable el cepillo o el disco que usaste en
+acero común**, porque las partículas de hierro que deja se oxidan encima y lo manchan de puntos color
+óxido.
+
+La **chapa fina** —menos de 1,5 mm: un mueble, un tanque, un guardabarros— se agujerea porque el charco
+atraviesa todo el espesor antes de que puedas moverte. Con el electrodo más delgado y el amperaje más
+bajo se trabaja por puntos: un punto, contar hasta cinco, otro punto al lado, encadenándolos hasta
+cerrar. Ayuda mucho respaldar por detrás con un pedazo de cobre o fierro grueso, que chupa calor y
+sostiene el charco. Y a veces la mejor solución es no soldar: una junta solapada con remaches o
+autoperforantes, de las de la lección 05, dura más que una chapa cosida a agujeros.
+
+## Lo que no se suelda nunca
+
+Hay una lista que no tiene versión matizada y no depende de la habilidad de nadie. Está aquí junta
+porque es en una reparación cuando aparece la tentación.
+
+<Advertencia titulo="La lista que no se negocia">
+**Recipientes que contuvieron combustible, aceite, solvente o químico desconocido.** El mecanismo está
+en la lección 02: el tambor **vacío** es más peligroso que el lleno, porque la película de residuo
+evaporándose dentro forma justo la mezcla que explota. Lavarlo con agua no lo limpia. Ni soldar ni
+cortar con amoladora.
+
+**Garrafas de gas.** Ni soldarlas, ni cortarlas, ni convertirlas en parrilla, ni «purgarlas con agua».
+Nunca, en ninguna condición.
+
+**Cualquier cosa con presión adentro**: tanque de compresor, extintor, termotanque, cañería con presión.
+Y **nada cerrado sin respiradero**: el aire de un tubo sellado se calienta, se expande y sale reventando
+por el cordón todavía líquido.
+
+**Ganchos, grilletes, cadenas, eslingas y todo <Termino slug="equipo-de-izaje">equipo de
+izaje</Termino>.** Son de acero aleado con tratamiento térmico, y el calor del arco borra ese
+tratamiento donde calienta: la pieza queda blanda por un lado y vidriosa por el otro. Además un gancho
+reparado ya no tiene ninguna capacidad conocida y falla de golpe con una carga colgando sobre personas.
+Se reemplaza por uno nuevo, y punto.
+
+**Dirección, suspensión, frenos, chasis y aros de un vehículo.** Piezas tratadas térmicamente cuyo fallo
+ocurre en movimiento y con gente adentro. Si tienes que soldar cualquier otra cosa en un vehículo,
+**desconecta la batería** y pon la pinza de masa a pocos centímetros del cordón, para que la corriente
+no busque camino por rodamientos ni electrónica, y trabaja lejos del tanque y de las cañerías de
+combustible.
+
+**Estructuras que sostienen personas por encima de la cabeza**: andamios, escaleras, barandas de altura,
+soportes de tanque elevado en uso. No es que no se puedan fabricar: es que su cálculo no sale del ojo, y
+ahí se consulta con alguien con formación.
+</Advertencia>
+
+## Cuándo reemplazar cuesta menos que arreglar
+
+La comparación honesta no es «cuánto cuesta el repuesto contra cuánto cuestan dos electrodos». Del lado
+de reparar hay que poner el material, el disco, tu tarde, la probabilidad de que vuelva a romperse y,
+sobre todo, **qué pasa el día que falle**. Cuatro señales dicen reemplazar sin discutir: cuando el metal
+alrededor de la rotura está adelgazado por corrosión, porque el cordón nuevo se apoyaría sobre material
+podrido; cuando no puedes identificar el material; cuando la pieza es una mercadería estándar y barata
+—una bisagra, una abrazadera, un perno—, porque tu tiempo vale más; y cuando la pieza protege a una
+persona. En el resto reparar es legítimo, incluso provisionalmente, con dos condiciones: **que el modo
+de falla sea benigno** —que si se rompe otra vez no caiga nada sobre nadie— y que tenga fecha escrita.
+«Aguanta hasta septiembre» es un plan; «después vemos» es cómo se llega a la tercera rotura.
+
+## La reparación que sí cambia algo
+
+Ahora sí, el arco. Tres movimientos, en este orden.
+
+**Abrir, no rellenar.** Una fisura no se tapa con un cordón encima: hay que
+hacer <Termino slug="ranurado">ranurado</Termino>, o sea abrir un canal en V a lo largo de toda la
+grieta hasta llegar a metal sano, y recién ahí rellenar en pasadas. Si sueldas encima, el charco no
+llega al fondo, queda una rendija afilada dentro del cordón y la fisura sigue creciendo escondida. La
+grieta casi siempre es más larga de lo que se ve: se descubre lijando y mirando de costado con luz
+rasante, y en la duda se abre un par de centímetros más allá de donde parece terminar.
+
+**Detener la grieta.** Cuando la fisura está en una chapa y todavía no partió la pieza, se
+usa <Termino slug="taladro-de-parada">taladro de parada</Termino>: un agujero de unos seis milímetros
+justo en la punta de la grieta, **un poco más allá** de donde crees que termina. El mecanismo es el de
+la fórmula de arriba: la punta de una fisura tiene radio casi cero y por eso un factor de concentración
+enorme; el agujero la convierte en un borde redondo con factor cercano a tres, y la grieta se queda sin
+la tensión que la hacía avanzar. Es legítimo y muy útil, pero **compra tiempo, no cura**: si la carga
+que la abrió sigue igual, reaparecerá en otro punto.
+
+**Repartir la carga.** El refuerzo que funciona es la <Termino slug="cartela">cartela</Termino>: una
+placa triangular o una platina soldada de manera que la carga tenga un segundo camino y no pase entera
+por el punto que se rompió. Su regla de oro es que **no debe terminar en punta ni con un corte recto y
+brusco**, porque el extremo de una cartela mal rematada es un concentrador nuevo y la pieza se romperá
+justo ahí: se rebaja en pendiente suave y se redondea. Tres criterios más: extiende el cordón bastante
+más allá del daño, hacia metal sano; usa varios cordones cortos repartidos en lugar de uno largo y
+grueso, que mete más calor y deja más tensión; y no cierres un cordón dando la vuelta completa a un tubo
+sin necesidad, porque la contracción anular lo estrangula.
+
+<Advertencia titulo="Las tres cosas que arruinan una reparación antes de empezar">
+**No sueldes sobre pintura, óxido, grasa ni zinc.** Todo eso se descompone con el calor y entra al
+charco: hidrógeno de la humedad y la pintura, poros del zinc, escoria atrapada del óxido. Se limpia
+hasta metal brillante unos tres centímetros a cada lado, como en la lección 03. Con galvanizado, además,
+los humos producen la <Termino slug="fiebre-del-zinc">fiebre del zinc</Termino>: se rebaja el zinc antes
+y se trabaja con ventilación real, jamás en un cuarto cerrado.
+
+**No sueldes una pieza cargada.** Si la reparación es de la estructura que sostiene un tanque, un techo
+o un portón, primero se apuntala y se descarga. El metal caliente pierde buena parte de su resistencia,
+y lo que aguantaba frío puede ceder justo mientras estás debajo con la careta puesta.
+
+**No la devuelvas al servicio sin probarla.** Cárgala en un lugar donde su caída no lastime a nadie, y
+si es posible cárgala más de lo que va a llevar. Una reparación que falla en la prueba es una buena
+tarde; una que falla en servicio es otra cosa.
+</Advertencia>
+
+## El óxido no es suciedad: es una pila trabajando
+
+El óxido no es una capa sucia que se posa encima del fierro: es el resultado de una **reacción
+eléctrica** en la superficie del metal, y entenderla te da todas las defensas de golpe.
+
+Sobre un pedazo de acero mojado se forma sola una <Termino slug="pila-de-corrosion">pila de
+corrosión</Termino>, igual a la de una linterna y con sus mismas cuatro piezas. Hay una zona que hace
+de <Termino slug="anodo">ánodo</Termino>: ahí los átomos de hierro sueltan electrones, se convierten en
+iones y **se van del metal disueltos en el agua**; ese es el lugar donde se pierde material, y el hueco
+que queda es la picadura. Hay otra que hace de <Termino slug="catodo">cátodo</Termino>: ahí los
+electrones sobrantes son recogidos por el oxígeno disuelto en el agua, y ahí no se pierde metal. Entre
+las dos hace falta un <Termino slug="electrolito">electrolito</Termino>, una película de agua con algo
+disuelto —sales, polvo, humo— capaz de llevar iones; el rocío con el polvo del camino es un electrolito
+excelente. Y hace falta un camino para los electrones, que es el propio metal.
+
+<Formula explicacion="Las dos medias reacciones del óxido común. En el ánodo el hierro se disuelve y suelta dos electrones por átomo: ahí adelgaza la pieza. En el cátodo el oxígeno disuelto en el agua consume esos electrones. De aquí sale toda la estrategia: sin oxígeno no hay cátodo, sin agua no hay electrolito, y sin uno de los dos la pila se detiene.">
+Ánodo: Fe → Fe²⁺ + 2 e⁻     ·     Cátodo: O₂ + 2 H₂O + 4 e⁻ → 4 OH⁻
+</Formula>
+
+Tres consecuencias prácticas. La primera: **el óxido ocupa varias veces el volumen del hierro que se
+comió**, así que empuja; por eso levanta la pintura desde abajo, separa dos chapas solapadas, traba un
+perno para siempre y revienta el recubrimiento del hormigón armado, como vimos en albañilería. La
+segunda: **el óxido de hierro es poroso y no protege**, deja pasar agua y aire hacia el metal sano de
+abajo, y por eso una vez que empieza no se detiene sola. La tercera explica por qué el aluminio y el
+inoxidable se comportan distinto: ellos también se oxidan, pero forman
+una <Termino slug="capa-pasiva">capa pasiva</Termino>, una película de óxido delgadísima, compacta y
+bien pegada que sella la superficie y frena la reacción; se rehace sola en segundos si hay oxígeno, y
+por eso mismo, tapada y sin oxígeno, deja de proteger.
+
+## Dónde se pudre primero: pares, rendijas, suelo y rocío
+
+Si la corrosión es una pila, se acelera cuando algo hace que ánodo y cátodo queden bien definidos y bien
+conectados. Eso pasa en cuatro situaciones que puedes reconocer y evitar.
+
+Dos metales distintos en contacto y mojados forman un par, y no les toca lo mismo a los dos: en
+la <Termino slug="serie-galvanica">serie galvánica</Termino> unos son más nobles que otros —grafito,
+inoxidable, cobre y bronce en un extremo; acero, zinc y aluminio en el otro—, y **el menos noble se
+convierte en el ánodo y se disuelve para proteger al otro**. Es
+la <Termino slug="corrosion-galvanica">corrosión galvánica</Termino> de la lección 05, y su crueldad
+está en las áreas.
+
+<Formula explicacion="La corriente que sale del ánodo es la misma que entra al cátodo, pero repartida sobre superficies distintas. Ánodo chico y cátodo grande concentra todo el ataque en pocos centímetros cuadrados. De ahí dos reglas que parecen contradictorias y no lo son: el tornillo debe ser siempre más noble que la chapa que sujeta, nunca al revés; y si vas a pintar solo una parte, pinta el metal noble, porque pintar solo al menos noble deja sus poros como ánodos diminutos frente a un cátodo enorme.">
+Velocidad de ataque en el ánodo ∝ área del cátodo ÷ área del ánodo
+</Formula>
+
+La segunda situación es más común todavía y no necesita dos metales:
+la <Termino slug="aireacion-diferencial">aireación diferencial</Termino>. Donde llega poco oxígeno, el
+metal se vuelve ánodo respecto del vecino bien aireado. Y donde llega poco oxígeno es en todas partes:
+dentro de una junta solapada, debajo de una arandela, bajo una costra de tierra o un montón de hojas,
+dentro de un tubo que juntó agua, y en la franja donde una pata entra al suelo. Eso explica de un
+plumazo por qué **un poste se corta justo al ras del piso**, por qué el óxido sale por el borde de una
+unión atornillada que se ve perfecta, y por qué el tubo del portón se pudrió por dentro mientras la
+pintura de afuera seguía linda.
+
+La tercera es el agua que no viene de la lluvia. Un fierro que pasa la noche a cielo abierto irradia
+calor y **queda más frío que el aire**; si baja del <Termino slug="punto-de-rocio">punto de
+rocío</Termino> se moja solo, sin que haya caído una gota. Lo que decide la vida de una pieza no es
+cuántas veces llueve sino su <Termino slug="tiempo-de-humectacion">tiempo de humectación</Termino>:
+cuántas horas al año pasa con una película de agua encima. Es la fracción húmeda del módulo de
+carpintería aplicada a otro material, y se maneja igual: primero dónde está puesta la pieza y si el agua
+puede irse, después el recubrimiento.
+
+<Dato titulo="Los ocho lugares donde empieza siempre">
+Al inspeccionar no mires la pieza entera: anda directo a estos ocho. **La línea del suelo**, donde una
+pata entra en tierra o en el piso. **El interior de los tubos**, sobre todo los que quedaron con la boca
+hacia arriba. **La junta solapada**, por la rendija entre las dos chapas. **Debajo de arandelas, tuercas
+y abrazaderas.** **El cordón y su salpicadura**, porque la superficie rugosa retiene la pintura en capa
+fina. **Los cantos vivos y los agujeros**, por lo mismo. **Donde el metal toca madera, hormigón o
+mampostería**, que retienen agua contra él. Y **la parte de abajo de todo**, que es la que nadie mira.
+</Dato>
+
+## Preparar la superficie: ahí se gana o se pierde
+
+Una pintura buena mal aplicada dura menos que una corriente bien preparada, y el orden casi siempre se
+hace al revés. **Desengrasar primero, lijar después**: si lijas sobre grasa la muelas y la metes en los
+poros del metal, y ninguna pintura pega sobre grasa. **Después sacar todo lo suelto**: óxido en escamas,
+pintura levantada, escoria olvidada, salpicadura. El objetivo no es dejarlo espejo, es dejarlo **seco,
+sin grasa, sin nada suelto y un poco áspero**, porque una superficie pulida no da agarre y una levemente
+rayada sí. Dos cosas se suelen dejar y no deberían: la salpicadura, que es un montón de puntas donde la
+pintura queda fina, y la cascarilla de laminación negra del perfil nuevo, que es noble respecto del
+acero y convierte cada rayón en un ánodo diminuto frente a un cátodo enorme.
+
+Un <Termino slug="convertidor-de-oxido">convertidor de óxido</Termino> —los productos a base de ácido
+fosfórico o tánico— transforma el óxido adherido en un compuesto estable y oscuro que sí sirve de base.
+Su límite hay que saberlo: **no reemplaza la limpieza mecánica**, no funciona sobre escamas ni sobre
+óxido suelto, y sobre metal sano no aporta nada. Se usa después de raspar, siguiendo las instrucciones
+del envase, con guantes, anteojos y ventilación, y sin mezclarlo jamás con otros productos.
+
+Y una ventana de tiempo que en este clima decide todo: **el metal limpio hasta el brillo se vuelve a
+oxidar en horas**, con una película fina que arruina la adherencia. Limpia y da la primera mano el mismo
+día. Nunca pintes sobre metal húmedo, en las horas del rocío, ni con la chapa quemando al sol, porque el
+solvente hierve dentro de la película y deja agujeritos.
+
+## El esquema de pintura: tres capas con tres trabajos distintos
+
+Ninguna pintura es impermeable: el agua y el oxígeno la atraviesan igual, solo que despacio. Lo que
+detiene la corrosión es **el camino largo**, y por eso lo que manda no es la marca sino
+el <Termino slug="espesor-de-pelicula-seca">espesor de película seca</Termino> total. Dos manos delgadas
+protegen más que una gruesa, porque la gruesa forma piel por fuera, atrapa solvente y termina
+agrietándose.
+
+<Tabla>
+
+| Capa | Su trabajo | Qué pasa si falta |
+| --- | --- | --- |
+| **Imprimación** | Agarrarse al metal e inhibir la reacción | La pintura se despega en placas |
+| **Capa de cuerpo** | Aportar espesor, que alarga el camino del agua | El agua llega al metal en un año |
+| **Acabado** | Resistir sol, lluvia y roce; dejar ver la falla | La película se cuartea con el ultravioleta |
+
+</Tabla>
+
+La <Termino slug="imprimacion">imprimación</Termino> es la capa que decide, y no todas son iguales: las
+hay que solo agarran, las hay con pigmentos que frenan la reacción y las hay ricas en zinc. En un rincón
+escondido conviene probar la compatibilidad antes de pintar todo: una pintura de solvente fuerte sobre
+una vieja que no la tolera la arruga y la levanta.
+
+Queda el detalle que separa un trabajo que dura tres años de uno que dura diez. **La pintura se retira
+sola de los cantos vivos**: mientras está líquida, la tensión superficial la tira hacia las superficies
+planas y sobre una arista queda una fracción del espesor. Lo mismo en el pie de un cordón, en el borde
+de un agujero y en el filo de un ángulo. De ahí dos costumbres profesionales: **redondear con lima o
+disco los cantos** que queden a la intemperie, y dar una <Termino slug="capa-de-franja">capa de
+franja</Termino>, o sea una mano extra a pincel solo sobre cordones, cantos, agujeros, cabezas de pernos
+y solapes, **antes** de la mano general. Son quince minutos, y son exactamente los quince minutos que
+faltan en casi todo lo que se ve oxidado por ahí.
+
+## El zinc: qué le hace la soldadura al galvanizado
+
+El <Termino slug="galvanizado">galvanizado</Termino> no protege como la pintura, que solo cubre: protege
+por sacrificio. El zinc es menos noble que el acero, así que si aparece una raya el zinc vecino se
+convierte en <Termino slug="anodo-de-sacrificio">ánodo de sacrificio</Termino> y se disuelve él para que
+el acero descubierto no lo haga. Por eso una chapa galvanizada rayada no se oxida en la raya.
+
+La soldadura destruye eso. El zinc hierve muy por debajo de la temperatura del charco, así que **se
+evapora en una franja de varios centímetros a cada lado del cordón**, y esa franja queda de acero
+desnudo justo en el punto más caliente y más tensionado. Ahí es donde una reja o un portón galvanizado
+empieza a oxidarse: siempre en la unión. Los humos que salen producen la fiebre del zinc, con
+escalofríos y malestar que suelen aparecer horas después, por la noche.
+
+Reponerlo es fácil y casi nadie lo hace: se limpia la zona quemada y se aplica pintura rica en zinc, lo
+que se vende como <Termino slug="galvanizado-en-frio">galvanizado en frío</Termino>. No es un color: es
+zinc en polvo dentro de un ligante, y sigue funcionando por sacrificio, aunque con menos vida que el
+galvanizado original. Encima va el esquema de pintura normal, y un tarro chico alcanza para años.
+
+## Un calendario que sí se cumple
+
+El óxido no avanza a saltos: avanza siempre, y lo que cambia es si lo agarras cuando mide dos
+centímetros cuadrados o dos metros. Y avanza escondido: una vez que hay un poro, la corrosión sigue **de
+costado por debajo de la pintura**, así que la burbuja que ves es más chica que el daño real. A
+ese <Termino slug="avance-bajo-la-pintura">avance bajo la pintura</Termino> se le gana solo con
+inspección.
+
+<Tabla>
+
+| Cuándo | Qué se hace | Por qué en ese momento |
+| --- | --- | --- |
+| **Abril–mayo, al terminar las lluvias** | Recorrido de los ocho puntos, picando lo dudoso con un destornillador | Se ve lo que hicieron seis meses de agua |
+| **Junio–agosto, en plena seca** | Limpieza, imprimación, capa de franja y manos generales | Humedad baja y sin lluvia: la ventana para pintar |
+| **Septiembre, antes de las lluvias** | Retoques, tapar tubos, despejar tierra y hojas | Última oportunidad antes de octubre |
+| **Cada mes, cinco minutos** | Mirar línea de suelo, cordones y pernos de lo que sostiene peso | Detectar la burbuja mientras es chica |
+
+</Tabla>
+
+<AplicarRizoma>
+**Empieza por un recorrido, no por una compra.** Camina tu casa y tu patio con un destornillador viejo
+en la mano y busca los ocho puntos: la pata del tanque donde entra al piso, los tubos con la boca hacia
+arriba, las bisagras del portón, la baranda, el catre, la reja del fondo, el brazo del tendedero. Donde
+veas burbuja o costra, pica: si se hunde, ahí no hay metal, hay óxido con forma de metal. Ese recorrido
+te dice qué atender este año y qué puede esperar, y no cuesta nada.
+
+**Arma una caja de corrosión y déjala donde la veas.** Un cepillo de acero, lija gruesa, un trapo, un
+frasquito de desengrasante, un tarro chico de antióxido, un pincel de media pulgada envuelto en bolsa y,
+si consigues, un aerosol de galvanizado en frío. Con eso se retocan dos centímetros cuadrados en cinco
+minutos, que es la operación más rentable de todo este módulo. Lo que hay que ir a buscar al fondo del
+galpón no se hace nunca.
+
+**Aplica dos reglas al comprar y al armar.** La primera: **el tornillo siempre más noble que la chapa**,
+nunca al revés, y si tienes que unir metales distintos mete algo entre ellos —una arandela de plástico,
+un pedazo de cámara de bicicleta, una mano de pintura en las dos caras que se tocan—. La segunda: **nada
+de metal apoyado directamente en el suelo**. Un ladrillo, un dado de hormigón, una platina que levante
+dos dedos: cualquier cosa que saque la pieza de la franja donde siempre se corta.
+
+**Cuando algo se te rompa, párate un minuto antes de encender la máquina.** Mira la cara de rotura con
+luz de costado, decide si fue sobrecarga, fatiga, corrosión o cordón, y anota en una libreta la fecha,
+la pieza y qué encontraste. Después decide qué vas a cambiar: geometría, camino de la carga o sección.
+Si la respuesta a las tres es «nada», guarda el electrodo, porque estás por fabricar la próxima rotura.
+Esa libreta, al año, te dice cuáles son los tres puntos débiles de tu casa.
+
+**Ten la lista de lo que no se suelda escrita y pegada en la pared.** No es para ti: es para cuando
+llegue el vecino con el gancho del aparejo, con la garrafa que quiere hacer parrilla o con el brazo de
+dirección de la moto. Ahí no hace falta discutir; se muestra la lista, se explica el mecanismo en dos
+frases y se ofrece la alternativa concreta: comprar la pieza nueva, o llevarla a un taller que tenga el
+equipo y responda por el trabajo. Decir «no» con una razón clara es parte del oficio.
+
+**Haz que esto quede en más de una cabeza.** El calendario de las cuatro filas, la lista de lo que no se
+suelda y la regla del tornillo noble caben en una tablita clavada donde trabajas. En Rizoma del Sur ese
+tablero está en la pared del galpón junto al de las medidas de perfiles, y sirve para lo mismo: que
+quien llega nuevo no dependa de preguntarle a una persona, y que quien sabe pueda faltar sin que se
+detenga nada. Enseñarle el recorrido de los ocho puntos a un chico o una chica de la casa toma media
+tarde y le queda para siempre.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Aquí el metal pasa mojado mucho más tiempo del que parece.** Entre octubre y abril llueve, pero lo que
+más cuenta es lo otro: la humedad alta casi todo el año y el rocío de la madrugada, que moja el fierro
+incluso en plena seca porque la pieza irradia calor de noche y baja del punto de rocío. Sumado, el
+tiempo de humectación de un ángulo a la intemperie en Zanja Honda es enorme comparado con el de una zona
+seca de altura, y por eso lo que en otro lado dura diez años aquí dura tres. No es mala pintura: es el
+número de horas mojado.
+
+**El surazo agrega su propia trampa.** Entra aire frío del sur y la estructura se enfría entera; cuando
+vuelve el aire cálido y húmedo del norte, ese aire condensa sobre el metal todavía frío y la pieza
+**transpira**, gotea y se moja por completo, dentro del galpón incluido. Por eso un cobertizo cerrado y
+sin ventilación puede oxidar más que uno abierto: adentro el aire húmedo se queda quieto contra metal
+frío. Ventilación cruzada y piezas levantadas del piso valen más que una puerta.
+
+**La ventana para pintar es la seca, de mayo a septiembre, y tiene sus horas.** No al amanecer, con
+rocío todavía sobre la chapa; no al mediodía, con el metal quemando; y con cuidado del viento, que en
+esos meses levanta polvo del camino y lo deposita sobre la pintura fresca. Quien descubre el óxido en
+enero espera meses para poder pintar bien. Y como aquí la tierra sigue húmeda mucho después de la última
+lluvia, toda estructura que se quede —un tinglado, la base de un tanque, un poste de portón— empieza
+sobre un dado de hormigón que sobresalga del piso, nunca con el fierro clavado directo en el suelo.
+
+**Los repuestos que tardan y cuestan empujan a reparar, y eso está bien salvo en una lista.** Es
+razonable arreglar el carro, la carretilla, la reja, el catre y el soporte; es la lógica de este lugar y
+de este proyecto. Pero cuando lo que falló es un gancho, un grillete, una cadena de izar, un elástico o
+un brazo de dirección, la espera del repuesto no cambia la física: esas piezas se reemplazan por otras
+compradas, y si el proveedor tarda dos meses, se deja de usar el equipo dos meses. Quien te diga que él
+los suelda «siempre» está describiendo los accidentes que todavía no le tocaron.
+
+**En el mercado de la zona abunda el galvanizado, y casi nadie repone el zinc.** Tubo, chapa, perfil y
+clavos galvanizados se consiguen sin problema y son buena elección para este clima; el error está en lo
+que pasa después de soldarlos. Si vas a comprar una sola cosa además de tus electrodos, que sea un tarro
+o un aerosol de pintura rica en zinc. Sobre la compatibilidad entre pinturas viejas y nuevas, pregunta
+en la ferretería y prueba en un rincón escondido: las formulaciones cambian y nadie puede garantizarte
+de memoria lo que hará una encima de otra.
+
+**Dos riesgos locales se cruzan con este trabajo.** El primero es el dengue: todo tubo, perfil hueco o
+lata que quede a la intemperie con la boca hacia arriba junta agua limpia y quieta, que es donde el
+mosquito pone, y además se pudre por dentro sin que se vea; taparlos o hacerles un agujero de drenaje en
+el punto más bajo resuelve las dos cosas de un golpe. El segundo es eléctrico: con humedad alta, sudor y
+tierra mojada la resistencia del cuerpo cae y la máquina deja de ser inofensiva, tal como explicó la
+lección 02. Y una advertencia de salud sobre la parte de pintura: las pinturas viejas de rejas y
+portones pueden contener plomo, así que **no las lijes en seco sin protección respiratoria y sin apartar
+a los chicos**, y si alguien de la casa presenta síntomas persistentes después de trabajar con humos,
+polvos o solventes, eso se consulta en el centro de salud.
+</ContextoBolivia>
+
+## Cierre del módulo
+
+Seis lecciones atrás este módulo empezó con una afirmación fuerte: soldar no es pegar, es **fundir dos
+piezas hasta que sean una sola**. Todo lo demás vino de ahí. Si van a ser una sola pieza, no puede haber
+pintura, óxido, grasa ni zinc en el medio, y por eso la preparación es la mitad del oficio. Si el metal
+se funde, se dilata y se contrae, y por eso un marco sale torcido y una pieza guarda tensión adentro. Y
+si hay un arco eléctrico, hay radiación, humos y corriente, y por eso la protección no fue un apartado
+final sino una condición de trabajar.
+
+Al cerrar aparece lo que atraviesa el módulo entero: **el arco es el minuto más corto del trabajo**.
+Alrededor de esos pocos minutos de luz azul está todo lo que de verdad decide el resultado. Antes: qué
+metal es, por qué se rompió, qué carga va a recibir, qué forma le vas a dar para que la tensión no se
+junte en un punto. Después: picar la escoria, quitar la salpicadura, redondear el canto, reponer el
+zinc, dar la capa de franja y volver en abril con un destornillador a ver qué pasó. El soldador que solo
+sabe hacer un cordón lindo produce piezas que se rompen otra vez y se oxidan en una temporada; el que
+entiende el mecanismo produce cosas que siguen en pie diez años después, con la misma máquina barata y
+el mismo electrodo.
+
+Eso es lo que este oficio le aporta a la comunidad, y por qué está en este curso al lado de la
+carpintería, del agua de la casa y de las cuentas de la familia. Una persona que sabe leer una rotura,
+decir que no a un gancho reparado y detener el óxido antes de que se coma una estructura mantiene en pie
+lo que ya existe, y lo que ya existe es la riqueza más difícil de reponer cuando el dinero es poco y los
+repuestos tardan. No hace falta un taller grande ni una máquina cara: hace falta saber mirar, y ahora
+sabes.

@@ -1,0 +1,99 @@
+{
+  "preguntas": [
+    {
+      "id": "p1",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un programa que calcula los minutos de riego devuelve un número raro. ¿Qué se hace antes de tocar una sola letra del código?",
+      "opciones": [
+        "Anotar los datos exactos de entrada que produjeron el fallo, copiados tal cual y no de memoria.",
+        "Anotar cuál era el resultado correcto, calculándolo a mano si hace falta.",
+        "Anotar el resultado real que salió, literal, con sus decimales y su formato.",
+        "Revisar las líneas que parecen más sospechosas y cambiar las tres o cuatro que más dudas generan."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son las partes de la receta de reproducción: qué le di, qué esperaba y qué pasó. Sin ellas no hay fallo reproducible, y un fallo que no se puede provocar a voluntad es un rumor, no algo que se esté arreglando. La cuarta es incorrecta porque es exactamente el método que fracasa: si se cambian varias cosas a la vez y el fallo deja de aparecer, no hay forma de saber si está corregido o si hoy simplemente no se dio la circunstancia que lo provocaba; y si uno de los cambios arreglaba el problema mientras otro introducía uno nuevo, se acaba descartando la sospecha correcta."
+    },
+    {
+      "id": "p2",
+      "tipo": "opcion_multiple",
+      "enunciado": "El programa falla una vez de cada cinco con datos que parecen los mismos. ¿Qué explica razonablemente ese comportamiento?",
+      "opciones": [
+        "El programa usa la fecha o la hora del sistema y se comporta distinto según el momento.",
+        "Entre muchas filas iguales hay una distinta —una coma en lugar de un punto, un espacio al final— y el programa falla el día que le toca.",
+        "Algo de fuera cambia: un archivo que a veces existe, una conexión que tarda, un sensor que a veces no contesta.",
+        "La máquina tiene un componente de azar y a veces ejecuta las instrucciones en distinto orden."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son variables ocultas: algo cambia entre una ejecución y otra y no lo estás mirando; la estrategia es hacerlas visibles anotando la hora de cada fallo y guardando el archivo exacto de cada vez para comparar. La cuarta es incorrecta y además es peligrosa como creencia: una máquina no tiene azar, ejecuta una instrucción a la vez en el orden escrito, y atribuir el fallo a la suerte es lo que hace abandonar la búsqueda justo cuando la causa está a una comparación de distancia."
+    },
+    {
+      "id": "p3",
+      "tipo": "verdadero_falso",
+      "enunciado": "En la comparación entre la tabla de traza hecha en papel y lo que el programa imprime de verdad, el fallo está en la última fila donde las dos columnas dejan de coincidir.",
+      "respuesta": false,
+      "explicacion": "Es al revés: el fallo está en la PRIMERA fila donde dejan de coincidir. La última es donde el resultado equivocado se nota, no donde se produjo. En el ejemplo de la lección el síntoma aparece en los minutos calculados, pero la divergencia empezó tres pasos antes, al convertir el texto en número perdiendo los decimales; y por el camino hay incluso una fila que vuelve a coincidir por casualidad, que es la que despista y manda a buscar en el sitio equivocado."
+    },
+    {
+      "id": "p4",
+      "tipo": "opcion_multiple",
+      "enunciado": "Una sonda de humedad queda desconectada seis horas y no envía ninguna lectura. ¿Qué debe hacer el programa que decide el riego?",
+      "opciones": [
+        "Registrar esas horas como hueco, no como cero, y dejarlas fuera de cualquier promedio.",
+        "Bloquear la decisión automática de ese sector y avisar para que una persona mire.",
+        "Tratar el dato faltante como un caso límite previsto, con su propio caso de prueba y su resultado esperado.",
+        "Rellenar las horas sin lectura con el valor cero, que es el valor neutro y no altera el cálculo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un dato faltante no es un cero, y esa distinción tiene consecuencias físicas: si el hueco se rellena con ceros, el promedio del día se hunde, la regla concluye que el sustrato está seco y el sistema riega un bancal que quizá ya estaba encharcado. La cuarta opción es incorrecta precisamente porque el cero no es neutro: es una medida, y una medida falsa. Ante un dato que no entiende, un programa que decide sobre plantas debe fallar de forma segura: no decide, avisa y deja las cosas como estaban."
+    },
+    {
+      "id": "p5",
+      "tipo": "verdadero_falso",
+      "enunciado": "Escribir el caso de prueba que delata el fallo tiene que hacerse antes de corregirlo, y ese caso se conserva después.",
+      "respuesta": true,
+      "explicacion": "En ese orden se consiguen tres cosas que de otra forma no se consiguen: tienes prueba de que el fallo existe y no estás persiguiendo una impresión; sabes cuándo terminaste, porque el criterio deja de ser «parece que ya va» y pasa a ser un caso que antes daba rojo y ahora da verde; y la prueba se queda para detectar regresiones, es decir fallos ya corregidos que reaparecen porque un cambio posterior deshizo la corrección sin que nadie lo notara. Con diez casos guardados y dos minutos de ejecución, un programa pequeño queda protegido."
+    },
+    {
+      "id": "p6",
+      "tipo": "opcion_multiple",
+      "enunciado": "Llevas cuarenta minutos con el mismo fallo, releyendo la misma línea y probando cosas al azar. ¿Qué corresponde hacer?",
+      "opciones": [
+        "Explicar el problema en voz alta a alguien, o a nadie, porque hablar obliga a decir las cosas completas y saca a la luz las suposiciones no verbalizadas.",
+        "Levantarse diez minutos, no como descanso sino para soltar la hipótesis que te tiene atrapado.",
+        "Anotar antes de parar qué hipótesis probaste, cuáles descartaste y con qué evidencia, y cuál ibas a probar ahora.",
+        "Insistir sin levantarse hasta resolverlo, porque parar ahora significa perder los cuarenta minutos ya invertidos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son las salidas de la visión de túnel, el estado en que la primera explicación que se te ocurrió bloquea el acceso a todas las demás. La cuarta es incorrecta y describe justamente la trampa: los cuarenta minutos ya están gastados y no se recuperan insistiendo; al contrario, cuanto más tiempo llevas dentro más cuesta admitir que la hipótesis era mala, y el fallo que consume tres horas de noche suele resolverse en cuatro minutos a la mañana siguiente. Lo que sí se pierde sin la nota es el trabajo de descarte ya hecho."
+    },
+    {
+      "id": "p7",
+      "tipo": "verdadero_falso",
+      "enunciado": "La búsqueda binaria solo sirve para acorralar el fallo dentro del código, no para los datos ni para las versiones guardadas.",
+      "respuesta": false,
+      "explicacion": "Sirve para las tres cosas y con la misma cuenta: cada corte por la mitad divide entre dos el terreno donde puede esconderse el fallo, así que sesenta líneas se acorralan en seis comprobaciones y mil en diez. Partir el código es mirar el estado a mitad de camino; partir los datos es probar con la mitad de las filas hasta llegar a la que rompe el programa, que casi siempre explica el fallo entero; y partir el tiempo es probar la copia fechada del medio para encontrar la primera versión que ya falla. Además no exige entender el programa, así que funciona igual en código ajeno."
+    },
+    {
+      "id": "p8",
+      "tipo": "abierta",
+      "enunciado": "El programa de riego de Rizoma del Sur lleva tres semanas corriendo y hoy aparece un problema: el lote 4 se regó dos veces la misma tarde, después de una lluvia fuerte, y el bancal quedó encharcado. Nadie tocó el programa desde el lunes. Escribe el plan completo de depuración aplicando el método de esta lección: qué haces antes de tocar nada, cómo acorralas el fallo, qué imprimes, qué casos de prueba escribes, cómo proteges la corrección y qué haces si a los cuarenta minutos sigues sin entenderlo.",
+      "respuestaModelo": "Antes de tocar nada, escribo la receta de reproducción, porque un fallo que no puedo provocar a voluntad es un rumor. Anoto QUÉ LE DI: copio aparte el archivo de datos de esa tarde tal cual, con las lecturas de la sonda del lote 4, la hora exacta de los dos riegos y el dato de lluvia si lo hubo; nada de memoria. Anoto QUÉ ESPERABA: calculo a mano, con la regla de riego que el curso usa, cuántos minutos correspondían ese día —muy probablemente cero, porque el día después de una lluvia fuerte regar es un error caro—. Y anoto QUÉ PASÓ: dos riegos, con su hora y su duración literal. Con esas tres líneas el fallo deja de ser una impresión y pasa a ser algo manipulable, y es frecuente que al escribirlas se explique solo.\n\nComo el programa no se tocó desde el lunes, mi primera hipótesis no es el código sino los datos o algo de fuera: es el perfil clásico del fallo intermitente. Reviso los cuatro sospechosos. La hora: ¿el programa se ejecutó dos veces porque algo lo lanzó dos veces, o porque tras un corte de energía volvió a arrancar y perdió la marca de la ejecución anterior? El orden de los datos: ¿el archivo de esa tarde trae una fila de más, una línea vacía al final o una lectura duplicada que dobla el promedio? Algo de fuera: la sonda mojada por la lluvia puede haber devuelto un valor imposible, o haber dejado de contestar. Y un dato distinto entre muchos iguales: una lectura con coma en lugar de punto, que en Bolivia es lo habitual al escribir a mano, y que puede convertir 28,5 en 28 o directamente en texto o en dos columnas.\n\nAcorralo con búsqueda binaria y por los datos antes que por el código, porque el código no cambió. Parto el archivo de esa tarde por la mitad y lo paso por el programa; en ocho o nueve pasos llego a la fila exacta que produce la decisión equivocada, y esa fila casi siempre explica todo. Si el problema resulta estar en el código, corto por la mitad del programa y miro el estado ahí: si los valores a mitad de camino todavía son correctos, el fallo está en la segunda mitad; si ya están mal, en la primera.\n\nImprimo el estado en lugar de suponerlo, con la marca DIAG: al principio para poder borrarlo después. Imprimo la humedad leída con su tipo, para descartar que sea texto y no número; la lluvia registrada; el resultado de la comparación con el umbral; y los minutos calculados. Y lo imprimo DENTRO del bucle que recorre las filas, no al final: número de vuelta, dato leído y acumulado, para ver la vuelta exacta en la que la cuenta se tuerce. Después pongo esas impresiones al lado de mi tabla de traza en papel y busco la PRIMERA fila donde las dos columnas dejan de coincidir, no la última, que es solo donde se nota.\n\nCambio una sola cosa a la vez: un cambio, una ejecución, una anotación, deshaciendo lo que no mejore. Y antes de corregir escribo el caso de prueba que delata el fallo: este archivo de entrada debe dar cero minutos de riego, y ahora da doce. Ese caso se queda en el archivo de casos junto a los otros: día normal de octubre, día de seca con calor, noche de surazo, lote recién repicado, lote vacío, sonda desconectada que devuelve vacío, lectura imposible por lluvia, archivo con la última fila cortada por un corte de energía, y ahora también el riego duplicado. Los paso todos después de cada cambio para detectar regresiones.\n\nProtejo la vuelta atrás: antes de tocar el programa que ya riega, guardo una copia fechada con nombre que diga el estado —riego_2026-08-15_funciona.py—, la ejecuto entera ese mismo día para comprobar que arranca, y dejo una copia en un pendrive fuera del sitio, porque una copia que nunca se ejecutó no es un respaldo sino una esperanza. Mientras dure la corrección, el programa vuelve a modo sombra: escribe lo que haría y no abre la válvula, y una persona compara. Y si a los cuarenta minutos sigo sin entenderlo, no insisto: lo explico en voz alta, me levanto a caminar o lo dejo para mañana, pero antes anoto en el cuaderno de fallos qué hipótesis probé, cuáles descarté y con qué evidencia, y cuál iba a probar ahora, junto con la columna que en este sitio importa: qué pasó en el vivero mientras tanto —el bancal encharcado del lote 4, donde el suelo arcilloso drena mal y un riego de más cuesta mucho más que uno de menos—.",
+      "criterios": [
+        "Escribe la receta de reproducción con sus tres partes —qué le di, qué esperaba, qué pasó— ANTES de tocar el código, y guarda el archivo de datos de esa tarde tal cual.",
+        "Calcula a mano el resultado esperado, en lugar de conformarse con la impresión de que el riego estuvo mal.",
+        "Reconoce que, si nadie tocó el programa, la sospecha razonable son los datos o algo de fuera, y recorre los sospechosos del fallo intermitente (hora, orden de los datos, algo externo, un dato distinto entre muchos iguales).",
+        "Aplica búsqueda binaria de forma explícita, y la aplica a los datos —partir el archivo por la mitad— y no solo al código.",
+        "Imprime el estado con etiqueta, marcado para poder borrarlo después, incluyendo el tipo del valor y no solo el valor.",
+        "Imprime dentro del bucle que recorre las filas, no solo el resultado final.",
+        "Compara las impresiones con la tabla de traza en papel y busca la PRIMERA fila donde dejan de coincidir.",
+        "Cambia una sola cosa a la vez y deshace lo que no mejora, con anotación de cada intento.",
+        "Escribe el caso de prueba que delata el fallo antes de corregirlo, con su entrada y su resultado esperado.",
+        "Añade ese caso al archivo de casos del sitio y lo pasa entero después de cada cambio, nombrando casos límite reales de Rizoma (sonda vacía, lectura imposible por lluvia, archivo cortado por corte de energía, lote vacío).",
+        "Guarda una copia fechada del programa que funcionaba, la prueba el mismo día y la deja también fuera del sitio.",
+        "Prevé la parada a tiempo: explicar en voz alta, levantarse o dormir, pero anotando antes qué se descartó y con qué evidencia.",
+        "Aterriza el razonamiento en el sitio real: suelo arcilloso con drenaje lento, donde un riego de más es más caro que uno de menos, y modo sombra o modo manual mientras dure la corrección."
+      ],
+      "explicacion": "La pregunta obliga a recorrer el método entero en el orden correcto, que es donde está casi todo el valor de la lección: reproducir antes de tocar, sospechar de los datos cuando el código no cambió, acorralar partiendo por la mitad, mirar el estado en vez de suponerlo, comparar contra la traza en papel, cambiar una cosa a la vez, escribir la prueba antes que la corrección, guardar copias probadas y parar a tiempo dejando anotado el trabajo de descarte. El fallo del enunciado —regar después de una lluvia— es además el que más caro sale en un terreno con arcillas expansivas y drenaje lento, y por eso la respuesta correcta del programa ante cualquier dato dudoso es la misma: no decidir, avisar y dejar las cosas como estaban."
+    }
+  ]
+}

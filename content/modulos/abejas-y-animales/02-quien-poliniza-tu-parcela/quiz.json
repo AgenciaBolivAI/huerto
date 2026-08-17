@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "gremio-y-redundancia",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la lección sostiene que un gremio silvestre variado vale más que una colmena comprada?",
+      "opciones": [
+        "El gremio es una categoría funcional, no taxonómica: reúne a todo lo que presta el mismo servicio aunque sean familias distintas.",
+        "Muchas especies distintas responden distinto al clima: si la lluvia frena a las abejas grandes, ese año polinizan las moscas.",
+        "Una colonia única es un punto único de fallo: si enferma, enjambra o muere, el servicio cae a cero de un día para otro.",
+        "Con suficientes individuos da igual cuántas especies haya, porque lo que decide el servicio es el número total de visitas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta suena razonable y es justo lo contrario de la idea central. El número total de visitas no basta por dos motivos que la lección desarrolla: muchas de esas visitas pueden no ser polinización efectiva —el robo de néctar es tráfico puro— y una población de una sola especie comparte todos sus modos de fallo, así que cae entera el mismo día. La redundancia entre especies es exactamente lo que da tolerancia a fallos: diez especies silvestres no se caen todas el mismo martes, y por eso la primera decisión sobre polinización no es una compra sino un inventario de la capacidad que ya está desplegada."
+    },
+    {
+      "id": "visitante-y-polinizador",
+      "tipo": "opcion_multiple",
+      "enunciado": "Cuentas muchísimas visitas en las flores de un frutal y aun así casi no cuaja. ¿Qué es correcto?",
+      "opciones": [
+        "Visitante floral es cualquier animal que se posa; polinizador efectivo es el que además deja polen viable en el estigma.",
+        "Hacen falta cuatro condiciones a la vez: contacto físico, polen de la especie correcta, movimiento entre plantas y frecuencia.",
+        "Conviene revisar la base de la corola buscando la perforación del robo de néctar antes de concluir nada.",
+        "Un conteo alto de visitas es prueba suficiente de que la polinización está resuelta y el problema es otro."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es el error que la lección compara con medir tráfico y llamarlo trabajo hecho: una petición que llega, consume conexión y devuelve sin escribir nada aparece en la gráfica igual que una que sí escribió. El robo de néctar es exactamente eso —el insecto perfora la base de la corola, bebe del nectario y nunca toca anteras ni estigma—, y una vez abierto el agujero otros lo reutilizan, incluida la abeja melífera. Lo que se mide no son visitas, son frutos cuajados; el conteo solo sirve si separa al visitante del polinizador efectivo."
+    },
+    {
+      "id": "constancia-floral",
+      "tipo": "verdadero_falso",
+      "enunciado": "Como los polinizadores presentan constancia floral, en la parcela conviene evitar que muchas especies florezcan a la vez para que no se confundan.",
+      "respuesta": false,
+      "explicacion": "Falso, y la conclusión correcta es casi la opuesta. La constancia floral significa que durante un mismo viaje el animal visita una sola especie aunque tenga otras al lado: no es lealtad, es economía, porque aprender la mecánica de cada tipo de flor cuesta tiempo y cambiar obliga a pagar de nuevo ese costo de cambio de contexto. Que florezcan veinte especies a la vez no es un caos, porque cada individuo se especializa dentro de la mancha donde está trabajando. Lo que sí hace daño es tener una sola planta de cada cosa: una planta aislada puede no valer el aprendizaje. De ahí la regla de diseño: se planta en manchas de varios individuos juntos, no en ejemplares sueltos repartidos por estética."
+    },
+    {
+      "id": "vibracion-poricidas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué dice la lección sobre las anteras poricidas y la polinización por vibración?",
+      "opciones": [
+        "Son tubos cerrados con un poro diminuto en la punta, como un salero: por gravedad no sale polen.",
+        "Ciertas abejas se agarran de la antera, desacoplan las alas de la musculatura del vuelo y contraen los músculos torácicos en el sitio.",
+        "La abeja melífera no sonica, así que en los cultivos que dependen de ese mecanismo su aporte es marginal.",
+        "La melífera también vibra la flor, solo que con menos potencia, y por eso rinde algo menos en tomate."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta convierte en cuestión de grado lo que es un comportamiento que se tiene o no se tiene. La melífera visita la flor, busca néctar y se lleva algo de polen suelto, pero no ejecuta la sonicación; por eso la horticultura de invernadero del mundo entero usa abejorros y no colmenas de miel para el tomate. La antera poricida es un endpoint que solo responde a un protocolo concreto: la melífera habla otro, la petición se acepta y devuelve vacío, sin error ni alerta. Sí lo tienen, en distinto grado, las carpinteras, varias abejas sin aguijón y muchas nativas solitarias: el servicio que la colmena comprada no presta lo prestan gratis los animales que ya viven ahí, si los dejas vivir."
+    },
+    {
+      "id": "moscas-y-escarabajos",
+      "tipo": "verdadero_falso",
+      "enunciado": "Las moscas y los escarabajos que se meten en las flores son visitantes sucios sin valor real; los polinizadores que cuentan son las abejas.",
+      "respuesta": false,
+      "explicacion": "Falso, y despreciarlos tiene consecuencias concretas. Las moscas vuelan con frío, con nublado y a primera hora, cuando las abejas todavía no salieron: son el respaldo del sistema los días malos, prefieren flores pequeñas, planas y pálidas, y trabajan muy bien las umbelas del culantro florecido. Los sírfidos —las rayadas que se quedan quietas en el aire— sirven dos veces, porque el adulto poliniza y la larva de muchas especies devora pulgones, o sea que son un enemigo natural. Los escarabajos son los polinizadores más antiguos y su método es tosco, pero hay plantas tropicales que dependen de ellos y de nadie más: en las anonáceas —chirimoya, guanábana y parientes— la literatura describe polinización por pequeños escarabajos y una separación de tiempos entre la fase femenina y la masculina de la misma flor. Si entra una anonácea al catálogo, matar escarabajos a ciegas es matar la cosecha."
+    },
+    {
+      "id": "cuatro-recursos",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre los factores que de verdad limitan la población de polinizadores en el sitio, ¿qué es correcto?",
+      "opciones": [
+        "Vale la ley del mínimo: la población la fija el recurso más escaso, no la suma, así que de poco sirven flores si no hay dónde anidar.",
+        "La cadena de floración se dimensiona por el mes más pobre, y los huecos aparecen solos al anotar durante un año qué floreció cada mes.",
+        "Los cuatro sustratos de nidificación —suelo desnudo firme, tallos huecos en pie, madera muerta y cavidades— suelen faltar porque se destruyeron por limpieza.",
+        "Un hotel de abejas bien construido con material permanente resuelve el problema del nido de una vez y para siempre."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la trampa más frecuente, y es literalmente una trampa: concentrar decenas de nidos en un punto concentra también parásitos, ácaros y hongos que en la naturaleza no se acumulan porque los nidos están dispersos. Un hotel que se instala y se olvida durante años pasa de refugio a foco de infección y acaba matando más de lo que produce. La regla es material desmontable y reemplazable —cañas atadas que se renuevan por tandas cada año o dos, no un bloque perforado que dure para siempre—, perforado por un lado, con fondo cerrado, con techo, al sol de la mañana y protegido del viento del sur; y si se pudre, se retira. Además, en llanura aluvial el parche de suelo desnudo va en alto del microrrelieve, porque un nido subterráneo en un bajío se inunda entero con la primera lluvia fuerte."
+    },
+    {
+      "id": "veneno-y-horario",
+      "tipo": "opcion_multiple",
+      "enunciado": "Hay que aplicar algo en la parcela y quieres no borrar todo el trabajo de hábitat. ¿Qué es correcto?",
+      "opciones": [
+        "Un sistémico circula por la planta y puede aparecer en néctar y polen semanas después, alcanzando a un animal que no estaba cuando se aplicó.",
+        "Por debajo de la dosis letal hay efectos subletales: la abeja no aparece muerta, simplemente no vuelve al nido y la cría se pierde.",
+        "Si es inevitable, se aplica al anochecer o de noche, sin viento y con la boquilla cerca del objetivo, nunca a media mañana.",
+        "Los preparados caseros —jabón potásico, aceites, extractos picantes— son selectivos, así que pueden aplicarse sin problema sobre cultivo en flor."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la mentira cómoda de la que la lección se cuida: \"natural\" no significa selectivo. El jabón potásico mata por contacto a cualquier insecto de cuerpo blando que moje, incluidas abejas pequeñas; los aceites tapan tráqueas sin preguntar de quién son; los extractos picantes son de amplio espectro. El más selectivo del repertorio es el Bacillus thuringiensis contra orugas, que no afecta a las abejas pero sí mata las orugas de las mariposas que querías. A esto se suman la residualidad —cuánto sigue siendo tóxico el ingrediente activo sobre la flor después de secarse— y la deriva: aplicar con mochila en día con viento alcanza los bordes floridos y convierte la franja floral en una trampa que anuncia comida y entrega veneno. Todo esto va después de los peldaños del manejo integrado y solo pasado el umbral de acción; dosis y condiciones están en la etiqueta del producto, y lo autorizado o restringido en Bolivia se consulta con la autoridad competente."
+    },
+    {
+      "id": "aplicacion-rizoma",
+      "tipo": "abierta",
+      "enunciado": "En la reunión de Rizoma alguien propone comprar dos colmenas este mes para arreglar el cuaje flojo de los frutales injertados. Escribe la respuesta técnica: (a) por qué la compra no es la primera decisión y qué se hace antes; (b) qué inventario levantas y cómo, sin saber entomología; (c) los cuatro recursos limitantes y qué harías en los 3.666 m² para cada uno, con el papel concreto del gandul, del culantro florecido y de las ornamentales; (d) el argumento de la polinización por vibración y qué implica para los frutales injertados del catálogo y para el vivero bajo malla; y (e) qué le dirías sobre una colonia silvestre africanizada instalada en un tronco del sitio y sobre la competencia por recurso floral.",
+      "respuestaModelo": "(a) La compra no es la primera decisión porque el problema todavía no está diagnosticado. Un cuaje flojo puede ser polen incompatible —un frutal injertado es un clon y varias variedades necesitan polen de otra variedad—, pueden ser tres días de surazo caídos sobre la floración, puede ser lluvia o calor en la apertura de la flor, y solo después puede ser falta de polinizadores. Comprar una colmena antes de perfilar dónde está el cuello de botella es levantar una máquina más sin mirar la traza. Y hay un argumento estructural: la colmena es un servicio gestionado con un modo de fallo único —enferma, enjambra o muere y el servicio cae a cero—, mientras el gremio silvestre es capacidad ya desplegada entre tantas especies que ninguna la tumba entera.\n\n(b) Inventario sin entomología. No identifico especies, identifico morfotipos: negra grande ruidosa, chiquita brillante, mosca rayada, avispa de cintura fina, con foto de cada uno. Diez minutos por flor, tres franjas horarias —temprano, media mañana y tarde—, en tres momentos del año, anotando fecha, hora, viento y quién contó. Separo visitante de polinizador efectivo mirando si el cuerpo toca anteras y estigma, si se mueve entre plantas y con qué frecuencia vuelve; y reviso la base de la corola buscando la perforación del robo de néctar, porque una flor muy visitada que no cuaja suele estar perforada. Sumo el inventario de nidos, una caminata de una hora: agujeros en tierra descubierta, perforaciones limpias en madera seca, tubos de cerumen en un tronco, tallos secos con la punta tapada. Cada hallazgo se marca y ese punto no se toca más. Todo va a la bitácora y se toma antes de intervenir: una línea de base tiene una sola oportunidad de tomarse.\n\n(c) Los cuatro recursos, con la ley del mínimo por delante: la población la fija el más escaso, no la suma. Comida: la capacidad la decide el mes más pobre, y aquí el hueco no es el invierno sino la seca, así que la pregunta no es qué florece en marzo sino qué florece en agosto. Anoto un año qué floreció cada mes: los huecos aparecen solos, y solo ahí tiene sentido gastar en plantar. El gandul es la pieza: muchas variedades tradicionales son de día corto y florecen en plena seca, y si se confirma con la variedad del sitio y la fecha anotada, esas líneas son la despensa de agosto del gremio. El culantro que sube a flor da umbelas —flor pequeña, néctar accesible—, justo lo que comen moscas, sírfidos y avispitas, y la misma superficie da semilla propia. Las ornamentales cubren el turno de arriba y el nocturno: tubulares para picaflores, perfumadas al anochecer para polillas. Todo en manchas, no en ejemplares sueltos, por la constancia floral. Nido: el limitante más frecuente y el más barato, porque lo que falta se destruyó por limpieza. En los bordes de los doce lotes caben los cuatro sustratos sin quitar producción: tierra descubierta firme y soleada que nadie pisa ni labra, en alto del microrrelieve para que no se inunde; tocones huecos de treinta centímetros donde hoy se corta a ras; madera muerta apilada lejos de las construcciones; troncos con cavidades en pie. Si pongo nido artificial, desmontable y renovable por tandas, nunca un bloque permanente que acumule parásitos. Agua: arena o gravilla gruesa mantenida húmeda, sin lámina libre, porque el dengue es endémico; un plato con piedras se vacía dos veces por semana, y el control del vector se consulta con la autoridad sanitaria local. Veneno: nada sobre cultivo en flor; si es inevitable, al anochecer, sin viento y con la boquilla cerca; después del manejo integrado y pasado el umbral de acción; y sin creer que lo casero es selectivo. Atraer fauna a un lugar que se fumiga a media mañana es peor que no atraerla.\n\n(d) Vibración. Las anteras poricidas son tubos cerrados con un poro cuyo polen solo sale si se agita a la frecuencia adecuada. La melífera no sonica, así que ese servicio no lo compra la colmena: lo prestan gratis carpinteras, abejas sin aguijón y nativas solitarias, y la consecuencia de diseño es dejar madera muerta cerca de las camas. Para los frutales injertados el orden es otro: si necesitan polen de otra variedad compatible, primero tiene que existir la donante en el terreno, porque el transporte no sirve sin contenido. Se verifican compatibilidades con el vivero de origen y se planta la acompañante antes de preocuparse por quién mueve el polen. Bajo la malla hay una tensión declarada: excluye polinizadores, y está bien mientras dentro solo haya almácigos y multiplicación vegetativa; el día que se quiera semilla propia de una especie que necesita insectos, o fruto de una solanácea bajo cubierta, habrá que agitar las flores con un aparato que vibre o abrir la estructura en floración.\n\n(e) La colonia africanizada en un tronco no es un adorno ni algo que se destruya por reflejo: con vecinos y niños entrando es un asunto de seguridad, se identifica con alguien que sepa y se decide con criterio. Y la colmena comprada no es un aditivo neutro: una colonia grande moviliza miles de forrajeras que recorren kilómetros y pueden agotar la floración local, en perjuicio de las nativas que vuelan corto y no tienen a dónde ir. Primero el hábitat, después la colonia, y siempre dimensionada a lo que el terreno florece de verdad.",
+      "criterios": [
+        "Rechaza la compra como primera decisión y ordena diagnosticar antes el cuaje flojo: compatibilidad del injerto, surazo y clima antes que falta de polinizadores.",
+        "Usa la redundancia del gremio frente al punto único de fallo de una colonia como argumento estructural, no como preferencia estética.",
+        "Propone un inventario por morfotipos con franjas horarias, fechas, viento y fotos, sin pretender identificar especies ni copiar listas de manuales extranjeros.",
+        "Separa visitante floral de polinizador efectivo y revisa la base de la corola buscando el robo de néctar antes de concluir.",
+        "Aplica la ley del mínimo y no promete que más flores compensen la falta de sitios de nidificación.",
+        "Levanta la cadena de floración observando un año y sitúa el hueco en la estación seca —agosto—, no en un invierno que aquí no existe.",
+        "Da papel concreto al gandul, al culantro florecido y a las ornamentales, y exige confirmar con fecha anotada la floración de la variedad de gandul del sitio.",
+        "Repone los cuatro sustratos de nidificación en los bordes de los doce lotes, con el suelo desnudo en alto del microrrelieve, y mantiene el nido artificial desmontable y renovable.",
+        "Resuelve el agua con arena o gravilla húmeda sin lámina libre por el dengue y remite el control del vector a la autoridad sanitaria local.",
+        "Fija reglas de aplicación —nada sobre cultivo en flor, al anochecer, sin viento, después del manejo integrado y pasado el umbral— y niega que lo casero sea selectivo.",
+        "Explica anteras poricidas y polinización por vibración, deriva de ahí la madera muerta y la agitación mecánica bajo cubierta, y declara la tensión de la malla del vivero.",
+        "Ordena primero la variedad donante compatible y después el transporte, y trata la colonia africanizada como asunto de seguridad y la competencia por recurso floral como límite al número de colmenas."
+      ],
+      "explicacion": "El ejercicio recorre la lección en el orden en que se usa en terreno: primero se cuestiona la compra, después se mide lo que ya hay, después se reponen los recursos, y solo al final se vuelve a hablar de colmenas. Lo que se evalúa no es cuántas especies nombres —el curso no puede darte la lista local sin inventarla— sino que sepas decir qué recurso das, dónde, en qué mes falla el sistema y qué decisión concreta se toma en el sitio. Si tu respuesta termina en \"comprar una colmena y plantar flores\", has hecho lo que la lección advierte: contratar el servicio gestionado sin mirar la capacidad propia. Y si termina en un inventario, un calendario con el hueco de agosto marcado, cuatro sustratos repuestos en los bordes y una regla de horario para las aplicaciones, has hecho la parte que no cuesta dinero y que decide todo lo demás."
+    }
+  ]
+}

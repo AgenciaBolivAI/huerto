@@ -1,0 +1,398 @@
+La lección anterior terminó con la peor de las tres familias de fallo: la que no habla. El programa
+arranca, corre hasta el final, no muestra ningún mensaje y el número que escribe está mal. Solo hay un
+resultado que no cuadra y una máquina que insiste en que hizo su trabajo.
+
+Y tiene razón. **Hizo exactamente lo que le dijiste.** Lo que le dijiste no es lo que querías, y hay
+que averiguar en qué punto exacto se separaron esas dos cosas. De eso trata esta lección: no con
+inspiración ni mirando el código fijo hasta que aparezca la respuesta, sino con un procedimiento que se
+aprende en una tarde.
+
+## Depurar es un método, no un talento
+
+Hay una creencia muy extendida entre quienes empiezan: que existe gente que «ve» los errores, que mira
+cuarenta líneas y señala la mala. Detrás de eso hay dos cosas y ninguna es un don. La primera es
+memoria de haberse equivocado antes: quien lleva diez años programando reconoce la forma del mismo
+error que ya cometió trescientas veces, igual que quien lleva diez años en un vivero reconoce una
+carencia de nitrógeno sin análisis. La segunda, la que importa hoy, es que aplica un método tan rápido
+que ya no parece un método.
+
+Llamamos <Termino slug="depuracion">depuración</Termino> al procedimiento ordenado de localizar la
+causa de un fallo y corregirla sin romper otra cosa. Lo importante es la palabra procedimiento: tiene
+pasos, tiene un orden, y el orden importa.
+
+El método cabe en cinco movimientos: **reproducir el fallo a voluntad, cambiar una sola cosa a la vez,
+partir el programa por la mitad para acorralar el problema, imprimir el estado para ver lo que la
+máquina ve, y probar a propósito con los datos que nadie quiere probar.** Ninguno pide saber más de lo
+que ya sabes; todos piden resistir la tentación de adivinar.
+
+## Regla cero: reproducirlo a voluntad
+
+Antes de tocar una sola letra hay que poder provocar el fallo cuando uno quiera.
+
+Suena obvio y casi nadie lo hace. Lo normal es lo contrario: algo salió mal y uno empieza a cambiar
+cosas sospechosas. Media hora después el programa está distinto, el fallo no aparece, y no hay forma de
+saber si está corregido o si hoy no se dio la circunstancia que lo provocaba. **Un fallo que no puedes
+provocar a voluntad no es un fallo que estés arreglando: es un rumor.**
+
+Un <Termino slug="fallo-reproducible">fallo reproducible</Termino> es aquel del que puedes escribir la
+receta exacta para que vuelva a ocurrir. Esa receta se escribe antes de tocar nada y tiene tres partes:
+
+**Qué le di.** Los datos exactos, copiados tal cual, no de memoria. Si el programa lee un archivo, ese
+archivo se guarda aparte. «Le puse una humedad baja» no sirve; `28,5` sí.
+
+**Qué esperaba.** El resultado correcto, calculado a mano si hace falta. Sin esto no hay manera de
+saber si el resultado nuevo es el bueno.
+
+**Qué pasó.** El resultado real, copiado literal, con sus decimales y su formato. La diferencia entre
+`0`, `0,0` y `"0"` cuesta tardes enteras.
+
+Con esas tres líneas el fallo deja de ser una sensación y pasa a ser un objeto que se puede manipular.
+Y **muchas veces, al escribir la receta, el fallo se explica solo.**
+
+<Analogia>
+Es lo mismo que el módulo de sanidad vegetal te obligó a hacer antes de aplicar ningún tratamiento:
+**no se trata una planta por la impresión de que está mal.** Se anota qué hoja, qué forma tiene la
+mancha, a cuántas plantas afecta y qué se hizo esa semana. Solo con eso se distingue una plaga de una
+carencia, y solo con eso se sabe después si el tratamiento sirvió.
+
+Un fallo es un síntoma y la receta de reproducción es la ficha de observación. **Quien trata sin
+observar ni cura ni aprende:** si mejora no sabe por qué, y si empeora tampoco.
+</Analogia>
+
+### Cuando falla una vez de cada cinco
+
+El caso incómodo es el <Termino slug="fallo-intermitente">fallo intermitente</Termino>: funciona casi
+siempre y falla de vez en cuando sin razón aparente. **Una máquina no tiene azar**: si el mismo
+programa con la misma entrada da dos resultados distintos, hay algo que cambia y que tú no estás
+mirando. Los sospechosos son cuatro: **la hora**, cuando el programa usa la fecha del sistema; **el
+orden de los datos**, porque el archivo de hoy trae una línea vacía al final que ayer no estaba;
+**algo de fuera**, como un sensor que a veces no contesta; **y un dato distinto entre muchos iguales**,
+la fila con coma en lugar de punto que rompe el programa el día que le toca.
+
+La estrategia es la misma para los cuatro: **hacer que la variable oculta deje de estar oculta.** Anota
+la hora de cada ejecución fallida, guarda el archivo exacto de cada vez y compara los casos que
+fallaron contra los que no. La diferencia aparece.
+
+## Una sola cosa a la vez
+
+Este es el error de método más caro, y el más difícil de resistir porque la impaciencia empuja en
+contra.
+
+Tienes tres sospechas. Cambias las tres. Ejecutas. Funciona. **Y ahora no sabes por qué funciona**, así
+que no aprendiste nada y el fallo volverá en cuanto cambien las condiciones. Peor es el caso simétrico:
+de los tres cambios, uno arreglaba el problema y otro introducía uno nuevo; el resultado sigue mal y
+descartas la sospecha correcta.
+
+El procedimiento es aburrido y no tiene alternativa: **un cambio, una ejecución, una anotación.** Si no
+mejora nada, se deshace antes de probar el siguiente.
+
+<Analogia>
+Es el mismo principio que hace válido un ensayo en el huerto. Si en un bancal cambias a la vez el
+sustrato, la frecuencia de riego y la variedad, y sale mejor que el de al lado, **no aprendiste nada
+aprovechable**: no sabes cuál de las tres cosas lo hizo, ni si dos ayudaron y la tercera estorbó. Por
+eso todo ensayo serio deja un testigo sin tocar y mueve un factor por vez. En el código, el testigo es
+la copia que funcionaba y el factor es la única línea que cambiaste.
+</Analogia>
+
+## Partir el programa por la mitad
+
+Tienes sesenta líneas y una hace algo indebido. Leerlas todas en orden es la peor estrategia: el ojo
+pasa por encima del error precisamente porque cree saber lo que dice cada línea.
+
+La alternativa se llama <Termino slug="busqueda-binaria">búsqueda binaria</Termino>: partir el problema
+por la mitad, averiguar en qué mitad está el fallo, y repetir. En la línea 30 se mira el estado del
+programa, o sea los valores que hay en ese momento. **Si a mitad de camino los valores todavía son
+correctos, el fallo está en la segunda mitad; si ya están mal, está en la primera.** Una comprobación
+descartó treinta líneas. Y otra vez, y otra.
+
+<Formula explicacion="Cada corte por la mitad divide entre dos el terreno donde puede esconderse el fallo, así que el número de comprobaciones crece muy despacio: cada vez que el programa se duplica de tamaño hace falta una sola comprobación más.">
+comprobaciones ≈ log₂(líneas sospechosas)
+</Formula>
+
+Sesenta líneas se acorralan en seis comprobaciones; mil, en diez. Y **no depende de entender el
+programa**: funciona igual en código ajeno que no comprendes.
+
+La técnica sirve para tres cosas. **Partir el código**, que es lo que acabamos de describir. **Partir
+los datos**: si falla con un archivo de quinientas filas, pruébalo con las primeras doscientas
+cincuenta; en ocho o nueve pasos llegas a la fila exacta que lo rompe, y esa fila casi siempre explica
+el fallo entero. **Y partir el tiempo**, para el clásico «ayer funcionaba y hoy no»: si guardaste
+copias fechadas, prueba la del medio, y cuando encuentres la primera versión que ya falla, la
+diferencia con la anterior es un puñado de líneas.
+
+<Analogia>
+Ya usaste esto sin llamarlo así en el módulo de riego: la línea de goteo no da presión al final del
+sector y hay ochenta metros de tubería enterrada. Nadie desentierra los ochenta metros: se abre el
+registro del medio y se mide ahí; si la presión llega bien, la fuga está más adelante. Cuatro
+comprobaciones y tienes el tramo. **El código no es distinto de una tubería enterrada:** solo hay que
+decidir dónde abrir la tapa.
+</Analogia>
+
+## Imprimir el estado: ver lo que la máquina ve
+
+Para partir por la mitad hace falta poder mirar dentro, y ese es el segundo hábito central.
+
+La <Termino slug="impresion-de-estado">impresión de estado</Termino> es la instrucción que se añade
+temporalmente al programa para que escriba en pantalla el valor que tiene una variable en un punto
+concreto de la ejecución. Resuelve la mayoría de los fallos silenciosos porque ataca su raíz: **estás
+suponiendo lo que vale una variable en lugar de mirarlo.** Tú crees que la humedad vale 28,5; la
+máquina cree otra cosa. Mientras no imprimas, el desacuerdo sigue invisible y puedes pasar horas
+leyendo código correcto convencido de que está mal.
+
+Se imprime bien así:
+
+**Con etiqueta, no a secas.** Solo el valor da una pantalla de números sin dueño. `humedad antes de
+decidir = 28,5` da información, y cuando hay varias impresiones se marcan con el nombre del punto.
+
+**Imprimiendo también el tipo.** La lección 1 avisó de que confundir el número `12` con el texto `"12"`
+es la primera fuente de errores del principiante, y en pantalla se ven idénticos. Casi todos los
+lenguajes tienen una forma de preguntar de qué tipo es un valor. **Un `12` que en realidad es texto
+explica por sí solo la mitad de los resultados absurdos.**
+
+**Dentro del bucle, no después.** Si el programa recorre doscientas filas, imprimir el total al terminar
+no dice nada. Hay que imprimir cada vuelta: número de vuelta, dato leído y acumulado. Ahí se ve dónde
+se tuerce la cuenta.
+
+Cuatro sospechosos explican casi todo lo que verás ahí: **el valor no es el que creías** porque leíste
+otra columna; **es del tipo que no creías**, y entonces sumar concatena en vez de sumar; **está vacío**
+porque el dato nunca llegó; o **el bloque no se ejecutó nunca**, porque la condición que lo protege no
+se cumple jamás y por eso no hay ningún mensaje.
+
+<Advertencia>
+**Marca las impresiones para poder quitarlas.** Toda impresión de diagnóstico lleva una marca
+reconocible al principio, por ejemplo `DIAG:`. Resuelto el fallo, se buscan por esa marca y se borran.
+Un programa con veinte impresiones olvidadas tiene una salida indistinguible del ruido, y el día que
+falle de verdad nadie va a ver el aviso.
+
+**Y no imprimas nunca contraseñas ni datos personales de nadie**, porque esa impresión puede acabar
+escrita en un archivo que se comparte. Lo que se imprime para depurar es el estado del cálculo.
+</Advertencia>
+
+## La tabla de traza contra la realidad
+
+Aquí se juntan las dos técnicas del módulo, y esto es el corazón de la lección. En la lección 2
+aprendiste a ejecutar un programa a mano, fila por fila, en una tabla de traza: eso es **lo que debería
+pasar.** Las impresiones de estado son **lo que pasa de verdad.** Depurar un fallo silencioso es,
+exactamente, poner las dos columnas juntas y buscar la primera fila donde dejan de coincidir.
+
+| Paso | Traza en papel | Lo que imprimió | ¿Coinciden? |
+|---|---|---|---|
+| Tras leer el archivo | `humedad = 28,5` | `humedad = 28,5` | Sí |
+| Tras convertir a número | `humedad = 28,5` | `humedad = 28` | **No** |
+| Al comparar con el umbral | `28,5 < 30 → regar` | `28 < 30 → regar` | Sí, por casualidad |
+| Minutos calculados | `12` | `10` | No |
+
+**La primera fila donde dejan de coincidir es el lugar del fallo**, no la última, que es donde se nota.
+En el ejemplo el síntoma son los minutos, pero el problema ocurrió tres pasos antes, al convertir el
+texto en número perdiendo los decimales; y hay una fila que coincide por casualidad, que es la que
+despista. Por eso las dos técnicas se enseñan juntas: sin la traza en papel no tienes contra qué
+comparar las impresiones, y sin las impresiones tienes una expectativa que no puedes confrontar con
+nada. **Depurar es la resta de las dos.**
+
+## Probar a propósito: los datos malos
+
+Todo lo anterior sirve cuando el fallo ya apareció. Lo que sigue sirve para que aparezca cuando tú
+decides y no en el peor momento.
+
+Un programa recién escrito se prueba con el caso feliz: el dato normal, bien escrito. Y funciona. La
+sensación de haber terminado es fuerte y es falsa, porque el mundo real no manda datos felices.
+Un <Termino slug="caso-limite">caso límite</Termino> es una entrada que está en el borde de lo que el
+programa espera —o directamente fuera—, y ahí vive casi todo lo que se rompe después. La lista es corta,
+es siempre la misma y merece estar pegada a la pared:
+
+| El caso | Qué suele romper |
+|---|---|
+| Cero | Divisiones imposibles, porcentajes sobre nada, promedios sin datos |
+| Vacío | El archivo sin filas, el campo en blanco, la lista de cero elementos |
+| Uno solo | Los bucles que suponen «al menos dos» y las restas entre consecutivos |
+| Negativo | Días negativos, litros negativos, plantas negativas; nadie los espera |
+| Enorme | El archivo de tres años, el número de quince cifras, la lista de mil filas |
+| Texto donde iba número | `"treinta"`, `"30 %"`, `"30,5"` con coma, el espacio delante |
+| El dato que nunca llegó | El sensor mudo, la fila que falta, el campo que nadie llenó |
+| El duplicado | La misma medición dos veces, que dobla los totales sin avisar |
+| El límite exacto | Justo el valor del umbral: ¿`30 < 30` o `30 ≤ 30`? |
+
+El último es el más barato de resolver: **decide explícitamente qué pasa en el valor exacto del umbral,
+escríbelo en un comentario y pruébalo.** El error por uno de la lección 2 vive ahí.
+
+Y el más importante para lo que viene después en el curso es
+el <Termino slug="dato-faltante">dato faltante</Termino>: la medición que nunca llegó porque el sensor
+estaba desconectado o hubo un corte de energía. **Un dato faltante no es un cero.** Si el programa lo
+trata como cero, el promedio del día se hunde, la regla decide que el sustrato está seco y el sistema
+riega un bancal encharcado. De ahí la regla: **el hueco se guarda como hueco, se cuenta aparte y quien
+lo lee decide qué hacer.**
+
+<Dato>
+La pregunta en cada punto donde el programa recibe algo de fuera —del teclado, de un archivo, de un
+sensor— es siempre la misma: **¿qué es lo peor que puede llegar aquí, y qué hace el programa cuando
+llega?**
+
+Hay tres respuestas legítimas, y elegir cuál es una decisión de diseño, no un descuido: **rechazarlo**
+avisando con un mensaje claro; **corregirlo** con una regla escrita, como aceptar coma o punto de
+separador decimal; o **detenerse** antes de hacer daño. La cuarta posibilidad, seguir como si nada, es
+la que produce riegos a destiempo. **Un programa que decide sobre plantas debe fallar de forma
+segura:** ante un dato que no entiende, no decide, avisa y deja las cosas como estaban.
+</Dato>
+
+## Escribir la prueba antes que la corrección
+
+Ya localizaste el fallo y sabes cómo arreglarlo. Falta un paso, y va antes de la corrección.
+Un <Termino slug="caso-de-prueba">caso de prueba</Termino> es una entrada concreta con su resultado
+esperado, guardada de forma que puedas volver a pasarla cuando quieras. Antes de tocar la línea mala se
+escribe el caso que la delata: esta entrada debe dar este resultado, y ahora mismo da este otro.
+
+Ese orden tiene tres consecuencias. **Tienes prueba de que el fallo existe** y no persigues una
+impresión. **Sabes cuándo terminaste**, porque el criterio dejó de ser «parece que ya va» y pasó a ser
+un caso que antes daba rojo y ahora da verde. **Y la prueba se queda**, que es lo que más rinde: se
+llama <Termino slug="regresion-de-software">regresión</Termino> a un fallo ya corregido que reaparece
+más tarde, casi siempre porque un cambio posterior en otra parte deshizo la corrección sin que nadie lo
+notara, y el segundo diagnóstico cuesta tanto como el primero.
+
+El antídoto no exige herramientas: un archivo con los casos y la costumbre de pasarlos todos después de
+cada cambio. Con diez casos y dos minutos, un programa pequeño queda protegido; y con el tiempo esa
+colección se convierte en la descripción más honesta de lo que el programa hace de verdad.
+
+## Copias que permiten volver atrás
+
+Existen herramientas profesionales para gestionar versiones y merecen aprenderse más adelante. Hoy no
+hace falta ninguna: hace falta una costumbre.
+
+**Nunca modifiques la única copia que funciona.** Antes de tocar un programa que ya hace su trabajo se
+guarda una copia fechada: `riego_2026-08-15_funciona.py`. Si el día termina peor de lo que empezó, la
+salida existe.
+
+**La copia se prueba el día que se hace.** Una copia que nunca se ejecutó no es un respaldo, es una
+esperanza; el mismo argumento que el módulo de agua usaba con el tanque de reserva que nadie vació.
+
+**El nombre dice el estado, no la versión.** `riego_v2` no informa; `riego_2026-08-16_probando_umbral`
+sí. Y **las copias viven fuera de la máquina**: un pendrive, otra computadora, un correo a uno mismo.
+Una carpeta de respaldos en el mismo disco que se quema no es un respaldo.
+
+Con esas copias funciona el tercer uso de la búsqueda binaria y funciona la regla de un cambio a la
+vez, porque deshacer deja de dar miedo.
+
+## Saber cuándo parar
+
+La última técnica no es técnica y es la que más veces salva la tarde.
+
+Cuando llevas cuarenta minutos con el mismo fallo ya no estás depurando: estás repitiendo la misma
+hipótesis equivocada con variaciones y probando cosas al azar. Eso tiene nombre. Es
+la <Termino slug="vision-de-tunel">visión de túnel</Termino>, el estado en que la primera explicación
+que se te ocurrió bloquea el acceso a todas las demás, y cuanto más tiempo llevas dentro más cuesta
+salir, porque cada minuto invertido hace más difícil admitir que la hipótesis era mala.
+
+Hay tres salidas y las tres funcionan. **Explicarlo en voz alta**, a otra persona aunque no sepa
+programar, o a nadie: a una planta, a la pared. Suena ridículo y es de lo más eficaz que existe, porque
+al hablar estás obligado a decir las cosas en orden y completas, y las suposiciones que tenías
+guardadas sin verbalizar salen a la luz; **la frase se corta sola en el punto donde estaba el error.**
+**Levantarse** diez minutos a regar o caminar, que no es descanso sino soltar la hipótesis que te tenía
+atrapado. **Y dormir**: el fallo que consumió tres horas de la noche se resuelve en cuatro minutos a la
+mañana siguiente.
+
+Pero hay una condición para que la pausa sirva: **antes de parar hay que anotar.** Qué fallo perseguías,
+qué hipótesis descartaste y con qué evidencia, y cuál ibas a probar ahora. Sin esa nota, mañana
+empiezas de cero.
+
+## El cuaderno de fallos
+
+Todo lo anterior deja un rastro que conviene guardar en un cuaderno de fallos, hermano de
+la <Termino slug="bitacora-del-sistema">bitácora del sistema</Termino> del módulo de automatización.
+Cuatro líneas por fallo bastan: **qué pasó, cómo se reprodujo, cuál era la causa real y cómo se
+corrigió.** La causa real, no la primera sospecha.
+
+Después de veinte o treinta entradas aparece el patrón, y ahí está el premio: **casi todos tus fallos
+son un puñado pequeño de causas repetidas.** Un nombre escrito de dos maneras. Un texto tratado como
+número. Dos instrucciones en el orden equivocado. Una condición escrita al revés. **Eso es exactamente
+lo que hace parecer que alguien «ve» los errores**, y ahora sabes que es un cuaderno, no un don.
+
+<AplicarRizoma>
+**El primer programa que se depura en Rizoma es el de la regla de riego**, el que la lección 3 convirtió
+en código. Y se depura antes de que decida nada real: mientras esté en prueba, el programa escribe en
+pantalla lo que haría —«regaría el lote 4 durante 12 minutos»— y una persona compara esa decisión con
+la que habría tomado ella. Ese periodo de sombra es la prueba más honesta que existe: **no verifica que
+el programa corra, verifica que acierta.**
+
+**El archivo de casos de prueba se construye con datos reales del sitio, no inventados.** Diez casos con
+su resultado esperado, calculado a mano una vez: un día normal de octubre; un día de seca con calor
+fuerte; la noche de surazo con 10 grados y viento, donde la respuesta correcta casi siempre es no
+regar; el día después de una lluvia, donde regar sería un error caro; el lote recién repicado; y el
+lote vacío, que no debe regarse ni entrar en los promedios. Se pasan enteros después de cada cambio, y
+el día que uno se ponga en rojo el fallo queda localizado al introducirlo.
+
+**Los casos límite de Rizoma tienen nombre propio.** La sonda desconectada que devuelve vacío. La sonda
+mojada por la lluvia que devuelve un valor imposible. El corte de energía que deja la última fila del
+archivo cortada. El pluviómetro que nadie leyó. **Cada uno se escribe como caso de prueba, y en casi
+todos el resultado correcto es el mismo: no decidir, avisar y dejar las cosas como estaban.** Un terreno
+con arcillas expansivas y drenaje lento castiga mucho más un riego de más que uno de menos.
+
+**El hueco no es cero, y aquí eso tiene consecuencias físicas.** Si la sonda del lote 4 no contesta seis
+horas y el programa rellena con ceros, el promedio del día cae, la regla ordena regar y el bancal se
+encharca justo donde el suelo ya drena mal. La regla queda escrita: **dato faltante se registra como
+hueco, no entra en ningún promedio y bloquea la decisión automática de ese sector hasta que alguien
+mire.**
+
+**Las copias fechadas viven dentro y fuera del sitio**, y el cuaderno de fallos se guarda junto a la
+bitácora del sistema, con una columna que casi nadie pone: **qué pasó en el vivero mientras tanto.** Un
+riego perdido, un lote que pasó sed, un plantín marchito. Esa columna es la que dice si el programa ya
+se ganó la confianza.
+
+**Y hay una decisión de proyecto que se toma ahora:** ningún programa de Rizoma decide un riego sin que
+exista un modo manual que funcione sin él. La llave se abre a mano y la regla se aplica con la libreta.
+Depurar es tranquilo cuando el peor caso es «hoy regamos a mano» y angustioso cuando es «hoy no riega
+nadie». **Depurar sin red es lo que hace que la gente tenga miedo de tocar el código, y un programa que
+nadie se atreve a tocar está muerto.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+**El separador decimal es el primer fallo silencioso que va a encontrar cualquiera que programe aquí.**
+Lo habitual al escribir a mano en Bolivia es la coma —`28,5`— y buena parte de las herramientas
+informáticas esperan el punto. Un programa que lee `28,5` puede quedarse solo con el `28`, guardarlo
+como texto sin avisar, o partir la fila en dos columnas si el archivo separa campos con comas. Los tres
+casos corren sin mensaje de error y dan resultados equivocados. **La regla práctica es aceptar las dos
+formas al leer y usar una sola al guardar.** Igual con la fecha: `05/08` no significa lo mismo aquí que
+en un archivo venido de fuera, y por eso el curso insiste en el formato `2026-08-05`.
+
+**El corte de energía es un caso límite, no una anécdota.** Un programa que estaba escribiendo un
+archivo cuando se fue la luz deja una última fila incompleta; al día siguiente la lee, encuentra un
+número a medias y falla, o peor, no falla y calcula con basura. **Se prueba a propósito:** se corta el
+programa a mitad de escritura, se mira cómo quedó el archivo y se le enseña a ignorar la última fila si
+está incompleta.
+
+**Muchas personas de la comunidad van a programar en una máquina prestada o compartida**, y eso cambia
+el método en dos puntos: todo el trabajo vive en un pendrive con copias fechadas, y las sesiones son
+cortas, así que anotar antes de parar pasa a ser la única forma de no perder lo avanzado.
+
+**El calor y la humedad de Santa Cruz producen fallos que parecen de programación y no lo son.** Una
+lectura absurda a mediodía puede ser condensación, un contacto flojo por dilatación o una hormiga
+dentro de la caja. Por eso el método empieza por reproducir: si el fallo solo aparece a las dos de la
+tarde con el sol pegando, el problema no está en tu código. **Depurar bien incluye saber cuándo salir
+a mirar el equipo.**
+
+**El curso no te va a dar precios de equipos ni condiciones de ningún servicio, y no los va a inventar.**
+Lo que sí puede decirte es qué preguntar: cuánto cuesta hoy un pendrive, y si hay algún telecentro,
+biblioteca o unidad educativa cercana con equipos disponibles. Eso se consulta localmente y las
+respuestas cambian año a año.
+
+**Y hay una razón comunitaria para hacer esto con disciplina, que es la que da sentido al módulo.**
+Rizoma del Sur es un proyecto gratuito: lo que se escriba aquí tiene que poder pasar a manos de otro
+vecino. Un programa con su archivo de casos de prueba, sus copias fechadas y su cuaderno de fallos **se
+puede entregar**: otra persona lo ejecuta, ve qué debe dar y puede cambiarlo sin miedo. Uno que solo
+funciona porque su autor recuerda qué no hay que tocar no se puede entregar a nadie, y entonces la
+herramienta no es de la comunidad sino de una sola persona. **La depuración ordenada no es prolijidad:
+es lo que convierte un programa en algo transmisible.**
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya tienes el método completo: reproducir antes de tocar, cambiar una cosa a la vez, partir por la
+mitad, imprimir el estado en lugar de suponerlo, probar a propósito con los datos malos, escribir la
+prueba antes que la corrección, guardar copias que permitan volver atrás y parar a tiempo.
+
+Eso resuelve la enorme mayoría de los fallos, pero no todos. Va a llegar la tarde en la que reproduces
+el fallo, lo acorralas, imprimes el estado, ves el valor imposible y sigues sin entender por qué. Ahí
+el método propio se agota y hay que buscar fuera.
+
+De eso trata la última lección: cómo se pide ayuda sin dejar de entender. Cómo se formula una pregunta
+que alguien pueda contestar de verdad, cómo se juzga una respuesta encontrada por ahí, y la regla dura
+cuando quien contesta es una máquina: **no pegar nunca código que no puedas explicar línea por línea.**
+
+Siguiente: **06 — Pedir ayuda sin dejar de entender.**

@@ -1,0 +1,436 @@
+Casi todo lo que hiciste hasta ahora era reversible. Un riego mal calculado se corrige al día
+siguiente, una siembra demasiado densa se ralea, una carencia se diagnostica y se enmienda: el sistema
+tenía dentro una planta viva, y una planta viva se recupera de casi cualquier error si le das tiempo.
+
+**El corte termina con eso.** Desde el instante en que separas el órgano de la planta ya no hay
+corrección posible: solo hay deterioro más rápido o más lento. La lección anterior explicó el
+mecanismo —sigue respirando, sigue transpirando, gasta reservas que nadie repone—. Esta lo usa como
+criterio para la única decisión que todavía te queda: **cuándo cortas, cómo cortas y qué haces en las
+cuatro horas siguientes.**
+
+## La última decisión barata
+
+Todo lo que viene después de la cosecha —frío, envase, transporte— cuesta dinero, energía o
+infraestructura que un proyecto comunitario muchas veces no tiene. En cambio **cortar a las seis de la
+mañana cuesta exactamente lo mismo que cortar a las once**: cero. Cortar con filo cuesta lo mismo que
+cortar con una hoja roma. Poner el cajón a la sombra cuesta lo mismo que dejarlo al sol.
+
+<Analogia>
+Es la diferencia entre **optimizar la consulta y comprar más servidores.** Cuando algo va lento, la
+reacción cara es escalar el hardware; la barata es buscar el índice que falta. En poscosecha casi todo
+el mundo cree que el problema es «falta una cámara de frío», y la mitad de la pérdida se genera antes.
+
+El frío hace falta, pero **no repara nada**: solo ralentiza lo que ya está pasando. Si el producto
+entra golpeado, caliente y raspado, la cámara le compra horas, no calidad.
+</Analogia>
+
+## Dos madureces que no son la misma
+
+El primer concepto que separar, porque el idioma corriente los mezcla, es que **«maduro» significa dos
+cosas distintas** y solo una depende de la planta.
+
+La <Termino slug="madurez-fisiologica">madurez fisiológica</Termino> es un estado del desarrollo: el
+órgano terminó de construirse, acumuló sus reservas y, si lleva semilla, esa semilla ya es viable. Es
+un hecho biológico. A partir de ahí el órgano no crece más y entra en senescencia.
+La <Termino slug="madurez-comercial">madurez comercial</Termino> es otra cosa: **el estado en el que ese
+producto sirve para el uso que le vas a dar.** No es biología, es destino. La misma planta de gandul da
+vainas de madurez comercial para grano verde varias semanas antes de tenerlas para grano seco, y las
+dos son correctas.
+
+<Tabla>
+
+| Relación | Qué significa en la práctica | Ejemplos del catálogo |
+| --- | --- | --- |
+| Comercial **antes** que fisiológica | Se cosecha un órgano en construcción; esperar lo empeora. | Culantro, gandul verde |
+| Comercial **igual** que fisiológica | El óptimo coincide con el fin del desarrollo. | Ají dulce, batata, yautía |
+| Comercial **después** que fisiológica | El cambio final ocurre fuera de la planta. | Plátano |
+
+</Tabla>
+
+Esa tercera fila existe gracias a un mecanismo que ya conoces: **la respuesta climatérica.** Un fruto
+climatérico como el plátano dispara por sí solo el pico de etileno y respiración que convierte almidón
+en azúcar, ablanda la pulpa y cambia el color, sin estar unido a la planta. Por eso se corta verde
+—que es como aguanta el transporte— y madura donde uno quiera.
+
+<Advertencia>
+**Un fruto no climatérico no tiene esa segunda oportunidad.** El ají dulce que cortas verde se queda
+verde: se ablandará y se arrugará porque sigue respirando, pero **no va a madurar**. No tiene el
+interruptor.
+
+De ahí sale una regla dura: **la calidad máxima de un no climatérico es la que tenía al cortarlo.**
+Toda su poscosecha es frenar la caída; la de un climatérico incluye decidir dónde ocurre el cambio.
+</Advertencia>
+
+## Qué es exactamente un índice de cosecha
+
+«Cortar en el punto» no es una habilidad mística que llega con veinte años de oficio: es una medición.
+Un <Termino slug="indice-de-cosecha">índice de cosecha</Termino> es **una variable observable, barata y
+repetible, correlacionada con el estado interno que de verdad importa** y que no puedes ver. Del
+plátano importa el almidón, que no medirás en el campo; lo que sí ves es si los dedos del racimo
+tienen aristas o ya están redondeados. Eso es el índice: un proxy.
+
+<Analogia>
+Un índice de cosecha es **una métrica de monitoreo.** No mides «la experiencia del usuario», mides el
+percentil 95 de latencia porque es barato y correlaciona bien. Con las mismas tres obligaciones:
+
+**La métrica no es la cosa.** El día que dejen de correlacionar —otra variedad, otro año— el proxy te
+va a mentir con total confianza.
+
+**Hay que calibrarla contra la realidad:** cortar una muestra, abrirla y anotar qué aspecto tenía por
+fuera cuando por dentro estaba bien.
+
+**Una métrica que nadie registra no existe.** Si el punto de corte vive solo en la cabeza de una
+persona, el proyecto tiene un factor bus de uno.
+</Analogia>
+
+Los índices se clasifican por lo que cuestan. Los **de calendario** son gratis pero se desalinean con
+el clima. Los **visuales** —color, brillo, tamaño, secado de la parte aérea— son gratis y bastante
+fiables. Los **táctiles** son gratis pero subjetivos, y hay que entrenarlos comparando entre personas.
+Los **destructivos** cuestan el producto sacrificado y son los más honestos. Y los **instrumentales**
+—refractómetro para <Termino slug="solidos-solubles">sólidos solubles</Termino>, penetrómetro para
+firmeza— cuestan dinero y no son imprescindibles para empezar.
+
+<Dato>
+**El índice más valioso cruza dos fuentes baratas:** calendario más aspecto visual, verificado una vez
+por temporada con un corte destructivo. El calendario dice cuándo empezar a mirar; el aspecto, cuál
+cortar hoy; el corte destructivo, si tu ojo sigue calibrado.
+</Dato>
+
+## Índices por órgano
+
+### Hoja
+
+En el culantro **la madurez comercial va muy por delante de la fisiológica**: buscas tejido joven y
+aromático, y todo lo que la planta haga después va en tu contra.
+
+El índice es doble: **tamaño de hoja y ausencia de vara floral.** Cuando la roseta levanta el escapo,
+el meristemo dejó de producir hojas nuevas y la planta cambió de programa. Se cosecha por hojas
+externas, a ras de la base, **dejando el centro de la roseta intacto**: ahí está el meristemo que dará
+la siguiente tanda. Eso convierte una planta en una cosecha repetida durante semanas, que es lo que
+necesita un huerto que entrega todos los sábados.
+
+### Fruto
+
+Un fruto acumula señales visibles porque su función biológica es ser visto. En el ají dulce el índice
+es **el color y su uniformidad**, más la firmeza y el brillo de la piel. La decisión que tomar por
+escrito es a qué estado se cosecha: en verde maduro o a color pleno, con más azúcar pero **mucha menos
+vida útil**. Al ser no climatérico lo que cortas es lo que hay, y eso vuelve la decisión controlable:
+lo que va a entrega inmediata se corta a color pleno y lo que debe aguantar dos días se corta antes.
+
+### Raíz y rizoma
+
+Aquí está el problema interesante: **el órgano que te interesa está enterrado y no emite señales.** Una
+batata puede estar perfecta o pasada y la parte aérea se ve casi igual.
+
+Los índices son indirectos. **El calendario** desde la plantación es fiable si lo calibras en tu suelo.
+**El follaje** ayuda: el amarilleo de las hojas viejas indica que la planta traspasa lo que le queda
+al <Termino slug="organo-de-reserva">órgano de reserva</Termino>. Y el que decide es **la cata**:
+desenterrar una planta representativa —no la mejor, no la del borde— y mirar.
+
+La cata da dos datos y el segundo se olvida siempre: el tamaño, y **si la piel está hecha.** Si al
+frotar con el pulgar la epidermis se desprende en tiras, ese producto saldrá del suelo abierto por
+todos lados. Es el problema clásico de la batata, y la razón de que exista el proceso de cicatrización
+que verás en la lección siguiente.
+
+<Advertencia>
+**La humedad del suelo al sacar es parte del índice, no un detalle logístico.**
+
+Con el suelo empapado la arcilla se pega en una costra que obliga a lavar con fuerza —y lavar con
+fuerza una piel frágil es justo lo que no se debe hacer—. Con el suelo demasiado seco y las arcillas
+expansivas contraídas, cada terrón es una piedra. El punto es intermedio: **suelo húmedo pero
+desmoronable**, una ventana que aquí puede durar dos días tras una lluvia.
+</Advertencia>
+
+### Racimo
+
+El plátano tiene el índice más elegante del catálogo. Se
+llama <Termino slug="grado-de-llenado">grado de llenado</Termino> y consiste en mirar la sección del dedo:
+mientras el fruto se desarrolla tiene aristas marcadas, y a medida que la pulpa engorda esas aristas se
+redondean. Ese índice visual se combina con un calendario que se construye solo y sin coste: **marcar
+cada racimo con una cinta de color el día que aparece la inflorescencia**, cambiando el color cada
+semana. A partir de ahí todo el platanal está fechado. Es poner una marca de tiempo en cada registro
+para poder ordenarlos.
+
+Como el plátano es climatérico, el punto de corte se decide hacia atrás desde el destino: cuanto más
+lejos y más lento el trayecto, más verde se corta. Un racimo cortado demasiado lleno **puede madurar en
+el camino y llegar con los dedos reventados.**
+
+### Vaina
+
+El gandul obliga a decidir primero para qué. **Vaina verde para grano fresco:** cuando los granos
+llenaron la vaina y se marcan por fuera, pero sigue verde y flexible. **Vaina seca para grano:** cuando
+perdió el verde, está seca y suena al agitarla.
+
+Aquí aparece un riesgo que no tiene ningún otro cultivo del catálogo: si te pasas, la vaina se abre
+sola por su línea de sutura —eso es la <Termino slug="dehiscencia">dehiscencia</Termino>— y la cosecha
+se cae al suelo. **En un cultivo que dehisce, llegar tarde no significa peor calidad: significa cero
+producto.** Es la diferencia entre un servicio degradado y uno caído. Por eso el gandul seco se cosecha
+en pasadas sucesivas: las vainas no maduran juntas y esperar a la última pierde las primeras.
+
+## La hora del día
+
+Durante la noche la planta cierra estomas, la transpiración cae casi a cero y la raíz sigue
+absorbiendo. El resultado es que **de madrugada el tejido está en su máximo contenido de agua**:
+máxima <Termino slug="turgencia">turgencia</Termino>, células llenas, hojas erguidas. A media tarde ese
+mismo tejido lleva horas perdiendo agua más rápido de lo que la raíz repone, y aunque no se vea
+marchito, está más deshidratado y bastante más caliente.
+
+Esa temperatura del tejido al cortar es el **calor de campo**, la segunda mitad del problema. Recuerda
+que la respiración aproximadamente se duplica cada diez grados: un producto cortado a 34 °C se consume
+a sí mismo al doble de velocidad que uno cortado a 24 °C, hasta que alguien le quite ese calor.
+
+<Formula explicacion="El 3,9 es aproximadamente el calor específico de un producto vegetal fresco en kilojulios por kilo y por grado, porque es casi todo agua. Cada grado de más que aceptas al cortar es una factura que alguien paga después.">
+CALOR A RETIRAR (kJ) = MASA (kg) × 3,9 × (T PRODUCTO − T OBJETIVO)
+</Formula>
+
+Cincuenta kilos de culantro cortados diez grados más calientes de lo necesario son cerca de dos mil
+kilojulios extra que sacar con sombra, aire o agua. Con electricidad eso es dinero. Sin ella **es
+tiempo durante el cual el producto se está gastando**, y ese tiempo sale de su vida útil.
+
+<Advertencia>
+**La regla «cosechar temprano» tiene una excepción que se paga cara: el rocío.**
+
+Cortar hoja o fruto empapado mete agua libre en el envase, y el agua libre en la superficie es el medio
+donde los hongos germinan y se mueven de una unidad a la siguiente.
+
+El óptimo no es «lo más temprano posible»: es **en cuanto el rocío se retira y antes de que apriete el
+sol.** En época de lluvias esa ventana puede no abrirse, y entonces la decisión honesta es posponer la
+cosecha de hoja, o cosechar mojado sabiendo que ese producto **no se guarda: se entrega hoy.**
+</Advertencia>
+
+## Herramienta y técnica
+
+Un corte con filo secciona las células en un plano. Una hoja roma **aplasta varias filas de células
+antes de romperlas** y deja un borde de tejido muerto. Eso no es estética: ese borde machacado es el
+sustrato preferido de cualquier hongo oportunista y dispara respiración de herida y producción de
+etileno en el tejido de alrededor.
+
+<Analogia>
+Un corte limpio es **una transacción**: se hace entera y deja el sistema en un estado consistente que
+la planta puede cerrar con una cicatriz. Un arrancón es **una escritura parcial abortada a medias**:
+deja tejido desgarrado sin superficie limpia sobre la que cicatrizar. No falló ruidosamente; falló en
+silencio y dejó basura que alguien encontrará tres días después.
+</Analogia>
+
+Todas las técnicas comparten un principio: **separar por donde la planta tiene previsto separarse, o
+cortar limpio, pero nunca tirar.** Muchos frutos tienen una zona
+de <Termino slug="abscision">abscisión</Termino>, un anillo de células preparado para desprenderse solo.
+Cuando no está activa, tirar arranca tejido de alrededor y abre la piel en el hombro, por donde entra
+después la podredumbre.
+
+El ají dulce se corta con tijera **dejando un trozo de pedúnculo**. El culantro, con cuchillo a ras de
+la base de la hoja. La batata y la yautía **no se arrancan: se levantan**, aflojando el suelo con
+horquilla clavada lejos del centro de la mata. Con el <Termino slug="rizoma">rizoma</Termino> de yautía
+hay además una precaución de salud: la savia de las aráceas lleva cristales de oxalato de calcio que
+irritan piel y mucosas, así que guantes y no frotarse los ojos.
+
+El racimo de plátano es cosecha de dos personas. Se hace un corte parcial en el pseudotallo para que la
+planta se doble despacio mientras la segunda persona **recibe el racimo sobre el hombro acolchado.** El
+racimo nunca toca el suelo, nunca se deja caer y nunca se apoya sobre los dedos. Después el tallo exuda
+látex, que mancha de forma permanente la cáscara que toca; por eso se deja escurrir con el corte hacia
+abajo y separado.
+
+<Dato>
+**El mantenimiento de la herramienta es parte de la poscosecha, no del taller.** Una hoja afilada,
+limpia y desinfectada entre plantas cuando hay riesgo sanitario corta sin machacar, no arrastra inóculo
+y exige menos fuerza. Todo lo que el módulo de sanidad decía
+sobre <Termino slug="bioseguridad">bioseguridad</Termino> sigue vigente, con un agravante: en la cosecha la
+misma tijera toca decenas de plantas por hora.
+</Dato>
+
+## El daño que no se ve hoy
+
+Este es el concepto que separa a quien entiende poscosecha de quien la sufre.
+El <Termino slug="dano-mecanico-latente">daño mecánico latente</Termino> es **una lesión que ya ocurrió,
+que todavía no se ve, y que se manifestará cuando el producto esté en manos de otro.**
+
+Un golpe rompe células por debajo de una piel intacta. Su contenido se mezcla: enzimas que estaban
+separadas de sus sustratos se encuentran con ellos y con el oxígeno, y arranca una oxidación que
+produce pigmentos pardos. **Ese proceso tarda horas o días en hacerse visible.** El día de la cosecha
+la unidad golpeada se ve idéntica a las demás; nadie la descarta, viaja, y a las cuarenta y ocho horas
+aparece la mancha oscura que quien la recibe interpreta como «producto malo».
+
+Hay tres formas de daño y se previenen distinto. La **herida** —corte, pinchazo, uña— rompe la piel y
+es la puerta directa. El **golpe** rompe células por dentro sin romper la piel. La **abrasión** —roce
+contra el envase, arrastre— desgasta la <Termino slug="cuticula">cutícula</Termino>, y aunque parezca
+lo más leve, elimina la barrera que frena la pérdida de agua y la entrada de patógenos.
+
+<Analogia>
+La piel intacta es **el único cortafuegos que tiene el producto**, y no hay segunda capa detrás. La
+mayoría de hongos y bacterias que pudren un producto cosechado no atraviesan una cutícula sana:
+necesitan una herida. Casi toda pérdida patológica es **consecuencia de una pérdida mecánica
+anterior**, el mismo problema con retardo. Por eso no empieces comprando fungicida: empieza contando
+golpes.
+</Analogia>
+
+La forma práctica de atacarlo es **contar transferencias.** Planta → mano → balde → cajón → mesa →
+clasificación → cajón de entrega → transporte son ocho saltos, cada uno con su tasa de error. Bajar la
+cadena de ocho a cinco reduce el daño más que cualquier cuidado adicional en cada paso, igual que
+quitar saltos de red baja la latencia más que optimizar cada uno.
+
+Tres detalles físicos causan la mayor parte del daño evitable. **La altura de caída:** soltar una
+unidad desde treinta centímetros dentro de un balde duro y vacío es un golpe real. **El llenado por
+encima del borde:** al apilar, el fondo del cajón de arriba aplasta la capa superior del de abajo. **La
+profundidad del envase:** en uno muy hondo la capa del fondo aguanta durante horas el peso de todo lo
+de encima, y ese peso magulla igual que un golpe, más despacio.
+
+## Higiene: manos, agua y envases
+
+Una regla de inocuidad antes de discutir técnicas: **ningún proceso posterior mejora la carga microbiana
+con la que el producto sale del campo.** Lavar y envasar evitan que empeore, pero no limpian lo que ya
+entró. La <Termino slug="carga-microbiana-inicial">carga microbiana inicial</Termino> es un techo. Es
+**la validación en el borde del sistema**: un dato sucio que entró a la base ya no se limpia con
+reportes bonitos, y aquí el punto de entrada es la mano que corta.
+
+**Manos.** Lavado con agua y jabón antes de empezar y tras cada interrupción, uñas cortas, heridas
+cubiertas. Y la regla que a nadie le gusta decir en voz alta: **quien tiene diarrea, vómitos o una
+herida infectada no manipula alimentos ese día.**
+
+**Agua.** El agua de lavado es el mayor riesgo del proceso por una razón estructural: **es lo único que
+toca todas las unidades del día.** Una unidad contaminada en un tanque estancado reparte su problema a
+todo lo que entre después. Eso
+es <Termino slug="contaminacion-cruzada">contaminación cruzada</Termino>, y por eso el agua se cambia y
+el enjuague final debería hacerse con agua de calidad potable.
+
+<Advertencia>
+**Sobre el cloro hay que ser honesto en las dos direcciones.** El cloro del agua de lavado **no está
+para desinfectar el producto**: está para que el agua no se convierta en el vehículo que reparte
+contaminación entre unidades. Es un tratamiento del agua, no del alimento.
+
+Y la dosis correcta depende del cloro libre, del tiempo de contacto, del pH y sobre todo de la carga de
+materia orgánica, que lo consume en minutos. **No inventes una receta ni copies una de internet sin
+verificarla:** las concentraciones y los productos autorizados para contacto con alimentos hay que
+consultarlos con el SENASAG o con una institución local de investigación. Este curso no te va a dar un
+número que no puede respaldar.
+</Advertencia>
+
+**Envases.** Un <Termino slug="envase-de-cosecha">envase de cosecha</Termino> es un utensilio
+alimentario, y eso excluye dos cosas que se ven todos los días: **cualquier recipiente que haya
+contenido agroquímicos** —aunque se le haya hecho <Termino slug="triple-lavado">triple lavado</Termino>,
+el envase de plaguicida se perfora y se descarta— y **los sacos de fertilizante.** El envase bueno tiene
+interior liso sin clavos ni astillas, se puede lavar, apila sin aplastar al de abajo y tiene aberturas
+que dejan salir el calor. Y ninguna cosecha se apoya sobre el suelo.
+
+## El acondicionamiento del mismo día
+
+Lo último antes de que empiece la conservación es
+el <Termino slug="acondicionamiento">acondicionamiento</Termino>: cuatro operaciones, en este orden, todas
+el mismo día del corte.
+
+**Uno: descarte.** Sale del flujo lo podrido, herido de forma visible o atacado. Se saca **primero**,
+porque una unidad podrida en un cajón no es una unidad perdida: es un foco que emite etileno y micelio
+a sus vecinas durante horas. Lo descartado se aleja y se composta.
+
+**Dos: selección.** Separar por defecto y calidad, no por tamaño. Aquí se detectan la piel raspada y la
+mancha incipiente. Todo lo dudoso va al lote de consumo inmediato, nunca al que va a guardarse: **lo
+que se guarda tiene que ser lo mejor, no el sobrante**, y esa es justo la inversión de la intuición de
+todo el mundo.
+
+**Tres: lavado, cuando corresponde.** Lavar quita tierra —que trae inóculo y calor— pero deja agua
+libre en la superficie. Por eso el lavado se cierra siempre
+con <Termino slug="oreo">oreo</Termino>: escurrir y secar la superficie a la sombra y con aire antes de
+envasar. Y no todo se lava; hay producto que se cepilla en seco porque el agua le hace más daño que la
+tierra. Cuál es cuál es de la lección siguiente.
+
+**Cuatro: clasificación por calibre.** El <Termino slug="calibrado">calibrado</Termino> parece un lujo
+comercial y no lo es: un lote uniforme se envasa mejor, se cocina parejo y viaja con menos huecos donde
+las piezas se golpeen. Una tabla con agujeros o un palo con marcas bastan.
+
+<Dato>
+**Lo que importa del calibrado no es la precisión: es la estabilidad de la definición.** Tu categoría
+«grande» tiene que significar lo mismo hoy, dentro de tres semanas y cuando la aplique otra persona. Es
+un contrato con quien recibe, igual que el esquema de una API: el valor no está en que los límites sean
+los ideales, está en que no cambien sin avisar.
+</Dato>
+
+<Formula explicacion="Lo que se cortó frente a lo que salió clasificado y utilizable. Es el número que convierte este capítulo en algo medible y el único que delata si el problema está en el campo o en el manejo.">
+RENDIMIENTO COMERCIAL (%) = KILOS CLASIFICADOS ÷ KILOS CORTADOS × 100
+</Formula>
+
+<AplicarRizoma>
+Los 3.666 m² no permiten una cámara de frío ni la necesitan todavía. Lo que sí permiten es una **rutina
+de mañana de cosecha** escrita, colgada en la pared y ejecutable por cualquier vecino que aparezca ese
+día sin haber estado nunca antes.
+
+**El puesto de acondicionamiento.** Antes de cortar nada hace falta un lugar fijo: mesa a la sombra,
+cerca del acceso vehicular, lejos del compost y de donde entran animales. Al lado, agua, jabón y algo
+para secarse las manos. Sin ese puesto, el producto acaba amontonado en el suelo junto a la tranquera,
+al sol, mientras alguien busca cajones.
+
+**El orden de la mañana.** La ventana útil en Prados del Sur va desde que se retira el rocío hasta
+que el sol empieza a pegar, y no es larga. Dentro de ella el orden lo dicta la fisiología: primero lo
+que más rápido se pierde —el culantro, hoja de enorme superficie y respiración alta—, después el ají
+dulce, y al final lo enterrado, que tolera esperar y además obliga a mover tierra. Lo sucio siempre
+después de lo limpio: la misma regla de circulación que el módulo de sanidad aplicaba al vivero.
+
+**El plátano tiene su propio calendario.** Conviene implantar ya la cinta de color: cada semana, quien
+pase por el platanal marca con el color de esa semana las inflorescencias nuevas. En pocos meses el
+platanal deja de ser un montón de plantas y pasa a ser una cola ordenada por fecha.
+
+**Trazabilidad al nivel de cama.** Cada cajón que sale del puesto lleva etiqueta con tres datos: fecha,
+cultivo y cama de origen. Cuesta quince segundos y es lo único que permite, cuando algo sale mal —un
+lote que se pudre en dos días, una queja—, saber de dónde salió y qué tenían en común los casos. Sin
+ese dato cada problema es un incidente aislado; con él, tres incidentes son un patrón.
+Es <Termino slug="trazabilidad">trazabilidad</Termino> hacia atrás, y es gratis.
+
+**Los índices se calibran aquí, no se copian.** Ninguna cifra de días desde la plantación publicada en
+otro país sirve tal cual en esta llanura. Lo que sirve es la libreta: fecha de siembra de cada cama,
+fecha de la primera cata, qué se encontró y fecha de cosecha final. Al tercer ciclo describe este suelo
+mejor que cualquier manual, y la regla de la casa debería ser que **una cosecha sin fecha anotada no
+cuenta como cosecha.**
+
+**El descarte también es una decisión comunitaria.** En un proyecto que reparte, la tentación de
+entregar todo «para no desperdiciar» es un error caro: la unidad podrida contamina el cajón y quien lo
+recibe recuerda esa y no las otras nueve. Lo dudoso se separa y **lo que se entrega es siempre producto
+sano.** Y como Rizoma del Sur existe para enseñar, cada mañana de cosecha es una clase: los tres gestos
+que hay que transmitir son no tirar sino cortar, no llenar por encima del borde y no dejar nada al sol.
+Con esos tres, alguien que nunca cosechó rinde casi como alguien con años de práctica.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La ventana de la mañana es más corta de lo que sugiere cualquier manual.** La literatura de
+poscosecha que se consigue en internet suele estar escrita para climas templados, donde «cosechar por
+la mañana» es un margen amplio. En la llanura de Santa Cruz, en octubre o noviembre, a las nueve ya hay
+condiciones que en otros lugares se consideran de mediodía. Eso convierte la organización previa
+—cajones listos, puesto armado, gente avisada— en la diferencia entre cosechar bien y cosechar tarde.
+
+**La <Termino slug="epoca-de-lluvias">época de lluvias</Termino> pelea contra el oreo.** Entre octubre
+y abril la humedad ambiente alta hace que el secado superficial tras el lavado sea lento: hay que lavar
+menos, cepillar más en seco y no lavar nada que vaya a guardarse. Además el suelo empapado impide sacar
+raíces sin embarrarlas, lo que a su vez obliga a lavar. El círculo se rompe eligiendo la fecha: esperar
+dos o tres días de escurrido tras una lluvia fuerte es una decisión técnica correcta, no pereza.
+
+**El <Termino slug="surazo">surazo</Termino> es una oportunidad y una trampa.** Una irrupción de aire
+frío del sur baja la temperatura del tejido varios grados sin que nadie gaste un vatio: cosechar
+durante o justo después entrega producto ya frío, con la respiración frenada de regalo. La trampa es el
+viento, fuerte y sostenido esos días, que acelera la deshidratación de todo lo cortado y expuesto. Lo
+que se corte durante un surazo va a cubierto rápido.
+
+**El dengue convierte el puesto de lavado en un asunto de salud pública.** El mosquito vector cría en
+agua limpia y estancada dentro de recipientes: exactamente un tanque de lavado olvidado, un balde con
+agua de ayer o una pila de cajones huecos llenándose con la lluvia. En una zona con dengue endémico,
+vaciar y voltear todo recipiente al terminar la jornada no es orden: es control vectorial.
+
+**El destino manda, y aquí el destino casi nunca tiene frío.** Un mercado de abasto o una entrega
+vecinal significan que el producto pasará horas a temperatura ambiente después de salir de tus manos.
+Eso cambia decisiones: se corta más verde lo que aguanta cortarse más verde, se entrega más temprano, y
+no tiene sentido enfriar algo que en dos horas estará sobre una mesa al sol. Y el camino también
+magulla: los tramos de tierra se degradan en temporada de lluvias, y la vibración es daño mecánico
+acumulado sobre producto que ya venía golpeado.
+
+**Sobre normas, prudencia.** Los requisitos de inocuidad, los productos autorizados para contacto con
+alimentos, la calidad del agua de proceso y las exigencias formales para entregar producto a terceros
+son competencia del SENASAG y, según el caso, del gobierno municipal. Este curso describe mecanismos,
+no trámites. **Ninguna cifra, plazo ni requisito legal debe darse por bueno sin consultarlo con la
+autoridad competente.**
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya tienes producto cortado en el punto, sin heridas evitables, limpio, oreado y clasificado sobre una
+mesa a la sombra. Es el mejor estado de toda su vida. **Y sigue respirando.**
+
+La siguiente lección, **La cadena de frío y sus sustitutos**, se ocupa de lo que pasa desde ese minuto:
+por qué la primera hora después del corte decide más que los tres días siguientes, por qué el aire seco
+marchita aunque no haga calor, qué es el curado que la batata y la yautía necesitan antes de guardarse,
+y qué se puede hacer cuando no hay electricidad.

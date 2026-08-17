@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "haz-de-tubos",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre de qué está hecha la madera y qué consecuencias tiene, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Es un haz de tubos huecos de celulosa pegados entre sí por lignina, casi todos apuntando a lo largo del tronco.",
+        "Como las fibras están orientadas, tiene tres resistencias y tres contracciones distintas, una por dirección: eso es la anisotropía.",
+        "Cuando una pieza de madera se rompe, casi siempre se rompió a través de la fibra, separando tubos, que es su dirección más débil.",
+        "Al ser un material natural, se comporta igual en todas las direcciones mientras no tenga nudos ni defectos visibles."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La opción incorrecta es la última, y es la creencia que arruina más muebles: la madera no es homogénea ni siquiera cuando la tabla está impecable, porque la orientación de las fibras es parte de su estructura, no un defecto. Un tronco es tubería acumulada —células largas, huecas y muertas, alineadas a lo largo—, y esa geometría manda en todo: a lo largo de la fibra aguanta veinte o treinta veces más tracción que a través, y encoge del orden de 0,1 % a lo largo frente a 6 a 10 % en tangencial. Esperar isotropía es lo que lleva a clavar un travesaño a lo ancho de una tapa y encontrarla partida meses después."
+    },
+    {
+      "id": "por-encima-del-psf",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una tabla recién aserrada con 80 % de contenido de humedad ya empieza a encoger apenas comienza a perder agua.",
+      "respuesta": false,
+      "explicacion": "Falso, y esta es la idea central de la lección. Entre el 80 % y el punto de saturación de la fibra —alrededor del 28 a 30 %— lo único que sale es agua libre, la que llena el hueco del tubo, y esa agua no sostiene nada: la tabla pierde bastante peso y no cambia de tamaño. Es la esponja dentro del balde: vaciar el balde no achica la esponja. La contracción empieza recién cuando se va el agua ligada, la que está metida entre las cadenas de celulosa dentro de la pared celular, porque cada molécula que sale deja que las cadenas se junten un poco más. Por debajo del punto de saturación, cada punto de humedad que se pierde o se gana encoge o hincha la pieza, siempre y en proporción directa."
+    },
+    {
+      "id": "tangencial-contra-radial",
+      "tipo": "opcion_multiple",
+      "enunciado": "La contracción tangencial es aproximadamente el doble de la radial. ¿Qué explica ese comportamiento y qué se deduce de él?",
+      "opciones": [
+        "Los radios medulares corren en sentido radial y frenan la contracción en esa dirección, como flejes que amarran la madera.",
+        "Dentro de cada anillo, la parte densa encoge más que la blanda: en radial esas capas están en serie y el total es el promedio, mientras que en tangencial están en paralelo y manda la más fuerte.",
+        "Por eso una tabla de corte radial es más estable y no se abarquilla, aunque salga más cara porque desperdicia más tronco.",
+        "En consecuencia, una tabla cortada al radial no se mueve nada y se le pueden fijar travesaños rígidos con toda confianza."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La incorrecta es la última, porque confunde «se mueve la mitad» con «no se mueve». Una tabla de corte radial sigue teniendo del orden de 3 a 5 % de contracción total en su ancho: con cinco puntos de cambio de humedad, un ancho de 60 cm todavía se mueve varios milímetros. Lo que gana el corte radial es estabilidad de forma —no se abarquilla, porque las dos caras tienen anillos igual de parados— y menos recorrido, no inmovilidad. La restricción de no fijar rígidamente dos maderas de veta cruzada vale igual para el radial; solo cambia cuánta fuerza se acumula antes de que algo ceda."
+    },
+    {
+      "id": "cuanto-se-mueve",
+      "tipo": "opcion_multiple",
+      "enunciado": "Una tapa de mesa de 60 cm de ancho, de corte tangencial y con 8 % de contracción tangencial, pasa de un febrero de lluvia (equilibrio ~16 %) a un agosto seco (~11 %). ¿Qué es cierto?",
+      "opciones": [
+        "El coeficiente por punto de humedad es 8 ÷ 28 = 0,29 %, y con 5 puntos de cambio la tapa se encoge unos 8,7 milímetros.",
+        "El largo de esa misma tapa, si midiera 2 metros, se movería menos de dos décimas de milímetro.",
+        "Ese movimiento ocurre todos los años sin que nadie toque la mesa, y por eso la tapa se sujeta con agujeros alargados o ranuras que la dejen deslizarse.",
+        "Como el movimiento es de ida y vuelta, al cabo del año se compensa y la mesa vuelve al mismo tamaño, así que no hace falta preverlo en el diseño."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa por un error de razonamiento frecuente: que el movimiento sea reversible no lo vuelve inofensivo. Es cierto que la tapa vuelve a su medida, pero si mientras tanto estaba atornillada rígidamente a un travesaño que no se movía, la madera no pudo encoger y se cargó de tensión hasta rajarse; una vez rajada, la vuelta al tamaño original no la cierra. Lo mismo con las juntas armadas justas en plena lluvia, que se abren en la seca y ya no vuelven a cerrar bien porque entró suciedad y la cola cedió. El movimiento se planifica, no se espera que se cancele solo."
+    },
+    {
+      "id": "rajadura-de-testa",
+      "tipo": "verdadero_falso",
+      "enunciado": "Las puntas de una tabla se rajan porque la testa —donde los tubos quedaron abiertos— evapora mucho más rápido que las caras, y encoge cuando el interior todavía está empapado.",
+      "respuesta": true,
+      "explicacion": "Verdadero. En la testa el agua sale por el extremo abierto de los tubos, sin tener que cruzar paredes celulares, y por eso evapora del orden de diez a quince veces más rápido que por las caras. La punta baja del punto de saturación de la fibra mientras el resto de la tabla sigue por encima: quiere encoger y el interior no la deja, así que queda traccionada a través de la fibra, que es su dirección más débil, y se abre. De ahí que sellar las testas el mismo día —con pintura sobrante, cola blanca o cera de vela— sea la medida más barata y más efectiva de toda la lección, y que convenga contar cinco a diez centímetros de sacrificio en cada punta al planificar los cortes, porque esa zona ya está dañada aunque la grieta no se vea."
+    },
+    {
+      "id": "estibar-la-pila",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a armar una pila para secar madera al aire en un patio de Zanja Honda. ¿Qué decisiones son correctas y por qué?",
+      "opciones": [
+        "Levantarla treinta o cuarenta centímetros del suelo sobre bloques, porque el suelo emite humedad hacia arriba y es el camino de las termitas.",
+        "Poner separadores del mismo espesor entre capa y capa y alinearlos verticalmente, porque si quedan corridos cada tabla se apoya en el vacío y se arquea.",
+        "Dejarla bajo techo y a la sombra, con peso arriba, porque el sol de un solo lado abarquilla y raja y la última capa es la que más se deforma.",
+        "Envolverla en plástico para que la humedad de la época de lluvias no le llegue y el secado no se detenga."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Envolver en plástico es la incorrecta, y hace exactamente lo contrario de lo que promete. El plástico no saca agua: atrapa la que la madera va soltando y convierte la pila en un invernadero, con la madera estacionada por encima del 20 % de contenido de humedad, que es justo el umbral donde los hongos de pudrición se ponen a trabajar, y con la albura cargada de almidón haciendo de comida. Además impide la ventilación que el secado necesita. Lo que sí frena el secado entre octubre y abril no se arregla con plástico: es que la humedad de equilibrio del aire anda por el 16 % o más, y una tabla que ya llegó ahí no baja por más meses que pasen. La respuesta a eso es paciencia y aclimatación antes de armar, no envolver."
+    },
+    {
+      "id": "tres-formas-de-dar-lugar",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre las tres formas de diseñar contando con el movimiento de la madera, ¿qué es correcto?",
+      "opciones": [
+        "Dejar que se mueva: agujeros alargados, ranuras que sostienen sin pegar y tornillos que aprietan en el centro y solo guían en los extremos.",
+        "Partir el ancho: como el movimiento es proporcional al ancho, varias piezas angostas mueven lo mismo en total pero repartido en juntas chicas que se disimulan.",
+        "Igualar el movimiento: si dos piezas se van a pegar rígidamente, que tengan la veta en la misma dirección para que se muevan juntas.",
+        "Frenarlo: con suficientes tornillos, cola y un buen barniz, una pieza bien construida deja de moverse."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la incorrecta y resume el error que gobierna el resto del módulo. Los tornillos no vencen a la madera: una tapa de 80 cm que quiere encoger 11 milímetros desarrolla una fuerza enorme, y lo que cede es siempre lo más débil —la madera se raja, el tornillo arranca fibra o la junta se abre—. El acabado tampoco lo impide: frena el intercambio de vapor y lo hace más lento, con lo que suaviza los picos, pero no cambia el destino, que sigue siendo la humedad de equilibrio con el aire. La puerta de marco y entrepaño es la prueba de que la solución es geométrica y no de fijación: un panel flotando libre dentro de la ranura de un marco de montantes angostos convierte 11 milímetros de movimiento anual en menos de milímetro y medio, sin apretar nada."
+    },
+    {
+      "id": "tu-propia-madera",
+      "tipo": "abierta",
+      "enunciado": "Elegí una pieza de madera concreta de tu casa o de tu taller que se haya movido: una puerta que traba en época de lluvias, una mesa rajada por el medio, un estante vuelto canaleta, un cajón que no sale en febrero. Explicá con el mecanismo qué le pasó y por qué; después contá qué vas a hacer esta semana con la madera que tenés guardada —dónde y cómo la vas a estibar, qué vas a hacer con las testas— y cómo vas a medir tu propio número de humedad con lo que hay en la casa.",
+      "respuestaModelo": "La pieza que elijo es la puerta del dormitorio, que es maciza, de tablas verticales, y mide unos 80 cm de ancho. Todos los años pasa lo mismo: entre enero y marzo raspa contra el marco por el costado y hay que empujarla, y en agosto cierra floja y queda una luz.\n\nEl mecanismo es este. La madera es higroscópica: negocia todos los días cuánta agua tiene con el aire que la rodea, y se detiene cuando llega a su humedad de equilibrio, que depende sobre todo de la humedad relativa. Acá, entre octubre y abril el aire se mantiene húmedo buena parte del día y la madera se estaciona cerca del 16 %; entre mayo y septiembre baja y, bajo techo, llega al 11 o 12 %. Son cinco o seis puntos de contenido de humedad de diferencia, todos los años. Como esos valores están por debajo del punto de saturación de la fibra, que anda por el 28 a 30 %, cada punto que gana o pierde la hincha o la encoge: por encima de ese umbral saldría agua libre y no pasaría nada de tamaño, pero acá lo que entra y sale es agua ligada, la que se mete entre las cadenas de celulosa dentro de la pared celular y las separa.\n\nCon la cuenta de la lección: si la contracción tangencial total es del orden del 8 %, el coeficiente por punto es 8 dividido 28, o sea 0,29 %. Con 80 cm de ancho y 5 puntos de cambio, el movimiento es 800 × 0,0029 × 5, más o menos 11 milímetros. Y el largo, que es de unos 2 metros, se mueve menos de dos décimas de milímetro, porque el agua ligada engorda la pared de costado pero no alarga las cadenas, que corren a lo largo de la fibra. Eso explica exactamente lo que veo: traba de costado y nunca de arriba.\n\nTambién entiendo ahora por qué cepillarla fue un error. Le sacaron material en febrero, cuando estaba hinchada; en agosto encogió los mismos 11 milímetros más lo cepillado, y quedó la luz por donde entran el aire y los mosquitos, que en zona de dengue no es un detalle menor. Lo que corresponde no es sacar material sino rediseñar: una puerta de marco y entrepaño, con montantes de 10 cm y un panel flotando libre en su ranura, movería menos de milímetro y medio, porque el ancho que se mueve deja de ser 80 cm y pasa a ser el de cada montante.\n\nCon la madera que tengo guardada voy a cambiar tres cosas. Hoy están unas tablas paradas contra la pared del pasillo, que es de las peores posiciones: una cara ventilada y la otra contra el revoque, así que secan a distinta velocidad y se abarquillan. Las voy a bajar y armar una pila como corresponde: sobre dos hileras de ladrillos para levantarla del piso unos treinta centímetros, porque el suelo emite humedad hacia arriba y es el camino de las termitas; con la base nivelada y apoyos cada 50 cm, porque cada tramo con vuelo se seca curvado y se queda curvado; con separadores del mismo espesor entre capa y capa y alineados uno justo encima del otro, porque si quedan corridos cada tabla se apoya en el vacío y se arquea, que es el error número uno; con peso arriba, porque la última capa es la que más se abarquilla; a la sombra y con aire, y sin plástico encima, porque el plástico no saca agua, la encierra y convierte la pila en un criadero de hongos, que necesitan que la madera pase del 20 % de humedad para trabajar.\n\nLas testas las sello el mismo día con lo que tengo, que es media lata de pintura vieja; también sirve cola blanca o cera de vela derretida, porque todas hacen lo mismo, tapar la punta de los tubos. La testa evapora diez o quince veces más rápido que las caras, y esa es la razón de que las puntas se rajen: encogen cuando el interior todavía está empapado. Y desde ahora, al planificar cortes, cuento cinco a diez centímetros de sacrificio en cada punta.\n\nPara mi propio número de humedad no necesito comprar un higrómetro: uso la balanza de cocina. Corto una muestra de más de 150 gramos a por lo menos 30 cm de la punta, porque la punta está más seca y me daría un número falso, y la peso apenas la corto: ese es el peso húmedo. Después la seco al sol varios días —o en el horno al mínimo con la puerta entreabierta, sin dejarlo solo, porque la madera fina a temperatura alta puede encenderse— y la peso una vez por día hasta que dos pesadas seguidas coincidan. Con la fórmula, contenido de humedad igual a peso húmedo menos peso seco, dividido entre el peso seco, por cien. Si me da 16 % sé que estoy en equilibrio de época de lluvias y que ese mueble se va a encoger en la seca, así que dejo las juntas con juego. Por último, antes de armar cualquier cosa meto la madera estibada dos a cuatro semanas en el cuarto donde va a vivir el mueble, que es gratis y solo cuesta anticiparse.",
+      "criterios": [
+        "Elige una pieza concreta y propia de su casa o su taller, y describe el síntoma real que observó, no un ejemplo genérico.",
+        "Explica que la madera es higroscópica y que su destino es la humedad de equilibrio con el aire, que cambia con la estación.",
+        "Sitúa el punto de saturación de la fibra cerca del 28 a 30 % y distingue el agua libre del agua ligada, indicando cuál mueve la pieza.",
+        "Señala que el movimiento es mucho mayor a lo ancho que a lo largo y usa eso para explicar por qué la puerta traba de costado y no de arriba.",
+        "Aplica la cuenta de la contracción dividida entre 28 por el ancho y por los puntos de cambio de humedad, con números coherentes.",
+        "Reconoce por qué cepillar o ajustar en la estación húmeda deja luz en la estación seca, y propone una solución de diseño en vez de sacar material.",
+        "Menciona al menos una de las tres formas de dar lugar al movimiento: dejar deslizar, partir el ancho o igualar la dirección de la veta.",
+        "Describe una pila de secado correcta: levantada del suelo, base nivelada, apoyos frecuentes, separadores parejos y alineados, peso arriba, sombra y aire.",
+        "Explica por qué el plástico envolviendo y el sol de un solo lado son contraproducentes, con el mecanismo y no solo como prohibición.",
+        "Sella las testas con lo que tenga a mano y explica por qué la punta se raja, contando además el sacrificio de material en cada extremo.",
+        "Describe el método de la balanza de cocina con sus pasos —muestra lejos de la punta, peso húmedo, secado hasta peso constante, fórmula— y menciona el riesgo de dejar el horno solo.",
+        "Incluye la aclimatación de la madera en el ambiente donde vivirá el mueble antes de armarlo."
+      ],
+      "explicacion": "Lo que se evalúa no es recitar los números, sino encadenar el mecanismo hasta una decisión: por qué se movió, cuánto, en qué dirección, y qué se hace distinto la próxima vez. Una respuesta que describa bien el síntoma pero proponga cepillar, atornillar más fuerte o barnizar para «sellar» la madera no aprobó, porque el acabado frena el intercambio y no lo impide, y ninguna fijación vence a una tapa que quiere encoger un centímetro. Los valores de contracción de cada especie varían y aquí no se inventan: si se necesita el dato exacto de una madera concreta, la fuente es quien la trabaja todos los días —el carpintero del barrio, el aserradero— y la propia balanza."
+    }
+  ]
+}

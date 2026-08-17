@@ -1,0 +1,400 @@
+El programa de la lección anterior ya existe y ya hace algo real: lee las humedades que anotaste,
+decide si toca regar y guarda la decisión en un archivo. La primera vez que lo ejecutes va a fallar.
+No es una señal de que esto no es para vos: **es el estado normal del trabajo.** Un programa recién
+escrito que arranca a la primera es la excepción, y quien lleva veinte años programando sigue viendo
+errores todos los días. Lo único que cambia con los años es cuánto tarda en leerlos.
+
+Ahí está el punto entero de esta lección. Lo que separa a quien avanza de quien abandona en estas
+primeras semanas no es la inteligencia, ni la memoria, ni el inglés, ni tener una máquina buena: es
+una habilidad concreta y perfectamente enseñable, **leer el mensaje de error en lugar de cerrarlo.**
+
+El reflejo del principiante es siempre el mismo. Aparecen ocho líneas de texto rojo, en inglés, y el
+cuerpo entiende eso como un reproche: se cierra la ventana y se empieza a cambiar cosas al azar. Es
+la peor estrategia posible, porque destruye la única evidencia disponible justo antes de leerla. Y la
+verdad es mucho más amable: **ese texto no es prosa, es un formulario.** Tiene campos fijos, siempre
+los mismos y en el mismo orden, y cada campo contesta una pregunta distinta.
+
+## El error no es un reproche, es una coordenada
+
+La máquina no tiene opinión sobre vos. No se molesta, no se cansa y no recuerda el intento anterior.
+Llegó a una instrucción que no puede ejecutar y, en vez de inventarse un resultado, hizo lo único
+honesto a su alcance: **detenerse y decir exactamente dónde.**
+
+Un sistema que falla y encima te entrega el archivo, la línea y el motivo te está regalando
+información literalmente verdadera, que no hay que interpretar: el trabajo de localizar el problema
+ya está medio hecho. Por eso conviene invertir la reacción emocional desde el primer día: **el error
+es la máquina colaborando.** Lo verdaderamente caro es el programa que corre sin protestar y devuelve
+un número equivocado durante seis semanas.
+
+<Analogia titulo="Analogía de riego">
+Es la misma diferencia que hay entre un gotero tapado que revienta el lateral y lo deja chorreando a
+la vista, y una tubería enterrada que se fisuró.
+
+**El chorro visible es una suerte.** Molesta y obliga a parar todo, pero dice dónde está el problema
+con precisión de centímetros. La fisura enterrada no molesta a nadie: el agua se va, el lote del
+fondo llega siempre corto, y el síntoma aparece tres semanas después en unas plantas amarillas que
+parecen tener otro problema.
+
+**Un mensaje de error es el chorro visible.** Por eso, cuando alguien te enseñe a "hacer que el
+programa no muestre errores", lo que casi siempre te está enseñando es a enterrar la tubería.
+</Analogia>
+
+## Anatomía de un mensaje
+
+Un mensaje de error típico se ve así. Este es de Python, el lenguaje con el que empezamos en la
+lección anterior, pero la estructura es equivalente en cualquier otro:
+
+```
+Traceback (most recent call last):
+  File "riego.py", line 41, in <module>
+    decidir_riego(lecturas)
+  File "riego.py", line 27, in decidir_riego
+    promedio = suma_total / cantidad_de_lecturas
+ZeroDivisionError: division by zero
+```
+
+Ocho segundos de miedo, cuatro campos de información.
+
+**El archivo.** `File "riego.py"` dice dónde ocurrió. Suena obvio con un solo archivo y deja de
+serlo en cuanto tenés tres, o cuando descubrís que editabas una copia guardada en otra carpeta.
+
+**La línea.** `line 27` dice en qué renglón, con una salvedad que casi nadie te avisa: la línea
+reportada es **donde la máquina se dio cuenta, no necesariamente donde está tu error.** Si te
+olvidaste de cerrar un paréntesis en la 12, la máquina sigue leyendo esperando que lo cierres y
+recién en la 15 encuentra algo sin sentido. De ahí la regla: **si la línea señalada te parece
+correcta, mirá la de arriba.**
+
+**El tipo.** `ZeroDivisionError` es el apellido del error y el campo más valioso. No es una
+descripción libre: es un nombre tomado de una lista cerrada, y con doce o quince nombres cubrís casi
+todo lo del primer año.
+
+**La descripción.** Lo que va tras los dos puntos, `division by zero`, es el detalle del caso, y
+muchas veces incluye entre comillas el dato exacto que lo causó. Si el mensaje termina en `'12,5'`,
+el problema es una coma decimal en tu planilla y no una idea equivocada sobre programación.
+
+<Dato titulo="La regla de oro del mensaje">
+**La última línea dice QUÉ pasó. Las de arriba dicen DÓNDE.**
+
+Si solo vas a mirar una cosa, mirá la última: ahí están el tipo y la descripción, que juntos son el
+diagnóstico. Todo lo demás es la ruta para llegar.
+
+Y una noticia buena que casi nadie le da a un principiante: **el vocabulario de tipos de error es
+cerrado y es corto.** Más corto que la lista de plagas del módulo de sanidad vegetal. Aprenderlo es
+cuestión de un par de semanas de tropezar, no de una carrera.
+</Dato>
+
+## La pila de llamadas se lee de abajo hacia arriba
+
+En el ejemplo aparecen dos líneas `File`, no una. Para entender por qué hace falta una idea que ya
+usaste sin nombrarla: un programa no es una lista plana de instrucciones. En cuanto crece, agrupás
+pasos en bloques con nombre —funciones— y un bloque llama a otro.
+
+Cuando la máquina entra en un bloque tiene que recordar dónde volver al terminar, así que apila esas
+anotaciones una encima de otra: la última que entró queda arriba, y al terminar ese bloque se saca y
+se sigue con la de abajo. A ese montón se lo llama
+la <Termino slug="pila-de-llamadas">pila de llamadas</Termino>, y cuando algo revienta la máquina lo
+imprime entero.
+
+Ahora el sentido de lectura. La primera línea del listado dice `Traceback (most recent call last)`:
+**la llamada más reciente va al final.** El listado empieza donde arrancó todo y termina donde se
+rompió de verdad. La línea 41 fue el punto de partida; la 27 es donde se estrelló. Por eso se lee de
+abajo hacia arriba: **abajo está el lugar del accidente, arriba el camino que llevó hasta él.** El
+orden, eso sí, depende del lenguaje y de la herramienta: hay entornos que imprimen la llamada más
+reciente primero. No lo memorices, leelo; el propio encabezado lo dice.
+
+De aquí salen dos reglas. La primera: **buscá la línea más profunda que sea tuya.** Si las últimas
+líneas mencionan archivos que vos nunca escribiste, dentro de la carpeta de una biblioteca, casi
+nunca es un error de esa biblioteca; lo habitual es que tu dato llegó mal a la puerta de entrada y
+reventó tres pisos más adentro. La segunda: **la pila cuenta la historia.** Cuando un mismo bloque se
+llama desde tres lugares distintos, saber cuál lo llamó esta vez es la mitad del diagnóstico.
+
+<Analogia titulo="Analogía de instalación">
+Rastrear una pila de llamadas es rastrear una obstrucción en la red de riego, y en el mismo sentido:
+empezás por el gotero que no larga agua, que es lo que se ve y lo que está abajo en el listado, y de
+ahí subís al lateral, a la llave de sector, al filtro, a la bomba. **El síntoma está en la punta; la
+causa está aguas arriba.**
+
+Nadie que sepa de riego empieza cambiando la bomba porque un gotero no larga. Y sin embargo mucha
+gente que empieza a programar mira la primera línea del listado —la más lejana al accidente— y se
+pone a modificar ahí. El filtro sucio, además, es la analogía exacta del error dentro de una
+biblioteca: el componente que falla no está roto, está recibiendo algo que no debería haberle
+llegado.
+</Analogia>
+
+## Tres familias de fallo
+
+Todo lo que puede salir mal cae en una de tres familias, y la diferencia entre ellas no es de grado
+sino de naturaleza.
+
+**Familia uno: el que no arranca.** Antes de ejecutar nada, la máquina lee el archivo entero y
+comprueba que esté bien escrito: paréntesis cerrados, comillas emparejadas, bloques bien sangrados.
+Si algo no cuadra no ejecuta ni una sola instrucción. Eso es
+un <Termino slug="error-de-sintaxis">error de sintaxis</Termino>, y es el error más barato que
+existe: como no se ejecutó nada, no pasó nada. No hay archivos a medio escribir ni válvulas
+abiertas.
+
+**Familia dos: el que se rompe a mitad.** La escritura estaba bien, la máquina arrancó, ejecutó
+cuarenta instrucciones y en la cuarenta y uno se encontró con algo imposible: dividir entre cero,
+abrir un archivo que no está, sumar un número a un texto. Eso es
+un <Termino slug="error-en-tiempo-de-ejecucion">error en tiempo de ejecución</Termino>, y lo que la
+máquina lanza cuando ocurre se llama una <Termino slug="excepcion">excepción</Termino>. Esta familia
+sí tiene consecuencias, porque **la mitad del trabajo ya se hizo.**
+
+**Familia tres: el que corre perfecto y devuelve un resultado equivocado.** No hay mensaje, no hay
+línea roja, el programa termina y anuncia que todo salió bien. Y el número que dio está mal. Eso es
+un <Termino slug="error-logico">error lógico</Termino>, y es el único de los tres que no habla.
+
+<Formula explicacion="Las dos primeras familias avisan solas. La tercera hay que ir a buscarla.">
+gramática rota → no arranca · operación imposible → se rompe a mitad · intención mal escrita → calla
+</Formula>
+
+¿Por qué solo hablan las dos primeras? Porque la máquina puede comprobar la **gramática**, ya que las
+reglas de escritura del lenguaje están definidas, y puede comprobar la **posibilidad**, porque sabe
+que dividir entre cero no está definido y que no puede sumar la palabra "húmedo" al número 40. Lo que
+no tiene, y no puede tener, es una copia de tu **intención**: en ningún lugar del sistema existe la
+frase "quería el promedio de las lecturas de la semana". Solo existe lo que escribiste. Si escribiste
+una división entre siete cuando eran seis lecturas, eso no es imposible ni gramaticalmente
+incorrecto: es una división perfectamente válida entre siete.
+
+<Advertencia titulo="La paradoja del error silencioso">
+Ordená las tres familias por lo alarmantes que se ven y después por lo que cuestan: las dos listas
+salen exactamente al revés. El error de sintaxis es el que más asusta y el que cuesta cinco minutos;
+el error lógico no asusta a nadie, porque no se ve, y puede regar diez veces de más durante un mes.
+**Un error de sintaxis te hace perder una tarde; un error lógico te hace perder una tanda.** Y encima
+te da confianza mientras lo hace, porque el programa termina diciendo "listo".
+
+La única defensa contra la familia tres es comparar el resultado con una verdad de afuera: la cuenta
+hecha a mano, la tabla de traza en papel de la lección 02, el balde debajo del gotero, el suelo
+abierto con una pala. **Ese método completo es la lección siguiente**, y por eso esta se ocupa de las
+dos familias que sí hablan.
+</Advertencia>
+
+## El catálogo de las primeras semanas
+
+Casi todo lo del primer mes está en esta lista corta. La columna del medio es la que importa: qué
+dice de verdad el mensaje, más allá de su redacción.
+
+| Lo que aparece | Lo que realmente pasó | Familia |
+| --- | --- | --- |
+| `SyntaxError: invalid syntax` | Falta un paréntesis, una comilla o los dos puntos, casi siempre en la línea anterior | Sintaxis |
+| `IndentationError: unexpected indent` | El sangrado no cuadra, o mezclaste tabulaciones con espacios | Sintaxis |
+| `NameError: name 'humedad' is not defined` | Ese nombre no existe todavía: error al teclear, definido más abajo o dentro de otro bloque | Ejecución |
+| `TypeError: can only concatenate str to str` | Mezclaste texto con número; casi siempre un dato de teclado o de archivo | Ejecución |
+| `ValueError: invalid literal for int()` | El texto no se convierte a número: coma decimal, un espacio, o está vacío | Ejecución |
+| `ZeroDivisionError: division by zero` | Dividiste por una cuenta que dio cero: lista vacía, sector sin lecturas | Ejecución |
+| `IndexError: list index out of range` | Pediste el elemento N de una lista más corta; el primero es el cero | Ejecución |
+| `KeyError: 'lote'` | Pediste un campo que ese registro no tiene, o se llama distinto | Ejecución |
+| `FileNotFoundError` | El archivo no está donde el programa está parado, o el nombre lleva tilde | Ejecución |
+| `AttributeError: 'NoneType' object...` | Una función devolvió nada y seguiste usando ese nada como dato | Ejecución |
+| `UnicodeDecodeError` | El archivo está guardado con una codificación distinta de la esperada | Ejecución |
+| `ModuleNotFoundError` | La biblioteca no está instalada, o lo está para otro intérprete | Ejecución |
+| El programa nunca termina | Bucle infinito, o está esperando que escribas algo | Ninguna |
+
+Cuatro merecen entenderse por dentro, porque no son descuidos sino malentendidos de fondo.
+
+**El de tipos.** Todo lo que entra por teclado es texto, y todo lo que se lee de un archivo es texto,
+siempre, aunque en la pantalla se vea como número. Si el usuario escribe 40, el programa recibe la
+cadena "40": podés pegarle otro texto detrás, pero no compararla con 35 ni sumarle 5. La operación
+que traduce de una cosa a la otra es
+la <Termino slug="conversion-de-tipo">conversión de tipo</Termino>, y hay que escribirla a mano **en
+el momento en que el dato entra**, no cuarenta líneas después: convertí en la frontera, y de ahí para
+adentro trabajá siempre con números de verdad.
+
+**El de valores imposibles.** La conversión falla cuando el texto no representa un número en el
+formato esperado, y ahí hay una trampa cultural feroz: `12,5` con coma es un número bien escrito en
+Bolivia y un texto inconvertible para la máquina. El mensaje suele mostrar el texto culpable entre
+comillas, así que **leelo hasta el final**: con eso sabés si el problema es la coma, un espacio
+invisible o una casilla vacía.
+
+**El del dato que no está.** Cuando una función termina sin devolver nada explícitamente, devuelve
+un <Termino slug="valor-nulo">valor nulo</Termino>: un objeto especial que significa "aquí no hay
+dato". Si seguís usándolo como si fuera un número, el error salta lejos de donde se originó. Por eso
+este es el que más confunde: **el mensaje aparece en la línea 60 y la causa está en la 22**, donde
+una rama de una decisión se olvidó de devolver un resultado. Es también el error típico de los datos
+del mundo real: la lectura que no llegó, la celda que nadie llenó, el día que faltó en la planilla.
+
+**El de la codificación.** Un archivo de texto no guarda letras, guarda números; la tabla que dice
+qué número es qué letra es
+la <Termino slug="codificacion-de-caracteres">codificación de caracteres</Termino>. Con solo letras
+del inglés casi todas las tablas coinciden y nunca notás que el problema existe; en cuanto aparece
+una ñ o una tilde, dos programas con tablas distintas leen cosas distintas del mismo archivo. Por eso
+`plátano` sale como `plÃ¡tano`. La solución es una sola: **guardá todo en UTF-8 y decilo explícito al
+abrir el archivo.**
+
+<ContextoBolivia titulo="La coma, la tilde y la máquina prestada">
+Hay cuatro fuentes de error que a un principiante boliviano le pasan casi con seguridad y que ningún
+tutorial en inglés menciona, porque a quien lo escribió no le pasan nunca.
+
+**La coma decimal.** Acá, como en casi toda América Latina, el separador decimal es la coma: se
+escribe 12,5 kilos y 1.200 plantines. Los lenguajes esperan el punto, y no es capricho: la coma ya
+tiene otro trabajo en el código, separa argumentos y elementos de una lista, así que no puede servir
+para las dos cosas. La consecuencia es inmediata: cualquier planilla exportada desde un programa
+configurado en español trae comas decimales y la conversión falla en la primera fila. Lo que hay que
+hacer no es cambiar los datos a mano sino **convertir la coma en punto en el mismo punto del programa
+donde se lee el dato**, con un comentario que explique por qué está esa línea. Peor todavía es el
+caso silencioso: si un dato como `1.200` —mil doscientos con punto de millar— se convierte sin
+avisar, la máquina lo entiende como uno coma dos. Eso ya no es un error de familia dos que grita,
+sino uno de familia tres que calla.
+
+**Las tildes y la ñ.** Buena parte de lo que vas a nombrar en este proyecto las lleva: yautía,
+plátano, ají, el lote de doña Mirta. En nombres de archivo y de carpeta conviene evitarlas del todo,
+porque distintos sistemas las tratan distinto y un `FileNotFoundError` por una tilde es de los más
+frustrantes que hay. Dentro de los datos, en cambio, hay que conservarlas —los nombres de las cosas
+se escriben bien— y para eso basta con guardar todo en UTF-8. Si abrís una planilla vieja y ves
+caracteres raros, no está corrupta: está guardada con otra tabla.
+
+**Las comillas del procesador de texto.** Si escribís código en un procesador de textos, o lo pegás
+desde un chat, el programa te "corrige" las comillas rectas por comillas tipográficas curvas y el
+guion corto por uno largo. Para la máquina son caracteres distintos, y el resultado es un error de
+sintaxis en una línea que a simple vista está impecable. **El código se escribe en un editor de texto
+plano, nunca en un procesador de textos.**
+
+**El inglés y la máquina prestada.** Los mensajes están en inglés y no hay forma de cambiarlo; la
+sección siguiente muestra que el vocabulario real son unas cuarenta palabras. Y sobre las condiciones
+de trabajo: si trabajás en una máquina prestada o en un telecentro, guardá tu código y tu cuaderno de
+errores en tu propio pendrive antes de irte; y si hay cortes de energía, asumí que alguna vez un
+programa se va a interrumpir a la mitad, que es exactamente la familia dos. Un programa que escribe
+sus resultados al final, de una sola vez, deja menos suciedad que uno que escribe a pedacitos.
+</ContextoBolivia>
+
+## Leer inglés sin saber inglés
+
+No hace falta saber inglés para leer un error: hace falta reconocer unas cuarenta palabras, porque
+los mensajes no son texto libre sino **plantillas**, y las mismas cuatro o cinco estructuras cubren
+casi todo.
+
+| Palabra | Qué significa en un mensaje |
+| --- | --- |
+| `expected` / `unexpected` | esperaba / no esperaba encontrar esto aquí |
+| `missing` | falta |
+| `invalid` | no vale, no tiene el formato correcto |
+| `not defined` | ese nombre no existe |
+| `not found` / `no such` | no lo encontré |
+| `cannot` / `unsupported` | esta operación no se puede hacer con estas cosas |
+| `must be` | tiene que ser, y no lo es |
+| `out of range` | te pasaste del límite |
+| `permission denied` | existe, pero no tenés permiso |
+| `object has no attribute` | eso que tenés en la mano no es lo que creés que es |
+
+La estructura más útil, y la que conviene buscar primero en cualquier mensaje largo, es **"expected
+X, got Y"**: esperaba X, recibí Y. Cuando aparece, el diagnóstico ya está escrito y solo queda
+averiguar de dónde salió Y.
+
+Sobre traducir: traducí una vez, aprendé las cuarenta palabras y después leelas directamente, porque
+pasar cada error por un traductor te cuesta concentración justo cuando la necesitás. Y sobre todo,
+**conservá el texto original en inglés**: cuando llegue el momento de buscar ayuda, que es la lección
+06, el texto literal es la llave. Tampoco te extrañe que el sistema operativo te hable en español y
+el lenguaje en inglés dentro del mismo mensaje; no significa que algo esté mal configurado.
+
+## Cuando no aparece ningún mensaje
+
+A veces lo peor no es el error rojo sino su ausencia. Hay seis causas y todas tienen comprobación
+rápida.
+
+**No imprime nada.** Comprobá primero que estás ejecutando el archivo que creés: poné en la
+primerísima línea una instrucción que imprima "acá estoy" y volvé a ejecutar. Si ese texto no
+aparece, no estás ejecutando ese archivo y todo lo que razonabas sobre su contenido era irrelevante.
+Diez segundos que ahorran tardes enteras. Si aparece, entonces la condición que dispara la parte
+interesante nunca se cumple, o la salida se va a un archivo en vez de a la pantalla.
+
+**Se queda colgado.** Un programa que no termina no está fallando: está haciendo algo o esperando
+algo. O es un bucle que nunca cumple su condición de salida, o espera que escribas algo por teclado.
+Y acá va un regalo poco conocido: **si lo interrumpís con Control-C, la mayoría de los lenguajes
+imprimen la pila de llamadas del punto exacto donde estaba.** Información gratis.
+
+**La ventana se cierra antes de que puedas leer.** Pasa al ejecutar con doble clic: el programa
+corre, falla, imprime el error y la ventana desaparece con él. La solución no es poner una pausa al
+final sino **ejecutar siempre desde la terminal**, que ya estaba abierta antes y sigue abierta
+después.
+
+**Alguien se tragó el mensaje.** Los lenguajes permiten capturar una excepción para manejarla en vez
+de detenerse. Es legítimo, pero en las primeras semanas se usa casi siempre mal: se envuelve todo en
+una captura general que atrapa cualquier cosa y continúa como si nada, y el resultado es un programa
+que no falla nunca y tampoco funciona. **Capturar un error que no entendés es silenciar la alarma en
+vez de apagar el incendio.**
+
+**El programa murió sin decir nada.** Si el proceso desaparece sin mensaje, la causa suele estar
+fuera: se quedó sin memoria, el sistema operativo lo cerró, se cortó la luz. Un mensaje lo emite
+quien está vivo para emitirlo. **Y el sexto caso: el mensaje salió por la otra puerta.** Los
+programas tienen dos salidas de texto separadas, la normal y la de errores; si redirigiste una a un
+archivo, la otra siguió yendo a la pantalla. Cuando un registro parece incompleto, esa suele ser la
+explicación.
+
+<AplicarRizoma titulo="El cuaderno de errores del vivero">
+Bajemos todo esto a los 3.666 m² y a los doce lotes, con el programa de riego de la lección anterior
+funcionando sobre las planillas reales.
+
+**Empezá por provocar los errores a propósito, un sábado tranquilo.** Es la práctica de esta lección
+y la que más rinde. Tomá una copia del programa —una copia, con fecha en el nombre— y rompela de
+cinco maneras, una por vez: borrale un paréntesis; escribí mal el nombre de una variable; pedí la
+lectura del lote 12 sabiendo que la lista de doce lotes va del 0 al 11; poné una coma decimal en una
+celda de humedad; borrá el archivo de lecturas y ejecutá igual. Leé el mensaje entero después de cada
+rotura. Media hora en total, y salís con cinco mensajes reconocibles a primera vista en vez de
+encontrártelos a las seis de la tarde con las bandejas pidiendo agua.
+
+**El error de los doce lotes vale por sí solo.** Los lotes se llaman 1 a 12 en la conversación, en el
+plano y en la libreta, pero cualquier lista de un programa empieza en cero: el primer lote es el
+elemento 0 y el último el 11. Pedir el elemento 12 da `IndexError`. Ojo con la variante silenciosa:
+si en vez de pedir el 12 recorrés del 0 al 10, no hay error ni mensaje, y **el lote 12 simplemente no
+se riega nunca** hasta que alguien camine hasta el fondo. Ese es el salto de la familia dos a la
+familia tres, en el mismo programa y con el mismo descuido.
+
+**La división entre cero va a aparecer sola.** El día que un sector no tenga lecturas anotadas, el
+promedio se calcula sobre cero mediciones y el programa se cae. Es la familia dos comportándose bien:
+te avisa. La tentación es "arreglarlo" poniendo un cero como humedad, y eso convierte un error que
+habla en uno que calla: un sector sin medir no tiene humedad cero, tiene humedad desconocida, y con
+humedad cero el programa manda regar a fondo. Es la misma distinción entre hueco y cero del módulo de
+automatización.
+
+**La familia dos es peligrosa cuando toca el mundo físico.** Imaginá el programa recorriendo los doce
+lotes: abre la válvula, espera los minutos que calculó, cierra la válvula, pasa al siguiente. Si
+revienta en el lote 7 por un dato malo, la ejecución se detiene entre "abrir" y "cerrar": los lotes 1
+a 6 se regaron, del 8 al 12 no se regó nadie, y la válvula del 7 quedó abierta toda la noche. Por eso
+el módulo de automatización insiste en el temporizador físico y en el fallo hacia cerrado: **el
+respaldo del error no puede ser el mismo programa que se rompió.** Y la pila de llamadas te dirá en
+qué lote se detuvo, que es justo lo que necesitás para saber qué válvula ir a cerrar a mano.
+
+**El surazo entra por la puerta de atrás.** Un programa que decide riego según la temperatura recibe,
+dos o tres veces por temporada, números que nunca vio: diez grados a las cinco de la mañana en pleno
+agosto. Ese dato no produce ningún error —es un número válido— y produce una decisión absurda.
+Familia tres otra vez.
+
+**La herramienta que hay que crear hoy es el cuaderno de errores.** Una hoja por error, con cuatro
+campos: el mensaje copiado literal y completo, qué estabas haciendo, qué lo arregló y cuánto
+tardaste. En un mes vas a tener quince hojas y vas a descubrir que **la mitad son el mismo error con
+distinta ropa.**
+
+**Ese cuaderno es patrimonio de la comunidad, no tuyo.** Rizoma del Sur existe para que la gente del
+barrio aprenda, y un cuaderno de errores compartido —pegado en la pared del galpón, copiado en el
+grupo— le ahorra a la siguiente persona exactamente la tarde que vos ya perdiste. Es el principio del
+módulo de enseñar: lo que aprendiste solo vale el doble cuando otro no tiene que aprenderlo solo. Y
+no hace falta saber programar para llevarlo; hace falta saber copiar un texto sin resumirlo.
+</AplicarRizoma>
+
+## La disciplina mínima frente a un error
+
+**Leelo antes de tocar nada.** La urgencia de "probar algo" es el enemigo: cambiar código antes de
+leer el mensaje destruye la evidencia y con frecuencia cambia el error por otro distinto, con lo cual
+perdiste el original y no ganaste nada.
+
+**Copialo entero y literal.** Nunca lo resumas ni lo cuentes con tus palabras. "Me da un error de
+tipos" no es información; el texto exacto, con archivo, línea, tipo y el dato entre comillas, sí lo
+es. Copialo tal cual, incluidas las líneas que no entendés, porque justo esas son las que otro va a
+entender.
+
+**Cambiá una sola cosa.** Aunque tengas tres sospechas, probá una. Si cambiás tres y funciona, no
+sabés cuál era y el error va a volver.
+
+**No te lo tomes personal, porque no lo es.** La cantidad de errores que comete alguien con quince
+años de oficio no es mucho menor que la tuya. Lo que se reduce con la práctica no es la frecuencia
+sino el tiempo entre el mensaje y el diagnóstico: de cuarenta minutos a cuarenta segundos. **Cada
+error que leés completo es una hora que no vas a perder el mes que viene.**
+
+## Lo que sigue
+
+Ya sabés leer lo que la máquina dice cuando habla. Queda la parte más difícil: qué hacer cuando no
+dice nada, o cuando dice algo que no alcanza. La lección siguiente, **Probar, equivocarse,
+corregir**, convierte la depuración en un método reproducible y no en un talento: reproducir el fallo
+a voluntad antes de tocar nada, cambiar una sola cosa a la vez, partir el programa por la mitad para
+acorralar el problema, e imprimir el estado para ver lo que la máquina ve en vez de suponerlo. Ahí es
+donde se caza, por fin, la familia tres.

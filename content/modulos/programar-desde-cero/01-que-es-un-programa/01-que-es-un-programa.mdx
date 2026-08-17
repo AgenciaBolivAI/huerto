@@ -1,0 +1,386 @@
+Este módulo va en dirección contraria al resto del curso. En las lecciones de suelo, de riego o de
+obra, las comparaciones salían de la informática para explicar la planta: la caché, la latencia, el
+respaldo que nadie verificó. Aquí se invierten. **Quien lee esto puede no haber tocado nunca una
+computadora**, y lo que sí conoce —regar, sembrar, contar plantines, llevar un cuaderno— es el
+material con el que se explica una máquina.
+
+Existe por una razón concreta. Buena parte de lo que este curso propone —el registro de datos, el
+riego que se decide solo, la electrónica que mide, las herramientas de inteligencia artificial para
+la comunidad— tiene una puerta cerrada delante para quien nunca programó. Este módulo abre esa
+puerta entera: al final de las seis lecciones vas a haber escrito un programa que hace trabajo real
+del vivero. No un ejercicio de juguete, un programa útil. Y como todo lo demás en Rizoma del Sur, es
+gratuito y comunitario: no se enseña esto para que alguien monte una empresa de software, sino
+porque **una persona que sabe darle instrucciones a una máquina deja de depender de que otro se las
+dé**, y porque el vecino que aprende suele terminar enseñándole a otros tres.
+
+Esta primera lección no toca ninguna computadora: nada que instalar, nada que ejecutar. Se lee
+donde sea, incluso en papel. Lo único que hay que llevarse es un **modelo mental correcto de qué es
+una máquina**, porque casi todo el sufrimiento de quien empieza a programar viene de tener en la
+cabeza un modelo equivocado y no saberlo.
+
+## La máquina no entiende nada
+
+La frase más importante del módulo suena a insulto y no lo es: **la computadora no entiende nada, no
+adivina nada, no tiene sentido común y no quiere ayudarte.** Hace exactamente lo que dice la
+instrucción, incluso —sobre todo— cuando eso no es lo que querías.
+
+Conviene describir el mecanismo real, porque explicarlo mal es lo que crea el modelo equivocado. La
+memoria de la máquina es una fila larguísima de casillas numeradas, y en algún lugar de ella están
+escritas las instrucciones, una detrás de otra. El procesador guarda un solo número: **en qué
+casilla está la instrucción que le toca ahora.** Y repite sin parar tres pasos: busca la instrucción
+que indica ese número, la descifra y la ejecuta; después suma uno al número y vuelve a empezar. A
+esa rueda de tres pasos se la llama el <Termino slug="ciclo-de-instruccion">ciclo de
+instrucción</Termino>, y es todo lo que hace un procesador desde que se enciende hasta que se
+apaga.
+
+Un <Termino slug="programa">programa</Termino> es esa lista de instrucciones. Nada más. No es una
+inteligencia, no es un ayudante y no es una conversación: es una lista, escrita por una persona, que
+una máquina recorre de arriba abajo sin criterio propio.
+
+<Dato titulo="Lo único extraordinario que tiene">
+El procesador de un teléfono barato ejecuta del orden de **miles de millones de esos pasos por
+segundo**; un chip diminuto de los que aparecen en el módulo de electrónica, millones por segundo.
+Nada de eso es inteligencia.
+
+Su única superpotencia real es esta: **hace la misma cosa la vez número diez mil exactamente igual
+que la primera, sin cansarse, sin aburrirse y sin mejorar.** Las dos mitades importan lo mismo. No
+se equivoca por distracción, que es maravilloso; y tampoco corrige por su cuenta una instrucción
+absurda, que es peligroso.
+
+Un ser humano al que le encargas contar plantines mil veces se cansa y se equivoca, pero también
+levanta la cabeza y dice «oiga, esta bandeja está vacía, ¿la cuento igual?». **La máquina no levanta
+la cabeza nunca.**
+</Dato>
+
+De aquí sale la ley que gobierna todo lo demás: **la máquina no hace lo que quieres, hace lo que
+escribiste.** Toda la distancia entre esas dos cosas es donde viven los errores, y en las lecciones
+04 y 05 se trabaja justamente esa distancia. Por ahora basta con aceptarla como un hecho físico,
+igual que se acepta que el agua baja.
+
+<Analogia titulo="Es como instruir a alguien que nunca vio el vivero">
+Imagina que llega una persona a ayudar y no conoce nada: no sabe qué es un plantín, no distingue una
+yautía de un pasto y no puede preguntar. Solo obedece frases sueltas, una por una, al pie de la
+letra.
+
+Le dices **«riega las plantas»** y no pasa nada, porque no sabe cuáles son plantas, con qué, cuánta
+agua ni hasta cuándo. Le dices **«abre la llave del sector tres»** y la abre. Si no le dices nunca
+que la cierre, **la deja abierta hasta que alguien vuelva**, aunque el agua ya esté corriendo por el
+camino. No es que sea mala, tonta ni desobediente: recibió una instrucción y la cumplió.
+
+Programar es aprender a hablarle a esa persona. Todo lo demás —el lenguaje, el teclado, la
+pantalla— es accesorio.
+</Analogia>
+
+El lenguaje humano funciona al revés. Cuando le dices a un vecino «anda regando mientras yo termino
+aquí», te apoyas en un montón de cosas que él ya sabe y tú no dijiste: qué se riega, cuánto, que no
+se riega al mediodía, que si llovió anoche no hace falta. El idioma humano es **comprimido**: manda
+poco y confía en que el otro reconstruye el resto. Con una máquina no hay nada que reconstruir.
+**Todo lo que no está escrito, no existe.**
+
+<Advertencia>
+«Hazlo bien», «que quede parejo», «riega lo necesario» y «avísame si pasa algo raro» **no son
+instrucciones.** Ninguna de las cuatro se puede ejecutar, porque ninguna dice qué hacer.
+
+Este es el trabajo mental de verdad de programar, y no tiene nada que ver con una computadora:
+**convertir una intención en pasos que no admiten interpretación.** La lección 02 se dedica entera
+a practicarla con lápiz y papel, antes de que aparezca ningún teclado.
+</Advertencia>
+
+## El estado: todo lo que la máquina sabe ahora mismo
+
+Si un programa es una lista de instrucciones, falta la otra mitad: **sobre qué actúan.** Actúan
+sobre datos guardados en algún lado, y al conjunto de todos esos datos en un instante dado se lo
+llama el <Termino slug="estado-de-un-programa">estado</Termino> del programa.
+
+Piénsalo como la pizarra del vivero. En un momento cualquiera dice: humedad del sector tres, 32;
+último riego, hoy a las seis; bandejas de ají dulce sembradas, 240; ¿llovió anoche?, no. Eso es el
+estado. Cada instrucción hace una sola cosa: **mira la pizarra y quizá borra un número y escribe
+otro.** Ejecutar un programa es recorrer una sucesión de estados, uno por instrucción, desde el
+inicial hasta el final.
+
+Y ahora la parte que cuesta aceptar: **la máquina no recuerda absolutamente nada que tú no le hayas
+pedido explícitamente que recuerde.** No hay un fondo de memoria donde queden las cosas por si
+acaso. Si no creaste un lugar para guardar la humedad de ayer, la humedad de ayer no existe, aunque
+el programa la haya leído hace tres instrucciones. Se leyó, se usó y se perdió.
+
+Hay una segunda pérdida, física y más brutal. La memoria de trabajo de una máquina
+es <Termino slug="memoria-volatil">volátil</Termino>: son circuitos que solo mantienen su contenido
+mientras les llega corriente. Cuando el programa termina —o cuando se corta la luz, que en Zanja
+Honda pasa— **todo el estado desaparece sin dejar rastro.** Para que algo sobreviva hay que
+escribirlo en un archivo, que vive en un disco o una tarjeta y no necesita corriente. Cómo se hace
+es materia de la lección 03; hoy basta con saber que son dos cosas distintas.
+
+<Analogia titulo="La pizarra y el cuaderno">
+Todo vivero que funciona tiene esas dos memorias y nadie las confunde. **La pizarra** es lo que
+pasa hoy —quién riega, qué sector toca, cuántas bandejas van— y se borra sola al cambiar el turno,
+sin que a nadie le moleste. **El cuaderno de registro** es lo que tiene que sobrevivir —fecha de
+siembra de cada lote, mortalidad por especie, qué sustrato se usó— porque dentro de seis meses
+alguien va a querer saber por qué el lote 7 salió mal.
+
+La memoria de una máquina es la pizarra; el archivo es el cuaderno. **Un programa que hace bien su
+trabajo y no escribe nada en el cuaderno es un programa que trabajó gratis**, que es exactamente la
+disciplina que reclama la lección de registro de datos del módulo de automatización.
+</Analogia>
+
+## La variable: un nombre pegado a una caja
+
+Para guardar algo en la pizarra hace falta un lugar con un nombre. Eso es
+una <Termino slug="variable">variable</Termino>: un nombre que tú eliges, pegado a un espacio de
+memoria donde hay un valor que puede cambiar mientras el programa corre.
+
+El mecanismo es literal. La memoria son casillas numeradas y el procesador trabaja con esos números,
+que se llaman direcciones. Nadie quiere acordarse de que la humedad del sector tres vive en la
+casilla 140.328, así que el lenguaje te deja escribir un nombre, `humedad_sector_3`, y él se encarga
+de la traducción. **El nombre es para ti; el número es para la máquina.** A la máquina le da igual
+cómo se llame, y de esa indiferencia sale una regla que vamos a repetir mucho: los nombres son
+gratis, así que ponlos largos y claros.
+
+Guardar un valor se llama <Termino slug="asignacion">asignación</Termino>, y aquí está la primera
+trampa seria del oficio. En casi todos los lenguajes se escribe con un signo igual, por ejemplo
+`humedad = 32`. **Eso no es una ecuación, es una orden.** No dice «humedad vale lo mismo que 32»,
+dice «pon 32 dentro de la caja llamada humedad». Se lee de derecha a izquierda, como una flecha.
+
+Que sea orden y no igualdad explica algo que parece brujería: `contador = contador + 1` significa
+«toma lo que hay en contador, súmale uno y vuelve a guardarlo ahí». Como igualdad matemática sería
+falso siempre; como orden es la frase más común de la programación.
+
+<Advertencia titulo="Asignar destruye">
+Cuando asignas un valor nuevo, **el anterior se pierde y no hay forma de recuperarlo.** No hay
+deshacer, no hay historial y no hay papelera. Si `humedad` valía 32 y escribes `humedad = 45`, el 32
+dejó de existir.
+
+De ahí salen dos errores clásicos de las primeras semanas, y los dos son de estado, no de escritura.
+El primero es **pisar un dato que todavía se necesitaba**, por reutilizar la misma variable para dos
+cosas distintas. El segundo es **leer una variable a la que nunca se le asignó nada**: la caja
+existe pero está vacía, o peor, tiene basura, y el programa sigue tan campante calculando con eso.
+Los dos aparecen en el catálogo de la lección 04; por ahora quédate con la causa, que es siempre la
+misma: **el estado no está donde el programador creía que estaba.**
+</Advertencia>
+
+## Tres tipos de dato, y por qué confundirlos rompe todo
+
+Una caja no guarda «cosas» en general: guarda una clase concreta de cosa, y esa clase se llama
+el <Termino slug="tipo-de-dato">tipo de dato</Termino>. Para empezar hacen falta tres —número, texto
+y verdadero o falso—, y con ellos se hace casi todo el trabajo de un vivero. El número viene en dos
+presentaciones que conviene no mezclar.
+
+| Tipo | Qué guarda | Ejemplo del vivero | Qué se puede hacer con él |
+| --- | --- | --- | --- |
+| Número entero | Cantidades que no se parten | 240 bandejas sembradas | contar, sumar, comparar |
+| Número con decimales | Medidas continuas | 32,4 % de humedad | promediar, comparar por rango |
+| Texto | Cualquier cosa escrita | «ají dulce», «lote 7» | pegar, buscar dentro, comparar |
+| Verdadero o falso | Respuesta a una pregunta cerrada | ¿se regó hoy? | combinar y decidir |
+
+El <Termino slug="entero">número entero</Termino> es el más simple: se guarda exacto y las cuentas
+con él son exactas. Doscientas cuarenta bandejas son doscientas cuarenta, no doscientas cuarenta con
+algo. Sirve para todo lo que se cuenta de a uno.
+
+El <Termino slug="numero-de-coma-flotante">número con decimales</Termino> es otra historia, y aquí
+hay que ser honesto porque sorprende a todo el mundo. La máquina trabaja en base dos, y en base dos
+hay fracciones que no se pueden escribir exactas, igual que en base diez no se puede escribir un
+tercio exacto: 0,3333… nunca termina. A un décimo le pasa eso mismo en base dos. Consecuencia real:
+**0,1 más 0,2 puede darte algo como 0,30000000000000004 en vez de 0,3.** No es un defecto de tu
+programa ni de tu máquina, es aritmética. De ahí sale una regla dura: **nunca preguntes si un número
+con decimales es exactamente igual a otro.** Pregunta si está por encima, por debajo o dentro de un
+rango. Para una regla de riego eso no molesta: comparar por umbral era lo que había que hacer
+igual.
+
+El <Termino slug="cadena-de-texto">texto</Termino> —una cadena de caracteres— es cualquier cosa
+escrita: un nombre de especie, una fecha tal como se tecleó, un código de lote. Y aquí está **la
+primera fuente de errores de todo principiante, sin competencia:** el texto `"32"` y el número `32`
+no son la misma cosa, aunque en pantalla se vean idénticos: el primero son dos símbolos dibujados
+uno al lado del otro, y el segundo es una cantidad. Sumar dos textos no suma: pega.
+**`"3"` más `"4"` da `"34"`, no 7.** Y no es un caso rebuscado: todo lo que entra por teclado entra
+como texto, y muchos sensores entregan su lectura como texto también. Si no lo conviertes a número a
+propósito, tu promedio de humedad será una tira de dígitos pegados.
+
+Y el <Termino slug="booleano">verdadero o falso</Termino> —el booleano, llamado así por George
+Boole, que formalizó esta lógica en el siglo XIX— es el tipo más pequeño posible y el más importante
+del módulo. Solo tiene dos valores y no es un número ni un texto: es **la respuesta a una pregunta
+cerrada.** ¿La humedad está por debajo del umbral? ¿Estamos dentro de la ventana horaria? Toda
+comparación que escribas produce un booleano, y **el booleano es lo que alimenta la decisión**, una
+de las tres piezas del inventario.
+
+<Advertencia titulo="El dato que no está">
+Falta un caso que no es un tipo más pero se comporta como si lo fuera, y que este curso ya trató en
+la lección de registro de datos: **la diferencia entre cero y «no hay dato».**
+
+Que el pluviómetro marque cero milímetros significa que no llovió. Que nadie lo haya mirado
+significa otra cosa distinta, y si las dos se guardan como un cero, el promedio de lluvia del mes
+queda mal para siempre. Los lenguajes tienen para esto un valor especial —**nada, vacío, nulo**,
+según cuál sea— que quiere decir exactamente «aquí no hay valor».
+
+La regla es de higiene y se aprende ahora o se paga después: **un dato ausente se guarda como
+ausente, nunca como cero, nunca como texto vacío y nunca como un guion.** Es la misma disciplina que
+el módulo de automatización le exige a la bitácora del sistema, y por la misma razón: cuando algo
+salga raro dentro de seis meses, la diferencia entre «midió cero» y «no midió» será justamente la
+que explique el misterio.
+</Advertencia>
+
+## El inventario cerrado: secuencia, decisión, repetición
+
+Aquí va la tesis del módulo: **no hay nada más que aprender que tres cosas.** No es una
+simplificación pedagógica ni un piadoso «por ahora»: es el inventario completo.
+
+La primera es la <Termino slug="secuencia">secuencia</Termino>: las instrucciones se ejecutan una
+detrás de otra, en el orden en que están escritas, y cada una termina antes de que empiece la
+siguiente. Suena tan obvio que da pereza nombrarlo, hasta que uno cae en que **el orden es
+información**: llenar la maceta y después sembrar no es lo mismo que hacerlo al revés, y la máquina
+no va a notar la diferencia.
+
+La segunda es el <Termino slug="condicional">condicional</Termino>, o decisión: mirar un booleano y,
+según sea verdadero o falso, ejecutar un camino u otro. «Si la humedad está por debajo del umbral,
+regar; si no, no hacer nada.» Es la única forma que tiene un programa de comportarse distinto en
+situaciones distintas, y es lo que convierte un temporizador en un controlador.
+
+La tercera es el <Termino slug="bucle">bucle</Termino>, o repetición: hacer lo mismo muchas veces,
+sea un número conocido de veces —una por cada lote— o hasta que se cumpla una condición —hasta que
+el sensor pase el umbral alto—. Es la pieza que hace que valga la pena tener una máquina, porque es
+donde entra su única superpotencia: repetir sin cansarse.
+
+<Dato titulo="Y no hay una cuarta">
+Esto es un resultado demostrado, no una opinión. En 1966 los investigadores italianos Corrado Böhm y
+Giuseppe Jacopini publicaron una prueba formal de que **cualquier programa que se pueda escribir se
+puede escribir usando solamente esas tres estructuras.** Es la base de lo que después se llamó
+programación estructurada.
+
+Entonces, ¿qué son las otras palabras que uno escucha —funciones, objetos, clases, módulos,
+bibliotecas, marcos de trabajo, servicios—? Son **maneras de organizar y reutilizar** secuencias,
+decisiones y repeticiones para que un programa grande siga siendo legible por una persona. Resuelven
+un problema humano, no uno de la máquina. Ninguna agrega una cuarta forma de decidir.
+
+La consecuencia práctica sostiene todo el módulo: **lo que se aprende en estas seis lecciones no es
+un escalón inicial que después se descarta.** Es la totalidad del mecanismo; lo que viene después es
+vocabulario y ordenamiento.
+</Dato>
+
+## Lo que no hace falta, y lo que sí
+
+Casi todo el mundo que no programa cree que no puede por alguna de estas razones, y todas son
+falsas.
+
+**No hacen falta matemáticas.** Programar no es matemática: es escribir instrucciones. La aritmética
+de este módulo es la de comprar en el mercado —sumar, restar, promediar, comparar—, y cuando hay una
+cuenta más seria detrás, como los grados-día, el curso ya te la da hecha y el programa solo la
+repite. Hay ramas de la informática que sí son matemáticas puras; ninguna hace falta para
+automatizar un riego.
+
+**No hace falta inglés.** Los lenguajes usan entre veinte y cuarenta palabras reservadas, casi
+todas en inglés, y funcionan como **símbolos, no como idioma**: `if` es un signo que significa «si»,
+igual que el signo de sumar significa sumar. Todo lo demás —nombres de variables, comentarios,
+mensajes— lo escribes en castellano. Los mensajes de error sí vienen en inglés, y por eso la lección
+04 se ocupa de leerlos sin saber el idioma.
+
+**No hace falta una máquina cara.** Todo esto corre en cualquier computadora de los últimos quince
+años, incluso lenta y con la pantalla rayada: programar es escribir texto, de las cosas que menos
+exigen de un equipo. Y si no tienes computadora propia, la lección 03 trata en serio los caminos que
+quedan, porque es una pregunta legítima.
+
+**Y no hace falta memoria**, que es el miedo más extendido y el más equivocado. **Nadie se aprende
+un lenguaje de memoria, ni siquiera después de veinte años.** Quien programa a diario consulta cómo
+se escribe algo varias veces por hora: eso no es una debilidad, es el oficio. Lo que sí queda en la
+cabeza, y queda solo, es **la forma de las tres piezas** —cuándo hace falta decidir, cuándo hace
+falta repetir—, que es justamente lo que no se puede buscar. Tampoco hay nada en el ciclo de
+instrucción que dependa de la edad de nadie ni de haber terminado el colegio.
+
+Hacen falta dos cosas, y ninguna es un talento. La primera es **tolerar equivocarse muchas veces
+por hora sin tomarlo como algo personal**: un programa no sale bien a la primera casi nunca, ni a
+principiantes ni a expertos, y la diferencia está en la velocidad con la que se recuperan. La
+segunda es **leer lo que dice la pantalla en vez de suponer lo que dice**, que suena ridículo de tan
+simple y es la costumbre que más separa a quien avanza de quien se traba: la máquina casi siempre te
+está diciendo qué pasó, con un mensaje que asusta por su forma pero que es información y no un
+reproche.
+
+<AplicarRizoma>
+**El estado de Rizoma del Sur ya existe, y está escrito a mano.** Los doce lotes de los 3.666 m²
+tienen, cada uno, valores que alguien anota: qué especie hay, cuántas bandejas se sembraron, en qué
+fecha, con qué sustrato, cuántas se perdieron y por qué. Eso es exactamente lo que en un programa se
+llama estado. **No hay que inventarlo para programar: hay que darle tipos.** Y ese ejercicio, que se
+hace en el cuaderno y sin computadora, es el trabajo más valioso que se puede hacer hoy.
+
+**Ponle tipo a cada columna del registro del vivero, ahora mismo, con lápiz.** «Bandejas sembradas»
+es un entero: 240, nunca 240,5. «Humedad del sustrato del sector tres» es un número con decimales, y
+por lo tanto **jamás se compara por igualdad, siempre por umbral**, que es justo lo que ya pide la
+regla de riego con histéresis del módulo de automatización. «Especie» es texto, y ahí aparece el
+primer problema real: si en una fila dice «ají dulce», en otra «Ají dulce» y en otra «aji dulce»,
+para la máquina son **tres especies distintas**, porque comparar textos es comparar símbolo por
+símbolo; la solución no es informática sino de disciplina, una lista cerrada de nombres y todos
+escriben igual. «¿Se regó hoy?» es verdadero o falso, y no se anota con una cruz ambigua que después
+nadie sabe si significaba sí o significaba «revisado». Y «lluvia de anoche» tiene tres estados, no
+dos: llovió tanto, llovió cero, **o nadie miró el pluviómetro** — y ese tercero se anota como
+ausente, nunca como cero.
+
+**Elige ya el primer programa, aunque no lo escribas hasta la lección 03.** Los dos candidatos los
+decidió el propio curso: son cálculos que ya se hacen a mano en Rizoma y que la mano hace mal. Uno
+es **la regla de riego** —dados el umbral bajo, el umbral alto, la última lectura y la hora, decidir
+si toca regar—, que es una secuencia con una decisión adentro. El otro es **la planilla de
+grados-día** —por cada día, máxima más mínima dividido dos, menos la temperatura base, acumulando
+desde la siembra de cada lote—, que es una secuencia dentro de un bucle. **Entre los dos usan las
+tres piezas del inventario y ni una más**, que es la prueba de que el inventario está cerrado.
+
+**Escríbelo pensando en el vecino, porque el proyecto es comunitario.** Un programa que solo
+entiende quien lo escribió se muere el día que esa persona se muda, y aquí el objetivo declarado no
+es tener una herramienta sino **que la comunidad tenga la herramienta**: nombres de variables en
+castellano y completos —`humedad_sector_3`, no `h3`—, y todo lo que el programa decida guardado en
+un archivo, porque la memoria se borra y el cuaderno no.
+
+**Y algo que puede hacerse esta semana sin tocar nada:** toma una tarea que ya haces —preparar
+sustrato, endurecer plantines, revisar trampas— y escríbela en el cuaderno como se la darías a
+alguien que no vio nunca el lugar y no puede preguntar. Vas a descubrir tres o cuatro decisiones que
+tomas sin darte cuenta y que nunca habías puesto en palabras. **Esas decisiones invisibles son el
+verdadero contenido del programa**, y encontrarlas es la práctica de la lección siguiente.
+</AplicarRizoma>
+
+<ContextoBolivia titulo="Aprender a programar desde Zanja Honda">
+**El primer condicionante es el acceso a la máquina, y hay que decirlo sin maquillaje.** Mucha
+gente del barrio no tiene computadora propia y sí tiene teléfono. Programar desde un teléfono es
+posible pero incómodo, y la alternativa realista suele ser una máquina prestada, compartida por
+horas, o la de una unidad educativa o un telecentro. **Qué existe cerca no se averigua en internet,
+se averigua preguntando**: en la junta vecinal, en la escuela, en el municipio. Conviene empezar por
+ahí hoy, porque conseguir el acceso suele tardar más que aprender.
+
+**El segundo es la energía y la conexión.** Los cortes de luz y la señal irregular son parte del
+paisaje, y tienen consecuencia directa sobre cómo se estudia esto: **elige herramientas que
+funcionen sin internet y guarda tu trabajo cada pocos minutos.** Toda la memoria de trabajo es
+volátil, así que un corte a las dos horas de estar escribiendo se lleva las dos horas si no
+guardaste. Es la lógica del depósito elevado y de la batería del módulo solar: un amortiguador entre
+un suministro intermitente y una necesidad continua. Y el costo de los datos móviles define qué se
+puede hacer: ver videos largos en el celular sale caro, leer texto no. Que este curso esté pensado
+para leerse no es una decisión estética.
+
+**El tercero es el clima, y es más literal de lo que parece.** Una computadora en Santa Cruz en
+octubre trabaja a temperaturas que en otras latitudes serían alarmantes: hay que dejarle aire y **no
+apoyarla sobre la cama ni sobre una tela**, porque el ventilador toma aire por abajo. El polvo de la
+seca lo empeora, y la humedad de la temporada de lluvias es dura con los contactos. Cuando entra un
+surazo con tormenta eléctrica, **lo más barato y más efectivo es desenchufarla**: un pico de tensión
+no distingue entre una computadora vieja y una nueva.
+
+**El cuarto es el idioma, y aquí hay una asimetría honesta.** El material para aprender a programar
+en castellano es abundante y bueno; los mensajes de error y la documentación de las herramientas,
+casi siempre en inglés. Eso es un obstáculo real y no se resuelve fingiendo que no existe, sino
+aprendiendo a leer unas pocas fórmulas que se repiten, que es lo que hace la lección 04.
+
+**Y una advertencia de honestidad, para no vender humo.** Este módulo enseña a programar; **no
+otorga ningún título ni certificación**, ni equivale a una formación reconocida. Si a alguien le
+sirve para presentarse a un trabajo o a una convocatoria, los requisitos formales hay que
+consultarlos con la institución correspondiente, porque cambian y este curso no tiene forma de
+saberlos. Lo que sí puede afirmarse sin exagerar es lo otro: **con estas seis lecciones se puede
+escribir un programa que decida un riego, lleve una planilla o cuente plantines**, y eso es una
+capacidad real que antes no se tenía.
+</ContextoBolivia>
+
+## Lo que sigue
+
+Ya está el modelo mental: una máquina que ejecuta una instrucción a la vez sin entender nada, un
+estado que solo contiene lo que le pediste, cajas con nombre que guardan números, textos o
+respuestas de sí o no, y un inventario de tres piezas que está cerrado.
+
+Falta usarlo. La lección 02, **La lógica antes que la sintaxis**, practica las tres piezas a mano,
+en castellano y con lápiz: cómo se descompone una tarea real del vivero en pasos sin ambigüedad,
+cómo se escribe eso en pseudocódigo y cómo se combinan condiciones con «y», «o» y «no» —incluida la
+parte que todo el mundo hace mal, que es negar bien una condición—. El centro de esa lección es la
+tabla de traza: **ejecutar tu propio programa a mano, fila por fila, haciendo tú de procesador.** Es
+la técnica que más rinde del módulo, y la que hace aparecer a los tres fantasmas de siempre: el
+bucle que no termina nunca, el error de contar uno de más y la decisión que no se cumple jamás.
+
+Sigue sin haber una computadora a la vista. Eso empieza en la 03.

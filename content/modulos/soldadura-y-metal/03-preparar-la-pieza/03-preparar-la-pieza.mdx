@@ -1,0 +1,475 @@
+El arco dura minutos; la preparación dura horas. Y cuando una unión falla —se abre, se raja, se parte
+por un sitio que nadie miraba— casi nunca falló la mano que llevaba el electrodo: **falló lo que había
+debajo**. Un soldador con buen pulso sobre una pieza sucia, mal ajustada y suelta hace una soldadura
+mala. Un principiante sobre una pieza limpia, biselada y bien sujeta hace una soldadura aceptable.
+
+Esta lección es esa mitad invisible, y cabe en tres condiciones que tienen que ser verdad **antes** de
+encender el arco —la pieza está limpia, la junta está ajustada, todo está sujeto— y una cuarta que
+ocurre **después** y hay que haber previsto antes: el metal calentado se mueve, y se mueve siempre en
+la misma dirección. Al terminar, la pieza queda armada y punteada, todavía sin soldar de corrido.
+
+## Nada que no sea metal puede estar en el baño
+
+Soldar por fusión es esto: el arco funde un charco de metal líquido —el baño— que toma material de las
+dos piezas, y al enfriarse solidifica como **un solo cuerpo continuo**, con sus granos creciendo a
+través de lo que antes era la separación. Esa continuidad es toda la resistencia de la unión, y
+cualquier cosa que esté en el baño sin ser metal la interrumpe. Una interrupción es por donde empieza
+la grieta.
+
+Lo que ensucia una pieza tiene tres destinos dentro del charco, y los tres son malos.
+
+**Se convierte en gas.** Pintura, grasa, aceite, humedad y restos orgánicos son compuestos de carbono,
+hidrógeno y oxígeno que a la temperatura del arco no se funden: se descomponen. El gas sube buscando
+salir, pero el baño solidifica en un par de segundos —mucho antes de que la burbuja escape— y la
+burbuja queda encerrada. Eso es la <Termino slug="porosidad-en-la-soldadura">porosidad</Termino>: un
+cordón que por fuera se ve razonable y por dentro es una esponja. Cada hueco es sección que no trabaja,
+y su pared es una superficie donde la tensión se acumula.
+
+**Se queda sólido y no se disuelve.** El óxido de hierro no es hierro: es hierro combinado con oxígeno,
+y su punto de fusión está **por encima** del del acero. Cuando el arco derrite el metal a su alrededor,
+la costra sigue siendo sólida y queda atrapada dentro del cordón. Eso es
+una <Termino slug="inclusion-en-el-cordon">inclusión</Termino>, y funciona como una piedra dentro del
+hormigón: ocupa lugar y no aguanta nada. Ojo con la que casi nadie reconoce como suciedad:
+la <Termino slug="cascarilla-de-laminacion">cascarilla de laminación</Termino> es esa piel gris
+azulada, brillante y bien pegada que trae el perfil nuevo de la ferretería, y es óxido igual que la
+herrumbre, solo que más adherido.
+
+**Se descompone y deja hidrógeno adentro.** Este es el peor porque no se ve. El agua —de la lluvia, del
+rocío, del electrodo húmedo— se parte en el arco en oxígeno e hidrógeno. El hidrógeno atómico es el más
+pequeño que existe y se disuelve con facilidad en el acero líquido; el problema es que en el acero
+sólido casi no cabe. Al enfriarse queda de más, migra por dentro del metal, se acumula en cualquier
+hueco microscópico y ahí vuelve a formar moléculas, con una presión enorme desde adentro. Eso es
+el <Termino slug="hidrogeno-difusible">hidrógeno difusible</Termino>, causa de las fisuras que aparecen
+**horas o días después**, con la pieza fría y todos convencidos de que el trabajo salió bien.
+
+<Analogia titulo="Entrada sin validar">
+Las tres suciedades son el mismo error de sistemas: **datos que entran sin sanear**. La porosidad es el
+fallo ruidoso que revienta a la vista; la inclusión es el registro corrupto que se guarda sin protestar
+y rompe algo tres consultas después; el hidrógeno es el **fallo diferido**: pasa todas las
+comprobaciones del momento, se queda latente y se manifiesta días más tarde, cuando ya nadie asocia la
+causa con el efecto. Limpiar no es cosmética: es validación en la frontera, y ahí sale más barata que
+en cualquier otro punto del proceso.
+</Analogia>
+
+## Hasta dónde hay que limpiar, y con qué
+
+La regla es fácil de enunciar y casi todo el mundo se queda corto: **brillo de metal desnudo en toda la
+zona de fusión y dos o tres centímetros más a cada lado, por las dos caras de la junta**. No hasta que
+«se vea limpio»: hasta ver el gris claro del acero con el rayado del cepillo encima. Ese margen parece
+mucho para un cordón de ocho milímetros, pero el arco calienta y agita bastante más que el charco
+visible, y arrastra hacia adentro lo que tiene alrededor.
+
+El orden importa: **primero se desengrasa y después se cepilla**, nunca al revés, porque el cepillo
+pasado sobre grasa no la quita, la reparte y la mete en los poros. Desengrasar no exige solvente —agua
+caliente con detergente y un trapo resuelve casi todo, y no arde—. Después vienen, de lo más barato a
+lo más eficaz, el cepillo de alambre de mano, la lija gruesa, el disco de láminas y el cepillo de copa
+en la amoladora.
+
+<Advertencia titulo="Solvente, pintura vieja y el arco no se llevan">
+Ningún solvente inflamable —gasolina, thinner, diésel, alcohol— debe estar cerca de donde vas a
+encender un arco, ni siquiera cerrado: **las chispas de soldadura viajan varios metros y llegan
+encendidas**. Si limpiaste con solvente, espera a que la pieza esté seca y saca el envase del ambiente.
+
+Y un riesgo que casi nadie conoce: los **solventes clorados** —desengrasantes industriales tipo
+tricloroetileno o percloroetileno— se descomponen bajo la radiación ultravioleta del arco y forman
+fosgeno, un gas tóxico que puede actuar sin que lo notes. La radiación los alcanza aunque el trapo esté
+a dos metros. Si no puedes leer la etiqueta y saber qué es, no lo uses cerca de soldadura.
+
+La pintura vieja tampoco es solo humo feo: puede contener plomo, y ciertos recubrimientos plásticos
+liberan compuestos de cloro al quemarse. Se quita **antes y en frío**, cepillando o lijando, no
+dejándola arder bajo el arco.
+</Advertencia>
+
+Hay un punto que casi nadie limpia y que arruina el trabajo desde el otro extremo: **donde muerde la
+pinza de masa**. El circuito se cierra por ahí, y un contacto apoyado sobre pintura u óxido tiene
+resistencia. La potencia que se pierde en un contacto es la corriente al cuadrado por esa resistencia,
+así que con cien amperios una resistencia ridícula ya calienta la pinza, le roba tensión al arco y lo
+vuelve inestable: el electrodo se pega, el cordón sale irregular y el soldador culpa a la máquina. **La
+masa se muerde sobre metal desnudo, sobre la propia pieza y lo más cerca posible de la junta.**
+
+<Dato titulo="Un cepillo lleva memoria">
+El cepillo que pasaste por una pieza galvanizada lleva zinc en las cerdas; el que usaste sobre chapa
+oxidada lleva óxido. Al pasarlo sobre acero limpio lo vuelve a ensuciar. No hace falta un cepillo por
+material: basta con no cepillar acero limpio con el mismo que acabas de pasar por galvanizado o por
+inoxidable. Lo mismo vale para un disco que estuvo desbastando aluminio.
+</Dato>
+
+## Los tipos de junta y qué exige cada una
+
+Una <Termino slug="junta-de-soldadura">junta</Termino> es la forma geométrica en que se encuentran las
+dos piezas. No es un detalle de estilo: decide por dónde entra el calor, hasta dónde puede llegar el
+metal fundido y en qué dirección tirará la carga cuando la pieza trabaje.
+
+<Tabla>
+
+| Junta | Cómo se encuentran | Qué exige | Cómo suele fallar |
+| --- | --- | --- | --- |
+| A tope | dos piezas de canto, en el mismo plano | corte recto, separación pareja, bisel si es gruesa | queda hueca por dentro |
+| En T | una pieza parada sobre la cara de otra | un cordón de filete por cada lado | se suelda un lado solo y se tuerce |
+| Solapada | una pieza montada encima de la otra | solape de al menos 3 veces el espesor | se cepilla mal entre las caras |
+| En esquina | dos cantos formando una L | mantener la escuadra mientras se enfría | se cierra el ángulo al contraerse |
+
+</Tabla>
+
+La <Termino slug="junta-a-tope">junta a tope</Termino> es la más exigente y la más honesta: la unión
+tiene que atravesar todo el espesor, porque no hay nada más aguantando.
+La <Termino slug="junta-en-t">junta en T</Termino> es la del oficio diario —una pata sobre una base, un
+travesaño sobre un montante— y se resuelve con un <Termino slug="cordon-de-filete">cordón de
+filete</Termino>, de sección triangular, que llena el rincón entre las dos piezas.
+La <Termino slug="junta-solapada">junta solapada</Termino> es la más indulgente: tolera cortes
+torcidos, porque el solape tapa el desajuste, y por eso es la buena para chapa fina y para quien
+empieza; su condición es que las dos caras que se montan estén limpias, porque lo que quede ahí adentro
+no se limpia nunca más. La <Termino slug="junta-en-esquina">junta en esquina</Termino> es la de los
+marcos y la que más se deforma.
+
+Del filete hay que entender algo que ahorra electrodos. Lo que aguanta no es el bulto que se ve por
+fuera sino la <Termino slug="garganta-del-filete">garganta</Termino>: la distancia más corta desde el
+rincón de la junta hasta la superficie del cordón. Un cordón muy abombado tiene mucho más metal y la
+misma garganta que uno plano: pesa más, se contrae más, deforma más y no aguanta más.
+
+<Formula explicacion="En un filete de lados iguales la garganta es el lado por 0,707 —el coseno de 45 grados—. Regla práctica: el lado del filete se hace igual al espesor de la pieza más delgada; pasarse de ahí no suma resistencia, solo calor y deformación.">
+garganta ≈ 0,707 × lado del filete      ·      lado ≈ espesor de la pieza más delgada
+</Formula>
+
+## El bisel: por qué una pieza gruesa queda pegada por fuera y hueca por dentro
+
+Este es el mecanismo más importante de la lección. El arco funde hasta una profundidad limitada: con un
+electrodo común y el amperaje habitual, el metal fundido penetra unos pocos milímetros por debajo de la
+superficie, y ni uno más por mucho que insistas. Si juntas dos planchas de seis milímetros canto con
+canto, bien apretadas, y pasas un cordón por arriba, **fundiste los tres milímetros de arriba y los
+tres de abajo siguen siendo dos piezas separadas**. La pieza se ve soldada. Está pegada por fuera y
+hueca por dentro.
+
+Y no es solo que falte material: **lo que quedó adentro es una rendija de aire con la punta afilada**,
+o sea la forma exacta de una grieta ya iniciada. Un cambio brusco de geometría multiplica la tensión en
+su vértice muy por encima de la tensión media de la pieza, y eso es
+un <Termino slug="concentrador-de-tension">concentrador de tensión</Termino>. La unión no falla porque
+le falte resistencia: falla porque le sobra un iniciador de grieta puesto en el peor sitio, y la carga
+repetida —el portón que se abre cada día, la mesa a la que se suben— lo va propagando.
+
+<Analogia titulo="Compiló, arrancó y está vacío por dentro">
+Es el módulo que exporta la interfaz correcta y adentro no implementa nada: compila, arranca y pasa la
+revisión visual porque desde afuera todo encaja. El fallo llega en producción, con carga real, en el
+sitio donde nadie miró. **Que se vea terminado y que esté hecho son dos propiedades distintas**, y acá
+la distancia entre las dos se mide en milímetros de penetración que nadie puede ver desde arriba.
+</Analogia>
+
+La solución tiene dos partes que se usan juntas. La primera es abrirle camino al arco: se rebaja el
+canto de cada pieza en ángulo para que la junta, vista en corte, tenga forma de V. Eso es
+el <Termino slug="bisel-de-soldadura">bisel</Termino>, y se hace con la amoladora antes de armar nada.
+Unos treinta grados por cara —sesenta de abertura total— es lo razonable: menos y el electrodo no
+entra, más y estás rellenando volumen inútil, que es calor y contracción de más.
+
+La segunda es dejar hueco. La <Termino slug="separacion-de-raiz">separación de raíz</Termino> es la luz
+entre las dos piezas en el fondo de la junta, del orden del diámetro del alma del electrodo, para que
+el metal fundido baje y funda el fondo en vez de puentearlo. Entre el bisel y esa luz queda un
+escaloncito recto de milímetro y medio o dos llamado <Termino slug="cara-de-raiz">cara de
+raíz</Termino>: más grueso, la primera pasada no lo funde; afilado a cero, el arco se lo come y te abre
+un agujero.
+
+<Dato titulo="Cuándo hace falta biselar">
+Por debajo de unos tres milímetros de espesor no se bisela: el arco atraviesa. Entre tres y seis, se
+bisela o se suelda por los dos lados. Por encima de seis, se bisela sí o sí y se llena en varias
+pasadas; y si puedes dar vuelta la pieza, un bisel en doble V —la mitad por cada cara— gasta menos
+material y deforma mucho menos, porque las contracciones de arriba y de abajo se compensan.
+</Dato>
+
+Falta una trampa que arruina juntas a tope todos los días: **la separación se cierra sola mientras
+sueldas**. El cordón que se enfría detrás del arco se contrae y arrastra las dos piezas una hacia la
+otra, así que empiezas con tres milímetros de luz y a mitad de camino tienes cero. Se resuelve
+punteando firme y a distancias cortas para que los puntos aguanten el tirón, o **abriendo la separación
+algo más en el extremo lejano**, en cuña, para que se cierre justo cuando llegue el arco.
+
+## Medir, trazar y escuadrar sobre metal
+
+Todo lo del módulo de carpintería sigue valiendo: declarar una referencia y medir siempre desde ella,
+copiar la pieza real en vez de guardar un número, poner un tope, comprobar el marco por sus diagonales.
+El metal cambia tres cosas.
+
+**El lápiz no se ve y el marcador se borra.** Sobre acero se traza con
+un <Termino slug="rayador">rayador</Termino> —una punta de acero duro; un clavo bien afilado hace el
+trabajo—, con tiza de esteatita, que resiste el calor, o con marcador indeleble para lo que no vaya a
+calentarse. Y cada agujero se marca con un <Termino slug="punzon-de-golpe">punzón de golpe</Termino>:
+un martillazo deja un cráter donde la broca se apoya y no patina, porque una broca sobre acero liso se
+pasea antes de morder y termina el agujero corrido.
+
+<Advertencia titulo="Una raya profunda en el sitio equivocado es una grieta empezada">
+El rayador no dibuja: **corta un surco**, y un surco es un concentrador de tensión igual que la rendija
+del bisel mal hecho. En una pieza que va a flexionar muchas veces —un brazo, un soporte, la barra de un
+portón— una raya profunda atravesada es por donde va a empezar la fisura dentro de unos años. Traza del
+lado que se va a cortar, con la presión justa para ver la línea, y si la pieza es delgada y va a
+trabajar a fatiga, marca con tiza.
+</Advertencia>
+
+**Las medidas nominales del metal mienten.** Un tubo «de 40 por 40» rara vez trae la pared que dice, y
+dos perfiles de la misma pila pueden diferir. El disco de corte, además, se come su franja —entre uno y
+medio y tres milímetros—, exactamente como la sierra en la madera: se descuenta por cada corte, y para
+separar seis piezas hacen falta cinco cortes, no seis. **Mide el metal que tienes en la mano, no el que
+dice la etiqueta.**
+
+**Y el metal disimula el corte torcido, que es lo peligroso.** Un hueco de cinco milímetros se puede
+rellenar con soldadura, y por eso mucha gente corta a ojo y «lo arregla soldando». El resultado es peor
+de lo que parece: más relleno es más metal fundido, más calor, más contracción, más deformación, más
+zona del metal base alterada y más probabilidad de agujerear la pieza al intentar llenar. **El relleno
+no repara el corte: es una deuda que se paga en deformación.**
+
+## Sujetar: lo que no está sujeto no está donde crees
+
+Una pieza suelta parece quieta y no lo está. En cuanto entra el arco el calor la mueve; en cuanto la
+tocas para acomodarla se corre; y al enfriarse vuelve a moverse. Sujetar es lo que convierte una
+intención en una posición.
+
+El equipo mínimo son **prensas de tipo C** y **grampas de presión** —las de mordaza que se traban
+solas—, más la morsa del banco. Las escuadras magnéticas son cómodas y tienen un límite que conviene
+decir: sostienen piezas livianas en ángulo, **no corrigen nada** y no vencen la contracción de un
+cordón, así que sirven para posicionar mientras punteas, no para armar una estructura.
+
+El recurso más útil del oficio no se compra: es
+el <Termino slug="puente-de-sujecion">puente de sujeción</Termino>, un recorte de platina punteado
+atravesando la junta, del lado que no estorba, para fijar la posición o mantener abierta una separación
+mientras se suelda; cuando cumplió, se corta con la amoladora y se rebaja la marca. Los mismos recortes
+punteados sobre la mesa hacen de topes, y con una escuadra de ángulo y dos taquitos ya tienes una
+plantilla que repite veinte piezas iguales.
+
+Y lo que decide más que todo lo anterior es
+la <Termino slug="mesa-de-armado">mesa de armado</Termino>: una superficie plana, rígida y comprobada
+sobre la que se apoya todo. **Una estructura soldada sobre un piso desparejo sale con la forma del
+piso.** No hace falta una mesa de taller: sirve una plancha gruesa, una losa comprobada con regla y
+nivel, o cuatro bloques nivelados con manguera como se hizo en albañilería. Lo que no sirve es el suelo
+de tierra ni dos caballetes de distinta altura.
+
+<Advertencia titulo="El metal caliente se ve igual que el metal frío">
+Una pieza recién soldada está a cientos de grados y **no cambia de color hasta muy por encima de la
+temperatura que quema hasta el hueso**. Agarrar una pieza «que ya parece fría» es la lesión más
+frecuente del taller después de las de la vista. Se manipula con alicate o tenaza, siempre, y lo
+caliente se deja en un sitio declarado y marcado, nunca donde alguien lo vaya a agarrar al pasar.
+
+Dos cosas más al sujetar. La chispa entra por el cuello de la camisa y por la caña de la bota: la ropa
+se cierra arriba y el pantalón va **por fuera** del calzado, nunca por dentro. Y no sostengas la pieza
+con la mano contra el cuerpo: si el circuito se cierra a través de ti, con piel sudada y la humedad de
+acá, la resistencia del cuerpo cae y una tensión que en seco ni notarías sí puede pasar.
+</Advertencia>
+
+## Puntear: la última oportunidad de corregir gratis
+
+El <Termino slug="punteo">punteo</Termino> —ir fijando las piezas con cordones cortos, los puntos, en
+un orden pensado— es el momento más rentable del trabajo, porque es el último instante en que un error
+cuesta treinta segundos de amoladora en lugar de la pieza entera. Tiene cuatro reglas y todas salen del
+mismo razonamiento.
+
+**Los puntos no se ponen en fila desde una punta.** Uno en cada extremo, después uno en el medio, y
+después se va dividiendo lo que queda. Avanzar desde un extremo es ir arrastrando la pieza con la
+contracción de cada punto, y al llegar al otro lado la medida se fue.
+
+**Entre puntear y soldar hay una comprobación obligatoria.** Punteas, mides, tiras las diagonales,
+apoyas la escuadra, miras la pieza a contraluz sobre la mesa, y recién entonces sueldas. Si algo está
+fuera, se rompe un punto con la amoladora o con un golpe seco y se vuelve a poner. Es la aserción del
+oficio, colocada donde el estado todavía es reversible.
+
+**El punto tiene que ser fuerte pero pequeño.** Fuerte, porque la contracción tira con mucha más fuerza
+de lo que la gente imagina y un punto flojo se parte solo, con un chasquido, mientras sueldas. Pequeño,
+porque va a quedar dentro del cordón definitivo: uno o dos centímetros, y más juntos cuanto más delgada
+sea la pieza.
+
+**Al punto hay que limpiarlo y rebajarle las puntas.** Un punto con su escoria puesta queda enterrado
+dentro del cordón final y es una inclusión garantizada; y si termina en un escalón abrupto, el cordón
+que llega no lo funde y salta por ahí. Se pica, se cepilla y se afinan sus dos extremos con la
+amoladora para que el cordón entre en rampa.
+
+<Analogia titulo="Puntear es hacer un commit antes de la refactorización">
+El punteo es el estado intermedio verificable: montas la estructura entera, la validas contra sus
+invariantes —diagonales, escuadra, apoyo plano— y solo entonces aplicas la operación irreversible.
+Soldar de corrido sin puntear es refactorizar sin haber guardado nada: si al final no cierra no hay
+punto de retorno, porque **deshacer una soldadura no existe**. Lo más parecido es cortar la pieza y
+volver a empezar con material más corto.
+</Analogia>
+
+## El metal se mueve: dilatación, contracción y el marco que sale torcido
+
+Cuando un metal se calienta, sus átomos vibran con más amplitud y la distancia media entre ellos
+aumenta: la pieza crece en todas sus dimensiones. En el acero cada metro se alarga unas doce milésimas
+de milímetro por grado, un número diminuto que se vuelve grande al multiplicarlo por la longitud y por
+el salto de temperatura del arco.
+
+<Formula explicacion="La dilatación es el coeficiente del material por la longitud por el cambio de temperatura. En el acero el coeficiente vale unas 12 millonésimas por grado: un tramo de 2 metros que sube 100 grados se alarga 2,4 milímetros. Junto al cordón la temperatura sube más de mil grados.">
+alargamiento = coeficiente × longitud × variación de temperatura
+</Formula>
+
+Parecería que no hay drama: se calienta, crece, se enfría, vuelve. **Y no vuelve**, y ese es el punto
+que casi nunca se explica. La franja de metal junto al cordón quiere dilatarse pero está rodeada de
+metal frío que no la deja, así que queda **comprimida**. Y la resistencia del acero se desploma con la
+temperatura —al rojo se deforma con casi nada—, de modo que esa franja no aguanta la compresión: cede y
+se recalca, se acorta de manera permanente. Cuando después se enfría, se contrae desde esa nueva forma
+más corta, y ahora sí con toda su resistencia, tirando de lo que tiene alrededor. De ahí la ley que hay
+que grabarse: **una soldadura siempre tira hacia sí misma, nunca empuja**. Todo lo que se deforma en un
+trabajo soldado se deforma en esa dirección, y por eso se puede predecir.
+
+<Analogia titulo="Una operación que parecía simétrica y no lo era">
+Calentar y enfriar parece un ciclo reversible: subes y bajas por el mismo camino. No lo es, porque
+arriba el valor **se saturó** —el metal salió del rango donde el comportamiento es elástico y se
+deformó de forma permanente— y esa información no se recupera al bajar. Es un estado mutado dentro de
+lo que parecía una operación pura, o un `clamp` en mitad de una ida y vuelta: el retorno no aterriza en
+el origen, y la diferencia es exactamente lo que tuerce el marco.
+</Analogia>
+
+Esa contracción se manifiesta de tres formas. La **transversal** acerca las dos piezas entre sí: la
+junta se angosta y el marco sale más chico de lo que trazaste. La **longitudinal** acorta la pieza a lo
+largo del cordón, poco pero medible en tramos largos. Y
+la <Termino slug="distorsion-angular">distorsión angular</Termino> es la que más sorprende: en una
+junta biselada en V hay más metal arriba que abajo, así que arriba se contrae más y las dos planchas
+rotan una hacia la otra como un libro que se cierra; en una junta en T, soldar primero un solo lado
+inclina la pieza parada hacia ese lado.
+
+Y cuando la pieza está tan sujeta que no puede moverse, la deformación no desaparece: se guarda. Eso es
+la <Termino slug="tension-residual">tensión residual</Termino>, una fuerza congelada dentro del metal
+que se suma a la carga de servicio y que a veces se libera de golpe —al cortar la pieza, al taladrarla—
+y la pieza se mueve sola sobre el banco. Hay un compromiso sin escapatoria: **o dejas que la pieza se
+mueva libre y se deforma, o la sujetas del todo y la tensión se queda adentro**. Sujetar más no elimina
+el problema, lo cambia de sitio.
+
+Las defensas son cuatro y se usan a la vez.
+
+**Meter menos calor.** El amperaje correcto y no más, el electrodo del diámetro que corresponde al
+espesor, cordones del tamaño necesario y no abombados, y dejar enfriar entre pasadas. La mitad de la
+deformación que ve un principiante viene de soldar con demasiado amperaje «para que agarre mejor».
+
+**Empezar torcido a propósito.** La <Termino slug="contra-deformacion">contra-deformación</Termino> es
+armar la pieza inclinada hacia el lado contrario al que se va a mover, para que la contracción la lleve
+a la posición correcta. Cuánto, nadie te lo puede decir por escrito: depende de tu máquina, tu
+electrodo, tu espesor y tu mano. Se mide una vez sobre un recorte igual y ese número sirve para
+siempre.
+
+**Repartir el calor en el tiempo y en el espacio.**
+La <Termino slug="soldadura-salteada">soldadura salteada</Termino> es no hacer el cordón de corrido:
+tramos cortos separados y, en una segunda vuelta, los huecos, de modo que ninguna región larga esté
+caliente al mismo tiempo. Su variante fina es soldar cada tramo **en sentido contrario al avance
+general** —se avanza un palmo y se suelda hacia atrás—, con lo que la contracción de cada tramo queda
+frenada por el metal ya frío.
+
+**Equilibrar el orden.** La <Termino slug="secuencia-de-soldadura">secuencia de soldadura</Termino> es
+el plan escrito de en qué orden se hacen los cordones, y sale de una sola idea: **que la pieza reciba
+tirones simétricos**. Alternar lados en una junta en T, alternar caras en un doble V, ir del centro
+hacia afuera y nunca terminar un lado entero antes de tocar el otro. En un marco de cuatro lados, eso
+es la diferencia entre una escuadra que se mantiene y un rombo.
+
+<Advertencia titulo="No enfríes la soldadura con agua">
+Tirarle agua a la pieza para trabajar más rápido tiene un mecanismo en contra. El acero enfriado
+bruscamente desde el rojo forma una estructura interna dura y frágil, y cuanto más carbono tiene, más
+marcado es el efecto. En metal de reuso —resortes, ejes, barras de camión, rieles—, que casi nunca es
+acero común, eso significa una unión que se parte de un golpe o una fisura que aparece sola al
+enfriar. Además el enfriamiento rápido no le da tiempo al hidrógeno de salir y aumenta el riesgo de las
+fisuras diferidas. La pieza se enfría al aire, en un sitio donde nadie la vaya a tocar.
+
+Por el mismo motivo, no martilles un cordón frío para «enderezar»: estarías golpeando la zona más
+frágil de la pieza con la tensión residual ya adentro. Enderezar en caliente es una técnica real, pero
+de otro nivel de oficio; a este nivel la deformación se previene, no se corrige.
+</Advertencia>
+
+<AplicarRizoma>
+**Tu primera inversión es una superficie plana, y no se compra.** Antes que otra prensa, consigue algo
+plano y rígido donde armar: una plancha gruesa, la losa de la vereda comprobada con una regla larga, o
+cuatro bloques nivelados con manguera y dos ángulos encima. Compruébalo con un hilo tenso en las dos
+diagonales y con una regla apoyada en varias direcciones. Todo lo que sueldes sobre algo alabeado sale
+alabeado, y ninguna prensa arregla eso después.
+
+**Hazte tus escuadras y tus topes con recortes esta semana.** Dos pedazos de ángulo cortados y
+punteados a noventa grados, comprobados con las diagonales o con la regla del 3-4-5, te dan una
+escuadra de armado que no existe en la ferretería del barrio. Puntea después dos o tres topes sobre tu
+mesa: repetir veinte piezas iguales deja de ser veinte mediciones y pasa a ser apoyar y cortar.
+
+**Haz el experimento de la contra-deformación una vez y anota tu número.** Toma dos recortes del mismo
+material que vas a usar, márcalos, mide la separación y el ángulo, suéldalos como los vas a soldar de
+verdad y vuelve a medir en frío: cuánto se cerró, cuánto se acortó, cuántos grados rotó. Escríbelo con
+marcador en la pared o en la tapa de la caja de electrodos. Ese número es tuyo, de tu máquina y de tu
+mano, y vale más que cualquier tabla de manual.
+
+**Arma el kit de limpieza más barato que existe y déjalo colgado donde sueldas:** cepillo de alambre de
+mano, lija gruesa, un trapo, detergente y agua caliente en una botella, un clavo afilado para rayar y
+un marcador. Con eso cumples la regla de los dos centímetros de brillo a cada lado en piezas chicas sin
+gastar en discos.
+
+**Instala una regla de la casa y dila en voz alta: limpiar, ajustar, sujetar, puntear, medir, soldar.**
+Lo que más cuesta adoptar es medir después de puntear, porque a esa altura las ganas de terminar son
+máximas; por eso conviene que lo pida otra persona. Y que las diagonales las mida alguien distinto de
+quien armó: quien armó ya tiene el ojo hecho a lo que armó y no lo va a ver.
+
+**Elige un trabajo real de tu casa y prepáralo entero antes de encender la máquina:** un portoncito
+para el patio, una parrilla, un marco metálico para el mosquitero de la ventana, un soporte para la
+bomba, un banco. Escribe en un papel qué junta lleva cada encuentro, dónde hay que biselar, dónde van
+los puntos, en qué orden van los cordones y hacia qué lado vas a inclinar la pieza a propósito. Cuando
+ese papel está hecho, la parte difícil ya terminó. Y piénsalo a escala de barrio: una mesa plana, un
+juego de prensas y una amoladora alcanzan para varias casas si alguien lleva la cuenta de quién tiene
+qué. En Rizoma del Sur está resuelto como en carpintería: la plantilla de armado se hace y se comprueba
+una sola vez, y de ahí salen todas las piezas iguales.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**Acá una pieza limpia no sigue limpia.** Con esta humedad, un acero cepillado a brillo amanece con
+película de óxido, y en lluvias en cuestión de horas. La consecuencia es dura y sencilla: **se limpia y
+se suelda el mismo día, y mejor en el mismo rato**. Preparar la junta el sábado para soldarla el
+domingo es preparar dos veces; si tienes que esperar, cepilla otra vez justo antes de encender.
+
+**A las siete de la mañana, en época húmeda, tu pieza está mojada aunque esté bajo techo.** El aire
+cargado condensa sobre el metal en cuanto la superficie baja del punto de rocío, y el metal se enfría
+de noche más rápido que el aire. Esa película es agua, y el agua es hidrógeno. Se pasa un trapo seco,
+se deja secar o se calienta suavemente la zona antes de soldar: es de las causas más frecuentes de
+porosidad en trabajos de patio.
+
+**Los electrodos se echan a perder en la caja de cartón en el suelo.** El revestimiento absorbe humedad
+del ambiente y la mete directamente en el arco: son los que suenan distinto, salpican y dejan el cordón
+agujereado. Guárdalos en un tubo de PVC con tapa, en un frasco de vidrio bien cerrado o en una lata con
+algo que absorba humedad, siempre levantados del piso. Los de bajo hidrógeno son los más sensibles y
+acá pierden su ventaja en pocas horas al aire.
+
+**El galvanizado está en todas partes y casi nadie lo raspa antes.** Tubo de portón, poste, calamina,
+caño de agua: todo viene con su capa de zinc. El zinc hierve muy por debajo de la temperatura a la que
+funde el acero, así que se evapora dentro del baño y sale como humo blanco y denso: deja el cordón
+poroso y produce la fiebre de los humos metálicos, esa sensación de gripe con escalofríos que aparece
+unas horas después. Se rebaja el zinc unos centímetros a cada lado de la junta, se suelda al aire libre
+y con el viento a la espalda, nunca en ambiente cerrado. Si después aparecen fiebre, escalofríos o
+falta de aire, hay que ir al centro de salud; no se aguanta en casa suponiendo que ya pasará.
+
+**Casi todo el metal que vas a soldar acá es de reuso y viene con historia:** perfiles de camión, ejes,
+resortes, tubos de andamio, rieles, chapa de un galpón viejo, todos con pintura, con grasa, oxidados
+por dentro y de una aleación que no conoces. Prepararlos es más trabajo que preparar material nuevo, no
+menos. Y en esta etapa se decide una prohibición absoluta: **nunca se suelda ni se corta un recipiente
+que contuvo combustible, aceite, solvente o gas**, aunque esté vacío, aunque esté lavado, aunque hayan
+pasado años. Lo que explota es el vapor que queda adentro, no el líquido. Un tambor, un tanque de moto
+o una garrafa no entran al taller.
+
+**El surazo cambia las condiciones de trabajo en una tarde.** Baja la temperatura, entra viento fuerte
+del sur y la pieza se enfría mucho más rápido de lo normal, lo que aumenta el riesgo de fisura y de
+falta de fusión, sobre todo en material grueso o de reuso. Suelda a resguardo del viento y, si la pieza
+está francamente fría al tacto, calienta la zona con suavidad antes de empezar. El viento levanta
+además polvo y arena, que terminan pegados en la junta que acabas de limpiar.
+
+**Los cortes de energía mandan sobre el orden del trabajo.** Toda la preparación —medir, trazar,
+limpiar a mano, armar, sujetar— se puede hacer sin electricidad; soldar, no. Cuando hay corte se
+adelanta preparación y cuando hay energía se suelda de corrido, dejando la pieza punteada y comprobada
+esperando: una unión punteada aguanta días, mientras que una junta a medio soldar que se enfrió y se
+retoma mal es un defecto en el medio del cordón. Y como los discos y los cepillos de copa se gastan y
+los repuestos tardan, el cepillo de mano y la lija son el plan realista; los precios cambian, así que
+pregúntalos en la ferretería el día que vayas.
+
+**Dos cosas que son de acá y no de un manual.** Los recortes de tubo y de perfil apilados en el patio
+juntan agua de lluvia por dentro y se vuelven criadero de mosquito, con el dengue endémico que hay en
+la zona: guárdalos bajo techo, inclinados o con un agujero en el punto bajo. Y si lo que vas a soldar
+es un soporte de tanque de agua, algo sobre lo que se va a subir alguien o cualquier cosa que quede
+colgada sobre gente, la preparación importa más que nunca, porque la unión que falla es siempre la que
+nunca llegó a fundirse por dentro; en ese caso consulta con alguien de experiencia comprobada antes de
+confiarle un peso a tu propia soldadura.
+</ContextoBolivia>
+
+## Lo que sigue
+
+La pieza ya está lista: limpia hasta el brillo con margen a cada lado, con la junta elegida a
+conciencia, biselada si el espesor lo pedía, con su separación de raíz pareja, medida y trazada sobre
+metal, sujeta contra una superficie plana, punteada en el orden correcto, comprobada mientras todavía
+era corregible e inclinada a propósito hacia donde sabes que se va a mover.
+
+Falta la parte que todo el mundo cree que es el oficio entero: **llevar el electrodo**. La lección
+siguiente, **El cordón: hacerlo, leerlo y corregir sus defectos**, entra en las cuatro variables que
+mandan —amperaje, longitud de arco, ángulo y velocidad—, en lo que se ve, se oye y se huele cuando cada
+una está mal, y en el catálogo completo de defectos con su mecanismo y su corrección. Vas a reconocer
+viejos conocidos: la porosidad, la inclusión de escoria y la falta de penetración que aparecen ahí ya
+las provocaste o las evitaste acá, antes de encender la máquina.

@@ -1,0 +1,442 @@
+Una máquina que no arranca produce casi siempre la misma escena. Alguien jala la cuerda quince veces,
+dice **«debe ser el carburador»** y lo desarma. Cambia la bujía. Manda a pedir una bobina que tarda
+una semana. Tres repuestos después sigue muerta y nadie recuerda qué se tocó. Eso no es reparar: es
+**comprar hasta acertar**. Se pagan piezas buenas, se pierde el tiempo de la máquina parada —con una
+bomba en plena seca, lo caro de verdad— y **no se aprende nada**, porque si arranca nadie sabe cuál
+cambio lo consiguió.
+
+En la lección 01 quedó plantada la tesis que ordena el módulo: un motor solo necesita **aire,
+combustible, chispa y compresión en el momento justo**, y toda falla es la ausencia de una de las
+cuatro. Aquí esa tesis se vuelve procedimiento.
+
+<Analogia>
+Si programas, ya trabajas así y le dices depurar: no lees el programa entero buscando el error,
+**partes el sistema por la mitad y averiguas de qué lado está**, porque cada comprobación bien
+elegida **divide entre dos el terreno** donde el problema puede esconderse. Es
+la <Termino slug="busqueda-binaria">búsqueda binaria</Termino> aplicada a una avería, y un motor se
+presta: cuatro subsistemas en serie y una salida binaria. De ahí la regla que aquí cuesta dinero:
+**una prueba que no puede desmentirte no es una prueba.** Limpiar el carburador y volver a jalar no
+distingue entre acertar y haber movido cinco cosas.
+</Analogia>
+
+## Antes de tocar nada: lo que puede lastimarte
+
+La seguridad no va al final porque **el peligro está en las maniobras de diagnóstico mismas**.
+
+<Advertencia>
+**El monóxido de carbono mata sin olor, sin humo visible y sin que te des cuenta.**
+
+El <Termino slug="monoxido-de-carbono">monóxido de carbono</Termino> aparece siempre que la
+combustión es incompleta. Se pega a la hemoglobina —la molécula que transporta el oxígeno— **con una
+afinidad unas doscientas veces mayor que el oxígeno**: ocupa el asiento y no se baja, así que la
+sangre sigue roja y llena sin llevar oxígeno. Los primeros síntomas —dolor de cabeza, náusea, mareo,
+sueño— **se parecen a estar cansado**, y el sueño impide salir a buscar aire.
+
+**Un motor nunca funciona dentro de una casa, un galpón, un garaje con la puerta entreabierta ni una
+galería techada**, ni junto a una ventana por donde se duerme. Si alguien que estuvo cerca tiene
+dolor de cabeza, náusea o confusión: **al aire libre y al centro de salud**.
+</Advertencia>
+
+El segundo peligro es del arranque de cuerda. Si la chispa salta **antes de que el pistón llegue
+arriba**, la explosión empuja el motor hacia atrás, el volante invierte el giro y **la cuerda regresa
+más rápido de lo que puedes acompañar**. Ese <Termino slug="retroceso-de-arranque">retroceso del
+arranque</Termino> disloca dedos y rompe muñecas:
+**nunca enrolles la cuerda en la mano**, jala con el brazo firme, y comprueba antes que la cuchilla o
+el rodete estén libres, porque la primera explosión los mueve.
+
+<Advertencia>
+**Lo que arde no es la gasolina líquida: arde su vapor mezclado con aire.**
+
+Un charco arde porque evapora y forma encima una capa de vapor que cae dentro
+del <Termino slug="limites-de-inflamabilidad">límite de inflamabilidad</Termino>, la ventana de mezcla
+—ni muy pobre ni muy rica— en la que el fuego se propaga. Ese vapor pesa más que el aire: corre por
+el piso y encuentra una chispa que estaba a dos metros. De ahí la regla que más se incumple: **no se
+busca chispa junto al agujero de la bujía**, porque por ahí sale niebla de combustible justo donde
+estás haciendo arcos.
+</Advertencia>
+
+## Las preguntas gratis, antes de aflojar un tornillo
+
+Hay comprobaciones gratis que resuelven una parte incómodamente grande de los casos, y se hacen
+siempre aunque parezcan una ofensa a quien trajo la máquina. **¿Tiene combustible, y del correcto?**
+No «se le echó»: mirarlo, y en un dos tiempos preguntar si es mezcla y en qué proporción. **¿Está el
+interruptor en marcha, la llave abierta, el cebador donde va, la barra de hombre muerto apretada, el
+cable de la bujía calzado?** **¿Y qué cambió desde la última vez que anduvo?**
+
+<Dato titulo="La pregunta que más información entrega">
+**¿Se apagó de golpe o se fue apagando?** Es la pregunta más rentable de la lección y casi nadie la
+hace.
+
+Un motor que **se apaga de golpe**, como si alguien tocara un interruptor, perdió la chispa o se trabó
+mecánicamente. Uno que **pierde fuerza, tose y termina apagándose** se quedó sin combustible, sin aire
+o sin refrigeración: son procesos con pendiente. Y uno que **se apaga caliente y arranca frío** apunta
+a algo que cambia con la temperatura: módulo de encendido, aletas tapadas, combustible que se evapora
+en la manguera.
+</Dato>
+
+## El orden de las cinco preguntas
+
+El <Termino slug="arbol-de-diagnostico">árbol de diagnóstico</Termino> son cinco preguntas **en este
+orden**: ¿gira?, ¿tiene compresión?, ¿tiene chispa?, ¿le llega combustible?, ¿respira? Obedece a dos
+criterios: **lo barato antes que lo caro**, porque cada pregunta cuesta más trabajo que la anterior,
+y **lo que invalida al resto va primero**, porque sin compresión ningún trabajo sobre el carburador
+puede hacerlo arrancar. Cada «sí» habilita la siguiente; un «no» **es el trabajo del día**.
+
+<Tabla>
+
+| Pregunta | Prueba | Si es «no», el trabajo está en |
+| --- | --- | --- |
+| ¿Gira? | Jalar; repetir sin bujía | Arranque, bloqueo mecánico, carga trabada |
+| ¿Comprime? | Pulgar en el agujero; compresímetro | Aros, válvulas, junta, descompresor |
+| ¿Hay chispa? | Probador, cilindro cerrado | Interruptor de paro, entrehierro, chaveta, módulo |
+| ¿Llega combustible? | Manguera a un frasco; gotas al cilindro | Tanque, llave, filtro, tapón, carburador |
+| ¿Respira? | Probar sin filtro; malla del escape | Filtro, escape carbonizado, respiradero |
+
+</Tabla>
+
+Y una regla que vale por todo lo demás:
+el <Termino slug="cambio-de-una-variable">cambio de una sola variable</Termino>. Si limpias el filtro,
+ajustas el entrehierro y cambias el combustible en la misma tanda y arranca, **arreglaste la máquina
+y no aprendiste nada**.
+
+## Primera pregunta: ¿gira?
+
+«No gira» tiene tres significados. **La cuerda sale floja y el motor no se mueve**: el arranque no
+engancha y el motor puede estar perfecto. **La cuerda no sale o se traba**: el arranque o el motor
+bloqueado. **La cuerda no vuelve sola**: resorte roto o desenganchado. Para separarlos, **quita la
+tapa y gira el volante a mano**, con guantes y el cable de la bujía a masa: si gira suave, el
+culpable es el arranque.
+
+Si no gira, **saca la bujía y vuelve a intentar**. Si con el agujero abierto gira bien y con la bujía
+puesta se traba, hay líquido dentro del cilindro: eso
+es <Termino slug="hidrobloqueo">hidrobloqueo</Termino>, porque los gases se comprimen y **los líquidos
+prácticamente no**, así que el pistón encuentra algo que no puede achicar y se detiene en seco. Puede
+ser agua entrada por el escape, combustible de un carburador que gotea o aceite de un motor guardado
+acostado, y se purga girando con la bujía fuera, **lejos de la cara y de cualquier chispa**.
+
+Si sigue trabado con la bujía fuera, el bloqueo es mecánico duro: **gripado** —el pistón dilatado y
+soldado a la pared por falta de lubricación, el desenlace de la lección 02—, óxido, una válvula
+doblada, o **la carga y no el motor**: cuchilla enredada, rodete trabado, embrague agarrotado. Eso se
+separa desacoplando la carga, y detrás de ese corte está la lección 06.
+
+## El arranque de cuerda por dentro
+
+El <Termino slug="arranque-retractil">arranque retráctil</Termino> es una máquina completa y muy
+lógica. Tiene la **cuerda** enrollada en una **polea**; un **resorte espiral** plano, como el de un
+reloj de cuerda, que al jalar se tensa y al soltar devuelve la polea enrollando la cuerda; y
+unos <Termino slug="trinquete">trinquetes</Termino> —uñas, perritos— que al girar salen hacia afuera
+y **muerden una copa dentada atornillada al volante**. Ahí está la clave: enganchan en un sentido y
+**se sueltan solos en el otro**, para que el motor encendido no arrastre el arranque a diez mil
+revoluciones.
+
+Los fallos se leen solos. **Jalas y no hay resistencia**: los trinquetes están pegados con grasa
+vieja y polvo o su resortito se cansó; se limpian con desengrasante y se lubrican **apenas**, porque
+la grasa espesa es la causa número uno de trinquetes que no salen. **La cuerda no vuelve**: resorte
+roto, salido de su gancho o atascado. **Se quedó en la mano**: se cortó donde roza el ojal, y se
+cambia por otra del mismo diámetro y largo, con la punta sellada al calor. **Engancha pero patina**:
+tornillos de la copa flojos o copa barrida.
+
+El cambio de cuerda tiene procedimiento: se **precarga el resorte** girando la polea cuatro a seis
+vueltas en el sentido de enrollado, se pasa la cuerda por el ojal, se hace el nudo de tope y recién
+entonces se libera la polea despacio. **Poca precarga deja la cuerda colgando; demasiada impide jalar
+el recorrido completo.**
+
+<Advertencia>
+**Un resorte de arranque es una lámina de acero con energía guardada, y salta como un látigo.**
+
+Nunca destapes el centro de un arranque con el resorte tensado: primero se libera la tensión dejando
+que la cuerda regrese entera y, si hace falta, girando la polea a mano y **soltándola de a poco**.
+Trabaja con **anteojos y guantes** y con la cara fuera de la línea de la tapa. Y el atajo de enrollar
+una cuerda con nudo en el volante **no tiene forma de soltarse si el motor retrocede**.
+</Advertencia>
+
+## Segunda pregunta: ¿tiene compresión?
+
+Comprimir es **sellar el cilindro** para que la mezcla se apriete antes de encenderse. Sin sello no
+hay presión, y sin presión no hay encendido ni fuerza: **sin compresión no arranca por más limpio que
+esté el carburador.**
+
+Hay tres maneras de responderlo. **Con la mano**: se saca la bujía, se tapa el agujero con el pulgar
+y se jala despacio; un motor sano **empuja el dedo con fuerza y silba al soltar el aire**. **Con la
+cuerda**: el tirón de un motor sano **rebota**, y uno sin compresión se jala hueco, con una suavidad
+que muchos confunden con buena señal. Y **con manómetro**:
+la <Termino slug="prueba-de-compresion">prueba de compresión</Termino> usa un compresímetro enroscado
+en lugar de la bujía y el acelerador **abierto del todo** —cerrado, el motor no toma aire y la
+lectura sale baja aunque esté sano—. **El valor correcto lo da el manual**; sin manual se compara
+contra el mismo motor cuando andaba bien.
+
+<Formula explicacion="Estimación de la presión que alcanza el cilindro al comprimir, a partir de la presión atmosférica y de la relación de compresión. El exponente refleja que el aire también se calienta al comprimirse. Es teórica: la lectura real siempre es menor por las fugas del sello, por la velocidad lenta del arranque a mano y porque el descompresor, si lo hay, deja escapar parte del aire.">
+presión de compresión ≈ presión atmosférica × (relación de compresión)^1,3
+</Formula>
+
+Hay una prueba que **discrimina** de verdad: la <Termino slug="prueba-humeda">prueba
+húmeda</Termino>. Se repite la medición tras echar por el agujero de la bujía unas gotas de aceite
+—media cucharadita— y girar dos o tres veces para repartirlas. El aceite tapa provisionalmente la luz
+entre los aros y la pared, pero no puede tapar una válvula que no cierra ni una junta soplada. Y
+entonces la lectura habla: **sube claramente** es fuga en **los aros y el cilindro**; **no cambia**,
+fuga **arriba** —válvula, junta de culata o bujía floja—. Es
+la <Termino slug="observacion-discriminante">observación discriminante</Termino> exacta.
+
+Y escuchar **por dónde sale el aire** cuesta cero: girando el motor muy despacio, silbido **por el
+escape** es válvula de escape; **por el carburador**, válvula de admisión; **por el tapón de
+aceite**, aros; **por la junta de la culata**, junta soplada. Las causas son cuatro y media:
+
+- **Aros gastados, rayados o pegados.** El aro sella por su propia tensión y por la presión que le
+  entra por detrás; se pega cuando el carbón llena su ranura y se gasta con el polvo que deja pasar
+  un filtro descuidado.
+- **<Termino slug="valvula-quemada">Válvula quemada</Termino>.** Una válvula se enfría apoyando su
+  cara contra el asiento; si queda demasiado apretada nunca cierra del todo, no evacúa ese calor, se
+  recalienta y termina con la cara comida.
+- **Junta de culata soplada**, por apriete flojo o desparejo o por un recalentón.
+- **<Termino slug="descompresor">Descompresor</Termino>**, el mecanismo que **abre un poco la válvula
+  de escape a baja vuelta** para que arrancar a mano no sea una lucha: hace que la lectura salga baja
+  sin avería, y trabado en abierto se pierde compresión de verdad.
+- Y la media: **la bujía floja o sin arandela**.
+
+## Tercera pregunta: ¿tiene chispa?
+
+Casi todo motor pequeño enciende sin batería. En el volante hay **imanes**; al pasar frente a la
+bobina generan corriente en un devanado de pocas espiras; un **módulo electrónico** la corta en el
+instante preciso, y ese corte provoca en un segundo devanado de muchísimas espiras los miles de
+voltios que hacen **saltar el arco** en la bujía.
+
+Y hay una pieza que sorprende a todos:
+el <Termino slug="interruptor-de-paro">interruptor de paro</Termino> **no corta la corriente para
+apagar el motor: la manda a masa**. De ahí que **cualquier cosa que deje ese cable pegado a masa —un
+cable pelado, humedad dentro del interruptor, la palanca de hombre muerto mal regulada, un sensor de
+aceite bajo activado— dé el mismo síntoma que una bobina muerta**, y se descarte gratis
+desconectándolo.
+
+<Advertencia>
+**La prueba de chispa mal hecha es la manera más frecuente de prenderle fuego a una máquina.**
+
+Lo correcto es un <Termino slug="probador-de-chispa">probador de chispa</Termino>, una pieza barata
+que se intercala entre el cable y la bujía **con la bujía enroscada en su sitio**: el cilindro queda
+cerrado, no sale niebla y el arco se ve contra un espacio calibrado. Si no tienes uno, sirve una
+**bujía de repuesto** apoyada firmemente contra metal limpio y sin pintura, **lejos del agujero y con
+el agujero tapado**. Y **no se sostiene el cable ni la bujía con la mano**: el tirón del susto lastima
+más que la corriente si tu otra mano está cerca de la cuchilla.
+</Advertencia>
+
+Lo que buscas no es «que salte algo», sino una chispa **gruesa, azul blanquecina y chasqueante**; un
+hilito anaranjado es una chispa enferma. Y aquí está el matiz que explica por qué tanta gente jura
+que «tiene chispa» y el motor no arranca:
+la <Termino slug="rigidez-dielectrica">rigidez dieléctrica</Termino> del gas —la tensión que hace
+falta para que el arco lo atraviese— **crece con la densidad**. Al aire libre el arco cruza con poca
+tensión; comprimido adentro, exige mucha más.
+
+<Formula explicacion="Ley de Paschen en forma práctica: la tensión que hace falta para que salte un arco crece aproximadamente con el producto de la presión del gas por la distancia entre electrodos. De ahí que una chispa preciosa con la bujía al aire pueda no existir dentro del cilindro comprimido, y que separar de más los electrodos exija una tensión que la bobina quizá ya no puede dar.">
+tensión de ruptura ≈ k × presión del gas × separación entre electrodos
+</Formula>
+
+Si no hay chispa, la rama se recorre así:
+
+- **Desconectar el cable del interruptor de paro** y reintentar, por lo dicho arriba.
+- **Revisar el <Termino slug="entrehierro">entrehierro</Termino>**, la luz de aire entre las patas de
+  la bobina y los imanes del volante: el campo se dispersa rápido con la distancia, así que unas
+  décimas de milímetro de más dejan la chispa floja o nula. Se aflojan los dos tornillos, se pone
+  entre bobina e imanes **un trozo de tarjeta plástica delgada**, se deja que los imanes peguen la
+  bobina contra ese espesor y se aprieta.
+- **Mirar la <Termino slug="chaveta">chaveta</Termino> del volante**, la media luna de metal blando
+  que fija el volante al cigüeñal en su posición angular y está hecha para **cortarse antes que el
+  cigüeñal** cuando la cuchilla pega una piedra. Cortada, la chispa existe pero **llega en el momento
+  equivocado**: el motor no arranca, retrocede o explota por el escape. Es lo que más se confunde con
+  bobina quemada.
+- **Cable y capuchón**, que envejecen y fugan contra el bloque; se ve de noche, con el motor girando.
+- **Módulo o bobina**, última conclusión y no la primera. Su firma es térmica: **arranca en frío, se
+  apaga caliente y no vuelve hasta enfriarse**, y
+  ese <Termino slug="fallo-intermitente">fallo intermitente</Termino> es la mejor prueba que tienes
+  sin instrumentos.
+
+Si hay chispa en el probador pero no con la bujía puesta, la sospechosa es la bujía: lección 05.
+
+## Cuarta pregunta: ¿le llega combustible?
+
+Aquí no se desarma nada: se comprueba **que llegue**, por la ruta tanque, tapón, filtro, llave,
+manguera, carburador.
+
+**Mirar el combustible en un frasco de vidrio limpio.** El agua no se mezcla: se ve una capa aparte
+en el fondo, con frontera nítida. La gasolina vieja se oscurece y **huele a barniz**, porque los
+livianos se evaporaron y quedaron gomas, que son las que tapan los pasos del carburador.
+
+**Probar el flujo.** Motor apagado y frío, se suelta la manguera en el carburador y se abre la llave
+sobre un recipiente: debe salir un chorro parejo. Si gotea, hay llave tapada, manguera reseca o
+filtro saturado.
+
+**Aflojar el tapón del tanque.** El tanque necesita que **entre aire a medida que sale combustible**,
+y para eso el tapón trae un respiradero diminuto; tapado con polvo, adentro se forma vacío y el
+combustible deja de bajar. El síntoma es inconfundible: **arranca, trabaja unos minutos, se ahoga y
+se apaga; descansa y vuelve a arrancar**. Aflojar el tapón y ver si sigue trabajando dura cinco
+segundos, y si sigue era la <Termino slug="ventilacion-del-tapon">ventilación del tapón</Termino>.
+
+**La prueba que cierra la pregunta.** Se echan **unas pocas gotas** de combustible por el agujero de
+la bujía, se enrosca y se jala. Si **enciende dos o tres segundos y se apaga**, sabes tres cosas de
+golpe: tiene compresión, tiene chispa y **el combustible no está llegando**.
+
+<Advertencia>
+**No uses aerosol de arranque, y menos en un motor de dos tiempos.**
+
+El éter enciende con muchísima facilidad, y ese es el problema. Primero, **no lubrica**: en un dos
+tiempos la lubricación viaja en el combustible, así que un chorro de éter lava la película de aceite
+de la pared justo cuando el pistón se mueve, y raya cilindros. Segundo, enciende tan brusco que da
+picos de presión capaces de romper aros. Unas gotas del propio combustible hacen la misma prueba.
+</Advertencia>
+
+Falta el caso opuesto, frecuentísimo: el <Termino slug="motor-ahogado">motor ahogado</Termino>.
+Demasiado combustible tampoco arde, porque la mezcla se sale **por arriba** de la ventana de
+inflamabilidad: no queda oxígeno suficiente entre tanta gasolina. Se reconoce porque la bujía sale
+**mojada y con olor fuerte**, y viene de insistir con el cebador. Se resuelve quitando la bujía,
+**abriendo el acelerador del todo** y girando varias veces para barrer el exceso.
+
+## Quinta pregunta: ¿respira?
+
+Un motor es una bomba de aire: lo que entra tiene que poder salir, y las dos vías se tapan distinto.
+
+**Entrada.** El filtro saturado estrangula la admisión, y como el carburador dosifica combustible en
+función del aire que pasa, un filtro tapado **enriquece la mezcla**: humo negro, pérdida de fuerza y
+arranque difícil en caliente. Se prueba quitándolo **unos segundos y nunca en lugar polvoriento**,
+porque cada grano que entra sin filtrar raya el cilindro.
+
+**Salida.** El escape se carboniza por dentro, y en dos tiempos mucho más porque queman aceite. La
+malla <Termino slug="apagachispas">apagachispas</Termino> del silenciador —la rejilla que retiene
+partículas incandescentes para que el escape no prenda el pasto seco— **se tapa con carbón y actúa
+como tapón**: **arranca bien y a los pocos minutos pierde fuerza**, y frío vuelve a andar un rato. Se
+limpia con cepillo de alambre, pero **no se elimina**: en la seca cruceña esa rejilla separa una
+chispa del escape de un incendio de pastizal.
+
+**Y el respiradero del cárter**, que iguala la presión interna: tapado, el motor **empuja aceite por
+los retenes**, y de ahí salen esos motores que gotean sin tener nada roto. Cerca vive el
+recalentamiento: **aletas tapadas de pasto y polvo**, el motor sube de temperatura hasta pararse y,
+como vuelve a arrancar frío, se confunde con falla eléctrica.
+
+## Los síntomas que llegan con la máquina
+
+Casi nadie llega diciendo «no tiene compresión»: llegan con frases. Ninguna fila es un diagnóstico,
+sino **sospechosos y la prueba que los separa**.
+
+<Tabla>
+
+| Lo que dice el dueño | Sospechosos | Prueba que discrimina |
+| --- | --- | --- |
+| Arranca y se apaga en segundos | Ralentí sucio, tapón sin ventilar, agua | ¿Sigue si aflojas el tapón? ¿Y con cebador? |
+| Solo anda con el cebador puesto | Mezcla pobre: paso obstruido o aire falso | Sin cebador muere: falta combustible o sobra aire |
+| No acelera, se ahoga al pisar | Paso de alta, filtro, escape sucio | Probar sin filtro; malla del escape |
+| Pierde fuerza bajo carga | Compresión, escape tapado, la carga | Compresión, y desacoplar la carga |
+| Humea azul | Aceite quemándose: mezcla o aros gastados | Dos tiempos, la proporción; cuatro, prueba húmeda |
+| Humea negro | Exceso de combustible o falta de aire | Filtro; cebador que quedó puesto |
+| Se recalienta y se para | Aletas tapadas, mezcla pobre, aceite bajo | Aletas y rejilla; ver si arranca frío |
+| Golpetea, cascabelea | Detonación por carbón, mezcla pobre, calor | Bajar carga ya; refrigeración y mezcla |
+
+</Tabla>
+
+Dos filas merecen su mecanismo. El <Termino slug="aire-falso">aire falso</Termino> es aire que entra
+**sin pasar por el carburador**: junta de admisión reseca, retén de cigüeñal gastado, manguera
+partida. Como el carburador solo mide el aire que lo atraviesa, ese aire no trae combustible y la
+mezcla queda pobre; y una mezcla pobre quema más caliente, así que es **una de las maneras clásicas
+de fundir un dos tiempos**. Y la <Termino slug="detonacion">detonación</Termino> es la mezcla
+encendiéndose **sola y por delante de la llama** que salió de la bujía: dos frentes chocan y dan un
+golpe de presión que se oye como cascabeleo metálico y pica la cabeza del pistón. **Un motor que
+cascabelea se baja de carga en el acto.**
+
+## Aplicación práctica
+
+<AplicarRizoma>
+Nada de esto necesita un vivero ni un taller: alcanza con una mesa, un rincón afuera con sombra y
+ventilación, y la decisión de trabajar con método.
+
+**Arma la caja de diagnóstico, que es barata.** No es la caja de reparar, es la de preguntar: la
+llave de bujía de la máquina, **una bujía patrón** —vieja pero sana, solo para comprobar chispa—, un
+probador de chispa en línea, un frasco de vidrio limpio, una jeringa para las gotas de la prueba
+húmeda, una tarjeta plástica para el entrehierro, linterna de cabeza, guantes y anteojos.
+
+**Escribe la hipótesis antes de probar.** Una <Termino slug="ficha-de-diagnostico">ficha de
+diagnóstico</Termino> es media hoja con seis casillas:
+fecha y máquina; el síntoma **en las palabras del dueño**; qué cambió desde la última vez; la
+hipótesis que tienes **antes** de tocar; la prueba que puede desmentirla; y el resultado. Anotarla
+primero desactiva el <Termino slug="sesgo-de-confirmacion">sesgo de confirmación</Termino>, esa
+tendencia a ver lo que ya esperabas.
+
+**Foto antes de desarmar, siempre**, y los tornillos en un frasco rotulado: el arranque de cuerda
+tiene piezas chicas que no se venden sueltas. Y **practica con un motor muerto**, el que nadie
+quiere: es el mejor maestro que vas a tener porque **no puedes empeorarlo**.
+
+**Empieza por las máquinas de la casa y del barrio**: la bomba del pozo, la desbrozadora del vecino,
+la moto del hermano, el generador de cada corte. Ojo con la bomba, que en muchas casas es
+un <Termino slug="punto-unico-de-falla">punto único de falla</Termino>: si se para, nadie tiene
+agua.
+
+**Cobra el diagnóstico, o al menos nómbralo**: encontrar la falla **es** el trabajo. Practica una
+frase honesta para cuando no sepas: «no sé todavía qué es, pero ya sé que tiene compresión y chispa,
+así que está en el combustible». Y lleva
+una <Termino slug="bitacora-de-uso">bitácora</Termino> por máquina con horas, trabajos y costos: es
+lo que la lección 06 necesitará para decidir.
+
+**Y enseña el método, que no cuesta nada.** Una tarde en el patio con un motor muerto y cinco
+vecinos, aprendiendo las cinco preguntas y la regla de una sola variable, es de lo más rentable que
+se puede hacer en el barrio: nadie sale mecánico, pero salen sabiendo cuándo el problema es el tapón
+del tanque y cuándo hay que llamar.
+</AplicarRizoma>
+
+<ContextoBolivia>
+Los mecanismos son los mismos en cualquier parte. Lo que cambia en Zanja Honda y en todo el sur
+cruceño es **qué falla primero y con qué frecuencia**.
+
+**La seca decide el filtro y las aletas.** De mayo a septiembre el polvo está en el aire todo el día
+y el filtro de una desbrozadora se satura en una fracción del tiempo que dice el manual. Las mismas
+partículas se pegan entre las aletas y sobre la rejilla del arranque, formando una manta que impide
+evacuar calor: dos síntomas de la tabla —pierde fuerza y se recalienta— tienen ahí su respuesta, y no
+está dentro del motor sino sobre él.
+
+**La humedad ataca el encendido.** Con humedad alta buena parte del año, el capuchón de la bujía, el
+interruptor de paro y el conector del cable acumulan agua y suciedad, y aparece el fallo que parece
+de bobina y no lo es: un camino a masa donde no debía haberlo. **Secar y limpiar bien esos tres
+puntos** resuelve más casos de los que uno cree.
+
+**El surazo trae arranques imposibles.** Cuando entra el aire frío del sur y la noche baja a unos
+diez grados, el combustible evapora peor y el aceite espesa: el motor pide más cebador y es cuando
+más gente lo ahoga. Si a los tres o cuatro tirones no da señales, **quitar el cebador y jalar con el
+acelerador abierto**.
+
+**El combustible aquí es perecedero.** Una parte de la gasolina que se vende lleva etanol —conviene
+preguntarlo en el surtidor en vez de suponerlo—, y el etanol absorbe humedad hasta que se separa
+formando abajo una capa que no arranca ningún motor; además ataca gomas viejas. Con el calor del
+llano encima: **comprar poco y seguido, guardar cerrado y a la sombra, rotular el bidón con la
+fecha**.
+
+**Los cortes de energía traen el peligro más grave del módulo.** Cuando se corta la luz sale el
+generador, y si llueve la tentación es meterlo bajo el alero o en la galería. Ahí ocurren las
+intoxicaciones: un espacio semitechado junto a una puerta por donde el gas entra a los dormitorios.
+**Generador siempre afuera, lejos de puertas y ventanas.** Si varias personas de la casa tienen a la
+vez dolor de cabeza, náusea o sueño raro, salgan al aire y vayan al centro de salud.
+
+**Los repuestos tardan, y eso cambia la economía del diagnóstico**: un módulo pedido por error son
+semanas de bomba parada y plata gastada dos veces, así que **fotografía la placa del motor**. Y
+cuando algo exceda lo que sabes, un mecánico de la zona o el servicio técnico de la marca son la
+respuesta correcta. Dos cosas del patio, además: el aceite quemado **no se tira al suelo ni al arroyo
+ni se quema**, va en bidón cerrado a un lugar que lo reciba; y todo recipiente destapado que junte
+agua de lluvia es criadero de mosquito en zona de dengue.
+</ContextoBolivia>
+
+## Lo que hay que llevarse
+
+**Diagnosticar es hacer preguntas en orden, no cambiar piezas hasta acertar.** Las cinco van así
+porque cada una cuesta más que la anterior y porque un «no» arriba **invalida el trabajo de abajo**.
+Y sobre todas está la gratis: **¿se apagó de golpe o se fue apagando?**
+
+Las tres pruebas que más discriminan: **la prueba húmeda** —separa aros de válvulas—, **desconectar
+el cable del interruptor de paro** —separa un encendido muerto de un cable a masa— y **aflojar el
+tapón del tanque** —separa un carburador sucio de un tanque que no respira—.
+
+Tres cosas de seguridad no se negocian: **el monóxido no huele y mata dormido**, **la cuerda nunca se
+enrolla en la mano** y **la chispa no se busca junto al agujero abierto de la bujía**. Y una
+disciplina: **una variable a la vez, hipótesis escrita antes de probar, foto antes de desarmar.**
+
+## Lo que sigue
+
+Con este método vas a llegar casi siempre a la misma puerta: hay compresión, hay chispa, el motor
+gira bien y **el combustible o el aire no están llegando como deben**.
+
+En **05-filtro-bujía-y-carburador** están las tres piezas que causan la mayoría de esas fallas: cómo
+retiene el polvo un filtro y por qué uno mal aceitado ahoga o deja pasar; qué hace cada electrodo de
+la bujía y cómo **leerla como instrumento**, porque su color y sus depósitos cuentan qué viene
+haciendo el motor; y el carburador entero, con el venturi, la cuba, el flotador y los chiclés.

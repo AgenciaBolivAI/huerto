@@ -1,0 +1,114 @@
+{
+  "preguntas": [
+    {
+      "id": "dos-redes",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre las dos redes de agua que atraviesan una casa, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "La red de abastecimiento está cerrada y llena de agua a presión todo el tiempo, y por eso puede subir a un segundo piso y por eso una fuga chorrea aunque nadie esté usando nada.",
+        "La red de desagüe está abierta al aire y a la misma presión que la calle, así que el agua solo baja empujada por su propio peso y no puede subir ni un centímetro.",
+        "Los tubos de abastecimiento son finos y los de desagüe gruesos porque en unos el agua va apretada y en los otros va suelta, arrastrando sólidos y con aire circulando por encima.",
+        "Como las dos redes llevan agua por tubos de plástico, un tramo de tubo sanitario que sobró se puede usar sin problema para reparar la red de presión."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras describen dos sistemas físicamente distintos: uno cerrado y presurizado, otro abierto y por gravedad. La cuarta es falsa y es un error caro. El tubo sanitario está diseñado para agua que baja sola, sin presión adentro: su pared es más delgada y no está calculada para aguantar bares. Puesto en la red de presión aguanta un tiempo —a veces meses— y revienta cuando nadie lo está mirando, normalmente dentro de una pared o bajo el piso. La clase de tubería no es un detalle de precio: es lo que decide si la pieza soporta o no la presión que va a tener adentro toda su vida."
+    },
+    {
+      "id": "altura-y-volumen",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un tanque de 1.000 litros da más presión en la ducha que un balde de 10 litros, porque tiene cien veces más agua adentro.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la confusión más común de todo el módulo. La presión que entrega un depósito depende **solo de la altura de la superficie del agua sobre el punto donde medís**: ni del volumen, ni del ancho del tanque, ni del grosor del tubo. Lo que empuja es el peso de la columna que está directamente encima, y una columna de un centímetro cuadrado de base y tres metros de alto pesa exactamente lo mismo esté sola o rodeada de otro millón de columnas iguales. Un tanque de 1.000 litros apoyado en el suelo junto a la ducha entrega cero presión en la regadera, porque el agua no está encima sino al lado; un balde de 10 litros colgado a tres metros entrega 0,3 bar. Volumen y altura resuelven dos problemas distintos: el volumen te da autonomía —cuántos días aguantás un corte— y la altura te da presión."
+    },
+    {
+      "id": "estatica-dinamica",
+      "tipo": "opcion_multiple",
+      "enunciado": "Una ducha arranca con buen chorro y a los tres segundos se muere. ¿Qué se puede afirmar?",
+      "opciones": [
+        "La presión estática estaba bien: con el agua quieta había presión suficiente en la regadera.",
+        "El problema está en la presión dinámica, la que queda cuando el agua se mueve y hay que pagar la fricción del recorrido.",
+        "La diferencia entre las dos no desapareció: se gastó en empujar el agua por el tubo, contra las paredes y contra los remolinos de cada codo, y eso es la pérdida de carga.",
+        "Como el chorro inicial fue bueno, el diámetro de la tubería queda descartado como causa y hay que buscar en el tanque."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras son la misma observación leída en orden: había presión guardada, se gastó al ponerse el agua en movimiento, y lo que se gastó tiene nombre. La cuarta invierte exactamente la conclusión correcta. Un chorro inicial bueno seguido de un desplome es precisamente el síntoma de un recorrido que no puede sostener caudal, y el diámetro es el sospechoso número uno, junto con la longitud y los codos. La presión estática no depende del tubo en absoluto —solo de la altura—, así que una estática buena no dice nada sobre la tubería; lo que la juzga es lo que pasa cuando el agua corre."
+    },
+    {
+      "id": "diametro",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el diámetro de la tubería y la pérdida de carga, ¿qué es correcto?",
+      "opciones": [
+        "La pérdida de carga es inversamente proporcional al diámetro elevado a algo entre cuatro y cinco, así que duplicar el diámetro divide la pérdida por casi treinta.",
+        "Un solo escalón, de media pulgada a tres cuartos, divide la pérdida por unas siete veces o permite pasar cerca del triple de caudal con la misma presión disponible.",
+        "Un flexible barato con el agujero interior a la mitad de su rosca, o una llave de escuadra de paso diminuto, pueden estrangular toda la instalación sin que nadie lo haya decidido.",
+        "Como el diámetro manda tanto, engrosar el último tramo antes de la ducha es la reparación más rentable y arregla el problema aunque el resto siga igual."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras son la misma ley vista en tres escalas: la fórmula, el salto comercial de un diámetro y el estrangulamiento accidental. La cuarta es falsa por el principio del cuello de botella: una instalación tiene la capacidad de su punto más estrecho, no la de su tubo más gordo. Si el agua tiene que pasar antes por veinte metros de media pulgada con doce codos, engrosar el último metro no cambia nada, porque la presión ya se gastó aguas arriba. El diámetro se corrige donde está el estrangulamiento, y para saber dónde está hay que recorrer y medir, no adivinar."
+    },
+    {
+      "id": "simultaneidad",
+      "tipo": "verdadero_falso",
+      "enunciado": "Cuando alguien tira la cadena del inodoro mientras otra persona se ducha, la ducha pierde aproximadamente la mitad de su caudal, porque el agua disponible se reparte entre dos.",
+      "respuesta": false,
+      "explicacion": "Falso: pierde bastante más que la mitad, y la razón es que la hidráulica no es lineal. La pérdida de carga crece **casi con el cuadrado del caudal**, así que cuando el inodoro suma sus seis o siete litros por minuto al tramo compartido, el caudal en ese tramo casi se duplica pero la presión que se come por el camino se multiplica por cerca de cuatro. Lo que quedaba de presión en la regadera se desploma, la ducha se muere durante el minuto que tarda en llenarse el tanque del inodoro y después vuelve sola. Nadie rompió nada: eso es la simultaneidad, y es el mismo fenómeno del barrio que contrató cien megas y a las ocho de la noche no puede ver un video. Y si en la ducha se mezcla fría y caliente, el episodio no es una molestia sino un riesgo: al robarle la fría, la mezcla se vuelve de golpe mucho más caliente y quema antes de que la persona alcance a reaccionar."
+    },
+    {
+      "id": "primeras-pruebas",
+      "tipo": "opcion_multiple",
+      "enunciado": "La ducha da poco y el tanque está lleno. ¿Qué pasos del diagnóstico son correctos y por qué?",
+      "opciones": [
+        "Abrir el lavamanos del mismo baño y medirlo con el balde, porque si también da poco el problema está aguas arriba y si anda bien está del ramal de la ducha para adelante.",
+        "Sacar la regadera y medir el caudal del brazo desnudo, porque si sin regadera el caudal se multiplica la culpable era la incrustación que tapó los agujeritos.",
+        "Recorrer todas las llaves del camino y abrirlas al tope, porque una llave a medio abrir es una resistencia enorme puesta a propósito y muchas casas viven años así.",
+        "Instalar una bomba de presurización, porque es la única forma de resolver una ducha floja cuando el tanque ya está lleno."
+      ],
+      "correctas": [
+        0,
+        1,
+        2
+      ],
+      "explicacion": "Las tres primeras son bisección aplicada a una casa: cada prueba descarta una mitad del sistema y las tres son gratis. La cuarta es falsa y describe el error más caro del oficio. La bomba se decide **después** del diagnóstico, nunca antes: si la causa es una regadera calcificada, un tramo estrangulado o una llave semicerrada, la bomba no arregla nada porque empuja más fuerte contra el mismo tapón, y encima castiga la instalación, consume electricidad, se rompe y deja a la casa sin agua cada vez que se corta la luz. Comprar equipamiento para no tener que diagnosticar es caro y además suele no funcionar."
+    },
+    {
+      "id": "aire-atrapado",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si un grifo sale a borbotones, escupiendo y con ruido, lo más probable es que haya aire atrapado en la red, y eso puede bastar para dejar floja una ducha aunque nada esté roto.",
+      "respuesta": true,
+      "explicacion": "Verdadero. Cuando el tubo sube y vuelve a bajar en algún punto del recorrido, en ese alto puede quedar una bolsa de aire, típicamente después de un corte de agua o de haber vaciado el tanque. El mecanismo es sencillo y no tiene equivalente eléctrico: el agua es prácticamente incompresible y el aire no, de modo que la burbuja funciona como un tapón elástico que absorbe y devuelve presión en vez de dejarla llegar al aparato. Se saca abriendo el grifo más alto de la casa un par de minutos y después el más bajo, para que el agua barra el aire hacia una salida. Vale la pena tenerlo presente porque es de las pocas causas que se arreglan sin herramienta, sin repuesto y sin tocar nada: el sistema está intacto, simplemente tiene aire donde debería haber agua."
+    },
+    {
+      "id": "ficha-de-mi-casa",
+      "tipo": "abierta",
+      "enunciado": "Tomá tu propia casa —la que sea, tuya o alquilada, con tanque o sin tanque, con agua de red o de pozo— y describí la tarde de trabajo que vas a hacer con esta lección. Explicá qué vas a dibujar, qué vas a medir, con qué, en qué orden y qué esperás que te diga cada medición. Después contá qué harías si tu ducha diera poco: qué pruebas, en qué orden y por qué cada una está donde está. Terminá diciendo qué de todo eso podés hacer solo y en qué punto necesitás hablar con otra persona.",
+      "respuestaModelo": "Empiezo por el mapa, porque sin mapa no sé qué estoy midiendo. Una hoja, un lápiz y ninguna pretensión de escala: marco por dónde entra el agua al terreno, dónde está el medidor si hay, dónde está la llave general, dónde está el tanque, y de ahí tiro una línea hasta cada punto de agua: cocina, lavadero, lavamanos, ducha, inodoro y la canilla del patio. Lo que no se ve no lo invento: donde el tubo entra a la pared pongo un signo de interrogación.\n\nLo segundo es la llave general, y es la tarea más importante de la tarde. La busco hoy, con la casa seca y sin apuro, la cierro, compruebo en la cocina que efectivamente se cortó el agua, la vuelvo a abrir del todo y marco el sitio para poder encontrarla de noche. Si está dura no le pongo un caño de palanca: la aflojo de a poco en los dos sentidos, porque lo que se rompe al forzarla suele ser la propia llave, y justo el día que hace falta. Después le enseño a todos los de la casa dónde está, porque el día que revienta un flexible el agua sale a la presión de la red y no se detiene sola, y la diferencia entre un piso mojado y un cielo raso caído son los sesenta segundos que tarde alguien en encontrarla. Si alquilo y la llave está en una caja compartida, averiguo cuál es la mía antes de necesitarla.\n\nLo tercero son los números. Consigo un balde de volumen conocido y uso el cronómetro del teléfono: abro cada punto al tope, cronometro cuánto tarda en llenarlo y aplico caudal en litros por minuto igual a litros del balde por sesenta dividido entre los segundos. Anoto punto, litros y segundos, todo el mismo día, porque esa hoja es mi línea base y no la voy a poder reconstruir después. Espero que me diga dos cosas: cuál es el punto más flojo, y si la casa entera anda floja o solo uno, que es la primera bifurcación del diagnóstico.\n\nSi tengo tanque, mido además la altura, y no la del piso sino la de la superficie del agua con el tanque por la mitad, que es como lo uso de verdad. Con una manguera transparente llena de agua sin burbujas transfiero ese nivel hasta la pared del baño y mido hasta la regadera. Ese número en metros, multiplicado por 0,1, me da los bares con los que estoy trabajando, y esa sola cuenta suele explicar de golpe media docena de cosas: dos metros son 0,2 bar y no alcanzan después de las pérdidas del recorrido.\n\nTermino la tarde sacando y limpiando todos los aireadores y la regadera. Es reversible y no toca la obra: desenrosco, miro a contraluz, cepillo, dejo en remojo si la costra está dura y vuelvo a poner. Mido el caudal antes y después, y anoto los dos números: esa es mi primera reparación medida.\n\nSi la ducha da poco, no adivino: parto el problema en dos en cada paso. Primero abro el lavamanos del mismo baño y lo mido; si también da poco, el problema está aguas arriba, en lo común a toda la casa, y si anda bien está del ramal de la ducha para adelante. Si la fría sale bien y la caliente no, es el calentador y no la red. Después saco la regadera y mido el brazo desnudo, porque si el caudal se multiplica la culpable era la incrustación. Después recorro todas las llaves del camino y las abro al tope, incluida la de escuadra debajo del lavamanos. Después mido la altura. Después purgo el aire abriendo el grifo más alto un par de minutos y luego el más bajo. Y recién al final cuento metros y codos y reviso los flexibles. El orden no es caprichoso: va de lo gratis y reversible a lo caro e irreversible.\n\nSi tengo que desarmar algo, cierro el paso, abro el grifo más bajo y espero a que deje de salir agua, porque un tubo bajo presión que se abre de golpe dispara y arrastra mugre a los ojos. Y hay un punto donde me detengo aunque sepa qué pasa: la ducha eléctrica no se toca con la mano mojada ni con el agua corriendo, y su parte eléctrica no se manipula buscando más caudal, porque adentro hay una resistencia con 220 voltios a centímetros del agua. Eso se hace desenergizado, bajando su llave térmica, y si toca cables lo hace un electricista.\n\nLo que necesito hablar con otra persona: con quien viva conmigo, para acordar que no se tira la cadena ni se abre el lavarropas mientras alguien se ducha, que además de molesto puede quemar. Con el dueño, si alquilo, llevándole números en vez de quejas. Con la cooperativa de agua, si sospecho de la presión que me entregan, yendo con la ficha en la mano. Y con los vecinos, si comparto tanque o tronco, porque ahí la simultaneidad deja de ser un problema doméstico y pasa a ser un acuerdo de horarios.",
+      "criterios": [
+        "Dibuja un mapa de la instalación marcando entrada, medidor, llave general, tanque y cada punto de agua, sin inventar el recorrido oculto de los tubos.",
+        "Localiza y prueba la llave general un día tranquilo, la deja abierta del todo, marca el sitio y enseña a los demás dónde está.",
+        "Justifica esa prueba con el mecanismo: un flexible reventado descarga a la presión de la red y no se detiene solo.",
+        "Mide el caudal con la prueba del balde en todos los puntos el mismo día y aplica la fórmula de litros por sesenta dividido entre segundos.",
+        "Mide la altura de la superficie del agua sobre el aparato con nivel de manguera y la convierte a bares multiplicando por 0,1.",
+        "Limpia aireadores y regadera midiendo el caudal antes y después, reconociéndolo como intervención reversible y sin permiso.",
+        "Ejecuta el diagnóstico por bisección: primero separa si es toda la casa o solo la ducha, y si es fría o caliente.",
+        "Ordena las pruebas de lo gratis y reversible a lo caro e irreversible, y deja el recorrido y el diámetro para el final.",
+        "Incluye la purga de aire y explica por qué una bolsa de aire actúa como tapón elástico.",
+        "Despresuriza antes de desarmar: cierra el paso, abre el grifo más bajo y espera a que deje de salir agua.",
+        "Se detiene ante la ducha eléctrica y deriva el trabajo con cables a un electricista.",
+        "Identifica con quién hay que hablar: la familia por la simultaneidad, el dueño con números si alquila, la cooperativa, y los vecinos si el tanque es compartido."
+      ],
+      "explicacion": "Fijate en que casi todo lo que resuelve una ducha floja no cuesta nada: un balde, un reloj, una manguera transparente, un cepillo de dientes viejo y una hoja de papel. Lo que sí cuesta es el orden, y el orden es lo que separa un diagnóstico de una compra a ciegas. Fijate también en la estructura de la respuesta: cada paso descarta una mitad del sistema, igual que se acorrala un error en un programa, y por eso las pruebas gratis y reversibles van primero y la decisión cara —bomba, obra, tubería nueva— va última y solo con datos. Y notá el punto donde la lección deja de ser de plomería: la ducha eléctrica, el dueño de casa y el tanque compartido no se resuelven con una llave inglesa, se resuelven llamando a quien corresponde o sentándose a acordar con alguien."
+    }
+  ]
+}

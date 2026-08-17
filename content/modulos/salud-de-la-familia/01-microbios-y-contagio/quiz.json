@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "cuatro-familias",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre las cuatro familias de microbios y en qué se diferencian, ¿qué es correcto?",
+      "opciones": [
+        "Un virus no es una célula: son instrucciones dentro de una cápsula de proteína, y para multiplicarse tiene que meterse en una célula tuya y usar su maquinaria.",
+        "Un antibiótico no le hace nada a un virus porque el virus no tiene las piezas que el antibiótico rompe: no es que actúe poco, es que no tiene blanco.",
+        "Casi ningún helminto se multiplica dentro de la persona, así que la gravedad no depende de una infección sino de la carga acumulada por reinfección desde el mismo piso y la misma agua.",
+        "El quiste es la forma más frágil del protozoo, y por eso el cloro que se usa en una casa lo elimina sin problema."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte justamente lo que es un quiste. Al salir del cuerpo, el protozoo se envuelve en una cáscara dura y apaga su metabolismo: el quiste es la forma de resistencia, no la frágil. Dura semanas en el agua y aguanta el cloro a las cantidades que se usan en una casa, y eso no es un detalle de examen: es la razón por la que clorar no es lo mismo que potabilizar, y es una de las dos piezas —la otra es la endospora, que aguanta el agua hirviendo— que vuelven en la lección siguiente cuando se juzgue cada tratamiento del agua por lo que sí y lo que no elimina."
+    },
+    {
+      "id": "se-duplican",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se sigue de que las bacterias se dupliquen en vez de sumarse?",
+      "opciones": [
+        "Una bacteria no crece: se parte en dos, y con calor, humedad y comida el tiempo que tarda la población en doblarse puede bajar a unos veinte minutos.",
+        "Lo traicionero del crecimiento exponencial no es que sea rápido, sino que durante la mayor parte del tiempo parece que no pasa nada.",
+        "Bajar la cantidad inicial no cambia la velocidad de la curva: la corre en el tiempo, y muchas veces alcanza porque la comida se come antes de esa hora.",
+        "El frío mata las bacterias, así que la comida que sale del refrigerador vuelve a estar limpia."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta confunde pausar con matar, y es el error que más comida arruina. Todo lo que hace una bacteria lo hacen enzimas, y las enzimas van más lentas en frío: el refrigerador estira el tiempo de duplicación de veinte minutos a varias horas, pero las bacterias siguen ahí, dormidas y completas. Apenas la comida vuelve a temperatura ambiente, la curva arranca desde donde quedó y con la población que ya tenía. Matar exige pasar el umbral por arriba, donde las proteínas se desarman y no se rearman —eso es desnaturalización, lo mismo que le pasa a la clara del huevo—, y ni así caen las endosporas."
+    },
+    {
+      "id": "cadena-en-serie",
+      "tipo": "verdadero_falso",
+      "enunciado": "Como los seis eslabones del contagio están en serie, hervir el agua todos los días compensa que después se guarde en un balde destapado del que todos toman metiendo la misma taza.",
+      "respuesta": false,
+      "explicacion": "Falso, y la razón es la misma propiedad que se invoca mal. Que la cadena esté en serie significa que basta con romper un eslabón para cortar la transmisión, y esa es la buena noticia del módulo; pero significa también lo simétrico, que un eslabón blindado al noventa y nueve por ciento no compensa otro abierto de par en par. Hervir resuelve el agua en el momento en que hierve, y el balde destapado con la taza compartida adentro es un eslabón nuevo, posterior, que vuelve a contaminar lo que ya estaba tratado: una puerta blindada al lado de una ventana abierta. El recipiente y el almacenamiento son el paso que más gente rompe después de hacer bien todo lo demás."
+    },
+    {
+      "id": "ruta-fecal-oral",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la ruta fecal-oral y las vías por las que corre, ¿qué es cierto?",
+      "opciones": [
+        "El agua, las manos, las moscas y el piso transportan; la comida transporta y además multiplica, y por eso es la peor de las cinco vías.",
+        "La mosca es un vector mecánico: no se enferma, hace de taxi en patas y cuerpo, y encima escupe saliva sobre la comida para ablandarla antes de chuparla.",
+        "Un solo pozo contaminado enferma a todos a la vez, y por eso los brotes por agua aparecen de golpe en lugar de escalonados.",
+        "Como la ruta fecal-oral resulta tan repugnante, el asco, el olfato y el aspecto del agua alcanzan para detectarla a tiempo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la creencia que más contagios permite, porque suena a sentido común. Las cantidades que hacen falta son invisibles: no se ven, no huelen y no cambian el sabor, así que el asco nunca se dispara y los sentidos no intervienen. De ahí sale la distinción entre sucio y peligroso: tierra del patio en las manos de un chico es suciedad, y una cantidad invisible de materia fecal en esas mismas manos es riesgo; un agua turbia de limo puede ser inofensiva y una cristalina puede enfermar a la casa entera. El agua, la comida y las manos no se juzgan por cómo se ven, sino por su historia."
+    },
+    {
+      "id": "el-reloj",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué se saca del período de incubación y del reloj del contagio?",
+      "opciones": [
+        "Si la diarrea llegó al tercer día, la última comida es casi siempre un testigo inocente: la respuesta está uno a tres días atrás.",
+        "Buena parte de lo que llamamos síntomas es la propia defensa trabajando, no el daño directo del microbio.",
+        "Casos escalonados cada uno o dos días apuntan a contagio de persona a persona; casos casi juntos apuntan a una fuente común que hay que buscar.",
+        "Cuando la persona ya se siente bien dejó de contagiar, así que ahí se pueden aflojar las medidas del baño y de las manos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta iguala dos cosas que el reloj separa. El período de transmisibilidad suele empezar antes de que aparezca el primer síntoma y seguir bastante después de que la persona se sienta bien: en varias infecciones intestinales hay eliminación durante semanas con el enfermo ya recuperado. «Ya está bien» no es lo mismo que «ya no contagia», y la consecuencia práctica no es encerrar a nadie, es sostener lo del baño y las manos una semana más de lo que parece necesario, que es exactamente cuando todo el mundo afloja."
+    },
+    {
+      "id": "portador-sano",
+      "tipo": "verdadero_falso",
+      "enunciado": "El diseño correcto de la higiene de una casa no pregunta «¿está sana esta persona?», sino «¿qué pasa si no lo está?».",
+      "respuesta": true,
+      "explicacion": "Correcto, y el motivo es el portador asintomático: alguien que aloja y elimina el agente sin sentirse mal ni parecerlo, sea por inmunidad parcial de una exposición anterior, por una dosis chica o porque ciertas enfermedades dejan portadores durante años. De ahí sale una consecuencia dura que hay que aceptar entera: ninguna inspección visual protege a nadie, porque el que más contagia suele ser el que mejor se ve. Y menos todavía sirve organizarla alrededor de quién nos parece limpio o de quién es de la familia: la confianza no es una barrera física. Es la lógica de un sistema que no confía en nadie por defecto, y la protección tiene que funcionar aunque el del otro lado esté infectado, empezando porque él tampoco lo sabe."
+    },
+    {
+      "id": "fiebre-y-vacuna",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la fiebre y sobre lo que hace una vacuna, ¿qué es correcto?",
+      "opciones": [
+        "Al principio la persona siente frío y se tapa porque unos pirógenos le subieron el número al termostato y el cuerpo todavía está por debajo de ese número nuevo.",
+        "Bajar la fiebre alivia el malestar pero no cura la infección: si cede con un medicamento y vuelve al pasar el efecto, sigue siendo la misma fiebre y el mismo motivo de consulta.",
+        "El brazo dolorido, el decaimiento o unas décimas después de una vacuna son la respuesta funcionando —inflamación local y respuesta innata—, no la enfermedad.",
+        "Un número alto de fiebre alcanza por sí solo para saber si lo que hay es algo grave o un virus corriente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta le pide a la fiebre una información que no tiene. La fiebre avisa que hay una pelea, pero no dice contra qué: es una respuesta regulada y general, la misma para un resfrío que para algo serio, y por eso el número solo nunca alcanza para decidir. Lo que sí decide son otras señales, y cuáles son exactamente —incluido el dato contraintuitivo del dengue, donde la fase peligrosa empieza cuando baja la fiebre— es la lección 06 de este módulo, que no se improvisa. Qué medicamento, cuánto y para quién lo indica el personal de salud, con más razón en un bebé, en un embarazo o en alguien con otra enfermedad."
+    },
+    {
+      "id": "la-cadena-de-tu-casa",
+      "tipo": "abierta",
+      "enunciado": "Tomá tu casa tal como es —alquilada o propia, con patio o sin patio— y armá su mapa: de dónde sale el agua que toman y en qué se guarda, adónde va lo que sale del baño y a qué distancia queda del agua, quién cocina, dónde juega el más chico y qué animales entran. Con ese mapa a la vista, tomá un episodio real de tu casa (o uno que podría pasar), identificá los seis eslabones de la cadena en ese caso concreto, elegí el eslabón más barato de romper y justificá por qué ese y no otro. Explicá además cómo usarías la cuenta hacia atrás y el cuaderno de la casa la próxima vez que alguien se descomponga, y qué vas a hacer con los carnets de vacunación de la familia sin inventar qué vacuna toca a qué edad.",
+      "respuestaModelo": "Vivo alquilando dos piezas con un patio compartido con otra familia, así que el mapa no es solo mío y eso ya cambia el problema.\n\nEl agua sale de un pozo con bomba y cae a un turril de doscientos litros en el patio, tapado a medias con una chapa. De ahí se saca con una jarra que queda apoyada al lado, sobre la misma mesa donde se lava la ropa; para tomar se pasa a una botella en la heladera. El baño es un pozo ciego a unos ocho metros del pozo de agua, y el terreno es arenoso. Cocina mi señora y a veces mi suegra. El más chico tiene un año y medio y gatea en el piso de tierra apisonada del patio. Entran dos perros y pasan gallinas de los vecinos por debajo del alambrado. Escribirlo me llevó veinte minutos y ya me mostró cosas que tenía delante y no miraba.\n\nEl episodio real: en marzo se enfermó de diarrea el chico, dos días después mi señora y cuatro días después yo. Los seis eslabones, en orden. El agente no lo sé ni lo voy a saber sin análisis, pero por el tiempo —dos a tres días hasta el primer síntoma— pienso en una bacteria o un protozoo, no en algo que se arregle con un antibiótico comprado en la farmacia. El reservorio pudo ser cualquiera de tres: nosotros mismos, las gallinas que andan por el patio o el pozo ciego. La puerta de salida son heces. La vía es fecal-oral, y tengo tres candidatas concretas: el agua del turril, la jarra que anda por todos lados y las manos del chico que gatea. La puerta de entrada es la boca. Y el hospedero susceptible es el de un año y medio, que cayó primero justamente porque su capa adaptativa casi no vio nada todavía y porque tiene el estómago menos ácido que un adulto.\n\nEl escalonamiento me dice algo que antes se me habría escapado: cayó uno cada dos días, no todos juntos. Si el problema hubiera sido el turril, que es fuente común, habríamos caído casi al mismo tiempo. Escalonado apunta a persona a persona, con las manos en el medio.\n\nEl eslabón más barato lo tengo elegido y no cuesta plata: la jarra. Está apoyada afuera, la agarra cualquiera con las manos como vengan y se mete adentro del agua que después toma toda la casa. Es la puerta blindada al lado de la ventana abierta: no sirve de nada pasar el agua a la botella si el paso anterior es ese. Esta semana le pongo una canilla al turril, lo tapo bien y saco la jarra del circuito; si no consigo la canilla el sábado, mientras tanto la jarra se cuelga de un clavo, se usa solo para eso y nadie mete la mano adentro. Elegí ese eslabón y no el pozo ciego porque mover un pozo ciego es una obra que este mes no puedo pagar, y la jarra la arreglo el fin de semana. Uno cambiado le gana a cinco planificados.\n\nEl segundo, también barato, es dónde gatea el chico. No voy a sacar a las gallinas del barrio, pero sí puedo separar circuitos: una lona o una manta donde juegue, el calzado de calle afuera y las gallinas del otro lado del alambrado. La zoonosis no exige que el animal esté enfermo, así que mirarle la cara a la gallina no me informa nada.\n\nLa próxima vez que alguien se descomponga hago dos cosas. La cuenta hacia atrás: en vez de acusar a lo último que comió, miro uno a tres días antes —qué se comió afuera, quién vino de visita, qué agua se tomó, dónde estuvieron los chicos—. Y el cuaderno: una hoja por episodio, con quién, qué día empezó, qué síntomas, cuántos días duró, quién más cayó y cuántos días después. Con tres episodios anotados voy a ver solo si el patrón es escalonado o de golpe, y ese cuaderno es además lo mejor que puedo llevar al centro de salud, porque contesta lo que ahí me van a preguntar y que en el momento nadie recuerda bien.\n\nCon los carnets hago lo simple: los junto todos en una carpeta, les saco foto con el teléfono y le mando una copia a mi hermana, porque acá la humedad arruina papeles y en una mudanza se pierden. Después llevo los originales al centro de salud y pregunto qué le falta a cada uno, adultos incluidos. Qué vacuna toca, a qué edad y cuántas dosis no lo decido yo ni lo saco de un grupo de mensajes: eso lo dicen ahí, y si un carnet se perdió, ahí mismo pregunto cómo se repone.\n\nY una cosa que dejo de hacer: comprar antibiótico por mi cuenta apenas empieza una diarrea. Si es un virus no hay pieza que romper, y encima me llevo por delante la microbiota, que era una de mis barreras. Diagnosticar y tratar es del centro de salud; lo mío es cortar eslabones, anotar y llegar allá siendo útil.",
+      "criterios": [
+        "Dibuja el mapa real de su casa: de dónde sale el agua, en qué se guarda y quién la sirve, adónde va lo del baño y a qué distancia queda, quién cocina, dónde juega el más chico y qué animales entran.",
+        "Identifica los seis eslabones —agente, reservorio, puerta de salida, vía de transmisión, puerta de entrada y hospedero susceptible— sobre un caso concreto y no en abstracto.",
+        "Explica por qué el más chico cayó primero apoyándose en el mecanismo (defensa adaptativa sin memoria, menos ácido gástrico, dosis infectante), no en que «es más débil».",
+        "Usa el escalonamiento de los casos para distinguir contagio de persona a persona de una fuente común, en lugar de suponerlo.",
+        "Reconoce que el reservorio puede ser un animal sano y que la zoonosis no exige que el animal esté enfermo, por lo que el aspecto no sirve de criterio.",
+        "Elige un eslabón barato y justifica por qué ese y no uno más impresionante o más caro, con un plazo concreto para cambiarlo.",
+        "Aplica la lógica de la cadena en serie: no blinda un eslabón dejando otro abierto, y detecta el punto donde se recontamina lo ya tratado (recipiente, jarra, taza compartida).",
+        "Distingue sucio de peligroso y no confía en el aspecto, el olor ni el sabor para juzgar agua, manos o comida.",
+        "Explica la cuenta hacia atrás con el período de incubación en vez de culpar a la última comida.",
+        "Propone el cuaderno de la casa con los datos que de verdad sirven y entiende que es lo que se lleva al centro de salud.",
+        "Resuelve los carnets de vacunación con copia y consulta, sin inventar calendario, edades, número de dosis ni normas.",
+        "Remite explícitamente al centro de salud el diagnóstico y el tratamiento, y descarta automedicar antibióticos sabiendo explicar por qué contra un virus no hacen nada."
+      ],
+      "explicacion": "La respuesta débil se queda en buenas intenciones —«voy a tener más cuidado», «voy a limpiar más»— y en un eslabón imposible, casi siempre el pozo ciego o una obra que no se va a hacer. La fuerte hace tres movimientos que se notan enseguida. Primero escribe el mapa, porque hasta que no está en una hoja el esfuerzo se pone por corazonada. Segundo nombra los seis eslabones sobre un caso propio y usa el patrón temporal —escalonado o de golpe— para decidir dónde mirar, en vez de adivinar. Y tercero elige el eslabón barato y verificable, ese que estaba a la vista y no cuesta plata: la taza metida dentro del balde, la jarra apoyada afuera, el trapo de tres días, la olla que se queda hasta la noche. El cierre también separa: la respuesta fuerte sabe dónde termina su jurisdicción —hidratar, observar, anotar, cortar eslabones y llevar el cuaderno— y no cruza la línea de diagnosticar, recetar ni armar un calendario de vacunas por su cuenta."
+    }
+  ]
+}

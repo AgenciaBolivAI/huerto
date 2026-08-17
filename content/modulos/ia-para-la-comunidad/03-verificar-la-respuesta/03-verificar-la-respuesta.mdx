@@ -1,0 +1,405 @@
+La lección anterior terminó con una petición bien construida: la situación completa, el lugar y la
+fecha, las restricciones duras, el formato de salida, el criterio de qué sería una buena respuesta.
+Eso sube bastante la probabilidad de que lo que vuelva sirva. **No cambia nada del mecanismo.** Del
+otro lado sigue habiendo un sistema que produce la continuación más probable de tu texto, y una
+continuación probable puede ser falsa con la misma facilidad con la que puede ser cierta. Preguntar
+bien mejora la apuesta; no la convierte en un hecho.
+
+Esta lección es la otra mitad del trabajo, y la que casi nadie hace. No por pereza: por un motivo de
+diseño que conviene nombrar de entrada, porque si no lo entiendes vas a creer que verificar es una
+precaución opcional para gente desconfiada, y es lo contrario — es el paso que convierte una
+herramienta insegura en un proceso utilizable.
+
+## El aplomo es una propiedad del formato, no de la verdad
+
+Cuando lees cualquier otra fuente, juzgas antes de leer. Una página con faltas de ortografía y
+publicidad parpadeante te pone en guardia; un vecino que dice «me parece que era en agosto, pero
+fijate» te marca su incertidumbre; un manual con sello institucional pesa más que un comentario. Nada
+de eso es el contenido: son **señales periféricas** de fiabilidad, y llevas toda la vida usándolas.
+
+Un modelo de lenguaje borra todas esas señales de golpe. Todo sale con el mismo acabado, esté
+repitiendo algo que vio diez mil veces o completando un hueco con lo que suena bien. La lección 1
+explicó por qué: la fluidez la produce el ajuste posterior por preferencia humana, que premia
+respuestas claras y útiles al leerse, y **la claridad al leerse no tiene ninguna relación con la
+corrección.** Has perdido tu instrumental de juicio rápido justo donde más falta hace.
+
+<Analogia titulo="Un respaldo que nadie restauró nunca">
+La tarea nocturna configurada, el registro en verde todas las mañanas, el archivo con el peso que
+debe tener. Todo indica que estás cubierto, hasta la noche en que hay que restaurar y descubres que
+hace siete meses el volcado guarda la base vacía, con el mismo tamaño y el mismo verde. **Un
+respaldo que nadie restauró no es un respaldo: es la creencia de tener un respaldo.**
+
+Una respuesta que nadie comprobó es exactamente eso: no es información, es la creencia de estar
+informado, que se comporta igual que la otra en el día a día y falla el día que importa.
+</Analogia>
+
+Hay un segundo efecto, más silencioso: leer algo claro produce la sensación de haberlo entendido. La
+última lección del módulo lo trata a fondo; aquí basta su consecuencia inmediata: **cuanto mejor
+escrita está una respuesta, menos ganas tienes de comprobarla**, justo al revés de lo que convendría.
+
+## Despieza la respuesta antes de juzgarla
+
+El primer error de método es tratar una respuesta como una unidad: buena o mala, la creo o no la
+creo. Una respuesta de veinte líneas es un commit con veinte cambios dentro, unos de una clase y
+otros de otra. **Verificar empieza por despiezar.**
+
+Cada pieza cae en una de tres categorías y cada categoría se comprueba distinto. La primera es
+la <Termino slug="afirmacion-verificable">afirmación verificable</Termino>: una cifra, una fecha, un
+nombre científico, una dosis, un plazo, el contenido de una norma, un precio. Existe un documento o
+una realidad ahí fuera que la confirma o la tumba. La segunda son **juicios y
+recomendaciones**: «te conviene sembrar primero esto». No hay documento que las resuelva porque
+dependen de tu contexto, y se juzgan contra tu realidad y, cuando tocan plantas, contra un ensayo. La
+tercera es **forma**: redacción, orden, estructura, tono. Se verifica leyendo, y es donde el modelo
+casi siempre acierta.
+
+<Tabla>
+
+| Pieza | Cómo se comprueba | Cuánto tarda | Qué pasa si no lo compruebas |
+| --- | --- | --- | --- |
+| Hecho verificable (cifra, fecha, ley, dosis, nombre) | Contra fuente primaria, fuera del modelo | Minutos u horas | Repites un dato inventado como si fuera tuyo |
+| Cálculo (aritmética, unidades, escala) | Lo rehaces a mano en una servilleta | Un minuto | Compras, aplicas o construyes con un factor mil de error |
+| Juicio o recomendación | Contra tu contexto y con prueba en pequeño | Semanas | Aplicas a todo algo calibrado para otro clima |
+| Forma (redacción, estructura, formato) | Leyéndolo | Segundos | Un texto feo, que reescribes y ya |
+
+</Tabla>
+
+Fíjate en la trampa que la tabla deja al descubierto. Casi todo el texto de una respuesta es forma, y
+la forma casi siempre está bien; tu cerebro extiende ese acierto al resto por vecindad. **Ese aval
+por vecindad es infundado**: la forma la aprendió de millones de textos bien escritos, y el dato
+concreto lo puede estar completando ahora mismo.
+
+El despiece se hace subrayando: marca cada número, cada nombre propio, cada fecha y cada afirmación
+que empiece por «hay que», «se debe» o «la norma exige». Lo subrayado es tu lista de verificación.
+
+## Exige la fuente, y después comprueba que la fuente existe
+
+Pedir la fuente cambia el comportamiento del modelo, y para bien. Lo que no hace es garantizar nada.
+**Pedir una cita y tener una cita no son la misma cosa**, porque la cita también es texto y se genera
+igual que el resto: pieza plausible detrás de pieza plausible. Un autor que suena a autor, una revista
+que existe, un año creíble y un título que encaja perfectamente con lo que preguntaste. Eso tiene
+nombre —una <Termino slug="cita-fabricada">cita fabricada</Termino>— y falla de cuatro maneras que
+conviene distinguir porque se comprueban distinto.
+
+**Uno: no existe nada.** Ni el artículo, ni el informe, ni la resolución. El caso más limpio de
+cazar: la búsqueda no devuelve nada, o solo devuelve tu propia pregunta.
+
+**Dos: existen las partes pero no el conjunto.** El autor es real, la institución es real, la revista
+es real, y ese artículo nunca se escribió. Es el más convincente, porque cada pieza por separado da
+verde.
+
+**Tres: existe el documento y no dice eso.** Aquí se cae casi todo el mundo, porque encontrar el PDF
+se siente como haber verificado. **Que la fuente exista no significa que diga lo que te dijeron que
+dice.** El paso que casi nadie da es abrir el documento y buscar la frase.
+
+**Cuatro: existe, dice eso, y no aplica.** Un ensayo real y correcto, hecho en otro clima, en otro
+hemisferio, hace quince años y con una variedad que aquí no se consigue: información verdadera y
+consejo equivocado a la vez.
+
+<Advertencia>
+Si te da un enlace, ábrelo. Si no lo puedes abrir, no lo puedes citar, y tampoco lo puede citar
+nadie a quien se lo pases. Los enlaces inventados suelen tener la forma correcta del sitio real: el
+dominio de la institución existe y la ruta de después no.
+
+Sin conexión el criterio no cambia, solo se aplaza: pídele qué documento es, de qué institución y de
+qué año, anótalo en una lista de pendientes y **trátalo como no verificado hasta que lo hayas
+abierto**. Lo pendiente sirve para orientar una búsqueda; no para decidir, ni para repetírselo a un
+vecino.
+</Advertencia>
+
+## Preguntarle otra vez a la misma máquina no es verificar
+
+La reacción natural cuando algo huele raro es escribir «¿estás seguro?», y en términos de sistemas se
+ve enseguida por qué no sirve: **es una segunda llamada al mismo servicio.** Dos respuestas del mismo
+proceso no son redundancia; consultar dos veces la misma caché no valida su contenido; un quórum de
+uno no es un quórum.
+
+Y hay algo peor que la inutilidad. Los modelos están ajustados para resultar agradables, así que tu
+duda funciona como una señal: si dudas es probable que reescriba, y si insistes, que reescriba otra
+vez. **Eso no es corrección, es acomodación.** El segundo número no es más verdadero que el primero;
+es más obediente. Es la versión de verificación de la trampa que viste en la lección anterior, la de
+la pregunta que ya lleva dentro la respuesta que quieres oír.
+
+Tampoco resuelve gran cosa preguntarle a otro modelo distinto: se entrenaron sobre corpus muy
+parecidos, así que sus errores están correlacionados y donde uno no tiene datos, el otro tampoco. Es
+pedir segunda opinión a quien estudió por el mismo manual equivocado. **La independencia no se
+consigue cambiando de instancia sino cambiando de tipo de fuente**: un papel, una ventanilla, un
+laboratorio, una persona con veinte años en el rubro, tu propia libreta.
+
+Hay un uso, eso sí, en el que la segunda pasada aporta: pedirle que **argumente en contra** de lo que
+acaba de decir. No verifica nada, pero saca a la luz supuestos que la primera respuesta se había
+tragado, y eso te da la lista de qué ir a comprobar.
+
+## Triangular contra una fuente primaria
+
+Verificar de verdad es llegar al origen.
+Una <Termino slug="fuente-primaria">fuente primaria</Termino> es el sitio donde la información se
+origina: la etiqueta física del envase, la norma publicada por quien la dictó, el informe de la
+institución que hizo el ensayo, el resultado del laboratorio que analizó tu muestra, la respuesta
+por escrito de la oficina competente. Una fuente secundaria la cita; una terciaria cita a la
+secundaria. **Lo que sale de un modelo es, en el mejor de los casos, una paráfrasis de tercera mano
+sin cadena de custodia**: nadie puede decirte de qué documento salió cada frase, ni siquiera él
+mismo, porque no guarda esa correspondencia.
+
+De ahí sale el método, que se
+llama <Termino slug="triangulacion-de-fuentes">triangulación de fuentes</Termino>: una afirmación
+que importa se sostiene con **dos fuentes que no dependan una de la otra**. La palabra clave es
+*independientes*, y ahí está el error caro.
+La <Termino slug="circularidad-de-fuentes">circularidad de fuentes</Termino> es encontrar el mismo
+dato en cinco páginas y concluir que está confirmado, cuando las cinco copiaron del mismo blog de
+2014 que a su vez copió mal una tabla. Cinco copias de un error son un error, no cinco
+confirmaciones — y como buena parte de lo que el modelo vio son justamente esas copias, el dato
+circular es el que más probabilidades tiene de salir repetido con toda seguridad.
+
+<Advertencia>
+Los nombres que colisionan son la trampa de triangulación más común aquí, y este curso ya la encontró
+dos veces. Hay un **SENAMHI en Bolivia y otro en Perú**, y las búsquedas los mezclan. Hay un **CIAT
+en Santa Cruz** —el Centro de Investigación Agrícola Tropical, con su laboratorio de suelos en
+Saavedra— y un CIAT internacional con sede en Colombia, que es otra institución distinta.
+
+Un modelo no distingue homónimos por contexto geográfico con fiabilidad: los funde. Antes de dar por
+buena una cifra institucional, **comprueba que la institución que la publica es la que crees**, país
+incluido. Un dato de precipitación correctísimo para otro país es un dato falso para tu calendario.
+</Advertencia>
+
+Sin biblioteca ni suscripciones tienes más fuentes primarias a mano de las que parece: el manual
+impreso del equipo, el informe del laboratorio, el rótulo y la factura del proveedor —lo que en
+propagación llamamos <Termino slug="trazabilidad">trazabilidad</Termino>— y la libreta con lo que
+pasó el año pasado en tu lote. Ninguna la sustituye un modelo, y todas están más cerca de ti que
+cualquier PDF.
+
+## Las cifras se rehacen a mano
+
+Un número, dentro de un modelo de lenguaje, es una pieza de texto como cualquier otra: se elige
+porque encaja, no porque se haya calculado. A veces el sistema tiene una calculadora conectada y la
+aritmética mejora; a veces no, y la respuesta sale con la misma cara de seguridad. Como no sabes en
+cuál de los dos casos estás, la regla es única: **toda cifra que vaya a mover dinero, agua, producto
+o material se rehace a mano.** Son tres comprobaciones, en este orden.
+
+**La aritmética.** Rehaz la cuenta. Si la respuesta no la muestra, pídesela y rehazla igual: dos
+multiplicaciones se comprueban en treinta segundos, y ese es el punto — no la rehaces por
+desconfianza, la rehaces porque es barato.
+
+**Las unidades.** Es el <Termino slug="analisis-dimensional">análisis dimensional</Termino> de toda
+la vida: escribe las unidades junto a los números y comprueba que se cancelan hasta dejar la que
+esperabas. Si terminas con litros por metro cuadrado por hectárea, no hay que discutir el número: la
+fórmula está mal.
+
+<Formula explicacion="Los m² del numerador se cancelan con los del denominador y queda litros, que era la unidad que buscabas. Si no queda litros, la fórmula está mal aunque el número parezca razonable.">
+litros totales = dosis (L/m²) × superficie (m²)
+</Formula>
+
+**El orden de magnitud.** Antes de mirar el número exacto, estima el tuyo a ojo. Si el del modelo
+está a un factor diez del tuyo, uno de los dos está mal y hay que averiguar cuál; si está a un factor
+mil, casi seguro hubo un salto de unidad. **El factor mil es el error agrícola clásico** y se esconde
+en tres pares: gramos y kilos, mililitros y litros, metros cuadrados y hectáreas.
+
+<Dato titulo="Los tres números de Rizoma que evitan el ridículo">
+Rizoma del Sur tiene **3.666 m² en doce lotes contiguos**, y de ahí salen tres conversiones que cazan
+solas la mayoría de los disparates.
+
+**Superficie en hectáreas: 0,3666 ha.** Casi todo el consejo agronómico publicado viene en unidades
+por hectárea. Una dosis de 2 L/ha son 0,73 L para el sitio entero, no 2 L: quien aplica los 2 L
+completos pone casi tres veces la dosis correcta.
+
+**Lluvia a volumen: 1 mm = 1 L/m².** Una lluvia de 20 mm deja 20 × 3.666 = **73.320 litros** sobre
+el terreno. Con esa cuenta se dimensiona un techo de captación y se ve al instante que un tanque de
+1.000 litros no es un sistema de cosecha de agua sino un vaso.
+
+**Superficie por lote: 3.666 ÷ 12 = 305,5 m².** Toda cantidad «por lote» tiene que ser coherente con
+esa cifra, y toda cantidad «para el vivero» tiene que decir si habla del terreno completo o de la
+superficie ocupada por bandejas y bolsas, que es muchísimo menor.
+</Dato>
+
+## Contrasta con lo que este curso ya te enseñó
+
+La verificación más barata que existe no necesita conexión ni ventanilla: es comprobar si la
+respuesta contradice lo que ya sabes. Después de veintinueve módulos tienes un cuerpo de conocimiento
+que funciona como una **batería de pruebas de regresión**: cada respuesta nueva es un cambio
+propuesto, y antes de integrarla se pasa contra lo que ya estaba verde.
+
+Cuatro afirmaciones que deberían encender una luz roja, porque aparecen constantemente en el consejo
+genérico y chocan con lo que este curso documentó para esta zona. **«Sembrar en primavera»**: aquí el
+calendario no lo marcan cuatro estaciones templadas sino la temporada de lluvias de octubre a abril y
+la seca de mayo a septiembre. **«Proteger del frío en invierno»**: el frío de aquí es
+el <Termino slug="surazo">surazo</Termino>, dos o tres días de aire frío del sur con noches de unos
+10 °C que pueden caer en plena seca. **«Regar dos veces por semana»**: una frecuencia sin demanda
+atmosférica, sin sustrato y sin sombra no significa nada. **«Bajar el pH con cal»**: la cal aporta
+carbonatos que neutralizan acidez, así que **sube** el pH, y el error se cuela porque la frase suena a
+jerga correcta.
+
+Ahora la parte honesta, porque el criterio inverso también es un error. Que una respuesta contradiga
+al curso no prueba que esté mal: puede haberse equivocado el modelo, puede que el curso simplificara
+o no cubra tu caso, o pueden estar hablando de contextos distintos sin mentir ninguno. **Una
+contradicción no es un veredicto, es una señal de que ahí hay que ir a mirar** — y cuando el asunto
+se decide en el campo se decide con parcela testigo, materia de la lección 5 y de los módulos 11 y 39.
+
+## Cuánto verificar: presupuesto proporcional al costo del error
+
+Verificarlo todo con el mismo rigor es una forma elegante de no usar la herramienta: si comprobar la
+respuesta cuesta más que haberla escrito tú, no ganaste nada. Entre eso y no verificar nada hay
+un <Termino slug="presupuesto-de-verificacion">presupuesto de verificación</Termino> que se asigna
+por respuesta con cuatro preguntas, las mismas de cualquier evaluación de riesgo de despliegue.
+
+**¿Qué pasa si esto está mal?** Un texto feo, o cuatrocientos plantines. **¿Cuánto tardo en
+enterarme?** Segundos si es una redacción, tres semanas si es un sustrato, dos años si es un frutal
+injertado. **¿Es reversible?** Un riego mal calculado se corrige mañana; un producto aplicado no se
+despliega hacia atrás. **¿A quién más afecta?** Solo a ti, o a los treinta vecinos a los que le vas
+a repetir el dato con toda seguridad porque lo leíste muy bien escrito.
+
+<Tabla>
+
+| Nivel | Qué contiene | Qué exige antes de usarlo |
+| --- | --- | --- |
+| 0 · Se verifica leyendo | Redacción, formato, resumir un texto que ya tienes, ordenar tus notas, traducir para entender | Nada más que leerlo con atención |
+| 1 · Juicio propio | Ideas, alternativas, planificación, borradores de método, listas de qué considerar | Contrastar con tu contexto y con el curso |
+| 2 · Fuente antes de actuar | Cálculos, cantidades de material, criterios agronómicos, interpretación de un análisis | Rehacer las cifras y confirmar con fuente primaria |
+| 3 · No vale como fuente nunca | Normativa, trámites, plazos, impuestos, requisitos sanitarios, dosis de producto, precios, salud | La autoridad competente, la etiqueta, el contador, el técnico |
+
+</Tabla>
+
+La regla de asignación es sencilla: **cualquier cosa irreversible sube automáticamente al nivel 3**,
+por barata que parezca, porque en irreversible el costo esperado no se promedia: se paga entero. Es
+el criterio del <Termino slug="fallo-seguro">fallo seguro</Termino> del riego automático — ante la
+duda, el estado que menos daño causa.
+
+## Bolivia: a quién se le pregunta de verdad
+
+Aquí va la regla dura de la lección, y no admite matices: **nunca des por buena una ley, un número
+de norma, un plazo, un requisito de trámite, un arancel o un precio que salga de un modelo.** Ni
+para actuar, ni para planificar, ni —sobre todo— para repetírselo a un vecino.
+
+El mecanismo del fallo es entendible y por eso predecible. La normativa es local, cambia con el
+tiempo y en Bolivia está poco publicada en la web abierta: vive en gacetas, en resoluciones
+administrativas, en ventanillas y en manuales impresos. Donde hay hueco de datos, el modelo completa
+con lo más frecuente de su entrenamiento, que en español es normativa de España, de México o de
+Argentina: un procedimiento de otro país con nombres bolivianos encima. **Un número de norma
+inventado es especialmente peligroso porque es citable**: se copia en una nota, se lleva a una
+reunión y se repite hasta que alguien queda mal delante de una oficina.
+
+El mapa de a quién se le pregunta en serio, según el asunto, es este. Para **sanidad vegetal,
+productos fitosanitarios, movimiento de material vegetal e inocuidad**, la autoridad es el SENASAG, y
+para cualquier producto que se vaya a aplicar manda antes que nadie
+la <Termino slug="etiqueta-del-producto">etiqueta del producto</Termino>, el texto legalmente
+vinculante donde constan la dosis, los cultivos autorizados y el plazo de seguridad. Para
+**investigación agropecuaria y forestal**, el INIAF. Para **análisis de suelo y consulta agronómica
+local**, el CIAT de Santa Cruz en Saavedra y la Facultad de Ciencias Agrícolas de la UAGRM. Para
+**clima**, el SENAMHI de Bolivia. Para **permisos de obra, uso de suelo y licencias**, el gobierno
+municipal del terreno. Para **impuestos, NIT y facturación**, Impuestos Nacionales y un contador
+local. Para **obligaciones laborales**, un asesor local.
+
+Y una cosa que este curso hace deliberadamente y conviene que veas hecha: **no te doy números de ley,
+ni plazos, ni montos, ni requisitos concretos.** Inventarlos sería precisamente el error que esta
+lección enseña a detectar, y además caducan. Lo que sí se puede enseñar es el mecanismo y el mapa de
+a quién preguntar, y eso no caduca.
+
+La técnica de preguntar en ventanilla también existe: lleva la pregunta **escrita**; pide el **nombre
+del documento** donde está eso —resolución, reglamento, formulario, número y fecha—; anota **quién te
+atendió y qué día**; guarda copia de todo formulario. Una respuesta verbal sin nombre de documento es
+un punto de partida, no una confirmación, y esa distinción evita volver una semana después a que te
+digan otra cosa.
+
+<AplicarRizoma>
+En Rizoma del Sur la verificación no es una virtud personal sino un procedimiento con soporte físico,
+porque el proyecto es comunitario y lo que uno da por bueno lo aplican treinta. La regla está escrita
+en la pared del galpón: **ninguna cifra que salga de una máquina entra al cuaderno de riego, de
+siembra o de compras sin la fuente anotada al lado.** Sin fuente, se escribe en lápiz y con la
+palabra «pendiente» delante.
+
+El soporte es el **cuaderno de verificaciones**, una tabla de seis columnas junto al cuaderno de
+siembra: fecha, la afirmación tal como salió, de dónde salió, nivel asignado del 0 al 3, cómo se
+comprobó y veredicto. A los seis meses ese cuaderno es lo único que tenemos que no está en internet,
+porque es el mapa de **en qué se equivoca la herramienta con nuestros temas** — nuestras especies,
+nuestro calendario, nuestros nombres locales. Tiene el mismo enemigo que el registro de bandejas,
+el <Termino slug="sesgo-de-supervivencia">sesgo de supervivencia</Termino>: anotamos las veces que
+acertó y tiramos sin escribir las que nos hicieron perder una tarde, que son las informativas.
+
+Tres casos que ya ocurren y que muestran los niveles altos de la tabla. **Uno, fitosanitario.**
+Alguien llega con manchas en las hojas del plátano y trae una respuesta con producto y dosis. Nivel
+3, sin discusión: sirve para saber qué preguntar y para entender las palabras de la etiqueta, y la
+dosis se lee en el envase físico. Si el envase no tiene etiqueta legible, no se aplica nada — y esa
+segunda mitad de la regla es la que salva lotes.
+
+**Dos, de cifras.** «El vivero necesita tantos litros por día.» El número suele calcularse sobre los
+3.666 m² completos, cuando lo que consume agua es la superficie ocupada por bandejas y bolsas bajo
+malla, una fracción pequeña. Unidad correcta, aritmética correcta y respuesta a una pregunta que no
+era la nuestra: **cifra bien calculada sobre premisa equivocada** es el fallo más difícil de ver, y
+solo lo caza rehacer la cuenta con tus propios metros cuadrados.
+
+**Tres, normativo.** «Para vender plantines hace falta tal permiso, según tal norma.» Se marca como
+no verificado el mismo día y se anota en la lista de pendientes de ventanilla; quien va lleva la
+pregunta escrita y vuelve con el nombre del documento, la fecha y quién lo dijo. Solo entonces entra
+al cuaderno con tinta.
+
+Y una asignación de trabajo que es de la misión y no de la técnica: **verificar es un aporte que
+puede hacer alguien sin tierra, sin dinero y sin estudios previos.** Cuesta tiempo, método y
+constancia, no capital. Quien comprueba bien una cosa y la deja escrita le ahorra el viaje a otras
+treinta, y produce el bien más escaso que tenemos: información local confirmada. Por eso en los
+talleres la tarea no es «pregúntale algo a la máquina» sino «traé una respuesta despiezada, con lo
+subrayado y con al menos una cosa comprobada».
+</AplicarRizoma>
+
+<ContextoBolivia>
+La primera restricción es material y hay que decirla sin adornos: **verificar cuesta datos móviles**,
+y los datos se pagan por megabyte. Abrir tres fuentes no es gratis para mucha gente de la zona, y ese
+costo es la razón real por la que la verificación se salta, mucho más que la confianza ciega. La
+estrategia que funciona es por lotes: se anotan los pendientes durante la semana, se verifican juntos
+cuando hay buena señal o wifi prestado, y el documento que sirvió se **descarga una vez y se guarda
+en el teléfono**. Un PDF guardado es una fuente primaria portátil.
+
+La segunda es el hueco de información. Buena parte del conocimiento agropecuario boliviano no está en
+la web indexada: está en manuales impresos, en boletines, en ferias, en páginas institucionales de
+Facebook y en la cabeza de gente que lleva veinte años produciendo. De ahí sale una conclusión que
+hay que grabarse: **«no encontré la fuente» no significa «el modelo tenía razón».** Significa que la
+verificación sigue pendiente, y con frecuencia que la fuente es una persona o una oficina, no una
+página. Ese mismo hueco es el que hace que el modelo rellene con material de otros países, y por eso
+los homónimos institucionales muerden tanto aquí. Cuando una respuesta cite una institución,
+**comprueba el país antes que el dato**.
+
+Hay un problema propio del catálogo local. Los nombres de aquí —yautía, gandul, ají dulce— se usan
+distinto en otros países y a veces designan especies distintas, así que el modelo mezcla información
+de plantas que no son la tuya. La verificación pasa por el **nombre científico** como puente, por la
+foto contrastada con una ficha y por preguntarle a un viverista de la zona cómo le dice él a esa
+planta.
+
+En la ventanilla hay además una asimetría social que afecta a quien menos defensa tiene. Un papel
+impreso impone, y quien llega a una oficina con una respuesta de inteligencia artificial impresa
+puede ser tratado —y puede tratarse a sí mismo— como si trajera un documento. **No lo es.** La forma
+correcta de llegar es al revés: con la pregunta escrita y sin respuesta escrita, para volver con la
+respuesta de quien tiene autoridad para darla, su nombre y su fecha. Ese cambio de postura evita
+además quedar en ridículo citando una norma que no existe, algo que en una comunidad pequeña dura
+años.
+
+Y una última pieza que sostiene el proyecto: **una verificación hecha una vez sirve para todos.** Un
+grupo que se reparte comprobaciones y las escribe en un lugar común convierte un costo individual
+—datos, tiempo, un viaje a una oficina— en un bien compartido, en español y con palabras de aquí, que
+es justo lo que no existe en internet. El método, repartido entre veinte personas, cuesta la vigésima
+parte.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Le pregunté si estaba seguro y me dijo que sí.»** Segunda llamada al mismo servicio. Y si
+insististe y cambió, eso fue acomodación, no corrección.
+
+**«Me dio la fuente, así que está verificado.»** Falta abrir el documento y encontrar la frase
+dentro. Y que exista no es que lo diga: muchas citas fabricadas apuntan a documentos reales.
+
+**«Lo dicen cinco páginas.»** Comprueba si esas cinco copiaron a la misma. Cinco copias de un error
+son un error.
+
+**«El número me cuadraba.»** Cuadrar de vista no es rehacer la cuenta. Y revisa las unidades: el
+factor mil no se nota leyendo.
+
+**«Es solo una consulta rápida sobre un trámite.»** Normativa, plazos y requisitos son nivel 3
+siempre. Un número de ley inventado se propaga porque se puede citar.
+
+## Lo que sigue
+
+Con las dos mitades montadas —preguntar bien y comprobar lo que vuelve— la herramienta deja de ser un
+oráculo y pasa a ser lo que es: un generador de borradores rápido, incansable y sin ninguna autoridad
+propia. La siguiente lección la pone a trabajar en lo que la comunidad necesita mañana: **redactar,
+traducir y entender un trámite**. Verás cómo se produce el borrador de una solicitud, un acta, una
+carta a la alcaldía o un cartel sin dejar de ser tú el autor y el responsable; cómo se traduce entre
+idiomas y entre registros, que es pasar jerga técnica a lenguaje llano; y cómo se usa para entender
+la **estructura** de un formulario sin creerle jamás el contenido normativo — que es, punto por
+punto, la regla dura de hoy aplicada al lugar donde más tienta saltársela.

@@ -1,0 +1,91 @@
+{
+  "titulo": "No arranca: diagnosticar con método y no a tientas",
+  "subtitulo": "Cambiar piezas hasta que prenda no es reparar: es comprar hasta acertar. Se pagan repuestos buenos, se pierden días de máquina parada y no se aprende nada, porque si arranca nadie sabe cuál de los cinco cambios lo consiguió. Esta lección convierte la tesis del módulo —aire, combustible, chispa y compresión en el momento justo— en cinco preguntas hechas en orden, cada una con su prueba concreta, lo que significa cada resultado y a qué rama te manda. Y como el peligro está en las maniobras del diagnóstico mismas, la seguridad crítica del oficio va integrada donde toca: el monóxido que no huele, la cuerda que retrocede y el vapor de gasolina junto a la chispa.",
+  "duracionMin": 34,
+  "objetivos": [
+    "Aplicar el árbol de diagnóstico de cinco preguntas —¿gira?, ¿comprime?, ¿hay chispa?, ¿llega combustible?, ¿respira?— en su orden, explicando por qué ese orden y no otro.",
+    "Trabajar sobre un motor sin lastimarse: monóxido de carbono en ambiente cerrado, retroceso del arranque de cuerda, resorte tensado y vapores de combustible durante la prueba de chispa.",
+    "Separar los tres significados distintos de «no gira» —arranque que no engancha, hidrobloqueo y bloqueo mecánico— y reparar un arranque retráctil: trinquetes, resorte y cambio de cuerda con la precarga correcta.",
+    "Medir la compresión con el pulgar, con el tirón de la cuerda y con manómetro, y usar la prueba húmeda para distinguir una fuga por los aros de una fuga por válvula, junta o bujía floja.",
+    "Recorrer el sistema de encendido de magneto completo: el interruptor de paro que apaga mandando a masa, el entrehierro de la bobina, la chaveta cortada del volante y el módulo que falla solo en caliente.",
+    "Hacer una prueba de chispa sin riesgo de incendio y explicar por qué una chispa buena al aire libre puede no existir dentro del cilindro comprimido.",
+    "Comprobar la llegada de combustible por toda la ruta —agua en el frasco, flujo de la manguera, ventilación del tapón, gotas al cilindro— y reconocer y recuperar un motor ahogado.",
+    "Traducir los síntomas que trae el dueño de la máquina —arranca y se apaga, no acelera, pierde fuerza, humea, se recalienta, cascabelea— en una lista de sospechosos y en la prueba concreta que los separa."
+  ],
+  "prerrequisitos": [
+    "motores-pequenos/01-como-funciona-un-motor",
+    "motores-pequenos/02-dos-tiempos-y-cuatro-tiempos",
+    "motores-pequenos/03-mantenimiento-por-horas"
+  ],
+  "videos": [],
+  "referencias": [
+    {
+      "titulo": "Manuales de usuario y listas de piezas por número de modelo",
+      "fuente": "Briggs & Stratton",
+      "url": "https://www.briggsandstratton.com/na/en_us/support/manuals.html",
+      "nota": "Buscador de manuales por el número grabado en el motor. Es donde está el dato que esta lección no puede darte: la presión de compresión correcta de tu motor, la separación de electrodos y el entrehierro de la bobina. Aunque tu máquina sea una copia genérica, las cifras del original sirven de referencia. Está en inglés, pero las tablas de valores se leen sin problema."
+    },
+    {
+      "titulo": "Bujía",
+      "fuente": "Wikipedia en español",
+      "url": "https://es.wikipedia.org/wiki/Buj%C3%ADa",
+      "nota": "Describe la pieza donde salta el arco y el circuito de alta tensión que la alimenta. Útil como respaldo del apartado de encendido, aunque el detalle de cómo leerla como instrumento de diagnóstico queda para la lección 05."
+    },
+    {
+      "titulo": "Ley de Paschen",
+      "fuente": "Wikipedia en español",
+      "url": "https://es.wikipedia.org/wiki/Ley_de_Paschen",
+      "nota": "El fundamento físico del matiz que más confunde en la prueba de chispa: la tensión necesaria para que salte un arco depende del producto de la presión del gas por la distancia entre electrodos. Explica por qué una chispa preciosa con la bujía al aire puede no existir dentro del cilindro comprimido."
+    },
+    {
+      "titulo": "Monóxido de carbono",
+      "fuente": "Wikipedia en español",
+      "url": "https://es.wikipedia.org/wiki/Mon%C3%B3xido_de_carbono",
+      "nota": "Propiedades del gas que produce toda combustión incompleta: incoloro, inodoro y sin sabor, que es exactamente lo que lo hace peligroso. Respalda la advertencia de no encender nunca un motor bajo techo."
+    },
+    {
+      "titulo": "Intoxicación por monóxido de carbono",
+      "fuente": "Wikipedia en español",
+      "url": "https://es.wikipedia.org/wiki/Intoxicaci%C3%B3n_por_mon%C3%B3xido_de_carbono",
+      "nota": "Detalla el mecanismo de la carboxihemoglobina y la secuencia de síntomas, que empiezan pareciéndose al cansancio. Es información para reconocer el cuadro y salir al aire, no para tratarlo: la intoxicación por monóxido se atiende en un centro de salud, siempre."
+    },
+    {
+      "titulo": "Ministerio de Salud y Deportes",
+      "fuente": "Estado Plurinacional de Bolivia",
+      "url": "https://www.minsalud.gob.bo/",
+      "nota": "Portal oficial con la red de establecimientos y los números de contacto. Se cita para lo único que esta lección puede decir sobre el asunto: si alguien que estuvo cerca de un motor encendido tiene dolor de cabeza, náusea, mareo o confusión, hay que sacarlo al aire libre y llevarlo al centro de salud, sin diagnosticar nada por cuenta propia."
+    }
+  ],
+  "terminos": [
+    "busqueda-binaria",
+    "monoxido-de-carbono",
+    "retroceso-de-arranque",
+    "limites-de-inflamabilidad",
+    "arbol-de-diagnostico",
+    "cambio-de-una-variable",
+    "hidrobloqueo",
+    "arranque-retractil",
+    "trinquete",
+    "prueba-de-compresion",
+    "prueba-humeda",
+    "observacion-discriminante",
+    "valvula-quemada",
+    "descompresor",
+    "interruptor-de-paro",
+    "probador-de-chispa",
+    "rigidez-dielectrica",
+    "entrehierro",
+    "chaveta",
+    "fallo-intermitente",
+    "ventilacion-del-tapon",
+    "motor-ahogado",
+    "apagachispas",
+    "aire-falso",
+    "detonacion",
+    "ficha-de-diagnostico",
+    "sesgo-de-confirmacion",
+    "punto-unico-de-falla",
+    "bitacora-de-uso"
+  ],
+  "practica": true
+}

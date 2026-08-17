@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "orden-del-gasto",
+      "tipo": "opcion_multiple",
+      "enunciado": "Tienes poca plata y quieres empezar a trabajar la madera. ¿Qué es correcto sobre en qué gastarla primero?",
+      "opciones": [
+        "Primero lo que sujeta y lo que mide, después lo que corta, y al final lo que tiene motor.",
+        "El afilador es la única herramienta que mejora a todas las demás, y suele ser la más barata.",
+        "Sin sujeción, la reacción del corte se descarga moviendo la pieza en vez de convertirse en corte.",
+        "El taladro es la primera compra sensata, porque agujerear a mano es lentísimo y además atornilla."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El taladro sí es el primer motor que vale la pena, pero eso no lo convierte en la primera compra: es escalón dos, y antes van la escuadra, la cinta, los sargentos, el serrucho, el formón y con qué afilar. El error de la frase está en confundir «el mejor de los motores» con «lo primero de todo». Cinta y escuadra son la fuente de verdad de cada medida que hagas, y los sargentos resuelven la mitad del trabajo que nadie menciona; un taladro sin nada que sujete la pieza hace agujeros torcidos muy rápido. La vitrina sugiere el orden inverso porque lo que tiene motor es lo que se vende, no lo que define la precisión."
+    },
+    {
+      "id": "desafilada-y-peligro",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una herramienta desafilada es menos peligrosa que una afilada, porque le cuesta más entrar en la madera.",
+      "respuesta": false,
+      "explicacion": "Falso, y es exactamente al revés por una razón mecánica. La desafilada necesita más fuerza para empezar a cortar, así que el que la usa empuja más; toda esa fuerza queda acumulada y aplicada mientras el filo no entra. Cuando por fin suelta —porque la fibra cede de golpe o porque la herramienta patina—, esa fuerza se libera entera y sin control, y lo que hay al otro lado suele ser la mano que sostenía la pieza. Afilar no es una cuestión de acabado ni de orgullo: es una medida de seguridad, y por eso la lección la trata junto con la sujeción y no como un adorno del final."
+    },
+    {
+      "id": "revisar-usado",
+      "tipo": "opcion_multiple",
+      "enunciado": "En la feria de usados miras un cepillo de mano y un taladro. ¿Qué revisiones tienen sentido, y por su mecanismo?",
+      "opciones": [
+        "Pasar la uña por el primer centímetro del filo: si engancha, es picadura, y ahí no habrá filo continuo nunca.",
+        "Apoyar la suela contra un vidrio y mirar a contraluz, porque la luz que pasa dice dónde no apoya.",
+        "Encender el taladro sin carga y empujar el eje de lado: si se mueve, ninguna precisión sobrevive a eso.",
+        "Descartar cualquier herramienta que tenga óxido, porque el óxido siempre arruina el acero."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Descartar por óxido a secas te hace perder buenas herramientas y no te protege de las malas, porque mezcla dos cosas distintas. El óxido superficial es una película parda que sale con lija fina y aceite, y debajo el acero está entero. La picadura son hoyitos que penetran el metal: en el lomo dan igual, pero en el primer centímetro del filo o en la suela de un cepillo cada picadura es un pedacito de filo que falta, y eso no se recupera puliendo. Por eso la prueba no es mirar el color, es pasar la uña. Y en lo que tiene motor, el eje con holgura condena la máquina aunque se vea impecable por fuera."
+    },
+    {
+      "id": "sujetar-sin-taller",
+      "tipo": "opcion_multiple",
+      "enunciado": "Trabajas sobre una mesa prestada en una casa alquilada donde no puedes atornillar ni taladrar nada. ¿Qué es cierto sobre sujetar la pieza?",
+      "opciones": [
+        "El tope de banco no aprieta nada: convierte la fuerza que aplicas en la fuerza que sujeta, porque cuanto más empujas el serrucho más se clava la pieza contra el tope.",
+        "Solo existen tres mecanismos de sujeción: peso, fricción y tope geométrico, y el tercero es el más barato.",
+        "Entre la zapata del sargento y la pieza va siempre un retazo, porque la presión concentrada aplasta las fibras.",
+        "Para cortes cortos en piezas pequeñas, sujetar con la mano libre es una solución razonable."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Lo de «es chiquito, lo agarro con la mano» es justamente el pensamiento que precede al accidente, y el mecanismo no cambia por el tamaño de la pieza: la pieza suelta se mueve, la herramienta patina, y encuentra la mano que estaba haciendo de sargento. Los cortes chiquitos son peligrosos precisamente porque son los que no se preparan. Además, una pieza pequeña sostenida a mano es la que menos margen deja: hay poca madera entre el filo y tus dedos. La regla no admite excepciones por brevedad: ninguna parte del cuerpo delante del filo, y la pieza sujeta con algo que no sea carne."
+    },
+    {
+      "id": "la-rebaba",
+      "tipo": "opcion_multiple",
+      "enunciado": "Afilando un formón sobre lija al agua aparece un hilito finísimo que engancha la uña al pasarla desde el filo hacia atrás. ¿Qué significa y qué haces?",
+      "opciones": [
+        "Es la rebaba, y demuestra que los dos planos ya se cruzan en toda la longitud: terminaste de formar el filo.",
+        "Hay que quitarla, porque si se queda puesta se rompe en el primer corte y te deja el filo mellado.",
+        "Si solo aparece en un tramo, en el resto del filo todavía falta quitar material.",
+        "Es señal de que apretaste demasiado y le quemaste el temple al acero."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La rebaba no es un daño ni un aviso de que hiciste algo mal: es el certificado de que hiciste bien lo único que había que hacer. Se forma porque el metal de la punta se queda sin nada que lo sostenga por detrás y, en vez de desprenderse, se dobla hacia el otro lado. Confundirla con un acero arruinado lleva al error contrario del que la gente teme: parar de afilar antes de llegar a ella, que es la razón número uno de los filos que parecen listos y no cortan. Como el filo es demasiado pequeño para verlo, la rebaba y el reflejo contra la luz son los dos únicos testigos que tienes."
+    },
+    {
+      "id": "serrucho-trabado",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un serrucho que se traba constantemente cortando madera húmeda casi siempre necesita que le afiles los dientes.",
+      "respuesta": false,
+      "explicacion": "Falso: lo que casi siempre perdió es el triscado, no el filo. Los dientes van doblados alternadamente uno a la derecha y el siguiente a la izquierda para que la ranura que abren sea más ancha que el grosor de la hoja; sin esa diferencia, la hoja roza las dos paredes del corte y se frena. En madera húmeda pasa siempre, porque además la madera cierra el corte al liberar tensiones. Un serrucho sin filo cuesta y va lento, pero baja; uno sin triscado se agarrota aunque los dientes estén filosos. Y para madera verde conviene más triscado que para seca, aunque cueste algo más empujar."
+    },
+    {
+      "id": "por-que-muerden-las-maquinas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre por qué muerden las máquinas y qué se deduce de ello, ¿qué es correcto?",
+      "opciones": [
+        "El retroceso ocurre cuando el corte se cierra sobre el disco, este se agarrota y el par del motor lanza la máquina hacia atrás, hacia el operador.",
+        "Ajustar la profundidad para que el disco asome apenas unos milímetros reduce a la vez lo que puede agarrarse y lo que puede cortarte.",
+        "Cerca de un eje que gira no se usan guantes: a 3.000 revoluciones el eje da doce vueltas dentro de tu tiempo de reacción.",
+        "Un disco dentado para madera en una amoladora es aceptable si la sujetas firme con las dos manos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Sujetar firme no compensa nada aquí, y el motivo es numérico. La velocidad de la periferia de un disco es su radio por su velocidad de giro, y una amoladora gira muchísimo más rápido que una sierra circular; a eso se le suma que no hay resguardo que cubra el corte, ni control de profundidad, ni cuchilla separadora, y que la máquina la sostienen solo tus manos. Si el disco se agarra, se va hacia donde decida y tus manos van con ella. No es una cuestión de pulso ni de experiencia: si el corte no lo puede hacer un serrucho, un formón, una caladora o una sierra circular, no se hace."
+    },
+    {
+      "id": "tu-plan-en-tu-casa",
+      "tipo": "abierta",
+      "enunciado": "Piensa en tu casa concreta —tu patio, tu cuarto, la mesa donde podrías trabajar— y en la plata que de verdad tienes. Escribe tu plan: qué herramienta ya hay en tu casa y qué harías con ella, qué comprarías primero y en qué orden, cómo vas a sujetar la pieza donde vives, con qué vas a afilar y cómo vas a saber que un filo está listo, y qué revisarías antes de pagar una herramienta usada.",
+      "respuestaModelo": "Vivo en un cuarto alquilado con un patio chico compartido, así que empiezo por la restricción real: no puedo atornillar nada a la pared ni dejar un banco armado ocupando lugar.\n\nLo primero no cuesta nada: el inventario. Junto todo lo que corta, golpea, mide o sujeta, aunque esté oxidado. Aparecieron un martillo de uña con el mango flojo, una cinta, un serrucho viejo y un formón sin cachas. Eso ya es medio escalón uno y me acorta la lista de compras.\n\nDe ahí salen dos decisiones antes de comprar nada. Al martillo le miro la unión del mango con la cabeza: si se mueve un milímetro, esa cabeza va a salir volando algún día, así que le cambio el mango y no compro martillo nuevo. Al serrucho le miro el color de los dientes: si la zona de los dientes está oscura o azulada están templados y no los va a tocar ninguna lima, así que ese serrucho es desechable, y el próximo lo compro con dientes del mismo color que la hoja para poder mantenerlo yo.\n\nMi primer gasto no es una herramienta, es con qué afilar. Compro tres granos de lija al agua y consigo un vidrio grueso o una baldosa nueva, que es superficie plana suficientemente buena. Con eso afilo el formón, los cuchillos de la cocina y más adelante una cuchilla de cepillo, y aplano dorsos; todo cabe en una caja de zapatos con un trapo y aceite. No pongo precios acá porque cambian: los pregunto el día que vaya.\n\nDespués, en orden: escuadra, punzón de marcar y dos sargentos. La cinta y la escuadra son la fuente de verdad de cada medida, así que van antes que cualquier cosa que corte, y los sargentos son sujeción, que es la mitad del trabajo. Recién después el taladro, que es el primer motor que vale la pena. La sierra circular no la compro hasta estar repitiendo el mismo corte muchas veces, y aunque la compre seguiré teniendo serrucho afilado: con los cortes de luz de acá, un taller que solo funciona enchufado trabaja los días que la red quiere. Dos máquinas eléctricas no son respaldo entre sí, porque el apagón las apaga a las dos; una máquina y una herramienta de mano sí lo son.\n\nLa sujeción la resuelvo así. Esta semana construyo el tope de banco: un retazo con un listón pegado arriba en un extremo y otro abajo en el contrario. El de abajo apoya contra el borde de la mesa y el de arriba detiene la pieza, y lo bueno es que no aprieta nada: cuanto más empujo el serrucho, más se clava la pieza contra el tope. Media hora, y me deja resuelta casi toda la sujeción sobre una mesa prestada, sin un agujero en la casa. Para piezas largas, dos caballetes y una tapa que se guardan de canto; si trabajo en el piso, una tabla gruesa con un listón apoyado contra el marco de la puerta y otro de tope. Y para encolar un marco sin sargentos largos, el torniquete de cuerda: cuerda floja, un palo entre los dos ramales y girar, con retazos en las esquinas y sabiendo que si la cuerda se corta el palo sale disparado. Con los sargentos, siempre un retazo entre la zapata y la pieza.\n\nPara el afilado tengo una condición de salida y no me guío por cómo se ve. Voy de grano grueso a fino sin saltarme pasos, porque cada grano tiene un solo trabajo, borrar las rayas del anterior, y una raya que llega a la punta es una muesca. Frotando el bisel aparece un hilito que engancha la uña al pasarla desde el filo hacia atrás: esa es la rebaba, y demuestra que los dos planos ya se cruzan en toda la longitud. Si aparece solo en un tramo, en el resto falta. Después la quito volteando la hoja y puliendo alternando lados con el grano fino, porque si la dejo se rompe en el primer corte. El segundo control es mirar el filo contra la luz: si veo un hilo brillante todavía hay una franja plana; si se ve como una línea negra, está listo. Con las maderas duras de acá afilo el bisel secundario a 30 o 35 grados en vez de 25, porque un filo fino se mella en dos golpes y después uno cree que el acero es malo cuando el problema era el ángulo.\n\nSi voy a comprar usado, voy con linterna, con la uña y dispuesto a no comprar. Miro a contraluz lo que deba ser plano, a lo largo lo que deba ser recto, paso la uña por el primer centímetro del filo buscando picaduras —el óxido superficial sale con lija y aceite, la picadura no— y muevo el mango. Si tiene motor, antes de enchufar reviso cable, clavija y carcasa, y no pruebo nada con carcasa metálica sin conexión a tierra; después lo enciendo sin carga, escucho si hay ruido áspero de rodamiento, empujo el eje de lado buscando holgura y huelo si hay olor a quemado. Y pregunto si consiguen repuestos de esa medida acá.\n\nPor último, el cuidado: un trapo con aceite al terminar, nada de acero sobre el cemento y ningún filo suelto en un cajón con llaves. Después de un surazo reviso las hojas: el metal queda frío, vuelve el aire húmedo y amanecen mojadas sin que haya llovido.",
+      "criterios": [
+        "Parte de su vivienda y su situación reales, incluidas las restricciones (alquiler, falta de espacio, no poder anclar nada), y no de un taller imaginario.",
+        "Empieza por el inventario de lo que ya hay en la casa antes de proponer ninguna compra.",
+        "Ordena el gasto poniendo lo que mide y lo que sujeta antes de lo que corta, y el motor al final.",
+        "Pone con qué afilar como primer gasto, y describe un método barato y realista.",
+        "Justifica conservar herramienta de mano como respaldo frente a los cortes de energía, con el argumento de que los dos elementos deben fallar por causas distintas.",
+        "Resuelve la sujeción con al menos dos soluciones concretas aplicables a su casa (tope de banco, caballetes con tapa, tabla contra el marco de la puerta, cuñas, torniquete de cuerda).",
+        "Explica por qué el tope de banco funciona: convierte la fuerza aplicada en fuerza de sujeción, sin apretar.",
+        "Describe la progresión de granos de grueso a fino y por qué no se saltan pasos.",
+        "Identifica la rebaba como la señal de que los dos planos ya se cruzan, y sabe que después hay que quitarla.",
+        "Menciona el segundo control, el filo mirado contra la luz, y qué significa el hilo brillante.",
+        "Al revisar usado distingue picadura de óxido superficial y comprueba planitud, rectitud, mango y, si hay motor, cable, carcasa, ruido, holgura de eje y olor.",
+        "No inventa precios, marcas ni normativa: remite a preguntar en la ferretería o la feria, y a un electricista cuando el asunto es la instalación."
+      ],
+      "explicacion": "Lo que se evalúa no es que recite la lista de herramientas, sino que aplique el criterio a su realidad: que el plan se sostenga en la casa que tiene, con la plata que tiene, y que resuelva la sujeción antes que la potencia. Una respuesta que arranca comprando una sierra circular no aprobó, por bien redactada que esté, y una que afila «hasta que se vea filoso» tampoco, porque el filo es demasiado pequeño para juzgarlo a ojo y por eso existen la rebaba y el reflejo. También cuenta la honestidad con los números: los precios y los repuestos se preguntan donde uno vive, no se suponen."
+    }
+  ]
+}

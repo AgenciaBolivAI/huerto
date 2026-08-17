@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "anatomia-del-mensaje",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué campos trae un mensaje de error y cómo se leen?",
+      "opciones": [
+        "El archivo y la línea, que dicen dónde; y la última línea, con el tipo y la descripción, que dice qué pasó.",
+        "La línea reportada es donde la máquina se dio cuenta, no necesariamente donde está el error: si parece correcta, hay que mirar la de arriba.",
+        "La descripción muchas veces incluye entre comillas el dato exacto que causó el problema, y ese dato solo ya orienta el diagnóstico.",
+        "El tipo de error es una descripción libre que cada programa redacta a su manera, así que no conviene fiarse de él."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El tipo es justo lo contrario de una descripción libre: es un nombre tomado de una lista cerrada y corta, y por eso es el campo más valioso del mensaje. Con doce o quince nombres se cubre casi todo lo del primer año, mientras que la redacción de la descripción sí cambia de caso en caso."
+    },
+    {
+      "id": "pila-de-llamadas",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se lee una pila de llamadas?",
+      "opciones": [
+        "Localizando primero qué extremo es la llamada más reciente, porque el encabezado lo dice y el orden depende del lenguaje y de la herramienta.",
+        "Buscando la línea más profunda que pertenece a código propio, porque un error dentro de una biblioteca suele significar que el dato llegó mal desde afuera.",
+        "Aprovechando que la pila cuenta también desde dónde se llamó al bloque que falló, lo que importa cuando se lo llama desde varios lugares.",
+        "Empezando siempre por la primera línea del listado, que es donde de verdad se rompió el programa."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "En un mensaje que dice «most recent call last», la primera línea del listado es donde arrancó todo y la última es donde se estrelló: empezar por arriba es como cambiar la bomba porque un gotero no larga agua. El síntoma está abajo, en la punta, y la causa se busca aguas arriba."
+    },
+    {
+      "id": "tres-familias",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué distingue a las tres familias de fallo?",
+      "opciones": [
+        "El error de sintaxis impide que se ejecute una sola instrucción, así que no deja estado sucio y es el más barato de todos.",
+        "El error en tiempo de ejecución rompe el programa a mitad de camino, con la mitad del trabajo ya hecha y posibles efectos a medias.",
+        "El error lógico no produce ningún mensaje porque la máquina hizo exactamente lo que estaba escrito.",
+        "El error lógico también acaba avisando solo, porque la máquina detecta cuando un resultado no tiene sentido."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La máquina puede comprobar la gramática y puede comprobar la posibilidad de una operación, pero no tiene ninguna copia de tu intención: en ningún lugar del sistema existe la frase «quería el promedio de la semana». Una división entre siete cuando eran seis lecturas es una división perfectamente válida, así que no hay nada de lo que protestar."
+    },
+    {
+      "id": "paradoja-del-silencio",
+      "tipo": "verdadero_falso",
+      "enunciado": "Ordenadas por lo alarmantes que se ven y por lo que realmente cuestan, las tres familias de fallo salen en orden inverso.",
+      "respuesta": true,
+      "explicacion": "Correcto. El error de sintaxis es el que más asusta, aparece antes de que pase nada y cuesta cinco minutos; el error lógico no se ve, no asusta a nadie y puede regar diez veces de más durante un mes. Un error de sintaxis te hace perder una tarde y uno lógico te hace perder una tanda, y encima te da confianza mientras lo hace porque el programa termina diciendo «listo»."
+    },
+    {
+      "id": "catalogo-de-errores",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué está diciendo realmente cada uno de estos errores frecuentes?",
+      "opciones": [
+        "Un error de conversión con un texto como «12,5» entre comillas está diciendo que el dato viene con coma decimal y hay que convertirla a punto al leerlo.",
+        "Un error de atributo sobre un valor nulo significa que una función devolvió nada, muchas veces porque una rama de una decisión se olvidó de devolver un resultado.",
+        "Un error de codificación significa que el archivo está guardado con una tabla de caracteres distinta de la que el programa espera, y se resuelve trabajando todo en UTF-8.",
+        "Un error de índice fuera de rango significa que la lista está corrupta y hay que volver a generarla."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El índice fuera de rango no dice nada sobre la lista: dice que pediste un elemento que no existe porque las listas empiezan en cero. Con doce lotes, el primero es el elemento 0 y el último el 11, así que pedir el 12 falla aunque la lista esté perfecta."
+    },
+    {
+      "id": "sin-mensaje",
+      "tipo": "opcion_multiple",
+      "enunciado": "El programa corre y no aparece ningún mensaje. ¿Qué comprobaciones corresponden?",
+      "opciones": [
+        "Poner una instrucción que imprima algo en la primerísima línea, para confirmar que se está ejecutando el archivo que uno cree.",
+        "Si se queda colgado, interrumpirlo con Control-C, porque la mayoría de los lenguajes imprimen entonces la pila de llamadas del punto exacto donde estaba.",
+        "Ejecutar desde la terminal en vez de con doble clic, para que la ventana no se cierre llevándose el mensaje.",
+        "Envolver todo el programa en una captura general de errores, para que al menos no se detenga a mitad de camino."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La captura general es exactamente lo contrario de una solución: produce un programa que no falla nunca y que tampoco funciona. Capturar un error que no se entiende es silenciar la alarma en vez de apagar el incendio; si se captura, se captura un tipo concreto y se hace algo con él, aunque sea imprimirlo."
+    },
+    {
+      "id": "disciplina",
+      "tipo": "verdadero_falso",
+      "enunciado": "Al copiar un error al cuaderno conviene resumirlo con palabras propias para que se entienda mejor después.",
+      "respuesta": false,
+      "explicacion": "Falso, y es uno de los hábitos que más tiempo cuesta. «Me da un error de tipos» no es información; el texto exacto, con archivo, línea, tipo y el dato entre comillas, sí lo es. Hay que copiarlo entero y literal, incluidas las líneas que uno no entiende, porque justo esas son las que otra persona sí va a entender y son la llave cuando llegue el momento de buscar ayuda."
+    },
+    {
+      "id": "aplicacion-rizoma",
+      "tipo": "abierta",
+      "enunciado": "El programa de riego de Rizoma del Sur recorre los doce lotes leyendo una planilla de humedades, calcula el promedio de cada sector y decide cuántos minutos abrir la válvula. Explicá qué errores de cada una de las tres familias son previsibles en ese programa concreto, cómo se leería el mensaje de cada uno, cuáles no van a producir mensaje alguno y qué disciplina de trabajo montarías desde hoy para que el aprendizaje no se pierda ni se quede en una sola persona.",
+      "respuestaModelo": "Familia uno, los que no arrancan. Son los más probables mientras se escribe y los más baratos: falta un paréntesis, falta una comilla, el sangrado no cuadra porque se mezclaron tabulaciones y espacios, o —muy típico en un proyecto donde el código se comparte por chat— el texto llegó con comillas tipográficas curvas y guiones largos porque pasó por un procesador de textos. El mensaje dirá SyntaxError o IndentationError con un número de línea, y la primera reacción correcta es mirar también la línea anterior, porque la máquina reporta donde se dio cuenta y no donde está el descuido. Lo importante es que aquí no se ejecutó nada: no hay planilla a medio escribir ni válvulas abiertas, así que se corrige la escritura y se vuelve a intentar sin consecuencias en el terreno.\n\nFamilia dos, los que se rompen a mitad. Son los que van a aparecer en cuanto el programa toque datos reales. La planilla trae humedades escritas como 45,2 con coma decimal, que es como se escribe un número en Bolivia, y la conversión a número falla con un ValueError que muestra el texto culpable entre comillas: la corrección es convertir la coma en punto en el mismo punto donde se lee el dato, con un comentario que explique por qué está esa línea. Si un sector se quedó sin lecturas anotadas, el promedio se calcula sobre cero mediciones y salta un ZeroDivisionError. Si el código pide el lote número 12 de una lista de doce elementos, salta un IndexError, porque el primero es el 0 y el último el 11. Si el archivo de lecturas no está donde el programa está parado, o su nombre lleva una tilde, salta un FileNotFoundError. Y si una función se olvidó de devolver resultado en una de sus ramas, más adelante aparecerá un AttributeError sobre un valor nulo, con la particularidad de que el mensaje sale en una línea y la causa está muy arriba, donde la rama no devolvió nada.\n\nEn todos estos casos la lectura es la misma: última línea para saber qué pasó, líneas de arriba para saber dónde, y dentro de la pila de llamadas buscar la línea más profunda que sea código propio. Lo grave de esta familia en Rizoma es el estado a medias: si el programa revienta mientras recorre el lote 7, entre abrir la válvula y cerrarla, los lotes 1 a 6 quedaron regados, del 8 al 12 no se regó nadie y la válvula del 7 quedó abierta toda la noche. Por eso el respaldo no puede ser el mismo programa que se rompió: hace falta el temporizador físico y el fallo hacia cerrado del módulo de automatización. Y la pila dirá en qué lote se detuvo, que es justo lo que hace falta para saber qué válvula ir a cerrar a mano.\n\nFamilia tres, los que callan. Son los que no van a dar ningún mensaje y los que pueden costar una tanda. Si el recorrido va del 0 al 10 en vez de al 11, el lote 12 no se riega nunca y nadie se entera hasta que alguien camine hasta el fondo. Si un dato como 1.200 —mil doscientos con punto de millar— se convierte sin avisar, la máquina lo entiende como uno coma dos y la decisión sale absurda sin protestar. Si al arreglar la división entre cero se rellena con un cero la humedad de un sector sin medir, se convierte un error que hablaba en uno que calla, porque un sector sin medir no tiene humedad cero sino humedad desconocida, y con humedad cero el programa manda regar a fondo. Y en cada surazo llegan temperaturas de diez grados de madrugada, números perfectamente válidos que no producen ningún error y sí una decisión sin sentido si la regla se escribió pensando solo en el calor. Contra esta familia no hay mensaje que leer: solo sirve comparar con una verdad de afuera —la cuenta a mano, la tabla de traza en papel, el balde bajo el gotero, el suelo abierto con una pala— y ese método es la lección siguiente.\n\nLa disciplina que montaría desde hoy tiene cuatro piezas. Primero, una tarde de roturas deliberadas sobre una copia fechada del programa: borrar un paréntesis, escribir mal una variable, pedir el lote 12, meter una coma decimal, borrar la planilla, y leer con calma los cinco mensajes que salen, para conocerlos antes de encontrárselos a las seis de la tarde con las bandejas pidiendo agua. Segundo, leer el mensaje entero antes de tocar nada y cambiar una sola cosa por vez, porque tocar antes de leer destruye la evidencia y cambiar tres cosas a la vez impide saber cuál era. Tercero, un cuaderno de errores con una hoja por error: el mensaje copiado literal y completo, en inglés y sin resumir, qué se estaba haciendo, qué lo arregló y cuánto tardó. Cuarto, y decisivo por la misión del proyecto, que ese cuaderno sea de la comunidad: pegado en la pared del galpón, copiado al grupo, leído en el taller, para que la siguiente persona no pierda la tarde que ya se perdió una vez. Llevarlo no exige saber programar, solo saber copiar un texto sin resumirlo.",
+      "criterios": [
+        "Identifica errores concretos de familia uno en este programa (paréntesis, comillas, sangrado, comillas tipográficas venidas de un procesador de textos o de un chat).",
+        "Señala que en la familia uno no se ejecuta nada y por tanto no queda estado sucio ni consecuencias en el terreno.",
+        "Menciona la coma decimal boliviana como causa concreta de error de conversión y propone corregirla al leer el dato, no a mano en la planilla.",
+        "Prevé la división entre cero por un sector sin lecturas y explica por qué rellenar con cero convierte un error que habla en uno que calla.",
+        "Explica el índice fuera de rango con los doce lotes: el primero es el 0 y el último el 11.",
+        "Incluye al menos un caso de valor nulo o archivo no encontrado y comenta que la causa puede estar lejos del mensaje.",
+        "Describe la lectura correcta del mensaje: última línea para el qué, líneas de arriba para el dónde, línea más profunda que sea código propio.",
+        "Analiza el estado a medias de la familia dos con las válvulas y lo conecta con el temporizador físico y el fallo hacia cerrado.",
+        "Da al menos dos ejemplos de fallo silencioso propios del sitio (lote 12 nunca regado, punto de millar mal interpretado, surazo con temperaturas extremas).",
+        "Reconoce que contra la familia tres no hay mensaje y que solo sirve comparar con una verdad externa, remitiendo a la lección siguiente.",
+        "Propone la práctica de romper el programa a propósito sobre una copia fechada y leer los mensajes resultantes.",
+        "Propone el cuaderno de errores con mensaje literal y completo, y plantea compartirlo con la comunidad en vez de guardarlo para uno."
+      ],
+      "explicacion": "La respuesta completa no es una lista de errores sino una clasificación: qué avisa, qué avisa tarde y qué no avisa nunca. Lo que hay que ver con claridad es que las dos primeras familias entregan gratis la coordenada y la tercera no, y que en un vivero real la familia dos deja además trabajo a medias en el mundo físico. Todo lo que no habla —el lote que no se riega, el número mal convertido, la madrugada de surazo— solo se caza comparando con algo de afuera, y todo lo que sí habla solo rinde si el mensaje se lee entero y se guarda literal donde otra persona pueda encontrarlo."
+    }
+  ]
+}

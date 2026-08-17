@@ -1,0 +1,105 @@
+{
+  "preguntas": [
+    {
+      "id": "la-planta-no-come-compost",
+      "tipo": "opcion_multiple",
+      "enunciado": "«Una planta no come compost.» ¿Qué se sigue de tomarse esa frase en serio al aplicar un preparado biológico?",
+      "opciones": [
+        "Que el compost es una despensa cerrada: sus nutrientes están en compuestos que la raíz no puede absorber hasta que los microorganismos los mineralizan.",
+        "Que el efecto sobre el cultivo es indirecto y con retardo, porque la velocidad de entrega la fija la biología del suelo y no la dosis que aplicaste.",
+        "Que un material de relación C/N alta puede dejar menos nitrógeno disponible que antes, porque los descomponedores lo secuestran para construir su propio cuerpo.",
+        "Que aplicar más cantidad del mismo preparado acelera proporcionalmente la entrega de nutrientes a la planta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La incorrecta es la cuarta: la entrega no la limita cuánto pones, la limita la tasa de mineralización, que depende de temperatura, humedad, oxígeno y de cuántos microorganismos haya vivos. Aplicar más sobre una cola que ya iba llena no la procesa más rápido; encola más trabajo. Es la diferencia entre una llamada síncrona, que devuelve el valor, y encolar un job cuyos workers no controlas."
+    },
+    {
+      "id": "balance-de-masa",
+      "tipo": "verdadero_falso",
+      "enunciado": "Fermentando bien un bidón de estiércol y agua durante varios meses se puede conseguir un líquido con más nitrógeno del que llevaban las materias primas.",
+      "respuesta": false,
+      "explicacion": "Falso, y no es opinión: es conservación de masa. La fermentación transforma y redistribuye los átomos que entraron, pero no fabrica ninguno nuevo; de hecho puede perder nitrógeno por volatilización. El nutriente del preparado tiene un techo duro —lo que entró con las materias primas—, y el agua, que suele ser el 90 % o más del volumen, no aporta nada. Ninguna receta, ninguna fase lunar y ninguna cantidad de azúcar cambia esa aritmética."
+    },
+    {
+      "id": "aritmetica-del-liquido",
+      "tipo": "opcion_multiple",
+      "enunciado": "Haciendo la cuenta de la lección —20 kg de estiércol en 200 litros, aplicado al 5 % en mochilas de 20 litros—, ¿qué conclusiones son correctas?",
+      "opciones": [
+        "Una mochila entrega del orden de décimas de gramo de nitrógeno, mientras que 20 kg de hoja cosechada exportan del orden de decenas de gramos.",
+        "Para reponer con ese líquido lo que se llevó una sola cosecha de una cama harían falta del orden de cien a cuatrocientas mochilas.",
+        "El preparado sigue teniendo sentido, pero como inóculo, bioestimulante y aporte de micronutrientes, no como fertilización.",
+        "Los números de la lección sirven como valores de referencia que se pueden copiar a la etiqueta del preparado propio."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La incorrecta es la última. Los números son órdenes de magnitud para razonar, no una composición: la real varía muchísimo con el animal, su dieta, la cama y la edad del estiércol. Lo honesto es decir que sin análisis de laboratorio no se sabe qué lleva un preparado, y que si sirve o no en tu parcela lo decide un ensayo con testigo, no una tabla copiada."
+    },
+    {
+      "id": "cuatro-verbos",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué un litro puede cambiar algo cuando se inocula, pero no cuando se nutre?",
+      "opciones": [
+        "Porque un organismo vivo se multiplica en destino: lo que entregas es una población que se fabrica sola, no una masa de elementos.",
+        "Porque nutrir se mide en kilos y toneladas, y mover kilos de material en forma líquida obligaría a mover mil litros de agua.",
+        "Porque bioestimular y aportar micronutrientes también funcionan a dosis diminutas, ya que son señales o elementos que la planta necesita en cantidades minúsculas.",
+        "Porque los nutrientes de un fermentado están en una forma mucho más eficiente que la planta aprovecha casi al cien por cien."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y es el argumento comercial más repetido: no existe una forma «más eficiente» que salte la aritmética de masa. Un kilo de nitrógeno son mil gramos de nitrógeno, se presenten como se presenten. La regla que ordena todo el módulo es: para masa, sólido y en volumen; para señal, inóculo y micronutriente, líquido y en poca cantidad."
+    },
+    {
+      "id": "inoculo-que-no-prende",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si un inóculo se aplica vivo y es de la especie adecuada, se establecerá en cualquier suelo donde lo pongas.",
+      "respuesta": false,
+      "explicacion": "Falso: falta la tercera condición, que es la que más se ignora. Un suelo sano ya está poblado por miles de especies que compiten por el mismo carbono y el mismo espacio, y esa resistencia biótica rechaza a la mayoría de los recién llegados. Es el problema de desplegar un servicio nuevo donde ya corre otro que hace lo mismo y tiene todas las conexiones. De ahí la regla del módulo 5: primero el hábitat, después el habitante; el compost que crea el hábitat suele valer más que el inóculo que se pone encima."
+    },
+    {
+      "id": "cuatro-familias",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre las cuatro familias de preparados y lo que las separa, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Solo el compostaje aerobio termófilo higieniza, porque solo él sostiene temperatura alta en todo el volumen; ni el bocashi ni el fermentado líquido lo hacen de forma confiable.",
+        "El bocashi es fermentación y no compostaje: ciclo corto, volteos para que no se caliente, material vivo y muy activo pero no estabilizado y de vida corta.",
+        "El caldo mineral no es biológico: es química inorgánica cuya función es matar hongos y bacterias, y por eso es antagónico de lo que cultivan las otras tres familias.",
+        "El biol es la familia indicada cuando hace falta reponer materia orgánica en volumen en un lote."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte la elección: el biol es un líquido y por la aritmética de masa no puede reponer materia orgánica de un lote —eso pide metros cúbicos de sólido, que solo da el compost—. El biol se elige para llevar inóculo y señal en la mochila. Confundir las columnas de esa tabla de decisión es el error del que salen casi todos los demás del módulo."
+    },
+    {
+      "id": "costo-y-bioseguridad",
+      "tipo": "opcion_multiple",
+      "enunciado": "«Lo hago yo, así que es gratis.» ¿Qué le falta a esa cuenta, y qué riesgos propios trae fabricar en casa?",
+      "opciones": [
+        "Falta el costo de oportunidad de las horas: contadas a cero, cualquier preparado parece rentable y no hay forma de comparar dos opciones.",
+        "Faltan el acarreo —cientos de kilos por metro cúbico, así que la distancia a la fuente de estiércol es una variable de diseño—, el espacio ocupado durante meses y el tiempo de ciclo, que obliga a decidir con meses de anticipación.",
+        "Los riesgos propios son los patógenos entéricos del estiércol, la presión y los gases de un recipiente anaerobio, y el agua estancada como criadero de mosquito.",
+        "Al ser preparados naturales, el riesgo sanitario de aplicarlos sobre hoja que se come cruda es despreciable."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es exactamente la creencia que hay que romper: «natural» no dice nada sobre inocuidad. El estiércol fresco puede llevar bacterias intestinales y huevos de parásitos, y ni la fermentación sólida ni la líquida anaerobia los eliminan de forma fiable —solo la temperatura sostenida del compost termófilo—. Por eso un preparado no higienizado no va sobre partes que se comen crudas, y menos poco antes de cosechar."
+    },
+    {
+      "id": "plan-de-insumos-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Rizoma del Sur va a arrancar su producción de insumos propios en sus 3.666 m² repartidos en 12 lotes. Con todo lo de esta lección, escribe el razonamiento completo: qué problema se está resolviendo, en qué orden entran los preparados y por qué, cómo se dimensiona con la mano de obra y el calendario, dónde se instala la zona de insumos, qué reglas de bioseguridad se fijan desde el primer día, y qué se registra para poder comprobarlo dentro de cinco años.",
+      "respuestaModelo": "Lo primero es nombrar el problema, porque la respuesta ordena todo lo demás. El problema de Rizoma no es la falta de un bioestimulante: es volumen de materia orgánica. El suelo es de llanura aluvial con arcillas expansivas, el clima tropical mineraliza la materia orgánica tres o cuatro veces más rápido que un clima templado, y hay 3.666 m² a los que hay que reponerla todos los años. Eso se resuelve con toneladas de sólido, no con litros de líquido, y la aritmética de la lección lo demuestra: un bidón de 200 litros contiene, como techo, el nitrógeno que entró con sus materias primas, del orden de decenas de gramos, mientras que una sola cosecha de una cama ya exporta esa cantidad. El líquido no mueve la aguja de un lote y no hay receta que cambie eso.\n\nDe ahí sale el orden de prioridad. Primero el compost termófilo, porque es el único que da volumen y además el único que higieniza. Segundo la lombriz, cuyo producto no va al campo sino al sustrato del vivero, que es donde la calidad se paga y donde el volumen necesario es pequeño. Tercero el bocashi, como arranque rápido cuando hace falta material y no hay cuatro meses, aceptando que no está estabilizado, no está higienizado y no dura. Cuarto los líquidos —biol, purines, té de compost— entendidos como inóculo y bioestimulante y nunca como fertilización. Y quinto los caldos minerales, que no son biológicos: son biocidas, matan justamente lo que las otras cuatro columnas cultivan, y entran solo por el peldaño que les corresponde en el manejo integrado del módulo 11, nunca por calendario.\n\nEl dimensionamiento se hace por mano de obra, no por entusiasmo. La pregunta del primer año no es qué receta usar, sino cuántos metros cúbicos de compost se pueden producir con las horas que hay de verdad y qué fracción del predio alcanzan a cubrir. Casi seguro será uno o dos lotes, no doce, y conviene empezar por los que van a producir primero. Las materias primas ya están: la biomasa leñosa del desmonte como carbono y la gallinaza cercana como nitrógeno, más restos del vivero. El acarreo es masa —un metro cúbico pesa cientos de kilos—, así que la distancia a la fuente de estiércol es una variable de diseño, no un detalle. Y el tiempo de ciclo obliga a decidir con anticipación: si el compost tarda meses y se necesita en octubre, la decisión se toma en junio.\n\nLa zona de insumos necesita metros asignados en el plano, con cuatro condiciones: media sombra, porque a pleno sol la pila se seca y el lecho de lombriz se muere; cerca de una llave de agua; accesible en carretilla desde la tranquera por donde entra el estiércol; y fuera del punto bajo del terreno, que en lluvias se encharca. Esa superficie sale de la superficie productiva: no es espacio libre, es espacio invertido. Y hacen falta techo y drenaje, porque en la llanura los dos fallos reales son la pila que se seca de mayo a septiembre y la que se ahoga de octubre a abril.\n\nLas reglas de bioseguridad se fijan el primer día. Los restos de plátano sospechoso no van a bocashi ni a fermentado, porque ninguno de los dos higieniza, y el compost solo sirve si alcanzó temperatura en todo el volumen, bordes incluidos: mover material entre lotes es el vector de los hongos de suelo que no tienen cura. Sobre el culantro y cualquier hoja que se coma cruda, solo preparados higienizados y con un intervalo generoso antes de cosechar; si hay que probar un biol, que sea en frutales, ornamentales o plantines de vivero. Los bidones de fermentación llevan sello de agua, se abren al aire libre y de lado, nunca en un cuarto cerrado, y nunca se asoma la cabeza dentro. Y como el dengue es endémico en la zona, todo recipiente va tapado o con mosquitero atado y lo que no se usa se guarda boca abajo; la revisión entra en la ronda semanal junto con la del riego, y conviene consultar las medidas vigentes con el personal de salud del centro más cercano en vez de suponerlas.\n\nHay un criterio final que en Rizoma manda sobre los demás: el proyecto no fabrica insumos para sí mismo, fabrica para enseñar a fabricar. Por eso el mejor preparado no es el que más rinde en la parcela grande, sino el que un vecino puede repetir en su casa sin bomba de aire, sin bidones nuevos y sin comprar nada. Un preparado que exige comprar algo no se puede regalar y no cumple la misión, y a alguien con veinte metros cuadrados hay que decirle que no le hace falta un metro cúbico de pila.\n\nY se registra todo por tanda: fecha de armado, materias primas y proporciones, temperaturas, fechas de volteo, fecha de uso y qué se observó. Ese registro es la materia prima de la última lección del módulo, la que enseña a comprobar con un testigo si el preparado hace algo. Sin él, dentro de cinco años habrá cinco años de experiencia y ningún dato que compartir con la comunidad.",
+      "criterios": [
+        "Nombra el problema real de Rizoma —volumen de materia orgánica en clima que la mineraliza rápido— y no un déficit de bioestimulante.",
+        "Usa el balance de masa para descartar el líquido como vía de reposición de nutrientes en un lote.",
+        "Ordena los cinco preparados por prioridad y justifica el primer puesto del compost por volumen y por higienización.",
+        "Coloca el humus de lombriz en el sustrato del vivero y no como enmienda de campo.",
+        "Trata los caldos minerales como biocidas dentro del manejo integrado y nunca por calendario.",
+        "Dimensiona por mano de obra real y concluye con uno o dos lotes el primer año, no con doce.",
+        "Cuenta el acarreo como masa y la distancia a la fuente de estiércol como variable de diseño.",
+        "Aplica el tiempo de ciclo para decidir con meses de anticipación.",
+        "Sitúa la zona de insumos con sombra, agua, acceso y fuera del punto bajo, y reconoce que ocupa superficie productiva.",
+        "Fija la regla del plátano: nada sospechoso a bocashi ni a fermentado, y compost solo si alcanzó temperatura en todo el volumen.",
+        "Restringe los preparados no higienizados sobre hoja que se come cruda y fija un intervalo antes de cosecha.",
+        "Incluye sello de agua, apertura al aire libre y la disciplina de recipientes tapados por el dengue.",
+        "Define el registro por tanda y lo conecta con el ensayo con testigo de la última lección."
+      ],
+      "explicacion": "Fíjate en que casi ninguna decisión de esta respuesta es una receta: son decisiones de arquitectura y de presupuesto —qué problema resuelvo, con qué unidad se mide, cuánta mano de obra tengo, qué riesgo introduzco y qué registro dejo—. Eso es exactamente lo que hace esta lección antes de que las siguientes enseñen a fabricar. La lección 02 abre el primer proceso, el compost termófilo, y se dedica entera a por qué la mayoría fracasa."
+    }
+  ]
+}

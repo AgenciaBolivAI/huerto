@@ -1,0 +1,389 @@
+La lección anterior dejó un diagnóstico y ninguna solución: el suelo se pierde por el golpe de la gota,
+por la costra que ese golpe forma y por el agua y el viento que se llevan lo que quedó suelto. Y ocurre
+en una llanura donde nadie diría que hay pendiente.
+
+Esta lección es la respuesta. Tiene tres partes y una particularidad incómoda: **la más eficaz de las
+tres es también la más barata y la que no necesita herramientas**. No es la que sale en las fotos.
+
+## Tres defensas, y el orden que casi todos invierten
+
+La erosión es un problema de energía. Llega energía del cielo —cada gota trae la suya— y se acumula
+energía cuando el agua que no entró empieza a correr y toma velocidad. El daño lo hace esa energía, no el
+agua. De ahí salen exactamente tres defensas, ordenadas por dónde intervienen.
+
+**Impedir que la energía llegue al suelo.** Es la cobertura: algo entre la gota y la tierra, para que el
+golpe lo reciba el material y no el agregado.
+
+**Frenar el agua que ya corre.** Son las barreras sobre la curva de nivel. No detienen el flujo: le bajan
+la velocidad, y con la velocidad se desploma su capacidad de arrastre.
+
+**Conducir o retener el sobrante en un sitio elegido.** Zanjas, camellones y microrrelieve, que son la
+lección siguiente.
+
+Casi todo el mundo empieza por la tercera y se olvida de la primera. Es el orden inverso al que dicta el
+mecanismo, y es caro: la obra de tierra cuesta jornales o maquinaria, la barrera cuesta dos años de
+establecimiento, y la cobertura cuesta juntar material que muchas veces ya está tirado en el terreno.
+
+<Analogia titulo="Validar en la entrada, no limpiar la base de datos">
+Quien haya mantenido un sistema con datos sucios conoce la jerarquía: rutinas de limpieza nocturnas,
+restricciones en el motor, o **validar donde el dato entra**. La última es la única barata, y las otras
+dos existen porque nunca es perfecta.
+
+La cobertura es esa validación en la entrada: actúa en el metro cuadrado donde cae la gota. La barrera es
+el limitador de caudal aguas abajo. La obra de tierra es la cola que absorbe el pico.
+</Analogia>
+
+## Por qué la cobertura gana: ahí es donde se gasta la energía
+
+Un milímetro de lluvia sobre un metro cuadrado es un litro de agua, y un litro es un kilo. Ese kilo no
+cae posado: cae a la velocidad en que el rozamiento del aire equilibra su peso, del orden de 8 a 9 metros
+por segundo en las gotas gruesas de tormenta.
+
+<Formula explicacion="Orden de magnitud, no medición: en una lluvia real las gotas tienen tamaños y velocidades distintas. Lo que importa es que la velocidad entra al cuadrado, así que una tormenta de gota gruesa no golpea el doble que una llovizna: golpea muchas veces más.">
+E = ½ · m · v²  →  ½ × 1 kg × (9 m/s)² ≈ 40 julios por cada mm de lluvia y por cada m²
+</Formula>
+
+Un chaparrón de 60 milímetros descarga del orden de **2.400 julios sobre cada metro cuadrado de suelo
+desnudo**, en pocos minutos y en golpes de un centímetro de diámetro. Ese es el trabajo que rompe
+agregados, libera partículas finas y las mete en los poros hasta formar la costra que impide entrar al
+agua siguiente. Y aquí está el punto que ordena la lección: **ese trabajo se gasta entero en el primer
+objeto que la gota encuentra**. Si encuentra una hoja seca, se gasta en la hoja.
+
+<Dato titulo="La cobertura no protege por tapar: protege por absorber">
+El mérito no es visual, es mecánico: el material se deforma y en esa deformación se disipa la energía
+cinética de la gota. Por eso **una capa fina pero continua funciona mejor que un montón grueso en un
+rincón**: no hace falta que la cobertura esté entera, hace falta que esté en el camino de la gota.
+</Dato>
+
+Hay un segundo efecto que en la llanura vale tanto como el primero. Lo que una corriente puede llevar en
+suspensión es su <Termino slug="capacidad-de-transporte">capacidad de transporte</Termino>, y crece muy
+deprisa con la velocidad: al bajarla a la mitad, el arrastre no baja a la mitad sino mucho más. Y una
+superficie cubierta de restos tiene
+una <Termino slug="rugosidad-hidraulica">rugosidad hidráulica</Termino> altísima: el agua no encuentra
+lámina lisa por la que deslizarse, encuentra un laberinto.
+
+## Cuánta cobertura hace falta, y cómo se mide sin comprar nada
+
+La pregunta correcta no es «¿cubro o no cubro?» sino **«¿qué porcentaje del suelo está cubierto?»**,
+porque la relación entre esa cifra y la pérdida no es proporcional: es una curva que baja muy rápido al
+principio y luego se aplana.
+
+<Formula explicacion="La forma de la curva es lo que importa. El coeficiente b depende del material —paja, hoja ancha, restos leñosos picados— y hay que tomarlo de trabajo publicado, no inventarlo.">
+pérdida relativa de suelo ≈ e^(−b × porcentaje de suelo cubierto)
+</Formula>
+
+Traducido: **cubrir un tercio del suelo evita alrededor de la mitad de la pérdida, y llegar al 70 u 80 %
+evita la mayor parte**. Pasar del 80 al 95 % es mucho trabajo para poco resultado. Es un permiso enorme
+para quien no tiene material de sobra: no hace falta perfección, hace falta llegar al umbral.
+
+Y ese porcentaje se mide, no se estima a ojo. Hay un método que cuesta lo que cuesta una cuerda y se
+llama <Termino slug="transecto-de-puntos">transecto de puntos</Termino>: una cuerda de 10 metros con **50
+marcas cada 20 centímetros**, tendida en diagonal a las hileras; en cada marca se mira verticalmente hacia
+abajo y se anota si hay material o tierra desnuda. Cada marca vale 2 %.
+
+<Advertencia titulo="Lo que la cobertura cuesta de verdad, sin adornos">
+**Hay que producir la biomasa**: media hectárea cubierta son toneladas de material seco que salen de
+podas, desmalezado, rastrojo y abonos verdes. **En el trópico se mineraliza rápido**, así que una capa que
+en clima templado duraría un año desaparece aquí en meses. **Da refugio a babosas, caracoles y roedores**,
+de modo que cerca de las bandejas conviene dejar una franja despejada. **En la seca es combustible.** **Y
+el material muy fino se apelmaza** hasta formar una lámina que llega a repeler el agua.
+</Advertencia>
+
+## La curva de nivel: la línea por la que el agua no puede correr
+
+Una <Termino slug="curva-de-nivel">curva de nivel</Termino> es el conjunto de puntos del terreno que
+están **a la misma altura**. No es recta ni se parece al lindero: serpentea, se mete en las hondonadas y
+rodea los altos. Si caminas exactamente sobre ella, no subes ni bajas.
+
+De ahí sale su utilidad. El agua se mueve hacia abajo, y sobre una curva de nivel no hay abajo: **el agua
+puesta sobre ella solo puede quedarse o cruzarla**. Y la dirección en que la cruzaría, la de máxima caída,
+es siempre perpendicular a la curva. Eso es
+la <Termino slug="linea-de-maxima-pendiente">línea de máxima pendiente</Termino>, y es por donde el agua
+corre de verdad.
+
+<Analogia titulo="Curvas de nivel y líneas equipotenciales">
+Las curvas de nivel son **líneas equipotenciales**: puntos con la misma energía potencial gravitatoria, y
+el flujo va siempre **perpendicular a la equipotencial**. De ahí la regla de diseño entera: **lo que
+quieras que frene el flujo se coloca sobre la equipotencial**. Una barrera trazada en otra dirección no
+frena el agua: la conduce a lo largo de sí misma hasta abrir un socavón en su punto más bajo.
+</Analogia>
+
+La separación entre dos barreras no se decide en metros sino por el desnivel que se acepta entre una y la
+siguiente. Ese desnivel es el <Termino slug="intervalo-vertical">intervalo vertical</Termino>, y la
+distancia por el suelo sale de dividirlo por la pendiente.
+
+<Formula explicacion="La pendiente va en tanto por uno: 2 % es 0,02 y 0,3 % es 0,003. Explica por qué copiar el espaciamiento de un manual de valle a un terreno plano no tiene ningún sentido.">
+distancia entre barreras = intervalo vertical ÷ pendiente
+</Formula>
+
+Con un intervalo vertical de 20 centímetros, en una ladera del 2 % las barreras van cada 10 metros; en un
+terreno del 0,3 %, como buena parte de la llanura cruceña, van **cada 66 metros**: en una parcela pequeña
+eso puede ser una sola barrera, o ninguna. No toda parcela necesita curvas de nivel. Lo que toda parcela
+necesita es haber medido.
+
+## Trazar una curva con nivel de manguera
+
+El <Termino slug="nivel-de-manguera">nivel de manguera</Termino> ya apareció en el módulo de preparación
+de tierra para levantar cotas. Aquí se usa de otra forma: en vez de medir puntos sueltos, se camina la
+parcela **dejando estacas todas a la misma altura**. Esa fila de estacas es una curva de nivel dibujada
+en el suelo.
+
+La física es la de los <Termino slug="vasos-comunicantes">vasos comunicantes</Termino>: en un líquido en
+reposo la presión de un punto depende sólo de la altura de columna que tiene encima, así que si dos
+columnas están conectadas por abajo y abiertas arriba a la misma atmósfera, la única forma de que se
+equilibren es que **las dos superficies libres queden a la misma altura**. No importa la forma del
+recipiente ni que el tubo suba y baje por el medio.
+
+Hacen falta una manguera transparente de 10 a 20 metros, agua, dos listones rectos e iguales, estacas y
+un martillo. Si la de casa no es transparente, basta empalmar medio metro transparente en cada extremo.
+
+1. Se marcan los dos listones **a la misma altura desde el pie**, por ejemplo a un metro. Esa marca ya no
+   se toca.
+2. Se llena la manguera, **se purga el aire** y se ata un extremo a cada listón, dejándolos **abiertos**.
+3. A clava su listón en el punto de partida y lo mantiene vertical; B camina con el otro hasta donde da
+   la manguera y sube o baja el suyo hasta que **el agua queda en la marca en los dos extremos a la vez**.
+4. Los dos pies están entonces a la misma altura: ahí clava estaca. A se pone donde estaba B, B avanza, y
+   otra vez.
+
+<Advertencia titulo="Los cinco errores que arruinan una lectura de manguera">
+**Una burbuja de aire** rompe la continuidad de la columna y falsea la lectura sin dar ninguna señal: es
+el error número uno. **Leer el menisco distinto en cada extremo** también desvía: se elige un criterio y
+se usa toda la jornada. **El listón inclinado** deja el pie donde no se cree, y una plomada lo resuelve.
+**El sol sobre un lado de la manguera** dilata el agua caliente. Y **un extremo tapado con el dedo** quita
+la presión atmosférica sobre esa columna: los dos abiertos, siempre.
+</Advertencia>
+
+Una comprobación que cuesta media hora y ahorra una temporada: al terminar, **cerrar el recorrido**
+volviendo al punto de partida por otro camino. Si la última estaca no cae a la altura de la primera, esa
+diferencia es el <Termino slug="error-de-cierre">error de cierre</Termino> y dice cuánta confianza merece
+el trazado. No dice dónde está el fallo, pero dice si lo hay.
+
+## El nivel en A, y la calibración que casi nadie hace
+
+El <Termino slug="nivel-en-a">nivel en A</Termino> es el instrumento más barato que existe y se construye
+en una tarde con tres palos: dos patas iguales de unos dos metros unidas arriba en A, un travesaño
+horizontal hacia la mitad, y del vértice una plomada que roza el travesaño.
+
+Cuando las dos patas se apoyan en puntos de la misma altura el aparato queda simétrico y **la plomada cae
+por un punto concreto del travesaño**. Ese punto es la marca de nivel; encontrar dos apoyos donde la
+plomada caiga ahí es haber encontrado dos puntos de la misma curva. Se avanza «de pata en pata»: se deja
+una quieta y se gira la otra buscando la marca.
+
+<Dato titulo="Calibración por inversión: calibrar sin tener otro instrumento">
+Nadie hace las dos patas exactamente iguales ni clava el travesaño perfectamente centrado, así que la
+marca hay que encontrarla, no suponerla.
+
+Se apoya el aparato en dos puntos cualesquiera y se marca **dónde cae la plomada**: marca uno. Sin mover
+los apoyos, se levanta, se gira 180° y se vuelve a apoyar **con cada pata en el hueco donde estaba la
+otra**: marca dos. Si coinciden, está calibrado. Si no —lo normal—, **el punto verdadero de nivel es el
+punto medio entre las dos marcas**, porque al invertirlo el defecto cambia de signo pero no de tamaño y el
+promedio lo cancela. Esa <Termino slug="calibracion-por-inversion">calibración por inversión</Termino> no
+necesita un segundo instrumento con el que comparar: funciona donde no hay nada que comprar.
+</Dato>
+
+<Analogia titulo="Error aleatorio contra error sistemático">
+Un **error aleatorio** cambia de signo cada vez y al encadenar pasos se compensa en parte: es el ruido de
+un sensor. Un **error sistemático** siempre empuja al mismo lado: medio centímetro de más en cada apoyo
+son, a los cincuenta apoyos, 25 centímetros de deriva, y la «curva de nivel» resultante es una rampa. De
+ahí que **un instrumento con más resolución pero sin calibrar sea peor que uno tosco y calibrado**, y que
+la manguera acumule menos error por metro trazado que el nivel en A, que avanza de dos en dos.
+</Analogia>
+
+Y un atajo que no lo es: el **GPS de un teléfono** tiene error vertical de varios metros.
+
+## De la fila de estacas a la línea que se planta
+
+La curva que sale de la caminata viene ondulada. No se planta tal cual, se **suaviza**, porque en cada
+recodo cerrado el agua converge, gana velocidad y abre justo ahí el socavón que la barrera pretendía
+evitar.
+
+Y hay una decisión con dos respuestas legítimas. **Nivel exacto** significa retener e infiltrar, y es lo
+correcto donde el suelo infiltra y el agua es el recurso escaso. **Pendiente muy pequeña y controlada**,
+de una o dos décimas de porcentaje, significa conducir el agua despacio hacia una salida elegida, y es lo
+correcto donde el suelo no infiltra y retener significaría encharcar.
+
+<Advertencia titulo="En arcilla expansiva, retener todo puede ser peor que dejar ir">
+Un suelo <Termino slug="arcilla-expansiva">arcilloso expansivo</Termino> como el del sur de Santa Cruz se
+sella cuando está húmedo y deja de admitir agua. Diseñar para retención total sobre un suelo así no
+infiltra más: encharca más tiempo, y eso asfixia raíces. En llanura pesada la respuesta suele ser **frenar
+y repartir**, con salida controlada.
+
+Y el aviso duro de la llanura: con pendientes de dos o tres décimas de porcentaje, **un error de trazado
+de pocos centímetros invierte el sentido del flujo**. O se mide, o no se traza.
+</Advertencia>
+
+## Barreras vivas: no paran el agua, la frenan
+
+Una <Termino slug="barrera-viva">barrera viva</Termino> es una franja estrecha de vegetación permanente y
+densa, plantada a lo largo de la curva de nivel, cuya función es frenar el agua que corre y filtrar el
+sedimento que lleva. No es un cerco perimetral ni una cortina rompevientos: **mira al agua y va atravesada
+a la pendiente**.
+
+La palabra «barrera» engaña. Una barrera viva **no detiene el agua**: si lo hiciera, se acumularía hasta
+rebasarla por su punto más bajo y saldría con toda la energía junta. La deja pasar despacio, se desploma
+su capacidad de transporte, y el sedimento **se deposita aguas arriba de la barrera**.
+
+<Dato titulo="La terraza que se construye sola">
+Ese depósito es el objetivo. Temporada tras temporada el suelo retenido se acumula del lado de arriba y
+el terreno se rebaja del de abajo, hasta que donde había una línea de plantas hay un **escalón**. Eso es
+una <Termino slug="terraza-de-formacion-lenta">terraza de formación lenta</Termino>: **la obra de tierra
+la hace el agua y la paga la gravedad**.
+
+De aquí sale un requisito de especie decisivo: la barrera tiene que **tolerar quedar enterrada y seguir
+rebrotando por encima**. Una planta que muere cuando le tapan el cuello no puede construir una terraza,
+porque el proceso consiste justamente en irla enterrando.
+</Dato>
+
+## Qué se planta, y la versión de coste cero
+
+La especie concreta depende del sitio y hay que verificarla localmente. Lo universal son los requisitos, y
+una barrera que falle en cualquiera de ellos no funciona por bonita que se vea.
+
+<Tabla>
+
+| Requisito | Por qué, mecánicamente |
+| --- | --- |
+| **Densa en la base** | Un hueco concentra el flujo y abre ahí el socavón; el agua busca el punto débil |
+| **Permanente** | Si se cosecha entera o se seca, falta el día del chaparrón, el único que importa |
+| **Erguida y macolladora** | Frena por rozamiento sin tumbarse; una rastrera se aplasta con el flujo |
+| **Que tolere el enterramiento** | Permite que se forme la terraza en vez de matar la barrera |
+| **Que no se escape ni hospede plagas** | Un rizoma trazador se vuelve maleza; vegetación permanente puede albergar el problema todo el año |
+| **Que dé algo** | Forraje, cobertura o flor: una barrera que no produce se abandona |
+
+</Tabla>
+
+El porte erguido tiene nombre propio en las gramíneas: interesa una
+planta <Termino slug="macollador">macolladora</Termino>, de las que emiten muchos brotes desde la base y
+forman una mata compacta en lugar de extenderse por el suelo. Esa mata es el peine que frena la lámina de
+agua. En el trópico la especie clásica es el vetiver, gramínea macolladora de raíz profunda usada para
+esto en muchos países; las leguminosas arbustivas también sirven y el gandul es candidato obvio. **Pero
+qué hay disponible en Santa Cruz, cómo se comporta en arcilla expansiva y qué plagas del catálogo puede
+hospedar cada especie son preguntas con respuesta local**: se consultan con el CIAT, con el INIAF o con
+productores de la zona. Y lo que decide el resultado no es el ancho de la franja sino **la continuidad**:
+una hilera única y densa ya hace la mayor parte del trabajo, y dos o tres
+al <Termino slug="tresbolillo">tresbolillo</Termino> cierran lo que el flujo buscaría.
+
+Donde hace falta protección **este año** y la viva tardará dos, existe la versión inerte.
+Una <Termino slug="barrera-muerta">barrera muerta</Termino> es una línea de material sólido sobre la
+curva: piedra alineada, troncos y ramas del desmonte, rastrojo sujeto con estacas. **Funciona desde el
+día que se coloca**, pero no se regenera; lo clásico es usarla de andamio y plantar la viva detrás,
+protegida por ella.
+
+Y queda una función que casi nadie aprovecha: **la barrera es un sensor**. El sedimento acumulado mide el
+suelo que se está moviendo por encima, así que si cada temporada hay que subir tierra depositada, está
+avisando de que **la cobertura aguas arriba está fallando**. Se instrumenta con una estaca clavada al
+plantar y una foto desde un punto fijo cada año.
+
+## Aplicación práctica
+
+<AplicarRizoma>
+**Lo primero es aceptar que en Rizoma del Sur puede no haber curvas de nivel que trazar, y que eso sería
+un buen resultado, no un fracaso.** Los 3.666 m² están en la llanura de Zanja Honda, a unos 529 metros
+sobre el nivel del mar, en un terreno que a ojo es plano. Si el levantamiento arroja una pendiente de tres
+décimas de porcentaje, un intervalo vertical de 20 centímetros pone las barreras **a más de 60 metros unas
+de otras**: una o dos líneas en total. Y si el desnivel de punta a punta resulta ser de cinco centímetros,
+aquí no manda la curva de nivel: manda la cobertura, y el resto del esfuerzo va al microrrelieve y al
+drenaje de las lecciones siguientes.
+
+**La secuencia empieza midiendo, y la medición es de una tarde.** Dos personas, una manguera transparente
+de 15 metros, dos listones marcados a un metro, estacas. Se levanta una rejilla de puntos cada 15 o 20
+metros cubriendo los 12 lotes, con referencia en un punto permanente que no se vaya a mover: una esquina
+de obra, un poste hormigonado. Se anota en tres columnas —punto, altura, observaciones— y se apunta el
+error de cierre. Ese cuaderno es el primer dato duro del módulo: se hace bien una vez y no se repite.
+
+**Mientras tanto, la cobertura empieza sin esperar a nada**, porque no necesita trazado ni permiso, no
+depende de que haya luz —que aquí se corta a menudo— ni de que haya plata, y se puede hacer por metros
+cuadrados sueltos. Por orden: los lotes vacíos, que son la mayor superficie desnuda; los pasillos del
+vivero, compactados por pisadas y por eso los que peor infiltran; los taludes y bordes de camas; y los
+puntos por donde el agua entra y sale, que es donde el flujo se concentra y abre cárcava.
+
+**Cuánto material hace falta, calculado por ti y no copiado.** Se cubre **un metro cuadrado** tal como
+quieres que quede toda la parcela, se recoge ese material, se pesa en una balanza de cocina y se
+multiplica por la superficie. Si un metro cuadrado bien cubierto pide medio kilo de material seco, cubrir
+los 3.666 m² pide del orden de **1.800 kilos**. Ese número explica por qué la cobertura se implanta por
+partes y por qué la biomasa hay que producirla en el sitio —abonos verdes, podas, desmalezado— en vez de
+soñar con traerla en camión. Y cada mes se mide con la cuerda, con la meta en el 70 % y no en el 100 %.
+
+**Las barreras, si el levantamiento las justifica, tienen aquí una complicación que no es técnica.** Los
+12 lotes son contiguos y las curvas de nivel no saben nada de linderos: cruzan de un lote a otro en
+diagonal, una barrera bien trazada puede tener que continuar en el terreno del vecino, y el agua que llega
+viene del lote de arriba, que no es de Rizoma. **La unidad natural de manejo del agua no es la
+propiedad**, y eso obliga a hablar con los vecinos antes que a clavar estacas. Lo que sí se puede empezar
+solo es una línea de gandul sobre la curva en el borde por donde el agua sale: ya está decidido aquí para
+la cortina del sur y para el compost, así que suma la función de barrera sin ocupar superficie nueva.
+
+**Dos precauciones locales y el costo real.** La cobertura no acumula agua libre, así que no es criadero
+de mosquito: en zona de dengue lo que se vigila son los recipientes estancados. Antes de cada seca se
+limpia el pie del cerco, porque una parcela cubierta es un cortafuegos frente al fuego de fuera sólo si la
+línea de combustible no llega hasta el alambre. Y el costo total es una manguera, dos listones, una tarde
+de dos personas, una cuerda con cincuenta marcas, y después mover material sobre el suelo cada temporada:
+el único gasto recurrente, y el que decide si esta lección se aplicó.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**En Bolivia, «curvas de nivel» suena a valle y a altiplano, no a llanura.** Y con razón histórica: las
+terrazas y andenes andinos son obra de siglos y son la demostración más sólida de que estas técnicas
+funcionan cuando se mantienen durante generaciones. En los Llanos de Mojos, en el Beni, hay además miles
+de hectáreas de camellones precolombinos que resolvieron el problema inverso —exceso de agua en llanura—
+con movimiento de tierra. Bolivia no tiene que importar el concepto: lo tiene en el paisaje.
+
+**Lo que cambia en el área integrada de Santa Cruz es el diagnóstico dominante.** Aquí el problema grande
+no suele ser el arrastre por pendiente, sino el suelo desnudo entre campañas: la lluvia sella la
+superficie, la escorrentía se lleva la capa más fértil aunque el terreno parezca plano, y en la seca el
+viento levanta lo que quedó suelto. Por eso, en esta llanura, el orden de las tres defensas se inclina
+todavía más del lado de la cobertura. Y el clima añade dos correcciones a los manuales templados: con
+calor y humedad la cobertura se mineraliza en meses, y aquí no llueve suave y largo sino en chaparrones
+concentrados, así que un diseño calculado con la media anual se queda corto el día que hace falta.
+
+**Y hay una ventaja práctica: la cobertura no es una idea importada.** La siembra directa está muy
+asentada en el sistema agrícola cruceño, con ella los cultivos de cobertura entre campañas, y las cortinas
+rompevientos son un elemento visible del paisaje del este del departamento. Eso significa que **el
+vocabulario es conocido** y que **la semilla se consigue** en las casas comerciales de Santa Cruz. Lo que
+hay que traducir son las escalas: esas recomendaciones están pensadas para hectáreas y sembradora, y
+Rizoma tiene 3.666 m² y siembra a mano. Del mismo modo, **el nivel de manguera y el nivel en A son de uso
+corriente en el campo boliviano**: si preguntas por «nivel en A», mucha gente mayor sabrá qué es.
+
+**El chaqueo y la quema de rastrojo son el punto de fricción, y conviene entenderlos antes de opinar.** Se
+quema porque es rápido, porque deja el terreno limpio para sembrar y porque se cree que elimina plagas y
+malezas: no es irracional, resuelve un problema real de trabajo con el recurso más escaso, que es el
+tiempo. En la balanza hay que poner lo que se pierde: la cobertura de toda la temporada, el carbono que se
+va como humo, y el suelo desnudo justo antes de las primeras lluvias fuertes. Explicado así —lo que
+cuesta, no lo que está mal— la conversación con un vecino cambia.
+
+**Y la regla de honestidad que este curso no rompe.** Aquí no hay una lista de especies de barrera viva
+recomendadas con nombre propio para Zanja Honda, y no la hay a propósito: qué gramínea macolla bien en
+esta arcilla, cuál tolera quedar enterrada por sedimento, cuál se escapa al cultivo y cuál hospeda las
+plagas del catálogo son preguntas con respuesta local. Se consultan con el **CIAT** de Santa Cruz, con el
+**INIAF** o con productores de la zona. Y si existen disposiciones municipales o departamentales sobre
+quemas, franjas de protección o manejo de cauces, **se consultan con la autoridad competente**: este curso
+no inventa normativa, ni números de ley, ni plazos.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Primero hago las zanjas y después ya veré lo de cubrir.»** Es el orden invertido: la obra de tierra
+intenta manejar aguas abajo un problema que la cobertura habría evitado arriba.
+
+**«Traza la curva a ojo, si esto es plano.»** Precisamente porque es plano: con pendientes de dos o tres
+décimas de porcentaje, unos centímetros de error invierten el sentido del flujo.
+
+**«El nivel en A ya viene derecho.»** No. Medio centímetro sistemático por apoyo son 25 centímetros de
+deriva a los cincuenta pasos. Se calibra por inversión antes del primer uso.
+
+**«La barrera tiene que parar el agua.»** Si la para, el agua se acumula y sale por el punto más bajo con
+toda la energía junta. La barrera frena y filtra.
+
+**«Cubrí el 40 % y no se nota, mejor lo dejo.»** Sí se nota: ese 40 % ya evita más de la mitad de la
+pérdida, y abandonar a mitad es tirar el trabajo hecho.
+
+## Lo que sigue
+
+Quedan cubiertas dos de las tres defensas: la cobertura impide que la energía de la gota llegue al suelo,
+y la curva de nivel da la única línea sobre la que una barrera tiene sentido. Falta la tercera, que decide
+qué pasa con el agua sobrante. Porque hasta aquí se ha hablado de defenderse de la lluvia, y en una zona
+con siete meses de lluvias y cinco de seca dura, esa misma lluvia es el recurso que va a faltar en agosto.
+
+La siguiente lección, **retener la lluvia**, entra ahí: cómo se retiene el agua a escala de parcela en vez
+de dejarla ir, qué son y cómo se dimensionan las zanjas de infiltración, cómo trabajan los camellones y el
+microrrelieve, y cuál es el equilibrio —el más delicado del módulo— entre retener lo suficiente para que
+llegue a la seca y no retener tanto que el suelo se ahogue en enero.

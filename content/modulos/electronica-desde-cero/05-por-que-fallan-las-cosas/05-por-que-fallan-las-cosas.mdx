@@ -1,0 +1,441 @@
+Un aparato deja de funcionar y casi todo el mundo dice la misma frase: **«se quemó algo por
+dentro»**. Con esa frase el aparato se declara muerto y a los seis meses va a la basura.
+
+La frase es casi siempre falsa. El «algo por dentro» —el chip, la parte que parece complicada— es
+justamente **la pieza más protegida y más fiable de todo el aparato**: encapsulada en resina, quieta,
+sin tocar el aire y trabajando con corrientes diminutas. Lo que falla está en la frontera: cables,
+conectores, soldaduras, alimentación y la caja que dejó entrar humedad.
+
+Esta lección todavía no repara nada. Enseña lo que va antes, y sin lo cual reparar es adivinar:
+**cuáles son los modos de fallo reales, qué pasa físicamente en cada uno, qué síntoma produce y por
+qué en Santa Cruz aparecen más y antes.**
+
+<Analogia>
+Si vienes del software ya conoces la forma. **Los errores casi nunca están en el algoritmo; están en
+las fronteras**: la red, la serialización, los tiempos de espera, el disco que se llenó.
+
+Un aparato es igual. El silicio es el algoritmo —determinista, probado, sin partes móviles— y las
+conexiones son la red. Y como en la red, el fallo más frecuente no es la caída limpia sino la
+degradación: la conexión que anda hasta que alguien mueve el cable.
+</Analogia>
+
+## Síntoma, modo de fallo y causa
+
+Tres palabras que se usan como si fueran una sola, y de esa confusión salen las reparaciones que no
+duran.
+
+**El síntoma** es lo que se ve desde afuera: no enciende, se apaga solo, huele raro, va a ratos. Es
+el mensaje de error.
+
+**El modo de fallo** es el mecanismo físico que cambió por dentro.
+Un <Termino slug="modo-de-fallo">modo de fallo</Termino> no se describe con adjetivos sino con un
+verbo: el electrolito se evaporó, el estaño se agrietó, el cobre se oxidó, un hilo se partió por
+flexión. Es la línea de código exacta.
+
+**La causa** es lo que permitió ese mecanismo: el cable colgaba y tiraba del conector, la caja estaba
+al sol, nadie limpió el ventilador en tres años, alguien puso un fusible más grande.
+
+Los tres importan porque **cada uno se arregla en un sitio distinto**. Atender solo el síntoma es
+cambiar la placa entera y gastar de más; atender el modo de fallo es reparar de verdad; atender la
+causa es que no vuelva a fallar por lo mismo en tres meses.
+
+<Dato titulo="La regla que ordena todo el módulo">
+Tenla presente cada vez que abras algo: **la mayoría de las averías están en las conexiones y en la
+alimentación, no en la electrónica.**
+
+No es optimismo, tiene una razón física detrás: la electrónica trabaja protegida, seca, quieta y con
+microamperios; las conexiones y la alimentación, expuestas, húmedas, con vibración, con calor y con
+toda la corriente del aparato pasando por ellas. **Falla lo sometido a esfuerzo, no lo que parece
+complicado.**
+</Dato>
+
+## Por dónde se empieza a buscar
+
+Este orden no sale de una estadística sino de dos hechos comprobables: **lo expuesto al ambiente
+falla antes que lo protegido**, y **lo que se mueve o se calienta, antes que lo quieto.**
+
+<Tabla>
+
+| Dónde | Qué pasa físicamente | Síntoma típico |
+| --- | --- | --- |
+| Enchufe, tomacorriente, conector | El contacto se oxida y se afloja | Va a ratos; calienta; huele a plástico |
+| Cable, junto al enchufe o a la entrada | Los hilos se parten por doblarse ahí | Anda si sostienes el cable en cierta posición |
+| Fusible | Se abrió por exceso de corriente | No enciende nada, sin más señales |
+| Fuente de alimentación | Condensadores secos, soldaduras agrietadas | Arranca y se apaga; zumba; anda al rato |
+| Interruptor, pulsador, relé | Contactos picados por el arco de apertura | Hay que apretar varias veces |
+| Motor o ventilador | Rodamiento seco, condensador de arranque | Chilla, gira lento, no arranca |
+| Placa electrónica | Humedad, suciedad conductora, corrosión de pistas | Fallos que cambian con el clima |
+| Chip o circuito integrado | Casi nunca es esto | — |
+
+</Tabla>
+
+Fíjate en la última fila. **Está al final por una razón**: empezar por ahí es lo que hace que la
+gente se rinda.
+
+## Los contactos: la resistencia que crece sola
+
+Este es el mecanismo más importante de la lección. Cuando dos metales se tocan, **no se tocan por
+toda la superficie**. Por lisos que parezcan, a escala pequeña son montañas: el contacto real ocurre
+en unos pocos puntos microscópicos y por ahí pasa toda la corriente. Eso tiene nombre y valor
+medible,
+la <Termino slug="resistencia-de-contacto">resistencia de contacto</Termino>: milésimas de ohmio en
+una unión sana, creciendo sin avisar en una enferma. La suben **el óxido** —el cobre al aire se cubre
+de una capa que conduce mucho peor, y el aluminio de una capa aislante dura casi al instante— y **la
+pérdida de presión**: un tornillo flojo, un resorte cansado, un conector estirado.
+
+En una unión con más resistencia de la debida, **la corriente genera calor justo ahí**, y la cantidad
+no crece de forma suave:
+
+<Formula explicacion="Potencia disipada en un contacto: la corriente al cuadrado por la resistencia de ese contacto. El cuadrado es lo importante: el doble de corriente por el mismo mal contacto produce cuatro veces más calor.">
+calor generado (W) = corriente (A)² × resistencia del contacto (Ω)
+</Formula>
+
+Ese calor oxida más rápido y además dilata y relaja las piezas, con lo que la presión baja todavía
+más. Menos presión y más óxido significan más resistencia; más resistencia, más calor. **Es un lazo
+de realimentación positiva sin nada que lo frene.**
+
+<Analogia>
+Es la forma exacta de una **tormenta de reintentos**: el servicio va lento, los clientes reintentan,
+los reintentos lo cargan más, va más lento todavía. Nadie hizo nada mal en ningún paso; el sistema se
+derrumba solo por la forma del lazo.
+
+Por eso un contacto flojo pasa meses «funcionando raro» y después falla en una semana: **no es una
+recta, es una rampa que se empina sola.** Y la contramedida es la de siempre, **cortar el lazo
+temprano**: un conector que calienta se arregla hoy, cuando cuesta cinco minutos.
+</Analogia>
+
+Hay un detalle de medición que vale una lección entera. Un contacto malo **puede medir perfectamente
+bien y aun así estar destruyendo el aparato**: al medir resistencia el multímetro hace pasar una
+corriente diminuta, y con ella la caída es invisible. Con los amperios reales, esa misma unión pierde
+varios voltios y quema. Por eso la <Termino slug="caida-de-tension">caída de tensión</Termino> se
+mide **con el aparato funcionando y con carga**: es el desengaño de la prueba unitaria que pasa
+aislada y revienta en producción.
+
+Y si se juntan dos metales distintos con humedad, aparece un mecanismo extra,
+la <Termino slug="corrosion-galvanica">corrosión galvánica</Termino>: cobre y aluminio en contacto,
+con una película de agua, forman literalmente una pila y el metal menos noble se va comiendo.
+
+<Advertencia>
+**Un conector, un borne o un enchufe que calienta es una urgencia, no una curiosidad.** Tibio puede
+ser normal en un equipo de potencia; que no aguantes el dedo encima, no.
+
+Tres señales que se ven sin herramientas: **plástico amarillento o marrón** alrededor de un terminal,
+**olor a plástico caliente** tras un rato encendido, y **marcas negras** en el enchufe. Las tres
+dicen lo mismo. El contacto flojo es una de las causas de incendio eléctrico más comunes que existen:
+no es un problema de rendimiento, es de seguridad.
+</Advertencia>
+
+## Humedad: la caja que respira
+
+En el trópico este es el modo de fallo número uno, y casi nadie lo entiende porque imagina agua
+entrando a chorro. Lo que pasa de verdad es que **una caja cerrada respira**: de día el sol la
+calienta, el aire de dentro se dilata y sale por cualquier junta; de noche —con más razón con un
+surazo— se enfría, el aire se contrae y **entra aire de afuera**, cargado de vapor. Cada ciclo mete un
+poco más de humedad, y esa humedad no se va. Cuando una superficie interior baja
+del <Termino slug="punto-de-rocio">punto de rocío</Termino> del aire encerrado, el vapor condensa:
+agua líquida **sobre la placa**, sin que haya llovido dentro de la caja.
+
+<Dato titulo="Una caja sellada no es una caja seca">
+Sellar sin más **no impide que entre humedad: impide que salga.** Con los ciclos térmicos metiendo
+vapor día tras día, una caja perfectamente cerrada acaba siendo mejor trampa de condensación que una
+abierta. Solo hay dos estrategias que funcionan, y hay que elegir una a conciencia:
+
+- **Sellado real más desecante**, lo que hacen los equipos industriales serios: junta continua,
+  prensacables de verdad y un absorbente dentro, que hay que reponer.
+- **Drenaje y ventilación deliberados**: agujeros pequeños en el punto más bajo, con malla fina.
+
+Para una instalación rural que nadie va a mantener cada mes, **la segunda casi siempre es la buena.**
+</Dato>
+
+Hay un truco elemental que no cuesta nada:
+el <Termino slug="lazo-de-goteo">lazo de goteo</Termino>. El cable, antes de entrar en la caja, **baja
+formando una curva por debajo del punto de entrada**; el agua que corre por él llega al fondo de la
+curva y cae al suelo en vez de seguir hacia adentro. Su ausencia explica innumerables tableros
+mojados por dentro.
+
+La humedad no daña porque «moje». Daña de tres formas. La primera es **la fuga superficial**: el agua
+se mezcla con polvo, ceniza y sales y forma una película que conduce un poco. Esa
+fuga <Termino slug="fuga-superficial">superficial</Termino> no es un cortocircuito franco sino un
+camino de alta resistencia entre pistas que deberían estar aisladas, y da el síntoma más
+desconcertante que existe: **anda bien a mediodía y falla de madrugada.** Cuando alguien te diga
+«funciona según el clima», ya sabes dónde mirar.
+
+La segunda es **la corrosión de pistas y patas**, sobre todo donde
+hay <Termino slug="corriente-continua">corriente continua</Termino> permanente: con humedad, la
+tensión continua hace migrar el metal en una dirección y la pista del lado positivo se va
+disolviendo. Se ve como verdín azulado o como una pista que adelgaza hasta desaparecer.
+
+La tercera son **los bichos**, que aquí no son anécdota: hormigas que anidan dentro de un contactor
+tibio y seco, cucarachas que dejan residuos conductores, lagartijas que cruzan dos bornes y mueren
+cerrando el circuito. Por eso todo drenaje lleva malla fina.
+
+Contra todo esto hay una defensa de fábrica que conviene conocer al comprar:
+el <Termino slug="recubrimiento-conforme">recubrimiento conforme</Termino>, un barniz finísimo que
+aísla el cobre del aire húmedo. Los equipos que lo traen se anuncian como «tropicalizados».
+
+## Calor: el reloj que corre más rápido
+
+El calor casi nunca rompe de golpe: lo que hace es **acelerar el reloj de todo lo demás** —oxidación,
+evaporación, envejecimiento de plásticos y aislantes—. Para estimarlo se usa una regla muy conocida,
+que conviene tomar por lo que es, una aproximación dentro de un rango y no una ley:
+la <Termino slug="regla-de-los-diez-grados">regla de los diez grados</Termino>, según la cual **por
+cada diez grados centígrados de más la vida esperada se reduce más o menos a la mitad.**
+
+<Formula explicacion="Regla práctica de envejecimiento por temperatura, muy usada con condensadores electrolíticos. Es una aproximación dentro de un rango limitado, no una ley: el fabricante serio publica su propia curva y esa es la que manda.">
+vida estimada = vida nominal × 2^(−ΔT ÷ 10 °C)
+</Formula>
+
+Haz la cuenta con números de aquí. Un equipo pensado para 25 °C, metido en una caja negra al sol
+donde por dentro se llega fácil a 55 °C, tiene **treinta grados de más**: tres duplicaciones hacia
+abajo, alrededor de **la octava parte de la vida esperada**. Ocho años se vuelven uno. No se «quemó»:
+envejeció ocho veces más rápido, y eso se previene de otra manera.
+
+El calor entra por tres puertas. **Lo que el equipo genera**, que no se elimina sino que se evacua.
+**Lo que le llega de afuera**, sobre todo el sol sobre la caja: la puerta más grande y la más fácil
+de tapar con una sombra. Y **lo que no consigue salir**: polvo sobre el disipador haciendo de manta,
+rejillas tapadas, un ventilador parado.
+
+<Advertencia>
+**Un ventilador que se detiene mata al equipo que estaba enfriando, y lo mata semanas después.**
+
+No falla por el motor: falla porque el lubricante de su rodamiento se seca con el calor y el polvo.
+Entonces chilla, gira lento y se para. Ese chillido es un aviso con semanas de anticipación de una
+avería mucho más cara: **si escuchas uno raro, actúa ese día.**
+</Advertencia>
+
+## Los electrolíticos: el componente con fecha de caducidad
+
+Casi todos los componentes de una placa son sólidos y no tienen nada que gastarse. Los condensadores
+electrolíticos —cilindros de aluminio con una banda que marca el negativo— son la excepción: **por
+dentro llevan un líquido**, un electrolito que empapa el papel entre las láminas, y ese líquido se
+evapora poco a poco por el sello de goma de la base, más rápido cuanto más caliente esté.
+Ese <Termino slug="secado-del-electrolito">secado del electrolito</Termino> es la razón por la que un
+cargador, una fuente, un foco LED o un balastro **se mueren de viejos aunque nunca les haya pasado
+nada.**
+
+A medida que se seca sube
+su <Termino slug="resistencia-serie-equivalente">resistencia serie equivalente</Termino>, la
+resistencia parásita que tiene en serie consigo mismo. Y reaparece la forma que ya viste: **más
+resistencia significa que se calienta más él solo cuando la corriente lo atraviesa, y más calor
+significa que se seca más rápido.** El mismo lazo, otra vez. Los síntomas se ven y se oyen:
+
+- **Tapa superior abombada.** Traen una cruz marcada arriba, una válvula de alivio para abrirse antes
+  de que la lata reviente. Si esa cara ya no es plana, el condensador está terminado.
+- **Costra marrón o cristalina** en la base o alrededor de las patas: el electrolito salió.
+- **Arranca después de un rato encendido**, o al revés, anda en frío y falla caliente.
+- **Zumbido, parpadeo, reinicios al pedirle potencia**: un filtro seco ya no alisa la alimentación y
+  todo lo que viene detrás recibe tensión sucia.
+
+<Dato titulo="Por qué esta es la reparación que más dinero ahorra">
+Buena parte de los focos LED «quemados», cargadores muertos y fuentes que no arrancan son eso: **un
+condensador de dos centavos dentro de un aparato entero que se iba a la basura.**
+
+Cuando sepas soldar, esta sola reparación paga el soldador muchas veces. Con tres condiciones:
+respetar **la polaridad** —al revés se destruye, a veces violentamente—, no bajar **la tensión de
+trabajo** del que quitaste, y elegir siempre los de **105 °C** en vez de los de 85 °C. En este clima,
+esa diferencia de etiqueta es diferencia de años.
+</Dato>
+
+<Advertencia>
+**Un condensador guarda carga después de desenchufar el aparato.** En una fuente de red, los grandes
+de la entrada pueden quedar cargados a cientos de voltios durante minutos.
+
+La regla mínima: desenchufar, esperar, y **no meter dedos ni herramienta en la zona de entrada de una
+fuente de red** hasta comprobar con el multímetro que ya no hay tensión. La descarga se hace con la
+resistencia adecuada, nunca puenteando las patas con un destornillador.
+</Advertencia>
+
+## Soldaduras frías y cables partidos
+
+Quedan dos modos de fallo mecánicos, los que dan los síntomas más desesperantes porque van y vienen.
+
+La <Termino slug="soldadura-fria">soldadura fría</Termino> es una unión hecha sin calentar lo
+suficiente **la pieza**, no el estaño: el estaño se derritió y se posó encima, pero no llegó a
+alearse con el metal de abajo. Al principio conduce; con los ciclos de calentarse y enfriarse se
+agrieta y aparece un anillo oscuro alrededor de la pata. Una unión buena es brillante y sube por la
+pata en falda cóncava; la fría es mate, abultada, con aspecto de gota pegada. Salen donde hay masa y
+esfuerzo —patas de transformador, conectores grandes, relés— y su firma es
+el <Termino slug="fallo-intermitente">fallo intermitente</Termino>: anda hasta que se calienta, o se
+corta si le das un golpecito. Esa relación con el calor y con el golpe es lo que la delata.
+
+<Analogia>
+Una soldadura fría es una **condición de carrera**. No hay error de lógica: el circuito está bien
+diseñado y bien conectado en el esquema. Lo que falla depende de un factor externo —temperatura,
+vibración— y por eso no se reproduce cuando quieres. Y como con las condiciones de carrera, el error
+más caro es cambiar piezas hasta que «parece» arreglado: si no encontraste el mecanismo no arreglaste
+nada, solo cambiaste las condiciones que lo hacían aparecer.
+</Analogia>
+
+Los cables tienen su propio mecanismo, tan regular que puedes predecir dónde van a romperse antes de
+que se rompan: **un cable no se parte por el medio de un tramo recto, se parte donde se dobla
+siempre.** Junto al enchufe, en la entrada al aparato, donde pasa por un canto. Se
+llama <Termino slug="fatiga-por-flexion">fatiga por flexión</Termino>: cada doblez deforma el cobre,
+cada deformación lo endurece un poco, y el metal endurecido termina agrietándose. Los hilos finos se
+parten de uno en uno; con cada hilo que se va queda menos sección para la misma corriente, sube la
+resistencia y sube el calor, que ablanda el aislante y acelera el resto. **Otra vez el mismo lazo.**
+El síntoma es inconfundible: anda si sostienes el cable en cierta posición.
+
+La pieza que evita esto se
+llama <Termino slug="alivio-de-traccion">alivio de tracción</Termino>: la goma cónica del enchufe, la
+abrazadera de dentro del aparato, el prensacable del tablero. Su trabajo es que **el tirón lo aguante
+la funda y no la conexión eléctrica**, y que la flexión se reparta en varios centímetros en vez de
+concentrarse en un punto. Es lo que más veces falta en un aparato ya reparado una vez. De ahí una
+regla: **nunca se empalma en el punto exacto donde el cable se dobla.** Se corta por detrás del daño
+y se une donde no vaya a flexionarse.
+
+## El fusible que se va otra vez
+
+Un fusible es un eslabón débil puesto a propósito: un hilo calculado para fundirse antes de que algo
+más caro se destruya o de que un cable incendie una pared. **Cuando un fusible se abre, lo normal no
+es que haya fallado: es que hizo su trabajo.** Por eso se cambia **después** de haber averiguado por
+qué se fue. Buscar la <Termino slug="causa-raiz">causa raíz</Termino> aquí evita que el segundo
+fusible se vaya en dos segundos y el tercero se lleve el equipo por delante. Es el disyuntor del
+patrón de tolerancia a fallos, y subirle los amperios es exactamente subir el tiempo de espera o
+capturar la excepción sin hacer nada: **elimina el aviso y deja la causa intacta.**
+
+<Advertencia>
+**Nunca se pone un fusible de más amperios que el original, y jamás se puentea con alambre, papel de
+aluminio o una moneda.**
+
+Un fusible protege el cable que tiene detrás. Subirlo de valor mueve el punto de fusión desde una
+pieza barata y contenida hasta un punto cualquiera del cableado, dentro de una pared y sin nadie
+mirando: es la forma más directa de convertir una avería en un incendio. Y si el fusible se va
+**inmediatamente** al encender, hay un cortocircuito franco: ahí se para y se busca.
+</Advertencia>
+
+Las causas se agrupan en tres familias y se distinguen bien:
+
+- **Cortocircuito.** Se va al instante, siempre. Viene de un aislante dañado, agua, un tornillo
+  suelto, un componente reventado o un cable pellizcado. Se busca midiendo resistencia con el equipo
+  desconectado, desde el portafusibles hacia adelante.
+- **Sobrecarga.** Tarda minutos u horas. El equipo pide más corriente de la prevista: un motor que
+  arrastra, un rodamiento agarrotado, una bomba en seco o contra una válvula cerrada. Aquí el fusible
+  no es el problema, es el mensajero.
+- **Arranque y envejecimiento.** Todo motor pide un pico grande al arrancar,
+  la <Termino slug="pico-de-arranque">corriente de arranque</Termino>, muy superior a la de
+  régimen. Un fusible **rápido** en un circuito con motor se va en cada arranque; ahí va uno
+  **retardado**. Uno correcto puede fatigarse tras miles de picos, pero **esa conclusión es la
+  última, no la primera.**
+
+<Dato titulo="El fusible cuenta cómo murió">
+Míralo a contraluz antes de tirarlo. **Vidrio ennegrecido, con el metal vaporizado y salpicado por
+dentro**: fue violento y rapidísimo, o sea cortocircuito. **Vidrio limpio y el hilo interrumpido en
+un punto, como derretido con calma**: fue sobrecarga sostenida.
+
+Cinco segundos que te dicen en cuál de las tres familias estás.
+</Dato>
+
+## Aplicación práctica
+
+<AplicarRizoma>
+En Rizoma del Sur, los **3.666 m² repartidos en doce lotes contiguos** de Prados del Sur van a
+tener unas pocas cosas eléctricas de las que depende todo lo demás: la bomba con su tablero, el
+controlador, las electroválvulas, la luz del galpón, los ventiladores del vivero y —cuando llegue— el
+sistema solar. Es poca cosa, y por eso mismo cada avería duele: **casi todo es punto único de
+fallo.**
+
+**Lo primero es decidir dónde va cada caja, porque el sitio decide la vida del equipo.** Aquí el sol
+viene del norte casi todo el año, así que la cara sur de un muro es la que menos radiación recibe y
+es la que hay que preferir para tableros. Pero el surazo entra justamente del sur, con viento fuerte
+y lluvia casi horizontal, de modo que esa cara **necesita un alero**: sombra del norte y techo contra
+el sur, las dos cosas.
+
+**Segundo, la caja se prepara para la humedad antes de meter nada dentro.** Prensacables por abajo,
+un lazo de goteo en cada cable que entre, uno o dos agujeros de drenaje de dos o tres milímetros en
+el punto más bajo real —comprobado con la caja ya montada, no supuesto— y malla fina por dentro.
+Perforar reduce la estanqueidad que declara el fabricante: es un intercambio consciente y, para una
+instalación que nadie va a abrir cada mes, es el correcto.
+
+**Tercero, la ronda de las conexiones, dos veces al año.** Con todo desenergizado se reaprietan los
+bornes a tornillo, se buscan plásticos amarillentos y se revisa que ningún cable roce nada. Con el
+sistema en marcha, la otra mitad: pasar la mano cerca de cada conexión de potencia buscando calor.
+**Una en octubre, cerrando la seca; otra en mayo, cerrando las lluvias.**
+
+**Cuarto, la caja de repuestos que se anticipa**, porque aquí un repuesto tarda y una bomba parada en
+plena seca no espera. Sale entera de esta lección: fusibles del valor **y del tipo** correctos,
+rápidos y retardados, rotulados; condensadores de 105 °C; terminales de punta hueca; termorretráctil;
+limpiador de contactos; grasa de silicona para bornes; un ventilador igual al del inversor. No pongo
+precios a propósito: **cotiza en el comercio de electrónica de Santa Cruz**, porque el valor cambia y
+la lista no.
+
+**Quinto, escribirlo.** Cada equipo lleva etiqueta con su fecha de instalación, y
+el <Termino slug="bitacora-del-sistema">cuaderno de bitácora</Termino> registra cada avería en tres
+líneas: qué síntoma se vio, qué modo de fallo resultó ser, qué causa lo permitió. Con diez entradas
+ya asoman patrones —«todo lo de la pared oeste falla»— que ninguna memoria sostiene sola: es
+la <Termino slug="linea-base">línea base</Termino> del suelo, puesta sobre los aparatos.
+
+**Y sexto, el criterio que enlaza con automatización:** lo que se automatice aquí se diseña para que,
+cuando falle —porque va a fallar—, quede en el estado que menos daño hace. Una electroválvula que se
+cierra al perder energía, no una que se queda abierta regando toda la noche.
+Ese <Termino slug="fallo-seguro">fallo seguro</Termino> separa una avería barata de un lote inundado.
+Y hay una razón comunitaria detrás de todo esto: una tarde con estos modos de fallo en la mano y unos
+aparatos muertos traídos por los vecinos es probablemente el taller de mayor rendimiento que se puede
+dar en el barrio, porque **casi todos están en la lista de esta lección.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+Los mecanismos de esta lección son universales. Lo que cambia en el llano cruceño es **la velocidad a
+la que corren**.
+
+**La humedad no es un evento, es el estado normal.** En
+un <Termino slug="clima-tropical-sabana">clima tropical de sabana</Termino> como el de Santa Cruz,
+con lluvias de octubre a abril, la <Termino slug="humedad-relativa">humedad relativa</Termino> pasa
+buena parte del año en valores altos, y la corrosión no avanza con el calendario sino con las horas
+que el metal pasa por encima de cierto umbral. No hace falta ponerle número —y no se lo pongo, porque
+no lo he medido— para sacar la consecuencia: **un equipo que en catálogo dura diez años, aquí hay que
+planificarlo para menos**, y la diferencia se recupera con mantenimiento, no con marca.
+
+**El surazo es una máquina de condensación.** Cuando entra el aire frío del sur la temperatura cae
+varios grados en pocas horas y toda la masa metálica se enfría. El problema no es esa noche: es **el
+día siguiente**, cuando vuelve el aire cálido y húmedo y se encuentra con equipos todavía fríos por
+dentro. Ahí condensa, sobre la placa. Es
+la <Termino slug="inercia-termica">inercia térmica</Termino> jugando en contra, y la contramedida no
+es sellar más: es que lo que condense tenga por dónde irse.
+
+**Los cortes de energía matan más aparatos que el uso.** Un equipo que arranca pide un pico muy
+superior al de régimen; si la energía va y viene varias veces seguidas ese pico se repite, y encima
+el motor puede estar arrancando contra presión. Por eso los aparatos se mueren **el día que vuelve la
+luz**, no mientras trabajan. De ahí tres decisiones: fusibles retardados en circuitos con motor;
+apagar a mano lo importante durante el corte y encenderlo con calma después; y, si el equipo lo
+permite, un retardo de arranque para que no todo arranque en el mismo segundo.
+
+**La seca trae polvo y agosto trae humo.** El polvo fino de mayo a septiembre se mete en rejillas y
+rodamientos y forma sobre los disipadores esa manta que impide evacuar el calor. Y entre agosto y
+octubre las quemas dejan semanas de ceniza en suspensión. La ceniza no es polvo inerte: es
+higroscópica y sobre una placa forma justamente la película conductora de la fuga superficial.
+**Después del humo conviene limpiar rejillas y ventiladores**, aunque no toque.
+
+**Y el dengue entra por una puerta inesperada.** Cualquier caja, canaleta o base de poste que acumule
+agua es un criadero, así que drenar los tableros no es solo una medida contra la corrosión: es
+también eliminación de criaderos. Un tablero que drena bien resuelve dos problemas con un agujero.
+
+Una última nota de honestidad, que vale para todo el módulo. **Todo lo que toque la instalación fija
+de 220 V —el tablero de la casa, la acometida, la protección diferencial— se consulta y se ejecuta
+con un electricista matriculado.** Aquí se explican mecanismos para diagnosticar y reparar equipos,
+no para intervenir la vivienda. Y si necesitas saber qué exige la norma o quién puede firmar un
+trabajo, la respuesta está en la empresa distribuidora, en el municipio y en un profesional
+habilitado, no en este curso.
+</ContextoBolivia>
+
+## Lo que hay que llevarse
+
+**El chip casi nunca es el problema.** Falla lo expuesto, lo que se mueve, lo que se calienta y lo
+que conduce toda la corriente: conectores, cables, soldaduras y alimentación. Separa siempre
+**síntoma, modo de fallo y causa**: el síntoma dice dónde mirar, el modo de fallo dice qué reparar, y
+la causa decide si la reparación va a durar.
+
+Casi todos los mecanismos que viste tienen **la misma forma de lazo que se realimenta**: más
+resistencia, más calor, más deterioro, más resistencia. Por eso una señal temprana —un conector
+tibio, un ventilador que chilla, un cable que hay que sujetar— se atiende hoy. En el trópico, además,
+**la caja respira**: sellar no basta, hay que drenar, poner malla y hacer lazo de goteo. El calor no
+rompe, **acelera el reloj de todo lo demás.** Y **un fusible que se fue tiene una causa que sigue
+ahí.**
+
+## Lo que sigue
+
+Ya tienes la lista de sospechosos. Falta el método para saber **cuál de ellos es**, sin desarmar el
+aparato entero ni cambiar piezas a ciegas.
+
+En **06-cuatro-reparaciones** vas a aprender a partir el sistema por la mitad y preguntar de qué lado
+está el fallo —una búsqueda binaria aplicada a un cable— y después vas a recorrer cuatro
+reparaciones reales enteras. Todas terminan en algún punto de esta lista.

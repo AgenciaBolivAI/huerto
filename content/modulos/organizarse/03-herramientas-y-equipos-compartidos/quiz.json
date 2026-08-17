@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "q1",
+      "tipo": "opcion_multiple",
+      "enunciado": "Tres vecinos evalúan comprar juntos una desbrozadora de motor. ¿Qué condiciones hacen que un bien sea un buen candidato a compartirse?",
+      "opciones": [
+        "Que sea caro en relación con lo que puede pagar una parcela y que no se venda en pedazos",
+        "Que cada uno lo use pocas horas al año y que esas horas no caigan todas en la misma semana",
+        "Que exista alguien dispuesto a guardarlo, con un lugar techado y con llave, y a llevar la bitácora",
+        "Que todos los miembros lo necesiten con urgencia en la misma ventana de trabajo, porque así se amortiza más rápido"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son las condiciones reales: precio alto, indivisibilidad, utilización individual baja y no simultánea, y un custodio posible. La cuarta invierte el criterio: la demanda simultánea es exactamente lo que destruye la idea de compartir. Si todos necesitan la máquina la misma semana —como pasa en octubre, cuando entran las lluvias y todo el barrio prepara tierra— compartir no produce ahorro sino una cola, y el que espera concluye, con razón, que compartir no le sirvió. Amortizar más rápido no compensa que la máquina llegue cuando la ventana de trabajo ya se cerró."
+    },
+    {
+      "id": "q2",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un fondo de mantenimiento bien diseñado se alimenta con una cuota anual igual para todos los miembros.",
+      "respuesta": false,
+      "explicacion": "Falso. El desgaste de una máquina es función de las horas trabajadas, no del calendario, así que el aporte tiene que seguir al uso: por hora de horómetro o por jornada declarada. Una cuota anual igual hace que quien usó tres jornadas subvencione a quien usó treinta, y ese agravio silencioso es de los que revientan grupos. Además, el fondo no debe cubrir solo reparaciones: tiene que apartar desde la primera hora la reposición futura del equipo, o alcanzará exactamente hasta el día en que la máquina muera, que es el día en que el grupo descubre que no tiene con qué reemplazarla y se disuelve."
+    },
+    {
+      "id": "q3",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Para qué sirve revisar el estado del equipo, con las dos personas presentes, tanto al entregarlo como al devolverlo?",
+      "opciones": [
+        "Para que un daño no se le atribuya a quien simplemente fue el primero en descubrirlo",
+        "Para comprobar que la máquina arranca, en vez de guardarla suponiendo que va a arrancar",
+        "Para dejar en la bitácora la lectura del horómetro, que es lo que alimenta el reparto del gasto y el fondo",
+        "Para tener pruebas con las que cobrarle al usuario cualquier desperfecto que aparezca durante su turno"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La revisión existe para proteger al que usa, no para vigilarlo: sin verificación en la frontera, el daño se le imputa al tercer usuario, que sabe que no fue él, y a partir de ahí nadie quiere volver a tomar la máquina. La cuarta opción describe el error de diseño más caro: si declarar un fallo significa automáticamente pagarlo, la gente esconde los fallos, y lo que arruina las máquinas compartidas no es el mal uso sino el mal uso ocultado. La regla correcta es la contraria: quien declara el fallo el mismo día no responde por lo que ese fallo cause después; quien lo oculta responde por todo."
+    },
+    {
+      "id": "q4",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una pulverizadora que se usó con herbicida queda en condiciones de aplicar un fungicida sobre plantines después de enjuagarla con agua.",
+      "respuesta": false,
+      "explicacion": "Falso, y es uno de los daños más caros que produce un equipo compartido. Los residuos de herbicida quedan en las paredes del tanque, en la manguera y sobre todo en empaques y lanza, y sobreviven al enjuagado normal. El siguiente usuario aplica sobre plantines —lo más sensible que existe— y produce una fitotoxicidad que aparece días después, deformando brotes, cuando ya nadie relaciona una cosa con la otra. Por eso la regla en un grupo es dura: un equipo dedicado exclusivamente a herbicidas, rotulado, que nunca se usa para otra cosa, y triple lavado como procedimiento mínimo entre aplicaciones del resto. Es también un caso donde el mal uso daña el cultivo de otro miembro y no la máquina."
+    },
+    {
+      "id": "q5",
+      "tipo": "opcion_multiple",
+      "enunciado": "En un equipo compartido, ¿qué gastos corresponden a quien usa la máquina en ese turno y no al fondo de mantenimiento?",
+      "opciones": [
+        "El combustible que consumió durante su jornada",
+        "El aceite de mezcla de un motor de dos tiempos que gastó en su turno",
+        "La reposición de lo que se llevó o rompió por operar fuera de las condiciones escritas",
+        "El cambio de aceite del motor que tocaba al cumplirse las horas de servicio"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Los consumibles se gastan mientras la máquina trabaja y son proporcionales al uso por definición: los paga quien usa, devolviendo el tanque como lo recibió. El mal uso comprobado también lo paga quien usó, porque cruzó un límite que estaba escrito. El cambio de aceite, en cambio, no se dispara por la sesión sino por las horas acumuladas de todos los usuarios juntos: cobrárselo a quien tuvo la mala suerte de usar la máquina el día que tocaba el servicio es injusto y hace que la gente evite ese turno. Ese gasto es mantenimiento preventivo y sale del fondo."
+    },
+    {
+      "id": "q6",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cuáles de estas afirmaciones sobre el custodio son correctas?",
+      "opciones": [
+        "Es una persona con nombre y apellido, no un comité ni «el grupo»",
+        "Su carga —espacio, disponibilidad, riesgo de robo— se compensa de forma explícita y escrita",
+        "Rotarlo con períodos largos y entrega documentada es mejor que rotarlo cada mes",
+        "Como guarda el equipo, le corresponde decidir a quién se lo presta y en qué orden"
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Un componente del que todos son responsables es un componente del que nadie es responsable: por eso la custodia necesita un nombre, una compensación explícita y una rotación lenta, porque quien lleva meses con la máquina sabe qué ruido es normal y ese conocimiento no está escrito en ninguna parte. La cuarta es el deslizamiento más común y hay que evitarlo: custodia no es propiedad. Si el custodio decide los turnos a criterio propio, en la práctica se vuelve dueño del bien; el calendario lo fija una regla que el grupo acordó antes, con prioridad rotativa y tope de horas."
+    },
+    {
+      "id": "q7",
+      "tipo": "abierta",
+      "enunciado": "Cinco vecinos de Prados del Sur, junto con Rizoma del Sur, quieren resolver la preparación de tierra y el acarreo dentro del barrio. Diseña el sistema completo: qué evaluar antes de comprar cualquier cosa, qué se comparte y qué no, y todas las reglas de operación del bien compartido —custodia, calendario, entrega y devolución, consumibles, fondo y frontera entre desgaste normal y mal uso— aplicadas al sitio real y a su calendario. Explica también cómo evitas que el aporte al fondo deje afuera a un vecino sin dinero, dado que el proyecto es comunitario y gratuito.",
+      "respuestaModelo": "Antes de comprar nada, dos verificaciones. La primera es el costo por hora de uso: precio dividido entre las horas de vida útil, más el mantenimiento previsto dividido entre esas horas, más el consumo por hora. Los números no salen de un curso: el precio y las horas de vida los da el proveedor y el mecánico, los intervalos de servicio los da el manual. La segunda es la alternativa que casi nadie evalúa: preguntar cuánto cobra por jornada quien ya tiene motocultor o tractor en la zona. El que presta el servicio absorbe mantenimiento, repuesto, combustible y el riesgo de que la máquina no arranque el día clave, y encima sabe operarla. Si comprar no gana con holgura sobre esa comparación, no gana; y existe un intermedio muy bueno, que es contratar el servicio entre los seis en una sola movilización para parcelas contiguas, sin ningún activo que administrar.\n\nQué se comparte: motocultor si la cuenta lo justifica, remolque o carretilla grande de acarreo, herramienta eléctrica de obra. Qué no se comparte nunca: pala, azadón, machete, regadera y todo lo de uso diario, porque son baratas y su valor está en tenerlas a mano; tijeras de podar y cuchillos de injerto, porque una herramienta que visita tres parcelas mueve virus, bacterias y hongos y eso es bioseguridad, no manía; la mochila de aspersión del vivero, que no sale y no admite ninguna prestada, porque un residuo de herbicida produce fitotoxicidad en los plantines y aparece días después, cuando nadie relaciona las cosas; y el equipo de protección personal, que se ajusta al cuerpo, se contamina y tiene una vida de filtro que nadie puede auditar en cabeza ajena. También hay que distinguir equipo fijo de móvil: la bomba, el tanque y el riego de Rizoma no se prestan llevándoselos, se comparten dando servicio en el sitio, lo que elimina transporte y entrega pero obliga a un horario del agua.\n\nCustodia: una persona con nombre, con lugar techado, seco y con llave, responsable de guardar, llevar la bitácora, hacer las revisiones y ejecutar el mantenimiento previsto. Esa carga se compensa por escrito, porque un custodio que se siente usado abandona en seis meses. Y custodia no es propiedad: no decide él los turnos.\n\nCalendario: es la mitad del sistema, porque en octubre entra la lluvia y todo el barrio prepara tierra la misma quincena. Prioridad rotativa publicada antes de que empiece la ventana —quien tuvo el primer turno esta temporada pasa al final la siguiente—, tope de horas por reserva, liberación automática de la reserva no usada, espacio muerto entre turnos para traslado, limpieza y revisión, y trabajo preparado antes de que llegue la máquina.\n\nEntrega y devolución: revisión con las dos personas presentes, al salir y al volver, anotada en la bitácora de uso: fecha, quién lo lleva, horómetro, aceite y combustible, fugas, filtro de aire, cuchillas, tornillería, cables y arranque de prueba. Cinco minutos. Y la regla de incentivos: quien declara un fallo el mismo día no responde por lo que ese fallo cause después; quien lo oculta responde por todo.\n\nConsumibles y fondo: combustible, aceite de mezcla e hilo los paga quien usa, devolviendo el tanque como lo recibió; el combustible de dos tiempos lo prepara y entrega el custodio en bidón rotulado, porque quien eche gasolina pura funde el motor en minutos. Aceite, filtros, bujía, correa y afilado salen del fondo, que se alimenta por hora de uso y no por año, y que además aparta la reposición desde la primera hora: sin eso, el grupo dura lo que dura la máquina.\n\nDesgaste y mal uso, escritos antes y con hechos observables. Desgaste normal —filo redondeado, correa estirada, rodamiento cumplido— lo paga el fondo sin reproche. Mal uso es cruzar un límite escrito: pasar el motocultor con el suelo demasiado húmedo, que en arcilla expansiva destruye la friabilidad y crea suela de labor y además carga el embrague, con la prueba del rollito como verificación en el acto; hacer trabajar una bomba en seco o cerrar de golpe una válvula; alimentar una herramienta eléctrica por una extensión larga y delgada, donde la caída de tensión quema el bobinado. Robo, incendio o inundación se resuelven por escrito de antemano, y si hay seguros disponibles hay que consultar sus condiciones con una entidad financiera o aseguradora, no suponerlas.\n\nY el fondo por hora no contradice la gratuidad: no es una renta, es lo que cuesta que la máquina siga existiendo el año que viene, y sin reposición el que pierde es exactamente el vecino sin plata para quien el equipo existía. Para que el aporte no sea barrera de entrada, la moneda del fondo no tiene que ser dinero: horas de mantenimiento, limpieza, custodia o afilado se acreditan a una equivalencia acordada y con un tope escrito. El primer paso, además, no es comprar: es inventariar lo que ya está ocioso en los patios y montar una hoja de préstamo de cuatro columnas, que sirve para descubrir con riesgo casi nulo si este grupo devuelve las cosas.",
+      "criterios": [
+        "Calcula o describe el costo por hora de uso con sus tres componentes y dice de dónde salen los números, sin inventar precios",
+        "Evalúa explícitamente contratar el servicio a quien ya tiene la máquina, y menciona contratarlo en grupo como opción intermedia",
+        "Nombra al menos tres bienes que no deben compartirse y da la razón técnica de cada uno (uso diario, bioseguridad, residuo de herbicida, protección personal)",
+        "Distingue equipo fijo de equipo móvil y explica que el fijo se comparte dando servicio en el sitio",
+        "Define un custodio con nombre, con lugar de guarda, con compensación escrita y separado de la propiedad",
+        "Diseña el calendario contra la demanda simultánea de octubre: prioridad rotativa, tope de horas y liberación de la reserva no usada",
+        "Incluye revisión de estado con las dos personas presentes al entregar y al devolver, con bitácora y lectura de horómetro",
+        "Establece que declarar un fallo el mismo día sale barato y ocultarlo sale caro, explicando por qué",
+        "Separa consumibles pagados por quien usa de mantenimiento preventivo pagado por el fondo",
+        "Especifica que el fondo se alimenta por hora de uso y que incluye la reposición, no solo las reparaciones",
+        "Escribe la frontera entre desgaste normal y mal uso con al menos dos ejemplos verificables y su mecanismo",
+        "Resuelve el acceso del vecino sin dinero con aportes en trabajo, con equivalencia y tope escritos, sin convertir el fondo en una renta"
+      ],
+      "explicacion": "La lección se juzga por si el lector produce un sistema completo y no una lista de buenas intenciones. Lo que separa una respuesta sólida de una floja son cuatro cosas: haber comparado con contratar el servicio antes de comprar; haber puesto un nombre a la custodia; haber diseñado el calendario contra la ventana de octubre, que es donde se rompe todo en el trópico de sabana; y haber incluido la reposición dentro del fondo, que es la omisión que hace que el grupo dure exactamente lo que dura la máquina. La honestidad también cuenta: no inventar precios ni condiciones de seguros, y remitir a la consulta local donde corresponde."
+    }
+  ]
+}

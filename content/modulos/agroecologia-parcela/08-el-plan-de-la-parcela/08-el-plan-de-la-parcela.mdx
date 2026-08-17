@@ -1,0 +1,411 @@
+Las siete lecciones anteriores produjeron piezas sueltas: un criterio de admisión, unos mecanismos de
+convivencia entre plantas, unas asociaciones que resisten la prueba, un orden temporal, una estructura
+arbórea, un perímetro con funciones apiladas y unas franjas para los enemigos naturales. Todas tienen
+la misma carencia: **ninguna tiene todavía coordenadas ni fecha**.
+
+Esta lección se las pone, con el idioma del módulo de planos. Aquí no se explica otra vez qué es una
+proyección ni cómo se acota: se explica **qué se decide** al dibujar una parcela entera, en qué orden y
+por qué ese orden no es negociable.
+
+## Un plan no es un dibujo bonito: es una lista de decisiones irreversibles
+
+Conviene separar dos cosas que la gente confunde. El **plano** es el soporte —líneas, cotas, escala,
+leyenda—; el **plan** es el conjunto de decisiones que ese plano registra. Se puede tener un plano
+precioso sin ningún plan detrás: un dibujo con árboles verdes que no dice qué va primero, qué se riega
+ni qué pasa si no alcanza el agua.
+
+La razón de dibujar es que **algunas decisiones son casi imposibles de deshacer, y son justo las que se
+toman mirando el conjunto**. Cambiar de hortaliza cuesta una temporada; mover un árbol de sombra de
+ocho años cuesta ocho años; cambiar el camino principal cuesta arrancar lo plantado a los lados; bajar
+el tanque cuesta rehacer la instalación, porque su altura es la presión de la red.
+
+<Analogia>
+Es la diferencia entre **datos y esquema**. Una fila mal escrita se corrige con un UPDATE; un esquema
+mal elegido —la clave primaria equivocada, la tabla que debió partirse— se arrastra años y se paga en
+cada consulta y en cada migración.
+
+En una parcela las plantas anuales son datos. **El esquema son la posición del agua, los caminos, los
+árboles y los límites**, y hay una asimetría cruel: se decide el primer día, cuando uno menos sabe del
+terreno. Por eso el plan deja en blanco lo que aún no se sabe, en vez de rellenarlo con adivinanzas que
+después parecerán datos.
+</Analogia>
+
+## Primero el levantamiento: dibujar lo que ya hay, sin diseñar nada
+
+La primera hoja no lleva ni una idea propia. Es el <Termino slug="plano-base">plano base</Termino>: el
+terreno tal como está hoy, medido y fechado. El módulo de planos ya enseñó cómo se
+hace <Termino slug="levantamiento">levantamiento</Termino>
+con <Termino slug="triangulacion">triangulación</Termino>
+y <Termino slug="ordenadas">ordenadas</Termino>, y cómo se comprueba
+el <Termino slug="error-de-cierre">error de cierre</Termino>. Lo que cambia aquí es **qué se mide**,
+porque un levantamiento agronómico registra cosas que a un albañil no le importan.
+
+Va al papel, como mínimo: los mojones y los límites reales; los doce lotes; toda construcción, poste,
+tanque, tubería y cable; **cada árbol de más de dos metros con su especie, el diámetro de su tronco y
+el radio de su copa**; los puntos de agua con su caudal medido a balde y cronómetro; las zonas donde
+el suelo se ve distinto; los caminos por donde la gente ya camina; y lo que hay del otro lado del
+lindero, que te da sombra, raíces, polvo y viento sin ser tuyo.
+
+<Dato titulo="La regla de las tres tintas">
+Un plano base miente cuando dibuja con la misma línea lo que se midió y lo que se supuso. Lo evita una
+disciplina trivial: **tres tintas, o tres <Termino slug="capa-de-dibujo">capas de dibujo</Termino> si
+es digital**. Una para lo **medido** con cinta; otra para lo **estimado a ojo**; otra para lo
+**pendiente de medir**. Juntas son un mapa de tu propia ignorancia, y dicen dónde todavía no puedes
+comprometer una decisión cara.
+
+El plano base se fecha y **no se dibuja encima**: lo posterior va en capas sobre una copia. Un plano
+base contaminado con propuestas deja de ser un registro y pasa a ser una opinión.
+</Dato>
+
+## El análisis de sitio: tres capas que se dibujan antes de decidir nada
+
+Entre el levantamiento y el diseño va la etapa que casi todos se saltan y que decide la mitad del
+resultado: el <Termino slug="analisis-de-sitio">análisis de sitio</Termino>, tres mapas de cosas que no
+salen en una foto —sol, viento y agua— y mandan sobre cada planta.
+
+### La luz: dónde cae la sombra y en qué mes
+
+En el trópico sur la geometría solar es contraintuitiva para quien leyó manuales del hemisferio norte,
+y se resuelve con números. La <Termino slug="trayectoria-solar">trayectoria solar</Termino> depende de
+la latitud del sitio y de la declinación del sol, que oscila entre +23,4° y −23,4° durante el año.
+
+<Formula explicacion="Altura del sol sobre el horizonte al mediodía solar. La sombra de un objeto de altura h mide h dividido entre la tangente de ese ángulo.">
+altura solar al mediodía = 90° − |latitud − declinación|
+</Formula>
+
+Para una latitud cercana a 17,8° sur, **en junio el sol del mediodía queda al norte, a unos 49° sobre
+el horizonte**: un árbol de seis metros tira cinco metros de sombra hacia el sur. **En diciembre queda
+al sur, a unos 84°**, y ese mismo árbol tira medio metro hacia el norte. Entre medias cruza el cenit
+dos veces —alrededor del 10 de noviembre y del 31 de enero, fechas que conviene confirmar con una
+calculadora solar— y la sombra del mediodía cambia de lado.
+
+De ahí salen dos reglas. **Lo alto que se plante al norte de una cama la sombrea la mayor parte del
+año**, porque el sol pasa por el norte de febrero a octubre. Y **lo que se plante al sur estorba
+poquísimo al mediodía**: la barrera contra el viento frío va justo en el lado que menos sombra
+proyecta. Aun así el mediodía es el caso fácil, porque la sombra real barre el terreno de oeste a este
+y a media mañana es larguísima, de modo que **el método que no falla es empírico**: clavar una estaca
+donde iría el árbol y fotografiar su sombra a las 9, a las 12 y a las 16 cerca del solsticio de junio.
+
+### El viento: dos vientos distintos, no uno
+
+Un plano con una sola flecha de viento está mal hecho, porque los vientos que importan hacen cosas
+opuestas: el dominante cálido seca y tumba, y el <Termino slug="surazo">surazo</Termino> entra desde el
+sur con aire frío y ráfagas y provoca el daño súbito. Se dibujan como dos capas, con los obstáculos que
+ya frenan algo y —lo que más se olvida— **los pasillos**: un callejón entre construcciones o entre dos
+filas de árboles acelera el aire, y ahí no va lo frágil.
+
+La lección del cerco vivo ya dio la porosidad y la distancia protegida en múltiplos de la altura; **el
+plano es donde se comprueba si esa distancia cabe**. Y no inventes rosas de los vientos: anota lo que
+observes y pregunta a los vecinos mayores y a las instituciones con registros meteorológicos.
+
+### El agua: por dónde corre, dónde se queda y de dónde viene
+
+La tercera capa es la que más daño evita. La <Termino slug="escorrentia">escorrentía</Termino> se mapea
+gratis: **caminar el terreno durante el aguacero y volver a caminarlo media hora después**. Durante la
+lluvia se ve por dónde corre; después, dónde se queda. Se marcan las líneas de flujo, los charcos que
+duran, los <Termino slug="bajio">bajíos</Termino> y las salidas.
+
+En una llanura casi plana la topografía que decide todo se mide en centímetros, y a esa escala se la
+llama <Termino slug="microrrelieve">microrrelieve</Termino>: quince centímetros deciden si una raíz se
+ahoga tres días. Un <Termino slug="nivel-de-manguera">nivel de manguera</Termino> y media mañana bastan
+para levantarlo con una <Termino slug="cota-de-referencia">cota de referencia</Termino> propia.
+
+Falta un dato que casi nadie dibuja: la <Termino slug="cuenca-de-aporte">cuenca de aporte</Termino>,
+**la superficie de afuera que drena hacia adentro**. Un camino o un lote más alto pueden meterte el
+agua de una superficie mayor que la tuya, y con ella sedimento y patógenos de suelo. **El agua que
+corre entre lotes es un vector**: por eso la posición de lo susceptible respecto de lo enfermo es una
+decisión de plano y no de manejo.
+
+Y aquí va el límite de alcance: **este análisis produce el mapa, no las obras**. Zanjas, drenajes y
+retención son del módulo de suelo y agua a escala de parcela; el plan solo les reserva el sitio.
+
+## Zonificación: ordenar por frecuencia de visita, no por tipo de planta
+
+Aquí aparece el criterio que más trabajo ahorra, y no tiene nada de botánico.
+La <Termino slug="zonificacion">zonificación</Termino> ordena los elementos según **cuántas veces al
+año hay que ir a tocarlos**, y pone lo más frecuentado cerca del punto desde el que uno sale.
+
+<Formula explicacion="Distancia recorrida al año por un solo elemento. Se multiplica por dos porque hay que volver.">
+metros caminados al año = 2 × distancia al elemento × visitas al año
+</Formula>
+
+Un almácigo visitado dos veces al día son 730 viajes. A veinte metros son 29 kilómetros anuales; a
+sesenta, 88. Esa diferencia —**59 kilómetros cargando agua**— no la produjo ninguna planta sino una
+decisión tomada en treinta segundos. Y se paga
+en <Termino slug="jornal">jornales</Termino>, que la primera lección ya señaló como
+el <Termino slug="cuello-de-botella">cuello de botella</Termino> real del diseño.
+
+<Analogia>
+Es **localidad de referencia**, exactamente: lo que se toca en cada iteración va en caché; lo que se
+consulta una vez al trimestre puede vivir en almacenamiento frío y tardar.
+
+Y aparece el error de quien optimiza sin medir: ordenar por **importancia** en vez de por **frecuencia
+de acceso**. El caché no guarda lo importante: guarda lo caliente.
+</Analogia>
+
+La idea viene de la literatura de diseño de fincas y hay que depurarla de dos malentendidos. Primero:
+**la frecuencia no es propiedad de la especie sino de la etapa** —la misma planta es caliente en
+almácigo y fría tres años después—. Segundo, decisivo en una parcela chica: **cuando todo queda a menos
+de ochenta metros, manda el camino y no la distancia**. Lo que queda de paso hacia la llave de agua se
+visita solo; lo que exige un desvío de diez metros se abandona aunque esté cerca.
+
+| Franja | Visitas al año | Qué va ahí | Si se ubica mal |
+| --- | --- | --- | --- |
+| Diaria o más | 300–700 | Almácigos, trasplantes recientes, cosecha del día | Un riego olvidado mata el lote |
+| Semanal | 50–150 | Ciclo corto, camas en producción, compost | Se atrasa la cosecha y baja la calidad |
+| Mensual | 12–30 | Cultivos rústicos, franjas florales, plantas madre | Se descuida la poda |
+| Estacional | 2–6 | Árboles establecidos, cerco maduro, ciclos largos | Poco daño: por eso van lejos |
+
+Y hay un criterio que corrige a la frecuencia: **qué tan rápido se muere lo que se olvida**. Un
+almácigo perdona horas; una yautía establecida, semanas. Lo que combina alta frecuencia y poca
+tolerancia al olvido va donde uno pasa obligatoriamente, no donde queda bonito.
+
+## Circulación: los caminos deciden más que las camas
+
+Los caminos son lo que más gente dibuja al final y debería dibujarse casi al principio, porque **son lo
+más permanente de una parcela**: una planta se cambia; un camino compactado y con la gente hecha a él,
+no.
+
+La primera regla es de **ancho**, y sale de medir, no de copiar: la carretilla que se tiene más los
+nudillos, la persona con dos baldes y sobre todo **el vehículo real que va a entrar** —ancho, largo y
+su <Termino slug="radio-de-giro">radio de giro</Termino>, que se obtiene dando una vuelta completa en
+un descampado y midiendo la circunferencia que dejó—. Un camión que entra y no puede girar sale en
+reversa por todo el terreno, y ese detalle ha destrozado más plantaciones que muchas plagas.
+
+La segunda es de **conducta**: la gente camina por donde es más corto, no por donde el plano dijo. Esa
+trayectoria espontánea es una <Termino slug="linea-de-deseo">línea de deseo</Termino>, y pelear contra
+ella se pierde siempre: se termina con un camino oficial vacío y un atajo pisoteado sobre una cama. Lo
+que funciona es levantarla como dato del sitio y **trazar el camino encima de ella**.
+
+La tercera es de **suelo**, y convierte un defecto en herramienta.
+La <Termino slug="compactacion">compactación</Termino> del tránsito destruye la porosidad y puede
+formar una <Termino slug="suela-de-labor">suela de labor</Termino>. Como el daño es inevitable, **se
+concentra a propósito**: todo el tránsito por franjas definidas y **jamás un pie dentro de la cama**.
+Eso fija el ancho de la cama, que no es tradición sino el doble del alcance del brazo: accesible desde
+los dos lados ronda el metro veinte; contra un muro, la mitad.
+
+<Advertencia titulo="El camino es también el mapa de contagio">
+Cada persona lleva suelo en las botas y cada herramienta lo lleva en el filo. Si el recorrido normal
+del día pasa de un bloque enfermo a la zona de propagación, **la circulación está haciendo el trabajo
+del patógeno**.
+
+La consecuencia hay que aceptarla en el papel: el recorrido va **siempre de lo más limpio a lo más
+sucio, nunca al revés**, y el punto de limpieza de calzado y herramienta se dibuja como un elemento
+más. Esto es <Termino slug="bioseguridad">bioseguridad</Termino> aplicada a la geometría, y en un
+cultivo clonal con enfermedades de suelo incurables es la única barrera que existe.
+</Advertencia>
+
+Falta algo que no es un camino pero vive de ellos: el <Termino slug="punto-de-acopio">punto de
+acopio</Termino>, donde se descarga lo que entra y se carga lo que sale. Su posición fija cuántos
+metros se acarrea cada bolsa de sustrato durante diez años: va donde llega el vehículo, con sombra,
+piso que no se vuelva barro y a la vista de la casa.
+
+## Ubicar cada elemento: primero lo que no se puede mover
+
+Con el análisis hecho, la ubicación deja de ser gusto y pasa a ser un problema de restricciones, que se
+resuelve **colocando primero lo más restringido y rellenando con lo flexible**, porque cada elemento
+colocado reduce las opciones de los siguientes.
+
+| Orden | Elemento | Qué lo ata al sitio |
+| --- | --- | --- |
+| 1 | Fuente de agua y tanque | Su altura fija la presión de la red; no se mueve |
+| 2 | Acceso, camino principal y acopio | El vehículo y su radio de giro no negocian |
+| 3 | Vivero, umbráculo y propagación | Agua diaria, sombra manejable, salida al camino |
+| 4 | Árboles de dosel y cerco vivo | Tardan años y su sombra futura condiciona lo demás |
+| 5 | Franjas florales y refugios | La dispersión de los enemigos naturales |
+| 6 | Bloques sanitariamente delicados | Su posición frente al agua y al paso de la gente |
+| 7 | Camas de cultivo anual | Lo único móvil: se acomoda a lo anterior |
+
+Cada elemento se coloca contestando dos columnas. **Qué necesita**: luz, agua, drenaje, protección de
+viento, cercanía a un camino, vigilancia. **Y qué produce o estorba**: sombra, hojarasca, raíces
+invasoras, olor, tránsito. Está bien ubicado cuando lo que estorba cae sobre algo a lo que no le
+molesta.
+
+El tanque es la restricción más rígida. Cada metro de altura sobre el punto de riego aporta
+un <Termino slug="metro-de-columna-de-agua">metro de columna de agua</Termino> de presión, y de ahí
+hay que descontar lo que se pierde en tuberías hasta llegar a
+la <Termino slug="altura-manometrica-total">altura manométrica</Termino> que exige el emisor. **Si el
+tanque queda bajo o lejos, ninguna decisión agronómica posterior lo arregla.** El plan solo reserva el
+sitio alto y accesible; el cálculo es del módulo de agua y riego.
+
+## Faseado: cuánta parcela se puede sostener este año
+
+Un plan sin años es un deseo dibujado. El <Termino slug="faseado">faseado</Termino> parte de una idea
+incómoda: **la superficie que se abre no la limita el terreno, la limitan el agua del mes más seco y
+las horas de trabajo de la semana más cargada**.
+
+<Formula explicacion="Techo de superficie sostenible en la peor época. La lámina diaria se calcula con la evapotranspiración del módulo de agua y riego, con datos propios.">
+superficie sostenible (m²) = agua disponible por día (L) ÷ lámina diaria requerida (L/m²)
+</Formula>
+
+Se calculan los dos techos —agua y jornales—, se toma **el menor** y ese es el número real. Lo que se
+abra por encima se abandona a mitad de la <Termino slug="mes-critico">temporada crítica</Termino>,
+justo cuando un sistema diversificado empezaba a devolver algo.
+
+Después, el orden de las fases obedece a una lógica de camino crítico: **lo que más tarda en estar
+listo se planta primero, aunque sea lo último que produzca**. Un árbol de sombra sembrado en la fase 1
+recién estructura el microclima en la fase 3; si se deja para el final, la fase 3 no existe. Las camas
+de hortalizas, en cambio, se abren el año que uno quiera.
+
+Una fase bien cortada **cabe en el techo de agua y de jornales**, **deja el sistema coherente aunque no
+haya fase siguiente** —porque puede no haberla— y **no imposibilita las posteriores**.
+
+<Dato titulo="La fase cero que casi nadie hace">
+Antes de plantar nada conviene una fase de puro conocimiento, que cuesta casi cero y evita casi todo:
+levantar el plano base, mapear el agua durante una temporada de lluvias completa, medir el caudal en la
+peor semana de la seca, clavar estacas y fotografiar sombras, y escribir
+una <Termino slug="linea-base">línea de base</Termino> del suelo y de la producción actual.
+
+Suena a demora y es lo contrario: es lo único que hace que las decisiones caras de la fase 1 se tomen
+con datos y no con entusiasmo.
+</Dato>
+
+## El plan como documento vivo: versiones, deriva y lo que de verdad se plantó
+
+Un plan impreso una vez y colgado en la pared se vuelve mentira en dos temporadas, y una mentira
+prolija es peor que nada porque la gente le cree.
+
+La disciplina mínima es la que el módulo de planos describe para
+cualquier <Termino slug="juego-de-planos">juego de planos</Termino>: **cada hoja lleva versión y fecha,
+ninguna versión anterior se destruye y cada cambio se anota con el motivo**. El motivo es lo único que
+sirve dentro de tres años: "se movió el camino" no vale; vale "se movió el camino porque el agua de la
+calle entraba por ahí en enero".
+
+Después está la hoja que casi nadie tiene: el <Termino slug="registro-de-plantacion">registro de
+plantación</Termino>, lo que efectivamente se plantó, con fecha, cantidad, origen del material y quién
+lo hizo. Es el equivalente agrícola de un plano <Termino slug="conforme-a-obra">conforme a
+obra</Termino>, y sostiene la <Termino slug="trazabilidad">trazabilidad</Termino> del material de
+vivero.
+
+La distancia entre el plan y ese registro tiene nombre: la <Termino slug="deriva-del-plan">deriva del
+plan</Termino>. No es un fracaso —la realidad corrige al papel— pero **sí es un dato que se mide en vez
+de disimularse**: una revisión anual, caminando, con tres preguntas por elemento —¿está?, ¿está donde
+decía?, ¿cumple la función por la que entró?—. Lo que no está y no se echa de menos se borra; lo que
+está sin haber sido planificado y funciona se dibuja y se le nombra la función.
+
+<Analogia>
+Es exactamente la **deriva de configuración**: alguien tocó a mano un servidor para apagar un incendio
+un domingo, y desde entonces el estado declarado y el estado real son dos cosas distintas. Nadie
+mintió: mandó la urgencia. Pero aquí no hay comando que reconcilie, y la única reconciliación es
+**caminar el terreno con el plano y anotar las diferencias**, con la seriedad de un inventario.
+</Analogia>
+
+Y un detalle de esquema: **cada lote y cada cama llevan un código estable que nunca se reutiliza**,
+aunque el elemento desaparezca. Es una clave primaria, y reciclarla mezcla dos historias distintas. Con
+ese código, la <Termino slug="bitacora-del-sistema">bitácora</Termino> de manejo, el registro de
+plantación y el plano hablan del mismo objeto sin ambigüedad.
+
+<AplicarRizoma>
+**Los 3.666 m² en 12 lotes contiguos son una ventaja grande y una trampa pequeña.** La ventaja es que
+ya existe una subdivisión física que sirve
+como <Termino slug="unidad-de-manejo">unidad de manejo</Termino>: unos 300 m² con tratamiento propio,
+código estable y registro independiente, lo que permite probar
+con <Termino slug="testigo">testigo</Termino> sin inventar parcelas. La trampa es creer que ese límite
+administrativo es el límite del diseño: **el agua, el viento y la sombra no saben dónde están los
+mojones**, y un cerco vivo o un dosel casi siempre cruzan de un lote a otro.
+
+**El levantamiento tiene un orden concreto aquí.** Amojonar y medir el perímetro y los doce lotes con
+su error de cierre; medir el caudal del punto de agua en la peor semana de agosto y no en marzo;
+levantar con nivel de manguera las diferencias de centímetros de cada lote, que en esta llanura son
+toda la topografía que existe; inventariar árbol por árbol lo que ya está en pie, incluidos los del
+otro lado del alambre; y dibujar por dónde camina hoy la gente que entra.
+
+**El análisis de sol tiene consecuencia inmediata para el catálogo.** Como el sol pasa por el norte de
+febrero a octubre, los árboles de sombra que Rizoma ya vende sombrean hacia el sur casi todo el año, y
+ese es justo el espacio útil para el sotobosque de yautía y culantro. **La franja al sur de cada grupo
+de árboles no es superficie perdida: es el piso sombreado del sistema**, y hay que dibujarla como tal.
+
+**El surazo entra por el sur, y ahí el plano resuelve un conflicto que parecía irresoluble.** El cerco
+vivo denso que pide la lección del perímetro va en el borde sur, el lado que menos sombra proyecta al
+mediodía: protección y luz no compiten. En el plano se comprueba si la distancia protegida alcanza; si
+no, se elige qué se protege y se anota que el resto queda expuesto, sin fingir que la cortina cubre
+todo.
+
+**El agua entre lotes es la decisión sanitaria del sitio.** El plátano es clonal y sus enfermedades de
+suelo más graves no se curan y viajan con suelo y agua. Eso se traduce en tres cosas: el bloque de
+plátano queda **aguas abajo** de todo lo susceptible y del vivero; el recorrido normal de trabajo va
+del vivero hacia el plátano y no al revés; y el punto de limpieza de botas y herramienta se dibuja en
+el papel como un elemento del sistema.
+
+**El vivero manda sobre la circulación más de lo que parece.** Es el elemento de mayor frecuencia de
+visita: agua a diario, sombra controlable y salida directa al punto de acopio, porque las plantas salen
+en volumen y en vehículo. Va pegado al camino principal, y los almácigos más cerca todavía. En cambio
+el <Termino slug="banco-de-plantas-madre">banco de plantas madre</Termino> del cerco vivo **se visita
+cada mes y puede ir en el borde más lejano**: es la carga fría del sistema.
+
+**El faseado sale de dos números que el proyecto todavía tiene que medir**: los litros por día que
+llegan al terreno en agosto y las horas semanales reales de trabajo. Con esos techos se decide cuántos
+de los doce lotes se abren el primer año —probablemente dos o tres, los más cercanos al agua— mientras
+el resto recibe solo lo que tarda años y no pide riego: el cerco vivo del sur, los árboles de dosel y
+el gandul. **Plantar la estructura lenta en toda la superficie es compatible con abrir camas solo donde
+alcanza el agua**, y esa combinación hace que el año tres exista.
+
+**Y el encuadre comunitario obliga a una hoja extra que ningún manual pide.** Rizoma no dibuja para
+Rizoma: dibuja para que un vecino con veinte metros cuadrados copie el patrón. Del plano general tiene
+que poder derivarse una versión mínima —un plano de patio con los mismos criterios de sol, viento,
+agua, frecuencia de visita y faseado— y tiene que ser legible para alguien que no dibuja planos. **Un
+plan que solo entiende quien lo hizo es, en un proyecto que existe para enseñar, un plan fallido.**
+</AplicarRizoma>
+
+<ContextoBolivia>
+**La llanura del sur de Santa Cruz castiga a quien confía en la vista.** A unos 529 metros sobre el
+nivel del mar, el terreno parece plano y no lo es: tiene diferencias de centímetros que deciden dónde
+se encharca. El suelo agrava el efecto, porque
+las <Termino slug="arcilla-expansiva">arcillas expansivas</Termino> de la zona se hinchan al mojarse,
+cierran los poros y hunden la infiltración justo cuando más agua está cayendo. **El agua se queda en
+superficie**, y por eso aquí el mapa de charcos vale más que unas curvas de nivel de otro clima.
+
+**El calendario obliga a levantar la información dos veces.** Con lluvias de octubre a abril y seca de
+mayo a septiembre, el mismo terreno son dos terrenos: en febrero el problema es la salida del agua; en
+agosto, el caudal disponible y la sombra. A eso se suman
+los <Termino slug="veranillo">veranillos</Termino> y los surazos: los eventos que ponen a prueba la
+ubicación de todo lo frágil.
+
+**Sobre límites, títulos y trámites, la única respuesta honesta es que se consultan.** En el área rural
+es normal que un terreno no tenga plano, que las medidas del papel no coincidan con las de la cinta,
+que existan pasos de servidumbre antiguos y que el <Termino slug="uso-de-suelo">uso de suelo</Termino>
+o la perforación de un pozo tengan requisitos propios. Este curso no te va a dar artículos, plazos ni
+costos, porque tendría que inventarlos. **Mide tú mismo el terreno para diseñar, y lleva cualquier
+discrepancia con los documentos, cualquier duda de lindero y cualquier trámite a la autoridad municipal
+competente y a un profesional habilitado.** El plano de diseño y el plano con validez legal son
+documentos distintos y no se sustituyen.
+
+**Los datos climáticos se buscan, no se suponen.** No hay una estación meteorológica en tu lote y los
+promedios departamentales no describen un terreno concreto. Sí existen instituciones —el servicio
+meteorológico nacional, las universidades y los centros de investigación agrícola— y vecinos que llevan
+décadas mirando el mismo cielo. **Preguntarles y anotar lo que uno mide es la fuente correcta.**
+
+**Y hay un criterio de diseño sanitario que aquí no es opcional: el dengue es endémico.** El mosquito
+que lo transmite se cría en agua acumulada en recipientes artificiales, y un vivero está lleno de
+ellos: macetas apiladas, bandejas, baldes, tanques sin tapa, canaletas y llantas. Eso entra en el plano
+como decisión de diseño: **tanques tapados, drenaje de todo lo que pueda acumular, un sitio definido
+para guardar envases boca abajo y bajo techo**. Diseñar el sitio para que sea difícil dejar agua parada
+es más eficaz que acordarse de vaciarla; la orientación sobre el dengue la dan las autoridades de
+salud.
+</ContextoBolivia>
+
+## Cierre del módulo
+
+El módulo empezó con una afirmación incómoda: un monocultivo no es frágil por ideología sino por
+mecanismo, y la diversidad no es una virtud sino una herramienta que se paga en trabajo. De ahí salió
+el criterio que se repitió siete lecciones seguidas: **cada elemento entra en el sistema por la función
+que cumple, no por ser natural, bonito o gratis**.
+
+Después vino el detalle: dos plantas que comparten un metro cuadrado compiten y a veces se facilitan la
+vida; unas asociaciones resisten la evidencia y otras son folclore de otro clima; la rotación rompe
+ciclos de inóculo; el árbol pasa a ser la estructura que fija el microclima; el perímetro se vuelve un
+banco de plantas madre; y las franjas son la infraestructura del control biológico.
+
+Esta última lección solo hizo una cosa con todo eso: **ponerle coordenadas y fecha**. Una función sin
+posición no se cumple —la sombra tiene que caer en un sitio concreto, el agua tiene que llegar por
+gravedad desde una altura concreta— y una función sin fase no se sostiene, porque lo que no se puede
+regar ni mantener este año no está diseñado: está imaginado. Si hay que quedarse con una sola idea:
+**un sistema agrícola se diseña como cualquier sistema del que uno se hace responsable —por funciones,
+con redundancia, midiendo lo que se paga y dejando escrito por qué se decidió cada cosa—**. Solo que
+aquí los componentes crecen, tardan años en dar servicio y no se pueden reiniciar.
+
+Y queda el corolario que le da sentido a todo esto en Rizoma del Sur: un plan dibujado, fechado y
+honesto sobre lo que no sabe **se puede regalar**. Es la única forma que tiene el conocimiento de un
+huerto de salir de la cabeza de quien lo hizo y llegar al vecino que empieza con veinte metros
+cuadrados, sin plata y sin estudios. Herramientas para que la comunidad avance: eso incluye el papel
+donde está dibujado el porqué.

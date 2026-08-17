@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "horas-y-no-meses",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué es correcto sobre contar el mantenimiento en horas de trabajo en vez de en meses?",
+      "opciones": [
+        "El desgaste es proporcional al trabajo hecho: a tres mil vueltas por minuto, una hora son ciento ochenta mil carreras del pistón, y dos máquinas compradas el mismo día pueden tener vidas muy distintas.",
+        "Cada tarea se cumple cuando llegan las horas o cuando llega la fecha, lo que ocurra primero, porque hay degradaciones que dependen del uso y otras que corren aunque el motor esté parado.",
+        "Sin horómetro se puede contar con la jornada declarada o calibrando una vez cuánto dura un tanque trabajando normal, y anotándolo siempre en una libreta.",
+        "Como el reloj de un motor son las horas, una máquina guardada catorce meses con el mismo aceite todavía está dentro de intervalo si le faltan horas por cumplir."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es la trampa más común. El aceite se degrada por dos vías distintas: unas dependen del trabajo —cizalladura, hollín, partículas— y otras del tiempo, sobre todo el agua de condensación que forma ácidos y ataca cojinetes durante meses aunque nadie encienda el motor. Por eso la regla es «lo que ocurra primero» y por eso hay un cambio anual mínimo. Un aceite con catorce meses en el cárter está vencido aunque el horómetro diga que sobran cuarenta horas."
+    },
+    {
+      "id": "por-que-se-gasta-el-aceite",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre por qué se degrada el aceite de un motor pequeño, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "La cizalladura parte las moléculas largas que espesan un multigrado en caliente, y el aceite termina más fino de lo que dice la lata.",
+        "Parte de los gases de combustión baja al cárter con gasolina sin quemar y diluye el aceite; la firma es que el nivel sube y huele a gasolina.",
+        "La combustión produce agua que, si el motor solo trabaja ratos cortos, condensa en el cárter, emulsiona el aceite y forma ácidos.",
+        "Como los aditivos detergentes mantienen la suciedad en suspensión, el aceite que sigue viéndose oscuro pero fluido conserva intacta su capacidad de protección."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El color no mide nada. Los aditivos —detergentes, dispersantes, antioxidantes— son un presupuesto que no se recarga: mientras quedan, todo parece igual; cuando se agotan, la suciedad precipita y los ácidos empiezan a morder sin ningún aviso previo. Además, la mayoría de los motores pequeños no lleva filtro de aceite, así que el hollín, el polvo y las virutas se quedan dentro hasta que alguien los saca con el aceite viejo. Por eso el cambio va por reloj y no por aspecto."
+    },
+    {
+      "id": "aceite-de-mas",
+      "tipo": "verdadero_falso",
+      "enunciado": "Llenar el cárter por encima de la marca de la varilla es un exceso inofensivo: como mucho se desperdicia un poco de aceite.",
+      "respuesta": false,
+      "explicacion": "Falso, y el mecanismo importa. El cigüeñal bate el aceite sobrante y lo llena de burbujas, y el aceite con espuma no sostiene la película que separa los metales: es decir, demasiado aceite puede producir el mismo daño que poco. Además, el exceso sube la presión dentro del cárter y empuja aceite por el respiradero hasta el filtro de aire, que aparece empapado y ahoga el motor. Si alguna vez encuentras el filtro mojado en aceite, revisa el nivel antes de culpar a otra cosa."
+    },
+    {
+      "id": "filtro-de-aire-en-la-seca",
+      "tipo": "opcion_multiple",
+      "enunciado": "Trabajas con una desbrozadora en agosto, en plena seca, con la tierra suelta. ¿Qué es correcto sobre el filtro de aire?",
+      "opciones": [
+        "El polvo de la sabana es sobre todo sílice, más dura que el acero del cilindro: la partícula que pasa queda entre el aro y la pared y raya, y el resultado es compresión perdida, humo azul y consumo de aceite.",
+        "El intervalo del manual está pensado para condiciones normales, así que en esos meses el filtro se mira a contraluz antes de cada jornada en vez de esperar a que toquen las horas.",
+        "Un filtro tapado enriquece la mezcla, y esa gasolina sin quemar termina diluyendo el aceite: un filtro sucio acorta también el intervalo del cárter.",
+        "Si el motor pierde fuerza por falta de aire, se le puede quitar el filtro para terminar la jornada y volver a ponerlo limpio al día siguiente."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Trabajar sin filtro «solo un rato» es la forma más rápida y más cara de matar un motor, y en un día de polvo puede bastar esa jornada. El daño no se ve al momento —el motor incluso anda con más fuerza— pero el cilindro se está rayando, y eso no se arregla después con un filtro nuevo: se arregla rectificando, que cuesta muchísimo más que el filtro. Si el filtro está tapado, se limpia o se cambia; y conviene revisar el lado limpio, porque tierra detrás del filtro significa que el aire entra por otro lado."
+    },
+    {
+      "id": "valvula-apretada",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una válvula de escape que se queda sin holgura no solo hace perder compresión: se quema, porque deja de refrigerarse contra su asiento.",
+      "respuesta": true,
+      "explicacion": "Verdadero, y es el motivo por el que esta tarea del calendario no se salta. La válvula de escape es la pieza más caliente del motor, bañada por los gases de salida, y su única vía para soltar ese calor es el contacto metal con metal contra la culata durante el rato que permanece cerrada. Si la holgura llegó a cero, la válvula queda levantada aunque el mecanismo diga que cerró: no apoya, no evacúa calor, se pone al rojo, se deforma y termina con una muesca por donde soplan los gases. Ahí ya no se calibra, se rectifica o se cambia. La holgura se cierra sola con las horas porque la válvula se hunde unas micras en su asiento, y la cifra de ajuste la da el manual del motor, en centésimas de milímetro y distinta para admisión y para escape."
+    },
+    {
+      "id": "guardado-de-temporada",
+      "tipo": "opcion_multiple",
+      "enunciado": "Terminó la temporada y vas a guardar la motobomba seis meses. ¿Qué es correcto?",
+      "opciones": [
+        "El aceite se cambia antes de guardar, no después, porque los ácidos del aceite usado van a estar meses en contacto con los cojinetes.",
+        "El combustible se resuelve entero —o vaciar todo el sistema o llenar el tanque con estabilizador y hacerlo circular—, porque medio tanque de gasolina vieja engoma los chiclés y, con etanol, separa agua al fondo.",
+        "Conviene dejar el motor en compresión y con una cucharadita de aceite repartida en el cilindro, para que las válvulas queden cerradas y la pared no se oxide.",
+        "Para que no se trabe, lo mejor es prenderla treinta segundos cada dos o tres semanas y apagarla enseguida."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El arranque corto hace daño en vez de bien. Al encender en frío entran gasolina y agua al cárter, y el motor se apaga antes de alcanzar la temperatura que las evaporaría por el respiradero: el saldo de esos treinta segundos es más dilución y más ácido que antes de encenderlo. La marcha de mantenimiento que sí sirve dura diez o quince minutos, hasta que el motor está caliente de verdad, y mejor con algo de carga: al generador se le enchufa un consumo real y a la bomba se le hace circular agua."
+    },
+    {
+      "id": "aletas-y-tornillos",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre refrigeración y tornillos en una máquina portátil, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Tapar media superficie de aletas obliga al motor a subir su temperatura para evacuar el mismo calor, y como el pistón de aluminio dilata casi el doble que el cilindro de hierro, la holgura se cierra sola hasta el agarrotamiento.",
+        "La rejilla del arrancador de cuerda es la boca de entrada de aire, así que un puñado de pasto pegado ahí anula la refrigeración aunque las aletas estén limpias.",
+        "La vibración afloja siempre los mismos tornillos, y dos de ellos son peligro directo: la tuerca de la cuchilla de una desbrozadora —de rosca izquierda en muchos modelos— y los del silenciador.",
+        "Si el motor se recalienta, ayuda quitarle el deflector o la tapa de chapa para que le llegue más aire libre."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Quitar el deflector empeora exactamente lo que se quería arreglar. Esa tapa no estorba: obliga al aire del ventilador del volante a pasar entre las aletas en vez de escaparse por el costado, y sin ella el aire circula suelto y refrigera mucho menos. Una máquina a la que le sacaron la tapa «porque se recalentaba» se recalienta más. La limpieza correcta es con el motor frío, con cepillo o un palito de madera, y nunca con agua a presión sobre un motor caliente, porque el choque térmico agrieta el aluminio."
+    },
+    {
+      "id": "plan-propio-doce-meses",
+      "tipo": "abierta",
+      "enunciado": "Elegí una máquina con motor que exista de verdad en tu vida: la desbrozadora de la casa, la motobomba del patio, la moto con la que trabajás, el generador que sacan cuando se corta la luz, o la de un vecino que te la presta. Escribí el plan de mantenimiento de esa máquina para los próximos doce meses. Decí cuál es, qué trabajo hace y en qué meses del año trabaja; cómo vas a llevar la cuenta de las horas si no tiene horómetro; qué tareas van antes de cada uso, cuáles por horas y cuáles por fecha, con el mecanismo de por qué cada una importa en tu caso; cómo y cuándo la vas a guardar; y qué vas a comprar y anotar para que el plan se sostenga. Sé concreto con tu situación real: dónde vive la máquina, quién más la usa y qué pasa el día que se para.",
+      "respuestaModelo": "Tomo la desbrozadora de la casa, que es de dos tiempos, la uso para el patio y para cortar el pasto de dos vecinos que me pagan, y vive colgada en el galpón del fondo. Trabaja de octubre a abril, que es cuando el pasto crece con las lluvias, y de mayo a septiembre casi no sale.\n\nHoras. No tiene horómetro, así que uso el tanque como reloj. Una tarde con reloj en mano lo llené, anoté la hora y trabajé normal hasta que se apagó sola: cuarenta minutos. Con eso cada tanque son casi tres cuartos de hora, y ese número quedó en grande en la primera hoja de la libreta, que vive en una bolsa de plástico atada al mango y no en la casa. En cada salida anoto la fecha, cuántos tanques hice, qué le hice y qué noté raro. En el depósito pegué una etiqueta con dos números, horas actuales y horas del próximo servicio, porque el sábado la puede agarrar mi hermano y él no va a abrir la libreta.\n\nAntes de cada uso, tres cosas que no me llevan ni dos minutos. Reviso la tuerca de la cuchilla, que en este modelo es de rosca izquierda y se afloja girando al derecho; lo hago con el motor apagado y el capuchón de la bujía desconectado, porque si esa tuerca se suelta la cuchilla sale disparada como un proyectil. Miro los tornillos del silenciador, que se aflojan siempre por el ciclo térmico y, sueltos, soplan gas a varios cientos de grados sobre mi pierna o sobre el pasto seco. Y miro el filtro a contraluz: si no veo la luz a través, ya no filtra aire.\n\nAl terminar cada jornada limpio la rejilla del arrancador y las aletas, con el motor frío y con un cepillo. Esto en el patio parece una tontería y no lo es: la rejilla es por donde entra todo el aire de refrigeración, y un puñado de pasto pegado ahí anula el sistema entero aunque las aletas estén impecables. Si el motor tiene que subir su temperatura para evacuar el mismo calor, el pistón de aluminio dilata casi el doble que el cilindro de hierro, la holgura se cierra sola y termino con el pistón agarrado. Nunca con agua a presión sobre el motor caliente.\n\nPor horas van la limpieza del filtro y la bujía, con las horas del manual, que bajé buscando el número grabado en el motor e imprimí en una hoja metida en una bolsa transparente colgada en el galpón. Como es de dos tiempos no tengo cárter ni calibración de válvulas, así que mi tarea grande es el filtro. En la seca casi no la uso, pero cuando corto en tierra suelta el filtro se me tapa en pocas horas, y eso no es solo pérdida de fuerza: el polvo de aquí es sílice, más duro que el cilindro, y la partícula que pasa raya la pared y me hace perder compresión. Cada vez que limpio el filtro anoto en la columna de «qué se notó» cuántas horas aguantó, y así ya sé que en agosto lo tengo que mirar todos los días. La ronda de tornillos la hago junto con la limpieza del filtro, con llave del tamaño correcto y no con pinza, y sin exagerar la fuerza porque la rosca es de aluminio.\n\nPor fecha va el guardado, y lo hago en mayo, apenas termina la temporada, con la máquina todavía en la mano y no seis meses después. Vacío el combustible entero: cierro y dejo que ande hasta que se apaga sola para que el carburador quede seco, porque la gasolina vieja deja gomas en unos chiclés de décimas de milímetro y, si lleva etanol, se separa agua al fondo del tanque, que es justo de donde chupa. Le saco la bujía, le echo una cucharadita de aceite al cilindro, tiro despacio dos o tres veces para repartirlo y la vuelvo a poner; después tiro despacio hasta sentir la resistencia y suelto ahí, para que quede en compresión con las válvulas cerradas y el cilindro aislado del aire húmedo. Limpio todo el pasto pegado, tapo el escape y la entrada de aire con un trapo y cuelgo una etiqueta que diga que están tapados, porque si no en octubre trato de arrancarla con el escape taponado. Y no la envuelvo en plástico ajustado: la dejo cubierta con lona, sobre una tarima y con aire circulando, porque el galpón cerrado con el surazo es una máquina de condensación. En septiembre, antes de que empiece la temporada, la reviso y la arranco quince minutos de verdad, no treinta segundos.\n\nQué compro y qué anoto. Armo una vez la caja: llave de bujía, dos llaves fijas, jarra medidora, embudo con malla fina, guantes y un cepillo duro; todo junto, porque la tarea que exige buscar herramientas es la que no se hace. Filtro y bujía de repuesto los compro cuando bajo a Santa Cruz y no el día que se rompen, porque aquí un repuesto tarda y la máquina siempre se para en la semana de más trabajo. No pongo precios porque cambian: cotizo en la zona. Y le enseño a mi hermano a limpiar el filtro y a preparar la mezcla, porque una máquina que solo yo sé mantener está a un viaje de distancia de morirse.",
+      "criterios": [
+        "Elige una máquina real de su casa, su taller o un vecino, y dice qué trabajo hace y en qué meses del año trabaja.",
+        "Propone una forma concreta de contar horas sin horómetro —jornada declarada o el tanque calibrado con reloj— en vez de dejarlo en la memoria.",
+        "Describe una bitácora que vive con la máquina y una etiqueta física con las horas del próximo servicio, y explica por qué la etiqueta hace falta aunque exista la libreta.",
+        "Separa tareas de antes de cada uso, tareas por horas y tareas por fecha, en vez de mezclar todo en una lista suelta.",
+        "Incluye las revisiones de seguridad antes de cada uso —tuerca de cuchilla y tornillos del silenciador, o el equivalente de su máquina— con el motor apagado y el capuchón de la bujía desconectado.",
+        "Justifica cada tarea con su mecanismo y no solo con la costumbre: por qué el polvo raya el cilindro, por qué la aleta tapada termina en pistón agarrado, por qué el aceite se gasta.",
+        "Ajusta el intervalo del filtro a las condiciones reales de la seca en vez de copiar el número del manual sin más.",
+        "Si la máquina es de cuatro tiempos, ubica el cambio de aceite por horas con un mínimo anual, y menciona la calibración de válvulas aunque la delegue en un mecánico.",
+        "Programa el guardado al terminar la temporada de trabajo y no cuando se acuerde, con procedimiento completo: aceite o combustible resuelto entero, película en el cilindro, compresión, limpieza y tapado con etiqueta.",
+        "Evita el error del arranque corto y propone marchas de mantenimiento largas si la máquina va a estar guardada mucho tiempo.",
+        "Lista lo que va a comprar una vez —caja de herramientas y consumibles de repuesto comprados antes de necesitarlos— sin inventar precios y remitiendo a cotizar en su zona.",
+        "Contempla a las otras personas que usan la máquina: quién más aprende a mantenerla, y qué se acuerda cuando se presta o se pide prestada."
+      ],
+      "explicacion": "Esta pregunta no busca que repitas el calendario de la lección, sino que lo aterrices en una máquina que existe, con las condiciones que tiene tu vida: dónde duerme, quién la agarra, en qué meses trabaja y qué te cuesta el día que se para. Un plan bueno se reconoce en tres cosas. Primero, que cada tarea trae su porqué, porque la que no se entiende se abandona en el segundo mes. Segundo, que está anclada a algo que no depende de la memoria —una libreta atada al mango, una etiqueta en el depósito, una fecha fija del mes—. Y tercero, que trata el guardado como una tarea de verdad y no como «dejarla ahí», porque en esta zona la máquina que se usa por temporadas casi nunca se muere trabajando: se muere en el galpón, entre una temporada y la siguiente."
+    }
+  ]
+}

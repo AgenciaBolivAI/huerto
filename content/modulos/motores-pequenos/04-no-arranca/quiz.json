@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "orden-de-las-cinco-preguntas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el orden del árbol de diagnóstico —¿gira?, ¿comprime?, ¿hay chispa?, ¿llega combustible?, ¿respira?—, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Va de lo barato a lo caro: cada pregunta cuesta más trabajo, más herramienta y más desarme que la anterior, así que empezar por el final es pagar de más por la misma información.",
+        "Lo que invalida al resto va primero: si no hay compresión, ningún trabajo sobre el carburador puede hacerlo arrancar, y quien limpia el carburador de un motor sin sello está reparando algo que igual no va a andar.",
+        "Se cambia una sola variable por vez, porque si limpiás el filtro, ajustás el entrehierro y cambiás el combustible en la misma tanda y arranca, arreglaste la máquina y no aprendiste nada.",
+        "Como el carburador sucio es la causa más frecuente de todas, lo eficiente es desarmarlo y limpiarlo de entrada, y solo si con eso no arranca ponerse a hacer pruebas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta suena razonable y es justo el hábito que esta lección viene a romper. Que algo sea frecuente no lo convierte en lo primero que hay que tocar: desarmar un carburador cuesta tiempo, ensucia el banco, expone chiclés de décimas de milímetro a que se pierdan o se dañen, y sobre todo no distingue entre acertar y haber movido cinco cosas a la vez. Peor todavía: un carburador que andaba bien puede dejar de andar bien después de que alguien lo abrió. La prueba correcta es la que puede desmentirte, y limpiar el carburador y volver a jalar no puede."
+    },
+    {
+      "id": "interruptor-de-paro-a-masa",
+      "tipo": "verdadero_falso",
+      "enunciado": "El interruptor de paro de un motor pequeño apaga el motor cortando la corriente que llega a la bobina.",
+      "respuesta": false,
+      "explicacion": "Falso, y confundirlo es lo que hace que se compren bobinas que no hacían falta. El motor no tiene batería: la corriente la genera el propio volante con sus imanes cada vez que gira, así que no hay nada que «cortar» aguas arriba. El interruptor hace lo contrario: manda esa corriente a masa, es decir, le abre un camino corto al chasis para que nunca llegue a formarse la alta tensión. La consecuencia práctica es enorme: cualquier cosa que deje ese cable pegado a masa —un cable pelado que roza el bloque, humedad dentro del interruptor, la palanca de hombre muerto mal regulada, un sensor de aceite bajo activado— da exactamente el mismo síntoma que una bobina muerta. Por eso el primer paso de la rama de chispa es gratis: desconectar el cable del interruptor de paro y volver a probar."
+    },
+    {
+      "id": "compresion-y-prueba-humeda",
+      "tipo": "opcion_multiple",
+      "enunciado": "Estás en la segunda pregunta del árbol, la compresión. ¿Qué es correcto?",
+      "opciones": [
+        "Con el compresímetro enroscado hay que jalar con el acelerador abierto del todo, porque con la mariposa cerrada el motor no toma aire y la lectura sale baja aunque el motor esté sano.",
+        "En la prueba húmeda se echan unas gotas de aceite por el agujero de la bujía y se vuelve a medir: si la lectura sube claramente, la fuga es por los aros y el cilindro; si no cambia, la fuga está arriba —válvula, junta de culata o la bujía floja—.",
+        "Girando el motor muy despacio se puede oír por dónde se escapa el aire, y eso cuesta cero: por el escape es válvula de escape, por el carburador es válvula de admisión, por el tapón de aceite son los aros.",
+        "Si la cuerda se jala suave y hueca, sin rebote, es buena señal: significa que el motor tiene poca fricción interna y que las piezas están bien lubricadas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta invierte el significado del síntoma más útil que tenés sin herramientas. El tirón de un motor sano cuesta y rebota, porque el pistón está apretando aire contra un cilindro sellado y ese aire devuelve el empuje. Una cuerda que sale hueca y suave no habla de poca fricción: habla de que el aire se está escapando por algún lado —aros, válvula, junta o la propia bujía mal apretada— y de que ahí está el trabajo del día. Mucha gente confunde esa suavidad con una máquina «liviana» y se pasa la tarde con el carburador. El truco de la prueba húmeda es que discrimina de verdad: el aceite tapa provisionalmente la luz entre aro y pared, pero no puede tapar una válvula que no cierra."
+    },
+    {
+      "id": "chispa-al-aire-y-chispa-adentro",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si apoyás la bujía contra el bloque y ves una chispa azul y fuerte, el sistema de encendido queda descartado con certeza.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la razón por la que tanta gente jura que «tiene chispa» y el motor sigue muerto. La tensión que hace falta para que un arco atraviese un gas crece con el producto de la presión por la distancia entre electrodos: al aire libre, a presión atmosférica, el arco cruza con poca tensión, pero dentro del cilindro comprimido el mismo gas se vuelve mucho más difícil de atravesar y exige varias veces esa tensión. Una bobina cansada, un cable que fuga contra el bloque o un capuchón húmedo pueden dar una chispa que se ve preciosa afuera y no existe adentro. Por eso la prueba se hace con un probador en línea y la bujía enroscada en su sitio, que además evita el otro problema: con el agujero abierto sale niebla de combustible justo donde estás haciendo arcos. Y una chispa buena de verdad es gruesa, azul blanquecina y chasqueante, no un hilito anaranjado."
+    },
+    {
+      "id": "seguridad-integrada",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la seguridad durante el diagnóstico de un motor, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "El monóxido de carbono se pega a la hemoglobina con una afinidad unas doscientas veces mayor que el oxígeno, así que la sangre sigue roja y llena sin transportar oxígeno, y los primeros síntomas —dolor de cabeza, náusea, mareo, sueño— se confunden con estar cansado.",
+        "La cuerda del arranque nunca se enrolla en la mano: si la chispa salta antes de que el pistón llegue arriba, el motor gira al revés y la cuerda regresa más rápido de lo que se puede acompañar.",
+        "Lo que arde no es la gasolina líquida sino su vapor mezclado con aire, y ese vapor pesa más que el aire, corre por el piso y puede encontrar una chispa que estaba a dos metros.",
+        "Un generador puede trabajar bajo una galería techada o en un garaje con la puerta entreabierta mientras haya algo de corriente de aire y nadie se quede parado al lado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es exactamente donde ocurren las intoxicaciones, y por eso hay que decirla al revés y sin matices: un motor nunca funciona bajo techo, ni siquiera bajo techo a medias. Una galería, un alero o un garaje con la puerta entreabierta no son «al aire libre»: son espacios donde el gas se acumula y desde donde entra a los dormitorios, y como no huele ni se ve, nadie tiene manera de darse cuenta. El detalle que lo vuelve mortal es que el sueño es uno de los síntomas, así que la persona no sale a buscar aire: se duerme. El generador va siempre afuera, lejos de puertas y ventanas. Y si varias personas de la casa tienen a la vez dolor de cabeza, náusea o sueño raro, hay que salir al aire e ir al centro de salud."
+    },
+    {
+      "id": "sintomas-vecinos",
+      "tipo": "opcion_multiple",
+      "enunciado": "Llegan con estas frases. ¿Qué relaciones entre síntoma y mecanismo son correctas?",
+      "opciones": [
+        "«Arranca, trabaja unos minutos, se ahoga y se apaga; descansa y vuelve a arrancar» apunta al respiradero del tapón del tanque tapado: si no entra aire a medida que sale combustible, adentro se forma vacío y el combustible deja de bajar. Aflojar el tapón y ver si sigue trabajando dura cinco segundos.",
+        "«Arranca bien y a los pocos minutos pierde fuerza, y frío vuelve a andar un rato» puede ser la malla apagachispas del silenciador carbonizada, que actúa como tapón; se limpia con cepillo de alambre pero no se elimina, porque en la seca esa rejilla separa una chispa del escape de un incendio de pastizal.",
+        "«Solo anda con el cebador puesto» indica mezcla pobre: o hay un paso obstruido en el carburador o entra aire falso por una junta reseca, una manguera partida o un retén gastado, y ese aire no trae combustible porque no pasó por el carburador.",
+        "«Humea azul» significa exceso de gasolina, así que la solución es limpiar el filtro de aire y comprobar que el cebador no haya quedado puesto."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta mezcla dos humos que cuentan cosas distintas. El humo negro sí es exceso de combustible o falta de aire, y ahí el filtro y el cebador son los primeros sospechosos. El humo azul es aceite quemándose, que es otra historia: en un dos tiempos apunta a una proporción de mezcla demasiado rica en aceite, y en un cuatro tiempos a aros gastados o pegados, a válvulas que dejan bajar aceite, o a un cárter sobrellenado. Limpiar el filtro de un motor que humea azul no cambia nada, y quitar el cebador tampoco. La prueba que discrimina en cuatro tiempos es la húmeda; en dos tiempos, revisar cómo se preparó la mezcla."
+    },
+    {
+      "id": "diagnostico-de-mi-maquina",
+      "tipo": "abierta",
+      "enunciado": "Elegí una máquina con motor que exista de verdad en tu vida y que hoy no arranque, ande mal o te haya dejado a pie alguna vez: la motobomba del pozo, la desbrozadora, la moto, el generador que sacan cuando se corta la luz, o la de un vecino. Escribí el plan de diagnóstico completo para esa máquina. Decí cuál es, qué trabajo hace y qué pasa en tu casa el día que se para; dónde y cómo la vas a trabajar sin lastimarte; qué información gratis vas a recoger antes de aflojar un tornillo; las cinco preguntas en orden con la prueba concreta que vas a hacer en cada una, qué significaría cada resultado y a qué rama te mandaría; qué herramientas tenés y cuáles te faltan, y cómo pensás resolverlo; cómo vas a anotar la hipótesis antes de probar; y qué le vas a decir al dueño de la máquina si llegás hasta cierto punto y no más.",
+      "respuestaModelo": "Tomo la motobomba del pozo de mi casa, de cuatro tiempos, que saca el agua para todo: cocina, ducha y baldes. Se paró un lunes de agosto, en plena seca, y es la peor máquina para que se pare porque acá la bomba es punto único de falla. La usó mi papá el sábado, y cuando le pregunté cómo se apagó me dijo lo más importante de todo: se fue apagando de a poco, tosiendo, no de golpe.\n\nDónde la voy a trabajar. Afuera, en el patio, con sombra pero sin techo encima. No se prende bajo el alero ni con la puerta del galpón abierta, porque el monóxido no huele, no se ve, y los primeros síntomas —dolor de cabeza, sueño— se parecen tanto al cansancio que uno se sienta a descansar justo cuando tendría que estar saliendo. Antes de tocar nada le saco el capuchón de la bujía y lo dejo lejos del agujero, así el motor no puede encender solo con mi mano cerca del rodete. Y no me enrollo la cuerda en la mano: si la chispa cae antes de tiempo, el motor gira al revés y la cuerda vuelve más rápido de lo que puedo soltarla.\n\nAntes de aflojar un tornillo, las preguntas gratis. Destapo el tanque y miro el combustible, no pregunto si le echaron. Reviso interruptor en marcha, llave abierta, cebador donde va y cable de bujía calzado. Y me quedo con la frase de mi papá: un motor que se va apagando se quedó sin combustible, sin aire o sin refrigeración, porque esos son procesos con pendiente; uno que se apaga de golpe perdió la chispa o se trabó. La chispa baja de prioridad sin que yo haya gastado un peso.\n\nEscribo la hipótesis antes de probar. Media hoja: fecha y máquina; el síntoma en las palabras del que la usó; qué cambió —estuvo tres semanas parada con el tanque a medias—; mi hipótesis, que es gasolina vieja o filtro tapado por el polvo de agosto; la prueba que puede desmentirla; y el resultado. Lo anoto primero, porque si lo escribo después voy a haber visto lo que ya esperaba ver.\n\n¿Gira? Jalo. Si sale floja y el motor no se mueve, el problema es el arranque y no el motor, y lo compruebo girando el volante a mano, con guantes y el cable a masa; ahí lo probable son los trinquetes pegados con grasa vieja. Si se traba, saco la bujía y vuelvo a jalar: si con el agujero abierto gira bien, había líquido adentro, y esta bomba duerme afuera.\n\n¿Comprime? Tapo el agujero de la bujía con el pulgar y jalo despacio: si me empuja el dedo con fuerza y silba, hay sello. Si se jala hueco, paro y no sigo con el carburador, porque sin compresión no arranca por más limpio que esté. Pido prestado un compresímetro, mido con el acelerador abierto del todo y repito con media cucharadita de aceite: si la lectura sube, la fuga es de aros; si no cambia, es válvula, junta o bujía floja, y eso lo llevo a un mecánico.\n\n¿Hay chispa? Primero desconecto el cable del interruptor de paro y reintento, porque con la humedad de acá ese interruptor se llena de agua y manda la corriente a masa, y da el mismo síntoma que una bobina muerta. Si sigue sin chispa, reviso el entrehierro con un pedazo de tarjeta y miro la chaveta del volante. La prueba la hago con probador en línea y la bujía enroscada, nunca con el agujero abierto, porque por ahí sale niebla de gasolina justo donde estoy haciendo arcos.\n\n¿Llega combustible? Vacío un poco en un frasco de vidrio: una capa aparte en el fondo es agua; olor a barniz es gasolina vieja y carburador engomado. Suelto la manguera y abro la llave: tiene que salir chorro parejo, no gotas. Aflojo el tapón del tanque y pruebo, que dura cinco segundos. Y si hace falta, unas gotas del propio combustible por el agujero de la bujía: si prende dos segundos y muere, ya sé que tiene compresión, que tiene chispa y que el combustible no está llegando. Nada de aerosol de arranque.\n\n¿Respira? Saco el filtro unos segundos y pruebo, pero no en el polvo, y miro la rejilla del escape y las aletas, que en agosto se tapan en una fracción del tiempo del manual.\n\nQué tengo y qué me falta. Tengo llave de bujía, frasco, guantes, anteojos y linterna. No tengo probador de chispa ni compresímetro: el probador es barato y lo compro; el compresímetro lo pido prestado o lo compramos entre tres vecinos, porque se usa poco y sirve a todos. Cambio una sola cosa por vez y anoto el resultado de cada prueba aunque salga negativo, porque un «no» también es información.\n\nQué le digo a mi papá si no llego al final. «Todavía no sé qué es, pero ya sé que gira, que tiene compresión y que tiene chispa, así que está en el combustible o en el aire.» Eso no es no saber: es haber acorralado el problema y haberle ahorrado a la casa dos repuestos comprados a ciegas. Y si es algo que no puedo, lo digo y lo llevamos, porque una bomba mal reparada es la casa sin agua otra vez el martes.",
+      "criterios": [
+        "Elige una máquina con motor que existe de verdad en su vida y dice qué trabajo hace y qué pasa el día que se para.",
+        "Recoge la información gratis antes de tocar nada: combustible mirado y no supuesto, interruptor, llave, cebador y cable de bujía, y qué cambió desde la última vez que anduvo.",
+        "Usa la pregunta que más información entrega —si se apagó de golpe o se fue apagando— y explica hacia dónde corre la sospecha cada respuesta.",
+        "Resuelve el lugar de trabajo con la regla del monóxido sin matices: nunca bajo techo, ni bajo alero, galería o garaje con la puerta entreabierta.",
+        "Desconecta el capuchón de la bujía antes de acercar la mano al rodete, la cuchilla o el volante, y no enrolla la cuerda en la mano.",
+        "Escribe la hipótesis y la prueba que puede desmentirla antes de probar, no después, y menciona por qué ese orden desactiva el sesgo de confirmación.",
+        "Recorre las cinco preguntas en el orden correcto en vez de saltar directamente a desarmar el carburador.",
+        "Da la prueba concreta de cada pregunta y dice qué significaría cada resultado y a qué rama lo mandaría, no solo el nombre de la prueba.",
+        "Sabe que sin compresión no tiene sentido seguir, y usa la prueba húmeda —o al menos sabe que distingue fuga por aros de fuga arriba— antes de sacar conclusiones.",
+        "Descarta el interruptor de paro pegado a masa antes de sospechar de la bobina, y hace la prueba de chispa con el cilindro cerrado y lejos de vapores de combustible.",
+        "Comprueba la ruta del combustible entera, incluida la ventilación del tapón del tanque, y descarta el aerosol de arranque con su motivo.",
+        "Es honesto sobre lo que le falta y sobre lo que no sabe: qué herramienta no tiene y cómo la consigue, cómo anota los resultados negativos, y qué frase concreta le dice al dueño cuando el diagnóstico queda a medias."
+      ],
+      "explicacion": "Esta pregunta no busca que repitas las cinco preguntas de memoria, sino que las apliques a una máquina que existe, en el patio que tenés, con las herramientas que tenés. Un plan bueno se reconoce en cuatro cosas. Primero, que empieza gratis: la información que no cuesta nada —qué dijo el que la usó, qué cambió, si se apagó de golpe— se recoge antes de aflojar el primer tornillo, y sola descarta ramas enteras. Segundo, que cada prueba está escrita en términos de qué resultado la desmentiría; una prueba que no puede desmentirte no es una prueba, y limpiar el carburador y volver a jalar es el ejemplo perfecto de eso. Tercero, que la seguridad no aparece como un párrafo al final sino dentro de la maniobra: el capuchón desconectado antes de meter la mano, el motor afuera, la cuerda que no se enrolla, la chispa que no se busca junto al agujero abierto. Y cuarto, que sabe dónde termina: reconocer que el trabajo excede lo que sabés y decirlo con precisión —«tiene compresión y chispa, está en el combustible»— vale más que un repuesto comprado a ciegas, porque el que sigue después ya no empieza de cero."
+    }
+  ]
+}

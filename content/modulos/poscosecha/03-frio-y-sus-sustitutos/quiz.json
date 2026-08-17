@@ -1,0 +1,104 @@
+{
+  "preguntas": [
+    {
+      "id": "grados-hora",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué la primera hora después del corte vale más que los tres días siguientes?",
+      "opciones": [
+        "Porque lo que gasta la vida útil es el tiempo multiplicado por la temperatura a la que transcurre, y esa primera hora suele ser la más caliente.",
+        "Porque el producto llega del campo con el calor acumulado del sol, una carga térmica que hay que retirar y que no se retira sola.",
+        "Porque la tasa de respiración es máxima al principio, así que los primeros grados que se quitan son los que más gasto evitan.",
+        "Porque la vida útil se cuenta en horas desde el corte, y las primeras horas cuentan doble en el conteo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No hay ningún conteo que haga que las primeras horas «cuenten doble» por ser las primeras: lo que las hace caras es la temperatura a la que transcurren. Piénsalo en grados-hora, como en horas-CPU: una hora a 34 °C consume el mismo presupuesto que cuatro o cinco horas a 18 °C. Si esa primera hora fuera de madrugada y a la sombra, no costaría casi nada."
+    },
+    {
+      "id": "preenfriar-no-es-almacenar",
+      "tipo": "verdadero_falso",
+      "enunciado": "Meter el producto recién cosechado dentro de un depósito fresco ya cuenta como preenfriamiento.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la confusión más cara del tema. El almacenamiento mantiene una temperatura; el preenfriamiento la baja, y es una carrera. Si metes una tonelada de raíces a 32 °C en un depósito fresco, lo que tienes es un depósito a 32 °C. Además, lo que decide la velocidad de enfriamiento no es el frío disponible sino el contacto: un saco cerrado tarda un día en sacar el calor del centro por conducción, y el mismo producto en capa fina, en cajón calado y con aire entre las piezas, se enfría en un par de horas. Amontonar es aislar."
+    },
+    {
+      "id": "hidroenfriamiento",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre enfriar con agua (hidroenfriamiento), ¿qué es correcto?",
+      "opciones": [
+        "Gana al aire porque el agua almacena mucho más calor por kilo y lo conduce mucho mejor: el contacto es íntimo y la transferencia rápida.",
+        "El agua debe estar limpia y renovarse, porque un tacho turbio a 30 °C reparte esporas a todo lo que entre después.",
+        "Hay que escurrir y orear antes de envasar, porque el agua libre sobre la superficie es justo lo que germina las esporas de hongo.",
+        "Es especialmente útil para el producto magullado, porque el agua fría cierra las heridas y las desinfecta."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El producto dañado es precisamente lo que hay que descartar antes del agua: la herida absorbe agua contaminada directamente hacia el tejido, así que el baño lo empeora en vez de curarlo. Las heridas no se cierran con frío, se cierran con curado. Y una advertencia local: todo recipiente de agua estancada es criadero de Aedes aegypti, así que en zona de dengue endémico se tapa, se vacía y se cepilla."
+    },
+    {
+      "id": "curado-suberizacion",
+      "tipo": "opcion_multiple",
+      "enunciado": "El curado de la batata y la yautía consiste en mantenerlas varios días en calor y humedad muy alta. ¿Por qué?",
+      "opciones": [
+        "Porque se cosechan cavando y su piel fina llega llena de raspaduras, y para una raíz la pérdida dominante es la podredumbre que entra por esas heridas.",
+        "Porque el calor y la humedad activan la suberización: las células del borde depositan suberina y organizan una peridermis de herida, una capa de corcho que sella.",
+        "Porque cuesta caro por adelantado —cuatro a siete días respirando a 30 °C— y compra meses de vida útil después.",
+        "Porque el calor evapora el agua superficial de la raíz y la deja seca, que es lo que impide que entren los hongos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El curado no es un secado: se hace con humedad relativa muy alta, del 85 al 95 %, justamente para que el tejido siga vivo y pueda fabricar piel nueva. Si secaras la superficie, la cicatriz no se formaría. Es cicatrización, no deshidratación, y por eso pide lo contrario del preenfriamiento: del orden de 28 a 32 °C durante cuatro a siete días, condiciones que en Santa Cruz regala el clima en plena época de cosecha."
+    },
+    {
+      "id": "reglas-del-curado",
+      "tipo": "verdadero_falso",
+      "enunciado": "Conviene lavar bien la batata y la yautía antes de curarlas, para que no entren hongos con la tierra.",
+      "respuesta": false,
+      "explicacion": "Falso. El agua reblandece la herida y reparte esporas justo cuando el tejido está abierto: la tierra seca se cepilla al final, después del curado. Las otras tres reglas que se incumplen siempre son curar antes de guardar y nunca después —la cicatriz se forma en tejido recién herido—, no curar producto podrido ni muy dañado, porque una pila caliente y saturada es una incubadora tanto para la cicatriz como para el hongo, y bajar a lo fresco en cuanto termina el curado."
+    },
+    {
+      "id": "dano-por-frio",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué caracteriza al daño por frío en las especies tropicales del catálogo?",
+      "opciones": [
+        "Ocurre por encima de cero, típicamente entre 0 y 12 °C, sin que se forme un solo cristal de hielo: las membranas pasan de fluidas a un estado de gel.",
+        "El síntoma no aparece en el frío sino al volver al ambiente, con días de retardo, así que quien lo provoca casi nunca sabe que fue él.",
+        "Es acumulativo en dosis, temperatura por tiempo: una hora fría no hace nada y tres noches seguidas sí.",
+        "Afecta por igual a todo el catálogo, así que basta con no bajar de 13 °C para tener a todos los productos contentos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "No afecta por igual: el culantro es la excepción y tolera cerca de 0 °C, que es donde mejor está. Por eso una heladera doméstica, que trabaja alrededor de 4 °C, es excelente para el culantro y destruye todo lo demás —plátano por debajo de unos 13 °C ennegrece y ya no madura, y el ají dulce se pica y se parda—. Una sola temperatura no sirve a todo el catálogo, y los umbrales concretos hay que verificarlos con producto propio y con las instituciones de investigación agropecuaria del departamento."
+    },
+    {
+      "id": "sustitutos-sin-electricidad",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre los sustitutos del frío cuando no hay electricidad, ¿qué es cierto en Zanja Honda?",
+      "opciones": [
+        "La cadena más barata es la más corta: cosechar contra pedido y entregar la misma mañana resuelve el problema de la hoja tierna sin construir nada.",
+        "La ventilación nocturna funciona por inercia térmica: se abre al anochecer para cargar el aire más frío del día y se cierra temprano para no cambiarlo por el de las dos de la tarde.",
+        "Un depósito enterrado tiende a la media anual del sitio, que aquí ronda los 25 °C, así que da estabilidad y ausencia de picos, no frío.",
+        "La cámara evaporativa es el sustituto más potente en esta zona, porque la humedad alta de la época de lluvias mejora su rendimiento."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Es exactamente al revés: la evaporación no puede bajar de la temperatura de bulbo húmedo, y con humedad relativa alta esa depresión es pequeña, así que la cámara casi no enfría en época de lluvias y encima añade humedad a un ambiente que ya la tiene de sobra. La comprobación cuesta cero: dos termómetros, uno con el bulbo envuelto en tela mojada, a las dos de la tarde del peor mes. Esa diferencia es el techo de la técnica. Medir un día antes de construir un mes."
+    },
+    {
+      "id": "plan-de-poscosecha-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Diseña el plan completo de conservación sin transformación de Rizoma del Sur —culantro, batata, yautía, ají dulce y plátano— desde el corte hasta la entrega, justificando cada decisión con el mecanismo y siendo explícito sobre los límites del sitio.",
+      "respuestaModelo": "En Rizoma del Sur no hay una política de poscosecha, hay tres, porque hay tres modos de fallo distintos, y confundirlos es el error que hay que evitar antes que ningún otro. La regla general es identificar primero cuál es la vía de pérdida dominante de cada producto y solo después elegir la técnica.\n\nEl culantro no se almacena: se corta contra pedido. Es hoja tierna, así que su modo de fallo dominante es la respiración acelerada y la deshidratación. Corte al amanecer, cuando la turgencia es máxima y el calor de campo es mínimo; atado; inmersión breve en agua limpia y fresca a la sombra para hidroenfriar y recuperar turgencia, aprovechando que el agua conduce y almacena mucho más calor que el aire; escurrido y oreado para que no quede agua libre en la superficie, que es lo que germina las esporas; y entrega la misma mañana. La cadena de frío más barata es la más corta. Si algún día aparece una heladera doméstica en el proyecto, es la heladera del culantro y de nadie más, porque es la única especie del catálogo que tolera trabajar cerca de 0 °C.\n\nLa batata y la yautía se curan antes de guardarse. Se cosechan cavando, su piel es fina y llegan con raspaduras inevitables, así que su modo de fallo dominante no es la respiración sino la podredumbre que entra por esas heridas: enfriarlas deprisa no cierra ninguna herida. Pila a la sombra, sin lavar —el agua reblandece la herida y reparte esporas—, cubierta con lona o con hojas de plátano para retener humedad, con algo de movimiento de aire, de cuatro a siete días. Lo que ocurre dentro es suberización: las células vivas del borde depositan suberina y organizan una peridermis de herida, una capa de corcho que sella contra la pérdida de agua y contra la entrada de hongos. Pide 28 a 32 °C y humedad relativa muy alta, condiciones que aquí regala el clima en época de cosecha, así que no cuesta obra: cuesta acordarse. Solo se cura producto sano, porque una pila caliente y saturada es una incubadora perfecta también para el hongo. Después se baja a lo más fresco disponible, pero nunca por debajo de unos 12 o 13 °C, porque por debajo aparecen el pardeamiento interno y el corazón duro.\n\nEl plátano se maneja por destino, no por almacén: verde y firme si va a viajar o a esperar, y en ningún caso frío, porque por debajo de unos 13 °C ennegrece la cáscara y ya no madura bien. Si hay que entregarlo maduro en fecha, se madura a propósito encerrando el racimo con una fruta ya madura: es el etileno usado como herramienta en vez de sufrido. El ají dulce, por su parte, aguanta unas semanas cerca de 10 °C, pero por debajo de unos 7 a 10 °C se pica y se parda, y el síntoma aparece dos días después, ya en el puesto.\n\nAntes que cualquier obra va el punto de acopio: una lona o malla de sombra sobre postes, cerca de las camas y no al final del camino. Es lo más barato del módulo y lo que más grados-hora evita, porque lo que gasta la vida útil es el tiempo multiplicado por la temperatura.\n\nEl depósito, cuando llegue, va semienterrado con berma y en el punto más alto de los doce lotes, nunca como pozo: es llanura aluvial, el nivel freático sube en época de lluvias y las arcillas expansivas del sitio empujan lateralmente contra cualquier muro de contención, que es cálculo del módulo de albañilería. Y hay que ser honesto sobre lo que entrega: como la media anual ronda los 25 °C, un enterrado aquí da estabilidad y ausencia de picos, no frío. Su régimen de trabajo es la ventilación nocturna con cierre diurno: abierto al anochecer para cargar el aire más frío de las veinticuatro horas, cerrado desde temprano, con termómetro de máxima y mínima dentro y otro fuera para comprobar que sirve de algo.\n\nLa cámara evaporativa se mide antes de construirse, con dos termómetros y uno con la mecha mojada, a las dos de la tarde, una semana de lluvias y una de seca: la depresión de bulbo húmedo es el techo de la técnica, y en época de lluvias será pequeña. Decida lo que decida el dato, hay que enseñarlo, porque en un proyecto comunitario y gratuito un resultado negativo bien medido le ahorra la obra a cada vecino que iba a copiarla de internet.\n\nY dos separaciones que no se negocian: el culantro nunca comparte espacio con el plátano, porque el plátano madurando emite etileno suficiente para amarillearlo en dos días; y nada de producto bajo el mismo techo que combustible, agroquímicos o pintura, porque los absorbe, y eso ya no es calidad sino inocuidad. Sobre el surazo, la regla es cerrar y tapar lo tropical, porque una madrugada a 10 °C es refrigeración gratis para el culantro y daño por frío para el plátano y el ají.\n\nEl control de todo esto es una balanza de cocina y una caja testigo pesada cada mañana: por encima de un 3 a 5 % de pérdida de peso la hoja ya no se vende. Y la honestidad final: nada de esto repara una magulladura ni arregla una mala planificación de siembra, porque el frío retrasa el reloj pero no lo hace retroceder.",
+      "criterios": [
+        "Separa el catálogo por modo de fallo dominante en vez de dar una sola receta.",
+        "Resuelve el culantro con cadena corta —corte al amanecer y entrega la misma mañana— e hidroenfriamiento con agua limpia, escurrido y oreado.",
+        "Explica el curado de batata y yautía como suberización y peridermis de herida, no como secado.",
+        "Da las condiciones del curado —calor y humedad muy alta, cuatro a siete días— y señala que el clima local las regala.",
+        "Respeta el orden curar primero, enfriar después, sin lavar antes y solo con producto sano.",
+        "Aplica los umbrales de daño por frío y descarta explícitamente la heladera doméstica para todo salvo el culantro.",
+        "Usa el etileno como herramienta para madurar plátano y como incompatibilidad frente al culantro.",
+        "Prioriza el punto de acopio con sombra antes que cualquier obra, argumentando en grados-hora.",
+        "Elige semienterrado con berma y justifica el rechazo del pozo por nivel freático y arcillas expansivas.",
+        "Corrige el mito del sótano con la media anual de unos 25 °C: estabilidad, no frío.",
+        "Condiciona la cámara evaporativa a la medición de bulbo húmedo y asume enseñar el resultado aunque sea negativo.",
+        "Cierra con el control por caja testigo y con el límite honesto: el frío no repara daño mecánico ni mala planificación."
+      ],
+      "explicacion": "La respuesta completa no es una lista de temperaturas: es un razonamiento que va del mecanismo a la decisión. Primero se identifica la vía de pérdida dominante de cada producto —deshidratación en la hoja, podredumbre por herida en la raíz, maduración por etileno en el plátano—, después se elige la técnica, y solo al final se piensa en construir algo. Los tres errores que más se ven son tratar todo el catálogo con la misma temperatura, curar después de guardar en vez de antes, y construir una cámara evaporativa sin haber medido nunca la depresión de bulbo húmedo del sitio."
+    }
+  ]
+}

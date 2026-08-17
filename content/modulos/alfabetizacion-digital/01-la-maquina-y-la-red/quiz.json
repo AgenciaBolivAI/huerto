@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "las-seis-piezas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre las piezas que tiene adentro cualquier teléfono o computadora, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "La memoria de trabajo solo mantiene su contenido mientras le llega corriente, así que se borra sola al apagar el aparato y sin ningún aviso.",
+        "El almacenamiento conserva fotos, mensajes y aplicaciones sin necesidad de corriente, y por eso todo sigue ahí después de tres días apagado.",
+        "La radio de GPS no habla con nadie: solo escucha señales de satélites, y por eso da la posición aunque no haya señal de teléfono ni datos contratados.",
+        "El procesador va guardando por su cuenta lo que calcula, así que conviene apagar el aparato de vez en cuando para que suelte lo que tiene acumulado adentro."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y sostiene media docena de supersticiones. El procesador no guarda nada por sí mismo: pide un dato, hace la operación y entrega el resultado; lo que se acumula está en la memoria de trabajo, que además se vacía sola en cuanto se corta la corriente. Apagar y prender puede ayudar en un caso concreto —dejar la memoria de trabajo limpia cuando quedó ocupada por aplicaciones colgadas—, pero no libera ni un byte del almacenamiento, que es lo que está lleno cuando el aparato «se llenó». Confundir las dos piezas es exactamente lo que lleva a aplicar el remedio equivocado."
+    },
+    {
+      "id": "por-que-va-lento",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un aparato que responde con retraso a cada toque puede estar así por varias razones. ¿Cuáles son mecanismos reales?",
+      "opciones": [
+        "El depósito casi lleno también hace lento el aparato, porque el sistema necesita espacio libre para archivos temporales y esta memoria escribe más lento cuanto menos hueco le queda.",
+        "Cuando el aparato se calienta, el sistema baja a propósito la velocidad del procesador para no dañarlo, y por eso se arrastra al sol o mientras carga.",
+        "El aparato es el mismo de siempre, pero las aplicaciones engordaron con cada actualización y ahora piden más memoria y más procesador que el año pasado.",
+        "Cerrar todas las aplicaciones cada vez que se termina de usarlas deja el aparato más rápido y le ahorra batería."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y además es la costumbre más extendida. Un sistema moderno deja las aplicaciones suspendidas en memoria justamente porque despertarlas cuesta muchísimo menos procesador que volver a abrirlas desde cero; cerrarlas todo el tiempo obliga a ese arranque completo una y otra vez, así que gasta más batería y hace el aparato menos ágil, no más. La misma lógica desarma las aplicaciones que prometen «limpiar y acelerar»: son ellas mismas programas que ocupan depósito, ocupan memoria y trabajan por detrás con publicidad y permisos que no necesitan."
+    },
+    {
+      "id": "que-dice-el-candado",
+      "tipo": "verdadero_falso",
+      "enunciado": "El candado que aparece junto a una dirección que empieza por https garantiza que ese sitio pertenece a una empresa seria y que se le pueden dejar datos y dinero con tranquilidad.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la confusión que más dinero cuesta. El candado dice una sola cosa: que el contenido va revuelto entre tu aparato y quien controla ese nombre, así que nadie en el medio —el dueño del wifi del negocio, la operadora, quien escuche el aire— puede leerlo ni modificarlo sin que se note. Garantiza el tubo, no quién está del otro lado del tubo. El certificado que enciende el candado es gratuito y se obtiene en minutos, de modo que una página armada para robarte lo tiene igual que tu banco. Lo que sí hay que leer es el nombre: buscar la primera barra sola de la dirección y quedarse con las dos últimas palabras antes de ella, leyendo de derecha a izquierda, porque quien controla un dominio puede escribir a la izquierda lo que se le antoje."
+    },
+    {
+      "id": "corte-de-luz",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si el teléfono está cargado al 100 %, la conexión a internet de la casa debería seguir funcionando durante un corte de luz en el barrio.",
+      "respuesta": false,
+      "explicacion": "Falso. Tu batería alimenta un solo eslabón de una cadena larga, y el resto está enchufado: el router de la casa se apaga en el mismo segundo, y también la caja de la operadora que convierte la fibra en señal para el router. El eslabón más débil está adentro de tu propia casa. Los datos móviles aguantan más, porque las antenas suelen tener baterías de respaldo para algunas horas, pero tienen su propio problema: todo el barrio se pasa a datos móviles a la vez y esa antena compartida se satura justo cuando más se la necesita. De ahí salen las dos medidas prácticas: probar los datos móviles aunque el wifi esté muerto, y —si el trabajo depende de la conexión— alimentar el router y la caja de la operadora desde un pequeño equipo de respaldo con batería, que es barato porque esos dos aparatos consumen muy poco."
+    },
+    {
+      "id": "el-viaje-del-mensaje",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué describe correctamente lo que ocurre cuando aprietas enviar en un mensaje?",
+      "opciones": [
+        "El mensaje se corta en paquetes con número de orden, que pueden tomar caminos distintos, llegar desordenados y hacer que en el destino se pidan de nuevo solo los que faltaron.",
+        "Antes de conectarse a ningún lado, el teléfono le pregunta al DNS qué número le corresponde al nombre escrito, porque los paquetes se guían por números y no por nombres.",
+        "Ninguna máquina del camino conoce la ruta completa: cada equipo intermedio sabe solamente a quién le pasa el paquete a continuación.",
+        "El mensaje viaja entero por un único cable y en el mismo orden en que salió, y por eso una avería en ese cable corta el envío completo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y es la imagen mental que hay que reemplazar. Nada viaja entero: si el mensaje fuera un camión, un accidente perdería toda la carga y mientras tanto el camino estaría ocupado por él. Al cortarlo en sobres numerados, una avería cuesta unos pocos paquetes que se vuelven a pedir, los demás doblan por otra calle, y por el mismo cable caben a la vez los paquetes de miles de conversaciones distintas. De ese diseño sale también un defecto que todo el mundo vivió: en una llamada en vivo no hay tiempo de pedir el paquete que faltó, y por eso la voz no se demora, se pica."
+    },
+    {
+      "id": "megas-wifi-y-nube",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el consumo de datos, el wifi y la nube, ¿qué es cierto?",
+      "opciones": [
+        "Un minuto de video en buena calidad puede gastar lo mismo que decenas de miles de mensajes de texto, así que quien se quedó sin megas no se los gastó escribiendo.",
+        "El wifi es solamente el último tramo hasta una caja de la casa, así que se pueden tener las rayitas llenas y no cargar nada si lo que se cortó es la línea de la calle.",
+        "Lo que está «en la nube» está en discos concretos, dentro de un edificio de una empresa y en un país con sus leyes, y por eso sin conexión no llegas a tus propios archivos.",
+        "El respaldo automático de fotos y videos solo sube cosas cuando uno se lo pide expresamente, así que no puede llevarse la recarga del día sin avisar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y explica la mayoría de los «se me fueron los megas y casi no uso el teléfono». El respaldo automático trabaja solo, en segundo plano, y sube cada foto y cada video en cuanto los grabas: el video de tres minutos del cumpleaños se va sin que nadie apriete nada. Lo mismo pasa con la reproducción automática de video en las listas de publicaciones —los videos se descargan aunque no toques ninguno— y con las actualizaciones automáticas de aplicaciones. Los tres tienen en cualquier teléfono un interruptor que dice «solo por wifi», y ese ajuste es lo más rentable de toda la lección."
+    },
+    {
+      "id": "el-telefono-del-vecino",
+      "tipo": "abierta",
+      "enunciado": "Un vecino te dice que su teléfono «ya está viejo y no sirve»: se le llenó, va lentísimo y encima se le acaban los megas antes de fin de mes aunque asegura que casi no lo usa. Escribe qué vas a mirar y qué vas a hacer, en orden y explicando el mecanismo en cada paso: cómo separas «se llenó» de «va lento» y las dos de un problema de conexión; qué ajustes le cambias y por qué; qué le explicas del candado y de las direcciones antes de que entre a una página donde hay plata; y qué le dices sobre lo que tiene guardado «en la nube» y sobre qué pasa con su internet cuando se corta la luz en el barrio.",
+      "respuestaModelo": "Lo primero que le digo es que «viejo» no es un diagnóstico y que casi seguro no tiene una avería sino tres cosas distintas mezcladas, y que se separan en veinte minutos sin gastar un peso.\n\nEmpiezo por medir, no por borrar. Entro a la configuración y busco «Almacenamiento»: ahí sale cuánto hay ocupado, cuánto libre y el desglose por tipo. Le explico que el aparato tiene dos memorias que no son la misma. La memoria de trabajo es la mesa donde se trabaja: chica, rapidísima y volátil, que quiere decir que solo mantiene lo que tiene mientras le llega corriente y se borra sola al apagar. El almacenamiento es el depósito: grande, más lento y permanente, y es donde viven las fotos, los videos y las aplicaciones. Con la comparación del carpintero se entiende sin más explicación: el banco lleno de herramientas hace que cada movimiento cueste el doble, pero el depósito lleno es otra cosa, no entra un tablón más, y no hay orden de herramientas que lo arregle. Por eso «se llenó» solo se arregla sacando cosas, y cerrar aplicaciones no libera ni un byte de esa pieza. En la lista de qué ocupa lugar van a aparecer, casi con seguridad, los videos propios y recibidos y lo que guarda sola la aplicación de mensajería.\n\nDespués separo «va lento» de «anda lenta la conexión», que es la confusión más común y la más cara, porque por ella se paga por arreglar teléfonos que no tenían nada. La prueba dura treinta segundos: abro algo que ya esté adentro del aparato, la calculadora o la galería de fotos. Si eso responde al instante, el aparato está sano y lo que tarda es lo que viene de afuera. Si también se arrastra, entonces sí miro las causas de lentitud del aparato: la memoria de trabajo ocupada por demasiadas aplicaciones trabajando por detrás, el depósito casi lleno —que hace lento el sistema porque necesita hueco para archivos temporales y esta memoria escribe más lento cuanto menos le queda—, el calor, que hace que el sistema baje a propósito la velocidad del procesador para no dañarlo, la batería gastada, y la que nadie considera, que las aplicaciones engordaron con cada actualización mientras el aparato siguió siendo el mismo. Le aviso de una vez que no instale «limpiadores»: son ellos mismos programas que ocupan depósito, ocupan memoria y trabajan por detrás con publicidad y permisos que no necesitan.\n\nCon los megas la explicación es de proporciones. Todo lo que sale y entra son paquetes, y los paquetes se cuentan; un minuto de video en buena calidad puede gastar lo mismo que decenas de miles de mensajes de texto, así que nadie se queda sin megas escribiendo. Le cambio tres interruptores a «solo por wifi»: el respaldo automático de fotos y videos, la reproducción automática de video en las listas de publicaciones, y la actualización de aplicaciones. Los tres trabajan solos, y por eso jura que casi no usa el teléfono. Después pongo a cero el contador de datos por aplicación el día que recarga, para que dentro de una semana tenga su propio número medido en su casa, que vale más que cualquier consejo general.\n\nAntes de que entre a una página con plata le explico el candado. El candado significa que el contenido va revuelto entre su teléfono y quien controla ese nombre, así que nadie en el medio puede leerlo ni cambiarlo: garantiza el tubo, no quién está del otro lado. El certificado es gratuito y se consigue en minutos, o sea que una página armada para robarle lo tiene igual que su banco. Lo que se lee es el nombre: se busca la primera barra sola de la dirección y se toman las dos últimas palabras antes de ella, de derecha a izquierda. Y dos costumbres: no entrar a nada con plata o datos personales apretando un enlace que le llegó, sino escribiendo el nombre; y si el navegador avisa que el certificado no corresponde, no seguir adelante.\n\nDe la nube le digo lo que es: no flota en ninguna parte, es un galpón con discos, de una empresa, en un país con sus leyes. Es la computadora de otro. Eso trae tres cosas prácticas: sin conexión no llega a sus propios archivos; la cuenta es la llave, y si pierde el acceso pierde todo lo que hay adentro; y las condiciones —precio, espacio, hasta que el servicio siga existiendo— las decide la empresa. Siendo justos, ese galpón tiene copias y protección que su cajón no tiene, así que para él una copia allá es más segura que la única copia en un teléfono que se moja o se roba; pero sincronizar no es respaldar, porque lo que borra de un lado se borra del otro.\n\nY por último, lo del corte de luz. Su batería alimenta un solo eslabón de una cadena larga y todos los demás están enchufados: el router se apaga en el mismo segundo, y también la caja de la operadora. Por eso en un corte conviene probar los datos móviles aunque el wifi esté muerto, tener cargado el cargador portátil, y si su trabajo dependiera de la conexión, alimentar el router y esa caja desde un pequeño equipo de respaldo con batería, que consumen muy poco. Le cierro con lo mismo con el que abrí: el teléfono no está viejo, estaba lleno.",
+      "criterios": [
+        "Separa explícitamente las tres quejas y las atribuye a piezas o tramos distintos, en vez de tratarlas como un solo problema de «teléfono viejo».",
+        "Distingue memoria de trabajo de almacenamiento con el mecanismo correcto: la primera es volátil y se borra al apagar, el segundo es permanente y es lo que está lleno.",
+        "Afirma que cerrar aplicaciones no libera almacenamiento y que «se llenó» solo se resuelve sacando archivos, señalando los videos y lo que guarda la aplicación de mensajería.",
+        "Propone medir antes de borrar, mirando el desglose de almacenamiento en la configuración del propio aparato.",
+        "Incluye la prueba de treinta segundos —abrir algo ya guardado en el teléfono— para separar una falla del aparato de una falla de la conexión.",
+        "Nombra al menos tres causas reales de lentitud del aparato, incluyendo el depósito casi lleno y la limitación térmica del procesador, y desaconseja los «limpiadores» explicando por qué empeoran.",
+        "Explica el consumo por proporciones —el video frente al texto— y desactiva los tres consumos automáticos: respaldo, reproducción automática y actualizaciones.",
+        "Propone medir el consumo propio con el contador por aplicación en vez de quedarse en el consejo general.",
+        "Explica correctamente qué protege el cifrado del https y afirma con claridad que el candado no dice nada sobre la honestidad del sitio, porque el certificado es gratuito y rápido de obtener.",
+        "Enseña a leer el dominio de derecha a izquierda antes de la primera barra, y agrega no entrar por enlaces recibidos ni seguir adelante ante un aviso de certificado.",
+        "Describe la nube como un edificio de una empresa en un país concreto, con sus consecuencias —hace falta conexión, la cuenta es la llave, las condiciones las pone el dueño— y aclara que sincronizar no es respaldar.",
+        "Explica el corte de luz como una cadena cuyo eslabón más débil está dentro de la casa, y da medidas concretas: probar datos móviles, cargador portátil y respaldo con batería para router y caja de la operadora."
+      ],
+      "explicacion": "Lo que se evalúa no es la lista de consejos sino si cada uno viene atado a su mecanismo, porque solo así el vecino puede resolver el problema siguiente sin volver a preguntar. Una respuesta que dice «bórrale videos y ponle todo en wifi» acierta las acciones y no enseña nada: el día que el aparato vuelva a arrastrarse, esa persona va a cerrar aplicaciones otra vez o a pagar por un limpiador. La bisagra de la respuesta buena es haber separado tres cosas que en la conversación llegaron mezcladas —el depósito, la mesa de trabajo y la conexión— y haber dado, para cada una, una prueba barata que cualquiera puede repetir. El otro punto que separa una respuesta completa es no exagerar hacia el miedo: el candado sí sirve y la nube sí es útil, y decir lo contrario deja a la persona igual de indefensa que creerles del todo."
+    }
+  ]
+}

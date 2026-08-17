@@ -1,0 +1,434 @@
+La lección anterior dejó tres magnitudes claras —tensión, corriente, resistencia— y una advertencia
+seria sobre lo que la electricidad le hace al cuerpo. Todo eso es cierto y **nada de eso se ve**. Un
+cable sano y uno cortado por dentro se ven igual; un fusible quemado y uno bueno se ven igual; un
+enchufe con 220 voltios y uno muerto se ven exactamente igual, y esa es la única razón por la que la
+electricidad mata gente que no era descuidada.
+
+Ahí está el problema entero de reparar. Un aparato roto entrega un solo dato —no funciona— y a partir
+de ahí casi todo el mundo **cambia piezas hasta que ande**. Eso es reparar por sustitución, y es la
+forma más cara que existe: tres repuestos para un fallo, una espera por cada uno, y con frecuencia el
+aparato termina peor que como entró.
+
+Un multímetro rompe ese círculo. No arregla nada: **convierte suposiciones en respuestas**. ¿Llega
+corriente hasta acá? ¿Este cable está cortado? ¿La batería está muerta o solo floja?
+
+## Tres instrumentos dentro de una caja
+
+Un <Termino slug="multimetro">multímetro</Termino> es literalmente eso: **múltiples metros**, varios
+instrumentos en una carcasa, compartiendo pantalla y puntas. Por dentro son tres aparatos distintos:
+
+- **El voltímetro** mide tensión, en voltios: *¿cuánto empuje hay entre estos dos puntos?*
+- **El amperímetro** mide corriente, en amperios: *¿cuánto está pasando por acá?*
+- **El óhmetro** mide resistencia, en ohmios: *¿cuánto estorba este camino?*
+
+La perilla no elige "una función más": elige **cuál de los tres está conectado a las puntas**. Y cada
+uno se conecta al circuito de una manera distinta, que es la idea central de la lección.
+
+Las <Termino slug="punta-de-prueba">puntas de prueba</Termino> son los dos cables con mango aislado y
+extremo metálico. El color no es decoración —**el negro va siempre a la referencia y el rojo al punto
+que se investiga**— y en continua invertirlos solo hace que el número salga con signo menos, que es
+información y no un error.
+
+## El selector, posición por posición
+
+Un multímetro asusta porque tiene veinte marcas alrededor de la perilla. Son cinco grupos, y con tres
+se resuelve casi todo.
+
+| Símbolo en la perilla | Qué mide | Para qué sirve |
+| --- | --- | --- |
+| `V` con línea y puntitos (DCV) | Tensión continua | Baterías, paneles, fuentes, cargadores |
+| `V` con onda (ACV) | Tensión alterna | Tomacorrientes, red de 220 V, inversor |
+| `Ω` | Resistencia | Bobinados, resistencias, calefactores |
+| Ondas de sonido `•)))` | Continuidad | Cables, fusibles, interruptores: ¿hay camino? |
+| Flecha con raya `⊳\|` | Prueba de diodos | Diodos, LED, semiconductores |
+| `A`, `mA`, `µA` | Corriente | Consumo real. **La posición peligrosa** |
+| `OFF` | Nada | Donde queda el selector al guardarlo |
+
+Los números que acompañan a cada símbolo —200 m, 2, 20, 200, 600— son **rangos**: el valor máximo que
+esa posición puede leer. Si mides 12 voltios en el rango de 2 V, la pantalla muestra `1` sola, o `OL`,
+que quiere decir *fuera de escala*; no está roto, le pediste algo más grande de lo que cabe. La regla
+es **empezar por el rango más alto y bajar**. Muchos instrumentos traen
+además <Termino slug="rango-automatico">rango automático</Termino>: la perilla solo dice `V` y el
+aparato elige la escala. **Es la compra correcta para quien empieza**, porque elimina la mitad de las
+lecturas mal interpretadas.
+
+<Advertencia titulo="La confusión que más lecturas arruina">
+Continua y alterna no son intercambiables. Elegir mal no rompe nada, pero **miente**: medir los 220 V
+de un tomacorriente con el selector en continua da un número cercano a cero o un valor que baila sin
+parar, y medir una batería de 12 V en alterna da basura. En los dos casos la conclusión que sacarías
+—*«acá no llega nada»*, *«la batería está muerta»*— sería falsa.
+
+Lo que sale de una batería, un panel o un cargador es continua; lo que viene del tomacorriente o de un
+inversor es alterna. Si dudas, mide primero en alterna: es la posición segura, porque una tensión
+continua leída ahí no daña el instrumento.
+</Advertencia>
+
+## Los bornes: el sitio donde se queman los instrumentos
+
+Debajo de la perilla hay tres o cuatro agujeros metálicos, los **bornes**, y elegir mal uno de ellos
+hace más daño que cualquier otro error posible.
+
+- **`COM`** — común. **El negro va siempre aquí y no se mueve nunca.** Es el retorno de toda medida.
+- **`VΩmA`** — el rojo va aquí para tensión, resistencia, continuidad, diodos y corrientes chicas: el
+  borne del noventa y cinco por ciento del trabajo.
+- **`10A`** o **`20A`** — el rojo va aquí, y solo aquí, para corrientes grandes. En muchos
+  instrumentos ese borne no tiene protección o la tiene apenas.
+
+**Cada vez que muevas el cable rojo, mueve también el selector, y al terminar devuelve los dos a la
+posición de tensión.** Ese hábito de dos segundos salva instrumentos, porque el accidente clásico no
+ocurre al medir corriente: ocurre **en la medida siguiente**, con el cable todavía puesto en el borne
+de 10 amperios.
+
+## Continuidad: la pregunta de sí o no
+
+Esta es la posición que más vas a usar y la más fácil, porque la respuesta es un sonido.
+
+La <Termino slug="continuidad-electrica">continuidad</Termino> es la existencia de un camino conductor
+entre dos puntos. En esa posición el instrumento inyecta una corriente diminuta por la punta roja y
+mira si vuelve por la negra. Si vuelve con poco estorbo —por debajo de unas decenas de ohmios, según
+el modelo— **pita**; si no vuelve, calla y la pantalla muestra `OL`.
+
+Ese pitido importa por una razón práctica: **puedes mirar dónde apoyas las puntas en vez de mirar la
+pantalla.** Con esa única pregunta se diagnostican casi todas las averías tontas, que son la mayoría:
+
+- **¿Este cable está cortado por dentro?** Una punta en cada extremo. Pita: entero. Calla: cortado,
+  aunque el forro se vea impecable.
+- **¿El fusible sirve?** Un <Termino slug="fusible">fusible</Termino> es un hilo metálico calculado
+  para fundirse antes que el resto del circuito: la pieza sacrificial. Bueno pita, quemado calla.
+- **¿El interruptor conmuta?** Puntas en sus dos tornillos: apagado calla, encendido pita. Si no
+  cambia nada, está muerto.
+- **¿Se tocan dos cosas que no deberían?** Entre dos cables que deben estar separados, un pitido
+  significa <Termino slug="cortocircuito">cortocircuito</Termino>.
+
+<Advertencia titulo="Continuidad SIEMPRE con el aparato desenchufado">
+Esta posición manda corriente propia hacia afuera. Si el circuito tiene tensión, **la lectura no
+significa nada** y el instrumento puede quemarse. Y no basta con apagar el interruptor —hay que
+desenchufar—, porque muchos interruptores cortan un solo cable y el otro sigue vivo.
+
+Un condensador grande guarda carga después de desenchufar y puede darte un golpe considerable un buen
+rato más tarde. Regla práctica: desenchufar, esperar, y en aparatos con electrónica medir primero en
+tensión continua para confirmar que ya no queda carga. Solo entonces pasar a continuidad.
+</Advertencia>
+
+<Analogia titulo="Un ping, no una prueba de carga">
+Para quien viene de sistemas: la continuidad es un `ping`. Contesta si el otro extremo responde, y no
+dice nada del ancho de banda ni de la latencia bajo tráfico real.
+
+**Un pitido significa "hay camino", no "el camino sirve".** Una unión corroída por la que apenas pasa
+un miliamperio pita perfecto y se cae en pedazos cuando la bomba pide cinco amperios. Ese es el techo
+del método: descarta lo obvio en dos segundos y es incapaz de encontrar un mal contacto bajo carga.
+</Analogia>
+
+## Resistencia: cuánto estorba el camino
+
+Girando a `Ω` el mismo mecanismo ya no contesta sí o no, sino **con un número**, y se interpreta por
+rangos. **Cerca de cero ohmios** es un conductor sano —o un cortocircuito, según dónde midas—. **`OL`**
+significa camino interrumpido, lo que se llama
+un <Termino slug="circuito-abierto">circuito abierto</Termino>: cable cortado, bobinado quemado,
+fusible fundido. **Un valor intermedio y estable** es lo que se espera de una pieza sana.
+
+Dos reglas hacen que la medida signifique algo. **Nunca con tensión presente**, igual que en
+continuidad. Y **nunca dentro del circuito, si puedes evitarlo**: cuando un componente sigue soldado
+en su sitio, los que lo rodean ofrecen caminos alternativos a la corriente del instrumento, y lo que
+lees es el conjunto y no la pieza. Una resistencia de 1.000 Ω puede leerse como 470 Ω sin estar mal.
+Por eso se levanta una pata o se desconecta un borne. **Los caminos en paralelo mienten siempre hacia
+abajo, nunca hacia arriba.**
+
+<Dato titulo="Las puntas también tienen resistencia">
+Júntalas en la escala más baja y verás algo entre cero y un ohmio: esa cifra hay que restarla al medir
+valores pequeños. Y si un día marca dos o tres ohmios, o salta al mover el cable, el problema no es lo
+que mides: **es la punta, rota por dentro junto al mango**, que es la avería más común del
+instrumento.
+</Dato>
+
+## Tensión: siempre entre dos puntos, siempre en paralelo
+
+Conviene desmontar una idea muy extendida: **no existe la tensión "en un punto"**. La tensión es una
+diferencia, siempre entre dos sitios, igual que una altura solo tiene sentido respecto de un suelo.
+Quien dice "acá hay 220 voltios" dice, sin decirlo, "hay 220 voltios entre este cable y el neutro".
+
+Por eso se mide con las dos puntas a la vez: negra en la referencia —el neutro, el negativo, la masa
+del aparato— y roja en el punto que investigas. Y por eso **se mide en paralelo**: apoyando las puntas
+por fuera, **sin desconectar nada y con el aparato funcionando**. Eso es posible por un detalle de
+diseño: la <Termino slug="resistencia-interna">resistencia interna</Termino> del voltímetro es enorme,
+del orden de millones de ohmios, y ofrece un camino tan malo que la corriente casi no lo toma. El
+instrumento **mira sin participar**.
+
+<Advertencia titulo="Medir con 220 V presente">
+Medir tensión en la red exige tenerla presente, así que no hay forma de hacerlo desenergizado.
+
+**Una sola mano**, la otra en el bolsillo: todo lo grave pasa cuando la corriente entra por una mano y
+sale por la otra, cruzando el pecho. **Puntas primero, mirada después**: apoya las dos, asegúralas, y
+recién entonces mira la pantalla. **Suelo seco y calzado seco**, sin tocar caños ni estructuras
+metálicas con la otra mano. Y **puntas enteras**, sin cortes ni remiendos de cinta; jamás improvises
+puntas con cables pelados para trabajar en 220 V.
+
+Regla de oro: si el trabajo se puede hacer desenchufado, se hace desenchufado.
+</Advertencia>
+
+## Corriente: en serie, y por qué esto quema instrumentos
+
+Aquí está la distinción que separa a quien mide de quien funde fusibles.
+
+<Formula explicacion="La tensión se toca por fuera, sin abrir nada. La corriente exige abrir el camino e insertar el instrumento adentro.">
+tensión → EN PARALELO, por fuera · corriente → EN SERIE, por dentro
+</Formula>
+
+La corriente es *lo que pasa por* un cable. Para saber cuánto pasa, el instrumento tiene que estar **en
+el camino**: hay que cortar o desconectar el circuito e intercalarlo. Por eso el amperímetro se diseña
+al revés que el voltímetro: su resistencia interna es **casi cero**, una fracción de ohmio, para no
+estorbar el paso.
+
+<Analogia titulo="El manómetro y el caudalímetro">
+**El voltímetro es un manómetro:** se rosca en un costado del tubo y mide la presión sin abrir nada y
+sin que el agua deje de correr. **El amperímetro es un caudalímetro de línea:** para saber cuántos
+litros por minuto pasan hay que **cortar el tubo** e intercalarlo.
+
+Montar un manómetro donde iba un caudalímetro no rompe nada: mide mal y se acabó. Al revés sí. **Abrir
+un caudalímetro de par en par y conectarlo directo entre la salida de la bomba y el desagüe** no es
+medir, es un caño abierto. En electricidad, un camino de resistencia casi nula puesto entre los dos
+polos de una fuente es exactamente un cortocircuito.
+</Analogia>
+
+Ese es el mecanismo del accidente, y no requiere torpeza especial: basta con **conectar el instrumento
+en corriente sobre dos puntos que tienen tensión**, sin carga que limite el paso. Ocurre de tres
+maneras y las tres son la misma: puntas sobre un tomacorriente con el selector en amperios; puntas
+sobre los bornes de una batería igual; o selector en tensión pero **el cable rojo olvidado en el borne
+de 10 A**, que puentea el circuito aunque el selector diga otra cosa.
+
+Con suerte se funde el fusible interno y el instrumento se queda mudo en corriente mientras sigue
+midiendo tensión: la pista más clara de que alguien hizo esto antes. Sin suerte, en un circuito capaz
+de dar mucha corriente —la red, o una batería de plomo— se produce un arco: fogonazo, metal vaporizado
+y quemaduras en la mano que sostiene.
+
+<Dato titulo="La salida honesta: casi nunca hace falta medir corriente así">
+La buena noticia después de todo esto: **intercalar el instrumento es de lejos la medición menos
+necesaria** en reparación. Casi todo se diagnostica con continuidad y con tensión.
+
+Y cuando hace falta de verdad —¿cuánto consume la bomba?— existe la herramienta que elimina el
+problema de raíz: la <Termino slug="pinza-amperimetrica">pinza amperimétrica</Termino>. Se abre como
+una tenaza, abraza **un solo cable** sin cortarlo ni tocar el metal, y lee la corriente por el campo
+magnético que ese cable genera: sin abrir el circuito, sin contacto, sin riesgo de cortocircuito. Es
+la compra número dos de la caja, y en un grupo se compra una vez para todos. Ojo: las pinzas baratas
+miden solo alterna; para la continua de un sistema solar hace falta una que lo diga expresamente.
+</Dato>
+
+## La medición que encuentra lo que las demás no ven
+
+Si de esta lección te llevas una sola técnica de reparación, que sea esta, porque encuentra la avería
+que la continuidad declara sana: **medir la caída de tensión con el aparato trabajando**.
+
+Un mal contacto —un tornillo flojo, un borne verde de corrosión, un empalme retorcido y forrado con
+cinta— se comporta como una resistencia pequeña, de fracciones de ohmio. Con los miliamperios de la
+prueba de continuidad esa resistencia es invisible y el instrumento pita alegre. Pero cuando pasan
+cinco amperios la ley de Ohm hace su trabajo: aparece
+una <Termino slug="caida-de-tension">caída de tensión</Termino> sobre esa unión, el aparato del final
+recibe menos y **la energía que falta se convierte en calor justo ahí**. Ese es el mecanismo por el
+que un empalme malo termina derritiendo el plástico y quemando una caja.
+
+La técnica es directa: con el circuito encendido y cargado, apoya las puntas **a un lado y otro de la
+unión sospechosa** y mide tensión. Un conductor sano muestra casi cero; una unión mala muestra décimas
+o unidades de voltio. **El culpable es el punto donde aparece la tensión que sobra.**
+
+De ahí sale también la <Termino slug="medicion-en-carga">medición en carga</Termino>. Una batería
+medida en vacío puede mostrar una cifra impecable y desplomarse en cuanto se le pide corriente; un
+cargador puede dar su tensión nominal sin nada conectado y hundirse con el aparato encendido. **Medir
+en vacío responde a una pregunta que a nadie le interesa.**
+
+## Comprobar el instrumento antes de creerle
+
+Un multímetro roto no avisa: sigue mostrando números, y esos números son mentira.
+
+**La prueba del pitido.** Selector en continuidad, negro en `COM`, rojo en `VΩmA`, **junta las dos
+puntas**. Tiene que pitar y marcar casi cero. Si no pita: pila agotada, fusible interno quemado, punta
+rota o cable en el borne equivocado. Cinco segundos, cada vez que lo enciendes. Y ojo con la pila
+propia: al agotarse, muchos modelos empiezan a leer bajo **antes** de mostrar el aviso, y ese es el
+fallo silencioso que te hace condenar una fuente que estaba bien.
+
+**La prueba contra algo conocido.** Mide una pila nueva de 1,5 V o una batería de 12 V que sabes sana:
+si el número está donde debe, el instrumento lee.
+
+<Advertencia titulo="Vivo – muerto – vivo, el procedimiento que salva vidas">
+Antes de declarar que un circuito está sin tensión y meter la mano, hay un procedimiento estándar de
+tres pasos, y el orden es todo:
+
+1. **Vivo.** Mide en un punto que sabes que tiene tensión —otro tomacorriente— y confirma que el
+   instrumento la muestra.
+2. **Muerto.** Mide el circuito que vas a tocar. Sale cero.
+3. **Vivo otra vez.** Vuelve al punto conocido. Si sigue midiendo, ese cero era real.
+
+El paso tres es el que casi todo el mundo se salta y el único que importa. Sin él, un instrumento que
+se rompió entre el paso uno y el dos —una punta partida por dentro, un fusible que se fue— te enseña
+un cero perfecto en un circuito con 220 voltios vivos. **Nunca uses un cero para justificar tocar algo
+si no comprobaste el instrumento después.**
+</Advertencia>
+
+Queda la compra. Los instrumentos traen impresa
+una <Termino slug="categoria-de-medida">categoría de medida</Termino> —`CAT II`, `CAT III`,
+`CAT IV`— con una tensión al lado: indica qué golpe de energía momentáneo aguantan sin convertirse en
+un arco dentro de tu mano. Para 220 V doméstico lo razonable es al menos `CAT III 600 V`, y con
+**fusibles cerámicos** de alta capacidad de corte, no de vidrio: son los que apagan ese arco dentro
+del instrumento en vez de dejarlo salir. Y si hay inversor, un detalle más: los instrumentos baratos
+calculan la tensión alterna suponiendo una onda senoidal perfecta, así que frente a una onda deformada
+—un inversor barato, un variador, un regulador de luz— se equivocan, casi siempre hacia abajo. Los que
+miden bien en cualquier forma de onda lo declaran
+como <Termino slug="valor-eficaz-verdadero">valor eficaz verdadero</Termino>, *True RMS*.
+
+## Las herramientas mínimas de verdad
+
+El resto de la caja es corto y barato, y esta lista separa lo que hay que tener de lo que se comparte.
+
+| Herramienta | Para qué | Decisión |
+| --- | --- | --- |
+| Multímetro con continuidad | Todo lo anterior | **Comprar**, uno por persona |
+| Destornillador plano y Phillips, dos tamaños | Abrir y cerrar | **Comprar** |
+| Juego de precisión | Tornillos de electrónica | **Comprar**, es barato |
+| Alicate universal, de punta fina y de corte | Sujetar, doblar, cortar | **Comprar** los tres |
+| Pelacables | Forro fuera sin herir el cobre | **Comprar** si aparece |
+| Soldador de estaño y estaño con resina | Uniones de verdad | **Comprar** o compartir |
+| Cinta aislante de calidad | Aislar en seco | **Comprar** |
+| Cinta autovulcanizante | Aislar a la intemperie | **Comprar** |
+| Tubo termorretráctil | Uniones prolijas | **Comprar** un surtido |
+| Terminales y pinza de crimpar | Uniones que no se sueltan | **Compartir** |
+| Pinza amperimétrica | Corriente sin cortar el cable | **Compartir** |
+| Linterna frontal | Ver con las manos libres | **Comprar**, cambia el trabajo |
+
+Tres merecen explicación, porque el detalle decide si la herramienta ayuda o arruina.
+
+**El destornillador correcto es el que llena la ranura.** Uno pequeño en un tornillo grande redondea
+la cabeza en el primer apriete y convierte una reparación de diez minutos en una tarde de taladro:
+prueba dos antes de hacer fuerza.
+
+**El pelacables ahorra el daño invisible.** Quitar el forro con cuchillo o con los dientes del alicate
+corta también hilos de cobre; el cable sigue andando, pero con menos sección de la que crees, calienta
+y se rompe meses después justo ahí. Sin pelacables, la forma correcta es **rodar** el filo alrededor
+sin llegar al cobre y tirar del forro, nunca cortar a lo largo.
+
+**La cinta común y la <Termino slug="cinta-autovulcanizante">cinta autovulcanizante</Termino> no son
+lo mismo.** La común pega con adhesivo, y en el calor de Santa Cruz ese adhesivo se derrite, la cinta
+se desliza y el empalme queda al aire. La autovulcanizante no tiene pegamento: se estira al ponerla y
+sus capas se sueldan entre sí formando una pieza de goma estanca. **Para cualquier unión que vaya a
+mojarse es la única que sirve**, con una vuelta de aislante común encima contra el sol. Y
+el <Termino slug="termorretractil">tubo termorretráctil</Termino> —un tubo plástico que encoge al
+calentarlo— se enhebra **antes** de soldar; olvidarlo es una tradición universal.
+
+<Dato titulo="Lo que se improvisa bien y lo que jamás">
+Se improvisa sin perder calidad: la **tercera mano** con una pinza de ropa clavada en un taco de
+madera; la **base de soldar** con un azulejo; la **esponja** con un trapo de algodón mojado; el
+**organizador de tornillos** con un cartón de huevos; la **iluminación** con el celular dentro de una
+botella traslúcida.
+
+Y no se improvisa nunca, bajo ningún argumento: **el fusible.** Reemplazarlo por un alambre, un clavo
+o papel aluminio elimina la única pieza diseñada para morir y traslada el fallo al cable dentro de la
+pared, que no tiene cómo apagarse. Se reemplaza por otro **del mismo valor y del mismo tipo**, y si se
+quema otra vez, el fusible no es el problema: está avisando de uno.
+</Dato>
+
+<AplicarRizoma titulo="La caja de herramientas de Rizoma del Sur">
+**Lo primero que hay que hacer con el instrumento nuevo no es reparar nada: es medir todo lo que
+funciona bien.** Ese es el cuaderno de mediciones sanas, y es lo más valioso de la lección. Un domingo
+tranquilo, con todo andando, se anota: cuántos voltios hay en el tomacorriente del galpón a media
+mañana y a las siete de la tarde; cuántos amperios toma la bomba trabajando, con la pinza; cuántos
+ohmios tiene su bobinado en frío; cuántos voltios da la batería solar en reposo y con la bomba
+encendida. **Una medición aislada no significa nada; comparada con la de cuando el equipo estaba sano
+lo significa todo.** Es la misma línea base que el módulo de suelos exige antes de enmendar, aplicada
+al cableado.
+
+**Los 3.666 m² en doce lotes contiguos hacen que la caída de tensión sea un problema real.** Las
+tiradas hasta el lote del fondo son largas, y medir a un lado y otro de cada unión con la bomba
+trabajando es lo que va a explicar por qué el motor del fondo arranca con dificultad mientras el mismo
+motor enchufado junto al galpón arranca perfecto.
+
+**La humedad trabaja contra los empalmes todo el año.** De octubre a abril, cualquier unión a la
+intemperie hecha con cinta común deja entrar agua; el adhesivo cede con el calor y la corrosión avanza
+por dentro del cobre sin que se vea nada por fuera. Ese es el escenario exacto donde la continuidad
+pita y el aparato no anda. Regla para el sitio: **toda unión exterior se sella con autovulcanizante**,
+y un fallo intermitente después de una lluvia se diagnostica midiendo caída de tensión en cada
+empalme, no cambiando la bomba.
+
+**Los cortes de energía frecuentes justifican una comprobación que casi nadie hace:** medir la tensión
+de entrada a distintas horas y anotarla. Una red que baja en horas pico hace que los motores tomen más
+corriente y se calienten, y explica averías que parecen misteriosas. Con ese cuaderno se reclama a la
+distribuidora con datos en vez de con impresiones.
+
+**El instrumento tiene sitio fijo y responsable, y va con su cuaderno.** En un proyecto comunitario la
+herramienta que se guarda "por ahí" desaparece en un mes: un clavo en la pared del galpón, una hoja de
+préstamos con nombre y fecha, y la pila de repuesto en la misma caja. Conviene tener **dos
+instrumentos**: uno barato de uso diario y uno bueno, con fusibles cerámicos, para el trabajo en 220
+V.
+
+**El taller de multímetro es el primer taller que puede dar el proyecto**, y no exige saber
+electrónica. Dos horas en una mesa bajo el sombreadero, con cables cortados a propósito, fusibles
+buenos y quemados, pilas gastadas y un interruptor roto; cada vecino practica hasta que pita donde
+tiene que pitar. **Un barrio donde diez personas saben usar continuidad es un barrio donde diez
+extensiones se arreglan en vez de tirarse.** Dos recordatorios: el trabajo eléctrico afuera se hace al
+atardecer, que es la hora del mosquito del dengue —manga larga y repelente son equipo tanto como el
+destornillador aislado—, y nadie mide en 220 V estando solo.
+</AplicarRizoma>
+
+<ContextoBolivia>
+**En Santa Cruz la red domiciliaria trabaja alrededor de los 220 voltios, a 50 hercios**, lo que fija
+dos hábitos: el selector va en tensión **alterna** y en un rango por encima de 220 —o en automático—,
+y hay que tener presente que 220 V perdona bastante menos que los 110 V de otros países. Y no en todo
+el país es igual —La Paz es el caso conocido—, así que **la tensión se mide, no se supone.**
+
+**El vocabulario cambia de barrio en barrio y conviene reconocerlo todo**, porque en la ferretería vas
+a oír una palabra distinta de la que aprendiste. Al multímetro se le dice casi siempre **tester** o
+**multitester**; al destornillador, **desarmador**; al alicate, **pinza**; al soldador de estaño,
+**cautín**; a la cinta aislante, **teip**; y **chicote** puede ser un cable o una extensión según
+quién hable. Pedir "un tester con pitido" se entiende en cualquier mostrador.
+
+**Dónde conseguir las cosas.** Los instrumentos y las herramientas de mano se consiguen sin dificultad
+en las ferreterías y casas de material eléctrico de Santa Cruz; la autovulcanizante y el
+termorretráctil rara vez están en la ferretería del barrio, así que hay que pedirlos por su nombre.
+**Sobre precios este curso no da cifras a propósito**: cambian todo el tiempo y dependen de la marca.
+Lo que sí es cierto siempre es la comparación de fondo: un instrumento básico cuesta bastante menos
+que **un solo repuesto comprado por equivocación**.
+
+**Cuidado con lo muy barato en lo que protege.** Circulan instrumentos cuyo marcado de categoría no se
+corresponde con lo que llevan adentro, fusibles de vidrio vendidos como cerámicos y cintas que se
+despegan en el primer verano. Para trabajar con la red, comprar donde haya factura y respaldo es la
+parte del gasto que compra seguridad; para lo que se hace en 12 V, lo barato alcanza de sobra.
+
+**Sobre normativa y calidad del suministro, el curso no inventa.** Las reglas de instalación, los
+requisitos para intervenir en la red y lo que se le puede exigir a la distribuidora tienen su propio
+marco y sus propios trámites, y varían según la zona y el momento. Lo correcto es **consultar
+directamente con la distribuidora eléctrica que corresponda a tu zona o con un electricista con
+matrícula**, y no guiarse por lo que se cuenta de vecino a vecino. Lo que sí puedes hacer sin permiso
+de nadie es medir, anotar y llegar a esa conversación con datos.
+
+**Y un apunte que da sentido a todo el módulo:** un repuesto que en otro lugar llega mañana acá puede
+tardar semanas y llegar con sobreprecio de transporte, lo que invierte la cuenta que hace un
+consumidor de ciudad grande. **Cada diagnóstico correcto vale más acá**, no porque el repuesto sea
+caro, sino porque la espera detiene riego, bombeo y trabajo.
+</ContextoBolivia>
+
+## Errores comunes
+
+**«Pita, entonces el cable está bien.»** Pita, entonces hay camino. Un cable con un hilo sano de
+treinta pita igual y se cae en cuanto pasa corriente de verdad.
+
+**«Mido continuidad con el aparato enchufado.»** La lectura es falsa y el instrumento puede quemarse.
+Continuidad y ohmios, siempre desenergizado.
+
+**«La batería marca 12,6 V, está bien.»** Marca eso sin hacer nada. La pregunta es cuánto marca con la
+bomba encendida.
+
+**«Dejé el cable rojo en el borne de 10 A y medí el tomacorriente.»** Ese es el cortocircuito clásico:
+fusible interno en el mejor caso, arco en la mano en el peor.
+
+**«Marca cero, no hay tensión, puedo tocar.»** No, mientras no vuelvas a probar el instrumento en un
+punto vivo. Vivo, muerto, vivo: los tres pasos o ninguno.
+
+**«Marca raro, debe estar el circuito mal.»** Puede estar la pila baja o una punta partida. Comprueba
+primero el instrumento: son cinco segundos.
+
+## Lo que sigue
+
+Ya tienes con qué preguntar y cómo confiar en la respuesta. Falta saber a quién le estás preguntando:
+qué son esos bultitos de colores dentro de una placa. La lección siguiente, **Los componentes**,
+recorre los que aparecen una y otra vez —resistencia, condensador, diodo, LED, transistor, relé,
+fusible, transformador— con la misma analogía hidráulica y de sistemas que venimos usando: qué hace
+cada uno, cómo se comporta cuando funciona bien y, sobre todo, **cómo se comporta cuando falla**, que
+es la parte que sirve para reparar. Ahí vas a descubrir por qué el condensador electrolítico se lleva
+la culpa de tantas averías, y vas a poder identificar un fusible o un diodo con lo que aprendiste hoy.

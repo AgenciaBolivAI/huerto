@@ -1,0 +1,65 @@
+{
+  "titulo": "Los componentes: qué hace cada pieza",
+  "subtitulo": "De las cuarenta cosas soldadas en una placa, treinta y ocho pertenecen a unas diez familias, y cada familia hace siempre lo mismo. Aquí se aprende a reconocerlas, a leer sus marcas y a saber cuál falla y con qué síntoma. No para diseñar circuitos: para reparar y sustituir sin quemar lo que estaba sano.",
+  "duracionMin": 30,
+  "objetivos": [
+    "Distinguir componentes pasivos de activos y de montaje pasante de los de montaje superficial, para saber de entrada qué se puede reparar con un soldador barato.",
+    "Identificar cada pieza en una placa por su letra de serigrafía y localizar su valor o número de parte impreso.",
+    "Leer el valor de una resistencia por bandas de color y por las cifras de montaje superficial, y saber por qué medida sobre la placa la lectura engaña.",
+    "Explicar qué hace un condensador, leer su capacidad, su tensión y su polaridad, y reconocer los síntomas de un electrolítico seco y de un condensador de arranque agotado.",
+    "Comprobar un diodo con la posición de diodo del multímetro y explicar los cuatro papeles que cumple, incluido el de rueda libre sobre una bobina.",
+    "Calcular la resistencia en serie de un LED y diagnosticar una lámpara LED apagada o parpadeante.",
+    "Explicar cómo un transistor y un relé dejan que una señal pequeña gobierne una carga grande, y usar el clic del relé para partir una avería en dos.",
+    "Elegir el fusible correcto en corriente, tensión y carácter, y aplicar las reglas de sustitución sin bajar capacidades ni invertir polaridades."
+  ],
+  "prerrequisitos": [
+    "electronica-desde-cero/02-multimetro-y-herramientas",
+    "energia-solar/01-electricidad-desde-cero",
+    "automatizacion-datos/01-sensores-y-valvulas"
+  ],
+  "videos": [],
+  "referencias": [
+    {
+      "titulo": "Resistor Guide: Resistor Color Code",
+      "fuente": "resistorguide.com",
+      "url": "https://resistorguide.com/resistor-color-code/",
+      "nota": "Tabla completa del código de bandas con ejemplos de cuatro, cinco y seis bandas. Útil para imprimir y pegar en la pared del taller; está en inglés pero es casi todo figura."
+    },
+    {
+      "titulo": "Capacitors",
+      "fuente": "SparkFun Electronics",
+      "url": "https://learn.sparkfun.com/tutorials/capacitors",
+      "nota": "Explicación paciente de qué es la capacidad, cómo se leen los códigos de tres cifras y por qué el electrolítico tiene polaridad. En inglés."
+    },
+    {
+      "titulo": "Diodes",
+      "fuente": "SparkFun Electronics",
+      "url": "https://learn.sparkfun.com/tutorials/diodes",
+      "nota": "Recorre la caída directa, el puente rectificador, el Zener y el diodo de rueda libre sobre una bobina, que es el que más equipos salva en una automatización de riego. En inglés."
+    }
+  ],
+  "terminos": [
+    "componente-pasivo",
+    "componente-activo",
+    "montaje-superficial",
+    "placa-de-circuito-impreso",
+    "resistor",
+    "codigo-de-colores",
+    "condensador",
+    "condensador-electrolitico",
+    "resistencia-serie-equivalente",
+    "condensador-de-arranque",
+    "diodo",
+    "caida-directa",
+    "puente-rectificador",
+    "diodo-de-rueda-libre",
+    "led",
+    "transistor",
+    "rele",
+    "fusible",
+    "fusible-retardado",
+    "transformador",
+    "fuente-conmutada"
+  ],
+  "practica": true
+}

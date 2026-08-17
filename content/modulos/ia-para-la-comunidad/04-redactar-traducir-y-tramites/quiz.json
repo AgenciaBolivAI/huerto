@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "r1",
+      "tipo": "opcion_multiple",
+      "enunciado": "En la misma caja de texto se le pueden pedir dos trabajos muy distintos. ¿Cuáles de estas peticiones son «transformar un material que le entregaste», o sea aquellas en las que la verdad de referencia la tenés vos?",
+      "opciones": [
+        "Pegarle tus notas crudas de la reunión y pedirle que las ordene en el formato de un acta.",
+        "Pegarle el párrafo en inglés del manual de la bomba de agua y pedirle la traducción al castellano.",
+        "Pegarle el párrafo del formulario que te dieron en la oficina y pedirle que te lo explique en lenguaje llano.",
+        "Pedirle los requisitos vigentes del trámite que querés hacer, después de explicarle bien tu caso y tu ubicación."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "En las tres primeras la materia prima está en la ventana de contexto porque vos la pusiste ahí: el modelo no tiene que recordar nada, tiene que reorganizar lo que ve, y verificar es leer y comparar, cinco minutos sin salir de la casa. La cuarta es incorrecta porque explicar bien tu caso no entrega la materia prima: el requisito no está en la ventana, sale de lo que quedó en sus números, y no hay ningún paso que compare lo escrito contra el mundo. La verdad de referencia está en una oficina, en un contador o en una institución, así que verificar cuesta un viaje y no una lectura comparada."
+    },
+    {
+      "id": "r2",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si le describís bien el tema, los participantes y lo que se discutió, el modelo puede redactar el acta de una reunión a la que no asistió.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el caso más peligroso de la lección. El acta no es un texto: es un registro de hechos que después se usa para decidir, para repartir y a veces para resolver un conflicto. El modelo no estuvo ahí, así que lo que devuelva es una reunión inventada con acuerdos inventados y nombres de gente real adentro, o sea un documento falso. El único uso válido es al revés: vos escribís las notas crudas durante la reunión —quién estuvo, qué se propuso, qué se decidió, quién hace qué y para cuándo— y le pedís que las ordene en el formato del acta sin agregar nada. Después se lee en voz alta antes de que la gente se vaya, se corrige ahí mismo y recién entonces se firma, porque quien aprueba un acta son los que estuvieron y no quien la tecleó."
+    },
+    {
+      "id": "r3",
+      "tipo": "opcion_multiple",
+      "enunciado": "Pediste «escribime una carta al municipio pidiendo apoyo para el vivero comunitario» sin dar más datos, y volvió impecable, con el nombre de un programa municipal y una cantidad de familias beneficiadas. ¿Qué corresponde hacer?",
+      "opciones": [
+        "Escribir antes, en crudo y sin ortografía, los datos duros: a quién va, quién firma, qué se pide en una frase, por qué, qué hay hoy, qué se ofrece a cambio y cómo te contactan.",
+        "Pedirle explícitamente que, cuando le falte un dato, escriba una marca visible del tipo [CANTIDAD DE FAMILIAS] en lugar de rellenarlo.",
+        "Repasar el borrador marcando cada nombre, número, fecha y promesa, y borrar todo lo que no puedas rastrear hasta algo que escribiste vos.",
+        "Preguntarle si los datos que puso son correctos y corregir solo aquellos que él mismo señale como dudosos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son las defensas contra el relleno de coherencia, que no es una alucinación espontánea sino un fallo que provoca el propio autor al pedir un documento completo sin entregar los hechos: el modelo está continuando el texto de la forma más probable, y en una carta de solicitud lo más probable después de «beneficiando a» es un número. La cuarta es incorrecta porque preguntarle al mismo modelo es una segunda llamada al mismo servicio, sin ningún paso que compare lo escrito contra el mundo: su repaso es otra continuación probable, no una comprobación. El disparador fuiste vos y la defensa también es tuya."
+    },
+    {
+      "id": "r4",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si hacés la retrotraducción en una sesión nueva y el texto vuelve diciendo lo mismo que el original, la traducción está confirmada.",
+      "respuesta": false,
+      "explicacion": "Falso. La retrotraducción es útil y vale la pena aprenderla, pero solo caza pérdidas gruesas: una negación que desapareció, una condición que se volvió una orden, un párrafo que se comió. No caza el error simétrico, que es el que se conserva en las dos direcciones; no caza el registro, porque una palabra puede ser correcta y a la vez sonar despectiva; y no caza el detalle, que es lo que más caro cuesta. Una coincidencia da falsa tranquilidad, y por eso una cifra cambiada o un nombre alterado pueden atravesar la ida y la vuelta sin que nada se note."
+    },
+    {
+      "id": "r5",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a traducir con un modelo material que necesita la comunidad. ¿Qué reglas corresponden?",
+      "opciones": [
+        "Traducir el texto y después copiar a mano, desde el original y uno por uno, las cifras, las fechas, las unidades, los nombres de personas y de lugares y los códigos.",
+        "En quechua, aimara, guaraní o lenguas chiquitanas, tratar la salida como un borrador que corrige una persona que habla la lengua, y nunca como versión final ni como cartel público.",
+        "Si le pegaste una tabla, revisar que no haya reordenado filas ni «corregido» en silencio un total que no cuadraba.",
+        "Dar por buena la traducción a una lengua de bajo recurso cuando el resultado se lee fluido, ordenado y sin errores aparentes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras atacan los fallos reales: los números y los nombres son lo primero que se altera y lo último que se revisa, porque el ojo los lee como adorno, y una coma decimal convertida en punto multiplica o divide por mil. La cuarta es incorrecta y además invierte el criterio: con poco material escrito digitalizado el modelo tiene poco de donde sacar la continuación probable, así que rellena con la forma más parecida que encuentre —de otra variante, de otra región o directamente inventada— y la entrega con el mismo tono seguro con el que traduce del inglés. Nada en la pantalla avisa del cambio de terreno, de modo que la fluidez es justamente lo que produce igual de bien cuando no tiene material."
+    },
+    {
+      "id": "r6",
+      "tipo": "verdadero_falso",
+      "enunciado": "Una vez que alguien la revisa, la versión en lenguaje llano de un documento técnico puede reemplazar al original para el uso diario del grupo.",
+      "respuesta": false,
+      "explicacion": "Falso, y esta es la regla que no admite excepción: la versión llana acompaña al original, no lo reemplaza. Es una vista, no la tabla. Al simplificar, el modelo tira lo que parece ruido, y en un documento técnico lo que parece ruido es la información: los condicionales —«salvo que», «siempre que», «únicamente si»—, las excepciones, los plazos, los rangos y las unidades se pierden primero porque estorban a una frase fluida. El resultado es un texto más claro que dice algo distinto del original, y eso es peor que una traducción mala, porque la mala se nota y esta se lee de maravilla. Lo que se firma y lo que se cumple es el documento original; con una etiqueta de producto, la explicación de qué es un ingrediente activo o un periodo de carencia te sirve, pero la dosis, el plazo y la restricción se leen en el envase que tenés en la mano."
+    },
+    {
+      "id": "r7",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a hacer un trámite. Según la distinción entre estructura y contenido, ¿qué es razonable pedirle al modelo?",
+      "opciones": [
+        "Que te explique qué significa una palabra del formulario y cómo se redacta la nota que acompaña el expediente.",
+        "Una lista de preguntas para llevar anotadas a la ventanilla, en lugar de una lista de respuestas.",
+        "Ensayar la conversación antes de ir y armar la lista de qué llevar en la carpeta para no volver tres veces.",
+        "El número de la resolución, el costo y el plazo, siempre que los dé con detalle y suenen específicos y coherentes."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son estructura: cosas genéricas que se repitieron millones de veces en el material, y que si salen mal lo notás en la ventanilla sin costo grave. Además preparan la visita en lugar de sustituirla, y una lista de preguntas no puede ser falsa, solo incompleta. La cuarta es incorrecta y es exactamente donde se concentra el fallo: las guías de trámite locales y los requisitos vigentes están poco digitalizados, cambian, viven en PDF de sitios que se caen y a veces solo existen en una hoja pegada en un vidrio, así que tienen muy poca presencia en el corpus; y a la vez un número de resolución o un código de formulario siguen un patrón tan regular que el modelo los produce impecables sin nada detrás. Máxima verosimilitud formal con mínima base real: la especificidad no es evidencia, y desde Zanja Honda un requisito inventado se paga con medio día de viaje."
+    },
+    {
+      "id": "r8",
+      "tipo": "abierta",
+      "enunciado": "La organización de vecinos de Prados del Sur te pide tres cosas para la semana que viene: una nota a la instancia municipal que corresponda pidiendo apoyo para el vivero comunitario, el acta de la reunión del sábado en la que se decidió pedirlo, y un aviso sobre agua estancada por el dengue que se va a pegar en tres esquinas y que además quieren en guaraní. Explica cómo usarías un modelo de lenguaje en cada uno de los tres encargos: qué le entregás, qué le pedís, qué no le pedís nunca, cómo se revisa antes de que salga y quién responde por lo que dice. Incluye qué harías con el trámite municipal que viene después de la nota.",
+      "respuestaModelo": "Lo primero es separar los tres encargos, porque no son el mismo trabajo. La nota y el aviso son transformación de material propio: la materia prima la pongo yo y verificar es leer y comparar. El acta es un registro de hechos, que es otra cosa. Y el trámite que sigue a la nota es terreno minado, donde la estructura se puede pedir y el contenido no.\n\nAntes de abrir la caja de texto escribo el archivo de datos duros de la organización, en crudo, mal y sin ortografía: los 3.666 m² en doce lotes contiguos, la ubicación en Prados del Sur, Zanja Honda, sur de Santa Cruz, el catálogo real —yautía, culantro, ají dulce, gandul, batata, plátano, ornamentales, árboles de sombra y frutales injertados—, los plantines efectivamente entregados el año pasado y el hecho de que se entregan gratis. Esa parte solo la puedo hacer yo y es la que tiene todo el valor. El archivo se pega al principio de cada pedido: sin él, en tres cartas ya circulan por el barrio tres superficies distintas.\n\nPara la nota entrego además a quién va dirigida, quién firma, qué se pide en una sola frase, por qué, qué hay hoy, qué se ofrece a cambio y cómo nos contactan. Y le pido explícitamente que, donde le falte algo, escriba un hueco declarado visible —[FECHA DE LA REUNIÓN], [N.º DE CARNET]— en lugar de inventarlo. Sin eso aparece el relleno de coherencia: una carta impecable con el nombre de un programa municipal que no existe, una cantidad de familias que nadie contó y hasta un número de norma. No es descuido: el disparador fui yo al pedir un documento completo sin entregar los hechos. Le pido dos versiones, formal y llana, y reescribo a mano el primer párrafo y el último. Después reviso marcando cada nombre, cada número, cada fecha y cada promesa, y borro lo que no pueda rastrear hasta algo que escribí yo: un párrafo menos nunca hundió una solicitud, un dato falso sí. Y la segunda pasada: ¿puedo defender cada frase delante de quien la va a leer? Si la nota dice que la organización se compromete a mantener el área dos años y eso no se acordó, esa frase la escribió la máquina y me compromete a mí.\n\nEl acta no se pide, y esto no tiene matices. El modelo no estuvo el sábado, así que cualquier acta que produzca es una reunión inventada con acuerdos inventados y nombres de vecinos reales adentro. El uso válido es el inverso: yo tomo las notas crudas durante la reunión —quién estuvo, qué se propuso, qué se decidió, quién hace qué y para cuándo— y le pido que las ordene en el formato del acta sin agregar nada. Antes de pegarlas sustituyo los nombres y cualquier número de documento por «vecino 1», «vecino 2», y los repongo a mano en la versión final. Después se lee en voz alta antes de que la gente se vaya, se corrige ahí mismo y recién entonces se firma: la aprueban los que estuvieron, no quien la tecleó. Y si la organización tiene alguna forma jurídica, qué debe llevar un acta para valer es una pregunta legal que se consulta con quien corresponda, no con la máquina.\n\nEl aviso tiene dos problemas separados. La forma se pide con restricciones físicas —doce palabras, una sola idea, legible a ocho metros— porque sin límite entrega cuatro líneas elegantes que nadie lee parado bajo el sol, y se prueba leyéndoselo a alguien que no estuvo en la conversación. El contenido sanitario no sale de la máquina: sale del centro de salud o de la autoridad correspondiente, y la versión corta se muestra al personal de salud antes de imprimirla, porque un aviso de salud que perdió una condición al simplificarse no es un error de estilo. La versión en guaraní es una lengua de bajo recurso: va a salir fluida y no confiable, así que es un borrador que corrige una persona que la habla, y jamás una salida final pegada en una esquina en nombre de la comunidad. La retrotraducción caza pérdidas gruesas pero no el error simétrico ni el registro, y los números y los nombres los copio a mano desde el original, uno por uno.\n\nDel trámite municipal le pido estructura: qué significa cada palabra del formulario, cómo se redacta la nota que acompaña el expediente, qué llevar en la carpeta y, sobre todo, una lista de preguntas para llevar anotadas. Una lista de preguntas no puede ser falsa, solo incompleta. El número de norma, el costo, el plazo, el horario, la vigencia y qué documento aceptan se confirman en el Gobierno Autónomo Municipal que corresponda a la jurisdicción; lo sanitario y fitosanitario, en el SENASAG; lo de semillas, en el INIAF; lo tributario, con un contador local. La aritmética es la que decide: una visita para preguntar cuesta una mañana, un requisito inventado cuesta la semana.\n\nY dos costumbres cierran todo. Ningún texto sale con el nombre de la organización sin que dos personas lo hayan leído en voz alta, y una tiene que ser alguien que no lo escribió. Y lo que salga de la ventanilla se anota —fecha, oficina, quién atendió, qué dijo, qué papel entregó— en un documento compartido que tiene fuente, fecha y responsable. La máquina produjo el borrador; la autora es la organización, y firma.",
+      "criterios": [
+        "Separa los tres encargos por tipo de trabajo: transformación de material propio en la nota y el aviso, registro de hechos en el acta, y estructura frente a contenido en el trámite.",
+        "Escribe primero el archivo de datos duros de la organización —3.666 m², doce lotes, Prados del Sur, catálogo real, entrega gratuita— y lo pega al principio de cada pedido.",
+        "Nombra el relleno de coherencia como fallo provocado por el propio autor y exige huecos declarados del tipo [FECHA DE LA REUNIÓN] en lugar de datos inventados.",
+        "Revisa el borrador rastreando cada nombre, número, fecha y promesa hasta algo escrito por la persona, y borra lo que no se pueda rastrear.",
+        "Aplica la prueba de defender cada frase ante quien la va a leer, con el ejemplo de un compromiso que la organización nunca acordó.",
+        "Rechaza pedirle el acta y describe el uso válido inverso: notas crudas propias que el modelo ordena sin agregar nada.",
+        "Incluye la lectura del acta en voz alta antes de que la gente se vaya y su aprobación por parte de quienes estuvieron, y remite la validez jurídica a quien corresponda.",
+        "Sustituye nombres de vecinos y números de documento por «vecino 1», «vecino 2» antes de pegar el texto, y los repone a mano en la versión final.",
+        "Pide el aviso con restricciones físicas —doce palabras, una idea, legible a ocho metros— y lo prueba con alguien que no estuvo en la conversación.",
+        "Separa el contenido sanitario del dengue: sale del centro de salud o de la autoridad correspondiente y se muestra al personal de salud antes de imprimir.",
+        "Trata el guaraní como lengua de bajo recurso —borrador corregido por un hablante, nunca cartel público— y menciona los límites de la retrotraducción y el copiado manual de cifras y nombres.",
+        "Del trámite pide estructura y una lista de preguntas, confirma norma, costo, plazo y requisitos en la instancia competente (municipio, SENASAG, INIAF, contador), y cierra con la doble lectura en voz alta y el registro escrito de lo que salió de la ventanilla."
+      ],
+      "explicacion": "El ejercicio obliga a aplicar las tres partes de la lección sobre encargos que la organización pide de verdad, y cada uno tiene su trampa propia: la nota falla por relleno de coherencia, el acta por pedir un registro de hechos que el modelo no presenció, el aviso por simplificar contenido sanitario y por traducir a una lengua de bajo recurso, y el trámite por confundir estructura con contenido. Si en alguno de los cuatro la respuesta acepta un dato que no rastrea hasta una fuente propia o hasta una ventanilla, el método no se aplicó, por bien escrito que esté el resultado."
+    }
+  ]
+}

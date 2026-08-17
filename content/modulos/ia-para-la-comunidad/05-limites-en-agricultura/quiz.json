@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "consejo-calibrado-para-otro-sitio",
+      "tipo": "opcion_multiple",
+      "enunciado": "Le pides consejo de siembra a un modelo describiendo bien tu sitio y aun así la respuesta llega desfasada. ¿Qué explica ese desfase?",
+      "opciones": [
+        "El material del que salen las continuaciones lo escribió sobre todo gente de climas con cuatro estaciones, en inglés del norte o en español de España y México.",
+        "En clima templado el año lo organiza la temperatura y aquí lo organiza el agua, así que el consejo traducido optimiza la variable equivocada.",
+        "La respuesta promedio supone tienda, laboratorio y dinero, de modo que puede ser correcta e inaplicable al mismo tiempo.",
+        "Basta con escribir en la petición el lugar, las lluvias y el suelo para que ese desfase desaparezca del todo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son el sesgo geográfico del corpus y sus dos consecuencias prácticas: calendario invertido y supuesto de dinero. La cuarta es incorrecta porque confunde superficie con fondo: la petición corrige lo que se dice encima, pero el material del que la máquina saca sus continuaciones sigue escrito desde otra latitud. Por eso «hacer primero un análisis de suelo» no es falso, es inaplicable, y una respuesta inaplicable se ve igual de bien que una aplicable."
+    },
+    {
+      "id": "el-frio-de-aqui-no-es-una-estacion",
+      "tipo": "verdadero_falso",
+      "enunciado": "«Proteger las plantas durante el invierno» es un consejo que se aplica igual en Zanja Honda, porque aquí también hace frío en algún momento del año.",
+      "respuesta": false,
+      "explicacion": "Falso. El consejo puede ser correcto sobre el frío y completamente inútil sobre su forma, que es lo único que sirve para prepararse: aquí el frío no es una estación sino un evento, un surazo de dos o tres días con mínimas cercanas a 10 °C y viento fuerte, en plena seca. Y arrastra un segundo supuesto peor: en clima templado el invierno impone un reinicio anual de las plagas, y sobre ese reinicio se apoya todo el calendario de control del norte. Sin invierno que corte, las generaciones se encadenan y la presión se acumula, así que lo que sirve no es un calendario de aplicaciones sino manejo integrado con monitoreo y umbrales de acción."
+    },
+    {
+      "id": "nombres-locales-y-binomio",
+      "tipo": "opcion_multiple",
+      "enunciado": "Le escribes a un modelo que tienes yautía y te contesta con toda coherencia sobre otra planta. ¿Qué es correcto sobre este fallo y su corrección?",
+      "opciones": [
+        "El mismo nombre designa plantas distintas en países distintos, y la continuación más probable sale del montón estadístico grande, no del que a ti te sirve.",
+        "Confundir la yautía con la colocasia invierte el consejo de riego, y eso no se nota el primer día: se nota en la cosecha, con el cormo podrido.",
+        "La corrección es barata y es una sola: nombre local y al lado el binomio en latín, y si no se sabe, una descripción física de la planta.",
+        "Con el nombre científico bien escrito la respuesta ya puede darte el manejo específico de tu variedad."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen el fallo del nombre vernáculo y su arreglo. La cuarta es incorrecta porque el binomio identifica la especie y ahí termina lo que se puede saber a distancia: qué variedad tienes en la mano no está en la foto, no está en el nombre común y no lo deduce ningún modelo, solo lo dice la trazabilidad —de qué planta madre salió el esqueje y qué decía el rótulo—. Y una respuesta que hable de «la variedad recomendada» habla de un catálogo comercial de otro país al que aquí no se accede."
+    },
+    {
+      "id": "convergencia-y-resolucion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Con una cámara mejor y un modelo más grande, el diagnóstico por foto acabaría siendo confiable.",
+      "respuesta": false,
+      "explicacion": "Falso, y el problema no está en la máquina. Una planta tiene un vocabulario cortísimo para decir que algo va mal —amarillear, marchitarse, manchar, necrosarse, quedarse chica, deformar el brote— y las causas posibles son decenas. Eso es la convergencia de síntomas, y tiene una consecuencia lógica: si muchas entradas distintas producen la misma salida, la salida no permite recuperar la entrada. No es que sea difícil, la información no está ahí, igual que nadie intenta invertir un hash. Lo que falta no es resolución: es raíz, suelo, riego, historia de manejo, cuántas de cuántas y tiempo."
+    },
+    {
+      "id": "lo-que-la-foto-no-tiene",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un vecino sin lupa, sin laboratorio y sin dinero quiere levantar esta tarde lo que a la foto le falta. ¿Qué hace?",
+      "opciones": [
+        "Saca una planta afectada y una sana del mismo lote, les lava la raíz y las compara lado a lado.",
+        "Cuenta cuántas de cuántas y dibuja en el reverso de un sobre dónde están las afectadas dentro del lote.",
+        "Clava una estaca con la fecha junto a una planta afectada y vuelve a los siete días.",
+        "Vuelve a fotografiar la misma hoja con mejor luz y desde más cerca para que el diagnóstico mejore."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son la raíz, el denominador con su geometría y la línea de tiempo: las tres cosas que deciden un diagnóstico y que ninguna aplicación puede darte desde arriba. La cuarta es incorrecta y es el error más repetido: mandar otra foto no mejora el diagnóstico, cambia el reparto del puntaje. Un clasificador reparte puntaje entre las opciones de un catálogo cerrado y devuelve la mayor, así que siempre hay un primer puesto aunque lo que le mostraste no esté en el catálogo."
+    },
+    {
+      "id": "incidencia-severidad-y-geometria",
+      "tipo": "opcion_multiple",
+      "enunciado": "En un lote de cuarenta plantas de ají dulce, treinta y ocho tienen el mismo amarilleo y con el mismo grado de daño, repartido parejo. ¿Qué se lee de eso?",
+      "opciones": [
+        "Incidencia alta con severidad pareja apunta a algo que les pasó a todas a la vez: manejo, agua o ambiente.",
+        "La figura que dibujan las afectadas —un foco que se agranda, una fila, un gradiente desde un borde, justo las de bajo el árbol— señala clases de causa distintas, y solo aparece si se mira el conjunto.",
+        "Antes de comprar o aplicar nada corresponde sacar una enferma y una sana y mirarles la raíz, y revisar qué se hizo en el lote las dos semanas anteriores.",
+        "Como la incidencia es tan alta, la urgencia justifica aplicar ya el producto que indicó la aplicación."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras leen el denominador, la geometría y la pregunta por lo que cambió antes. La cuarta es incorrecta por dos motivos que se suman: el propio patrón —muchas plantas, daño parejo— apunta a manejo, agua o ambiente, que ningún producto arregla; y actuar sobre un diagnóstico falso no cuesta lo mismo que esperar, porque además del gasto y del riesgo borra la evidencia y ya no podrás saber si el problema se detuvo solo, si se detuvo por lo que hiciste o si nunca fue eso."
+    },
+    {
+      "id": "costo-asimetrico",
+      "tipo": "verdadero_falso",
+      "enunciado": "Aplicar el producto que sugirió la aplicación, por si acaso, es una decisión barata: en el peor de los casos no hace nada.",
+      "respuesta": false,
+      "explicacion": "Falso: el costo de equivocarse no es simétrico. Aplicar lo que no corresponde cuesta el dinero del producto, que en un proyecto sin presupuesto sale de otro lado; puede producir fitotoxicidad; mata a los enemigos naturales que estaban conteniendo otra plaga que aún no viste; expone a quien lo aplica, casi siempre sin equipo de protección; y borra la evidencia, que es lo más caro. Esperar una semana mirando cuesta una semana, y en la enorme mayoría de los casos la decisión correcta ante un diagnóstico salido de una foto es no hacer nada todavía y salir a buscar los datos que faltan."
+    },
+    {
+      "id": "el-vecino-con-el-diagnostico-en-la-mano",
+      "tipo": "abierta",
+      "enunciado": "Un vecino de Prados del Sur cruza el portón de Rizoma del Sur con el teléfono por delante: foto de una hoja de plátano con manchas pardas, el nombre de una enfermedad, un 94 % y un producto con dosis. Viene a preguntar dónde se compra, no si el diagnóstico es correcto. Escribe qué haces y qué dices, en orden: cómo lo recibes, qué le preguntas, qué levantan juntos en el terreno esa misma tarde sin gastar un peso, qué se le pide a la máquina y qué no se le pide nunca, qué queda anotado y dónde, y qué regla se acuerda para lo que él va a reenviar al grupo del barrio. Explica el porqué de cada paso.",
+      "respuestaModelo": "Lo primero es lo que no se hace: no le digo que la aplicación miente. El vecino hizo algo razonable —tenía un problema y buscó ayuda con lo que tenía—, y si la conversación empieza humillándolo pierdo a la persona y la dejo donde estaba, creyéndole igual a la pantalla pero ahora incómoda con el proyecto. Esto es comunitario: lo que se enseña es el criterio, no quién sabe más. Le digo que el nombre que le dio sirve, que es una hipótesis y un buen comienzo; lo que nunca es, es una orden de compra.\n\nDespués vienen las cuatro preguntas, tranquilo y sin contradecir nada. ¿Cuántas plantas de cuántas? ¿Desde cuándo, y va más rápido o se frenó? ¿Qué hiciste en los quince días anteriores: qué regaste, qué aplicaste, qué trasplantaste, qué llovió, qué hizo el vecino en su lote? ¿Sacaste una para verle la raíz? Ninguna lo desmiente, y las cuatro juntas dejan a la vista, sin decirlo, que el diagnóstico se dio sin ninguna de las cosas que hacían falta. La persona lo descubre sola, y eso es lo único que se queda; la cuarta, además, resuelve por sí sola una parte enorme de los casos y no exige saber nada de agronomía.\n\nDe paso aclaro la identidad, que es donde más silenciosamente se rompe todo: plátano de comer es el género Musa, no el árbol de alameda que se llama igual. El nombre local arrastra el vecindario estadístico del país donde más se escribió, así que de aquí en adelante escribimos nombre local y binomio al lado.\n\nEsa misma tarde levantamos en el terreno lo que la foto no puede contener, y nada cuesta plata. Sacamos una planta afectada y una sana del mismo lote, les lavamos la raíz y las comparamos lado a lado: blanca y ramificada contra parda, blanda y con olor. Eso solo ya parte el universo de causas en dos mitades. Contamos cuántas de cuántas —la incidencia— y cuánto daño tiene cada una —la severidad—, porque tres de cuarenta y treinta y ocho de cuarenta cuentan historias opuestas: incidencia baja con severidad alta apunta a algo que se mueve planta por planta; incidencia alta con severidad pareja, a algo que les pasó a todas a la vez, que casi siempre es manejo, agua o ambiente. Dibujamos el lote en el reverso de un sobre y marcamos con cruz las afectadas, porque la figura —un foco que se agranda, una fila, un gradiente desde el borde del camino, justo las de bajo el árbol— señala la clase de causa antes de que sepamos su nombre. Cavamos un hoyo con agua para ver el drenaje y clavamos una estaca con la fecha para volver a los siete días, porque un diagnóstico se apoya en una película y no en una fotografía.\n\nA la máquina le pedimos otra cosa, que es donde sí es fuerte. No «qué enfermedad es y qué le aplico», sino el caso completo escrito —tantas plantas de plátano, género Musa, sur de Santa Cruz de la Sierra, 529 msnm, en plena seca, cuántas afectadas de cuántas, dónde está el síntoma, desde cuándo, qué se hizo antes, sin laboratorio y sin dinero— y una petición concreta: las cinco causas más probables ordenadas y, para cada par, qué observar mañana temprano para descartar una. Eso es diagnóstico diferencial y observación discriminante, es trabajo de texto y devuelve tareas para mañana; sirve igual para ordenar la descripción y llevársela a un técnico. Lo que no se le pide nunca es producto, dosis, plazo de seguridad ni cultivo autorizado: eso se lee en la etiqueta del producto, que es el texto legalmente vinculante y manda sobre cualquier respuesta de cualquier máquina, y el registro nacional lo lleva el SENASAG; para semillas e investigación está el INIAF, y para identificar una nativa, el herbario del Museo de Historia Natural Noel Kempff Mercado.\n\nTodo queda escrito en el cuaderno del portón: fecha, lote, qué planta con su binomio, qué síntoma y dónde en la planta, cuántas de cuántas, y qué se hizo en ese lote las dos semanas anteriores. Sin registro no se puede contestar a los siete días la única pregunta que importa: ¿esto avanza o se detuvo? Y si se decide hacer algo, se hace en una parte y se deja otra comparable sin tocar: eso es el testigo, y sin él cualquier mejora se le atribuye a lo que hicimos, cuando las plantas mejoran solas más seguido de lo que uno cree. Con doce lotes contiguos y casi todo repetido en más de uno, siempre hay contra qué comparar.\n\nLa regla del grupo se acuerda en voz alta, porque ahí es donde se propaga el daño: todo lo que salga de una máquina y se reenvíe va rotulado —esto lo dijo la aplicación, no está comprobado—. En dos reenvíos pierde el origen y a la semana ya es «lo que hay este año en la zona». Y antes de que se vaya queda dicha la frase que evita lo irreversible: antes de comprar nada y antes de aplicar nada, vamos a mirar. Esperar una semana cuesta una semana; aplicar equivocado cuesta plata que no sobra, puede dar fitotoxicidad, mata a los enemigos naturales que contenían otra cosa, expone a quien aplica y borra la evidencia. No hacer nada todavía es una acción legítima, y aquí casi siempre es la mejor.",
+      "criterios": [
+        "Recibe al vecino sin humillarlo ni desautorizar la aplicación, y trata el diagnóstico como hipótesis y punto de partida, nunca como orden de compra.",
+        "Hace las cuatro preguntas: cuántas de cuántas, desde cuándo y a qué velocidad, qué cambió en los quince días anteriores, y si sacó una planta para verle la raíz.",
+        "Aclara la identidad de la planta con nombre local más nombre científico (plátano, género Musa) y explica por qué el nombre vernáculo desvía la respuesta hacia otra planta.",
+        "Saca una planta afectada y una sana del mismo lote, lava las raíces y las compara lado a lado, justificando que eso parte el universo de causas en dos.",
+        "Cuenta incidencia y severidad y sabe leer qué historia cuenta cada combinación, en particular que incidencia alta con severidad pareja apunta a manejo, agua o ambiente.",
+        "Dibuja el mapa del lote y usa la geometría de las afectadas como pista de la clase de causa.",
+        "Instala la línea de tiempo: estaca con la fecha y regreso a los siete días, porque el diagnóstico está en la velocidad y no en un instante.",
+        "Reformula lo que se le pide a la máquina: caso completo con lugar, altitud, época y cifras, y lista de causas posibles con la observación discriminante que descarta cada una, en vez de un diagnóstico.",
+        "Excluye explícitamente producto, dosis, plazo de seguridad y cultivo autorizado de lo que se le pregunta a la máquina, y remite a la etiqueta del producto y al SENASAG, mencionando además el INIAF o el herbario del oriente boliviano.",
+        "Deja constancia escrita en el cuaderno del portón con sus campos, incluido qué se hizo en el lote las dos semanas anteriores.",
+        "Deja testigo si se decide actuar —una parte tratada y otra comparable sin tocar— aprovechando que en los doce lotes casi todo está repetido.",
+        "Acuerda la regla de rotular lo que se reenvía al grupo y justifica la espera con la asimetría del costo del error: gasto, fitotoxicidad, enemigos naturales muertos, exposición de quien aplica y evidencia borrada."
+      ],
+      "explicacion": "El ejercicio recorre la lección entera sobre la escena con la que abre: el trato con la persona, las cuatro preguntas que hacen visible el hueco sin decirlo, el trabajo de terreno que sustituye a la foto, el reparto correcto de tareas entre la máquina y el terreno, el registro escrito y la regla de propagación en el grupo. Si la respuesta empieza desautorizando al vecino, si acepta pedirle a la máquina dosis o producto, o si toma alguna decisión sin haber mirado la raíz y contado cuántas de cuántas, el método no se aplicó."
+    }
+  ]
+}

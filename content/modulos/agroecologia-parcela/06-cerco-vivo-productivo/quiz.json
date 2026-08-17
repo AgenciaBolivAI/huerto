@@ -1,0 +1,91 @@
+{
+  "preguntas": [
+    {
+      "id": "q1",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre la porosidad de una cortina rompeviento y su efecto sobre el flujo de aire, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Una barrera maciza obliga al aire a saltarla y genera detrás una zona de recirculación con ráfagas que pueden superar la velocidad del viento libre.",
+        "El óptimo general de porosidad óptica para proteger cultivo está del orden del 40 al 50 %, y la cifra exacta depende de especie, estación y edad.",
+        "La porosidad óptica se puede medir con una fotografía del cerco a contraluz, umbralizada para contar los píxeles de cielo.",
+        "Cuanto más opaco y tupido sea el cerco, más larga es la franja protegida a sotavento."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen el mecanismo real: una barrera impermeable fuerza el desprendimiento del flujo y crea turbulencia detrás; la barrera permeable deja pasar un chorro frenado que impide que se forme esa burbuja y alarga la zona de calma. La cuarta es falsa y es el error más común: un cerco perfectamente opaco da mucha reducción de velocidad pegada a él pero una zona protegida corta y turbulenta. Más denso no es mejor; hay un óptimo intermedio."
+    },
+    {
+      "id": "q2",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el alcance de un rompevientos y su dimensionamiento, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "La distancia protegida se expresa en múltiplos de la altura de la barrera, que se escribe H, y la cifra de planificación de este curso es una franja útil del orden de 10 H.",
+        "Para proteger cuarenta metros de fondo con esa regla hace falta una barrera de unos cuatro metros de altura.",
+        "A barlovento también hay efecto, pero corto: del orden de dos a cinco alturas.",
+        "Si la barrera no alcanza, se compensa añadiendo hileras y densidad hasta que la franja protegida sea más larga."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El alcance escala con la altura y solo con la altura: 10 H es la regla de planificación, de donde sale que 40 m de fondo piden unos 4 m de cerco, y a barlovento el efecto existe pero es corto. La cuarta es falsa y es la trampa del ejercicio: añadir hileras y densidad cambia la porosidad y el ancho de la franja, pero no alarga la zona protegida, porque esa distancia depende de H. Si H no alcanza, hace falta otra barrera intermedia o asumir que el fondo queda desprotegido."
+    },
+    {
+      "id": "q3",
+      "tipo": "verdadero_falso",
+      "enunciado": "Un cerco que con los años perdió las ramas bajas y quedó con follaje arriba y aire libre abajo sigue protegiendo el cultivo a nivel del suelo, porque la masa de la copa es la que frena el viento.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el fallo más caro de los tres. Cuando la base se despeja, el hueco actúa como una tobera: el aire converge y acelera justo a la altura del culantro, de los plantines y de las bandejas, de modo que el cerco puede ser peor que no tener cerco. La corrección no es plantar más árboles arriba, sino mantener viva una hilera baja y recepar por sectores para forzar brotación desde la base."
+    },
+    {
+      "id": "q4",
+      "tipo": "verdadero_falso",
+      "enunciado": "En Zanja Honda conviene programar el recepe del tramo sur del cerco para mitad de la estación seca, cuando la planta está parada y sufre menos el corte.",
+      "respuesta": false,
+      "explicacion": "Falso, por dos razones que se suman. Primero, fisiológica: un tocón recién cortado sin agua no rebrota, se muere; el recepe se hace al comenzar las lluvias, cuando el rebrote es rápido. Segundo, funcional: la estación seca es justamente la del surazo, es decir, cuando la cortina tiene que estar en pie. Recepar el tramo sur en plena seca deja el terreno sin protección en el peor momento. Por eso ese tramo se divide en sectores y se recepa uno cada octubre."
+    },
+    {
+      "id": "q5",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el cerco entendido como banco de plantas madre para el vivero de Rizoma, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "El perímetro sirve como banco porque es espacio permanente que no rota ni se voltea, está delimitado y se llega a él por fuera de las camas.",
+        "La topofisis explica que los brotes de la base, de carácter juvenil, enraícen mucho mejor que las ramas de la copa, y por eso el recepe produce material de esqueje de calidad.",
+        "Como toda la producción del vivero sale de esas madres, la desinfección de la herramienta entre plantas y el registro de qué madre dio qué lote dejan de ser opcionales.",
+        "Al estar el material a la intemperie y en el borde, basta con etiquetar el tramo del cerco: la identidad individual de cada planta no aporta nada al vivero."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son el argumento central de la lección: el perímetro reúne por construcción las condiciones de un banco de madres, el recepe es a la vez mantenimiento y cosecha de material juvenil, y el banco concentra el riesgo sanitario de toda la producción. La cuarta es falsa: un banco de madres sin identidad individual —etiqueta permanente, croquis de posiciones, planilla— no permite ni vender variedad conocida ni retirar el material afectado por un problema sin retirarlo todo."
+    },
+    {
+      "id": "q6",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el costo real de un cerco vivo y sobre qué no plantar en un lindero, ¿qué afirmaciones son correctas?",
+      "opciones": [
+        "Con un perímetro del orden de 240 m, una franja de cerco de 4 m de ancho ocupa unos 960 m², más de un cuarto de los 3.666 m² de Rizoma, y por eso no se hace igual en las cuatro caras.",
+        "Existe una franja de competencia pegada al cerco donde el rendimiento cae, y el balance global depende del ancho del lote.",
+        "Una especie que hospeda a la plaga o al patógeno del cultivo cuando este no está mantiene el problema vivo los doce meses, así que hay que consultar qué hospeda cada especie antes de plantarla.",
+        "Como el cerco es vegetación permanente y no se cosecha, no compite con el cultivo vecino por agua ni por luz."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras son los costos y riesgos declarados: superficie ocupada, franja de competencia y hospedante alterno. La cuarta es falsa: el cerco compite de verdad —sus raíces beben del mismo perfil y su sombra recorta horas de sol en la banda contigua—, y precisamente por eso se mitiga con una zanja de corte de raíces en el borde interior o eligiendo especies de raíz profunda. Negar esa competencia es lo que lleva a diseñar cercos que después hay que arrancar."
+    },
+    {
+      "id": "q7",
+      "tipo": "abierta",
+      "enunciado": "Diseña el perímetro completo de Rizoma del Sur: los 3.666 m² en 12 lotes contiguos de Zanja Honda, con el surazo entrando del sur y del sureste, un camino de tierra en una de las caras y vecinos en las otras. Especifica cara por cara la composición, justifica cada decisión por la función que cumple, calcula el costo en superficie, define el calendario de establecimiento y el de recepe, y explica cómo el perímetro alimenta al vivero. Di también qué no plantarías y qué preguntas dejarías abiertas por falta de dato local.",
+      "respuestaModelo": "El punto de partida es que el perímetro no se especifica de una sola forma: se especifican tramos, porque cada cara mira a un problema distinto y las funciones piden geometrías incompatibles. El perímetro exacto —entre unos 240 y unos 350 m según cómo se ordenen los 12 lotes— sale del levantamiento y no de una estimación.\n\nCara sur y sureste: cortina rompeviento. Es el tramo que se lleva la inversión, porque el surazo entra por ahí con viento fuerte y noches de unos 10 °C entre mayo y agosto. Tres hileras al tresbolillo: una hilera baja apretada (0,3 a 0,75 m entre plantas) que cierra el pie y evita el hueco de abajo; una hilera media arbustiva a uno o dos metros, que es el cuerpo del cerco y lo que se recepa; y una hilera alta de árboles a cuatro u ocho metros entre pies, que es la que fija H. La altura es la variable de diseño porque la franja útil es del orden de 10 H: con árboles de unos cinco metros se protege del orden de cincuenta metros hacia adentro. Porosidad objetivo cercana al 50 %, verificada dos veces al año con una foto a contraluz umbralizada. La cortina se prolonga más allá del área que protege, porque el viento acelera al rodear los extremos.\n\nCara del camino: barrera de polvo y pantalla. Aquí la especificación se invierte: la función dominante es capturar partículas por impacto y tapar la vista, así que manda la densidad cerca del suelo —hilera baja apretada con follaje hasta el piso, más una hilera media—. Es el tramo que protege al vivero y sus bandejas, lo más sensible al polvo y a la desecación, y el que intercepta parte de la deriva de aspersión de afuera, sin eliminarla y en las dos direcciones.\n\nLinderos con vecinos: hilera única de madres. Donde no hay una función física que justifique cuatro metros de ancho, el cerco se reduce a una hilera y su justificación pasa a ser productiva. Ahí van las madres de ornamentales de esqueje, y van en el tramo más cercano al vivero porque un esqueje es una carrera contra la deshidratación desde que se corta: la distancia de acarreo es parte de la técnica. Un tramo corto y bien identificado, cercano a la mesa de injerto, lleva las madres de púa de los frutales, con dos ejemplares por variedad en posiciones distintas, etiqueta permanente y planilla; los patrones siguen viniendo de semilla y de su propio bloque. Los árboles semilleros de sombra van en la hilera alta del tramo sur, dejados sin podar para que florezcan, y tienen que ser varios individuos no emparentados: la semilla de tres clones del mismo árbol arrastra depresión por consanguinidad.\n\nEl acceso rompe el cerco, y ahí aparece el efecto de portillo apuntando al interior, así que la entrada se resuelve por traslape: dos tramos solapados con un pasillo entre ellos, sin línea recta para el aire.\n\nCosto en superficie, declarado antes de dibujar: con 240 m de perímetro, una franja de 4 m son unos 960 m², más de un cuarto de la parcela; una hilera única de 2 m son unos 480 m². Eso obliga a priorizar y es la razón por la que solo el tramo sur lleva tres hileras. A eso se suman dos estaciones secas de riego asistido, la franja de competencia hacia adentro y un pico de jornales en octubre.\n\nCalendario. Plantación al comenzar las lluvias, de octubre en adelante, con margen para que haya raíz antes de abril, contando con que el veranillo puede sorprender a lo recién plantado. Año 0 se planta —estacón donde la especie lo permita, plantín propio donde se busque mejor prendimiento—; año 1 se riega, se desmaleza y se repone; año 2 o 3 primer recepe y primer material aprovechable; año 4 a 6 altura de rompevientos real. Poda de formación en los dos primeros años, despuntando para romper la dominancia apical y forzar ramificación baja. Después, recepe por sectores: el perímetro dividido en tres, uno cada octubre, nunca en bloque y nunca en plena seca, con los árboles altos manejados por trasmocho para no perder H. Siempre quedan dos tercios en pie.\n\nQué no plantaría: especies que hospeden plagas o patógenos del catálogo, como solanáceas silvestres junto al ají dulce o parientes de la musácea junto al platanal; especies de raíces trazadoras, que en arcillas expansivas además agravan el agrietamiento de las obras; especies que se escapan por rizoma o por semilla dispersada; árboles que a diez años no se puedan podar con la herramienta disponible; espinas en la cara interior y especies tóxicas o de látex irritante donde circulan vecinos y niños; y cualquier planta sin identidad conocida, que en un banco de madres es material anónimo en el origen de toda la producción. Cerca de la casa evitaría además especies que embalsan agua en las axilas, por el dengue.\n\nPreguntas abiertas por falta de dato local: qué especies disponibles en Santa Cruz enraízan de estacón, cuáles rebrotan de tocón, cuáles hospedan las plagas del catálogo y cuáles son invasoras en el área integrada. Se consultan con el CIAT, el INIAF y viveros con experiencia, y lo que no haya cómo verificar se prueba en tres plantas antes que en trescientas. Las obligaciones legales de lindero se consultan con la autoridad competente.",
+      "criterios": [
+        "Especifica tramos distintos por cara en lugar de un cerco uniforme, y justifica cada uno por su función dominante.",
+        "Asigna la cortina rompeviento a la cara sur y sureste por el surazo, y no a otra orientación.",
+        "Usa la altura H como variable de diseño y estima la franja protegida en múltiplos de H, no en metros absolutos.",
+        "Fija una porosidad objetivo cercana al 40-50 % y propone medirla con la foto a contraluz de forma repetida.",
+        "Resuelve el conflicto entre densidad para polvo y porosidad para viento por capas —hilera baja densa, hilera alta porosa— y no con un promedio.",
+        "Prevé el efecto de portillo en el acceso y lo resuelve con traslape, y prolonga la cortina más allá del área protegida.",
+        "Calcula el costo en superficie con el perímetro y el ancho de franja, y concluye que no se puede hacer igual en las cuatro caras.",
+        "Declara la franja de competencia, el riego de establecimiento de dos secas y el pico de jornales.",
+        "Coloca las madres de esqueje cerca del vivero por la distancia de acarreo, y las madres de púa cerca del punto de injerto, con dos ejemplares por variedad e identidad registrada.",
+        "Trata los árboles semilleros aparte, sin recepar y con varios individuos no emparentados por la depresión por consanguinidad.",
+        "Programa el recepe por sectores en octubre, con trasmocho en los altos, y explica por qué no se recepa en bloque ni en la seca.",
+        "Aplica al menos cuatro de los cinco vetos de especie y remite explícitamente al CIAT, al INIAF o a la autoridad competente lo que no se puede afirmar sin dato local."
+      ],
+      "explicacion": "La respuesta completa tiene que hacer tres cosas a la vez: aplicar la física del rompevientos con números en múltiplos de la altura, declarar el costo en superficie y en trabajo antes de dibujar nada, y usar el perímetro como banco de plantas madre con la operación de recepe rotado como puente entre el mantenimiento y la producción del vivero. Una respuesta que solo enumere especies bonitas, o que prometa un cerco que hace las siete funciones en todo el contorno sin declarar lo que ocupa y lo que cuesta regar, no ha entendido la lección."
+    }
+  ]
+}

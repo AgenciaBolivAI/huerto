@@ -1,0 +1,57 @@
+{
+  "titulo": "Del terreno al papel: levantar lo que ya existe",
+  "subtitulo": "El triángulo es el único polígono rígido, y de ahí sale toda la técnica. Cuatro lados medidos no bastan para dibujar un terreno: sin diagonales, la figura se deforma y admite infinitas soluciones.",
+  "duracionMin": 29,
+  "portada": "portada.webp",
+  "portadaAlt": "Terreno llano y abierto del oriente boliviano a última hora de la tarde. Dos personas vistas de espaldas y a distancia tienden una cinta métrica amarilla entre dos estacas de madera con cinta de señalización naranja. En primer plano, desenfocado sobre un poste, un cuaderno de espiral abierto con un croquis a mano alzada. Alrededor hay más estacas, un mazo y un machete; al fondo, pasto alto, árboles dispersos y el horizonte plano",
+  "objetivos": [
+    "Reunir un equipo de levantamiento que cabe en una bolsa, y saber por qué el GPS del teléfono no sirve para esto.",
+    "Dibujar el croquis completo antes de medir nada, grande y suelto, entendiendo que su única obligación es que las cotas quepan legibles.",
+    "Explicar por qué cuatro lados no determinan un cuadrilátero y por qué el triángulo sí es rígido.",
+    "Aplicar la triangulación descomponiendo la figura y midiendo las diagonales, y usar la diagonal sobrante como comprobación.",
+    "Justificar por qué el levantamiento con cinta se basa en distancias y nunca en ángulos.",
+    "Ubicar un punto suelto por sus distancias a dos puntos conocidos, y resolver la ambigüedad de las dos soluciones.",
+    "Levantar bordes irregulares con línea base y ordenadas perpendiculares.",
+    "Cerrar la poligonal y usar el error de cierre para distinguir imprecisión repartible de error que obliga a remedir.",
+    "Medir las distancias en horizontal y no siguiendo la pendiente del suelo.",
+    "Registrar lo que no es geometría —árboles, agua, accesos, zonas que se encharcan, norte— y aplicar las reglas del cuaderno de campo: no borrar, fechar y conservar el croquis sucio."
+  ],
+  "prerrequisitos": [
+    "planos-de-obra/02-escala-y-acotado",
+    "albanileria-y-obra/03-replanteo"
+  ],
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=jQYHxLJNQMU",
+      "idioma": "es",
+      "porQue": "Levantamiento real de un polígono usando solo cinta, estacas y martillo, con el método de triangulación aplicado en campo. Es exactamente la técnica de esta lección hecha con las mismas herramientas que vas a tener tú, no con equipo topográfico.",
+      "titulo": "Levantamiento topográfico con cinta. Método de radiaciones (triangulación) y método de lados de liga",
+      "canal": "RAFAEL STANLEY CANO FUNES",
+      "duracion": "15:01",
+      "verificado": true
+    }
+  ],
+  "referencias": [
+    {
+      "titulo": "Levantamiento de planos: medida directa de distancias",
+      "fuente": "Universidad de Granada — Expresión Gráfica",
+      "url": "https://www.ugr.es/~agomezb/etsie_eg1/etsie_eg1_material_docente/t4_medicion.pdf",
+      "nota": "Apunte universitario sobre medición directa con cinta: alineaciones, reducción al horizonte, levantamiento por triangulación y por abscisas y ordenadas. Es el respaldo académico de las tres técnicas centrales de esta lección."
+    },
+    {
+      "titulo": "Mediciones con cinta",
+      "fuente": "Escuela Industrial Superior — Universidad Nacional del Litoral (Argentina)",
+      "url": "https://www.eis.unl.edu.ar/z/adjuntos/2761/Apuntes_topograf%C3%ADa_1_-_Unidad_3_-_Mediciones_con_cinta_-_EIS_2022.pdf",
+      "nota": "Unidad completa sobre medición con cinta, con las fuentes de error del método —cinta combada, medición en pendiente, tensión— y los órdenes de magnitud de precisión esperables. Útil para entender qué tolerancia de cierre es razonable exigirse."
+    }
+  ],
+  "terminos": [
+    "croquis",
+    "levantamiento",
+    "triangulacion",
+    "escuadra-3-4-5",
+    "ordenadas",
+    "error-de-cierre"
+  ],
+  "practica": true
+}

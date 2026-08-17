@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "pendiente-mecanismo",
+      "tipo": "opcion_multiple",
+      "enunciado": "Un desagüe se tapa una y otra vez. ¿Cuáles de estas afirmaciones sobre la pendiente son correctas?",
+      "opciones": [
+        "Con poca pendiente el agua igual corre, pero corre despacio: por debajo de la velocidad de arrastre el roce del agua ya no mueve los sólidos, que se depositan de a poco durante años.",
+        "Con demasiada pendiente el agua se acelera, se hace delgada y se adelanta, dejando los sólidos varados en seco; se secan, se pegan y forman una costra que ninguna descarga levanta.",
+        "Una contrapendiente de unos pocos milímetros —un tubo que se hundió porque quedó tierra suelta debajo— basta para que el agua se quede quieta y el tubo se tape siempre en el mismo punto.",
+        "Cuanta más pendiente se le dé al tubo, menos posibilidad hay de que se tape, así que ante la duda conviene exagerar la caída."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen el mecanismo real. La cuarta es la intuición más extendida del oficio y es falsa: el arrastre de sólidos no depende de que el agua vaya rápido, sino de que la lámina de agua sea lo bastante alta para envolver y empujar lo que trae. Al exagerar la caída, el agua se adelanta corriendo por el fondo y abandona los sólidos atrás, en seco, exactamente igual que si volcaras un balde sobre una rampa empinada con arena encima: el agua baja y la arena se queda. Por eso el oficio busca un término medio —del orden del 2 % en ramales de 50 mm y entre 1 y 2 % en el colector de 100 mm— y no un máximo. La cifra exigible en tu lugar la fija la autoridad local, así que se consulta en el municipio o en la cooperativa antes de tapar una zanja."
+    },
+    {
+      "id": "diametros-por-gravedad",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre los diámetros de una red de desagüe, ¿cuáles afirmaciones son correctas?",
+      "opciones": [
+        "El inodoro y el colector principal se resuelven con 100 mm porque son los únicos que mandan sólidos grandes de una vez.",
+        "En un tubo demasiado ancho el mismo caudal forma una lámina de agua más baja, que pasa por encima de los sólidos en vez de arrastrarlos.",
+        "El diámetro nunca se reduce aguas abajo, porque la reducción funciona como un embudo y garantiza el atasco justo donde no hay acceso.",
+        "Conectar un inodoro a un ramal de 50 mm es aceptable siempre que se use una reducción y se le aumente la pendiente para compensar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta y además es la causa número uno de los atascos crónicos que ningún destapador arregla. Un inodoro descarga varios litros de golpe junto con sólidos grandes; un ramal de 50 mm no tiene sección para ese volumen instantáneo ni para ese tamaño de sólido, y la reducción crea un escalón donde lo que viene rodando choca y se queda. Aumentar la pendiente no compensa nada: empeora, porque acelera el agua y la separa todavía más de los sólidos. Lo importante de las otras tres es que rompen la intuición de la red a presión: ahí un tubo más grueso siempre es más holgado, pero por gravedad el diámetro es un rango con un límite superior, y pasarse es tan malo como quedarse corto."
+    },
+    {
+      "id": "gorgoteo-ventilacion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si al descargar el inodoro se oye gorgotear el lavamanos o la rejilla del piso, lo más probable es que la red no tenga ventilación suficiente.",
+      "respuesta": true,
+      "explicacion": "Es el mejor diagnóstico gratuito de la plomería y llega antes que el olor. Los litros que caen por la bajante se comportan como un pistón: adelante comprimen el aire y atrás dejan un vacío. Si no hay un tubo abierto al aire que deje entrar el aire que reemplaza al agua que se va —el segundo agujero de la botella—, ese aire tiene que salir o entrar por el único punto débil disponible, que es el sello de agua de un sifón. El gorgoteo es exactamente eso: aire abriéndose paso a través del agua de un sifón. Si el sifón se vacía del todo, el tubo del desagüe queda abierto de par en par y la casa empieza a oler a cloaca sin que nadie haya tocado nada."
+    },
+    {
+      "id": "efluente-no-es-agua-limpia",
+      "tipo": "verdadero_falso",
+      "enunciado": "El líquido que sale de una cámara séptica bien construida y mantenida ya está tratado, así que puede usarse para regar hortalizas.",
+      "respuesta": false,
+      "explicacion": "Es falso, y es el malentendido más peligroso de todo el saneamiento doméstico. Una cámara séptica quita del orden de la mitad a dos tercios de los sólidos en suspensión y parte de la carga orgánica, pero de los microbios que causan enfermedad no quita casi nada, y del nitrógeno prácticamente nada. Lo que sale es efluente: líquido clarificado y todavía agua servida, turbio, con olor y con la misma población de patógenos intestinales que entró. Por eso no se descarga a una zanja, a una acequia, a un arroyo ni a la calle; no se usa para regar, y menos aún hortalizas que se comen crudas; y no se tira al patio para que se seque. Tiene que ir al terreno por debajo de la superficie, porque el tratamiento de verdad lo hace el suelo no saturado y no la cámara."
+    },
+    {
+      "id": "suelo-napa-y-distancia",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el destino final del efluente y su relación con el agua de beber, ¿cuáles afirmaciones son correctas?",
+      "opciones": [
+        "El tratamiento real lo hace el suelo no saturado: ahí hay oxígeno entre los granos y sobre cada partícula crece una capa biológica que devora la materia orgánica y agota a los microbios intestinales.",
+        "Un terreno de arena gruesa o grava que traga rapidísimo es un riesgo y no una ventaja, porque acepta todo el caudal y no da tiempo de contacto: el efluente llega vivo a la napa.",
+        "La dirección importa tanto como los metros: como el agua subterránea se mueve siguiendo el gradiente hidráulico, conviene que el pozo de agua quede aguas arriba del sistema séptico.",
+        "El nitrato queda retenido por el suelo igual que las bacterias, así que si el terreno filtra bien basta con alejar unos metros el pozo de agua."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y por un mecanismo que conviene tener claro. Las bacterias son partículas: se filtran entre los granos, se adhieren a las arcillas y mueren en distancias relativamente cortas en tierra franca. El nitrato no es una partícula sino una sal completamente disuelta: no se pega a nada, ningún suelo lo retiene y viaja tan lejos como viaje el agua. Encima no huele, no enturbia y no se quita hirviendo —hervir concentra el nitrato, porque evapora agua—. Es perfectamente posible que un pozo dé agua clara y sin bacterias y esté cargado de nitrato, y el único modo de saberlo es un análisis de laboratorio. Es especialmente grave para los menores de seis meses por el riesgo de metahemoglobinemia, y eso se consulta en el centro de salud."
+    },
+    {
+      "id": "espacio-confinado",
+      "tipo": "verdadero_falso",
+      "enunciado": "Antes de bajar a una cámara séptica alcanza con abrir la tapa, esperar un rato y confiar en el olfato: si ya no huele a huevo podrido, el aire es seguro.",
+      "respuesta": false,
+      "explicacion": "Es falso y es la creencia que mata gente todos los años. El sulfuro de hidrógeno huele a huevo podrido en concentración baja, pero en concentración alta paraliza el olfato en segundos: el olor desaparece, la persona cree que el aire mejoró y sigue bajando. Además es más pesado que el aire y se acumula justo abajo. En paralelo actúa la deficiencia de oxígeno: la digestión consumió el oxígeno y el metano y el dióxido de carbono ocuparon su lugar; por debajo de un 16 % se pierden la coordinación y el juicio, y cerca del 10 % se pierde el conocimiento sin ninguna sensación previa de ahogo, porque el cuerpo detecta el exceso de dióxido de carbono y no la falta de oxígeno. Un aire que te mata puede sentirse igual que el aire de tu casa. La regla no tiene excepciones domésticas: nadie baja, todo se hace desde la superficie, y si alguien cae adentro no se entra a sacarlo —la mayoría de los muertos en pozos sépticos son los que bajaron a rescatar—: se llama a los bomberos, se tira una soga y se ventila."
+    },
+    {
+      "id": "mantenimiento-y-mezclas",
+      "tipo": "opcion_multiple",
+      "enunciado": "Sobre el mantenimiento de una cámara séptica y lo que nunca debe entrarle, ¿cuáles afirmaciones son correctas?",
+      "opciones": [
+        "Al vaciar se deja un balde de lodo adentro y no se lava a presión ni se raspa la pared, porque ese lodo es el inóculo con el que las bacterias arrancan de nuevo.",
+        "El agua de lluvia no se conecta jamás al desagüe cloacal, aunque sea agua limpia: un techo bajo una tormenta entrega en una hora muchos más litros de los que la familia manda en todo un día.",
+        "Un balde de desinfectante concentrado echado a la cámara frena la digestión anaerobia y hace que se llene de lodo crudo y empiece a oler.",
+        "Los sobres de bacterias que se venden en ferretería reemplazan al vaciado si se usan todos los meses, porque digieren también el material acumulado."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa por dos motivos. Primero, la cámara ya se siembra sola con lo que le entra todos los días: no le falta población bacteriana. Segundo, y decisivo, esos productos no pueden sacar el material mineral —arena, pelo, plástico, restos de obra—, que es justamente lo que ocupa el volumen y lo que obliga a vaciar; ninguna bacteria digiere arena. Peor todavía, varios funcionan emulsionando la grasa: la desarman en gotitas que ya no flotan, la nata desaparece, el dueño cree que el producto funcionó, y esa grasa se va derecha al terreno de infiltración a sellarlo. Un pozo arruinado por grasa no se destapa con nada: se abandona. Por eso la cámara se vacía por medición con la varilla de lodos —cuando lodo más nata ocupan alrededor de un tercio de la profundidad útil— y no por calendario ni por olor."
+    },
+    {
+      "id": "diagnostico-de-mi-casa",
+      "tipo": "abierta",
+      "enunciado": "Hacé el diagnóstico del saneamiento de la casa donde vivís ahora, sea propia o alquilada, tenga patio o no. Contá qué averiguaste sobre adónde va el agua de tu baño, qué resultado te dio la prueba del gorgoteo, qué encontraste al buscar el tubo de ventilación y qué pasa en tu patio o vereda cuando llueve fuerte. Después elegí los tres cambios que harías primero, ordenados por lo que cuestan y por lo que evitan, y justificá cada uno con el mecanismo, no con la costumbre. Decí también qué cosas de tu caso no podés resolver por tu cuenta y a quién corresponde preguntarle.",
+      "respuestaModelo": "Vivo en una casa alquilada de dos ambientes con un patio chico de tierra. Lo primero que hice fue averiguar adónde va el agua del baño, porque no tenía idea: le pregunté al dueño por mensaje y me dijo que no hay red, que hay una cámara séptica con un pozo detrás del lavadero. No supo decirme cuándo se vació por última vez, que es la respuesta que esperaba y por eso la pedí por escrito: el día que rebalse no quiero que se discuta de quién era la responsabilidad. Salí a buscar la tapa y la encontré tanteando con una varilla: es una losa de hormigón partida en dos, apoyada, con una punta hundida. Medí desde la esquina del lavadero y desde el poste de luz, anoté las dos distancias en una hoja y le saqué fotos, porque con dos medidas desde puntos fijos ese punto queda ubicado para siempre y ya no hay que picar el patio para encontrarlo.\n\nLa prueba del gorgoteo me dio positiva y fue el hallazgo de la noche. Descargué el inodoro y el sifón de la rejilla del piso hizo un glu-glu clarísimo, y el lavamanos un ruido más suave. Eso significa que los litros que caen por la bajante se comportan como un pistón y que la red está sacando el aire que le falta del sello de agua de mis sifones, porque no tiene por dónde entrar. Subí al techo a buscar el tubo de ventilación y sí existe, pero está cortado bajo, casi a la altura del alféizar de la ventana del dormitorio, y alguien le metió una bolsa adentro atada con alambre —supongo que porque entraba agua o avispas—. Eso explica de una vez dos cosas que llevaba meses sin entender: el olor a cloaca que aparecía en el dormitorio sobre todo de noche con la ventana abierta, y que el olor empeorara justo en los surazos, cuando cerramos todo por el frío. El tubo tapado deja la red sin su segundo agujero, y encima, aunque estuviera abierto, termina demasiado cerca de una ventana.\n\nCuando llovió fuerte salí a mirar con linterna, que es el único momento en que se ve la verdad. Descubrí lo peor: la bajada del techo de la cocina descarga en una boca que entra al mismo desagüe del baño. O sea que toda el agua del techo le está pasando por adentro a mi cámara séptica. El techo tendrá unos cincuenta metros cuadrados, y con las tormentas de acá eso son miles de litros en una hora, contra los pocos cientos que mandamos entre todos en un día entero. No es una sobrecarga: es un lavado a presión que levanta el lodo del fondo, arrastra la nata y empuja todo al pozo justo cuando el suelo está saturado y no puede infiltrar. También vi que se hace un charco permanente contra la pared del lavadero, que en zona de dengue es un criadero, porque el mosquito necesita menos de una semana para pasar de huevo a adulto.\n\nMis tres cambios, en orden. Primero, desviar el caño del techo, porque cuesta un codo y dos metros de tubo y es lo único que puede matarme el sistema entero en una sola tarde; lo hablo con el dueño porque es una mejora de la casa. Segundo, sacar la bolsa del tubo de ventilación y ponerle un sombrerete con malla: media hora de trabajo, deja entrar el aire que reemplaza al agua que se va, y con eso los sifones dejan de vaciarse y se va el olor; la prolongación del tubo por encima de la ventana la propongo como obra aparte porque ya es albañilería. Tercero, coladores en los tres desagües, un tarro con tapa junto a la cocina para el aceite usado y una espátula para raspar los platos al tacho antes de lavar: monedas, y evitan la grasa y los pelos, que son lo que engorda la nata y termina sellando el terreno de infiltración de forma irreversible. Junto con eso, la lista pegada en la puerta del baño para toda la casa, porque esto falla por el eslabón más desinformado y basta una visita que tire una toallita por semana para armar el nudo.\n\nLo que no puedo resolver solo lo anoté aparte. No sé a qué distancia está la cámara del pozo de agua del vecino de atrás ni de qué lado corre el terreno, y eso decide si lo que infiltra mi pozo va hacia su bomba o al revés; tampoco sé si la cámara tiene los codos de entrada y salida enteros, porque no pienso abrirla más que para mirar con linterna desde afuera: nadie baja a una cámara, ni siquiera un segundo, porque el sulfhídrico paraliza el olfato y la falta de oxígeno no se siente. La distancia mínima exigible, si hace falta permiso y quién está habilitado para vaciar y adónde se lleva el lodo lo voy a preguntar en el municipio, y si hay cooperativa de agua también ahí. Y como en la casa hay un bebé de cuatro meses y el agua sale de un pozo poco profundo, voy a pedir en el centro de salud que me orienten sobre análisis de agua, en particular por nitrato, que no huele, no enturbia y no se va hirviendo.",
+      "criterios": [
+        "Averigua y dice explícitamente adónde va el agua del baño —red, cámara séptica o pozo— en vez de suponerlo, y registra cuándo se vació por última vez o deja constancia de que no hay respuesta.",
+        "Ubica la cámara o el punto de descarga y lo deja registrado de forma reutilizable: croquis o fotos con al menos dos distancias medidas desde puntos fijos.",
+        "Ejecuta la prueba del gorgoteo descargando el inodoro y escuchando lavamanos y rejilla, e informa el resultado concreto.",
+        "Interpreta el gorgoteo con el mecanismo correcto: el agua que baja necesita que entre aire, y si no hay tubo de ventilación ese aire sale de los sifones, que se vacían y dejan pasar el olor.",
+        "Inspecciona el tubo de ventilación con criterio: si existe, si termina por encima y lejos de las ventanas, si tiene malla y si alguien lo tapó.",
+        "Sale a mirar el patio o la vereda durante una lluvia fuerte e identifica agua acumulada, tapas que rebalsan o bajadas de techo conectadas al desagüe.",
+        "Reconoce el agua de lluvia como la mezcla más destructiva y la argumenta con volúmenes: el techo entrega en una hora mucho más de lo que la familia manda en un día, y arrastra lodo y nata al pozo.",
+        "Propone exactamente tres cambios priorizados y justifica cada uno por su mecanismo y por lo que evita, no por costumbre ni por lo que hace el vecino.",
+        "Incluye al menos una medida de costo casi nulo sobre grasa y sólidos —colador, tarro para aceite, raspar los platos, lista en la puerta del baño— explicando que la grasa sella el terreno de infiltración de forma irreversible.",
+        "Aplica sin excepciones la regla del espacio confinado: no abre para entrar, no baja, y si menciona inspección la hace con linterna desde afuera.",
+        "Separa con honestidad lo que puede resolver de lo que no, y deriva distancias, permisos, vaciado y destino del lodo al municipio, la cooperativa de agua o un técnico habilitado, sin inventar cifras.",
+        "Deriva al centro de salud las cuestiones sanitarias que correspondan —análisis de agua, nitrato en casas con bebés, diarrea repetida— sin dar por sí mismo consejo médico."
+      ],
+      "explicacion": "El objetivo de esta pregunta no es que describas una instalación perfecta, sino que dejes de ser alguien que no sabe adónde va el agua de su propia casa. Casi toda la ganancia en salud del saneamiento doméstico está en tres cosas que no cuestan casi nada: separar el agua de lluvia, tener ventilación que funcione y no mandar grasa ni sólidos que el sistema no puede procesar. Las tres se descubren con las herramientas de esta lección —la prueba del gorgoteo, una vuelta por el patio bajo la lluvia y una mirada al techo—, y ninguna necesita que seas propietario. Una respuesta buena se reconoce porque razona con mecanismos y porque marca sus propios límites: dice qué averiguó, qué dedujo y de qué, qué va a cambiar primero y por qué, y a quién le corresponde contestar lo que ella no puede —el municipio y la cooperativa para distancias, permisos, vaciado y destino del lodo; el centro de salud para el agua y para cualquier síntoma—. Inventar una distancia mínima o un precio sería el peor error posible, porque esos números cambian de un lugar a otro y una cifra equivocada acá se paga con el agua que bebe la casa de al lado."
+    }
+  ]
+}

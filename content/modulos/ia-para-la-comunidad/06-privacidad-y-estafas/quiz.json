@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "que-pasa-con-lo-que-escribes",
+      "tipo": "opcion_multiple",
+      "enunciado": "Escribes una consulta en una aplicación de inteligencia artificial desde tu teléfono, sin poner tu nombre. ¿Qué está ocurriendo de verdad con ese texto?",
+      "opciones": [
+        "Sale del teléfono, se procesa en el centro de datos de una empresa en otro país y queda registrado durante un tiempo que decide esa empresa, no tú.",
+        "Puede leerlo una persona —empleado o contratista— por control de calidad, abuso u orden legal: no hay ninguna garantía técnica de que no pueda leerse.",
+        "La sesión está atada a un correo, un número o un dispositivo, y la aplicación tiene además los permisos que le diste: cámara, archivos, a veces ubicación.",
+        "El modelo se queda con lo que le contaste y mañana puede repetírselo a otro usuario que pregunte por tu zona."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Las tres primeras describen la llamada a un servicio remoto de un tercero, con registro activado, retención indefinida y unas condiciones de uso que nadie leyó. La cuarta es incorrecta y confunde las dos capas: el modelo no guarda nada entre una conversación y otra, y mañana, en un chat nuevo, no te conoce. La que guarda es la plataforma —historial, cuenta, dispositivo y a veces una memoria explícita—, así que el riesgo real no es que la máquina le cuente tus cosas al vecino, sino lo aburrido y probable: un registro en un servidor ajeno, sujeto a políticas que cambian, a fallas de seguridad y a órdenes legales de otro país."
+    },
+    {
+      "id": "borre-el-chat",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si te arrepientes de haber escrito un dato delicado, borrar la conversación en la aplicación lo elimina y el asunto queda resuelto.",
+      "respuesta": false,
+      "explicacion": "Falso. Borraste tu vista, no el dato: el registro del servidor, la retención que fijó la empresa y los respaldos de anoche no están bajo tu mando. Es exactamente lo que pasa cuando alguien sube una clave por descuido y la borra en el commit siguiente —sigue en el historial, en los clones y en el respaldo—, con dos agravantes: aquí el historial es de otro, y un dato personal no se puede rotar. Puedes cambiar una contraseña, no el número de tu carnet ni dónde está tu parcela. De ahí la única regla que aguanta: lo que se entrega se da por entregado para siempre, así que todo se decide antes de tocar enviar."
+    },
+    {
+      "id": "suma-de-datos-inofensivos",
+      "tipo": "opcion_multiple",
+      "enunciado": "A lo largo de un mes le has contado a la máquina, en consultas distintas, que la parcela está al sur de Santa Cruz, que son doce lotes, que tienes yautía, gandul y ají dulce, que la reunión es los sábados y cómo se llama tu hija. ¿Qué es correcto decir de eso?",
+      "opciones": [
+        "Ninguna frase es un secreto por separado, pero cruzadas describen a una sola familia en Zanja Honda: eso es reidentificación.",
+        "La suma de todo lo que has soltado —en la aplicación, en el grupo, en Facebook, en la foto— es tu superficie de exposición, y crece sola porque nadie borra nada.",
+        "Lo que corresponde es minimización de datos: entregar lo mínimo que hace falta para que la respuesta sirva, como no se le dan a un script más permisos de los que necesita.",
+        "Mientras ningún dato de la lista sea sensible por sí solo, el conjunto sigue siendo anónimo."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta, y es el error común: no se entrega un dato grave, se entregan quince inofensivos que juntos dicen más que cualquiera de ellos. Es un resultado viejo del trabajo con datos —conjuntos «anonimizados» vuelven a tener nombre cuando se cruzan dos o tres campos si la combinación es rara—, y aquí la combinación es rarísima: un catálogo con yautía, gandul y ají dulce en doce lotes al sur de Santa Cruz no lo tiene nadie más. El resultado del cruce no es un dato de más: es dirección aproximada, horario en que la casa está vacía y qué hay adentro que valga la pena llevarse."
+    },
+    {
+      "id": "datos-de-terceros",
+      "tipo": "verdadero_falso",
+      "enunciado": "Pegar la conversación entera con el vecino para que la máquina te ayude a redactar la respuesta es aceptable, porque el problema que estás consultando es tuyo.",
+      "respuesta": false,
+      "explicacion": "Falso: el problema será tuyo, pero el dato no. Los nombres, teléfonos y palabras del otro no son tuyos para entregarlos, y quien aparece ahí no eligió estar. Lo que hace falta antes se llama consentimiento informado —la persona sabe qué dato es, a dónde va y para qué, y dice que sí—, y esta es la línea que más se salta la gente buena, sin mala intención: se pega la conversación, se sube la lista de asistentes al taller para que la ordene, se cuenta el problema de salud de la suegra. En un proyecto comunitario no es formalismo de abogado: un grupo donde lo que cuentas termina pegado en una aplicación deja de contarte cosas, y ahí se acabó el trabajo comunitario. La versión correcta sustituye por «un vecino» o «una socia», y el caso técnico no cambia."
+    },
+    {
+      "id": "foto-y-captura",
+      "tipo": "opcion_multiple",
+      "enunciado": "Vas a mandarle la foto de una hoja enferma y la captura de tu conversación con un técnico. ¿Qué corresponde hacer antes de enviar?",
+      "opciones": [
+        "Desactivar en la cámara el guardado de ubicación, porque el archivo lleva metadatos con fecha, hora, modelo del teléfono y las coordenadas del sitio donde se disparó.",
+        "Mirar el fondo del encuadre y no el motivo: el número de la casa, la placa de la moto, el rostro del sobrino, el papel con precios sobre la mesa.",
+        "Transcribir a mano el contenido de la captura en lugar de mandar la imagen, porque la captura lleva el número del otro, su foto de perfil, su nombre y la hora en que estuvo en línea.",
+        "No preocuparse por los metadatos, porque las aplicaciones de mensajería recomprimen la imagen y de paso los borran."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta porque es cierta a medias, que es lo peor que puede ser una defensa: varias aplicaciones sí recomprimen y limpian esos campos, pero eso depende de la aplicación y de cómo la enviaste —adjunta como documento, por ejemplo, viaja intacta—, y una defensa que depende de un detalle que no controlas no es una defensa. Lo que sí controlas es la cámara, y se arregla hoy con una casilla. Fíjate además en el criterio que une las tres correctas: un texto copiado a mano deja fuera todo lo que no hacía falta, que es exactamente la minimización de datos aplicada a una imagen."
+    },
+    {
+      "id": "mensaje-institucional-y-canal-aparte",
+      "tipo": "opcion_multiple",
+      "enunciado": "Llega un mensaje impecable que dice ser de una institución: sin faltas, con el logo correcto, en el español que se habla aquí y hasta con el nombre de un funcionario. Pide que confirmes el código que acaba de llegarte por mensaje. ¿Qué criterios se aplican?",
+      "opciones": [
+        "No juzgar si el mensaje parece auténtico —la imitación va a seguir mejorando— sino qué te pide: un pago, una foto de tu documento, un código o que entres a un sitio y pongas tu clave.",
+        "Verificar por un canal distinto del que trajo el mensaje, marcando el número que tenías guardado de antes y nunca el que viene en el mensaje.",
+        "Tratar la presión de tiempo y el pedido de secreto como una confesión, porque su único propósito técnico es impedir que verifiques.",
+        "Responder en el mismo chat preguntando si el mensaje es legítimo, y darlo por bueno si contestan con detalles correctos."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es incorrecta y es el reflejo más natural. Quien te escribió controla el canal por el que te escribió —el número, el perfil, la cuenta— y controla también lo que se responda ahí, así que preguntar dentro de ese canal si el mensaje es verdadero es preguntarle al atacante si está atacando: contestará que no, con excelente redacción y con esos detalles correctos. Un canal comprometido no puede validarse a sí mismo, igual que un certificado no se valida consigo mismo y que comprobar el respaldo leyéndolo desde el disco que está fallando no comprueba nada. Y sobre el código: ese código es la llave de la puerta, y nadie legítimo lo pide, jamás, por ningún motivo."
+    },
+    {
+      "id": "voz-y-deteccion",
+      "tipo": "verdadero_falso",
+      "enunciado": "Como las falsificaciones todavía tienen defectos, la defensa correcta es entrenar el ojo y el oído para detectarlas: contar los dedos, mirar las orejas, notar cuándo la voz suena rara.",
+      "respuesta": false,
+      "explicacion": "Falso, y es la respuesta que produce el peor resultado posible: te vuelve confiado justo cuando la falsificación mejoró. Esos trucos envejecen en meses. Aplica aquí el fallo seguro que este curso enseñó con el riego automático: el sistema debe quedar en el estado que menos daño causa cuando el detector falla, no cuando funciona. Si tu regla es «si no me convence, verifico», ya perdiste, porque la falsificación mejora hasta convencerte; la que aguanta es «verifico siempre», aplicada solo a lo que importa: dinero, datos y accesos. Con la voz es literal —el llanto y la mala señal del guion están puestos para tapar las imperfecciones de la voz sintética y bloquear el pensamiento—, así que reconocer la voz ya no prueba nada: toda tu vida funcionó como factor de autenticación y ese factor acaba de dejar de servir."
+    },
+    {
+      "id": "caso-integrador-rizoma",
+      "tipo": "abierta",
+      "enunciado": "Un sábado por la tarde pasan tres cosas seguidas en Rizoma del Sur. (a) Al grupo de WhatsApp llega un anuncio impecable, con logo y nombre de funcionario, de entrega gratuita de plantines y una capacitación con certificado para productores del sur de Santa Cruz: cierra en cuarenta y ocho horas y para inscribirse hay que mandar foto del carnet y pagar un «trámite» a una cuenta personal. (b) Una socia, para ayudar, pega en una aplicación de inteligencia artificial la lista de asistentes al último taller —nombres y teléfonos— y la captura de su conversación con un vecino, pidiendo que se lo ordene y le redacte la respuesta. (c) El coordinador recibe una llamada con la voz de su hijo, llorando y con la señal mala, diciendo que tuvo un accidente en Santa Cruz, que necesita una transferencia ya y que no llame a nadie. Explica qué está pasando en cada caso, qué se hace exactamente y en qué orden, y qué procedimientos deja escritos el grupo para que nada de esto dependa de que alguien esté alerta ese día.",
+      "respuestaModelo": "Lo primero es ordenar por reloj, no por gravedad: la llamada es lo único que todavía se puede parar, el anuncio hay que frenarlo antes de que alguien lo reenvíe, y la lista pegada ya salió, así que ahí solo cabe contener y avisar.\n\nLa llamada es una clonación de voz montada sobre un guion de ingeniería social, con las tres palancas a la vista: autoridad —enseguida entra otra persona, con voz de mando, a dar las instrucciones de pago—, urgencia fabricada —el dinero es para ahora— y secreto —que no llame a nadie—. El llanto y la mala señal no son adornos: tapan las imperfecciones de la voz sintética y bloquean el pensamiento. Con unos segundos de audio reenviado cualquiera produce ese timbre, así que reconocer la voz ya no prueba nada: funcionó toda la vida como factor de autenticación y dejó de servir. No sale ninguna transferencia. Se pregunta la palabra de verificación acordada en familia, que una voz clonada no puede saber porque nunca se escribió en ninguna parte. Se cuelga y se llama uno mismo al número guardado de antes, jamás al que llamó; si no contesta, se llama a otro familiar. La prisa es del estafador y media hora de demora no arruina ningún asunto legítimo. Si el dinero ya salió, el minuto siguiente es lo que importa: se llama al banco de inmediato y se denuncia en la policía, preguntando ahí qué unidad atiende estos casos y qué hay que llevar. No invento plazos ni artículos de ninguna norma.\n\nEl anuncio es suplantación de identidad hecha a la medida del campo: funciona porque apela a una necesidad legítima —quien trabaja la tierra sí necesita apoyo y sí existen programas reales— y porque casi nadie sabe cómo se anuncia de verdad un programa público. No se juzga si parece auténtico: el logo, la redacción sin faltas y el nombre del funcionario salen hoy por casi cero peso, así que la calidad de la imitación no informa. Se juzga qué pide, y pide justo las tres cosas de la lista: un pago, la foto del documento y prisa. Los tres criterios lo cierran. Un apoyo real no se cobra por inscribirse, menos a una cuenta personal. Un programa público existe fuera del mensaje, con oficina, horario y funcionarios; si solo existe en el reenvío, no existe. Y nadie legítimo apura el envío del carnet, que se entrega en ventanilla o en un sistema oficial. La comprobación es una llamada por canal aparte: una persona busca ella misma el número en la página de la institución o va a la oficina —el gobierno municipal por lo local, el SENASAG por sanidad vegetal, el INIAF o el CIAT de Santa Cruz por lo agronómico— y pregunta si eso existe. Mientras tanto nadie reenvía, porque reenviar es prestar tu nombre. Queda anotado en el cuaderno de verificaciones —fecha, qué anuncia, por dónde llegó, qué pide, cómo se comprobó, veredicto— y se avisa al grupo exista o no exista, porque avisar que algo era falso es tan útil como avisar que era verdadero.\n\nEn el caso de la socia no hay estafa: hay alguien servicial entregando lo que no era suyo. La lista de asistentes son datos de terceros —gente que no está en la conversación y no dio consentimiento informado, es decir, no supo qué dato es, a dónde va ni para qué—, y la captura arrastra el número del vecino, su foto de perfil, su nombre y la hora en que estuvo en línea; si hacía falta el contenido, se transcribe. Borrar el chat no arregla nada: el texto ya está en el registro de un servicio ajeno, con la retención que decide la empresa, revisión humana posible y una cuenta detrás, y un dato personal no se puede rotar como una clave. Lo que se hace es cortar, no pegar nada más y avisar a las personas de la lista. La forma correcta de pedir ayuda era la abstracta: el formato del acta o el modelo de respuesta, con el contenido escrito por ella y los nombres sustituidos por roles.\n\nPara que nada dependa de quién esté alerta ese día quedan escritos cinco procedimientos. La regla del dinero: ningún pago, transferencia, recarga ni código sale de un mensaje hasta confirmarlo por otro canal, y todo pago no rutinario lo aprueban dos personas de viva voz, aunque la orden venga del número del coordinador y con su voz en un audio. La regla de la convocatoria: nadie reenvía, una persona verifica y lo anota. La palabra de verificación, acordada hoy en persona entre quienes se llamarían en una emergencia, incluidos los que trabajan lejos, y que no esté en ninguna red social. El inventario de lo confidencial que no se pega en ninguna aplicación: socios con teléfonos, actas, precios de compra, fotos con menores, el croquis con dónde duerme la bomba y las claves. Y las reglas de foto: ubicación desactivada en la cámara, quien no quiera salir lo dice y no sale, de menores no se publica cara ni nombre. Y a quien cayó se le dice lo que no es adorno: caer en esto no es ser tonto —están diseñadas por profesionales para saltarse el pensamiento usando el afecto—, y no contarlo es lo que permite que le pase al siguiente.",
+      "criterios": [
+        "Ordena las tres respuestas por reloj: primero la llamada, que todavía se puede parar; después el anuncio, antes de que alguien lo reenvíe; y al final la contención del dato ya entregado.",
+        "Identifica la llamada como clonación de voz y nombra las tres palancas de la ingeniería social: autoridad, urgencia fabricada y secreto.",
+        "Explica que el llanto y la mala señal tapan las imperfecciones de la voz sintética y bloquean el pensamiento, y afirma que reconocer la voz ya no prueba nada.",
+        "Aplica la palabra de verificación y la verificación por canal aparte, marcando el número guardado de antes y nunca el que llamó, con la alternativa de llamar a otro familiar.",
+        "Dice qué hacer si el dinero ya salió —banco de inmediato y denuncia en la policía preguntando qué unidad y qué llevar— sin inventar plazos, artículos de ley ni montos.",
+        "Juzga el anuncio por lo que pide y no por lo auténtico que parece, señalando que el logo y la redacción impecable ya no cuestan nada y por tanto no informan.",
+        "Aplica los tres criterios de convocatoria: un apoyo real no se cobra por inscribirse, un programa público existe fuera del mensaje, y nadie legítimo apura el envío del carnet.",
+        "Indica a qué entidad boliviana se pregunta y cómo se consigue el número —página oficial u oficina, nunca el del mensaje—, sin inventar programas, montos ni requisitos.",
+        "Establece que nadie reenvía mientras tanto, con el argumento de que reenviar es prestar tu nombre, y que se avisa el resultado al grupo exista o no exista el programa.",
+        "Reconoce la lista de asistentes y la captura como datos de terceros entregados sin consentimiento informado, y detalla qué arrastra una captura de conversación.",
+        "Explica que borrar el chat no revierte la entrega —registro ajeno, retención decidida por la empresa, cuenta detrás— y que un dato personal no se puede rotar como una clave, y propone la petición en abstracto con nombres sustituidos por roles.",
+        "Deja escritos procedimientos que no dependen de la alerta individual: regla del dinero con dos personas de viva voz, regla de la convocatoria con cuaderno de verificaciones, palabra acordada incluyendo a quien está lejos, inventario de lo confidencial y reglas de foto."
+      ],
+      "explicacion": "El caso junta las dos direcciones del flujo en una sola tarde, que es como ocurren de verdad: lo que entra y hay que verificar por otro camino, y lo que sale y no vuelve. Se resuelve bien si el criterio no depende en ningún momento de detectar la falsificación —ni la voz, ni el logo, ni la redacción—, sino de procedimiento decidido antes: canal aparte, palabra acordada, ningún pago salido de un mensaje y nada confidencial pegado en una aplicación. Si alguna de las tres se resuelve contestando en el mismo chat, marcando el número que vino en el mensaje o confiando en que se nota que la voz es falsa, el método no se aplicó."
+    }
+  ]
+}

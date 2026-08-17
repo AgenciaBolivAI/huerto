@@ -1,0 +1,98 @@
+{
+  "preguntas": [
+    {
+      "id": "quedarse-en-blanco",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Por qué alguien que se sabe perfectamente lo que iba a decir se queda en blanco al pararse delante de un grupo?",
+      "opciones": [
+        "Porque la memoria de trabajo —el espacio minúsculo donde se sostiene lo que se está haciendo ahora— tiene sitio para unos pocos elementos, y vigilar la amenaza ocupa parte de ese sitio.",
+        "Porque el circuito de alarma no distingue amenaza social de amenaza física: ser evaluado por muchos ojos dispara la misma respuesta que un peligro real.",
+        "Porque no se borró nada: la información sigue ahí y vuelve diez minutos después, lo que falta es espacio para traerla.",
+        "Porque el contenido no estaba lo bastante estudiado: quien de verdad domina un tema no se queda en blanco."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cuarta es falsa y además es la creencia que hace daño. Quedarse en blanco no mide cuánto sabes: mide cuánto recurso te queda libre en ese instante. Es lo mismo que una aplicación que se cae porque un proceso en segundo plano se llevó el procesador entero —el código está bien, el recurso no está—, y por eso la solución no es estudiar más sino no pedirle al sistema trabajo nuevo justo cuando tiene menos recurso: memorizar el arranque, llevar la tarjeta, no improvisar."
+    },
+    {
+      "id": "curva-de-activacion",
+      "tipo": "verdadero_falso",
+      "enunciado": "La adrenalina hace pico en el primer minuto o minuto y medio y después baja sola, aunque no hagas nada.",
+      "respuesta": true,
+      "explicacion": "Correcto, y es el dato más útil de la lección: la adrenalina se libera en segundos y se elimina de la sangre en pocos minutos, así que el cuerpo no tiene forma de sostener el pico por más que en ese momento parezca eterno. De ahí las tres decisiones que se toman antes y no durante: los primeros treinta segundos van memorizados palabra por palabra, lo difícil —la cifra delicada, el argumento que hay que armar, el chiste improvisado— se pospone hasta después del minuto y medio, y no se juzga la charla entera por cómo se sintió el primer minuto."
+    },
+    {
+      "id": "respirar-bien",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Cómo se respira para bajar la activación antes de hablar, y por qué funciona?",
+      "opciones": [
+        "Alargando la exhalación más que la inspiración, porque el pulso sube un poco al inspirar y baja al exhalar, de modo que se pasa más tiempo del ciclo del lado del freno.",
+        "Moviendo la panza y no los hombros, que además es la respiración que después sostiene la voz.",
+        "Antes de entrar, en el pasillo o en el baño, y no delante de todos.",
+        "Respirando hondo y rápido varias veces seguidas para cargar oxígeno antes de empezar."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "Respirar hondo y rápido es justamente lo que empeora el cuadro: produce hiperventilación, es decir, se bota más dióxido de carbono del que se produce, la sangre se vuelve más alcalina, los vasos que alimentan el cerebro se estrechan y aparecen mareo, visión con puntos y hormigueo en las manos y alrededor de la boca. Y como el mareo se lee como prueba de que uno se va a desmayar, la persona se asusta más y respira todavía más rápido. La regla no tiene excepción: lento, y largo al soltar."
+    },
+    {
+      "id": "cadena-o-lista",
+      "tipo": "opcion_multiple",
+      "enunciado": "¿Qué hace que una charla sobreviva a que se te vaya la cabeza en la mitad?",
+      "opciones": [
+        "Que esté armada como lista de bloques que se sostienen solos y no como cadena donde cada eslabón depende del anterior: perder uno cuesta uno.",
+        "Que el arranque y el cierre estén memorizados palabra por palabra, y que las cifras, nombres y fechas exactas estén escritos, porque son lo primero que suelta la memoria de trabajo.",
+        "Que los apuntes sean un esqueleto de siete líneas en una tarjeta rígida y no un texto seguido, porque en un guion completo perder el punto obliga a rastrear un muro de texto.",
+        "Que lleves el guion completo escrito en el teléfono, que siempre está a mano y con letra ajustable."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "El teléfono falla por tres motivos independientes: la pantalla se apaga sola, entra una notificación en el peor momento y desde tres metros parece que estás mirando WhatsApp. Pero el problema de fondo no es el soporte sino el formato: un guion completo, esté en papel o en pantalla, vuelve a ser una cadena, y buscar el punto perdido entre quinientas palabras con la vista estrechada es exactamente lo que no se puede hacer con adrenalina encima."
+    },
+    {
+      "id": "efecto-foco",
+      "tipo": "verdadero_falso",
+      "enunciado": "Empezar con «perdonen, estoy nervioso» es una buena idea porque la gente se da cuenta igual y así se relaja el ambiente.",
+      "respuesta": false,
+      "explicacion": "Falso, y el motivo está medido. Por el efecto foco sobrestimamos cuánto se fija la gente en nosotros, y por la ilusión de transparencia sobrestimamos cuánto se ve desde afuera lo que sentimos por dentro: tu corazón es inaudible, el temblor que sientes como un terremoto es un movimiento chico a tres metros y la pausa eterna duró dos segundos. Anunciar los nervios instala justo al observador que temías —ahora veinte personas buscan el temblor que nadie miraba— y encima le pasa al público el trabajo de cuidarte. En un contexto muy cercano una sola frase puede leerse como calidez; repetirla no funciona nunca."
+    },
+    {
+      "id": "pregunta-hostil",
+      "tipo": "opcion_multiple",
+      "enunciado": "Te hacen una pregunta agresiva delante de toda la asamblea. ¿Qué haces?",
+      "opciones": [
+        "Exhalas y repites la pregunta en voz alta con tus palabras, en tono neutro: compras segundos, verificas que entendiste, le quitas la carga y dejas que la sala la escuche.",
+        "Contestas el interés y no el tono, porque detrás casi siempre hay una preocupación real: miedo a pagar, a perder algo, a quedar afuera o el recuerdo de una promesa incumplida.",
+        "Si no sabes la respuesta, dices «no sé», das el nombre de quién sí sabe y lo anotas ahí delante de todos, comprometiendo una fecha.",
+        "Das una cifra aproximada para no quedar mal delante del grupo, y después la verificas."
+      ],
+      "correctas": [0, 1, 2],
+      "explicacion": "La cifra aproximada es el peor negocio posible: un solo número inventado que alguien comprueba y encuentra falso borra todo lo demás, incluso lo que era cierto, porque nadie puede saber qué otras partes eran del mismo tipo. Y en un lugar chico el costo no se descuenta nunca: a esa persona la ves el domingo en el mercado. Por eso tampoco hay sarcasmo ni ganarle la discusión a alguien delante del grupo —ganar la discusión y perder al vecino es un mal negocio— y por eso el acto de anotar el compromiso, no la frase «no sé», es lo que compra crédito."
+    },
+    {
+      "id": "habituacion-y-escape",
+      "tipo": "verdadero_falso",
+      "enunciado": "Si te está saliendo mal, cortar antes de tiempo y sentarte es lo más sensato: al menos evitas empeorarlo y la próxima vez arrancas de cero.",
+      "respuesta": false,
+      "explicacion": "Falso, y es el error que congela a la gente durante años. La habituación —que el sistema de alarma baje la respuesta ante un estímulo que se repite y no trae consecuencias malas— tiene una condición dura: la experiencia tiene que completarse. Irse, cortar a la mitad o no asistir le enseña al cuerpo lo contrario, que había peligro y que escapar funcionó, y la próxima vez cuesta más. Por eso el protocolo de recuperación termina en saltar al siguiente bloque o devolver la palabra con una pregunta, no en huir, y por eso terminar completo aunque salga regular vale más que una retirada elegante."
+    },
+    {
+      "id": "preparar-mi-intervencion",
+      "tipo": "abierta",
+      "enunciado": "Elige una situación real tuya de las próximas semanas —la asamblea de tu junta vecinal, la reunión del colegio de tus hijos, atender en la feria o unas palabras en un cumpleaños— y prepárala completa: qué haces los días previos, qué llevas escrito y cómo, qué haces en los primeros treinta segundos, cómo manejas voz, pausas, mirada y manos, qué contestas si te hacen una pregunta hostil o una que no sabes, y qué haces exactamente si te quedas en blanco.",
+      "respuestaModelo": "Elijo la asamblea de la junta vecinal, donde quiero pedir que se arregle el pozo de la esquina.\n\nEmpiezo aceptando la fisiología en vez de pelearme con ella. Lo que voy a sentir —corazón acelerado, manos frías, boca seca, temblor— es adrenalina, y viene de que un grupo mirándome dispara el mismo circuito de alarma que un peligro físico. Hace pico en el primer minuto o minuto y medio y después baja sola, y todo mi plan se apoya en eso: no necesito media hora heroica, necesito atravesar noventa segundos.\n\nLos días previos hago tres cosas. Primero, armo la charla **en lista y no en cadena**: un titular —«vengo a pedir que el arreglo del pozo entre en el presupuesto de este año»—, tres bloques que se sostienen solos —desde cuándo está roto, a cuántas casas afecta, qué ponemos los vecinos— y un cierre que repite el pedido. Si me olvido de uno pierdo un bloque y nadie lo nota, porque nadie tiene mi guion. Segundo, memorizo palabra por palabra el arranque y el cierre hasta que el arranque me sale mientras lavo los platos: eso es sobreaprendizaje, y lo hago porque la adrenalina me va a quitar la atención que hace falta para improvisar. Tercero, ensayo de pie y en voz alta, cerrando el papel e intentando decir cada bloque de memoria en vez de releerlo, porque releer da una fluidez falsa que se cae cuando el papel no está.\n\nLlevo una sola tarjeta rígida, hecha con la cara lisa de una caja y escrita con marcador para que se lea a la altura del pecho. Siete líneas numeradas de tres o cuatro palabras. Palabra por palabra van solo el arranque, el cierre y los números y nombres exactos, que es lo primero que suelta la memoria de trabajo. Al reverso, las tres preguntas que sé que me van a hacer. Nada en el teléfono: se apaga la pantalla, entra una notificación y desde tres metros parece que estoy mirando WhatsApp.\n\nEn el camino y en la puerta hago la respiración: inspirar contando cuatro, soltar contando seis u ocho, cinco rondas, moviendo la panza y no los hombros. Alargo la exhalación a propósito porque el pulso sube al inspirar y baja al exhalar, así que paso más tiempo del lado del freno. Lo que no hago es respirar hondo y rápido, que produce hiperventilación —mareo y hormigueo— y me haría sentir peor. Llevo agua, porque la boca seca es adrenalina.\n\nEn la sala me paro para hablar, porque con techo de calamina, ventiladores y motos pasando, hablar sentado es hablar para las tres primeras filas. Antes de arrancar pregunto hacia atrás «¿me escuchan bien allá?»: calibro el volumen, convierto el monólogo en un intercambio y gano cinco segundos con la boca ocupada en algo fácil. El volumen lo saco del diafragma y no de la garganta, y proyecto eligiendo blanco: le hablo a la persona del fondo. Digo el pedido en los primeros veinte segundos, porque la agenda es larga y puede que no llegue al tercer minuto, y me propongo durar dos o tres minutos, no más.\n\nCon el ritmo no me ordeno «hablar despacio», que no se puede ejecutar: pauso al final de cada idea. Esa pausa hace cuatro trabajos —el que escucha procesa, yo respiro, miro una cara y leo la tarjeta— y además ocupa el lugar de las muletillas, porque el silencio compra el mismo tiempo que «este». La mirada la manejo con una idea, una cara: una frase completa a una persona, tres a cinco segundos, y a la siguiente me muevo a otra zona, incluyendo los costados y el fondo, sin engancharme ni con la cara amable ni con la hostil. Las manos libres a la altura de la cintura, gesticulando cuando el gesto significa algo; los pies plantados, y si me muevo, entre bloques y no mientras digo lo importante.\n\nSi llega una pregunta agresiva tengo el procedimiento fijo, para que corra cuando no me quede cabeza: exhalo y repito la pregunta con mis palabras en tono neutro. Me compra cinco segundos, verifica que entendí, le quita el aguijón y deja que la sala la escuche. Después contesto el interés y no el tono: si preguntan «¿y quién va a pagar?», debajo hay miedo a una cuota nueva, y eso es lo que nombro. Si no sé, digo «no sé», digo quién sí sabe y anoto el compromiso delante de todos, con fecha; no invento cifra, requisito ni plazo, porque un número inventado que alguien comprueba borra todo lo demás. Nada de sarcasmo ni de ganar la discusión: a esa persona la veo el domingo en el mercado.\n\nY si me quedo en blanco ejecuto el protocolo sin pensarlo: paro y cierro la boca en vez de llenarla con «este… este…»; exhalo largo; miro la tarjeta abiertamente; repito en voz alta la última idea completa con otras palabras, que muchas veces trae de vuelta lo que seguía; si no aparece, salto al siguiente punto de la lista; y como último recurso devuelvo la palabra con una pregunta. Lo que no hago es disculparme dos veces, explicar que estoy nervioso ni correr al final al doble de velocidad, porque eso es escape y el escape es lo que impide que la próxima vez cueste menos. Al terminar anoto qué funcionó y me pongo el siguiente peldaño.",
+      "criterios": [
+        "Explica el mecanismo fisiológico —alarma social, rama simpática, adrenalina— y lo usa para no interpretar los síntomas como fracaso personal.",
+        "Apoya el plan en la forma de la curva: pico en el primer minuto y medio y caída posterior, con el arranque memorizado justo donde hay menos memoria de trabajo.",
+        "Arma la intervención en lista de bloques independientes y no en cadena, con titular, tres bloques y cierre que repite el pedido.",
+        "Memoriza palabra por palabra solo el arranque y el cierre, y deja escritos los números, nombres y fechas exactas.",
+        "Describe un ensayo en voz alta y de pie, con recuperación de memoria en vez de relectura, y menciona el sobreaprendizaje o una prueba equivalente.",
+        "Especifica un esqueleto de apuntes concreto: tarjeta rígida, pocas líneas, letra grande, numeradas, con las preguntas previsibles al reverso, y descarta el guion completo y el teléfono.",
+        "Incluye la respiración con exhalación larga hecha antes de entrar y descarta explícitamente respirar hondo y rápido por la hiperventilación.",
+        "Resuelve el volumen desde el diafragma y la proyección eligiendo blanco, con alguna calibración real de la sala.",
+        "Sustituye la orden imposible de «hablar despacio» por pausas al final de cada idea y usa el silencio en lugar de las muletillas.",
+        "Da reglas ejecutables de mirada y manos: una idea una cara, barrido que incluye fondo y costados, manos libres con gestos con sentido y pies plantados.",
+        "Tiene procedimiento para la pregunta hostil —exhalar, reformular en neutro, contestar el interés— y para la que no sabe —«no sé», quién sí sabe, compromiso anotado— sin inventar cifras ni plazos.",
+        "Ejecuta el protocolo de recuperación completo al quedarse en blanco y descarta el escape, entendiendo que terminar completo es lo que produce la habituación."
+      ],
+      "explicacion": "Una buena respuesta no es una lista de consejos sueltos: cada decisión sale de un mecanismo. El arranque memorizado sale de que el pico coincide con el momento de menos memoria de trabajo disponible; la estructura en lista sale de que una cadena se detiene entera al romperse un eslabón; la tarjeta sale de que buscar el punto perdido en un muro de texto es imposible con la vista estrechada; la exhalación larga sale de cómo el ciclo respiratorio mueve el pulso; la pausa sale de que el que escucha tiene el mismo techo de memoria que tú; el «no sé» con nombre y fecha sale de que una cifra inventada borra todo lo demás; y terminar completo sale de que la habituación solo ocurre con experiencias terminadas."
+    }
+  ]
+}
