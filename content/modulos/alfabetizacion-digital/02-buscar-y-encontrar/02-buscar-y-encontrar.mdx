@@ -32,6 +32,12 @@ esa palabra aparece —el índice alfabético del final de un libro, pero de tod
 Cuando escribís tres palabras la máquina no lee tu frase: **busca esas tres entradas y se queda con
 las páginas que están en las tres listas a la vez.**
 
+<Diagrama
+  src="como-funciona-un-buscador.webp"
+  alt="Tres paneles en fila. El primero, una red de hojas en blanco unidas por flechas con una arañita caminando de una a otra por esas flechas, y una hoja suelta terracota de línea punteada a la que no llega ninguna flecha, rotulado EL RASTREO. El segundo, una grilla alta tipo libro de registro donde cada renglón empieza con una llave y sigue con una hilera de paginitas en blanco, rotulado EL ÍNDICE DE PALABRAS. El tercero, una pila vertical de barras horizontales de largo decreciente con una flecha bajando por el costado izquierdo, rotulado LA FILA ORDENADA. Arriba, LO QUE PASA ANTES DE QUE ESCRIBAS."
+  pie="Lo que nadie enlaza es la hoja suelta: para el buscador no existe. Y las tres etapas ocurren antes de que escribas nada."
+/>
+
 <Analogia titulo="Un índice invertido y una intersección">
 Para quien programa es literal: una tabla `palabra → lista de documentos`, y la consulta es una
 intersección de listas. Nada de semántica; conjuntos. Por eso **cada palabra que agregás achica el
@@ -40,6 +46,12 @@ elegida para vaciarlo entero. Para quien no programa es el fichero de una biblio
 «carpintería» y te dan el cajón; pedís «carpintería, humedad, Bolivia» y te dan los tres libros que
 están en los tres cajones a la vez.
 </Analogia>
+
+<Diagrama
+  src="cada-palabra-achica.webp"
+  alt="Cuatro paneles en fila con círculos superpuestos llenos de puntos. El primero, un círculo grande repleto de decenas de puntos, UNA PALABRA. El segundo, dos círculos que se cruzan y apenas una docena de puntos en la lente donde se superponen, DOS PALABRAS. El tercero, tres círculos cruzados con solo tres puntos en la superposición central, TRES PALABRAS. El cuarto, una roseta de muchos círculos finos cuya superposición central es un disco terracota con una equis y ni un punto adentro, TRECE PALABRAS. Arriba, CADA PALABRA ACHICA EL CONJUNTO."
+  pie="Buscar es intersectar listas. Basta una palabra mal elegida para que la intersección quede vacía, y eso se siente como «no hay nada sobre esto»."
+/>
 
 Los buscadores de hoy hacen algo más que la intersección pura: reconocen sinónimos, plurales y errores
 de tipeo. Pero **eso los hace generosos, no precisos.** La precisión la vas a tener que pedir vos.
@@ -88,6 +100,12 @@ porque suelen ir todos juntos antes de que empiece la lista de verdad. Es una di
 milímetros de letra: mirá ese renglón **antes** de tocar nada. Que sea pagado no lo hace malo; si
 buscás dónde comprar un ventilador, el anuncio de una tienda de ventiladores es lo que querías. El
 problema es cuando lo que buscás no es un producto.
+
+<Diagrama
+  src="el-anuncio-no-es-un-resultado.webp"
+  alt="Dos paneles con la misma lista vertical de ocho barras en blanco, sin ventana ni pantalla alrededor. En el de la izquierda las tres barras de arriba son terracota, cada una con una monedita en su extremo, y una llave terracota las agrupa; debajo siguen cinco barras verdes. En el de la derecha esas tres barras pagadas están levantadas hacia un costado, tachadas y desvaídas, y las verdes empiezan desde arriba, con una flecha verde señalando la nueva primera. Los rótulos, LA LISTA COMO TE LLEGA y LA LISTA SIN LOS ANUNCIOS. Arriba, LOS PRIMEROS LUGARES SE VENDEN."
+  pie="Saltear esa tanda entera es un gesto de dos segundos. En trámites, bancos y préstamos, el que más paga por estar arriba es el que más gana con que entres."
+/>
 
 <Advertencia titulo="Dónde el anuncio hace daño de verdad">
 Hay tres terrenos donde el clic al patrocinado sale caro. **Trámites**: quien paga por estar arriba
@@ -202,6 +220,12 @@ cambia de ángulo de verdad: **otro idioma, u otro tipo de fuente.** Porque no t
 formato: un gesto con las manos vive en un video, una falla rara vive en un foro, un valor exacto vive
 en un manual y el nombre comercial de una pieza vive en un aviso de venta. **Si buscaste tres veces en
 el mismo lugar, buscaste una sola vez.**
+
+<Diagrama
+  src="tres-consultas.webp"
+  alt="Tres paneles en fila unidos por dos flechas. El primero, un candado dibujado a mano junto a una lupa sostenida sobre una grilla de cuatro marcos de imagen vacíos, rotulado TUS PALABRAS. El segundo, el mismo candado ahora en corte preciso con su cerrojo y su cilindro a la vista, apoyado sobre un manual abierto cuyas páginas solo tienen renglones, rotulado EL NOMBRE TÉCNICO. El tercero, un globo terráqueo detrás de tres clases de fuente distintas: un rectángulo con triángulo de reproducción, un globo de diálogo y un libro cerrado, rotulado OTRO IDIOMA U OTRA FUENTE. Arriba, LA REGLA DE LAS TRES CONSULTAS."
+  pie="La primera búsqueda no sirve para encontrar: sirve para averiguar cómo se llama la cosa. Si las tres son del mismo tipo, buscaste una sola vez."
+/>
 
 ## Leer la página de resultados sin entrar a todo
 

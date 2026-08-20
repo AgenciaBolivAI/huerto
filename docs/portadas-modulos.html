@@ -1,0 +1,393 @@
+<title>Portadas de Huerto Class</title>
+<style>
+  :root{
+    --paper:#FBFAF6; --surface:#F5F1E7; --surface-2:#F0EBDD;
+    --ink:#22301F; --ink-soft:#5C6B57; --ink-faint:#8A9483;
+    --green:#2F5233; --terra:#B5613C; --rule:#DFDACB; --rule-soft:#E8E3D6;
+    --code-bg:#F3F0E4; --ok:#3F6B45;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#141810; --surface:#1D231A; --surface-2:#232A1F;
+      --ink:#E9EAE1; --ink-soft:#A6AF9D; --ink-faint:#7C8574;
+      --green:#8FB27C; --terra:#D98A5F; --rule:#2E3629; --rule-soft:#252C21;
+      --code-bg:#1A2017; --ok:#8FB27C;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#141810; --surface:#1D231A; --surface-2:#232A1F;
+    --ink:#E9EAE1; --ink-soft:#A6AF9D; --ink-faint:#7C8574;
+    --green:#8FB27C; --terra:#D98A5F; --rule:#2E3629; --rule-soft:#252C21;
+    --code-bg:#1A2017; --ok:#8FB27C;
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    font-size:16px; line-height:1.6; margin:0; padding:0;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:56px 24px 96px}
+  .mono{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace}
+  .eyebrow{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 14px}
+  h1{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:clamp(24px,4.2vw,34px);
+    line-height:1.15;font-weight:700;margin:0 0 16px;text-wrap:balance}
+  h2{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;letter-spacing:.14em;
+    text-transform:uppercase;font-weight:700;color:var(--green);margin:0 0 20px;
+    padding-bottom:10px;border-bottom:1px solid var(--rule)}
+  h3{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:15px;font-weight:700;margin:0 0 6px}
+  p{margin:0 0 14px;max-width:68ch}
+  strong{font-weight:650}
+  .lede{font-size:17.5px;color:var(--ink-soft);max-width:64ch;margin-bottom:28px}
+  section{margin-top:52px}
+  .stack-lg{display:flex;flex-direction:column;gap:26px}
+  .stack-sm{display:flex;flex-direction:column;gap:14px}
+  .meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:8px}
+  .meta div{background:var(--surface);padding:12px 14px}
+  .meta dt{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink-faint);margin:0 0 4px}
+  .meta dd{margin:0;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+  .good{border-left:3px solid var(--ok);background:var(--surface);padding:14px 18px}
+  .good h3{color:var(--ok)}
+  .good p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+  .fail{border-left:3px solid var(--terra);background:var(--surface);padding:14px 18px}
+  .fail h3{color:var(--terra)}
+  .fail p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+  .card{border:1px solid var(--rule);background:var(--surface)}
+  .card-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;padding:13px 16px;
+    border-bottom:1px solid var(--rule);background:var(--surface-2)}
+  .fname{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;font-weight:700}
+  .chip{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.08em;
+    text-transform:uppercase;padding:3px 8px;border:1px solid var(--rule);
+    color:var(--ink-soft);background:var(--paper)}
+  .card-note{padding:11px 16px;font-size:13.5px;color:var(--ink-soft);border-bottom:1px solid var(--rule-soft)}
+  .card-note b{color:var(--ink)}
+  .prompt-wrap{position:relative}
+  pre{margin:0;padding:16px;background:var(--code-bg);
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:12.5px;line-height:1.65;color:var(--ink);
+    white-space:pre-wrap;word-wrap:break-word;overflow-x:auto}
+  .copy{position:absolute;top:10px;right:10px;font-family:ui-monospace,Menlo,Consolas,monospace;
+    font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;cursor:pointer;
+    background:var(--paper);color:var(--ink-soft);border:1px solid var(--rule)}
+  .copy:hover{color:var(--green);border-color:var(--green)}
+  .copy:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+  .copy.done{color:var(--ok);border-color:var(--ok)}
+  .cat{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;margin:0 0 18px;
+    padding-bottom:8px;border-bottom:2px solid var(--ink)}
+  .cat .t{font-size:19px;font-weight:700}
+  .cat .n{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+  .tbl-wrap{overflow-x:auto;border:1px solid var(--rule)}
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--rule-soft)}
+  th{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--ink-faint);background:var(--surface-2)}
+  td.num{font-variant-numeric:tabular-nums;font-family:ui-monospace,Menlo,Consolas,monospace}
+  tr:last-child td{border-bottom:none}
+  .foot{margin-top:64px;padding-top:20px;border-top:1px solid var(--rule);
+    font-size:13px;color:var(--ink-faint);max-width:68ch}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+
+<p class="eyebrow">Huerto Class · Producción de imágenes</p>
+<h1>Portadas de Huerto Class</h1>
+<p class="lede">
+  Las 22 portadas de módulo que faltan, en orden de curso. Cada una es una sola fotografía y
+  es lo que se ve en el índice, así que rinden más por imagen que cualquier otra cosa que
+  quede por generar.
+</p>
+
+<div class="meta">
+  <div><dt>Modelo</dt><dd>nano banana pro</dd></div>
+  <div><dt>Formato</dt><dd>21:9 · 1584×672</dd></div>
+  <div><dt>Portadas aquí</dt><dd>22</dd></div>
+  <div><dt>Ya hechas</dt><dd>18 de 40</dd></div>
+</div>
+
+<section>
+  <h2>Cómo funcionan las portadas aquí</h2>
+  <p>
+    Los 18 módulos que ya tienen portada <strong>no usan una imagen propia</strong>: apuntan a la
+    portada de una de sus lecciones. Pero estos 22 módulos no tienen todavía ninguna imagen de
+    lección, así que no hay a qué apuntar y necesitan archivo propio.
+  </p>
+  <p>
+    Por eso cada ficha lleva la ruta <span class="mono">&lt;modulo&gt;/portada.webp</span>, en la raíz
+    del módulo y no dentro de una lección. Lo comprobé contra el validador antes de escribirlo:
+    la comprobación de «imagen en disco que no se usa» solo recorre carpetas de lección, así que
+    una portada en la raíz del módulo pasa limpia.
+  </p>
+  <div class="good">
+    <h3>Lo que hago yo cuando me las pases</h3>
+    <p>
+      Reviso cada una, la convierto a webp a 1584×672, la coloco en su ruta, escribo el
+      <span class="mono">portadaAlt</span>, añado <span class="mono">portada</span> al
+      <span class="mono">modulo.json</span> de su módulo, la registro con su prompt en
+      <span class="mono">content/imagenes.json</span> y paso <span class="mono">npm run validar</span>.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Las tres reglas de una portada</h2>
+  <div class="stack-sm">
+    <div class="fail">
+      <h3>Sin caras</h3>
+      <p>
+        Todas se recortan a manos, herramienta y objeto, o directamente no llevan gente. No es
+        solo estilo: pidiéndole una escena de campo genérica, el modelo ambienta en el sur de
+        Asia — ya devolvió una aldea india con sari y bindi. Sin cara no hay a quién acertar, y
+        el entorno va fijado en el prompt.
+      </p>
+    </div>
+    <div class="fail">
+      <h3>Sin texto de ningún tipo</h3>
+      <p>
+        Ni rótulos, ni números, ni marcas, ni pantallas legibles, ni billetes reconocibles. Todas
+        terminan en <span class="mono">No text, no numbers, no logos, no brand marks anywhere</span>.
+      </p>
+    </div>
+    <div class="fail">
+      <h3>Santa Cruz, no un campo cualquiera</h3>
+      <p>
+        Vegetación tropical de hoja ancha, calamina, tierra apisonada, luz húmeda. Es lo que hace
+        que el curso se parezca al sitio donde se va a usar.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cat"><span class="n">Módulos 2–4</span><span class="t">Antes de la primera tarea</span></div>
+  <div class="stack-lg">
+
+    <div class="card">
+      <div class="card-head"><span class="fname">seguridad-y-salud/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Seguridad, salud y primeros auxilios en el campo</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary still-life photograph on a tree stump in a rural Santa Cruz yard in the Bolivian lowlands. A well-used machete rests across the stump with its blade catching the light; beside it lie a pair of worn leather work gloves, a wide-brimmed straw hat, and an open first-aid tin showing rolled gauze, tape and small scissors. Broad tropical leaves and packed bare earth fall away out of focus behind. No people and no hands in the frame. Warm late-afternoon side light, strong shadows, earthy brown, straw and deep green tones, real and unstyled. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="fname">matematica-util/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">La matemática que de verdad se usa</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph looking down the length of a freshly formed garden bed in the Bolivian lowlands. A steel measuring tape is pulled taut across the dark soil in the foreground, and beyond it wooden stakes carry a tight string line marking a straight edge; a folding wooden rule and a carpenter's pencil rest on the soil beside the tape. The rows recede toward broad tropical foliage out of focus. No people and no hands in the frame. Sharp raking morning light picking out the string and the tape edge, earthy brown, steel grey and green tones. No readable text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="fname">alfabetizacion-digital/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">El teléfono y la computadora como herramienta</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph of weathered brown hands holding a smartphone at a rough wooden table in a rural Santa Cruz home. The phone screen shows only a soft featureless glow with no icons, no words and nothing readable. Beside the phone on the table lie a school exercise notebook and a chipped enamel mug. Broad tropical leaves are visible through a doorway behind, thrown out of focus. Crop above the wrists so no face and no clothing is visible. Warm low window light from the left, deep shadows, brown, cream and green tones, real and unstyled. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="cat"><span class="n">Módulos 12–14</span><span class="t">Sembrar, comer y dejar de comprar</span></div>
+  <div class="stack-lg">
+
+    <div class="card">
+      <div class="card-head"><span class="fname">huerto-familiar/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Huerto familiar para comer todo el año</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph of a small family kitchen garden in the Bolivian lowlands near Santa Cruz. In the foreground a woven basket sits on the packed earth path holding a mixed harvest just picked: leafy greens, a few peppers, a squash and bunched coriander with soil still on the roots. Behind it, narrow raised beds run back in uneven rows with a different crop in each, a banana clump and broad tropical foliage closing the far end, and the edge of a corrugated metal roof just visible. No people and no hands in the frame. Warm early-morning light, dew on the leaves, earthy brown and many shades of green. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="fname">insumos-propios/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Insumos biológicos propios</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial macro photograph of two cupped weathered hands lifting a double handful of finished vermicompost from a worm bed in the Bolivian lowlands. The material is almost black, crumbly and granular, and several pink earthworms are clearly visible threading through it; a few fragments of undigested leaf remain. Behind the hands, the wooden edge of the worm bed and its damp bedding fall out of focus. Crop above the wrists so no face and no clothing is visible. Soft shaded daylight, very shallow depth of field, deep brown, near-black and muted pink tones. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="cat"><span class="n">Módulos 16–19</span><span class="t">Que deje algo y no hacerlo solo</span></div>
+  <div class="stack-lg">
+
+    <div class="card">
+      <div class="card-head"><span class="fname">poscosecha/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Poscosecha, conservación y transformación</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary still-life photograph on a wooden table in a rural Santa Cruz kitchen. On the left, a row of sealed glass jars holds preserves and pickled vegetables in amber and deep green, the light passing through them. On the right, a slatted wooden drying rack carries neatly laid slices of fruit curling as they dry. Between them sits a shallow basket of fresh produce waiting to be processed. No people and no hands in the frame. Warm low side light raking across the table, deep shadow behind, amber, brown and green tones, real and unstyled. No readable text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="fname">organizarse/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Organizarse: del vecino al grupo</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph of a shared tool wall inside a simple timber shed in the Bolivian lowlands. Hoes, machetes, a pruning saw, shears and a backpack sprayer hang in an ordered row from nails on rough boards, each with a small blank wooden tag tied to its handle with string. One hook stands conspicuously empty. A school notebook hangs from a nail beside the row. No people and no hands in the frame. Soft daylight entering from an open doorway on the left, dust in the air, warm timber brown, steel grey and green tones. No readable text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="fname">ensenar/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Enseñar lo que aprendiste</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph shot from directly overhead, looking straight down at a rough wooden bench in a rural Santa Cruz yard. At the centre, one pair of weathered hands holds a cutting and a grafting knife mid-demonstration; four or five other pairs of hands lean into the frame from the edges, close and attentive, one of them pointing. Cuttings, a roll of grafting tape and a bucket sit on the bench around them. Crop so that only hands and forearms enter the frame — no faces, no heads and no torsos anywhere. Dappled shade from a tree above, warm brown, green and steel tones. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="fname">comunicar/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Comunicar: hablar, escribir y negociar</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph of an empty community meeting set up under a large tree in a rural Santa Cruz yard. Eight or nine mismatched plastic and wooden chairs stand in a loose semicircle on packed bare earth, facing a simple easel that holds a large completely blank sheet of paper. A folding table at the side carries a stack of enamel cups and a thermos. Nobody has arrived yet. Broad tropical foliage overhead casts dappled shade across the chairs. Late-afternoon light, long shadows, warm earth, faded plastic colours and deep green. No text, no numbers, no logos, no brand marks anywhere; the paper stays entirely blank.</pre></div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="cat"><span class="n">Módulo 20</span><span class="t">Medir y dibujar antes de cavar</span></div>
+  <div class="stack-lg">
+
+    <div class="card">
+      <div class="card-head"><span class="fname">fisica/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Física: por qué el mundo hace lo que hace</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph of a half-built brick wall in the Bolivian lowlands, seen close and square on. A plumb bob hangs dead still on its string from a nail at the top of the frame, its point hovering just clear of the brickwork, and the low sun throws a long hard shadow of the string and weight across the rough brick face. A spirit level rests on the top course with its bubble visible, and a trowel is stuck into a mound of mortar on a board at the edge. No people and no hands in the frame. Strong directional late light, deep shadow, terracotta brick, grey mortar and steel tones. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="cat"><span class="n">Módulo 27</span><span class="t">Levantar el lugar de trabajo</span></div>
+  <div class="stack-lg">
+
+    <div class="card">
+      <div class="card-head"><span class="fname">electronica-desde-cero/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Electrónica desde cero: medir, reparar, construir</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary macro photograph of a repair in progress on a workbench in a rural Santa Cruz workshop. Two weathered hands hold the red and black probes of a multimeter against the terminals of a small dismantled water pump motor, its casing open and copper windings visible. The multimeter body sits in the foreground but its display is angled away so nothing on it is readable. Screwdrivers, a stripped length of cable and the pump's removed screws lie scattered on the scarred wooden bench. Crop above the wrists so no face and no clothing is visible. Focused work light from the left, copper, steel and deep shadow. No readable text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="cat"><span class="n">Módulos 28–30</span><span class="t">La parcela que dura</span></div>
+  <div class="stack-lg">
+
+    <div class="card">
+      <div class="card-head"><span class="fname">agroecologia-parcela/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Agroecología y diseño de la parcela</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph taken low across a polyculture plot in the Bolivian lowlands near Santa Cruz. In the same frame several crops grow interplanted rather than in separate blocks: tall maize, beans climbing their stalks, low squash sprawling across the soil between them, and a band of leafy greens in front. A line of young fruit trees runs along the far edge, and beyond them a dense living fence of mixed shrubs closes the plot. Bare dark earth shows in patches between the plants. No people and no hands in the frame. Warm humid morning light, layered depth from foreground to treeline, many distinct greens against brown soil. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="fname">suelo-y-agua-parcela/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Suelo y agua a escala de parcela</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph of a lowland field in Bolivia the morning after heavy rain. Across the middle of the frame runs a dense planted barrier strip of tall grass following the contour; on the near side of it the bare soil is scored with small erosion channels and a fan of pale silt has been dropped against the base of the grass, while beyond the strip the ground is intact and covered with crop residue. Shallow pools of muddy water stand in the low spots, reflecting the sky. Broad tropical vegetation lines the far horizon. No people and no hands in the frame. Flat bright light after rain, ochre, silt-grey and deep green tones. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="fname">abejas-y-animales/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Abejas, polinización y animales integrados</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial macro photograph of the entrance of a stingless bee hive in the Bolivian lowlands: a small wooden box mounted on a post, with a soft irregular tube of ochre wax and resin built out from the entrance hole. Several tiny dark stingless bees cluster at the mouth of the tube and two are caught in flight just outside it, wings blurred. The weathered grain of the box and a bead of resin catch the light. Broad tropical foliage and a hint of pale citrus blossom fall out of focus behind. No people and no hands in the frame. Warm humid morning light, very shallow depth of field, ochre, warm brown and deep green tones. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="cat"><span class="n">Módulos 31–36</span><span class="t">La casa y los oficios que la sostienen</span></div>
+  <div class="stack-lg">
+
+    <div class="card">
+      <div class="card-head"><span class="fname">el-dinero-de-la-casa/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">El dinero de la casa: presupuesto, ahorro y deuda</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph looking down at a worn kitchen table in a rural Santa Cruz home. A school exercise notebook lies open, its page ruled by hand into columns with rows of handwritten marks that are soft and completely illegible. A pencil rests in the fold. Beside the notebook sit a small stack of assorted coins, a folded cloth purse and an enamel mug. Crop the frame to the table surface only — no people, no hands and no faces. Warm low window light from the left, deep shadow to the right, brown, cream and muted metal tones, real and unstyled. No readable text, no numbers, no banknotes, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="fname">salud-de-la-familia/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Salud de la familia: agua, comida y prevención</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph of handwashing outdoors in the Bolivian lowlands. A clear stream of water pours from a tilted enamel jug over a pair of cupped weathered hands above a shallow basin, individual droplets frozen in the air and catching the light; a bar of plain soap sits on the basin rim. A covered water container with a clean cloth over its lid stands behind, slightly out of focus, with broad tropical leaves beyond. Crop above the wrists so no face and no clothing is visible. Bright backlight through the falling water, cool clear water tones against warm earth and green. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="fname">carpinteria/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Carpintería: madera, herramienta y uniones</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary macro photograph of hand planing in a rural Santa Cruz workshop. Two weathered hands push a wooden hand plane along a board clamped to a scarred bench, and a long pale shaving curls up out of the mouth of the plane in one continuous ribbon. Loose shavings and fine sawdust have piled against the board, and a chisel and a folding rule lie further along the bench. Crop above the wrists so no face and no clothing is visible. Low warm light from a window on the left rakes across the grain and lights the airborne dust, honey-brown timber, steel and deep shadow. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="fname">soldadura-y-metal/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Soldadura y metal</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph of arc welding in a rural Santa Cruz workshop. Gloved hands guide an electrode along the joint between two pieces of angle iron clamped in place, and a fierce blue-white arc throws a shower of orange sparks arcing across the dark frame. A welding helmet is worn but its visor is down and turned away from the camera, so no face is visible anywhere. The surrounding workshop falls into deep shadow, lit only by the arc. Very high contrast, blue-white core, orange sparks, grey steel and near-black surroundings. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="fname">agua-en-la-casa/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Agua en la casa: plomería, bombas y saneamiento</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary macro photograph of plumbing work in a rural Santa Cruz home. Two weathered hands wind white sealing tape around the thread of a PVC fitting held over a concrete floor; the roll of tape hangs from one finger. Laid out on the concrete beside them are elbows, tees and couplings, a pipe wrench, and a cut length of white pipe with a bead of water still in it. An elevated water tank on its stand is visible out of focus through an open doorway behind. Crop above the wrists so no face and no clothing is visible. Bright even daylight, white plastic and grey concrete against a warm green background. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="fname">motores-pequenos/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Motores pequeños: bomba, desbrozadora y moto</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary macro photograph of small engine maintenance in a rural Santa Cruz yard. Two oil-stained hands use a plug spanner to lift a spark plug clear of the cylinder head of a small petrol engine, the plug's electrode dark with carbon. The engine sits on packed earth with its air filter cover removed and lying beside it, next to a rag and a shallow tin of loose bolts. Broad tropical foliage out of focus behind. Crop above the wrists so no face and no clothing is visible. Hard midday light with strong shadow, oily steel, dull aluminium and warm earth tones. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="cat"><span class="n">Módulos 37 y 40</span><span class="t">La máquina que decide</span></div>
+  <div class="stack-lg">
+
+    <div class="card">
+      <div class="card-head"><span class="fname">programar-desde-cero/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Programar desde cero: la lógica antes que la sintaxis</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary photograph looking down at a school exercise notebook open on a wooden table in a rural Santa Cruz home. Across the ruled page someone has drawn a flowchart by hand in pencil: plain rectangles and one diamond joined by arrows that branch in two directions and loop back on themselves. The shapes and arrows are clearly drawn but contain no words or letters of any kind, only empty outlines. A pencil and an eraser lie on the page, and the closed edge of a laptop sits at the top of the frame. No people, no hands, no faces. Warm low window light from the left, paper cream, graphite grey and warm wood tones. No text, no letters, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><span class="fname">ia-para-la-comunidad/portada.webp</span><span class="chip">21:9</span></div>
+      <div class="card-note">Inteligencia artificial para la comunidad</div>
+      <div class="prompt-wrap"><button class="copy">Copiar</button><pre>WIDE LANDSCAPE composition, subject fills the entire frame edge to edge, no borders, no letterboxing, full bleed. Editorial documentary still-life photograph on a rough wooden table in a rural Santa Cruz yard. A smartphone lies face up in the middle of the frame, its screen showing only a soft featureless glow with no icons, no words and nothing readable, and that glow spills faintly onto the timber around it. Beside the phone sit a seedling tray of young plants with soil on the rim, a school notebook, and a small glass jar of seed. Broad tropical foliage falls out of focus behind. No people, no hands, no faces. Blue-tinted screen light meeting warm low afternoon daylight from the left, cool grey against warm brown and green. No text, no numbers, no logos, no brand marks anywhere.</pre></div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Después de las portadas</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Trabajo</th><th>Imágenes</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>Portadas de módulo</td><td class="num">22</td><td>Este documento</td></tr>
+        <tr><td>Módulo 18, lecciones 04 · 06 · 07</td><td class="num">14</td><td>Documento anterior</td></tr>
+        <tr><td>Imágenes de lección, 133 lecciones en 21 módulos</td><td class="num">≈ 665</td><td>Por módulo, cuando digas</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin-top:18px">
+    Con estas 22 el índice del curso queda entero: los 40 módulos con su imagen y ninguna banda
+    de relleno. Es el mayor salto visual por imagen generada que queda en el proyecto.
+  </p>
+</section>
+
+<p class="foot">
+  Huerto Class · Rizoma del Sur — Los prompts de las 728 imágenes ya publicadas están en
+  <span class="mono">content/imagenes.json</span>; los de las descartadas, con el motivo de cada
+  fallo, en la clave <span class="mono">_descartadas</span> del mismo archivo.
+  <br><br>
+  Made by BolivAI
+</p>
+
+</div>
+
+<script>
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var pre = btn.parentElement.querySelector('pre');
+      navigator.clipboard.writeText(pre.textContent).then(function(){
+        var old = btn.textContent;
+        btn.textContent = 'Copiado';
+        btn.classList.add('done');
+        setTimeout(function(){ btn.textContent = old; btn.classList.remove('done'); }, 1600);
+      });
+    });
+  });
+</script>
